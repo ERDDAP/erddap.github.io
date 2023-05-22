@@ -4,7 +4,7 @@
 <title>The EDDTableFromEML and EDDTableFromEMLBatch Options in GenerateDatasetsXml</title>
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="https://coastwatch.pfeg.noaa.gov/erddap/images/favicon.ico">
-<link href="../images/erddap2.css" rel="stylesheet" type="text/css">
+<link href="/images/erddap2.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -14,7 +14,7 @@
     <td style="text-align:center; width:80px;"><a rel="bookmark"
       href="https://www.noaa.gov/"><img 
       title="National Oceanic and Atmospheric Administration" 
-      src="../images/noaab.png" alt="NOAA"
+      src="/images/noaab.png" alt="NOAA"
       style="vertical-align:middle;"></a></td> 
     <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
       <strong>ERDDAP</strong>
@@ -80,7 +80,7 @@ which uses the information in an
 <a rel="help"
   href="https://knb.ecoinformatics.org/external//emlparser/docs/index.html"
   >Ecological Metadata Language (EML)<img 
-  src="../images/external.png" alt=" (external link)" 
+  src="/images/external.png" alt=" (external link)" 
   title="This link to an external website does not constitute an endorsement."></a>
 XML file to generate the chunk of XML for datasets.xml 
 to create an 
@@ -139,7 +139,7 @@ or a batch of EML files:
     <a rel="help"
         href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
         >TZ column list of time zone names<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.  
   <br>Note all of the easy-to-use "US/..." names at the end of the list.
   <br>If you later find that to be incorrect, you can change the time_zone
@@ -152,13 +152,13 @@ give users more direct access to the wealth of
 <a rel="help"
   href="https://knb.ecoinformatics.org/"
   >Knowledge Network for Biocomplexity (KNB)<img 
-  src="../images/external.png" alt=" (external link)" 
+  src="/images/external.png" alt=" (external link)" 
   title="This link to an external website does not constitute an endorsement."></a> 
 and 
 <a rel="help"
   href="https://lternet.edu/"
   >Long Term Ecological Research (LTER)<img 
-  src="../images/external.png" alt=" (external link)" 
+  src="/images/external.png" alt=" (external link)" 
   title="This link to an external website does not constitute an endorsement."></a>
 data and help those projects meet the US government's 
 <a rel="help" 
@@ -194,11 +194,11 @@ Here are the design details of the EDDTableFromEML option in GenerateDatasetsXml
   but in a different format. ERDDAP uses the  
   <a rel="help"
   href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html">CF<img 
-  src="../images/external.png" alt=" (external link)" 
+  src="/images/external.png" alt=" (external link)" 
   title="This link to an external website does not constitute an endorsement."></a>)
   and
   <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3">ACDD<img 
-  src="../images/external.png" alt=" (external link)" 
+  src="/images/external.png" alt=" (external link)" 
   title="This link to an external website does not constitute an endorsement."></a>
   metadata standards. They are complementary metadata systems that
   use key=value pairs for global metadata and for
@@ -258,7 +258,7 @@ Here are the design details of the EDDTableFromEML option in GenerateDatasetsXml
   <br>ERDDAP uses 
   <a rel="help" href="https://www.unidata.ucar.edu/software/udunits/"
   >UDUNITS formatting for units<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
   GenerateDatasetsXml is able to convert EML units to UDUNITS cleanly about
   95% of the time. The remaining 5% results in a readable description 
@@ -410,7 +410,7 @@ to match the column names in the data file.
   <a rel="help"
     href="https://docs.oracle.com/javase/8/docs/api/index.html?java/time/format/DateTimeFomatter.html"
     >Java DateTimeFormatter specification<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>,
   but which lacks the important guidelines about its use,
   with the result that formatString is often/usually improperly used.)
@@ -473,7 +473,7 @@ to match the column names in the data file.
   <a rel="help"
     href="https://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html"
     >Java/Joda time format<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>)
     for specifying the dataTime format:
     <br>If there is a col with numeric time values (e.g., Matlab times) and
@@ -492,7 +492,7 @@ to match the column names in the data file.
   <a rel="help"
     href="https://sbclter.msi.ucsb.edu/external/InformationManagement/eml_2018_erddap/"
          >https://sbclter.msi.ucsb.edu/external/InformationManagement/eml_2018_erddap/<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>
     dataTable #2.
 
@@ -503,7 +503,7 @@ to match the column names in the data file.
       <a rel="help"
         href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
         >TZ column<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>).
   
 <li><a class="selfLink" id="missingMissingValue" href="#missingMissingValue" rel="bookmark">Missing missing_value</a>
@@ -590,7 +590,7 @@ to match the column names in the data file.
   <br><a rel="help"
     href="https://sbclter.msi.ucsb.edu/external/InformationManagement/eml_2018_erddap/"
          >https://sbclter.msi.ucsb.edu/external/InformationManagement/eml_2018_erddap/<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>
   dataTable #3, see
   datafile=LTER_monthly_bottledata_registered_stations_20140429.txt

@@ -4,7 +4,7 @@
 <title>ERDDAP - Working with the datasets.xml File</title>
 <meta charset="UTF-8">
 <link rel="shortcut icon" href="https://coastwatch.pfeg.noaa.gov/erddap/images/favicon.ico">
-<link href="../images/erddap2.css" rel="stylesheet" type="text/css">
+<link href="/images/erddap2.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -14,7 +14,7 @@
     <td style="text-align:center; width:80px;"><a rel="bookmark"
       href="https://www.noaa.gov/"><img 
       title="National Oceanic and Atmospheric Administration" 
-      src="../images/noaab.png" alt="NOAA"
+      src="/images/noaab.png" alt="NOAA"
       style="vertical-align:middle;"></a></td> 
     <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
       <strong>ERDDAP</strong>
@@ -277,7 +277,7 @@ please fill out the form at https://<i>yourUrl</i>/erddap/dataProviderForm.html 
     <p>The impetus for this was NOAA's 2014 <a rel="help"
     href="https://www.glerl.noaa.gov/review2016/reviewer_docs/NOAA_PARR_Plan_v5.04.pdf"
     >Public Access to Research Results (PARR) directive<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This is a link to an external website."/></a>,
     which requires that all NOAA environmental data funded through taxpayer dollars 
     be made available via a data service (not just files) within 12 months of creation.
@@ -389,7 +389,7 @@ please fill out the form at https://<i>yourUrl</i>/erddap/dataProviderForm.html 
         whitespace characters at the beginning or end, non-ASCII characters),
         enter a 
         <a rel="help" href="https://www.json.org/json-en.html" >JSON-style string<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>
         (with special characters escaped with \ characters). 
         For example, to enter just a tab character, enter "\t" (with the surrounding double quotes,
@@ -429,12 +429,12 @@ please fill out the form at https://<i>yourUrl</i>/erddap/dataProviderForm.html 
           (See this <a rel="help"
           href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
           >regex documentation<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a> 
             and 
           <a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html"
           >regex tutorial<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>.)
           <li>Check that the user who is running the program (e.g., user=tomcat (?) for Tomcat/ERDDAP)
             has 'read' permission for those files. 
@@ -548,7 +548,7 @@ please fill out the form at https://<i>yourUrl</i>/erddap/dataProviderForm.html 
         <li>If a parameter contains a space or some special character, then encode the
           parameter as a 
           <a rel="help" href="https://www.json.org/json-en.html" >JSON-style string<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>, e.g., 
           <kbd>"my parameter with spaces and two\nlines"</kbd>.
         <li>If you want to specify an empty string as a parameter, use: <kbd>nothing</kbd>
@@ -729,7 +729,7 @@ please fill out the form at https://<i>yourUrl</i>/erddap/dataProviderForm.html 
             <a rel="help"
             href="https://knb.ecoinformatics.org/external//emlparser/docs/index.html"
             >Ecological Metadata Language<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
             XML file. 
         The "Batch" variant works on all of the EML files in a local or remote directory.  
@@ -745,7 +745,7 @@ please fill out the form at https://<i>yourUrl</i>/erddap/dataProviderForm.html 
             from the information in an  
             <a rel="help" href="https://inport.nmfs.noaa.gov/inport"
             >inport-xml<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
             file. 
         If you can get access to the source data file (the inport-xml file should
@@ -848,7 +848,7 @@ please fill out the form at https://<i>yourUrl</i>/erddap/dataProviderForm.html 
            in the
         <a rel="bookmark" 
 href="https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendations#Software_implementations">NOAA Data Access Procedural Directive<img 
-  src="../images/external.png" alt=" (external link)" 
+  src="/images/external.png" alt=" (external link)" 
   title="This is a link to an external website."/></a>, 
           unlike some other software being considered.
         <li>ERDDAP is a product of NMFS/NOAA, so using it within NMFS and NOAA 
@@ -881,14 +881,14 @@ href="https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendat
             <a rel="help"
             href="https://linux.die.net/man/1/ncdump"
             >ncdump<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>-like
           printout of an .nc, .ncml, or .hdf file.
           It actually uses the netcdf-java's 
             <a rel="help"
             href="https://docs.unidata.ucar.edu/netcdf-java/5.4/javadoc/ucar/nc2/write/Ncdump.html"
             >NCdump<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>,
           which is a more limited tool than the C version of NCdump.
           If you use this option, GenerateDatasetsXml will ask you to use one
@@ -960,13 +960,13 @@ href="https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendat
        <a rel="help"
             href="https://en.wikipedia.org/wiki/Lint_(software)"
             >Unix/Linux lint tool<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>,
        you can edit the existing rules or add new rules. 
        See <a rel="help"
             href="https://github.com/IrishMarineInstitute/erddap-lint"
             >ERDDAP-lint<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>
         for more information.  
 
@@ -1113,7 +1113,7 @@ Usually this works fine. Some exceptions are:
       <a rel="help"
       href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries"
       >CF Discrete Sampling Geometries (DSG)<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
       Contiguous Ragged Array data structures and so can be handled with ERDDAP's
       <a rel="help" href="#EDDTableFromNcCFFiles">EDDTableFromNcCFFiles</a>).
@@ -1148,7 +1148,7 @@ making a copy of a working dataset description in dataset.xml and then modifying
 <li><strong><a class="selfLink" id="encodingSpecialCharacters" href="#encodingSpecialCharacters" rel="bookmark">Encoding Special Characters</a></strong>
 <br>Since datasets.xml is an XML file, you MUST 
 <a rel="help" href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Predefined_entities_in_XML">&amp;-encode<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a> 
 "&amp;", "&lt;", and "&gt;" 
   in any content as "&amp;amp;", "&amp;lt;", and "&amp;gt;".
@@ -1160,11 +1160,11 @@ making a copy of a working dataset description in dataset.xml and then modifying
 <br>After you edit the dataset.xml file, it is a good idea 
 to verify that the result is 
 <a rel="help" href="https://www.w3schools.com/xml/xml_dtd.asp">well-formed XML<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a> 
 by pasting the XML text into an XML checker like
 <a rel="help" href="https://www.xmlvalidation.com/">xmlvalidation<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>.
 <br>&nbsp;
 
@@ -1378,7 +1378,7 @@ by pasting the XML text into an XML checker like
   This is similar to what people do when they convert satellite level 2 data into level 3 data.
 One such tool is 
 <a rel="help" href="https://nco.sourceforge.net/nco.html#Regridding">NCO<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
 which offers extension options for regridding data.
 
@@ -1418,7 +1418,7 @@ projection which, fortunately, is accepted by most mapping programs.
   This is similar to what people do when they convert satellite level 2 data into level 3 data.
 One such tool is 
 <a rel="help" href="https://nco.sourceforge.net/nco.html#Regridding">NCO<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
 which offers extension options for regridding data.
 
@@ -1477,7 +1477,7 @@ please email Chris.John at noaa.gov .)
   is a single, 2-byte (16-bit)
   <a rel="help" href="https://en.wikipedia.org/wiki/UTF-16"
       >Unicode UCS-2 character<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
    ranging from \u0000 (#0) through \uffff (#65535).
   <br>\uffff's definition is Not-a-Character, analogous to a double value of NaN.
@@ -1490,7 +1490,7 @@ please email Chris.John at noaa.gov .)
   is a sequence of 0 or more, 2-byte (16-bit)
   <a rel="help" href="https://en.wikipedia.org/wiki/UTF-16"
       >Unicode UCS-2 characters<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>.
   <br>ERDDAP uses/interprets a 0-length string as a missing value. ERDDAP does not support a true null string.
   <br>The theoretical maximum string length is 2147483647 characters, 
@@ -1654,7 +1654,7 @@ dataset to make those files accessible via ERDDAP, notably via ERDDAP's
 <p>All files made accessible via EDDTableFromFileNames and ERDDAP's "files" system 
 support
 <a rel="help" href="https://en.wikipedia.org/wiki/Byte_serving">byte&nbsp;range&nbsp;requests<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>.
 Normally, when a client (e.g., a browser) makes a request to a URL, it gets the 
 entire file as the response. 
@@ -1715,15 +1715,15 @@ to see a very large image or video scaled to full screen, instead of in a popup.
 
 <li><a class="selfLink" id="AwsS3Files" href="#AwsS3Files" rel="bookmark"><strong>Working with AWS S3 Files</strong></a>
 <br><a rel="help" href="https://aws.amazon.com">Amazon Web Service (AWS)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 is a seller of 
 <a rel="help" href="https://en.wikipedia.org/wiki/Cloud_computing">cloud computing<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 services.
 <a rel="help" href="https://aws.amazon.com/s3/">S3<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 is an object storage system offered by AWS.
 Instead of the hierarchical system of directories and files of a traditional file system
@@ -1744,19 +1744,19 @@ and other scientific data software are designed to work with
 files in a traditional file system which offers 
 <a rel="help" href="https://en.wikipedia.org/wiki/Block-level_storage"
   >block level<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 access to files (which permits reading chunks of a file),
 but S3 only offers 
 <a rel="help" href="https://en.wikipedia.org/wiki/Block-level_storage"
   >file level (object)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 access to files (which only permits reading the entire file).
 AWS offers an alternative to S3,
 <a rel="help" href="https://aws.amazon.com/ebs/"
   >Elastic Block Store (EBS)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>),
 which supports block level access to files 
 but it is more expensive than S3, so it is rarely used for bulk storage of large
@@ -1774,7 +1774,7 @@ The corresponding URl for that object is
 <pre><a rel="help" 
   href="https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc"
        >https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a></pre>
 AWS supports a little variation in how that URL is constructed, 
 but ERDDAP requires this one specific format:
@@ -1792,7 +1792,7 @@ the bucket and its contents public or private. If public, any file in the bucket
 may be downloaded by anyone using the URL for the file. Amazon has an
 <a rel="help" 
   href="https://aws.amazon.com/opendata/">Open Data<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 program which hosts public datasets (including data from NOAA, NASA, and USGS) for free
 and doesn't charge for anyone to download the files from those buckets.
@@ -1808,7 +1808,7 @@ buckets.
   See the AWS SDK for Java 2.x documentation: <a rel="help" 
     href="https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/setup.html#setup-credentials"
          >Set default credentials<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>.
    (The option to store the values as Java command line parameters in [tomcat]/bin/setenv.sh
    may be a good option.)
@@ -1849,12 +1849,12 @@ in a reasonably efficient way:
   Look/ask for help
   <br>(<a rel="help" href="https://aws.amazon.com/documentation/gettingstarted/"
     >AWS documentation<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>,
   websites like 
   <a rel="help" href="https://stackoverflow.com/"
     >Stack Overflow<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>,
   and the regular 
   <br><a rel="bookmark" href="#contact">ERDDAP support options</a>)
@@ -1941,7 +1941,7 @@ as objects in an S3 bucket, one approach to getting the dataset in ERDDAP is:
 <br>As part of NOAA's
 <a rel="help" href="https://www.noaa.gov/nodd/about"
   >Big Data Program<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>,
 NOAA has partnerships with five organizations, including AWS, 
 "to explore the potential benefits of storing copies of key observations and 
@@ -1951,7 +1951,7 @@ AWS includes the datasets it gets from NOAA as part of its program to offer
 public access to a large collection of 
 <a rel="help" href="https://registry.opendata.aws/"
   >Open Data on AWS S3<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 from any computer, whether it is 
 an Amazon compute instance (a rented computer) on the AWS network or your own PC on any network.
@@ -1978,7 +1978,7 @@ if you specify the <a rel="help" href="#cacheFromUrl">&lt;cacheFromUrl&gt;</a>
   <a rel="help" 
   href="https://docs.aws.amazon.com/general/latest/gr/rande.html"
   >AWS Service Endpoints<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
   where the bucket is actually located.
 <li>The prefix is optional. If present, it must end with '/'.
@@ -1988,13 +1988,13 @@ For example, <kbd>https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/</
 <a rel="help" 
   href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html"
   >Accessing a Bucket<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
  and 
 <a rel="help" 
   href="https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html"
   >this description of prefixes<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
 ERDDAP requires that you combine the bucket URL and the optional prefix into one URL
 in order to specify the &lt;cacheFromUrl&gt; (or &lt;fileDir&gt;) where the files are located.
@@ -2004,7 +2004,7 @@ of the AWS S3 directory in your browser, e.g.,
 <br><a rel="help" 
   href="https://noaa-goes17.s3.us-east-1.amazonaws.com"
        >https://noaa-goes17.s3.us-east-1.amazonaws.com<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>  
 If the bucket URL is correct and appropriate for ERDDAP,
 it will return an XML document which has (partial) listing of the contents of that bucket.
@@ -2050,14 +2050,14 @@ browse the directory hierarchy of the S3 bucket via ERDDAP's "files" system.
 <a rel="help" 
   href="https://docs.aws.amazon.com/sdk-for-java/index.html"
        >AWS SDK for Java<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
 to get bucket information from AWS,
 so you need to 
 <a rel="help" 
   href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/"
        >create and activate an AWS account<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
 That's a pretty big job, with lots of things to learn.
 <br>&nbsp;
@@ -2067,7 +2067,7 @@ That's a pretty big job, with lots of things to learn.
 <a rel="help" 
   href="https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/setup.html#setup-credentials"
        >Set up AWS Credentials and Region for Development<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 so ERDDAP (specifically, the AWS SDK for Java) will be able to find and use your AWS credentials.
 If ERDDAP can't find the credentials, you will see a
@@ -2091,7 +2091,7 @@ to make sure the file is read-only for user=tomcat.
 <br><a rel="help" 
   href="https://noaa-goes17.s3.us-east-1.amazonaws.com"
        >https://noaa-goes17.s3.us-east-1.amazonaws.com<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> ,
 and (for public buckets) test it in a browser to make sure it returns an XML document which has a partial 
 listing the contents of that bucket.
@@ -2130,7 +2130,7 @@ to create an
   for almost all of the 
   <a rel="help" href="https://registry.opendata.aws/"
   >AWS S3 Open Data buckets<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
 <br>[The few buckets that we didn't include 
   either have a large number of files in the root directory (more than can be downloaded in a reasonable amount of time),
@@ -2186,7 +2186,7 @@ to view the contents of a public bucket.
   <a rel="help" 
   href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/ncml_overview.html"
   >Unidata NcML documentation<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
   NcML is useful because you can do some things with it (for example, making different changes to 
   different files in a collection, including adding a dimension with a specific value to a file),
@@ -2256,7 +2256,7 @@ allows users to manipulate and analyze files interactively, or with expressive
 scripts that avoid some overhead of higher-level programming environments." 
 (from the
 <a rel="help" href="https://nco.sourceforge.net/">NCO<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 homepage).
 
@@ -2285,7 +2285,7 @@ that have different scale_factors and add_offset, or different time units.)
 
 <p>NCO is Free and Open Source Software which uses the 
 <a rel="help" href="https://www.gnu.org/licenses/gpl-3.0.html">GPL 3.0<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 license.
 
@@ -2298,7 +2298,7 @@ different from others (e.g., time units of
 you could use NCO's 
 <a rel="help"
 href="https://nco.sourceforge.net/nco.html#ncatted-netCDF-Attribute-Editor">ncatted<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
 to change the units in all of the files to be identical with 
 <br><kbd>nco/ncatted -a units,time,o,c,'seconds since 1970-01-01T00:00:00Z' *.nc</kbd>
@@ -2467,7 +2467,7 @@ currently recommend
     <br><kbd>&lt;att name="standard_name_vocabulary"&gt;CF Standard Name Table v65&lt;/att&gt;</kbd>
     <br>If the reference is to an older version of the 
     <a rel="help" href="https://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html">CF standard name table<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     it is probably a good idea to switch to the current version (65, as we write this),
     since new standard names are added to that table with subsequent versions,
@@ -2501,7 +2501,7 @@ currently recommend
 <br>(As of August 2019)
     We could easily be wrong, but we are not yet convinced that 
     <a rel="help" href="https://github.com/zarr-developers/zarr-python">Zarr<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>,
     or similar systems which break data files up into smaller chunks, are great
     solutions to the problem of ERDDAP reading data stored in cloud services like Amazon AWS S3. 
@@ -2571,7 +2571,7 @@ currently recommend
     This is a requirement of the
     <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
     >CF metadata standard<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     If any dimension's values aren't in sorted order, the dataset won't be loaded
     and ERDDAP will identify the first unsorted value in the log file,
@@ -2690,7 +2690,7 @@ currently recommend
         aggregates data from files with several variables with shared 
         dimensions served by a 
         <a rel="help" href="https://www.opendap.org/software/hyrax-data-server">Hyrax OPeNDAP server<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>.
       <li><a rel="help" href="#EDDTableFromInvalidCRAFiles">EDDTableFromInvalidCRAFiles</a> 
         aggregates data from NetCDF (v3 or v4) .nc files which use 
@@ -2704,7 +2704,7 @@ currently recommend
         <a rel="help"
           href="https://jsonlines.org/examples/"
           >JSON Lines CSV files<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>.
       <li><a rel="help" href="#EDDTableFromMultidimNcFiles">EDDTableFromMultidimNcFiles</a> 
         aggregates data from NetCDF (v3 or v4) .nc files with several variables 
@@ -2718,7 +2718,7 @@ currently recommend
         aggregates data from NetCDF (v3 or v4) .nc files which use one of the 
         file formats specified by the 
         <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries">CF Discrete Sampling Geometries (DSG)<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a> 
         conventions. 
         But for files using one of the multidimensional CF DSG variants, use
@@ -2740,7 +2740,7 @@ currently recommend
           <a rel="help" 
           href="https://www.unidata.ucar.edu/software/tds/"
           >THREDDS OPeNDAP server<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>.
       <li><a rel="help" href="#EDDTableFromWFSFiles">EDDTableFromWFSFiles</a> (DEPRECATED)
         makes a local copy of all of the data from an ArcGIS MapServer WFS server
@@ -2761,7 +2761,7 @@ currently recommend
 
 <p><a class="selfLink" id="EDDGridFromDap" href="#EDDGridFromDap" rel="bookmark"><strong>EDDGridFromDap</strong></a> handles grid variables from 
 <a rel="help" href="https://www.opendap.org/">DAP<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a> servers.
 <ul>
 <li>We strongly recommend using the
@@ -2772,7 +2772,7 @@ currently recommend
   at the source dataset's DDS and DAS files in your browser (by adding .das and .dds to the sourceUrl,
   for example, 
 <a href="https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds">https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>).
   <br>&nbsp;
 <li>EDDGridFromDap can get data from any multi-dimensional variable from a DAP data server.
@@ -2785,7 +2785,7 @@ currently recommend
    This is a requirement of the
    <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
     >CF metadata standard<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     If any dimension's values aren't in sorted order, the dataset won't be loaded
     and ERDDAP will identify the first unsorted value in the log file,
@@ -2941,7 +2941,7 @@ currently recommend
   two values are equal. But for floats and
   doubles, this brings up the horrible problem of floating point numbers 
   <a rel="help" href="https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/">not matching exactly<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
   (for example, 0.2 versus 0.199999999999996). 
   To (try to) deal with this, EDDGridFromTable
@@ -3110,7 +3110,7 @@ a remote ERDDAP server.
   <li>Unlike other types of datasets, when ERDDAP receives a request for data or 
     images from these datasets, ERDDAP
      <a rel="help" href="https://en.wikipedia.org/wiki/URL_redirection">redirects<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
      the request to the remote ERDDAP server. The result is:
      <ul>
@@ -3347,7 +3347,7 @@ allowing those would lead to inconsistencies:
 <p><a class="selfLink" id="EDDGridFromEtopo" href="#EDDGridFromEtopo" rel="bookmark"><strong>EDDGridFromEtopo</strong></a> just serves the 
 <a rel="help" href="https://www.ngdc.noaa.gov/mgg/global/global.html"
   >ETOPO1 Global 1-Minute Gridded Elevation Data Set<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a> 
   (Ice Surface, grid registered, binary, 2byte int: etopo1_ice_g_i2.zip) which is 
   distributed with ERDDAP.
@@ -3374,7 +3374,7 @@ Instead, use a subclass of EDDGridFromFiles to handle the specific file type:
       <a rel="help"
       href="https://www.cpc.ncep.noaa.gov/products/global_precip/html/README">MergeIR
       .gz<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> files.
 
    <li><a rel="help" href="#EDDGridFromAudioFiles">EDDGridFromAudioFiles</a> 
@@ -3382,14 +3382,14 @@ Instead, use a subclass of EDDGridFromFiles to handle the specific file type:
 
    <li><a rel="help" href="#EDDGridFromNcFiles">EDDGridFromNcFiles</a> handles data from gridded 
       <a rel="help" href="https://en.wikipedia.org/wiki/GRIB">GRIB .grb<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> files,
       <a rel="help" href="https://www.hdfgroup.org/">HDF (v4 or v5) .hdf<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> files,
       <a rel="help" href="#NcML">.ncml</a> files, and 
       <a rel="help" href="https://www.unidata.ucar.edu/software/netcdf/">NetCDF (v3 or v4) .nc<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> files.
       This may work with other file types (for example, BUFR), we just haven't tested it -- 
       please send us some sample files if you are interested.
@@ -3529,11 +3529,11 @@ The following information applies to all of the subclasses of EDDGridFromFiles.
       <a rel="help"
       href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
       >regular expression<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
       (<a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html"
       >tutorial<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>)
       which includes a capture group (in parentheses) which 
       describes how to extract the value from the filename or global attribute value.
@@ -3807,7 +3807,7 @@ The following information applies to all of the subclasses of EDDGridFromFiles.
    This is a requirement of the
    <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
     >CF metadata standard<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     If any dimension's values aren't in sorted order, the dataset won't be loaded
     and ERDDAP will identify the first unsorted value in the log file,
@@ -3848,7 +3848,7 @@ The following information applies to all of the subclasses of EDDGridFromFiles.
   if the server supports
   <a rel="help" href="https://en.wikipedia.org/wiki/Byte_serving"
     >Byte Serving<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
   via HTTP range requests (the HTTP mechanism for byte serving).
   This is possible because netcdf-java (which ERDDAP uses to read .nc files)
@@ -3941,7 +3941,7 @@ The following information applies to all of the subclasses of EDDGridFromFiles.
     <li>The dataset is reloaded as soon as possible whenever ERDDAP detects
       that you have added, removed, 
       <a rel="help" href="https://en.wikipedia.org/wiki/Touch_(Unix)">touch'd<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         (to change the file's lastModified time), or changed a datafile.
     <li>The dataset is reloaded as soon as possible if you use the 
@@ -4000,12 +4000,12 @@ The following information applies to all of the subclasses of EDDGridFromFiles.
           (See this <a rel="help"
           href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
           >regex documentation<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a> 
             and 
           <a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html"
           >regex tutorial<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>.)
   <li>Check that the user who is running the program (e.g., user=tomcat (?) for Tomcat/ERDDAP)
     has 'read' permission for those files. 
@@ -4043,10 +4043,10 @@ The following information applies to all of the subclasses of EDDGridFromFiles.
   &lt;fileNameRegex&gt;...&lt;/fileNameRegex&gt; &lt;-- 0 or 1. A 
     <a rel="help" href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
   >regular expression<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> (<a rel="help"
     href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html">tutorial<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>) describing valid data
     file names, for example, ".*\.nc" for all .nc files. --&gt;
   <a rel="help" href="#accessibleViaFiles">&lt;accessibleViaFiles&gt;</a>true|false(default)&lt;/accessibleViaFiles&gt; 
@@ -4137,7 +4137,7 @@ for general information on how this class works and how to use it.
   ERDDAP will always be the 
   <a rel="help" href="https://en.wikipedia.org/wiki/Pulse-code_modulation"
   >PCM-encoded <img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
   data values (i.e., simple digitized
   samples of the sound wave).  
@@ -4199,18 +4199,18 @@ for general information on how this class works and how to use it.
 <p><a class="selfLink" id="EDDGridFromMergeIRFiles" href="#EDDGridFromMergeIRFiles" rel="bookmark"><strong>EDDGridFromMergeIRFiles</strong></a> aggregates data 
   from local, <a rel="help"
   href="https://www.cpc.ncep.noaa.gov/products/global_precip/html/README">MergeIR<img
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
   files, which are from the 
   <a rel="bookmark"
   href="https://trmm.gsfc.nasa.gov">Tropical Rainfall Measuring Mission (TRMM)<img
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>,
   which is a joint mission between NASA and the Japan Aerospace Exploration Agency (JAXA).
   MergeIR files can be downloaded from   
   <a rel="bookmark"
   href="ftp://disc2.nascom.nasa.gov/data/s4pa/TRMM_ANCILLARY/MERG/">NASA<img
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>. 
   
 <p>EDDGridFromMergeIRFiles.java was written and contributed to the ERDDAP project by
@@ -4255,15 +4255,15 @@ for general information on how this class works and how to use it.
 <p><a class="selfLink" id="EDDGridFromNcFiles" href="#EDDGridFromNcFiles" rel="bookmark"
   ><strong>EDDGridFromNcFiles</strong></a> aggregates data from local, gridded, 
     <a rel="help" href="https://en.wikipedia.org/wiki/GRIB">GRIB .grb and .grb2<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> files,
     <a rel="help" href="https://www.hdfgroup.org/">HDF (v4 or v5) .hdf<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 files,
     <a rel="help" href="#NcML">.ncml</a> files, and 
     <a rel="help" href="https://www.unidata.ucar.edu/software/netcdf/">NetCDF (v3 or v4) .nc<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> files.
 This may work with other file types (for example, BUFR), we just haven't tested it -- please send us
 some sample files.
@@ -4683,7 +4683,7 @@ dimension and another child might have 365 values (for 2005) for the time dimens
    This is a requirement of the
    <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
     >CF metadata standard<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     If any dimension's values aren't in sorted order, the dataset won't be loaded
     and ERDDAP will identify the first unsorted value in the log file,
@@ -4742,9 +4742,9 @@ dimension and another child might have 365 values (for 2005) for the time dimens
     An example of a <a rel="help" 
     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
     >regular expression<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> (regex) (<a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html">tutorial<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>) is .*\.nc 
     recursive can be "true" or "false".  
     Only directory names which match the 
@@ -4755,18 +4755,18 @@ dimension and another child might have 365 values (for 2005) for the time dimens
     <a href="https://thredds1.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml"
       >https://thredds1.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/
       chla/catalog.xml<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
     An example of a hyrax catalogUrl is
     <a href="https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/1988/contents.html"
       >https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/
     flk/1988/contents.html<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
     An example of a dodsindex URL is 
     <a href="https://opendap.jpl.nasa.gov/opendap/GeodeticsGravity/tellus/L3/mascon/RL06/JPL/v02/CRI/netcdf/contents.html"
       >https://opendap.jpl.nasa.gov/opendap/GeodeticsGravity/tellus/L3/mascon/RL06/JPL/v02/CRI/netcdf/contents.html<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
     (Note the "OPeNDAP logo at the top of the page.)
     When these children are sorted by filename, they must be in 
@@ -4883,7 +4883,7 @@ of another EDDGrid's data and serves data from the local copy.
   Use that data as a starting point and EDDGridCopy will add data to it.
   (That is one way that 
   <a rel="help" href="https://aws.amazon.com/importexport/">Amazon's EC2 Cloud Service<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
     handles the problem, even though their system
   has lots of bandwidth.)
@@ -5037,13 +5037,13 @@ check the source dataset to see if there is additional data available.
 <!-- THIS IS INACTIVE. THERE ARE NO KNOWN VALID DATASETS. TESTING IS NO LONGER DONE.
 p><a class="selfLink" id="EDDTableFromBMDE" href="#EDDTableFromBMDE" rel="bookmark"><strong>EDDTableFromBMDE</strong></a> handles data from a
 <a rel="help" href="https://avianknowledge.net">Bird Monitoring Data Exchange (BMDE)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> server.
 <ul>
 <li>BMDE servers expect an XML request and return an XML response.
 <li>All BMDE servers return XML responses with the same variables, as specified in the 
 <a rel="help" href="WAS http://akn.ornith.cornell.edu/Schemas/bmde/BMDE-Bandingv1.38.08.xsd">BMDE schema<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
   The BMDE schema defines 515 data variables(!), but most BMDE servers only return data in a few of the variables.
   You should ask the BMDE administrator for a list of the data variables which are active for a given sourceCode.
@@ -5079,20 +5079,20 @@ p><a class="selfLink" id="EDDTableFromBMDE" href="#EDDTableFromBMDE" rel="bookma
 handles data from one 
 <a rel="help" 
     href="https://cassandra.apache.org/">Cassandra<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
 table.
 Cassandra is a NoSQL database.
 
 <!-- or <a rel="help" href="https://en.wikipedia.org/wiki/View_(database)">view<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>. -->
 <ul>
 <li>ERDDAP can work with Cassandra v2 and v3 with no changes or differences in setup.
   We have tested with 
   <a rel="help" 
     href="https://cassandra.apache.org/download/">Cassandra v2 and v3 from Apache<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>.
   It is likely that ERDDAP can also work with Cassandra downloaded from DataStax.
   <br>&nbsp;
@@ -5381,7 +5381,7 @@ deviceid,date
     Cassandra indexes only help with '=' constraints. 
     And they are only 
     <a rel="help" href="https://cassandra.apache.org/doc/latest/cql/indexes.html">recommended<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
     for columns that have far fewer distinct values than total values.
   <li>By default, Cassandra and ERDDAP treat column names in a case-insensitive way.
@@ -5555,7 +5555,7 @@ deviceid,date
   (See this 
   <a rel="help" href="https://datastax-oss.atlassian.net/browse/JAVA-236">bug
   report<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>.)
   To avoid making Cassandra mad, ERDDAP caches all PreparedStatements 
   so it can reuse them.
@@ -5625,7 +5625,7 @@ deviceid,date
   <li>In General -
     <br>The nature of CQL is that queries are 
     <a rel="help" href="https://en.wikipedia.org/wiki/Declarative_programming">declarative<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     They just specify what the user wants. 
     They don't include a specification or hints for how the query is to be handled
@@ -5655,7 +5655,7 @@ deviceid,date
   <li>Make <a rel="help"
     href="https://cassandra.apache.org/doc/latest/cql/indexes.html"
     >Indexes<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
     for Commonly Constrained Variables -- 
     <br>You can speed a few queries by creating indexes for Cassandra columns
@@ -5739,7 +5739,7 @@ deviceid,date
     (especially .nc files that use the 
     <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries"
     >CF Discrete Sampling Geometries (DSG)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
     Contiguous Ragged Array data structures and so can be handled with ERDDAP's
     <a rel="help" href="#EDDTableFromNcCFFiles">EDDTableFromNcCFFiles</a>).
@@ -5798,7 +5798,7 @@ EDDTableFromCassandra dataset is:</a>
 <p><a class="selfLink" id="EDDTableFromDapSequence" href="#EDDTableFromDapSequence" rel="bookmark"><strong>EDDTableFromDapSequence</strong></a> handles variables within 
 1- and 2-level sequences from 
 <a rel="help" href="https://www.opendap.org/">DAP<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
     servers such as DAPPER (was at https://www.pmel.noaa.gov/epic/software/dapper/, now discontinued).
 <ul>
@@ -5857,7 +5857,7 @@ EDDTableFromCassandra dataset is:</a>
 <p><a class="selfLink" id="EDDTableFromDatabase" href="#EDDTableFromDatabase" rel="bookmark"><strong>EDDTableFromDatabase</strong></a> 
 handles data from one relational database table or 
 <a rel="help" href="https://en.wikipedia.org/wiki/View_(database)">view<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
 <ul>
 <li><a class="selfLink" id="databaseOneTable" href="#databaseOneTable" rel="bookmark">One Table</a> (or <a class="selfLink" id="databaseViews" href="#databaseViews" rel="bookmark">View</a>) 
@@ -5865,11 +5865,11 @@ handles data from one relational database table or
   (and thus needs a JOIN to extract data from both tables at once), 
   you need to make one 
       <a rel="help" href="https://en.wikipedia.org/wiki/Denormalization">denormalized<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
     (already joined) table or
       <a rel="help" href="https://en.wikipedia.org/wiki/View_(SQL)">view<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
     with all of the data that you want to make available as one dataset in ERDDAP.
 
@@ -5949,7 +5949,7 @@ handles data from one relational database table or
       ERDDAP+files is a read-only system and doesn't have to deal with making changes
       while providing
       <a rel="help" href="https://en.wikipedia.org/wiki/ACID">ACID<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
       (Atomicity, Consistency, Isolation, Durability).)
       Also, you probably won't need a separate server since we can store the data
@@ -6047,29 +6047,29 @@ handles data from one relational database table or
   <li>For MariaDB, try
     <a rel="help" href="https://mariadb.com/kb/en/about-the-mariadb-java-client/"
       >https://mariadb.com/kb/en/about-the-mariadb-java-client/<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
     <br>The <kbd>&lt;driverName&gt;</kbd> to use in datasets.xml (see below) is probably <kbd>org.mariadb.jdbc.Driver</kbd> .
   <li>For MySQL and Amazon RDS, try 
     <a rel="help" href="https://dev.mysql.com/downloads/connector/j/"
       >https://dev.mysql.com/downloads/connector/j/<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>        
     <br>The <kbd>&lt;driverName&gt;</kbd> to use in datasets.xml (see below) is probably <kbd>com.mysql.jdbc.Driver</kbd> .
   <li>For Oracle, try 
     <a rel="help" href="https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html"
       >https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     <br>The <kbd>&lt;driverName&gt;</kbd> to use in datasets.xml (see below) is probably <kbd>oracle.jdbc.driver.OracleDriver</kbd> .
   <li>For Postgresql, we got the JDBC 4 driver from 
     <a rel="help" href="https://mvnrepository.com/artifact/org.postgresql/postgresql">https://jdbc.postgresql.org<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
     <br>The <kbd>&lt;driverName&gt;</kbd> to use in datasets.xml (see below) is probably <kbd>org.postgresql.Driver</kbd> .
   <li>For SQL Server, you can get the JTDS JDBC driver from 
     <a rel="help" href="https://jtds.sourceforge.net">https://jtds.sourceforge.net<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     <br>The <kbd>&lt;driverName&gt;</kbd> to use in datasets.xml (see below) is probably <kbd>net.sourceforge.jtds.jdbc.Driver</kbd> .
   </ul>
@@ -6122,13 +6122,13 @@ handles data from one relational database table or
   <ul>
   <li>For MariaDB, you need to run the database with 
     <a rel="help" href="https://mariadb.com/kb/en/mysql-command-line-client/">--sql-mode=ANSI_QUOTES<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> . 
   <li>For MySQL and Amazon RDS, you need to run the database with
     <a rel="help"
     href="https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_ansi_quotes"
     >--sql-mode=ANSI_QUOTES<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> .
   <li>Oracle supports ANSI-SQL-standard double quotes 
     <a rel="help"
@@ -6291,7 +6291,7 @@ handles data from one relational database table or
   <li>In General -
     <br>The nature of SQL is that queries are 
     <a rel="help" href="https://en.wikipedia.org/wiki/Declarative_programming">declarative<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     They just specify what the user wants. 
     They don't include a specification or hints for how the query is to be handled or optimized.
@@ -6338,20 +6338,20 @@ handles data from one relational database table or
   <li>Vacuum the Table -
     <br>MySQL and Amazon RDS will respond much faster if you use
     <a rel="help" href="https://dev.mysql.com/doc/refman/5.7/en/optimize-table.html">OPTIMIZE TABLE<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     <br>MariaDB will respond much faster if you use
     <a rel="help" href="https://mariadb.com/kb/en/optimize-table/">OPTIMIZE TABLE<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     <br>PostgreSQL will respond much faster if you 
     <a rel="help" href="https://www.postgresql.org/docs/8.3/static/sql-vacuum.html">VACUUM<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> the table.
     <br>Oracle doesn't have or need an analogous command.
 
   <li>Make <a rel="help" href="https://en.wikipedia.org/wiki/Database_index">Indexes<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
     for Commonly Constrained Variables -- 
     <br>You can speed up many/most queries by creating indexes in the database for the variables 
@@ -6378,17 +6378,17 @@ handles data from one relational database table or
       <br>General information about using a DataSource is at
         <a rel="help" href="https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html"
              >https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>.
       <br>See 
         <a rel="help"
         href="https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources">Tomcat
         DataSource information<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a> and 
         <a rel="help"
         href="https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html">Tomcat DataSource examples<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
         or search the web for examples of using DataSources with other application servers.
 
@@ -6404,7 +6404,7 @@ handles data from one relational database table or
     (especially .nc files that use the 
     <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries"
     >CF Discrete Sampling Geometries (DSG)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
     Contiguous Ragged Array data structures and so can be handled with ERDDAP's
     <a rel="help" href="#EDDTableFromNcCFFiles">EDDTableFromNcCFFiles</a>).
@@ -6617,12 +6617,12 @@ subclasses, this dataset type does not serve data from within the files.
       <li>Unaggregated datasets in Hyrax, e.g., 
       <br><a rel="help" href="https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/"
                              >https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>
       <li>Most Apache-like directory listings, e.g., 
       <br><a rel="help" href="https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/"
                              >https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>
       </ul>
 
@@ -6663,12 +6663,12 @@ subclasses, this dataset type does not serve data from within the files.
           (See this <a rel="help"
           href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
           >regex documentation<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a> 
             and 
           <a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html"
           >regex tutorial<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>.)
     <li>&lt;fileRegex&gt; -- Only the filenames where the whole filename
       (not including the directory name) match the &lt;fileRegex&gt;
@@ -6676,12 +6676,12 @@ subclasses, this dataset type does not serve data from within the files.
           (See this <a rel="help"
           href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
           >regex documentation<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a> 
             and 
           <a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html"
           >regex tutorial<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>.)
       <br>&nbsp;
     </ul>  
@@ -6710,10 +6710,10 @@ subclasses, this dataset type does not serve data from within the files.
     <li>extractRegex -- This is a <a rel="help" 
     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
     >regular expression<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
       (<a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html">tutorial<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>).  
         The entire regex must match the entire filename 
         (not including the directory name).
@@ -6790,7 +6790,7 @@ subclasses, this dataset type does not serve data from within the files.
     <a rel="help" 
       href="https://noaa-goes17.s3.us-east-1.amazonaws.com"
            >https://noaa-goes17.s3.us-east-1.amazonaws.com<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a> ,
     and test it in a browser to make sure it returns an XML document which has a partial 
     listing the contents of that bucket.
@@ -6837,7 +6837,7 @@ subclasses, this dataset type does not serve data from within the files.
     For details, see the <a rel="help" 
       href="https://www.computerhope.com/unix/usplit.htm"
            ><kbd>split</kbd> documentation<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>.
     <br>&nbsp;
        
@@ -6937,7 +6937,7 @@ Instead, use a subclass of EDDTableFromFiles to handle the specific file type:
     aggregates data with several variables, each with shared dimensions
     (for example, time, altitude (or depth), latitude, longitude), and served by a 
       <a rel="help" href="https://www.opendap.org/software/hyrax-data-server">Hyrax OPeNDAP server<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
   <li><a rel="help" href="#EDDTableFromInvalidCRAFiles">EDDTableFromInvalidCRAFiles</a> 
         aggregates data from NetCDF (v3 or v4) .nc files which use 
@@ -6951,7 +6951,7 @@ Instead, use a subclass of EDDTableFromFiles to handle the specific file type:
         <a rel="help"
           href="https://jsonlines.org/examples/"
           >JSON Lines CSV files<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>.
   <li><a rel="help" href="#EDDTableFromMultidimNcFiles">EDDTableFromMultidimNcFiles</a> 
     aggregates data from NetCDF (v3 or v4) .nc 
@@ -6971,7 +6971,7 @@ Instead, use a subclass of EDDTableFromFiles to handle the specific file type:
     files which use one of the file formats specified by the 
     <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries"
     >CF Discrete Sampling Geometries (DSG)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
     conventions.
     But for files using one of the multidimensional CF DSG variants, use
@@ -6988,7 +6988,7 @@ Instead, use a subclass of EDDTableFromFiles to handle the specific file type:
     <a rel="help" 
     href="https://www.unidata.ucar.edu/software/tds/"
     >THREDDS OPeNDAP server<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
   <li><a rel="help" href="#EDDTableFromWFSFiles">EDDTableFromWFSFiles</a> (DEPRECATED)
     makes a local copy of all of the data from an ArcGIS MapServer WFS server
@@ -7001,7 +7001,7 @@ we recommend converting the files to be NetCDF v3 .nc files
 (and especially .nc files with the  
 <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries"
 >CF Discrete Sampling Geometries (DSG)<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a> 
 Contiguous Ragged Array data structure -- 
 ERDDAP can extract data from them very quickly). 
@@ -7111,7 +7111,7 @@ The following information applies to all of the subclasses of EDDTableFromFiles.
     <li>The dataset is reloaded as soon as possible whenever ERDDAP detects that you have added,
        removed, 
         <a rel="help" href="https://en.wikipedia.org/wiki/Touch_(Unix)">touch'd<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         (to change the file's lastModified time), or changed a datafile.
     <li>The dataset is reloaded as soon as possible if you use the 
@@ -7204,7 +7204,7 @@ The following information applies to all of the subclasses of EDDTableFromFiles.
   if the server supports
   <a href="https://en.wikipedia.org/wiki/Byte_serving"
     >Byte Serving<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
   via HTTP range requests (the HTTP mechanism for byte serving).
   This is possible because netcdf-java (which ERDDAP uses to read .nc files)
@@ -7229,17 +7229,17 @@ The following information applies to all of the subclasses of EDDTableFromFiles.
       <li>Unaggregated datasets in Hyrax, e.g., 
       <br><a rel="help" href="https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/"
                              >https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>
       <li>Most Apache-like directory listings, e.g., 
       <br><a rel="help" href="https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/"
                              >https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>
       <li>S3 buckets, e.g, 
       <br><a rel="help" href="https://noaa-goes17.s3.us-east-1.amazonaws.com/"
                              >https://noaa-goes17.s3.us-east-1.amazonaws.com/<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a> 
       <br>However, this may require an AWS account and more setup. 
         <br>See <a rel="help" href="#AwsS3Files">working with S3 Buckets in ERDDAP</a>.
@@ -7314,12 +7314,12 @@ The following information applies to all of the subclasses of EDDTableFromFiles.
     <li>The &lt;cacheSizeGB&gt; tag specifies the size of the local cache.
       You probably only need to use this when working with cloud storage systems like 
       <a href="https://aws.amazon.com/s3/">Amazon S3<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
       which is a commonly used storage system that is part of 
       <a href="https://aws.amazon.com/"
       >Amazon Web Services (AWS)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>. 
       The default is -1.
       <ul>
@@ -7431,12 +7431,12 @@ The following information applies to all of the subclasses of EDDTableFromFiles.
         <br>(See this <a rel="help"
           href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
           >regex documentation<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a> 
             and 
           <a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html"
           >regex tutorial<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>.)
         <br>If you need help creating &lt;cachePartialPathRegex&gt;, please 
           email the &lt;cacheFromUrl&gt; to Chris.John at noaa.gov .
@@ -7537,7 +7537,7 @@ The following information applies to all of the subclasses of EDDTableFromFiles.
     Requests to ERDDAP for .ncCF files create a NetCDF v3 .nc file that uses the 
     <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries"
     >CF Discrete Sampling Geometries (DSG)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
     Contiguous Ragged Array data structures).
 
@@ -7603,10 +7603,10 @@ and you only need to modify one, small, new file to add the next month's worth o
       <a rel="help" 
       href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
       >regular expression<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
       (<a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html">tutorial<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>) 
       used to identify text to be removed
     from the start of the filename. 
@@ -7739,18 +7739,18 @@ and you only need to modify one, small, new file to add the next month's worth o
           (See this <a rel="help"
           href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
           >regex documentation<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a> 
             and 
           <a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html"
           >regex tutorial<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>.)
   The regex may be specified as a string with or without surrounding quotes.
   If the regex is specified as a string with surrounding quotes,
   the string must be 
   <a rel="help" href="https://www.json.org/json-en.html" >JSON-style string<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>
   (with special characters escaped with \ characters).
   The capture group number is usually 1 (the first capture group), but may be any number.
@@ -7774,18 +7774,18 @@ and you only need to modify one, small, new file to add the next month's worth o
           (See this <a rel="help"
           href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
           >regex documentation<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a> 
             and 
           <a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html"
           >regex tutorial<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>.)
   The regex may be specified as a string with or without surrounding quotes.
   If the regex is specified as a string with surrounding quotes,
   the string must be a
   <a rel="help" href="https://www.json.org/json-en.html" >JSON-style string<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>
   (with special characters escaped with \ characters).
   The capture group number is usually 1 (the first capture group), but may be any number.
@@ -7808,12 +7808,12 @@ and you only need to modify one, small, new file to add the next month's worth o
           (See this <a rel="help"
           href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
           >regex documentation<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a> 
             and 
           <a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html"
           >regex tutorial<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>.)
   <li>Check that the user who is running the program (e.g., user=tomcat (?) for Tomcat/ERDDAP)
     has 'read' permission for those files. 
@@ -8110,10 +8110,10 @@ for example, "#" at the start of the file.
     match the pathRegex (default=".*") will be accepted. --&gt;
   &lt;fileNameRegex&gt;...&lt;/fileNameRegex&gt; &lt;-- 0 or 1. A <a rel="help" href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
   >regular expression<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
     (<a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html">tutorial<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>) describing valid data file names, for example, 
         ".*\.nc" for all .nc files. --&gt;
   <a rel="help" href="#accessibleViaFiles">&lt;accessibleViaFiles&gt;</a>true|false(default)&lt;/accessibleViaFiles&gt; 
@@ -8277,7 +8277,7 @@ tags in the chunk of XML for this dataset:
   makes EDDTable datasets from the ASCII text data services offered by NOAA's
   <a rel="bookmark" href="https://oceanservice.noaa.gov/"
     >National&nbsp;Ocean&nbsp;Service&nbsp;(NOS)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
   For information on how this class works and how to use it, see 
   this class's superclass 
@@ -8295,7 +8295,7 @@ tags in the chunk of XML for this dataset:
 <!-- p><a class="selfLink" id="EDDTableFromMWFS" href="#EDDTableFromMWFS" rel="bookmark"><strong>EDDTableFromMWFS</strong></a> handles data from a 
 <a rel="help" href="
 WAS    https://csc-s-ial-p.csc.noaa.gov/DTL/DTLProjects/microwfs/microWFS.html">microWFS<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> source.
 <ul>
 <li>This won't work for other WFS servers.
@@ -8397,7 +8397,7 @@ for the response. This lets users search for datasets of interest in very powerf
   in NetCDF v3 .nc files
   (best: .nc files with the 
   <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries">CF Discrete Sampling Geometries (DSG) Contiguous Ragged Array format<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>)
   and using <a href="#EDDTableFromMultidimNcFiles">EDDTableFromMultidimNcFiles</a> 
         (or <a href="#EDDTableFromNcCFFiles">EDDTableFromNcCFFiles</a>) 
@@ -8511,7 +8511,7 @@ unrealistic expectations or get yourself into trouble that is hard to fix.
   <li><a href="#HttpGetVersioning" rel="help">Versioning</a> / 
     <a rel="help" href="https://en.wikipedia.org/wiki/Reproducibility"
     >Reproducible Science<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a> 
     / DOIs -- 
     <br>Situations where you need to be able to make changes to the data
@@ -8520,7 +8520,7 @@ unrealistic expectations or get yourself into trouble that is hard to fix.
     and (upon request) be able to see the original data from before the change was made.  
     Thus, these datasets are eligible for 
     <a rel="bookmark" href="https://en.wikipedia.org/wiki/Digital_object_identifier"
-        >DOIs<img src="../images/external.png" alt=" (external link)" 
+        >DOIs<img src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>. 
     because they meet the DOI requirement
     that the dataset is unchanging, except by aggregation. In general,
@@ -8546,7 +8546,7 @@ URLs that are sent to the EDDTableFromHttpGet dataset
 And in all cases, make sure that the data files created by your EDDTableFromHttpGet 
 dataset are routinely backed up to external data storage devices. (Note that 
 <a rel="help" href="https://en.wikipedia.org/wiki/Rsync">rsync<img 
-  src="../images/external.png" alt=" (external link)" 
+  src="/images/external.png" alt=" (external link)" 
   title="This link to an external website does not constitute an endorsement."></a>.
 can back up the data files created by EDDTableFromHttpGet very efficiently.)
   <br>&nbsp;
@@ -8610,7 +8610,7 @@ which can insert (or change) or delete data in the dataset:
        key=value pairs, separated by '&amp;'.  
        The values must be 
         <a rel="help" href="https://en.wikipedia.org/wiki/Percent-encoding">percent encoded<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
         Thus, you need to encode special characters into the form %HH, 
         where HH is the 2 digit hexadecimal value of the character.
@@ -8696,7 +8696,7 @@ each of which is a table stored in a
 <a rel="help"
         href="https://jsonlines.org/examples/"
         >JSON Lines CSV file<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>. 
 When a user makes a request for data, ERDDAP quickly reads the relevant log files, 
 applies the changes to the dataset in the order they were made, and then 
@@ -8744,7 +8744,7 @@ the time when the change was made to the dataset.
 <li><a class="selfLink" id="HttpGetPost" href="#HttpGetPost" rel="bookmark"
 >"What about HTTP POST?!"</a>
 <br>HTTP <a rel="help" href="https://en.wikipedia.org/wiki/POST_(HTTP)">POST<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>
 is the better alternative (compared to HTTP GET) for sending information from a client to an HTTP server.
 If you can, or if you really want to improve security, use POST instead of GET to 
@@ -8771,7 +8771,7 @@ For example, here are the recommended httpGetRequiredVariables for each of the
 <a rel="help"
   href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries"
   >CF Discrete Sampling Geometries (DSG)<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>
     (Of course, the ID names may be different in your dataset.):
   <ul>
@@ -9064,7 +9064,7 @@ data to the new dataset.
 dataset are 
 <a rel="help" href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete"
     >CREATE, READ, UPDATE, DELETE (CRUD)<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>.
 SQL, the language for working with relational databases, has the equivalent in
 INSERT, SELECT, UPDATE, and DELETE.
@@ -9161,7 +9161,7 @@ Thus, EDDTableFromHttpGet supports all of the fundamental commands for working w
       <a rel="help"
         href="https://jsonlines.org/examples/"
         >JSON Lines CSV files<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>,
         to store the data.
     <li>Another huge advantage to JSON Lines CSV is that if a file ever does become 
@@ -9224,7 +9224,7 @@ going to great effort or expense.
 <p>[Background: We didn't think this up.
 <a rel="help" href="https://en.wikipedia.org/wiki/Reliability_(computer_networking)"
     >This is how computer networks achieve reliability.<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>
 Computer networks are inherently unreliable. So when you transfer a file from
 one computer to another, the sending software knows/expects that some packets may be lost.
@@ -9239,7 +9239,7 @@ network.]
 <a rel="help"
         href="https://jsonlines.org/examples/"
         >JSON Lines CSV files<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>. 
 for storing the data. The reasons are:
   <ul>
@@ -9314,7 +9314,7 @@ which author made which changes, and when they made them.
 <p>This versioning system enables 
 <a rel="help" href="https://en.wikipedia.org/wiki/Reproducibility"
     >Reproducible Science<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>
 because anyone, at any time, can request data from the version of the dataset 
 at any point in time. 
@@ -9351,7 +9351,7 @@ Simple file systems don't offer this. Relational databases don't. Cassandra does
 <li><a class="selfLink" id="HttpGetPut" href="#HttpGetPut" rel="bookmark"
 >"What about HTTPS PUT and DELETE?!"</a>
 <br><a rel="help" href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Hypertext Transfer Protocol (HTTP)<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>
 is the basis of the World Wide Web and the reason that web page URLs begin with "http://" or "https://".
 HTTPS is HTTP with an additional security layer.
@@ -9360,7 +9360,7 @@ Every day, browsers, scripts and computer programs make billions of HTTP(S)
 HTTP(S) also includes other 
 <a rel="help" href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods"
 >verbs<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>,
 notably PUT (to push data to the server) and DELETE
 (to DELETE data from the server). Yes, PUT and DELETE are the proper way to 
@@ -9390,7 +9390,7 @@ cumbersome approach given the way the tools have evolved.
 to add data to a dataset) is from UCAR's (NCAR's?)
 <a rel="help" href="https://github.com/earthcubeprojects-chords"
 >Cloud-Hosted Real-time Data Services (CHORDS)<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a> project.
 The format for the parameters in the request (repeated <i>name=value</i>, separated by &amp;'s)
 is the same standard format that is used by HTML forms on web pages.
@@ -9416,7 +9416,7 @@ Cloud-Hosted Real-time Data Services for the Geosciences (CHORDS) software.
 UCAR/NCAR -- Earth Observing Laboratory. 
 <a rel="help" href="https://doi.org/10.5065/d6v1236q"
                    >https://doi.org/10.5065/d6v1236q<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>
 
 <br>&nbsp;
@@ -9428,7 +9428,7 @@ UCAR/NCAR -- Earth Observing Laboratory.
   aggregates data files with several variables, each with
   one or more shared dimensions (for example, time, altitude (or depth), latitude, longitude), and served by a 
   <a rel="help" href="https://www.opendap.org/software/hyrax-data-server">Hyrax OPeNDAP server<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
 <ul>
 <li>This dataset type is <strong>DEPRECATED</strong>. 
@@ -9517,7 +9517,7 @@ on how this class works and how to use it.
   <a rel="help"
         href="https://jsonlines.org/examples/"
         >JSON Lines CSV files<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
   See this class' superclass, <a rel="help" href="#EDDTableFromFiles">EDDTableFromFiles</a>, 
   for information on how this class works and how to use it.
@@ -9612,7 +9612,7 @@ on how this class works and how to use it.
     specified for 
     <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#_incomplete_multidimensional_array_representation"
     >CF Discrete Sampling Geometries (DSG) Incomplete Multidimensional Array files<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
     <br>&nbsp;
   </ul>
@@ -9717,7 +9717,7 @@ variables:
 <ul>
 <li>If the .nc files use one of the  
   <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries">CF Discrete Sampling Geometries (DSG)<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
   file formats, try using 
     <a rel="help" href="#EDDTableFromNcFiles">EDDTableFromNcCFFiles</a> before trying this.
@@ -9819,7 +9819,7 @@ variables:
   files which use one of the file formats specified by the 
   <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries"
     >CF Discrete Sampling Geometries (DSG)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
   conventions.
   See this class' superclass, <a rel="help" href="#EDDTableFromFiles">EDDTableFromFiles</a>, 
@@ -9881,7 +9881,7 @@ variables:
 
 <p><a class="selfLink" id="EDDTableFromNOS" href="#EDDTableFromNOS" rel="bookmark"><strong>EDDTableFromNOS</strong></a> (DEPRECATED) handles data from a NOAA 
 <a rel="help" href="https://opendap.co-ops.nos.noaa.gov/axis/">NOS<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> source,
   which uses
   <a rel="help" href="https://www.w3schools.com/xml/xml_soap.asp">SOAP+XML</a>  
@@ -9945,7 +9945,7 @@ It is possible that there are no more active servers which use this now out-of-d
 <p><a class="selfLink" id="EDDTableFromSOS" href="#EDDTableFromSOS" rel="bookmark"><strong>EDDTableFromSOS</strong></a> handles data from a
 Sensor Observation Service
 (SWE/<a rel="help" href="https://www.ogc.org/standards/sos">SOS<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>) server.
 <ul>
 <li>This dataset type aggregates data from a group of stations which are all served by one SOS server. 
@@ -9974,7 +9974,7 @@ Sensor Observation Service
     <ul>
     <li>SWE (Sensor Web Enablement) and SOS (Sensor Observation Service) are
       <a rel="help" href="https://www.ogc.org/standards">OpenGIS&reg; standards<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
       That website has the standards documents.
     <li>The OGC Web Services Common Specification ver 1.1.0 (OGC 06-121r3) covers construction of
@@ -10010,11 +10010,11 @@ Sensor Observation Service
   <br>to the dataset's global attributes when the dataset is created.
 <li>SOS servers usually express <a rel="help" href="#units">units</a> with the 
       <a rel="help" href="https://unitsofmeasure.org/ucum.html">UCUM<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> system.
   Most ERDDAP servers express units with the 
     <a rel="help" href="https://www.unidata.ucar.edu/software/udunits/">UDUNITS<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> system.
   If you need to convert between the two systems, you can use
   <a rel="help" href="https://coastwatch.pfeg.noaa.gov/erddap/convert/units.html">ERDDAP's web service to convert UCUM units to/from UDUNITS</a>.
@@ -10051,7 +10051,7 @@ Sensor Observation Service
     &lt;!-- timeSourceFormat MUST be either
     * For numeric data: a <a rel="help"
         href="https://www.unidata.ucar.edu/software/udunits/">UDUnits<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."
         /></a>-compatible string (with the format 
       "<i>units</i> since <i>baseTime</i>") describing how to interpret
@@ -10068,9 +10068,9 @@ Sensor Observation Service
     which match this <a rel="help" 
     href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
     >regular expression<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> (<a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html">tutorial<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>) will be included 
     in the dataset (".+" will catch all station names). --&gt;
   &lt;requestObservedPropertiesSeparately&gt;true|false(default)
@@ -10095,7 +10095,7 @@ Sensor Observation Service
   <a rel="help" 
   href="https://www.unidata.ucar.edu/software/tds/"
   >THREDDS OPeNDAP server<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
 <ul>
 <li>This dataset type is <strong>DEPRECATED</strong>. 
@@ -10518,7 +10518,7 @@ Here are detailed descriptions of common tags and attributes.
   is a rarely used OPTIONAL tag within an <kbd>&lt;erddapDatasets&gt;</kbd> tag in datasets.xml to specify
   a comma-separated list of common 
   <a rel="help" href="https://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html">CF standard names<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>.
   E.g.,
   <br><kbd>&lt;commonStandardNames&gt;air_pressure, ..., wind_to_direction&lt;/commonStandardNames&gt;</kbd>
@@ -10896,11 +10896,11 @@ rel="bookmark"><kbd><strong>&lt;convertToPublicSourceUrl&gt;</strong></kbd></a>
   <ul>
   <li>This can be used to fend off a 
     <a rel="help" href="https://en.wikipedia.org/wiki/Denial_of_service">Denial of Service attack<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>, 
     an overly zealous 
     <a rel="help" href="https://en.wikipedia.org/wiki/Internet_bot">web robot<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>,
     or any other type of troublesome user.
   <li><a class="selfLink" id="troublesomeUser" href="#troublesomeUser" rel="bookmark">Troublesome User</a> -- 
@@ -10993,7 +10993,7 @@ rel="bookmark"><kbd><strong>&lt;convertToPublicSourceUrl&gt;</strong></kbd></a>
   <li>If you want to figure out what domain/institution is related to a numeric IP address, 
      you can use a free, reverse DNS web service like 
     <a rel="help" href="https://network-tools.com/">https://network-tools.com/<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
   <li>There may be times when it makes sense to block certain users at a higher level,
     for example, malicious users.
@@ -11001,7 +11001,7 @@ rel="bookmark"><kbd><strong>&lt;convertToPublicSourceUrl&gt;</strong></kbd></a>
     On Linux, one such method is to use <a rel="help"
     href="https://www.linode.com/docs/guides/control-network-traffic-with-iptables/"
     >iptables<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     For example, you can add a rule that will block everything coming from 198.51.100.0
     with the command
@@ -11177,7 +11177,7 @@ rel="bookmark"><kbd><strong>&lt;convertToPublicSourceUrl&gt;</strong></kbd></a>
       <kbd>&lt;user&gt;</kbd> tags in datasets.xml.  In order of increasing security, the options are: 
       <ul>
       <li><a rel="help" href="https://en.wikipedia.org/wiki/MD5">MD5<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
       (Don't use this!) -- for the password attribute, specify the MD5 hash digest
         of the user's password.
@@ -11185,11 +11185,11 @@ rel="bookmark"><kbd><strong>&lt;convertToPublicSourceUrl&gt;</strong></kbd></a>
         MD5 hash digest of <i>username</i>:ERDDAP:<i>password</i> .
         The username and "ERDDAP" are used to 
           <a rel="help" href="https://en.wikipedia.org/wiki/Salt_(cryptography)">salt<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         the hash value, making it more difficult to decode. 
       <li><a rel="help" href="https://en.wikipedia.org/wiki/SHA-2">SHA256<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
         (not recommended) -- for the password attribute, specify the SHA-256 hash digest
         of the user's password.
@@ -11202,7 +11202,7 @@ rel="bookmark"><kbd><strong>&lt;convertToPublicSourceUrl&gt;</strong></kbd></a>
       </ul>
     <li>On Windows, you can generate MD5 password digest values by downloading an MD5 program 
       (such as <a rel="help" href="https://www.fourmilab.ch/md5/">MD5<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>)
         and using (for example): 
       <br> <kbd>md5 -djsmith:ERDDAP:<i>actualPassword</i></kbd>
@@ -11250,12 +11250,12 @@ rel="bookmark"><kbd><strong>&lt;convertToPublicSourceUrl&gt;</strong></kbd></a>
    See this <a rel="help"
           href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html"
           >regex documentation<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a> 
             and 
           <a rel="help" href="https://www.vogella.com/tutorials/JavaRegularExpressions/article.html"
           >regex tutorial<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>.
   In particular, you need to know about capture groups (something inside parentheses),
   and the "or" symbol "|".
@@ -11324,7 +11324,7 @@ is a REQUIRED attribute within a
       only differ in upper/lowercase letters.  It will cause problems
       on Windows computers (yours and/or a user's computer).
     <li>Best practices: We recommend using <a rel="help" href="https://en.wikipedia.org/wiki/CamelCase">camelCase<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
     <li>Best practices: We recommend that the first part be an acronym or abbreviation of the
       source institution's name and the second part be an acronym or abbreviation of the 
@@ -11750,15 +11750,15 @@ while processing each request.
                 because it can deliver more data, faster, when requested. Examples of
                 parallel file systems include 
                 <a rel="help" href="https://en.wikipedia.org/wiki/Non-RAID_drive_architectures">JBOD<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>,
 
              <a rel="help" href="http://www.pnfs.com/">pNFS<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>, 
 
              <a rel="help" href="https://en.wikipedia.org/wiki/Gluster">GlusterFS<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>,
 
               Amazon S3, and Google Cloud Storage.
@@ -11867,7 +11867,7 @@ while processing each request.
       time needed to respond to a given user's request.
       The reason is: with nThreads=1, most modern CPU's will often
       <a rel="help" href="https://en.wikipedia.org/wiki/Intel_Turbo_Boost">dynamically overclock<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
       (turbo boost) to temporarily increase the clock speed of the CPU. 
       Thus with nThreads=1, the one core will often be working at a higher clock speed than
@@ -11898,7 +11898,7 @@ while processing each request.
 
       <p>Yes, most processors these days say that they support 2 threads per core (via
       <a rel="help" href="https://en.wikipedia.org/wiki/Hyper-threading">hyper-threading<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>), 
       but the 2 threads share computing resources, so you won't see twice the
       throughput on a CPU under heavy load. 
@@ -12012,7 +12012,7 @@ while processing each request.
       <ul>
       <li><a class="selfLink" id="PercentEncoded" href="#PercentEncoded" rel="bookmark">If the URL has a query part (after the "?"),</a> it MUST be already 
         <a rel="help" href="https://en.wikipedia.org/wiki/Percent-encoding">percent encoded<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
         You need to encode special characters in the constraints 
         (other than the initial '&amp;' and the main '='
@@ -12030,15 +12030,15 @@ while processing each request.
         A-Za-z0-9_-!.~'()*, but still don't encode the initial '&amp;' or the main '=' in constraints.
         <br>Programming languages have tools to do this (for example, see Java's
           <a rel="help" href="https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html">java.net.URLEncoder<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>
         and JavaScript's
           <a rel="help" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">encodeURIComponent()<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>) 
           and there are
         <br><a rel="help" href="https://www.url-encode-decode.com/">websites that percent encode/decode for you<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>.
         <li>Since datasets.xml is an XML file, you MUST also &amp;-encode ALL '&amp;', '&lt;', and '&gt;' in the
           URL as '&amp;amp;', '&amp;lt;', and '&amp;gt;' after percent encoding.          
@@ -12383,7 +12383,7 @@ while processing each request.
     For example, a search for <kbd>longitude=220.2</kbd> may fail if the value is stored as 220.20000000000001.
   <li>This problem arises because floating point numbers are
     <a rel="help" href="https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/">not represented exactly within computers<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
   <li>If sourceNeedsExpandedFP_EQ is set to true (the default), 
     ERDDAP modifies the queries sent to the data source to avoid this problem.
@@ -12551,10 +12551,10 @@ while processing each request.
      <li><a rel="help"
      href="https://www.fgdc.gov/standards/projects/FGDC-standards-projects/metadata/base-metadata/index_html"
      >FGDC<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> and
        <a rel="help" href="https://en.wikipedia.org/wiki/Geospatial_metadata">ISO&nbsp;19115-2/19139<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
        Metadata
        -- Normally, ERDDAP will automatically generate
@@ -12566,7 +12566,7 @@ while processing each request.
        Most of the dataset metadata attributes which are used to generate the ISO 19115 
        and FGDC metadata are from the 
        <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3">ACDD metadata standard<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         and are so noted below. 
 
@@ -12603,7 +12603,7 @@ while processing each request.
           <a class="selfLink" id="acknowledgment"  href="#acknowledgment"  rel="bookmark"><strong>acknowledgment</strong></a>
           (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3">ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is a RECOMMENDED way to acknowledge the group or groups that provided support 
@@ -12639,23 +12639,23 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is a global attribute that indicates the 
           Unidata <a rel="help" href="https://www.unidata.ucar.edu/software/netcdf-java/v4.6/CDM/index.html"
           >Common Data Model<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
         data type for the dataset.    For example,
         <br><kbd>&lt;att name="cdm_data_type"&gt;Point&lt;/att&gt;</kbd>
         <br>The CDM is still evolving and may change again. ERDDAP complies with the 
         related and more detailed 
         <a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries">Discrete&nbsp;Sampling&nbsp;Geometries (DSG)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> chapter of the 
         <a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html">CF 1.6<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
         metadata conventions
         (previously called the CF Point Observation Conventions).
@@ -12924,12 +12924,12 @@ while processing each request.
             as defined in  
             <a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries"
             >Discrete&nbsp;Sampling&nbsp;Geometries&nbsp;(DSG)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
           chapter of the 
             <a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
             >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
                metadata conventions,
             which were previously named "CF Point Observation Conventions".
@@ -12946,7 +12946,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is the RECOMMENDED way to identify a person, organization, or project 
@@ -12962,7 +12962,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is the RECOMMENDED way to identify the role of 
@@ -12975,7 +12975,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
         >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
         metadata standard) 
         is STRONGLY RECOMMENDED. (It may be REQUIRED in the future.) 
@@ -12987,13 +12987,13 @@ while processing each request.
         <li><a rel="help" 
         href="https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html"
         >COARDS Conventions<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         is the precursor to CF. 
 
         <li><a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
         >Climate and Forecast (CF) Conventions<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         is the source of many of the recommended and required attributes in ERDDAP. 
         The current version of CF is identified as "CF-1.6".
@@ -13003,12 +13003,12 @@ while processing each request.
         The original 1.0 version of ACDD (a brilliant piece of work by Ethan Davis), was identified as
         <a rel="help" href="https://wiki.esipfed.org/ArchivalCopyOfVersion1"
         >Unidata Dataset Discovery v1.0<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
         The current (starting in 2015) 1.3 version of ACDD is identified as 
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD-1.3<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
         If your datasets have been using <kbd>Unidata Dataset Discovery v1.0</kbd>,
         we encourage you to 
@@ -13022,7 +13022,7 @@ while processing each request.
       <li><a class="selfLink" id="coverage_content_type" href="#coverage_content_type" rel="bookmark"><strong>coverage_content_type</strong></a> 
         (from the
         <a rel="help" href="https://en.wikipedia.org/wiki/Geospatial_metadata">ISO 19115<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is the RECOMMENDED way to identify the type of gridded data (in EDDGrid datasets).   
@@ -13038,7 +13038,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is the RECOMMENDED way to identify the person, organization, or project 
@@ -13058,7 +13058,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is the RECOMMENDED way to identify an email address 
@@ -13070,7 +13070,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is the RECOMMENDED way to identify a URL for organization that created the dataset, 
@@ -13085,7 +13085,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is the RECOMMENDED way to identify the date on which the data was first created 
@@ -13100,7 +13100,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is the RECOMMENDED way to identify the date on which the data was last modified 
@@ -13112,7 +13112,7 @@ while processing each request.
       <li><a class="selfLink" id="date_issued" href="#date_issued" rel="bookmark"><strong>date_issued</strong></a> (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is the RECOMMENDED way to identify the date on which the data was first 
@@ -13142,7 +13142,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
         >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
         metadata standard) 
         is IGNORED and/or REPLACED.  If the dataset's <a rel="help" href="#cdm_data_type"><kbd>cdm_data_type</kbd></a>
@@ -13154,7 +13154,7 @@ while processing each request.
         to create a dataset from files that follow the 
         <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries"
         >CF Discrete Sampling Geometries (DSG) standard<img 
-      src="../images/external.png" alt=" (external link)" 
+      src="/images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>,
         the files themselves must have <kbd>featureType</kbd> correctly defined,
         so that ERDDAP can read the files correctly.
@@ -13165,12 +13165,12 @@ while processing each request.
         (from the
         <a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
         >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         and
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standards) 
         is a RECOMMENDED multi-line String global attribute with a line for
@@ -13209,7 +13209,7 @@ while processing each request.
         <li>If the URL has a query part (after the "?"), it MUST be already 
           <a rel="help" href="https://en.wikipedia.org/wiki/Percent-encoding"
           >percent encoded<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
         You need to encode special characters in the constraints 
         (other than the initial '&amp;' and the main '=',
@@ -13228,18 +13228,18 @@ while processing each request.
         <br>Programming languages have tools to do this (for example, see Java's
           <a rel="help" href="https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html"
           >java.net.URLEncoder<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>
         <br>and JavaScript's
           <a rel="help" 
           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent"
           >encodeURIComponent()<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>) 
           and there are
         <br><a rel="help" href="https://www.url-encode-decode.com/"
           >websites that percent encode/decode for you<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>.
         <li>Since datasets.xml is an XML file, you MUST also &amp;-encode ALL 
           '&amp;', '&lt;', and '&gt;' in the
@@ -13252,12 +13252,12 @@ while processing each request.
         (from the
         <a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
         >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
         and
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standards) 
         is a REQUIRED global attribute with the short version of the
@@ -13278,7 +13278,7 @@ while processing each request.
           in ERDDAP's 
            <a rel="help" href="https://erddap.github.io/setup.html#setup.xml"
            >setup.xml<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
           file, users can easily find datasets from the same institution via ERDDAP's 
           "Search for Datasets by Category" on the home page.
@@ -13289,14 +13289,14 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is a RECOMMENDED comma-separated list of words 
         and short phrases (for example,
         <a rel="help" href="https://wiki.earthdata.nasa.gov/display/CMR/GCMD+Keyword+Access"
         >GCMD Science Keywords<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>) 
         that describe the dataset in a general way, and not assuming any other knowledge of the
         dataset (for example, for oceanographic data, include <kbd>ocean</kbd>).   
@@ -13323,7 +13323,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is a RECOMMENDED attribute: 
@@ -13339,7 +13339,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is a STRONGLY RECOMMENDED global attribute with the license and/or usage
@@ -13358,7 +13358,7 @@ while processing each request.
         <a rel="help" 
         href="https://wiki.esipfed.org/ArchivalCopyOfVersion1"
         >ACDD 1.0<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
         (which was identified in Metadata_Conventions as
         "Unidata Dataset Discovery v1.0")
@@ -13379,13 +13379,13 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is a RECOMMENDED textual description of the processing 
         (for example, <a rel="help" href="https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels">NASA
         satellite data processing levels<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>, 
         for example, <kbd>Level 3</kbd>)
         or quality control level (for example, <kbd>Science Quality</kbd>) of the data.
@@ -13398,7 +13398,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is an OPTIONAL attribute to identify the project that the dataset is part of. 
@@ -13414,7 +13414,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is the RECOMMENDED way to identify the person, organization, or project 
@@ -13432,7 +13432,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is the RECOMMENDED way to identify an email address 
@@ -13446,7 +13446,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is the RECOMMENDED way to identify a URL for the organization that
@@ -13492,7 +13492,7 @@ while processing each request.
         (from the
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is a RECOMMENDED attribute to identify 
@@ -13504,7 +13504,7 @@ while processing each request.
         <br><kbd>&lt;att name="standard_name_vocabulary"&gt;CF Standard Name Table v77&lt;/att&gt;</kbd>
         <br>for version 77 of the 
         <a rel="help" href="https://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html">CF standard name table<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
         <br>&nbsp;
 
@@ -13657,12 +13657,12 @@ while processing each request.
         <a rel="help"
         href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
         >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
         and 
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standards) 
         is a REQUIRED global attribute with a long description of the 
@@ -13685,7 +13685,7 @@ while processing each request.
           dataset to some random
           person you meet on the street or to a colleague.  Remember to include the 
           <a rel="help" href="https://en.wikipedia.org/wiki/Five_Ws">Five W's and one H<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>:
           Who created the dataset?  What information was collected? 
           When was the data collected?
@@ -13753,12 +13753,12 @@ while processing each request.
         (from the
         <a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
         >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
         and
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standards) 
         is a REQUIRED global attribute with the short description of the dataset
@@ -13910,7 +13910,7 @@ while processing each request.
             (case insensitive, e.g., <kbd>=NaN</kbd> ).
           <li>For String variables, the fixed value must be single, 
             <a rel="help" href="https://www.json.org/json-en.html" >JSON-style string<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>
             (with special characters escaped with \ characters), e.g., <kbd>="My \"Special\" String"</kbd> .
           <li>For a timestamp variable, specify the fixed value as a number in "seconds since 1970-01-01T00:00:00Z" and use 
@@ -13941,20 +13941,20 @@ while processing each request.
         <br><kbd>&lt;sourceName&gt;=<i>script</i>&lt;/sourceName&gt;</kbd>
         <br>ERDDAP relies on the
           <a rel="help" href="https://www.apache.org/">Apache project's<img 
-              src="../images/external.png" alt=" (external link)" 
+              src="/images/external.png" alt=" (external link)" 
               title="This link to an external website does not constitute an endorsement."></a>
           <a rel="help" href="https://commons.apache.org/proper/commons-jexl/">Java Expression Language (JEXL)<img 
-              src="../images/external.png" alt=" (external link)" 
+              src="/images/external.png" alt=" (external link)" 
               title="This link to an external website does not constitute an endorsement."></a>
           (license: <a rel="bookmark" href="https://www.apache.org/licenses/LICENSE-2.0">Apache<img 
-              src="../images/external.png" alt=" (external link)" 
+              src="/images/external.png" alt=" (external link)" 
               title="This link to an external website does not constitute an endorsement."></a>)
           to evaluate the expressions and run the scripts.
         <br>The calculation for a given new variable is done within one row of the results, repeatedly for all rows.
         <br>The expressions and scripts use a Java- and JavaScript-like syntax and can use any of the 
         <br><a rel="bookmark" href="https://commons.apache.org/proper/commons-jexl/reference/syntax.html"
               >operators and methods which are built into JEXL<img 
-              src="../images/external.png" alt=" (external link)" 
+              src="/images/external.png" alt=" (external link)" 
               title="This link to an external website does not constitute an endorsement."></a>.          
         <br>The scripts can also use methods (functions) from these classes:
           <ul>
@@ -13970,7 +13970,7 @@ while processing each request.
             which is a wrapper for almost all of the static, math-related methods in 
             <a rel="help" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html"
               >java.lang.Math<img 
-              src="../images/external.png" alt=" (external link)" 
+              src="/images/external.png" alt=" (external link)" 
               title="This link to an external website does not constitute an endorsement."></a>.
             For example, 
             <kbd>Math.atan2(<i>y, x</i>)</kbd>
@@ -13987,7 +13987,7 @@ while processing each request.
           <li>String, which gives you access to all of the static, String-related methods in 
             <a rel="help" href="https://docs.oracle.com/javase/8/docs/api/java/lang/String"
               >java.lang.String<img 
-              src="../images/external.png" alt=" (external link)" 
+              src="/images/external.png" alt=" (external link)" 
               title="This link to an external website does not constitute an endorsement."></a>.
             String objects in ERDDAP expressions and scripts can use any of their
             associated Java methods, as described in the java.lang.String documentation.
@@ -14388,13 +14388,13 @@ while processing each request.
         <li>This attribute is from the 
           <a rel="help" href="https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html"
           >CDC COARDS<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>
           and
           <a rel="help"
           href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
           >CF 1.7+<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>
           metadata standards.
         <li>If present, it MUST be an array of two values of the same data type 
@@ -14477,14 +14477,14 @@ while processing each request.
           <a rel="help"
           href="https://en.wikipedia.org/wiki/UTF-16"
           >Unicode UCS-2 character set<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>.
         <li>Many file types only support 1-byte characters and thus need this
           attribute to identify an associated
           <br><a rel="help"
           href="https://en.wikipedia.org/wiki/Code_page"
           >charset (AKA code page)<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>
           which defines how to map the 256 possible values to a set of 
           256 characters drawn from the UCS-2 character set.
@@ -14493,7 +14493,7 @@ while processing each request.
           <a rel="help"
           href="https://www.iana.org/assignments/character-sets/character-sets.xhtml"
           >this IANA list<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>,
           but in practice, ERDDAP currently just supports <kbd>ISO-8859-1</kbd> 
           (note that it has dashes, not underscores), which has the advantage
@@ -14671,21 +14671,21 @@ while processing each request.
           <a rel="help"
           href="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html"
           >NetCDF User's Guide (NUG)<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>.
         <li>Internally in ERDDAP, Strings are a sequence of 2-byte characters 
           that use the          
           <a rel="help"
           href="https://en.wikipedia.org/wiki/UTF-16"
           >Unicode UCS-2 character set<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>.
         <li>Many file types only support 1-byte characters in Strings and thus need this
           attribute to identify an associated
           <br><a rel="help"
           href="https://en.wikipedia.org/wiki/Code_page"
           >charset (AKA code page)<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>
           which defines how to map the 256 possible values to a set of 
           256 characters drawn from the UCS-2 character set
@@ -14693,7 +14693,7 @@ while processing each request.
           <a rel="help"
           href="https://en.wikipedia.org/wiki/UTF-8"
           >UTF-8<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>
           (which requires between 1 and 4 bytes per character).
         <li>Values for <kbd>_Encoding</kbd> are case-insensitive.
@@ -14701,7 +14701,7 @@ while processing each request.
           <a rel="help"
           href="https://www.iana.org/assignments/character-sets/character-sets.xhtml"
           >this IANA list<img 
-          src="../images/external.png" alt=" (external link)" 
+          src="/images/external.png" alt=" (external link)" 
           title="This link to an external website does not constitute an endorsement."></a>,
           but in practice, ERDDAP currently just supports 
           <ul>
@@ -14768,7 +14768,7 @@ while processing each request.
         <br>The categories are from 
           <a rel="help" href="https://ioos.noaa.gov/">NOAA's 
           Integrated Ocean Observing System (IOOS)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
         <ul>
         <li>(As of writing this) we aren't aware of formal definitions of these names.
@@ -14777,7 +14777,7 @@ while processing each request.
            <a rel="help"
            href="https://www.iooc.us/wp-content/uploads/2010/11/US-IOOS-Blueprint-for-Full-Capability-Version-1.0.pdf"
            >US IOOS Blueprint<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
           (page 1-5).
         <li>It is likely that this list will be revised in the future.
@@ -14807,7 +14807,7 @@ while processing each request.
         <a rel="bookmark" 
 href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
 >a discussion about ERDDAP and ioos_category in the ERDDAP Google Group.<img 
-  src="../images/external.png" alt=" (external link)" 
+  src="/images/external.png" alt=" (external link)" 
   title="This is a link to an external website."/></a>
         </ul>
 
@@ -14834,14 +14834,14 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
         <li>These categories are from 
           <a rel="help" href="https://ioos.noaa.gov/">NOAA's 
           Integrated Ocean Observing System (IOOS)<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>. 
           These categories
           are fundamental to IOOS's description of IOOS's mission.
           If you are in NOAA, supporting ioos_category is a good One-NOAA thing to do.
           (Watch this 
           <a rel="help" href="https://www.youtube.com/watch?v=nBnCsMYm2yQ">One NOAA video<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
           and be inspired!)
           If you are in some other U.S. or international agency, 
@@ -14862,16 +14862,16 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
       <li><a class="selfLink" id="long_name" href="#long_name" rel="bookmark"><strong>long_name</strong></a> 
         (<a rel="help" href="https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html"
         >COARDS<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>,
         <a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
         >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         and
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standards) 
         is a RECOMMENDED variable attribute in ERDDAP.  For example,
@@ -14898,12 +14898,12 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
         <a class="selfLink" id="FillValue" href="#FillValue" rel="bookmark"><strong>_FillValue</strong></a> 
         (<a rel="help" href="https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html"
         >COARDS<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
         and
         <a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
         >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>)
         are variable attributes which describe a number
         (for example, -9999) which is used to represent a missing value.  For example,
@@ -15020,13 +15020,13 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
         (<a rel="help" 
         href="https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html"
         >COARDS<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
         and
         <a rel="help"
         href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
         >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>)
         are OPTIONAL variable attributes which describe data which is packed in a 
         simpler data type via a simple transformation.
@@ -15074,14 +15074,14 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
         <a rel="help"
         href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
         >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         is a RECOMMENDED variable attribute in ERDDAP.
         CF maintains the list of allowed
           <a rel="help" href="https://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html"
           >CF standard names<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.  
         For example,
         <br><kbd>&lt;att name="standard_name"&gt;eastward_sea_water_velocity&lt;/att&gt;</kbd>
@@ -15106,7 +15106,7 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
         <li>Best practices: Part of the power of 
             <a rel="help" href="https://en.wikipedia.org/wiki/Controlled_vocabulary"
             >controlled vocabularies<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
             comes from using only the terms
           in the list. 
@@ -15151,7 +15151,7 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
           This matches the 
           <a rel="help" href="https://www.iso.org/iso/date_and_time_format"
           >ISO 8601:2004 "extended" Time Format Specification<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
         <li><strong>WARNING:</strong> You should only use a limited time_precision if 
           <strong>all</strong> of the data values for the variable have only the minimum value 
@@ -15186,7 +15186,7 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
           <a rel="help" 
             href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
             >https://en.wikipedia.org/wiki/List_of_tz_database_time_zones<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>).
           ERDDAP's time_zone attribute helps you deal with local time data from some time zone
           (e.g., 1987-03-25T17:32:05 Pacific Time). 
@@ -15205,7 +15205,7 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
           <a rel="help" 
             href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"
             >https://en.wikipedia.org/wiki/List_of_tz_database_time_zones<img 
-            src="../images/external.png" alt=" (external link)" 
+            src="/images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>.
           Common US time zones are:
           US/Hawaii, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, US/Eastern.
@@ -15218,16 +15218,16 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
       <li><a class="selfLink" id="units" href="#units" rel="bookmark"><strong>units</strong></a> 
         (<a rel="help" href="https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html"
         >COARDS<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>,
         <a rel="help"
         href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html">CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
          and
         <a rel="help" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3"
         >ACDD<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata standard) 
         defines the units of the data values.   For example,
@@ -15239,36 +15239,36 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
           almost always).
         <li>In general, we recommend 
           <a rel="help" href="https://www.unidata.ucar.edu/software/udunits/">UDUnits<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."
           ></a>-compatible units which is required by the 
           <a rel="help" href="https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html"
           >COARDS<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
           and
           <a rel="help" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
           >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
           standards.
         <li>Another common standard is <a rel="help" href="https://unitsofmeasure.org/ucum.html">UCUM<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
           -- the Unified Code for Units of Measure.
           <a rel="help" href="https://www.ogc.org/">OGC<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         services such as
             <a rel="help" href="https://www.ogc.org/standards/sos">SOS<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>,
             <a rel="help" href="https://www.ogc.org/standards/wcs">WCS<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>, 
         and
             <a rel="help" href="https://www.ogc.org/standards/wms">WMS<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
             require UCUM and often refer to UCUM 
             as UOM (Units Of Measure).
@@ -15316,7 +15316,7 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
           <ul>
           <li>For time axis variables or time data variables with numeric data: 
             <a rel="help" href="https://www.unidata.ucar.edu/software/udunits/">UDUnits<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."
           ></a>-compatible
             string (with the format <kbd><i>units</i> since <i>baseTime</i></kbd>) 
@@ -15373,7 +15373,7 @@ href="https://groups.google.com/forum/#!topic/erddap/TnwbgzpSS0w"
             <a rel="help" 
       href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html"
       >java.time.DateTimeFormatter<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
             pattern (which is mostly compatible with java.text.SimpleDateFormat) 
             which describes how to interpret the 
@@ -15414,7 +15414,7 @@ ERDDAP treats y (year-of-era) and Y (week-based-year, because this is often mist
 used instead of y) as u, the 
 <a rel="help" href="https://en.wikipedia.org/wiki/Astronomical_year_numbering"
     >astronomical year number<img 
-    src="../images/external.png" alt=" (external link)" 
+    src="/images/external.png" alt=" (external link)" 
     title="This link to an external website does not constitute an endorsement."></a>. 
 Astronomical years are positive
 or negative integers that don't use the BCE (BC) or CE (AD) era designators: 
@@ -15719,7 +15719,7 @@ email Chris.John at noaa.gov .</td>
         <a rel="help"
         href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html"
         >CF<img 
-        src="../images/external.png" alt=" (external link)" 
+        src="/images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
         metadata conventions.  For example,
         <br><kbd>&lt;att name="valid_range" 
@@ -15771,7 +15771,7 @@ you can join the ERDDAP Google Group / Mailing List</a> by visiting
 <a class="N" rel="help"
 href="https://groups.google.com/forum/#!forum/erddap"
 >https://groups.google.com/forum/#!forum/erddap<img 
-  src="../images/external.png" alt=" (external link)" 
+  src="/images/external.png" alt=" (external link)" 
   title="This link to an external website does not constitute an endorsement."></a> 
 and clicking on "Apply for membership". 
 Once you are a member, you can post your question there
