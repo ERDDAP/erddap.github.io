@@ -3,8 +3,8 @@
 <head>
 <title>ERDDAP - Heavy Loads, Grids, Clusters, Federations, and Cloud Computing</title>
 <meta charset="UTF-8">
-<link rel="shortcut icon" href="https://coastwatch.pfeg.noaa.gov/erddap/images/favicon.ico">
-<link href="/images/erddap2.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="https://coastwatch.pfeg.noaa.gov/erddap./images/favicon.ico">
+<link href="./images/erddap2.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -14,7 +14,7 @@
     <td style="text-align:center; width:80px;"><a rel="bookmark"
       href="https://www.noaa.gov/"><img 
       title="National Oceanic and Atmospheric Administration" 
-      src="/images/noaab.png" alt="NOAA"
+      src="./images/noaab.png" alt="NOAA"
       style="vertical-align:middle;"></a></td> 
     <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
       <strong>ERDDAP</strong>
@@ -229,7 +229,7 @@ of the world that they need to abandon their efforts and put all their data
 in a centralized "data lake" (even if it were possible, it is a horrible idea for numerous reasons 
 -- see the various analyses showing the numerous advantages of 
 <a rel="help" href="https://en.wikipedia.org/wiki/Decentralised_system">decentralized systems<img 
-  src="/images/external.png" alt=" (external link)" 
+  src="./images/external.png" alt=" (external link)" 
   title="This link to an external website does not constitute an endorsement."></a>),
 ERDDAP's design works with the world as it is.
 Each data center which produces data can continue to maintain, curate, and serve their data (as they should),
@@ -283,11 +283,11 @@ with the added benefit that you have removed the risk from a single point of fai
 
   <p>I'm using 
     <a rel="help" href="https://en.wikipedia.org/wiki/Grid_computing">grid<img 
-      src="/images/external.png" alt=" (external link)" 
+      src="./images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
   as a general term to indicate a type of  
     <a rel="help" href="https://en.wikipedia.org/wiki/Computer_cluster">computer cluster<img 
-      src="/images/external.png" alt=" (external link)" 
+      src="./images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
   where all of the
   parts may or may not be physically located in one facility and may or may not be centrally 
@@ -305,7 +305,7 @@ with the added benefit that you have removed the risk from a single point of fai
     part of the system linearly (efficiency of scaling). The system isn't scalable unless
     there is a scalable solution for every bottleneck.  
     <a rel="help" href="https://en.wikipedia.org/wiki/Scalability">Scalability<img 
-      src="/images/external.png" alt=" (external link)" 
+      src="./images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a> 
     is different from efficiency (how quickly a task can be done &mdash; efficiency    
     of the parts).  Scalability allows the system to grow to handle any level of demand.
@@ -357,7 +357,7 @@ with the added benefit that you have removed the risk from a single point of fai
   <li>When the composite ERDDAP receives a request for data or images from 
     these datasets, the composite ERDDAP 
     <a rel="help" href="https://en.wikipedia.org/wiki/URL_redirection">redirects<img 
-      src="/images/external.png" alt=" (external link)" 
+      src="./images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
        the data request to the other ERDDAP server. The result is:
     <ul>
@@ -524,7 +524,7 @@ href="https://erddap.github.io/setupDatasetsXml.html#EDDTableCopy">EDDTableCopy<
         the composite ERDDAPs will be temporarily slightly out of synch, but with 
         <a rel="help" href="https://en.wikipedia.org/wiki/Eventual_consistency"
         >eventual consistency<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>. 
         Normally, they will re-synch within 5 seconds, but sometimes it will be longer.
         If a user makes an automated system that relies on 
@@ -542,13 +542,13 @@ href="https://erddap.github.io/setupDatasetsXml.html#EDDTableCopy">EDDTableCopy<
         (an overzealous user? a 
         <a rel="help" href="https://en.wikipedia.org/wiki/Denial-of-service_attack"
         >denial-of-service attack<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>?),
         this makes it very likely that redirecting its users to other composite ERDDAPs 
         will cause a 
         <a rel="help" href="https://en.wikipedia.org/wiki/Cascading_failure"
         >cascading failure<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>. 
       Thus, the most robust setup is to have composite ERDDAPs with different URLs.        
 
@@ -563,7 +563,7 @@ href="https://erddap.github.io/setupDatasetsXml.html#EDDTableCopy">EDDTableCopy<
     <li>[For a fascinating design of a high performance system running on one server, 
         see this <a rel="help" 
       href="https://mailinator.blogspot.com/2007/01/architecture-of-mailinator.html">detailed description of Mailinator<img 
-      src="/images/external.png" alt=" (external link)" 
+      src="./images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>.]
     </ul>
 
@@ -587,7 +587,7 @@ href="https://erddap.github.io/setupDatasetsXml.html#EDDTableCopy">EDDTableCopy<
       appear as separate datasets in the composite ERDDAP.  
       Users are used to seeing lists of
       <a rel="help" href="https://en.wikipedia.org/wiki/Website#mirror_site">mirror sites<img 
-      src="/images/external.png" alt=" (external link)" 
+      src="./images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>
       at popular file download sites, so this shouldn't surprise or disappoint them.
       Because of bandwidth limitations at a given site, it may make sense to have the mirror
@@ -602,7 +602,7 @@ href="https://erddap.github.io/setupDatasetsXml.html#EDDTableCopy">EDDTableCopy<
     heavily used, it may make more sense to copy the data on another server + ERDDAP + hard
     drive (similar to 
     <a rel="help" href="https://storagemojo.com/2007/02/19/googles-disk-failure-experience/">what Google does<img 
-      src="/images/external.png" alt=" (external link)" 
+      src="./images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>)
     rather than to use one server and a RAID to store
     multiple datasets since you get to use both server+hardDrive+ERDDAPs in the grid until
@@ -625,18 +625,18 @@ href="https://erddap.github.io/setupDatasetsXml.html#EDDTableCopy">EDDTableCopy<
   <li>The composite ERDDAP fails?
       <br>If you want to make a system with very 
       <a rel="help" href="https://en.wikipedia.org/wiki/High_availability">high availability<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>, 
       you can set up 
       <a rel="help" href="#multipleCompositeERDDAPs"
       >multiple composite ERDDAPs (as discussed above)</a>, 
       using something like
       <a rel="help" href="https://www.nginx.com/">NGINX<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
       or
       <a rel="help" href="https://traefik.io/">Traefik<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
       to handle load balancing.
       Note that a given composite ERDDAP can handle a very large number of requests
@@ -709,13 +709,13 @@ href="https://erddap.github.io/setupDatasetsXml.html#EDDTableCopy">EDDTableCopy<
   see Michael T. Nygard's book 
       <a rel="help" 
       href="https://www.amazon.com/Release-Production-Ready-Software-Pragmatic-Programmers/dp/0978739213">Release It<img 
-      src="/images/external.png" alt=" (external link)" 
+      src="./images/external.png" alt=" (external link)" 
       title="This link to an external website does not constitute an endorsement."></a>.
 
 <p><a class="selfLink" id="LikeLegos" href="#LikeLegos" rel="bookmark">Like Legos</a> 
     &mdash; Software designers often try to use good
     <a rel="help" href="https://en.wikipedia.org/wiki/Software_design_pattern">software design patterns<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
     to solve problems. Good patterns are good because they encapsulate good,
     easy to create and work with, general-purpose solutions that lead to systems 
@@ -786,18 +786,18 @@ href="https://erddap.github.io/setupDatasetsXml.html#EDDTableCopy">EDDTableCopy<
       and analyzed on separate computers, and then the results combined on the
       original server. This approach is called 
       <a rel="help" href="https://en.wikipedia.org/wiki/MapReduce">MapReduce<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
       and is exemplified by 
       <a rel="help" href="https://en.wikipedia.org/wiki/Apache_Hadoop">Hadoop<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>,
       the first (?) open-source MapReduce program, 
       which was based on ideas from a Google paper. (If you need MapReduce in ERDDAP,
       please send an email request to erd.data at noaa.gov.)
       Google's 
       <a rel="help" href="https://cloud.google.com/bigquery/">BigQuery<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
       is interesting because it seems to be an implementation of MapReduce applied
       to subsetting tabular datasets, which is one of ERDDAP's main goals.
@@ -819,14 +819,14 @@ Please send an email with the correction to erd dot data at noaa dot gov.
 <hr><h2><a class="selfLink" id="cloudComputing" href="#cloudComputing" rel="bookmark"><strong>Cloud Computing</strong></a></h2> 
 Several companies offer cloud computing services 
     (e.g., <a rel="help" href="https://aws.amazon.com/">Amazon Web Services<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
       and
       <a rel="help" href="https://cloud.google.com/">Google Cloud Platform<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>).
       <a rel="help" href="https://en.wikipedia.org/wiki/Web_hosting_service">Web hosting companies<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a> 
       have offered simpler services since the mid-1990's,
       but the "cloud" services have greatly expanded the flexibility 
@@ -857,7 +857,7 @@ Several companies offer cloud computing services
       (in absolute terms; not that it isn't a good value). 
       The prices listed here are for 
       <a rel="help" href="https://aws.amazon.com/ec2/pricing">Amazon EC2<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
       These prices (as of June 2015) will come down. 
       <br>In the past, prices were higher,
@@ -994,7 +994,7 @@ seeks to maintain a remote copy of a dataset:
     <ul>
     <li>ERDDAP's <a rel="help" href="https://en.wikipedia.org/wiki/RSS"
       >RSS (Rich Site Summary?) service<img 
-            src="/images/external.png" alt=" (external link)" 
+            src="./images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>
       <br>offers a quick way to check if a dataset on a remote ERDDAP has changed.
       <br>&nbsp;
@@ -1008,7 +1008,7 @@ seeks to maintain a remote copy of a dataset:
       there is no wasted effort (as with polling an RSS service). 
       Users can use other tools (like
       <a rel="help" href="https://ifttt.com/">IFTTT<img 
-            src="/images/external.png" alt=" (external link)" 
+            src="./images/external.png" alt=" (external link)" 
             title="This link to an external website does not constitute an endorsement."></a>)
       to react to the email notifications from the subscription system.
       For example, a user could subscribe to a dataset on a remote ERDDAP 
@@ -1070,7 +1070,7 @@ someone else, which can be easily reused in different situations.
 <li><a class="selfLink" id="RemoteReplicationOfDatasets_rsync" href="#RemoteReplicationOfDatasets_rsync" 
   rel="bookmark"><strong>rsync (or similar)</strong></a>
 <br><a rel="help" href="https://en.wikipedia.org/wiki/Rsync">rsync<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 is the existing, stunningly good, general purpose solution to keeping a 
 collection of files on a source computer in sync on a user's remote computer.
@@ -1089,7 +1089,7 @@ The way it works is:
 quickly (e.g., 10 seconds plus data transfer time) and very efficiently.
 There are  
 <a rel="help" href="https://en.wikipedia.org/wiki/Rsync#Variations">variations of rsync<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>
 that optimize for different situations (e.g., by precalculating and caching the
 hashes of the chunks of each source file).
@@ -1110,7 +1110,7 @@ please email erd.data at noaa.gov.
 <p>There are other programs which do more or less what rsync does, sometimes 
 oriented to dataset replication (although often at a file-copy level),
 e.g., Unidata's <a rel="help" href="https://www.unidata.ucar.edu/projects/index.html#idd">IDD<img 
-        src="/images/external.png" alt=" (external link)" 
+        src="./images/external.png" alt=" (external link)" 
         title="This link to an external website does not constitute an endorsement."></a>.
 
 

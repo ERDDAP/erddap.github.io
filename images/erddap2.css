@@ -8,7 +8,7 @@ If you make changes other than colors, be sure to check the appearance
   in all common browsers on Linux, Mac, and Windows computers.
 
 To use this file:
-1) One time: rename this file to <tomcat>/content/erddap/images/erddap2.css
+1) One time: rename this file to <tomcat>/content/erddap./images/erddap2.css
 2) Make whatever changes you want to the file.
 3) To apply the changes:
  3a) Restart ERDDAP. 
