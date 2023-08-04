@@ -36,5 +36,5 @@ Appendix A.  ERDDAP Strategic Insight Groups Members (as of July, 2023)
 * Dale Robinson - NESDIS/CoastWatch, UCS/CIMEAS
 
 <footer>
-    <p>This document is built using GitHub pages. To propose changes to the document, see the GitHub source file at <a href="https://github.com/ERDDAP/erddap.github.io/blob/main/StrategicInsightGroup.md">https://github.com/ERDDAP/erddap.github.io/blob/main/StrategicInsightGroup.md</a></p>
+    <p>This document is built using GitHub pages. To propose changes to the document, edit the GitHub source file at <a href="https://github.com/ERDDAP/erddap.github.io/edit/main/StrategicInsightGroup.md">https://github.com/ERDDAP/erddap.github.io/edit/main/StrategicInsightGroup.md</a></p>
 </footer>
