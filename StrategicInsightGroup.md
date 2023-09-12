@@ -1,4 +1,4 @@
-2# ERDDAP -  Strategic Insight Group
+# ERDDAP -  Strategic Insight Group
 
 This document is built using GitHub pages. To propose changes to the document, see the GitHub [source file](https://github.com/ERDDAP/erddap.github.io/blob/main/StrategicInsightGroup.md).
 
