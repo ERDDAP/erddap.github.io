@@ -1,4 +1,4 @@
-# ERDDAP -  Strategic Insight Group
+2# ERDDAP -  Strategic Insight Group
 
 This document is built using GitHub pages. To propose changes to the document, see the GitHub [source file](https://github.com/ERDDAP/erddap.github.io/blob/main/StrategicInsightGroup.md).
 
@@ -21,7 +21,7 @@ To help guide ERDDAP advancement and interaction with the global ERDDAP communit
 ## ERDDAP outlook
 The ERDDAP community continues to grow and is more vigorous than ever.  The development of the ERDDAP-SIG provides a clear opportunity to ensure the continued support, growth and development of ERDDAP and to cultivate the momentum ERDDAP has created in the data management community over the last decade.  
 
-Appendix A.  ERDDAP Strategic Insight Groups Members (as of July, 2023)
+Appendix A.  Preliminary Core Group Members (as of July, 2023)
 * Mathew Biddle - NOAA/NOS/US IOOS
 * Eugene Burger - NOAA/OAR/PMEL
 * Conor Delaney - EMODnet (European Marine Observation Data Network)
