@@ -22,14 +22,14 @@ To help guide ERDDAP advancement and interaction with the global ERDDAP communit
 The ERDDAP community continues to grow and is more vigorous than ever.  The development of the ERDDAP-SIG provides a clear opportunity to ensure the continued support, growth and development of ERDDAP and to cultivate the momentum ERDDAP has created in the data management community over the last decade.  
 
 ## Appendix A.  SIG Members (as of August, 2024)
-* Mathew Biddle - NOAA/NOS/US IOOS
+* Mathew Biddle - NOAA/NOS/US IOOS (co-chair)
 * Eugene Burger - NOAA/OAR/PMEL
 * Seth Champagne - U.S. Naval Research Laboratory
 * Conor Delaney - EMODnet (European Marine Observation Data Network)
 * Chris John - NOAA/NMFS/SWFSC/ERD, MNE
 * Roy Mendelssohn - NOAA/NMFS/SWFSC/ERD
 * Heather Nicholas - NOAA/NMFS/SWFSC
-* Kevin O’Brien - NOAA/OAR/PMEL, UW/CIOCES
+* Kevin O’Brien - NOAA/OAR/PMEL, UW/CIOCES (co-chair)
 * Shane St Savage - Axiom Data Science
 * Micah Wengren - NOAA/NOS/US IOOS
 
