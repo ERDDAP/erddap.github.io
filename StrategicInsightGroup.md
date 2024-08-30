@@ -21,22 +21,24 @@ To help guide ERDDAP advancement and interaction with the global ERDDAP communit
 ## ERDDAP outlook
 The ERDDAP community continues to grow and is more vigorous than ever.  The development of the ERDDAP-SIG provides a clear opportunity to ensure the continued support, growth and development of ERDDAP and to cultivate the momentum ERDDAP has created in the data management community over the last decade.  
 
-## Appendix A.  Preliminary Core Group Members (as of July, 2023)
-* Mathew Biddle - NOAA/NOS/US IOOS
+## Appendix A.  SIG Members (as of August, 2024)
+* Mathew Biddle - NOAA/NOS/US IOOS (co-chair)
 * Eugene Burger - NOAA/OAR/PMEL
+* Seth Champagne - U.S. Naval Research Laboratory
 * Conor Delaney - EMODnet (European Marine Observation Data Network)
-* Filipe Fernandes - (SECOORA/IOOS) 
-* Heather Nicholas - NOAA/NMFS/SWFSC
-* Chris John - NOAA/NMFS/SWFSC/ERD, UCSC/CIMEAS
-* Alex Kerney - Gulf of Maine Research Institute
+* Chris John - NOAA/NMFS/SWFSC/ERD, MNE
 * Roy Mendelssohn - NOAA/NMFS/SWFSC/ERD
-* Kevin O’Brien - NOAA/OAR/PMEL, UW/CIOCES
-* Bob Simons - Creator of ERDDAP (Retired)
+* Heather Nicholas - NOAA/NMFS/SWFSC
+* Kevin O’Brien - NOAA/OAR/PMEL, UW/CIOCES (co-chair)
+* Shane St Savage - Axiom Data Science
 * Micah Wengren - NOAA/NOS/US IOOS
-* Dale Robinson - NESDIS/CoastWatch, UCS/CIMEAS
 
 ### Former Members
+* Filipe Fernandes - (SECOORA/IOOS) 
 * Toby Garfield - NOAA/NMFS/SWFSC/ERD (Retired)
+* Alex Kerney - Gulf of Maine Research Institute
+* Dale Robinson - NESDIS/CoastWatch, UCS/CIMEAS
+* Bob Simons - Creator of ERDDAP (Retired)
 
 <footer>
     <p>This document is built using GitHub pages. To propose changes to the document, edit the GitHub source file at <a href="https://github.com/ERDDAP/erddap.github.io/edit/main/StrategicInsightGroup.md">https://github.com/ERDDAP/erddap.github.io/edit/main/StrategicInsightGroup.md</a></p>
