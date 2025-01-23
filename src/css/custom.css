@@ -1,0 +1,96 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #128cb5;
+  --ifm-color-primary-dark: #0d6887;
+  --ifm-color-primary-darker: #094458;
+  --ifm-color-primary-darkest: #04202a;
+  --ifm-color-primary-light: #17b0e3;
+  --ifm-color-primary-lighter: #41c1ec;
+  --ifm-color-primary-lightest: #6fd0f1;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-navbar-background-color: #128cb5;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #128cb5;
+  --ifm-color-primary-dark: #0d6887;
+  --ifm-color-primary-darker: #094458;
+  --ifm-color-primary-darkest: #04202a;
+  --ifm-color-primary-light: #17b0e3;
+  --ifm-color-primary-lighter: #41c1ec;
+  --ifm-color-primary-lightest: #6fd0f1;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --ifm-navbar-background-color: #128cb5;
+}
+
+.navbar, .navbar--dark {
+  background-color: #128cb5;
+}
+
+.navbar__link {
+  color: #f5f6f7;
+}
+
+.broughtBy {
+  color: #6fd0f1;
+}
+
+.navbar__link:hover {
+  color:#04202a;
+}
+
+.broughtBy:hover {
+  color:#04202a;
+}
+
+.navbar__link--active {
+  color: #094458;
+}
+
+.navbar__title:hover {
+  color:#04202a;
+}
+
+.mainBody {
+  max-width: 48rem;
+  margin: auto;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  min-width: 120px;
+  max-width:624px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
