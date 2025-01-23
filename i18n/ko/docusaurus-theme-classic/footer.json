@@ -1,0 +1,82 @@
+{
+  "link.title.Docs": {
+    "message": "사이트맵",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Community": {
+    "message": "- 연혁",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "더 보기",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Documentation": {
+    "message": "회사연혁",
+    "description": "The label of footer link with label=Documentation linking to /docs/intro"
+  },
+  "link.item.label.Contributing": {
+    "message": "관련 기사",
+    "description": "The label of footer link with label=Contributing linking to /docs/contributing"
+  },
+  "link.item.label.Governance": {
+    "message": "회사연혁",
+    "description": "The label of footer link with label=Governance linking to /governance"
+  },
+  "link.item.label.Technical Board": {
+    "message": "기술위원회",
+    "description": "The label of footer link with label=Technical Board linking to /technical-board"
+  },
+  "link.item.label.ERDDAP™ User Group": {
+    "message": "ERDDAP™사용자 그룹",
+    "description": "The label of footer link with label=ERDDAP™ User Group linking to https://groups.google.com/g/erddap"
+  },
+  "link.item.label.ERDDAP™ Announce": {
+    "message": "ERDDAP™- 연혁",
+    "description": "The label of footer link with label=ERDDAP™ Announce linking to https://groups.google.com/g/erddap-announce"
+  },
+  "link.item.label.GitHub": {
+    "message": "프로젝트",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/ERDDAP/erddap/"
+  },
+  "link.item.label.Credits": {
+    "message": "계정 만들기",
+    "description": "The label of footer link with label=Credits linking to /credits"
+  },
+  "copyright": {
+    "message": "ERDDAP™, 버전 2.25. 저작권 © 2024ERDDAP™· Docusaurus와 내장.",
+    "description": "The footer copyright"
+  },
+  "link.title.Brought to you by": {
+    "message": "당신에 게",
+    "description": "The title of the footer links column with title=Brought to you by in the footer"
+  },
+  "link.item.label.License": {
+    "message": "이름 *",
+    "description": "The label of footer link with label=License linking to license"
+  },
+  "link.item.label.Changes": {
+    "message": "기타",
+    "description": "The label of footer link with label=Changes linking to /changes"
+  },
+  "link.item.label.Acknowledgements": {
+    "message": "관련 기사",
+    "description": "The label of footer link with label=Acknowledgements linking to /acknowledgements"
+  },
+  "link.item.label.NOAA": {
+    "message": "NOAA",
+    "description": "The label of footer link with label=NOAA linking to https://www.noaa.gov"
+  },
+  "link.item.label.NMFS": {
+    "message": "NMFS",
+    "description": "The label of footer link with label=NMFS linking to https://www.fisheries.noaa.gov"
+  },
+  "link.item.label.SWFSC": {
+    "message": "SWFSC",
+    "description": "The label of footer link with label=SWFSC linking to https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center"
+  },
+  "link.item.label.ERD": {
+    "message": "ERD",
+    "description": "The label of footer link with label=ERD linking to https://www.fisheries.noaa.gov/about/environmental-research-division-southwest-fisheries-science-center"
+  }
+}

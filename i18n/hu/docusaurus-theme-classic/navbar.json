@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "ERDDAP™",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "NOAAlogó",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentation": {
+    "message": "Dokumentáció",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.Governance": {
+    "message": "Kormányzás",
+    "description": "Navbar item with label Governance"
+  },
+  "item.label.Technical Board": {
+    "message": "Műszaki Testület",
+    "description": "Navbar item with label Technical Board"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Blag prionsabal",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "Blag prionsabal",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Poist le déanaí",
+    "description": "The label for the left sidebar"
+  }
+}

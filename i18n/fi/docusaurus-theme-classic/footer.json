@@ -1,0 +1,82 @@
+{
+  "link.title.Docs": {
+    "message": "Docs",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Community": {
+    "message": "Yhteisöyhteisö",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "Lisää enemmän",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Documentation": {
+    "message": "Dokumentointi",
+    "description": "The label of footer link with label=Documentation linking to /docs/intro"
+  },
+  "link.item.label.Contributing": {
+    "message": "osallistuminen",
+    "description": "The label of footer link with label=Contributing linking to /docs/contributing"
+  },
+  "link.item.label.Governance": {
+    "message": "Hallinto",
+    "description": "The label of footer link with label=Governance linking to /governance"
+  },
+  "link.item.label.Technical Board": {
+    "message": "Tekninen hallitus",
+    "description": "The label of footer link with label=Technical Board linking to /technical-board"
+  },
+  "link.item.label.ERDDAP™ User Group": {
+    "message": "ERDDAP™Käyttäjäryhmä",
+    "description": "The label of footer link with label=ERDDAP™ User Group linking to https://groups.google.com/g/erddap"
+  },
+  "link.item.label.ERDDAP™ Announce": {
+    "message": "ERDDAP™Ilmoittautuminen",
+    "description": "The label of footer link with label=ERDDAP™ Announce linking to https://groups.google.com/g/erddap-announce"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/ERDDAP/erddap/"
+  },
+  "link.item.label.Credits": {
+    "message": "Luottoa",
+    "description": "The label of footer link with label=Credits linking to /credits"
+  },
+  "copyright": {
+    "message": "ERDDAP™Versio 2.25. Tekijänoikeudet © 2024ERDDAP™. Rakennettu Docusauruksella.",
+    "description": "The footer copyright"
+  },
+  "link.title.Brought to you by": {
+    "message": "Tuonut sinulle",
+    "description": "The title of the footer links column with title=Brought to you by in the footer"
+  },
+  "link.item.label.License": {
+    "message": "Lisenssi",
+    "description": "The label of footer link with label=License linking to license"
+  },
+  "link.item.label.Changes": {
+    "message": "Muutoksia",
+    "description": "The label of footer link with label=Changes linking to /changes"
+  },
+  "link.item.label.Acknowledgements": {
+    "message": "Tunnustukset",
+    "description": "The label of footer link with label=Acknowledgements linking to /acknowledgements"
+  },
+  "link.item.label.NOAA": {
+    "message": "NOAA",
+    "description": "The label of footer link with label=NOAA linking to https://www.noaa.gov"
+  },
+  "link.item.label.NMFS": {
+    "message": "NMFS",
+    "description": "The label of footer link with label=NMFS linking to https://www.fisheries.noaa.gov"
+  },
+  "link.item.label.SWFSC": {
+    "message": "SWFSC",
+    "description": "The label of footer link with label=SWFSC linking to https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center"
+  },
+  "link.item.label.ERD": {
+    "message": "ERD",
+    "description": "The label of footer link with label=ERD linking to https://www.fisheries.noaa.gov/about/environmental-research-division-southwest-fisheries-science-center"
+  }
+}

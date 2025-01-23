@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "ERDDAP™",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "NOAAlogout",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentation": {
+    "message": "Sitemap",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.Governance": {
+    "message": "Login",
+    "description": "Navbar item with label Governance"
+  },
+  "item.label.Technical Board": {
+    "message": "Dewan Teknis",
+    "description": "Navbar item with label Technical Board"
+  },
+  "item.label.GitHub": {
+    "message": "Login",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Docs": {
+    "message": "Login",
+    "description": "Navbar item with label Docs"
+  }
+}
