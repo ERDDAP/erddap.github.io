@@ -70,16 +70,18 @@ const config: Config = {
     /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
     ({
       docsRouteBasePath: '/docs',
-      blogRouteBasePath: '/',
       docsDir: 'docs',
-      blogDir: 'src/pages',
       searchBarPosition: 'right',
+      indexPages: true,
+      indexBlog: false,
       // ... Your options.
       // `hashed` is recommended as long-term-cache of index file is possible.
       hashed: true,
       // For Docs using Chinese, The `language` is recommended to set to:
       // ```
       language: ["en"],
+      searchResultLimits: 10,
+      highlightSearchTermsOnTargetPage: true,
       // ```
     }),
   ],

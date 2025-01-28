@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # Scaling
 ## ERDDAP™ - Heavy Loads, Grids, Clusters, Federations, and Cloud Computing {#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing}

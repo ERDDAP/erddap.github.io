@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 ERDDAP™ - Set Up Your Own ERDDAP™    
 
 ## Things You Need To Know {#things-you-need-to-know}
