@@ -8,6 +8,8 @@ sidebar_position: 3
 
 After you have followed the ERDDAP™ [installation instructions](/docs/server-admin/deploy-install), you must edit the datasets.xml file in *tomcat*/content/erddap/ to describe the datasets that your ERDDAP™ installation will serve.
 
+You can see an example [datasets.xml on GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
+
 - - -
 
 ## [Introduction](#introduction) {#introduction}

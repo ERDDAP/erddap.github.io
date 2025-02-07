@@ -30,6 +30,8 @@ There are two ways to search multiple ERDDAP™s for datasets: [Search Multiple 
 
 ERDDAP™ is a [Free and Open Source](https://en.wikipedia.org/wiki/Free_and_open-source_software), all-Java (servlet), web application that runs in a web application server (for example, Tomcat (recommended), or Jetty (it works, but we don't support it)). This web page is mostly for people ("ERDDAP™ administrators") who want to set up their own ERDDAP™ installation at their own website.
 
+To get started with an installation read [the deploy install guide](/docs/server-admin/deploy-install).
+
 ### Why use ERDDAP™ to distribute your data? {#why-use-erddap-to-distribute-your-data}
 
 Because the small effort to set up ERDDAP™ brings many benefits.
