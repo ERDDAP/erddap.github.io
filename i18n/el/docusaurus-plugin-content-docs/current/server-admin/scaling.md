@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # Σκάλιση
 ## ERDDAP™- Βαριά φορτία, πλέγματα, συστοιχίες, ομοσπονδίες, και υπολογιστικό σύννεφο{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

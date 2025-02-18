@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # 일하기datasets.xml파일 형식
 
 \\[이 웹 페이지는 오직 관심의 것입니다ERDDAP™관리자.\\]
 
 너 뒤에ERDDAP™ [설치 설명서](/docs/server-admin/deploy-install), 당신은 편집해야합니다datasets.xml파일 형식 *뚱 베어* /content/erddap/ 당신의 데이터셋을 설명하기 위해ERDDAP™임명은 봉사할 것입니다.
+
+예제를 볼 수 있습니다.[datasets.xmlGitHub에서](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml)·
 
 - - - -
 

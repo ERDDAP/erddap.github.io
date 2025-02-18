@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## UltimeleERDDAP™versiune{#latest-erddap-version} 
+
+2,25, a se vedea[documentația privind modificările](/changes#version-225)şi[descarcă](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1).
 
 ## ERDDAP™informații{#erddap-information} 
 
@@ -26,6 +29,8 @@ Există două moduri de a căuta mai multeERDDAP™s pentru seturi de date:[Caut
 ## Configuraţi - vă propriulERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™este[Sursă liberă și deschisă](https://en.wikipedia.org/wiki/Free_and_open-source_software)Toate...Java  (servlet) , aplicație web care rulează într-un server de aplicații web (De exemplu, Tomcat (recomandată) , sau Jetty (funcţionează, dar noi nu-l sprijinim.) ) . Această pagină web este în principal pentru oameni ("ERDDAP™administratori") care vor să-şi facă propria afacereERDDAP™instalarea pe propriul site web.
+
+Pentru a începe cu o instalare citită[ghidul de instalare a implementarii](/docs/server-admin/deploy-install).
 
 ### De ce să utilizaţiERDDAP™să distribui datele tale?{#why-use-erddap-to-distribute-your-data} 
 

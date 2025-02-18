@@ -241,6 +241,8 @@ KezdőlapERDDAP™v2.13,ERDDAP™Az adminisztrátorok felülírhatnak bármilyen
     
 ### datasets.xml {#datasetsxml} 
 * Olvassa el a megjegyzéseket[ **Együttműködésdatasets.xmlFile** ](/docs/server-admin/datasets)... Később, miután megkapodERDDAP™futás az első alkalommal (általában csak az alapértelmezett adatkészletekkel) Ön módosítja az XML-t_tomcat_/content/erddap/ **datasets.xml** megadni az összes adatkészletet, amit akarszERDDAP™szolgálni. Ez az, ahol eltölti az idejét, miközben felállítjaERDDAP™később, miközben fenntartja aERDDAP™...
+
+Láthat egy példát[datasets.xmlGitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml)...
      
 *    (Valószínűleg) Most vagy (kissé valószínűbb) a jövőben, ha módosítani szeretné az erddap CSS fájlját, készítsen másolatot_tomcat_/content/erddap/images/erddapStart2.css néven erddap2.css, majd változtatni. Az erddap2.css változásai csak akkor lépnek hatályba, haERDDAP™újraindításra kerül, és gyakran megköveteli a felhasználótól, hogy törölje a böngésző csésze fájljait.
      

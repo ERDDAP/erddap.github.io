@@ -241,6 +241,8 @@ Când creați mare ParentDirectory, din directorul părinte al BigParentDirector
     
 ### datasets.xml {#datasetsxml} 
 * Citiţi comentariile din[ **Lucrul cudatasets.xmlFișier** ](/docs/server-admin/datasets). Mai târziu, după ce teERDDAP™care rulează pentru prima dată (de obicei cu doar seturile de date implicite) , veți modifica XML în_tomcat_/content/erddap/ **datasets.xml** pentru a specifica toate seturile de date pe care doriți dumneavoastrăERDDAP™pentru a servi. Acest lucru este în cazul în care veți petrece cea mai mare parte a timpului în timp ce setareaERDDAP™și mai târziu în timp ce menținerea dumneavoastrăERDDAP™.
+
+Puteți vedea un exemplu[datasets.xmlprivind GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (Puţin probabil.) Acum sau (ușor mai probabil) în viitor, dacă doriți să modificați fișierul CSS al lui Erddap, faceți o copie a_tomcat_/content/erddap/imagini/erddapStart2.css numit erddap2.cs și apoi să facă modificări la acesta. Modificările aduse erddap2.css intră în vigoare numai atunci cândERDDAP™este repornit și adesea solicită utilizatorului să curețe fișierele cache ale browser-ului.
      

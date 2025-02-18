@@ -22,9 +22,9 @@ Make sure the english json translation files are generated. In the documentation
 npm run write-translations
 ```
 
-From the main erddap project directory run:
+From the main project directory run:
 ```
-python .\translation\translate_docs.py
+python .\translate_docs.py
 ```
 Note that this step is very slow, it translates all of the pages, documentation files, and json message files into 29 additional languages.
 

@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # と働くdatasets.xmlファイル
 
 \\[このページは、このページの先頭へERDDAP™管理者。\\]
 
 続いた後ERDDAP™ [インストール手順](/docs/server-admin/deploy-install)、編集しなければなりませんdatasets.xmlファイル *トームキャット* /content/erddap/ がデータセットを記述するERDDAP™取付けはサーブします。
+
+例を確認できます。[datasets.xmlGitHubで](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml)お問い合わせ
 
 - - - - -
 

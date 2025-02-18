@@ -241,6 +241,8 @@ bigParentDirectory の親ディレクトリから bigParentDirectory を作成�
     
 ### datasets.xml {#datasetsxml} 
 * コメントを読む[ **と働くdatasets.xmlファイル** ](/docs/server-admin/datasets)お問い合わせ 後で、あなたが得る後ERDDAP™初めて走る (通常はデフォルトデータセットのみ) でXMLを変更します。_tomcat_/content/erddap/ / / / **datasets.xml** 必要なすべてのデータセットを指定するERDDAP™お問い合わせ これは、セットアップ中にあなたの時間のバルクを費やす場所ですERDDAP™メンテナンス中、ERDDAP™お問い合わせ
+
+例を確認できます。[datasets.xmlGitHubで](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml)お問い合わせ
      
 *    (うまいも) 今、または (もう少し可能性が高い) 将来的には、 erddap の CSS ファイルを変更したい場合は、 コピーを作成します。_tomcat_/content/erddap/images/erddapStart2.css は erddap2.css と呼ばれ、変更を行います。 erddap2.css への変更は、いつしか効果をとりますERDDAP™再起動され、多くの場合、ブラウザのキャッシュされたファイルを消去するためにユーザーが必要です。
      

@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # EML 的 EDD 表和EMLBatch 的 EDD表 產生達泰斯的選項 Xml 命令
 

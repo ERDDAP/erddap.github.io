@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # Schalen
 ## ERDDAP™- Zware belasting, rasters, Clusters, Federaties en Cloud Computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

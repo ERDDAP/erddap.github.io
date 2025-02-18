@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # Den EDDTableFraEML og EDDTableFraEMLBatch Valgmuligheder i GenererDatasets Xml
 

@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## รุ่นล่าสุดERDDAP™รุ่น{#latest-erddap-version} 
+
+2.25 ดู[เปลี่ยนเอกสาร](/changes#version-225)ถึง[ดาวน์โหลดมัน](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1).
 
 ## ERDDAP™ข้อมูล{#erddap-information} 
 
@@ -26,6 +29,8 @@ ERDDAP™เป็น แหล่ง ที่ มี อิสระ และ
 ## ตั้งตัวของคุณเองERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™คือ[เปิดและเปิดแหล่ง](https://en.wikipedia.org/wiki/Free_and_open-source_software)ทั้งหมด...Java  (เซรุ่มName) แอพพลิเคชันที่ทํางานในเว็บบริการเว็บ (ยกตัวอย่างเช่น ทอมแคท (แนะนํา) หรือ เจ็ตตี้ (มันได้ผล แต่เราไม่ได้สนับสนุนมัน) ) . หน้าเว็บนี้ส่วนใหญ่สําหรับคน ("ERDDAP™ผู้ดูแลระบบ") ที่ต้องการที่จะตั้งของตัวเองERDDAP™ติดตั้งที่เว็บไซต์ของพวกเขาเอง
+
+เพื่อเริ่มอ่านการติดตั้ง[คู่มือการติดตั้งที่ใช้งาน](/docs/server-admin/deploy-install).
 
 ### ทําไมใช้ERDDAP™เพื่อแจกจ่ายข้อมูลของคุณ?{#why-use-erddap-to-distribute-your-data} 
 

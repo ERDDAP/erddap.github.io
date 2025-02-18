@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 ERDDAP™- Připrav si vlastníERDDAP™    
 
 ## Co potřebujete vědět{#things-you-need-to-know} 

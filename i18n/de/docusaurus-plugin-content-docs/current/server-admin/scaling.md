@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # Skalierung
 ## ERDDAP™- Schwere Lasten, Gitter, Cluster, Föderationen und Cloud Computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

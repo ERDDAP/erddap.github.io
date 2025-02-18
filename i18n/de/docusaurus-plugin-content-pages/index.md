@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## Letzter BeitragERDDAP™Version{#latest-erddap-version} 
+
+2.25, siehe[Änderungen der Dokumentation](/changes#version-225)und[Sie können](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1).
 
 ## ERDDAP™Informationen{#erddap-information} 
 
@@ -26,6 +29,8 @@ Es gibt zwei Möglichkeiten, mehrere zu suchenERDDAP™s für Datensätze:[Suche
 ## Stellen Sie Ihre eigenenERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™ein[Freie und offene Quelle](https://en.wikipedia.org/wiki/Free_and_open-source_software)Alles...Java  (servlet) , Web-Anwendung, die in einem Web-Anwendungsserver läuft (zum Beispiel Tomcat (empfohlen) , oder Jetty (es funktioniert, aber wir unterstützen es nicht) ) . Diese Seite ist meist für Menschen ("ERDDAP™Administratoren") die sich selbst einrichten wollenERDDAP™Installation auf ihrer eigenen Website.
+
+Mit einer Installation starten[die Installationsanleitung bereitstellen](/docs/server-admin/deploy-install).
 
 ### Warum verwendenERDDAP™Ihre Daten zu verbreiten?{#why-use-erddap-to-distribute-your-data} 
 

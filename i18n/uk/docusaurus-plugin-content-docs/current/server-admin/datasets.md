@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # Робота зdatasets.xmlГоловна
 
 \\[Цей веб-сторінок буде тільки цікавимERDDAP™адміністратори.\\]
 
 Після того, як ви пішлиERDDAP™ [Інструкція по монтажу](/docs/server-admin/deploy-install), ви повинні редагуватиdatasets.xmlфайл *домка* /content/erddap/, щоб описати дані, які вашіERDDAP™монтаж буде служити.
+
+Ви можете побачити приклад[datasets.xmlна GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml)й
 
 - - - -
 

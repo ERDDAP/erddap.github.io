@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 ERDDAP™- Sett opp din egenERDDAP™    
 
 ## Ting du trenger å vite{#things-you-need-to-know} 

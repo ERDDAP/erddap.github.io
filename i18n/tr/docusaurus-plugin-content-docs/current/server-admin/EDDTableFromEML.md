@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # EDTable FromEML ve EDDTable FromEMLBatch GenrateDatasets'teki Seçenekler X ml
 

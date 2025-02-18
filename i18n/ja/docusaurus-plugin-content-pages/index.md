@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## 最新記事ERDDAP™バージョン{#latest-erddap-version} 
+
+2.25、参照して下さい[ドキュメントの変更](/changes#version-225)そして、[ダウンロード](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1)お問い合わせ
 
 ## ERDDAP™インフォメーション{#erddap-information} 
 
@@ -26,6 +29,8 @@ ERDDAP™自由でオープンソース (Apache と Apache のような)  Java�
 ## 自分で設定するERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™お問い合わせ[無料およびオープンソース](https://en.wikipedia.org/wiki/Free_and_open-source_software), 全て-Java  (サーブレット) ウェブアプリケーションサーバで実行するWebアプリケーション (例えば、Tomcat (おすすめ) またはジェット機 (機能するが、サポートしない) ) お問い合わせ このページは主に人のために (ツイートERDDAP™管理者") 自分で設定したい人ERDDAP™自分のウェブサイトにインストールします。
+
+インストール読み込みから始める[デプロイインストールガイド](/docs/server-admin/deploy-install)お問い合わせ
 
 ### なぜ使うのかERDDAP™データを配布するには?{#why-use-erddap-to-distribute-your-data} 
 

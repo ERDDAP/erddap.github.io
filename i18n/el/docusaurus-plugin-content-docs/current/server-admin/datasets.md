@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # Συνεργασία με τοdatasets.xmlΑρχείο
 
 \\[Αυτή η ιστοσελίδα θα ενδιαφέρει μόνοERDDAP™διαχειριστές.\\]
 
 Αφού ακολουθήσετε τοERDDAP™ [οδηγίες εγκατάστασης](/docs/server-admin/deploy-install), θα πρέπει να επεξεργαστείτε τοdatasets.xmlαρχείο in *τομκάτ* /content/erddap/ για την περιγραφή των συνόλων δεδομένων που έχετεERDDAP™εγκατάσταση θα εξυπηρετήσει.
+
+Μπορείτε να δείτε ένα παράδειγμα[datasets.xmlστο GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
 
 - - Ναι.
 

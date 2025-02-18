@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # Scaling
 ## ERDDAP™- raskaat vuodot, verkot, klusterit, liitot ja pilvipalvelut{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

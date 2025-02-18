@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # পরিশ্রম করাdatasets.xmlফাইল
 
 \\[এই ওয়েব পেজের জন্য শুধুমাত্র আগ্রহের বিষয় হবেERDDAP™প্রশাসক.\\]
 
 পরে তুমি অনুসরণ করবেERDDAP™ [ইনস্টলেশন সংক্রান্ত নির্দেশ](/docs/server-admin/deploy-install)অবশ্যই খুলতে হবে ,datasets.xmlফাইলের মধ্যে *নিক্তি* /dev/অনুক্রমবীকরণ/আনসেট করুনERDDAP™ইনস্টলেশন কাজ করবে।
+
+আপনি একটি উদাহরণ দেখতে পারেন[datasets.xmlগিটহাবে](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml). .
 
 - -
 

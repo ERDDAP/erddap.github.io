@@ -241,6 +241,8 @@ Börja medERDDAP™v2.13,ERDDAP™administratörer kan åsidosätta något värd
     
 ### datasets.xml {#datasetsxml} 
 * Läs kommentarerna i[ **Arbeta meddatasets.xmlFil** ](/docs/server-admin/datasets). Senare, efter att du fåttERDDAP™Kör för första gången (vanligtvis med bara standarddataset) Du kommer att ändra XML i_tomcat_/content/erddap/// **datasets.xml** för att ange alla datamängder du vill ha dinERDDAP™att tjäna. Det är där du kommer att spendera huvuddelen av din tid medan du ställer inERDDAP™och senare samtidigt bibehålla dinERDDAP™.
+
+Du kan se ett exempel[datasets.xmlpå GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (Osannolikt) Nu eller (Lite mer sannolikt) i framtiden, om du vill ändra dinddaps CSS-fil, gör en kopia av_tomcat_/content/erddap/images/erddapStart2.css kallas erddap2.css och gör sedan ändringar i det. Ändringar av erddap2.css tar bara effekt närERDDAP™omstartas och kräver ofta också att användaren rensar webbläsarens cachade filer.
      

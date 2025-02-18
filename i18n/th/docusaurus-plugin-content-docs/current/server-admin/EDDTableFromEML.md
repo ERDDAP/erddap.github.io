@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # EDTable fromEML และ EDTable fromEMLBatch ตัวเลือกต่าง ๆ ในการสร้าง Datatas Xml
 

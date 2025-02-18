@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## НовиниERDDAP™версія{#latest-erddap-version} 
+
+2.25 див.[документація](/changes#version-225)і[скачати](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1)й
 
 ## ERDDAP™Інформація{#erddap-information} 
 
@@ -26,6 +29,8 @@ ERDDAP™Безкоштовний і відкритий джерело (Стат
 ## Встановити свій власнийERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™є[Безкоштовні та відкриті джерела](https://en.wikipedia.org/wiki/Free_and_open-source_software), всіJava  (консервлет) , веб-додаток, що працює на сервері веб-додатків (Наприклад, Tomcat (Рекомендовані) , або Jetty (ми не підтримуємо) ) й Ця сторінка в основному для людей (« » » » » » » » » » » » » » »ERDDAP™адміністратори) хто хоче самостійно налаштуватиERDDAP™установка на власний сайт.
+
+Для початку роботи з інсталяцією читайте[Встановити керівництво](/docs/server-admin/deploy-install)й
 
 ### ЧомуERDDAP™поширювати дані?{#why-use-erddap-to-distribute-your-data} 
 

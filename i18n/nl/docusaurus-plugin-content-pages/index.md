@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## LaatsteERDDAP™versie{#latest-erddap-version} 
+
+2.25, zie[de documentatie wijzigen](/changes#version-225)en[download het](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1).
 
 ## ERDDAP™informatie{#erddap-information} 
 
@@ -26,6 +29,8 @@ Er zijn twee manieren om meerdere te zoekenERDDAP™s voor datasets:[Meerdere zo
 ## Stel uw eigenERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™is a[Vrije en open bron](https://en.wikipedia.org/wiki/Free_and_open-source_software), all-Java  (servlet) , webapplicatie die draait in een webapplicatieserver (bijvoorbeeld, Tomcat (aanbevolen) , of Jetty (Het werkt, maar we steunen het niet.) ) . Deze web pagina is vooral voor mensen ("ERDDAP™beheerders") die hun eigenERDDAP™installatie op hun eigen website.
+
+Aan de slag met een installatie lezen[de installatiehandleiding](/docs/server-admin/deploy-install).
 
 ### Waarom gebruikenERDDAP™om uw gegevens te verspreiden?{#why-use-erddap-to-distribute-your-data} 
 

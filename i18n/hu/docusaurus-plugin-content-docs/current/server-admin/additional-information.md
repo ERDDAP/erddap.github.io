@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 ERDDAP™- állítsa be sajátjátERDDAP™    
 
 ## Dolog, amit tudnod kell{#things-you-need-to-know} 

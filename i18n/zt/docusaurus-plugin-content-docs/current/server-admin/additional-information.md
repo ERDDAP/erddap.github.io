@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 ERDDAP™- 建立你自己ERDDAP™    
 
 ## 你需要知道的事情{#things-you-need-to-know} 

@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## SitemapERDDAP™Sitemap{#latest-erddap-version} 
+
+2.25, lihat[perubahan dokumentasi](/changes#version-225)Login[Unduh](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1)Sitemap
 
 ## ERDDAP™Sitemap{#erddap-information} 
 
@@ -26,6 +29,8 @@ Ada dua cara untuk mencari beberapaERDDAP™s untuk dataset:[Cari BeberapaERDDAP
 ## Tetapkan SendiriERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™Sitemap[Sumber Bebas dan Terbuka](https://en.wikipedia.org/wiki/Free_and_open-source_software)SitemapJava  (Login) , aplikasi web yang berjalan di server aplikasi web (misalnya, Tomcat (Sitemap) , atau Jetty (itu bekerja, tapi kita tidak mendukung Meme it) ) Sitemap Halaman web ini sebagian besar untuk orang (SitemapERDDAP™Login) yang ingin mengatur mereka sendiri Meme itERDDAP™instalasi di situs web mereka sendiri.
+
+Untuk memulai dengan membaca instalasi[panduan pemasangan](/docs/server-admin/deploy-install)Sitemap
 
 ### SitemapERDDAP™mendistribusikan data Anda?{#why-use-erddap-to-distribute-your-data} 
 

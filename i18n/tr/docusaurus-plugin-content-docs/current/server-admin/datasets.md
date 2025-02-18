@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # Çalışmak ile çalışmakdatasets.xmlDosya
 
 \\[Bu web sayfası sadece ilgilenecekERDDAP™yöneticiler.\\]
 
 Takip ettikten sonraERDDAP™ [yükleme talimatları](/docs/server-admin/deploy-install), düzenlemelisindatasets.xmlDosya içinde dosya *tomcat* /content/erddap / veri kümelerinizi tarif etmek içinERDDAP™Kurulum hizmet edecek.
+
+Bir örnek görebilirsiniz[datasets.xmlGitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
 
 - - - -
 

@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # 缩放
 ## ERDDAP™- 重载、网格、集群、联合会和云计算{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

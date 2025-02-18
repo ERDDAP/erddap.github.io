@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # Paggawang kasama ng mga kapatiddatasets.xmlLarawan
 
 \\[Ang pahinang web na ito ay magiging kawili - wili lamang saERDDAP™Mga administrador.\\]
 
 Pagkatapos mong sundan angERDDAP™ [maglagay ng mga tagubilin](/docs/server-admin/deploy-install), kailangan mong ayusin angdatasets.xmltalaksan sa loob *tomcat* /content/erddap/ upang ilarawan ang mga dataset na iyong binigayERDDAP™Iluluklok ang instalasyon.
+
+Makikita mo ang isang halimbawa[datasets.xmltungkol sa GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
 
 - - -
 

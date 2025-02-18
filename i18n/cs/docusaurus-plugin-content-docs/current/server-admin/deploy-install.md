@@ -241,6 +241,8 @@ Začneme sERDDAP™v2.13,ERDDAP™Správci mohou přepsat jakoukoliv hodnotu v s
     
 ### datasets.xml {#datasetsxml} 
 * Přečti si komentáře[ **Práce sdatasets.xmlSoubor** ](/docs/server-admin/datasets). Později, až se dostanešERDDAP™poprvé běží (obvykle pouze s výchozími soubory dat) , budete modifikovat XML v_tomcat_/content/erddap/ **datasets.xml** k určení všech souborů dat, které chceteERDDAP™sloužit. Tady budete trávit většinu času při přípravěERDDAP™a později při zachováníERDDAP™.
+
+Můžete vidět příklad[datasets.xmlna GitHubu](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (Nepravděpodobné) Teď nebo (o něco pravděpodobnější) v budoucnu, pokud chcete změnit soubor Erddap CSS, udělejte kopii_tomcat_/content/erddap/images/erddapStart2.css volal erddap2.css a pak provést změny. Změny erddap2.cs nabývají účinku pouze tehdy, pokudERDDAP™je restartován a často také vyžaduje, aby uživatel vymazal cachované soubory prohlížeče.
      

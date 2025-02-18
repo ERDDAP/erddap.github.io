@@ -241,6 +241,8 @@ Xmx 和 -Xms 記憶體設定值很重要, 因為ERDDAP™更有記憶力更好 �
     
 ### datasets.xml {#datasetsxml} 
 * 讀取註解[ **与datasets.xml文件** ](/docs/server-admin/datasets). 等會兒,等會兒再說ERDDAP™第一次跑 (通常只有預設的數據集) 您將修改 XML 中的 XML 。_tomcat_/content/erddap/ **datasets.xml** 指定您想要的所有数据集ERDDAP™服侍。 在這裡你可以花你大部分時間來設置ERDDAP™后來在維持你的ERDDAP™.
+
+你可以看到一個例子[datasets.xml在 GitHub 上](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (不太可能) 現在或 (稍稍可能) 如果您要修改 Erdddap 的 CSS 檔案, 請將檔案複製成_tomcat_/content/erddap/ images/ erddapStart2. cs 叫做 erddap2. cs, 然后修改它 。 變更到 erddap2. cs 才生效ERDDAP™重新啟動, 也常常需要使用者清除瀏覽器的缓存檔案 。
      

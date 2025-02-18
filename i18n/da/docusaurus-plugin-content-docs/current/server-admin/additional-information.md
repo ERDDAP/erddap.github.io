@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 ERDDAP™- Opsæt din egenERDDAP™    
 
 ## Ting du har brug for at vide{#things-you-need-to-know} 

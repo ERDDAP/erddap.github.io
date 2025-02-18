@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # Skaling
 ## ERDDAP™- Heavy Loads, Grids, Klaszterek, Föderációk és Cloud Computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

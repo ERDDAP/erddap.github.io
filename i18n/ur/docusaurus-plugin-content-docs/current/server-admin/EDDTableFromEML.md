@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # EdDtable from EMML اور EdDTabble from EmLBatch جنیٹکات میں اختیارات Xml
 

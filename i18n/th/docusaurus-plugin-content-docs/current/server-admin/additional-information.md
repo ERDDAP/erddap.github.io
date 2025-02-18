@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 ERDDAP™- ตั้งตัวเองERDDAP™    
 
 ## สิ่ง ที่ คุณ จําเป็น ต้อง รู้{#things-you-need-to-know} 

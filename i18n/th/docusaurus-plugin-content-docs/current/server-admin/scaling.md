@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # การไล่สี
 ## ERDDAP™- สัมภาระหนัก, กริด, คลูสเตอร์, สหพันธ์, และ การประกอบเมฆ{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

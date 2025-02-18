@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # EDDTableFromEML 및 EDDTableFromEMLBatch GenerateDatasets에 있는 선택권 사이트맵
 

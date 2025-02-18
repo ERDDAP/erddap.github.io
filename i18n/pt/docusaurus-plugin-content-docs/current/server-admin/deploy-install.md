@@ -241,6 +241,8 @@ Começar comERDDAP™V2.13,ERDDAP™Os administradores podem substituir qualquer
     
 ### datasets.xml {#datasetsxml} 
 * Leia os comentários em[ **Trabalhar com odatasets.xmlArquivo** ](/docs/server-admin/datasets). Mais tarde, depois de você começarERDDAP™correndo pela primeira vez (geralmente com apenas os conjuntos de dados padrão) , você modificará o XML em_tomcat_/content/erddap/ **datasets.xml** para especificar todos os conjuntos de dados que você desejaERDDAP™servir. É aqui que você vai gastar a maior parte do seu tempo ao configurarERDDAP™e mais tarde, mantendo o seuERDDAP™.
+
+Você pode ver um exemplo[datasets.xmlem GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (Diferentemente) Agora ou (ligeiramente mais provável) no futuro, se você quiser modificar o arquivo CSS do erddap, faça uma cópia do_tomcat_/content/erddap/images/erddapStart2.css chamado erddap2.css e, em seguida, fazer alterações a ele. As alterações ao erddap2.css só entram em vigor quandoERDDAP™é reiniciado e muitas vezes também exigem que o usuário desmarque os arquivos em cache do navegador.
      

@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # स्केलिंग
 ## ERDDAP™- हेवी लोड, ग्रिड, क्लस्टर्स, फेडरेशन और क्लाउड कम्प्यूटिंग{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

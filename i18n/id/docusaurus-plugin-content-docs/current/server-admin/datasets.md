@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # Bekerja dengandatasets.xmlLogin
 
 \\[Halaman web ini hanya akan menarik minat untuk Meme itERDDAP™Login\\]
 
 Setelah Anda mengikutiERDDAP™ [instruksi instalasi](/docs/server-admin/deploy-install)Anda harus mengeditdatasets.xmlSitemap *Login* /content/erddap/ untuk menggambarkan dataset yang AndaERDDAP™instalasi akan melayani.
+
+Anda dapat melihat contoh[datasets.xmldi GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml)Sitemap
 
 - Sitemap
 

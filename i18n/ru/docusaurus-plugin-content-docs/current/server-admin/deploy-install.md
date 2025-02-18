@@ -241,6 +241,8 @@ Linux и Mac:
     
 ### datasets.xml {#datasetsxml} 
 * Читайте комментарии в[ **Работая сdatasets.xmlФайл** ](/docs/server-admin/datasets). Позже, когда ты получишьERDDAP™Бег в первый раз (Обычно только с наборами данных по умолчанию) Вы будете изменять XML в_tomcat_/content/erddap/ **datasets.xml** указать все наборы данных, которые вы хотитеERDDAP™служить. Именно здесь вы будете тратить большую часть своего времени на настройку.ERDDAP™А потом, сохраняя свойERDDAP™.
+
+Вы можете увидеть пример[datasets.xmlНа GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (маловероятно) Сейчас или (немного вероятнее) Если вы хотите изменить CSS-файл erddap, сделайте копию_tomcat_/content/erddap/images/erddapStart2.css называется erddap2.css и затем вносит в него изменения. Изменения в erddap2.css вступают в силу только тогда, когдаERDDAP™Перезапускается и часто требует от пользователя очистить кэшированные файлы браузера.
      

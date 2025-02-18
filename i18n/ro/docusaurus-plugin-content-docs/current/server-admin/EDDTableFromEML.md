@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # Tabelul EDDFromEML și tabelul EDDFromEMLBatch Opțiuni în setări de date generate Xml
 

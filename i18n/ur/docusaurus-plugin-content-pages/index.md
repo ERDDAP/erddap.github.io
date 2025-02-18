@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## تاریخERDDAP™ورژن{#latest-erddap-version} 
+
+2.25، دیکھو[دستاویز تبدیل کریں](/changes#version-225)اور[اسے اتار دو](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1). .
 
 ## ERDDAP™معلومات{#erddap-information} 
 
@@ -26,6 +29,8 @@ ERDDAP™ایک آزاد اور کھلا ماخذ ہے۔ (اپاچی اور اپ
 ## خود کو بلند کریںERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™ایک ہے[آزاد اور کھلے ماخذ](https://en.wikipedia.org/wiki/Free_and_open-source_software)... تمامJava  (سرکل) . ، ویب ایپلیکیشن جو ویب اطلاقیہ سرور میں چلتا ہے۔ (مثال کے طور پر ٹومکاٹ (سفارش) : (یہ کام کرتا ہے، لیکن ہم اس کی حمایت نہیں کرتے) ) . . یہ ویب صفحہ زیادہ تر لوگوں کے لیے ہے۔ ("ERDDAP™منتظم") جو اپنی جگہ قائم کرنا چاہتے ہیں۔ERDDAP™اپنی ویب سائٹ پر نصب کرنا۔
+
+تنصیب کردہ پڑھنے سے شروع کر نے کے لئے[گرب تنصیب کار](/docs/server-admin/deploy-install). .
 
 ### کیوں استعمال کریںERDDAP™آپ کے اعداد و شمار کو تقسیم کرنے کے لئے؟{#why-use-erddap-to-distribute-your-data} 
 

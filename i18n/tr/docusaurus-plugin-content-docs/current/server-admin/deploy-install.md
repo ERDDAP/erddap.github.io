@@ -241,6 +241,8 @@ Starting with withERDDAP™v2.13,ERDDAP™Yöneticiler kurulumda herhangi bir de
     
 ### datasets.xml {#datasetsxml} 
 * Yorumları okuyun[ **Çalışmak ile çalışmakdatasets.xmlDosya** ](/docs/server-admin/datasets). Daha sonra, aldıktan sonraERDDAP™İlk kez koşmak (Genellikle sadece varsayılan datasets ile) , XML'i XML'i değiştireceksiniz_tomcat_/content/erddap/ **datasets.xml** İstediğiniz tüm veri kümelerini belirtmek içinERDDAP™Hizmet etmek için. Bu, zamanınızın büyük kısmını harcayacak, ayarlandığındaERDDAP™ve daha sonra da devam ederkenERDDAP™.
+
+Bir örnek görebilirsiniz[datasets.xmlGitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (aksine) Şimdi veya Şimdi (Biraz daha muhtemel) Gelecekte, erddap'ın CSS dosyasını değiştirmek istiyorsanız, bir kopyasını yapın_tomcat_/content/erddap/ Images/erddapStart2.css, erddap2.css olarak adlandırılır ve sonra ona değişiklikler yapar. erddap2.css için değişiklikler sadece etkisini alırERDDAP™Yeniden başlatılır ve genellikle kullanıcının tarayıcının önbellek dosyalarını temizlemek gerekir.
      

@@ -241,6 +241,8 @@ Beginnen metERDDAP™v2.13,ERDDAP™beheerders kunnen elke waarde in setup.xml o
     
 ### datasets.xml {#datasetsxml} 
 * Lees de opmerkingen in[ **Werken met dedatasets.xmlBestand** ](/docs/server-admin/datasets). Later, nadat jeERDDAP™voor de eerste keer (meestal met alleen de standaard datasets) , zul je de XML in_tomcat_/content/erddap' **datasets.xml** om alle datasets te specificeren die u wiltERDDAP™Om te dienen. Dit is waar u het grootste deel van uw tijd doorbrengen tijdens het opzettenERDDAP™en later met behoud van uwERDDAP™.
+
+U kunt een voorbeeld zien[datasets.xmlop GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (Onwaarschijnlijk) Nu of (iets waarschijnlijker) in de toekomst, als u erddap's CSS-bestand wilt wijzigen, maak dan een kopie van_tomcat_/content/erddap/images/erddapStart2.css genaamd erddap2.css en dan wijzigingen aanbrengen. Wijzigingen in erddap2.css worden alleen van kracht wanneerERDDAP™wordt herstart en vereisen vaak ook de gebruiker om de gecachede bestanden van de browser te wissen.
      

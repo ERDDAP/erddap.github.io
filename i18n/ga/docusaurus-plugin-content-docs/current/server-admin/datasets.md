@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # Ag obair leis andatasets.xmlDéan Teagmháil Linn
 
 \\[Beidh an leathanach gréasáin a bheith ach amháin ar spéis leoERDDAP™riarthóirí.\\]
 
 Tar éis duit lean anERDDAP™ [treoracha a shuiteáil](/docs/server-admin/deploy-install), ní mór duit in eagar andatasets.xmlcomhad i *taiseachas aeir: fliuch* / ábhar / erddap / chun cur síos ar na tacair sonraí go bhfuil doERDDAP™Beidh suiteáil freastal.
+
+Is féidir leat sampla a fheiceáil[datasets.xmlar GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
 
 - - - - - -
 

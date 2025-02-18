@@ -241,6 +241,8 @@ Chmod - R O-rwx apache-tomac-10.23_BAR_
     
 ### datasets.xml {#datasetsxml} 
 * อ่าน ความ เห็น ใน หนังสือ[ **ทํางานกับdatasets.xmlแฟ้ม** ](/docs/server-admin/datasets). หลังจากนั้น หลังจากนายได้รับERDDAP™ทํางานเป็นครั้งแรก (โดยปกติจะเป็นชุดข้อมูลปริยาย) คุณจะแก้ไข XML ใน_tomcat_/content/erddap/ **datasets.xml** เพื่อกําหนดชุดข้อมูลที่คุณต้องการทั้งหมดERDDAP™เพื่อรับใช้ นี่คือที่ที่คุณจะใช้เวลาส่วนใหญ่ของคุณในระหว่างการตั้งค่าERDDAP™และในภายหลังในขณะที่รักษาของคุณERDDAP™.
+
+คุณจะเห็นตัวอย่าง[datasets.xmlบน กิตติฮับ](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (ไม่น่าจะใช่) ตอนนี้หรือ (มีแนวโน้มมากกว่า) ในอนาคต ถ้าคุณอยากแก้ไขแฟ้ม CSS ของ Ardadap ให้ทําสําเนา_tomcat_/content/erddapอิมเมจ/ serdap start2. ซีซีที่เรียกว่า edadap2cs แล้วทําการปรับเปลี่ยน การเปลี่ยนแปลงไปยัง rdep2cs จะมีผลเฉพาะเมื่อERDDAP™เริ่มการทํางานใหม่และมักต้องการผู้ใช้เพื่อล้างแฟ้มที่มีแคชของเบราว์เซอร์
      

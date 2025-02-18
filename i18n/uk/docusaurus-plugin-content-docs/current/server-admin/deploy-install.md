@@ -241,6 +241,8 @@ JavaScript licenses API Веб-сайт Go1.13.8
     
 ### datasets.xml {#datasetsxml} 
 * Читати коментарі[ **Робота зdatasets.xmlГоловна** ](/docs/server-admin/datasets)й Після того, як ви отримаєтеERDDAP™перший раз (як правило, з просто даними за замовчуванням) Ви зміните XML в_tomcat_/content/erddapУкраїнська **datasets.xml** щоб вказати всі дані, які ви хочете, щоб вашERDDAP™подавати. Це те, де ви будете витрачати об'єм вашого часу під час налаштуванняERDDAP™і пізніше, зберігаючи вашERDDAP™й
+
+Ви можете побачити приклад[datasets.xmlна GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml)й
      
 *    (На відміну) Відправити (трохи частіше) в майбутньому, якщо ви хочете змінити файл CSS erddap, зробити копію_tomcat_/content/erddap/images/erddapStart2.css назвав erddap2.css, а потім внести зміни до нього. Зміни до erddap2.css тільки приймають ефект приERDDAP™Працював і часто зажадає користувачу очистити файли кешування браузера.
      

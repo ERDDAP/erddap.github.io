@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # Ang EDDTable MulaEML at EDDTable MulaEMLBatch Mga Mapagpipilian sa GenerateDatasets Xml
 

@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 ERDDAP™- Configurați-vă propriaERDDAP™    
 
 ## Lucruri pe care trebuie să le ştii{#things-you-need-to-know} 

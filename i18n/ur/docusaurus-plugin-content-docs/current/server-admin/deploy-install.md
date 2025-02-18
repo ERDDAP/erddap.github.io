@@ -241,6 +241,8 @@ chmod -RO-rwx apache-tomcat-_101.23_
     
 ### datasets.xml {#datasetsxml} 
 * جواب پڑھیں[ **ساتھ کام کرتے ہیں۔datasets.xmlفائل** ](/docs/server-admin/datasets). . بعد، آپ کو حاصل کرنے کے بعدERDDAP™پہلی بار دوڑ (عام طور پر صرف طے شدہ ڈیٹا سیٹ کے ساتھ) ، آپ میں XML تبدیل کریں گے_tomcat_/content/erddap/ **datasets.xml** تمام ڈیٹا سیٹ آپ چاہتے ہیںERDDAP™خدمت. یہ وہی وقت ہوگا جب آپ اپنے وقت کے دوران میں گزر بسر کریں گے۔ERDDAP™اور پھر ہم نے آپ کی جگہ پر توجہ دیERDDAP™. .
+
+آپ ایک مثال دیکھ سکتے ہیں[datasets.xmlجتوئی پر](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml). .
      
 *    (برعکس) ابھی یا تو (تھوڑا زیادہ امکان) مستقبل میں، اگر آپ ایرڈاپ کی سی ایس فائل میں ترمیم کرنا چاہیں تو کاپی رائٹ کریں۔_tomcat_/content/erddap/images/erdap species2.css جنہیں Erddap2.cs کہا جاتا ہے اور پھر اس میں تبدیلیاں کرتا ہے۔ Erddap2.cs صرف جب اثر انداز ہوتے ہیں۔ERDDAP™دوبارہ شروع کیا جاتا ہے اور اکثر صارف کو بھی صارفین کی ضرورت ہوتی ہے کہ وہ براؤزر کے کیڈڈ فائل کو صاف کرے۔
      

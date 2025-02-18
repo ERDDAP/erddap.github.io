@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # An EDDTableFromEML agus EDDTableFromEMLBatch Roghanna i GenerateDatasets XLUMX
 

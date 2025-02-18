@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # ساتھ کام کرتے ہیں۔datasets.xmlفائل
 
 \\[یہ ویب صفحہ صرف دلچسپی کا حامل ہوگا۔ERDDAP™منتظم.\\]
 
 بعد ازاں آپ کے پیرو ہوئے۔ERDDAP™ [ہدایات نصب کریں](/docs/server-admin/deploy-install)، آپ کو ترمیم کرنی چاہیےdatasets.xmlفائل فہرست *بائٹس* /cont/redap/ ان اعداد و شمار کو بیان کرنے کے لیے جو آپ کے نزدیک ہیں۔ERDDAP™نصب‌اُلعین خدمت کریں گے ۔
+
+آپ ایک مثال دیکھ سکتے ہیں[datasets.xmlجتوئی پر](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml). .
 
 - - -
 

@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # Työskentelyä yhdessädatasets.xmlTiedosto
 
 \\[Tämä sivu kiinnostaa vainERDDAP™hallinnoijia.\\]
 
 Kun olet seurannutERDDAP™ [Asennusohjeet](/docs/server-admin/deploy-install)Sinun täytyy muokatadatasets.xmltiedostossa *Tom* Sisältö/erddap/kuvaus aineistoista, joitaERDDAP™Asennus palvelee.
+
+Voit nähdä esimerkin[datasets.xmlKirjoittanut GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
 
 - -
 

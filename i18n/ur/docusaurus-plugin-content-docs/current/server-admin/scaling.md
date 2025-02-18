@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # حکمت عملی
 ## ERDDAP™- بھاری بوجھ، گرڈس، کلائڈس، فیڈریشن اور کلاؤڈ کامپلنگ -{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

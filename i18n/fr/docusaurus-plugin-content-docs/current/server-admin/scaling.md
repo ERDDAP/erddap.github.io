@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # Élargissement
 ## ERDDAP™- Charges lourdes, Grilles, Clusters, Fédérations et Cloud Computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

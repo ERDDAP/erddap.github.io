@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## ViimeisinERDDAP™versio versio versio versio versio{#latest-erddap-version} 
+
+2.25 Nähdään[Muutoksen dokumentointi](/changes#version-225)ja[Lataa](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1).
 
 ## ERDDAP™Tietoa{#erddap-information} 
 
@@ -26,6 +29,8 @@ On kaksi tapaa etsiä useitaERDDAP™s aineistoihin:[Etsi useitaERDDAP™s](/Sea
 ## Aseta omasiERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™on A[Vapaa ja avoin lähde](https://en.wikipedia.org/wiki/Free_and_open-source_software)Kaikki-Java  (Servlet) Web-sovellus, joka toimii verkkosovelluspalvelimessa (Esimerkiksi Tomcat (Suositeltu) Tai Jetty (Toimii, mutta emme tue sitä) ) . Tämä sivusto on enimmäkseen ihmisille ("""ERDDAP™Hallinnolliset") jotka haluavat perustaa omanERDDAP™asennus omalla verkkosivustollaan.
+
+Aloita asennuslukemalla[Asennuksen opas](/docs/server-admin/deploy-install).
 
 ### Miksi käyttääERDDAP™Jakamaan tietojasi?{#why-use-erddap-to-distribute-your-data} 
 

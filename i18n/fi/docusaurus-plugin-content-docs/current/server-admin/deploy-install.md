@@ -241,6 +241,8 @@ AloitetaanERDDAP™v2.13,ERDDAP™Järjestäjät voivat ylittää minkä tahansa
     
 ### datasets.xml {#datasetsxml} 
 * Lue kommentit sisään[ **Työskentelyä yhdessädatasets.xmlTiedosto** ](/docs/server-admin/datasets). Myöhemmin, kun olet saanutERDDAP™Juoksen ensimmäistä kertaa (yleensä vain oletustietojen kanssa) Muutat XML:ää_tomcat_/content/erddap// **datasets.xml** määrittää kaikki haluamasi tietoaineistotERDDAP™palvelemaan. Näin vietät suurimman osan ajastasi perustaessasiERDDAP™ja myöhemmin säilyttäenERDDAP™.
+
+Voit nähdä esimerkin[datasets.xmlKirjoittanut GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (epätodennäköistä) Nyt tai (hieman todennäköisemmin) tulevaisuudessa, jos haluat muokata erddapin CSS-tiedostoa, tee kopio_tomcat_/content/erddap/images/erdapStart2.css kutsutaan erddap2.css ja sitten tehdä muutoksia siihen. Muutokset erdap2.css:iin tulevat voimaan vain silloin, kunERDDAP™Käynnistetään uudelleen ja usein myös käyttäjän on puhdistettava selaimen välimuistitiedostot.
      

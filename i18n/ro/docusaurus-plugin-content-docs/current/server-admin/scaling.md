@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # Scalare
 ## ERDDAP™- Încărcături grele, grile, clustere, federații și cloud computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # ทํางานกับdatasets.xmlแฟ้ม
 
 \\[หน้าเว็บนี้จะสนใจเฉพาะหน้าเว็บERDDAP™ผู้บริหาร\\]
 
 หลังจากที่เจ้าติดตามERDDAP™ [คําสั่งการติดตั้ง](/docs/server-admin/deploy-install)คุณต้องแก้ไขdatasets.xmlแฟ้มใน *แว่นขยาย* / intent/ erdap/ เพื่ออธิบายชุดข้อมูลต่าง ๆ ที่ใช้แสดงERDDAP™การติดตั้งจะให้บริการ
+
+คุณจะเห็นตัวอย่าง[datasets.xmlบน กิตติฮับ](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
 
 - -
 

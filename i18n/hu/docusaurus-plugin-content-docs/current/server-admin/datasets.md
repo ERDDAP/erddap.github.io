@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # Együttműködésdatasets.xmlFile
 
 \\[Ez a weboldal csak érdekes leszERDDAP™adminisztrátorok.\\]
 
 Miután követted aERDDAP™ [telepítési utasítások](/docs/server-admin/deploy-install), szerkesztenie kelldatasets.xmlfájl *Tomcat* /content/erddap/ leírja azokat az adatkészleteket, amelyeket aERDDAP™A telepítés szolgálni fog.
+
+Láthat egy példát[datasets.xmlGitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml)...
 
 - -
 

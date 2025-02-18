@@ -786,9 +786,9 @@ pre_matcher_dont_translate_strings = [
 ]
 
 # For testing
-language_code_list  = [
-   "es",
-]
+# language_code_list  = [
+#    "es",
+# ]
 
 def get_file_name(file_path):
     file_path_components = file_path.split('/')

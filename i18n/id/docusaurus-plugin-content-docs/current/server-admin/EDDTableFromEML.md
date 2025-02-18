@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # EDDTableDariEML dan EDDTableDariEMLBatch Pilihan di GenerateDataset Login
 

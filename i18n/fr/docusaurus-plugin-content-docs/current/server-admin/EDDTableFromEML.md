@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # La table EDDFromEML et la table EDDFromEMLBatch Options dans Générer des ensembles de données Xml
 

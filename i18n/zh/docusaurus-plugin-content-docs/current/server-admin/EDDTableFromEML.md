@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # 来自EML的EDD表和来自EMLBatch的EDD表 生成数据中的选项 xml 数据
 

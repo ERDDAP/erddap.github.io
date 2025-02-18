@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # Práce sdatasets.xmlSoubor
 
 \\[Tato webová stránka bude pouze zajímavéERDDAP™Správci.\\]
 
 Poté, co jste následovaliERDDAP™ [Návod k instalaci](/docs/server-admin/deploy-install), musíte upravitdatasets.xmlsoubor v *tomcat* /content/erddap/ pro popis souborů dat, které máteERDDAP™instalace bude sloužit.
+
+Můžete vidět příklad[datasets.xmlna GitHubu](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
 
 - - -
 

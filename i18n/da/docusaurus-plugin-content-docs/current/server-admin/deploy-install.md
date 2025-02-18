@@ -241,6 +241,8 @@ Begyndende medERDDAP™v2.13,ERDDAP™Administratorer kan tilsidesætte enhver v
     
 ### datasets.xml {#datasetsxml} 
 * Læs kommentarerne i[ **Arbejde med arbejdetdatasets.xmlFilen fil** ](/docs/server-admin/datasets). Senere, efter du fårERDDAP™kører for første gang (Normalt med kun standarddatasæt) , vil du ændre XML i_tomcat_/content/erddap/ / / / **datasets.xml** for at angive alle de data, du ønsker,ERDDAP™at tjene. Dette er, hvor du vil bruge mængden af din tid, mens du opsætterERDDAP™og senere samtidig opretholde dinERDDAP™.
+
+Du kan se et eksempel[datasets.xmlpå GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (I modsætning til) Nu eller nu (lidt mere sandsynligt) i fremtiden, hvis du ønsker at ændre erddaps CSS-fil, lave en kopi af_tomcat_/content/erddap/images/erddapStart2.css kaldet erddap2.css og derefter foretage ændringer til det. Ændringer til erddap2.css tager kun virkning, nårERDDAP™genstartes og kræver ofte også brugeren at rydde browserens cachede filer.
      

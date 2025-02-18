@@ -241,6 +241,8 @@ Pasimula saERDDAP™v2.13,ERDDAP™Maaaring maagaw ng mga administrador ang anum
     
 ### datasets.xml {#datasetsxml} 
 * Basahin ang mga komento sa[ **Paggawang kasama ng mga kapatiddatasets.xmlLarawan** ](/docs/server-admin/datasets). Sa kalaunan, pagdating moERDDAP™tumatakbo sa unang pagkakataon (karaniwang kasama lamang ang default datasets) , babaguhin mo ang XML sa_tomcat_/content/erddap/ **datasets.xml** upang tiyakin ang lahat ng datos na gusto moERDDAP™upang maglingkod. Dito mo gugugulin ang malaking bahagi ng iyong panahon habang nagtatayoERDDAP™at mamaya habang pinananatili ang iyongERDDAP™.
+
+Makikita mo ang isang halimbawa[datasets.xmltungkol sa GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (Di - inaasahan) Ngayon o (bahagyang malamang) sa hinaharap, kung nais mong baguhin ang talaksang CSS ng erddap, gumawa ng isang kopya ng_tomcat_/content/erddap/images/erddapStart2.cs na tinatawag na erddap2.cs at pagkatapos ay gumagawa ng mga pagbabago rito. Ang mga pagbabago tungo sa erddap2.cs ay nangyayari lamang kapagERDDAP™ay muling naka-arte at kadalasan ay nangangailangan din ang gumagamit na alisin ang mga screw na file ng browser.
      

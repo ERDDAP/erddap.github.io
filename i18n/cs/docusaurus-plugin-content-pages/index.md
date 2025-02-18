@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## NejnovějšíERDDAP™verze{#latest-erddap-version} 
+
+2.25 viz[změny dokumentace](/changes#version-225)a[stáhnout](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1).
 
 ## ERDDAP™informace{#erddap-information} 
 
@@ -26,6 +29,8 @@ Existují dva způsoby, jak hledat víceERDDAP™s pro datové soubory:[Hledat v
 ## Nastavte si vlastníERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™je[Volný a otevřený zdroj](https://en.wikipedia.org/wiki/Free_and_open-source_software), vše-Java  (servlet) , webová aplikace běžící na webovém serveru aplikace (například Tomcat (doporučené) , nebo Jetty (Funguje to, ale my to nepodporujeme.) ) . Tato webová stránka je většinou pro lidi ("ERDDAP™Správci") kteří si chtějí založit vlastníERDDAP™instalace na vlastních internetových stránkách.
+
+Chcete-li začít s instalací číst[návod k instalaci zařízení](/docs/server-admin/deploy-install).
 
 ### PročERDDAP™šířit vaše data?{#why-use-erddap-to-distribute-your-data} 
 

@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # Скальлінг
 ## ERDDAP™- Важкі навантаження, Сітки, кластери, федерації та хмарні обчислення{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

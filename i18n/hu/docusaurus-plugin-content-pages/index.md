@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## LegutóbbERDDAP™verzió{#latest-erddap-version} 
+
+2.25 lásd:[változások dokumentáció](/changes#version-225)és[Töltse le](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1)...
 
 ## ERDDAP™információ{#erddap-information} 
 
@@ -26,6 +29,8 @@ Két módja van a keresés többERDDAP™s az adatkészletek esetében:[Keresés
 ## Állítsa be sajátjátERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™egy[Ingyenes és nyitott forrás](https://en.wikipedia.org/wiki/Free_and_open-source_software)All-Java  (servlet) , webes alkalmazás, amely egy webes alkalmazáskiszolgálóban fut (Például Tomcat (ajánlott) vagy Jetty (működik, de nem támogatjuk) ) ... Ez a weboldal többnyire az emberek számára ("..."ERDDAP™adminisztrátorok") Ki akarja létrehozni a sajátERDDAP™telepítés saját honlapján.
+
+Kezdeni egy telepítési olvasással[A telepítő útmutató](/docs/server-admin/deploy-install)...
 
 ### Miért használjaERDDAP™Adatainak terjesztése?{#why-use-erddap-to-distribute-your-data} 
 

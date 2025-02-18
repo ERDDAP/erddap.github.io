@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## Son Son Son Son Son Son Son SonERDDAP™sürüm sürüm sürüm sürüm sürüm sürüm sürüm sürüm sürüm versiyonu{#latest-erddap-version} 
+
+2.25, bakınız[Değişiklikler](/changes#version-225)ve[indir](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1).
 
 ## ERDDAP™Bilgi Bilgileri{#erddap-information} 
 
@@ -26,6 +29,8 @@ Birden fazla aramanın iki yolu vardırERDDAP™Datasets için s:[Birden çok ar
 ## Set Up Your OwnERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™Bir şeydir[Ücretsiz ve Açık Kaynak](https://en.wikipedia.org/wiki/Free_and_open-source_software)Tüm -Java  (servlet) , bir web uygulama sunucusunda çalışan web uygulaması (Örneğin, Tomcat (önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen önerilen) Ya da Jetty (işe yarıyor ama onu desteklemiyoruz) ) . Bu web sayfası çoğunlukla insanlar içindir (" " ""ERDDAP™Yöneticiler") Kim kendilerini kurmak istiyorERDDAP™Kendi web sitesinde yükleme.
+
+Bir yükleme okuma ile başlamak için[Dağıtım yükleme rehberi](/docs/server-admin/deploy-install).
 
 ### Neden kullanımERDDAP™Verilerinizi dağıtmak için?{#why-use-erddap-to-distribute-your-data} 
 

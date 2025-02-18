@@ -241,6 +241,8 @@ chmod - R o-rwx apache-tomcat - _1.0.23_ (韩语).
     
 ### datasets.xml {#datasetsxml} 
 * 阅读注释[ **与datasets.xml文件** ](/docs/server-admin/datasets)。 。 。 。 以后,你得到后,我给你ERDDAP™第一次运行 (通常只有默认数据集) ,您将在_tomcat_/content/erddap页:1 **datasets.xml** 指定您想要的所有数据集ERDDAP™服务。 在那里你会花你的大部分时间 设置ERDDAP™以后在维持你的ERDDAP™。 。 。 。
+
+你可以看到一个例子[datasets.xml关于 GitHub 的](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml)。 。 。 。
      
 *    (不太可能,也许) 现在或 (略为可能) 如果您想要修改 erddap 的 CSS 文件, 请复制_tomcat_/content/erddap/images/erddapStart2.cs称为erddap2.cs,然后对其进行修改. 对 erddap2.cs 的修改只有在ERDDAP™并经常要求用户清除浏览器缓存文件。
      

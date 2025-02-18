@@ -241,6 +241,8 @@ Ag tosú leERDDAP™v2.13,ERDDAP™Is féidir le riarthóirí override aon luach
     
 ### datasets.xml {#datasetsxml} 
 * Léigh na tuairimí i[ **Ag obair leis andatasets.xmlDéan Teagmháil Linn** ](/docs/server-admin/datasets). Níos déanaí, tar éis a gheobhaidh túERDDAP™ag rith don chéad uair (de ghnáth leis na tacair sonraí réamhshocraithe) , beidh tú a mhodhnú an XML i_tomcat_/content/erddap/ Baile **datasets.xml** a shonrú go léir na tacair sonraí is mian leat doERDDAP™a sheirbheáil. Tá sé seo nuair a bheidh tú a chaitheamh ar an chuid is mó de do chuid ama agus a chur ar bunERDDAP™agus ina dhiaidh sin ag cothabháil doERDDAP™.
+
+Is féidir leat sampla a fheiceáil[datasets.xmlar GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (Murab ionann agus) Anois nó (beagán níos dóichí) sa todhchaí, más mian leat a mhodhnú comhad CSS erddap, a dhéanamh cóip de_tomcat_/content/erddap/ teachtaireachtaí / erddapStart2.css ar a dtugtar erddap2.cs agus ansin athruithe a dhéanamh air. Athruithe ar erddap2.cs ghlacadh ach amháin i bhfeidhm nuairERDDAP™Tá atosú agus is minic a cheangal ar an úsáideoir a soiléir an bhrabhsálaí comhaid i dtaisce.
      

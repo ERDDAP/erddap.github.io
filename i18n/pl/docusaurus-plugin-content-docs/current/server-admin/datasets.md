@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # Praca zdatasets.xmlPlik
 
 \\[Ta strona będzie interesować tylkoERDDAP™administratorzy.\\]
 
 Po zakończeniuERDDAP™ [instrukcje instalacji](/docs/server-admin/deploy-install), musisz edytowaćdatasets.xmlplik *tomcat* / content / erddap / w celu opisania zbiorów danychERDDAP™instalacja będzie służyć.
+
+Możesz zobaczyć przykład[datasets.xmlw sprawie GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
 
 - -
 

@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # Trabalhar com odatasets.xmlArquivo
 
 \\[Esta página será apenas de interesse paraERDDAP™administradores.\\]
 
 Depois de ter seguido oERDDAP™ [instruções de instalação](/docs/server-admin/deploy-install), você deve editar odatasets.xmlarquivo em *Toca a brincar.* /content/erddap/ para descrever os conjuntos de dados que seuERDDAP™instalação irá servir.
+
+Você pode ver um exemplo[datasets.xmlem GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
 
 - - Não.
 

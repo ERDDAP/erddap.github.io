@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 ERDDAP™Aseta omasiERDDAP™    
 
 ## Asioita, jotka sinun on tiedettävä{#things-you-need-to-know} 

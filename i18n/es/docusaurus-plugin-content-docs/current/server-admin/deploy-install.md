@@ -241,6 +241,8 @@ Empezando conERDDAP™v2.13,ERDDAP™los administradores pueden anular cualquier
     
 ### datasets.xml {#datasetsxml} 
 * Lea los comentarios en[ **Trabajando con eldatasets.xmlArchivo** ](/docs/server-admin/datasets). Luego, después de que lleguesERDDAP™corriendo por primera vez (generalmente con sólo los conjuntos de datos predeterminados) , modificará el XML en_tomcat_/content/erddap/ **datasets.xml** para especificar todos los conjuntos de datos que deseaERDDAP™para servir. Aquí es donde pasarás la mayor parte de tu tiempo mientras te preparasERDDAP™y más tarde manteniendo suERDDAP™.
+
+Puedes ver un ejemplo.[datasets.xmlen GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
      
 *    (Diferentemente) Ahora o (ligeramente más probable) en el futuro, si desea modificar el archivo CSS de Erddap, haga una copia de_tomcat_/content/erddap/images/erddapStart2.css llamado erddap2.css y luego hacer cambios en él. Los cambios a erddap2.css sólo tienen efecto cuandoERDDAP™se reinicia y a menudo también requieren que el usuario despeje los archivos en caché del navegador.
      

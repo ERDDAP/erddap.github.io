@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## Mais recentesERDDAP™versão{#latest-erddap-version} 
+
+2.25, veja[muda a documentação](/changes#version-225)e[Faça o download](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1).
 
 ## ERDDAP™informação{#erddap-information} 
 
@@ -26,6 +29,8 @@ Existem duas maneiras de pesquisar váriosERDDAP™s para conjuntos de dados:[M�
 ## Configure o seu próprioERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™é um[Fonte livre e aberta](https://en.wikipedia.org/wiki/Free_and_open-source_software)Tudo...Java  (- Sim.) , aplicação web que é executado em um servidor de aplicativos web (por exemplo, Tomcat (recomendado) , ou Jetty (funciona, mas não o apoiamos) ) . Esta página web é principalmente para pessoas ("ERDDAP™administradores") quem quer montar seu próprioERDDAP™instalação em seu próprio site.
+
+Para começar com uma leitura de instalação[o guia de instalação de implantação](/docs/server-admin/deploy-install).
 
 ### Por que usarERDDAP™para distribuir seus dados?{#why-use-erddap-to-distribute-your-data} 
 

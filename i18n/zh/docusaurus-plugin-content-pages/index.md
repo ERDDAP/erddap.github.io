@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## 最新数据ERDDAP™版本{#latest-erddap-version} 
+
+2.25,见[更改文档](/changes#version-225)和[下载](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1)。 。 。 。
 
 ## ERDDAP™资料{#erddap-information} 
 
@@ -26,6 +29,8 @@ ERDDAP™是一个自由和开放源代码 (阿帕奇语和阿帕奇语)  Java�
 ## 设置自己的位置ERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™是一个[自由和开放源码](https://en.wikipedia.org/wiki/Free_and_open-source_software)┮Τ...Java  (服务器) ,在网络应用程序服务器中运行的网络应用程序 (例如,汤姆卡特 (建议) ,或杰蒂 (有用,但我们不支持) ) 。 。 。 这个网页主要面向人们 (" , "ERDDAP™管理员") 他们想建立自己的ERDDAP™在自己的网站上安装。
+
+要从安装开始读取[部署安装指南](/docs/server-admin/deploy-install)。 。 。 。
 
 ### 为什么用ERDDAP™要分发你的数据吗?{#why-use-erddap-to-distribute-your-data} 
 

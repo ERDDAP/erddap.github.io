@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## SisteERDDAP™versjon{#latest-erddap-version} 
+
+2.25, se[endre dokumentasjon](/changes#version-225)og[Last ned den](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1)..
 
 ## ERDDAP™Informasjon{#erddap-information} 
 
@@ -26,6 +29,8 @@ Det finnes to måter å søke flere påERDDAP™s for datasett:[Søk i flereERDD
 ## Sett opp din egenERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™er en[Fri og åpen kilde](https://en.wikipedia.org/wiki/Free_and_open-source_software), all-Java  (Servlet) , webprogram som kjører i en webapplikasjonsserver (For eksempel Tomcat (Anbefalt) , eller Jetty (Det fungerer, men vi støtter det ikke) ) .. Denne nettsiden er for det meste for mennesker ("ERDDAP™administratorer") som ønsker å sette opp sin egenERDDAP™installasjon på egen hjemmeside.
+
+For å komme i gang med installasjon les[utplasseringsinstallasjonsguiden](/docs/server-admin/deploy-install)..
 
 ### Hvorfor brukeERDDAP™For å distribuere dine data?{#why-use-erddap-to-distribute-your-data} 
 

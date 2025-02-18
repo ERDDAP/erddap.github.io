@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## PinakahuliERDDAP™bersyon{#latest-erddap-version} 
+
+2.25, tingnan ang[Pagbabago ng dokumentasyon](/changes#version-225)at[download ito](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1).
 
 ## ERDDAP™impormasyon{#erddap-information} 
 
@@ -26,6 +29,8 @@ May dalawang paraan upang saliksikin ang multipleERDDAP™mga datos:[Maraming Pa
 ## Itatag ang Iyong SariliERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™ay isang[Malaya at Bukás na Pinagmumulan](https://en.wikipedia.org/wiki/Free_and_open-source_software), all-Java  (servelet) , web application na tumatakbo sa isang web application server (Halimbawa, si Tomcat (mungkahi) , o Jetty (mabisa ito, subalit hindi namin ito sinusuportahan) ) . Ang pahinang web na ito ay karamihang para sa mga tao ("ERDDAP™Mga administrador") na nagnanais magtatag ng kanilang sarilingERDDAP™sa kanilang sariling website.
+
+Upang magsimula sa isang instalasyon na binasa[ng install guide](/docs/server-admin/deploy-install).
 
 ### Kung Bakit Kailangang GamitinERDDAP™upang ipamahagi ang iyong impormasyon?{#why-use-erddap-to-distribute-your-data} 
 

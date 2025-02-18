@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # масштабирование
 ## ERDDAP™Тяжелые нагрузки, сети, кластеры, федерации и облачные вычисления{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 

@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # EDDTableЗ альбомуEML і EDDTableЗ альбомуEMLBatch Параметри в GenerateDatasets Хмл
 

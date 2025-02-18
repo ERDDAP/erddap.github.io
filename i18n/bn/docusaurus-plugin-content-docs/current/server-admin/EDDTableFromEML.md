@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # EDDTEQLLL এবং ED টেবিল সম্পাদক তথ্য নির্মাণ করতে ব্যবহৃত হয় এক্স- বি- এমName
 

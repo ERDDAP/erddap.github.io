@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## Déan Teagmháil LinnERDDAP™leagan leagan{#latest-erddap-version} 
+
+2.25, féach ar an[data recovery](/changes#version-225)agus[íoslódáil](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1).
 
 ## ERDDAP™Eochairfhocal information{#erddap-information} 
 
@@ -26,6 +29,8 @@ Tá dhá bhealach a chuardach ilERDDAP™s le haghaidh tacar sonraí:[Cuardaigh 
 ## Socraigh Suas Do FéinERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™Is maith liom é[Foinse Saor in Aisce agus Oscailte](https://en.wikipedia.org/wiki/Free_and_open-source_software), uile-Java  (cineál gas: in airde) , iarratas gréasáin a ritheann i freastalaí iarratais gréasáin (mar shampla, Tomcat (molta molta) nó Jetty (oibríonn sé, ach ní chuirimid tacaíocht a thabhairt dó) ) . Tá an leathanach gréasáin den chuid is mó do dhaoine (" " "ERDDAP™riarthóirí ") ar mian leo a chur ar bun a gcuid féinERDDAP™suiteáil ar a láithreán gréasáin féin.
+
+Chun tús a chur le suiteáil a léamh[an treoir a shuiteáil imscaradh](/docs/server-admin/deploy-install).
 
 ### Cén fáth a n-úsáidtearERDDAP™do chuid sonraí a dháileadh?{#why-use-erddap-to-distribute-your-data} 
 

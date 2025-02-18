@@ -241,6 +241,8 @@ SitemapERDDAP™v2.13,ERDDAP™administrator dapat menimpa nilai apapun dalam se
     
 ### datasets.xml {#datasetsxml} 
 * Baca komentar di[ **Bekerja dengandatasets.xmlLogin** ](/docs/server-admin/datasets)Sitemap Kemudian, setelah Anda mendapatkanERDDAP™berjalan untuk pertama kalinya (biasanya hanya dengan set data default) , Anda akan memodifikasi XML di_tomcat_/content/erddapSitemap **datasets.xml** untuk menentukan semua dataset yang Anda inginkanERDDAP™Sitemap Di sinilah Anda akan menghabiskan banyak waktu Anda sambil menyiapkanERDDAP™dan kemudian sambil menjaga Anda Meme itERDDAP™Sitemap
+
+Anda dapat melihat contoh[datasets.xmldi GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml)Sitemap
      
 *    (Sitemap) Sitemap (sedikit lebih mungkin) di masa depan, jika Anda ingin memodifikasi file CSS erddap, membuat salinan_tomcat_/content/erddap/images/erddapStart2.css disebut erddap2.css dan kemudian membuat perubahan. Perubahan ke erddap2.css hanya berlaku ketikaERDDAP™direstart dan sering juga memerlukan pengguna untuk menghapus file cache browser.
      

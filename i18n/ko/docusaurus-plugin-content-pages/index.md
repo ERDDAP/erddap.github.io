@@ -1,6 +1,9 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
+## 인기 있는ERDDAP™이름 *{#latest-erddap-version} 
+
+2.25, 참조[관련 문서](/changes#version-225)이름 *[다운로드](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1)·
 
 ## ERDDAP™* 이름{#erddap-information} 
 
@@ -26,6 +29,8 @@ ERDDAP™무료 및 오픈 소스 (아파치 및 Apache와 같은)  Java서비�
 ## 사용자 정의ERDDAP™ {#set-up-your-own-erddap} 
 
 ERDDAP™·[무료 및 오픈 소스](https://en.wikipedia.org/wiki/Free_and_open-source_software), 모든-Java  (관련 상품) , 웹 애플리케이션 서버에서 실행하는 웹 응용 프로그램 (예를 들어, Tomcat ((주)) , 또는 제트 (그것은 작동하지만, 우리는 그것을 지원하지 않습니다) ) · 이 웹 페이지는 주로 사람들에게 (·ERDDAP™관리자) 스스로 설정하고 싶은 분ERDDAP™자신의 웹 사이트에 설치.
+
+설치로 시작하려면[배포 설치 가이드](/docs/server-admin/deploy-install)·
 
 ### 왜 사용ERDDAP™데이터 배포?{#why-use-erddap-to-distribute-your-data} 
 

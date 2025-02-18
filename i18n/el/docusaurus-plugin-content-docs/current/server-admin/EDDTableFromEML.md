@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # Ο πίνακας EDDFromEML και ο πίνακας EDDFromEMLBatch Επιλογές δημιουργίας συνόλων δεδομένων Xml
 

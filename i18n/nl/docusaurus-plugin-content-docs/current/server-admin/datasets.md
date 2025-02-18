@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # Werken met dedatasets.xmlBestand
 
 \\[Deze webpagina zal alleen interessant zijn voorERDDAP™beheerders.\\]
 
 Nadat u deERDDAP™ [installatie-instructies](/docs/server-admin/deploy-install), moet u dedatasets.xmlbestand in *kat* /content/erdap/ om de datasets te beschrijven die uwERDDAP™installatie zal dienen.
+
+U kunt een voorbeeld zien[datasets.xmlop GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
 
 - -
 

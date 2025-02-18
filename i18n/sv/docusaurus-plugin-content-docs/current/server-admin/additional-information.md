@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 ERDDAP™Ställ in din egenERDDAP™    
 
 ## Saker du behöver veta{#things-you-need-to-know} 

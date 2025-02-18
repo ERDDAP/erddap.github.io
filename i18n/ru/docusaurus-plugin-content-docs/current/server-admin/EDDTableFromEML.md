@@ -1,5 +1,6 @@
 ---
-title: "EDDTableFromEML" 
+title: "EDDTableFromEML"
+sidebar_position: 6
 ---
 # EDDTable FromEML и EDDTable FromEMLBatch Варианты генерации наборов данных Xml
 

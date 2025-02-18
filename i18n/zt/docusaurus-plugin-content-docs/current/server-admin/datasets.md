@@ -1,11 +1,14 @@
 ---
 title: "ERDDAP™ - Working with the datasets.xml File"
+sidebar_position: 3
 ---
 # 与datasets.xml文件
 
 \\[此網頁將只引起興趣ERDDAP™管理者\\]
 
 你跟著我ERDDAP™ [安裝指令](/docs/server-admin/deploy-install)您必須編輯datasets.xml文件在 *湯姆卡* /content/erddap/ 描述您的數據集ERDDAP™安裝會用上
+
+你可以看到一個例子[datasets.xml在 GitHub 上](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml).
 
 - - –
 

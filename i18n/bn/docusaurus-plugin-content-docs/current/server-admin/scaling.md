@@ -1,5 +1,6 @@
 ---
 title: "Scaling"
+sidebar_position: 5
 ---
 # মাপ নির্ধারণ
 ## ERDDAP™- ভারি লোড, গ্রিড, স্তবক, ফেডারেশন এবং ক্লাউড কম্পিউটার{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
