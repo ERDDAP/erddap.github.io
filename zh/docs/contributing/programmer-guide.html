@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-contributing/programmer-guide" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">程序员指南 | ERDDAP™ Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://erddap.github.io/zh/img/noaa_simple.gif"><meta data-rh="true" name="twitter:image" content="https://erddap.github.io/zh/img/noaa_simple.gif"><meta data-rh="true" property="og:url" content="https://erddap.github.io/zh/docs/contributing/programmer-guide"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" property="og:locale:alternate" content="bn"><meta data-rh="true" property="og:locale:alternate" content="zt"><meta data-rh="true" property="og:locale:alternate" content="cs"><meta data-rh="true" property="og:locale:alternate" content="da"><meta data-rh="true" property="og:locale:alternate" content="nl"><meta data-rh="true" property="og:locale:alternate" content="fi"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" property="og:locale:alternate" content="de"><meta data-rh="true" property="og:locale:alternate" content="el"><meta data-rh="true" property="og:locale:alternate" content="hi"><meta data-rh="true" property="og:locale:alternate" content="hu"><meta data-rh="true" property="og:locale:alternate" content="id"><meta data-rh="true" property="og:locale:alternate" content="ga"><meta data-rh="true" property="og:locale:alternate" content="it"><meta data-rh="true" property="og:locale:alternate" content="ja"><meta data-rh="true" property="og:locale:alternate" content="ko"><meta data-rh="true" property="og:locale:alternate" content="nb"><meta data-rh="true" property="og:locale:alternate" content="pl"><meta data-rh="true" property="og:locale:alternate" content="pt"><meta data-rh="true" property="og:locale:alternate" content="ro"><meta data-rh="true" property="og:locale:alternate" content="ru"><meta data-rh="true" property="og:locale:alternate" content="es"><meta data-rh="true" property="og:locale:alternate" content="sv"><meta data-rh="true" property="og:locale:alternate" content="tl"><meta data-rh="true" property="og:locale:alternate" content="th"><meta data-rh="true" property="og:locale:alternate" content="tr"><meta data-rh="true" property="og:locale:alternate" content="uk"><meta data-rh="true" property="og:locale:alternate" content="ur"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="程序员指南 | ERDDAP™ Documentation"><meta data-rh="true" name="description" content="这些只是程序员想配合的ERDDAP因为Java课堂需要知道。"><meta data-rh="true" property="og:description" content="这些只是程序员想配合的ERDDAP因为Java课堂需要知道。"><link data-rh="true" rel="icon" href="/zh/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://erddap.github.io/zh/docs/contributing/programmer-guide"><link data-rh="true" rel="alternate" href="https://erddap.github.io/docs/contributing/programmer-guide" hreflang="en"><link data-rh="true" rel="alternate" href="https://erddap.github.io/bn/docs/contributing/programmer-guide" hreflang="bn"><link data-rh="true" rel="alternate" href="https://erddap.github.io/zh/docs/contributing/programmer-guide" hreflang="zh"><link data-rh="true" rel="alternate" href="https://erddap.github.io/zt/docs/contributing/programmer-guide" hreflang="zt"><link data-rh="true" rel="alternate" href="https://erddap.github.io/cs/docs/contributing/programmer-guide" hreflang="cs"><link data-rh="true" rel="alternate" href="https://erddap.github.io/da/docs/contributing/programmer-guide" hreflang="da"><link data-rh="true" rel="alternate" href="https://erddap.github.io/nl/docs/contributing/programmer-guide" hreflang="nl"><link data-rh="true" rel="alternate" href="https://erddap.github.io/fi/docs/contributing/programmer-guide" hreflang="fi"><link data-rh="true" rel="alternate" href="https://erddap.github.io/fr/docs/contributing/programmer-guide" hreflang="fr"><link data-rh="true" rel="alternate" href="https://erddap.github.io/de/docs/contributing/programmer-guide" hreflang="de"><link data-rh="true" rel="alternate" href="https://erddap.github.io/el/docs/contributing/programmer-guide" hreflang="el"><link data-rh="true" rel="alternate" href="https://erddap.github.io/hi/docs/contributing/programmer-guide" hreflang="hi"><link data-rh="true" rel="alternate" href="https://erddap.github.io/hu/docs/contributing/programmer-guide" hreflang="hu"><link data-rh="true" rel="alternate" href="https://erddap.github.io/id/docs/contributing/programmer-guide" hreflang="id"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ga/docs/contributing/programmer-guide" hreflang="ga"><link data-rh="true" rel="alternate" href="https://erddap.github.io/it/docs/contributing/programmer-guide" hreflang="it"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ja/docs/contributing/programmer-guide" hreflang="ja"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ko/docs/contributing/programmer-guide" hreflang="ko"><link data-rh="true" rel="alternate" href="https://erddap.github.io/nb/docs/contributing/programmer-guide" hreflang="nb"><link data-rh="true" rel="alternate" href="https://erddap.github.io/pl/docs/contributing/programmer-guide" hreflang="pl"><link data-rh="true" rel="alternate" href="https://erddap.github.io/pt/docs/contributing/programmer-guide" hreflang="pt"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ro/docs/contributing/programmer-guide" hreflang="ro"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ru/docs/contributing/programmer-guide" hreflang="ru"><link data-rh="true" rel="alternate" href="https://erddap.github.io/es/docs/contributing/programmer-guide" hreflang="es"><link data-rh="true" rel="alternate" href="https://erddap.github.io/sv/docs/contributing/programmer-guide" hreflang="sv"><link data-rh="true" rel="alternate" href="https://erddap.github.io/tl/docs/contributing/programmer-guide" hreflang="tl"><link data-rh="true" rel="alternate" href="https://erddap.github.io/th/docs/contributing/programmer-guide" hreflang="th"><link data-rh="true" rel="alternate" href="https://erddap.github.io/tr/docs/contributing/programmer-guide" hreflang="tr"><link data-rh="true" rel="alternate" href="https://erddap.github.io/uk/docs/contributing/programmer-guide" hreflang="uk"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ur/docs/contributing/programmer-guide" hreflang="ur"><link data-rh="true" rel="alternate" href="https://erddap.github.io/docs/contributing/programmer-guide" hreflang="x-default"><link rel="stylesheet" href="/zh/assets/css/styles.1015a39a.css">
+<script src="/zh/assets/js/runtime~main.9891052c.js" defer="defer"></script>
+<script src="/zh/assets/js/main.826fc66c.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳转到主内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳转到主内容</a></div><nav aria-label="主要" class="navbar navbar--fixed-top navbar--dark"><div class="navbar__inner"><div class="navbar__items"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/zh/"><div class="navbar__logo"><img src="/zh/img/noaab.png" alt="NOAA图标" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/zh/img/noaab.png" alt="NOAA图标" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">ERDDAP™</b></a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>中文</a><ul class="dropdown__menu"><li><a href="/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en">English</a></li><li><a href="/bn/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="bn">বাংলা</a></li><li><a href="/zh/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="zh">中文</a></li><li><a href="/zt/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="zt">Zt</a></li><li><a href="/cs/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="cs">Čeština</a></li><li><a href="/da/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="da">Dansk</a></li><li><a href="/nl/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="nl">Nederlands</a></li><li><a href="/fi/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="fi">Suomi</a></li><li><a href="/fr/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="fr">Français</a></li><li><a href="/de/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="de">Deutsch</a></li><li><a href="/el/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="el">Ελληνικά</a></li><li><a href="/hi/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="hi">हिन्दी</a></li><li><a href="/hu/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="hu">Magyar</a></li><li><a href="/id/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="id">Indonesia</a></li><li><a href="/ga/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ga">Gaeilge</a></li><li><a href="/it/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="it">Italiano</a></li><li><a href="/ja/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ja">日本語</a></li><li><a href="/ko/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ko">한국어</a></li><li><a href="/nb/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="nb">Norsk bokmål</a></li><li><a href="/pl/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="pl">Polski</a></li><li><a href="/pt/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="pt">Português</a></li><li><a href="/ro/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ro">Română</a></li><li><a href="/ru/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ru">Русский</a></li><li><a href="/es/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="es">Español</a></li><li><a href="/sv/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="sv">Svenska</a></li><li><a href="/tl/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="tl">Filipino</a></li><li><a href="/th/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="th">ไทย</a></li><li><a href="/tr/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="tr">Türkçe</a></li><li><a href="/uk/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="uk">Українська</a></li><li><a href="/ur/docs/contributing/programmer-guide" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ur">اردو</a></li></ul></div><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/zh/docs/intro">文档</a><a class="navbar__item navbar__link" href="/zh/governance">施政</a></div><div class="navbar__items navbar__items--right"><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><a href="https://github.com/erddap/erddap" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub 图像<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS darkNavbarColorModeToggle_X3D1" type="button" disabled="" title="在暗光模式之间切换( 目前)光线模式页:1" aria-label="在暗光模式之间切换( 目前)光线模式页:1" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="向上滚动" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="侧边栏" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/zh/docs/intro">文档</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/zh/docs/category/server-administration">服务器管理</a><button aria-label="扩展侧边栏类别  &#x27;服务器管理 &#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/zh/docs/category/contributing">捐款</a><button aria-label="折叠侧边栏类别  &#x27;捐款 &#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/zh/docs/contributing">捐款ERDDAP™</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/zh/docs/contributing/programmer-guide">程序员指南</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/zh/docs/dokka">数据集脚本代码文档</a><button aria-label="扩展侧边栏类别  &#x27;数据集脚本代码文档 &#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/zh/docs/category/user">用户</a><button aria-label="扩展侧边栏类别  &#x27;用户 &#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="面包屑"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="主页" class="breadcrumbs__link" href="/zh/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/zh/docs/category/contributing"><span itemprop="name">捐款</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">程序员指南</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">在本页</button></div><div class="theme-doc-markdown markdown"><header><h1>程序员指南</h1></header>
+<p>这些只是程序员想配合的ERDDAP因为Java课堂需要知道。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="getting-the-source-code"><strong>获取源代码</strong><a href="#getting-the-source-code" class="hash-link" aria-label="直接链接到getting-the-source-code" title="直接链接到getting-the-source-code">​</a></h3>
+<p> </p>
+<ul>
+<li>GitHub 上的 Via 源代码
+近期公开版本和开发中版本的源代码也可通过下列途径获取:<a href="https://github.com/ERDDAP" target="_blank" rel="noopener noreferrer">GitHub 图像</a>。 。 。 。 请读一下<a href="https://github.com/ERDDAP/erddap/wiki" target="_blank" rel="noopener noreferrer">维基</a>为这个项目。 如果您想要修改源代码 (并可能将修改纳入标准ERDDAP™分发) ,这是建议的方法。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="erddap-dependencies"><strong>ERDDAP™依赖关系</strong><a href="#erddap-dependencies" class="hash-link" aria-label="直接链接到erddap-dependencies" title="直接链接到erddap-dependencies">​</a></h3>
+<p>ERDDAP™使用 Maven 来装入代码依赖以及一些静态引用文件 (WEB-INF/ ref (英语).) 。 。 。 这是为了避免在寄存器中存储许多大文件.
+您可以使用“ mvn 编译” , 这将获取依赖关系和校对文件 。 您也可以使用“ mvn 包” 来生成战争文件 。
+您可以手动下载参考文件 :</p>
+<ul>
+<li>
+<p><a href="https://github.com/ERDDAP/ERDDAPRefFiles/releases/download/1.0.0/etopo1_ice_g_i2.zip" target="_blank" rel="noopener noreferrer">etopo1\_ice\_g\_i2.zip</a>并解析为/WEB-INF/ref/.</p>
+</li>
+<li>
+<p><a href="https://github.com/ERDDAP/ERDDAPRefFiles/releases/download/1.0.0/ref_files.zip" target="_blank" rel="noopener noreferrer">参考文件.zip</a>并解析为/WEB-INF/ref/.</p>
+</li>
+<li>
+<p><a href="https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip" target="_blank" rel="noopener noreferrer">erddap 组件.zip</a>  (1.0.0,2033字节,MD5=2B8D2A5AE5ED73E3A42B529C168C60B5,日期为2024-10-14) 并将其解析为 <em>tomcat</em>,创建_tomcat_/content/erddap。 。 。 。</p>
+</li>
+</ul>
+<p>注:默认情况下,Maven会缓存静态引用和测试数据存档下载,仅在下载新版本时才提取. 要全部跳过下载, 您可以将“ skipResourceDownload” 和/ 或“ skip TestResourceDownload” 属性设置为 Maven (例如,<code>mvn - Dskip 资源下载包 </code>) 。 。 。 为强制提取,设置“-Ddownload.unpack= true”和“-Ddownload.unpack when Changed=false” 。</p>
+<ul>
+<li>
+<p>ERDDAP™及其子组件具有非常宽松,开源<a href="/zh/license">许可证</a>,这样你就可以为任何目的使用和修改源代码,无论是盈利还是非营利. 请注意<!-- -->:ERDDAP<!-- -->™并且许多子组件拥有许可证,需要您确认您使用的代码来源。 见<a href="/zh/credits">贷项</a>。 。 。 无论是否需要,承认所有这些贡献者只是好的形式。</p>
+</li>
+<li>
+<p><strong>对其它项目使用代码</strong></p>
+</li>
+</ul>
+<p>欢迎您使用ERDDAP™用于其他工程的代码,警告该代码可以并且将会改变。 我们不承诺支持我们代码的其他用途. Git 和 GitHub 将是您处理这个问题的主要解决方案 -- Git 允许您将我们的更改合并到您的更改中。
+<strong>在很多情况下,你可能会 试图使用部分ERDDAP™在你的工程中,我们认为你会发现 安装和使用更容易ERDDAP™同样,</strong> 然后写其他使用ERDDAP服务。 你可以自己设ERDDAP™在一两个小时后就安装了 你可以自己设ERDDAP™几天后以抛光方式安装 (取决于数据集的数量和复杂程度) 。 。 。 。 但是,黑进部分ERDDAP™可能要花上几周时间 (和数月捕捉微妙) 然后您将失去后续修改和错误修正的能力ERDDAP™释放 我们 (很明显) 认为使用ERDDAP™也让你ERDDAP™安装可公开访问。 然而,在某些情况下,你可能不想做你的ERDDAP™安装可公开访问。 那么,你的服务可以进入和使用你的私人ERDDAP™你的客户不需要知道ERDDAP™。 。 。 。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="半径"><strong>半径</strong><a href="#半径" class="hash-link" aria-label="直接链接到半径" title="直接链接到半径">​</a></h4>
+<p>或者,还有一种方法,你可能会发现有用 在探索之间ERDDAP代码和使用ERDDAP™作为一个独立的网络服务: 在EDD 类中,有一个静态方法,可以让你制作一个数据集实例 (基于datasets.xml) 数字 :
+&#x27;一个来自数据集&#x27; xml 数据 (字符串 tDatasetID)
+返回 EDD表或EDDGrid数据集。 既然如此,你可以打电话
+“ make NewFileForDap查询 (字符串用户DapQuery、字符串目录、字符串文件Name、字符串文件 类型Name)
+`让实例制作特定文件的数据文件Type,并附上用户查询的结果。 因此,这是一个简单的使用方式ERDDAP正如客户端会使用ERDDAP™网络应用程序。 但是这个方法在你的Java程序并绕过像Tomcat这样的应用程序服务器的需要. 我们在EDD Table和EDDGrid子类,所以您可以在源代码中看到所有这些类的例子。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="development-environment"><strong>发展环境</strong><a href="#development-environment" class="hash-link" aria-label="直接链接到development-environment" title="直接链接到development-environment">​</a></h3>
+<ul>
+<li>
+<p>有配置用于<a href="https://github.com/ERDDAP/erddap/blob/main/development/jetty" target="_blank" rel="noopener noreferrer">洁蒂,你好吗?</a>和<a href="https://github.com/ERDDAP/erddap/blob/main/development/docker" target="_blank" rel="noopener noreferrer">插头</a>在GitHub中,虽然预计发布会运行在Tomcat中.</p>
+</li>
+<li>
+<p><strong>可选</strong> 数字 : 设置ERDDAP™在汤姆卡特
+从ERDDAP™我们强烈建议你们遵守标准<a href="/zh/docs/server-admin/deploy-install">安装指令</a>安装Tomcat,然后安装ERDDAP™在Tomcat的网络应用目录中。 除其他事项外,ERDDAP™被设计为安装在Tomcat的目录结构中,并期望Tomcat提供一些.jar文件.</p>
+</li>
+<li>
+<p>ERDDAP™不需要特定的IDE (Chris主要使用Visual Studio代码,Bob使用EditPlus) 。 。 。 我们不使用Eclipse、Ant等;我们也不提供ERDDAP- 与他们相关的支持。 工程确实使用了马文.</p>
+</li>
+<li>
+<p>我们使用一个批量文件删除源树中所有 . class 文件,以确保我们有一个干净的编译 (带Javac) 。 。 。 。</p>
+</li>
+<li>
+<p>目前我们使用领养的javac jdk-21.0.3+9来编译gov.noaa.pfeg.coastwatch.Testall. (它有链接到几个类,否则不会编译) 并进行测试。 出于安全考虑,几乎总是最好使用最新的版本。Java21和汤姆卡特10。</p>
+<ul>
+<li>
+<p>当运行 javac 或 java 时, 当前目录为 <em>tomcat</em>/webapps/erddap/WEB-INF 。</p>
+</li>
+<li>
+<p>我们的Javac和Java阶级是
+<code>类;./././lib/servlet-api.jar;lib/*</code></p>
+</li>
+<li>
+<p>所以,你的Javac指挥线 会是类似的东西
+`javac-编码UTF-8-cp类;././lib/servlet-api.jar;lib/*类/gov/noaa/pfel/coastwatch/TestAll.java&#x27;</p>
+</li>
+<li>
+<p>你的Java指挥线会像...
+<code>java-cp班;./././lib/servlet-api.jar;lib/*-Xmx4000M-Xms4000M /政府/noaa/pfel/海岸监视/试验 </code>备选:你可以添加`-动词<!-- -->:gc<!-- -->&#x27;,它说明<!-- -->:Java<!-- -->打印垃圾收集统计数据。</p>
+</li>
+<li>
+<p>如果测试 所有编译,一切ERDDAP™已经汇编了需求。 几门课是编的 不需要用于ERDDAP™。 。 。 如果编译TestAll成功,但不编译一些类,那类就不需要了. (有一些未完成/未使用的课程。)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>在少数情况下,我们使用第三方源代码而不是.jar文件 (特别针对DODS) 并稍作修改,以避免出现与Java21. 我们经常作出其他微小修改。 (目标DODS) 由于其他原因。</p>
+</li>
+<li>
+<p>大多数班级在其相关的src/test文件中都有测试方法. 您可以使用“mvn测试”命令进行JUnit测试。 这将下载从最近发布的测试中依赖的数个数据zip文件<a href="https://github.com/ERDDAP/erddapTest/releases/" target="_blank" rel="noopener noreferrer">ERDDAP/埃尔达普 测试</a>。 。 。 。 。
+ 
+注<!-- -->:Maven<!-- -->缓存下载,但会解析每次执行中下载的档案,这需要时间。 跳过下载
+并解密测试数据档案,您可以指定“ skip Test RequestDownload” 属性给 Maven (例如,<code>mvn - Dskip TestResource&#x27; 软件包 </code>) 。 。 。 。</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="important-classes"><strong>重要类</strong><a href="#important-classes" class="hash-link" aria-label="直接链接到important-classes" title="直接链接到important-classes">​</a></h3>
+<p>如果你想看看源代码 并试图找出如何ERDDAP™工作,请。</p>
+<ul>
+<li>
+<p>密码有Java医生评论,但Java医生还没有生成。 自由产生它们吧</p>
+</li>
+<li>
+<p>最重要的班级 (包括以下所述) 在政府/noaa/pfel/erddap范围内。</p>
+</li>
+<li>
+<p>那个ERDDAP™类有最高级别的方法。 它扩展了HttpServlet.</p>
+</li>
+<li>
+<p>ERDDAP™将请求转到以下类别<!-- -->:EDDGrid<!-- -->  或 EDD表,代表单个数据集。</p>
+</li>
+<li>
+<p>EDStatic 拥有大部分静态信息和设置 (例如,从设置.xml和消息.xml文件) 并提供静态服务 (例如,发送电子邮件) 。 。 。 。</p>
+</li>
+<li>
+<p>EDDGrid和 EDDTable 子类解析请求,从子类特定方法获取数据,然后为响应格式化数据.</p>
+</li>
+<li>
+<p>EDDGrid子类将数据推入 GridData 访问器 (网格数据的内部数据容器) 。 。 。 。</p>
+</li>
+<li>
+<p>EDDTable子类将数据推入TableWriter子类,这些子类将数据写入一个特定的文件类型上飞.</p>
+</li>
+<li>
+<p>其他课程 (例如,低级班级) 也是很重要的,但你不太可能 努力改变它们。
+ </p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="code-contributions"><strong>代码贡献</strong><a href="#code-contributions" class="hash-link" aria-label="直接链接到code-contributions" title="直接链接到code-contributions">​</a></h3>
+<ul>
+<li>
+<p>GitHub 问题
+如果您愿意贡献但没有项目,请参见列表<a href="https://github.com/ERDDAP/erddap/issues" target="_blank" rel="noopener noreferrer">GitHub 问题</a>,其中许多都是你可以承担的项目。 如果你想就一个问题开展工作,请自行指定,向其他人表明你正在研究的问题。 GitHub问题是讨论任何问题的最佳场所,以便开展有关该问题的工作。</p>
+</li>
+<li>
+<p>若您想做出改变,<a href="https://github.com/ERDDAP/erddap/issues" target="_blank" rel="noopener noreferrer">GitHub 问题</a>表示您打算作出的更改。 然后,一旦修改完成,就发出拉动请求,请求合并. 共同变化包括:</p>
+<ul>
+<li>
+<p>您想要写另一个子类EDDGrid或 EDD Table 处理另一个数据源类型。 如果是这样,我们建议你们找到最接近的现有子类,并使用该代码作为起点.</p>
+</li>
+<li>
+<p>您想要写入另一个保存 As_ FileType_ 方法 。 如果是的话,我们建议您在其中找到最近的保存 As_ FileType_ 方法EDDGrid或 EDD Table 并使用该代码作为起点。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>这些情形的优点是 你写的代码是自成一体的 你不需要知道所有细节ERDDAP&#x27;内经曰. 我们很容易把密码输入ERDDAP。 。 。 请注意,如果您确实提交了代码,许可证需要与该代码兼容。ERDDAP™ <a href="/zh/license">许可证</a>  (例如,<a href="https://www.apache.org/licenses/" target="_blank" rel="noopener noreferrer">阿帕奇语Name</a>, (中文).<a href="https://www.opensource.org/licenses/bsd-license.php" target="_blank" rel="noopener noreferrer">BSD 软件</a>,或<a href="https://www.opensource.org/licenses/mit-license.php" target="_blank" rel="noopener noreferrer">麻省理工学院-X</a>) 。 。 。 我们将列出你的贡献<a href="/zh/credits">贷方</a>。 。 。 。</p>
+<ul>
+<li>如果您有一个上面没有覆盖的特征,您希望添加到ERDDAP,建议首先在<a href="https://github.com/ERDDAP/erddap/discussions/categories/ideas" target="_blank" rel="noopener noreferrer">GitHub 讨论</a>。 。 。 对于重大特点/改变,技术委员会将讨论这些特点,并决定是否核准将其添加到ERDDAP™。 。 。 。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="judging-your-code-contributions"><strong>判断您的代码贡献</strong><a href="#judging-your-code-contributions" class="hash-link" aria-label="直接链接到judging-your-code-contributions" title="直接链接到judging-your-code-contributions">​</a></h3>
+<p>如果您想要提交要包含在其中的代码或其他修改ERDDAP这是伟大的。 你的贡献必须符合某些标准才能被接受。 如果你遵循以下准则,你将大大增加你的贡献被接受的机会。
+ </p>
+<ul>
+<li>
+<p>那个ERDDAP™项目由NATD管理 (NOAA任命的技术主任) 由技术委员会提供投入。
+从2007年起 (开始ERDDAP) 2022年,鲍勃・西蒙斯 (也是创始人-领导者) 。 。 。 从2023年1月开始,这就是克里斯·约翰. 基本上,NATD负责ERDDAP,所以S/他对决定有最后的发言权ERDDAP™  代码,尤其是关于设计以及是否接受给定的拉动请求。 一定是因为效率的原因 (这对Linus Torvalds和Linux很有用) 部分出于安全原因: 必须有人告诉IT安全人员 他/他负责代码的安全性和完整性.
+ </p>
+</li>
+<li>
+<p>NATD不能保证他接受你的代码
+如果一个项目没有如我们所希望的那样成功 如果无法挽救的话 NATD就不会把该项目列入ERDDAP™分发。 请不要感到难过。 有时项目会不尽如人意 它发生在所有软件开发者身上. 如果你遵循以下准则,你就会大大增加成功的机会.
+ </p>
+</li>
+<li>
+<p>如果这些变化具有普遍的利益和效用,那是最好的.
+如果代码是您的组织特有的, 最好保持一个单独的分支ERDDAP™供你们使用。 Axiom这样做。 幸运的是,吉特让这件事变得容易了. NATD希望保持对ERDDAP,不允许它成为一个厨房水槽项目,每个人都在其中为其项目添加一个定制的特性.
+ </p>
+</li>
+<li>
+<p>跟着Java《守则公约》。
+一般来说,你的代码应该质量好,应该遵循原来的<a href="https://www.oracle.com/technetwork/java/codeconventions-150003.pdf" target="_blank" rel="noopener noreferrer">Java守则公约</a>: 将. class 文件放在目录结构的适当位置, 给. class 文件一个适当的名称, 包括 properJavaDoc 注释,在代码的每一段开头包含//注释,缩进4个空格 (没有标签) ,避免行 &gt;80字符等. 传统改变, 源代码并不总是完全更新。 当出现疑问时,将代码与公约而不是现有的代码相匹配。</p>
+</li>
+<li>
+<p>使用描述类,方法和可变名称.
+这让其他人更容易阅读代码.
+ </p>
+</li>
+<li>
+<p>避免奇异的代码。
+从长远来看,你或其他人必须找出代码才能维持. 所以,请使用简单的编码方法,这样对其他人更容易 (包括你的未来) 找出来。 很明显,如果有真正的优势 使用一些花哨Java编程功能,使用它,但大量记录你做了什么,为什么,以及它是如何工作的.
+ </p>
+</li>
+<li>
+<p>在你开始之前跟技术委员会合作
+如果你想让您的代码更改进入ERDDAP™技术委员会绝对会想在修改代码之前 谈谈你要做什么和怎么做 这样我们就可以避免你做出NATD最终不接受的改变. 在你做这项工作时,NATD和技术委员会愿意回答问题,以帮助你找出现有的代码和 (总计) 如何解决您的项目。
+ </p>
+</li>
+<li>
+<p>独立工作 (尽可能多) 你开始后
+与上述&quot;与技术委员会合作&quot;相对,在项目开始后,NATD鼓励您尽可能独立工作. 如果NATD要告诉你几乎所有的事情 回答很多问题 (特别是那些你可以通过阅读文档或代码来回答的) 那样你的努力就不是 NATD的节省时间了 他也可以自己做 这是<a href="https://en.wikipedia.org/wiki/The_Mythical_Man-Month" target="_blank" rel="noopener noreferrer">神话人物月</a>问题。 当然,我们还是应该沟通。 最好能定期看到你的工作进展,以确保项目走上正轨。 不过你越能独立工作 (在技术委员会商定手头的任务和一般办法之后) - 越好越好
+ </p>
+</li>
+<li>
+<p>避开虫子。
+如果一个错误在发布前没有被抓住,会对用户造成问题 (最多不过) ,返回错误的信息 (最糟的时候) ,是一个blot上ERDDAP名声远扬 将持续过时ERDDAP™设施使用年限。 十分努力地避免虫虫. 一部分是写干净的代码 (所以更容易看到问题) 。 。 。 这部分是写作单位测试. 其中一部分是写代码时对避虫的恒定态度. 不要让NATD后悔 加上你的代码ERDDAP™。 。 。 。
+ </p>
+</li>
+<li>
+<p>写出单位测试或测试.
+对于新代码,您应该在测试文件中写入JUnit测试.
+请至少写出一种个体测试方法, 彻底测试您所写的代码, 并将其添加到类的“ JUnit” 测试文件中, 以便自动运行 。 单位 (及有关事项) 测试是捕虫的最好方法之一 首先,从长远来看 (随着其他事物的变化ERDDAP™) 。 。 。 正如鲍勃所 说, &quot;单位测试让我晚上睡觉。&quot;
+ </p>
+</li>
+<li>
+<p>让NATD容易理解并接受你拉力请求中的变动.
+其中一部分是写一个单位测试方法 (编号) 。 。 。 其中一部分是限制您修改代码的一节 (或一个类别) 如果可能的话。 NATD不会接受任何拉动请求,在整个代码中会有数百个修改. NATD告诉IT安全人员,他/他负责代码的安全性和完整性. 如果有太多的改变或者它们太难想出,那么就很难核实这些改变是正确的,并且不要引入错误或安全问题.
+ </p>
+</li>
+<li>
+<p>简单点
+你代码的一个好的总主题是:保持简单. 简单的代码对其他人来说很简单 (包括你的未来) 阅读和维护。 NATD很容易理解从而接受.
+ </p>
+</li>
+<li>
+<p>承担你代码的长期责任
+从长远来看,你最好承担持续的责任 维持你的代码,回答关于它的问题 (例如,ERDDAP™谷歌集团) 。 。 。 正如一些作者指出,代码既是负债也是资产。 如果将来发现一个虫子,最好还是把它修好 因为没有人比你更了解你的密码 (也是为了防止虫子出现) 。 。 。 NATD并不是要求坚定承诺提供持续的维护. NATD只是表示,做维修工作会非常感激.</p>
+</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/erddap/erddap.github.io/tree/main/documentation/docs/contributing/programmer-guide.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>编辑此页面</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="文档页面"><a class="pagination-nav__link pagination-nav__link--prev" href="/zh/docs/contributing"><div class="pagination-nav__sublabel">上一个</div><div class="pagination-nav__label">捐款ERDDAP™</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/zh/docs/dokka"><div class="pagination-nav__sublabel">下一个</div><div class="pagination-nav__label">index</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#getting-the-source-code" class="table-of-contents__link toc-highlight"><strong>获取源代码</strong></a></li><li><a href="#erddap-dependencies" class="table-of-contents__link toc-highlight"><strong>ERDDAP™依赖关系</strong></a></li><li><a href="#development-environment" class="table-of-contents__link toc-highlight"><strong>发展环境</strong></a></li><li><a href="#important-classes" class="table-of-contents__link toc-highlight"><strong>重要类</strong></a></li><li><a href="#code-contributions" class="table-of-contents__link toc-highlight"><strong>代码贡献</strong></a></li><li><a href="#judging-your-code-contributions" class="table-of-contents__link toc-highlight"><strong>判断您的代码贡献</strong></a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">文档</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/zh/docs/intro">文档</a></li><li class="footer__item"><a class="footer__link-item" href="/zh/docs/contributing">捐款</a></li><li class="footer__item"><a class="footer__link-item" href="/zh/license">许可证</a></li><li class="footer__item"><a class="footer__link-item" href="/zh/changes">变动</a></li></ul></div><div class="col footer__col"><div class="footer__title">社区</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/zh/governance">施政</a></li><li class="footer__item"><a class="footer__link-item" href="/zh/technical-board">技术委员会</a></li><li class="footer__item"><a href="https://groups.google.com/g/erddap" target="_blank" rel="noopener noreferrer" class="footer__link-item">ERDDAP™用户组<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://groups.google.com/g/erddap-announce" target="_blank" rel="noopener noreferrer" class="footer__link-item">ERDDAP™发布<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/ERDDAP/erddap/" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub 图像<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/zh/credits">贷项</a></li><li class="footer__item"><a class="footer__link-item" href="/zh/acknowledgements">鸣谢</a></li></ul></div><div class="col footer__col"><div class="footer__title">带给你的</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.noaa.gov" target="_blank" rel="noopener noreferrer" class="footer__link-item">NOAA<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.fisheries.noaa.gov" target="_blank" rel="noopener noreferrer" class="footer__link-item">NMFS<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center" target="_blank" rel="noopener noreferrer" class="footer__link-item">SWFSC<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://www.fisheries.noaa.gov/about/environmental-research-division-southwest-fisheries-science-center" target="_blank" rel="noopener noreferrer" class="footer__link-item">ERD<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">ERDDAP™,第2.25版. 版权 2024ERDDAP™。 。 。 以多宝龙造.</div></div></div></footer></div>
+</body>
+</html>
