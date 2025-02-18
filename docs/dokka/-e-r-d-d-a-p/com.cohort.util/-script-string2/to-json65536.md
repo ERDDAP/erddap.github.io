@@ -3,15 +3,15 @@
 # toJson65536
 
 [JVM]\
-open fun [toJson65536](to-json65536.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [toJson65536](to-json65536.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This variant doesn't encode high characters.
 
-#### Return {#return}
+#### Return
 
 the JSON-encoded string surrounded by &quot;'s.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

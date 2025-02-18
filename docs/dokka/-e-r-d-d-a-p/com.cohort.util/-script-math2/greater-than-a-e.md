@@ -7,11 +7,11 @@ open fun [greaterThanAE](greater-than-a-e.md)(nSignificantDigits: Int, d1: Doubl
 
 This tests if d1 is greater than or almostEqual9 d2.
 
-#### Return {#return}
+#### Return
 
 true if d1 is greater than or almostEqual9 d2. If isNaN(d1) || isNaN(d2), this returns false.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

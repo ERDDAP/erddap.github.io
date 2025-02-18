@@ -3,7 +3,7 @@
 # isVariableNameSafe
 
 [JVM]\
-open fun [isVariableNameSafe](is-variable-name-safe.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Boolean
+open fun [isVariableNameSafe](is-variable-name-safe.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Boolean
 
 This tests if s is a valid variableName: 
 
@@ -12,11 +12,11 @@ This tests if s is a valid variableName:
 
  Note that Java allows Unicode characters, but this does not.
 
-#### Return {#return}
+#### Return
 
 true if s is a valid variableName.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

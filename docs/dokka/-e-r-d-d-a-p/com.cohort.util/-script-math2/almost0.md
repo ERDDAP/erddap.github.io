@@ -11,11 +11,11 @@ This quickly tests if d is almost 0 (Math.abs(d)&lt;dEps).
 - This is very fast, since it only involves one comparison.
 - Use almost0(d) instead of almostEqual5 or almostEqual9.
 
-#### Return {#return}
+#### Return
 
 true if Math.abs(d) &lt;dEps. NaN and Infinity correctly return false.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

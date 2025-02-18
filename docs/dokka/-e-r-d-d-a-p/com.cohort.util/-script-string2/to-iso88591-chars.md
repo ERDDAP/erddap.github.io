@@ -7,11 +7,11 @@ open fun [toIso88591Chars](to-iso88591-chars.md)(car: Array&lt;Char&gt;): Array&
 
 This converts the chars to ISO-8859-1 (ISO_8859_1) chars. This converts any char in 127-159 and &gt;255 into '?'.
 
-#### Return {#return}
+#### Return
 
 car for convenience.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

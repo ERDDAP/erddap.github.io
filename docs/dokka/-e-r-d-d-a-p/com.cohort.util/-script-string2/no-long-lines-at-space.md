@@ -3,15 +3,15 @@
 # noLongLinesAtSpace
 
 [JVM]\
-open fun [noLongLinesAtSpace](no-long-lines-at-space.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), maxLength: Int, spaces: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [noLongLinesAtSpace](no-long-lines-at-space.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), maxLength: Int, spaces: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This is like noLongLines, but will only break at spaces.
 
-#### Return {#return}
+#### Return
 
 the content of s, but with no long lines
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

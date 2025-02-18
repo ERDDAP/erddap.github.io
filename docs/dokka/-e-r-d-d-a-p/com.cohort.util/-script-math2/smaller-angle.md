@@ -7,11 +7,11 @@ open fun [smallerAngle](smaller-angle.md)(d: Double): Double
 
 This decreases the double degree value (nicely).
 
-#### Return {#return}
+#### Return
 
 the previous multiple 15. It rounds to nearest mult, then changes it. If !Double.isFinite(d), it returns d.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

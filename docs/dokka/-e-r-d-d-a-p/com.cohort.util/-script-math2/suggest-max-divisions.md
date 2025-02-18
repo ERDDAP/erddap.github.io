@@ -7,11 +7,11 @@ open fun [suggestMaxDivisions](suggest-max-divisions.md)(range: Double, maxDivis
 
 This suggests the division distance along an axis so that there will be between maxDivisions/2 and maxDivisions.
 
-#### Return {#return}
+#### Return
 
 a double with the suggested division distance. If range isn't finite, this returns NaN. If range == 0, this returns 1. If range &lt;0, this the result will be negative. If maxDivisions == 0, this returns range. If maxDivisions &lt;0, this uses Math.abs(maxDivisions).
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

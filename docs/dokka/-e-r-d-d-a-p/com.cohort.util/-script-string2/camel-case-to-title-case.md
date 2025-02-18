@@ -3,15 +3,15 @@
 # camelCaseToTitleCase
 
 [JVM]\
-open fun [camelCaseToTitleCase](camel-case-to-title-case.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [camelCaseToTitleCase](camel-case-to-title-case.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This converts &quot;camelCase99String&quot; to &quot;Camel Case 99 String&quot;
 
-#### Return {#return}
+#### Return
 
 the string with spaces before capital letters. null returns null. &quot;&quot; returns &quot;&quot;.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

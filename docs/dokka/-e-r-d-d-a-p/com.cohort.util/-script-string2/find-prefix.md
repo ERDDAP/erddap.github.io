@@ -3,15 +3,15 @@
 # findPrefix
 
 [JVM]\
-open fun [findPrefix](find-prefix.md)(prefixes: Array&lt;[String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)&gt;, longerString: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), startAt: Int): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [findPrefix](find-prefix.md)(prefixes: Array&lt;[String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)&gt;, longerString: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), startAt: Int): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This is like whichPrefix, but returns the found prefix (or null).
 
-#### Return {#return}
+#### Return
 
 the prefixes[i] which longerString starts with (or null if not found)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

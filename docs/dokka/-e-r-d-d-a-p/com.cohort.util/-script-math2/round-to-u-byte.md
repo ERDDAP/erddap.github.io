@@ -7,11 +7,11 @@ fun [roundToUByte](round-to-u-byte.md)(d: Double): Short
 
 Safely rounds a double to a ubyte.
 
-#### Return {#return}
+#### Return
 
 255 if d is too small, too big, or NaN; otherwise d, rounded to the nearest byte. Undesirable: d.5 rounds up for positive numbers, down for negative.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

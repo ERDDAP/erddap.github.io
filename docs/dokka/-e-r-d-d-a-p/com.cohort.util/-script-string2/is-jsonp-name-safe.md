@@ -3,7 +3,7 @@
 # isJsonpNameSafe
 
 [JVM]\
-open fun [isJsonpNameSafe](is-jsonp-name-safe.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Boolean
+open fun [isJsonpNameSafe](is-jsonp-name-safe.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Boolean
 
 This tests if s is a valid jsonp function name. The functionName MUST be a series of 1 or more (period-separated) words. For each word: 
 
@@ -13,11 +13,11 @@ This tests if s is a valid jsonp function name. The functionName MUST be a serie
 
  Note that JavaScript allows Unicode characters, but this does not.
 
-#### Return {#return}
+#### Return
 
 true if s is a valid jsonp function name.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

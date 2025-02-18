@@ -3,15 +3,15 @@
 # csvToDoubleArray
 
 [JVM]\
-open fun [csvToDoubleArray](csv-to-double-array.md)(csv: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Array&lt;Double&gt;
+open fun [csvToDoubleArray](csv-to-double-array.md)(csv: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Array&lt;Double&gt;
 
 This converts a comma-separated-value String into a double[]. Invalid values are converted to Double.NaN.
 
-#### Return {#return}
+#### Return
 
 the corresponding double[]. csv=null returns null. csv=&quot;&quot; is converted to double[1]&#123;Double.NAN&#125;.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

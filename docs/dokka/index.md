@@ -2,7 +2,7 @@
 
 # ERDDAP
 
-## Packages {#packages}
+## Packages
 
 | Name |
 |---|

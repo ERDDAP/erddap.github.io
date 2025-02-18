@@ -7,11 +7,11 @@ fun [minMaxDef](min-max-def.md)(min: Int, max: Int, def: Int, current: Int): Int
 
 This forces an int into a range defined by min..max.
 
-#### Return {#return}
+#### Return
 
 def if current is less than min; or def if current is greater than max; else it returns the current value.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 
@@ -27,11 +27,11 @@ fun [minMaxDef](min-max-def.md)(min: Double, max: Double, def: Double, current: 
 
 This forces a double into a range defined by min..max.
 
-#### Return {#return-1}
+#### Return
 
 def if current is less than min; or def if current is greater than max; else it returns the current value.
 
-#### Parameters {#parameters-1}
+#### Parameters
 
 JVM
 

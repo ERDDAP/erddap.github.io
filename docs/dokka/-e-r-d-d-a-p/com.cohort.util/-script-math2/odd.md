@@ -7,11 +7,11 @@ open fun [odd](odd.md)(i: Int): Boolean
 
 Indicates if i is odd.
 
-#### Return {#return}
+#### Return
 
 true if i is an odd number
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

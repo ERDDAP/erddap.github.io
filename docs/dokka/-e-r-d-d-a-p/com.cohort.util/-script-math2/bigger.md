@@ -7,11 +7,11 @@ open fun [bigger](bigger.md)(d: Double): Double
 
 This increases the value (nicely).
 
-#### Return {#return}
+#### Return
 
 a number slightly larger than d. If !Double.isFinite(d), it returns d. If almost 0, it returns 0.01.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

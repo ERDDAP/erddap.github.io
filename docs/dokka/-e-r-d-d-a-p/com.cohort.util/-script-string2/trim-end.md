@@ -3,15 +3,15 @@
 # trimEnd
 
 [JVM]\
-open fun [trimEnd](trim-end.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [trimEnd](trim-end.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This trims just the end of the string.
 
-#### Return {#return}
+#### Return
 
 s with just the end of the string trim'd. If s == null, this returns null.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

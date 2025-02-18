@@ -3,15 +3,15 @@
 # extractAllCaptureGroupsAsStringArray
 
 [JVM]\
-open fun [extractAllCaptureGroupsAsStringArray](extract-all-capture-groups-as-string-array.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), regex: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), captureGroupNumber: Int): Array&lt;[String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)&gt;
+open fun [extractAllCaptureGroupsAsStringArray](extract-all-capture-groups-as-string-array.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), regex: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), captureGroupNumber: Int): Array&lt;[String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)&gt;
 
 This repeatedly finds the regex and extracts the specified captureGroup.
 
-#### Return {#return}
+#### Return
 
 a String[] with the found strings in their original order.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

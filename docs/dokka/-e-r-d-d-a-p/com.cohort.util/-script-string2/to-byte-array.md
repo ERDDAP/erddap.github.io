@@ -3,15 +3,15 @@
 # toByteArray
 
 [JVM]\
-open fun [toByteArray](to-byte-array.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Array&lt;Byte&gt;
+open fun [toByteArray](to-byte-array.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Array&lt;Byte&gt;
 
 This extracts the lower 8 bits of each char to form a byte array.
 
-#### Return {#return}
+#### Return
 
 the corresponding byte[] (or null if s is null)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

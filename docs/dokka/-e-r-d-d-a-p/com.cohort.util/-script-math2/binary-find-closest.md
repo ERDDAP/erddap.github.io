@@ -7,11 +7,11 @@ open fun [binaryFindClosest](binary-find-closest.md)(dar: Array&lt;Double&gt;, x
 
 Find the closest element to x in an ascending sorted array.
 
-#### Return {#return}
+#### Return
 
 the index of the index of the element closest to x. If x is NaN, this returns -1.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

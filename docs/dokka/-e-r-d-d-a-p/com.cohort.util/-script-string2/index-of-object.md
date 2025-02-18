@@ -7,11 +7,11 @@ open fun [indexOfObject](index-of-object.md)(ar: Array&lt;Any&gt;, o: Any, start
 
 This finds the first element in Object[] (starting at element startAt) where ar[i]==o.
 
-#### Return {#return}
+#### Return
 
 the element number of ar which is equal to s (or -1 if ar is null, or s is null or not found)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

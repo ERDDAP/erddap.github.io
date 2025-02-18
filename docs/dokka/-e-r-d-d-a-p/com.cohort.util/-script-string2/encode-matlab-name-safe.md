@@ -3,7 +3,7 @@
 # encodeMatlabNameSafe
 
 [JVM]\
-open fun [encodeMatlabNameSafe](encode-matlab-name-safe.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [encodeMatlabNameSafe](encode-matlab-name-safe.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This is like encodeFileNameSafe, but further restricts the name to 
 
@@ -14,11 +14,11 @@ This is like encodeFileNameSafe, but further restricts the name to
 
 THIS WON'T BE CHANGED. FILE NAMES CREATED FOR EDDGridFromFile and EDDTableFromFile DEPEND ON SAME ENCODING OVER TIME.
 
-#### Return {#return}
+#### Return
 
 s with all of the non-variableNameSafe characters changed. If s is null, this returns &quot;x_1&quot;. If s is &quot;&quot;, this returns &quot;x_0&quot;.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

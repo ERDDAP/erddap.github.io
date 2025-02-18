@@ -3,15 +3,15 @@
 # format
 
 [JVM]\
-open fun [format](format.md)(epochSeconds: Double, pattern: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), zone: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [format](format.md)(epochSeconds: Double, pattern: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), zone: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This formats the epochSeconds time value using the pattern.
 
-#### Return {#return}
+#### Return
 
 the formatted time string (or &quot;&quot; if trouble)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

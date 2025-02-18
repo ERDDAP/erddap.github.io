@@ -3,6 +3,6 @@
 # toNccsvAttString
 
 [JVM]\
-open fun [toNccsvAttString](to-nccsv-att-string.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [toNccsvAttString](to-nccsv-att-string.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This encodes one String as an NCCSV att String, with surrounding double quotes only if necessary.

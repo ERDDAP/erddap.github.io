@@ -7,11 +7,11 @@ fun [doubleToFloatNaN](double-to-float-na-n.md)(d: Double): Float
 
 Safely converts a double to a float (including the non-standard conversion of large values to Float.NaN, not Float.POSITIVE_INFINITY).
 
-#### Return {#return}
+#### Return
 
 a float. If f is not finite or greater than Float.MAX_VALUE, this returns Float.NaN.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

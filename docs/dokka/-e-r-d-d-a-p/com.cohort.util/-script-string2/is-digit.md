@@ -7,11 +7,11 @@ fun [isDigit](is-digit.md)(c: Int): Boolean
 
 0..9. Non-Latin numeric characters are not included (see Java Lang Spec pg 14).
 
-#### Return {#return}
+#### Return
 
 true if c is a digit
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

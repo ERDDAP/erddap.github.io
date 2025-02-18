@@ -7,11 +7,11 @@ open fun [truncToInt](trunc-to-int.md)(d: Double): Int
 
 This returns the truncated part of a double, stored as an int.
 
-#### Return {#return}
+#### Return
 
 the truncated version of d (or NaN if trouble)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 
@@ -19,7 +19,7 @@ JVM
 |---|---|
 | d | any double |
 
-#### See also {#see-also}
+#### See also
 
 | |
 |---|

@@ -7,11 +7,11 @@ fun [floatToDoubleNaN](float-to-double-na-n.md)(f: Double): Double
 
 Crudely (not nicely) converts a float to a double (including the non-standard conversion of INFINITY values to NaN). See floatToDouble.
 
-#### Return {#return}
+#### Return
 
 a double. If f is NaN or +-INFINITY, this returns Double.NaN.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

@@ -3,15 +3,15 @@
 # removeLeading
 
 [JVM]\
-open fun [removeLeading](remove-leading.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), ch: Char): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [removeLeading](remove-leading.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), ch: Char): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This removes leading ch's.
 
-#### Return {#return}
+#### Return
 
 s or a new string without leading ch's. null returns null.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

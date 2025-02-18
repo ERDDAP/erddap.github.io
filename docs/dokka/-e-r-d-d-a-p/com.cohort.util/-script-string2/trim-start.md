@@ -3,15 +3,15 @@
 # trimStart
 
 [JVM]\
-open fun [trimStart](trim-start.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [trimStart](trim-start.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This trims just the start of the string.
 
-#### Return {#return}
+#### Return
 
 s with just the start of the string trim'd. If s == null, this returns null.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

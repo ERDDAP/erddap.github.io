@@ -3,15 +3,15 @@
 # columnFloat
 
 [JVM]\
-open fun [columnFloat](column-float.md)(colName: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Float
+open fun [columnFloat](column-float.md)(colName: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Float
 
 This gets the value from a column as a float.
 
-#### Return {#return}
+#### Return
 
 the value as a float (or NaN if column not found or other trouble)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

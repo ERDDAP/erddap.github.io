@@ -3,4 +3,4 @@
 # commonUnicodeToPlainText
 
 [JVM]\
-open fun [commonUnicodeToPlainText](common-unicode-to-plain-text.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [commonUnicodeToPlainText](common-unicode-to-plain-text.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)

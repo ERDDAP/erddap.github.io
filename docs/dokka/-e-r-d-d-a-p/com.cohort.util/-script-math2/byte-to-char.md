@@ -7,11 +7,11 @@ fun [byteToChar](byte-to-char.md)(b: Int): Char
 
 Safely converts a byte (-128..127) to char (0..255). Note that reverse is easy: (byte)ch works (for 0..255) because narrowing just saves the low order bits, so &gt;127 becomes negative bytes.
 
-#### Return {#return}
+#### Return
 
 a char (0..255)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

@@ -7,7 +7,7 @@ fun [roundTo](round-to.md)(d: Double, nPlaces: Int): Double
 
 Rounds the value to the specified number of decimal places.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

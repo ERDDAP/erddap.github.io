@@ -3,15 +3,15 @@
 # lineContainingIgnoreCase
 
 [JVM]\
-open fun [lineContainingIgnoreCase](line-containing-ignore-case.md)(ar: Array&lt;Any&gt;, s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), startAt: Int): Int
+open fun [lineContainingIgnoreCase](line-containing-ignore-case.md)(ar: Array&lt;Any&gt;, s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), startAt: Int): Int
 
 This finds the first element in Object[] (starting at element startAt) where the ar[i].toString value contains the substring s (ignoring the case of ar and s).
 
-#### Return {#return}
+#### Return
 
 the element number of ar which is equal to s (or -1 if not found)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

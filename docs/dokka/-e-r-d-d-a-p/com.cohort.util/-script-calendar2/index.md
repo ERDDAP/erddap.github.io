@@ -9,17 +9,17 @@ This class makes some of the static methods in com.cohort.Calendar2 accessible t
 
 The underlying Calendar2 class is Copyright (c) 2005 Robert Simons (CoHortSoftware@gmail.com). See the MIT/X-like license in com/cohort/util/LICENSE.txt.
 
-#### Author {#author}
+#### Author
 
 Bob Simons (was bob.simons@noaa.gov, now BobSimons2.00@gmail.com) 2019-11-20
 
-## Constructors {#constructors}
+## Constructors
 
 | | |
 |---|---|
 | [ScriptCalendar2](-script-calendar2-constructor.md) | [JVM]<br/>constructor() |
 
-## Properties {#properties}
+## Properties
 
 | Name | Summary |
 |---|---|
@@ -38,16 +38,16 @@ Bob Simons (was bob.simons@noaa.gov, now BobSimons2.00@gmail.com) 2019-11-20
 | [YEAR](-y-e-a-r.md) | [JVM]<br/>val [YEAR](-y-e-a-r.md): Int = 1 |
 | [ZONE_OFFSET](-z-o-n-e_-o-f-f-s-e-t.md) | [JVM]<br/>val [ZONE_OFFSET](-z-o-n-e_-o-f-f-s-e-t.md): Int = 15<br/>in millis |
 
-## Functions {#functions}
+## Functions
 
 | Name | Summary |
 |---|---|
 | [clearSmallerFields](clear-smaller-fields.md) | [JVM]<br/>open fun [clearSmallerFields](clear-smaller-fields.md)(epochSeconds: Double, field: Int): Double<br/>This clears the fields smaller than 'field' (e.g., HOUR_OF_DAY clears MINUTE, SECOND, and MILLISECOND, but doesn't change HOUR_OF_DAY, MONTH, or YEAR). |
-| [epochSecondsToLimitedIsoStringT](epoch-seconds-to-limited-iso-string-t.md) | [JVM]<br/>open fun [epochSecondsToLimitedIsoStringT](epoch-seconds-to-limited-iso-string-t.md)(time_precision: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), seconds: Double, NaNString: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)<br/>This is like safeEpochSecondsToIsoStringT3Z, but returns a limited precision string. |
+| [epochSecondsToLimitedIsoStringT](epoch-seconds-to-limited-iso-string-t.md) | [JVM]<br/>open fun [epochSecondsToLimitedIsoStringT](epoch-seconds-to-limited-iso-string-t.md)(time_precision: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), seconds: Double, NaNString: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)<br/>This is like safeEpochSecondsToIsoStringT3Z, but returns a limited precision string. |
 | [epochSecondsToUnitsSince](epoch-seconds-to-units-since.md) | [JVM]<br/>open fun [epochSecondsToUnitsSince](epoch-seconds-to-units-since.md)(baseSeconds: Double, factorToGetSeconds: Double, epochSeconds: Double): Double<br/>This converts an epochSeconds value into a unitsSince value. |
-| [format](format.md) | [JVM]<br/>open fun [format](format.md)(epochSeconds: Double, pattern: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), zone: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)<br/>This formats the epochSeconds time value using the pattern. |
-| [getTimeBaseAndFactor](get-time-base-and-factor.md) | [JVM]<br/>open fun [getTimeBaseAndFactor](get-time-base-and-factor.md)(tsUnits: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), timeZone: [TimeZone](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/TimeZone.html)): Array&lt;Double&gt;<br/>This converts a string &quot;[units] since [isoDate]&quot; (e.g., &quot;minutes since 1985-01-01&quot;) into a baseSeconds (seconds since 1970-01-01) and a factor (&quot;minutes&quot; returns 60). |
-| [parseToEpochSeconds](parse-to-epoch-seconds.md) | [JVM]<br/>open fun [parseToEpochSeconds](parse-to-epoch-seconds.md)(sourceTime: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), dateTimeFormat: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Double<br/>A variant of parseToEpochSeconds that uses the Zulu time zone.<br/>[JVM]<br/>open fun [parseToEpochSeconds](parse-to-epoch-seconds.md)(sourceTime: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), dateTimeFormat: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), timeZoneString: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Double<br/>This converts a sourceTime string into a double with epochSeconds. |
-| [tryToEpochSeconds](try-to-epoch-seconds.md) | [JVM]<br/>open fun [tryToEpochSeconds](try-to-epoch-seconds.md)(someDateTimeString: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Double<br/>This tries to figure out the format of someDateTimeString then parse the value and convert it to epochSeconds. |
-| [tryToIsoString](try-to-iso-string.md) | [JVM]<br/>open fun [tryToIsoString](try-to-iso-string.md)(someDateTimeString: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)<br/>This tries to figure out the format of someDateTimeString then parse the value and convert to an ISO 8601 string with 'Z' at end. |
+| [format](format.md) | [JVM]<br/>open fun [format](format.md)(epochSeconds: Double, pattern: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), zone: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)<br/>This formats the epochSeconds time value using the pattern. |
+| [getTimeBaseAndFactor](get-time-base-and-factor.md) | [JVM]<br/>open fun [getTimeBaseAndFactor](get-time-base-and-factor.md)(tsUnits: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), timeZone: [TimeZone](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TimeZone.html)): Array&lt;Double&gt;<br/>This converts a string &quot;[units] since [isoDate]&quot; (e.g., &quot;minutes since 1985-01-01&quot;) into a baseSeconds (seconds since 1970-01-01) and a factor (&quot;minutes&quot; returns 60). |
+| [parseToEpochSeconds](parse-to-epoch-seconds.md) | [JVM]<br/>open fun [parseToEpochSeconds](parse-to-epoch-seconds.md)(sourceTime: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), dateTimeFormat: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Double<br/>A variant of parseToEpochSeconds that uses the Zulu time zone.<br/>[JVM]<br/>open fun [parseToEpochSeconds](parse-to-epoch-seconds.md)(sourceTime: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), dateTimeFormat: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), timeZoneString: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Double<br/>This converts a sourceTime string into a double with epochSeconds. |
+| [tryToEpochSeconds](try-to-epoch-seconds.md) | [JVM]<br/>open fun [tryToEpochSeconds](try-to-epoch-seconds.md)(someDateTimeString: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Double<br/>This tries to figure out the format of someDateTimeString then parse the value and convert it to epochSeconds. |
+| [tryToIsoString](try-to-iso-string.md) | [JVM]<br/>open fun [tryToIsoString](try-to-iso-string.md)(someDateTimeString: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)<br/>This tries to figure out the format of someDateTimeString then parse the value and convert to an ISO 8601 string with 'Z' at end. |
 | [unitsSinceToEpochSeconds](units-since-to-epoch-seconds.md) | [JVM]<br/>open fun [unitsSinceToEpochSeconds](units-since-to-epoch-seconds.md)(baseSeconds: Double, factorToGetSeconds: Double, unitsSince: Double): Double<br/>This converts a unitsSince value into epochSeconds. |

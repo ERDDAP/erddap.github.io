@@ -3,4 +3,4 @@
 # fileName
 
 [JVM]\
-open val [fileName](file-name.md): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open val [fileName](file-name.md): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
