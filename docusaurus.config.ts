@@ -10,14 +10,14 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://ChrisJohnNOAA.github.io/',
+  url: 'https://erddap.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/erddap.github.io/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ChrisJohnNOAA', // Usually your GitHub org/user name.
+  organizationName: 'ERDDAP', // Usually your GitHub org/user name.
   projectName: 'erddap.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
