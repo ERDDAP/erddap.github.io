@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "ERDDAP™",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "NOAAλογότυπο",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentation": {
+    "message": "Τεκμηρίωση",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.Governance": {
+    "message": "Διακυβέρνηση",
+    "description": "Navbar item with label Governance"
+  },
+  "item.label.Technical Board": {
+    "message": "Τεχνικό συμβούλιο",
+    "description": "Navbar item with label Technical Board"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Docs": {
+    "message": "Γιατροί",
+    "description": "Navbar item with label Docs"
+  }
+}

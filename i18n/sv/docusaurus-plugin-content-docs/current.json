@@ -1,0 +1,66 @@
+{
+  "version.label": {
+    "message": "Nästa Nästa",
+    "description": "The label for version current"
+  },
+  "sidebar.docSidebar.category.Server Administration": {
+    "message": "Server Administration",
+    "description": "The label for category Server Administration in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.Server Administration.link.generated-index.description": {
+    "message": "Hjälpsam information för serveradministratörer",
+    "description": "The generated-index page description for category Server Administration in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.Contributing": {
+    "message": "Bidrag",
+    "description": "The label for category Contributing in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.Contributing.link.generated-index.description": {
+    "message": "Information för dem som bidrar tillERDDAP",
+    "description": "The generated-index page description for category Contributing in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.Dataset Scripts Code Documentation": {
+    "message": "Dataset Scripts Code Documentation",
+    "description": "The label for category Dataset Scripts Code Documentation in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.ERDDAP": {
+    "message": "ERDDAP",
+    "description": "The label for category ERDDAP in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.ERDDAP.link.generated-index.description": {
+    "message": "Genererad dokumentation omERDDAP™kodkodkod",
+    "description": "The generated-index page description for category ERDDAP in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.com.cohort.util": {
+    "message": "Com.cohort.util",
+    "description": "The label for category com.cohort.util in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.ScriptCalendar2": {
+    "message": "ScriptCalendar2",
+    "description": "The label for category ScriptCalendar2 in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.ScriptMath": {
+    "message": "ScriptMath",
+    "description": "The label for category ScriptMath in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.ScriptMath2": {
+    "message": "ScriptMath2",
+    "description": "The label for category ScriptMath2 in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.ScriptString2": {
+    "message": "ScriptString2",
+    "description": "The label for category ScriptString2 in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.index": {
+    "message": "Index index",
+    "description": "The label for category index in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.User": {
+    "message": "Användare",
+    "description": "The label for category User in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.User.link.generated-index.description": {
+    "message": "Hjälpsam information för användare",
+    "description": "The generated-index page description for category User in sidebar docSidebar"
+  }
+}

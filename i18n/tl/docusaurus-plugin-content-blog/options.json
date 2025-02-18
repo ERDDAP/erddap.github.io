@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Bilog",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "Bilog",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Mga post kamakailan",
+    "description": "The label for the left sidebar"
+  }
+}

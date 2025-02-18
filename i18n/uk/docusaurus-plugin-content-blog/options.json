@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Новини",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "Новини",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Останні повідомлення",
+    "description": "The label for the left sidebar"
+  }
+}
