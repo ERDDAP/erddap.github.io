@@ -7,11 +7,11 @@ fun [narrowToInt](narrow-to-int.md)(i: Long): Int
 
 Safely narrows a long to an int.
 
-#### Return {#return}
+#### Return
 
 Integer.MAX_VALUE if i is too small or too big; otherwise i.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

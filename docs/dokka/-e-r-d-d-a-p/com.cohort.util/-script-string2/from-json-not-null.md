@@ -3,6 +3,6 @@
 # fromJsonNotNull
 
 [JVM]\
-open fun [fromJsonNotNull](from-json-not-null.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [fromJsonNotNull](from-json-not-null.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This is like the other fromJson, but returns &quot;&quot; instead of null.

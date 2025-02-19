@@ -3,15 +3,15 @@
 # min
 
 [JVM]\
-open fun [min](min.md)(s1: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), s2: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [min](min.md)(s1: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), s2: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This returns the string which sorts lower. null sorts low.
 
-#### Return {#return}
+#### Return
 
 the string which sorts lower.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

@@ -3,15 +3,15 @@
 # tryToEpochSeconds
 
 [JVM]\
-open fun [tryToEpochSeconds](try-to-epoch-seconds.md)(someDateTimeString: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Double
+open fun [tryToEpochSeconds](try-to-epoch-seconds.md)(someDateTimeString: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Double
 
 This tries to figure out the format of someDateTimeString then parse the value and convert it to epochSeconds.
 
-#### Return {#return}
+#### Return
 
 epochSeconds (or Double.NaN if trouble);
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

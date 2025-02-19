@@ -3,15 +3,15 @@
 # epochSecondsToLimitedIsoStringT
 
 [JVM]\
-open fun [epochSecondsToLimitedIsoStringT](epoch-seconds-to-limited-iso-string-t.md)(time_precision: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), seconds: Double, NaNString: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [epochSecondsToLimitedIsoStringT](epoch-seconds-to-limited-iso-string-t.md)(time_precision: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), seconds: Double, NaNString: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This is like safeEpochSecondsToIsoStringT3Z, but returns a limited precision string. This won't throw an exception.
 
-#### Return {#return}
+#### Return
 
 the formatted time string (or NaNString if trouble)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

@@ -7,11 +7,11 @@ fun [narrowToByte](narrow-to-byte.md)(i: Int): Byte
 
 Safely narrows an int to a byte.
 
-#### Return {#return}
+#### Return
 
 Byte.MAX_VALUE if i is too small or too big; otherwise i.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 
@@ -24,11 +24,11 @@ fun [narrowToByte](narrow-to-byte.md)(i: Long): Byte
 
 Safely narrows a long to a byte.
 
-#### Return {#return-1}
+#### Return
 
 Byte.MAX_VALUE if i is too small or too big; otherwise i.
 
-#### Parameters {#parameters-1}
+#### Parameters
 
 JVM
 

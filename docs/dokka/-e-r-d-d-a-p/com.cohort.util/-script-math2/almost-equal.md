@@ -11,11 +11,11 @@ This tests if the numbers are equal to at least n significant digits.
 - If d1 and d2 are almost0, this returns true.
 - This is slow compared to almost0.
 
-#### Return {#return}
+#### Return
 
 true if the numbers are equal to at least n significant digits (or are both almost0). If either number is NaN or Infinity, this returns false.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 
@@ -30,11 +30,11 @@ open fun [almostEqual](almost-equal.md)(nSignificantDigits: Int, f1: Float, f2: 
 
 This tests if two floats are equal to at least n significant digits.
 
-#### Return {#return-1}
+#### Return
 
 true if the numbers are equal to at least n significant digits (or are both almost0). If either number is NaN or Infinity, this returns false.
 
-#### Parameters {#parameters-1}
+#### Parameters
 
 JVM
 

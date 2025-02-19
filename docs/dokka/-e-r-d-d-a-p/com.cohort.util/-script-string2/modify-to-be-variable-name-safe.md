@@ -3,7 +3,7 @@
 # modifyToBeVariableNameSafe
 
 [JVM]\
-open fun [modifyToBeVariableNameSafe](modify-to-be-variable-name-safe.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [modifyToBeVariableNameSafe](modify-to-be-variable-name-safe.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This is like modifyToBeFileNameSafe, but restricts the name to: 
 
@@ -12,11 +12,11 @@ This is like modifyToBeFileNameSafe, but restricts the name to:
 
  Note that Java allows Unicode characters, but this does not. See also the safer encodeMatlabNameSafe(String s). Note, this does not check for names that are too long (many system have an 80 or 255 char limit).
 
-#### Return {#return}
+#### Return
 
 a safe variable name (but perhaps two s's lead to the same result)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

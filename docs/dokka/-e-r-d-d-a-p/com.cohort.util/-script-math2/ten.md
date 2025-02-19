@@ -7,11 +7,11 @@ open fun [ten](ten.md)(toThe: Int): Double
 
 This returns an integer power of ten. It uses Ten[] when possible for increased speed. It is protected against errors. It returns Double.POSITIVE_INFINITY if trouble.
 
-#### Return {#return}
+#### Return
 
 10^toThe
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

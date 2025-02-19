@@ -7,11 +7,11 @@ open fun [indexOf](index-of.md)(iArray: Array&lt;Int&gt;, i: Int, fromIndex: Int
 
 Finds the first instance of i at or after fromIndex (0.. ) in iArray.
 
-#### Return {#return}
+#### Return
 
 The first instance of i. If not found, it returns -1.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 
@@ -26,11 +26,11 @@ open fun [indexOf](index-of.md)(iArray: Array&lt;Int&gt;, i: Int): Int
 
 Finds the first instance of i in iArray.
 
-#### Return {#return-1}
+#### Return
 
 The first instance of i. If not found, it returns -1.
 
-#### Parameters {#parameters-1}
+#### Parameters
 
 JVM
 
@@ -44,11 +44,11 @@ open fun [indexOf](index-of.md)(cArray: Array&lt;Char&gt;, c: Char, fromIndex: I
 
 Finds the first instance of c at or after fromIndex (0.. ) in cArray.
 
-#### Return {#return-2}
+#### Return
 
 The first instance of c. If not found, it returns -1.
 
-#### Parameters {#parameters-2}
+#### Parameters
 
 JVM
 
@@ -63,11 +63,11 @@ open fun [indexOf](index-of.md)(cArray: Array&lt;Char&gt;, c: Char): Int
 
 Finds the first instance of c in cArray.
 
-#### Return {#return-3}
+#### Return
 
 The first instance of c. If not found, it returns -1.
 
-#### Parameters {#parameters-3}
+#### Parameters
 
 JVM
 
@@ -77,15 +77,15 @@ JVM
 | c | the char you want to find |
 
 [JVM]\
-open fun [indexOf](index-of.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), car: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), fromIndex: Int): Int
+open fun [indexOf](index-of.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), car: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), fromIndex: Int): Int
 
 This indexOf is a little different: it finds the first instance in s of any char in car.
 
-#### Return {#return-4}
+#### Return
 
 The first instance in s of any char in car. If not found, it returns -1.
 
-#### Parameters {#parameters-4}
+#### Parameters
 
 JVM
 
@@ -100,11 +100,11 @@ open fun [indexOf](index-of.md)(dArray: Array&lt;Double&gt;, d: Double, fromInde
 
 Finds the first instance of d at or after fromIndex (0.. ) in dArray (tested with Math2.almostEqual5).
 
-#### Return {#return-5}
+#### Return
 
 The first instance of d. If not found, it returns -1.
 
-#### Parameters {#parameters-5}
+#### Parameters
 
 JVM
 
@@ -119,11 +119,11 @@ open fun [indexOf](index-of.md)(dArray: Array&lt;Double&gt;, d: Double): Int
 
 Finds the first instance of d in dArray (tested with Math2.almostEqual5).
 
-#### Return {#return-6}
+#### Return
 
 The first instance of d. If not found, it returns -1.
 
-#### Parameters {#parameters-6}
+#### Parameters
 
 JVM
 
@@ -133,15 +133,15 @@ JVM
 | d | the double you want to find |
 
 [JVM]\
-open fun [indexOf](index-of.md)(ar: Array&lt;Any&gt;, s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Int
+open fun [indexOf](index-of.md)(ar: Array&lt;Any&gt;, s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Int
 
 This finds the first element in Object[] where the ar[i].toString value equals to s.
 
-#### Return {#return-7}
+#### Return
 
 the element number of ar which is equal to s (or -1 if ar is null, or s is null or not found)
 
-#### Parameters {#parameters-7}
+#### Parameters
 
 JVM
 
@@ -151,15 +151,15 @@ JVM
 | s | the String to be found |
 
 [JVM]\
-open fun [indexOf](index-of.md)(ar: Array&lt;Any&gt;, s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), startAt: Int): Int
+open fun [indexOf](index-of.md)(ar: Array&lt;Any&gt;, s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), startAt: Int): Int
 
 This finds the first element in Object[] (starting at element startAt) where the ar[i].toString value equals s.
 
-#### Return {#return-8}
+#### Return
 
 the element number of ar which is equal to s (or -1 if ar is null, or s is null or not found)
 
-#### Parameters {#parameters-8}
+#### Parameters
 
 JVM
 

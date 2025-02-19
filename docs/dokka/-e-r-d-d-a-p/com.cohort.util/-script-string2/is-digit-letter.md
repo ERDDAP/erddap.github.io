@@ -7,11 +7,11 @@ fun [isDigitLetter](is-digit-letter.md)(c: Int): Boolean
 
 Determines if the character is a digit or a letter.
 
-#### Return {#return}
+#### Return
 
 true if c is a letter or a digit
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

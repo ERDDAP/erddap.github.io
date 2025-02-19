@@ -3,15 +3,15 @@
 # justPrintable
 
 [JVM]\
-open fun [justPrintable](just-printable.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [justPrintable](just-printable.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This returns the string with all non-isPrintable characters removed.
 
-#### Return {#return}
+#### Return
 
 s with all the non-isPrintable characters removed. If s is null, this throws null pointer exception.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

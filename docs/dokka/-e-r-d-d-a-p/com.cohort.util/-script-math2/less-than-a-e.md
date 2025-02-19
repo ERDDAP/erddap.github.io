@@ -7,11 +7,11 @@ open fun [lessThanAE](less-than-a-e.md)(nSignificantDigits: Int, d1: Double, d2:
 
 This tests if d1 is less than or almostEqual d2.
 
-#### Return {#return}
+#### Return
 
 true if d1 is less than or almostEqual d2. If isNaN(d1) || isNaN(d2), this returns false.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

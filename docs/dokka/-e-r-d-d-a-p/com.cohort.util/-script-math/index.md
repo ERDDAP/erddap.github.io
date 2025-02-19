@@ -7,24 +7,24 @@ open class [ScriptMath](index.md)
 
 This class makes almost all of the static methods in java.lang.Math accessible to JexlScript scripts as &quot;Math.*name*()&quot; methods.
 
-#### Author {#author}
+#### Author
 
 Bob Simons (was bob.simons@noaa.gov, now BobSimons2.00@gmail.com) 2019-11-14
 
-## Constructors {#constructors}
+## Constructors
 
 | | |
 |---|---|
 | [ScriptMath](-script-math-constructor.md) | [JVM]<br/>constructor() |
 
-## Properties {#properties}
+## Properties
 
 | Name | Summary |
 |---|---|
 | [E](-e.md) | [JVM]<br/>val [E](-e.md): Double = 2.718281828459045<br/>The double value that is closer than any other to e, the base of the natural logarithms. |
 | [PI](-p-i.md) | [JVM]<br/>val [PI](-p-i.md): Double = 3.141592653589793<br/>The double value that is closer than any other to pi, the ratio of the circumference of a circle to its diameter. |
 
-## Functions {#functions}
+## Functions
 
 | Name | Summary |
 |---|---|

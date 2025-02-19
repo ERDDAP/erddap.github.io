@@ -7,11 +7,11 @@ fun [unsignedByte](unsigned-byte.md)(b: Int): Int
 
 Safely converts a signed byte (-128..127) to an unsigned byte (0..255). Note that reverse is easy: (byte)ch works (for 0..255) because narrowing just saves the low order bits, so &gt;127 becomes negative bytes.
 
-#### Return {#return}
+#### Return
 
 an int (0..255)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

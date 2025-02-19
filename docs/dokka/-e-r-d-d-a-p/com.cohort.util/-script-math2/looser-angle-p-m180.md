@@ -7,11 +7,11 @@ fun [looserAnglePM180](looser-angle-p-m180.md)(degrees: Double): Double
 
 This converts an angle (in degrees) into the range &gt;=-180 to &lt;=180 (note 180 is valid).
 
-#### Return {#return}
+#### Return
 
 the angle (in degrees) in the range &gt;=-180 to &lt;=180. A non-finite degrees returns the original value.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

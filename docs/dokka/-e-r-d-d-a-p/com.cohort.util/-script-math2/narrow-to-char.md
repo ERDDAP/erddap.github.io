@@ -7,11 +7,11 @@ fun [narrowToChar](narrow-to-char.md)(i: Int): Char
 
 Safely narrows an int to a char.
 
-#### Return {#return}
+#### Return
 
 Character.MAX_VALUE if i is too small or too big; otherwise i.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 
@@ -24,11 +24,11 @@ fun [narrowToChar](narrow-to-char.md)(i: Long): Char
 
 Safely narrows a long to a char.
 
-#### Return {#return-1}
+#### Return
 
 Character.MAX_VALUE if i is too small or too big; otherwise i.
 
-#### Parameters {#parameters-1}
+#### Parameters
 
 JVM
 

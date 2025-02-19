@@ -9,17 +9,17 @@ This class makes almost all of the static methods in com.cohort.Math2 accessible
 
 The underlying Math2 class is Copyright (c) 2005 Robert Simons (CoHortSoftware@gmail.com). See the MIT/X-like license in com/cohort/util/LICENSE.txt.
 
-#### Author {#author}
+#### Author
 
 Bob Simons (was bob.simons@noaa.gov, now BobSimons2.00@gmail.com) 2019-11-14
 
-## Constructors {#constructors}
+## Constructors
 
 | | |
 |---|---|
 | [ScriptMath2](-script-math2-constructor.md) | [JVM]<br/>constructor() |
 
-## Properties {#properties}
+## Properties
 
 | Name | Summary |
 |---|---|
@@ -47,10 +47,10 @@ Bob Simons (was bob.simons@noaa.gov, now BobSimons2.00@gmail.com) 2019-11-14
 | [TwoPi](-two-pi.md) | [JVM]<br/>val [TwoPi](-two-pi.md): Double = 6.283185307179586<br/>2 * Math. |
 | [UBYTE_MAX_VALUE](-u-b-y-t-e_-m-a-x_-v-a-l-u-e.md) | [JVM]<br/>val [UBYTE_MAX_VALUE](-u-b-y-t-e_-m-a-x_-v-a-l-u-e.md): Short = 255<br/>255 |
 | [UINT_MAX_VALUE](-u-i-n-t_-m-a-x_-v-a-l-u-e.md) | [JVM]<br/>val [UINT_MAX_VALUE](-u-i-n-t_-m-a-x_-v-a-l-u-e.md): Long = 4294967295<br/>4294967295L |
-| [ULONG_MAX_VALUE](-u-l-o-n-g_-m-a-x_-v-a-l-u-e.md) | [JVM]<br/>val [ULONG_MAX_VALUE](-u-l-o-n-g_-m-a-x_-v-a-l-u-e.md): [BigInteger](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigInteger.html)<br/>18446744073709551615. |
+| [ULONG_MAX_VALUE](-u-l-o-n-g_-m-a-x_-v-a-l-u-e.md) | [JVM]<br/>val [ULONG_MAX_VALUE](-u-l-o-n-g_-m-a-x_-v-a-l-u-e.md): [BigInteger](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigInteger.html)<br/>18446744073709551615. |
 | [USHORT_MAX_VALUE](-u-s-h-o-r-t_-m-a-x_-v-a-l-u-e.md) | [JVM]<br/>val [USHORT_MAX_VALUE](-u-s-h-o-r-t_-m-a-x_-v-a-l-u-e.md): Int = 65535<br/>65535 |
 
-## Functions {#functions}
+## Functions
 
 | Name | Summary |
 |---|---|
@@ -84,7 +84,7 @@ Bob Simons (was bob.simons@noaa.gov, now BobSimons2.00@gmail.com) 2019-11-14
 | [getSmallIncrement](get-small-increment.md) | [JVM]<br/>open fun [getSmallIncrement](get-small-increment.md)(range: Double): Double<br/>This returns a small increment roughly 1/100th the range (e.g., .1, 1, 10, ....). |
 | [greaterThanAE](greater-than-a-e.md) | [JVM]<br/>open fun [greaterThanAE](greater-than-a-e.md)(nSignificantDigits: Int, d1: Double, d2: Double): Boolean<br/>This tests if d1 is greater than or almostEqual9 d2. |
 | [guessFrac](guess-frac.md) | [JVM]<br/>open fun [guessFrac](guess-frac.md)(r: Double, int3: Array&lt;Int&gt;)<br/>Looks for a fraction very close to some decimal value. |
-| [guessFracString](guess-frac-string.md) | [JVM]<br/>open fun [guessFracString](guess-frac-string.md)(d: Double): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)<br/>This creates a String based on the results of guessFrac() |
+| [guessFracString](guess-frac-string.md) | [JVM]<br/>open fun [guessFracString](guess-frac-string.md)(d: Double): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)<br/>This creates a String based on the results of guessFrac() |
 | [hiDiv](hi-div.md) | [JVM]<br/>open fun [hiDiv](hi-div.md)(num: Int, den: Int): Int<br/>open fun [hiDiv](hi-div.md)(num: Long, den: Long): Long<br/>A div that rounds up if den&gt;0. |
 | [intExponent](int-exponent.md) | [JVM]<br/>open fun [intExponent](int-exponent.md)(d: Double): Int<br/>This returns the integer exponent of a double (-0.0175 returns -2 since -0.0175=-1.75*10^-2). |
 | [lessThanAE](less-than-a-e.md) | [JVM]<br/>open fun [lessThanAE](less-than-a-e.md)(nSignificantDigits: Int, d1: Double, d2: Double): Boolean<br/>This tests if d1 is less than or almostEqual d2. |
@@ -105,7 +105,7 @@ Bob Simons (was bob.simons@noaa.gov, now BobSimons2.00@gmail.com) 2019-11-14
 | [oneDigitBigger](one-digit-bigger.md) | [JVM]<br/>open fun [oneDigitBigger](one-digit-bigger.md)(max: Double, def: Double, d: Double): Double<br/>This increases the first digit of d (for example, .8, .9, 1, 2, 3, ..., 9, 10, 20, 30, ...). |
 | [oneDigitSmaller](one-digit-smaller.md) | [JVM]<br/>open fun [oneDigitSmaller](one-digit-smaller.md)(min: Double, def: Double, d: Double): Double<br/>This decreases the first digit of d (for example, 30, 20, 10, 9, ..., 3, 2, 1, .9, .8, ...). |
 | [random](random.md) | [JVM]<br/>open fun [random](random.md)(max: Int): Int<br/>This returns a random integer between 0 and max-1. |
-| [reduceHashCode](reduce-hash-code.md) | [JVM]<br/>open fun [reduceHashCode](reduce-hash-code.md)(hashCode: Int): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)<br/>This reduces a hash code (currently to a 10 digit unsigned number -- no loss of information). |
+| [reduceHashCode](reduce-hash-code.md) | [JVM]<br/>open fun [reduceHashCode](reduce-hash-code.md)(hashCode: Int): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)<br/>This reduces a hash code (currently to a 10 digit unsigned number -- no loss of information). |
 | [roundDiv](round-div.md) | [JVM]<br/>open fun [roundDiv](round-div.md)(num: Int, den: Int): Int<br/>A div that rounds. |
 | [roundTo](round-to.md) | [JVM]<br/>fun [roundTo](round-to.md)(d: Double, nPlaces: Int): Double<br/>Rounds the value to the specified number of decimal places. |
 | [roundToByte](round-to-byte.md) | [JVM]<br/>fun [roundToByte](round-to-byte.md)(d: Double): Byte<br/>Safely rounds a double to a byte. |
@@ -116,7 +116,7 @@ Bob Simons (was bob.simons@noaa.gov, now BobSimons2.00@gmail.com) 2019-11-14
 | [roundToShort](round-to-short.md) | [JVM]<br/>fun [roundToShort](round-to-short.md)(d: Double): Short<br/>Safely rounds a double to a short. |
 | [roundToUByte](round-to-u-byte.md) | [JVM]<br/>fun [roundToUByte](round-to-u-byte.md)(d: Double): Short<br/>Safely rounds a double to a ubyte. |
 | [roundToUInt](round-to-u-int.md) | [JVM]<br/>fun [roundToUInt](round-to-u-int.md)(d: Double): Long<br/>Safely rounds a double to a uint. |
-| [roundToULong](round-to-u-long.md) | [JVM]<br/>fun [roundToULong](round-to-u-long.md)(d: Double): [BigInteger](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigInteger.html)<br/>Safely rounds a double to a ulong. |
+| [roundToULong](round-to-u-long.md) | [JVM]<br/>fun [roundToULong](round-to-u-long.md)(d: Double): [BigInteger](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/math/BigInteger.html)<br/>Safely rounds a double to a ulong. |
 | [roundToUShort](round-to-u-short.md) | [JVM]<br/>fun [roundToUShort](round-to-u-short.md)(d: Double): Int<br/>Safely rounds a double to a ushort. |
 | [setSeed](set-seed.md) | [JVM]<br/>open fun [setSeed](set-seed.md)(seed: Long)<br/>This sets the seed for the next call to random(). |
 | [sign1](sign1.md) | [JVM]<br/>open fun [sign1](sign1.md)(i: Int): Int<br/>This returns 1 for positive i's, -1 for negative i's, and 1 if i is 0 (i.e., 0 is treated as a positive number). |

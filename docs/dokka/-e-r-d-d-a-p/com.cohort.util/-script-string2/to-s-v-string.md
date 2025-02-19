@@ -3,15 +3,15 @@
 # toSVString
 
 [JVM]\
-open fun [toSVString](to-s-v-string.md)(ar: Array&lt;Any&gt;, separator: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), finalSeparator: Boolean): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [toSVString](to-s-v-string.md)(ar: Array&lt;Any&gt;, separator: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), finalSeparator: Boolean): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This is used at a low level to generate a 'separator'-separated-value string (without newlines) with the element.toString()'s from the array.
 
-#### Return {#return}
+#### Return
 
 a separator-separated-value String. Returns null if ar is null. null elements are represented as &quot;[null]&quot;.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

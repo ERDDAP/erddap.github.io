@@ -9,11 +9,11 @@ This returns the mantissa of a double (-0.0175 returns -1.75 since -0.0175=-1.75
 
 See the similar String2.toRational()
 
-#### Return {#return}
+#### Return
 
 d / exponent(d) (or 0 if d=0, or NaN if !finite(d))
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

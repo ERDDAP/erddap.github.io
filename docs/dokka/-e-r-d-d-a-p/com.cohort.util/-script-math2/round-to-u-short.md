@@ -7,11 +7,11 @@ fun [roundToUShort](round-to-u-short.md)(d: Double): Int
 
 Safely rounds a double to a ushort.
 
-#### Return {#return}
+#### Return
 
 0xffff if d is too small, too big, or NaN; otherwise d, rounded to the nearest short. Undesirable: d.5 rounds up for positive numbers, down for negative.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

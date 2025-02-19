@@ -3,15 +3,15 @@
 # isEmailAddress
 
 [JVM]\
-open fun [isEmailAddress](is-email-address.md)(email: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Boolean
+open fun [isEmailAddress](is-email-address.md)(email: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Boolean
 
 This indicates if 'email' is a valid email address.
 
-#### Return {#return}
+#### Return
 
 true if 'email' is a valid email address.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

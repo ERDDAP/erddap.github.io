@@ -3,15 +3,15 @@
 # removeNull
 
 [JVM]\
-open fun [removeNull](remove-null.md)(sar: Array&lt;[String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)&gt;): Array&lt;[String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)&gt;
+open fun [removeNull](remove-null.md)(sar: Array&lt;[String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)&gt;): Array&lt;[String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)&gt;
 
 This returns a String[] with just non-null strings from the original array.
 
-#### Return {#return}
+#### Return
 
 a new String[] with just non-null strings. sar=null returns null.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

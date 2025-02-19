@@ -7,11 +7,11 @@ open fun [oneDigitBigger](one-digit-bigger.md)(max: Double, def: Double, d: Doub
 
 This increases the first digit of d (for example, .8, .9, 1, 2, 3, ..., 9, 10, 20, 30, ...). It rounds to nearest single digit mantissa, then changes it. If !Double.isFinite(d), it returns def. If d = 0, it returns 1.
 
-#### Return {#return}
+#### Return
 
 d, rounded to a single digit mantissa and with the initial digit increased
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

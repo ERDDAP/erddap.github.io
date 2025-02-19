@@ -3,15 +3,15 @@
 # whichSuffix
 
 [JVM]\
-open fun [whichSuffix](which-suffix.md)(suffixes: Array&lt;[String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)&gt;, longerString: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), startAt: Int): Int
+open fun [whichSuffix](which-suffix.md)(suffixes: Array&lt;[String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)&gt;, longerString: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), startAt: Int): Int
 
 This finds the first element in suffixes (starting at element startAt) where the longerString ends with suffixes[i].
 
-#### Return {#return}
+#### Return
 
 the element number of suffixes which longerString ends with (or -1 if not found)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

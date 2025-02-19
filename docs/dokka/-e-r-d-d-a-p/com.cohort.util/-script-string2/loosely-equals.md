@@ -3,15 +3,15 @@
 # looselyEquals
 
 [JVM]\
-open fun [looselyEquals](loosely-equals.md)(s1: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), s2: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Boolean
+open fun [looselyEquals](loosely-equals.md)(s1: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), s2: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Boolean
 
 This goes beyond equalsIgnoreCase by looking after punctuation removed.
 
-#### Return {#return}
+#### Return
 
 true if find is loosely in s. Return false if s or find !isSomething.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

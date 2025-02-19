@@ -7,7 +7,7 @@ open fun [setSeed](set-seed.md)(seed: Long)
 
 This sets the seed for the next call to random(). You can use this for testing purposes if you need to get repeatable results from random().
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

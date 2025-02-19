@@ -7,11 +7,11 @@ open fun [clearSmallerFields](clear-smaller-fields.md)(epochSeconds: Double, fie
 
 This clears the fields smaller than 'field' (e.g., HOUR_OF_DAY clears MINUTE, SECOND, and MILLISECOND, but doesn't change HOUR_OF_DAY, MONTH, or YEAR).
 
-#### Return {#return}
+#### Return
 
 the new epochSeconds value (or NaN if trouble).
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

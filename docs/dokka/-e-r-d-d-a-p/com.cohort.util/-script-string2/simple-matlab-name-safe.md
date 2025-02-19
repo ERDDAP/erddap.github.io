@@ -3,7 +3,7 @@
 # simpleMatlabNameSafe
 
 [JVM]\
-open fun [simpleMatlabNameSafe](simple-matlab-name-safe.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [simpleMatlabNameSafe](simple-matlab-name-safe.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This is like encodeMatlabNameSafe, but simpler and won't always retain all the info. 
 
@@ -14,11 +14,11 @@ This is like encodeMatlabNameSafe, but simpler and won't always retain all the i
 
 THIS WON'T BE CHANGED. SOME datasetIDs DEPEND ON SAME ENCODING OVER TIME.
 
-#### Return {#return}
+#### Return
 
 s with all of the non-variableNameSafe characters changed. If s is null, this returns &quot;null_&quot;. If s is &quot;&quot;, this returns &quot;nothing_&quot;.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

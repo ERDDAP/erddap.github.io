@@ -9,11 +9,11 @@ Find the last element which is &lt;x or almostEqual(5, x) in an ascending sorted
 
 If firstGE &gt;lastLE, there are no matching elements (because the requested range is less than or greater than all the values, or between two adjacent values).
 
-#### Return {#return}
+#### Return
 
 the index of the last element which is &lt;= x in an ascending sorted array. If x &lt;the smallest element, this returns -1 (no element is appropriate). If x &gt;the largest element, this returns dar.length-1. If x is NaN, this is currently undefined.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

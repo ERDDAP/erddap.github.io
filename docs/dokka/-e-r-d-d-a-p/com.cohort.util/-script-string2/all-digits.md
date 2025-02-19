@@ -3,15 +3,15 @@
 # allDigits
 
 [JVM]\
-fun [allDigits](all-digits.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Boolean
+fun [allDigits](all-digits.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Boolean
 
 0..9. Non-Latin numeric characters are not included (see Java Lang Spec pg 14).
 
-#### Return {#return}
+#### Return
 
 true if c is a digit
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

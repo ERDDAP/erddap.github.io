@@ -7,11 +7,11 @@ fun [longToDoubleNaN](long-to-double-na-n.md)(tl: Long): Double
 
 This converts a long to a double (Long.MAX_VALUE becomes NaN).
 
-#### Return {#return}
+#### Return
 
 a double. If tl is Long.MAX_VALUE, this returns Double.NaN.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

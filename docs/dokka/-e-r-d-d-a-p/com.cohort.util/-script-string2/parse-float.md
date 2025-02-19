@@ -3,15 +3,15 @@
 # parseFloat
 
 [JVM]\
-open fun [parseFloat](parse-float.md)(s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Float
+open fun [parseFloat](parse-float.md)(s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Float
 
 Parse as a float with either &quot;.&quot; or &quot;,&quot; as the decimal point. Leading or trailing spaces are automatically removed.
 
-#### Return {#return}
+#### Return
 
 the corresponding float (or Float.NaN if not properly formatted)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

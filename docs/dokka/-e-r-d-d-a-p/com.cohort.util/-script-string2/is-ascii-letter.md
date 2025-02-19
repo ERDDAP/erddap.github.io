@@ -7,11 +7,11 @@ fun [isAsciiLetter](is-ascii-letter.md)(c: Int): Boolean
 
 This returns true for A..Z, a..z.
 
-#### Return {#return}
+#### Return
 
 true if c is a letter
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

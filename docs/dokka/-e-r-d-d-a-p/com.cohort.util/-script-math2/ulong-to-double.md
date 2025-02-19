@@ -7,11 +7,11 @@ fun [ulongToDouble](ulong-to-double.md)(tl: Long): Double
 
 This converts an unsigned long to a double. !!! possible loss of precision!
 
-#### Return {#return}
+#### Return
 
 a double.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

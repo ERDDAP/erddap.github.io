@@ -7,11 +7,11 @@ open fun [getSmallIncrement](get-small-increment.md)(range: Double): Double
 
 This returns a small increment roughly 1/100th the range (e.g., .1, 1, 10, ....).
 
-#### Return {#return}
+#### Return
 
 an appropriate increment for the range
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

@@ -7,11 +7,11 @@ open fun [unitsSinceToEpochSeconds](units-since-to-epoch-seconds.md)(baseSeconds
 
 This converts a unitsSince value into epochSeconds. This properly handles 'special' factorToGetSeconds values (for month and year).
 
-#### Return {#return}
+#### Return
 
 seconds since 1970-01-01 (or NaN if unitsSince is NaN)
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

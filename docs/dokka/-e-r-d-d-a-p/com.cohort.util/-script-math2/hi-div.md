@@ -9,11 +9,11 @@ open fun [hiDiv](hi-div.md)(num: Long, den: Long): Long
 
 A div that rounds up if den&gt;0. e.g., 1/4 goes to 1; 4/4 goes to 1; den = 0 throws an exception.
 
-#### Return {#return}
+#### Return
 
 num/den, but rounded to the next larger (abs) int
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

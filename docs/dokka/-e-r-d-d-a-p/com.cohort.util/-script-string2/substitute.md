@@ -3,15 +3,15 @@
 # substitute
 
 [JVM]\
-open fun [substitute](substitute.md)(msg: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), s0: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), s1: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html), s2: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+open fun [substitute](substitute.md)(msg: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), s0: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), s1: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html), s2: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 This replaces &quot;&#123;0&#125;&quot;, &quot;&#123;1&#125;&quot;, and &quot;&#123;2&#125;&quot; in msg with s0, s1, s2.
 
-#### Return {#return}
+#### Return
 
 the modified msg
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

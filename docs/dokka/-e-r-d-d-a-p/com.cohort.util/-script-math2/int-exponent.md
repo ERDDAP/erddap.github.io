@@ -9,11 +9,11 @@ This returns the integer exponent of a double (-0.0175 returns -2 since -0.0175=
 
 See the similar String2.toRational()
 
-#### Return {#return}
+#### Return
 
 the integer exponent of the number. If !isFinite(d), this returns Integer.MAX_VALUE d=0 returns 0.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

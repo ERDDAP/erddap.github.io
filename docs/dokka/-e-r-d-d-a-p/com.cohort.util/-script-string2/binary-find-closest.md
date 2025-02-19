@@ -3,15 +3,15 @@
 # binaryFindClosest
 
 [JVM]\
-open fun [binaryFindClosest](binary-find-closest.md)(sar: Array&lt;[String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)&gt;, s: [String](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)): Int
+open fun [binaryFindClosest](binary-find-closest.md)(sar: Array&lt;[String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)&gt;, s: [String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)): Int
 
 Find the closest element to s in an ascending sorted array.
 
-#### Return {#return}
+#### Return
 
 the index of the element closest to s. If s is null, this returns -1.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 

@@ -9,11 +9,11 @@ open fun [equalsIncludingNanOrInfinite](equals-including-nan-or-infinite.md)(a: 
 
 This returns true if a == b. This treats as true: NaN=NaN (which Java says is false), NEGATIVE_INFINITY=NEGATIVE_INFINITY, and POSITIVE_INFINITY=POSITIVE_INFINITY.
 
-#### Return {#return}
+#### Return
 
 true if a == b.
 
-#### Parameters {#parameters}
+#### Parameters
 
 JVM
 
