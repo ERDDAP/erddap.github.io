@@ -16,7 +16,7 @@ Here are the changes associated with each ERDDAP™ release.
 
 *   **New Features and Changes (for users):**
     *   Subscriptions and RSS updates should happen more reliably for datasets that get updated frequently from file changes.
-         
+
 *   **Things ERDDAP™ Administrators Need to Know and Do:**
     *   The default release requires/supports Java version 21. Back in this release is being able to easily make a Java 17 compatible binary.
 
@@ -24,6 +24,13 @@ Here are the changes associated with each ERDDAP™ release.
 
     *   Additional Prometheus metrics. The biggest one is `http_request_duration_seconds` which includes request response times broken down by: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
         This machine readable format will enable better collection of metrics to understand how users are using the server.
+
+    *   New way to generate ISO19115 XML files. It uses Apache SIS and is a new option in this release. Please enable it and send feedback.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    *   The UI will now create individual links for each url in fields like the infoUrl and summary.
 
     *   Subscriptions and RSS updates should happen more reliably for datasets that get updated frequently from file changes. If this causes issues, please reach out on GitHub and disable the functionality by adding the below flag to your setup.xml.
     NOT RECOMMENDED
@@ -42,9 +49,9 @@ Here are the changes associated with each ERDDAP™ release.
     ```
         <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
     ```
-         
+
     *   Some small changes and bug fixes.  
-         
+
 *   **For ERDDAP™ Developers:**
     *   More code quality improvements and dead code cleanup. This includes minor optimizations, better handling of closable resources, and migrating away from long obsolete data types (like Vector).
 
