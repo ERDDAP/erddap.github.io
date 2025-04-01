@@ -7,6 +7,59 @@ ERDDAP™é um grande exemplo de[Inovação orientada pelo usuário](https://en.
 
 Aqui estão as mudanças associadas a cadaERDDAP™liberar.
 
+## Versão 2.26{#version-226} 
+ (lançado 2025-02-??) 
+
+*    **Para todos:** 
+    * Grande atualização para o nosso site de documentação: https://erddap.github.io/
+ 
+Além da aparência atualizada, há melhor navegação, pesquisa, tradução, e deve ser mais fácil manter em frente&#33;
+
+*    **Novos recursos e mudanças (para usuários) :** 
+    * Subscrições eRSSatualizações devem acontecer mais confiável para conjuntos de dados que são atualizados frequentemente a partir de mudanças de arquivo.
+
+*    **CoisasERDDAP™Os administradores precisam saber e fazer:** 
+    * A versão padrão requer / suportaJavaversão 21. Voltar nesta versão está sendo capaz de facilmente fazer umJava17 binário compatível.
+
+    * Novo recurso para personalizar as informações exibidas sobre conjuntos de dados na interface do usuário. Esperamos que isso seja particularmente útil para adicionar coisas como citações de conjuntos de dados. Para mais detalhes, você pode ler[nova documentação](/docs/server-admin/display-info.md). Graças a Ayush Singh pela contribuição&#33;
+
+    * Outras métricas do Prometheus. O maior é `http_request_duration_seconds` que inclui tempos de resposta de solicitação quebrados por: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
+Este formato legível da máquina permitirá uma melhor coleção de métricas para entender como os usuários estão usando o servidor.
+
+    * Nova maneira de gerar arquivos XML ISO19115. Ele usa o Apache SIS e é uma nova opção nesta versão. Por favor, ative-o e envie comentários.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * A IU agora criará links individuais para cada url em campos como oinfoUrle resumo.
+
+    * Subscrições eRSSatualizações devem acontecer mais confiável para conjuntos de dados que são atualizados frequentemente a partir de mudanças de arquivo. Se isso causar problemas, acesse o GitHub e desabilite a funcionalidade adicionando a bandeira abaixo ao seu setup.xml.
+NÃO RECOMENDADO
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * As variáveis subdefinidas não serão mais geradas automaticamente para o tipo de conjunto de dados EDDTableFromNcCFFiles. Se você estava confiando no comportamento, você pode ou (solução preferencial) adicionar osubsetVariablespara a definição de conjunto de dados em seudatasets.xml, ou adicione a bandeira abaixo ao seu setup.xml. Se você sentir a necessidade de ativar isso, por favor, alcance o GitHub para que possamos melhor apoiar o seu caso de uso avançando.
+NÃO RECOMENDADO
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * O servidor irá agora redirecionar solicitações de documentação (em downloads/ qual é a documentação que foi migrada) para o novo site de documentação. Se necessário, você pode desativar isso com uma bandeira no setup.xml:
+NÃO RECOMENDADO
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * Algumas pequenas mudanças e correções de bugs.
+
+*    **ParaERDDAP™Desenvolvedores:** 
+    * Mais melhorias de qualidade de código e limpeza de código morto. Isso inclui pequenas otimizações, melhor manuseio de recursos closáveis e migrando de longos tipos de dados obsoletos (como Vector) .
+
+    * Grande refatoração ao EDStatic para tirar a maioria do config, mensagem e código métrico. Também melhor encapsula a inicialização e o manuseio de caminhos de diretório (estes últimos 2 têm mais a fazer.) 
+
+    * Muitos progressos em direção a uma imagem Docker oficialmente apoiada. O plano é finalizar e liberar após oERDDAP™2.26 lançamento está disponível.
+
 ## Versão 2.25{#version-225} 
  (lançado 2024-10-31) 
 

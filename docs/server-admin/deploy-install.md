@@ -250,7 +250,7 @@ ERDDAP™ will not work correctly if the setup.xml or datasets.xml file isn't a 
      
 ###  Install the erddap.war file {#install-the-erddapwar-file}
 4. On Linux, Mac, and Windows, download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war) into _tomcat_/webapps .  
-    (version 2.26, 607,404,032 bytes, MD5=c71df1f40c42ec4a743f4c0c3a189c0a, dated 03-31-2025)
+    (version 2.26, 607,404,032 bytes, MD5=99a725108b37708e5420986c1616a119, dated 03-31-2025)
     
     The .war file is big because it contains high resolution coastline, boundary, and elevation data needed to create maps.
     

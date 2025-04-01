@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## 最近ERDDAP™版本{#latest-erddap-version} 
 
-2.25,見[變更文件](/changes#version-225)和[下載](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1).
+2.26,参见[變更文件](/changes#version-226)和[下載](https://github.com/ERDDAP/erddap/releases/tag/v2.26.0).
 
 ## ERDDAP™信息{#erddap-information} 
 

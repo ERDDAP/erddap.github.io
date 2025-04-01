@@ -7,6 +7,59 @@ ERDDAP™是一个伟大的例子[用户驱动创新](https://en.wikipedia.org/w
 
 以下是与每个ERDDAP™释放
 
+## 第2.26号版本{#version-226} 
+ (发布2025-02 -?) 
+
+*    **为所有人:** 
+    * 我们的文件网站大量更新: https://erddap.github.io/
+ 
+除了更新的外观外,还有改进的导航,搜索,翻译,应该更便于维持前进&#33;
+
+*    **新特征和变化 (用户) 数字 :** 
+    * 订阅费和RSS对从文件更改中频繁更新的数据集,更新应当更加可靠。
+
+*    **东西ERDDAP™管理员需要知道和做:** 
+    * 默认发布需要/支持Java第21版. 回到本版后,人们可以很容易地Java17个兼容二进制.
+
+    * 用于自定义UI中显示的数据集信息的新功能. 我们期望这特别有助于增加数据引用。 详情请阅读[新文档](/docs/server-admin/display-info.md)。 。 。 感谢阿尤什·辛格的贡献&#33;
+
+    * 额外的普罗米修斯度量衡. 最大的一个是...http_ request_dult_seconds' 包括按“request_type”、“dataset_id”、“dataset_type”、“file_type”、“lang_code”、“status_code”细分的请求响应时间
+这种机器可读格式可以更好地收集度量衡来理解用户是如何使用服务器的.
+
+    * 生成 ISO19115 XML 文件的新方式. 它使用Apache SIS,是本版中的新选项. 请启用并发送反馈 。
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * 用户界面现在将创建单个链接。infoUrl和摘要。
+
+    * 订阅费和RSS对从文件更改中频繁更新的数据集,更新应当更加可靠。 如果这造成问题, 请联系 GitHub 并禁用功能, 在您的设置中添加下面的旗帜 。 xml 。
+未建议
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * 对于数据集类型EDD Table FromNcCFFiles,子集变量将不再自动生成. 如果你依赖于行为,你也可以 (首选解决方案) 添加subsetVariables到您的数据集定义datasets.xml,或者在您的设置中添加下面的旗帜.xml. 如果你觉得需要打开这个 请联系GitHub 这样我们就能更好地支持你的使用案例
+未建议
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * 服务器现在将重定向文档请求 (下载/ 这是已迁移的文件) 到新文档网站。 如果需要, 您可以在设置. xml 中禁用此标记 :
+未建议
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * 一些小的更改和错误修正 。
+
+*    **对于ERDDAP™开发者 :** 
+    * 更多代码质量改进和死代码清理. 其中包括微小优化、更好地处理可消耗资源以及从长期过时的数据类型中迁移出去 (像矢量一样) 。 。 。 。
+
+    * 大量重构到EDStatic,以拔出大部分的配置,消息,和度量码. 它还更好地封装目录路径的初始化和处理 (最后两个方面还有许多工作要做。) 
+
+    * 在正式支持的Docker图像上取得了很多进展. 计划在ERDDAP™2.26 发布。
+
 ## 第2.25号版本{#version-225} 
  (2024-10-31年发布) 
 

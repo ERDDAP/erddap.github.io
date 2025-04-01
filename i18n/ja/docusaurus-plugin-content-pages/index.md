@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## 最新記事ERDDAP™バージョン{#latest-erddap-version} 
 
-2.25、参照して下さい[ドキュメントの変更](/changes#version-225)そして、[ダウンロード](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1)お問い合わせ
+2.26, 見る[ドキュメントの変更](/changes#version-226)そして、[ダウンロード](https://github.com/ERDDAP/erddap/releases/tag/v2.26.0)お問い合わせ
 
 ## ERDDAP™インフォメーション{#erddap-information} 
 

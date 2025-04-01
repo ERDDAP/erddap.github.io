@@ -7,6 +7,59 @@ ERDDAP™je skvělý příklad[Uživatelská inovace](https://en.wikipedia.org/w
 
 Zde jsou změny spojené s každýmERDDAP™Uvolnit.
 
+## Verze 2.26{#version-226} 
+ (Propustili 2025-02?) 
+
+*    **Pro všechny:** 
+    * Velká aktualizace naší dokumentace: https://erddap.github.io/
+ 
+Kromě aktualizovaného vzhledu je lepší navigace, vyhledávání, překlad, a to by mělo být jednodušší udržet v pokroku&#33;
+
+*    **Nové funkce a změny (pro uživatele) :** 
+    * Předplatné aRSSaktualizace by se měly odehrávat spolehlivěji u souborů, které se často aktualizují ze změn souborů.
+
+*    **VěciERDDAP™Administrátoři potřebují vědět a udělat:** 
+    * Výchozí uvolnění vyžaduje/podporujeJavaverze 21. Zpět v této verzi je schopen snadno vytvořitJava17 kompatibilní binární.
+
+    * Nová funkce pro přizpůsobení informací o datových souborech v UI. Očekáváme, že to bude obzvlášť užitečné, když přidáme věci jako citace souborů dat. Další podrobnosti si můžete přečíst[nová dokumentace](/docs/server-admin/display-info.md). Díky Ayush Singh za příspěvek&#33;
+
+    * Další Prometheovy metriky. Největší z nich je:http_request_duration_sekundy [65], které zahrnují časy odezvy na žádost v členění podle: "request_type," "dataset_id," "dataset_type," "file_type," "lang_code," "status_code"
+Tento stroj čitelný formát umožní lepší sběr metrik pochopit, jak uživatelé používají server.
+
+    * Nový způsob generování souborů ISO19115 XML. Používá Apache SIS a je novou volbou v tomto vydání. Prosím, povolte to a pošlete zpětnou vazbu.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * UI nyní vytvoří individuální odkazy pro každou urlu v polích jakoinfoUrla shrnutí.
+
+    * Předplatné aRSSaktualizace by se měly odehrávat spolehlivěji u souborů, které se často aktualizují ze změn souborů. Pokud to způsobuje problémy, prosím, oslovte GitHub a zakázat funkčnost přidáním níže uvedené vlajky do nastavení.xml.
+NEDOPORUČENÉ
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * Subsetové proměnné již nebudou automaticky generovány pro datový typ EDDTableFromNcCFFiles. Pokud jste se spoléhal na chování, můžete buď (preferovaný roztok) přidatsubsetVariablesk definici datového souboru ve vašemdatasets.xml, nebo přidat níže uvedenou vlajku do nastavení.xml. Pokud máte pocit, že je třeba to zapnout, prosím oslovte GitHub, abychom mohli lépe podpořit vaše použití pouzdro vpřed.
+NEDOPORUČENÉ
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * Server nyní přesměruje požadavky na dokumentaci (v rámci stažení / což je dokumentace, která byla migrována) na nové místo dokumentace. V případě potřeby to můžete vypnout s vlajkou v setup.xml:
+NEDOPORUČENÉ
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * Některé malé změny a opravy chyb.
+
+*    **ProERDDAP™Vývojáři:** 
+    * Více vylepšení kvality kódu a vyčištění mrtvého kódu. Jedná se o drobné optimalizace, lepší manipulaci s ucpanými zdroji a migraci od zastaralých datových typů (jako Vektor) .
+
+    * Velkou refaktoring na ED Static vytáhnout většinu z konfigu, zprávy, a metrické kód. Je také lepší zapouzdřit inicializaci a manipulaci adresářových cest (Tyto poslední 2 mají více co dělat.) 
+
+    * Hodně pokroku směrem k oficiálně podporovanému Docker Image. Plán je dokončit a uvolnit poERDDAP™2.26 uvolnění je k dispozici.
+
 ## Verze 2.25{#version-225} 
  (propuštěn 2024-10-31) 
 

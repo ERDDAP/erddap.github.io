@@ -249,8 +249,8 @@ Is féidir leat sampla a fheiceáil[datasets.xmlar GitHub](https://github.com/ER
 ERDDAP™Ní bheidh ag obair i gceart má tá an thus.xml nódatasets.xmlNíl comhad XML dea-chruthaithe. Mar sin,, tar éis duit na comhaid seo a chur in eagar, is smaoineamh maith é a fhíorú go bhfuil an toradh XML dea-déanta trí théacs XML a ghreamú isteach i seiceáilire XML cosúil le[xmlvaldation](https://www.xmlvalidation.com/).
      
 ### Suiteáil an erddap.war comhad{#install-the-erddapwar-file} 
-4. Ar Linux, Mac, agus Windows, íoslódáil[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)isteach _ síos / iarratais.
-     (leagan 2.25_1, 592,292,039 beart, MD5 = 652AFC9D1421F00B5F789DA2C4732D4C, dar dáta 2024-11-07) 
+4. Ar Linux, Mac, agus Windows, íoslódáil[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)isteach _ síos / iarratais.
+     (leagan 2.26, 607,404,032 bytes, MD5 = 99a725108b37708e5420986c16119, dáta 03-31-2025) 
     
 Is é an comhad .war mór toisc go bhfuil sé chósta réiteach ard, teorainn, agus sonraí ingearchló is gá chun léarscáileanna a chruthú.
     
@@ -261,6 +261,7 @@ Is é an comhad .war mór toisc go bhfuil sé chósta réiteach ard, teorainn, a
     [2.22](https://github.com/ERDDAP/erddap/releases/download/v2.22/erddap.war)  (567,742,765 beart, MD5 = 2B33354F633294213AE2AFDCF4DA6D0, dáta 2022-12-08) 
     [2.23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddap.war)  (572,124,953 beart, MD5 = D843A043C506725EBD6F8EFDCCA8FD5F, dar dáta 2023-03-03) 
     [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187 beart, MD5 = 970fbee172e28b0b8a07756eec898e, dar dáta 2024-06-07) 
+    [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 beart, MD5 = 652AFC9D1421F00B5F789DA2C4732D4C, dar dáta 2024-11-07) 
     \\]
     
 #### ProxyPass{#proxypass} 

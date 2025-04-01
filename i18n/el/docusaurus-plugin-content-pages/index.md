@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## ΤελευταίαERDDAP™έκδοση{#latest-erddap-version} 
 
-2.25, βλ.[τεκμηρίωση αλλαγών](/changes#version-225)και[Κατέβασέ το.](https://github.com/ERDDAP/erddap/releases/tag/v2.25.1).
+2.26, βλέπε[τεκμηρίωση αλλαγών](/changes#version-226)και[Κατέβασέ το.](https://github.com/ERDDAP/erddap/releases/tag/v2.26.0).
 
 ## ERDDAP™Πληροφορίες{#erddap-information} 
 

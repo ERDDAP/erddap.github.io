@@ -7,6 +7,59 @@ ERDDAP™Et godt eksempel på[Brukerdrevet innovasjon](https://en.wikipedia.org/
 
 Her er endringene som er forbundet med hverERDDAP™Frigjøring.
 
+## Versjon 2.26{#version-226} 
+ (Utgitt 2025-02-?) 
+
+*    **For alle:** 
+    * Stor oppdatering til vår dokumentasjonsside: https://erddap.github.io/
+ 
+Foruten det oppdaterte utseendet er det forbedret navigasjon, søk, oversettelse, og det bør være lettere å opprettholde videre&#33;
+
+*    **Nye funksjoner og endringer (for brukere) :)** 
+    * Abonnementer ogRSSoppdateringer bør skje mer pålitelig for datasett som blir oppdatert ofte fra filendringer.
+
+*    **TingERDDAP™Administratorer trenger å vite og gjøre:** 
+    * Standardutgivelsen krever/støtterJava21. Tilbake i denne utgaven er det lett å lage enJava17 kompatible binære.
+
+    * Ny funksjon for å tilpasse informasjonen som vises om datasett i UI. Vi forventer at dette er spesielt nyttig å legge til ting som datasett siteringer. For mer informasjon kan du lese[ny dokumentasjon](/docs/server-admin/display-info.md).. Takk til Ayush Singh for bidraget&#33;
+
+    * Ytterligere Prometheus metrikk. Den største er:http_request_duration_seconds» som inkluderer forespørselsresponstider delt ned av: "request_type", "dataset_id", "dataset_type", " fil_type", "lang_kode " "status_kode"
+Dette maskinlesbare formatet vil tillate bedre samling av metriske for å forstå hvordan brukerne bruker serveren.
+
+    * Ny måte å generere ISO19115 XML-filer. Det bruker Apache SIS og er et nytt alternativ i denne utgivelsen. Vennligst aktiver det og send tilbakemeldinger.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * UI vil nå opprette individuelle lenker for hver adresse i felt sominfoUrlog sammendrag.
+
+    * Abonnementer ogRSSoppdateringer bør skje mer pålitelig for datasett som blir oppdatert ofte fra filendringer. Hvis dette forårsaker problemer, vennligst kontakt på GitHub og deaktivere funksjonaliteten ved å legge til flagget nedenfor til config.xml.
+IKKE TILGÅTT
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * Subset variabler vil ikke lenger bli genereret automatisk for datasett type EDDTableFromNcCFFiles. Hvis du var avhengig av oppførselen, kan du enten (Foretrukket løsning) Legg tilsubsetVariablestil datasettets definisjon i dindatasets.xml, eller legg flagget nedenfor til setup.xml. Hvis du føler behovet for å slå på dette, vennligst kontakt ut på GitHub slik at vi bedre kan støtte din brukssak fremover.
+IKKE TILGÅTT
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * Serveren vil nå omdirigere dokumentasjonsforespørsler (under nedlastinger/ som er dokumentasjonen som har blitt migrert) til den nye dokumentasjonssiden. Hvis nødvendig kan du deaktivere dette med et flagg i setup.xml:
+IKKE TILGÅTT
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * Noen små endringer og feilrettinger.
+
+*    **ForERDDAP™Utviklere:** 
+    * Mer kodekvalitetsforbedringer og dead code cleanup. Dette inkluderer mindre optimaliseringer, bedre håndtering av klosbare ressurser og migrasjon fra langvarige datatyper (som Vector) ..
+
+    * Stor repactoring til EDStatic å trekke ut det meste av konfigurasjonen, meldingen og metriske koden. Det også bedre innkapsler initialisering og håndtering av katalogstier (Disse to siste har mer å gjøre.) 
+
+    * Mange fremskritt mot et offisielt støttet Docker Image. Planen er å avslutte og frigjøre etterERDDAP™2.26 utgivelse er tilgjengelig.
+
 ## Versjon 2.25{#version-225} 
  (utgitt 2024-10-31) 
 

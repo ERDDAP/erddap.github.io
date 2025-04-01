@@ -7,6 +7,59 @@ ERDDAP™是個很好的例子[使用者](https://en.wikipedia.org/wiki/User_inn
 
 以下是與每項變更相關的變更ERDDAP™釋放
 
+## 2.26版本{#version-226} 
+ (2025 -02?) 
+
+*    **所有人:** 
+    * 我們的檔案網站大部份更新: https://erddap.github.io/
+ 
+除了更新的外貌外, 還有更好的導航、搜尋、翻譯,
+
+*    **新特性和變更 (使用者) :** 
+    * 订阅和RSS更新應更可靠地發生於從檔案變更時常更新的數據集 。
+
+*    **事情ERDDAP™管理者需要知道和做:** 
+    * 預設釋放需要/ 支援Java第21版 重回本版Java17個相容的二進制
+
+    * 自訂 UI 中顯示的數據集資訊的新功能 。 我們期望這對加入數據集引文等項目尤其有用。 更多細節你可以讀到[新文件](/docs/server-admin/display-info.md). 感謝阿尤什·辛格的貢獻&#33;
+
+    * 附加的普羅米修斯度量衡 最大的是http_ request_duration_seconds 包括按 request_type 、 "dataset_id"、 "dataset_type"、 "file_type"、 "lang_code"、 "status_code" 细分的應答時間
+此機型可讀格式可以更好地收集公制以了解使用者如何使用伺服器 。
+
+    * 產生 ISO19115 XML 檔案的新方式 。 它使用Apache SIS, 是此版本中的新選項 。 請啟用並發送回復 。
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * 使用者介面將建立單位連結, 每個網址的字段如infoUrl和摘要。
+
+    * 订阅和RSS更新應更可靠地發生於從檔案變更時常更新的數據集 。 如果這會引起問題, 請用 GitHub 聯絡, 並在您的設定中加入以下旗號, 以關閉功能 。
+未推荐
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * 子集變數將不再被自動產生 。 如果你靠的就是行為 (偏好的解决办法) 添加subsetVariables到您的數據集定義datasets.xml,或將下面的旗子加入您的設定. xml 。 如果你覺得有必要打開這個 請聯繫GitHub 這樣我們就能更好地支持你的使用案例
+未推荐
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * 伺服器將重新定向文件要求 (已移動的文件) 到新文件网站。 如果您需要的話, 您可以在設定. xml 中禁用此標籤 :
+未推荐
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * 一些小變更與錯誤修正 。
+
+*    **為ERDDAP™發展者 :** 
+    * 更多代碼質素的改善和死亡代碼清理 。 包括微小的优化、更妥善地處理殘缺的資源, (像矢量) .
+
+    * 大型重製到 EDStatic 以拔出大部分的配置、訊息和公制碼 。 更好的封裝和處理目錄路徑 (最後兩份還有更多事要做) 
+
+    * 在建立官方支持的Docker影像方面, 有很多進展。 計劃是完成並釋放ERDDAP™2.26 已公布。
+
 ## 2.25版本{#version-225} 
  (2024-10-31年) 
 

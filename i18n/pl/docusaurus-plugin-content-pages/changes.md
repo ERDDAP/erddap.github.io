@@ -7,6 +7,59 @@ ERDDAP™jest doskonałym przykładem[User- Driven Innowacje](https://en.wikiped
 
 Oto zmiany związane z każdymERDDAP™Wypuścić.
 
+## Wersja 2.26{#version-226} 
+ (Wydany 2025- 02-?) 
+
+*    **Dla wszystkich:** 
+    * Duża aktualizacja naszej strony dokumentacyjnej: https://erddap.github.io/
+ 
+Oprócz zaktualizowanego wyglądu istnieje ulepszona nawigacja, wyszukiwanie, tłumaczenie, i powinno być łatwiej do przodu&#33;
+
+*    **Nowe funkcje i zmiany (dla użytkowników) :** 
+    * Subskrypcje iRSSaktualizacje powinny być bardziej niezawodne dla zbiorów danych, które są często aktualizowane ze zmian plików.
+
+*    **RzeczyERDDAP™Administratorzy muszą wiedzieć i robić:** 
+    * Domyślne zwolnienie wymaga / wspieraJavawersja 21. Powrót w tym wydaniu jest w stanie łatwo zrobićJava17 kompatybilnych binarnych.
+
+    * Nowa funkcja dostosowywania wyświetlanych informacji o zbiorach danych w UI. Oczekujemy, że będzie to szczególnie przydatne w dodaniu takich rzeczy jak cytaty z zestawem danych. Aby uzyskać więcej szczegółów można przeczytać[nowa dokumentacja](/docs/server-admin/display-info.md). Dzięki Ayush Singh za wkład&#33;
+
+    * Dodatkowe wskaźniki Prometeusza. Największy to "http_ request _ direction _ seconds ", który zawiera czasy odpowiedzi na żądanie w podziale na:" request _ type "," dataset _ id "," dataset _ type "," file _ type "," lang _ code "," status _ code "
+Ten format do odczytu maszynowego umożliwi lepsze zbieranie danych pomiarowych, aby zrozumieć, jak użytkownicy korzystają z serwera.
+
+    * Nowy sposób generowania plików ISO19115 XML. Wykorzystuje Apache SIS i jest nową opcją w tym wydaniu. Proszę włączyć i wysłać informacje zwrotne.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * Interfejs będzie teraz tworzyć indywidualne linki dla każdego url w polach takich jakinfoUrlPodsumowanie.
+
+    * Subskrypcje iRSSaktualizacje powinny być bardziej niezawodne dla zbiorów danych, które są często aktualizowane ze zmian plików. Jeśli powoduje to problemy, prosimy o kontakt na GitHub i wyłączyć funkcjonalność poprzez dodanie poniżej flagi do setup.xml.
+NIE ZALECA
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * Zmienne subset nie będą już automatycznie generowane dla typu zbioru danych EDDTableFromNcCFFiles. Jeśli polegasz na zachowaniu, możesz albo (roztwór) dodaćsubsetVariablesdo definicji zbioru danych w Twoimdatasets.xml, lub dodać flagę poniżej do setup.xml. Jeśli czujesz potrzebę, aby włączyć to, prosimy o kontakt na GitHub, abyśmy mogli lepiej wspierać Twój przypadek wykorzystania do przodu.
+NIE ZALECA
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * Serwer przekieruje teraz żądania dokumentacji (under downloads / which is the documentation that 's been migrated) do nowej strony dokumentacji. W razie potrzeby można wyłączyć to z flagą w setup.xml:
+NIE ZALECA
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * Niewielkie zmiany i poprawki błędów.
+
+*    **DlaERDDAP™Programiści:** 
+    * Więcej ulepszeń jakości kodu i dead code cleanup. Obejmuje to niewielkie optymalizacje, lepszą obsługę zamykanych zasobów i migrację z dala od przestarzałych typów danych (jak Vector) .
+
+    * Duża refakturowanie do EDStatic, aby wyciągnąć większość konfiguracji, wiadomości i kodu metrycznego. Lepiej również, aby zawierała inicjalizację i obsługę ścieżek katalogowych (Te ostatnie dwa mają więcej do zrobienia.) 
+
+    * Duży postęp w kierunku oficjalnie wspieranego Docker Image. Plan jest do finalizacji i uwolnienia poERDDAP™2.26 jest dostępny.
+
 ## Wersja 2.25{#version-225} 
  (wydany 2024- 10- 31) 
 

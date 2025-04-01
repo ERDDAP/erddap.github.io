@@ -12,7 +12,7 @@ How To Do an Update of an Existing ERDDAP™ on Your Server
 
 ## Download {#download}
 3.  Download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war) into _tomcat_/webapps .  
-    (version 2.26, 607,404,032 bytes, MD5=c71df1f40c42ec4a743f4c0c3a189c0a, dated 03-31-2025)
+    (version 2.26, 607,404,032 bytes, MD5=99a725108b37708e5420986c1616a119, dated 03-31-2025)
      
 ## messages.xml {#messagesxml}
 4. 

@@ -7,6 +7,59 @@ ERDDAP™adalah contoh besar[Inovasi Pengguna](https://en.wikipedia.org/wiki/Use
 
 Berikut adalah perubahan yang terkait dengan masing-masingERDDAP™Sitemap
 
+## Versi 2.26{#version-226} 
+ (dirilis 2025-02- ???) 
+
+*    **Untuk Semua:** 
+    * Pembaruan besar ke situs dokumentasi kami: https://erddap.github.io/
+ 
+Selain tampilan yang diperbarui ada navigasi yang lebih baik, pencarian, terjemahan, dan harus lebih mudah untuk menjaga ke depan&#33;
+
+*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
+    * Langganan danRSSpembaruan harus terjadi lebih andal untuk dataset yang sering diperbarui dari perubahan file.
+
+*    **SitemapERDDAP™Administrator Perlu Tahu dan Lakukan:** 
+    * Rilis default memerlukan / mendukungJavaversi 21. Kembali dalam rilis ini dapat dengan mudah membuatJava17 biner kompatibel.
+
+    * Fitur baru untuk menyesuaikan informasi yang ditampilkan tentang set data di UI. Kami berharap ini sangat berguna untuk menambahkan hal-hal seperti eksitasi dataset. Untuk detail lebih lanjut, Anda dapat membaca[dokumentasi baru](/docs/server-admin/display-info.md)Sitemap Terima kasih kepada Ayush Singh untuk kontribusi&#33;
+
+    * metrik Prometheus tambahan. Yang terbesar adalah `http_request_duration_seconds` yang mencakup waktu respon permintaan rusak oleh: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
+Format yang dapat dibaca mesin ini akan memungkinkan pengumpulan metrik yang lebih baik untuk memahami bagaimana pengguna menggunakan server.
+
+    * Cara baru untuk menghasilkan file XML ISO19115. Menggunakan Apache SIS dan merupakan pilihan baru dalam rilis ini. Harap aktifkan dan kirim umpan balik.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * UI sekarang akan membuat tautan individual untuk setiap url di bidang sepertiinfoUrldan ringkasan.
+
+    * Langganan danRSSpembaruan harus terjadi lebih andal untuk dataset yang sering diperbarui dari perubahan file. Jika ini menyebabkan masalah, silakan hubungi GitHub dan menonaktifkan fungsi dengan menambahkan bendera di bawah ini ke setup Anda.xml.
+Sitemap
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * Subset variabel tidak akan lagi dihasilkan secara otomatis untuk jenis dataset EDDTableDariNcCFFiles. Jika Anda mengandalkan perilaku, Anda dapat baik Meme it (solusi yang lebih disukai) LoginsubsetVariablesuntuk definisi dataset Andadatasets.xml, atau tambahkan bendera di bawah ini ke setup.xml Anda. Jika Anda merasa perlu untuk mengubah ini, silakan hubungi GitHub sehingga kami dapat lebih baik mendukung kasus penggunaan Anda bergerak maju.
+Sitemap
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * Server sekarang akan mengarahkan permintaan dokumentasi (di bawah download / yang merupakan dokumentasi yang telah dimigrasi) ke situs dokumentasi baru. Jika diperlukan Anda dapat menonaktifkan ini dengan bendera di setup.xml:
+Sitemap
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * Beberapa perubahan kecil dan perbaikan bug.
+
+*    **SitemapERDDAP™Pengembang:** 
+    * Peningkatan kualitas kode dan pembersihan kode mati. Ini termasuk optimasi kecil, penanganan sumber daya yang lebih baik, dan memigrasikan jauh dari jenis data usang panjang (seperti vektor) Sitemap
+
+    * Refactoring besar untuk EDStatic untuk menarik sebagian besar konfigurasi, pesan, dan kode metrik. Ini juga lebih enkapsulatisasi dan penanganan jalur direktori (2 terakhir ini lebih harus dilakukan.) 
+
+    * Banyak kemajuan menuju Gambar Docker yang didukung secara resmi. Rencananya adalah untuk menyelesaikan dan melepaskan setelahERDDAP™2.26 rilis tersedia.
+
 ## Versi 2.25{#version-225} 
  (dirilis 2024-10-31) 
 

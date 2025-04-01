@@ -7,10 +7,6 @@
     "message": "Topluluk Topluluğu",
     "description": "The title of the footer links column with title=Community in the footer"
   },
-  "link.title.More": {
-    "message": "Daha fazla",
-    "description": "The title of the footer links column with title=More in the footer"
-  },
   "link.item.label.Documentation": {
     "message": "Dokümantasyon",
     "description": "The label of footer link with label=Documentation linking to /docs/intro"

@@ -7,6 +7,59 @@ ERDDAP™Hyvä esimerkki[Käyttäjälähtöinen innovaatio](https://en.wikipedia
 
 Tässä ovat muutokset, jotka liittyvät jokaiseenERDDAP™Vapautuminen.
 
+## Versio 2.26{#version-226} 
+ (2025-02?) 
+
+*    **Kaikille:** 
+    * Suuri päivitys dokumenttisivuillemme: https://erddap.github.io/
+ 
+Päivitetyn ulkonäön lisäksi on parannettu navigointia, hakua, käännöstä, ja sen pitäisi olla helpompi jatkaa eteenpäin.
+
+*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
+    * Tilaukset jaRSSPäivitykset pitäisi tapahtua luotettavammin tietoaineistoissa, joita päivitetään usein tiedostojen muutoksista.
+
+*    **AsioitaERDDAP™Hallitsijoiden on tiedettävä ja tehtävä:** 
+    * Epäonnistuminen vaatii / tukeeJava21. Takaisin tähän julkaisuun on helppo tehdäJava17 Yhteensopiva binääri.
+
+    * Uusi ominaisuus muokata tietoja, jotka on esitetty UI: n tietoaineistoista. Odotamme, että tämä on erityisen hyödyllistä, jotta voidaan lisätä esimerkiksi tietoaineistoa. Lisätietoja voit lukea[Uusia dokumentteja](/docs/server-admin/display-info.md). Kiitos Ayush Singhille&#33;
+
+    * Lisätietoja Prometheus Metrics Suurin on "http_request_duration_seconds, joka sisältää pyynnön vastausajat, jotka on jaettu seuraavasti: "Request_type", "dataset_id", "dataset_type", "lang_code", "status_code"
+Tämä kone luettava muoto mahdollistaa paremman kokoelman mittareita ymmärtää, miten käyttäjät käyttävät palvelinta.
+
+    * Uusi tapa luoda ISO19115 XML -tiedostoja Se käyttää Apache SIS ja on uusi vaihtoehto tässä julkaisussa. Ole hyvä ja lähetä palautetta.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * UI luo nyt yksittäisiä linkkejä jokaiseen URL-osoitteeseen, kuteninfoUrlYhteenveto.
+
+    * Tilaukset jaRSSPäivitykset pitäisi tapahtua luotettavammin tietoaineistoissa, joita päivitetään usein tiedostojen muutoksista. Jos tämä aiheuttaa ongelmia, ota yhteyttä GitHubiin ja poista toiminnallisuus lisäämällä alla oleva lippu asentoon.
+Ei sovittu
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * Subset-muuttujat eivät enää tuota automaattisesti EDDTableFromNcCFiles-tiedostotyyppiä. Jos luotat käytökseen, voit myös (Mieluiten ratkaisu) LisätäänsubsetVariablesTietojen määrittely omassadatasets.xmltai lisää alla oleva lippu asetukseen.xml. Jos tunnet tarvetta kääntää tämä, ota yhteyttä GitHubiin, jotta voimme tukea käyttötapaustasi eteenpäin.
+Ei sovittu
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * Palvelin ohjaa dokumentaatiopyynnöt uudelleen (lataukset / mikä on dokumentaatio, joka on siirretty) uuteen dokumentointisivustoon. Tarvittaessa voit poistaa lipun asennus.xml:
+Ei sovittu
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * Pieniä muutoksia ja vikoja.
+
+*    **For ForERDDAP™Kehittäjät:** 
+    * Lisää koodin laatua ja koodin puhdistusta. Tämä sisältää pieniä optimointeja, suljettavien resurssien parempaa käsittelyä ja siirtymistä pois pitkistä vanhentuneista tietotyypeistä. (kuin vektori) .
+
+    * Suuri refactoring EDStatic poistaa suurimman osan konfigurista, viestistä ja metrinen koodi. Se myös parantaa hakemistojen aloittamista ja käsittelyä. (Näitä kahta viimeistä on vielä tehtävä.) 
+
+    * Virallisesti tuettu Docker Image. Suunnitelman tarkoituksena on viimeistellä ja vapauttaaERDDAP™2.26 Käytettävissä.
+
 ## Versio 2.25{#version-225} 
  (Lähde: 2024-10-31) 
 

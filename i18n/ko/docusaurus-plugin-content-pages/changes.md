@@ -7,6 +7,59 @@ ERDDAP™좋은 예입니다.[사용자 중심의 혁신](https://en.wikipedia.o
 
 각각의 변화는 다음과 같습니다.ERDDAP™다운로드
 
+## 버전 2.26{#version-226} 
+ (출시 2025-02-?) 
+
+*    **모든 것:** 
+    * 우리의 문서 사이트에 큰 업데이트: https://erddap.github.io/
+ 
+업데이트 된 외관이 개선 된 항법, 검색, 번역, 그리고 그것은 쉽게 앞으로 유지해야합니다&#33;
+
+*    **새로운 기능 및 변경 (사용자 정의) ::** 
+    * 구독 및RSS업데이트는 파일 변경에서 자주 업데이트되는 datasets에 더 의존해야 합니다.
+
+*    **기타ERDDAP™관리자는 알아야 할:** 
+    * 기본값은/supports를 요구합니다Java버전 21. 이 릴리스에서 다시 쉽게 만들 수 있습니다Java17 호환 바이너리.
+
+    * UI의 datasets에 대해 표시된 정보를 사용자 정의하는 새로운 기능. Dataset 인용과 같은 것들을 추가하는 것이 특히 유용합니다. 더 자세한 내용은 읽을 수 있습니다[새 문서](/docs/server-admin/display-info.md)· 기여에 대한 Ayush Singh 덕분에&#33;
+
+    * 추가 Prometheus 미터. 가장 큰 것은 `http_request_duration_seconds`: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
+이 기계 읽기 쉬운 체재는 사용자가 서버를 사용하는 방법을 이해하기 위하여 미터의 더 나은 수집을 가능하게 할 것입니다.
+
+    * ISO19115 XML 파일을 생성하는 새로운 방법. 그것은 Apache SIS를 사용하고이 릴리스의 새로운 옵션입니다. 이를 활성화하고 피드백을 보낼 수 있습니다.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * UI는 이제 각 url에 대한 개별 링크를 만듭니다.infoUrl그리고 요약.
+
+    * 구독 및RSS업데이트는 파일 변경에서 자주 업데이트되는 datasets에 더 의존해야 합니다. 이 문제가 발생하면 GitHub에 도달하고 아래 플래그를 setup.xml에 추가하여 기능을 비활성화하십시오.
+관련 상품
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * Subset 변수는 더 이상 dataset type EDDTableFromNcCFFiles에 대해 자동으로 생성되지 않습니다. 행동에 의존하는 경우, 당신은 할 수 있습니다 (선호되는 해결책) 추가하기subsetVariablesdataset 정의에datasets.xml, 또는 아래 플래그를 setup.xml에 추가합니다. 이 턴이 필요하면 GitHub에 도달하여 사용 사례를 더 잘 지원할 수 있습니다.
+관련 상품
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * 서버는 이제 문서 요청을 리디렉션합니다. (아래 다운로드/ 문서는 migrated) 새 문서 사이트에. 필요하다면 setup.xml의 플래그와 함께 비활성화 할 수 있습니다.
+관련 상품
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * 몇몇 작은 변화 및 버그 수정.
+
+*    **제품 정보ERDDAP™개발자:** 
+    * 더 많은 코드 품질 개선 및 죽은 코드 정리. 이 포함 된 미성년자 최적화, 더 나은 복제 자원의 취급, 긴 사용 데이터 유형에서 멀리 마이그레이션 (벡터처럼) ·
+
+    * config, 메시지 및 메트릭 코드의 대부분을 끌어 EDStatic에 큰 재구성. 그것은 또한 더 나은 초기화 및 디렉토리 경로의 취급을 캡슐화 (이 마지막 2는 더 많은 것을 수행해야합니다.) 
+
+    * 공식적으로 지원된 Docker Image를 향해 진행 중입니다. 계획은 최종화 및 출시 후입니다.ERDDAP™2.26 릴리스가 가능합니다.
+
 ## 버전 2.25{#version-225} 
  (출시 2024-10-31) 
 

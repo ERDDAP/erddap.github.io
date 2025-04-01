@@ -7,6 +7,59 @@ ERDDAP™nagyszerű példa erre[Felhasználó-vezérelt innováció](https://en.
 
 Íme a változások, amelyek mindegyikhez kapcsolódnakERDDAP™kiadás.
 
+## Verzió 2.26{#version-226} 
+ (2025-02-et?) 
+
+*    **Mert All:** 
+    * Nagy frissítés a dokumentációs oldalunkra: https://erddap.github.io/
+ 
+A frissített megjelenés mellett jobb navigáció, keresés, fordítás, és könnyebben kell fenntartani a haladást&#33;
+
+*    **Új funkciók és változások (felhasználók számára) :** 
+    * Előfizetések ésRSSA frissítéseknek megbízhatóbbá kell válniuk az olyan adatkészletek esetében, amelyek gyakran frissülnek a fájlváltozásokból.
+
+*    **A dolgokERDDAP™Az adminisztrátoroknak tudniuk kell és meg kell tenniük:** 
+    * Az alapértelmezett kiadás megköveteli/támogatjaJava21. Hát ebben a kiadásban könnyen elkészíthetőJava17 kompatibilis bináris.
+
+    * Új funkció az UI adatkészleteiről megjelenített információk testreszabásához. Arra számítunk, hogy ez különösen hasznos lehet olyan dolgokat hozzáadni, mint az adatállomány idézetei. További részletekért olvassa el a[új dokumentáció](/docs/server-admin/display-info.md)... Köszönjük Ayush Singh-nak a hozzájárulásért&#33;
+
+    * További Prometheus metrikák. A legnagyobb a `http_request_duration_seconds`, amely magában foglalja a kérelemre adott válaszidőket: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
+Ez a gép olvasható formátum lehetővé teszi a mutatók jobb gyűjtését, hogy megértsék, hogy a felhasználók hogyan használják a szervert.
+
+    * Új módja az ISO19115 XML fájlok létrehozásának. Az Apache SIS-t használja, és ez egy új lehetőség ebben a kiadásban. Kérjük, engedélyezze és küldjön visszajelzést.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * Az UI most egyedi linkeket fog létrehozni minden késztetéshez olyan területeken, mint amilyen ainfoUrlés összefoglaló.
+
+    * Előfizetések ésRSSA frissítéseknek megbízhatóbbá kell válniuk az olyan adatkészletek esetében, amelyek gyakran frissülnek a fájlváltozásokból. Ha ez problémákat okoz, kérjük, érje el a GitHub-ot, és tiltsa le a funkcionalitást az alábbi zászló hozzáadásával a setup.xml-hez.
+NEM ELŐTTT
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * Az anyagi változókat már nem fogják automatikusan generálni az EDDTableFromNcCFFiles adatkészlettípusra. Ha a viselkedésre támaszkodtál, akkor akár (preferált megoldás) add hozzásubsetVariablesaz adatkészlet meghatározása az Ön adataibandatasets.xml, vagy add hozzá az alábbi zászlót a setup.xml-hez. Ha úgy érzi, hogy ezt meg kell fordítania, kérjük, érje el a GitHub-ot, hogy jobban támogassuk a használati esetet előre.
+NEM ELŐTTT
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * A szerver most átirányítja a dokumentációs kérelmeket (letöltés alatt / ami a dokumentáció, amely áttelepült) az új dokumentációs oldalra. Ha szükséges, akkor ezt egy zászlóval letilthatja a setup.xml-ben:
+NEM ELŐTTT
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * Néhány kis változás és hibajavítás.
+
+*    **MertERDDAP™Fejlesztők:** 
+    * Több kódminőség javítása és halott kód tisztítás. Ez magában foglalja a kisebb optimalizálásokat, a lezárható erőforrások jobb kezelését, és eltávolítja a hosszú elavult adattípusokat (mint Vector) ...
+
+    * Nagy refaktoring EDStatic, hogy húzza ki a legtöbb konfigurált, üzenet és metrikus kód. Ez is jobban képesíti a könyvtári utak kezdetiesítését és kezelését (Az utolsó 2-nek többet kell tennie.) 
+
+    * Sok előrelépés egy hivatalosan támogatott Docker Image. A terv az, hogy véglegesítsük és felszabadítsuk aERDDAP™2.26 kiadás áll rendelkezésre.
+
 ## Verzió 2.25{#version-225} 
  (2024-10-31) 
 
