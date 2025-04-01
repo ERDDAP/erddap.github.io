@@ -32,7 +32,7 @@ Dans le 'datasets.xml` fichier, inclure deux balises de haut niveau:
 Le nombre de valeurs séparées par des virgules dans les balises `displayInfo` et `displayAttribute` doit être le même.
 
 ### Comment ça marche
-- La balise `displayAttribute` spécifie les attributs globaux (définie dans le paragraphe "<addAttributes>` étiquette) à afficher pour chaque ensemble de données.
+- La balise `displayAttribute` spécifie les attributs globaux (définis dans la&lt;"addAttributes`&gt; tag) à afficher pour chaque ensemble de données.
 - Les valeurs correspondantes de l'étiquette `displayInfo` sont affichées sous forme d'étiquettes dans la ligne `Information` de l'interface utilisateur.
 - Lorsque l'utilisateur survole les étiquettes affichées, une infobulle apparaîtra, montrant la valeur de l'attribut global.
 

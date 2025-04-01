@@ -32,7 +32,7 @@ En eldatasets.xml` file, include two top-level tags:
 El número de valores separados por coma en las etiquetas `displayInfo` y `displayAttribute` debe ser el mismo.
 
 ### Cómo funciona
-- La etiqueta 'displayAttribute' especifica atributos globales (definidas en el<addAttributes>etiqueta) que se mostrará para cada conjunto de datos.
+- La etiqueta `displayAttribute` especifica atributos globales (definidos dentro del&lt;`addAttributes&gt; etiqueta) que se mostrará para cada conjunto de datos.
 - Los valores correspondientes en la etiqueta `displayInfo` se muestran como etiquetas en la fila `Information` de la interfaz de usuario.
 - Cuando el usuario salta sobre las etiquetas mostradas, aparecerá una punta de herramienta, mostrando el valor del atributo global.
 

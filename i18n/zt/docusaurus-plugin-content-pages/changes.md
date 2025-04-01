@@ -8,7 +8,7 @@ ERDDAP™是個很好的例子[使用者](https://en.wikipedia.org/wiki/User_inn
 以下是與每項變更相關的變更ERDDAP™釋放
 
 ## 2.26版本{#version-226} 
- (2025 -02?) 
+ (2025-03-31年) 
 
 *    **所有人:** 
     * 我們的檔案網站大部份更新: https://erddap.github.io/
@@ -21,7 +21,7 @@ ERDDAP™是個很好的例子[使用者](https://en.wikipedia.org/wiki/User_inn
 *    **事情ERDDAP™管理者需要知道和做:** 
     * 預設釋放需要/ 支援Java第21版 重回本版Java17個相容的二進制
 
-    * 自訂 UI 中顯示的數據集資訊的新功能 。 我們期望這對加入數據集引文等項目尤其有用。 更多細節你可以讀到[新文件](/docs/server-admin/display-info.md). 感謝阿尤什·辛格的貢獻&#33;
+    * 自訂 UI 中顯示的數據集資訊的新功能 。 我們期望這對加入數據集引文等項目尤其有用。 更多細節你可以讀到[新文件](/docs/server-admin/display-info). 感謝阿尤什·辛格的貢獻&#33;
 
     * 附加的普羅米修斯度量衡 最大的是http_ request_duration_seconds 包括按 request_type 、 "dataset_id"、 "dataset_type"、 "file_type"、 "lang_code"、 "status_code" 细分的應答時間
 此機型可讀格式可以更好地收集公制以了解使用者如何使用伺服器 。

@@ -32,7 +32,7 @@ W "datasets.xml'file, include two top- level tags:
 Liczba wartości oddzielonych od comma- w znacznikach 'displayInfo' i 'displayAtribution' musi być taka sama.
 
 ### Jak to działa
-- Znacznik 'displayAtribution' określa atrybuty globalne (zdefiniowane w ramach "<addAttributes>'tag) wyświetlane dla każdego zbioru danych.
+- Znacznik 'displayAtribution' określa atrybuty globalne (zdefiniowane w&lt;'addAttributes'& gt; tag) zostanie wyświetlony dla każdego zbioru danych.
 - Odpowiednie wartości w znaczniku 'displayInfo' są wyświetlane jako etykiety w wierszu 'Information' interfejsu użytkownika.
 - Kiedy użytkownik przewija się nad wyświetlanymi etykietami, pojawi się podpowiedź, pokazująca wartość atrybutu globalnego.
 

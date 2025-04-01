@@ -8,7 +8,7 @@ ERDDAP™Is sampla iontach de[Úsáideoir-Driven Innovation](https://en.wikipedi
 Seo iad na hathruithe a bhaineann le gachERDDAP™scaoileadh.
 
 ## Leagan 2.26{#version-226} 
- (scaoileadh 2025-02-??) 
+ (scaoileadh 2025-03-31) 
 
 *    **Do Gach:** 
     * Nuashonrú mór ar ár suíomh doiciméadú: https://erddap.github.io/
@@ -21,7 +21,7 @@ Chomh maith leis an chuma cothrom le dáta tá feabhas a chur ar nascleanúint, 
 *    **Cad a bhí mícheart leis an láithreánERDDAP™Riarthóirí An riachtanas is gá a fhios agus a dhéanamh:** 
     * Éilíonn an scaoileadh réamhshocraithe / tacaíochtaíJavaleagan 21. Ar ais sa scaoileadh a bheith in ann a dhéanamh go héascaJava17 dénártha comhoiriúnach.
 
-    * Gné nua a shaincheapadh ar an eolas ar taispeáint faoi thacair sonraí sa Chomhéadain. Táimid ag súil go mbeidh sé seo úsáideach go háirithe chun rudaí a chur ar nós lua sonraí. Le haghaidh tuilleadh sonraí is féidir leat a léamh[data recovery](/docs/server-admin/display-info.md). A bhuíochas le Ayush Singh don ranníocaíocht&#33;
+    * Gné nua a shaincheapadh ar an eolas ar taispeáint faoi thacair sonraí sa Chomhéadain. Táimid ag súil go mbeidh sé seo úsáideach go háirithe chun rudaí a chur ar nós lua sonraí. Le haghaidh tuilleadh sonraí is féidir leat a léamh[data recovery](/docs/server-admin/display-info). A bhuíochas le Ayush Singh don ranníocaíocht&#33;
 
     * méadracht Prometheus breise. Is é an ceann is mó `http_request_duration_seconds` lena n-áirítear amanna freagartha a iarraidh briste síos ag: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 Beidh an fhormáid seo meaisín inléite ar chumas bailiúchán níos fearr de méadracht a thuiscint conas úsáideoirí ag baint úsáide as an bhfreastalaí.

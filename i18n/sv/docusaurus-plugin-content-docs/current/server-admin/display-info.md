@@ -32,7 +32,7 @@ I `datasets.xml`-fil, inkludera två top-level taggar:
 Antalet kommaseparerade värden i både "displayInfo" och "displayAttribute" taggar måste vara samma.
 
 ### Hur det fungerar
-- "displayAttribute"-taggen anger globala attribut (definierad inom `<addAttributes>Tagga) visas för varje dataset.
+- "displayAttribute"-taggen anger globala attribut (definieras inom&lt;`addAttributes"&gt; tag) som ska visas för varje dataset.
 - Motsvarande värden i "displayInfo"-taggen visas som etiketter i "Information" raden av UI.
 - När användaren svävar över de visade etiketterna kommer ett verktyg att visas, vilket visar värdet av det globala attributet.
 

@@ -32,7 +32,7 @@ Sa `datasets.xml` comhad, san áireamh dhá barr-leibhéal clibeanna:
 Ní mór líon na luachanna coma-scartha sa dá `displayInfo` agus `displayAttribute ` clibeanna a bheith mar an gcéanna .
 
 ### Conas a Oibríonn sé
-- Sonraíonn an `displayAttribute ` chlib tréithe domhanda (sainithe laistigh den `<addAttributes>` chlib) a chur ar taispeáint do gach tacar sonraí.
+- Sonraíonn an `displayAttribute ` chlib tréithe domhanda (sainithe laistigh den&lt;` .addAttributes` &amp; tag) a chur ar taispeáint do gach tacar sonraí.
 - Na luachanna comhfhreagracha sa chlib `displayInfo ` ar taispeáint mar lipéid sa tsraith `Information` an Chomhéadain .
 - Nuair a théann an t-úsáideoir thar na lipéid ar taispeáint, beidh tooltip le feiceáil, a léiríonn luach an tréith domhanda.
 

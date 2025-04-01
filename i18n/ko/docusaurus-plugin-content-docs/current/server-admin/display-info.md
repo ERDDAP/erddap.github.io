@@ -32,7 +32,7 @@ sidebar_position: 7
 `displayInfo`와 `displayAttribute` 태그 모두에서 comma-separated 값의 수는 동일해야합니다.
 
 ### 어떻게 작동합니까?
-- `displayAttribute` 태그는 글로벌 속성을 지정합니다. (정의된 `<addAttributes>` 태그) 각 dataset에 표시될 수 있습니다.
+- `displayAttribute` 태그는 글로벌 속성을 지정합니다.&lt;₢ 킹addAttributes`&gt; tag)는 각 dataset를 위해 표시될 것입니다.
 - `displayInfo` 태그의 해당 값은 UI의 `Information` 행에서 레이블으로 표시됩니다.
 - 표시된 라벨을 통해 사용자가 표시되면, 도구 끝이 나타납니다.
 

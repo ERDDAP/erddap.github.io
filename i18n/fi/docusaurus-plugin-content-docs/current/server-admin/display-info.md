@@ -32,7 +32,7 @@ Sisällä »datasets.xml’tiedosto, sisältää kaksi huipputason tunnistetta:
 Sekä DisplayInfo- että DisplayAttribute-tunnisteiden arvojen määrän on oltava sama.
 
 ### Miten se toimii
-- ’displayAttribute’-tunniste määrittää globaalit ominaisuudet (määritellään »<addAttributes>&gt; tag) Näytetään jokaisesta tietoaineistosta.
+- ’displayAttribute’-tunniste määrittää globaaleja ominaisuuksia (määritetty)&lt;&gt; &gt;addAttributes|gt; tag) jokaista tietoaineistoa varten.
 - ’displayInfo’-tunnuksen vastaavat arvot näkyvät UI:n ’informaation’ rivissä olevina etiketteinä.
 - Kun käyttäjä vilkkuu näytettyjen etikettien päälle, tulee näkyviin työkalupakki, joka osoittaa maailmanlaajuisen attribuutin arvon.
 

@@ -8,7 +8,7 @@ ERDDAP™jest doskonałym przykładem[User- Driven Innowacje](https://en.wikiped
 Oto zmiany związane z każdymERDDAP™Wypuścić.
 
 ## Wersja 2.26{#version-226} 
- (Wydany 2025- 02-?) 
+ (wydany 2025- 03- 31) 
 
 *    **Dla wszystkich:** 
     * Duża aktualizacja naszej strony dokumentacyjnej: https://erddap.github.io/
@@ -21,7 +21,7 @@ Oprócz zaktualizowanego wyglądu istnieje ulepszona nawigacja, wyszukiwanie, t�
 *    **RzeczyERDDAP™Administratorzy muszą wiedzieć i robić:** 
     * Domyślne zwolnienie wymaga / wspieraJavawersja 21. Powrót w tym wydaniu jest w stanie łatwo zrobićJava17 kompatybilnych binarnych.
 
-    * Nowa funkcja dostosowywania wyświetlanych informacji o zbiorach danych w UI. Oczekujemy, że będzie to szczególnie przydatne w dodaniu takich rzeczy jak cytaty z zestawem danych. Aby uzyskać więcej szczegółów można przeczytać[nowa dokumentacja](/docs/server-admin/display-info.md). Dzięki Ayush Singh za wkład&#33;
+    * Nowa funkcja dostosowywania wyświetlanych informacji o zbiorach danych w UI. Oczekujemy, że będzie to szczególnie przydatne w dodaniu takich rzeczy jak cytaty z zestawem danych. Aby uzyskać więcej szczegółów można przeczytać[nowa dokumentacja](/docs/server-admin/display-info). Dzięki Ayush Singh za wkład&#33;
 
     * Dodatkowe wskaźniki Prometeusza. Największy to "http_ request _ direction _ seconds ", który zawiera czasy odpowiedzi na żądanie w podziale na:" request _ type "," dataset _ id "," dataset _ type "," file _ type "," lang _ code "," status _ code "
 Ten format do odczytu maszynowego umożliwi lepsze zbieranie danych pomiarowych, aby zrozumieć, jak użytkownicy korzystają z serwera.

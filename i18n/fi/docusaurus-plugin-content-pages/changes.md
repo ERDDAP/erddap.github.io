@@ -8,7 +8,7 @@ ERDDAP™Hyvä esimerkki[Käyttäjälähtöinen innovaatio](https://en.wikipedia
 Tässä ovat muutokset, jotka liittyvät jokaiseenERDDAP™Vapautuminen.
 
 ## Versio 2.26{#version-226} 
- (2025-02?) 
+ (Lähde: 2025-03-31) 
 
 *    **Kaikille:** 
     * Suuri päivitys dokumenttisivuillemme: https://erddap.github.io/
@@ -21,7 +21,7 @@ Päivitetyn ulkonäön lisäksi on parannettu navigointia, hakua, käännöstä,
 *    **AsioitaERDDAP™Hallitsijoiden on tiedettävä ja tehtävä:** 
     * Epäonnistuminen vaatii / tukeeJava21. Takaisin tähän julkaisuun on helppo tehdäJava17 Yhteensopiva binääri.
 
-    * Uusi ominaisuus muokata tietoja, jotka on esitetty UI: n tietoaineistoista. Odotamme, että tämä on erityisen hyödyllistä, jotta voidaan lisätä esimerkiksi tietoaineistoa. Lisätietoja voit lukea[Uusia dokumentteja](/docs/server-admin/display-info.md). Kiitos Ayush Singhille&#33;
+    * Uusi ominaisuus muokata tietoja, jotka on esitetty UI: n tietoaineistoista. Odotamme, että tämä on erityisen hyödyllistä, jotta voidaan lisätä esimerkiksi tietoaineistoa. Lisätietoja voit lukea[Uusia dokumentteja](/docs/server-admin/display-info). Kiitos Ayush Singhille&#33;
 
     * Lisätietoja Prometheus Metrics Suurin on "http_request_duration_seconds, joka sisältää pyynnön vastausajat, jotka on jaettu seuraavasti: "Request_type", "dataset_id", "dataset_type", "lang_code", "status_code"
 Tämä kone luettava muoto mahdollistaa paremman kokoelman mittareita ymmärtää, miten käyttäjät käyttävät palvelinta.

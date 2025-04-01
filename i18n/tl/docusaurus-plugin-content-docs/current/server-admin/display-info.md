@@ -32,7 +32,7 @@ Sa `datasets.xml` file, isama ang dalawang top-level tag:
 Ang bilang ng mga comma-nahating halaga sa parehong `display Info` at `display Attribute` tags ay dapat pareho.
 
 ### Kung Paano Ito Umaandar
-- Ang `display Attribute` tag ay nagpapahiwatig ng pangglobong mga katangian (Kahulugan sa loob ng `<addAttributes>` tag) upang itanghal sa bawat dataset.
+- Ang `display Attribute` tag ay nagpapahiwatig ng pangglobong mga katangian (ang kahulugan ay nasa loob ng `display Attribute` tag&lt;`addAttributes`Bugtget' tag) na ididispley sa bawat dataset.
 - Ang mga katumbas na halaga sa `display Info` tag ay tinatanghal bilang mga tatak sa `Information` row ng UI.
 - Kapag ang gumagamit ay umaali - aligid sa mga etiketang nakadispley, lilitaw ang dulo ng kagamitan, na nagpapakita sa halaga ng pangglobong katangian.
 

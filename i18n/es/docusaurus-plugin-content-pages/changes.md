@@ -8,7 +8,7 @@ ERDDAP™es un gran ejemplo de[Innovación impulsada por el usuario](https://en.
 Aquí están los cambios asociados con cada unoERDDAP™liberación.
 
 ## Versión 2.26{#version-226} 
- (liberado 2025-02-?) 
+ (publicado 2025-03-31) 
 
 *    **Para todos:** 
     * Gran actualización a nuestro sitio de documentación: https://erddap.github.io/
@@ -21,7 +21,7 @@ Además de la apariencia actualizada hay navegación mejorada, búsqueda, traduc
 *    **CosasERDDAP™Los administradores necesitan saber y hacer:** 
     * La liberación predeterminada requiere/apoyosJavavolver a esta versión es poder hacer fácilmenteJava17 binario compatible.
 
-    * Nueva función para personalizar la información mostrada sobre conjuntos de datos en la interfaz de usuario. Esperamos que esto sea particularmente útil para añadir cosas como citas de conjunto de datos. Para más detalles puede leer[nueva documentación](/docs/server-admin/display-info.md). ¡Gracias a Ayush Singh por la contribución&#33;
+    * Nueva función para personalizar la información mostrada sobre conjuntos de datos en la interfaz de usuario. Esperamos que esto sea particularmente útil para añadir cosas como citas de conjunto de datos. Para más detalles puede leer[nueva documentación](/docs/server-admin/display-info). ¡Gracias a Ayush Singh por la contribución&#33;
 
     * Metrices adicionales Prometheus. El más grande es:http_request_duration_seconds` que incluye tiempos de respuesta de solicitud descompuestos por: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 Este formato legible de máquina permitirá una mejor colección de métricas para entender cómo los usuarios están utilizando el servidor.

@@ -8,7 +8,7 @@ ERDDAP™Büyük bir örnek[User-Driven Innovation](https://en.wikipedia.org/wik
 İşte her biri ile ilişkili değişikliklerERDDAP™salıver.
 
 ## Version 2.26{#version-226} 
- (2025-02-?) 
+ (2025-03-31) 
 
 *    **Her şey için:** 
     * Belge sitemize büyük güncelleme: https://erddap.github.io/
@@ -21,7 +21,7 @@ Güncellenen görünümün yanı sıra gelişmiş navigasyon, arama, çeviri ve 
 *    **Şeyler ŞeylerERDDAP™Yöneticilerin Bilme ve Yapması Gerekiyor:** 
     * Varsayılan sürüm gerektirir / destek gerektirirJavasürüm 21 Bu sürümde geri dönüş kolayca yapabilirJava17 uyumlu ikili.
 
-    * UI'deki veri kümeleri hakkında gösterilen bilgileri özelleştirmek için yeni özellik. Bunun veri setleri gibi şeyleri eklemek özellikle kullanışlı olmasını bekliyoruz. Daha fazla ayrıntı için, okuyabilirsiniz[Yeni Belgeler](/docs/server-admin/display-info.md). Katkı için Ayush Singh sayesinde&#33;
+    * UI'deki veri kümeleri hakkında gösterilen bilgileri özelleştirmek için yeni özellik. Bunun veri setleri gibi şeyleri eklemek özellikle kullanışlı olmasını bekliyoruz. Daha fazla ayrıntı için, okuyabilirsiniz[Yeni Belgeler](/docs/server-admin/display-info). Katkı için Ayush Singh sayesinde&#33;
 
     * Ek Prometheus metrics. En büyük olanı "http_request_duration_sans', istek yanıtlarını içeren zamanlar şunları içerir: "request_type", "dataset_id", "file_type", "lang_code", "status_code"
 Bu makine okunabilir format, kullanıcıların sunucuyu nasıl kullandıklarını anlamak için daha iyi ölçüm koleksiyonu sağlayacaktır.

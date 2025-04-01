@@ -8,7 +8,7 @@ ERDDAP™ is a great example of [User-Driven Innovation](https://en.wikipedia.or
 Here are the changes associated with each ERDDAP™ release.
 
 ## Version 2.26 {#version-226}
-(released 2025-02-??)
+(released 2025-03-31)
 
 *   **For All:**
     *   Large update to our documentation site: https://erddap.github.io/
@@ -20,7 +20,7 @@ Here are the changes associated with each ERDDAP™ release.
 *   **Things ERDDAP™ Administrators Need to Know and Do:**
     *   The default release requires/supports Java version 21. Back in this release is being able to easily make a Java 17 compatible binary.
 
-    *   New feature to customize the information displayed about datasets in the UI. We expect this to be particularly useful to add things like dataset citations. For more details you can read the [new documentation](/docs/server-admin/display-info.md). Thanks to Ayush Singh for the contribution!
+    *   New feature to customize the information displayed about datasets in the UI. We expect this to be particularly useful to add things like dataset citations. For more details you can read the [new documentation](/docs/server-admin/display-info). Thanks to Ayush Singh for the contribution!
 
     *   Additional Prometheus metrics. The biggest one is `http_request_duration_seconds` which includes request response times broken down by: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
         This machine readable format will enable better collection of metrics to understand how users are using the server.

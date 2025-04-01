@@ -32,7 +32,7 @@ No `datasets.xml` arquivo, inclua duas tags de nível superior:
 O número de valores separados por vírgula em ambas as tags `displayInfo` e `displayAttribute` deve ser o mesmo.
 
 ### Como funciona
-- A tag `displayAttribute` especifica atributos globais (definido dentro do `<addAttributes># tag) para ser exibido para cada conjunto de dados.
+- A tag `displayAttribute` especifica atributos globais (definidos dentro do&lt;"addAttributes` &gt; tag) a ser exibido para cada conjunto de dados.
 - Os valores correspondentes na tag `displayInfo` são exibidos como rótulos na linha `Information` da interface do usuário.
 - Quando o usuário passa sobre as etiquetas exibidas, aparecerá uma dica de ferramenta, mostrando o valor do atributo global.
 

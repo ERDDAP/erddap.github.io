@@ -8,7 +8,7 @@ ERDDAP™是一个伟大的例子[用户驱动创新](https://en.wikipedia.org/w
 以下是与每个ERDDAP™释放
 
 ## 第2.26号版本{#version-226} 
- (发布2025-02 -?) 
+ (2025-03-31 (韩语).) 
 
 *    **为所有人:** 
     * 我们的文件网站大量更新: https://erddap.github.io/
@@ -21,7 +21,7 @@ ERDDAP™是一个伟大的例子[用户驱动创新](https://en.wikipedia.org/w
 *    **东西ERDDAP™管理员需要知道和做:** 
     * 默认发布需要/支持Java第21版. 回到本版后,人们可以很容易地Java17个兼容二进制.
 
-    * 用于自定义UI中显示的数据集信息的新功能. 我们期望这特别有助于增加数据引用。 详情请阅读[新文档](/docs/server-admin/display-info.md)。 。 。 感谢阿尤什·辛格的贡献&#33;
+    * 用于自定义UI中显示的数据集信息的新功能. 我们期望这特别有助于增加数据引用。 详情请阅读[新文档](/docs/server-admin/display-info)。 。 。 感谢阿尤什·辛格的贡献&#33;
 
     * 额外的普罗米修斯度量衡. 最大的一个是...http_ request_dult_seconds' 包括按“request_type”、“dataset_id”、“dataset_type”、“file_type”、“lang_code”、“status_code”细分的请求响应时间
 这种机器可读格式可以更好地收集度量衡来理解用户是如何使用服务器的.

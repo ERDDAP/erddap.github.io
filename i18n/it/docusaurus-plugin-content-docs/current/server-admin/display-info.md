@@ -32,7 +32,7 @@ Nel `datasets.xml` file, includere due tag di primo livello:
 Il numero di valori separati da virgola in entrambi i tag `displayInfo` e `displayAttribute` deve essere lo stesso.
 
 ### Come funziona
-- Il tag `displayAttribute` specifica gli attributi globali (definito all'interno del `<addAttributes>Articolo) da visualizzare per ogni dataset.
+- Il tag `displayAttribute` specifica gli attributi globali (definiti all'interno del&lt;#addAttributes`&gt; tag) da visualizzare per ogni dataset.
 - I valori corrispondenti nel tag `displayInfo` vengono visualizzati come etichette nella riga `Information` dell'interfaccia utente.
 - Quando l'utente supera le etichette visualizzate, apparirà un tooltip, mostrando il valore dell'attributo globale.
 

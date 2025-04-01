@@ -8,7 +8,7 @@ ERDDAP™adalah contoh besar[Inovasi Pengguna](https://en.wikipedia.org/wiki/Use
 Berikut adalah perubahan yang terkait dengan masing-masingERDDAP™Sitemap
 
 ## Versi 2.26{#version-226} 
- (dirilis 2025-02- ???) 
+ (dirilis 2025-03-31) 
 
 *    **Untuk Semua:** 
     * Pembaruan besar ke situs dokumentasi kami: https://erddap.github.io/
@@ -21,7 +21,7 @@ Selain tampilan yang diperbarui ada navigasi yang lebih baik, pencarian, terjema
 *    **SitemapERDDAP™Administrator Perlu Tahu dan Lakukan:** 
     * Rilis default memerlukan / mendukungJavaversi 21. Kembali dalam rilis ini dapat dengan mudah membuatJava17 biner kompatibel.
 
-    * Fitur baru untuk menyesuaikan informasi yang ditampilkan tentang set data di UI. Kami berharap ini sangat berguna untuk menambahkan hal-hal seperti eksitasi dataset. Untuk detail lebih lanjut, Anda dapat membaca[dokumentasi baru](/docs/server-admin/display-info.md)Sitemap Terima kasih kepada Ayush Singh untuk kontribusi&#33;
+    * Fitur baru untuk menyesuaikan informasi yang ditampilkan tentang set data di UI. Kami berharap ini sangat berguna untuk menambahkan hal-hal seperti eksitasi dataset. Untuk detail lebih lanjut, Anda dapat membaca[dokumentasi baru](/docs/server-admin/display-info)Sitemap Terima kasih kepada Ayush Singh untuk kontribusi&#33;
 
     * metrik Prometheus tambahan. Yang terbesar adalah `http_request_duration_seconds` yang mencakup waktu respon permintaan rusak oleh: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 Format yang dapat dibaca mesin ini akan memungkinkan pengumpulan metrik yang lebih baik untuk memahami bagaimana pengguna menggunakan server.
