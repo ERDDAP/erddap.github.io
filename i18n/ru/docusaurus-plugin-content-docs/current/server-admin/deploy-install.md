@@ -249,8 +249,8 @@ Linux и Mac:
 ERDDAP™не будет работать правильно, если setup.xml илиdatasets.xmlФайл не является хорошо сформированным XML-файлом. Таким образом, после редактирования этих файлов рекомендуется проверить, что результат хорошо сформирован XML, вставив текст XML в XML-проверку.[xmlvalidation](https://www.xmlvalidation.com/).
      
 ### Установите файл erddap.war{#install-the-erddapwar-file} 
-4. На Linux, Mac и Windows, скачать[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)_tomcat_/webapps.
-     (версия 2.25_1, 592,292,039 байт, MD5=652AFC9D1421F00B5F789DA2C4732D4C, от 2024-11-07) 
+4. На Linux, Mac и Windows, скачать[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)_tomcat_/webapps.
+     (версия 2.26, 607 404 032 байт, MD5=99a725108b37708e5420986c1616a119, датированная 03-31-2025) 
     
 Военный файл большой, потому что он содержит данные о береговой линии, границе и высоте высокого разрешения, необходимые для создания карт.
     
@@ -261,6 +261,7 @@ ERDDAP™не будет работать правильно, если setup.xml
     [2.22](https://github.com/ERDDAP/erddap/releases/download/v2.22/erddap.war)  (567 742 765 байт, MD5=2B33354F633294213AE2AFDDCF4DA6D0, от 2022-12-08) 
     [2.23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddap.war)  (572 124 953 байт, MD5=D843A043C506725EBD6F8EFDCCA8FD5F, от 2023-03-03) 
     [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568 748 187 байт, MD5=970fbee172e28b0b8a07756eecbc898e, от 2024-06-07) 
+    [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592 292 039 байт, MD5=652AFC9D1421F00B5F789DA2C4732D4C, от 2024-11-07) 
     \\]
     
 #### Проксипасс{#proxypass} 

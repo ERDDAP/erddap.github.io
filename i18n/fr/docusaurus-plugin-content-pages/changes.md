@@ -7,6 +7,59 @@ ERDDAP™est un excellent exemple de[Innovation axée sur l'utilisateur](https:/
 
 Voici les changements associés à chaqueERDDAP™libérer.
 
+## Version 2.26{#version-226} 
+ (libéré 2025-02-??) 
+
+*    **Pour tous:** 
+    * Grande mise à jour de notre site de documentation: https://erddap.github.io/
+ 
+Outre l'apparence mise à jour, il y a une meilleure navigation, recherche, traduction, et il devrait être plus facile de maintenir aller de l'avant&#33;
+
+*    **Nouvelles caractéristiques et changements (pour les utilisateurs) :** 
+    * Abonnements etRSSles mises à jour devraient se produire de façon plus fiable pour les ensembles de données qui sont mis à jour fréquemment à partir des changements de fichiers.
+
+*    **Les chosesERDDAP™Les administrateurs doivent savoir et faire :** 
+    * La version par défaut nécessite/supporteJavaversion 21. De retour dans cette version est en mesure de faire facilement unJava17 binaire compatible.
+
+    * Nouvelle fonctionnalité pour personnaliser les informations affichées sur les ensembles de données dans l'interface utilisateur. Nous nous attendons à ce que cela soit particulièrement utile pour ajouter des choses comme les citations de jeux de données. Pour plus de détails, vous pouvez lire le[nouvelle documentation](/docs/server-admin/display-info.md). Merci à Ayush Singh pour la contribution&#33;
+
+    * Mesures Prométhée supplémentaires. La plus grosse est `http_request_duration_seconds` qui inclut les temps de réponse de la requête ventilés par: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
+Ce format lisible par machine permettra une meilleure collecte de métriques pour comprendre comment les utilisateurs utilisent le serveur.
+
+    * Nouvelle façon de générer des fichiers XML ISO19115. Il utilise Apache SIS et est une nouvelle option dans cette version. Veuillez l'activer et envoyer vos commentaires.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * L'interface utilisateur va maintenant créer des liens individuels pour chaque url dans des champs comme leinfoUrlet résumé.
+
+    * Abonnements etRSSles mises à jour devraient se produire de façon plus fiable pour les ensembles de données qui sont mis à jour fréquemment à partir des changements de fichiers. Si cela cause des problèmes, veuillez contacter GitHub et désactiver la fonctionnalité en ajoutant le drapeau ci-dessous à votre setup.xml.
+NON RECOMMANDÉ
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * Les variables de sous-ensemble ne seront plus automatiquement générées pour les données de type EDDTableFromNcCFFiles. Si vous dépendiez du comportement, vous pouvez (solution préférée) ajoutersubsetVariablesà la définition des ensembles de données dans votredatasets.xml, ou ajoutez le drapeau ci-dessous à votre setup.xml. Si vous ressentez le besoin d'allumer cela, veuillez contacter GitHub afin que nous puissions mieux soutenir votre cas d'utilisation aller de l'avant.
+NON RECOMMANDÉ
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * Le serveur va maintenant rediriger les requêtes de documentation (sous téléchargements/ qui est la documentation qui a été migré) au nouveau site de documentation. Si nécessaire, vous pouvez désactiver cela avec un drapeau dans setup.xml:
+NON RECOMMANDÉ
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * Quelques petits changements et corrections de bug.
+
+*    **PourERDDAP™Développeurs :** 
+    * Plus d'améliorations de la qualité du code et de nettoyage du code mort. Cela comprend des optimisations mineures, une meilleure gestion des ressources de fermeture et la migration des types de données obsolètes (comme Vector) .
+
+    * Grand refactoring à EDStatic pour retirer la plupart des codes de configuration, de message et de métrique. Il permet également de mieux encapsuler l'initialisation et le traitement des chemins de répertoire (Ces deux derniers ont encore à faire.) 
+
+    * Beaucoup de progrès vers une image Docker officiellement soutenue. Le plan est de finaliser et de publier après leERDDAP™2.26 version est disponible.
+
 ## Version 2.25{#version-225} 
  (publié le 2024-10-31) 
 

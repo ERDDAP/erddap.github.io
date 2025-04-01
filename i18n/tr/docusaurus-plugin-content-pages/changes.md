@@ -7,6 +7,59 @@ ERDDAP™Büyük bir örnek[User-Driven Innovation](https://en.wikipedia.org/wik
 
 İşte her biri ile ilişkili değişikliklerERDDAP™salıver.
 
+## Version 2.26{#version-226} 
+ (2025-02-?) 
+
+*    **Her şey için:** 
+    * Belge sitemize büyük güncelleme: https://erddap.github.io/
+ 
+Güncellenen görünümün yanı sıra gelişmiş navigasyon, arama, çeviri ve ilerlemeyi korumak daha kolay olmalıdır&#33;
+
+*    **Yeni Özellikler ve Değişiklikler (kullanıcılar için) :** 
+    * Abonelik ve AbonelikRSSGüncellemeler, dosya değişikliklerinden sık güncellenen veri setleri için daha güvenilir olmalıdır.
+
+*    **Şeyler ŞeylerERDDAP™Yöneticilerin Bilme ve Yapması Gerekiyor:** 
+    * Varsayılan sürüm gerektirir / destek gerektirirJavasürüm 21 Bu sürümde geri dönüş kolayca yapabilirJava17 uyumlu ikili.
+
+    * UI'deki veri kümeleri hakkında gösterilen bilgileri özelleştirmek için yeni özellik. Bunun veri setleri gibi şeyleri eklemek özellikle kullanışlı olmasını bekliyoruz. Daha fazla ayrıntı için, okuyabilirsiniz[Yeni Belgeler](/docs/server-admin/display-info.md). Katkı için Ayush Singh sayesinde&#33;
+
+    * Ek Prometheus metrics. En büyük olanı "http_request_duration_sans', istek yanıtlarını içeren zamanlar şunları içerir: "request_type", "dataset_id", "file_type", "lang_code", "status_code"
+Bu makine okunabilir format, kullanıcıların sunucuyu nasıl kullandıklarını anlamak için daha iyi ölçüm koleksiyonu sağlayacaktır.
+
+    * ISO19115 XML dosyaları oluşturmak için yeni bir yol. Apache SIS kullanıyor ve bu sürümde yeni bir seçenek. Lütfen bunu etkinleştirin ve geri bildirim gönderin.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * UI şimdi her url için bireysel bağlantılar yaratacakinfoUrlve özet.
+
+    * Abonelik ve AbonelikRSSGüncellemeler, dosya değişikliklerinden sık güncellenen veri kümeleri için daha güvenilir olmalıdır. Bu sorunlara sebep olursa lütfen GitHub'a ulaşır ve aşağıdaki bayrağı sizin kurulumunuza ekleyerek işlevselliği devre dışı bırakır.xml.
+RECOMMENDED
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * Alt set değişkenleri artık veri set türü EDDTableNcCFFiles için otomatik olarak oluşturulmayacaktır. Davranışa güvenseydiniz, ya da (Tercih edilen çözüm tercih edildi) Ekle the add the add the add the add thesubsetVariablesDataset tanımına göredatasets.xml, veya aşağıdaki bayrağı kurulumunuza ekleyin.xml. Bunu açmak için ihtiyaç duyuyorsanız, lütfen GitHub'a ulaşırsınız, böylece kullanımınızı ileriye götürebiliriz.
+RECOMMENDED
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * Sunucu artık belgeleri yönlendirme isteği (İndirmeler altında / bu, göç edilen belgedir) Yeni belge sitesine. Gerekirse bunu kurulumda bir bayrakla devretebilirsiniz.xml:
+RECOMMENDED
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * Bazı küçük değişiklikler ve bug düzeltmeleri.
+
+*    **For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For ForERDDAP™Geliştiriciler:** 
+    * Daha fazla kod kalitesi iyileştirme ve ölü kod temizlendi. Bu, küçük optimizasyonlar, daha iyi işlenmiş kaynakların kullanımı ve uzun eski veri türlerinden uzaklaşmayı içerir. (Vector gibi) .
+
+    * EDStatic'e yapılandırma, mesaj ve metrik kodun çoğunu çekmek için büyük bir refaksiyon. Ayrıca ilkleme ve dizin yollarının kullanımı daha iyi (Bu son 2'nin yapılacak daha fazlası var.) 
+
+    * Resmi olarak desteklenen Docker Image'ya yönelik birçok ilerleme. Plan nihaileştirmek ve serbest bırakmaktırERDDAP™2.26 sürüm mevcuttur.
+
 ## Version 2.25{#version-225} 
  (2024-10-31) 
 

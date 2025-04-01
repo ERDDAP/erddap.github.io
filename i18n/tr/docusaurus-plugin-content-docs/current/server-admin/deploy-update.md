@@ -11,8 +11,8 @@ Bir Varan Güncelleme Nasıl YapılırERDDAP™Your Server
 2. Eğer yükseltme yapıyorsanızERDDAP™2.18 veya aşağıda, geçmek zorundasınızJava21 21 21 (veya yeni) Ve ilgili Tomcat 10. Düzenli olarak bakınızERDDAP™yükleme talimatları için yükleme talimatları[Java](/docs/server-admin/deploy-install#java)ve[Tomcat](/docs/server-admin/deploy-install#tomcat). Ayrıca kopyasını kopyalamanız gerekecek_tomcat_/content/erddapEski Tomcat kurulumunuzdan yeni Tomcat kurulumuna dizin.
 
 ## Download Download Download Download Download{#download} 
-3. Download Download Download Download Download[Heddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)_tomcat_/webapps .
-     (2.25_1, 592,292,039 bytes, MD5=652AFC9D1421F00B5F789DA2C4732D4C, 2024-11-07-07-07) 
+3. Download Download Download Download Download[Heddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)_tomcat_/webapps .
+     (2.26, 607,404,032 bytes, MD5=99a725108b37708e5420986c16a119, 03-31-2025) 
      
 ## mesajlar.xml{#messagesxml} 
 4. 

@@ -7,6 +7,59 @@ ERDDAP™Is sampla iontach de[Úsáideoir-Driven Innovation](https://en.wikipedi
 
 Seo iad na hathruithe a bhaineann le gachERDDAP™scaoileadh.
 
+## Leagan 2.26{#version-226} 
+ (scaoileadh 2025-02-??) 
+
+*    **Do Gach:** 
+    * Nuashonrú mór ar ár suíomh doiciméadú: https://erddap.github.io/
+ 
+Chomh maith leis an chuma cothrom le dáta tá feabhas a chur ar nascleanúint, cuardach, aistriúchán, agus ba chóir é a bheith níos éasca a choimeád ar bun ag dul ar aghaidh&#33;
+
+*    **Gnéithe agus Athruithe Nua (d'úsáideoirí) :** 
+    * Síntiúis agusRSSBa chóir nuashonruithe tarlú níos iontaofa le haghaidh tacar sonraí a fháil cothrom le dáta go minic ó athruithe comhad.
+
+*    **Cad a bhí mícheart leis an láithreánERDDAP™Riarthóirí An riachtanas is gá a fhios agus a dhéanamh:** 
+    * Éilíonn an scaoileadh réamhshocraithe / tacaíochtaíJavaleagan 21. Ar ais sa scaoileadh a bheith in ann a dhéanamh go héascaJava17 dénártha comhoiriúnach.
+
+    * Gné nua a shaincheapadh ar an eolas ar taispeáint faoi thacair sonraí sa Chomhéadain. Táimid ag súil go mbeidh sé seo úsáideach go háirithe chun rudaí a chur ar nós lua sonraí. Le haghaidh tuilleadh sonraí is féidir leat a léamh[data recovery](/docs/server-admin/display-info.md). A bhuíochas le Ayush Singh don ranníocaíocht&#33;
+
+    * méadracht Prometheus breise. Is é an ceann is mó `http_request_duration_seconds` lena n-áirítear amanna freagartha a iarraidh briste síos ag: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
+Beidh an fhormáid seo meaisín inléite ar chumas bailiúchán níos fearr de méadracht a thuiscint conas úsáideoirí ag baint úsáide as an bhfreastalaí.
+
+    * Bealach nua a ghiniúint comhaid ISO19115 XML. Úsáideann sé Apache SIS agus is rogha nua sa scaoileadh. Cuir ar chumas é agus aiseolas a sheoladh.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * Beidh an Chomhéadain a chruthú anois naisc aonair do gach url i réimsí cosúil leis aninfoUrlagus achoimre.
+
+    * Síntiúis agusRSSBa chóir nuashonruithe tarlú níos iontaofa le haghaidh tacar sonraí a fháil cothrom le dáta go minic ó athruithe comhad. Má cúiseanna seo saincheisteanna, le do thoil a bhaint amach ar GitHub agus an fheidhmiúlacht a dhíchumasú tríd an bhratach thíos a chur le do thus.xml.
+Déan teagmháil linn
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * Beidh athróg subset a thuilleadh a ghintear go huathoibríoch le haghaidh cineál tacar sonraí EDDTableFromNcCFFiles. Má bhí tú ag brath ar an iompar, is féidir leat ceachtar (réiteach fearr) cuir ansubsetVariablesleis an sainmhíniú tacar sonraí i dodatasets.xml, nó cuir an bhratach thíos le do thus.xml. Má bhraitheann tú an gá atá le dul ar aghaidh, le do thoil a bhaint amach ar GitHub ionas gur féidir linn tacaíocht níos fearr do chás úsáide ag gluaiseacht ar aghaidh.
+Déan teagmháil linn
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * Beidh an freastalaí atreorú anois iarratais doiciméadú (faoi íoslódálacha/a bhfuil an cháipéisíocht atá ar imirce) chuig an suíomh doiciméadúcháin nua. Más gá is féidir leat é seo a dhíchumasú le bratach i thus.xml:
+Déan teagmháil linn
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * Roinnt athruithe beaga agus Ceartúcháin bug.
+
+*    **Le haghaidhERDDAP™Forbróirí:** 
+    * Feabhsuithe cáilíochta cód níos mó agus cleanup cód marbh. Áirítear leis seo optimizations saorga, láimhseáil níos fearr ar acmhainní closable, agus imirce amach ó chineálacha sonraí fada i léig (cosúil le Veicteoir) .
+
+    * Refactoring mór le EDStatic a tharraingt amach an chuid is mó de na config, teachtaireacht, agus cód méadrach. encapsulates sé níos fearr initialization agus láimhseáil na cosáin eolaire (tá na 2 seo caite níos mó a dhéanamh.) 
+
+    * Go leor dul chun cinn i dtreo íomhá Docker tacaíocht go hoifigiúil. Is é an plean a thabhairt chun críche agus a scaoileadh tar éisERDDAP™Tá scaoileadh 2.26 ar fáil.
+
 ## Leagan 2.25{#version-225} 
  (scaoileadh 2024-10-31) 
 

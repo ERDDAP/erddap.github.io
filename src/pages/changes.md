@@ -7,6 +7,58 @@ ERDDAP™ is a great example of [User-Driven Innovation](https://en.wikipedia.or
 
 Here are the changes associated with each ERDDAP™ release.
 
+## Version 2.26 {#version-226}
+(released 2025-02-??)
+
+*   **For All:**
+    *   Large update to our documentation site: https://erddap.github.io/
+        Besides the updated appearance there is improved navigation, search, translation, and it should be easier to maintain going forward!
+
+*   **New Features and Changes (for users):**
+    *   Subscriptions and RSS updates should happen more reliably for datasets that get updated frequently from file changes.
+
+*   **Things ERDDAP™ Administrators Need to Know and Do:**
+    *   The default release requires/supports Java version 21. Back in this release is being able to easily make a Java 17 compatible binary.
+
+    *   New feature to customize the information displayed about datasets in the UI. We expect this to be particularly useful to add things like dataset citations. For more details you can read the [new documentation](/docs/server-admin/display-info.md). Thanks to Ayush Singh for the contribution!
+
+    *   Additional Prometheus metrics. The biggest one is `http_request_duration_seconds` which includes request response times broken down by: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
+        This machine readable format will enable better collection of metrics to understand how users are using the server.
+
+    *   New way to generate ISO19115 XML files. It uses Apache SIS and is a new option in this release. Please enable it and send feedback.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    *   The UI will now create individual links for each url in fields like the infoUrl and summary.
+
+    *   Subscriptions and RSS updates should happen more reliably for datasets that get updated frequently from file changes. If this causes issues, please reach out on GitHub and disable the functionality by adding the below flag to your setup.xml.
+    NOT RECOMMENDED
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    *   Subset variables will no longer be automatically generated for dataset type EDDTableFromNcCFFiles. If you were relying on the behavior, you can either (prefered solution) add the subsetVariables to the dataset definition in your datasets.xml, or add the below flag to your setup.xml. If you feel the need to turn this on, please reach out on GitHub so we can better support your use case moving forward.
+    NOT RECOMMENDED
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    *   The server will now redirect documentation requests (under downloads/ which is the documentation that's been migrated) to the new documentation site. If needed you can disable this with a flag in setup.xml:
+    NOT RECOMMENDED
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    *   Some small changes and bug fixes.  
+
+*   **For ERDDAP™ Developers:**
+    *   More code quality improvements and dead code cleanup. This includes minor optimizations, better handling of closable resources, and migrating away from long obsolete data types (like Vector).
+
+    *   Large refactoring to EDStatic to pull out most of the config, message, and metric code. It also better encapsulates initialization and handling of directory paths (these last 2 have more to be done.)
+
+    *   Lots of progress towards an officially supported Docker Image. The plan is to finalize and release after the ERDDAP™ 2.26 release is available.
+
 ## Version 2.25 {#version-225}
 (released 2024-10-31)
 

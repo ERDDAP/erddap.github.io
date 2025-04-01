@@ -7,6 +7,59 @@ ERDDAP™este un mare exemplu de[Inovarea bazată pe utilizator](https://en.wiki
 
 Aici sunt modificările asociate cu fiecareERDDAP™Eliberare.
 
+## Versiunea 2.26{#version-226} 
+ (eliberat în 2025-02-?) 
+
+*    **Pentru toți:** 
+    * Actualizare mare la site-ul nostru de documentare: https://erddap.github.io/
+ 
+În afară de aspectul actualizat există o navigare îmbunătățită, căutare, traducere, și ar trebui să fie mai ușor pentru a menține merge mai departe&#33;
+
+*    **Noi caracteristici și schimbări (pentru utilizatori) :** 
+    * Abonamente șiRSSactualizări ar trebui să se întâmple mai fiabil pentru seturile de date care se actualizează frecvent din modificările fișierelor.
+
+*    **LucruriERDDAP™Administratorii trebuie să cunoască și să facă:** 
+    * Eliberarea implicită necesită/suporturiJavaVersiunea 21. Înapoi în această versiune este posibilitatea de a face cu ușurință oJava17 binare compatibile.
+
+    * O caracteristică nouă pentru personalizarea informațiilor afișate despre seturile de date din UI. Ne așteptăm ca acest lucru să fie deosebit de util pentru a adăuga lucruri cum ar fi citări de seturi de date. Pentru mai multe detalii puteți citi[documentație nouă](/docs/server-admin/display-info.md). Mulţumită lui Ayush Singh pentru contribuţie&#33;
+
+    * Indicatori suplimentari Prometheus. Cel mai mare dintre ele este:http_Cerere_durata_secunde care include timpii de răspuns la cerere descriși prin: "Cerere_type," "dataset_id," "dataset_type," "file_type," "lang_code," "status_code"
+Acest format lizibil va permite o mai bună colectare de indicatori pentru a înțelege modul în care utilizatorii folosesc serverul.
+
+    * Mod nou de a genera fișiere XML ISO19115. Acesta utilizează SIS Apache și este o nouă opțiune în această versiune. Vă rugăm să activați și să trimiteți feedback.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * UI va crea acum link-uri individuale pentru fiecare url în domenii cainfoUrlşi sumar.
+
+    * Abonamente șiRSSactualizări ar trebui să se întâmple mai fiabil pentru seturile de date care se actualizează frecvent din modificările fișierelor. Dacă acest lucru cauzează probleme, vă rugăm să ajungeți pe GitHub și dezactivați funcționalitatea prin adăugarea steagului de mai jos la setup.xml.
+NECOMANDAT
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * Variabilele secundare nu vor mai fi generate automat pentru tipul de set de date EDDTabelFromNcCFFiles. Dacă te bazai pe comportament, nici tu nu puteai. (soluţie preferată) se adaugăsubsetVariablesla definiția setului de date dindatasets.xml, sau adăugați steagul de mai jos la setup.xml. Dacă simţiţi nevoia de a porni acest lucru, vă rugăm să ajungeţi pe GitHub astfel încât să putem sprijini mai bine cazul dumneavoastră de utilizare merge mai departe.
+NECOMANDAT
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * Serverul va redirecționa acum cererile de documentație (în timpul descărcărilor/care este documentaţia care a fost migrată) la noul site de documentare. Dacă este necesar, puteți dezactiva acest lucru cu un steag în setup.xml:
+NECOMANDAT
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * Câteva mici schimbări şi reparaţii de insecte.
+
+*    **PentruERDDAP™Dezvoltatori:** 
+    * Mai multe îmbunătăţiri ale calităţii codului şi curăţarea codului mort. Aceasta include optimizări minore, o mai bună gestionare a resurselor closabile și migrarea departe de tipurile de date vechi (ca Vector) .
+
+    * Refactoring mare la EDStatic pentru a scoate cea mai mare parte a config, mesaj, și codul metric. De asemenea, mai bine încapsulat inițializarea și manipularea traseelor directoare (Ultimele două au mai multe de făcut.) 
+
+    * O mulțime de progrese către o imagine Docker susținut oficial. Planul este de a finaliza și de a elibera dupăERDDAP™2.26 eliberarea este disponibilă.
+
 ## Versiunea 2.25{#version-225} 
  (eliberat 2024-10-31) 
 

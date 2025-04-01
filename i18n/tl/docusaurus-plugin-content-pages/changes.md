@@ -7,6 +7,59 @@ ERDDAP™isang magandang halimbawa[User-Driven Innovation](https://en.wikipedia.
 
 Narito ang mga pagbabagong nauugnay sa bawat isaERDDAP™paglaya.
 
+## Bersiyong 2.26{#version-226} 
+ (inilabas 2025-02-?) 
+
+*    **Para sa Lahat:** 
+    * Malaking update sa ating dokumentasyon: https://erddap.github.io/
+ 
+Bukod sa bagong hitsura roon, dapat na mas madali pa ang paglalayag, paghahanap, pagsasalin, at patuloy na pagsulong&#33;
+
+*    **Bagong mga Katangian at Pagbabago (para sa mga gumagamit) :** 
+    * Mga Suskripsiyon at SuskripsiyonRSSAng mga update ay dapat na mangyari nang mas tiyak para sa datasets na madalas na nai-update mula sa mga pagbabago ng file.
+
+*    **Mga BagayERDDAP™Kailangang Malaman at Gawin ng mga Administrador:** 
+    * Ang default release ay nangangailangan ng/suportaJavabersyon 21. Back sa release na ito ay madaling makagawa ngJava17 Magkasundong binary.
+
+    * Bagong katangian upang gawing maayos ang impormasyon na ipinakikita tungkol sa mga dataset sa UI. Inaasahan namin na ito'y lalo nang kapaki - pakinabang upang magdagdag ng mga bagay na gaya ng dataset scripts. Para sa higit pang detalye mababasa mo[bagong dokumentasyon](/docs/server-admin/display-info.md). Salamat kay Ayush Singh sa kontribusyon&#33;
+
+    * Karagdagang mga metrikong Prometheus. Ang pinakamalaki ay ang `http_request_duration_seconds` na kinabibilangan ng mga oras ng request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code".
+Ang magagamit na format ng makinang ito ay tutulong sa mas mabuting koleksiyon ng mga metriko na maunawaan kung paano ginagamit ng mga gumagamit ang server.
+
+    * Bagong paraan ng paglikha ng ISO19115 XML files. Gumagamit ito ng Apache SIS at isang bagong opsiyon sa pagpapalabas na ito. Pakisuyong gawin ito at magpadala ng impormasyon.
+    ```
+        <useSisISO19115>true</useSisISO19115>
+    ```
+
+    * Ang UI ngayon ay lilikha ng isahang kawing para sa bawat url sa mga larangang gaya nginfoUrlat buod.
+
+    * Mga Suskripsiyon at SuskripsiyonRSSAng mga update ay dapat na mangyari nang mas tiyak para sa datasets na madalas na nai-update mula sa mga pagbabago ng file. Kung ito ay sanhi ng mga isyu, pakisuyong abutin ang GitHub at sirain ang functionality sa pamamagitan ng pagdaragdag ng ilalim na watawat sa iyong setup.xml.
+HINDI NATATANGGAP
+    ```
+        <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
+    ```
+
+    * Ang mga subset variable ay hindi na awtomatikong lilikhain para sa tipo ng datos na EDDTable FromNcCFililes. Kung umaasa ka sa paggawing iyon, magagawa mo rin ito (piniling solusyon) idagdag angsubsetVariablessa kahulugan ng datasetdatasets.xml, o idagdag ang ilalim na watawat sa iyong setup.xml. Kung inaakala mong kailangan mo itong buksan, pakisuyong abutin mo ang GitHub upang mas higit na suportahan namin ang iyong kaso na ginagamit mo na sumusulong.
+HINDI NATATANGGAP
+    ```
+    <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
+    ```
+
+    * Itutuwid ngayon ng server ang mga kahilingan ng dokumento (under-downloads/ na siyang dokumentasyon na niraranggo) sa bagong dokumentasyon. Kung kinakailangan maaari mo itong sirain sa pamamagitan ng isang bandila sa setup.xml:
+HINDI NATATANGGAP
+    ```
+        <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
+    ```
+
+    * Ilang maliliit na pagbabago at bug fix.
+
+*    **SapagkatERDDAP™Mga Nagpapaunlad:** 
+    * Higit pang mga pagpapabuti ng kalidad ng kodigo at paglilinis ng patay na kodigo. Kasali na rito ang maliliit na pagbabago, mas mahusay na pangangasiwa sa madaling mawalang mga yaman, at pandarayuhan palayo sa matagal nang mga uri ng data (gaya ni Vector) .
+
+    * Malaking pagbabago sa EDstatic upang ilabas ang karamihan ng mga impormasyon, mensahe, at kodigong metriko. Mas mainam din nitong encapsule ang pag-uuna at pangangasiwa sa mga landas ng directory (Ang huling 2 ito ay marami pang dapat gawin.) 
+
+    * Maraming pagsulong tungo sa isang opisyal na suportadong Docker Image. Ang plano ay tapusin at ilabas pagkatapos ngERDDAP™2.26 makukuhang release.
+
 ## Bersiyong 2.25{#version-225} 
  (inilabas 2024-10-31) 
 
