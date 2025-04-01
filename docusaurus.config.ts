@@ -95,7 +95,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/erddap/erddap.github.io/tree/main/documentation/',
+            'https://github.com/erddap/erddap.github.io/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',

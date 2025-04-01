@@ -8,7 +8,7 @@ ERDDAP™ist ein großes Beispiel[Benutzergetriebene Innovation](https://en.wiki
 Hier sind die Änderungen, die jederERDDAP™Veröffentlichung.
 
 ## Version 2.26{#version-226} 
- (veröffentlicht 2025-02-??) 
+ (veröffentlicht 2025-03-31) 
 
 *    **Für alle:** 
     * Großes Update auf unserer Dokumentationsseite: https://erddap.github.io/
@@ -21,7 +21,7 @@ Neben dem aktualisierten Erscheinungsbild gibt es eine verbesserte Navigation, S
 *    **DingeERDDAP™Administratoren müssen wissen und tun:** 
     * Die Standardauslösung erfordert/unterstütztJavaVersion 21. Zurück in dieser Veröffentlichung ist in der Lage, eineJava17 kompatibel binär.
 
-    * Neue Funktion, um die Informationen, die über Datensätze in der UI angezeigt werden, anzupassen. Wir erwarten, dass dies besonders nützlich ist, um Dinge wie Dataset Zitate hinzuzufügen. Für weitere Details können Sie die[neue Dokumentation](/docs/server-admin/display-info.md). Dank Ayush Singh für den Beitrag&#33;
+    * Neue Funktion, um die Informationen, die über Datensätze in der UI angezeigt werden, anzupassen. Wir erwarten, dass dies besonders nützlich ist, um Dinge wie Dataset Zitate hinzuzufügen. Für weitere Details können Sie die[neue Dokumentation](/docs/server-admin/display-info). Dank Ayush Singh für den Beitrag&#33;
 
     * Zusätzliche Prometheus Metriken. Der größte ist `http_request_duration_seconds`, die Anforderungs-Antwortzeiten nach unten durch: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code" umfasst
 Dieses maschinenlesbare Format ermöglicht eine bessere Sammlung von Metriken, um zu verstehen, wie Benutzer den Server verwenden.

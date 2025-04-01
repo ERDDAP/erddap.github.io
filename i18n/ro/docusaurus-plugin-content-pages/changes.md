@@ -8,7 +8,7 @@ ERDDAP™este un mare exemplu de[Inovarea bazată pe utilizator](https://en.wiki
 Aici sunt modificările asociate cu fiecareERDDAP™Eliberare.
 
 ## Versiunea 2.26{#version-226} 
- (eliberat în 2025-02-?) 
+ (eliberat în 2025-03-31) 
 
 *    **Pentru toți:** 
     * Actualizare mare la site-ul nostru de documentare: https://erddap.github.io/
@@ -21,7 +21,7 @@ Aici sunt modificările asociate cu fiecareERDDAP™Eliberare.
 *    **LucruriERDDAP™Administratorii trebuie să cunoască și să facă:** 
     * Eliberarea implicită necesită/suporturiJavaVersiunea 21. Înapoi în această versiune este posibilitatea de a face cu ușurință oJava17 binare compatibile.
 
-    * O caracteristică nouă pentru personalizarea informațiilor afișate despre seturile de date din UI. Ne așteptăm ca acest lucru să fie deosebit de util pentru a adăuga lucruri cum ar fi citări de seturi de date. Pentru mai multe detalii puteți citi[documentație nouă](/docs/server-admin/display-info.md). Mulţumită lui Ayush Singh pentru contribuţie&#33;
+    * O caracteristică nouă pentru personalizarea informațiilor afișate despre seturile de date din UI. Ne așteptăm ca acest lucru să fie deosebit de util pentru a adăuga lucruri cum ar fi citări de seturi de date. Pentru mai multe detalii puteți citi[documentație nouă](/docs/server-admin/display-info). Mulţumită lui Ayush Singh pentru contribuţie&#33;
 
     * Indicatori suplimentari Prometheus. Cel mai mare dintre ele este:http_Cerere_durata_secunde care include timpii de răspuns la cerere descriși prin: "Cerere_type," "dataset_id," "dataset_type," "file_type," "lang_code," "status_code"
 Acest format lizibil va permite o mai bună colectare de indicatori pentru a înțelege modul în care utilizatorii folosesc serverul.

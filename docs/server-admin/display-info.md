@@ -32,7 +32,7 @@ These tags can only be used with the `Sax parser`. To enable and use them, follo
    The number of comma-separated values in both `displayInfo` and `displayAttribute` tags must be the same.
 
 ### How It Works
-- The `displayAttribute` tag specifies global attributes (defined within the `<addAttributes>` tag) to be displayed for each dataset.
+- The `displayAttribute` tag specifies global attributes (defined within the &lt;`addAttributes`&gt; tag) to be displayed for each dataset.
 - The corresponding values in the `displayInfo` tag are displayed as labels in the `Information` row of the UI.
 - When the user hovers over the displayed labels, a tooltip will appear, showing the value of the global attribute.
 

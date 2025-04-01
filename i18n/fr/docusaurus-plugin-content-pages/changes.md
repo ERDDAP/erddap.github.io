@@ -8,7 +8,7 @@ ERDDAP™est un excellent exemple de[Innovation axée sur l'utilisateur](https:/
 Voici les changements associés à chaqueERDDAP™libérer.
 
 ## Version 2.26{#version-226} 
- (libéré 2025-02-??) 
+ (publié en 2025-03-31) 
 
 *    **Pour tous:** 
     * Grande mise à jour de notre site de documentation: https://erddap.github.io/
@@ -21,7 +21,7 @@ Outre l'apparence mise à jour, il y a une meilleure navigation, recherche, trad
 *    **Les chosesERDDAP™Les administrateurs doivent savoir et faire :** 
     * La version par défaut nécessite/supporteJavaversion 21. De retour dans cette version est en mesure de faire facilement unJava17 binaire compatible.
 
-    * Nouvelle fonctionnalité pour personnaliser les informations affichées sur les ensembles de données dans l'interface utilisateur. Nous nous attendons à ce que cela soit particulièrement utile pour ajouter des choses comme les citations de jeux de données. Pour plus de détails, vous pouvez lire le[nouvelle documentation](/docs/server-admin/display-info.md). Merci à Ayush Singh pour la contribution&#33;
+    * Nouvelle fonctionnalité pour personnaliser les informations affichées sur les ensembles de données dans l'interface utilisateur. Nous nous attendons à ce que cela soit particulièrement utile pour ajouter des choses comme les citations de jeux de données. Pour plus de détails, vous pouvez lire le[nouvelle documentation](/docs/server-admin/display-info). Merci à Ayush Singh pour la contribution&#33;
 
     * Mesures Prométhée supplémentaires. La plus grosse est `http_request_duration_seconds` qui inclut les temps de réponse de la requête ventilés par: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 Ce format lisible par machine permettra une meilleure collecte de métriques pour comprendre comment les utilisateurs utilisent le serveur.

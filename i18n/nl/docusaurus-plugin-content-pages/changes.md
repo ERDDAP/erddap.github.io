@@ -8,7 +8,7 @@ ERDDAP™is een groot voorbeeld van[Gebruikersgestuurde innovatie](https://en.wi
 Hier zijn de veranderingen in verband met elkERDDAP™Laat los.
 
 ## Versie 2.26{#version-226} 
- (Uitgebracht 2025-02-??) 
+ (vrijgegeven 2025-03-31) 
 
 *    **Voor iedereen:** 
     * Grote update naar onze documentatie site: https://erddap.github.io/
@@ -21,7 +21,7 @@ Naast de bijgewerkte verschijning is er verbeterde navigatie, zoeken, vertaling,
 *    **DingenERDDAP™Beheerders moeten weten en doen:** 
     * De standaard versie vereist/ondersteuntJavaversie 21. Terug in deze release is in staat om gemakkelijk eenJava17 compatibel binair.
 
-    * Nieuwe functie om de informatie over datasets in de UI aan te passen. We verwachten dat dit bijzonder nuttig is om dingen als dataset citaten toe te voegen. Voor meer details kunt u de[nieuwe documentatie](/docs/server-admin/display-info.md). Met dank aan Ayush Singh voor de bijdrage&#33;
+    * Nieuwe functie om de informatie over datasets in de UI aan te passen. We verwachten dat dit bijzonder nuttig is om dingen als dataset citaten toe te voegen. Voor meer details kunt u de[nieuwe documentatie](/docs/server-admin/display-info). Met dank aan Ayush Singh voor de bijdrage&#33;
 
     * Aanvullende Prometheus statistieken. De grootste is...http_request_dure_seconden
 Dit machineleesbare formaat zal een betere verzameling metrics mogelijk maken om te begrijpen hoe gebruikers de server gebruiken.

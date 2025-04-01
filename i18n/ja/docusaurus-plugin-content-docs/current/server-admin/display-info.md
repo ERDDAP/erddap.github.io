@@ -32,7 +32,7 @@ sidebar_position: 7
 `displayInfo` と `displayAttribute` タグのコンマ区切り値の数は同じでなければなりません。
 
 ### 仕組み
-- `displayAttribute` タグはグローバル属性を指定します (`` 内で定義される<addAttributes>タグ) データセットごとに表示する。
+- `displayAttribute` タグは、グローバル属性を指定します (定義は内部)&lt;ツイートaddAttributes各データセットに `&gt; タグ) が表示されます。
 - `display`Info タグの対応する値は、UIの `インフォメーション` 行のラベルとして表示されます。
 - 表示されたラベルの上にユーザがカーソルを合わせると、ツールチップが現れ、グローバル属性の値を表示します。
 

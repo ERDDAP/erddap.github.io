@@ -32,7 +32,7 @@ In dedatasets.xmlHet bestand bevat twee top-level tags:
 Het aantal door komma's gescheiden waarden in zowel displayInfo
 
 ### Hoe het werkt
-- De  (gedefinieerd binnen de <addAttributes>Tag) te tonen voor elke dataset.
+- De &lt;Wat?addAttributesVoor elke dataset wordt een "tag" getoond.
 - De corresponderende waarden in de 
 - Wanneer de gebruiker over de getoonde labels zweeft, verschijnt er een tooltip die de waarde van het globale attribuut toont.
 

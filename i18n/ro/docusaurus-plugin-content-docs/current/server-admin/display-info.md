@@ -32,7 +32,7 @@ Adăugaţi următoarea linie la fişierul dvs. de setup.xml:
 Numărul de valori comma-separate atât în 
 
 ### Cum funcţionează
-- Tag-ul "DisplayAttribute" specifică atribute globale (definite în cadrul <addAttributes>Tag) pentru fiecare set de date.
+- Tag-ul "DisplayAttribute" specifică atribute globale (definite în cadrul&lt;addAttributesTag-ul trebuie afișat pentru fiecare set de date.
 - Valorile corespunzătoare în tag-ul "DisplayInfo" sunt afișate ca etichete în rândul "UI."
 - Atunci când utilizatorul plutește peste etichetele afișate, va apărea un tip de instrument, indicând valoarea atributului global.
 

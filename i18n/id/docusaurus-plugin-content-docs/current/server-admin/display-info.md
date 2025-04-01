@@ -32,7 +32,7 @@ Sitemapdatasets.xml` file, termasuk dua tag tingkat atas:
 Jumlah nilai yang ditentukan dalam tag `displayInfo` dan `displayAttribute` harus sama.
 
 ### Cara Kerja
-- Tag `displayAttribute` menentukan atribut global (didefinisikan dalam `<addAttributes>Sitemap) untuk ditampilkan untuk setiap dataset.
+- Tag `displayAttribute` menentukan atribut global (didefinisikan dalam&lt;SitemapaddAttributes`&gt; tag) untuk ditampilkan untuk setiap dataset.
 - Nilai yang sesuai dalam tag `displayInfo` ditampilkan sebagai label di baris `Informasi` UI.
 - Ketika pengguna menelusuri label yang ditampilkan, tooltip akan muncul, menunjukkan nilai atribut global.
 

@@ -8,7 +8,7 @@ ERDDAP™är ett bra exempel på[Användar-Driven Innovation](https://en.wikiped
 Här är förändringarna i samband med varjeERDDAP™release.
 
 ## Version 2.26{#version-226} 
- (släppt 2025-02-?) 
+ (släppt 2025-03-31) 
 
 *    **För alla:** 
     * Stor uppdatering till vår dokumentationswebbplats: https://erddap.github.io/
@@ -21,7 +21,7 @@ Förutom det uppdaterade utseendet finns det förbättrad navigering, sökning, 
 *    **Saker att göra sakerERDDAP™Administratörer behöver veta och göra:** 
     * Standardutgåvan kräver/stöderJavaversion 21. Tillbaka i denna release kan enkelt göra enJava17 kompatibel binär.
 
-    * Ny funktion för att anpassa den information som visas om datamängder i UI. Vi förväntar oss att detta är särskilt användbart för att lägga till saker som datasetcitationer. För mer information kan du läsa[Ny dokumentation](/docs/server-admin/display-info.md). Tack till Ayush Singh för bidraget&#33;
+    * Ny funktion för att anpassa den information som visas om datamängder i UI. Vi förväntar oss att detta är särskilt användbart för att lägga till saker som datasetcitationer. För mer information kan du läsa[Ny dokumentation](/docs/server-admin/display-info). Tack till Ayush Singh för bidraget&#33;
 
     * Ytterligare Prometheus mätvärden. Den största är "http_request_duration_seconds' som inkluderar förfrågningstider som bryts ned av: "request_type", "dataset_id", "file_type", "lang_code", "status_code"
 Detta maskinläsbara format möjliggör bättre samling av mätvärden för att förstå hur användare använder servern.

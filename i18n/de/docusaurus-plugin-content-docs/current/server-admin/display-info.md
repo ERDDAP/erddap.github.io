@@ -32,7 +32,7 @@ In der `datasets.xml`-Datei, beinhalten zwei Top-Level-Tags:
 Die Anzahl der `displayInfo`- und `displayAttribute`-Tags muss gleich sein.
 
 ### Wie es funktioniert
-- Das `displayAttribute`-Tag gibt globale Attribute an (innerhalb des `<addAttributes>` Tag) für jeden Datensatz angezeigt werden.
+- Das `displayAttribute`-Tag gibt globale Attribute an (definiert innerhalb der&lt;`addAttributes`&gt; tag) für jeden Datensatz angezeigt werden.
 - Die entsprechenden Werte im `displayInfo`-Tag werden in der Reihe `Information` der UI als Label angezeigt.
 - Wenn der Benutzer über die angezeigten Etiketten schwebt, erscheint ein Tooltip, der den Wert des globalen Attributs zeigt.
 

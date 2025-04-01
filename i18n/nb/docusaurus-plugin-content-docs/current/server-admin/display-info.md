@@ -32,7 +32,7 @@ I «datasets.xml` fil, inkluderer to toppnivå tags:
 Antallet kommaseparerte verdier i både \"displayInfo\" og \"displayAttribute\"-tagger må være det samme.
 
 ### Hvordan det fungerer
-- Taggen «displayAttribute» spesifiserer globale attributter (definert i «<addAttributes>` tag) skal vises for hvert datasett.
+- Merken «displayAttribute» angir globale attributter (definert innenfor&lt;`addAttributes`&gt; tag) som vises for hvert datasett.
 - De tilsvarende verdiene i merket «displayInfo» vises som etiketter i raden «informasjon».
 - Når brukeren hviler over de viste etikettene, vises et verktøytips som viser verdien av den globale attributten.
 

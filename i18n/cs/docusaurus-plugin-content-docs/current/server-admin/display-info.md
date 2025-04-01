@@ -32,7 +32,7 @@ In the ?datasets.xmlSoubor, včetně dvou značek nejvyšší úrovně:
 Počet čárkových oddělovaných hodnot v obou tagech musí být stejný.
 
 ### Jak to funguje
-- Štítek DisplayAttribute určuje globální atributy (definuje se v rámci "A"<addAttributes>Štítek) zobrazí se pro každý soubor údajů.
+- Štítek DisplayAttribute určuje globální atributy (definované v rámci&lt;?addAttributesPro každý soubor údajů se zobrazí značka.
 - Odpovídající hodnoty v záložce ¶DisplayInfo-Display jsou zobrazeny jako štítky v řádku ¶Informace o UI.
 - Když se uživatel vznáší nad zobrazenými etiketami, objeví se tip nástrojů, zobrazí hodnotu globálního atributu.
 

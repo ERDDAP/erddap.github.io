@@ -32,7 +32,7 @@ A `datasets.xml` fájl, tartalmaz két felső szintű címkét:
 A comma-választott értékek száma mind a "displayInfo", mind a "displayAttribute" címkéknek ugyanaznak kell lenniük.
 
 ### Hogyan működik
-- A "displayAttribute" címke meghatározza a globális tulajdonságokat (a `<addAttributes>`címke) minden adatkészlet számára megjelenítendő.
+- A „displayAttribute” címke meghatározza a globális tulajdonságokat (amelyet a&lt;`addAttributes`&gt; tag) minden adatkészlet esetében jelenik meg.
 - A "displayInfo" címke megfelelő értékei az UI "Information" sorában található címkékként jelennek meg.
 - Amikor a felhasználó a megjelenített címkék felett ül, megjelenik egy tooltip, megmutatva a globális tulajdonság értékét.
 

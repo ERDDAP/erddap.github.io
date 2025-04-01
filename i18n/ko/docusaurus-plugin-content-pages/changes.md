@@ -8,7 +8,7 @@ ERDDAP™좋은 예입니다.[사용자 중심의 혁신](https://en.wikipedia.o
 각각의 변화는 다음과 같습니다.ERDDAP™다운로드
 
 ## 버전 2.26{#version-226} 
- (출시 2025-02-?) 
+ (릴리스 2025-03-31) 
 
 *    **모든 것:** 
     * 우리의 문서 사이트에 큰 업데이트: https://erddap.github.io/
@@ -21,7 +21,7 @@ ERDDAP™좋은 예입니다.[사용자 중심의 혁신](https://en.wikipedia.o
 *    **기타ERDDAP™관리자는 알아야 할:** 
     * 기본값은/supports를 요구합니다Java버전 21. 이 릴리스에서 다시 쉽게 만들 수 있습니다Java17 호환 바이너리.
 
-    * UI의 datasets에 대해 표시된 정보를 사용자 정의하는 새로운 기능. Dataset 인용과 같은 것들을 추가하는 것이 특히 유용합니다. 더 자세한 내용은 읽을 수 있습니다[새 문서](/docs/server-admin/display-info.md)· 기여에 대한 Ayush Singh 덕분에&#33;
+    * UI의 datasets에 대해 표시된 정보를 사용자 정의하는 새로운 기능. Dataset 인용과 같은 것들을 추가하는 것이 특히 유용합니다. 더 자세한 내용은 읽을 수 있습니다[새 문서](/docs/server-admin/display-info)· 기여에 대한 Ayush Singh 덕분에&#33;
 
     * 추가 Prometheus 미터. 가장 큰 것은 `http_request_duration_seconds`: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 이 기계 읽기 쉬운 체재는 사용자가 서버를 사용하는 방법을 이해하기 위하여 미터의 더 나은 수집을 가능하게 할 것입니다.

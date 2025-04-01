@@ -32,7 +32,7 @@ Aşağıdaki çizgiyi "setup.xml" dosyasına ekleyin:
 Hem "displayInfo" hem de "displayAttribute" etiketleri aynı olmalıdır.
 
 ### Nasıl çalışır
-- “displayAttribute’ etiketi küresel özellikleri işaret ediyor ("The" (İngilizce).<addAttributes>" etiketi") Her veri kümesi için gösteriliyor.
+- “displayAttribute’ etiketi, küresel özellikleri belirtir (aşağıda tanımlanır).&lt;"addAttributes"&gt; tag) her veri kümesi için gösteriliyor.
 - “displayInfo’ etiketindeki karşılık gelen değerler, UI’nin ‘Bilgi’ sıralarında etiketler olarak gösteriliyor.
 - Kullanıcı, görüntülenen etiketler üzerinde ilerlerken, bir alettip görünür, küresel özelliklerin değerini gösterir.
 

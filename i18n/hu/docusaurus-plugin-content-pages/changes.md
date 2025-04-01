@@ -8,7 +8,7 @@ ERDDAP™nagyszerű példa erre[Felhasználó-vezérelt innováció](https://en.
 Íme a változások, amelyek mindegyikhez kapcsolódnakERDDAP™kiadás.
 
 ## Verzió 2.26{#version-226} 
- (2025-02-et?) 
+ (2025-03-31) 
 
 *    **Mert All:** 
     * Nagy frissítés a dokumentációs oldalunkra: https://erddap.github.io/
@@ -21,7 +21,7 @@ A frissített megjelenés mellett jobb navigáció, keresés, fordítás, és k�
 *    **A dolgokERDDAP™Az adminisztrátoroknak tudniuk kell és meg kell tenniük:** 
     * Az alapértelmezett kiadás megköveteli/támogatjaJava21. Hát ebben a kiadásban könnyen elkészíthetőJava17 kompatibilis bináris.
 
-    * Új funkció az UI adatkészleteiről megjelenített információk testreszabásához. Arra számítunk, hogy ez különösen hasznos lehet olyan dolgokat hozzáadni, mint az adatállomány idézetei. További részletekért olvassa el a[új dokumentáció](/docs/server-admin/display-info.md)... Köszönjük Ayush Singh-nak a hozzájárulásért&#33;
+    * Új funkció az UI adatkészleteiről megjelenített információk testreszabásához. Arra számítunk, hogy ez különösen hasznos lehet olyan dolgokat hozzáadni, mint az adatállomány idézetei. További részletekért olvassa el a[új dokumentáció](/docs/server-admin/display-info)... Köszönjük Ayush Singh-nak a hozzájárulásért&#33;
 
     * További Prometheus metrikák. A legnagyobb a `http_request_duration_seconds`, amely magában foglalja a kérelemre adott válaszidőket: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 Ez a gép olvasható formátum lehetővé teszi a mutatók jobb gyűjtését, hogy megértsék, hogy a felhasználók hogyan használják a szervert.

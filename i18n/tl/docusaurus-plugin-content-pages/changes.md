@@ -8,7 +8,7 @@ ERDDAP™isang magandang halimbawa[User-Driven Innovation](https://en.wikipedia.
 Narito ang mga pagbabagong nauugnay sa bawat isaERDDAP™paglaya.
 
 ## Bersiyong 2.26{#version-226} 
- (inilabas 2025-02-?) 
+ (inilabas 2025-03-31) 
 
 *    **Para sa Lahat:** 
     * Malaking update sa ating dokumentasyon: https://erddap.github.io/
@@ -21,7 +21,7 @@ Bukod sa bagong hitsura roon, dapat na mas madali pa ang paglalayag, paghahanap,
 *    **Mga BagayERDDAP™Kailangang Malaman at Gawin ng mga Administrador:** 
     * Ang default release ay nangangailangan ng/suportaJavabersyon 21. Back sa release na ito ay madaling makagawa ngJava17 Magkasundong binary.
 
-    * Bagong katangian upang gawing maayos ang impormasyon na ipinakikita tungkol sa mga dataset sa UI. Inaasahan namin na ito'y lalo nang kapaki - pakinabang upang magdagdag ng mga bagay na gaya ng dataset scripts. Para sa higit pang detalye mababasa mo[bagong dokumentasyon](/docs/server-admin/display-info.md). Salamat kay Ayush Singh sa kontribusyon&#33;
+    * Bagong katangian upang gawing maayos ang impormasyon na ipinakikita tungkol sa mga dataset sa UI. Inaasahan namin na ito'y lalo nang kapaki - pakinabang upang magdagdag ng mga bagay na gaya ng dataset scripts. Para sa higit pang detalye mababasa mo[bagong dokumentasyon](/docs/server-admin/display-info). Salamat kay Ayush Singh sa kontribusyon&#33;
 
     * Karagdagang mga metrikong Prometheus. Ang pinakamalaki ay ang `http_request_duration_seconds` na kinabibilangan ng mga oras ng request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code".
 Ang magagamit na format ng makinang ito ay tutulong sa mas mabuting koleksiyon ng mga metriko na maunawaan kung paano ginagamit ng mga gumagamit ang server.
