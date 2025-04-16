@@ -129,6 +129,7 @@ const config: Config = {
           label: 'Docs',
         },
         {to: '/governance', label: 'Governance', position: 'left'},
+        {to: '/cloud', label: 'Cloud', position: 'left'},
         {
           type: 'search',
           position: 'right',
@@ -162,6 +163,10 @@ const config: Config = {
             {
               label: 'Changes',
               to: '/changes',
+            },
+            {
+              label: 'Cloud',
+              to: '/cloud',
             }
           ],
         },

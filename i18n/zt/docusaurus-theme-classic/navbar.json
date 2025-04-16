@@ -26,5 +26,9 @@
   "item.label.Docs": {
     "message": "文件",
     "description": "Navbar item with label Docs"
+  },
+  "item.label.Cloud": {
+    "message": "云",
+    "description": "Navbar item with label Cloud"
   }
 }

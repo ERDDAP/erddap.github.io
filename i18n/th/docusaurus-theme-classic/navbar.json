@@ -26,5 +26,9 @@
   "item.label.Docs": {
     "message": "หมอ",
     "description": "Navbar item with label Docs"
+  },
+  "item.label.Cloud": {
+    "message": "เมฆ",
+    "description": "Navbar item with label Cloud"
   }
 }

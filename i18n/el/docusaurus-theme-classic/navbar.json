@@ -26,5 +26,9 @@
   "item.label.Docs": {
     "message": "Γιατροί",
     "description": "Navbar item with label Docs"
+  },
+  "item.label.Cloud": {
+    "message": "Σύννεφο",
+    "description": "Navbar item with label Cloud"
   }
 }

@@ -26,5 +26,9 @@
   "item.label.Docs": {
     "message": "Login",
     "description": "Navbar item with label Docs"
+  },
+  "item.label.Cloud": {
+    "message": "Login",
+    "description": "Navbar item with label Cloud"
   }
 }
