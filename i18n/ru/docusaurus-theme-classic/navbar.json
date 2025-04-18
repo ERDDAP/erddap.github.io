@@ -26,5 +26,9 @@
   "item.label.Docs": {
     "message": "Докс",
     "description": "Navbar item with label Docs"
+  },
+  "item.label.Cloud": {
+    "message": "облако",
+    "description": "Navbar item with label Cloud"
   }
 }

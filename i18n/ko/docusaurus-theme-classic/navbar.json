@@ -26,5 +26,9 @@
   "item.label.Docs": {
     "message": "사이트맵",
     "description": "Navbar item with label Docs"
+  },
+  "item.label.Cloud": {
+    "message": "클라우드",
+    "description": "Navbar item with label Cloud"
   }
 }
