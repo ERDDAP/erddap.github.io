@@ -21,7 +21,7 @@ Here are the changes associated with each ERDDAP™ release.
     You can disable the new cache clear checks by setting taskCacheClear to false in setup.xml, though that is not recommended.
     cacheClearMinutes is also in the [datasets documentation](/docs/server-admin/datasets#cacheclearminutes).
     
-    *   Localized dataset metadata support. This requires you to be using the SAX parser. It supports localization for values in an addAttributes section. Simply add an attribute with the additional xml:lang tag. For example to add a French title to a dataset your addAttributes section would include:
+    *   Localized dataset metadata support. It supports localization for values in an addAttributes section. Simply add an attribute with the additional xml:lang tag. For example to add a French title to a dataset your addAttributes section would include:
     ```
         <att name="title">Data from a local source.</att>
         <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
