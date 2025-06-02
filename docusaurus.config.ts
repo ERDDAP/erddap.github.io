@@ -167,6 +167,10 @@ const config: Config = {
             {
               label: 'Cloud',
               to: '/cloud',
+            },
+            {
+              label: "Support/Contact",
+              to: '/docs/intro#support'
             }
           ],
         },
@@ -213,7 +217,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `ERDDAP™, Version 2.26. Copyright © ${new Date().getFullYear()} ERDDAP™. Built with Docusaurus.`,
+      copyright: `ERDDAP™, Version 2.27.0. Copyright © ${new Date().getFullYear()} ERDDAP™. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

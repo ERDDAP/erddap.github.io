@@ -7,6 +7,39 @@ ERDDAP™ is a great example of [User-Driven Innovation](https://en.wikipedia.or
 
 Here are the changes associated with each ERDDAP™ release.
 
+## Version 2.27.0 {#version-2270}
+(released 2025-06-??)
+
+*   **New Features and Changes (for users):**
+    *   New data to colorbar converter on servers at /erddap/convert/color.html
+
+*   **Things ERDDAP™ Administrators Need to Know and Do:**
+    *   Default behavoir is that the cache will now be cleared independent of the major load datasets task. This will allow for more reliable and regular clearing of old cache files. There is additional work to improve server behavoir when low on disk space (returning an error for requests likely to make the server run out of space, and clearing the cache more frequently in low disk circumstances to attempt to prevent errors). In datasets.xml (or setup.xml) you can add/set the new cacheClearMinutes parameter to control how frequently the server checks to clear the cache. Note, the existing cacheMinutes parameter controls the age of files to be kept, the new cacheClearMinutes is for how frequently to do a chache clear.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+    You can disable the new cache clear checks by setting taskCacheClear to false in setup.xml, though that is not recommended.
+    cacheClearMinutes is also in the [datasets documentation](/docs/server-admin/datasets#cacheclearminutes).
+    
+    *   Localized dataset metadata support. This requires you to be using the SAX parser. It supports localization for values in an addAttributes section. Simply add an attribute with the additional xml:lang tag. For example to add a French title to a dataset your addAttributes section would include:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+    Additional details available in the [localized metadata documentation](/docs/server-admin/localized-metadata).
+
+    *   New Docker Compose file with options for SSL and a barebones Prometheus server. Thanks to Shane St. Savage for the SSL and Jiahui Hu for the Prometheus.
+
+    *   Support for using information in the headers to determine the server URL instead of relying on the config file. This will allow a server to be accessed by multiple names and may simplify certain configurations. Please enable it and send feedback.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    *   Some small changes, bug fixes, and optimizations.  
+
+*   **For ERDDAP™ Developers:**
+    *   Refactor to how output file types are defined in code. This should make it so file types can be added without needing to touch many code places.
+
 ## Version 2.26 {#version-226}
 (released 2025-03-31)
 

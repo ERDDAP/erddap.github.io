@@ -4130,6 +4130,13 @@ If you want to provide this information in datasets.xml, start by copying the cu
     <cacheMinutes>60</cacheMinutes>  
 ```
 In general, only image files (because the same images are often requested repeatedly) and .nc files (because they must be fully created before sending to the user) are cached. Although it might seem like a given request should always return the same response, that isn't true. For example, a tabledap request which includes time>*someTime* will change when new data arrives for the dataset. And a griddap request which includes \[last\] for the time dimension will change when new data arrives for the dataset. Any changes to this tag's value will take effect the next time ERDDAP™ reads datasets.xml, including in response to a dataset [flag](/docs/server-admin/additional-information#flag). Before ERDDAP™ v2.00, this was specified in setup.xml, which is still allowed but discouraged.  
+
+### &lt;cacheClearMinutes&gt; {#cacheclearminutes}
+*   [**&lt;cacheClearMinutes>**](#cacheclearminutes) is a rarely used OPTIONAL tag within an &lt;erddapDatasets> tag in datasets.xml to specify the frequency to check cached files and remove old ones (in minutes) (default=15). E.g.,  
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+When the server finishes handling a request it will check how long ago the last cache clear was. If it was too long ago, it will queue a task on the TaskThread to clear the cache. Any changes to this tag's value will take effect the next time ERDDAP™ reads datasets.xml, including in response to a dataset [flag](/docs/server-admin/additional-information#flag). This can be specified in specified in setup.xml, but that is discouraged.  
      
 ### &lt;convertInterpolateRequestCSVExample&gt; {#convertinterpolaterequestcsvexample}
 *   [**&lt;convertInterpolateRequestCSVExample>**](#convertinterpolaterequestcsvexample) is an OPTIONAL tag within an &lt;erddapDatasets> tag in datasets.xml \[starting with ERDDAP™ v2.10\] which contains an example which will be shown on the Interpolate converter's web page. The default value is: jplMURSST41/analysed\_sst/Bilinear/4 .
