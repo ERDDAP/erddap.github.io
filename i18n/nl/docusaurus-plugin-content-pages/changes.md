@@ -7,6 +7,39 @@ ERDDAP™is een groot voorbeeld van[Gebruikersgestuurde innovatie](https://en.wi
 
 Hier zijn de veranderingen in verband met elkERDDAP™Laat los.
 
+## Versie 2.27.0{#version-2270} 
+ (vrijgegeven 2025-06-??) 
+
+*    **Nieuwe functies en wijzigingen (voor gebruikers) :** 
+    * Nieuwe gegevens voor kleurbalkconverter op servers op /erddap/convert/color.html
+
+*    **DingenERDDAP™Beheerders moeten weten en doen:** 
+    * Standaard behavoir is dat de cache nu wordt gewist onafhankelijk van de belangrijkste taak van de datasets. Dit zal zorgen voor meer betrouwbare en regelmatige opruiming van oude cache bestanden. Er is extra werk om servergedrag te verbeteren als er weinig schijfruimte is (returning a error for requests to make the server out of space, and clearing the cache more frequenter in low disk conditions to try to prevent fouten) . Indatasets.xml  (of setup.xml) kunt u de nieuwe cache toevoegen/instellen ClearMinutes parameter om te bepalen hoe vaak de server controleert om de cache te wissen. Opmerking, de bestaande cacheMinutes parameter controleert de leeftijd van bestanden die moeten worden bewaard, de nieuwe cache ClearMinutes is voor hoe vaak een chache duidelijk te maken.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+U kunt de nieuwe cache clear controles uitschakelen door taakCacheClear in setup.xml op false te zetten, hoewel dat niet wordt aanbevolen.
+cache ClearMinutes is ook in de[documentatie over datasets](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * Gelokaliseerde dataset metadata ondersteuning. Het ondersteunt lokalisatie voor waarden in eenaddAttributesSection. Voeg gewoon een attribuut toe met de extra xml:lang tag. Bijvoorbeeld om een Franse titel toe te voegen aan een dataset uwaddAttributesDe afdeling omvat:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Aanvullende gegevens beschikbaar in de[gelokaliseerde metagegevensdocumentatie](/docs/server-admin/localized-metadata).
+
+    * Nieuwe Docker Stel bestand samen met opties voor SSL en een barebones Prometheus server. Dankzij Shane St. Savage voor de SSL en Jiahui Hu voor de Prometheus.
+
+    * Ondersteuning voor het gebruik van informatie in de headers om de server-URL te bepalen in plaats van te vertrouwen op het configuratiebestand. Hierdoor kan een server door meerdere namen worden benaderd en kunnen bepaalde configuraties worden vereenvoudigd. Schakel het in en stuur feedback.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Enkele kleine veranderingen, bugfixes, en optimalisaties.
+
+*    **VoorERDDAP™Ontwikkelaars:** 
+    * Refactor voor hoe uitvoer bestandstypen worden gedefinieerd in code. Dit moet ervoor zorgen dat bestandstypen kunnen worden toegevoegd zonder dat veel code plaatsen aan te raken.
+
 ## Versie 2.26{#version-226} 
  (vrijgegeven 2025-03-31) 
 

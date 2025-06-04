@@ -4133,6 +4133,13 @@ Kung nais mong ibigay ang impormasyong itodatasets.xml, simulan sa pamamagitan n
     <cacheMinutes>60</cacheMinutes>  
 ```
 Sa pangkalahatan, mga talaksan lamang ng larawan (sapagkat ang parehong mga imahen ay kadalasang paulit - ulit na hinihiling) at.ncmga talaksan (sapagkat ang mga ito ay kailangang ganap na likhain bago ipadala sa gumagamit) ay kinakalupkop. Bagaman parang iyon din ang dapat na maging tugon, hindi iyan totoo. Halimbawa, isangtabledaptanong na may kalakip na time&gt; *ilan Panahon* ay magbabago pagdating ng bagong datos para sa dataset. At ang kahilingang griddap na kasama rito\\[huli\\]para sa sukat ng oras ay magbabago kapag dumating ang bagong impormasyon para sa dataset. Anumang pagbabago sa halaga ng tag na ito ay matutupad sa susunod na pagkakataonERDDAP™basahindatasets.xml, kasama bilang tugon sa isang dataset[bandila](/docs/server-admin/additional-information#flag). BagoERDDAP™v2.00, ito ay tinukoy sa setup.xml, na pinapayagan pa rin ngunit nasisiraan ng loob.
+
+### &lt;cacheClearMinutes gt;{#cacheclearminutes} 
+* [ ** &lt;Mga cacheClearMinutes&gt; ** ] (Mga #cache Clearminute) ay bihirang gamiting OPSYONAL na tag sa loob ng isang&lt;" erddapDatasets&gt; " tag indatasets.xmlupang matiyak ang dalas upang tingnan ang mga talaksang may cache at alisin ang lumang mga file (sa loob ng ilang minuto)   (default=15) . E.g.,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Kapag natapos na ng server ang pag - aasikaso sa isang kahilingan, susuriin nito kung gaano na katagal malinaw ang huling cache. Kung napakatagal na ang nakalipas, ito'y magtatanong ng isang atas sa TaskThread upang alisin ang cache. Anumang pagbabago sa halaga ng tag na ito ay matutupad sa susunod na pagkakataonERDDAP™basahindatasets.xml, kasama bilang tugon sa isang dataset[bandila](/docs/server-admin/additional-information#flag). Ito ay maaaring tiyakin sa espesipikong setup.xml, ngunit iyan ay nasisiraan ng loob.
      
 ### &lt;Komberte ng InterpolateRequestCSVExamplegt;{#convertinterpolaterequestcsvexample} 
 * [ ** &lt;Palitan ng InterpolateRequestCSVExample&gt; ** ] (#convertinterpolaterequestcsvexample) ay isang OPSYONAL na tag sa loob ng isang&lt;" erddapDatasets&gt; " tag indatasets.xml \\[pasimula saERDDAP™v2.10\\]na naglalaman ng halimbawa na ipakikita sa web page ng Interpolate converter. Ang halagang default ay: jplMURSST41/analyssed\\_sst/Bilipino/4 .

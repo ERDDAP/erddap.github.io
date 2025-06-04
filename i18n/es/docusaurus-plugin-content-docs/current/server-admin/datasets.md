@@ -4133,6 +4133,13 @@ Si desea proporcionar esta información endatasets.xml, empezar por copiar la li
     <cacheMinutes>60</cacheMinutes>  
 ```
 En general, sólo archivos de imagen (porque las mismas imágenes son solicitadas repetidamente) y.ncarchivos (porque deben ser completamente creados antes de enviar al usuario) están caché. Aunque podría parecer que una petición dada siempre debe devolver la misma respuesta, eso no es verdad. Por ejemplo, atabledapsolicitud que incluye tiempo *algunos Hora* cambiará cuando lleguen nuevos datos para el conjunto de datos. Y una solicitud de cuadrícula que incluye\\[último\\]para la dimensión del tiempo cambiará cuando lleguen nuevos datos para el conjunto de datos. Cualquier cambio en el valor de esta etiqueta tendrá efecto la próxima vezERDDAP™lecturasdatasets.xml, incluso en respuesta a un conjunto de datos[bandera](/docs/server-admin/additional-information#flag). AntesERDDAP™v2.00, esto se especificó en setup.xml, que todavía está permitido pero desalentado.
+
+### &lt;cacheClearMinutes sensible;{#cacheclearminutes} 
+* [ ** &lt;cacheClearMinutes ** ] (#cacheclearminutes) es una etiqueta OPTIONAL raramente utilizada dentro de un&lt;erddapDatasets tag endatasets.xmlpara especificar la frecuencia para comprobar los archivos caché y eliminar los viejos (en minutos)   (default=15) . Por ejemplo,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Cuando el servidor termine de tramitar una solicitud, comprobará cuánto tiempo hace el último caché claro. Si fue hace demasiado tiempo, se encargará de una tarea en el TaskThread para limpiar el caché. Cualquier cambio en el valor de esta etiqueta tendrá efecto la próxima vezERDDAP™lecturasdatasets.xml, incluso en respuesta a un conjunto de datos[bandera](/docs/server-admin/additional-information#flag). Esto se puede especificar en el setup.xml, pero eso es desalentado.
      
 ### &lt;convertInterpolateRequestCSVExample{#convertinterpolaterequestcsvexample} 
 * [ ** &lt;convertInterpolateRequestCSVExample ** ] (#convertinterpolaterequestcsvexample) es una etiqueta OPTIONAL dentro de un&lt;erddapDatasets tag endatasets.xml \\[empezar conERDDAP™v2.10\\]que contiene un ejemplo que se mostrará en la página web del convertidor Interpolate. El valor predeterminado es: jplMURSST41/analysed\\_sst/Bilinear/4 .

@@ -4133,6 +4133,13 @@ Jeśli chcesz dostarczyć te informacje wdatasets.xml, rozpocząć od skopiowani
     <cacheMinutes>60</cacheMinutes>  
 ```
 Ogólnie, tylko pliki obrazkowe (ponieważ te same obrazy są często wymagane wielokrotnie) oraz.ncpliki (ponieważ muszą być w pełni utworzone przed wysłaniem do użytkownika) są buforowane. Chociaż może się wydawać, że dana prośba powinna zawsze odpowiadać tak samo, to nie jest to prawda. Na przykładtabledapwniosek zawierający czas &gt; *niektóre Czas* zmieni się, gdy nowe dane przybędą do zbioru danych. I żądanie griddap, które obejmuje\\[ostatni\\]dla wymiaru czasu zmieni się, gdy nowe dane przybędą do zbioru danych. Wszelkie zmiany wartości tego znacznika będą skuteczne następnym razemERDDAP™odczytdatasets.xml, w tym w odpowiedzi na zbiór danych[bandera](/docs/server-admin/additional-information#flag). PrzedERDDAP™v2.00, to zostało określone w setup.xml, który jest nadal dozwolony, ale zniechęcony.
+
+### &lt;KACZEPIENIE Protokół & gt;{#cacheclearminutes} 
+* [ ** &lt;KACZEPIENIE &gt; ** ] (# cacheclearminutes) jest rzadko używanym znacznikiem optycznym w obrębie&lt;erddapDatasets &gt; tag indatasets.xmlaby określić częstotliwość sprawdzania plików cached i usunąć stare (w minutach)   (domyślny = 15) . Np.
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Gdy serwer zakończy obsługę żądania, będzie sprawdzał, jak dawno temu ostatni cache clear był. Jeśli to było zbyt dawno temu, to będzie kolejka zadanie na TaskThread, aby wyczyścić cache. Wszelkie zmiany wartości tego znacznika będą skuteczne następnym razemERDDAP™odczytdatasets.xml, w tym w odpowiedzi na zbiór danych[bandera](/docs/server-admin/additional-information#flag). Można to określić w sposób określony w setup.xml, ale jest to zniechęcające.
      
 ### &lt;convertInterpolateRequestCSVPrzykład & gt;{#convertinterpolaterequestcsvexample} 
 * [ ** &lt;convertInterpolateRequestCSVPrzykład &gt; ** ] (# convertinterpolaterequestcsvexample) jest znacznikiem optycznym w obrębie&lt;erddapDatasets &gt; tag indatasets.xml \\[rozpoczynając odERDDAP™v2.10\\]który zawiera przykład, który zostanie pokazany na stronie Interpolate. Domyślna wartość to: jplMURSST41 / analiza\\ _sstBilinear / 4.

@@ -7,6 +7,39 @@ ERDDAP™좋은 예입니다.[사용자 중심의 혁신](https://en.wikipedia.o
 
 각각의 변화는 다음과 같습니다.ERDDAP™다운로드
 
+## 버전 2.27.0{#version-2270} 
+ (출시 2025-06-?) 
+
+*    **새로운 기능 및 변경 (사용자 정의) ::** 
+    * /erddap/convert/color.html에서 서버의 colorbar 변환기에 새로운 자료
+
+*    **기타ERDDAP™관리자는 알아야 할:** 
+    * Default behavoir는 캐시가 이제 주요 로드 데이터셋 작업의 독립적으로 삭제됩니다. 이것은 오래된 캐시 파일의 믿을 수 있고 일정한 정리를 허용합니다. 디스크 공간에 낮은 경우 서버 behavoir를 개선하는 추가 작업 (서버가 공간을 실행하고, 오류를 방지하기 위해 낮은 디스크 환경에서 캐시를 더 자주 삭제하는 요청의 오류를 반환) · 내 계정datasets.xml  (또는 setup.xml) 새 캐시를 추가/설정할 수 있습니다. ClearMinutes 매개 변수는 자주 서버가 캐시를 삭제하는 방법을 제어합니다. 참고, 기존의 cacheMinutes 매개 변수는 파일의 나이를 유지, 새로운 캐시 ClearMinutes는 종종 chache를 맑게하는 방법입니다.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+setup.xml에 false로 taskCacheClear을 설정하여 새로운 캐시 클리어 체크를 비활성화 할 수 있지만 권장되지 않습니다.
+뚱 베어 ClearMinutes도[Datasets 문서](/docs/server-admin/datasets#cacheclearminutes)·
+    
+    * Localized dataset 메타데이터 지원 로컬라이제이션을 지원합니다.addAttributes이름 * 추가 xml:lang 태그로 속성을 추가합니다. 예를 들어 프랑스 제목을 dataset에 추가하려면addAttributes단면도는 다음을 포함합니다:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+자주 묻는 질문[metadata 문서](/docs/server-admin/localized-metadata)·
+
+    * 새로운 도커 SSL 및 barebones Prometheus 서버에 대한 옵션을 가진 파일을 컴파일합니다. Shane St. Savage for SSL 및 Prometheus를 위한 Jiahui Hu에 감사합니다.
+
+    * 헤더의 정보를 사용하여 설정 파일에 의존하는 대신 서버 URL을 결정합니다. 서버가 여러 이름에 접근할 수 있으며 특정 구성을 단순화할 수 있습니다. 이를 활성화하고 피드백을 보낼 수 있습니다.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * 몇몇 작은 변화, 버그 수정 및 최적화.
+
+*    **제품 정보ERDDAP™개발자:** 
+    * 출력 파일 유형이 코드에서 정의되는 방법에 Refactor. 이렇게 파일 유형이 많은 코드 장소를 만질 필요없는 추가될 수 있어야 합니다.
+
 ## 버전 2.26{#version-226} 
  (릴리스 2025-03-31) 
 

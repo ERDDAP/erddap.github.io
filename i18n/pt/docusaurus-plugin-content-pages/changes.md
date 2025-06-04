@@ -7,6 +7,39 @@ ERDDAP™é um grande exemplo de[Inovação orientada pelo usuário](https://en.
 
 Aqui estão as mudanças associadas a cadaERDDAP™liberar.
 
+## Versão 2.27.0{#version-2270} 
+ (lançado 2025-06-??) 
+
+*    **Novos recursos e mudanças (para usuários) :** 
+    * Novos dados para conversor de barra de cores em servidores em /erddap/convert/color.html
+
+*    **CoisasERDDAP™Os administradores precisam saber e fazer:** 
+    * O behavoir padrão é que o cache será agora compensado independente da principal tarefa de conjuntos de dados de carga. Isso permitirá uma limpeza mais confiável e regular de arquivos de cache antigos. Há trabalho adicional para melhorar o behavoir do servidor quando baixo no espaço em disco (retornar um erro para solicitações susceptíveis de fazer o servidor ficar sem espaço e limpar o cache com mais frequência em circunstâncias de disco baixo para tentar evitar erros) . Emdatasets.xml  (ou setup.xml) você pode adicionar / definir o novo cache Parâmetro ClearMinutes para controlar com que frequência o servidor verifica para limpar o cache. Nota, o parâmetro cacheMinutes existente controla a idade dos arquivos a serem mantidos, o novo cache ClearMinutes é para como frequentemente fazer um chache claro.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Você pode desativar as novas verificações claras de cache definindo taskCacheClear para false em setup.xml, embora isso não seja recomendado.
+cache ClearMinutes também está no[documentação de conjuntos de dados](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * Suporte de metadados de dataset localizado. Apoia a localização de valores em umaddAttributesSecção. Basta adicionar um atributo com a tag xml:lang adicional. Por exemplo, adicionar um título francês a um conjunto de dadosaddAttributesseção incluiria:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Detalhes adicionais disponíveis no[documentação de metadados localizada](/docs/server-admin/localized-metadata).
+
+    * Novo Docker Componha arquivo com opções para SSL e um servidor Prometheus barebones. Graças a Shane St. Savage para o SSL e Jiahui Hu para o Prometheus.
+
+    * Suporte para usar informações nos cabeçalhos para determinar a URL do servidor em vez de confiar no arquivo de configuração. Isso permitirá que um servidor seja acessado por vários nomes e pode simplificar certas configurações. Por favor, ative-o e envie comentários.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Algumas pequenas mudanças, correções de bugs e otimizações.
+
+*    **ParaERDDAP™Desenvolvedores:** 
+    * Refactor para como os tipos de arquivo de saída são definidos no código. Isso deve torná-lo assim que os tipos de arquivo podem ser adicionados sem precisar tocar muitos lugares de código.
+
 ## Versão 2.26{#version-226} 
  (lançado 2025-03-31) 
 

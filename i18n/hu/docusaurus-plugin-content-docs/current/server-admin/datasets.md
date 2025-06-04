@@ -4133,6 +4133,13 @@ Ha ezt az információt szeretné megadnidatasets.xmlKezdje a jelenlegi alapért
     <cacheMinutes>60</cacheMinutes>  
 ```
 Általában csak képfájlok (mert ugyanazokat a képeket gyakran ismételten kérik) és.ncfájlok (mert teljes mértékben létre kell hozni, mielőtt elküldik a felhasználót) csésze. Bár úgy tűnhet, mintha egy adott kérés mindig ugyanazt a választ adja vissza, ami nem igaz. Például egytabledapkérelem, amely tartalmazza az időt&gt; *Néhány Idő* megváltozik, amikor új adatok érkeznek az adatkészlethez. És egy griddap kérelem, amely magában foglalja\\[utolsó\\]Az idő dimenziója megváltozik, amikor új adatok érkeznek az adatkészlethez. A tag értékének bármilyen változása a következő alkalommal lép életbeERDDAP™olvasódatasets.xml, beleértve az adatkészletre adott válaszban is[zászló](/docs/server-admin/additional-information#flag)... KorábbanERDDAP™v2.00, ezt a setup.xml-ben határozták meg, amely még megengedett, de elriasztott.
+
+### &lt;cacheClearMinutes & Gt;{#cacheclearminutes} 
+* [[szerkesztés]] ** &lt;cacheClearMinutes&gt; ** ] (#cacheclear percek) egy ritkán használt OPTIONAL tag egy&lt;erddapDatasets&gt; tagdatasets.xmlmeghatározni a frekvenciát, hogy ellenőrizze a csípett fájlokat, és távolítsa el a régieket (perc)   (default=15) ... E. pl.
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Amikor a kiszolgáló befejezi a kérést, ellenőrizni fogja, hogy mennyi ideig volt az utolsó gyorsítótár. Ha túl régen volt, akkor feladatot fog kérni a TaskThread-on, hogy megtisztítsa a tortát. A tag értékének bármilyen változása a következő alkalommal lép életbeERDDAP™olvasódatasets.xml, beleértve az adatkészletre adott válaszban is[zászló](/docs/server-admin/additional-information#flag)... Ezt meg lehet határozni a setup.xml-ben, de ez elriasztott.
      
 ### &lt;átalakításInterpolateRequestCSVExample & gt;{#convertinterpolaterequestcsvexample} 
 * [[szerkesztés]] ** &lt;átalakításInterpolateRequestCSVExample ** ] (# Convertinterpolaterequestcsvexample) egy OPTIONAL tag egy&lt;erddapDatasets&gt; tagdatasets.xml \\[KezdőlapERDDAP™v2.10\\]amely olyan példát tartalmaz, amelyet az Interpolate átalakító weboldalán mutatnak be. Az alapértelmezett érték: jplMURSST41/analylylyed\\_sst/Bilinear/4 .

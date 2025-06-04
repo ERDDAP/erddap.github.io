@@ -4133,6 +4133,13 @@ EDD 表格 Copy 通過從遠端數據集中要求數據區域來製造本地的�
     <cacheMinutes>60</cacheMinutes>  
 ```
 一般只有影像文件 (因為同樣的影像常被反复要求) 和.nc文件 (因為它們在寄給使用者前必須完整建立) 已儲存。 但這不是真的。 例如,atabledap包含時間的要求 &gt; *一些 時間* 當新的數據到來時會變更 。 以及包含\\[上次\\]當新的數據到來時, 時間維度會變化。 此標籤值的任何變更將在下次生效ERDDAP™已讀datasets.xml,包括因應数据集[旗號](/docs/server-admin/additional-information#flag). 之前ERDDAP™v2. 00, 這在 setup. xml 中被指定, 仍然允許使用, 但被抑制 。
+
+### &lt;快取清除Minutes & gt;{#cacheclearminutes} 
+* [ ** &lt;快取清除( C) &gt; ** [ [ ] ] (&#123;\fn黑体\fs22\bord1\\shad0\\3aHBE\\4aH00\fscx67\fscy66\\2cHFFFFFF\\3cH808080&#125;) 在一個&lt;erddapDatasets &gt; 標籤datasets.xml指定檢查快取檔案及移除舊檔案的頻率 (分鐘)   (缺省=15) . 例如,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+當伺服器完成處理一個要求時, 它會檢查上次快取清除是多久前的 。 如果它已經太早了, 它會在 TaskThread 上排隊清除缓存 。 此標籤值的任何變更將在下次生效ERDDAP™已讀datasets.xml,包括因應数据集[旗號](/docs/server-admin/additional-information#flag). 可以在 setup.xml 中指定此項, 但這會被阻擋 。
      
 ### &lt;轉換 Polticate RequestCvexample & gt;{#convertinterpolaterequestcsvexample} 
 * [ ** &lt;轉換 Polticate RequestCvexample &gt; ** [ [ ] ] (# 轉換通訊器 要求cxample) 是在&lt;erddapDatasets &gt; 標籤datasets.xml \\[始于ERDDAP™v2.10\\]包含一個在 Interpoate 轉換器的網頁上顯示的示例。 預設值為: jplMURSST41/分析sst/Bilinear/4。

@@ -7,6 +7,39 @@ ERDDAP™isang magandang halimbawa[User-Driven Innovation](https://en.wikipedia.
 
 Narito ang mga pagbabagong nauugnay sa bawat isaERDDAP™paglaya.
 
+## Bersiyong 2.27.0{#version-2270} 
+ (inilabas 2025-06-?) 
+
+*    **Bagong mga Katangian at Pagbabago (para sa mga gumagamit) :** 
+    * Bagong datos sa colorbar converter sa mga server sa /erddap/convert/color.html
+
+*    **Mga BagayERDDAP™Kailangang Malaman at Gawin ng mga Administrador:** 
+    * Ang default behavoir ay na ang cache ay aalisin na ngayon nang hiwalay sa malaking trabahong datasets. Magpapahintulot ito ng mas maaasahan at regular na pag - aalis ng lumang mga salansan ng cache. May karagdagang gawain upang mapabuti ang server behavoir kapag mababa sa disk space (Ang pagbabalik ng isang pagkakamali sa mga kahilingan ay malamang na gumawa sa server na maubusan ng lugar, at ang pag - aalis sa cache nang mas madalas sa mababang kalagayan ng disk upang maiwasan ang mga pagkakamali) . Sa loobdatasets.xml  (o setup.xml) maaari mong idagdag/set ang bagong cache Ang mga clearMinute ay naghahanda upang kontrolin kung gaano kadalas na sinusuri ng server ang cache. Pansinin, kinokontrol ng umiiral na mga cacheMinutes parameter ang panahon ng pag - iimbak ng mga file, ang bagong cache Ang ClearMinutes ay para sa kung gaano kadalas gawin ang isang chache maliwanag.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Maaari mong sirain ang bagong cache na malinaw na mga tseke sa pamamagitan ng paglalagay sa taskCachClear na mali sa setup.xml, bagaman hindi ito inirerekomenda.
+cache Ang mga ClearMinute ay nasa[dokumentasyon ng datos](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * Localized dataset metadata support. Sinusuportahan nito ang lokalisasyon para sa mga pamantayan sa isang lugaraddAttributesseksiyon. Lagyan lamang ng attribute ang karagdagang xml:lang tag. Halimbawa upang lagyan ng pamagat na Pranses ang iyong datasetaddAttributeskalakip ang:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Karagdagang mga detalye na makukuha sa[lokal na dokumentong metadata](/docs/server-admin/localized-metadata).
+
+    * Bagong Docker Compose file na may mga opsyon para sa SSL at isang unbones Prometheus server. Salamat kay Shane St. Savage para sa SSL at Jihui Hu para sa Prometheus.
+
+    * Suporta sa paggamit ng impormasyon sa mga header upang alamin ang server URL sa halip na umasa sa talaksang pagkaayos. Ito'y magpapangyari sa isang server na makuha ang maraming pangalan at maaaring gawing simple ang ilang kaayusan. Pakisuyong gawin ito at magpadala ng impormasyon.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Ilang maliliit na pagbabago, mga bug fix, at optimisasyon.
+
+*    **SapagkatERDDAP™Mga Nagpapaunlad:** 
+    * Refactor kung paano binibigyang kahulugan ang mga uri ng output file sa code. Ito ay dapat gumawa nito kaya ang mga tipo ng talaksan ay maaaring idagdag nang hindi na kailangang hawakan ang maraming code place.
+
 ## Bersiyong 2.26{#version-226} 
  (inilabas 2025-03-31) 
 

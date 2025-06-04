@@ -4133,6 +4133,13 @@ Hvis du vil gi denne informasjonen idatasets.xml, start ved å kopiere gjeldende
     <cacheMinutes>60</cacheMinutes>  
 ```
 Generelt bare bildefiler (De samme bildene blir ofte bedt om flere ganger) og.ncfiler (fordi de må opprettes fullt ut før du sender til brukeren) er cached. Selv om det kan virke som en gitt forespørsel bør alltid returnere det samme svaret, er det ikke sant. For eksempel entabledapforespørsel som inkluderer tid &gt; *Noen Tid* vil endre seg når nye data kommer til datasettet. Og en forespørsel som inkluderer\\[siste\\]for tidsdimensjonen vil endre seg når nye data kommer til datasettet. Eventuelle endringer i denne etikettens verdi vil tre i kraft neste gangERDDAP™Leserdatasets.xml, inkludert som reaksjon på et datasett[flagg](/docs/server-admin/additional-information#flag).. FørERDDAP™v2.00, var dette spesifisert i setup.xml, som fortsatt er tillatt, men mislykket.
+
+### &lt;cacheClearMinutes&gt;{#cacheclearminutes} 
+* [ ** &lt;cacheClearMinutes&gt; ** ] (#cacheclearminutes) er en sjelden brukt OPTIONAL tag i en&lt;ErddapDatasett&gt; Merke idatasets.xmlfor å angi frekvensen for å sjekke cachede filer og fjerne gamle (på minutter)   (standard=15) .. F.eks.
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Når serveren er ferdig med å håndtere en forespørsel, vil den sjekke hvor lenge siden den siste cacheen var klar. Hvis det var for lenge siden, vil det køe en oppgave på TaskThread å rydde cache. Eventuelle endringer i denne etikettens verdi vil tre i kraft neste gangERDDAP™Leserdatasets.xml, inkludert som reaksjon på et datasett[flagg](/docs/server-admin/additional-information#flag).. Dette kan angis i spesifisert i config.xml, men det er nedslått.
      
 ### &lt;convertInterpolateRequestCSVExample&gt;{#convertinterpolaterequestcsvexample} 
 * [ ** &lt;convertInterpolateRequestCSVExample&gt; ** ] (#convertinterpolaterequestcsvexample) er et valgfritt merke i en&lt;ErddapDatasett&gt; Merke idatasets.xml \\[Begynner medERDDAP™v2.10\\]som inneholder et eksempel som vil bli vist på Interpolate konverterens nettside. Standardverdien er: jplMURSST41/analysertsst/Bilineær/4.

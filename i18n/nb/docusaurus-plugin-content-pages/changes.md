@@ -7,6 +7,39 @@ ERDDAP™Et godt eksempel på[Brukerdrevet innovasjon](https://en.wikipedia.org/
 
 Her er endringene som er forbundet med hverERDDAP™Frigjøring.
 
+## Versjon 2.27.0{#version-2270} 
+ (Utgitt 2025-06-?) 
+
+*    **Nye funksjoner og endringer (for brukere) :)** 
+    * Nye data til colorbar converter på servere på /erddap/convert/color.html
+
+*    **TingERDDAP™Administratorer trenger å vite og gjøre:** 
+    * Standard behavoir er at cache nå vil bli slettet uavhengig av de store belastningsdatasett oppgaven. Dette vil tillate mer pålitelig og regelmessig fjerning av gamle cache-filer. Det er ekstra arbeid for å forbedre serverbehavoir når det er lavt på diskplass (å returnere en feil for forespørsler som sannsynligvis vil få serveren til å gå tom for plass, og å rydde cache oftere under lave diskforhold for å forsøke å hindre feil) .. Idatasets.xml  (eller setup.xml) du kan legge til / angi den nye cache ClearMinutes parameter for å kontrollere hvor ofte serveren sjekker for å rydde cache. Merk at den eksisterende cacheMinutes parameteren kontrollerer alderen på filer som skal oppbevares, den nye cache ClearMinutes er for hvor ofte å gjøre en chach klar.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Du kan deaktivere den nye cache klare kontroller ved å sette oppgaveCacheClear til falsk i setup.xml, men det anbefales ikke.
+cache ClearMinutes er også i[Datasetts dokumentasjon](/docs/server-admin/datasets#cacheclearminutes)..
+    
+    * Lokalisert metadatastøtte for datasett. Det støtter lokalisering for verdier i enaddAttributesSeksjon. Legg til en attributt med ekstra xml:lang tag. For eksempel å legge til en fransk tittel i et datasett dittaddAttributesSeksjonen inkluderer:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Ytterligere detaljer tilgjengelig i[lokalisert metadatadokumentasjon](/docs/server-admin/localized-metadata)..
+
+    * New Docker Skriv fil med alternativer for SSL og en barebones Prometheus-server. Takk til Shane St. Savage for SSL og Jiahui Hu for Prometheus.
+
+    * Støtte for bruk av informasjon i overskriftene til å bestemme serverens URL i stedet for å stole på oppsettsfilen. Dette vil gjøre det mulig å få tilgang til en server med flere navn og kan forenkle visse konfigurasjoner. Vennligst aktiver det og send tilbakemeldinger.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Noen små endringer, feilrettinger og optimeringer.
+
+*    **ForERDDAP™Utviklere:** 
+    * Refaktor til hvordan utgangsfiltypene er definert i kode. Dette bør gjøre det slik at filtyper kan legges til uten å måtte berøre mange kodesteder.
+
 ## Versjon 2.26{#version-226} 
  (utgitt 2025-03-31) 
 

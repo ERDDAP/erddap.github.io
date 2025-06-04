@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## Letzter BeitragERDDAP™Version{#latest-erddap-version} 
 
-2.26, siehe[Änderungen der Dokumentation](/changes#version-226)und[Sie können](https://github.com/ERDDAP/erddap/releases/tag/v2.26.0).
+2.27.0, siehe die[Änderungen der Dokumentation](/changes#version-2270)und[Sie können](https://github.com/ERDDAP/erddap/releases/tag/v2.27.0).
 
 ## ERDDAP™Informationen{#erddap-information} 
 

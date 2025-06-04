@@ -4133,6 +4133,13 @@ Jos haluat antaa nämä tiedotdatasets.xmlAloita kopioimalla nykyinen oletusluet
     <cacheMinutes>60</cacheMinutes>  
 ```
 Yleisesti ottaen vain kuvatiedostoja (Koska samoja kuvia toistuvasti pyydetään) ja.nctiedostoja (koska ne on luotava kokonaan ennen lähettämistä käyttäjälle) ovat kiinni. Vaikka pyynnön pitäisi aina palauttaa sama vastaus, se ei pidä paikkaansa. Esimerkiksi atabledappyyntö, joka sisältää ajan *jotkut Aika-aika* Muuttuu, kun aineistoon saapuu uusia tietoja. pyyntö, joka sisältää\\[Viimeinen viimeinen\\]Aikamitta muuttuu, kun aineistoon saapuu uusia tietoja. Muutokset tämän sivun arvoon tulevat voimaan seuraavalla kerralla.ERDDAP™Lukeminendatasets.xmlmukaan lukien vastauksena tietoaineistoon[Lippu](/docs/server-admin/additional-information#flag). Ennen ennenERDDAP™V2.00, tämä on määritetty setup.xml, joka on edelleen sallittua mutta lannistunut.
+
+### &lt;CacheClearMinutes &gt{#cacheclearminutes} 
+* [...] ** &lt;CacheClearMinutes » ** ) (#kacheclearminutes) harvoin käytetty OPTIONAL-tunnisteet&lt;erdapdatasets &gt; Tag indatasets.xmlmäärittää taajuus tarkistettujen tiedostojen ja poistaa vanhoja (Minuuteissa)   (Oletusarvo = 15) . esim.
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Kun palvelin päättää pyynnön käsittelyn, se tarkistaa, kuinka kauan viimeisin välimuisti oli. Jos se oli jo kauan sitten, se jonottaa tehtävän TskThread puhdistaa välimuisti. Muutokset tämän sivun arvoon tulevat voimaan seuraavalla kerralla.ERDDAP™Lukeminendatasets.xmlmukaan lukien vastauksena tietoaineistoon[Lippu](/docs/server-admin/additional-information#flag). Tämä voidaan määritellä asennus.xml, mutta se on lannistunut.
      
 ### &lt;InterpolateRequestCSVExample &gt;{#convertinterpolaterequestcsvexample} 
 * [...] ** &lt;InterpolateRequestCSVExample&gt; ** ) (#convertinterpolaterequestcsvexample Näytä tarkat tiedot) OPTIONAL-tunnisteet sisällä&lt;erdapdatasets &gt; Tag indatasets.xml \\[AloitetaanERDDAP™V2.10\\]joka sisältää esimerkin, joka esitetään Interpolate-muunninohjelman verkkosivuilla. Oletusarvo on: jplMURSST41/analyysisstBilineaari/4.

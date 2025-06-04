@@ -7,6 +7,39 @@ ERDDAP™是一个伟大的例子[用户驱动创新](https://en.wikipedia.org/w
 
 以下是与每个ERDDAP™释放
 
+## 2.2.7.0版本 翻译:{#version-2270} 
+ (发布2025-06 -?) 
+
+*    **新特征和变化 (用户) 数字 :** 
+    * 在 /erddap/convert/color.html 服务器上向色彩栏转换器提供新数据
+
+*    **东西ERDDAP™管理员需要知道和做:** 
+    * 默认比武是,缓存现在将被清除,独立于主要负载数据集任务. 这将有利于更可靠和定期地清理旧的缓存文件。 当磁盘空间低时,还有改进服务器行为的额外工作 (返回可能使服务器耗尽空间的请求错误,并在低磁盘情况下更频繁地清除缓存,以试图防止错误) 。 。 。 。 内datasets.xml  (或设置.xml) 您可以添加/设置新缓存 清除Minutes参数以控制服务器检查清理缓存的频率 。 注意, 现有的缓存Minutes参数控制要保存的文件的年龄, 新的缓存 ClearMinutes是多少频率做一个cache清晰。
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+您可以在设置. xml 中设置任务CacheClear 至虚假来禁用新的缓存清晰检查, 尽管不建议这样做 。
+缓存 清明也出现在[数据集文档](/docs/server-admin/datasets#cacheclearminutes)。 。 。 。
+    
+    * 本地化数据集元数据支持. 它支持将数值本地化addAttributes节。 只需用附加的 xml: lang 标记添加一个属性 。 例如,在您的数据集中添加法语标题addAttributes该节将包括:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+详见本报告。[本地元数据文档](/docs/server-admin/localized-metadata)。 。 。 。
+
+    * 新建嵌入器 为 SSL 和一个空骨 Prometheus 服务器编写文件 。 谢恩·圣萨维奇为SSL效力,贾辉胡为普罗米修斯效力.
+
+    * 支持使用信头中的信息来决定服务器URL,而不是依赖配置文件. 这将允许一个服务器被多个名称访问,并可能简化某些配置. 请启用并发送反馈 。
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * 一些小的改变,错误修正,以及优化.
+
+*    **对于ERDDAP™开发者 :** 
+    * 重构代码中如何定义输出文件类型 。 这应该可以让它使得文件类型可以添加而无需触及很多代码位置.
+
 ## 第2.26号版本{#version-226} 
  (2025-03-31 (韩语).) 
 

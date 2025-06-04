@@ -4133,6 +4133,13 @@ Als u deze informatie indatasets.xml, begin met het kopiëren van de huidige sta
     <cacheMinutes>60</cacheMinutes>  
 ```
 In het algemeen alleen afbeeldingsbestanden (omdat dezelfde beelden vaak herhaaldelijk worden gevraagd) en.ncbestanden (omdat ze volledig moeten worden aangemaakt voordat ze naar de gebruiker worden verzonden) zijn gecached. Hoewel het lijkt alsof een gegeven verzoek altijd hetzelfde antwoord moet geven, is dat niet waar. Bijvoorbeeld atabledapverzoek dat tijd bevat&gt; *enkele Tijd* zal veranderen wanneer nieuwe gegevens aankomen voor de dataset. En een griddap verzoek dat omvat\\[laatste\\]voor de tijddimensie zal veranderen wanneer nieuwe gegevens voor de dataset arriveren. Wijzigingen in de waarde van deze tag worden de volgende keer van krachtERDDAP™leestdatasets.xml, inclusief in reactie op een gegevensset[vlag](/docs/server-admin/additional-information#flag). VoorERDDAP™v2,00, dit werd gespecificeerd in setup.xml, die nog steeds is toegestaan maar ontmoedigd.
+
+### &lt;cacheClearMinutes&gt;{#cacheclearminutes} 
+* [ ** &lt;cacheClearMinutes&gt; ** ] (#cacheclearminutes) is een zelden gebruikte OPTIONAL tag&lt;erddapDatasets&gt; tag indatasets.xmlom de frequentie aan te geven om cache bestanden te controleren en oude bestanden te verwijderen (in minuten)   (standaard=15) . Bijv.
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Wanneer de server klaar is met het verwerken van een verzoek zal het controleren hoe lang geleden de laatste cache leeg was. Als het te lang geleden is, zal het een taak op de TaskThread in de wachtrij zetten om de cache te wissen. Wijzigingen in de waarde van deze tag worden de volgende keer van krachtERDDAP™leestdatasets.xml, inclusief in reactie op een gegevensset[vlag](/docs/server-admin/additional-information#flag). Dit kan gespecificeerd worden in setup.xml, maar dat wordt ontmoedigd.
      
 ### &lt;convertI compostateRequestCSVexample&gt;{#convertinterpolaterequestcsvexample} 
 * [ ** &lt;convertIcleateRequestCSVexample&gt; ** ] (#converti Complementate requestcsvexample) is een OPTIONAL tag binnen een&lt;erddapDatasets&gt; tag indatasets.xml \\[beginnend metERDDAP™v2.10\\]die een voorbeeld bevat dat zal worden weergegeven op de webpagina van de Interpolate converter. De standaardwaarde is: jplMURSST41/geannuleerd\\_sst/Bilineair/4 .

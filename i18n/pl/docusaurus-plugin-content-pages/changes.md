@@ -7,6 +7,39 @@ ERDDAP™jest doskonałym przykładem[User- Driven Innowacje](https://en.wikiped
 
 Oto zmiany związane z każdymERDDAP™Wypuścić.
 
+## Wersja 2.27.0{#version-2270} 
+ (Wydany 2025- 06-?) 
+
+*    **Nowe funkcje i zmiany (dla użytkowników) :** 
+    * Nowe dane dla konwertera barów na serwerach / erddap / convert / color.html
+
+*    **RzeczyERDDAP™Administratorzy muszą wiedzieć i robić:** 
+    * Domyślnie behavoir jest to, że cache zostanie teraz oczyszczony niezależnie od głównego zadania zbioru danych obciążenia. Umożliwi to bardziej wiarygodne i regularne czyszczenie starych plików buforowych. Istnieje dodatkowa praca, aby poprawić zachowanie serwera, gdy niski na powierzchni dysku (zwracanie błędu w przypadku żądań, które mogą spowodować wyczerpanie się serwera i częstsze czyszczenie pamięci podręcznej w warunkach niskiego poziomu dysku w celu zapobiegania błędom) . Wdatasets.xml  (lub setup.xml) możesz dodać / ustawić nowy podręcznik Parametr ClearMinutes do kontrolowania jak często serwer sprawdza czyszczenie bufora. Uwaga, istniejący parametr CacheMinut kontroluje wiek plików, które mają być przechowywane, nowy cache ClearMinutes jest dla jak często wykonać dreszcz jasne.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Możesz wyłączyć nowe kontrole cache clear poprzez ustawienie taskCacheClear do false w setup.xml, choć nie jest to zalecane.
+cache Protokół jest również w[dokumentacja zbiorów danych](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * Lokalizowane wsparcie metadanych metadanych. Obsługuje lokalizację wartości waddAttributessekcja. Wystarczy dodać atrybut z dodatkowym znacznikiem xml: lang. Na przykład dodać tytuł francuski do zbioru danychaddAttributessekcja obejmowałaby:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Dodatkowe informacje dostępne w[lokalizowana dokumentacja metadanych](/docs/server-admin/localized-metadata).
+
+    * Nowy docker Komponować plik z opcjami dla SSL i bez kości serwera Prometeus. Dzięki Shane St. Savage za SSL i Jiahui Hu za Prometeusza.
+
+    * Obsługa korzystania z informacji w nagłówkach do określenia adresu URL serwera zamiast polegania na pliku konfiguracyjnym. Umożliwi to dostęp do serwera wieloma nazwami i może uprościć niektóre konfiguracje. Proszę włączyć i wysłać informacje zwrotne.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Kilka drobnych zmian, poprawek i optymalizacji.
+
+*    **DlaERDDAP™Programiści:** 
+    * Zmień sposób definiowania typów plików wyjściowych w kodzie. Powinno to sprawić, że typy plików mogą być dodawane bez konieczności dotykania wielu miejsc kodowych.
+
 ## Wersja 2.26{#version-226} 
  (wydany 2025- 03- 31) 
 

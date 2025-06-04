@@ -4133,6 +4133,13 @@ Bu bilgiyi bu bilgiyi sağlamak istiyorsanızdatasets.xml, mevcut varsayılan li
     <cacheMinutes>60</cacheMinutes>  
 ```
 Genel olarak, sadece görüntü dosyaları (Çünkü aynı görüntüler genellikle defalarca talep edilir) ve.ncdosyaları dosyaları dosyaları dosyaları (Çünkü kullanıcıya göndermeden önce tamamen oluşturulmalıdır.) Önbellek. Verilen bir istek gibi görünse de her zaman aynı cevabı geri getirmelidir, bu doğru değil. Örneğin, birtabledapİstek hangi zaman içerir&gt; *Bazı bazıları bazıları bazıları bazıları Zaman Zamanı* Yeni veriler veri kümesi için geldiğinde değişecektir. Ve içeren bir griddap isteği\\[Son son son son\\]Zaman boyutu, yeni veriler veri kümesi için geldiğinde değişecektir. Bu etiketin değerine herhangi bir değişiklik bir dahaki sefere etkilenecekERDDAP™Okunuşu okudatasets.xmlAyrıca bir veri kümesine yanıt da dahil[Bayrak bayrağı](/docs/server-admin/additional-information#flag). Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce Önce ÖnceERDDAP™v2.00, bu kurulumda belirtilmiştir.xml, ki bu hala izin verilir, ancak cesaretiz.
+
+### &lt;ÖnbellekMinutes&gt;{#cacheclearminutes} 
+* [ ** &lt;Önbellekli Dakikalar&gt; ** ] (#cacheclear dakikalar) nadiren bir OPence etiketi içinde kullanılır&lt;erddapDatasets&gt; etiketdatasets.xmlÖnbellek dosyaları kontrol etmek ve eski olanları kaldırmak için frekansı belirtmek (dakikalar içinde)   (varsayılan=15) . E.g.,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Sunucu bir istekle bitince, son önbellek açık ne kadar uzun zaman kontrol edecektir. Çok uzun zaman önce olsaydı, önbelleği temizlemek için bir görev sıralayacaktır. Bu etiketin değerine herhangi bir değişiklik bir dahaki sefere etkilenecekERDDAP™Okunuşu okudatasets.xmlAyrıca bir veri kümesine yanıt da dahil[Bayrak bayrağı](/docs/server-admin/additional-information#flag). Bu, kurulumda belirtilmiş olarak belirtilebilir.xml, ancak bu cesaret vericidir.
      
 ### &lt;InterpolateRequestCSVExample&gt;{#convertinterpolaterequestcsvexample} 
 * [ ** &lt;InterpolateRequestCSVExample&gt; ** ] (#convertinterpolaterequestcsvör) Bir OPLOW etiketi içinde&lt;erddapDatasets&gt; etiketdatasets.xml \\[Başlangıçla başlamakERDDAP™v2.10\\]Interpolate dönüştürücünün web sayfasında gösterilen bir örnek içerir. Varsayılan değer: jplMURSST41/analysed\\_sst/Bilinear/4

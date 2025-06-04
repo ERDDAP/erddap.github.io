@@ -7,6 +7,39 @@ ERDDAP™este un mare exemplu de[Inovarea bazată pe utilizator](https://en.wiki
 
 Aici sunt modificările asociate cu fiecareERDDAP™Eliberare.
 
+## Versiunea 2.27.0{#version-2270} 
+ (Eliberat în 2025-06?) 
+
+*    **Noi caracteristici și schimbări (pentru utilizatori) :** 
+    * Date noi pentru convertorul bara de culoare pe servere la /erddap/convert/color.html
+
+*    **LucruriERDDAP™Administratorii trebuie să cunoască și să facă:** 
+    * Behavoir implicit este că cache-ul va fi eliminat acum independent de sarcina de seturi de sarcini majore. Acest lucru va permite o compensare mai fiabile și regulate de fișiere vechi cache. Există lucrări suplimentare pentru a îmbunătăți Behavoir server atunci când scăzut pe spațiu disc (returnarea unei erori pentru cererile susceptibile de a face serverul să rămână fără spațiu, și curățarea cache-ului mai frecvent în circumstanțe de disc scăzut pentru a încerca să prevină erorile) . Îndatasets.xml  (sau configurare. xml) puteți adăuga/seta noua cache ClearMinutes parametru pentru a controla cât de frecvent verifică serverul pentru a șterge cache-ul. Notă, parametrul cacheMinutes existent controlează vârsta fișierelor care trebuie păstrate, noul cache ClearMinutes este pentru cât de des pentru a face un Chache clar.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Puteți dezactiva noile controale cache clare prin setarea askCacheClear la fals în setup.xml, deși care nu este recomandat.
+cache ClearMinutes este, de asemenea, în[Documentația seturilor de date](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * Suport de metadate de date localizate. Acesta susține localizarea valorilor într-oaddAttributesSectiunea. Pur și simplu adăugați un atribut cu tag-ul suplimentar xml:lang. De exemplu, pentru a adăuga un titlu francez la un set de date dumneavoastrăaddAttributessecțiunea va include:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Detalii suplimentare disponibile în[documentație de metadate localizate](/docs/server-admin/localized-metadata).
+
+    * Docker nou Compune fişier cu opţiuni pentru SSL şi un server Prometheus. Mulţumită lui Shane St. Savage pentru SSL şi Jiahui Hu pentru Prometheus.
+
+    * Suport pentru utilizarea informațiilor din antete pentru a determina URL-ul serverului în loc să se bazeze pe fișierul de configurare. Acest lucru va permite accesul unui server cu mai multe nume și poate simplifica anumite configurații. Vă rugăm să activați și să trimiteți feedback.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Câteva mici schimbări, reparaţii de insecte şi optimizări.
+
+*    **PentruERDDAP™Dezvoltatori:** 
+    * Refactor la modul în care tipurile de fișiere de ieșire sunt definite în cod. Acest lucru ar trebui să facă astfel încât tipurile de fișiere pot fi adăugate fără a fi nevoie să atingă mai multe locuri de cod.
+
 ## Versiunea 2.26{#version-226} 
  (eliberat în 2025-03-31) 
 

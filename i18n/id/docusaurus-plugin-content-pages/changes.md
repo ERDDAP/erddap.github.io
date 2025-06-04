@@ -7,6 +7,39 @@ ERDDAP™adalah contoh besar[Inovasi Pengguna](https://en.wikipedia.org/wiki/Use
 
 Berikut adalah perubahan yang terkait dengan masing-masingERDDAP™Sitemap
 
+## Versi 2.27.0{#version-2270} 
+ (dirilis 2025-06-??) 
+
+*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
+    * Data baru untuk converter warnabar pada server di /erddap/convert/color.html
+
+*    **SitemapERDDAP™Administrator Perlu Tahu dan Lakukan:** 
+    * Default behavoir adalah bahwa cache sekarang akan dibersihkan independen dari tugas dataset beban utama. Ini akan memungkinkan untuk menghapus file cache yang lebih andal dan teratur. Ada pekerjaan tambahan untuk meningkatkan server berperilaku ketika rendah di ruang disk (mengembalikan kesalahan untuk permintaan mungkin untuk membuat server keluar dari ruang, dan membersihkan cache lebih sering dalam keadaan disk rendah untuk mencoba untuk mencegah kesalahan) Sitemap Sitemapdatasets.xml  (atau setup.xml) Anda dapat menambahkan / mengatur cache baru Jelaskan parameter untuk mengontrol seberapa sering server memeriksa untuk menghapus cache. Catatan, parameter cacheMinutes yang ada mengontrol usia file yang akan disimpan, cache baru ClearMinutes adalah untuk seberapa sering melakukan kekacauan.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Anda dapat menonaktifkan cek yang jelas cache baru dengan mengatur tugasCacheClear untuk palsu dalam setup.xml, meskipun itu tidak dianjurkan.
+Login ClearMinutes juga di[Database](/docs/server-admin/datasets#cacheclearminutes)Sitemap
+    
+    * Dukungan metadata dataset lokal. Ini mendukung lokalisasi nilai dalamaddAttributesSitemap Cukup tambahkan atribut dengan tag xml tambahan: lang. Misalnya untuk menambahkan judul Prancis ke dataset AndaaddAttributesbagian akan mencakup:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Rincian tambahan yang tersedia di[Metadata database](/docs/server-admin/localized-metadata)Sitemap
+
+    * Docker Baru Menentukan file dengan pilihan untuk SSL dan barebones Prometheus server. Berkat Shane St. Savage untuk SSL dan Jiahui Hu untuk Prometheus.
+
+    * Dukungan untuk menggunakan informasi di header untuk menentukan URL server alih-alih mengandalkan file konfigurasi. Ini akan memungkinkan server untuk diakses oleh beberapa nama dan dapat menyederhanakan konfigurasi tertentu. Harap aktifkan dan kirim umpan balik.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Beberapa perubahan kecil, perbaikan bug, dan optimasi.
+
+*    **SitemapERDDAP™Pengembang:** 
+    * Refactor untuk bagaimana jenis file output didefinisikan dalam kode. Ini harus membuatnya sehingga jenis file dapat ditambahkan tanpa perlu menyentuh banyak tempat kode.
+
 ## Versi 2.26{#version-226} 
  (dirilis 2025-03-31) 
 

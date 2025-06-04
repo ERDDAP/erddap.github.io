@@ -7,6 +7,39 @@ ERDDAP™ist ein großes Beispiel[Benutzergetriebene Innovation](https://en.wiki
 
 Hier sind die Änderungen, die jederERDDAP™Veröffentlichung.
 
+## Version 2.27.0{#version-2270} 
+ (veröffentlicht 2025-06-??) 
+
+*    **Neue Funktionen und Änderungen (für Benutzer) :** 
+    * Neue Daten zum Colorbar-Konverter auf Servern bei /erddap/convert/color.html
+
+*    **DingeERDDAP™Administratoren müssen wissen und tun:** 
+    * Default behavoir ist, dass der Cache jetzt unabhängig von der großen Lastdatensätze Aufgabe gelöscht wird. Dies ermöglicht eine zuverlässigere und regelmäßige Clearing von alten Cache-Dateien. Es gibt zusätzliche Arbeit, um Server-Behavoir zu verbessern, wenn niedrig auf Festplattenspeicherplatz (Rückgabe eines Fehlers für Anfragen, die den Server möglicherweise aus dem Raum ausführen, und das Löschen des Caches häufiger unter niedrigen Festplattenbedingungen, um Fehler zu verhindern) . Indatasets.xml  (oder Setup.xml) Sie können den neuen Cache hinzufügen/einfügen ClearMinutes-Parameter, um zu steuern, wie häufig der Server überprüft, um den Cache zu löschen. Hinweis, der vorhandene Parameter cacheMinutes steuert das Alter der zu haltenden Dateien, den neuen Cache ClearMinutes ist, wie oft eine Chache klar zu machen.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Sie können die neuen Cache klare Kontrollen deaktivieren, indem TaskCacheClear auf false in setup.xml, obwohl das nicht empfohlen wird.
+Cache ClearMinutes ist auch in der[Datensätze Dokumentation](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * Lokalisierte Datensatz-Metadatenunterstützung. Es unterstützt die Lokalisierung von Werten in einemaddAttributesAbschnitt. Fügen Sie einfach ein Attribut mit dem zusätzlichen xml:lang-Tag hinzu. Zum Beispiel einen französischen Titel zu einem Datensatz hinzufügenaddAttributesAbschnitt würde beinhalten:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Weitere Details in der[lokalisierte Metadatendokumentation](/docs/server-admin/localized-metadata).
+
+    * Neues Docker Erfassen Sie die Datei mit Optionen für SSL und einen Barebones Prometheus Server. Dank Shane St. Savage für die SSL und Jiahui Hu für die Prometheus.
+
+    * Unterstützung für die Verwendung von Informationen in den Headern, um die Server-URL zu bestimmen, anstatt sich auf die config-Datei zu verlassen. Auf diese Weise kann ein Server mit mehreren Namen aufgerufen werden und bestimmte Konfigurationen vereinfachen. Bitte aktivieren Sie es und senden Sie Feedback.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Einige kleine Änderungen, Fehlerbehebungen und Optimierungen.
+
+*    **FürERDDAP™Entwickler:** 
+    * Refactor, wie Ausgabedateitypen in Code definiert sind. Dies sollte es so machen, dass Dateitypen hinzugefügt werden können, ohne viele Code-Stellen berühren müssen.
+
 ## Version 2.26{#version-226} 
  (veröffentlicht 2025-03-31) 
 

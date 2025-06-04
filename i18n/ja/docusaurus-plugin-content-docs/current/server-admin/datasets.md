@@ -4133,6 +4133,13 @@ DataProviderForm3.html ではユーザの利便性として利用しています
     <cacheMinutes>60</cacheMinutes>  
 ```
 一般的にはイメージファイルのみ (同じ画像が繰り返し要求されることが多いため) そして、.ncファイル (ユーザに送信する前に完全に作成される必要があるため) キャッシュされます。 リクエストが常に同じ応答を返すように見えるかもしれませんが、それは本当ではありません。 例えば、tabledap時間を含むリクエスト&gt; *詳しくはこちら タイムタイム* データセットに新しいデータが到着したときに変更されます。 そして含まれているgriddapの要求\\[最後の投稿\\]データセットに新しいデータが到着したときに時間次元が変化します。 このタグの値の変更は、次の時刻に有効になります。ERDDAP™フィードバックdatasets.xmlデータセットに対する応答を含む[ログイン](/docs/server-admin/additional-information#flag)お問い合わせ 新着情報ERDDAP™v2.00, これは、setup.xmlで指定されました, これは、まだ許可されていますが、捨てられます.
+
+### &lt;キャッシュClearMinutes&gt;{#cacheclearminutes} 
+* ツイート ** &lt;キャッシュClearMinutes&gt; ** . . (#キャッシュクリア分) まれに使用されていた OPTIONAL の札は内のあります&lt;erddapDatasets&gt; タグdatasets.xmlキャッシュされたファイルをチェックし、古いファイルを削除する頻度を指定する (所要時間)   (デフォルト=15) お問い合わせ 例:
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+サーバがリクエストの処理が完了すると、最後のキャッシュクリアがどのくらい前に確認されます。 長い前にいたら、タスクをタスクにキューに入れ、キャッシュをクリアします。 このタグの値の変更は、次の時刻に有効になります。ERDDAP™フィードバックdatasets.xmlデータセットに対する応答を含む[ログイン](/docs/server-admin/additional-information#flag)お問い合わせ これは setup.xml で指定できますが、それは無視されます。
      
 ### &lt;変換InterpolateRequestCSVExample&gt;{#convertinterpolaterequestcsvexample} 
 * ツイート ** &lt;変換InterpolateRequestCSVExample&gt; ** . . (#convertinterpolaterequestcsvexample(コンバート)) 内の OPTIONAL タグです。&lt;erddapDatasets&gt; タグdatasets.xml \\[まずはERDDAP™v2.10の特長\\]Interpolate コンバーターの Web ページに表示される例が含まれている。 デフォルト値は: jplMURSST41/分析\\_sst/バイリンガル4
