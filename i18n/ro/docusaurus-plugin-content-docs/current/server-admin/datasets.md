@@ -4133,6 +4133,13 @@ Dacă doriți să furnizați aceste informații îndatasets.xml, începe prin co
     <cacheMinutes>60</cacheMinutes>  
 ```
 În general, numai fișiere de imagine (deoarece aceleași imagini sunt adesea solicitate în mod repetat) şi.ncfișiere (deoarece acestea trebuie să fie complet create înainte de trimiterea la utilizator) sunt cached. Deși s-ar putea părea ca o cerere dată ar trebui să se întoarcă întotdeauna același răspuns, că nu este adevărat. De exemplu,tabledapcerere care include timp&gt; *unele Timp* se modifică atunci când sosesc date noi pentru setul de date. Și o cerere griddap care include\\[ultima\\]pentru dimensiunea temporală se va schimba atunci când sosesc date noi pentru setul de date. Orice modificare a valorii acestei etichete va avea efect data viitoareERDDAP™citestedatasets.xml, inclusiv ca răspuns la un set de date[pavilion](/docs/server-admin/additional-information#flag). ÎnainteERDDAP™v2.00, acest lucru a fost specificat în setup.xml, care este încă permis, dar descurajat.
+
+### &lt;CacheClearMinutes&gt;{#cacheclearminutes} 
+* [ ** &lt;CacheClearMinute &gt; ** ] (#cacheclear minutes) este o etichetă OPTONAL utilizată rar în&lt;erddapDatasets&gt; tag indatasets.xmlpentru a specifica frecvența pentru a verifica fișierele cache și a elimina cele vechi (în minute)   (implicit=15) . De exemplu,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Atunci când serverul termină de manipulare o cerere va verifica cât timp în urmă ultimul Cache clar a fost. Dacă a fost prea mult timp în urmă, acesta va coada o sarcină pe TaskThread pentru a șterge cache. Orice modificare a valorii acestei etichete va avea efect data viitoareERDDAP™citestedatasets.xml, inclusiv ca răspuns la un set de date[pavilion](/docs/server-admin/additional-information#flag). Acest lucru poate fi specificat în specificat în setup.xml, dar care este descurajat.
      
 ### &lt;convertireInterpolateRequestCSVexample&gt;{#convertinterpolaterequestcsvexample} 
 * [ ** &lt;convertireInterpolateRequestCSVexample&gt; ** ] (#convertininterpolate requestcsvexemplu) este o etichetă OPTIONALă în cadrul&lt;erddapDatasets&gt; tag indatasets.xml \\[începând cuERDDAP™v2.10\\]care conține un exemplu care va fi afișat pe pagina web a convertorului Interpolat. Valoarea implicită este: jplMURSST41/analized\\_sst/Biliniar/4.

@@ -249,8 +249,8 @@ Láthat egy példát[datasets.xmlGitHub](https://github.com/ERDDAP/erddap/blob/m
 ERDDAP™nem működik megfelelően, ha a setup.xml vagydatasets.xmlA fájl nem egy jól kialakított XML fájl. Tehát, miután szerkesztette ezeket a fájlokat, ez egy jó ötlet, hogy ellenőrizze, hogy az eredmény jól formált XML az XML szöveg beillesztése egy XML ellenőrző, mint például[xmlvalidáció](https://www.xmlvalidation.com/)...
      
 ### Telepítse az erddap.war fájlt{#install-the-erddapwar-file} 
-4. Linux, Mac és Windows, letöltés[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)_tomcat_/webapps .
-     (2.26, 607,404,032 bytes, MD5=99a725108b37708e5420986c16a119, 03-31-2025) 
+4. Linux, Mac és Windows, letöltés[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)_tomcat_/webapps .
+     (2.27.0, 620,554,403 bytees, MD5=3b2086c659eee4145ca2dff447bf4ef7, dátumozott 06-11-2025) 
     
 A .war fájl nagy, mert magas állásfoglalási partvonalat, határt és emelési adatokat tartalmaz a térképek létrehozásához.
     
@@ -262,6 +262,7 @@ A .war fájl nagy, mert magas állásfoglalási partvonalat, határt és emelés
     [2.23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddap.war)  (572,124,953 bytes, MD5=D843A043C506725EBD6F8EFDCCA8FD5F, 2023-03-03) 
     [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187 bytes, MD5=970fbee172e28b0b8a07756eecbc898e, 2024-06-07) 
     [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 byte, MD5=652AFC9D1421F00B5F789DA2C4732D4C, 2024-11-07) 
+    [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032 byte, MD5=99a725108b37708e5420986c16a119, 2025-03-31) 
     \\]
     
 #### ProxyPass{#proxypass} 

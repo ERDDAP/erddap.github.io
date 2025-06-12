@@ -249,8 +249,8 @@ Du kan se et eksempel[datasets.xmlpå GitHub](https://github.com/ERDDAP/erddap/b
 ERDDAP™virker ikke korrekt, hvis opsætningen.xml ellerdatasets.xmlfilen er ikke en veldannet XML-fil. Så efter du redigerer disse filer, er det en god ide at bekræfte, at resultatet er veldannet XML ved at indsætte XML-teksten i en XML-tjeker som[xmlvalidation](https://www.xmlvalidation.com/).
      
 ### Installer filen erddap.war{#install-the-erddapwar-file} 
-4. På Linux, Mac og Windows, download[Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)i _tomcat_/webapps.
-     (version 2.26, 607,404,032 bytes, MD5=99a725108b37708e5420986c16a119, af 03-31-2025) 
+4. På Linux, Mac og Windows, download[Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)i _tomcat_/webapps.
+     (version 2.27.0, 620,554,403 bytes, MD5=3b2086c659eee4145ca2dff447bf4ef7, dateret 06-11-2025) 
     
 .war-filen er stor, fordi den indeholder høj opløsning kystlinje, grænse og højdedata, der er nødvendige for at oprette kort.
     
@@ -262,6 +262,7 @@ ERDDAP™virker ikke korrekt, hvis opsætningen.xml ellerdatasets.xmlfilen er ik
     [2.23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddap.war)  (572,124,953 bytes, MD5=D843A043C506725EBD6F8EFDCCA8FD5F, af 2023-03-03-03) 
     [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187 bytes, MD5=970fbee172e28b0b8a07756eecbc898e, dateret 2024-06-07) 
     [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 bytes, MD5=652AFC9D1421F00B5F789DA2C4732D4C, af 2024-11-07) 
+    [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032 bytes, MD5=99a725108b37708e5420986c16a119, dateret 202187-31) 
     \\]
     
 #### ProxyPass{#proxypass} 

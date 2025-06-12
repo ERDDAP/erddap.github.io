@@ -4133,6 +4133,13 @@ Pokud chcete tyto informace poskytnoutdatasets.xml, začít kopírováním aktu�
     <cacheMinutes>60</cacheMinutes>  
 ```
 Obecně platí, že pouze obrazové soubory (Protože stejné obrázky jsou často žádány opakovaně) a.ncsoubory (protože musí být plně vytvořeny před odesláním uživateli) jsou utajené. I když by to mohlo vypadat, že daná žádost by měla vždy vrátit stejnou odpověď, to není pravda. Například:tabledapžádost, která zahrnuje čas&gt; *některé Čas* změní se, jakmile pro datový soubor dorazí nové údaje. A požadavek Griddap, který zahrnuje\\[poslední\\]pro časový rozměr se změní, jakmile pro datový soubor přijdou nová data. Jakékoli změny hodnoty této značky nabudou účinku příštěERDDAP™čtedatasets.xml, včetně odpovědi na soubor údajů[vlajka](/docs/server-admin/additional-information#flag). PředERDDAP™v2.00, to bylo uvedeno v nastavení.xml, který je stále povoleno, ale odrazen.
+
+### &lt;cachearMinutes&gt;{#cacheclearminutes} 
+* [ ** &lt;cacheClearMinutes&gt; ** ] (#cacheclearminutes) je vzácně používaná VOLITELNÁ tag v rámci&lt;erddapDatasets&gt; tag indatasets.xmlzadat frekvenci pro kontrolu cached souborů a odstranit staré (v minutách)   (výchozí=15) . např.
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Když server dokončí zpracování požadavku, bude kontrolovat, jak dlouho byla poslední cache čistá. Pokud to bylo příliš dávno, bude fronta na úkolThread vymazat cache. Jakékoli změny hodnoty této značky nabudou účinku příštěERDDAP™čtedatasets.xml, včetně odpovědi na soubor údajů[vlajka](/docs/server-admin/additional-information#flag). To může být specifikováno v setup.xml, ale to je odrazeno.
      
 ### &lt;ConvertI TálibánuRequestCSVexample&gt;{#convertinterpolaterequestcsvexample} 
 * [ ** &lt;ConvertI TálibánuRequestCSVexample&gt; ** ] (#Konverti Tipolaterequestcsvexample) je VOLITELNÁ tag v rámci&lt;erddapDatasets&gt; tag indatasets.xml \\[Začneme sERDDAP™v2.10\\]který obsahuje příklad, který bude uveden na webové stránce Interpolate převodníku. Výchozí hodnota je: jplMURSST41/analyzovaný\\_sst/Bilineární/4 .

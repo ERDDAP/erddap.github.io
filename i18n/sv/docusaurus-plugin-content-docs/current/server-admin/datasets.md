@@ -4133,6 +4133,13 @@ Om du vill lämna denna information idatasets.xmlBörja med att kopiera den aktu
     <cacheMinutes>60</cacheMinutes>  
 ```
 I allmänhet endast bildfiler (eftersom samma bilder ofta begärs upprepade gånger) och.ncfiler filer (eftersom de måste skapas fullt ut innan de skickas till användaren) är cachade. Även om det kan verka som en viss begäran bör alltid returnera samma svar, är det inte sant. Till exempel entabledapFörfrågan som inkluderar tid&gt; *vissa Tid* ändras när nya data kommer till datasetet. Och en griddap begäran som inkluderar\\[Sista sista\\]för tidsdimensionen kommer att ändras när nya data kommer till datamängden. Eventuella ändringar av denna tags värde kommer att träda i kraft nästa gångERDDAP™Läserdatasets.xml, inklusive som svar på en dataset[flagga](/docs/server-admin/additional-information#flag). FöreERDDAP™v2.00, detta anges i setup.xml, som fortfarande är tillåtet men avskräckt.
+
+### &lt;cacheClearMinutes & gt;{#cacheclearminutes} 
+* [Och [Gud] ** &lt;cacheClearMinutes &gt; ** ] (#cacheclearminutes) är en sällan OPTIONAL tag inom en&lt;ErddapDatasets&gt; tagga indatasets.xmlför att ange frekvensen för att kontrollera cachade filer och ta bort gamla (på några minuter)   (Standard=15) . t.ex.,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+När servern slutar hantera en förfrågan kommer den att kontrollera hur länge sedan den sista cache klar var. Om det var för länge sedan kommer det att köa en uppgift på TaskThread för att rensa cache. Eventuella ändringar av denna tags värde kommer att träda i kraft nästa gångERDDAP™Läserdatasets.xml, inklusive som svar på en dataset[flagga](/docs/server-admin/additional-information#flag). Detta kan anges i specificerad i setup.xml, men det är avskräckt.
      
 ### &lt;konverteraInterpolateRequestCSVExample&gt;{#convertinterpolaterequestcsvexample} 
 * [Och [Gud] ** &lt;konverteraInterpolateRequestCSVExample &gt; ** ] (#convertinterpolaterequestcsvexample) är en optisk tag inom en&lt;ErddapDatasets&gt; tagga indatasets.xml \\[Börja medERDDAP™v2.10\\]som innehåller ett exempel som visas på Interpolate-omvandlarens webbsida. Standardvärdet är: jplMURSST41/analyseradsst/Bilinear/4.

@@ -7,6 +7,39 @@ ERDDAP™Is sampla iontach de[Úsáideoir-Driven Innovation](https://en.wikipedi
 
 Seo iad na hathruithe a bhaineann le gachERDDAP™scaoileadh.
 
+## Leagan 2.27.0{#version-2270} 
+ (scaoileadh 2025-06-11) 
+
+*    **Gnéithe agus Athruithe Nua (d'úsáideoirí) :** 
+    * Sonraí nua chun tiontaire dathbharra ar fhreastalaithe ag / bairille / ciorcal / dath.html
+
+*    **Cad a bhí mícheart leis an láithreánERDDAP™Riarthóirí An riachtanas is gá a fhios agus a dhéanamh:** 
+    * Is Default behavoir go mbeidh an taisce a ghlanadh anois neamhspleách ar an ualach mór datasets tasc. Beidh sé seo ar chumas imréitigh níos iontaofa agus rialta de chomhaid taisce d'aois. Tá obair bhreise a fheabhsú behavoir freastalaí nuair íseal ar spás diosca (ag filleadh ar earráid le haghaidh iarrataí dócha a dhéanamh ar an bhfreastalaí reáchtáil amach as spás, agus imréitigh an taisce níos minice i gcúinsí diosca íseal chun iarracht a dhéanamh earráidí a chosc) . Idatasets.xml  (nó setup.xml) is féidir leat a chur / a leagtar an taisce nua ClearMinutes paraiméadar a rialú cé chomh minic na seiceálacha freastalaí a ghlanadh an taisce. Tabhair faoi deara, rialaíonn an paraiméadar atá ann cheana i dtaiscMinutes aois na gcomhad atá le coinneáil, an taisce nua Is ClearMinutes do cé chomh minic a dhéanamh chache soiléir.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Is féidir leat a dhíchumasú an taisce nua seiceálacha soiléir ag tascCacheClear a bréagach i thus.xml, cé nach bhfuil molta.
+taisce taisce taisce Is ClearMinutes freisin sa[datasets doiciméad](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * Tacaíocht meiteashonraí réamhshocraithe sonraí áitiúla. Tacaíonn sé le logánú do luachanna iaddAttributesAlt. Níl ort ach cuir tréith leis an xml breise: tag teanga. Mar shampla chun teideal na Fraince a chur le tacar sonraí doaddAttributesbheadh alt san áireamh:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Sonraí breise ar fáil sa[doiciméadú meiteashonraí áitiúla](/docs/server-admin/localized-metadata).
+
+    * Déan teagmháil anois Comhdhéanta comhad le roghanna do SSL agus barebones freastalaí Prometheus. Buíochas le Shane St. Savage don SSL agus Jiahui Hu don Prometheus.
+
+    * Tacaíocht le haghaidh úsáid a bhaint as faisnéis sna headers a chinneadh an URL freastalaí in ionad brath ar an gcomhad config. Tabharfaidh sé seo deis do fhreastalaí rochtain a fháil ar ainmneacha éagsúla agus féadfaidh sé cumraíochtaí áirithe a shimpliú. Cuir ar chumas é agus aiseolas a sheoladh.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Roinnt athruithe beaga, Ceartúcháin bug, agus leas iomlán a bhaint.
+
+*    **Le haghaidhERDDAP™Forbróirí:** 
+    * Fachtóir ar conas cineálacha comhaid aschur a shainmhínítear i gcód. Ba chóir é seo a dhéanamh ionas gur féidir cineálacha comhaid a chur leis gan gá a dteagmháil go leor áiteanna cód.
+
 ## Leagan 2.26{#version-226} 
  (scaoileadh 2025-03-31) 
 

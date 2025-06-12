@@ -4133,6 +4133,13 @@ Más mian leat an fhaisnéis seo a chur ar fáil idatasets.xml, tús a chur trí
     <cacheMinutes>60</cacheMinutes>  
 ```
 Go ginearálta, ach comhaid íomhá (toisc go bhfuil na híomhánna céanna a iarrtar go minic arís agus arís eile) agus.nccomhaid comhad (toisc nach mór iad a chruthú go hiomlán roimh sheoladh chuig an úsáideoir) atá i dtaisce. Cé go bhféadfadh sé cosúil le hiarratas ar leith ba chóir ar ais i gcónaí ar an freagra céanna, nach bhfuil fíor. Mar shampla, atabledapiarraidh lena n-áirítear am *roinnt roinnt Am agus am* a athrú nuair a thagann sonraí nua don tacar sonraí. Agus iarraidh griddap lena n-áirítear\\[deireanach\\]don ghné ama a athrú nuair a thagann sonraí nua don tacar sonraí. Beidh aon athruithe ar luach an chlib seo i bhfeidhm an chéad uair eileERDDAP™léamhadatasets.xml, lena n-áirítear mar fhreagra ar tacar sonraí[bratach bratach](/docs/server-admin/additional-information#flag). RoimhERDDAP™v2.00, bhí sé seo sonraithe i thus.xml, atá ceadaithe fós ach discouraged.
+
+### &lt;taisceClearMinutes &amp; gt;{#cacheclearminutes} 
+* [EN] ** &lt;riachtanais uisce: measartha ** ] (#cacheclearminutes) is annamh a úsáidtear chlib OPTIONAL laistigh&lt;cliceáil grianghraf a mhéadú tag idatasets.xmla shonrú ar an minicíocht a sheiceáil comhaid i dtaisce agus na cinn d'aois a bhaint (i nóiméad)   (réamhshocraithe = 15) . E.g.,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Nuair a chríochnaíonn an freastalaí láimhseáil iarratas beidh sé a sheiceáil cé chomh fada ó shin go raibh an taisce seo caite soiléir. Má bhí sé ró-fhada ó shin, beidh sé scuaine tasc ar an Tascríd a ghlanadh an taisce. Beidh aon athruithe ar luach an chlib seo i bhfeidhm an chéad uair eileERDDAP™léamhadatasets.xml, lena n-áirítear mar fhreagra ar tacar sonraí[bratach bratach](/docs/server-admin/additional-information#flag). Is féidir é seo a shonrú i sonraithe i thus.xml, ach go bhfuil discouraged.
      
 ### &lt;Athshóite InterpolateRequestCSVExample &amp; &amp; rsquo; s;{#convertinterpolaterequestcsvexample} 
 * [EN] ** &lt;Athshóite InterpolateRequestCSVExample × ** ] (Tuilleadh eolais) is tag OPTIONAL laistigh de&lt;cliceáil grianghraf a mhéadú tag idatasets.xml \\[ag tosú leERDDAP™v2.10\\]ina bhfuil sampla a bheidh le taispeáint ar leathanach gréasáin an tiontaire Interpolate. Is é an luach réamhshocraithe: jplMURSST41/anailísithesst/ Líneach / 4.

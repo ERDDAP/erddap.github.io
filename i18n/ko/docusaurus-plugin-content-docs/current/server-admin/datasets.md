@@ -4133,6 +4133,13 @@ WARNING : 값의 주어진 조합이 원격 데이터셋에서 사라지면 EDDT
     <cacheMinutes>60</cacheMinutes>  
 ```
 일반적으로 이미지 파일 만 (동일한 이미지가 종종 반복적으로 요구되기 때문에) 이름 *.nc파일 형식 (사용자가 전송하기 전에 완전히 생성되어야하기 때문에) 캐시입니다. 주어진 요청처럼 보일 수도 있지만 항상 동일한 응답을 반환해야합니다. 사실이 아닙니다. 예를 들어,tabledap시간 포함 요청&gt; *이름 * (주)* 새 데이터가 dataset에 도착하면 변경됩니다. 그리고 포함되는 griddap 요청\\[이름 *\\]새 데이터가 dataset에 도착하면 시간 치수가 변경됩니다. 이 태그의 값에 대한 변경은 다음 번 효력을 발생합니다.ERDDAP™지원하다datasets.xmldataset에 응답을 포함하여[기본 정보](/docs/server-admin/additional-information#flag)· 이전 다음ERDDAP™v2.00, 이것은 여전히 허용되지만 discouraged 인 setup.xml에 지정되었습니다.
+
+### &lt;캐시ClearMinutes&gt;{#cacheclearminutes} 
+* [기타] ** &lt;캐시ClearMinutes&gt; ** · (#cacheclear분) 거의 사용되는 OPTIONAL 태그&lt;erddap데이터셋&gt; 태그 :datasets.xml캐시된 파일을 확인하고 오래된 것을 제거하는 빈도를 지정하기 위해 (몇 분)   (기본값=15) · ₢ 킹
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+서버가 요청을 처리 할 때 그것은 얼마나 오래 전에 마지막 캐시가 명확했는지 확인하십시오. 너무 오래 전이었다면 TaskThread에서 작업을 수행 할 수 있습니다. 이 태그의 값에 대한 변경은 다음 번 효력을 발생합니다.ERDDAP™지원하다datasets.xmldataset에 응답을 포함하여[기본 정보](/docs/server-admin/additional-information#flag)· 이것은 setup.xml에서 지정할 수 있지만, discouraged입니다.
      
 ### &lt;변환InterpolateRequestCSVExample&gt;{#convertinterpolaterequestcsvexample} 
 * [기타] ** &lt;변환InterpolateRequestCSVExample&gt; ** · (#convertinterpolaterequestcsvexample에 대한 의견) OPTIONAL 태그는&lt;erddap데이터셋&gt; 태그 :datasets.xml \\[시작하기ERDDAP™v2.10의\\]Interpolate Converter의 웹 페이지에 표시될 예가 들어 있습니다. 기본 값은: jplMURSST41/analysed\\_에 대해sst/비행기/4 .

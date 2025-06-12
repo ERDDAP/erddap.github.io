@@ -4133,6 +4133,13 @@ Se você quiser fornecer essas informações emdatasets.xml, começar por copiar
     <cacheMinutes>60</cacheMinutes>  
 ```
 Em geral, apenas arquivos de imagem (porque as mesmas imagens são frequentemente solicitadas repetidamente) e.ncarquivos (porque eles devem ser totalmente criados antes de enviar para o usuário) estão em cache. Embora possa parecer que um pedido deve sempre retornar a mesma resposta, isso não é verdade. Por exemplo, umtabledappedido que inclui tempo&gt; *alguns Tempo* irá mudar quando novos dados chegam para o conjunto de dados. E um pedido de griddap que inclui\\[último\\]para a dimensão do tempo vai mudar quando novos dados chegam para o conjunto de dados. Quaisquer alterações no valor desta tag entrarão em vigor na próxima vezERDDAP™leiturasdatasets.xml, incluindo em resposta a um conjunto de dados[bandeira](/docs/server-admin/additional-information#flag). AntesERDDAP™v2.00, isso foi especificado no setup.xml, que ainda é permitido mas desencorajado.
+
+### &lt;cacheClearMinutes &gt;{#cacheclearminutes} 
+* Não. ** &lt;cacheClearMinuts&gt; ** ] (#cacheclearminutes) é uma tag OPTIONAL raramente usada dentro de uma&lt;erddapDatasets&gt; Identificaçãodatasets.xmlpara especificar a frequência para verificar arquivos em cache e remover antigos (em minutos)   (default=15) . Por exemplo,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Quando o servidor terminar de manusear uma solicitação, verificará há quanto tempo o último cache limpo foi. Se foi há muito tempo, ele vai filar uma tarefa no TaskThread para limpar o cache. Quaisquer alterações no valor desta tag entrarão em vigor na próxima vezERDDAP™leiturasdatasets.xml, incluindo em resposta a um conjunto de dados[bandeira](/docs/server-admin/additional-information#flag). Isso pode ser especificado em setup.xml, mas isso é desencorajado.
      
 ### &lt;converterInterpolateRequestCSVExample &gt;{#convertinterpolaterequestcsvexample} 
 * Não. ** &lt;converterInterpolateRequestCSVExample&gt; ** ] (#convertinterpolaterequestcsvexample) é uma tag OPTIONAL dentro de uma&lt;erddapDatasets&gt; Identificaçãodatasets.xml \\[começar comERDDAP™v2.10\\]que contém um exemplo que será mostrado na página do conversor de interpolar. O valor padrão é: jplMURSST41/analysed\\_sst/Bilinear/4 .

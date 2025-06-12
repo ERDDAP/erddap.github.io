@@ -4133,6 +4133,13 @@ Se si desidera fornire queste informazioni indatasets.xml, avviare copiando l'el
     <cacheMinutes>60</cacheMinutes>  
 ```
 In generale, solo i file di immagine (perché le stesse immagini sono spesso richieste ripetutamente) e.ncfile (perché devono essere completamente creati prima di inviare all'utente) sono in cache. Anche se potrebbe sembrare come una data richiesta dovrebbe sempre restituire la stessa risposta, che non è vero. Per esempio, untabledaprichiesta che include il tempo *alcuni Tempo* cambierà quando arriveranno nuovi dati per il dataset. E una richiesta di grigliata che include\\[Ultimo\\]per la dimensione del tempo cambierà quando nuovi dati arrivano per il dataset. Eventuali modifiche al valore di questo tag avranno effetto la prossima voltaERDDAP™leggidatasets.xml, anche in risposta a un set di dati[bandiera](/docs/server-admin/additional-information#flag). PrimaERDDAP™v2.00, questo è stato specificato in setup.xml, che è ancora permesso ma scoraggiato.
+
+### &lt;cacheClearMinutes&gt;{#cacheclearminutes} 
+* [ ** &lt;cacheClearMinuts&gt; ** ] (#cacheclearminutes) è un tag OPTIONAL raramente usato all'interno di un&lt;erddapDatasets&gt; tag indatasets.xmlper specificare la frequenza per controllare i file memorizzati nella cache e rimuovere quelli vecchi (in minuti)   (predefinito = 15) . Ad esempio,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Quando il server termina la gestione di una richiesta controllerà quanto tempo fa l'ultima cache era chiara. Se è stato troppo tempo fa, in coda un'attività sul TaskThread per cancellare la cache. Eventuali modifiche al valore di questo tag avranno effetto la prossima voltaERDDAP™leggidatasets.xml, anche in risposta a un set di dati[bandiera](/docs/server-admin/additional-information#flag). Questo può essere specificato in setup.xml, ma che è scoraggiato.
      
 ### &lt;convertInterpolateRequestCSVExample&gt;{#convertinterpolaterequestcsvexample} 
 * [ ** &lt;ConvertireInterpolateRequestCSVExample&gt; ** ] (#convertinterpolarequestcsvexample) è un tag OPTIONAL all'interno di un&lt;erddapDatasets&gt; tag indatasets.xml \\[a partire daERDDAP™V2.10\\]che contiene un esempio che verrà mostrato nella pagina web del convertitore Interpolato. Il valore predefinito è: jplMURSST41/analyed\\_sst/Bilinear/4 .

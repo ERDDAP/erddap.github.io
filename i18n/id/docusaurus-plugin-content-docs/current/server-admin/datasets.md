@@ -4133,6 +4133,13 @@ Jika Anda ingin memberikan informasi inidatasets.xmlMulai dengan menyalin daftar
     <cacheMinutes>60</cacheMinutes>  
 ```
 Secara umum, hanya file gambar (karena gambar yang sama sering diminta berulang) Login.ncLogin (karena mereka harus sepenuhnya diciptakan sebelum mengirim ke pengguna) Sitemap Meskipun mungkin tampak seperti permintaan yang diberikan harus selalu mengembalikan respon yang sama, itu tidak benar. Misalnya, contohtabledappermintaan yang mencakup waktu&gt; *Sitemap Sitemap* akan berubah ketika data baru tiba untuk dataset. Dan permintaan griddap yang mencakup\\[Sitemap\\]untuk dimensi waktu akan berubah ketika data baru tiba untuk dataset. Setiap perubahan nilai tag ini akan berpengaruh pada waktu berikutnyaERDDAP™Logindatasets.xmltermasuk dalam menanggapi dataset[Login](/docs/server-admin/additional-information#flag)Sitemap SitemapERDDAP™v2.00, ini ditentukan dalam setup.xml, yang masih diperbolehkan tetapi tidak teratur.
+
+### &lt;cacheClearMinutes&gt;{#cacheclearminutes} 
+* Sitemap ** &lt;Login ** Sitemap (Login) adalah tag OPTIONAL yang jarang digunakan dalam&lt;Login Logindatasets.xmluntuk menentukan frekuensi untuk memeriksa file cache dan menghapus yang lama (dalam beberapa menit)   (default=15) Sitemap Login
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Ketika server selesai menangani permintaan itu akan memeriksa berapa lama yang lalu cache terakhir jelas. Jika terlalu lama, itu akan memanjang tugas di TaskThread untuk membersihkan cache. Setiap perubahan nilai tag ini akan berpengaruh pada waktu berikutnyaERDDAP™Logindatasets.xmltermasuk dalam menanggapi dataset[Login](/docs/server-admin/additional-information#flag)Sitemap Ini dapat ditentukan dalam setup.xml, tetapi itu tidak teratur.
      
 ### &lt;convertInterpolateRequestCSVExample&gt;{#convertinterpolaterequestcsvexample} 
 * Sitemap ** &lt;Login ** Sitemap (#convertinterpolaterequestcsvexample) adalah tag OPTIONAL dalam sebuah&lt;Login Logindatasets.xml \\[SitemapERDDAP™di.10\\]yang berisi contoh yang akan ditampilkan di halaman web Interpolate converter. Nilai default adalah: jplMURSSFacebook Twitter Google Plus Pinterest Emailsst/Bilinear/4 .

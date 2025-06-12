@@ -11,8 +11,8 @@ Hogyan készítsünk egy meglévő frissítéstERDDAP™A szervered
 2. Ha frissülszERDDAP™2.18 vagy alul, át kell váltaniJava21. (vagy újabb) a kapcsolódó Tomcat 10. Lásd a rendszertERDDAP™telepítési utasítások[Java](/docs/server-admin/deploy-install#java)és[Tomcat](/docs/server-admin/deploy-install#tomcat)... Meg kell másolnia is_tomcat_/content/erddapkönyvtár a régi Tomcat telepítés az új Tomcat telepítés.
 
 ## Letöltés{#download} 
-3. Letöltés[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)_tomcat_/webapps .
-     (2.26, 607,404,032 bytes, MD5=99a725108b37708e5420986c16a119, 03-31-2025) 
+3. Letöltés[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)_tomcat_/webapps .
+     (2.27.0, 620,554,403 bytees, MD5=3b2086c659eee4145ca2dff447bf4ef7, dátumozott 06-11-2025) 
      
 ## üzenetek.xml{#messagesxml} 
 4. 

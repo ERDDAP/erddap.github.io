@@ -7,6 +7,39 @@ ERDDAP™est un excellent exemple de[Innovation axée sur l'utilisateur](https:/
 
 Voici les changements associés à chaqueERDDAP™libérer.
 
+## Version 2.27.0{#version-2270} 
+ (publié le 2025-06-11) 
+
+*    **Nouvelles caractéristiques et changements (pour les utilisateurs) :** 
+    * Nouvelles données au convertisseur colorbar sur les serveurs à /erddap/convert/color.html
+
+*    **Les chosesERDDAP™Les administrateurs doivent savoir et faire :** 
+    * Par défaut behavoir est que le cache sera maintenant effacé indépendamment de la tâche des ensembles de données de charge. Cela permettra une compensation plus fiable et régulière des anciens fichiers cache. Il y a du travail supplémentaire pour améliorer le comportement du serveur lorsque faible sur l'espace disque (retour d'une erreur pour les requêtes susceptibles de faire manquer le serveur de l'espace, et nettoyage du cache plus fréquemment dans des circonstances de disque faible pour tenter d'éviter les erreurs) . Endatasets.xml  (ou setup.xml) vous pouvez ajouter/configurer le nouveau cache Paramètre ClearMinutes pour contrôler la fréquence des vérifications du serveur pour effacer le cache. Note, le paramètre cacheMinutes existant contrôle l'âge des fichiers à conserver, le nouveau cache ClearMinutes est pour la fréquence à faire un clair de cache.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Vous pouvez désactiver les nouvelles vérifications claires du cache en définissant taskCacheClear à false dans setup.xml, mais ce n'est pas recommandé.
+cache ClearMinutes est également dans le[documentation des ensembles de données](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * Gestion des métadonnées des ensembles de données localisés. Il soutient la localisation des valeurs dans unaddAttributesChapitre. Ajoutez simplement un attribut avec la balise xml:lang supplémentaire. Par exemple pour ajouter un titre français à un jeu de donnéesaddAttributesla section comprendrait:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Des détails supplémentaires sont disponibles dans le[documentation de métadonnées localisées](/docs/server-admin/localized-metadata).
+
+    * Nouveau Docker Composez un fichier avec des options pour SSL et un serveur Prométhée. Merci à Shane St. Savage pour le SSL et Jiahui Hu pour le Prométhée.
+
+    * Prise en charge de l'utilisation des informations dans les en-têtes pour déterminer l'URL du serveur au lieu de se fier au fichier de configuration. Cela permettra d'accéder à un serveur par plusieurs noms et peut simplifier certaines configurations. Veuillez l'activer et envoyer vos commentaires.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Quelques petits changements, corrections de bugs et optimisations.
+
+*    **PourERDDAP™Développeurs :** 
+    * Refacteur de la façon dont les types de fichiers de sortie sont définis dans le code. Cela devrait le faire afin que les types de fichiers puissent être ajoutés sans avoir à toucher de nombreux endroits de code.
+
 ## Version 2.26{#version-226} 
  (publié en 2025-03-31) 
 

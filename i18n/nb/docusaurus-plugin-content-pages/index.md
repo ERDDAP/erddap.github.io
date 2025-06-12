@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## SisteERDDAP™versjon{#latest-erddap-version} 
 
-2.26 Se[endre dokumentasjon](/changes#version-226)og[Last ned den](https://github.com/ERDDAP/erddap/releases/tag/v2.26.0)..
+2.27.0, se[endre dokumentasjon](/changes#version-2270)og[Last ned den](https://github.com/ERDDAP/erddap/releases/tag/v2.27.0)..
 
 ## ERDDAP™Informasjon{#erddap-information} 
 

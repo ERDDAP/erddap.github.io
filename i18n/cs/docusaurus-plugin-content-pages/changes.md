@@ -7,6 +7,39 @@ ERDDAP™je skvělý příklad[Uživatelská inovace](https://en.wikipedia.org/w
 
 Zde jsou změny spojené s každýmERDDAP™Uvolnit.
 
+## Verze 2.27.0{#version-2270} 
+ (propuštěno 2025-06-11) 
+
+*    **Nové funkce a změny (pro uživatele) :** 
+    * Nová data do převodníku barev na serverech na /erddap/convert/color.html
+
+*    **VěciERDDAP™Administrátoři potřebují vědět a udělat:** 
+    * Výchozím behavoirem je, že cache bude nyní vymazána nezávisle na úkolu hlavního souboru souborů zatížení. To umožní spolehlivější a pravidelné čištění starých cache souborů. Je zde další práce na vylepšení serveru behavoir, když je málo na diskovém prostoru (vrácení chyby pro žádosti, které mohou způsobit, že server vyprší z místa, a vyčištění cache častěji za nízkých okolností disku, aby se pokusil zabránit chybám) . Indatasets.xml  (nebo nastavení.xml) můžete přidat/nastavit novou cache Parametr ClearMinutes pro kontrolu toho, jak často server kontroluje pro odstranění cache. Poznámka: stávající parametr cacheMinutes řídí věk souborů, které mají být uchovávány, novou cache ClearMinutes je pro to, jak často dělat Chache jasné.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Můžete zakázat nové cache jasné kontroly nastavením úkoluCacheClear na false v setup.xml, i když to se nedoporučuje.
+cache ClearMinutes je také v[Dokumentace datových souborů](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * Podpora lokalizovaných dat. Podporuje lokalizaci hodnot vaddAttributessekce. Jednoduše přidejte atribut s dalším xml:lang tag. Například přidat francouzský titul do souboru vašeaddAttributesoddíl zahrnuje:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Další podrobnosti jsou k dispozici v[lokalizovaná dokumentace metadat](/docs/server-admin/localized-metadata).
+
+    * New Docker Složte soubor s možnostmi pro SSL a server pro barebony Prometheus. Díky Shane St. Savage za SSL a Jiahui Hu za Prometheus.
+
+    * Podpora používání informací v hlavičkách k určení URL serveru namísto spoléhání na konfigurační soubor. To umožní přístup k serveru více jmény a může zjednodušit některé konfigurace. Prosím, povolte to a pošlete zpětnou vazbu.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Některé malé změny, opravy chyb a optimalizace.
+
+*    **ProERDDAP™Vývojáři:** 
+    * Refaktor k tomu, jak jsou typy výstupních souborů definovány v kódu. To by mělo učinit tak, aby typy souborů mohou být přidány, aniž by bylo nutné se dotknout mnoha kódových míst.
+
 ## Verze 2.26{#version-226} 
  (propuštěno 2025-03-31) 
 

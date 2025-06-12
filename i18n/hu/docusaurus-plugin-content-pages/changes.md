@@ -7,6 +7,39 @@ ERDDAP™nagyszerű példa erre[Felhasználó-vezérelt innováció](https://en.
 
 Íme a változások, amelyek mindegyikhez kapcsolódnakERDDAP™kiadás.
 
+## Verzió 2.27.0{#version-2270} 
+ (2025-06-11) 
+
+*    **Új funkciók és változások (felhasználók számára) :** 
+    * Új adatok a színesbar konverterhez a szervereken /erddap / Convert / Color.html
+
+*    **A dolgokERDDAP™Az adminisztrátoroknak tudniuk kell és meg kell tenniük:** 
+    * Az alapértelmezett magatartás az, hogy a gyorsítótárat most a nagy terhelési adatkészletek feladatától függetlenül tisztázzák. Ez lehetővé teszi a régi cache fájlok megbízhatóbb és rendszeresebb tisztítását. További munka van a szerver viselkedésének javítására, amikor alacsony a lemezterületen (hiba visszatérése a kérésekhez valószínű, hogy a kiszolgáló kifut az űrből, és gyakrabban az alacsony lemezes körülmények között, hogy megpróbálja megakadályozni a hibákat) ... Inkábbdatasets.xml  (vagy setup.xml) hozzáadhatja / állíthatja az új gyorsítótárat A ClearMinutes paramétere annak ellenőrzésére, hogy a szerver milyen gyakran ellenőrzi a gyorsítót. Vegye figyelembe, hogy a meglévő cacheMinutes paraméter irányítja a fájlok korát, az új cache A ClearMinutes az, hogy milyen gyakran kell egy láncot tisztázni.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Letilthatja az új cache egyértelmű ellenőrzéseket a feladat CacheClear hamis beállításával.xml, bár ez nem ajánlott.
+Húsvét A ClearMinutes szintén a[adatkészlet dokumentáció](/docs/server-admin/datasets#cacheclearminutes)...
+    
+    * Helyi adatkészlet metaadat támogatás. Támogatja az értékek lokalizációját egybenaddAttributesrész. Egyszerűen adjon hozzá egy tulajdonságot a további xml:lang címkével. Például egy francia cím hozzáadása egy adatkészlethezaddAttributesA rész tartalmazza:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+További részletek elérhetők a[lokalizált metaadat dokumentáció](/docs/server-admin/localized-metadata)...
+
+    * Új Docker Kompozz fájlt az SSL és egy barebones Prometheus szerver opcióival. Shane St. Savagenak köszönhetően az SSL és Jiahui Hu a Prometheus számára.
+
+    * Támogatja az információk használatát a fejlécekben, hogy meghatározza a szerver URL-t, ahelyett, hogy a konfig fájlra támaszkodna. Ez lehetővé teszi, hogy egy kiszolgáló több néven elérhető legyen, és egyszerűsítse bizonyos konfigurációkat. Kérjük, engedélyezze és küldjön visszajelzést.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Néhány kis változás, hibajavítás és optimalizálás.
+
+*    **MertERDDAP™Fejlesztők:** 
+    * Refaktor, hogy a kimeneti fájltípusokat hogyan definiálják a kódban. Ehhez olyan fájltípusokat kell hozzáadni anélkül, hogy sok kódhelyet érintene.
+
 ## Verzió 2.26{#version-226} 
  (2025-03-31) 
 

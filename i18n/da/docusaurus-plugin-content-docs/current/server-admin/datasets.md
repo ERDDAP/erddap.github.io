@@ -4133,6 +4133,13 @@ Hvis du ønsker at give disse oplysninger idatasets.xml, begynde at kopiere den 
     <cacheMinutes>60</cacheMinutes>  
 ```
 Generelt, kun billedfiler (fordi de samme billeder ofte anmodes gentagne gange) og og og.ncfiler filer filer (fordi de skal være fuldt oprettet, før de sender til brugeren) er cached. Selvom det kan synes som en given anmodning bør altid returnere den samme svar, det er ikke sandt. For eksempel ettabledapanmodning, der indeholder tid&gt; *nogle af nogle Tidstid* vil ændre, når nye data ankommer til datasættet. Og en gitteretap anmodning, der omfatter\\[sidst\\]for tidsdimensionen vil ændre, når nye data ankommer til datasættet. Eventuelle ændringer i dette tags værdi vil tage virkning næste gangERDDAP™Læserdatasets.xml, herunder svar på et datasæt[flag flag flag flag](/docs/server-admin/additional-information#flag). Før før førERDDAP™v2.00, dette blev angivet i setup.xml, som stadig er tilladt, men discouraged.
+
+### &lt;cacheClearMinutes&gt;{#cacheclearminutes} 
+* [ [] ** &lt;cacheClearMinutes&gt; ** Særkegle (#cacheclear minutter) er en sjældent brugt OPTIONAL tag inden for en&lt;ErddapDatasets&gt; tag i tagdatasets.xmlfor at angive hyppigheden for at kontrollere cached-filer og fjerne gamle dem (på få minutter)   (Standard=15) . E.g.,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Når serveren afslutter håndteringen af en anmodning, vil den kontrollere, hvor længe siden den sidste cache var klar. Hvis det var for længe siden, vil det køere en opgave på OpgaveThread for at rydde cachen. Eventuelle ændringer i dette tags værdi vil tage virkning næste gangERDDAP™Læserdatasets.xml, herunder svar på et datasæt[flag flag flag flag](/docs/server-admin/additional-information#flag). Dette kan angives i angivet i opsætning.xml, men det er diskotek.
      
 ### &lt;konvertereInterpolateRequestCSVExample&gt;{#convertinterpolaterequestcsvexample} 
 * [ [] ** &lt;konvertereInterpolateRequestCSVExample&gt; ** Særkegle (#convertinterpolaterequestcsvexample) er en OPTIONAL tag inden for et&lt;ErddapDatasets&gt; tag i tagdatasets.xml \\[begyndende medERDDAP™v2.10\\]som indeholder et eksempel, der vil blive vist på Interpolate konverterens webside. Standardværdien er: jplMURSST41/analyseret \\_sst/Bilinear/4 .

@@ -7,6 +7,39 @@ ERDDAP™è un grande esempio di[Innovazione guidata dall'utente](https://en.wik
 
 Ecco i cambiamenti associati a ciascunoERDDAP™rilascio.
 
+## Versione 2.27.0{#version-2270} 
+ (rilasciato 2025-06-11) 
+
+*    **Nuove funzionalità e modifiche (per gli utenti) :** 
+    * Nuovi dati al convertitore colorbar su server a /erddap/convert/color.html
+
+*    **CoseERDDAP™Gli amministratori devono sapere e fare:** 
+    * Il comando predefinito è che la cache sarà ora eliminata indipendentemente dall'attività dei principali dataset di carico. Questo permetterà una compensazione più affidabile e regolare dei vecchi file di cache. C'è un ulteriore lavoro per migliorare il comando del server quando basso su spazio su disco (restituire un errore per richieste che potrebbero far funzionare il server fuori dallo spazio, e cancellare la cache più frequentemente in circostanze di disco basso per tentare di prevenire errori) . Indatasets.xml  (o setup.xml) è possibile aggiungere/impostare la nuova cache Parametro ClearMinutes per controllare quanto spesso il server controlli per cancellare la cache. Nota, il parametro cacheMinutes esistente controlla l'età dei file da tenere, la nuova cache ClearMinutes è per quanto spesso fare un chache chiaro.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+È possibile disabilitare i nuovi controlli trasparenti cache impostando taskCacheClear a false in setup.xml, anche se questo non è raccomandato.
+cache ClearMinutes è anche nel[documentazione dei datasets](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * Supporto di metadati per dataset localizzato. Supporta la localizzazione dei valori in unaddAttributessezione. Basta aggiungere un attributo con il tag xml aggiuntivo:lang. Ad esempio, aggiungere un titolo francese a un datasetaddAttributesla sezione comprenderebbe:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Ulteriori dettagli disponibili in[documentazione dei metadati localizzata](/docs/server-admin/localized-metadata).
+
+    * Nuovo Docker Componi file con opzioni per SSL e un server di Prometheus a spina. Grazie a Shane St. Savage per il SSL e Jiahui Hu per il Prometheus.
+
+    * Supporto per l'utilizzo di informazioni nelle intestazioni per determinare l'URL del server invece di fare affidamento sul file di configurazione. Ciò consentirà di accedere a un server da più nomi e di semplificare determinate configurazioni. Si prega di abilitarlo e inviare feedback.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Alcune piccole modifiche, correzioni di bug e ottimizzazioni.
+
+*    **PerERDDAP™Sviluppatori:** 
+    * Refactor su come i tipi di file di output sono definiti in codice. Questo dovrebbe farlo in modo che i tipi di file possono essere aggiunti senza dover toccare molti luoghi di codice.
+
 ## Versione 2.26{#version-226} 
  (rilasciato 2025-03-31) 
 

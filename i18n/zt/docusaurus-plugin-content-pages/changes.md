@@ -7,6 +7,39 @@ ERDDAP™是個很好的例子[使用者](https://en.wikipedia.org/wiki/User_inn
 
 以下是與每項變更相關的變更ERDDAP™釋放
 
+## 2.2.7.0版本{#version-2270} 
+ (2025-06-11年) 
+
+*    **新特性和變更 (使用者) :** 
+    * 在 /erddap/convert/color.html 的伺服器上新增數據到色彩列轉換器
+
+*    **事情ERDDAP™管理者需要知道和做:** 
+    * 預設比喻是, 缓存將被清除 。 這樣可以更可靠和定期地清理舊的缓存檔案 。 磁碟空間低時還有更多改善伺服器空間的工作 (傳回可能讓伺服器耗盡空間的要求的錯誤, 並在低磁碟環境下更常地清理快取以試圖防止錯誤) . 在datasets.xml  (或設定.xml) 您可以新增/ 設定新快取 清除Minutes 參數以控制伺服器檢查清除快取的频率 。 注意, 现有的缓存Minutes 參數控制要保存的檔案的年齡, 新的缓存 清除Minutes是多 频繁做一個 cache 清除。
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+您可以在設定. xml 中設定任务CacheClear 以錯誤的方式關閉新的缓存清查, 雖然這不是建議的 。
+快取 清除Minutes也在其中[數據集文件](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * 本地化的數據集元数据支援 。 它支持數值的本地化addAttributes章次 只需用附加的 xml: lang 標籤加入一個屬性 。 例如在您的數據集中加入一個法語標題addAttributes包括:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+附件[本地化元数据文件](/docs/server-admin/localized-metadata).
+
+    * 新建嵌入器 以 SSL 和空骨 Prometheus 伺服器的選項來編譯檔案 。 謝恩·圣薩維奇為SSL和胡家辉為普羅米修斯
+
+    * 支持在信頭中使用資訊來決定伺服器網址, 而不是依靠設定檔 。 這會讓伺服器被多個名稱存取, 並可能简化某些設定 。 請啟用並發送回復 。
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * 一些小變更, 錯誤修正, 以及优化 。
+
+*    **為ERDDAP™發展者 :** 
+    * 重設輸出檔案類型的代碼 。 這應該可以讓檔案型態被加入而不需要觸碰很多碼位 。
+
 ## 2.26版本{#version-226} 
  (2025-03-31年) 
 

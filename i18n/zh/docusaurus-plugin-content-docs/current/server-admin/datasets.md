@@ -4133,6 +4133,13 @@ CF DSG公约定义了数十种文件格式,并包括许多细微的变体. 这�
     <cacheMinutes>60</cacheMinutes>  
 ```
 一般来说,只有图像文件 (因为同样的图像经常被反复要求) 和.nc文件 (因为它们必须在发送给用户之前全部创建) 被缓存。 虽然某个请求似乎应该总是回回同样的回复,但事实并非如此。 例如,atabledap包含时间的请求 &gt; *有点 时间* 当新的数据到达数据集时,将会改变。 和一个网格dap请求,包括\\[最后一个\\]当新的数据到达数据集时,时间维度将会发生变化。 此标签值的任何更改将在下次生效ERDDAP™读取datasets.xml,包括针对数据集[旗帜](/docs/server-admin/additional-information#flag)。 。 。 。 在此之前ERDDAP™v2.00,此选项在设置. xml 中指定,仍然允许但劝阻.
+
+### &lt;缓存 ClearMinutes & gt;{#cacheclearminutes} 
+* [ ** &lt;缓存清除 &gt; ** [ . ] (&#123;\fn方正粗倩简体\fs12\\an8\\1cHFFFF00\b0&#125;时间清澈) 是一个很少使用的 OPTIONAL 标签&lt;erddapDatasets &gt; (英语). 标记datasets.xml指定检查缓存文件并删除旧文件的频率 (分钟后)   (默认=15) 。 。 。 。 例如,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+当服务器完成处理一个请求时, 它会检查上次缓存清除的时间有多早 。 如果时间太早,它将在 TaskThread 上排队清除缓存的任务 。 此标签值的任何更改将在下次生效ERDDAP™读取datasets.xml,包括针对数据集[旗帜](/docs/server-admin/additional-information#flag)。 。 。 这可以在setup.xml中指定,但劝阻.
      
 ### &lt;转换 Polticate RequestCvexample & gt;{#convertinterpolaterequestcsvexample} 
 * [ ** &lt;转换为刑警组织请求Cvexample &gt; ** [ . ] (#转换内插请求cxample) 是一个可选标记&lt;erddapDatasets &gt; (英语). 标记datasets.xml \\[开始ERDDAP™页:1\\]它包含一个实例,将在Interpoate转换器的网页上显示。 默认值为: jplMURSST41/分析sst/比线性/4.

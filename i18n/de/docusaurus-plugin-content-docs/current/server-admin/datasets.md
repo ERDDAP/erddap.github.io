@@ -4133,6 +4133,13 @@ Wenn Sie diese Informationen indatasets.xml, durch Kopieren der aktuellen Standa
     <cacheMinutes>60</cacheMinutes>  
 ```
 Im Allgemeinen nur Bilddateien (weil die gleichen Bilder oft wiederholt angefordert werden) und.ncDateien (weil sie vor dem Senden an den Benutzer vollständig erstellt werden müssen) werden geätzt. Obwohl es scheint, als sollte eine bestimmte Anfrage immer die gleiche Antwort zurückgeben, das ist nicht wahr. Zum Beispiel atabledapAnfrage, die Zeit umfasst *einige Zeit* ändert sich, wenn neue Daten für den Datensatz ankommen. Und eine Gridap-Anforderung, die beinhaltet\\[Letzter Beitrag\\]für die Zeitdimension wird sich ändern, wenn neue Daten für den Datensatz ankommen. Änderungen des Wertes dieses Tags werden das nächste Mal wirksamERDDAP™liestdatasets.xml, einschließlich in Reaktion auf einen Datensatz[Flagge](/docs/server-admin/additional-information#flag). VorERDDAP™v2.00, dies wurde in setup.xml angegeben, was noch erlaubt ist, aber entmutigt.
+
+### &lt;ccheClearMinutes&gt;{#cacheclearminutes} 
+* ( ** &lt;cacheClearMinutes&gt; ** &#33; (#cacheclearminutes) ist ein selten benutztes OPTIONAL-Tag innerhalb eines&lt;erdddapDatasets&gt; in den Warenkorbdatasets.xmldie Häufigkeit anzugeben, um die geätzten Dateien zu überprüfen und alte zu entfernen (in Minuten)   (Standardeinstellungen) . Z.B.,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Wenn der Server die Bearbeitung einer Anfrage beendet, wird es überprüfen, wie lange der letzte Cache klar war. Wenn es zu lange her war, wird es eine Aufgabe auf dem TaskThread löschen, um den Cache. Änderungen des Wertes dieses Tags werden das nächste Mal wirksamERDDAP™liestdatasets.xml, einschließlich in Reaktion auf einen Datensatz[Flagge](/docs/server-admin/additional-information#flag). Dies kann in setup.xml angegeben werden, aber das ist entmutigt.
      
 ### &lt;konvertieren InterpolateRequestCSVExample&gt;{#convertinterpolaterequestcsvexample} 
 * ( ** &lt;konvertierenInterpolateRequestCSVExamping&gt; ** &#33; (#convertinterpolaterequestcsvexample) ist ein OPTIONAL-Tag innerhalb eines&lt;erdddapDatasets&gt; in den Warenkorbdatasets.xml \\[beginnend mitERDDAP™V2.10\\]die ein Beispiel enthält, das auf der Webseite des Interpolate-Konverters angezeigt wird. Der Standardwert ist: jplMURSST41/analysiertsst/Bilinear/4 .

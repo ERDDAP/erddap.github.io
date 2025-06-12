@@ -4133,6 +4133,13 @@ Si vous voulez fournir ces informations dansdatasets.xml, commencez par copier l
     <cacheMinutes>60</cacheMinutes>  
 ```
 En général, seuls les fichiers image (parce que les mêmes images sont souvent demandées à plusieurs reprises) et.ncfichiers (parce qu'ils doivent être entièrement créés avant d'envoyer à l'utilisateur) sont mis en cache. Bien que cela puisse sembler comme une demande donnée devrait toujours renvoyer la même réponse, ce n'est pas vrai. Par exemple,tabledapdemande qui inclut le temps&gt; *certains Heure* changera quand de nouvelles données arriveront pour l'ensemble de données. Et une demande de griddap qui comprend\\[dernier\\]pour la dimension temporelle changera quand de nouvelles données arriveront pour l'ensemble de données. Toute modification de la valeur de cette balise prendra effet la prochaine foisERDDAP™litdatasets.xml, y compris en réponse à un ensemble de données[drapeau](/docs/server-admin/additional-information#flag). AvantERDDAP™v2.00, cela a été spécifié dans setup.xml, qui est encore autorisé mais découragé.
+
+### &lt;cacheClearMinutes&gt;{#cacheclearminutes} 
+* [ ** &lt;cacheClearMinutes&gt; ** - Oui. (# minutes claires) est une étiquette OPTIONNELLE rarement utilisée&lt;erddapDatasets&gt; tag indatasets.xmlpour spécifier la fréquence pour vérifier les fichiers en cache et supprimer les anciens (en minutes)   (par défaut=15) . Par exemple,
+```
+    <cacheClearMinutes>15</cacheClearMinutes>  
+```
+Lorsque le serveur termine la gestion d'une requête, il vérifiera combien de temps il y a le dernier cache clair. Si c'était il y a trop longtemps, il attendrait une tâche sur le TaskThread pour effacer le cache. Toute modification de la valeur de cette balise prendra effet la prochaine foisERDDAP™litdatasets.xml, y compris en réponse à un ensemble de données[drapeau](/docs/server-admin/additional-information#flag). Cela peut être spécifié dans setup.xml, mais cela est découragé.
      
 ### &lt;convertirInterpolateRequestCSVexample&gt;{#convertinterpolaterequestcsvexample} 
 * [ ** &lt;convertirInterpolateRequestCSVexample&gt; ** - Oui. (#convertinterpolaterequestcsvexample) est une étiquette OPTIONNELLE&lt;erddapDatasets&gt; tag indatasets.xml \\[commençant parERDDAP™v2.10\\]qui contient un exemple qui sera affiché sur la page web du convertisseur Interpolate. La valeur par défaut est : jplMURSST41/analysésst/Bilinéaire/4 .

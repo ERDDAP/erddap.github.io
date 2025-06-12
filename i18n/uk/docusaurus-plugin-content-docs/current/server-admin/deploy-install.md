@@ -249,8 +249,8 @@ JavaScript licenses API Веб-сайт Go1.13.8
 ERDDAP™не працює правильно, якщо налаштування.xml абоdatasets.xmlФайл не є добре сформованим файлом XML. Отже, після того, як ви редагуєте ці файли, це гарна ідея для перевірки того, що результат добре сформований XML, поставивши текст XML у XML-реєстратор, як[анотація](https://www.xmlvalidation.com/)й
      
 ### Встановіть файл erddap.war{#install-the-erddapwar-file} 
-4. На Linux, Mac і Windows, скачати[ерддап.воєнний](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)в _tomcat_/webapps .
-     (версія 2.26, 607,404,032 байтів, MD5=99a725108b37708e5420986c16a119, від 03-31-2025) 
+4. На Linux, Mac і Windows, скачати[ерддап.воєнний](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)в _tomcat_/webapps .
+     (версія 2.27.0, 620,554,403 байтів, MD5=3b2086c659eee4145ca2dff447bf4ef7, відданий 06-11-2025) 
     
 .war файл є великим, тому що він містить берегову лінію високої роздільної здатності, граничні та дані висоти, необхідні для створення карт.
     
@@ -262,6 +262,7 @@ ERDDAP™не працює правильно, якщо налаштування
     [2.23 р.](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddap.war)  (572,124,953 байти, MD5=D843A043C506725EBD6F8EFDCCA8FD5F, від 2023-03-03) 
     [2.24 р.](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187 байтів, MD5=970fbee172e28b0b8a07756eecbc898e, від 2024-06-07) 
     [2.25 р](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 байтів, MD5=652AFC9D1421F00B5F789DA2C4732D4C, від 2024-11-07) 
+    [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032 байтів, MD5=99a725108b37708e5420986c1616a119, від 2025-03-31) 
     \\]
     
 #### ПроксиПас{#proxypass} 

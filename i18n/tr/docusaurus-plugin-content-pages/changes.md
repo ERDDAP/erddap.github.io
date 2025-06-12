@@ -7,6 +7,39 @@ ERDDAP™Büyük bir örnek[User-Driven Innovation](https://en.wikipedia.org/wik
 
 İşte her biri ile ilişkili değişikliklerERDDAP™salıver.
 
+## Version 2.27.07.0{#version-2270} 
+ (2025-06-11-11) 
+
+*    **Yeni Özellikler ve Değişiklikler (kullanıcılar için) :** 
+    * New data to colorbar dönüştürücü on servers at /erddap /convert /color.html
+
+*    **Şeyler ŞeylerERDDAP™Yöneticilerin Bilme ve Yapması Gerekiyor:** 
+    * Varsayılan behavoir, önbellek artık büyük yük veri setlerinin görevinden bağımsız olarak temizlenecektir. Bu, eski önbellek dosyalarının daha güvenilir ve düzenli olarak açıklanmasına izin verecektir. Disk uzayında düşük olduğunda sunucu behavoir geliştirmek için ek bir çalışma var (Sunucunun uzaydan tükenmesini talep etmek için bir hata döndürür ve düşük disk koşullarında daha sık önbellekleri açıklayarak hataları önlemek için hataları açıklayın) . In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In Indatasets.xml  (veya kurulum.xml) Yeni önbelleği ekleyebilirsiniz ClearMinutes parametresi, sunucunun önbelleği nasıl açıklayacağını kontrol etmek için. Not, mevcut önbellek parametresi dosyaların tutulmasını kontrol eder, yeni önbellekli ClearMinutes, bir chache net yapmak için ne sıklıkta.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Yeni önbellek açık çekleri yapılandırmada sahte görünmeye engel olabilirsiniz.xml, ancak bu tavsiye edilmez.
+Önbelli önbelli önbelli önbelli önbelli önbelli önbelli önbelli önbelli önbelli önbelli ClearMinutes aynı zamanda[Datasets Document](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * Yerelleştirilmiş veri kümesi metadata desteği. Bu, bir değer için yerelleştirmeyi destekleraddAttributesBölüm. Sadece ek xml ile bir özellik ekleyin:lang etiketi. Örneğin bir Fransız unvanı veri setine eklemek içinaddAttributesBölüm şunları içerecektir:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Mevcut ek ayrıntılar[Yerelleştirilmiş metadata belgeleri](/docs/server-admin/localized-metadata).
+
+    * New Docker SSL ve çıplak bir Bones Prometheus sunucusu için seçeneklerle eğlence dosyası. Shane St. Savage for the SSL and Jiahui Hu for the Prometheus için teşekkürler.
+
+    * Form dosyasına güvenmek yerine sunucu URL'yi belirlemek için başlıklardaki bilgileri kullanmak için destek. Bu, bir sunucunun birden fazla isim tarafından erişilebilir olmasına ve belirli yapılandırmaları basitleştirebilmesine izin verecektir. Lütfen bunu etkinleştirin ve geri bildirim gönderin.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Bazı küçük değişiklikler, boğalar ve optimizasyonlar.
+
+*    **For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For ForERDDAP™Geliştiriciler:** 
+    * Dosya türlerinin kodda nasıl tanımlandığına yardımcı olun. Bu yüzden dosya türleri birçok kod yere dokunmak zorunda kalmadan eklenmelidir.
+
 ## Version 2.26{#version-226} 
  (2025-03-31) 
 

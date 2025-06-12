@@ -7,6 +7,39 @@ ERDDAP™Hyvä esimerkki[Käyttäjälähtöinen innovaatio](https://en.wikipedia
 
 Tässä ovat muutokset, jotka liittyvät jokaiseenERDDAP™Vapautuminen.
 
+## Versio 2.27.0{#version-2270} 
+ (2025-06-11) 
+
+*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
+    * Uusia tietoja väripalkkien muuntimeen palvelimilla osoitteessa /erddap/convert/color.html
+
+*    **AsioitaERDDAP™Hallitsijoiden on tiedettävä ja tehtävä:** 
+    * Oletusarvo on, että välimuisti on nyt puhdistettu riippumattomaksi tärkeimmästä kuorma-aineistotehtävästä. Tämä mahdollistaa vanhojen välimuistitiedostojen luotettavamman ja säännöllisemmän puhdistuksen. Lisätyötä palvelimen käyttäytymisen parantamiseksi, kun levytila on alhainen (palauttaa virheen pyyntöihin, jotka saattavat saada palvelimen loppumaan avaruudesta, ja puhdistaa välimuistia useammin matalissa levytilanteissa, jotta virheet voidaan estää.) . Sisällädatasets.xml  (Asennus.xml) Voit lisätä / asettaa uuden välimuistin ClearMinutes-parametri valvoo, kuinka usein palvelin tarkistaa välimuistin puhdistamiseksi. Huomautus: olemassa oleva kacheMinutes-parametri ohjaa säilytettävien tiedostojen ikää, uutta välimuistia ClearMinutes on sitä, kuinka usein selkeitä on.
+    ```
+        <cacheClearMinutes>15</cacheClearMinutes>
+    ```
+Voit poistaa uuden välimuistin selkeitä tarkastuksia asettamalla tehtäväCacheClear väärään asennus.xml, vaikka sitä ei suositella.
+Cash ClearMinutes on myös[Datan dokumentointi](/docs/server-admin/datasets#cacheclearminutes).
+    
+    * Paikallistettu metadatatuki. Se tukee arvojen lokalisointiaaddAttributesosasto. Yksinkertaisesti lisätä attribuutti ylimääräinen xml:lang tunniste. Voit esimerkiksi lisätä ranskankielisen otsikon aineistoonaddAttributesOsasto sisältää:
+    ```
+        <att name="title">Data from a local source.</att>
+        <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
+    ```
+Lisätietoja saatavilla[Paikalliset metatiedot](/docs/server-admin/localized-metadata).
+
+    * Uusi Docker Yhdistä tiedosto, jossa on vaihtoehtoja SSL: lle ja barebones Prometheus -palvelimelle. Kiitos Shane St. Savage SSL ja Jiahui Hu Prometheus.
+
+    * Tuki tietojen käyttämiseen otsikoissa palvelimen URL-osoitteen määrittämiseksi konfigurttitiedoston sijasta. Näin palvelimeen pääsee useilla nimillä ja se voi yksinkertaistaa tiettyjä kokoonpanoja. Ole hyvä ja lähetä palautetta.
+    ```
+        <useHeadersForUrl>true</useHeadersForUrl>
+    ```
+
+    * Pieniä muutoksia, vikoja ja optimointia.
+
+*    **For ForERDDAP™Kehittäjät:** 
+    * Refactor to how output tiedostotyypit määritellään koodissa. Tämä pitäisi tehdä, jotta tiedostotyypit voidaan lisätä ilman tarvetta koskettaa monia koodipaikkoja.
+
 ## Versio 2.26{#version-226} 
  (Lähde: 2025-03-31) 
 
