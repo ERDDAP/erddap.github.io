@@ -8,7 +8,7 @@ ERDDAP™Is sampla iontach de[Úsáideoir-Driven Innovation](https://en.wikipedi
 Seo iad na hathruithe a bhaineann le gachERDDAP™scaoileadh.
 
 ## Leagan 2.27.0{#version-2270} 
- (scaoileadh 2025-06-?) 
+ (scaoileadh 2025-06-11) 
 
 *    **Gnéithe agus Athruithe Nua (d'úsáideoirí) :** 
     * Sonraí nua chun tiontaire dathbharra ar fhreastalaithe ag / bairille / ciorcal / dath.html

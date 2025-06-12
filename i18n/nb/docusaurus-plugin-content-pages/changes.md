@@ -8,7 +8,7 @@ ERDDAP™Et godt eksempel på[Brukerdrevet innovasjon](https://en.wikipedia.org/
 Her er endringene som er forbundet med hverERDDAP™Frigjøring.
 
 ## Versjon 2.27.0{#version-2270} 
- (Utgitt 2025-06-?) 
+ (utgitt 2025-06-11) 
 
 *    **Nye funksjoner og endringer (for brukere) :)** 
     * Nye data til colorbar converter på servere på /erddap/convert/color.html

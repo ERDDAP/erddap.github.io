@@ -8,7 +8,7 @@ ERDDAP™Hyvä esimerkki[Käyttäjälähtöinen innovaatio](https://en.wikipedia
 Tässä ovat muutokset, jotka liittyvät jokaiseenERDDAP™Vapautuminen.
 
 ## Versio 2.27.0{#version-2270} 
- (2025-06?) 
+ (2025-06-11) 
 
 *    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
     * Uusia tietoja väripalkkien muuntimeen palvelimilla osoitteessa /erddap/convert/color.html

@@ -8,7 +8,7 @@ ERDDAP™è un grande esempio di[Innovazione guidata dall'utente](https://en.wik
 Ecco i cambiamenti associati a ciascunoERDDAP™rilascio.
 
 ## Versione 2.27.0{#version-2270} 
- (rilasciato 2025-06-??) 
+ (rilasciato 2025-06-11) 
 
 *    **Nuove funzionalità e modifiche (per gli utenti) :** 
     * Nuovi dati al convertitore colorbar su server a /erddap/convert/color.html

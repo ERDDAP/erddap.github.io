@@ -249,8 +249,8 @@ Du kan se et eksempel[datasets.xmlpå GitHub](https://github.com/ERDDAP/erddap/b
 ERDDAP™vil ikke fungere riktig hvis config.xml ellerdatasets.xmlfilen er ikke en velformet XML-fil. Så etter at du har redigert disse filene, er det en god ide å bekrefte at resultatet er velformet XML ved å lime XML-teksten inn i en XML-sjekker som[xmlvalidering](https://www.xmlvalidation.com/)..
      
 ### Installer erddap.war-filen{#install-the-erddapwar-file} 
-4. På Linux, Mac og Windows, last ned[Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)i _tomcat_/webapps.
-     (versjon 2.26, 607.404.032 bytes, MD(2005)99a725108b37708e5420986c16a119, datert 03-31-2025) 
+4. På Linux, Mac og Windows, last ned[Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)i _tomcat_/webapps.
+     (versjon 2.27.0, 620.554.403 bytes, MD(2005)3b2086c659eee4145ca2dff447bf4ef7, datert 06-11-2025) 
     
 .war-filen er stor fordi den inneholder høy oppløsning kystlinje, grenser og høydedata som trengs for å opprette kart.
     
@@ -262,6 +262,7 @@ ERDDAP™vil ikke fungere riktig hvis config.xml ellerdatasets.xmlfilen er ikke 
     [2.23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddap.war)  (572,124,953 bytes, MD(2005)D843A043C506725EBD6F8EFDCCA8FD5F, dateret 2023-03-03) 
     [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568.748.187 bytes, MD(2005)970fbee172e28b0b8a07756eecbc898e, datert 2024-06-07) 
     [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 bytes, MD(2005)652AFC9D1421F00B5F789DA2C4732D4C, datert 2024-11-07) 
+    [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607.404.032 bytes, MD(2005)99a725108b37708e5420986c1616a119, datert 2025-03-31) 
     \\]
     
 #### ProxyPass{#proxypass} 

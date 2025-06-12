@@ -249,8 +249,8 @@ Możesz zobaczyć przykład[datasets.xmlw sprawie GitHub](https://github.com/ERD
 ERDDAP™nie działa prawidłowo, jeśli setup.xml lubdatasets.xmlplik nie jest dobrze uformowanym plikiem XML. Tak więc, po edycji tych plików, dobrym pomysłem jest sprawdzenie, czy wynik jest dobrze ukształtowany XML poprzez wklejanie tekstu XML do sprawdzania XML jak[xmlalidation](https://www.xmlvalidation.com/).
      
 ### Zainstaluj plik erddap.war{#install-the-erddapwar-file} 
-4. Na Linuksie, Mac i Windows, pobierz[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)into _ tomcat _ / webapps.
-     (Wersja 2.26, 607,404,032 bajtów, MD5 = 99a725108b37708e5420986c16a119, datowany 03- 31- 2025) 
+4. Na Linuksie, Mac i Windows, pobierz[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)into _ tomcat _ / webapps.
+     (Wersja 2.27.0, 620,554,403 bajtów, MD5 = 3b2086c659eee4145ca2dff447bf4ef7, datowany 06- 11- 2025) 
     
 Plik .war jest duży, ponieważ zawiera wysoką rozdzielczość linii brzegowej, granicy i danych elewacji potrzebnych do tworzenia map.
     
@@ -262,6 +262,7 @@ Plik .war jest duży, ponieważ zawiera wysoką rozdzielczość linii brzegowej,
     [2, 23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddap.war)  (572,124,953 bajtów, MD5 = D843A043C506725EBD6F8EFDCCA8FD5F z 2023- 03- 03) 
     [2, 24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187 bajtów, MD5 = 970fbee172e28b0b8a07756eecbc898e, dated 2024- 06- 07) 
     [2, 25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 bajtów, MD5 = 652AFC9D1421F00B5F789DA2C4732D4C z 2024- 11- 07) 
+    [2, 26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032 bajtów, MD5 = 99a725108b37708e5420986c1616a119, datowany 2025- 03- 31) 
     \\]
     
 #### ProxyPass{#proxypass} 

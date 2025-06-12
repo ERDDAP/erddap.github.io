@@ -249,8 +249,8 @@ bigParentDirectory の親ディレクトリから bigParentDirectory を作成�
 ERDDAP™setup.xml または setup.xml が正しく動作しないdatasets.xmlファイルが整形されたXMLファイルではありません。 そのため、これらのファイルを編集した後、XMLテキストをXMLチェッカーに貼り付けることで、結果がよく形成されたXMLであることを検証することをお勧めします。[xmlvalidationの](https://www.xmlvalidation.com/)お問い合わせ
      
 ### erddap.warファイルをインストールする{#install-the-erddapwar-file} 
-4. Linux、Mac、Windowsで、ダウンロード[erddap.warの](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)_tomcat_/webapps に。
-     (バージョン 2.26、607、404、032 バイト、MD5=99a725108b37708e5420986c16a119、日付 03-31-2025) 
+4. Linux、Mac、Windowsで、ダウンロード[erddap.warの](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)_tomcat_/webapps に。
+     (バージョン2.27.0、620、554、403バイト、MD5=3b2086c659eee4145ca2dff447bf4ef7、日付 2018年11月20日) 
     
 .war ファイルは高解像度の海岸線、境界線、および関連するデータがマップを作成する必要があるため大きいです。
     
@@ -262,6 +262,7 @@ ERDDAP™setup.xml または setup.xml が正しく動作しないdatasets.xml�
     [2.23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddap.war)  (572,124,953バイト、MD5 = D843A043C506725EBD6F8EFDCCA8FD5FD5F、日付 2023-03-03) 
     [2.24の](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187バイト、MD5=970fbee172e28b0b8a07756eecbc898e、日付 2024-06-07) 
     [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039バイト、MD5=652AFC9D1421F00B5F789DA2C4732D4C、日付 2024-11-07) 
+    [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032 バイト、MD5=99a725108b37708e5420986c1616a119、日付 2025-03-31) 
     \\]
     
 #### プロキシパス{#proxypass} 

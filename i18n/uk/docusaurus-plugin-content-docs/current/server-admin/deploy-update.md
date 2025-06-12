@@ -11,8 +11,8 @@ sidebar_position: 2
 2. Якщо ви готовіERDDAP™версія 2.18 або нижче, необхідно перейти доJava21 мар (або нові) і пов'язаний Tomcat 10. Дивитися регулярніERDDAP™Інструкція по монтажу[Java](/docs/server-admin/deploy-install#java)і[Кошик](/docs/server-admin/deploy-install#tomcat)й Ви також повинні копіювати ваш_tomcat_/content/erddapкаталог з вашої старої установки Tomcat до нової установки Tomcat.
 
 ## Завантажити{#download} 
-3. Завантажити[ерддап.воєнний](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)в _tomcat_/webapps .
-     (версія 2.26, 607,404,032 байтів, MD5=99a725108b37708e5420986c16a119, від 03-31-2025) 
+3. Завантажити[ерддап.воєнний](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)в _tomcat_/webapps .
+     (версія 2.27.0, 620,554,403 байтів, MD5=3b2086c659eee4145ca2dff447bf4ef7, відданий 06-11-2025) 
      
 ## повідомлення.xml{#messagesxml} 
 4. 

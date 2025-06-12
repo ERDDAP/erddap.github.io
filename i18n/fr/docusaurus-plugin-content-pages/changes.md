@@ -8,7 +8,7 @@ ERDDAP™est un excellent exemple de[Innovation axée sur l'utilisateur](https:/
 Voici les changements associés à chaqueERDDAP™libérer.
 
 ## Version 2.27.0{#version-2270} 
- (libéré 2025-06-??) 
+ (publié le 2025-06-11) 
 
 *    **Nouvelles caractéristiques et changements (pour les utilisateurs) :** 
     * Nouvelles données au convertisseur colorbar sur les serveurs à /erddap/convert/color.html

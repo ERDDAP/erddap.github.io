@@ -8,7 +8,7 @@ ERDDAP™is een groot voorbeeld van[Gebruikersgestuurde innovatie](https://en.wi
 Hier zijn de veranderingen in verband met elkERDDAP™Laat los.
 
 ## Versie 2.27.0{#version-2270} 
- (vrijgegeven 2025-06-??) 
+ (vrijgegeven 2025-06-11) 
 
 *    **Nieuwe functies en wijzigingen (voor gebruikers) :** 
     * Nieuwe gegevens voor kleurbalkconverter op servers op /erddap/convert/color.html

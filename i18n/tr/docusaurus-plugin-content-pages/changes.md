@@ -8,7 +8,7 @@ ERDDAP™Büyük bir örnek[User-Driven Innovation](https://en.wikipedia.org/wik
 İşte her biri ile ilişkili değişikliklerERDDAP™salıver.
 
 ## Version 2.27.07.0{#version-2270} 
- (2025-06-?) 
+ (2025-06-11-11) 
 
 *    **Yeni Özellikler ve Değişiklikler (kullanıcılar için) :** 
     * New data to colorbar dönüştürücü on servers at /erddap /convert /color.html

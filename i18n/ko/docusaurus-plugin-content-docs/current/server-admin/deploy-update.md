@@ -11,8 +11,8 @@ Existing의 업데이트를 수행하는 방법ERDDAP™서버에서
 2. 당신은에서 격상시키는 경우에ERDDAP™버전 2.18 이하, 당신은 전환해야Java24시간 (또는 newer) 그리고 관련 Tomcat 10. 자주 묻는 질문ERDDAP™설치 설명서[Java](/docs/server-admin/deploy-install#java)이름 *[톰캣](/docs/server-admin/deploy-install#tomcat)· 당신은 또한 당신의 복사해야합니다_tomcat_/content/erddap오래된 Tomcat 설치에서 새로운 Tomcat 설치로 디렉토리.
 
 ## 다운로드{#download} 
-3. 다운로드[다운로드](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)으로 _tomcat_/webapps .
-     (버전 2.26, 607,404,032 바이트, MD5=99a725108b37708e5420986c1616a119, 날짜 03-31-2025) 
+3. 다운로드[다운로드](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)으로 _tomcat_/webapps .
+     (버전 2.27.0, 620,554,403 바이트, MD5=3b2086c659eee4145ca2dff447bf4ef7, dated 06-11-2025 ·) 
      
 ## 메시지.xml{#messagesxml} 
 4. 

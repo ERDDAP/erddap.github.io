@@ -249,8 +249,8 @@ Voit nähdä esimerkin[datasets.xmlKirjoittanut GitHub](https://github.com/ERDDA
 ERDDAP™ei toimi oikein, jos asennus.xml taidatasets.xmltiedosto ei ole hyvin muotoiltu XML-tiedosto. Joten, kun olet muokannut näitä tiedostoja, on hyvä tarkistaa, että tulos on hyvin muotoiltu XML liittämällä XML-teksti XML-testiin, kuten XML-testiin.[xmlvalidaatio](https://www.xmlvalidation.com/).
      
 ### Asenna erdap.war-tiedosto{#install-the-erddapwar-file} 
-4. Linux, Mac ja Windows, lataa[Erddap.sota](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)_tomcat_/webapps.
-     (versio 2.26, 607 404 032 tavua, MD5=99a725108b37708e5420986c16a119, päivätty 03-31-2025) 
+4. Linux, Mac ja Windows, lataa[Erddap.sota](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)_tomcat_/webapps.
+     (versio 2.27.0, 620.554.403 tavua, MD5=3b2086c659eee4145ca2dff447bf4ef7, päivätty 06-11-2025) 
     
 .war-tiedosto on suuri, koska se sisältää korkean resoluution rantaviivaa, rajoja ja korkeustietoja, joita tarvitaan karttojen luomiseen.
     
@@ -262,6 +262,7 @@ ERDDAP™ei toimi oikein, jos asennus.xml taidatasets.xmltiedosto ei ole hyvin m
     [2.23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddap.war)  (572 124,953 tavua, MD5=D843A043C506725EBD6F8FDCCA8FD5F, päivätty 2023-03-03) 
     [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568 748 187 tavua, MD5=970fbee172e28b0b8a07756eecbc898e, päivätty 2024-06-07) 
     [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592 292 039 tavua, MD5=652AFC9D1421F00B5F789DA2C4732D4C, päivätty 2024-11-07) 
+    [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607 404 032 tavua, MD5=99a725108b37708e5420986c16a119, päivätty 2025-03-31) 
     \\]
     
 #### ProxyPass{#proxypass} 

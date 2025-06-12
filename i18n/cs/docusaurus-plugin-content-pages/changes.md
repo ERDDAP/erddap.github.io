@@ -8,7 +8,7 @@ ERDDAP™je skvělý příklad[Uživatelská inovace](https://en.wikipedia.org/w
 Zde jsou změny spojené s každýmERDDAP™Uvolnit.
 
 ## Verze 2.27.0{#version-2270} 
- (propuštěn 2025-06-?) 
+ (propuštěno 2025-06-11) 
 
 *    **Nové funkce a změny (pro uživatele) :** 
     * Nová data do převodníku barev na serverech na /erddap/convert/color.html

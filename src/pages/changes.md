@@ -8,7 +8,7 @@ ERDDAP™ is a great example of [User-Driven Innovation](https://en.wikipedia.or
 Here are the changes associated with each ERDDAP™ release.
 
 ## Version 2.27.0 {#version-2270}
-(released 2025-06-??)
+(released 2025-06-11)
 
 *   **New Features and Changes (for users):**
     *   New data to colorbar converter on servers at /erddap/convert/color.html

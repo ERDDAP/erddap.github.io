@@ -8,7 +8,7 @@ ERDDAP™是個很好的例子[使用者](https://en.wikipedia.org/wiki/User_inn
 以下是與每項變更相關的變更ERDDAP™釋放
 
 ## 2.2.7.0版本{#version-2270} 
- (2025 -06?) 
+ (2025-06-11年) 
 
 *    **新特性和變更 (使用者) :** 
     * 在 /erddap/convert/color.html 的伺服器上新增數據到色彩列轉換器

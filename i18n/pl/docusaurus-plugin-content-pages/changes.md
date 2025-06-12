@@ -8,7 +8,7 @@ ERDDAP™jest doskonałym przykładem[User- Driven Innowacje](https://en.wikiped
 Oto zmiany związane z każdymERDDAP™Wypuścić.
 
 ## Wersja 2.27.0{#version-2270} 
- (Wydany 2025- 06-?) 
+ (wydany 2025- 06- 11) 
 
 *    **Nowe funkcje i zmiany (dla użytkowników) :** 
     * Nowe dane dla konwertera barów na serwerach / erddap / convert / color.html

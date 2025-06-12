@@ -8,7 +8,7 @@ ERDDAP™是一个伟大的例子[用户驱动创新](https://en.wikipedia.org/w
 以下是与每个ERDDAP™释放
 
 ## 2.2.7.0版本 翻译:{#version-2270} 
- (发布2025-06 -?) 
+ (发表于2025-06-11) 
 
 *    **新特征和变化 (用户) 数字 :** 
     * 在 /erddap/convert/color.html 服务器上向色彩栏转换器提供新数据

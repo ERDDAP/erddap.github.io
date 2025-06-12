@@ -8,7 +8,7 @@ ERDDAP™isang magandang halimbawa[User-Driven Innovation](https://en.wikipedia.
 Narito ang mga pagbabagong nauugnay sa bawat isaERDDAP™paglaya.
 
 ## Bersiyong 2.27.0{#version-2270} 
- (inilabas 2025-06-?) 
+ (inilabas 2025-06-11) 
 
 *    **Bagong mga Katangian at Pagbabago (para sa mga gumagamit) :** 
     * Bagong datos sa colorbar converter sa mga server sa /erddap/convert/color.html

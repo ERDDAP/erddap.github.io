@@ -8,7 +8,7 @@ ERDDAP™é um grande exemplo de[Inovação orientada pelo usuário](https://en.
 Aqui estão as mudanças associadas a cadaERDDAP™liberar.
 
 ## Versão 2.27.0{#version-2270} 
- (lançado 2025-06-??) 
+ (lançado 2025-06-11) 
 
 *    **Novos recursos e mudanças (para usuários) :** 
     * Novos dados para conversor de barra de cores em servidores em /erddap/convert/color.html

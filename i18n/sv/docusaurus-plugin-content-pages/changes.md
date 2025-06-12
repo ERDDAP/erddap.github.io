@@ -8,7 +8,7 @@ ERDDAP™är ett bra exempel på[Användar-Driven Innovation](https://en.wikiped
 Här är förändringarna i samband med varjeERDDAP™release.
 
 ## Version 2.27.0{#version-2270} 
- (släppt 2025-06-?) 
+ (släppt 2025-06-11) 
 
 *    **Nya funktioner och förändringar (för användare) Från:** 
     * Nya data till colorbar converter på servrar på /erddap/convert/color.html

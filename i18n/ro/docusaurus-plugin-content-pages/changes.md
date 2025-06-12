@@ -8,7 +8,7 @@ ERDDAP™este un mare exemplu de[Inovarea bazată pe utilizator](https://en.wiki
 Aici sunt modificările asociate cu fiecareERDDAP™Eliberare.
 
 ## Versiunea 2.27.0{#version-2270} 
- (Eliberat în 2025-06?) 
+ (eliberat în 2025-06-11) 
 
 *    **Noi caracteristici și schimbări (pentru utilizatori) :** 
     * Date noi pentru convertorul bara de culoare pe servere la /erddap/convert/color.html

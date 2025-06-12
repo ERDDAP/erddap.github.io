@@ -8,7 +8,7 @@ ERDDAP™ist ein großes Beispiel[Benutzergetriebene Innovation](https://en.wiki
 Hier sind die Änderungen, die jederERDDAP™Veröffentlichung.
 
 ## Version 2.27.0{#version-2270} 
- (veröffentlicht 2025-06-??) 
+ (veröffentlicht 2025-06-11) 
 
 *    **Neue Funktionen und Änderungen (für Benutzer) :** 
     * Neue Daten zum Colorbar-Konverter auf Servern bei /erddap/convert/color.html

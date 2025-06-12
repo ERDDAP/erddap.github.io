@@ -8,7 +8,7 @@ ERDDAP™adalah contoh besar[Inovasi Pengguna](https://en.wikipedia.org/wiki/Use
 Berikut adalah perubahan yang terkait dengan masing-masingERDDAP™Sitemap
 
 ## Versi 2.27.0{#version-2270} 
- (dirilis 2025-06-??) 
+ (dirilis 2025-06-11) 
 
 *    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
     * Data baru untuk converter warnabar pada server di /erddap/convert/color.html

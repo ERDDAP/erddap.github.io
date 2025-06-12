@@ -8,7 +8,7 @@ ERDDAP™좋은 예입니다.[사용자 중심의 혁신](https://en.wikipedia.o
 각각의 변화는 다음과 같습니다.ERDDAP™다운로드
 
 ## 버전 2.27.0{#version-2270} 
- (출시 2025-06-?) 
+ (출시 2025-06-11) 
 
 *    **새로운 기능 및 변경 (사용자 정의) ::** 
     * /erddap/convert/color.html에서 서버의 colorbar 변환기에 새로운 자료

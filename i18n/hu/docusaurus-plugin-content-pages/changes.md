@@ -8,7 +8,7 @@ ERDDAP™nagyszerű példa erre[Felhasználó-vezérelt innováció](https://en.
 Íme a változások, amelyek mindegyikhez kapcsolódnakERDDAP™kiadás.
 
 ## Verzió 2.27.0{#version-2270} 
- (2025-06-ban?) 
+ (2025-06-11) 
 
 *    **Új funkciók és változások (felhasználók számára) :** 
     * Új adatok a színesbar konverterhez a szervereken /erddap / Convert / Color.html
