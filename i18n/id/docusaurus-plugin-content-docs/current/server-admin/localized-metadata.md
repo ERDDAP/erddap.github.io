@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Metadata
+# Metadata
 
 ### Sitemap
 Fitur ini memungkinkan Anda untuk menyertakan metadata lokal tentang dataset dan variabel Anda. Setiap atribut yang didefinisikan dalamaddAttributestag dapat dilokalkan. Ini dimaksudkan untuk digunakan untuk atribut string umum seperti judul, ringkasan, lisensi, instituion. Tidak disarankan untuk digunakan untuk numerik (Sitemap) atau nilai standar (e.g. "ioos_kategori") dan lokalisasi jenis nilai-nilai ini mungkin memiliki perilaku yang mengejutkan.

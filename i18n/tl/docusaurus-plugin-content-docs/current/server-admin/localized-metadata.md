@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Lokalisadong Metadata
+# Lokalisadong Metadata
 
 ### Paglalarawan
 Ang katangiang ito ay nagpapahintulot sa iyo na isama ang lokalisadong metadata tungkol sa iyong datasets at variables. Anumang katangian na ibinigay sa loob ng isang attributeaddAttributesMaaaring gawing lokal ang tag. Ito ay nilalayong gamitin para sa mga karaniwang katangiang strando tulad ng pamagat, buod, lisensiya, instituion. Hindi ito inirerekomendang gamitin para sa numeriko (e.g. "_FillValue".) o pamantayang mga pamantayan (e.g. "ioos_category") at ang paggamit ng ganitong mga uri ng pamantayan ay maaaring may nakapagtatakang paggawi.

@@ -78,5 +78,9 @@
   "link.item.label.Cloud": {
     "message": "เมฆ",
     "description": "The label of footer link with label=Cloud linking to /cloud"
+  },
+  "link.item.label.Support/Contact": {
+    "message": "การรองรับ/ การติดต่อ",
+    "description": "The label of footer link with label=Support/Contact linking to /docs/intro#support"
   }
 }

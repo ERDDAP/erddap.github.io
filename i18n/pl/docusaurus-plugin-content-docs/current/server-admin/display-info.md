@@ -1,13 +1,12 @@
 ---
-title: "displayInfo and displayAttribute"
 sidebar_position: 7
 ---
-## 'displayInfo' i 'displayAttribute' Tags
+# 'displayInfo' i 'displayAttribute' Tags
 
-### Opis
+## Opis
 Ta funkcja pozwala na wyświetlanie globalnych atrybutów wybranych w zakładce zbiorów danych w wierszu "Informacje".
 
-### Instrukcja użycia
+## Instrukcja użycia
 Te znaczniki mogą być używane tylko z 'Sax parser'. Aby je włączyć i wykorzystać, należy wykonać następujące czynności:
 
 1.  **Włącz parser SAX** :
@@ -31,30 +30,30 @@ W "datasets.xml'file, include two top- level tags:
 4.  **Zapewnienie spójności** :
 Liczba wartości oddzielonych od comma- w znacznikach 'displayInfo' i 'displayAtribution' musi być taka sama.
 
-### Jak to działa
+## Jak to działa
 - Znacznik 'displayAtribution' określa atrybuty globalne (zdefiniowane w&lt;'addAttributes'& gt; tag) zostanie wyświetlony dla każdego zbioru danych.
 - Odpowiednie wartości w znaczniku 'displayInfo' są wyświetlane jako etykiety w wierszu 'Information' interfejsu użytkownika.
 - Kiedy użytkownik przewija się nad wyświetlanymi etykietami, pojawi się podpowiedź, pokazująca wartość atrybutu globalnego.
 
-### Przykład
+## Przykład
 ```xml
 <displayInfo>Display1,Display2</displayInfo>
 <displayAttribute>att1,att2</displayAttribute>
 ```
 
-#### Przykład atrybutów globalnych Dataset:
+### Przykład atrybutów globalnych Dataset:
 ```xml
 <att name="att1">This is att1</att>
 <att name="att2">This is att2</att>
 ```
 
-#### UI Zachowanie:
+### UI Zachowanie:
 - Słowa "Display1" i "Display2" zostaną wyświetlone w wierszu "Information" w UI.
 - Podczas podświetlania, podpowiedzi wyświetlają odpowiednie wartości atrybutów:
   - 'Display1': Tooltip pokazuje _ To jest att1 _
   - 'Display2': Tooltip pokazuje _ To jest att2 _
 
-### Uwagi
+## Uwagi
 - Upewnij się, że nazwy atrybutów podane w znaczniku 'displayAtribution' pasują do atrybutów globalnych zdefiniowanych w zbiorze danych.
 - Nieprawidłowe lub brakujące atrybuty rejestrują komunikaty błędów.
 

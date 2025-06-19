@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Metadati locali
+# Metadati locali
 
 ### Descrizione
 Questa funzione consente di includere metadati localizzati sui set di dati e variabili. Qualsiasi attributo definito all'interno di unaddAttributestag può essere localizzato. Questo è destinato ad essere utilizzato per attributi di stringa comuni come titolo, sommario, licenza, istituione. Non è raccomandato per essere utilizzato per numerico (ad esempio "_FillValue") o valori standardizzati (ad esempio "ioos_category") e localizzare questi tipi di valori può avere un comportamento sorprendente.

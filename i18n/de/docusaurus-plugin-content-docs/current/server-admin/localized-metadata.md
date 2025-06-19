@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Lokale Metadaten
+# Lokale Metadaten
 
 ### Warenbezeichnung
 Mit dieser Funktion können Sie lokalisierte Metadaten über Ihre Datensätze und Variablen einschließen. Jedes Attribut, das in einemaddAttributestag kann lokalisiert werden. Dies soll für gemeinsame String-Attribute wie Titel, Zusammenfassung, Lizenz, Instituion verwendet werden. Es wird nicht empfohlen, für numerische (z.B. "_FillValue") oder standardisierte Werte (z.B. "ioos_category") und Lokalisierung dieser Wertetypen kann überraschendes Verhalten aufweisen.

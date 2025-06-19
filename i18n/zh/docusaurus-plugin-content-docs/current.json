@@ -62,5 +62,9 @@
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "用户的有用信息",
     "description": "The generated-index page description for category User in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.ScriptRow": {
+    "message": "脚本",
+    "description": "The label for category ScriptRow in sidebar docSidebar"
   }
 }

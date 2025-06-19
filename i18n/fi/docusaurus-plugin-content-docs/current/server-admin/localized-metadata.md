@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Paikallinen metatieto
+# Paikallinen metatieto
 
 ### Kuvaus
 Tämän ominaisuuden avulla voit sisällyttää paikalliset metatiedot tietoaineistoistasi ja muuttujistasi. mikä tahansa ominaisuus, joka on määriteltyaddAttributesTag voidaan lokalisoida. Tämä on tarkoitettu käytettäväksi yleisiin merkkijonoihin, kuten otsikkoon, yhteenvetoon, lisenssiin, instituutioon. Ei ole suositeltavaa käyttää numeerisesti (Esimerkkinä "_FillValue") standardoituja arvoja (Esimerkkinä ”joos_category”) Näiden arvojen lokalisoiminen voi olla yllättävää.

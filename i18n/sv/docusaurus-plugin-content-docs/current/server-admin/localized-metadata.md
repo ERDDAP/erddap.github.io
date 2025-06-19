@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Lokaliserade metadata
+# Lokaliserade metadata
 
 ### Beskrivning
 Denna funktion låter dig inkludera lokaliserade metadata om dina datamängder och variabler. Alla attribut definierade inom enaddAttributestag kan lokaliseras. Detta är avsett att användas för vanliga sträng attribut som titel, sammanfattning, licens, instituion. Det rekommenderas inte att användas för numeriska (t.ex. "FillValue") eller standardiserade värden (t.ex. "ioos_category") och lokalisera dessa typer av värden kan ha överraskande beteende.

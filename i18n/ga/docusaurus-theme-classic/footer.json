@@ -78,5 +78,9 @@
   "link.item.label.Cloud": {
     "message": "Cloud Cloud Cloud",
     "description": "The label of footer link with label=Cloud linking to /cloud"
+  },
+  "link.item.label.Support/Contact": {
+    "message": "Tacaíocht / Gníomh",
+    "description": "The label of footer link with label=Support/Contact linking to /docs/intro#support"
   }
 }

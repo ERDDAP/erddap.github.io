@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # 缩放
+
 ## ERDDAP™- 重载、网格、集群、联合会和云计算{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP数字 :
+## ERDDAP数字 :
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)是一种网络应用程序和网络服务,它集聚了来自不同本地和远程来源的科学数据,提供了一种简单、一致的方式,以共同的文件格式下载数据子集,并制作图表和地图。 本网页讨论与重型ERDDAP™通过电网、集群、联合会和云计算处理极其沉重的负荷的可能性。
 

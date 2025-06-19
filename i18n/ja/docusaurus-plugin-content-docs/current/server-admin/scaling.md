@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # スケーリング
+
 ## ERDDAP™- 重負荷、グリッド、クラスタ、フェデレーション、クラウドコンピューティング{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP: : :
+## ERDDAP: : :
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)さまざまなローカルおよびリモートソースから科学データを集約し、一般的なファイル形式でデータのサブセットをダウンロードし、グラフやマップを作成するためのシンプルで一貫した方法を提供するWebアプリケーションとWebサービスです。 このページでは、重い問題について議論していますERDDAP™使用は、グリッド、クラスター、フェデレーション、クラウドコンピューティングを介して非常に重い負荷に対処するための可能性をロードし、探索します。
 

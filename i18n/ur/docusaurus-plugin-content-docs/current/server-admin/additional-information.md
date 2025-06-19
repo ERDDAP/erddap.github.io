@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-ERDDAP™- اپنے آپ کو اوپر رکھیںERDDAP™    
+# اضافی معلومات
 
 ## کن باتوں کو جاننا ضروری ہے ؟{#things-you-need-to-know} 
      

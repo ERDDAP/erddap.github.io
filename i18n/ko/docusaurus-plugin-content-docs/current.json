@@ -62,5 +62,9 @@
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "사용자에 대한 유용한 정보",
     "description": "The generated-index page description for category User in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.ScriptRow": {
+    "message": "스크립트Row",
+    "description": "The label for category ScriptRow in sidebar docSidebar"
   }
 }

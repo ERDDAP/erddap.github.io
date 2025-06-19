@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-ERDDAP™- 당신의 자신의 설정ERDDAP™    
+# 자주 묻는 질문
 
 ## 당신이 알아야 할 것들{#things-you-need-to-know} 
      

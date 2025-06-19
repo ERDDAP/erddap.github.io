@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Metadatos localizados
+# Metadatos localizados
 
 ### Descripción
 Esta función le permite incluir metadatos localizados sobre sus conjuntos de datos y variables. Cualquier atributo definido dentro de unaddAttributesla etiqueta puede ser localizada. Esto se pretende utilizar para atributos comunes de cadena como título, resumen, licencia, instituto. No se recomienda utilizar para numérico (por ejemplo "_FillValue") o valores estandarizados (por ejemplo "ioos_categoría") y localización de estos tipos de valores puede tener comportamiento sorprendente.

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-ERDDAP™- 摆平你自己ERDDAP™    
+# 补充资料
 
 ## 你该知道的事{#things-you-need-to-know} 
      

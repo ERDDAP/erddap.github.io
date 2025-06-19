@@ -62,5 +62,9 @@
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "Kullanıcılar için yardımcı bilgiler",
     "description": "The generated-index page description for category User in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.ScriptRow": {
+    "message": "Senaryo",
+    "description": "The label for category ScriptRow in sidebar docSidebar"
   }
 }

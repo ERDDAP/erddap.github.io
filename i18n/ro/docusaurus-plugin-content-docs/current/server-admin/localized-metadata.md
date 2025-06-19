@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Metadate localizate
+# Metadate localizate
 
 ### Descriere
 Această caracteristică vă permite să includeți metadate localizate despre seturile de date și variabilele dumneavoastră. Orice atribut definit în cadrul unuiaddAttributesTag-ul poate fi localizat. Aceasta este destinată utilizării pentru atribute comune ale stringurilor, cum ar fi titlul, rezumatul, licența, instituția. Nu se recomandă utilizarea pentru numeric (de exemplu "_FillValue") sau valori standardizate (de exemplu "ioos_category") şi localizarea acestor tipuri de valori poate avea un comportament surprinzător.

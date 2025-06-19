@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Helyi Metadata
+# Helyi Metadata
 
 ### Leírás
 Ez a funkció lehetővé teszi a lokalizált metaadatokat az adatkészletekről és a változókról. Minden olyan tulajdonság, amelyet egyaddAttributesA címke lokalizálható. Ezt olyan közös karakterlánc-jellemzőkre kell használni, mint a cím, az összefoglaló, a licenc, az intézet. Nem ajánlott numerikusan használni (pl. „_FillValue”) vagy szabványosított értékek (pl. „ioos_category”) és az ilyen típusú értékek elhelyezése meglepő viselkedéssel járhat.

@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Skaling
+
 ## ERDDAP™- Heavy Loads, Grids, Klaszterek, Föderációk és Cloud Computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)egy webes alkalmazás és egy webes szolgáltatás, amely összegyűjti a különböző helyi és távoli forrásokból származó tudományos adatokat, és egyszerű, következetes módot kínál arra, hogy letöltse az adatokat a közös fájlformátumokban, és grafikákat és térképeket készítsen. Ez a weboldal megvitatja a nehéz kérdésekkel kapcsolatos kérdéseketERDDAP™Használja a terheléseket és felfedezi a rendkívül nehéz terhek kezelésének lehetőségeit hálózatokon, klasztereken, szövetségeken és felhőalapú számításon keresztül.
 

@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Métadonnées localisées
+# Métadonnées localisées
 
 ### Désignation des marchandises
 Cette fonctionnalité vous permet d'inclure des métadonnées localisées sur vos ensembles de données et variables. Tout attribut défini dans unaddAttributestag peut être localisé. Ceci est destiné à être utilisé pour les attributs de chaîne commune comme le titre, résumé, licence, instituion. Il n'est pas recommandé d'utiliser pour le calcul numérique (Par exemple "_FillValue") ou des valeurs normalisées (Par exemple, "catégorie_ioos") et la localisation de ces types de valeurs peut avoir un comportement surprenant.

@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Scaling
+
 ## ERDDAP™- raskaat vuodot, verkot, klusterit, liitot ja pilvipalvelut{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)on verkkosovellus ja verkkopalvelu, joka yhdistää tieteellisiä tietoja erilaisista paikallisista ja kaukolähteistä ja tarjoaa yksinkertaisen ja johdonmukaisen tavan ladata tietoja yhteisissä tiedostomuodoissa ja tehdä kaavioita ja karttoja. Tämä sivu käsittelee raskaita asioitaERDDAP™Käytä kuormia ja tutkii mahdollisuuksia käsitellä erittäin raskaita kuormia verkkojen, klusterien, liittojen ja pilvipalveluiden kautta.
 

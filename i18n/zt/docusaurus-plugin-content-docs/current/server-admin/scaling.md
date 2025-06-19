@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # 放大
+
 ## ERDDAP™- 重载、网格、群組、聯盟和云计算{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)一個網絡應用程式和網路服務, 此網頁討論與沉重相關的問題ERDDAP™透過網格、群組、聯盟、云计算,
 

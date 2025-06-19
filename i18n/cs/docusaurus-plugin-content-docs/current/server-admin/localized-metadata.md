@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Lokální metadata
+# Lokální metadata
 
 ### Popis zboží
 Tato funkce umožňuje zahrnout lokalizovaná metadata o vašich datových souborech a proměnných. Jakýkoli atribut definovaný vaddAttributestag lze lokalizovat. To je určeno k použití pro běžné atributy řetězce, jako je název, shrnutí, licence, institution. Nedoporučuje se používat pro numerické (např. "_FillValue") nebo standardizované hodnoty (např. "ioos_categorie") a umístění těchto typů hodnot může mít překvapivé chování.

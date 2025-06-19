@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-ERDDAP™- নিজেরটা সেট করোERDDAP™    
+# অতিরিক্ত তথ্য@ label
 
 ## আপনাকে যা জানতে হবে{#things-you-need-to-know} 
      

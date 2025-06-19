@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Scaling
+
 ## ERDDAP™- Luchtaigh Trom, Grids, Clusters, Cónaidhm, agus Cloud Ríomhaireacht{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)Is iarratas gréasáin agus seirbhís gréasáin a chomhiomlánaíonn sonraí eolaíochta ó fhoinsí áitiúla agus iargúlta éagsúla agus cuireann sé ar bhealach simplí, comhsheasmhach a íoslódáil fo-thacar de na sonraí i bhformáidí comhad coitianta agus graif agus léarscáileanna a dhéanamh. Pléann an leathanach gréasáin seo saincheisteanna a bhaineann le tromERDDAP™ualaí úsáide agus iniúchadh féidearthachtaí chun déileáil le ualaí thar a bheith trom trí greillí, braislí, cónaidhmeanna, agus ríomhaireachta scamall.
 

@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Pag - iiski
+
 ## ERDDAP™- Mabibigat na Pasan, Grids, Cluster, Pederasyon, at Pagkukot{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)ay isang web application at isang web service na nagkokodigo ng mga siyentipikong datos mula sa iba't ibang lokal at malayong pinagmulan at nag-aalok ng simple at hindi pabagu-bago na paraan upang mag-download ng mga subset ng datos sa karaniwang mga format ng file at gumawa ng mga graph at mapa. Tinatalakay sa pahinang web na ito ang mga isyung may kaugnayan sa mabibigat na bagayERDDAP™Ginagamit ang mga pasan at sinusuri ang mga posibilidad para sa pakikitungo sa labis na mabibigat na pasan sa pamamagitan ng mga grid, kumpol, pederasyon, at pagpupuslit ng ulap.
 

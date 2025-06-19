@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-ERDDAP™- Opsæt din egenERDDAP™    
+# Yderligere oplysninger
 
 ## Ting du har brug for at vide{#things-you-need-to-know} 
      
