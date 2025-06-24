@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## 메타데이터
+# 메타데이터
 
 ### 이름 *
 이 기능은 데이터셋과 변수에 대한 로컬화된 메타데이터를 포함합니다. 정의된 모든 속성addAttributes태그는 현지화 될 수 있습니다. 이것은 title, Summary, license, instituion과 같은 일반적인 문자열 속성에 사용됩니다. 그것은 수치에 사용할 수 없습니다 (예. "_FillValue") 또는 표준화된 값 (예: "ioos_category") 그리고 이러한 유형의 값을 로컬라이제이션할 수 있습니다.

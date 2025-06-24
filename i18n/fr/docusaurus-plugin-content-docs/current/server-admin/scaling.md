@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Élargissement
+
 ## ERDDAP™- Charges lourdes, Grilles, Clusters, Fédérations et Cloud Computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)est une application web et un service web qui regroupe des données scientifiques provenant de diverses sources locales et distantes et offre un moyen simple et cohérent de télécharger des sous-ensembles de données dans des formats de fichiers communs et de faire des graphiques et des cartes. Cette page Web traite des questions liées àERDDAP™l'utilisation charge et explore les possibilités de faire face à des charges extrêmement lourdes via des réseaux, des grappes, des fédérations et l'informatique en nuage.
 

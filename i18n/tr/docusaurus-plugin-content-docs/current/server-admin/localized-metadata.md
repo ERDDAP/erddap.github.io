@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Yerelleştirilmiş Metadata
+# Yerelleştirilmiş Metadata
 
 ### Açıklama
 Bu özellik, veri setleri ve değişkenleriniz hakkında yerelleştirilmiş metadata dahil etmenizi sağlar. Herhangi bir özellik içinde tanımlananaddAttributesetiket yerelleştirilebilir. Bu, başlık, özet, lisans, instituion gibi ortak dize özellikleri için kullanılması amaçlanmıştır. numeric için kullanılması tavsiye edilmez (E.g. "_FillValue") veya standart değerler (E.g. "ioos_category") Ve bu değerlerin yerelleştirilmesi şaşırtıcı davranışlar olabilir.

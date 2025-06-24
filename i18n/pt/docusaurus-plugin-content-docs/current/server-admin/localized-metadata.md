@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Metadados localizados
+# Metadados localizados
 
 ### Descrição
 Este recurso permite incluir metadados localizados sobre seus conjuntos de dados e variáveis. Qualquer atributo definido dentro de umaddAttributestag pode ser localizada. Isto destina-se a ser usado para atributos de cadeia de caracteres comuns como título, resumo, licença, instituiçãoon. Não é recomendado para ser usado para numérico (por exemplo, "_FillValue") ou valores padronizados (por exemplo, "ioos_category") e localizar esses tipos de valores pode ter comportamento surpreendente.

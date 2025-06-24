@@ -31,7 +31,7 @@ Note that this step is very slow, it translates all of the pages, documentation 
 ### Build
 
 ```
-$ npm build
+$ npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.

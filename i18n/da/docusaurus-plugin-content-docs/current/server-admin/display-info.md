@@ -1,13 +1,12 @@
 ---
-title: "displayInfo and displayAttribute"
 sidebar_position: 7
 ---
-## ‘displayInfo’ og ’displayAttribute’ Tags
+# ‘displayInfo’ og ’displayAttribute’ Tags
 
-### Beskrivelse Beskrivelse Beskrivelse Beskrivelse
+## Beskrivelse Beskrivelse Beskrivelse Beskrivelse
 Denne funktion giver dig mulighed for at vise globale attributter af dit valg på siden Datasets i rækken "Oplysninger".
 
-### Brugsvejledning
+## Brugsvejledning
 Disse tags kan kun bruges med "Sax parser". Følg disse trin for at aktivere og bruge dem:
 
 1.  **Aktiver SAX Parser** :
@@ -31,30 +30,30 @@ I `datasets.xml` fil, omfatter to top-niveau tags:
 4.  **Sørg for, at Consistency** :
 Antallet af komma-separerede værdier i både ‘displayInfo’ og ‘displayAttribute’ tags skal være den samme.
 
-### Hvordan det virker
+## Hvordan det virker
 - ’displayAttribute’ tag specificerer globale attributter (definerede inden for begrebet&lt;„addAttributes"&gt; tag) vises for hvert datasæt.
 - De tilsvarende værdier i ’displayInfo’-mærket vises som etiketter i ‘Oplysninger’-rækken.
 - Når brugeren svæver over de viste etiketter, vises et værktøjstip, der viser værdien af den globale egenskab.
 
-### Eksempel Eksempel Eksempel
+## Eksempel Eksempel Eksempel
 ```xml
 <displayInfo>Display1,Display2</displayInfo>
 <displayAttribute>att1,att2</displayAttribute>
 ```
 
-#### Dataset Global Attributes Eksempel:
+### Dataset Global Attributes Eksempel:
 ```xml
 <att name="att1">This is att1</att>
 <att name="att2">This is att2</att>
 ```
 
-#### Brugeradfærd:
+### Brugeradfærd:
 - Ordene `Display1’ og `Display2’ vises i ’Oplysninger’ rækken på UI.
 - Når du svæver, vil værktøjstips vise de tilsvarende egenskabsværdier:
   - `Display1`: Værktøjstip viser _Dette er att1_
   - `Display2`: Værktøjstip viser _Dette er att2_
 
-### Noter
+## Noter
 - Sørg for, at attributnavne, der er angivet i ’displayAttribute’-mærket, matcher de globale attributter, der er defineret i datasættet.
 - Forkerte eller manglende attributter vil logge fejlmeddelelser.
 

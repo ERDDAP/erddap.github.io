@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## 本地化元数据
+# 本地化元数据
 
 ### 描述
 此功能允許您包含關於您的數據集與變數的本地化中繼資料 。 任何屬性addAttributes標籤可以本地化 。 這是要用於共同的字串屬性, 如標題、摘要、許可證、建設等 。 不建議用於數字 (例如: "FillVale") 或标准化值 (例如,“ioos_ classic”) 可能會有令人驚訝的行為。

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-ERDDAP™- Preparar o teu próprioERDDAP™    
+# InformaÃ§Ãμes adicionais
 
 ## Coisas que você precisa saber{#things-you-need-to-know} 
      

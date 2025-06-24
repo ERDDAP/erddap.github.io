@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # 관련 상품
+
 ## ERDDAP™- 무거운 짐, 격자, 클러스터, 연맹 및 클라우드 컴퓨팅{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP::
+## ERDDAP::
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)웹 응용 프로그램 및 다양한 로컬 및 원격 소스에서 과학 데이터를 수집하는 웹 서비스이며 일반적인 파일 형식의 데이터의 하위 세트를 다운로드하고 그래프와지도를 만듭니다. 이 웹 페이지는 무거운 관련 문제 논의ERDDAP™사용 하중 및 그리드, 클러스터, 페더레이션 및 클라우드 컴퓨팅을 통해 매우 무거운 하중을 처리 할 수있는 가능성을 탐구합니다.
 

@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Meiteashonraí áitiúla
+# Meiteashonraí áitiúla
 
 ### Cur síos ar an Táirge
 Ceadaíonn an ghné seo duit meiteashonraí áitiúla a chur san áireamh faoi do thacair sonraí agus athróga. Aon tréith a shainmhínítear laistighaddAttributesIs féidir tag a localized. Tá sé seo beartaithe a úsáid le haghaidh tréithe teaghrán coitianta cosúil le teideal, achoimre, ceadúnas, instituion. Ní mholtar é a úsáid le haghaidh uimhriúil (e.g. "_FillValue") nó luachanna caighdeánaithe (e.g. "catagóirioos_") agus d'fhéadfadh go mbeadh iompar iontas ag na cineálacha luachanna seo.

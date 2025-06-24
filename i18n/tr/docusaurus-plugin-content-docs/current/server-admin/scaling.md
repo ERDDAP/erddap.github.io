@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Scaling
+
 ## ERDDAP™- Ağır Yükler, Grids, Clusters, Federasyonlar ve Cloud Computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)Farklı yerel ve uzaktan kaynaklardan gelen bilimsel verileri toplayan bir web uygulaması ve verilerin alt setlerini ortak dosya formatlarında indirmenin basit, tutarlı bir yolu sunar ve grafikler ve haritalar oluşturun. Bu web sayfası ağırla ilgili sorunları tartışırERDDAP™Kullanım Yükleri ve ızgaralar, kümeler, federasyonlar ve bulut bilişim yoluyla son derece ağır yüklerle uğraşmak için olanaklar keşfedin.
 

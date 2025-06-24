@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Schalen
+
 ## ERDDAP™- Zware belasting, rasters, Clusters, Federaties en Cloud Computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)is een webapplicatie en een webservice die wetenschappelijke gegevens uit verschillende lokale en externe bronnen samenvoegt en een eenvoudige, consistente manier biedt om deelverzamelingen van de gegevens in gemeenschappelijke bestandsformaten te downloaden en grafieken en kaarten te maken. Deze web pagina bespreekt kwesties met betrekking tot zwaarERDDAP™gebruik ladingen en verkent mogelijkheden voor het omgaan met extreem zware lasten via roosters, clusters, federaties en cloud computing.
 

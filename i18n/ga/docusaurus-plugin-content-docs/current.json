@@ -62,5 +62,9 @@
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "Eolas cabhrach d'úsáideoirí",
     "description": "The generated-index page description for category User in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.ScriptRow": {
+    "message": "Amharc ar gach eolas",
+    "description": "The label for category ScriptRow in sidebar docSidebar"
   }
 }

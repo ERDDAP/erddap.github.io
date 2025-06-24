@@ -62,5 +62,9 @@
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "ব্যবহারকারীদের জন্য সাহায্য তথ্য",
     "description": "The generated-index page description for category User in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.ScriptRow": {
+    "message": "স্ক্রিপ্ট",
+    "description": "The label for category ScriptRow in sidebar docSidebar"
   }
 }

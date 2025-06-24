@@ -62,5 +62,9 @@
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "Nakatutulong na impormasyon para sa mga gumagamit",
     "description": "The generated-index page description for category User in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.ScriptRow": {
+    "message": "ScriptRow",
+    "description": "The label for category ScriptRow in sidebar docSidebar"
   }
 }

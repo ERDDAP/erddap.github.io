@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Escalada
+
 ## ERDDAP™- Carga pesada, rejas, racimos, federaciones y computación en la nube{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)es una aplicación web y un servicio web que agrega datos científicos de diversas fuentes locales y remotas y ofrece una manera sencilla y consistente de descargar subconjuntos de los datos en formatos de archivos comunes y hacer gráficos y mapas. Esta página web discute temas relacionados con pesadosERDDAP™cargas de uso y explora posibilidades para lidiar con cargas extremadamente pesadas a través de rejillas, racimos, federaciones y computación en la nube.
 

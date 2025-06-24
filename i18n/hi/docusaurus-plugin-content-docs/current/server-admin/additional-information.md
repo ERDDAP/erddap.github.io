@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-ERDDAP™- अपना खुद का सेट करेंERDDAP™    
+# अतिरिक्त जानकारी
 
 ## जो चीज़ें आपको जानना चाहिए{#things-you-need-to-know} 
      

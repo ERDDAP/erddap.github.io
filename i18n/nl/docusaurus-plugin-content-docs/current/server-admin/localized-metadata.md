@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Gelokaliseerde metadata
+# Gelokaliseerde metadata
 
 ### Omschrijving
 Met deze functie kunt u gelokaliseerde metadata over uw datasets en variabelen opnemen. Een attribuut gedefinieerd in eenaddAttributestag kan gelokaliseerd worden. Dit is bedoeld voor gemeenschappelijke string attributen zoals titel, samenvatting, licentie, instelling. Het wordt niet aanbevolen voor numerieke (bv. "_FillValue") of gestandaardiseerde waarden (b.v. "ios_categorie") en het lokaliseren van deze soorten waarden kan verrassend gedrag.

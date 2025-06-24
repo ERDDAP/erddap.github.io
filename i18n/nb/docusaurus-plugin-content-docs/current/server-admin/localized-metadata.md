@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Lokaliserte metadata
+# Lokaliserte metadata
 
 ### Beskrivelse
 Denne funksjonen lar deg inkludere lokaliserte metadata om datasett og variabler. Enhver egenskap definert i enaddAttributesTagge kan lokaliseres. Dette er ment å brukes til felles strengeattributter som tittel, sammendrag, lisens, instituering. Det anbefales ikke å brukes til numeriske (f.eks.) eller standardiserte verdier (f.eks. "ioos_kategori") og lokalisering av disse typer verdier kan ha overraskende oppførsel.

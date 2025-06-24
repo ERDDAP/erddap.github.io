@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Stříkání
+
 ## ERDDAP™- Heavy Loads, Grids, Clusters, Federations, and Cloud Computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)je webová aplikace a webová služba, která shromažďuje vědecká data z různých místních a vzdálených zdrojů a nabízí jednoduchý a konzistentní způsob, jak stáhnout podmnožiny dat ve společných formátech souborů a vytvářet grafy a mapy. Tato webová stránka pojednává o otázkách souvisejících s těžkýmERDDAP™používání zatížení a zkoumá možnosti řešení extrémně těžkých zatížení prostřednictvím sítí, klastrů, federací a cloud computingu.
 

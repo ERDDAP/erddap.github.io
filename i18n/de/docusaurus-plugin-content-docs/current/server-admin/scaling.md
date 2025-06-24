@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Skalierung
+
 ## ERDDAP™- Schwere Lasten, Gitter, Cluster, Föderationen und Cloud Computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)ist eine Web-Anwendung und ein Web-Service, der wissenschaftliche Daten aus verschiedenen lokalen und Remote-Quellen aggregiert und bietet eine einfache, konsequente Möglichkeit, Untermengen der Daten in gemeinsamen Dateiformaten herunterzuladen und Grafiken und Karten zu erstellen. Diese Seite diskutiert Probleme im Zusammenhang mit schwerERDDAP™Nutzungslasten und erforscht Möglichkeiten für den Umgang mit extrem schweren Lasten über Netze, Cluster, Verbände und Cloud Computing.
 

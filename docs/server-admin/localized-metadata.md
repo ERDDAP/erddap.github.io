@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Localized Metadata
+# Localized Metadata
 
 ### Description
 This feature allows you to include localized metadata about your datasets and variables. Any attribute defined within an addAttributes tag can be localized. This is intended to be used for common string attributes like title, summary, license, instituion. It is not recommended to be used for numeric (e.g. "_FillValue") or standardized values (e.g. "ioos_category") and localizing these types of values may have surprising behavior.

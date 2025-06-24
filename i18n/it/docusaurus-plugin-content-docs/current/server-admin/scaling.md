@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Scala
+
 ## ERDDAP™- Caricamenti pesanti, Griglia, cluster, federazioni e cloud computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)è un'applicazione web e un servizio web che aggrega i dati scientifici provenienti da diverse fonti locali e remote e offre un modo semplice e coerente per scaricare sottoinsiemi dei dati in formati di file comuni e fare grafici e mappe. Questa pagina web parla di questioni relative a pesantiERDDAP™i carichi di utilizzo ed esplora le possibilità di trattare carichi estremamente pesanti tramite griglie, cluster, federazioni e cloud computing.
 

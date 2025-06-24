@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-ERDDAP™- Iayos ang Iyong SariliERDDAP™    
+# Karagdagang Impormasyon
 
 ## Mga Bagay na Kailangan Mong Malaman{#things-you-need-to-know} 
      

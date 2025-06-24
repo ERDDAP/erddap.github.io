@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-ERDDAP™- 自分で設定するERDDAP™    
+# 追加情報
 
 ## 知っておくべきこと{#things-you-need-to-know} 
      

@@ -1,8 +1,7 @@
 ---
-title: "Localized Metadata"
 sidebar_position: 8
 ---
-## Lokalizowane metadane
+# Lokalizowane metadane
 
 ### Opis
 Ta funkcja pozwala na włączenie lokalnych metadanych o zbiorach danych i zmiennych. Każdy atrybut zdefiniowany waddAttributesZnacznik może być zlokalizowany. Jest to przeznaczone dla atrybutów wspólnych, takich jak tytuł, streszczenie, licencja, instytut. Nie zaleca się stosowania w liczbach (np. "_ FillValue") lub wartości znormalizowane (np. "joos _ category") i lokalizacja tego typu wartości może mieć zaskakujące zachowanie.

@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Scalare
+
 ## ERDDAP™- Încărcături grele, grile, clustere, federații și cloud computing{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAP:
+## ERDDAP:
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)este o aplicație web și un serviciu web care agregate date științifice din diverse surse locale și de la distanță și oferă o modalitate simplă, coerentă de a descărca subseturi de date în formate de fișiere comune și de a face grafice și hărți. Această pagină web discută probleme legate de greleERDDAP™utilizarea sarcinilor și explorează posibilitățile de a face față sarcinilor extrem de grele prin rețele, clustere, federații și cloud computing.
 

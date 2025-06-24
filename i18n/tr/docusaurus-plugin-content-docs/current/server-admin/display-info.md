@@ -1,13 +1,12 @@
 ---
-title: "displayInfo and displayAttribute"
 sidebar_position: 7
 ---
-## "displayInfo" ve "displayAttribute" Etiketler
+# "displayInfo" ve "displayAttribute" Etiketler
 
-### Açıklama
+## Açıklama
 Bu özellik, "Bilgi" sırasındaki veri setlerinde seçiminizin global özelliklerini göstermenize olanak sağlar.
 
-### Kullanım talimatları
+## Kullanım talimatları
 Bu etiketler sadece “Sax .” ile kullanılabilir. Onları sağlamak ve kullanmak için, bu adımları takip edin:
 
 1.  **SAX Parser** :
@@ -31,30 +30,30 @@ Aşağıdaki çizgiyi "setup.xml" dosyasına ekleyin:
 4.  **Anlaşıcılık** :
 Hem "displayInfo" hem de "displayAttribute" etiketleri aynı olmalıdır.
 
-### Nasıl çalışır
+## Nasıl çalışır
 - “displayAttribute’ etiketi, küresel özellikleri belirtir (aşağıda tanımlanır).&lt;"addAttributes"&gt; tag) her veri kümesi için gösteriliyor.
 - “displayInfo’ etiketindeki karşılık gelen değerler, UI’nin ‘Bilgi’ sıralarında etiketler olarak gösteriliyor.
 - Kullanıcı, görüntülenen etiketler üzerinde ilerlerken, bir alettip görünür, küresel özelliklerin değerini gösterir.
 
-### Örnek Örnek Örnek Örnek Örnek Örnek Örnek Örnek
+## Örnek Örnek Örnek Örnek Örnek Örnek Örnek Örnek
 ```xml
 <displayInfo>Display1,Display2</displayInfo>
 <displayAttribute>att1,att2</displayAttribute>
 ```
 
-#### Dataset Global Attributes Örnek:
+### Dataset Global Attributes Örnek:
 ```xml
 <att name="att1">This is att1</att>
 <att name="att2">This is att2</att>
 ```
 
-#### UI Davranışı:
+### UI Davranışı:
 - "Display1" ve "Display2", UI'de "Bilgi" sırasında gösteriliyor.
 - Atıldığı zaman, alettipleri ilgili özellikleri gösterecektir:
   - "Display1": Tooltip gösteriyor _This is att1_
   - "Display2": Tooltip gösteriyor _This is att2_
 
-### Notlar Notlar Notlar Notlar Notlar Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Notlar
+## Notlar Notlar Notlar Notlar Notlar Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Not Notlar
 - “displayAttribute’ etiketinde belirtilen özelliklerden emin olun, veri kümesinde tanımlanan küresel özellikleri eşleştirin.
 - Incorrect veya eksik özellikler hata mesajlarını girişecektir.
 

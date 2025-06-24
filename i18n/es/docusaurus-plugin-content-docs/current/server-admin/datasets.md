@@ -1,5 +1,4 @@
 ---
-title: "ERDDAP™ - Working with the datasets.xml File"
 sidebar_position: 3
 ---
 # Trabajando con eldatasets.xmlArchivo

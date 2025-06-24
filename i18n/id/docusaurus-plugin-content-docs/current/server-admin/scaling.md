@@ -1,12 +1,12 @@
 ---
-title: "Scaling"
 sidebar_position: 5
 ---
 # Login
+
 ## ERDDAP™- Beban Berat, Grid, Cluster, Federasi, dan Komputasi Cloud{#erddap---heavy-loads-grids-clusters-federations-and-cloud-computing} 
  
 
-# ERDDAPSitemap
+## ERDDAPSitemap
 
 [ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)adalah aplikasi web dan layanan web yang mengumpulkan data ilmiah dari berbagai sumber lokal dan jarak jauh dan menawarkan cara yang sederhana dan konsisten untuk mengunduh subset data dalam format file umum dan membuat grafik dan peta. Halaman web ini membahas masalah terkait dengan beratERDDAP™beban penggunaan dan mengeksplorasi kemungkinan untuk berurusan dengan beban yang sangat berat melalui grid, cluster, federasi, dan komputasi awan.
 

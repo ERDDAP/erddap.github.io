@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-ERDDAP™Ställ in din egenERDDAP™    
+# Ytterligare information
 
 ## Saker du behöver veta{#things-you-need-to-know} 
      
