@@ -7,14 +7,12 @@ How To Do the Initial Setup of ERDDAP™ on Your Server
 
 
 ERDDAP™ can run on any server that supports Java and Tomcat (and other application servers like Jetty, but we don't support them). ERDDAP™ has been tested on Linux (including on Amazon's AWS), Mac, and Windows computers.
-
-*   **Amazon** -- If you are installing ERDDAP™ on an Amazon Web Services EC2 instance, see this [Amazon Web Services Overview](/docs/server-admin/additional-information#amazon) first.
-*   **Docker** -- Axiom now offers [ERDDAP™ in a Docker container](https://hub.docker.com/u/axiom/) and IOOS now offers a [Quick Start Guide for ERDDAP™ in a Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).  
-    It's the standard ERDDAP™ installation, but Axiom has put it in a docker container.  
+*   **Docker** -- We provide [ERDDAP™ in a Docker container](https://hub.docker.com/r/erddap/erddap) and IOOS now offers a [Quick Start Guide for ERDDAP™ in a Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).  
+    It's the standard ERDDAP™ installation, in a Docker container.  
+    Through Docker Compose we provide easy ways to set up ssl and monitoring, read more in out [Docker documentation](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).  
     If you already use Docker, you will probably prefer the Docker version.  
-    If you don't already use Docker, we generally don't recommend this.  
-    If you chose to install ERDDAP™ via Docker, we don't offer any support for the installation process.  
-    We haven't worked with Docker yet. If you work with this, please send us your comments.
+    If you are looking to run on cloud services you will probably prefer the Docker version.  
+*   **Amazon** -- If you are installing ERDDAP™ on an Amazon Web Services EC2 instance, see this [Amazon Web Services Overview](/docs/server-admin/additional-information#amazon) first.      
 *   **Linux and Macs** -- ERDDAP™ works great on Linux and Mac computers. See the instructions below.
 *   **Windows** -- Windows is fine for testing ERDDAP™ and for personal use (see the instructions below), but we don't recommend using it for public ERDDAPs. Running ERDDAP™ on Windows may have problems: notably, ERDDAP™ may be unable to delete and/or rename files quickly. This is probably due to antivirus software (e.g., from McAfee and Norton) which is checking the files for viruses. If you run into this problem (which can be seen by error messages in the [log.txt](/docs/server-admin/additional-information#log) file like "Unable to delete ..."), changing the antivirus software's settings may partially alleviate the problem. Or consider using a Linux or Mac server instead.
 
