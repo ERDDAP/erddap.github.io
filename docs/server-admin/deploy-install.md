@@ -9,7 +9,7 @@ How To Do the Initial Setup of ERDDAP™ on Your Server
 ERDDAP™ can run on any server that supports Java and Tomcat (and other application servers like Jetty, but we don't support them). ERDDAP™ has been tested on Linux (including on Amazon's AWS), Mac, and Windows computers.
 
 *   **Amazon** -- If you are installing ERDDAP™ on an Amazon Web Services EC2 instance, see this [Amazon Web Services Overview](/docs/server-admin/additional-information#amazon) first.
-*   **Docker** -- Axiom now offers [ERDDAP™ in a Docker container](https://hub.docker.com/u/axiom/) and IOOS now offers a [Quick Start Guide for ERDDAP™ in a Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).  
+*   **Docker** -- Axiom now offers [ERDDAP™ in a Docker container](https://hub.docker.com/r/erddap/erddap) and IOOS now offers a [Quick Start Guide for ERDDAP™ in a Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).  
     It's the standard ERDDAP™ installation, but Axiom has put it in a docker container.  
     If you already use Docker, you will probably prefer the Docker version.  
     If you don't already use Docker, we generally don't recommend this.  
