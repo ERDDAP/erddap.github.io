@@ -7,14 +7,12 @@ Wie man die erste Aufstellung vonERDDAP™auf Ihrem Server
 
 
 ERDDAP™kann auf jedem Server laufen, der unterstütztJavaund Tomcat (und andere Anwendungsserver wie Jetty, aber wir unterstützen sie nicht) .ERDDAP™wurde auf Linux getestet (auch auf Amazon's AWS) , Mac und Windows-Computer.
-
-*    **Amazon** -- Wenn Sie installierenERDDAP™auf einer Amazon Web Services EC2 Instanz, siehe dies[Amazon Web Services Überblick](/docs/server-admin/additional-information#amazon)zuerst.
-*    **Docker** -- Axiom jetzt Angebote[ERDDAP™in einem Docker-Container](https://hub.docker.com/u/axiom/)und IOOS bietet nun[Quick Start Guide fürERDDAP™in einem Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).
-Es ist der StandardERDDAP™Installation, aber Axiom hat es in einen Hafencontainer gelegt.
+*    **Docker** -- Wir bieten[ERDDAP™in einem Docker-Container](https://hub.docker.com/r/erddap/erddap)und IOOS bietet nun[Quick Start Guide fürERDDAP™in einem Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).
+Es ist der StandardERDDAP™Installation, in einem Docker Container.
+Über Docker Zusammenfassend bieten wir einfache Möglichkeiten, ssl und Monitoring einzurichten, weiterlesen[Docker Dokumentation](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 Wenn Sie Docker bereits verwenden, werden Sie wahrscheinlich die Docker-Version bevorzugen.
-Wenn Sie Docker nicht schon verwenden, empfehlen wir das im Allgemeinen nicht.
-Wenn Sie sich für die Installation entschieden habenERDDAP™via Docker bieten wir keine Unterstützung für den Installationsprozess.
-Wir haben noch nicht mit Docker gearbeitet. Bitte senden Sie uns Ihre Kommentare.
+Wenn Sie auf Cloud-Services laufen möchten, werden Sie wahrscheinlich die Docker-Version bevorzugen.
+*    **Amazon** -- Wenn Sie installierenERDDAP™auf einer Amazon Web Services EC2 Instanz, siehe dies[Amazon Web Services Überblick](/docs/server-admin/additional-information#amazon)zuerst.
 *    **Linux und Macs** --ERDDAP™funktioniert super auf Linux- und Mac-Computern. Siehe unten die Anweisungen.
 *    **Windows** -- Windows ist gut für TestsERDDAP™und für den persönlichen Gebrauch (siehe die folgenden Anweisungen) , aber wir empfehlen es nicht für die Öffentlichkeit zu verwendenERDDAPS. LaufenERDDAP™unter Windows kann Probleme haben:ERDDAP™kann Dateien schnell löschen und/oder umbenennen können. Dies ist wahrscheinlich auf Antivirus-Software zurückzuführen (z.B. von McAfee und Norton) die die Dateien für Viren überprüft. Wenn Sie in dieses Problem laufen (die durch Fehlermeldungen in der[Pressemitteilung](/docs/server-admin/additional-information#log)Datei wie "Unable to delete ...") , das Ändern der Antivirus-Software-Einstellungen kann das Problem teilweise lindern. Oder betrachten Sie stattdessen einen Linux- oder Mac-Server.
 

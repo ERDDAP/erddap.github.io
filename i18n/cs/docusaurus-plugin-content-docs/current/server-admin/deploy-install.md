@@ -7,14 +7,12 @@ Jak udělat počáteční nastaveníERDDAP™na Vašem serveru
 
 
 ERDDAP™může běžet na jakémkoli serveru, který podporujeJavaa Tomcat (a další servery jako Jetty, ale my je nepodporujeme.) .ERDDAP™byla testována na Linuxu (včetně AWS Amazonu) , Mac a Windows počítače.
-
-*    **Amazon** -- Pokud instalujeteERDDAP™v případě Amazon Web Services EC2:[Přehled webových služeb Amazon](/docs/server-admin/additional-information#amazon)Nejdřív.
-*    **Docker** -- Axiom nyní nabízí[ERDDAP™v kontejneru Docker](https://hub.docker.com/u/axiom/)a IOOS nyní nabízí[Návod k rychlému startu proERDDAP™v kontejneru Docker](https://ioos.github.io/erddap-gold-standard/index.html).
-Je to standard.ERDDAP™instalace, ale Axiom to dal do kontejneru s dockery.
+*    **Docker** -- Poskytujeme[ERDDAP™v kontejneru Docker](https://hub.docker.com/r/erddap/erddap)a IOOS nyní nabízí[Návod k rychlému startu proERDDAP™v kontejneru Docker](https://ioos.github.io/erddap-gold-standard/index.html).
+Je to standard.ERDDAP™instalace v kontejneru Docker.
+Přes Dockera Kompozit poskytujeme jednoduché způsoby, jak nastavit ssl a monitoring, číst více ven[Dokumentace dockerů](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 Pokud již používáte Docker, budete pravděpodobně preferovat Docker verzi.
-Pokud už nepoužíváte Dockera, obvykle to nedoporučujeme.
-Pokud jste se rozhodli pro instalaciERDDAP™přes Dockera nenabízíme žádnou podporu procesu instalace.
-Ještě jsme s Dockerem nepracovali. Pokud s tím budete pracovat, pošlete nám své připomínky.
+Pokud hledáte spustit na cloud služby budete pravděpodobně preferovat verzi Docker.
+*    **Amazon** -- Pokud instalujeteERDDAP™v případě Amazon Web Services EC2:[Přehled webových služeb Amazon](/docs/server-admin/additional-information#amazon)Nejdřív.
 *    **Linux a Macs** --ERDDAP™funguje skvěle na Linux a Mac počítače. Viz pokyny níže.
 *    **Okna** -- Windows je v pořádku pro testováníERDDAP™a pro osobní použití (viz níže uvedené pokyny) , ale nedoporučujeme ji používat pro veřejnostERDDAPs. BěhERDDAP™na Windows mohou mít problémy: zejménaERDDAP™nemusí být schopen rychle smazat a/nebo přejmenovat soubory. To je pravděpodobně kvůli antivirovému softwaru. (např. z McAfee a Norton) který kontroluje soubory na viry. Pokud narazíte na tento problém (které lze vidět chybovými zprávami v[log.txt](/docs/server-admin/additional-information#log)soubor jako "Nelze smazat ...") , změna nastavení antivirového softwaru může částečně zmírnit problém. Nebo místo toho používejte Linux nebo Mac server.
 

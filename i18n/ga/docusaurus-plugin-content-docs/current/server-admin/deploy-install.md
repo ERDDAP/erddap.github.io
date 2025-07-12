@@ -7,14 +7,12 @@ Conas a dhéanamh ar an Socrú TosaighERDDAP™ar do Freastalaí
 
 
 ERDDAP™Is féidir a reáchtáil ar aon fhreastalaí a thacaíonnJavaagus Tomcat (agus freastalaithe iarratas eile cosúil le Jetty, ach ní chuirimid tacaíocht dóibh) .ERDDAP™Tástáil ar Linux (lena n-áirítear ar AWS Amazon) , Mac, agus ríomhairí Windows.
-
-*    **Amazon ag díol** -- Má tá tú a shuiteáilERDDAP™ar shampla Amazon Seirbhísí Gréasáin EC2, féach seo[Seirbhísí Idirlín Amazon](/docs/server-admin/additional-information#amazon)ar dtús.
-*    **Déan teagmháil Linn** -- Axiom tairiscintí anois[ERDDAP™i gcoimeádán Docker](https://hub.docker.com/u/axiom/)agus IOOS cuireann anois[Treoir Tosaigh Tapa doERDDAP™i Docker Coimeádán](https://ioos.github.io/erddap-gold-standard/index.html).
-Tá sé an caighdeánERDDAP™suiteáil, ach tá Axiom curtha i gcoimeádán docker.
+*    **Déan teagmháil Linn** -- Soláthraímid[ERDDAP™i gcoimeádán Docker](https://hub.docker.com/r/erddap/erddap)agus IOOS cuireann anois[Treoir Tosaigh Tapa doERDDAP™i Docker Coimeádán](https://ioos.github.io/erddap-gold-standard/index.html).
+Tá sé an caighdeánERDDAP™suiteáil, i gcoimeádán Docker.
+Trí Doras Múirín a chuirimid ar fáil bealaí éasca a chur ar bun ssl agus monatóireacht a dhéanamh, níos mó a léamh amach[Doiciméid Docker](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 Má úsáideann tú Docker cheana féin, is dócha gur fearr leat an leagan Docker.
-Mura n-úsáideann tú Docker cheana féin, ní dhéanaimid é seo a mholadh go ginearálta.
-Má roghnaigh tú a shuiteáilERDDAP™trí Docker, ní chuirimid ar fáil aon tacaíocht don phróiseas a shuiteáil.
-Níor oibrigh muid le Docker fós. Má oibríonn tú leis seo, cuir do chuid tuairimí chugainn.
+Má tá tú ag iarraidh a reáchtáil ar sheirbhísí scamall beidh tú is fearr is dócha an leagan Docker.
+*    **Amazon ag díol** -- Má tá tú a shuiteáilERDDAP™ar shampla Amazon Seirbhísí Gréasáin EC2, féach seo[Seirbhísí Idirlín Amazon](/docs/server-admin/additional-information#amazon)ar dtús.
 *    **Linux agus Macs** --ERDDAP™Oibríonn mór ar Linux agus Mac ríomhairí. Féach na treoracha thíos.
 *    **Windows Windows Windows** -- Tá Windows breá le tástáilERDDAP™agus le haghaidh úsáide pearsanta (féach na treoracha thíos) , ach ní molaimid é a úsáid don phobalERDDAPs. Ag rithERDDAP™d'fhéadfadh fadhbanna a bheith ag Windows: go háirithe,ERDDAP™a bheith in ann a scriosadh agus / nó comhaid a athainmniú go tapa. Tá sé seo dócha mar gheall ar bogearraí antivirus (e.g., ó McAfee agus Norton) atá ag seiceáil na comhaid le haghaidh víris. Má ritheann tú isteach an fhadhb seo (is féidir a fheiceáil ag teachtaireachtaí earráide i[logáil isteach.](/docs/server-admin/additional-information#log)comhad cosúil le "Ní féidir a scriosadh...") , d'fhéadfadh athrú ar an bogearraí antivirus socruithe a mhaolú go páirteach ar an bhfadhb. Nó a mheas ag baint úsáide as freastalaí Linux nó Mac ionad.
 

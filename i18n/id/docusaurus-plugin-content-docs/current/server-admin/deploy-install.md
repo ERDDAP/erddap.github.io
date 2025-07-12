@@ -7,14 +7,12 @@ Cara Melakukan Pengaturan AwalERDDAP™Login
 
 
 ERDDAP™dapat menjalankan server apa pun yang mendukungJavadan Tomcat (dan server aplikasi lainnya seperti Jetty, tetapi kami tidak mendukung mereka Meme it) SitemapERDDAP™telah diuji pada Linux (termasuk di AWS Amazon) , Mac, dan komputer Windows.
-
-*    **Login** Login Jika Anda menginstalERDDAP™di Amazon Web Services EC2 instance, lihat ini[Sitemap _ Amazon Web Services](/docs/server-admin/additional-information#amazon)pertama.
-*    **Login** Login Axiom[ERDDAP™dalam wadah Docker](https://hub.docker.com/u/axiom/)dan IOOS sekarang menawarkan[Panduan Mulai Cepat untukERDDAP™dalam wadah Docker](https://ioos.github.io/erddap-gold-standard/index.html)Sitemap
-Ini standarERDDAP™instalasi, tetapi Axiom telah menempatkannya dalam wadah docker.
+*    **Login** Login Kami menyediakan[ERDDAP™dalam wadah Docker](https://hub.docker.com/r/erddap/erddap)dan IOOS sekarang menawarkan[Panduan Mulai Cepat untukERDDAP™dalam wadah Docker](https://ioos.github.io/erddap-gold-standard/index.html)Sitemap
+Ini standarERDDAP™instalasi, dalam wadah Docker.
+Melalui Docker Menyediakan cara mudah untuk mengatur ssl dan pemantauan, membaca lebih lanjut[Login](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md)Sitemap
 Jika Anda sudah menggunakan Docker, Anda mungkin akan lebih memilih versi Docker.
-Jika Anda belum menggunakan Docker, kita umumnya tidak merekomendasikan ini.
-Jika Anda memilih untuk menginstalERDDAP™melalui Docker, kami tidak menawarkan dukungan untuk proses instalasi.
-Kami belum bekerja dengan Docker belum. Jika Anda bekerja dengan ini, silakan kirim komentar Anda.
+Jika Anda ingin menjalankan layanan cloud, Anda mungkin akan memilih versi Docker.
+*    **Login** Login Jika Anda menginstalERDDAP™di Amazon Web Services EC2 instance, lihat ini[Sitemap _ Amazon Web Services](/docs/server-admin/additional-information#amazon)pertama.
 *    **Linux dan Macs** LoginERDDAP™bekerja hebat di komputer Linux dan Mac. Lihat petunjuk di bawah ini.
 *    **Login** Login Windows adalah baik untuk pengujianERDDAP™dan untuk penggunaan pribadi (lihat petunjuk di bawah ini) tapi kami tidak merekomendasikan menggunakannya untuk publikERDDAPSitemap LoginERDDAP™pada Windows mungkin memiliki masalah: tidak dapat,ERDDAP™mungkin tidak bisa menghapus dan/atau mengubah nama file dengan cepat. Ini mungkin karena perangkat lunak antivirus (e.g., dari McAfee dan Norton) yang memeriksa file untuk virus. Jika Anda menjalankan masalah ini (yang dapat dilihat oleh pesan kesalahan di Meme it[Login](/docs/server-admin/additional-information#log)file seperti "Tidak dapat dihapus ...") mengubah pengaturan perangkat lunak antivirus mungkin sebagian mengurangi masalah. Atau pertimbangkan menggunakan server Linux atau Mac.
 

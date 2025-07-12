@@ -7,14 +7,12 @@ Hvordan å gjøre den første oppsett avERDDAP™på din server
 
 
 ERDDAP™kan kjøres på enhver server som støtterJavaog Tomcat (og andre programservere som Jetty, men vi støtter dem ikke) ..ERDDAP™Har blitt testet på Linux (Inkludert i Amazons AWS) Mac og Windows datamaskiner.
-
-*    **Amazon** -- Hvis du installererERDDAP™på en Amazon Web Services EC2-instans, se dette[Amazon Web Services Oversikt](/docs/server-admin/additional-information#amazon)Først.
-*    **Docker** -- Axiom tilbyr nå[ERDDAP™i en Docker-beholder](https://hub.docker.com/u/axiom/)IOOS tilbyr nå[Hurtigstartguide forERDDAP™i en Docker Container](https://ioos.github.io/erddap-gold-standard/index.html)..
-Det er standardenERDDAP™installasjon, men Axiom har satt den i en docker beholder.
+*    **Docker** -- Vi tilbyr[ERDDAP™i en Docker-beholder](https://hub.docker.com/r/erddap/erddap)IOOS tilbyr nå[Hurtigstartguide forERDDAP™i en Docker Container](https://ioos.github.io/erddap-gold-standard/index.html)..
+Det er standardenERDDAP™installasjon, i en Docker container.
+Gjennom Docker Kombiner vi gir enkle måter å sette opp ssl og overvåking, lese mer på utsiden[Docker dokumentasjon](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md)..
 Hvis du allerede bruker Docker, vil du sannsynligvis foretrekke Docker versjonen.
-Hvis du ikke allerede bruker Docker, anbefaler vi vanligvis ikke dette.
-Hvis du velger å installereERDDAP™via Docker tilbyr vi ingen støtte for installasjonsprosessen.
-Vi har ikke jobbet med Docker ennå. Hvis du jobber med dette, vennligst send oss dine kommentarer.
+Hvis du ønsker å kjøre på skytjenester vil du sannsynligvis foretrekke Docker-versjonen.
+*    **Amazon** -- Hvis du installererERDDAP™på en Amazon Web Services EC2-instans, se dette[Amazon Web Services Oversikt](/docs/server-admin/additional-information#amazon)Først.
 *    **Linux og Macs** --ERDDAP™Fungerer bra på Linux og Mac datamaskiner. Se instruksjonene nedenfor.
 *    **Vinduer** -- Windows er bra for testingERDDAP™og til personlig bruk (Se instruksjonene nedenfor) , men vi anbefaler ikke å bruke det til offentligERDDAPS. KjøringERDDAP™på Windows kan ha problemer: spesieltERDDAP™kan være i stand til å slette og/eller omdøpe filer raskt. Dette skyldes sannsynligvis antivirusprogramvare. (For eksempel fra McAfee og Norton) som kontrollerer filene for virus. Hvis du løper inn i dette problemet (som kan sees av feilmeldinger i[log.txt](/docs/server-admin/additional-information#log)fil som "Ukan slettes ...") , endrer antivirusprogramvarens innstillinger kan delvis lindre problemet. Eller vurdere å bruke en Linux eller Mac-server i stedet.
 

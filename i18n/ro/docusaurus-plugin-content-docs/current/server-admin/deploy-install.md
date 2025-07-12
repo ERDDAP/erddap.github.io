@@ -7,14 +7,12 @@ Cum să faceţi configurarea iniţială aERDDAP™pe serverul dumneavoastră
 
 
 ERDDAP™poate rula pe orice server care suportăJavaşi Tomcat (și alte servere de aplicații ca Jetty, dar noi nu le sprijinim) .ERDDAP™a fost testat pe Linux (inclusiv pe Amazon AWS) , Mac, și calculatoare Windows.
-
-*    **Amazon** -- Dacă instalaţiERDDAP™într-o instanță Amazon Web Services EC2, a se vedea acest[Amazon Web Services Prezentare generală](/docs/server-admin/additional-information#amazon)Mai întâi.
-*    **Docker** -- Axiom oferă acum[ERDDAP™într-un recipient Docker](https://hub.docker.com/u/axiom/)și IOOS oferă acum o[Ghid de pornire rapidă pentruERDDAP™într-un container Docker](https://ioos.github.io/erddap-gold-standard/index.html).
-Este standardulERDDAP™Instalare, dar Axiom a pus-o într-un container docker.
+*    **Docker** -- Noi oferim[ERDDAP™într-un recipient Docker](https://hub.docker.com/r/erddap/erddap)și IOOS oferă acum o[Ghid de pornire rapidă pentruERDDAP™într-un container Docker](https://ioos.github.io/erddap-gold-standard/index.html).
+Este standardulERDDAP™instalare, într-un container Docker.
+Prin Docker Compozitie va oferim modalitati usoare de a configura SSL si monitorizare, citeste mai mult in afara[Documentație Docker](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 Dacă utilizaţi deja Docker, probabil că veţi prefera versiunea Docker.
-Dacă nu utilizați deja Docker, în general nu recomandăm acest lucru.
-Dacă ați ales să instalațiERDDAP™Prin Docker, nu oferim nici un sprijin pentru procesul de instalare.
-Încă nu am lucrat cu Docker. Dacă lucrați cu acest lucru, vă rugăm să ne trimiteți comentariile.
+Dacă sunteți în căutarea de a rula pe servicii cloud va prefera, probabil, versiunea Docker.
+*    **Amazon** -- Dacă instalaţiERDDAP™într-o instanță Amazon Web Services EC2, a se vedea acest[Amazon Web Services Prezentare generală](/docs/server-admin/additional-information#amazon)Mai întâi.
 *    **Linux și Macs** --ERDDAP™lucrează foarte bine pe Linux și Mac calculatoare. Vezi instrucţiunile de mai jos.
 *    **Ferestre** -- Windows este bine pentru testareERDDAP™și pentru uz personal (vezi instrucţiunile de mai jos) , dar noi nu recomandăm utilizarea sa pentru publicERDDAPc. RulareaERDDAP™pe Windows pot avea probleme: în special;ERDDAP™poate nu poate șterge și/sau redenumi rapid fișierele. Acest lucru este, probabil, din cauza software-ul antivirus (De exemplu, din McAfee și Norton) care verifică fișierele pentru viruși. Dacă dai peste această problemă (care poate fi văzut prin mesaje de eroare în[log.txt](/docs/server-admin/additional-information#log)fișier ca "Nu se poate șterge ...") , modificarea setărilor software-ului antivirus poate atenua parţial problema. Sau ia în considerare utilizarea unui Linux sau Mac server în schimb.
 

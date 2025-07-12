@@ -7,14 +7,12 @@ Hoe te doen de eerste instelling vanERDDAP™op uw server
 
 
 ERDDAP™kan draaien op elke server die ondersteuntJavaen Tomcat (en andere applicatieservers zoals Jetty, maar we ondersteunen ze niet) .ERDDAP™is getest op Linux (Inclusief Amazon's AWS) Mac en Windows computers.
-
-*    **Amazon** -- Als u installeertERDDAP™op een Amazon Web Services EC2 instantie, zie dit[Amazon Web Services Overzicht](/docs/server-admin/additional-information#amazon)Eerst.
-*    **Docker** -- Axiom biedt nu[ERDDAP™in een Docker container](https://hub.docker.com/u/axiom/)en IOOS biedt nu een[Snelstartgids voorERDDAP™in een Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).
-Het is de standaard.ERDDAP™installatie, maar Axiom heeft het in een docker container.
+*    **Docker** -- Wij bieden[ERDDAP™in een Docker container](https://hub.docker.com/r/erddap/erddap)en IOOS biedt nu een[Snelstartgids voorERDDAP™in een Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).
+Het is de standaard.ERDDAP™installatie, in een Docker container.
+Via Docker Samenstellen bieden wij eenvoudige manieren om ssl en monitoring op te zetten, lees meer in uit[Docker documentatie](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 Als u Docker al gebruikt, zult u waarschijnlijk liever de Docker versie.
-Als je Docker nog niet gebruikt, raden we dit over het algemeen niet aan.
-Als u ervoor gekozen heeft om te installerenERDDAP™Via Docker bieden wij geen ondersteuning voor het installatieproces.
-We hebben nog niet met Docker gewerkt. Als u hiermee werkt, stuur ons dan uw opmerkingen.
+Als u op zoek bent om te draaien op cloud-diensten zult u waarschijnlijk liever de Docker-versie.
+*    **Amazon** -- Als u installeertERDDAP™op een Amazon Web Services EC2 instantie, zie dit[Amazon Web Services Overzicht](/docs/server-admin/additional-information#amazon)Eerst.
 *    **Linux en Macs** --ERDDAP™werkt geweldig op Linux en Mac computers. Zie de instructies hieronder.
 *    **Vensters** -- Windows is prima voor het testenERDDAP™en voor persoonlijk gebruik (zie onderstaande instructies) , maar we raden het niet aan voor publiekERDDAPs. UitvoerenERDDAP™op Windows kunnen problemen hebben: met name,ERDDAP™kan bestanden niet snel kunnen verwijderen en/of hernoemen. Dit is waarschijnlijk te wijten aan antivirus software (bijvoorbeeld van McAfee en Norton) die de bestanden op virussen controleert. Als u dit probleem tegenkomt (die kunnen worden gezien door foutmeldingen in de[log.txt](/docs/server-admin/additional-information#log)bestand als "Kan niet verwijderen ...") , het veranderen van de instellingen van de antivirussoftware kan gedeeltelijk verlichten het probleem. Of overwegen om een Linux of Mac server te gebruiken.
 

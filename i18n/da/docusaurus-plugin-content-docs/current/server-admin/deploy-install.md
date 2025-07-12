@@ -7,14 +7,12 @@ Sådan gør du den første opsætning afERDDAP™på din server
 
 
 ERDDAP™kan køre på enhver server, der understøtterJavaog Tomcat (og andre applikationsservere som Jetty, men vi understøtter ikke dem) .ERDDAP™er blevet testet på Linux (herunder på Amazon's AWS) , Mac og Windows-computere.
-
-*    **Amazon Amazon** -- Hvis du installererERDDAP™på en Amazon Web Services EC2-instans, se dette[Oversigt over Amazon Web Services](/docs/server-admin/additional-information#amazon)først.
-*    **Docker** -- Axiom tilbyder nu[ERDDAP™i en Docker-container](https://hub.docker.com/u/axiom/)og IOOS tilbyder nu et tilbud[Hurtig startguide tilERDDAP™i en Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).
-Det er standardenERDDAP™installation, men Axiom har lagt den i en docker beholder.
+*    **Docker** -- Vi leverer[ERDDAP™i en Docker-container](https://hub.docker.com/r/erddap/erddap)og IOOS tilbyder nu et tilbud[Hurtig startguide tilERDDAP™i en Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).
+Det er standardenERDDAP™installation, i en Docker beholder.
+Gennem Docker Vi tilbyder nemme måder at opsætte ssl og overvåge, læse mere på[Docker dokumentation](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 Hvis du allerede bruger Docker, vil du sandsynligvis foretrække Docker-versionen.
-Hvis du ikke allerede bruger Docker, anbefaler vi generelt ikke dette.
-Hvis du valgte at installereERDDAP™via Docker tilbyder vi ingen støtte til installationsprocessen.
-Vi har ikke arbejdet med Docker endnu. Hvis du arbejder med dette, bedes du sende os dine kommentarer.
+Hvis du leder efter at køre på cloud-tjenester, vil du sandsynligvis foretrække Docker-versionen.
+*    **Amazon Amazon** -- Hvis du installererERDDAP™på en Amazon Web Services EC2-instans, se dette[Oversigt over Amazon Web Services](/docs/server-admin/additional-information#amazon)først.
 *    **Linux og Macs** --ERDDAP™virker fantastisk på Linux og Mac-computere. Se vejledningen nedenfor.
 *    **Windows Windows Windows** -- Windows er fint til testERDDAP™og til personlig brug (Se vejledningen nedenfor) , men vi anbefaler ikke at bruge det til offentlighedenERDDAPs. LøbERDDAP™på Windows kan have problemer: navnlig,ERDDAP™kan ikke slette og/eller omdøbe filer hurtigt. Dette skyldes sandsynligvis antivirus software (f.eks. fra McAfee og Norton) som kontrollerer filerne til virus. Hvis du kører ind i dette problem (som kan ses af fejlmeddelelser i den[log.txt](/docs/server-admin/additional-information#log)fil som "Unable at slette...") , ændring af antivirussoftwarens indstillinger kan delvist lindre problemet. Eller overveje at bruge en Linux- eller Mac-server i stedet.
 

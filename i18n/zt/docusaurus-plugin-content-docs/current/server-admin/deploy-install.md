@@ -7,14 +7,12 @@ sidebar_position: 1
 
 
 ERDDAP™可以在任何支持的伺服器上執行Java和 Tomcat (以及杰蒂等其他應用服務器 但我們不支持他們) .ERDDAP™已在 Linux 上驗證 (包括亞馬遜的AWS) 麥克和Windows電腦
-
-*    **亞馬遜** -- 如果你正在安裝ERDDAP™在 Amazon 網路服務 EC2 實例中,請參考此[Amazon 網路服務概述](/docs/server-admin/additional-information#amazon)先
-*    **嵌入器** -- Axiom 現在提供[ERDDAP™嵌入容器](https://hub.docker.com/u/axiom/)而IOOS現在提供[快速啟動指南ERDDAP™在容器中](https://ioos.github.io/erddap-gold-standard/index.html).
-這是標準ERDDAP™但Axiom把它放進了容器
+*    **嵌入器** -- 我們提供[ERDDAP™嵌入容器](https://hub.docker.com/r/erddap/erddap)而IOOS現在提供[快速啟動指南ERDDAP™在容器中](https://ioos.github.io/erddap-gold-standard/index.html).
+這是標準ERDDAP™安裝,在多克容器。
+透過嵌入器 撰寫我們提供簡單的設置SL和監控方法,[Docker 文件](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 如果您已經使用 Docker, 您可能會更喜歡 Docker 版本 。
-如果你沒有用多克 我們一般不建議這樣
-如果您選擇安裝ERDDAP™我們不支援安裝程序
-我們還沒和多克合作呢 如果你用這個工作,請發給我們你的評論。
+如果你想要運行云端服務 你可能會更喜歡Docker版本
+*    **亞馬遜** -- 如果你正在安裝ERDDAP™在 Amazon 網路服務 EC2 實例中,請參考此[Amazon 網路服務概述](/docs/server-admin/additional-information#amazon)先
 *    **Linux 和 macs** --ERDDAP™在Linux和Mac電腦上做得很好 參考以下指示.
 *    **視窗** -- 視窗可以做測試ERDDAP™供私人使用 (参见以下指令) 但我們不建議公開使用ERDDAPs. 執行ERDDAP™在 Windows 上可能會有問題:ERDDAP™可能無法快速刪除和(或)重命名檔案 。 可能是因為防病毒軟體 (例如,McAfee和Norton) 是檢查病毒的檔案 如果你碰到這個問題 (以錯誤訊息在[log.txt](/docs/server-admin/additional-information#log)檔案如"無法刪除...") 改變抗病毒軟體的設定, 或者考慮使用 Linux 或者 Mac 伺服器 。
 

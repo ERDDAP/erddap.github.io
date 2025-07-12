@@ -7,14 +7,12 @@ sidebar_position: 1
 
 
 ERDDAP™可以在任何支持的服务器上运行Java和汤姆卡特 (还有Jetty等其他应用服务器 但我们不支持它们) 。 。 。 。ERDDAP™已在 Linux 上测试过 (包括亚马逊的AWS) 麦克和Windows电脑
-
-*    **亚马逊** - —— - 说 如果你正在安装ERDDAP™在亚马逊网络服务EC2实例中,请参见此[亚马逊网络服务概览](/docs/server-admin/additional-information#amazon)先说
-*    **插头** - —— - 说 Axiom现在出价了[ERDDAP™嵌入容器](https://hub.docker.com/u/axiom/)监督办现在提供[快速启动指南ERDDAP™在一个容器中](https://ioos.github.io/erddap-gold-standard/index.html)。 。 。 。
-这是标准ERDDAP™安装,但Axiom已经把它放在一个容器里。
+*    **插头** - —— - 说 我们提供[ERDDAP™嵌入容器](https://hub.docker.com/r/erddap/erddap)监督办现在提供[快速启动指南ERDDAP™在一个容器中](https://ioos.github.io/erddap-gold-standard/index.html)。 。 。 。
+这是标准ERDDAP™在Docker容器中安装。
+通过多克 组成我们提供方便的方法 建立 sl 和监控, 更多读出来[Docker 文档](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md)。 。 。 。
 如果您已经使用 Docker , 您可能更喜欢 Docker 版本 。
-如果你不已经使用Docker, 我们一般不建议这样做。
-如果您选择安装ERDDAP™通过Docker,我们不为安装过程提供任何支持.
-我们还没和多克合作呢 如果你用这个工作, 请给我们你的评论。
+如果您想要运行云服务, 您可能更喜欢多克版本 。
+*    **亚马逊** - —— - 说 如果你正在安装ERDDAP™在亚马逊网络服务EC2实例中,请参见此[亚马逊网络服务概览](/docs/server-admin/additional-information#amazon)先说
 *    **Linux 和 麦克斯** - —— - 说ERDDAP™在Linux和Mac电脑上很出色 参见以下说明.
 *    **窗口** - —— - 说 窗口可以测试ERDDAP™供个人使用 (参见以下说明:) 但是我们不建议公开使用它ERDDAP编号 运行ERDDAP™在Windows上可能会有问题:ERDDAP™可能无法快速删除和/或重命名文件。 这大概是因为防病毒软件 (例如,来自McAfee和Norton) 正在检查病毒的文件。 如果你遇到这个问题 (中的错误信息可查看[日志.txt](/docs/server-admin/additional-information#log)文件如“无法删除...”) ,改变抗病毒软件的设置可能会部分缓解问题. 或者考虑使用Linux或Mac服务器代替.
 

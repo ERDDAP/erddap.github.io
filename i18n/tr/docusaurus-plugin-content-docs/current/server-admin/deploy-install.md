@@ -7,14 +7,12 @@ sidebar_position: 1
 
 
 ERDDAP™Desteklenen herhangi bir sunucuda çalıştırılabilirJavaTomcat ve (Ve Jetty gibi diğer uygulama sunucuları, ama onları desteklemiyoruz) .ERDDAP™Linux üzerinde test edilmiştir (Amazon'un AWS'sinde de dahil olmak üzere) Mac ve Windows bilgisayarları.
-
-*    **Amazon Amazon Amazon** – Eğer yükleniyorsanızERDDAP™Amazon Web Services EC2 örneğinde, bunu görün[Amazon Web Services Genel Bakış](/docs/server-admin/additional-information#amazon)İlk olarak.
-*    **Docker** – Axiom şimdi teklifleri sunuyor[ERDDAP™Bir Docker konteynerinde](https://hub.docker.com/u/axiom/)Ve IOOS şimdi bir teklif sunuyor[Hızlı Başlangıç Kılavuzu içinERDDAP™Bir Docker Konteyner](https://ioos.github.io/erddap-gold-standard/index.html).
-StandartERDDAP™Kurulum, ancak Axiom bunu bir docker konteynerine koydu.
+*    **Docker** – Biz sunuyoruz[ERDDAP™Bir Docker konteynerinde](https://hub.docker.com/r/erddap/erddap)Ve IOOS şimdi bir teklif sunuyor[Hızlı Başlangıç Kılavuzu içinERDDAP™Bir Docker Konteyner](https://ioos.github.io/erddap-gold-standard/index.html).
+StandartERDDAP™kurulum, bir Docker konteynerinde.
+Docker Boşluk ve izleme kurmak için kolay yollar sunuyoruz, daha fazlasını okuyun[Docker belgeleri](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 Docker kullanıyorsanız, muhtemelen Docker versiyonunu tercih edersiniz.
-Docker kullanmıyorsanız, genellikle bunu tavsiye etmiyoruz.
-Yüklemeyi seçtiysenizERDDAP™Docker aracılığıyla yükleme süreci için herhangi bir destek sunmuyoruz.
-Henüz Docker ile çalışmadık. Eğer bununla çalışıyorsanız, lütfen bize yorumlarınızı gönderin.
+Bulut hizmetleri üzerinde koşmak arıyorsanız muhtemelen Docker versiyonunu tercih edeceksiniz.
+*    **Amazon Amazon Amazon** – Eğer yükleniyorsanızERDDAP™Amazon Web Services EC2 örneğinde, bunu görün[Amazon Web Services Genel Bakış](/docs/server-admin/additional-information#amazon)İlk olarak.
 *    **Linux ve Macs** –ERDDAP™Linux ve Mac bilgisayarlarında harika çalışır. Aşağıdaki talimatları görün.
 *    **Windows Windows Windows** – Windows test için iyiERDDAP™Ve kişisel kullanım için (Aşağıdaki talimatları görmek) Ama bunu halk için kullanmayı önermiyoruzERDDAPs. Koşu KoşuERDDAP™Windows'da sorunlar olabilir: özellikle,ERDDAP™dosyaları çabucak silemez ve / veya yeniden adlandırmayabilir. Bu muhtemelen antivirüs yazılımı nedeniyle (E.g., McAfee ve Norton) Hangi dosyaları virüsler için kontrol eder. Eğer bu sorunla karşılaşırsanız (Hangi hata mesajları tarafından görülebilir[Giriş.txt](/docs/server-admin/additional-information#log)"Unable to delete ..." gibi dosya) Ancak antivirüs yazılımının ayarlarını değiştirmek kısmen sorunu hafifletebilir. Ya da bunun yerine bir Linux veya Mac sunucusu kullanmayı düşünün.
 

@@ -7,14 +7,12 @@ Kung Paano Gagawin ang Unang SeksyonERDDAP™sa Iyong Server
 
 
 ERDDAP™ay maaaring tumakbo sa anumang server na sumusuportaJavaat ang Tomcat (at iba pang aplikasyon na gaya ni Jetty, pero hindi namin sila sinusuportahan) .ERDDAP™ay sinubok sa Linux (kasama ang AWS ng Amazon) , Mac, at Windows computers.
-
-*    **Amazon** -- Kung naka-install kaERDDAP™sa isang Web Services EC2 halimbawa, tingnan ito[Overviewed ang Web Services ng Amazon](/docs/server-admin/additional-information#amazon)Una.
-*    **Docker** -- Ang Axiom ngayon ay nag - aalok[ERDDAP™sa isang Docker container](https://hub.docker.com/u/axiom/)at si IOOS ngayon ay nag - aalok ng isang[Mabilis na Patnubay sa PasimulaERDDAP™sa Isang Docker Conter](https://ioos.github.io/erddap-gold-standard/index.html).
-Ito ang pamantayanERDDAP™Pagluluklok, subalit inilagay ito ni Axiom sa isang lalagyan ng mga piyer.
+*    **Docker** -- Nagbibigay tayo[ERDDAP™sa isang Docker container](https://hub.docker.com/r/erddap/erddap)at si IOOS ngayon ay nag - aalok ng isang[Mabilis na Patnubay sa PasimulaERDDAP™sa Isang Docker Conter](https://ioos.github.io/erddap-gold-standard/index.html).
+Ito ang pamantayanERDDAP™pag-install, sa isang Docker container.
+Sa Pamamagitan ng Docker Compose ay naglalaan kami ng madaling mga paraan upang gumawa ng sstl at pagsubaybay, magbasa pa nang higit[Docker dokumentasyon](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 Kung gumagamit ka na ng Docker, malamang na mas gugustuhin mo ang bersiyong Docker.
-Kung hindi mo na ginagamit ang Docker, karaniwan nang hindi namin inirerekomenda ito.
-Kung pipiliin mong magluklokERDDAP™Sa pamamagitan ni Docker, hindi kami nag - aalok ng anumang suporta para sa proseso ng instalasyon.
-Hindi pa kami gumagawang kasama ni Docker. Kung gagawin mo ito, pakisuyong ipadala sa amin ang iyong mga komento.
+Kung nais mong tumakbo sa mga serbisyo ng ulap malamang na mas gusto mo ang bersiyong Docker.
+*    **Amazon** -- Kung naka-install kaERDDAP™sa isang Web Services EC2 halimbawa, tingnan ito[Overviewed ang Web Services ng Amazon](/docs/server-admin/additional-information#amazon)Una.
 *    **Linux at Macs** --ERDDAP™ay napakahusay sa Linux at Mac na mga computer. Tingnan ang mga tagubilin sa ibaba.
 *    **Windows** -- Mainam ang Windows para sa pagsubokERDDAP™at para sa personal na gamit (tingnan ang mga tagubilin sa ibaba) , ngunit hindi namin inirerekomenda ang paggamit nito para sa publikoERDDAPs. PagtakboERDDAP™sa Windows ay maaaring may mga problema: lalo na,ERDDAP™ay maaaring hindi matanggal ang mga talaksang delete at/o magkaroon ng maling pangalan nang mabilis. Ito marahil ay dahil sa antivirus software (e.g., mula sa McAfee at Norton) na sumusuri sa mga file para sa mga virus. Kung mapaharap ka sa problemang ito (na makikita sa maling mga mensahe sa[log.txt](/docs/server-admin/additional-information#log)talaksang tulad ng "Hindi Kayang tanggalin ...") , ang pagbabago ng settings ng antivirus software ay maaaring bahagyang maibsan ang problema. O sa halip ay isaalang - alang ang paggamit ng isang Linux o Mac server.
 
