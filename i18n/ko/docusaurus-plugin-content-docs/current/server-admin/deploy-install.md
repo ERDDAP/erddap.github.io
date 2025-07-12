@@ -7,14 +7,12 @@ sidebar_position: 1
 
 
 ERDDAP™지원되는 모든 서버에 실행할 수 있습니다.Java톰캣 (Jetty와 같은 다른 응용 서버, 그러나 우리는 그들을 지원하지 않습니다) ·ERDDAP™Linux에서 테스트되었습니다. (Amazon의 AWS를 포함한) , Mac 및 Windows 컴퓨터.
-
-*    **아마존 320** -- 설치 방법ERDDAP™Amazon Web Services EC2 인스턴스에서, 이 참조[Amazon 웹 서비스 개요](/docs/server-admin/additional-information#amazon)처음.
-*    **팟캐스트** -- Axiom 지금 제안[ERDDAP™Docker 컨테이너](https://hub.docker.com/u/axiom/)IOOS는 이제[빠른 시작 가이드ERDDAP™Docker 컨테이너](https://ioos.github.io/erddap-gold-standard/index.html)·
-그것은 기준입니다ERDDAP™설치하지만, Axiom은 도커 컨테이너에 넣어.
+*    **팟캐스트** -- 우리는 제공합니다[ERDDAP™Docker 컨테이너](https://hub.docker.com/r/erddap/erddap)IOOS는 이제[빠른 시작 가이드ERDDAP™Docker 컨테이너](https://ioos.github.io/erddap-gold-standard/index.html)·
+그것은 기준입니다ERDDAP™설치, Docker 컨테이너.
+Docker를 통해 Compose 우리는 SSL 및 모니터링을 설정하는 쉬운 방법을 제공, 자세히 읽기[Docker 문서](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md)·
 이미 Docker를 사용한다면 Docker 버전을 선호합니다.
-이미 Docker를 사용하지 않는 경우, 우리는 일반적으로 이것을 추천하지 않습니다.
-설치를 선택한 경우ERDDAP™Docker를 통해, 우리는 임명 과정을 위한 어떤 지원을 제안하지 않습니다.
-Docker는 아직 작동하지 않았습니다. 이 작업을 수행하면 의견을 보내주십시오.
+클라우드 서비스에 실행하려면 Docker 버전을 선호합니다.
+*    **아마존 320** -- 설치 방법ERDDAP™Amazon Web Services EC2 인스턴스에서, 이 참조[Amazon 웹 서비스 개요](/docs/server-admin/additional-information#amazon)처음.
 *    **리눅스 및 맥** --ERDDAP™Linux 및 Mac 컴퓨터에서 잘 작동합니다. 아래 지침을 참조하십시오.
 *    **윈도우** -- Windows는 시험을 위해 정밀합니다ERDDAP™자주 묻는 질문 (아래 지침을 참조) , 그러나 우리는 대중을 위해 그것을 사용하는 추천하지 않습니다ERDDAP₢ 킹 지원하다ERDDAP™Windows에서 문제가 발생할 수 있습니다.ERDDAP™삭제 및/또는 파일 이름을 신속하게 변경할 수 없습니다. 이것은 아마도 바이러스 백신 소프트웨어로 인해 (예를 들어, McAfee와 Norton에서) 바이러스에 대한 파일을 검사하는 것. 이 문제로 실행하는 경우 (오류 메시지로 볼 수 있습니다.[로그.txt](/docs/server-admin/additional-information#log)같은 파일 " 삭제할 수 없습니다 ...") 백신 소프트웨어의 설정을 변경하면 부분적으로 문제를 완화할 수 있습니다. 또는 대신 Linux 또는 Mac 서버를 사용하는 것이 좋습니다.
 

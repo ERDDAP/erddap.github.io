@@ -7,14 +7,12 @@ Cómo hacer la configuración inicialERDDAP™en su servidor
 
 
 ERDDAP™puede ejecutarse en cualquier servidor que soportaJavay Tomcat (y otros servidores de aplicaciones como Jetty, pero no los apoyamos) .ERDDAP™ha sido probado en Linux (incluido en el AWS de Amazon) , Mac y ordenadores Windows.
-
-*    **Amazon** -- Si usted está instalandoERDDAP™en una instancia de Amazon Web Services EC2, ver esto[Amazon Web Services Overview](/docs/server-admin/additional-information#amazon)primero.
-*    **Docker** -- Axiom ahora ofrece[ERDDAP™en un contenedor Docker](https://hub.docker.com/u/axiom/)IOOS ahora ofrece un[Guía de inicio rápidoERDDAP™en un contenedor Docker](https://ioos.github.io/erddap-gold-standard/index.html).
-Es el estándar.ERDDAP™instalación, pero Axiom lo ha puesto en un contenedor de muelles.
+*    **Docker** -- Proporcionamos[ERDDAP™en un contenedor Docker](https://hub.docker.com/r/erddap/erddap)IOOS ahora ofrece un[Guía de inicio rápidoERDDAP™en un contenedor Docker](https://ioos.github.io/erddap-gold-standard/index.html).
+Es el estándar.ERDDAP™instalación, en un contenedor Docker.
+A través de Docker Compongamos que proporcionamos maneras fáciles de establecer ssl y monitoreo, leer más[Documentación de Docker](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 Si ya usas Docker, probablemente preferirás la versión Docker.
-Si ya no usas Docker, generalmente no recomendamos esto.
-Si elegiste instalarERDDAP™via Docker, no ofrecemos ningún soporte para el proceso de instalación.
-Aún no hemos trabajado con Docker. Si trabajas con esto, envíanos tus comentarios.
+Si usted está buscando para ejecutar en los servicios de la nube usted probablemente prefiere la versión Docker.
+*    **Amazon** -- Si usted está instalandoERDDAP™en una instancia de Amazon Web Services EC2, ver esto[Amazon Web Services Overview](/docs/server-admin/additional-information#amazon)primero.
 *    **Linux y Macs** --ERDDAP™funciona muy bien en computadoras Linux y Mac. Vea las instrucciones a continuación.
 *    **Windows** -- Windows está bien para probarERDDAP™y para uso personal (ver las instrucciones siguientes) , pero no recomendamos utilizarlo para públicoERDDAPs. CorriendoERDDAP™en Windows puede tener problemas:ERDDAP™puede ser incapaz de borrar y/o renombrar archivos rápidamente. Esto probablemente se debe al software antivirus (por ejemplo, de McAfee y Norton) que está revisando los archivos para virus. Si te enfrentas a este problema (que puede ser visto por mensajes de error en[log.txt](/docs/server-admin/additional-information#log)archivo como "Unable to delete ...") , cambiar la configuración del software antivirus puede aliviar parcialmente el problema. O considere usar un servidor Linux o Mac en su lugar.
 

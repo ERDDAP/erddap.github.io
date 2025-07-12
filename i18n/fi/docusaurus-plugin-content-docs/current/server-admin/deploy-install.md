@@ -7,14 +7,12 @@ Miten tehdä ensimmäinen asennusERDDAP™Sinun palvelijasi
 
 
 ERDDAP™Voit käyttää mitä tahansa palvelinta, joka tukeeJavaTomcat (muut sovelluspalvelimet, kuten Jetty, mutta emme tue niitä.) .ERDDAP™on testattu Linuxilla (Lähde: Amazon's AWS) Mac ja Windows-tietokoneet.
-
-*    **Amazon Amazon** ----- Jos olet asennuksessaERDDAP™Amazon Web Services EC2:ssa, katso tämä[Amazon Web Services yleiskatsaus](/docs/server-admin/additional-information#amazon)Ensimmäinen.
-*    **Docker** ----- Axiom tarjoaa nyt[ERDDAP™Docker-säiliö](https://hub.docker.com/u/axiom/)IOOS tarjoaa nyt[Nopea aloitusopasERDDAP™Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).
-Se on standardiERDDAP™Asennus, mutta Axiom on laittanut sen docker-säiliöön.
+*    **Docker** ----- Tarjoamme[ERDDAP™Docker-säiliö](https://hub.docker.com/r/erddap/erddap)IOOS tarjoaa nyt[Nopea aloitusopasERDDAP™Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).
+Se on standardiERDDAP™Asentaminen Docker-säiliöön.
+Dockerin kautta Kompleksi tarjoaa helppoja tapoja luoda sl ja seuranta, lue lisää[Dockerin dokumentointi](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 Jos käytät Dockeria, pidät todennäköisesti Docker-versiosta.
-Jos et käytä Dockeria, emme yleensä suosittele tätä.
-Jos päätät asentaaERDDAP™Dockerin kautta emme tarjoa mitään tukea asennusprosessiin.
-Emme ole vielä tehneet yhteistyötä Dockerin kanssa. Jos työskentelet tämän kanssa, lähetä meille kommenttisi.
+Jos haluat käyttää pilvipalveluita, pidät todennäköisesti Docker-versiosta.
+*    **Amazon Amazon** ----- Jos olet asennuksessaERDDAP™Amazon Web Services EC2:ssa, katso tämä[Amazon Web Services yleiskatsaus](/docs/server-admin/additional-information#amazon)Ensimmäinen.
 *    **Linux ja Macit** -----ERDDAP™Toimii erinomaisesti Linux- ja Mac-tietokoneissa. Katso ohjeet alta.
 *    **Windows Windows** ----- Windows on hyvä testataERDDAP™henkilökohtaiseen käyttöön (Katso ohjeet alta) Mutta emme suosittele käyttämään sitä julkisesti.ERDDAPs. JuokseminenERDDAP™Windowsissa voi olla ongelmia:ERDDAP™Et voi poistaa ja/tai nimetä tiedostoja nopeasti. Tämä johtuu todennäköisesti virustorjuntaohjelmistosta. (Lähde: McAfee and Norton) Tämä tarkistaa tiedostoja viruksia. Jos törmäät tähän ongelmaan (jotka näkyvät virheviestissä[log.txt](/docs/server-admin/additional-information#log)tiedostot "Ei voi poistaa ...") Virustorjuntaohjelmiston asetukset saattavat osittain lievittää ongelmaa. Käyttää Linux- tai Mac-palvelinta.
 

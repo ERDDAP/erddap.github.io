@@ -7,14 +7,12 @@ Hogyan kell csinálni a kezdeti beállítástERDDAP™A szervered
 
 
 ERDDAP™futhat bármely olyan szerveren, amely támogatjaJavaTomcat (más alkalmazásszerverek, mint a Jetty, de nem támogatjuk őket) ...ERDDAP™tesztelték a Linuxot (beleértve az Amazon AWS-t) Mac és Windows számítógépek.
-
-*    **Amazon** - Ha telepítiERDDAP™az Amazon Web Services EC2 esetben lásd ezt[Amazon Web Services áttekintés](/docs/server-admin/additional-information#amazon)először.
-*    **Docker** - Axiom most kínál[ERDDAP™egy Docker konténerben](https://hub.docker.com/u/axiom/)IOOS most kínál egy[Gyors indítási útmutatóERDDAP™egy Docker Container](https://ioos.github.io/erddap-gold-standard/index.html)...
-Ez a szabványERDDAP™telepítés, de az Axiom docker konténerbe helyezte.
+*    **Docker** - Biztosítunk[ERDDAP™egy Docker konténerben](https://hub.docker.com/r/erddap/erddap)IOOS most kínál egy[Gyors indítási útmutatóERDDAP™egy Docker Container](https://ioos.github.io/erddap-gold-standard/index.html)...
+Ez a szabványERDDAP™telepítés egy Docker konténerben.
+Docker Könnyű módszereket biztosítunk a ssl és a monitorozás létrehozásához, többet olvasunk ki[Docker dokumentáció](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md)...
 Ha már használja Docker, akkor valószínűleg inkább a Docker verzió.
-Ha nem használja a Dockert, általában nem ajánljuk ezt.
-Ha úgy döntött, hogy telepítERDDAP™Docker segítségével nem nyújtunk támogatást a telepítési folyamathoz.
-Még nem dolgoztunk Dockerrel. Ha ezzel dolgozol, kérjük, küldje el hozzászólásait.
+Ha felhőszolgáltatásokat szeretne futtatni, valószínűleg inkább a Docker verziót fogja előnyben részesíteni.
+*    **Amazon** - Ha telepítiERDDAP™az Amazon Web Services EC2 esetben lásd ezt[Amazon Web Services áttekintés](/docs/server-admin/additional-information#amazon)először.
 *    **Linux és Macska** -ERDDAP™nagyszerűen működik a Linux és a Mac számítógépeken. Lásd az alábbi utasításokat.
 *    **Windows Windows** - A Windows jó a teszteléshezERDDAP™és személyes használatra (lásd az alábbi utasításokat) , de nem javasoljuk, hogy használja a nyilvánosság számáraERDDAPS. RunningERDDAP™Windows-on problémák merülhetnek fel: nevezetesen,ERDDAP™Lehet, hogy nem tudja törölni és / vagy renesz fájlokat gyorsan. Ez valószínűleg a víruskereső szoftver miatt van (pl. McAfee és Norton) amely ellenőrzi a vírusok fájljait. Ha belefutsz erre a problémára (amelyet hibás üzenetek láthatnak a[Log.txt](/docs/server-admin/additional-information#log)olyan fájl, mint a "Lehetetlen törölni ...") A víruskereső szoftver beállításainak megváltoztatása részben enyhítheti a problémát. Vagy inkább egy Linux vagy Mac szerver használata.
 

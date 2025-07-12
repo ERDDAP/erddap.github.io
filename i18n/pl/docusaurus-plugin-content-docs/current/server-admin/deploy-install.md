@@ -7,14 +7,12 @@ Jak zrobić wstępne ustawienieERDDAP™na serwerze
 
 
 ERDDAP™może działać na dowolnym serwerze, który obsługujeJavai Tomcat (i innych serwerów aplikacji takich jak Jetty, ale ich nie wspieramy) .ERDDAP™został przetestowany na Linuksie (w tym na AWS Amazona) komputerów Mac i Windows.
-
-*    **Amazon** -- W przypadku instalacjiERDDAP™na przykładzie Amazon Web Services EC2, zobacz to[Amazon Web Services Przegląd](/docs/server-admin/additional-information#amazon)Najpierw.
-*    **Docker** -- Axiom teraz oferuje[ERDDAP™w pojemniku Docker](https://hub.docker.com/u/axiom/)i IOOS oferuje teraz[Szybki przewodnik startowy dlaERDDAP™w kontenerze dokującym](https://ioos.github.io/erddap-gold-standard/index.html).
-Taki jest standard.ERDDAP™Instalacja, ale Axiom umieścił ją w pojemniku.
+*    **Docker** -- Zapewniamy[ERDDAP™w pojemniku Docker](https://hub.docker.com/r/erddap/erddap)i IOOS oferuje teraz[Szybki przewodnik startowy dlaERDDAP™w kontenerze dokującym](https://ioos.github.io/erddap-gold-standard/index.html).
+Taki jest standard.ERDDAP™instalacji, w pojemniku Docker.
+Przez Docker Komponowanie zapewniamy łatwe sposoby konfiguracji ssl i monitorowania, czytaj więcej na zewnątrz[Dokumentacja dokująca](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 Jeśli już używasz Docker, prawdopodobnie wolisz wersję Docker.
-Jeśli nie używasz Dockera, zazwyczaj nie zalecamy tego.
-Jeśli wybrałeś zainstalowaćERDDAP™przez Docker, nie oferujemy żadnego wsparcia dla procesu instalacji.
-Nie pracowaliśmy jeszcze z Dockerem. Jeśli z tym współpracujesz, wyślij nam swoje uwagi.
+Jeśli chcesz uruchomić usługi w chmurze, prawdopodobnie wolisz wersję Docker.
+*    **Amazon** -- W przypadku instalacjiERDDAP™na przykładzie Amazon Web Services EC2, zobacz to[Amazon Web Services Przegląd](/docs/server-admin/additional-information#amazon)Najpierw.
 *    **Linux i Mac** --ERDDAP™działa świetnie na komputerach Linux i Mac. Patrz instrukcja poniżej.
 *    **Okna** -- Okna są dobre do testowaniaERDDAP™oraz do użytku osobistego (Zob. instrukcje poniżej.) , ale nie zalecamy używania go publicznieERDDAPb. UruchomienieERDDAP™w sprawie systemu Windows mogą mieć problemy: w szczególności,ERDDAP™może nie być w stanie szybko usunąć i / lub zmienić nazwy plików. To prawdopodobnie z powodu oprogramowania antywirusowego (np. z McAfee i Norton) czyli sprawdzanie plików pod kątem wirusów. Jeśli wpadniesz na ten problem (które mogą być widoczne przez komunikaty błędów w[log.txt](/docs/server-admin/additional-information#log)plik jak "Nie można usunąć"...) , zmiana ustawień oprogramowania antywirusowego może częściowo złagodzić problem. Albo rozważyć użycie serwera Linux lub Mac zamiast.
 

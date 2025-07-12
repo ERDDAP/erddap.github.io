@@ -7,14 +7,12 @@ Hur man gör den inledande inställningen avERDDAP™på din server
 
 
 ERDDAP™kan köras på någon server som stöderJavaoch Tomcat (och andra programservrar som Jetty, men vi stöder dem inte.) .ERDDAP™har testats på Linux (inklusive Amazons AWS) Mac och Windows-datorer.
-
-*    **Amazon Amazon Amazon Amazon** ----- Om du installerarERDDAP™på en Amazon Web Services EC2-instans, se detta[Amazon Web Services översikt](/docs/server-admin/additional-information#amazon)Först.
-*    **Docker** ----- Axiom erbjuder nu[ERDDAP™I en Docker container](https://hub.docker.com/u/axiom/)IOOS erbjuder nu en[Snabbstartguide förERDDAP™I en Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).
-Det är standardenERDDAP™installation, men Axiom har lagt den i en dockarbehållare.
+*    **Docker** ----- Vi tillhandahåller[ERDDAP™I en Docker container](https://hub.docker.com/r/erddap/erddap)IOOS erbjuder nu en[Snabbstartguide förERDDAP™I en Docker Container](https://ioos.github.io/erddap-gold-standard/index.html).
+Det är standardenERDDAP™installation, i en Docker behållare.
+Genom Docker Komponera vi ger enkla sätt att ställa in ssl och övervakning, läs mer ut[Docker dokumentation](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
 Om du redan använder Docker kommer du förmodligen att föredra Docker-versionen.
-Om du inte redan använder Docker rekommenderar vi i allmänhet inte detta.
-Om du väljer att installeraERDDAP™via Docker erbjuder vi inget stöd för installationsprocessen.
-Vi har inte jobbat med Docker än. Om du arbetar med detta, skicka oss dina kommentarer.
+Om du vill köra på molntjänster kommer du förmodligen att föredra Docker-versionen.
+*    **Amazon Amazon Amazon Amazon** ----- Om du installerarERDDAP™på en Amazon Web Services EC2-instans, se detta[Amazon Web Services översikt](/docs/server-admin/additional-information#amazon)Först.
 *    **Linux och Macs** -----ERDDAP™fungerar bra på Linux och Mac-datorer. Se instruktionerna nedan.
 *    **Windows Windows** ----- Windows är bra för testningERDDAP™och för personligt bruk (se instruktionerna nedan) Men vi rekommenderar inte att du använder den för allmänhetenERDDAPs. RunningERDDAP™på Windows kan ha problem: särskiltERDDAP™kan vara oförmögen att radera och/eller byta namn snabbt. Detta beror förmodligen på antivirusprogram (från McAfee och Norton) som kontrollerar filerna för virus. Om du stöter på detta problem (som kan ses med felmeddelanden i[Log.txt](/docs/server-admin/additional-information#log)fil som "Unable to rad...") ändra antivirusprogramvarans inställningar kan delvis lindra problemet. Eller överväga att använda en Linux- eller Mac-server istället.
 
