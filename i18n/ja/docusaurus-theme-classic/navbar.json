@@ -7,28 +7,20 @@
     "message": "NOAAロゴマーク",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Documentation": {
+  "item.label.Docs": {
     "message": "ドキュメント",
-    "description": "Navbar item with label Documentation"
+    "description": "Navbar item with label Docs"
   },
   "item.label.Governance": {
     "message": "ガバナンス",
     "description": "Navbar item with label Governance"
   },
-  "item.label.Technical Board": {
-    "message": "テクニカルボード",
-    "description": "Navbar item with label Technical Board"
+  "item.label.Cloud": {
+    "message": "クラウド",
+    "description": "Navbar item with label Cloud"
   },
   "item.label.GitHub": {
     "message": "GitHubで",
     "description": "Navbar item with label GitHub"
-  },
-  "item.label.Docs": {
-    "message": "ドキュメント",
-    "description": "Navbar item with label Docs"
-  },
-  "item.label.Cloud": {
-    "message": "クラウド",
-    "description": "Navbar item with label Cloud"
   }
 }

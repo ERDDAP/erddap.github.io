@@ -3,10 +3,6 @@
     "message": "Cette page s'est écrasée.",
     "description": "The title of the fallback page when the page crashed"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Retour en haut",
-    "description": "The ARIA label for the back to top button"
-  },
   "theme.blog.archive.title": {
     "message": "Archive",
     "description": "The page & hero title of the blog archive page"
@@ -27,6 +23,14 @@
     "message": "Entrées plus anciennes",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Retour en haut",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Afficher toutes les balises",
+    "description": "The label of the link targeting the tag list page"
+  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Blog post page navigation",
     "description": "The ARIA label for the blog posts pagination"
@@ -39,21 +43,21 @@
     "message": "Autre poste",
     "description": "The blog post button label to navigate to the older/next post"
   },
-  "theme.tags.tagsPageLink": {
-    "message": "Afficher toutes les balises",
-    "description": "The label of the link targeting the tag list page"
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "mode système",
+    "description": "The name for the system color mode"
   },
-  "theme.colorToggle.ariaLabel": {
-    "message": "Interrupteur entre le mode sombre et le mode lumineux (actuellement{mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "mode lumière",
+    "description": "The name for the light color mode"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "mode sombre",
     "description": "The name for the dark color mode"
   },
-  "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "mode lumière",
-    "description": "The name for the light color mode"
+  "theme.colorToggle.ariaLabel": {
+    "message": "Interrupteur entre le mode sombre et le mode lumineux (actuellement{mode})",
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Fil d'Ariane",
@@ -75,9 +79,6 @@
     "message": "Suivant",
     "description": "The label used to navigate to the next doc"
   },
-  "theme.docs.versionBadge.label": {
-    "message": "Version:{versionLabel}"
-  },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
     "message": "Un doc marqué|{count}docs étiquetés",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
@@ -85,6 +86,9 @@
   "theme.docs.tagDocListPageTitle": {
     "message": "{nDocsTagged}avec \"{tagName}\"",
     "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Version:{versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "Il s'agit d'une documentation non publiée pour{siteTitle}{versionLabel}de la version française.",
@@ -162,25 +166,9 @@
     "message": "Fermer",
     "description": "The ARIA label for close button of announcement bar"
   },
-  "theme.CodeBlock.copied": {
-    "message": "Copié",
-    "description": "The copied button label on code blocks"
-  },
-  "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Copier le code dans le presse-papiers",
-    "description": "The ARIA label for copy code blocks button"
-  },
-  "theme.CodeBlock.copy": {
-    "message": "Copier",
-    "description": "The copy button label on code blocks"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Blog articles récents navigation",
     "description": "The ARIA label for recent posts in the blog sidebar"
-  },
-  "theme.CodeBlock.wordWrapToggle": {
-    "message": "Couper le mot wrap",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Élargir la catégorie des barres latérales '{label}'",
@@ -194,10 +182,6 @@
     "message": "Principale",
     "description": "The ARIA label for the main navigation"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Langues",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "On n'a pas trouvé ce que vous cherchiez.",
     "description": "The first paragraph of the 404 page"
@@ -205,6 +189,10 @@
   "theme.NotFound.p2": {
     "message": "Veuillez contacter le propriétaire du site qui vous a lié à l'URL originale et leur faire savoir que leur lien est rompu.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Langues",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Sur cette page",
@@ -221,6 +209,22 @@
   "theme.blog.post.readingTime.plurals": {
     "message": "1 min lire|{readingTime}min lire",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Copier",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Copié",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Copier le code dans le presse-papiers",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Couper le mot wrap",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
     "message": "Page d'accueil",
@@ -250,6 +254,14 @@
     "message": "Couper la barre de navigation",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Élargir la liste déroulante",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Réduire le déclin",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Élargir la barre latérale",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
@@ -257,22 +269,6 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "Élargir la barre latérale",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Aucun résultat"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Voir tous les résultats à l'extérieur \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Voir tous les résultats dans \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Voir tous les résultats"
-  },
-  "theme.SearchBar.label": {
-    "message": "Recherche",
-    "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Résultats de recherche pour \"{query}\"",
@@ -292,6 +288,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "Aucun document n'a été trouvé",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Aucun résultat"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Voir tous les résultats à l'extérieur \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Voir tous les résultats dans \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Voir tous les résultats"
+  },
+  "theme.SearchBar.label": {
+    "message": "Recherche",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "Essaie encore",

@@ -7,28 +7,20 @@
     "message": "NOAAlogo",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Documentation": {
-    "message": "Documentație",
-    "description": "Navbar item with label Documentation"
+  "item.label.Docs": {
+    "message": "Docuri",
+    "description": "Navbar item with label Docs"
   },
   "item.label.Governance": {
     "message": "Guvernanță",
     "description": "Navbar item with label Governance"
   },
-  "item.label.Technical Board": {
-    "message": "Comitetul tehnic",
-    "description": "Navbar item with label Technical Board"
+  "item.label.Cloud": {
+    "message": "Nor",
+    "description": "Navbar item with label Cloud"
   },
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
-  },
-  "item.label.Docs": {
-    "message": "Docuri",
-    "description": "Navbar item with label Docs"
-  },
-  "item.label.Cloud": {
-    "message": "Nor",
-    "description": "Navbar item with label Cloud"
   }
 }

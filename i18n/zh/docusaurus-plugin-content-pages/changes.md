@@ -7,6 +7,33 @@ ERDDAP™是一个伟大的例子[用户驱动创新](https://en.wikipedia.org/w
 
 以下是与每个ERDDAP™释放
 
+## 版本 2.2.8.{#version-2280} 
+ (发表于2025-08-29年) 
+
+*    **新特征和变化 (用户) 数字 :** 
+    *   [Croissant 计划](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)现在可以使用。 管理员可以控制默认元数据是否使用Croissant,但从2.28.0开始,您可以请求对新导出文件类型".croissant"进行Croissant定义. (它提供了 jsonld 文件) 。 。 。 。
+
+*    **东西ERDDAP™管理员需要知道和做:** 
+    * 新建嵌入器 在每个合并拉请求上创建图像 。 这些是α构件,不是版本的发行. 他们将会有一个像"20250814T034025"这样的标记,这个标记表明它是何时建造的. 如果你想尝试最新的功能,你可以使用这些功能. 如果你想要更稳定的东西,请用语义版标签来发布 (例如,2.28.0美元) 。 。 。 我们的目标总是让α释放可以被使用, 但是对它们的测试比我们的版本释放要少. 我们总是建议你使用至少 和我们"最新"版一样的新的东西 这将是最新的语义版版版
+
+    * 插头 图像现在可用于[GitHub 图像](https://github.com/ERDDAP/erddap/pkgs/container/erddap)此外,还有[DockerHub 标签](https://hub.docker.com/r/erddap/erddap)。 。 。 。
+
+感谢[翻译:](https://github.com/ocefpaf), (中文).[@abkfenris (英语).](https://github.com/abkfenris), (中文).[@srstsavage (英语).](https://github.com/srstsavage),以及[马修比德尔](https://github.com/MathewBiddle)他们围绕着Docker图像的贡献。 除了@stsavage之外,
+    
+    * 现在有人支持生成[Croissant 计划](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)文档。 这是默认的。 您可以在您的设置中禁用 Croissant 计划 。 xml (不推荐 -- 如果您需要的话, 请联系 GitHub 或存档 。) 数字 :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * 一些设置已经更改了默认值 。 使用HeadersForUrl 并使用Edd Reflection 现在两者都默认为真实 。 如果他们造成问题,而你需要 把它们弄虚作假, 请创建一个问题。 意图是在未来的释放中将他们清除.
+
+    * 一些设置已被删除 。 使用共享监视服务和重定向文件 ToGitHubIo在多次发布时默认是真实的,此时测试相当完善. 删除这些可以进行代码清理 。
+
+    * 一些小的改变,错误修正,以及优化.
+
+*    **对于ERDDAP™开发者 :** 
+    * 很多死密码都被删除了 许多警告都得到了确认。
+
 ## 2.2.7.0版本 翻译:{#version-2270} 
  (发表于2025-06-11) 
 

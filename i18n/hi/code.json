@@ -3,10 +3,6 @@
     "message": "यह पृष्ठ दुर्घटनाग्रस्त हो गया।",
     "description": "The title of the fallback page when the page crashed"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "शीर्ष पर वापस स्क्रॉल करें",
-    "description": "The ARIA label for the back to top button"
-  },
   "theme.blog.archive.title": {
     "message": "पुरालेख",
     "description": "The page & hero title of the blog archive page"
@@ -27,6 +23,14 @@
     "message": "पुराने प्रविष्टियों",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "शीर्ष पर वापस स्क्रॉल करें",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "सभी टैग देखें",
+    "description": "The label of the link targeting the tag list page"
+  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "ब्लॉग पोस्ट",
     "description": "The ARIA label for the blog posts pagination"
@@ -39,21 +43,21 @@
     "message": "पुराने पोस्ट",
     "description": "The blog post button label to navigate to the older/next post"
   },
-  "theme.tags.tagsPageLink": {
-    "message": "सभी टैग देखें",
-    "description": "The label of the link targeting the tag list page"
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "सिस्टम मोड",
+    "description": "The name for the system color mode"
   },
-  "theme.colorToggle.ariaLabel": {
-    "message": "अंधेरे और प्रकाश मोड (वर्तमान में) के बीच स्विच{mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "प्रकाश मोड",
+    "description": "The name for the light color mode"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "अंधेरे मोड",
     "description": "The name for the dark color mode"
   },
-  "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "प्रकाश मोड",
-    "description": "The name for the light color mode"
+  "theme.colorToggle.ariaLabel": {
+    "message": "अंधेरे और प्रकाश मोड (वर्तमान में) के बीच स्विच{mode})",
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "ब्रेडक्रंब",
@@ -75,9 +79,6 @@
     "message": "अगला",
     "description": "The label used to navigate to the next doc"
   },
-  "theme.docs.versionBadge.label": {
-    "message": "संस्करण:{versionLabel}"
-  },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
     "message": "एक डॉक्टर टैग|{count}टैग",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
@@ -85,6 +86,9 @@
   "theme.docs.tagDocListPageTitle": {
     "message": "{nDocsTagged}\\ के साथ{tagName}\"",
     "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "संस्करण:{versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "यह असंतुष्ट प्रलेखन के लिए है{siteTitle}{versionLabel}संस्करण।",
@@ -162,25 +166,9 @@
     "message": "बंद",
     "description": "The ARIA label for close button of announcement bar"
   },
-  "theme.CodeBlock.copied": {
-    "message": "Copied",
-    "description": "The copied button label on code blocks"
-  },
-  "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "क्लिपबोर्ड पर कोड कॉपी करें",
-    "description": "The ARIA label for copy code blocks button"
-  },
-  "theme.CodeBlock.copy": {
-    "message": "कॉपी",
-    "description": "The copy button label on code blocks"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "हाल के पोस्ट नेविगेशन",
     "description": "The ARIA label for recent posts in the blog sidebar"
-  },
-  "theme.CodeBlock.wordWrapToggle": {
-    "message": "Toggle word लपेटो",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "साइडबार श्रेणी का विस्तार करें '{label}'",
@@ -194,10 +182,6 @@
     "message": "मुख्य",
     "description": "The ARIA label for the main navigation"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "भाषा",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "हमें पता नहीं था कि आप क्या देख रहे थे।",
     "description": "The first paragraph of the 404 page"
@@ -205,6 +189,10 @@
   "theme.NotFound.p2": {
     "message": "कृपया उस साइट के मालिक से संपर्क करें जो आपको मूल यूआरएल से जोड़ता है और उन्हें पता है कि उनका लिंक टूट गया है।",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "भाषा",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "इस पृष्ठ पर",
@@ -221,6 +209,22 @@
   "theme.blog.post.readingTime.plurals": {
     "message": "एक मिनट पढ़ा|{readingTime}पढ़ना",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "कॉपी",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Copied",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "क्लिपबोर्ड पर कोड कॉपी करें",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Toggle word लपेटो",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
     "message": "होम पेज",
@@ -250,6 +254,14 @@
     "message": "टॉगल नेविगेशन बार",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "ड्रॉपडाउन का विस्तार करें",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "गिरावट को कम करें",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "साइडबार का विस्तार",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
@@ -257,22 +269,6 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "साइडबार का विस्तार",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "कोई परिणाम नहीं"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "बाहर सभी परिणाम देखें{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "\\ के भीतर सभी परिणाम देखें{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "सभी परिणाम देखें"
-  },
-  "theme.SearchBar.label": {
-    "message": "खोज",
-    "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "\\ के लिए खोज परिणाम{query}\"",
@@ -292,6 +288,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "कोई दस्तावेज नहीं मिला",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "कोई परिणाम नहीं"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "बाहर सभी परिणाम देखें{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "\\ के भीतर सभी परिणाम देखें{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "सभी परिणाम देखें"
+  },
+  "theme.SearchBar.label": {
+    "message": "खोज",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "फिर से कोशिश करो",

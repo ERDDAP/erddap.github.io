@@ -3,10 +3,6 @@
     "message": "Ez az oldal összeomlott.",
     "description": "The title of the fallback page when the page crashed"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Scroll vissza a csúcsra",
-    "description": "The ARIA label for the back to top button"
-  },
   "theme.blog.archive.title": {
     "message": "Archívum",
     "description": "The page & hero title of the blog archive page"
@@ -27,6 +23,14 @@
     "message": "régebbi bejegyzések",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Scroll vissza a csúcsra",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Nézd meg az összes címkét",
+    "description": "The label of the link targeting the tag list page"
+  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Blog Post oldal navigáció",
     "description": "The ARIA label for the blog posts pagination"
@@ -39,21 +43,21 @@
     "message": "Régebbi poszt",
     "description": "The blog post button label to navigate to the older/next post"
   },
-  "theme.tags.tagsPageLink": {
-    "message": "Nézd meg az összes címkét",
-    "description": "The label of the link targeting the tag list page"
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "rendszermód",
+    "description": "The name for the system color mode"
   },
-  "theme.colorToggle.ariaLabel": {
-    "message": "Váltás sötét és könnyű mód között (jelenleg{mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "Fény mód",
+    "description": "The name for the light color mode"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "sötét mód",
     "description": "The name for the dark color mode"
   },
-  "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "Fény mód",
-    "description": "The name for the light color mode"
+  "theme.colorToggle.ariaLabel": {
+    "message": "Váltás sötét és könnyű mód között (jelenleg{mode})",
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Breadcrumbs",
@@ -75,9 +79,6 @@
     "message": "Kezdőlap &gt;",
     "description": "The label used to navigate to the next doc"
   },
-  "theme.docs.versionBadge.label": {
-    "message": "Verzió:{versionLabel}"
-  },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
     "message": "Egy doc tagged|{count}dokkok címkézve",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
@@ -85,6 +86,9 @@
   "theme.docs.tagDocListPageTitle": {
     "message": "{nDocsTagged}\"{tagName}\"",
     "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Verzió:{versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "Ez nem engedélyezett dokumentáció{siteTitle}{versionLabel}verzió.",
@@ -162,25 +166,9 @@
     "message": "Bezárás",
     "description": "The ARIA label for close button of announcement bar"
   },
-  "theme.CodeBlock.copied": {
-    "message": "Második",
-    "description": "The copied button label on code blocks"
-  },
-  "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Másolási kód a vágólapra",
-    "description": "The ARIA label for copy code blocks button"
-  },
-  "theme.CodeBlock.copy": {
-    "message": "Másolás",
-    "description": "The copy button label on code blocks"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Blog a közelmúltban közzétett navigáció",
     "description": "The ARIA label for recent posts in the blog sidebar"
-  },
-  "theme.CodeBlock.wordWrapToggle": {
-    "message": "Toggle szó Wrap",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Expand oldalbar kategória \"...\"{label}\"...\"",
@@ -194,10 +182,6 @@
     "message": "Főoldal",
     "description": "The ARIA label for the main navigation"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Nyelvek",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "Nem találtuk meg, amit kerestünk.",
     "description": "The first paragraph of the 404 page"
@@ -205,6 +189,10 @@
   "theme.NotFound.p2": {
     "message": "Kérjük, vegye fel a kapcsolatot a webhely tulajdonosával, amely az eredeti URL-hez kapcsolódik, és hagyja, hogy ismerje meg a kapcsolatát.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Nyelvek",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Ezen az oldalon",
@@ -221,6 +209,22 @@
   "theme.blog.post.readingTime.plurals": {
     "message": "Egy perc olvas|{readingTime}Bővebben",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Másolás",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Második",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Másolási kód a vágólapra",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Toggle szó Wrap",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
     "message": "Kezdőlap",
@@ -250,6 +254,14 @@
     "message": "Toggle navigációs bár",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Bővítse meg a lemaradást",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Összeomlik a leesés",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Expand oldalbar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
@@ -257,22 +269,6 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "Expand oldalbar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Nincs eredmény"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Lásd az összes eredményt kívül \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Lásd az összes eredményt \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Lásd az összes eredményt"
-  },
-  "theme.SearchBar.label": {
-    "message": "Keresés",
-    "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Keresési eredmények \"{query}\"",
@@ -292,6 +288,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "Nincsenek dokumentumok",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Nincs eredmény"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Lásd az összes eredményt kívül \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Lásd az összes eredményt \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Lásd az összes eredményt"
+  },
+  "theme.SearchBar.label": {
+    "message": "Keresés",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "Próbálj újra",

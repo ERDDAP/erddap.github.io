@@ -247,8 +247,8 @@ Puteți vedea un exemplu[datasets.xmlprivind GitHub](https://github.com/ERDDAP/e
 ERDDAP™nu va funcționa corect dacă setarea.xml saudatasets.xmlfișierul nu este un fișier XML bine format. Deci, după ce editați aceste fișiere, este o idee bună pentru a verifica că rezultatul este bine format XML prin lipirea textului XML într-un checker XML ca[Validare xml](https://www.xmlvalidation.com/).
      
 ### Instalează fișierul erddap.war{#install-the-erddapwar-file} 
-4. Pe Linux, Mac și Windows, descărcați[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)în _tomcat_/webapps.
-     (Versiunea 2.27.0, 620.554,403 octeți, MD5=3b2086c659ee4145ca2dff447bf4ef7, datată 06-11-2025) 
+4. Pe Linux, Mac și Windows, descărcați[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war)în _tomcat_/webapps.
+     (versiunea 2.28.0, 620.824,288 octeți, MD5=f948b2ba603f65a83ac67af43da9e4c2, datată 08-29-2025) 
     
 Fișierul .war este mare, deoarece conține date de coastă de înaltă rezoluție, limită, și elevație necesare pentru a crea hărți.
     
@@ -261,6 +261,7 @@ Fișierul .war este mare, deoarece conține date de coastă de înaltă rezoluț
     [2, 24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187 bytes, MD5=970fbee172e28b0b8a07756eecbc898e, datat 2024-06-07) 
     [2, 25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 octeți, MD5=652AFC9D1421F00B5F789DA2C4732D4C, din 2024-11-07) 
     [2, 26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032 octeți, MD5=99a725108b37708e5420986c16a119, din 2025-03-31) 
+    [2, 27, 0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)  (620,554 403 octeți, MD5=3b2086c659eee4145ca2dff447bf4ef7, datate 06-11-2025) 
     \\]
     
 #### ProxyPass{#proxypass} 

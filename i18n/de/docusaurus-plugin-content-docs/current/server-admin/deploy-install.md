@@ -247,8 +247,8 @@ Sie können ein Beispiel sehen[datasets.xmlauf GitHub](https://github.com/ERDDAP
 ERDDAP™wird nicht korrekt funktionieren, wenn die setup.xml oderdatasets.xmlDatei ist keine gut ausgebildete XML-Datei. So, nachdem Sie diese Dateien bearbeiten, ist es eine gute Idee, zu überprüfen, ob das Ergebnis gut gebildet XML ist, indem Sie den XML-Text in einen XML-Checker wie[xmlvalidierung](https://www.xmlvalidation.com/).
      
 ### Installieren Sie die Datei erddap.war{#install-the-erddapwar-file} 
-4. Auf Linux, Mac und Windows herunterladen[Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)in _tomcat_/webapps .
-     (Version 2.27.0, 620,554,403 Bytes, MD5=3b2086c659eee4145ca2dff447bf4ef7, datiert ,-11-2025) 
+4. Auf Linux, Mac und Windows herunterladen[Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war)in _tomcat_/webapps .
+     (Version 2.28.0, 620,824,288 Bytes, MD5=f948b2ba603f65a83ac67af43da9e4c2, datiert 08-29-2025) 
     
 Die .war-Datei ist groß, weil sie hochauflösende Küste, Grenze und Höhendaten enthält, die benötigt werden, um Karten zu erstellen.
     
@@ -261,6 +261,7 @@ Die .war-Datei ist groß, weil sie hochauflösende Küste, Grenze und Höhendate
     [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187 Bytes, MD5=970fbee172e28b0b8a07756eecbc898e, datiert 2024-06-07) 
     [2.2.2.](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 Bytes, MD5=652AFC9D1421F00B5F789DA2C4732D4C, datiert 2024-11-07) 
     [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032 Bytes, MD5=99a725108b37708e5420986c16a119, datiert 2025-03-31) 
+    [2.27.0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)  (620,554,403 Bytes, MD5=3b2086c659ee4145ca2dff447bf4ef7, datiert ,-11-2025) 
     \\]
     
 #### ProxyPass{#proxypass} 

@@ -247,8 +247,8 @@ bigParentDirectory를 만들 때, bigParentDirectory의 부모 디렉토리에�
 ERDDAP™setup.xml 또는 설정이 제대로 작동하지 않을 경우datasets.xml파일은 잘 만들어진 XML 파일이 아닙니다. 그래서,이 파일을 편집 한 후, 그 결과가 XML 텍스트를 XML 검사기와 같은 XML 검사기로 붙여 넣기하여 XML의 결과를 확인할 수있는 좋은 아이디어입니다.[XML 유효성](https://www.xmlvalidation.com/)·
      
 ### erddap.war 파일을 설치{#install-the-erddapwar-file} 
-4. Linux, Mac 및 Windows에서 다운로드[다운로드](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)으로 _tomcat_/webapps .
-     (버전 2.27.0, 620,554,403 바이트, MD5=3b2086c659eee4145ca2dff447bf4ef7, dated 06-11-2025 ·) 
+4. Linux, Mac 및 Windows에서 다운로드[다운로드](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war)으로 _tomcat_/webapps .
+     (버전 2.28.0, 620,824,288 바이트, MD5=f948b2ba603f65a83ac67af43da9e4c2, 날짜 08-29-2025) 
     
 .war 파일은 고해상도 해안선, 경계선 및 지도를 생성하는 데 필요한 고도 데이터가 포함되어 있기 때문에 큰 파일입니다.
     
@@ -261,6 +261,7 @@ ERDDAP™setup.xml 또는 설정이 제대로 작동하지 않을 경우datasets
     [2.24의](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187 바이트, MD5=970fbee172e28b0b8a07756eecbc898e, 날짜 2024-06-07) 
     [2.25의](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 바이트, MD5=652AFC9D1421F00B5F789DA2C4732D4C, 날짜 2024-11-07) 
     [2.26의](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032 바이트, MD5=99a725108b37708e5420986c16a119, 날짜 2025-03-31) 
+    [2.27.0의](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)  (620,554,403 바이트, MD5=3b2086c659e4145ca2dff447bf4ef7, dated 06-11-2025 ·) 
     \\]
     
 #### 프록시Pass{#proxypass} 

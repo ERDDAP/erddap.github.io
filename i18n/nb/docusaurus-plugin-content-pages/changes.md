@@ -7,6 +7,33 @@ ERDDAP™Et godt eksempel på[Brukerdrevet innovasjon](https://en.wikipedia.org/
 
 Her er endringene som er forbundet med hverERDDAP™Frigjøring.
 
+## Versjon 2.28.0{#version-2280} 
+ (utgitt 2025-08-29) 
+
+*    **Nye funksjoner og endringer (for brukere) :)** 
+    *   [Croissant skjema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)Nå er tilgjengelig. Admins kan kontrollere om standard metadata bruker Croissant, men fra og med 2.28.0 kan du be om Croissant-definisjonen med den nye eksportfiltypen ".croissant" (som gir en Jsonld-fil) ..
+
+*    **TingERDDAP™Administratorer trenger å vite og gjøre:** 
+    * New Docker Bilde opprettet på hver sammenslått trekkforespørsel. Dette er alfabygg, de er ikke utgitt. De vil ha en tag som -50814T034025 - som indikerer når den ble bygget. Hvis du vil prøve ut de nyeste funksjonene kan du bruke disse. Hvis du vil ha noe mer stabilt bruk våre utgivelser med en semantisk versjon tag (f.eks. 2.28.0) .. Vi har alltid som mål å ha alfa-utgivelsene være brukbare, men det er mindre testing for dem enn våre versjonsutgivelser. Vi anbefaler alltid at du bruker noe så nytt som vår siste utgivelse som vil være den siste semantiske versjon.
+
+    * Docker Bilder nå tilgjengelig på[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)I tillegg til[DockerHub](https://hub.docker.com/r/erddap/erddap)..
+
+Takket være[@ocefpaf](https://github.com/ocefpaf),[@abkfenris](https://github.com/abkfenris),[@srstsavage](https://github.com/srstsavage), og[MathewBiddle](https://github.com/MathewBiddle)til deres bidrag rundt Docker Images. Dette inkluderte de første bidrag fra alle bortsett fra @stsavage&#33;
+    
+    * Det er nå støtte til å generere[Croissant skjema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)Filer. Det er som standard. Du kan deaktivere Croissant-skjemaet i setup.xml med (IKKJE TILBEVART - Ta kontakt med eller fil et problem på GitHub hvis du trenger å gjøre dette) :)
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Noen innstillinger har endret standardverdier. brukHeadersForUrl og brukEddReflection nå både standard til sant. Hvis de forårsaker et problem, og du må sette dem på falsk, vennligst lag et problem. Hensikten er å fjerne dem i en fremtidig utgivelse.
+
+    * Noen innstillinger er fjernet. useSharedWatchService og omdirigereDokumentering ToGitHubio hadde blitt satt til virkelighet som standard for flere utgivelser og ble ganske godt testet på dette punktet. Fjerne disse tillatt for noen kode rengjøring.
+
+    * Noen små endringer, feilrettinger og optimeringer.
+
+*    **ForERDDAP™Utviklere:** 
+    * Mye døde kode fjernet. Mange advarsler løst.
+
 ## Versjon 2.27.0{#version-2270} 
  (utgitt 2025-06-11) 
 

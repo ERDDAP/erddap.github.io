@@ -7,6 +7,33 @@ ERDDAP™isang magandang halimbawa[User-Driven Innovation](https://en.wikipedia.
 
 Narito ang mga pagbabagong nauugnay sa bawat isaERDDAP™paglaya.
 
+## Bersiyong 2.28.0{#version-2280} 
+ (inilabas 2025-08-29) 
+
+*    **Bagong mga Katangian at Pagbabago (para sa mga gumagamit) :** 
+    *   [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)ay makukuha na ngayon. Ang mga admin ay maaaring kumontrol kung ang default metadata ay gumagamit ng Croissant, ngunit simula 2.28.0 maaari mong hilingin ang kahulugang Croissant para sa bagong talaksang panluwas na ".croissant". (na nagbibigay ng talaksang jsonld) .
+
+*    **Mga BagayERDDAP™Kailangang Malaman at Gawin ng mga Administrador:** 
+    * Bagong Docker Ang larawan na nilikha sa bawat pinagsanib na kahilingan ng hila. Ang mga ito ay mga gusaling alpha, ang mga ito ay hindi mga inilabas na bersyon. Magkakaroon sila ng tag tulad ng "20250814T034025", na nagpapakita kung kailan ito itinayo. Kung nais mong subukin ang pinakabagong mga katangian na magagamit mo sa mga ito. Kung nais mo ng isang bagay na mas matatag na gamitin ang ating mga labas na may semantikong tag ng bersyon (e.g. 2.28.0) . Lagi naming layon na ang mga inilabas na alpha ay maging magagamit, subalit mas kaunti ang pagsubok para sa mga ito kaysa aming mga inilabas na bersyon. Sa tuwina'y inirerekomenda namin na gamitin ninyo ang isang bagay na bago na gaya ng aming "latest" release na siyang magiging pinakabagong semantic versioned release.
+
+    * Docker Ang mga imahen na makukuha ngayon sa[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)bukod pa sa[DockerHub](https://hub.docker.com/r/erddap/erddap).
+
+Salamat[@ocefpaf](https://github.com/ocefpaf),[@abkfenris](https://github.com/abkfenris),[Waltzsrstsavage](https://github.com/srstsavage), at[MathewBiddle](https://github.com/MathewBiddle)ang kanilang mga kontribusyon sa paligid ng Docker Images. Kasali na rito ang unang mga abuloy buhat sa lahat ng ito maliban sa Waltzstsavage&#33;
+    
+    * Mayroon na ngayong suporta sa paggawa[Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)mga file. Ito ay sa pamamagitan ng default. Maaari mong sirain ang Croissant schema sa iyong setup.xml sa pamamagitan ng (HINDI RECOMMENDED- Pakiabot o i-up ang isang isyu sa GitHub kung kailangan mong gawin ito) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Binago ng ilang kalagayan ang kanilang default na mga pamantayan. gamitin ang Headers ForwardUrl at gamitin ang EddReflection na ngayon ay parehong hindi natupad. Kung ang mga ito ay nagiging sanhi ng isang problema at kailangan mo silang pasinungalingan, pakisuyong lumikha ng isang isyu. Ang layon ay alisin ang mga ito sa hinaharap na paglaya.
+
+    * Ang ilang kalagayan ay inalis na. paggamit ng SharedWatchService at Pagredirect ng Dokumentasyon Ang ToGitHubIo ay napatunayan sa pamamagitan ng hindi pagtupad sa maramihang paglalabas at mahusay na nasubok sa puntong ito. Ang pag - aalis sa mga ito ay nagpapahintulot ng paglilinis ng ilang kodigo.
+
+    * Ilang maliliit na pagbabago, mga bug fix, at optimisasyon.
+
+*    **SapagkatERDDAP™Mga Nagpapaunlad:** 
+    * Maraming patay na kodigo ang inalis. Maraming babala ang ibinigay.
+
 ## Bersiyong 2.27.0{#version-2270} 
  (inilabas 2025-06-11) 
 

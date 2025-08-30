@@ -7,28 +7,20 @@
     "message": "NOAAЛогін",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Documentation": {
-    "message": "Документація",
-    "description": "Navbar item with label Documentation"
+  "item.label.Docs": {
+    "message": "Докс",
+    "description": "Navbar item with label Docs"
   },
   "item.label.Governance": {
     "message": "Вступ",
     "description": "Navbar item with label Governance"
   },
-  "item.label.Technical Board": {
-    "message": "Технічна дошка",
-    "description": "Navbar item with label Technical Board"
+  "item.label.Cloud": {
+    "message": "Хмар",
+    "description": "Navbar item with label Cloud"
   },
   "item.label.GitHub": {
     "message": "ГітХуб",
     "description": "Navbar item with label GitHub"
-  },
-  "item.label.Docs": {
-    "message": "Докс",
-    "description": "Navbar item with label Docs"
-  },
-  "item.label.Cloud": {
-    "message": "Хмар",
-    "description": "Navbar item with label Cloud"
   }
 }

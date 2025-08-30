@@ -7,6 +7,33 @@ ERDDAP™je skvělý příklad[Uživatelská inovace](https://en.wikipedia.org/w
 
 Zde jsou změny spojené s každýmERDDAP™Uvolnit.
 
+## Verze 2.28.0{#version-2280} 
+ (propuštěn 2025-08-29) 
+
+*    **Nové funkce a změny (pro uživatele) :** 
+    *   [schéma Croissant](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)je nyní k dispozici. Admins mohou kontrolovat, zda výchozí metadata používají Croissant, ale počínaje 2.28.0 můžete požádat o definici Croissant pro nový typ exportního souboru ".croissant" (který poskytuje soubor jsonld) .
+
+*    **VěciERDDAP™Administrátoři potřebují vědět a udělat:** 
+    * New Docker Obrázek vytvořený na každé sloučené žádosti o tah. Jsou to alfa stavby, nejsou to verze. Budou mít značku jako "20250814T034025," což naznačuje, kdy byla postavena. Chcete-li vyzkoušet nejnovější funkce, můžete použít tyto. Pokud chcete něco stabilnějšího, použijte naše verze se sémantickou verzí. (např. 2.28.0) . Vždycky chceme, aby se Alfa uvolnila, ale je pro ně méně testů než naše verze. Vždy doporučujeme použít něco alespoň tak nového, jako je naše "poslední" vydání, které bude nejnovější sémantická verze verze vydání.
+
+    * Docker Obrázky nyní k dispozici na[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)kromě[DockerHub](https://hub.docker.com/r/erddap/erddap).
+
+Díky[@ocefpaf](https://github.com/ocefpaf),[@abkfenris](https://github.com/abkfenris),[@srstsavage](https://github.com/srstsavage)a[MathewBiddle](https://github.com/MathewBiddle)na jejich příspěvky kolem Docker Images. To zahrnovalo první příspěvky od všech kromě @ststsavage&#33;
+    
+    * Nyní existuje podpora pro generování[schéma Croissant](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)Složky. Je zapnutá ve výchozím nastavení. Můžete zakázat Croissant schéma ve vašem nastavení.xml s (NENÍ DOPORUČEN- Pokud to potřebujete udělat, kontaktujte prosím GitHuba nebo vyplňte soubor.) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Některá nastavení byla změněna. použijte hlavičkyForUrl a použijteEddReflection nyní obě výchozí na true. Pokud způsobí problém a vy je musíte nastavit na falešnou, prosím, vytvořte problém. Záměrem je odstranit je v příštím vydání.
+
+    * Některá nastavení byla odstraněna. useSharedWatchService a přesměrováníDokumentace ToGitHublo byl nastaven na true ve výchozím nastavení pro více verzí a byl velmi dobře testován v tomto bodě. Odstraňování těchhle je povoleno pro vyčištění kódu.
+
+    * Některé malé změny, opravy chyb a optimalizace.
+
+*    **ProERDDAP™Vývojáři:** 
+    * Spousta mrtvých kódů odstraněna. Mnoho varování bylo spraveno.
+
 ## Verze 2.27.0{#version-2270} 
  (propuštěno 2025-06-11) 
 

@@ -217,7 +217,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `ERDDAP™, Version 2.27.0. Copyright © ${new Date().getFullYear()} ERDDAP™. Built with Docusaurus.`,
+      copyright: `ERDDAP™, Version 2.28.0. Copyright © ${new Date().getFullYear()} ERDDAP™. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

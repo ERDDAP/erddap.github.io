@@ -3,10 +3,6 @@
     "message": "Denne side styrtede ned.",
     "description": "The title of the fallback page when the page crashed"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Rul tilbage til toppen",
-    "description": "The ARIA label for the back to top button"
-  },
   "theme.blog.archive.title": {
     "message": "Arkiv Arkiv",
     "description": "The page & hero title of the blog archive page"
@@ -27,6 +23,14 @@
     "message": "Ældre poster",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Rul tilbage til toppen",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Se alle tags",
+    "description": "The label of the link targeting the tag list page"
+  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Blogindlægsside navigation",
     "description": "The ARIA label for the blog posts pagination"
@@ -39,21 +43,21 @@
     "message": "Ældre indlæg",
     "description": "The blog post button label to navigate to the older/next post"
   },
-  "theme.tags.tagsPageLink": {
-    "message": "Se alle tags",
-    "description": "The label of the link targeting the tag list page"
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "systemtilstand",
+    "description": "The name for the system color mode"
   },
-  "theme.colorToggle.ariaLabel": {
-    "message": "Skift mellem mørk og lys tilstand (strømsvis{mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "lystilstand",
+    "description": "The name for the light color mode"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "mørk tilstand",
     "description": "The name for the dark color mode"
   },
-  "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "lystilstand",
-    "description": "The name for the light color mode"
+  "theme.colorToggle.ariaLabel": {
+    "message": "Skift mellem mørk og lys tilstand (strømsvis{mode})",
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Breadcrumbs",
@@ -75,9 +79,6 @@
     "message": "Næste Næste Næste",
     "description": "The label used to navigate to the next doc"
   },
-  "theme.docs.versionBadge.label": {
-    "message": "Version:{versionLabel}"
-  },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
     "message": "Et dokument tagged|{count}Dokumenter tagged",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
@@ -85,6 +86,9 @@
   "theme.docs.tagDocListPageTitle": {
     "message": "{nDocsTagged}med \"{tagName}\"",
     "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Version:{versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "Dette er uudgivet dokumentation for{siteTitle}{versionLabel}version.",
@@ -162,25 +166,9 @@
     "message": "Tæt på",
     "description": "The ARIA label for close button of announcement bar"
   },
-  "theme.CodeBlock.copied": {
-    "message": "Copied",
-    "description": "The copied button label on code blocks"
-  },
-  "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Kopier kode til udklipsholder",
-    "description": "The ARIA label for copy code blocks button"
-  },
-  "theme.CodeBlock.copy": {
-    "message": "Kopiere Kopier",
-    "description": "The copy button label on code blocks"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Blog seneste indlæg navigation",
     "description": "The ARIA label for recent posts in the blog sidebar"
-  },
-  "theme.CodeBlock.wordWrapToggle": {
-    "message": "Skift ordindpakning",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Udvid sideoversigt ''{label}''",
@@ -194,10 +182,6 @@
     "message": "Hovedhoved",
     "description": "The ARIA label for the main navigation"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Sprogsprog",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "Vi kunne ikke finde, hvad du ledte efter.",
     "description": "The first paragraph of the 404 page"
@@ -205,6 +189,10 @@
   "theme.NotFound.p2": {
     "message": "Kontakt venligst ejeren af webstedet, der har forbindelse til den oprindelige URL, og lad dem vide deres link er brudt.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Sprogsprog",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "På denne side",
@@ -221,6 +209,22 @@
   "theme.blog.post.readingTime.plurals": {
     "message": "En min læsning|{readingTime}min læsning",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Kopiere Kopier",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Copied",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Kopier kode til udklipsholder",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Skift ordindpakning",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
     "message": "Forside side",
@@ -250,6 +254,14 @@
     "message": "Skift navigationslinje",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Udvid dropdown",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Collapse dropdown",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Udvid sideoversigten",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
@@ -257,22 +269,6 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "Udvid sideoversigten",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Ingen resultater"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Se alle resultater uden for \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Se alle resultater inden for \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Se alle resultater"
-  },
-  "theme.SearchBar.label": {
-    "message": "Søg Søg Søg",
-    "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Søgeresultater for \"{query}\"",
@@ -292,6 +288,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "Ingen dokumenter blev fundet",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Ingen resultater"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Se alle resultater uden for \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Se alle resultater inden for \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Se alle resultater"
+  },
+  "theme.SearchBar.label": {
+    "message": "Søg Søg Søg",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "Prøv igen",

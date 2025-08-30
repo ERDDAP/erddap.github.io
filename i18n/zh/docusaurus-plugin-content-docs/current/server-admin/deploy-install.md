@@ -247,8 +247,8 @@ chmod - R o-rwx apache-tomcat - _1.0.23_ (韩语).
 ERDDAP™如果设置. xml 或datasets.xml文件不是一个很好组成的 XML 文件。 因此,在您编辑这些文件后,通过将 XML 文本粘贴到像 XML 这样的 XML 检查器中来验证结果是否是好的 XML 是一个好主意.[xml 验证](https://www.xmlvalidation.com/)。 。 。 。
      
 ### 安装 erddap.war 文件{#install-the-erddapwar-file} 
-4. 在Linux、Mac和Windows上下载[战争](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)输入 _tomcat_/webapps 。
-     (2.27.0, 620, 554, 403字节, MD5=3b2086c659ee4145ca2dff447bf4ef7, 日期 06-11-2025 (英语).) 
+4. 在Linux、Mac和Windows上下载[战争](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war)输入 _tomcat_/webapps 。
+     (2.28.0, 620, 824, 288字节, MD5=f948b2ba603f65a83ac67af43da9e4c2, 日期为08-29-2025) 
     
 .war文件很大,因为它包含了高分辨率的海岸线,边界,以及创建地图所需的海拔数据.
     
@@ -261,6 +261,7 @@ ERDDAP™如果设置. xml 或datasets.xml文件不是一个很好组成的 XML 
     [2.24 (中文(简体) ).](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187字节,MD5=970fbee172e28b0b8a07756ecbc898e,日期2024-06-07) 
     [2.25 联合国](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039字节,MD5=652AFC9D1421F00B5F789DA2C4732D4C,日期为2024-11-07) 
     [2.26 国家](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032字节,MD5=99a725108b37708e5420986c1616a119,日期2025-03-31) 
+    [2.27.0 (简体中文)](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)  (620,554,403字节,MD5=3b2086c659ee4145ca2dff447bf4ef7,日期: 06-11-2025 (英语).) 
     \\]
     
 #### 代理密码{#proxypass} 

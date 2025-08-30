@@ -7,6 +7,33 @@ ERDDAP™Is sampla iontach de[Úsáideoir-Driven Innovation](https://en.wikipedi
 
 Seo iad na hathruithe a bhaineann le gachERDDAP™scaoileadh.
 
+## Leagan 2.28.0{#version-2280} 
+ (scaoileadh 2025-08-29) 
+
+*    **Gnéithe agus Athruithe Nua (d'úsáideoirí) :** 
+    *   [scéimre Croissant](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)Tá sé ar fáil anois. Is féidir le Riarachán rialú cibé an n-úsáideann an meiteashonraí réamhshocraithe Croissant, ach ag tosú le 2.28.0 is féidir leat a iarraidh ar an sainmhíniú Croissant le haghaidh leis an gcineál comhaid onnmhairithe nua ".croissant" (a sholáthraíonn comhad jsonld) .
+
+*    **Cad a bhí mícheart leis an láithreánERDDAP™Riarthóirí An riachtanas is gá a fhios agus a dhéanamh:** 
+    * Déan teagmháil anois Íomhá a cruthaíodh ar gach iarratas tarraingt chumasc. Is iad seo alfa tógálacha, nach bhfuil siad scaoileadh leagan. Beidh tag acu cosúil le "20250814T034025", rud a léiríonn nuair a tógadh é. Más mian leat triail a bhaint as na gnéithe is déanaí is féidir leat iad seo a úsáid. Más mian leat rud éigin níos cobhsaí a úsáid ár n-eisiúintí le tag leagan shéimeantach (e.g. 2.28.0) . Tá sé mar aidhm againn i gcónaí go bhfuil an alfa eisiúintí a bheith inúsáidte, ach níl tástáil níos lú dóibh ná ár scaoileadh leagan. Molaimid i gcónaí leat úsáid a bhaint as rud éigin ar a laghad chomh nua mar ár "níos déanaí" scaoileadh a bheidh an scaoileadh leagan is déanaí shéimeantach.
+
+    * Déan teagmháil Linn Íomhánna ar fáil anois ar[Déan teagmháil linn](https://github.com/ERDDAP/erddap/pkgs/container/erddap)i dteannta[Seirbhís do Chustaiméirí](https://hub.docker.com/r/erddap/erddap).
+
+Go raibh maith agat as[Cuntas deimhnithe](https://github.com/ocefpaf),[Cuntas deimhnithe](https://github.com/abkfenris),[Cuntas deimhnithe](https://github.com/srstsavage), agus[Plean Gníomhaíochta don Oideachas](https://github.com/MathewBiddle)a gcuid ranníocaíochtaí ar fud na Íomhánna Docker. Bhí na chéad ranníocaíochtaí ó gach ceann acu ach amháin @stsavage&#33;
+    
+    * Tá tacaíocht anois do ghiniúint[scéimre Croissant](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)comhaid. Tá sé de réir réamhshocraithe. Is féidir leat a dhíchumasú an scéimre Croissant i do thus.xml le (NÍ MÓR MÓR - Bain amach nó comhad ceist ar GitHub más gá duit é seo a dhéanamh) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Roinnt socruithe a bhí a luachanna réamhshocraithe athrú. úsáidHeadersForUrl agus useEddReflection anois araon réamhshocraithe a fíor. Má chuireann siad faoi deara fadhb agus ní mór duit iad a shocrú go bréagach, le do thoil a chruthú ceist. Is é an rún iad a bhaint i scaoileadh amach anseo.
+
+    * Baineadh roinnt socruithe. ÚsáidSharedWatchService agus atreorú Bhí ToGitHubIo leagtha chun fíor de réir réamhshocraithe le haghaidh eisiúintí il agus bhí tástáil maith go leor ag an bpointe seo. A bhaint na cheadaítear le haghaidh roinnt cleanup cód.
+
+    * Roinnt athruithe beaga, Ceartúcháin bug, agus leas iomlán a bhaint.
+
+*    **Le haghaidhERDDAP™Forbróirí:** 
+    * Go leor de cód marbh a bhaint. Go leor rabhaidh socraithe.
+
 ## Leagan 2.27.0{#version-2270} 
  (scaoileadh 2025-06-11) 
 

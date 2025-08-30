@@ -7,6 +7,33 @@ ERDDAP™é um grande exemplo de[Inovação orientada pelo usuário](https://en.
 
 Aqui estão as mudanças associadas a cadaERDDAP™liberar.
 
+## Versão 2.28.0{#version-2280} 
+ (lançado 2025-08-29) 
+
+*    **Novos recursos e mudanças (para usuários) :** 
+    *   [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)está agora disponível. Os administradores podem controlar se os metadados padrão usam Croissant, mas começando com 2.28.0 você pode solicitar a definição Croissant para com o novo tipo de arquivo de exportação ".croissant" (que fornece um arquivo jsonld) .
+
+*    **CoisasERDDAP™Os administradores precisam saber e fazer:** 
+    * Novo Docker Imagem criada em cada solicitação de tração mesclada. Estas são construções alfa, não são versões versionadas. Eles terão uma tag como "20250814T034025", que indica quando foi construída. Se você quiser experimentar os recursos mais recentes, você pode usá-los. Se você quiser algo mais estável use nossas versões com uma tag de versão semântica (por exemplo, 2.28.0) . Sempre pretendemos que as versões alfa sejam usáveis, mas há menos testes para elas do que as nossas versões em versão. Nós sempre recomendamos que você use algo pelo menos tão novo como o nosso lançamento "mais tarde" que será o lançamento semântico mais recente.
+
+    * Docker. Imagens agora disponíveis em[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)além de[DockerHub](https://hub.docker.com/r/erddap/erddap).
+
+Graças a[@ocefpaf](https://github.com/ocefpaf),[@abkfenris](https://github.com/abkfenris),[Anúncio grátis para sua empresa](https://github.com/srstsavage)e[Medalha de Mathew](https://github.com/MathewBiddle)para suas contribuições em torno da Docker Images. Isso incluiu as primeiras contribuições de todos eles, exceto @stsavage&#33;
+    
+    * Há agora suporte para gerar[Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)arquivos. Está ligado por padrão. Você pode desativar o esquema Croissant em seu setup.xml com (NÃO RECOMENDADO- Por favor, alcance ou arquivo um problema no GitHub se você precisar fazer isso) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Algumas configurações tiveram seus valores padrão alterados. useHeadersForUrl e useEddReflection agora ambos padrão para true. Se eles causarem um problema e você precisa colocá-los em falso, por favor crie um problema. A intenção é removê-los em uma versão futura.
+
+    * Algumas configurações foram removidas. useServiço de assistência compartilhada e redirecionarDocumentação ToGitHubIo foi definido como verdadeiro por padrão para várias versões e foi muito bem testado neste ponto. Remover estes permitidos para alguma limpeza de código.
+
+    * Algumas pequenas mudanças, correções de bugs e otimizações.
+
+*    **ParaERDDAP™Desenvolvedores:** 
+    * Muito código morto removido. Muitos avisos corrigidos.
+
 ## Versão 2.27.0{#version-2270} 
  (lançado 2025-06-11) 
 

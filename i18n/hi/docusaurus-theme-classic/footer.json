@@ -7,6 +7,10 @@
     "message": "समुदाय",
     "description": "The title of the footer links column with title=Community in the footer"
   },
+  "link.title.Brought to you by": {
+    "message": "आप के लिए लाया",
+    "description": "The title of the footer links column with title=Brought to you by in the footer"
+  },
   "link.item.label.Documentation": {
     "message": "दस्तावेज़ीकरण",
     "description": "The label of footer link with label=Documentation linking to /docs/intro"
@@ -14,6 +18,22 @@
   "link.item.label.Contributing": {
     "message": "योगदान",
     "description": "The label of footer link with label=Contributing linking to /docs/contributing"
+  },
+  "link.item.label.License": {
+    "message": "लाइसेंस",
+    "description": "The label of footer link with label=License linking to license"
+  },
+  "link.item.label.Changes": {
+    "message": "परिवर्तन",
+    "description": "The label of footer link with label=Changes linking to /changes"
+  },
+  "link.item.label.Cloud": {
+    "message": "क्लाउड",
+    "description": "The label of footer link with label=Cloud linking to /cloud"
+  },
+  "link.item.label.Support/Contact": {
+    "message": "समर्थन / संपर्क",
+    "description": "The label of footer link with label=Support/Contact linking to /docs/intro#support"
   },
   "link.item.label.Governance": {
     "message": "शासन",
@@ -39,22 +59,6 @@
     "message": "ऋण",
     "description": "The label of footer link with label=Credits linking to /credits"
   },
-  "copyright": {
-    "message": "ERDDAP™संस्करण 2.25. 2024ERDDAP™। Docusaurus के साथ निर्मित।",
-    "description": "The footer copyright"
-  },
-  "link.title.Brought to you by": {
-    "message": "आप के लिए लाया",
-    "description": "The title of the footer links column with title=Brought to you by in the footer"
-  },
-  "link.item.label.License": {
-    "message": "लाइसेंस",
-    "description": "The label of footer link with label=License linking to license"
-  },
-  "link.item.label.Changes": {
-    "message": "परिवर्तन",
-    "description": "The label of footer link with label=Changes linking to /changes"
-  },
   "link.item.label.Acknowledgements": {
     "message": "घोषणा",
     "description": "The label of footer link with label=Acknowledgements linking to /acknowledgements"
@@ -75,12 +79,8 @@
     "message": "ERD",
     "description": "The label of footer link with label=ERD linking to https://www.fisheries.noaa.gov/about/environmental-research-division-southwest-fisheries-science-center"
   },
-  "link.item.label.Cloud": {
-    "message": "क्लाउड",
-    "description": "The label of footer link with label=Cloud linking to /cloud"
-  },
-  "link.item.label.Support/Contact": {
-    "message": "समर्थन / संपर्क",
-    "description": "The label of footer link with label=Support/Contact linking to /docs/intro#support"
+  "copyright": {
+    "message": "ERDDAP™संस्करण 2.28.0. 2025ERDDAP™। Docusaurus के साथ निर्मित।",
+    "description": "The footer copyright"
   }
 }

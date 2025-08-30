@@ -7,6 +7,33 @@ ERDDAP™ist ein großes Beispiel[Benutzergetriebene Innovation](https://en.wiki
 
 Hier sind die Änderungen, die jederERDDAP™Veröffentlichung.
 
+## Version 2.28.0{#version-2280} 
+ (veröffentlicht 2025-08-29) 
+
+*    **Neue Funktionen und Änderungen (für Benutzer) :** 
+    *   [Croissant Schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)ist jetzt verfügbar. Admins können steuern, ob die Standard-Metadaten Croissant verwenden, aber ab 2.28.0 können Sie die Croissant-Definition mit dem neuen Exportdateityp ".croissant" anfordern. (die eine jsonld-Datei bietet) .
+
+*    **DingeERDDAP™Administratoren müssen wissen und tun:** 
+    * Neues Docker Bild erstellt auf jeder zusammengeführten Zuganforderung. Dies sind Alpha-Builds, sie sind keine versionierten Versionen. Sie haben einen Tag wie "20250814T034025", der anzeigt, wann er gebaut wurde. Wenn Sie die neuesten Funktionen ausprobieren möchten, können Sie diese verwenden. Wenn Sie etwas stabiler wollen, verwenden Sie unsere Versionen mit einem semantischen Versions-Tag (z.B. 2.28.0) . Wir wollen immer, dass die Alpha-Versionen nutzbar sind, aber es gibt weniger Tests für sie als unsere versionierten Versionen. Wir empfehlen Ihnen immer, etwas zumindest neu als unsere "letzte" Veröffentlichung zu verwenden, die die neueste semantische Version sein wird.
+
+    * Docker Bilder jetzt auf[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)zusätzlich zu[Was ist los?](https://hub.docker.com/r/erddap/erddap).
+
+Dank[@ocefpaf](https://github.com/ocefpaf),[@abkfenris](https://github.com/abkfenris),[@srstsavage](https://github.com/srstsavage), und[MathewBiddle](https://github.com/MathewBiddle)zu ihren Beiträgen rund um die Docker Images. Dies beinhaltete die ersten Beiträge von allen außer @stststsavage&#33;
+    
+    * Es gibt jetzt Unterstützung für die Erzeugung[Croissant Schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)Dateien. Es ist standardmäßig. Sie können das Croissant Schema in Ihrem setup.xml mit (NICHT EMPFEHLEN- Bitte erreichen Sie ein Problem bei GitHub, wenn Sie dies tun müssen) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Einige Einstellungen haben ihre Standardwerte geändert. Verwenden SieHeadersForUrl und verwenden Sie EddReflection jetzt beide standardmäßig wahr. Wenn sie ein Problem verursachen und Sie sie auf false setzen müssen, erstellen Sie bitte ein Problem. Die Absicht ist, sie in einer zukünftigen Veröffentlichung zu entfernen.
+
+    * Einige Einstellungen wurden entfernt. nutzenSharedWatchService und redirectDocumentation ToGitHubIo wurde standardmäßig für mehrere Versionen auf true gesetzt und an dieser Stelle ziemlich gut getestet. Entfernen Sie diese erlaubt für einige Code-Reinigung.
+
+    * Einige kleine Änderungen, Fehlerbehebungen und Optimierungen.
+
+*    **FürERDDAP™Entwickler:** 
+    * Viele tote Code entfernt. Viele Warnungen wurden behoben.
+
 ## Version 2.27.0{#version-2270} 
  (veröffentlicht 2025-06-11) 
 

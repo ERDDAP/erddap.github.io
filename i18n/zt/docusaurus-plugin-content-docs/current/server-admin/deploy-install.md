@@ -247,8 +247,8 @@ Xmx 和 -Xms 記憶體設定值很重要, 因為ERDDAP™更有記憶力更好 �
 ERDDAP™如果設定. xml 或datasets.xmlXML 檔案不是很好的檔案。 因此,在您編輯這些檔案後, 最好將 XML 文字貼入 XML 檢查器, 以確認結果是否是好的 XML 。[xml 驗證](https://www.xmlvalidation.com/).
      
 ### 安裝 erddap.war 檔案{#install-the-erddapwar-file} 
-4. 在Linux、Mac和Windows上下載[戰爭](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)輸入 _tomcat_/webapps 。
-     (2.27.0, 620, 554, 403字節, MD5=3b2086c659ee4145ca2dff447bf4ef7, 日期 06-11-2025) 
+4. 在Linux、Mac和Windows上下載[戰爭](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war)輸入 _tomcat_/webapps 。
+     (2.28.0, 620, 824, 288字節, MD5=f948 b2ba603f65a83ac67af43da9e4c2, 日期08- 29-2025) 
     
 . war 檔案很大, 因為它包含高分辨率的海岸线、 邊界、 以及建立地圖所需的海拔資料 。
     
@@ -261,6 +261,7 @@ ERDDAP™如果設定. xml 或datasets.xmlXML 檔案不是很好的檔案。 因
     [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187字節,MD5=970fbee172e28b0b8a07756ecbc898e,日期2024-06-07) 
     [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039字節,MD5=652AFC9D1421F00B5F789DA2C4732D4C,日期2024-11-07) 
     [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032字節,MD5=99a725108b37708e5420986c1616a119,日期2025-03-31) 
+    [2.2.7.0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)  (620,554,403字節,MD5=3b2086c659ee4145ca2dff447bf4ef7,日期: 06-11-2025) 
     \\]
     
 #### 代理 Pass{#proxypass} 

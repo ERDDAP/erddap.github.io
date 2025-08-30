@@ -7,6 +7,33 @@ ERDDAP™este un mare exemplu de[Inovarea bazată pe utilizator](https://en.wiki
 
 Aici sunt modificările asociate cu fiecareERDDAP™Eliberare.
 
+## Versiunea 2.28.0{#version-2280} 
+ (eliberat în 2025-08-29) 
+
+*    **Noi caracteristici și schimbări (pentru utilizatori) :** 
+    *   [Schema croissant](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)este acum disponibil. Admins poate controla dacă metadatele implicite utilizează Croissant, dar începând cu 2.28.0 puteți solicita definiția Croissant pentru noul tip de fișier de export ".croissant" (care oferă un fișier jsonld) .
+
+*    **LucruriERDDAP™Administratorii trebuie să cunoască și să facă:** 
+    * Docker nou Imagine creată pe fiecare cerere de tragere fuzionată. Acestea sunt cladiri alfa, nu sunt versiuni. Ei vor avea o etichetă ca "20250814T034025," care indică atunci când a fost construit. Dacă doriți să încercați cele mai recente caracteristici puteți utiliza aceste. Daca doriti ceva mai stabil utiliza lansările noastre cu un tag versiune semantica (de exemplu 2,28.0) . Întotdeauna ne propunem ca eliberarea alfa să fie utilă, dar există mai puţine teste pentru ei decât versiunile noastre. Vă recomandăm întotdeauna să utilizați ceva cel puțin la fel de nou ca nostru "ultima" versiune, care va fi cea mai recentă versiune versiune.
+
+    * Docker Imagini disponibile acum pe[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)pe lângă[DockerHub](https://hub.docker.com/r/erddap/erddap).
+
+Mulţumită[@ocefpaf](https://github.com/ocefpaf),[@abkfenris](https://github.com/abkfenris),[@srstsavage](https://github.com/srstsavage), și[MathewBiddle](https://github.com/MathewBiddle)la contribuțiile lor în jurul Docker Images. Aceasta a inclus primele contribuții din partea tuturor, cu excepția @stsavage&#33;
+    
+    * Există acum sprijin pentru generarea[Schema croissant](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)Dosare. Este în mod implicit. Puteți dezactiva schema Croissant în setup.xml cu (NU RECOMANDAT- Vă rugăm să ajungeţi sau să completaţi o problemă privind GitHub dacă este necesar să faceţi acest lucru) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Unele setări au modificat valorile implicite. Utilizați anteteleForUrl și utilizațiEddReflection acum ambele implicit la adevărat. Dacă ei cauzează o problemă și trebuie să le setați să fals, vă rugăm să creați o problemă. Intenția este de a le elimina într-o viitoare versiune.
+
+    * Unele setări au fost eliminate. UtilizareSharedWatchService și redirecționareDocumentare ToGitHubIo a fost setat la adevărat în mod implicit pentru mai multe versiuni și a fost destul de bine testat în acest moment. Îndepărtez astea permise pentru o curăţare de coduri.
+
+    * Câteva mici schimbări, reparaţii de insecte şi optimizări.
+
+*    **PentruERDDAP™Dezvoltatori:** 
+    * O mulțime de cod mort eliminat. Multe avertismente fixate.
+
 ## Versiunea 2.27.0{#version-2270} 
  (eliberat în 2025-06-11) 
 

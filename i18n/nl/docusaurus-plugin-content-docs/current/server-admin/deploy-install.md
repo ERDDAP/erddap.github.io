@@ -247,8 +247,8 @@ U kunt een voorbeeld zien[datasets.xmlop GitHub](https://github.com/ERDDAP/erdda
 ERDDAP™werkt niet correct als de setup.xml ofdatasets.xmlbestand is geen goed gevormd XML bestand. Dus, nadat je deze bestanden hebt bewerkt, is het een goed idee om te controleren of het resultaat goed is gevormd XML door de XML tekst te plakken in een XML checker zoals[xmlvalidatie](https://www.xmlvalidation.com/).
      
 ### Het erddap.war-bestand installeren{#install-the-erddapwar-file} 
-4. Op Linux, Mac en Windows, downloaden[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)in _tomcat_/webapps .
-     (versie 2.27.0, 620.554.403 bytes, MD5=3b2086c659ee4145ca2dff447bf4ef7, gedateerd 06-11-2025) 
+4. Op Linux, Mac en Windows, downloaden[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war)in _tomcat_/webapps .
+     (versie 2.28.0, 620,824,288 bytes, MD5=f948b2ba603f65a83ac67af43da9e4c2, gedateerd 08-29-2025) 
     
 Het .war bestand is groot omdat het hoge resolutie kustlijn, grens, en hoogte gegevens die nodig zijn om kaarten te maken bevat.
     
@@ -261,6 +261,7 @@ Het .war bestand is groot omdat het hoge resolutie kustlijn, grens, en hoogte ge
     [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187 bytes, MD5=970fbee172e28b0b8a07756eecbc898e, gedateerd 2024-06-07) 
     [2,25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 bytes, MD5=652AFC9D1421F00B5F789DA2C4732D4C, gedateerd 2024-11-07) 
     [2,26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032 bytes, MD5=99a725108b37708e5420986c1616a119, gedateerd 2025-03-31) 
+    [2,27,0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)  (620.554.403 bytes, MD5=3b2086c659ee4145ca2dff447bf4ef7, gedateerd 06-11-2025) 
     \\]
     
 #### ProxyPass{#proxypass} 

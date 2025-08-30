@@ -3,10 +3,6 @@
     "message": "এই পৃষ্ঠাটি ।",
     "description": "The title of the fallback page when the page crashed"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "উপরে যাও",
-    "description": "The ARIA label for the back to top button"
-  },
   "theme.blog.archive.title": {
     "message": "আর্কাইভ",
     "description": "The page & hero title of the blog archive page"
@@ -27,6 +23,14 @@
     "message": "পুরোনো এন্ট্রি",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "উপরে যাও",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "সকল ট্যাগ প্রদর্শন করা হবে",
+    "description": "The label of the link targeting the tag list page"
+  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "ব্লগ পোস্ট পৃষ্ঠা পরিদর্শন",
     "description": "The ARIA label for the blog posts pagination"
@@ -39,21 +43,21 @@
     "message": "পুরোনো পোস্ট",
     "description": "The blog post button label to navigate to the older/next post"
   },
-  "theme.tags.tagsPageLink": {
-    "message": "সকল ট্যাগ প্রদর্শন করা হবে",
-    "description": "The label of the link targeting the tag list page"
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "সিস্টেম মোড",
+    "description": "The name for the system color mode"
   },
-  "theme.colorToggle.ariaLabel": {
-    "message": "অন্ধকার ও আলোর মোডে পরিবর্তন (বর্তমান সময়ের মধ্যে){mode}আপনি কি মনে করতে পারেন?",
-    "description": "The ARIA label for the navbar color mode toggle"
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "হালকা মোড",
+    "description": "The name for the light color mode"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "গাঢ় মোড",
     "description": "The name for the dark color mode"
   },
-  "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "হালকা মোড",
-    "description": "The name for the light color mode"
+  "theme.colorToggle.ariaLabel": {
+    "message": "অন্ধকার ও আলোর মোডে পরিবর্তন (বর্তমান সময়ের মধ্যে){mode}আপনি কি মনে করতে পারেন?",
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "বিস্তীর্ণ",
@@ -75,9 +79,6 @@
     "message": "পরবর্তী",
     "description": "The label used to navigate to the next doc"
   },
-  "theme.docs.versionBadge.label": {
-    "message": "সংস্করণ:{versionLabel}"
-  },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
     "message": "একটি doc ট্যাগ|{count}docs ট্যাগ",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
@@ -85,6 +86,9 @@
   "theme.docs.tagDocListPageTitle": {
     "message": "{nDocsTagged}এর সাথে{tagName}ডিস্‌প্লে",
     "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "সংস্করণ:{versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "এই নথিপত্রের জন্য সঠিক নথিপত্র{siteTitle}{versionLabel}সংস্করণ।",
@@ -162,25 +166,9 @@
     "message": "বন্ধ",
     "description": "The ARIA label for close button of announcement bar"
   },
-  "theme.CodeBlock.copied": {
-    "message": "প্রতিলিপি",
-    "description": "The copied button label on code blocks"
-  },
-  "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "ক্লিপবোর্ড শেয়ার করুন",
-    "description": "The ARIA label for copy code blocks button"
-  },
-  "theme.CodeBlock.copy": {
-    "message": "কপি করুন",
-    "description": "The copy button label on code blocks"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "সম্প্রতি ব্যবহৃত ব্লগ",
     "description": "The ARIA label for recent posts in the blog sidebar"
-  },
-  "theme.CodeBlock.wordWrapToggle": {
-    "message": "শব্দ ঘুরিয়ে দিন",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "সাইডবারের প্রান্তিক মাপ 'আ'{label}'আ'",
@@ -194,10 +182,6 @@
     "message": "প্রধান",
     "description": "The ARIA label for the main navigation"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "ভাষা",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "তুমি যা খুঁজছিলে আমরা তা খুঁজে পাইনি।",
     "description": "The first paragraph of the 404 page"
@@ -205,6 +189,10 @@
   "theme.NotFound.p2": {
     "message": "অনুগ্রহ করে মূল URL-এর সাথে যুক্ত পরিচিতি-এর মালিকের সাথে যোগাযোগ করুন এবং তাদের লিংক ভাঙ্গা হয়েছে।",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "ভাষা",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "এই ওয়েবপেজটি",
@@ -221,6 +209,22 @@
   "theme.blog.post.readingTime.plurals": {
     "message": "এক মিনিট পড়া|{readingTime}মিনিট পড়া",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "কপি করুন",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "প্রতিলিপি",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "ক্লিপবোর্ড শেয়ার করুন",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "শব্দ ঘুরিয়ে দিন",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
     "message": "হোম পেজ",
@@ -250,6 +254,14 @@
     "message": "ন্যাভিগেশন বার",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "ড্রপ-ডাউন প্রসারিত করুন",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "ড্রপ-ডাউন নিষ্ক্রিয় করা হবে",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "সাইড-বার প্রসারণ",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
@@ -257,22 +269,6 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "সাইড-বার প্রসারণ",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "কোনো ফলাফল প্রাপ্ত হয়নি"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "সব ফলাফল বাইরে দেখুন।{context}ডিস্‌প্লে"
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "এর মধ্যে সব ফলাফল দেখতে পাবেন।{context}ডিস্‌প্লে"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "সকল ফলাফল প্রদর্শন"
-  },
-  "theme.SearchBar.label": {
-    "message": "অনুসন্ধান",
-    "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "অনুসন্ধানের ফলাফল{query}ডিস্‌প্লে",
@@ -292,6 +288,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "কোনো ডকুমেন্ট পাওয়া যায়নি",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "কোনো ফলাফল প্রাপ্ত হয়নি"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "সব ফলাফল বাইরে দেখুন।{context}ডিস্‌প্লে"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "এর মধ্যে সব ফলাফল দেখতে পাবেন।{context}ডিস্‌প্লে"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "সকল ফলাফল প্রদর্শন"
+  },
+  "theme.SearchBar.label": {
+    "message": "অনুসন্ধান",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "পুনরায় প্রচেষ্টা করুন",

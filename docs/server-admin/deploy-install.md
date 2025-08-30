@@ -247,8 +247,8 @@ Starting with ERDDAP™ v2.13, ERDDAP™ administrators can override any value i
 ERDDAP™ will not work correctly if the setup.xml or datasets.xml file isn't a well-formed XML file. So, after you edit these files, it is a good idea to verify that the result is well-formed XML by pasting the XML text into an XML checker like [xmlvalidation](https://www.xmlvalidation.com/).  
      
 ###  Install the erddap.war file {#install-the-erddapwar-file}
-4. On Linux, Mac, and Windows, download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war) into _tomcat_/webapps .  
-    (version 2.27.0, 620,554,403 bytes, MD5=3b2086c659eee4145ca2dff447bf4ef7, dated 06-11-2025)
+4. On Linux, Mac, and Windows, download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war) into _tomcat_/webapps .  
+    (version 2.28.0, 620,824,288 bytes, MD5=f948b2ba603f65a83ac67af43da9e4c2, dated 08-29-2025)
     
     The .war file is big because it contains high resolution coastline, boundary, and elevation data needed to create maps.
     
@@ -261,6 +261,7 @@ ERDDAP™ will not work correctly if the setup.xml or datasets.xml file isn't a 
     [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war) (568,748,187 bytes, MD5=970fbee172e28b0b8a07756eecbc898e, dated 2024-06-07)
     [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war) (592,292,039 bytes, MD5=652AFC9D1421F00B5F789DA2C4732D4C, dated 2024-11-07)
     [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war) (607,404,032 bytes, MD5=99a725108b37708e5420986c1616a119, dated 2025-03-31)
+    [2.27.0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war) (620,554,403 bytes, MD5=3b2086c659eee4145ca2dff447bf4ef7, dated 06-11-2025)
     \]
     
 #### ProxyPass {#proxypass}

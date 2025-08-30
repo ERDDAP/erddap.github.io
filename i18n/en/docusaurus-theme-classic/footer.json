@@ -7,6 +7,10 @@
     "message": "Community",
     "description": "The title of the footer links column with title=Community in the footer"
   },
+  "link.title.Brought to you by": {
+    "message": "Brought to you by",
+    "description": "The title of the footer links column with title=Brought to you by in the footer"
+  },
   "link.item.label.Documentation": {
     "message": "Documentation",
     "description": "The label of footer link with label=Documentation linking to /docs/intro"
@@ -14,6 +18,22 @@
   "link.item.label.Contributing": {
     "message": "Contributing",
     "description": "The label of footer link with label=Contributing linking to /docs/contributing"
+  },
+  "link.item.label.License": {
+    "message": "License",
+    "description": "The label of footer link with label=License linking to license"
+  },
+  "link.item.label.Changes": {
+    "message": "Changes",
+    "description": "The label of footer link with label=Changes linking to /changes"
+  },
+  "link.item.label.Cloud": {
+    "message": "Cloud",
+    "description": "The label of footer link with label=Cloud linking to /cloud"
+  },
+  "link.item.label.Support/Contact": {
+    "message": "Support/Contact",
+    "description": "The label of footer link with label=Support/Contact linking to /docs/intro#support"
   },
   "link.item.label.Governance": {
     "message": "Governance",
@@ -39,22 +59,6 @@
     "message": "Credits",
     "description": "The label of footer link with label=Credits linking to /credits"
   },
-  "copyright": {
-    "message": "ERDDAP™, Version 2.25. Copyright © 2024 ERDDAP™. Built with Docusaurus.",
-    "description": "The footer copyright"
-  },
-  "link.title.Brought to you by": {
-    "message": "Brought to you by",
-    "description": "The title of the footer links column with title=Brought to you by in the footer"
-  },
-  "link.item.label.License": {
-    "message": "License",
-    "description": "The label of footer link with label=License linking to license"
-  },
-  "link.item.label.Changes": {
-    "message": "Changes",
-    "description": "The label of footer link with label=Changes linking to /changes"
-  },
   "link.item.label.Acknowledgements": {
     "message": "Acknowledgements",
     "description": "The label of footer link with label=Acknowledgements linking to /acknowledgements"
@@ -75,12 +79,8 @@
     "message": "ERD",
     "description": "The label of footer link with label=ERD linking to https://www.fisheries.noaa.gov/about/environmental-research-division-southwest-fisheries-science-center"
   },
-  "link.item.label.Cloud": {
-    "message": "Cloud",
-    "description": "The label of footer link with label=Cloud linking to /cloud"
-  },
-  "link.item.label.Support/Contact": {
-    "message": "Support/Contact",
-    "description": "The label of footer link with label=Support/Contact linking to /docs/intro#support"
+  "copyright": {
+    "message": "ERDDAP™, Version 2.28.0. Copyright © 2025 ERDDAP™. Built with Docusaurus.",
+    "description": "The footer copyright"
   }
 }

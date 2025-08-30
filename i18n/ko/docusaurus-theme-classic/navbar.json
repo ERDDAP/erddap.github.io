@@ -7,28 +7,20 @@
     "message": "NOAA이름 *",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Documentation": {
-    "message": "회사연혁",
-    "description": "Navbar item with label Documentation"
+  "item.label.Docs": {
+    "message": "사이트맵",
+    "description": "Navbar item with label Docs"
   },
   "item.label.Governance": {
     "message": "회사연혁",
     "description": "Navbar item with label Governance"
   },
-  "item.label.Technical Board": {
-    "message": "기술위원회",
-    "description": "Navbar item with label Technical Board"
+  "item.label.Cloud": {
+    "message": "클라우드",
+    "description": "Navbar item with label Cloud"
   },
   "item.label.GitHub": {
     "message": "프로젝트",
     "description": "Navbar item with label GitHub"
-  },
-  "item.label.Docs": {
-    "message": "사이트맵",
-    "description": "Navbar item with label Docs"
-  },
-  "item.label.Cloud": {
-    "message": "클라우드",
-    "description": "Navbar item with label Cloud"
   }
 }

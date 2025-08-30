@@ -7,6 +7,33 @@ ERDDAP™Hyvä esimerkki[Käyttäjälähtöinen innovaatio](https://en.wikipedia
 
 Tässä ovat muutokset, jotka liittyvät jokaiseenERDDAP™Vapautuminen.
 
+## Versio 2.28.0{#version-2280} 
+ (Lähde: 2025-08-29) 
+
+*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
+    *   [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)on nyt saatavilla. Admins voi hallita, käyttääkö oletusmetadata Croissant, mutta alkaen 2.28.0 voit pyytää Croissant-määritelmän uudella vientitiedostotyypillä ".croissant" (Mikä on jsonld-tiedosto) .
+
+*    **AsioitaERDDAP™Hallitsijoiden on tiedettävä ja tehtävä:** 
+    * Uusi Docker Kuva jokaisesta yhdistyneestä vetopyynnöstä. Nämä ovat alfa-rakentamista, niitä ei ole versioitu. Niissä on merkintä "20250814T034025", joka osoittaa, milloin se on rakennettu. Jos haluat kokeilla uusimpia ominaisuuksia, voit käyttää niitä. Jos haluat jotain vakaampaa, käytä julkaisujamme semanttisella versiotunnuksella (2.28.0) . Tavoitteenamme on, että alfa-julkaisut ovat käyttökelpoisia, mutta niille on vähemmän testausta kuin versioituja julkaisujamme. Suosittelemme, että käytät jotain vähintään yhtä uutta kuin viimeisin julkaisu, joka on uusin versioversio.
+
+    * Docker Kuvat nyt saatavilla[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)lisäksi[DockerHub](https://hub.docker.com/r/erddap/erddap).
+
+Kiitos[@ocefpaf](https://github.com/ocefpaf),[@abkfenris](https://github.com/abkfenris),[@srstsavage](https://github.com/srstsavage)ja[Matematiikka](https://github.com/MathewBiddle)heidän panoksestaan Dockerin kuvien ympärillä. Tähän sisältyi ensimmäiset panokset kaikista paitsi @stssavage&#33;
+    
+    * Tukea on nyt luotu[Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)tiedostoja. Se on oletusarvoisesti päällä. Voit poistaa Croissant-rakenteen asennuksessa.xml (EI VÄLTÄ: Ole hyvä ja ota yhteys GitHubiin, jos sinun on tehtävä tämä.) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Joissakin tilanteissa oletusarvot ovat muuttuneet. Käytä HeadersForUrlia ja käytä EddReflectionia nyt molemmat oletusarvoisesti. Jos ne aiheuttavat ongelman ja sinun on asetettava ne väärään, luo ongelma. Tarkoituksena on poistaa ne tulevaisuudessa.
+
+    * Joitakin asetuksia on poistettu. SharedWatchService and redirectDocumentation Näytä tarkat tiedot ToGitHubIo oli asetettu todeksi oletusarvoisesti useista julkaisuista ja testattu melko hyvin tässä vaiheessa. Niiden poistaminen on sallittua koodin puhdistukseen.
+
+    * Pieniä muutoksia, vikoja ja optimointia.
+
+*    **For ForERDDAP™Kehittäjät:** 
+    * Paljon kuollutta koodia poistettu. Paljon varoituksia on korjattu.
+
 ## Versio 2.27.0{#version-2270} 
  (2025-06-11) 
 

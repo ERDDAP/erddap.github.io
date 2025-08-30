@@ -7,6 +7,33 @@ ERDDAP™Büyük bir örnek[User-Driven Innovation](https://en.wikipedia.org/wik
 
 İşte her biri ile ilişkili değişikliklerERDDAP™salıver.
 
+## Version 2.28.0{#version-2280} 
+ (2025-08-29-29-29) 
+
+*    **Yeni Özellikler ve Değişiklikler (kullanıcılar için) :** 
+    *   [Croissant şema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)Şimdi mevcut. Adminler varsayılan metadata'nın Croissant kullanıyor olup olmadığını kontrol edebilir, ancak 2.28.0 ile başlayan Croissant tanımını yeni ihracat dosyası türü ".croissant" ile talep edebilirsiniz. (Hangi bir jsonld dosyası sağlar) .
+
+*    **Şeyler ŞeylerERDDAP™Yöneticilerin Bilme ve Yapması Gerekiyor:** 
+    * New Docker Resim, her birleştirilmiş çekme isteği üzerine yaratıldı. Bunlar alfa inşa ediyor, versiyonlanmış sürüm değiller. "20250814T034025" gibi bir etikete sahip olacaklar, bu da inşa edildiğinde işaret eder. Bunu kullanabileceğiniz en son özellikleri denemek istiyorsanız. Daha istikrarlı bir şey istiyorsanız, sürümlerimizi bir semantik sürüm etiketi ile kullanın (e.g. 2.28.0) . Her zaman alfa yayınlarının kullanılabilir olmasını hedeflemekteyiz, ancak versiyonumuzdan daha az test var. Her zaman en son semantik sürümlü sürüm olacak olan "daha az test" serbest bırakılması için bir şey kullanmanızı tavsiye ederiz.
+
+    * Docker Şimdi mevcut görüntüler[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)Buna ek olarak[DockerHub](https://hub.docker.com/r/erddap/erddap).
+
+Teşekkürler teşekkürler[@ocefpaf](https://github.com/ocefpaf),[@abkfenris](https://github.com/abkfenris),[@srstsavage](https://github.com/srstsavage)Ve[MathewBiddle](https://github.com/MathewBiddle)Docker Images etrafındaki katkılarına. Bu, @ststsavage dışında tüm bunlardan ilk katkılarını içeriyordu&#33;
+    
+    * Şimdi üretim için destek var[Croissant şema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)dosyaları. Varsayılan olarak budur. Setinizde Croissant şemayı devre dışı bırakabilirsin.xml with the Croissant şema in your installation.xml with with with (Not RECOMMENDED- Lütfen GitHub'da bir sorun yaşamanız veya dosyaya ulaşmanız gerekiyorsa bunu yapmanız gerekir) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Bazı ayarlar varsayılan değerleri değişti. HeadersForUrl'ı kullanın ve EddReflection'i kullanın, hem doğruya varsayılan. Bir probleme neden olurlarsa ve onları yanlış ayarlamanız gerekir, lütfen bir sorun yaratın. Amaç onları gelecekteki bir salıvermek.
+
+    * Bazı ayarlar kaldırıldı. useSharedWatchService and yönlendirmeDocumentation ToGitHubIo, birden fazla sürüm için varsayılan olarak doğruya ayarlanmış ve bu noktada oldukça iyi test edilmiştir. Bu izinleri bazı kod temizlik için geri yükleyin.
+
+    * Bazı küçük değişiklikler, boğalar ve optimizasyonlar.
+
+*    **For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For ForERDDAP™Geliştiriciler:** 
+    * Birçok ölü kod kaldırıldı. Birçok uyarı düzeltildi.
+
 ## Version 2.27.07.0{#version-2270} 
  (2025-06-11-11) 
 
