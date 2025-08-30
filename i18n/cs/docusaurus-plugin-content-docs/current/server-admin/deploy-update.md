@@ -11,8 +11,8 @@ Jak udělat aktualizaci existujícíhoERDDAP™na Vašem serveru
 2. Pokud upgrade zERDDAP™verze 2.18 nebo níže, musíte přejít naJava21 (nebo novější) a související Tomcat 10. Viz pravidelnéERDDAP™návod k instalaci[Java](/docs/server-admin/deploy-install#java)a[Tomcat](/docs/server-admin/deploy-install#tomcat). Budete muset také kopírovat_tomcat_/content/erddapadresář z vaší staré instalace Tomcat do vaší nové instalace Tomcat.
 
 ## Stáhnout{#download} 
-3. Stáhnout[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)do _tomcat_/webaps .
-     (verze 2.27.0, 620,554,403 bytes, MD5=3b2086c659eee4145ca2dff447bf4ef7, dated 06-11-2025) 
+3. Stáhnout[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war)do _tomcat_/webaps .
+     (verze 2.28.0, 620,824,288 bytes, MD5=f948b2ba603f65a83ac67af43da9e4c2, dat. 08-29-2025) 
      
 ## zprávy.xml{#messagesxml} 
 4. 

@@ -7,6 +7,33 @@ ERDDAP™est un excellent exemple de[Innovation axée sur l'utilisateur](https:/
 
 Voici les changements associés à chaqueERDDAP™libérer.
 
+## Version 2.28.0{#version-2280} 
+ (publié le 2025-08-29) 
+
+*    **Nouvelles caractéristiques et changements (pour les utilisateurs) :** 
+    *   [Schéma croissant](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)est maintenant disponible. Admins peut contrôler si les métadonnées par défaut utilisent Croissant, mais à partir de 2.28.0 vous pouvez demander la définition Croissant pour avec le nouveau type de fichier d'exportation ".croissant" (qui fournit un fichier jsonld) .
+
+*    **Les chosesERDDAP™Les administrateurs doivent savoir et faire :** 
+    * Nouveau Docker Image créée sur chaque requête de tirage fusionnée. Ce sont des constructions alpha, elles ne sont pas des versions. Ils auront une étiquette comme "20250814T034025", qui indique quand il a été construit. Si vous voulez essayer les dernières fonctionnalités, vous pouvez les utiliser. Si vous voulez quelque chose de plus stable utilisez nos versions avec une balise de version sémantique (Par exemple, 2.28.0) . Nous voulons toujours que les versions alpha soient utilisables, mais il y a moins de tests pour elles que nos versions. Nous vous recommandons toujours d'utiliser quelque chose d'au moins aussi nouveau que notre version "dernière" qui sera la version sémantique la plus récente.
+
+    * Coq Les images sont maintenant disponibles sur[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)en plus[DockerHub](https://hub.docker.com/r/erddap/erddap).
+
+Grâce à[@ocefpaf](https://github.com/ocefpaf),[Conformément à l'article 4 du règlement (UE) no 1308/2013 du Parlement européen et du Conseil, le présent règlement est obligatoire dans tous ses éléments et directement applicable dans tout État membre.](https://github.com/abkfenris),[@srstsavage](https://github.com/srstsavage)et[MathewBiddle](https://github.com/MathewBiddle)à leurs contributions autour des Images Docker. Cela comprenait les premières contributions de tous sauf @ststsavage&#33;
+    
+    * Il y a maintenant un soutien pour générer[Schéma croissant](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)fichiers. Il est activé par défaut. Vous pouvez désactiver le schéma croissant dans votre setup.xml avec (S'il vous plaît contacter ou déposer un problème sur GitHub si vous devez faire cela) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Certains paramètres ont changé leurs valeurs par défaut. useHeadersForUrl et useEddReflexion maintenant les deux par défaut à true. S'ils causent un problème et que vous devez les définir à faux, s'il vous plaît créer un problème. L'intention est de les supprimer dans une version future.
+
+    * Certains paramètres ont été supprimés. useSharedWatchService et redirectionDocumentation ToGitHubIo avait été mis à true par défaut pour plusieurs versions et a été assez bien testé à ce stade. La suppression de celles-ci a permis un nettoyage du code.
+
+    * Quelques petits changements, corrections de bugs et optimisations.
+
+*    **PourERDDAP™Développeurs :** 
+    * Beaucoup de code mort enlevé. De nombreux avertissements ont été corrigés.
+
 ## Version 2.27.0{#version-2270} 
  (publié le 2025-06-11) 
 

@@ -7,6 +7,33 @@ ERDDAP™adalah contoh besar[Inovasi Pengguna](https://en.wikipedia.org/wiki/Use
 
 Berikut adalah perubahan yang terkait dengan masing-masingERDDAP™Sitemap
 
+## Versi 2.28.0{#version-2280} 
+ (dirilis 2025-08-29) 
+
+*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
+    *   [Login](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)sekarang tersedia. Admin dapat mengontrol apakah metadata default menggunakan Croissant, tetapi mulai dengan 2.28.0 Anda dapat meminta definisi Croissant untuk dengan jenis file ekspor baru ".croissant" (yang menyediakan file jsonld) Sitemap
+
+*    **SitemapERDDAP™Administrator Perlu Tahu dan Lakukan:** 
+    * Docker Baru Gambar yang dibuat pada setiap permintaan tarik gabungan. Ini adalah build alfa, mereka tidak versi rilis. Mereka akan memiliki tag seperti "20250814T034025", yang menunjukkan ketika dibangun. Jika Anda ingin mencoba fitur terbaru yang dapat Anda gunakan ini. Jika Anda ingin menggunakan rilis kami dengan tag versi semantik (g. 2.28.0) Sitemap Kami selalu bertujuan untuk memiliki rilis alfa dapat digunakan, tetapi ada kurang pengujian bagi mereka dari rilis versi kami. Kami selalu merekomendasikan Anda menggunakan sesuatu setidaknya seperti rilis "latest" kami yang akan menjadi rilis versi semantik terbaru.
+
+    * Login Gambar sekarang tersedia[Login](https://github.com/ERDDAP/erddap/pkgs/container/erddap)selain[Login](https://hub.docker.com/r/erddap/erddap)Sitemap
+
+Sitemap[Login](https://github.com/ocefpaf)Login[Login](https://github.com/abkfenris)Login[Login](https://github.com/srstsavage)Sitemap[Login](https://github.com/MathewBiddle)untuk kontribusi mereka di sekitar Docker Images. Ini termasuk kontribusi pertama dari mereka kecuali @ststsavage&#33;
+    
+    * Sekarang dukungan untuk menghasilkan[Login](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)Login Secara default. Anda dapat menonaktifkan skema Croissant di setup Anda.xml dengan (TIDAK MEMBUAT- Silahkan hubungi atau mengajukan masalah di GitHub jika Anda perlu melakukan ini) Sitemap
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Beberapa pengaturan memiliki nilai default mereka berubah. useHeadersForUrl dan useEddReflection sekarang baik default untuk benar. Jika mereka menyebabkan masalah dan Anda perlu mengatur mereka untuk palsu, silakan buat masalah. Tujuannya adalah untuk menghapusnya dalam rilis masa depan.
+
+    * Beberapa pengaturan telah dihapus. useSharedWatchService dan redirectDocumentation ToGitHubIo telah ditetapkan untuk benar secara default untuk beberapa rilis dan cukup baik diuji pada titik ini. Menghapus ini diperbolehkan untuk beberapa pembersihan kode.
+
+    * Beberapa perubahan kecil, perbaikan bug, dan optimasi.
+
+*    **SitemapERDDAP™Pengembang:** 
+    * Banyak kode mati dihapus. Banyak peringatan tetap.
+
 ## Versi 2.27.0{#version-2270} 
  (dirilis 2025-06-11) 
 

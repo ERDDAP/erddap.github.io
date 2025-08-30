@@ -7,6 +7,33 @@ ERDDAP™nagyszerű példa erre[Felhasználó-vezérelt innováció](https://en.
 
 Íme a változások, amelyek mindegyikhez kapcsolódnakERDDAP™kiadás.
 
+## Verzió 2.28.0{#version-2280} 
+ (2025-08-29) 
+
+*    **Új funkciók és változások (felhasználók számára) :** 
+    *   [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)most elérhető. Az adminok ellenőrizhetik, hogy az alapértelmezett metaadat Croissant-ot használ-e, de 2,28,0-val kezdődően kérheti a Croissant meghatározását az új exportfájltípus ".croissant"-jével. (amely egy jsonld fájlt biztosít) ...
+
+*    **A dolgokERDDAP™Az adminisztrátoroknak tudniuk kell és meg kell tenniük:** 
+    * Új Docker A kép minden egyes összeolvadt pull kérésre készült. Ezek az alfa épít, ezek nem változatos kiadások. Olyan címkékkel rendelkeznek, mint a "20250814T034025", amely jelzi, mikor épült. Ha meg akarja próbálni a legújabb funkciókat, használhatja ezeket. Ha azt szeretné, hogy valami stabilabb használja a kiadásokat egy szemantikai verzió címke (pl. 2.28.0) ... Mindig arra törekszünk, hogy az alfa-kibocsátás használható legyen, de kevésbé teszteljük őket, mint a változatos kiadásaink. Mindig javasoljuk, hogy legalább olyan újat használjon, mint a "legjobb" kiadás, amely a legutóbbi szemantikai változatos kiadás lesz.
+
+    * Docker Képek most elérhetők[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)mellett[DockerHub](https://hub.docker.com/r/erddap/erddap)...
+
+Köszönöm[@ocefpaf](https://github.com/ocefpaf),[@abkfenris](https://github.com/abkfenris),[@srstsavage](https://github.com/srstsavage)és[MathewBiddle](https://github.com/MathewBiddle)hozzájárulásuk a Docker Images körül. Ez magában foglalta az első hozzájárulást mind közülük, kivéve a @ststsavage&#33;
+    
+    * Jelenleg támogatást nyújt a generáláshoz[Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)fájlok. Ez az alapértelmezett. Letilthatja a Croissant schema a setup.xml-ben (NEM ELŐTTT - Kérjük, vegye ki vagy dobjon egy problémát a GitHub-on, ha ezt meg kell tennie) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Egyes beállítások megváltoztatták az alapértelmezett értékeiket. HasználatHeadersForUrl és használjaEddReflection most mind alapértelmezett az igaz. Ha problémát okoznak, és hamisnak kell beállítania őket, kérlek hozzon létre egy problémát. A szándék az, hogy eltávolítsa őket egy jövőbeli kiadásban.
+
+    * Néhány beállítást eltávolítottak. HasználatSharedWatchService és redirectDocumentation A ToGitHubIo-t a többszörös kiadások alapértelmezettje határozta meg, és ezen a ponton nagyon jól tesztelték. Ezek eltávolítása lehetővé tette néhány kód tisztítását.
+
+    * Néhány kis változás, hibajavítás és optimalizálás.
+
+*    **MertERDDAP™Fejlesztők:** 
+    * Sok halott kód eltávolított. Sok figyelmeztetés rögzített.
+
 ## Verzió 2.27.0{#version-2270} 
  (2025-06-11) 
 

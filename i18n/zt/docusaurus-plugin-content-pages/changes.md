@@ -7,6 +7,33 @@ ERDDAP™是個很好的例子[使用者](https://en.wikipedia.org/wiki/User_inn
 
 以下是與每項變更相關的變更ERDDAP™釋放
 
+## 2.2.8. 版本{#version-2280} 
+ (2025-08-29年) 
+
+*    **新特性和變更 (使用者) :** 
+    *   [Croissant 方案](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)已提供。 管理者可以控制預設中繼資料是否使用Croissant, 但從2.28. 0開始, 您可以用新的匯出檔案類型 ". croissant" 來要求 Croissant 的定義 。 (提供 jsonld 檔案) .
+
+*    **事情ERDDAP™管理者需要知道和做:** 
+    * 新建嵌入器 每個合并的拉拉要求都產生影像 。 這些是α建築,不是版本的釋放。 他們會有像"20250814T034025"的標籤, 如果您想要試試最新的功能, 您可以使用這些功能 。 如果你想要更穩定的東西的話 使用我們用語义版的標籤 (例如,2.28.0) . 我們總是希望α释放能被使用 但對它們的測試比我們版本的释放要少 我們總是建議你使用 至少和我們"最新"的版本一樣新 也就是最新語言版的版本
+
+    * 嵌入器 影像目前可用於[GitHub 圖片](https://github.com/ERDDAP/erddap/pkgs/container/erddap)除[套接字](https://hub.docker.com/r/erddap/erddap).
+
+多虧了[@ ocefpaf](https://github.com/ocefpaf),[@abkfenris : @ abkfenris](https://github.com/abkfenris),[@ srstsavage 中](https://github.com/srstsavage)和[馬修比多](https://github.com/MathewBiddle)關於他們在 Docker 影像上的贡献。 除了@stsavage之外,
+    
+    * 現在有人支持產生[Croissant 方案](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)文件。 這是預設的 您可以在您的設定中禁用 Croissant schema 。 xml 。 (不建議 -- 如果您需要的話, 請在 GitHub 上聯絡或提交 。) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * 有些設定值已變更 。 使用 HeadersForUrl 并使用 Edd Reflection 。 如果他們有問題,你需要把他們弄錯, 請建立問題。 目的是在未來的釋放中除掉他們
+
+    * 已移除一些設定值 。 使用共享監控服務及重定向文件 ToGitHubIo被設計成真, 移除這些可以進行密碼清理 。
+
+    * 一些小變更, 錯誤修正, 以及优化 。
+
+*    **為ERDDAP™發展者 :** 
+    * 很多死亡密碼都被移除了 很多警告已生效。
+
 ## 2.2.7.0版本{#version-2270} 
  (2025-06-11年) 
 

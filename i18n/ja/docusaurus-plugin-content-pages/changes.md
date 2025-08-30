@@ -7,6 +7,33 @@ ERDDAP™素晴らしい例です。[ユーザー主導のイノベーション]
 
 それぞれに関連した変更は次のとおりです。ERDDAP™リリース
 
+## バージョン2.28.0{#version-2280} 
+ (リリース 2025-08-29) 
+
+*    **新機能と変更 (ユーザ向け) : : :** 
+    *   [Croissantスキーマ](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)詳しくはこちら 管理者は、デフォルトのメタデータがクロワッサンを使用しているかどうかを制御できますが、2.28.0 以降では、新しいエクスポートファイルタイプ ".croissant" でクロワッサン定義を要求できます。 (jsonld ファイルを提供する) お問い合わせ
+
+*    **お知らせERDDAP™管理者は知っておく必要があります。** 
+    * 新しいドッカー あらゆるマージリクエストで作成されたイメージ。 これらはアルファビルドであり、バージョンアップされていない。 "20250814T034025" というタグがあり、そのタグはビルド時に示します。 これらを使用できる最新の機能を試してみたい場合。 より安定的なものが必要な場合は、リリースを意味のあるバージョンタグで使用してください。 (例: 2.28.0) お問い合わせ アルファリリースを使用可能にすることを目指していますが、バージョンアップされたリリースよりもテストが少なくなっています。 最新リリースとなる「最新リリース」として、少なくとも新しいものを使用することをお勧めします。
+
+    * ドッカー 利用できるイメージ[GitHubで](https://github.com/ERDDAP/erddap/pkgs/container/erddap)その他[ドッカーハブ](https://hub.docker.com/r/erddap/erddap)お問い合わせ
+
+お問い合わせ[@ocefpafさん](https://github.com/ocefpaf),[@abkfenrisさん](https://github.com/abkfenris),[@srstsavage からのツイート](https://github.com/srstsavage)と[Mathewビドル](https://github.com/MathewBiddle)Docker Images に関する貢献 これは、@stsavageを除くすべてのものからの最初の貢献が含まれて&#33;
+    
+    * 生成をサポートするようになりました[Croissantスキーマ](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)ファイル。 デフォルトではあります。 set.xml で Croissant スキーマを無効にできます。 (これを行う必要がある場合は、GitHub で問題が発生したり、GitHub で問題が発生したりしてください。) : : :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * いくつかの設定はデフォルト値を変更しました。 useHeadersForUrl と useEddReflection はデフォルトを true にしました。 問題を引き起こし、誤って設定する必要がある場合は、問題を作成してください。 意図は、将来のリリースでそれらを削除することです。
+
+    * 一部設定が削除されました。 useSharedWatchService とリダイレクトドキュメント ToGitHubIo は、複数のリリースでデフォルトで true に設定されており、この時点ではかなりよくテストされていました。 いくつかのコードのクリーンアップのために許可されているこれらの削除。
+
+    * いくつかの小さな変更、バグ修正、最適化。
+
+*    **お問い合わせERDDAP™開発者:** 
+    * デッドコードのロットを削除しました。 多くの警告が修正されました。
+
 ## バージョン2.27.0{#version-2270} 
  (リリース 2025-06-11) 
 

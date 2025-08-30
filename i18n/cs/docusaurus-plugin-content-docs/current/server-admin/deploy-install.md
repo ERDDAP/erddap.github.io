@@ -247,8 +247,8 @@ Můžete vidět příklad[datasets.xmlna GitHubu](https://github.com/ERDDAP/erdd
 ERDDAP™nefunguje správně, pokud nastavení.xml nebodatasets.xmlsoubor není dobře vytvořený XML soubor. Takže po editaci těchto souborů je dobrý nápad ověřit, že výsledek je dobře vytvořený XML vložením XML textu do XML checkeru jako[xmlvalidace](https://www.xmlvalidation.com/).
      
 ### Nainstalovat soubor erddap.war{#install-the-erddapwar-file} 
-4. Na Linux, Mac a Windows, stáhnout[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)do _tomcat_/webaps .
-     (verze 2.27.0, 620,554,403 bytes, MD5=3b2086c659eee4145ca2dff447bf4ef7, dated 06-11-2025) 
+4. Na Linux, Mac a Windows, stáhnout[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war)do _tomcat_/webaps .
+     (verze 2.28.0, 620,824,288 bytes, MD5=f948b2ba603f65a83ac67af43da9e4c2, dat. 08-29-2025) 
     
 Soubor .war je velký, protože obsahuje pobřeží s vysokým rozlišením, hranice a nadmořské výšky potřebné k vytvoření map.
     
@@ -261,6 +261,7 @@ Soubor .war je velký, protože obsahuje pobřeží s vysokým rozlišením, hra
     [2. 24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187 bytes, MD5=970fbee172e28b0b8a07756eecbc898e, dat.2024-06-07e) 
     [2. 25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 bytes, MD5=652AFC9D1421F00B5F789DA2C4732D4C, datováno 2024-11-07) 
     [2. 26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032 bytes, MD5=99a725108b37708e5420986c1616a119, dat. 2025-03-31) 
+    [2, 27. 0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)  (620,554,403 bytes, MD5=3b2086c659eee4145ca2dff447bf4ef7, dated 06-11-2025) 
     \\]
     
 #### ProxyPass{#proxypass} 

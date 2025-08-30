@@ -3,10 +3,6 @@
     "message": "Αυτή η σελίδα συνετρίβη.",
     "description": "The title of the fallback page when the page crashed"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Κύλιση πίσω στην κορυφή",
-    "description": "The ARIA label for the back to top button"
-  },
   "theme.blog.archive.title": {
     "message": "Αρχείο",
     "description": "The page & hero title of the blog archive page"
@@ -27,6 +23,14 @@
     "message": "Παλαιότερες καταχωρήσεις",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Κύλιση πίσω στην κορυφή",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Προβολή όλων των ετικετών",
+    "description": "The label of the link targeting the tag list page"
+  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Ιστολόγιο post page navigation",
     "description": "The ARIA label for the blog posts pagination"
@@ -39,21 +43,21 @@
     "message": "Παλαιότερη θέση",
     "description": "The blog post button label to navigate to the older/next post"
   },
-  "theme.tags.tagsPageLink": {
-    "message": "Προβολή όλων των ετικετών",
-    "description": "The label of the link targeting the tag list page"
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "λειτουργία συστήματος",
+    "description": "The name for the system color mode"
   },
-  "theme.colorToggle.ariaLabel": {
-    "message": "Εναλλαγή μεταξύ σκοτεινής και φωτεινής λειτουργίας (τώρα){mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "λειτουργία φωτός",
+    "description": "The name for the light color mode"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "σκοτεινή λειτουργία",
     "description": "The name for the dark color mode"
   },
-  "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "λειτουργία φωτός",
-    "description": "The name for the light color mode"
+  "theme.colorToggle.ariaLabel": {
+    "message": "Εναλλαγή μεταξύ σκοτεινής και φωτεινής λειτουργίας (τώρα){mode})",
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Ψωμί",
@@ -75,9 +79,6 @@
     "message": "Επόμενο",
     "description": "The label used to navigate to the next doc"
   },
-  "theme.docs.versionBadge.label": {
-    "message": "Έκδοση:{versionLabel}"
-  },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
     "message": "Ένα έγγραφο με ετικέτα|{count}έγγραφα με ετικέτα",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
@@ -85,6 +86,9 @@
   "theme.docs.tagDocListPageTitle": {
     "message": "{nDocsTagged}με \"{tagName}~",
     "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Έκδοση:{versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "Αυτό είναι ακυκλοφόρητη τεκμηρίωση για{siteTitle}{versionLabel}έκδοση.",
@@ -162,25 +166,9 @@
     "message": "Κλείσιμο",
     "description": "The ARIA label for close button of announcement bar"
   },
-  "theme.CodeBlock.copied": {
-    "message": "Αντιγραφή",
-    "description": "The copied button label on code blocks"
-  },
-  "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Αντιγραφή κώδικα στο πρόχειρο",
-    "description": "The ARIA label for copy code blocks button"
-  },
-  "theme.CodeBlock.copy": {
-    "message": "Αντιγραφή",
-    "description": "The copy button label on code blocks"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Blog πρόσφατες δημοσιεύσεις πλοήγησης",
     "description": "The ARIA label for recent posts in the blog sidebar"
-  },
-  "theme.CodeBlock.wordWrapToggle": {
-    "message": "Εναλλαγή περιτυλίγματος λέξεων",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Επέκταση κατηγορίας πλευρικής ράβδου \"{label}\"",
@@ -194,10 +182,6 @@
     "message": "Κύρια",
     "description": "The ARIA label for the main navigation"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Γλώσσες",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "Δεν μπορέσαμε να βρούμε αυτό που έψαχνες.",
     "description": "The first paragraph of the 404 page"
@@ -205,6 +189,10 @@
   "theme.NotFound.p2": {
     "message": "Παρακαλώ επικοινωνήστε με τον ιδιοκτήτη της ιστοσελίδας που σας συνέδεσε με το αρχικό URL και ενημερώστε τους ότι ο σύνδεσμός τους είναι σπασμένος.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Γλώσσες",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Σε αυτή τη σελίδα",
@@ -221,6 +209,22 @@
   "theme.blog.post.readingTime.plurals": {
     "message": "Ανάγνωση ενός λεπτού|{readingTime}min διαβάσει",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Αντιγραφή",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Αντιγραφή",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Αντιγραφή κώδικα στο πρόχειρο",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Εναλλαγή περιτυλίγματος λέξεων",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
     "message": "Αρχική σελίδα",
@@ -250,6 +254,14 @@
     "message": "Εναλλαγή γραμμής πλοήγησης",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Επέκταση της πτώσης",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Κατάρρευση της πτώσης",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Επέκταση πλευρικής ράβδου",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
@@ -257,22 +269,6 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "Επέκταση πλευρικής ράβδου",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Κανένα αποτέλεσμα"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Δείτε όλα τα αποτελέσματα έξω \"{context}~"
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Δείτε όλα τα αποτελέσματα εντός \"{context}~"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Δείτε όλα τα αποτελέσματα"
-  },
-  "theme.SearchBar.label": {
-    "message": "Αναζήτηση",
-    "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Αποτελέσματα αναζήτησης για \"{query}~",
@@ -292,6 +288,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "Δεν βρέθηκαν έγγραφα",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Κανένα αποτέλεσμα"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Δείτε όλα τα αποτελέσματα έξω \"{context}~"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Δείτε όλα τα αποτελέσματα εντός \"{context}~"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Δείτε όλα τα αποτελέσματα"
+  },
+  "theme.SearchBar.label": {
+    "message": "Αναζήτηση",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "Προσπάθησε ξανά.",

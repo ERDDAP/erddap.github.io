@@ -7,28 +7,20 @@
     "message": "NOAAلاگو",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Documentation": {
-    "message": "دستاویز",
-    "description": "Navbar item with label Documentation"
+  "item.label.Docs": {
+    "message": "ڈاک",
+    "description": "Navbar item with label Docs"
   },
   "item.label.Governance": {
     "message": "گورننگ باڈی",
     "description": "Navbar item with label Governance"
   },
-  "item.label.Technical Board": {
-    "message": "تکنیکی بورڈ",
-    "description": "Navbar item with label Technical Board"
+  "item.label.Cloud": {
+    "message": "کلاؤڈ",
+    "description": "Navbar item with label Cloud"
   },
   "item.label.GitHub": {
     "message": "جٹوب",
     "description": "Navbar item with label GitHub"
-  },
-  "item.label.Docs": {
-    "message": "ڈاک",
-    "description": "Navbar item with label Docs"
-  },
-  "item.label.Cloud": {
-    "message": "کلاؤڈ",
-    "description": "Navbar item with label Cloud"
   }
 }

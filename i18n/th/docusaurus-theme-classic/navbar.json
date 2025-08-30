@@ -7,28 +7,20 @@
     "message": "NOAAโลโก้",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Documentation": {
-    "message": "เอกสาร",
-    "description": "Navbar item with label Documentation"
+  "item.label.Docs": {
+    "message": "หมอ",
+    "description": "Navbar item with label Docs"
   },
   "item.label.Governance": {
     "message": "การ ปกครอง",
     "description": "Navbar item with label Governance"
   },
-  "item.label.Technical Board": {
-    "message": "กระดานเทคนิค",
-    "description": "Navbar item with label Technical Board"
+  "item.label.Cloud": {
+    "message": "เมฆ",
+    "description": "Navbar item with label Cloud"
   },
   "item.label.GitHub": {
     "message": "กิตฮับ",
     "description": "Navbar item with label GitHub"
-  },
-  "item.label.Docs": {
-    "message": "หมอ",
-    "description": "Navbar item with label Docs"
-  },
-  "item.label.Cloud": {
-    "message": "เมฆ",
-    "description": "Navbar item with label Cloud"
   }
 }

@@ -3,10 +3,6 @@
     "message": "Tämä sivu kaatui.",
     "description": "The title of the fallback page when the page crashed"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Palaa sivulle Top",
-    "description": "The ARIA label for the back to top button"
-  },
   "theme.blog.archive.title": {
     "message": "Arkisto",
     "description": "The page & hero title of the blog archive page"
@@ -27,6 +23,14 @@
     "message": "Vanhemmat merkinnät",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Palaa sivulle Top",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Katso kaikki merkit",
+    "description": "The label of the link targeting the tag list page"
+  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Blogisivun navigointi",
     "description": "The ARIA label for the blog posts pagination"
@@ -39,21 +43,21 @@
     "message": "Vanhempi postaus",
     "description": "The blog post button label to navigate to the older/next post"
   },
-  "theme.tags.tagsPageLink": {
-    "message": "Katso kaikki merkit",
-    "description": "The label of the link targeting the tag list page"
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "Järjestelmä",
+    "description": "The name for the system color mode"
   },
-  "theme.colorToggle.ariaLabel": {
-    "message": "Vaihda pimeän ja valon välillä (tällä hetkellä){mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "Valoa",
+    "description": "The name for the light color mode"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "Tumma tila",
     "description": "The name for the dark color mode"
   },
-  "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "Valoa",
-    "description": "The name for the light color mode"
+  "theme.colorToggle.ariaLabel": {
+    "message": "Vaihda pimeän ja valon välillä (tällä hetkellä){mode})",
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Leipäpuut",
@@ -75,9 +79,6 @@
     "message": "Seuraava Seuraava Seuraava Seuraava Seuraava",
     "description": "The label used to navigate to the next doc"
   },
-  "theme.docs.versionBadge.label": {
-    "message": "Versio:{versionLabel}"
-  },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
     "message": "Yksi doc tagged|{count}Docs Tagged",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
@@ -85,6 +86,9 @@
   "theme.docs.tagDocListPageTitle": {
     "message": "{nDocsTagged}\"{tagName}\"",
     "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Versio:{versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "Tämä on julkaisematon dokumentaatio{siteTitle}{versionLabel}versio.",
@@ -162,25 +166,9 @@
     "message": "Lähellä",
     "description": "The ARIA label for close button of announcement bar"
   },
-  "theme.CodeBlock.copied": {
-    "message": "Kopioiminen",
-    "description": "The copied button label on code blocks"
-  },
-  "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Kopioi koodi levylle",
-    "description": "The ARIA label for copy code blocks button"
-  },
-  "theme.CodeBlock.copy": {
-    "message": "Kopio",
-    "description": "The copy button label on code blocks"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Äskettäin julkaistu blogi",
     "description": "The ARIA label for recent posts in the blog sidebar"
-  },
-  "theme.CodeBlock.wordWrapToggle": {
-    "message": "Yhteinen sana krap",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Laajennettu sivubaari \"\"\"{label}\"\"\"",
@@ -194,10 +182,6 @@
     "message": "Pää",
     "description": "The ARIA label for the main navigation"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Kielet",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "Emme löytäneet sitä, mitä etsit.",
     "description": "The first paragraph of the 404 page"
@@ -205,6 +189,10 @@
   "theme.NotFound.p2": {
     "message": "Ota yhteyttä sivuston omistajaan, joka liitti sinut alkuperäiseen URL-osoitteeseen ja kerro heille, että linkki on rikki.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Kielet",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Tällä sivulla",
@@ -221,6 +209,22 @@
   "theme.blog.post.readingTime.plurals": {
     "message": "Yksi min|{readingTime}min Lue",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Kopio",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Kopioiminen",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Kopioi koodi levylle",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Yhteinen sana krap",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
     "message": "Kotisivu kotisivu",
@@ -250,6 +254,14 @@
     "message": "Toggle navigointi baari",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Laajenna pudotus",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Romahda pudotus",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Laajennettu sivubaari",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
@@ -257,22 +269,6 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "Laajennettu sivubaari",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Ei tuloksia"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Katso kaikki tulokset ulkona{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Katso kaikki tulokset \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Katso kaikki tulokset"
-  },
-  "theme.SearchBar.label": {
-    "message": "Etsintä",
-    "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Etsi tuloksia \"{query}\"",
@@ -292,6 +288,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "Asiakirjoja ei löytynyt",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Ei tuloksia"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Katso kaikki tulokset ulkona{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Katso kaikki tulokset \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Katso kaikki tulokset"
+  },
+  "theme.SearchBar.label": {
+    "message": "Etsintä",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "Kokeile uudelleen",

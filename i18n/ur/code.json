@@ -3,10 +3,6 @@
     "message": "یہ صفحہ تباہ ہو گیا۔",
     "description": "The title of the fallback page when the page crashed"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "اوپري ميں واپسی",
-    "description": "The ARIA label for the back to top button"
-  },
   "theme.blog.archive.title": {
     "message": "محفوظہ:",
     "description": "The page & hero title of the blog archive page"
@@ -27,6 +23,14 @@
     "message": "عمررسیدہ اشخاص",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "اوپري ميں واپسی",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "تمام ٹیگس دیکھیں",
+    "description": "The label of the link targeting the tag list page"
+  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "بلاگ پوسٹ",
     "description": "The ARIA label for the blog posts pagination"
@@ -39,21 +43,21 @@
     "message": "قدیم پوسٹ",
     "description": "The blog post button label to navigate to the older/next post"
   },
-  "theme.tags.tagsPageLink": {
-    "message": "تمام ٹیگس دیکھیں",
-    "description": "The label of the link targeting the tag list page"
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "سسٹم طریقہ",
+    "description": "The name for the system color mode"
   },
-  "theme.colorToggle.ariaLabel": {
-    "message": "تاریکی اور روشنی کے موڈ کے درمیان سوئیچ{mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "ہلکے موڈ",
+    "description": "The name for the light color mode"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "سیاہ موڈ",
     "description": "The name for the dark color mode"
   },
-  "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "ہلکے موڈ",
-    "description": "The name for the light color mode"
+  "theme.colorToggle.ariaLabel": {
+    "message": "تاریکی اور روشنی کے موڈ کے درمیان سوئیچ{mode})",
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "برتن",
@@ -75,9 +79,6 @@
     "message": "اگلے حصے",
     "description": "The label used to navigate to the next doc"
   },
-  "theme.docs.versionBadge.label": {
-    "message": "نسخہ:{versionLabel}"
-  },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
     "message": "ایک عمل|{count}حساب",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
@@ -85,6 +86,9 @@
   "theme.docs.tagDocListPageTitle": {
     "message": "{nDocsTagged}کے ساتھ\"{tagName}٭",
     "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "نسخہ:{versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "یہ غیر مجاز دستاویز ہے{siteTitle}{versionLabel}ورژن.",
@@ -162,25 +166,9 @@
     "message": "بندکرو",
     "description": "The ARIA label for close button of announcement bar"
   },
-  "theme.CodeBlock.copied": {
-    "message": "کوس",
-    "description": "The copied button label on code blocks"
-  },
-  "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Gکمپرائز کو کاپی کریں",
-    "description": "The ARIA label for copy code blocks button"
-  },
-  "theme.CodeBlock.copy": {
-    "message": "کاپی",
-    "description": "The copy button label on code blocks"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "بلاگ حالیہ پوسٹ گریجویٹ",
     "description": "The ARIA label for recent posts in the blog sidebar"
-  },
-  "theme.CodeBlock.wordWrapToggle": {
-    "message": "لفظ لپیٹنا",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "سب سے پہلے '{label}'",
@@ -194,10 +182,6 @@
     "message": "مین",
     "description": "The ARIA label for the main navigation"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "زبانیں",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "ہم آپ کی تلاش میں کیا تلاش کر رہے تھے تلاش نہیں کر سکتے.",
     "description": "The first paragraph of the 404 page"
@@ -205,6 +189,10 @@
   "theme.NotFound.p2": {
     "message": "براہ مہربانی اس سائٹ کے مالک سے رابطہ کریں جو آپ کو اصل محور سے منسلک کرتا ہے اور انہیں پتہ چلتا ہے کہ ان کا تعلق ٹوٹ گیا ہے.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "زبانیں",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "اس صفحہ پر",
@@ -221,6 +209,22 @@
   "theme.blog.post.readingTime.plurals": {
     "message": "ایک منٹ پڑھی|{readingTime}منٹ",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "کاپی",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "کوس",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Gکمپرائز کو کاپی کریں",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "لفظ لپیٹنا",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
     "message": "گھریلو صفحہ",
@@ -250,6 +254,14 @@
     "message": "بار کو روشن کرنے کیلئے",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "گر تے هو ئے",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "گر تے هو ئے",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "قریبی کنارہ",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
@@ -257,22 +269,6 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "قریبی کنارہ",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "کوئی نتیجہ نہیں"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "تمام نتائج خارجہ –{context}٭"
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "2008 کے اندر سب نتائج دیکھیں\"{context}٭"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "تمام نتائج دیکھیں"
-  },
-  "theme.SearchBar.label": {
-    "message": "تلاش",
-    "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "تلاش کے نتائج %d{query}٭",
@@ -292,6 +288,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "کوئی دستاویز نہیں ملی تھی",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "کوئی نتیجہ نہیں"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "تمام نتائج خارجہ –{context}٭"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "2008 کے اندر سب نتائج دیکھیں\"{context}٭"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "تمام نتائج دیکھیں"
+  },
+  "theme.SearchBar.label": {
+    "message": "تلاش",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "دوبارہ کوشش",

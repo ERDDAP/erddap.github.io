@@ -7,28 +7,20 @@
     "message": "NOAAlógó lógó",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Documentation": {
-    "message": "Cáipéisí",
-    "description": "Navbar item with label Documentation"
+  "item.label.Docs": {
+    "message": "Seirbhís do Chustaiméirí",
+    "description": "Navbar item with label Docs"
   },
   "item.label.Governance": {
     "message": "Rialachas agus Rialachas",
     "description": "Navbar item with label Governance"
   },
-  "item.label.Technical Board": {
-    "message": "An Bord Teicniúil",
-    "description": "Navbar item with label Technical Board"
+  "item.label.Cloud": {
+    "message": "Cloud Cloud Cloud",
+    "description": "Navbar item with label Cloud"
   },
   "item.label.GitHub": {
     "message": "Déan teagmháil linn",
     "description": "Navbar item with label GitHub"
-  },
-  "item.label.Docs": {
-    "message": "Seirbhís do Chustaiméirí",
-    "description": "Navbar item with label Docs"
-  },
-  "item.label.Cloud": {
-    "message": "Cloud Cloud Cloud",
-    "description": "Navbar item with label Cloud"
   }
 }

@@ -7,28 +7,20 @@
     "message": "NOAA图标",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Documentation": {
+  "item.label.Docs": {
     "message": "文档",
-    "description": "Navbar item with label Documentation"
+    "description": "Navbar item with label Docs"
   },
   "item.label.Governance": {
     "message": "施政",
     "description": "Navbar item with label Governance"
   },
-  "item.label.Technical Board": {
-    "message": "技术委员会",
-    "description": "Navbar item with label Technical Board"
+  "item.label.Cloud": {
+    "message": "云头",
+    "description": "Navbar item with label Cloud"
   },
   "item.label.GitHub": {
     "message": "GitHub 图像",
     "description": "Navbar item with label GitHub"
-  },
-  "item.label.Docs": {
-    "message": "文档",
-    "description": "Navbar item with label Docs"
-  },
-  "item.label.Cloud": {
-    "message": "云头",
-    "description": "Navbar item with label Cloud"
   }
 }

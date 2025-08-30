@@ -247,8 +247,8 @@ Makikita mo ang isang halimbawa[datasets.xmltungkol sa GitHub](https://github.co
 ERDDAP™hindi gagana nang wasto kung ang setup.xml odatasets.xmlAng talaksan ay hindi isang mahusay-pormal na talaksang XML. Kaya, pagkatapos na ayusin mo ang mga file na ito, isang mabuting ideya upang matiyak na ang resulta ay maayos na XML sa pamamagitan ng paglalagay ng XML text sa isang XML checker tulad ng XML[Paglaganap ng xmlvalid](https://www.xmlvalidation.com/).
      
 ### Iluklok ang erddap.war file{#install-the-erddapwar-file} 
-4. Sa Linux, Mac, at Windows, download[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)sa _tomcat_/webapps .
-     (bersyon 2.27.0, 620,554,403 bytes, MD5=3b2086c659eee4145ca2dff447bf4ef7, pinetsahang petsa 06-11-2025) 
+4. Sa Linux, Mac, at Windows, download[erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war)sa _tomcat_/webapps .
+     (bersyon 2.28.0, 620,824,288 bytes, MD5=f948b2ba603f65a83ac67af43da9ec2, may petsang 08-29-2025) 
     
 Ang talaksang .war ay malaki dahil ito ay naglalaman ng mataas na resolution baybayin, hangganan, at taas na mga datos na kinakailangan upang lumikha ng mga mapa.
     
@@ -261,6 +261,7 @@ Ang talaksang .war ay malaki dahil ito ay naglalaman ng mataas na resolution bay
     [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187 bytes, MD5=970fbee172e28b0b807756eecbc898e, na may petsang 2024-06-07) 
     [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 bytes, MD5=652AFC9D1421F00B5F789DA2C4732D4C, na may petsang 2024-11-07) 
     [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032 bytes, MD5=99a725108b37708e5420986c16a119, na may petsang 2025-03-31) 
+    [2.27.0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)  (620,554,403 bytes, MD5=3b2086c659e4145ca2dff447bf4ef7, na may petsang 847bf7 06-11-2025) 
     \\]
     
 #### MGA DUGO{#proxypass} 

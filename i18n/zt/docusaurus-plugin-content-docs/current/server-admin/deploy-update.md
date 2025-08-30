@@ -11,8 +11,8 @@ sidebar_position: 2
 2. 如果你是升級自ERDDAP™2.18或以下版本,需要切換到Java21 (或更新) 和相關的托姆卡特10。 常見ERDDAP™安裝指令[Java](/docs/server-admin/deploy-install#java)和[托姆卡特](/docs/server-admin/deploy-install#tomcat). 你也要抄你_tomcat_/content/erddap從你以前的Tomcat安裝到新的Tomcat安裝
 
 ## 下載{#download} 
-3. 下載[戰爭](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)輸入 _tomcat_/webapps 。
-     (2.27.0, 620, 554, 403字節, MD5=3b2086c659ee4145ca2dff447bf4ef7, 日期 06-11-2025) 
+3. 下載[戰爭](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war)輸入 _tomcat_/webapps 。
+     (2.28.0, 620, 824, 288字節, MD5=f948 b2ba603f65a83ac67af43da9e4c2, 日期08- 29-2025) 
      
 ## 信件. xml{#messagesxml} 
 4. 

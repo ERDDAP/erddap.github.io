@@ -7,6 +7,10 @@
     "message": "Κοινότητα",
     "description": "The title of the footer links column with title=Community in the footer"
   },
+  "link.title.Brought to you by": {
+    "message": "Το έφερε σε σένα.",
+    "description": "The title of the footer links column with title=Brought to you by in the footer"
+  },
   "link.item.label.Documentation": {
     "message": "Τεκμηρίωση",
     "description": "The label of footer link with label=Documentation linking to /docs/intro"
@@ -14,6 +18,22 @@
   "link.item.label.Contributing": {
     "message": "Συνεισφορά",
     "description": "The label of footer link with label=Contributing linking to /docs/contributing"
+  },
+  "link.item.label.License": {
+    "message": "Άδεια",
+    "description": "The label of footer link with label=License linking to license"
+  },
+  "link.item.label.Changes": {
+    "message": "Μεταβολές",
+    "description": "The label of footer link with label=Changes linking to /changes"
+  },
+  "link.item.label.Cloud": {
+    "message": "Σύννεφο",
+    "description": "The label of footer link with label=Cloud linking to /cloud"
+  },
+  "link.item.label.Support/Contact": {
+    "message": "Υποστήριξη/επαφή",
+    "description": "The label of footer link with label=Support/Contact linking to /docs/intro#support"
   },
   "link.item.label.Governance": {
     "message": "Διακυβέρνηση",
@@ -39,22 +59,6 @@
     "message": "Πιστώσεις",
     "description": "The label of footer link with label=Credits linking to /credits"
   },
-  "copyright": {
-    "message": "ERDDAP™, έκδοση 2.25. Πνευματικά δικαιώματα © 2024ERDDAP™. Χτισμένο με Docusaurus.",
-    "description": "The footer copyright"
-  },
-  "link.title.Brought to you by": {
-    "message": "Το έφερε σε σένα.",
-    "description": "The title of the footer links column with title=Brought to you by in the footer"
-  },
-  "link.item.label.License": {
-    "message": "Άδεια",
-    "description": "The label of footer link with label=License linking to license"
-  },
-  "link.item.label.Changes": {
-    "message": "Μεταβολές",
-    "description": "The label of footer link with label=Changes linking to /changes"
-  },
   "link.item.label.Acknowledgements": {
     "message": "Ευχαριστίες",
     "description": "The label of footer link with label=Acknowledgements linking to /acknowledgements"
@@ -75,12 +79,8 @@
     "message": "ERD",
     "description": "The label of footer link with label=ERD linking to https://www.fisheries.noaa.gov/about/environmental-research-division-southwest-fisheries-science-center"
   },
-  "link.item.label.Cloud": {
-    "message": "Σύννεφο",
-    "description": "The label of footer link with label=Cloud linking to /cloud"
-  },
-  "link.item.label.Support/Contact": {
-    "message": "Υποστήριξη/επαφή",
-    "description": "The label of footer link with label=Support/Contact linking to /docs/intro#support"
+  "copyright": {
+    "message": "ERDDAP™, Έκδοση 2.28.0. Πνευματικά δικαιώματα © 2025ERDDAP™. Χτισμένο με Docusaurus.",
+    "description": "The footer copyright"
   }
 }

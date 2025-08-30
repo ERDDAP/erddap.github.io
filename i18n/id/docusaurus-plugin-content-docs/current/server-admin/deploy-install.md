@@ -247,8 +247,8 @@ Anda dapat melihat contoh[datasets.xmldi GitHub](https://github.com/ERDDAP/erdda
 ERDDAP™tidak akan bekerja dengan benar jika setup.xml ataudatasets.xmlfile bukan file XML yang dibentuk dengan baik. Jadi, setelah Anda mengedit file-file ini, itu adalah ide yang baik untuk memverifikasi bahwa hasilnya adalah XML berbentuk dengan baik dengan menelusuri teks XML ke dalam pemeriksa XML seperti[Login](https://www.xmlvalidation.com/)Sitemap
      
 ### Instal file erddap.war{#install-the-erddapwar-file} 
-4. Di Linux, Mac, dan Windows, download[Login](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)ke _tomcat_/webapps.
-     (versi 2.27.0, 620,554,403 byte, MD5=3b2086c659eee4145ca2dff447bf4ef7, tanggal 06-11-2025) 
+4. Di Linux, Mac, dan Windows, download[Login](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war)ke _tomcat_/webapps.
+     (versi 2.28.0, 620,824,288 byte, MD5=f948b2ba603f65a83ac67af43da9e4c2, tanggal 08-29-2025) 
     
 File .war besar karena mengandung garis pantai resolusi tinggi, batas, dan data elevasi yang diperlukan untuk membuat peta.
     
@@ -261,6 +261,7 @@ File .war besar karena mengandung garis pantai resolusi tinggi, batas, dan data 
     [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)  (568,748,187 byte, MD5=970fbee172e28b0a07756eecbc898e, tanggal 2024-06-07) 
     [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)  (592,292,039 byte, MD5=652AFC9D1421F00B5F789DA2C4732D4C, tanggal 2024-11-07) 
     [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)  (607,404,032 byte, MD5=99a725108b37708e5420986c16a119, tanggal 2025-03-31) 
+    [SmadAV 11.4](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)  (620,554,403 byte, MD5=3b2086c659eee4145ca2dff447bf4ef7, tanggal 06-11-2025) 
     \\]
     
 #### Login{#proxypass} 

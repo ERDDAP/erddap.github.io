@@ -7,28 +7,20 @@
     "message": "NOAAलोगो",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Documentation": {
-    "message": "दस्तावेज़ीकरण",
-    "description": "Navbar item with label Documentation"
+  "item.label.Docs": {
+    "message": "डोक",
+    "description": "Navbar item with label Docs"
   },
   "item.label.Governance": {
     "message": "शासन",
     "description": "Navbar item with label Governance"
   },
-  "item.label.Technical Board": {
-    "message": "तकनीकी बोर्ड",
-    "description": "Navbar item with label Technical Board"
+  "item.label.Cloud": {
+    "message": "क्लाउड",
+    "description": "Navbar item with label Cloud"
   },
   "item.label.GitHub": {
     "message": "गिटहब",
     "description": "Navbar item with label GitHub"
-  },
-  "item.label.Docs": {
-    "message": "डोक",
-    "description": "Navbar item with label Docs"
-  },
-  "item.label.Cloud": {
-    "message": "क्लाउड",
-    "description": "Navbar item with label Cloud"
   }
 }

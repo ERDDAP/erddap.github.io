@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## NejnovějšíERDDAP™verze{#latest-erddap-version} 
 
-2, 27, 0 viz[změny dokumentace](/changes#version-2270)a[stáhnout](https://github.com/ERDDAP/erddap/releases/tag/v2.27.0).
+2, 28, 0[změny dokumentace](/changes#version-2280)a[stáhnout](https://github.com/ERDDAP/erddap/releases/tag/v2.28.0).
 
 ## ERDDAP™informace{#erddap-information} 
 

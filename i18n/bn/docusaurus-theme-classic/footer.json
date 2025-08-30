@@ -7,6 +7,10 @@
     "message": "সম্প্রদায়",
     "description": "The title of the footer links column with title=Community in the footer"
   },
+  "link.title.Brought to you by": {
+    "message": "প্রস্তুক করছেন",
+    "description": "The title of the footer links column with title=Brought to you by in the footer"
+  },
   "link.item.label.Documentation": {
     "message": "নথিপত্র",
     "description": "The label of footer link with label=Documentation linking to /docs/intro"
@@ -14,6 +18,22 @@
   "link.item.label.Contributing": {
     "message": "বাতিল করা",
     "description": "The label of footer link with label=Contributing linking to /docs/contributing"
+  },
+  "link.item.label.License": {
+    "message": "লাইসেন্স",
+    "description": "The label of footer link with label=License linking to license"
+  },
+  "link.item.label.Changes": {
+    "message": "পরিবর্তন",
+    "description": "The label of footer link with label=Changes linking to /changes"
+  },
+  "link.item.label.Cloud": {
+    "message": "ক্লাউড",
+    "description": "The label of footer link with label=Cloud linking to /cloud"
+  },
+  "link.item.label.Support/Contact": {
+    "message": "সমর্থন/ যোগাযোগ",
+    "description": "The label of footer link with label=Support/Contact linking to /docs/intro#support"
   },
   "link.item.label.Governance": {
     "message": "পরিচালকগোষ্ঠী",
@@ -39,22 +59,6 @@
     "message": "স্বীকৃতি",
     "description": "The label of footer link with label=Credits linking to /credits"
   },
-  "copyright": {
-    "message": "ERDDAP™- ২২৫। স্বত্বাধিকার © ২০২৪ERDDAP™. . ডোকুরাস দিয়ে তৈরি.",
-    "description": "The footer copyright"
-  },
-  "link.title.Brought to you by": {
-    "message": "প্রস্তুক করছেন",
-    "description": "The title of the footer links column with title=Brought to you by in the footer"
-  },
-  "link.item.label.License": {
-    "message": "লাইসেন্স",
-    "description": "The label of footer link with label=License linking to license"
-  },
-  "link.item.label.Changes": {
-    "message": "পরিবর্তন",
-    "description": "The label of footer link with label=Changes linking to /changes"
-  },
   "link.item.label.Acknowledgements": {
     "message": "মন্তব্য",
     "description": "The label of footer link with label=Acknowledgements linking to /acknowledgements"
@@ -75,12 +79,8 @@
     "message": "ERD",
     "description": "The label of footer link with label=ERD linking to https://www.fisheries.noaa.gov/about/environmental-research-division-southwest-fisheries-science-center"
   },
-  "link.item.label.Cloud": {
-    "message": "ক্লাউড",
-    "description": "The label of footer link with label=Cloud linking to /cloud"
-  },
-  "link.item.label.Support/Contact": {
-    "message": "সমর্থন/ যোগাযোগ",
-    "description": "The label of footer link with label=Support/Contact linking to /docs/intro#support"
+  "copyright": {
+    "message": "ERDDAP™; সংস্করণ ২.২৮. স্বত্বাধিকার © ২০২৫ERDDAP™. . ডোকুরাস দিয়ে তৈরি.",
+    "description": "The footer copyright"
   }
 }

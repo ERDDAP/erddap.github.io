@@ -7,6 +7,33 @@ ERDDAP™er et fantastisk eksempel på[Bruger-Driven Innovation](https://en.wiki
 
 Her er de ændringer, der er forbundet med hinandenERDDAP™udgivelse.
 
+## Version 2.28.0{#version-2280} 
+ (udgivet 2025-08-29) 
+
+*    **Nye funktioner og ændringer (for brugere) :** 
+    *   [I nærheden af Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)er nu tilgængelig. Admins kan kontrollere, om standardmet metadata bruger Croissant, men startende med 2.28.0 kan du anmode Croissant-definitionen om med den nye eksportfiltype ".croissant" (som giver en jsonld-fil) .
+
+*    **Ting, tingERDDAP™Administratorer har brug for at vide og gøre:** 
+    * Ny Docker Billede skabt på hver flettet pull-forespørgsel. Disse er alfa byggere, de er ikke versionerede udgivelser. De vil have et tag som "20250814T034025", som angiver, hvornår det blev bygget. Hvis du vil prøve de nyeste funktioner, kan du bruge disse. Hvis du vil have noget mere stabilt brug vores udgivelser med en semantisk version tag (f.eks. 2.28.0) . Vi bestræber os altid på at have alfa udgivelserne er brugbare, men der er mindre test for dem end vores versionerede udgivelser. Vi anbefaler dig altid at bruge noget mindst lige så nyt som vores "latest" udgivelse, som vil være den nyeste versioned release.
+
+    * Docker Billeder nu tilgængelig på[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)Ud over[DockerHub](https://hub.docker.com/r/erddap/erddap).
+
+Tak til[I nærheden af @ocefpaf](https://github.com/ocefpaf),[I nærheden af @abkfenris](https://github.com/abkfenris),[@srstsavage](https://github.com/srstsavage), og[MathewBiddle](https://github.com/MathewBiddle)til deres bidrag omkring Docker Images. Dette omfattede de første bidrag fra alle dem undtagen @stsavage&#33;
+    
+    * Der er nu støtte til at generere[I nærheden af Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)filer. Det er som standard. Du kan deaktivere Croissant schema i din opsætning.xml med (IKKE RECOMMMENTD- bedes du kontakte eller fil et problem på GitHub, hvis du har brug for at gøre dette) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Nogle indstillinger har haft deres standardværdier ændret. BrugHeadersForUrl og brugEddReflection nu begge standard for at tro. Hvis de forårsager et problem, og du skal angive dem til falsk, skal du oprette et problem. Hensigten er at fjerne dem i en fremtidig udgivelse.
+
+    * Nogle indstillinger er fjernet. BrugSharedWatchService og omdirigering ToGitHubIo havde været indstillet til at tro som standard for flere udgivelser og er temmelig godt testet på dette tidspunkt. Fjernelse af disse tilladt for nogle kodeoprydning.
+
+    * Nogle små ændringer, fejlrettelser og optimeringer.
+
+*    **For For For For ForERDDAP™Udviklere:** 
+    * Masser af døde kode fjernet. Mange advarsler fast.
+
 ## Version 2.27.0{#version-2270} 
  (udgivet 2025-06-11) 
 

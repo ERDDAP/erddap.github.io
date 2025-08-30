@@ -7,6 +7,33 @@ ERDDAP™jest doskonałym przykładem[User- Driven Innowacje](https://en.wikiped
 
 Oto zmiany związane z każdymERDDAP™Wypuścić.
 
+## Wersja 2.28.0{#version-2280} 
+ (wydany 2025- 08- 29) 
+
+*    **Nowe funkcje i zmiany (dla użytkowników) :** 
+    *   [Schemat rogalika](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)jest teraz dostępny. Administratorzy mogą kontrolować, czy domyślne metadane używają Croissanta, ale począwszy od 2.28.0 możesz poprosić o definicję Croissanta dla nowego typu pliku eksportu. (który dostarcza plik jsonld) .
+
+*    **RzeczyERDDAP™Administratorzy muszą wiedzieć i robić:** 
+    * Nowy docker Obraz stworzony na każdym połączonym wniosku o ciągnięcie. To są alpha builds, nie są one wersjami. Będą mieli tag jak "20250814T034025", co wskazuje, kiedy został zbudowany. Jeśli chcesz wypróbować najnowsze funkcje możesz użyć tych. Jeśli chcesz czegoś bardziej stabilnego użyj naszych wydań z znacznikiem wersji semantycznej (np. 2.28.0) . Zawsze staramy się, by wydawnictwa alfa były użyteczne, ale są mniej testowane niż nasze wersje. Zawsze zalecamy użycie czegoś co najmniej tak nowego jak nasze "najnowsze" wydanie, które będzie najnowszą wersją semantyczną.
+
+    * Docker Zdjęcia dostępne na stronie[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)oprócz[DockerHub](https://hub.docker.com/r/erddap/erddap).
+
+Dzięki[@ ocefpaf](https://github.com/ocefpaf),[@ abkfenris](https://github.com/abkfenris),[@ srstsavage](https://github.com/srstsavage)oraz[MathewBiddle](https://github.com/MathewBiddle)ich wkład w Docker Images. To był pierwszy wkład od wszystkich z wyjątkiem @ ststsavage&#33;
+    
+    * Obecnie istnieje poparcie dla generowania[Schemat rogalika](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)pliki. Jest włączony domyślnie. Można wyłączyć schemat Croissant w setup.xml z (NIE ZALECA- Proszę zwrócić się do GitHub lub zgłosić problem, jeśli chcesz to zrobić) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Niektóre ustawienia zmieniły wartości domyślne. User HeadersForUrl i useEddReflection teraz oba domyślne do true. Jeśli powodują problemy i trzeba je ustawić na fałszywe, proszę stworzyć problem. Celem jest usunięcie ich w przyszłym wydaniu.
+
+    * Niektóre ustawienia zostały usunięte. Use SharedWatchService i przekierowanieDokumentacja ToGitHubio został ustawiony na true domyślnie dla wielu wydań i został całkiem dobrze przetestowany w tym momencie. Usunięcie ich pozwala na czyszczenie kodu.
+
+    * Kilka drobnych zmian, poprawek i optymalizacji.
+
+*    **DlaERDDAP™Programiści:** 
+    * Wiele martwych kodów usunięto. Wiele ostrzeżeń zostało naprawionych.
+
 ## Wersja 2.27.0{#version-2270} 
  (wydany 2025- 06- 11) 
 

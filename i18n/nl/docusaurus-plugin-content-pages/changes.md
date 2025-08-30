@@ -7,6 +7,33 @@ ERDDAP™is een groot voorbeeld van[Gebruikersgestuurde innovatie](https://en.wi
 
 Hier zijn de veranderingen in verband met elkERDDAP™Laat los.
 
+## Versie 2.28.0{#version-2280} 
+ (uitgebracht 2025-08-29) 
+
+*    **Nieuwe functies en wijzigingen (voor gebruikers) :** 
+    *   [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)is nu beschikbaar. Beheerders kunnen controleren of de standaard metadata Croissant gebruikt, maar vanaf 2.28.0 kunt u de Croissant definitie voor met de nieuwe export bestand type ".croissant" vragen (die een jsonld-bestand levert) .
+
+*    **DingenERDDAP™Beheerders moeten weten en doen:** 
+    * Nieuwe Docker Afbeelding aangemaakt op elke samengevoegde pull verzoek. Dit zijn alpha builds, ze zijn niet versioned releases. Ze hebben een tag zoals "20250814T034025," die aangeeft wanneer het werd gebouwd. Als u de nieuwste functies wilt uitproberen kunt u deze gebruiken. Als u iets stabieler wilt gebruiken onze releases met een semantische versie tag (bv. 2.28,0) . We streven er altijd naar om de alpha releases bruikbaar te hebben, maar er is minder testen voor hen dan onze versies. We raden je altijd aan iets zo nieuw te gebruiken als onze "laatste" release die de meest recente semantische versie zal zijn.
+
+    * Docker Afbeeldingen nu beschikbaar op[GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap)naast[DockerHub](https://hub.docker.com/r/erddap/erddap).
+
+Dankzij[@ocefpaf](https://github.com/ocefpaf),[@abkfenris](https://github.com/abkfenris),[@srstsavage](https://github.com/srstsavage)en[MathewBiddle](https://github.com/MathewBiddle)hun bijdragen rond de Docker Images. Dit omvatte de eerste bijdragen van alle van hen behalve @ststsavage&#33;
+    
+    * Er is nu ondersteuning voor het genereren[Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)dossiers. Het staat standaard aan. U kunt de Croissant schema uitschakelen in uw setup.xml met (NIET AANVAARD- Gelieve contact op te nemen met of een probleem op GitHub als u dit moet doen) :
+    ```
+        <generateCroissantSchema>false</generateCroissantSchema>
+    ```
+
+    * Sommige instellingen hebben hun standaardwaarden gewijzigd. gebruik HeadersForUrl en gebruikEddReflection nu allebei standaard naar true. Als ze een probleem veroorzaken en je moet ze op valse, maak dan een probleem. De bedoeling is om ze te verwijderen in een toekomstige release.
+
+    * Sommige instellingen zijn verwijderd. gebruikSharedWatchService en redirectDocumentatie ToGitHubio was standaard op ware voor meerdere releases en vrij goed getest op dit punt. Verwijderen van deze toegestaan voor een aantal code opruimen.
+
+    * Enkele kleine veranderingen, bugfixes, en optimalisaties.
+
+*    **VoorERDDAP™Ontwikkelaars:** 
+    * Veel dode codes verwijderd. Veel waarschuwingen zijn verholpen.
+
 ## Versie 2.27.0{#version-2270} 
  (vrijgegeven 2025-06-11) 
 
