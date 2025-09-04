@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 import re
+import sys
 import argostranslate.package
 import argostranslate.translate
 
@@ -808,7 +809,7 @@ def get_json_path(file_path):
     else:
         return os.path.join(path.parent.name, path.name)
 
-def find_files(src_filepath, extension):
+def find_files(src_filepath, extension, filter_filepaths):
     filepath_list = []
     #This for loop uses the os.walk() function to walk through the files and directories
     #and records the filepaths of the files to a list
@@ -823,6 +824,9 @@ def find_files(src_filepath, extension):
             else:
                 root_path = root
             filepath = root_path + "/" + file
+            #If filter_filepaths is not empty, remove any filepaths not contained in the filter list
+            if filter_filepaths and filepath not in filter_filepaths:
+                continue
             #Appends filepath to filepath_list if filepath does not currently exist in filepath_list
             # Also don't include auto generated documentation (dokka)
             if filepath not in filepath_list and filepath.endswith(extension) and not "dokka" in filepath:
@@ -891,7 +895,7 @@ class LinkMatcher:
     processed_line["translate_text"].append(chunk[self.match.end():])
     # update format {idx} -> {idx} + "[" +"{legnth-2}" +"]" + "(" + match.group(2) + ")" + "{length-1}"
     placeholder = "{"+ str(idx) +"}"
-    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + "[{" + str(len(processed_line["translate_text"]) -2) + "}](" + self.match.group(2) + "){" + str(len(processed_line["translate_text"]) -1) + "}")
+    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + " [{" + str(len(processed_line["translate_text"]) -2) + "}](" + self.match.group(2) + ") {" + str(len(processed_line["translate_text"]) -1) + "}")
     return processed_line
   
 class TagMatcher:
@@ -915,7 +919,7 @@ class TagMatcher:
     processed_line["translate_text"].append(chunk[self.match.end():])
     # update format {idx} -> {idx} + "<" + match.group(0) + ">" + "{length-1}"
     placeholder = "{"+ str(idx) +"}"
-    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + self.match.group(0) + "{" + str(len(processed_line["translate_text"]) -1) + "}")
+    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + " " + self.match.group(0) + " {" + str(len(processed_line["translate_text"]) -1) + "}")
     return processed_line
 
 class EscapedTagMatcher:
@@ -939,7 +943,7 @@ class EscapedTagMatcher:
     processed_line["translate_text"].append(chunk[self.match.end():])
     # update format {idx} -> {idx} + "<" + match.group(0) + ">" + "{length-1}"
     placeholder = "{"+ str(idx) +"}"
-    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + self.match.group(0) + "{" + str(len(processed_line["translate_text"]) -1) + "}")
+    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + " " + self.match.group(0) + "{" + str(len(processed_line["translate_text"]) -1) + "}")
     return processed_line
   
 class StarEmphasisMatcher:
@@ -1099,7 +1103,7 @@ class UrlMatcher:
     processed_line["translate_text"].append(chunk[self.match.end():])
     # update format {idx} -> {idx} + "<" + match.group(0) + ">" + "{length-1}"
     placeholder = "{"+ str(idx) +"}"
-    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + " " + self.match.group(0) + " {" + str(len(processed_line["translate_text"]) -1) + "}")
+    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + self.match.group(0) + "{" + str(len(processed_line["translate_text"]) -1) + "}")
     return processed_line
 
 markdown_matchers = [
@@ -1247,7 +1251,7 @@ def preprocess_file(text):
                     processed_line["translate_text"][idx] = chunk[:index]
                     processed_line["translate_text"].append(chunk[index+len(no_translate):])
                     placeholder = "{"+ str(idx) +"}"
-                    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + no_translate + "{" + str(len(processed_line["translate_text"]) -1) + "}")
+                    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + " " + no_translate + " {" + str(len(processed_line["translate_text"]) -1) + "}")
 
         line_info.append(processed_line)
 
@@ -1441,13 +1445,21 @@ def translate_json_all(input_file, i18n_path):
             print("translating to language: " + lang_code)
             translate_json(file_contents, "i18n/" + lang_code + "/" + i18n_path, lang_code)
 
+if len(sys.argv) > 1:
+    translate_paths = sys.argv[1:]
+else:
+    translate_paths = []
+
+if 'LANGUAGE_CODE_LIST' in os.environ:
+    language_code_list = os.environ['LANGUAGE_CODE_LIST'].lower().split(",")
+
 for lang_code in language_code_list:
     print("Installing language: " + lang_code)
     find_and_install_langauge_package(lang_code)
-
+ 
 # translate markdown pages
 pages_dir = "src/pages"
-pages_list = find_files(pages_dir, ".md")
+pages_list = find_files(pages_dir, ".md", translate_paths)
 for page in pages_list:
     # page output: i18n/{lang_code}/docusaurus-plugin-content-pages/{pageName}.md
     print(get_file_name(page))
@@ -1455,7 +1467,7 @@ for page in pages_list:
 
 # translate markdown docs
 docs_dir = "docs/"
-docs_list = find_files(docs_dir, ".md")
+docs_list = find_files(docs_dir, ".md", translate_paths)
 for doc in docs_list:
     # page output: i18n/{lang_code}/docusaurus-plugin-content-docs/current/{docName}.md
     print(get_file_name(doc))
@@ -1463,9 +1475,8 @@ for doc in docs_list:
 
 # translate json text
 json_dir = "i18n\en"
-json_list = find_files(json_dir, ".json")
+json_list = find_files(json_dir, ".json", translate_paths)
 for file in json_list:
     # page output: i18n/{lang_code}/docusaurus-plugin-content-pages/{pageName}.md
     print(get_file_name(file))
     translate_json_all(file, get_json_path(file))
-
