@@ -28,6 +28,19 @@ python .\translate_docs.py
 ```
 Note that this step is very slow, it translates all of the pages, documentation files, and json message files into 29 additional languages.
 
+To translate a single page or list of pages, you can supply the page paths as arguments:
+
+```
+python .\translate_docs.py docs\server-admin\deploy-install.md docs\server-admin\deploy-update.md
+```
+
+To translate to a subset of languages, set environment variable `LANGUAGE_CODE_LIST` to a comma separated
+list of the language codes to translate.
+
+```
+LANGUAGE_CODE_LIST=es,ja .\translate_docs.py docs\server-admin\deploy-install.md
+```
+
 ### Build
 
 ```
