@@ -5,7 +5,7 @@ sidebar_position: 1
 # Installera
 Hur man gör den inledande inställningen av ERDDAP™ på din server
 
- ERDDAP™ kan köras på någon server som stöder Java och Tomcat (och andra applikationsservrar som Jetty, men vi stöder dem inte) .
+ ERDDAP™ kan köras på någon server som stöder Java och Tomcat (och andra programservrar som Jetty, men vi stöder dem inte.) .
  ERDDAP™ har testats på Linux (inklusive Amazons AWS) Mac och Windows-datorer.
 
 *  **Docker** ----- Vi tillhandahåller [ ERDDAP™ I en Docker container](https://hub.docker.com/r/erddap/erddap) 
@@ -13,17 +13,17 @@ IOOS erbjuder nu en [Snabbstartguide för ERDDAP™ I en Docker Container](https
 Det är standarden ERDDAP™ installation, i en Docker behållare.
 Genom Docker Komponera vi ger enkla sätt att ställa in ssl och övervakning, läs mer ut [Docker dokumentation](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
 Om du redan använder Docker kommer du förmodligen att föredra Docker-versionen.
-Om du vill köra på molntjänster föredrar du förmodligen Docker-versionen.
+Om du vill köra på molntjänster kommer du förmodligen att föredra Docker-versionen.
 *  **Amazon Amazon Amazon Amazon** ----- Om du installerar ERDDAP™ på en Amazon Web Services EC2-instans, se detta [Amazon Web Services översikt](/docs/server-admin/additional-information#amazon) Först.
 *  **Linux och Macs** ----- ERDDAP™ fungerar bra på Linux och Mac-datorer. Se instruktionerna nedan.
 *  **Windows Windows** ----- Windows är bra för testning ERDDAP™ och för personligt bruk (se instruktionerna nedan) ,
 Men vi rekommenderar inte att du använder den för allmänheten ERDDAP™ Utplaceringar. Running ERDDAP™ på Windows kan ha problem:
-i synnerhet, ERDDAP™ kan vara oförmögen att radera och/eller byta namn på filer snabbt. Detta beror förmodligen på antivirusprogram
+i synnerhet, ERDDAP™ kan vara oförmögen att radera och/eller byta namn snabbt. Detta beror förmodligen på antivirusprogram
    (från McAfee och Norton) som kontrollerar filerna för virus. Om du stöter på detta problem
-(som kan ses av felmeddelanden i [Log.txt](/docs/server-admin/additional-information#log) fil som
+(som kan ses med felmeddelanden i [Log.txt](/docs/server-admin/additional-information#log) fil som
 "Det går att ta bort ..."), ändra antivirusprogramvarans inställningar kan delvis lindra problemet. Eller överväga att använda en Linux- eller Mac-server istället.
 
- **Standarden ERDDAP™ installationsanvisningar för Linux, Mac och Windows-datorer är:** 
+ **Standarden ERDDAP™ installationsanvisningar för Linux, Macs och Windows-datorer är:** 
 
 0. Se till att alla beroenden är installerade. På icke-Windows maskiner (Linux och Mac) Du behöver csh.
 
@@ -40,7 +40,7 @@ För att verifiera installationen, kör "/javaJreBinDirectory/java-version", til
 Gratis gratis (som i öl och tal) version av Java 21 som erbjuder långsiktig support (gratis uppgraderingar under många år förbi den första releasen) .
 Av säkerhetsskäl, vänligen uppdatera din ERDDAP version av Java periodiskt som nya versioner av Java 21 blir tillgängligt från Adoptium.
 
-    ERDDAP™ har testats och använts i stor utsträckning med 21, inte andra versioner. Av olika skäl testar vi inte med eller stöder andra versioner av Java .
+    ERDDAP™ har testats och använts omfattande med 21, inte andra versioner. Av olika skäl testar vi inte med eller stöder andra versioner av Java .
      
 ## Tomcat{#tomcat} 
 
@@ -56,14 +56,14 @@ som är utformad för att arbeta med Java 21 eller nyare. Nedan kommer Tomcat-ka
 
 Varning&#33;__ Om du redan har en Tomcat kör någon annan webbapplikation (Särskilt TREDDS) Vi rekommenderar att du installerar ERDDAP™ in i
       [En andra Tomcat](/docs/server-admin/additional-information#second-tomcat) för att ERDDAP™ behöver olika Tomcat-inställningar
-och bör inte behöva brottas med andra applikationer för minnet.
+och bör inte behöva brottas med andra program för minne.
 
      * på Linux, [Ladda ner "Core" "Tar .gz Tomcat distribution](https://tomcat.apache.org/download-10.cgi) och packa upp den.
 Vi rekommenderar att du packar upp den i "/usr/local".
      * På en Mac är Tomcat förmodligen redan installerat i "/Library/Tomcat", men bör uppdatera den till den senaste versionen av Tomcat 10.
 Om du laddar ner den, [Ladda ner "Core" "Tar .gz Tomcat distribution](https://tomcat.apache.org/download-10.cgi) och packa upp den i "/Library/Tomcat".
      * På Windows kan du [Ladda ner "Core" "zip" Tomcat distribution](https://tomcat.apache.org/download-10.cgi) 
-        (som inte röra med Windows-registret och som du kontrollerar från en DOS-kommandolinje) och packa upp den i en lämplig katalog.
+        (som inte röra med Windows-registret och som du styr från en DOS-kommandorad) och packa upp den i en lämplig katalog.
         (För utveckling använder vi "Core" "zip" distribution. Vi gör en "/program" katalog och packa upp den där.) 
 Eller du kan ladda ner "Core" "64-bitars Windows zip" -distributionen, som innehåller fler funktioner.
 Om distributionen är en Windows-installatör kommer det förmodligen att sätta Tomcat i till exempel "/Programfiler/apache-tomcat-10.0.23".
@@ -71,14 +71,14 @@ Om distributionen är en Windows-installatör kommer det förmodligen att sätta
 ### Server.xml{#serverxml} 
 
 *  [Server.xml](#serverxml) I "tomcat/conf/server.xml"-filen finns det två ändringar som du bör göra för var och en av de två " <Connector> Taggar
-   (en för Čonnector port="80"" och en för ΔConector port="8443") .
-   1.  (Rekommenderas) Öka "connectionTimeout" parametervärdet, kanske till 300 000 (millisekunder, som är 5 minuter) .
+   (en för Čonnector port="80" och en för ≤Conector port="8443") .
+   1.  (Rekommenderas) Öka "connectionTimeout" parametervärdet, kanske till 300000 (millisekunder, som är 5 minuter) .
    2.  (Rekommenderas) Lägg till en ny parameter: "RelaxedQueryChars="[] | ". Detta är frivilligt och något mindre säkert,
 men tar bort behovet av användare att procentkoda dessa tecken när de förekommer i parametrarna för en användares begäran URL.
              
 ### innehåll.xml{#contentxml} 
 
-* sammanhang.xml ----- Resurser Cache - I "tomcat/conf/context.xml", strax före " </Context> tag, ändra Resources-taggen
+* sammanhang.xml ----- Resurser Cache - I "tomcat/conf/context.xml" strax före " </Context> tag, ändra Resources-taggen
    (Eller lägg till det om det inte redan finns där) att ställa in cache MaxSize parameter till 80000:
   ```
   <Resources cachingAllowed="true" cacheMaxSize="80000" />
@@ -100,7 +100,7 @@ Detta undviker många varningar i catalina. Allt börjar med
 ### Säkerhet{#security} 
          
 * Säkerhetsrekommendation: Se [Dessa instruktioner](https://tomcat.apache.org/tomcat-10.0-doc/security-howto.html) öka säkerheten för
-Din Tomcat-installation, särskilt för offentliga servrar.
+Din Tomcat-installation, speciellt för offentliga servrar.
          
 * För allmänheten ERDDAP™ installationer på Linux och Mac, det är bäst att ställa in Tomcat (Programmet) som tillhör användaren "tomcat `
    (en separat användare med begränsade behörigheter och som [har inget lösenord](https://unix.stackexchange.com/questions/56765/creating-an-user-without-a-password) ) .
@@ -147,7 +147,7 @@ Detta är viktigt eftersom det hindrar andra användare från att läsa eventuel
 Ställ Tomcats miljövariabler
 
 * På Linux och Mac:
-Skapa en fil "tomcat/bin/setenv.sh ` (Eller i Red Hat Enterprise Linux \\[ RHEL \\] Redigera tomcat/conf/tomcat10.conf `) att ställa in Tomcats miljövariabler.
+Skapa en fil "tomcat/bin/setenv.sh ` (Eller i Red Hat Enterprise Linux \\[ RHEL \\] redigera tomcat/conf/tomcat10.conf `) att ställa in Tomcats miljövariabler.
 Den här filen kommer att användas av "tomcat/bin/startup.sh" och "shutdown.sh". Filen ska innehålla något som:
   ```
   export JAVA_HOME=/usr/local/jdk-21.0.3+9
@@ -155,7 +155,7 @@ Den här filen kommer att användas av "tomcat/bin/startup.sh" och "shutdown.sh"
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
   ```
-   (men ersätta katalogen namn från din dator) .
+   (men ersätta katalogens namn från din dator) .
    (Om du tidigare ställt "JRE_HOME" kan du ta bort det.) 
 På Mac behöver du förmodligen inte ställa in "JAVA_HOME".
 
@@ -169,15 +169,15 @@ Filen ska innehålla något som:
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
   ```
-   (men ersätta katalogen namn från din dator) .
+   (men ersätta katalogens namn från din dator) .
 Om detta bara är för lokal testning, ta bort "-server".
    (Om du tidigare ställt "JRE_HOME" kan du ta bort det.) 
 
 "-Xmx" och "-Xms" minnesinställningar är viktiga eftersom ERDDAP™ fungerar bättre med mer minne.
-Ställ alltid "-XM" till samma värde som "-Xmx".
+Ange alltid "-XM" till samma värde som "-Xmx".
 
 * För 32 bitars operativsystem och 32 bitar Java Från:
-64 bitar Java är mycket bättre än 32 bitar Java Men 32 bit Java Kommer att fungera så länge servern inte är upptagen.
+64 bitar Java Bättre än 32 bitar Java Men 32 bit Java Kommer att fungera så länge servern inte är upptagen.
 Ju mer fysiskt minne i servern desto bättre: 4 + GB är riktigt bra, 2 GB är okej, mindre rekommenderas inte.
 Med 32 bitar Java Även med rikligt fysiskt minne, Tomcat och Java inte springa om du försöker ställa in "-Xmx" mycket över 1500M (1200M på vissa datorer) .
 Om din server har mindre än 2 GB minne, minska värdet "-Xmx" (I 'M'egaBytes) 1/2 av datorns fysiska minne.
@@ -185,11 +185,11 @@ Om din server har mindre än 2 GB minne, minska värdet "-Xmx" (I 'M'egaBytes) 1
 * För 64 bitars operativsystem och 64 bitar Java Från:
 64 bitar Java fungerar bara på ett 64-bitars operativsystem.
   * Med Java 8, du måste lägga till "-d64" till Tomcat "CATALINA_OPTS" parameter i "setenv.bat".
-  * Med Java 21, du väljer 64 bitar Java När du laddar ner en version av Java märkt "64 bit".
+  * Med Java 21 Du väljer 64 bitar Java När du laddar ner en version av Java märkt "64 bit".
 
 Med 64 bit Java Tomcat och Java kan använda mycket höga "-Xmx" och "-Xms" inställningar. Ju mer fysiskt minne i servern desto bättre.
 Som ett förenklat förslag: vi rekommenderar att du ställer in "-Xmx" och "-XMs" till (I 'M'egaBytes) till 1/2 (eller mindre) av datorns fysiska minne.
-Du kan se om Tomcat, Java och ERDDAP™ kör faktiskt i 64 bitars läge genom att söka efter "bit" ERDDAP Daglig rapport e-post
+Du kan se om Tomcat, Java och ERDDAP™ kör faktiskt i 64 bitars läge genom att söka efter "bit", ERDDAP Daglig rapport e-post
 eller i "BigParentDirectory/logs/ [Log.txt](/docs/server-admin/additional-information#log) ` fil ("BigParentDirectory" anges i [setup.xml](#setupxml) ) .
 
 #### Garbage Collection{#garbage-collection} 
@@ -214,7 +214,7 @@ se [OutOfMemoryError](/docs/server-admin/additional-information#outofmemoryerror
 ### Fonts{#fonts} 
 
 *  [Fonts för bilder:](#fonts) Vi föredrar starkt det fria [DejaVu teckensnitt](https://dejavu-fonts.github.io/) till den andra Java Typsnitt.
-Att använda dessa teckensnitt rekommenderas starkt men krävs inte.
+Användning av dessa teckensnitt rekommenderas starkt men krävs inte.
 
 Om du väljer att inte använda DejaVu teckensnitt, måste du ändra fontFamily inställningen i setup.xml till " <fontFamily> SansSerif </fontFamily> `,
 som är tillgänglig med alla Java distributioner. Om du ställer in " <fontFamily> "till namnet på ett teckensnitt som inte är tillgängligt, ERDDAP™ Kommer inte att ladda
@@ -228,7 +228,7 @@ och unzip teckenfilerna till en tillfällig katalog.
   * På Linux:
     * För Linux Adoptium Java distributioner, se [Dessa instruktioner](https://blog.adoptopenjdk.net/2021/01/prerequisites-for-font-support-in-adoptopenjdk/) .
     * Med andra Java Fördelningar: Som "tomcat"-användaren kopierar du teckenfilerna till "$JAVA_HOME/lib/fonts" så Java kan hitta teckensnitten.
-Kom ihåg: om/när du senare uppgraderar till en nyare version av Java Du måste installera om dessa teckensnitt.
+Kom ihåg: om/när du senare uppgraderar till en nyare version Java Du måste installera om dessa teckensnitt.
   * På Mac: för varje teckenfil, dubbelklicka på den och klicka sedan på Installera Font.
   * På Windows 7 och 10: i Windows Explorer väljer du alla teckenfiler. Högerklick. Klicka på Installera.
              
@@ -278,7 +278,7 @@ Detta är vanligt när du först ställer in ERDDAP™ .
 ###  ERDDAP™ Innehåll{#erddap-content} 
 3.   [Ställ in "tomcat/content/erddap" konfigurationsfiler.](#erddap-content) 
 På Linux, Mac och Windows, ladda ner [ErddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
-och unzip det i "tomcat"-katalogen, skapa "tomcat / innehåll / erddap".
+och unzip det i "tomcat" katalogen, skapa "tomcat/innehåll/erddap".
 
 __Version 1.0.0, 20333 byte, MD5=2B8D2A5AE5ED73E3A42B529C168C60B5, daterad 2024-10-14___
 
@@ -332,19 +332,19 @@ in i ERDDAP™ logga filer och filer med information om privata datamängder.
 ### Miljövariabler{#environment-variables} 
 
 Börja med ERDDAP™ v2.13, ERDDAP™ administratörer kan åsidosätta värdet i setup.xml genom att ange en miljövariabel
-Namnet " ERDDAP _valueName' innan du kör ERDDAP™ . Använd till exempel " ERDDAP _baseUrl' åsidosätter " <baseUrl> värde.
+Namnet " ERDDAP _valueName' innan du kör ERDDAP™ . Använd till exempel " ERDDAP _baseUrl' åsidosätter ` <baseUrl> värde.
 Detta kan vara praktiskt när du distribuerar ERDDAP™ med en behållare som Docker, eftersom du kan sätta standardinställningar i setup.xml
 och sedan leverera speciella inställningar via miljövariabler. Om du lämnar hemlig information till ERDDAP™ via denna metod,
 Se till att kontrollera att informationen kommer att förbli hemlig. ERDDAP™ läser bara miljövariabler en gång per start,
 I den första sekunden av start, så ett sätt att använda detta är: sätt miljövariabler, börja ERDDAP ,
-vänta tills ERDDAP™ startas, sedan störa miljövariablerna.
+Vänta tills ERDDAP™ startas, sedan störa miljövariablerna.
 
 ###  datasets.xml  {#datasetsxml} 
 
 * Läs kommentarerna i [ **Arbeta med datasets.xml Fil** ](/docs/server-admin/datasets) . Senare, efter att du fått ERDDAP™ kör
 För första gången (vanligtvis med bara standarddataset) Du kommer att ändra XML i "tomcat/innehåll/erddap/ datasets.xml `
 för att ange alla datamängder du vill ha din ERDDAP™ att tjäna. Det är där du kommer att spendera huvuddelen av din tid
-När du ställer in ERDDAP™ och senare samtidigt bibehålla din ERDDAP™ .
+när du ställer in ERDDAP™ och senare samtidigt bibehålla din ERDDAP™ .
 
 Du kan se ett exempel [ datasets.xml på GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml) .
      
@@ -357,9 +357,9 @@ Det är en bra idé att verifiera att resultatet är välformat XML genom att kl
      
 ### Installera erddap. krigsfil{#install-the-erddapwar-file} 
 
-4. På Linux, Mac och Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war) ____ till "tomcat/webapps":
+4. På Linux, Mac och Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) ___ till "tomcat/webapps":
 
-__Version 2.28.0, 620,824,288 byte, MD5=f948b2ba603f65a83ac67af43da9e4c2, daterad 2025-08-29________________________________________________________________________________________________________________________________________________________________________________________________________
+__Version 2.28.1, 622.676.238 byte, MD5=48b4226045f950c8a8d69ef9521b9bc9, daterad 2025-09-05_______________________________________________________________________________________________________________________________________________________________________________________________________
 
 Krigsfilen är stor eftersom den innehåller högupplöst kustlinje, gräns och höjddata som behövs för att skapa kartor.
 
@@ -401,8 +401,8 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 ```
 
 Om ERDDAP™ serveras på en annan väg än "/erddap", även ange "X-Forwarded-Prefix" rubrik till rubriken
-Path segment _before_'/erddap'. Denna inställning skulle vara lämplig för en ERDDAP™ serveras på
-`/subpath/erddap`:
+Path segment _before_ `/erddap'. Denna inställning skulle vara lämplig för en ERDDAP™ serveras på
+"/subpath/erddap":
 
 ```
 RequestHeader set X-Forwarded-Prefix /subpath
@@ -423,8 +423,8 @@ proxy_set_header X-Forwarded-Proto $scheme;
 ```
 
 Om ERDDAP™ serveras på en annan väg än "/erddap", även ange "X-Forwarded-Prefix" rubrik till rubriken
-Path segment _before_'/erddap'. Denna inställning skulle vara lämplig för en ERDDAP™ serveras på
-`/subpath/erddap`:
+Path segment _before_ `/erddap'. Denna inställning skulle vara lämplig för en ERDDAP™ serveras på
+"/subpath/erddap":
 
 ```
 proxy_set_header X-Forwarded-Prefix /subpath
@@ -446,7 +446,7 @@ För att få NGINX och ERDDAP™ arbeta korrekt med https , du måste lägga fö
 * Om Tomcat redan kör, stäng av Tomcat med (i Linux eller Mac OS) "tomcat/bin/shutdown.sh"
 eller (i Windows) "tomcat\bin\" shutdown.bat `
 
-På Linux, använd "ps -ef | grep tomcat före och efter "shutdown.sh" för att se till att tomcat-processen har slutat.
+På Linux, använd `ps -ef | grep tomcat före och efter "shutdown.sh" för att se till att tomcat-processen har slutat.
 Processen bör anges före nedstängningen och så småningom inte listas efter nedstängningen.
 Det kan ta en minut eller två för ERDDAP™ att helt stänga ner. Var tålmodig. Eller om det ser ut som det inte kommer att sluta på egen hand, använd:
 Döda -9 <processID> `
@@ -461,14 +461,14 @@ Använd en webbläsare för att försöka visahttp://www.YourServer.org/erddap/s
 
 * När en förfrågan från en användare kommer in går den till Apache (på Linux och Mac OS-datorer) Då Tomcat, då ERDDAP™ .
 * Du kan se vad som kommer till Apache (och relaterade fel) i Apache-loggfilerna.
-*    [Du du du](/docs/server-admin/additional-information#tomcat-logs) Kan se vad som kommer till Tomcat (och relaterade fel) 
-i Tomcat-loggfilerna ("tomcat/logs/catalina.out" och andra filer i den katalogen) .
-*    [Du du du](/docs/server-admin/additional-information#log) kan se vad som kommer till ERDDAP diagnostiska meddelanden från ERDDAP ,
+*    [Du du](/docs/server-admin/additional-information#tomcat-logs) Kan se vad som kommer till Tomcat (och relaterade fel) 
+I Tomcat-loggfilerna ("tomcat/logs/catalina.out" och andra filer i den katalogen) .
+*    [Du du](/docs/server-admin/additional-information#log) kan se vad som kommer till ERDDAP diagnostiska meddelanden från ERDDAP ,
 och felmeddelanden från ERDDAP i den ERDDAP™ ` <bigParentDirectory> /logs/log.txt' fil.
 * Tomcat börjar inte ERDDAP™ Tills Tomcat får en begäran om ERDDAP™ . Så du kan se i Tomcat-loggfilerna om det
 började ERDDAP™ om det finns ett felmeddelande relaterat till det försöket.
-* När när ERDDAP™ Börjar upp, det dör den gamla ERDDAP™ Log.txt fil ("logArchived på At at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at <CurrentTime> .txt) och skapar en ny log.txt-fil.
-Om filen "log.txt" är gammal är det ett tecken på att ERDDAP™ Har inte nyligen startat om. ERDDAP™ Skriver log info till en buffert
+* När när ERDDAP™ Börjar upp, det dör den gamla ERDDAP™ Log.txt fil ("logArchived på At at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at at <CurrentTime> .txt') och skapar en ny log.txt-fil.
+Så om filen "log.txt" är gammal är det ett tecken på att ERDDAP™ Har inte nyligen startat om. ERDDAP™ Skriver log info till en buffert
 och bara skriver bufferten till loggfilen regelbundet, men du kan tvinga ERDDAP™ att skriva bufferten till loggfilen genom att besöka
 ` /erddap/status.html `.
 
@@ -486,12 +486,12 @@ Lösningen är att uppdatera till den senaste versionen av Java Se till att Tomc
 ### Problem: Långsam start första gången{#trouble-slow-startup-first-time} 
 
 Tomcat måste göra mycket arbete första gången ett program som ERDDAP™ startas, särskilt måste det packa upp "erddap.war"-filen
- (som liknar en .zip fil) . På vissa servrar, det första försöket att visa ERDDAP™ Stalls (30 sekunder?) tills detta arbete är klart.
+ (som är som en .zip fil) . På vissa servrar, det första försöket att visa ERDDAP™ Stalls (30 sekunder?) tills detta arbete är klart.
 På andra servrar kommer det första försöket att misslyckas omedelbart. Men om du väntar 30 sekunder och försöker igen, kommer det att lyckas om ERDDAP™ installerades korrekt.
 
 Det finns ingen fix för detta. Det är helt enkelt hur Tomcat fungerar. Men det sker bara första gången när du har installerat en ny version av ERDDAP™ .
 
-## Stäng och omstart{#shut-down-and-restart} 
+## Stäng ner och starta om{#shut-down-and-restart} 
 
 I framtiden, att stänga av (och omstart)   ERDDAP™ Se, se [Hur man stänger av och startar om Tomcat ERDDAP ](/docs/server-admin/additional-information#shut-down-and-restart) .
 
@@ -502,20 +502,20 @@ Problem med att installera Tomcat eller ERDDAP™ ?? Se vår [sektion om att få
 ## E-postmeddelande om nya versioner av ERDDAP  {#email-notification-of-new-versions-of-erddap} 
 
 Om du vill få ett e-postmeddelande när en ny version av ERDDAP™ finns eller annan viktig ERDDAP™ tillkännagivanden,
-Du kan gå med i ERDDAP™ Tillkännagivanden lista [här här här här](https://groups.google.com/g/erddap-announce) . Denna lista är ungefär ett e-postmeddelande var tredje månad.
+Du kan gå med i ERDDAP™ Tillkännagivanden lista [här här här](https://groups.google.com/g/erddap-announce) . Denna lista genomsnitt ungefär ett e-postmeddelande var tredje månad.
 
 ## Anpassa{#customize} 
 
 *  [Anpassa din ERDDAP™ för att belysa din organisation (Inte inte NOAA   ERD ) .](#customize) 
-* Ändra bannern som visas högst upp ERDDAP™ .html sidor genom att redigera " <startBodyHtml5> Tagga in din " datasets.xml ` fil.
+* Ändra bannern som visas högst upp ERDDAP™ .html sidor genom att redigera " <startBodyHtml5> tagga i din " datasets.xml ` fil.
 (Om det inte finns en, kopiera standarden från ERDDAP™ "tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml" fil
 I ` datasets.xml och redigera det.) Du kan till exempel:
   * Använd en annan bild (dvs. din organisations logotyp) .
   * Ändra bakgrundsfärgen.
   * Ändra " ERDDAP™ till "YourOrganization_'s" ERDDAP™ "
   * Ändra "Easier access to science data" till "Easier access to _YourOrganization_'s data".
-  * Ändra "Godde dig genom" länkar för att vara länkar till din organisation och finansieringskällor.
-* Ändra informationen på vänster sida av hemsidan genom att redigera " <theShortDescriptionHtml> Tagga in din " datasets.xml ` fil.
+  * Ändra länkarna "Gjort för dig" för att vara länkar till din organisation och finansieringskällor.
+* Ändra informationen på vänster sida av hemsidan genom att redigera " <theShortDescriptionHtml> tagga i din " datasets.xml ` fil.
 (Om det inte finns en, kopiera standarden från ERDDAP™ "tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml" fil
 I ` datasets.xml och redigera det.) Du kan till exempel:
   * Beskriv vad din organisation och/eller grupp gör.

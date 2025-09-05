@@ -80,7 +80,7 @@
     "description": "The label of footer link with label=ERD linking to https://www.fisheries.noaa.gov/about/environmental-research-division-southwest-fisheries-science-center"
   },
   "copyright": {
-    "message": "ERDDAP™, Version 2.28.0. Copyright © 2025 ERDDAP™. Built with Docusaurus.",
+    "message": "ERDDAP™, Version 2.28.1. Copyright © 2025 ERDDAP™. Built with Docusaurus.",
     "description": "The footer copyright"
   }
 }
