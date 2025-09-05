@@ -33,8 +33,8 @@ zejména: ERDDAP™ nemusí být schopen rychle smazat a/nebo přejmenovat soubo
 Z bezpečnostních důvodů je téměř vždy nejlepší použít nejnovější verzi Java 21.
 Stáhnout a nainstalovat nejnovější verzi
     [Adoptium OpenJDK (Temurin) 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
-Pro ověření instalace spusťte např. JreBinDirectory/java -version
-Lokální/jdk-21.0.3+9/jre/bin/java -verze?
+Pro ověření instalace spusťte `/javaJreBinDirectory/java -verze` , například
+    `/usr/local/jdk-21.0.3+9/jre/bin/java -verze` .
 
     ERDDAP™ spolupracuje s Java z jiných zdrojů, ale doporučujeme Adoptium, protože je to hlavní, komunitně podporované,
 volný (jako pivo a řeč) verze Java 21, která nabízí dlouhodobou podporu (bezplatné upgrady pro mnoho let po počáteční vydání) .
@@ -52,33 +52,33 @@ Můžeš použít jiný. Java Aplikační server (např. Jetty) Ale testujeme je
 
    * Stáhněte si Tomcat a vybalte ho na server nebo PC.
 Z bezpečnostních důvodů je téměř vždy nejlepší použít nejnovější verzi Tomcat 10 (Verze 9 a níže nejsou přijatelné) 
-která je určena pro práci s Java 21 nebo novější. Níže bude adresář Tomcat označován jako "Tomcat."
+která je určena pro práci s Java 21 nebo novější. Níže bude adresář Tomcat označován jako `tomcat` .
 
 __ Varování&#33;_ Pokud již máte Tomcat spuštěnou jinou webovou aplikaci (zejména THREDDS) , Doporučujeme vám nainstalovat ERDDAP™ v
       [druhý Tomcat](/docs/server-admin/additional-information#second-tomcat) , protože ERDDAP™ potřebuje různé nastavení Tomcat
 a neměl by se muset potýkat s jinými aplikacemi pro paměť.
 
      * Na Linuxu, [stáhnout "Core" "tar .gz " Distribuce Tomcat](https://tomcat.apache.org/download-10.cgi) a vybalit.
-Doporučujeme jej vybalit v ?
-     * Na Mac, Tomcat je pravděpodobně již nainstalován v  příplatek / knihovna / Tomcat, ale měl by jej aktualizovat na nejnovější verzi Tomcat 10.
-Když to stáhneš, [stáhnout "Core" "tar .gz " Distribuce Tomcat](https://tomcat.apache.org/download-10.cgi) a vybalte ji do knihovny.
+Doporučujeme vybalit `/usr/local` .
+     * Na Mac, Tomcat je pravděpodobně již nainstalován v `/Knihovna/Tomcat` , ale měl by ji aktualizovat na nejnovější verzi Tomcat 10.
+Když to stáhneš, [stáhnout "Core" "tar .gz " Distribuce Tomcat](https://tomcat.apache.org/download-10.cgi) a vybalit `/Knihovna/Tomcat` .
      * Na Windows, můžete [stáhnout "Core" "zip" Tomcat distribuce](https://tomcat.apache.org/download-10.cgi) 
         (který nezahrává s registrem Windows a který ovládáte z příkazového řádku DOS) a vybalit ji do vhodného adresáře.
-        (Pro vývoj používáme distribuci "Core" "zip." Uděláme adresář a vybalíme ho tam.) 
+        (Pro vývoj používáme distribuci "Core" "zip." Uděláme `/programy` adresář a vybalit ho tam.) 
 Nebo si můžete stáhnout distribuci "Core" "64-bit Windows zip," která obsahuje více funkcí.
-Pokud je distribuce instalátorem systému Windows, pravděpodobně vloží Tomcat do například soubory pro programy/apache-tomcat-10.0.23/07.
+Pokud je distribuce instalátorem Windows, bude pravděpodobně dát Tomcat do, například, `/Programové soubory/apache-tomcat-10,0.23` .
              
 ### server.xml{#serverxml} 
 
-*  [server.xml](#serverxml) - V souboru s názvem "Tomcat/conf/server.xml" jsou dvě změny, které byste měli udělat pro každý ze dvou souborů. <Connector> Štítky
-   (jeden pro &lt;Connector port="8080" a jeden pro Ş &lt;Conector port="8443") .
-   1.  (Doporučené) Zvýšit hodnotu parametru Timeout na 300000 (milisekundy, což je 5 minut) .
-   2.  (Doporučené) Přidání nového parametru: RelaxedQueryChars="[] | "? Toto je volitelné a o něco méně bezpečné,
+*  [server.xml](#serverxml) - V `tomcat/conf/server.xml` soubor, existují dvě změny, které byste měli udělat pro každou z obou ` <Connector> ` značky
+   (jeden pro `&lt;Connector port="8080"` a jeden pro `&lt;Konektorový port="8443"` ) .
+   1.  (Doporučené) Zvýšit `spojení Timeout` hodnota parametru, možná 300000 (milisekundy, což je 5 minut) .
+   2.  (Doporučené) Přidat nový parametr: `relaxQueryChars="[] | "` . Toto je volitelné a o něco méně bezpečné,
 ale odstraňuje potřebu, aby uživatelé procentně kódovali tyto znaky, když se objeví v parametrech požadavku uživatele URL.
              
 ### obsah.xml{#contentxml} 
 
-* context.xml -- Resources Cache - In ?tomcat/conf/context.xml </Context> Změnit značku Resources
+* context.xml -- Zdroje Cache - In `tomcat/conf/context.xml` , těsně před ` </Context> ` tag, změna značky Resources
    (nebo přidejte, pokud už tam není.) nastavit cache MaxSize parametr to 80000:
   ```
   <Resources cachingAllowed="true" cacheMaxSize="80000" />
@@ -92,26 +92,26 @@ Tím se v Catalině vyhýbáme mnoha varováním. ven, že všechny začínají 
 
 * Na Linuxových počítačích, změnit nastavení timeout Apache tak, aby časově náročné požadavky uživatelů netimeout
    (s tím, co často vypadá jako chyba "Proxy" nebo "Bad Gateway") . Jako uživatel kořene:
-  * Upravit Apače http d.conf[2] soubor (obvykle u http d/conf/ ?) :
-    * Změňte stávající hodnotu. <Timeout> Nastavení (nebo přidat jeden na konci souboru) do 3600 (sekund) , místo výchozí 60 nebo 120 sekund.
-    * Změňte stávající hodnotu. <ProxyTimeout> Nastavení (nebo přidat jeden na konci souboru) do 3600 (sekund) , místo výchozí 60 nebo 120 sekund.
-  * Restartujte Apache: - K elegantní. ? (ale někdy je v jiném adresáři) .
+  * Upravit Apače ` http d.conf` soubor (obvykle v `/etc/ http d/conf/` ) :
+    * Změnit existující ` <Timeout> ` nastavení (nebo přidat jeden na konci souboru) do 3600 (sekund) , místo výchozí 60 nebo 120 sekund.
+    * Změnit existující ` <ProxyTimeout> ` nastavení (nebo přidat jeden na konci souboru) do 3600 (sekund) , místo výchozí 60 nebo 120 sekund.
+  * Restartovat Apache: `/usr/sbin/apachectl - K elegantní.`   (ale někdy je v jiném adresáři) .
 
 ### Bezpečnost{#security} 
          
 * Bezpečnostní doporučení: Viz [Tyto pokyny](https://tomcat.apache.org/tomcat-10.0-doc/security-howto.html) zvýšit bezpečnost
 Vaše instalace Tomcat, zejména pro veřejné servery.
          
-* Pro veřejnost ERDDAP™ instalace na Linux a Macs, je nejlepší nastavit Tomcat (program) jako součást uživatele ?
+* Pro veřejnost ERDDAP™ instalace na Linux a Macs, je nejlepší nastavit Tomcat (program) jako součást uživatele `tomcat` 
    (samostatný uživatel s omezeným oprávněním a který [nemá žádné heslo](https://unix.stackexchange.com/questions/56765/creating-an-user-without-a-password) ) .
-Takže pouze super uživatel může přepnout na to, aby působil jako uživatel atomcat. To znemožňuje hackerům přihlásit se do vašeho serveru jako uživatel Tomcat.
-A v každém případě, měli byste to udělat tak, aby uživatel dálekat má velmi omezená oprávnění na souborovém systému serveru (read+write+execute privilegia
-pro adresářový strom a adresářový list <bigParentDirectory> A. ERDDAP™ vyžaduje přístup k).
-  * Můžete si vytvořit uživatelský účet (který nemá heslo) pomocí příkazu:
+Tak, jen super uživatel může přejít k jednání jako uživatel `tomcat` . To znemožňuje hackerům přihlásit se na váš server jako uživatel `tomcat` .
+A v každém případě byste to měli udělat tak, aby `tomcat` uživatel má v systému souboru serveru velmi omezená oprávnění (read+write+execute privilegia)
+pro `apache-tomcat` adresářový strom a ` <bigParentDirectory> ` a práva pouze pro čtení pro adresáře s daty, která ERDDAP™ vyžaduje přístup k).
+  * Můžete vytvořit `tomcat` uživatelský účet (který nemá heslo) pomocí příkazu:
     ```
     sudo useradd tomcat -s /bin/bash -p '*'
     ```
-  * Můžete přepnout na práci jako uživatel pomocí příkazu
+  * Můžete přejít na práci jako uživatel `tomcat` pomocí příkazu
     ```
     sudo su - tomcat
     ```
@@ -120,9 +120,9 @@ pro adresářový strom a adresářový list <bigParentDirectory> A. ERDDAP™ v
     ```
     exit
     ````
-    * Udělat většinu zbytku Tomcat a ERDDAP™ Nastavte návod k nastavení uživatele jako uživatele. Později spusťte Startup.sh a Shutdown.sh.sh. ?
+    * Udělat většinu zbytku Tomcat a ERDDAP™ nastavit návod k nastavení jako uživatel `tomcat` . Později, spusťte `startup.` a `Vypnout. s` skripty jako uživatel `tomcat` 
 aby měl Tomcat povolení napsat do svých logových souborů.
-    * Po vybalení Tomcatu, z rodiče adresáře "Apache-tomcat":
+    * Po vybalení Tomcat, od rodiče `apache-tomcat` adresář:
       * Změna vlastnictví adresáře apache-tomcat na uživatele tomcat.
         ```
         chown -R tomcat apache-tomcat-10.0.23
@@ -147,8 +147,8 @@ To je důležité, protože to brání ostatním uživatelům číst možná cit
 Nastavit proměnné prostředí Tomcat
 
 * Na Linuxu a Macu:
-Vytvořit soubor ¶Tomcat/bin/setenv.sh ? (nebo v Red Hat Enterprise Linux \\[ RHEL \\] , edit ~tomcat/conf/tomcat10.conf ?) nastavit Tomcatovy proměnné prostředí.
-Tento soubor bude použit pomocí ¶tomcat/bin/startup.sh-sh-sh-sh-sh-sh. Soubor by měl obsahovat něco jako:
+Vytvořit soubor `Tomcat/bin/setenv.sh`   (nebo v Red Hat Enterprise Linux \\[ RHEL \\] , upravit `~tomcat/conf/tomcat10.conf` ) nastavit Tomcatovy proměnné prostředí.
+Tento soubor bude použit `tomcat/bin/startup.sh` a `Vypnout. s` . Soubor by měl obsahovat něco jako:
   ```
   export JAVA_HOME=/usr/local/jdk-21.0.3+9
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
@@ -156,12 +156,12 @@ Tento soubor bude použit pomocí ¶tomcat/bin/startup.sh-sh-sh-sh-sh-sh. Soubor
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
   ```
    (ale nahradit názvy adresářů z počítače) .
-   (Pokud jste již dříve nastavili JRE_HOME, můžete to odstranit.) 
-Na Macs, pravděpodobně nemusíte nastavit JAVA_HOME.
+   (Pokud jste již dříve nastaven `JRE_HOME` Můžeš to odstranit.) 
+Na Macs, pravděpodobně nemusíte nastavit `JAVA_ DOMŮ` .
 
 * Na Windows:
-Vytvořit soubor pro nastavení proměnných prostředí Tomcat.
-Tento soubor bude použit pomocí "The Tomcat\bin\\startup.bat." shutdown.bat Ahoj.
+Vytvořit soubor `Tomcat\bin\\setenv.bat` nastavit Tomcatovy proměnné prostředí.
+Tento soubor bude použit `Tomcat\bin\\ startup.bat` a ` shutdown.bat ` .
 Soubor by měl obsahovat něco jako:
   ```
   SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
@@ -171,42 +171,42 @@ Soubor by měl obsahovat něco jako:
   ```
    (ale nahradit názvy adresářů z počítače) .
 Pokud je to jen pro místní testování, odstraňte "-server."
-   (Pokud jste již dříve nastavili JRE_HOME, můžete to odstranit.) 
+   (Pokud jste již dříve nastaven `JRE_HOME` Můžeš to odstranit.) 
 
-Nastavení paměti Xmx a Xms jsou důležité, protože ERDDAP™ lépe funguje s více paměti.
-Vždy nastavte xms na stejnou hodnotu jako xmx.
+The `- Xmx` a `- Xms` nastavení paměti je důležité, protože ERDDAP™ lépe funguje s více paměti.
+Vždy nastaveno `- Xms` na stejnou hodnotu jako `- Xmx` .
 
 * Pro 32 bitové operační systémy a 32 bitů Java :
 64 bitů Java je mnohem lepší než 32 bitů Java , ale 32 bitů Java bude fungovat tak dlouho, dokud nebude server zaneprázdněn.
 Čím více fyzické paměti na serveru, tím lépe: 4+ GB je opravdu dobré, 2 GB je v pořádku, méně se nedoporučuje.
-S 32 bity Java , i s bohatou fyzickou pamětí, Tomcat a Java nebude utíkat, pokud se pokusíte nastavit mnohem více než 1500M (1200M na některých počítačích) .
-Pokud má váš server méně než 2 GB paměti, snižte hodnotu Xmx. (v 'M'egaBytech) na 1/2 fyzické paměti počítače.
+S 32 bity Java , i s bohatou fyzickou pamětí, Tomcat a Java neuteče, když se pokusíte nastavit `- Xmx` vysoko nad 1500M (1200M na některých počítačích) .
+Pokud má váš server méně než 2GB paměti, snižte `- Xmx` hodnota (v 'M'egaBytech) na 1/2 fyzické paměti počítače.
 
 * Pro 64 bitů operačních systémů a 64 bitů Java :
 64 bitů Java bude fungovat pouze na 64 bitovém operačním systému.
-  * S Java 8, je třeba přidat do parametru Tomcat CATALINA_OPTS ?
+  * S Java 8, musíte přidat `-d64` Tomcatovi `CATALINA_OPTS` parametr v `setenv.bat` .
   * S Java 21, vyberete 64 bitů. Java při stažení verze Java označené "64 bit."
 
-Se 64 bity Java , Tomcat a Java mohou používat velmi vysoké nastavení  Čím více fyzické paměti na serveru, tím lépe.
-Jako zjednodušený návrh: doporučujeme vám nastavit xmx a xms - (v 'M'egaBytech) až 1/2 (nebo méně) fyzické paměti počítače.
+Se 64 bity Java , Tomcat a Java může použít velmi vysoké `- Xmx` a `- Xms` nastavení. Čím více fyzické paměti na serveru, tím lépe.
+Jako zjednodušený návrh: doporučujeme nastavit `- Xmx` a `- Xms` až (v 'M'egaBytech) až 1/2 (nebo méně) fyzické paměti počítače.
 Uvidíš, jestli Tomcat, Java a ERDDAP™ jsou skutečně běží v 64 bitovém režimu hledáním " bit," v ERDDAP 's Daily Report email
-nebo ve velkémadresáři/logech/ [log.txt](/docs/server-admin/additional-information#log) Soubor (BigDirectory Directory je uvedeno v [setup.xml](#setupxml) ) .
+nebo `bigDirectory/logs/ [log.txt](/docs/server-admin/additional-information#log) ` soubor ( `velkýRodič rodičů` je uvedeno v [setup.xml](#setupxml) ) .
 
 #### Sběr odpadků{#garbage-collection} 
 
 * In ERDDAP™ 's [log.txt](/docs/server-admin/additional-information#log) soubor, uvidíte mnoho "GC (Selhání přidělení) "zprávy.
 Tohle obvykle není problém. Je to častou zprávou od normálně fungujícího Java že právě dokončila menší odpad.
 sbírka, protože jí došel prostor v Edenu (část Java hromada pro velmi mladé předměty) . Obvykle vám zpráva ukazuje
-Předpaměťovápouživa po aplikaci. Pokud jsou ta dvě čísla blízko sebe, znamená to, že odpadky nebyly produktivní.
+   `PaměťPoužítPřed-&gt;paměťPo použití` . Pokud jsou ta dvě čísla blízko sebe, znamená to, že odpadky nebyly produktivní.
 Zpráva je jen známkou problémů, pokud je velmi časté (každých pár sekund) , není produktivní, a čísla jsou velké a nerostou,
 které společně naznačují, že Java potřebuje více paměti, snaží se uvolnit paměť a nemůže uvolnit paměť.
 To se může stát během stresující doby a pak odejít. Ale pokud bude pokračovat, je to známka problémů.
-* Pokud uvidíte ?java.lang.OutOfMemoryError ? ERDDAP™ 's [log.txt](/docs/server-admin/additional-information#log) soubor,
+* Pokud uvidíte `java.lang.OutOfMemoryError` s v ERDDAP™ 's [log.txt](/docs/server-admin/additional-information#log) soubor,
 viz [OutOfMemoryError](/docs/server-admin/additional-information#outofmemoryerror) pro tipy, jak diagnostikovat a řešit problémy.
          
 ### Povolení{#permissions} 
 
-*  [Na Linux a Macs, změnit oprávnění](#permissions) ze všech souborů v souboru ¶tomcat/bin/.../...
+*  [Na Linux a Macs, změnit oprávnění](#permissions) ze všech `*.sh` soubory v `tomcat/bin/` musí být spustitelný vlastníkem:
   ```
   chmod +x *.sh
   ```
@@ -216,18 +216,18 @@ viz [OutOfMemoryError](/docs/server-admin/additional-information#outofmemoryerro
 *  [Písma pro obrázky:](#fonts) Rozhodně dáváme přednost svobodným. [DejaVu písma](https://dejavu-fonts.github.io/) na druhou Java písma.
 Používání těchto písem se důrazně doporučuje, ale nevyžaduje se.
 
-Pokud se rozhodnete nepoužívat písma DejaVu, musíte změnit písmoRodinné nastavení v setup.xml na: <fontFamily> SansSerif </fontFamily> a.
-který je k dispozici se všemi Java distribuce. Pokud jste nastavili <fontFamily> Jméno písma, které není k dispozici, ERDDAP™ Nenabíjí.
-a vytiskne seznam dostupných písem v souboru ignolog.txt. Musíte použít jedno z těch písm.
+Pokud se rozhodnete nepoužívat písma DejaVu, musíte změnit písmoFamily nastavení v setup.xml na ` <fontFamily> SansSerif </fontFamily> ` ,
+který je k dispozici se všemi Java distribuce. Při nastavení ` <fontFamily> ` na jméno písma, které není k dispozici, ERDDAP™ Nenabíjí.
+a vytiskne seznam dostupných písem v `log.txt` Složka. Musíte použít jedno z těch písm.
 
-Pokud se rozhodnete použít písma DejaVu, ujistěte se prosím, že jsou <fontFamily> Setting in setup.xml is ? <fontFamily> DejaVu Sans </fontFamily> Ahoj.
+Pokud se rozhodnete použít písma DejaVu, ujistěte se, že ` <fontFamily> ` nastavení v setup.xml je ` <fontFamily> DejaVu Sans </fontFamily> ` .
 
 Pro instalaci písem DejaVu si stáhněte [DejaVuFonts .zip ](/DejaVuFonts.zip)   (5,522,795 bytes, MD5=33E1E61FAB06A547851ED308B4FFEF42) 
 a rozepnout soubory s písmem do dočasného adresáře.
 
   * Na Linuxu:
     * Pro Linux Adoptium Java distribuce, viz [Tyto pokyny](https://blog.adoptopenjdk.net/2021/01/prerequisites-for-font-support-in-adoptopenjdk/) .
-    * Ostatní Java distribuce: Jelikož uživatel této kategorie, zkopírujte soubory písma do ?$JAVA_HOME/lib/fonts ? Java může najít písma.
+    * Ostatní Java distribuce: Jako `tomcat` uživatel, zkopírovat soubory písma do `$JAVA_HOME/LIB/fonts` tak Java může najít písma.
 Pamatujte: pokud/když později upgrade na novější verzi Java , musíte reinstalovat tato písma.
   * Na Macs: pro každý soubor s písmem dvakrát klikněte na něj a pak klikněte na Install Font.
   * Na Windows 7 a 10: ve Windows Exploreru vyberte všechny soubory písma. Pravým tlačítkem. Klikněte na Install.
@@ -236,10 +236,10 @@ Pamatujte: pokud/když později upgrade na novější verzi Java , musíte reins
 
 * Otestujte si instalaci Tomcat.
   * Linux:
-    * Jako uživatel "tomcat" spusťte "tomcat/bin/startup.sh"
+    * Jako uživatel "tomcat," spustit `tomcat/bin/startup.sh` .
     * Zobrazit své URL + ":8080/" ve svém prohlížeči (např. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac (spustit tomcat jako uživatel správce systému) :
-    * Spusťte tomcat/bin/startup.sh[3].
+    * Utíkej. `tomcat/bin/startup.sh` .
     * Zobrazit své URL + ":8080/" ve svém prohlížeči (např. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Všimněte si, že ve výchozím nastavení je váš Tomcat přístupný pouze vámi. Není veřejně přístupná.
   * Localhost Windows:
@@ -248,7 +248,7 @@ Všimněte si, že ve výchozím nastavení je váš Tomcat přístupný pouze v
 
 Měli byste vidět stránku Tomcat "Gratulujeme."
 
-Je-li problém, viz soubor s logem Tomcat na adrese ¶tomcat/logs/catalina.out ¶out.
+Jestli se něco stane, podívejte se do souboru Tomcat. `Tomcat/logs/catalina.out` .
 
 ### Problémy s instalací Tomcat?{#troubles-with-the-tomcat-installation} 
 
@@ -265,10 +265,10 @@ To by mělo vrátit jeden řádek s něčím jako:
   tcp 0 0 :::8080 :::* LISTEN ## ##### ####/java
   ```
 
-   (kde je nějaká číslice) , což naznačuje, že proces ¶java ¶ (pravděpodobně Tomcat) poslouchá v přístavu "8080" pro "tcp" provoz.
+   (kde `#` je nějaká číslice) , s uvedením, že a `kava` postup (pravděpodobně Tomcat) poslouchá v přístavu "8080" pro "tcp" provoz.
 Pokud nebyly vráceny žádné linky, pokud se řádek výrazně liší, nebo pokud byly vráceny dvě nebo více řádků, pak může být problém s nastavením portu.
 
-* Viz log soubor Tomcat ? Tomcat problémy a některé ERDDAP™ startup problémy jsou téměř vždy uvedeny tam.
+* Viz soubor s logem Tomcat `Tomcat/logs/catalina.out` . Tomcat problémy a některé ERDDAP™ startup problémy jsou téměř vždy uvedeny tam.
 To je běžné, když jste poprvé nastavení ERDDAP™ .
 
 * Viz [Tomcat](https://tomcat.apache.org/) webové stránky nebo hledat web o pomoc, ale prosím dejte nám vědět problémy, které jste měli a řešení jste našli.
@@ -276,9 +276,9 @@ To je běžné, když jste poprvé nastavení ERDDAP™ .
 * Podívejte se na naše [oddíl o získání dodatečné podpory](/docs/intro#support) .
              
 ###  ERDDAP™ Obsah{#erddap-content} 
-3.   [Nastavte konfigurační soubory pro konfirmaci a obsah.](#erddap-content) 
+3.   [Připravit `Tomcat/content/erddap` Konfigurační soubory.](#erddap-content) 
 Na Linux, Mac a Windows, stáhnout [erddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
-a rozbalit jej do adresáře ¶tomcat ¶, který vytváří ¶tomcat/content/erddap ¶.
+a rozepnout do `tomcat` adresář, vytváření `Tomcat/content/erddap` .
 
 __Version 1.0.0, 20333 bytes, MD5=2B8D2A5AE5ED73E3A42B529C168C60B5, dated 2024-10-14__
 
@@ -294,24 +294,24 @@ Některé předchozí verze jsou také k dispozici:
 
 Pro Red Hat Enterprise Linux (RHEL) nebo pro jiné situace, kdy není dovoleno upravovat adresář Tomcat nebo kde chcete/potřebujete
 dát ERDDAP™ adresář obsahu v jiném místě z nějakého jiného důvodu (například, pokud používáte Jetty místo Tomcat) ,
-Unzip  .zip Do požadovaného adresáře (k němuž má přístup pouze uživatel ¶tomcat ¶) a nastavila erddapContentDirectory Vlastnost systému
- (např. erddapContentDirectory  =~tomcat/content/erddap ?) tak ERDDAP™ může najít tento nový adresář obsahu.
+unzip `erddapContent .zip ` do požadovaného adresáře (na které pouze `tomcat` uživatel má přístup) a nastavit ` erddapContentDirectory ` vlastnost systému
+ (např. ` erddapContentDirectory  =~tomcat/content/erddap ` ) tak ERDDAP™ může najít tento nový adresář obsahu.
 
 ### setup.xml{#setupxml} 
 
-*  [Přečti si komentáře v ¶tomcat/content/erddap/setup.xml ?](#setupxml) a provést požadované změny. setup.xml je soubor se všemi nastaveními, které určují, jak ERDDAP™ Chová se slušně.
+*  [Přečti si komentáře `tomcat/content/erddap/setup.xml` ](#setupxml) a provést požadované změny. setup.xml je soubor se všemi nastaveními, které určují, jak ERDDAP™ Chová se slušně.
 
 Pro počáteční nastavení musíte alespoň změnit tato nastavení:
-      * ? <bigParentDirectory> ?
-      * ? <emailEverythingTo> ?
-      * ? <baseUrl> ?
-      * ? <email...> Nastavení
-      * ? <admin...> Nastavení
-      * ? <baseHttpsUrl> ? (Když jste to nachystali https ) 
+      *  ` <bigParentDirectory> ` 
+      *  ` <emailEverythingTo> ` 
+      *  ` <baseUrl> ` 
+      *  ` <email...> ` nastavení
+      *  ` <admin...> ` nastavení
+      *  ` <baseHttpsUrl> `   (Když jste to nachystali https ) 
 
 Když vytvoříte velký Rodič Directory, z rodičovského adresáře bigParentDirectory:
 
-    * Udělat z uživatele Átomcata majitele Ábig ParentDirectory:
+    * Make the `tomcat` uživatel majitele `velkýRodič rodičů` :
       ```
       chown -R tomcat bigParentDirectory
       ```
@@ -332,7 +332,7 @@ v ERDDAP™ log soubory a soubory s informacemi o soukromých datových souborec
 ### Proměnné prostředí{#environment-variables} 
 
 Začneme s ERDDAP™ v2.13, ERDDAP™ Správci mohou přepsat jakoukoli hodnotu v setup.xml zadáním proměnné prostředí
-Jmenuje se "A" ERDDAP Před spuštěním_valueName ERDDAP™ . Například, použití ERDDAP _základnaUrllu přehrává <baseUrl> Hodnota.
+jméno ` ERDDAP _hodnotaNázev` před spuštěním ERDDAP™ . Například použití ` ERDDAP _baseUrl` Přepíše ` <baseUrl> ` hodnota.
 To může být užitečné při nasazení ERDDAP™ s kontejnerem jako je Docker, jak můžete dát standardní nastavení do setup.xml
 a pak dodat speciální nastavení pomocí proměnných prostředí. Pokud poskytnete tajné informace ERDDAP™ pomocí této metody,
 Ujistěte se, že informace zůstanou v tajnosti. ERDDAP™ pouze čte proměnné prostředí jednou za spuštění,
@@ -342,22 +342,22 @@ Počkej. ERDDAP™ je spuštěn, pak odnastavit proměnné prostředí.
 ###  datasets.xml  {#datasetsxml} 
 
 * Přečti si komentáře [ **Práce s datasets.xml Soubor** ](/docs/server-admin/datasets) . Později, až se dostaneš ERDDAP™ běží
-poprvé (obvykle pouze s výchozími soubory dat) , budete modifikovat XML v ¶tomcat/content/erddap/ datasets.xml ?
+poprvé (obvykle pouze s výchozími soubory dat) , budete modifikovat XML v `tomcat/content/erddap/ datasets.xml ` 
 k určení všech souborů dat, které chcete ERDDAP™ sloužit. Tady budeš trávit většinu času.
 při nastavení ERDDAP™ a později při zachování ERDDAP™ .
 
 Můžete vidět příklad [ datasets.xml na GitHubu](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml) .
      
 *  (Nepravděpodobné) Teď nebo (o něco pravděpodobnější) v budoucnu, pokud chcete změnit soubor Erddap CSS, kopírujte
-Tomcat/content/erddap/images/erddapStart2.cssdtdtdtdtdtdtdtdtt/content/erddap/image/erddap2.cssdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddtdddddddddddddddddd.ddddddd.
-Změny ve 2. bodě odůvodnění nabývají účinku pouze tehdy, pokud ERDDAP™ je restartován a často také vyžaduje, aby uživatel vymazal cachované soubory prohlížeče.
+   `Tomcat/content/erddap/images/erddapStart2.cs` až `Tomcat/content/erddap/images/erddap2.cs` a pak udělat změny.
+Změny `erddap2.css` nabývají účinku pouze tehdy, ERDDAP™ je restartován a často také vyžaduje, aby uživatel vymazal cachované soubory prohlížeče.
      
  ERDDAP™ nefunguje správně, pokud nastavení.xml nebo datasets.xml soubor není dobře vytvořený XML soubor. Takže, po editaci těchto souborů,
 je dobrý nápad ověřit, že výsledek je dobře vytvořený XML vložením XML textu do XML checkeru, jako je [xmlvalidace](https://www.xmlvalidation.com/) .
      
 ### Nainstalujte erddap. válečný soubor{#install-the-erddapwar-file} 
 
-4. Na Linuxu, Macu a Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) __ into ignorat/webapps
+4. Na Linuxu, Macu a Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) __ do `Tamcat/webaps` :
 
 __Version 2.28.1, 622,676,238 bytes, MD5=48b4226045f950c8a8d69ef9521b9bc9, dated 2025-09-05__
 
@@ -382,14 +382,14 @@ Ukončení SSL/TLS je často zahaleno i ve vrstvě proxy serveru. Specifikace z�
 
 #### Apač{#apache} 
 
-1. Ujistěte se, že se "proxymod" a "proxy" http Nakládají se:
+1. Zajistit, aby `mod_ proxy` a `mod_proxy_ http ` jsou naloženy:
 
 ```
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 ```
 
-2. Upravit stávající hodnotu <VirtualHost> Štítek (pokud nějaký existuje) , nebo přidat jeden na konci souboru:
+2. Upravit existující ` <VirtualHost> ` Značka (pokud nějaký existuje) , nebo přidat jeden na konci souboru:
 ```
 <VirtualHost *:80>
    ServerName YourDomain.org
@@ -400,15 +400,15 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 </VirtualHost>
 ```
 
-Pokud ERDDAP™ se podává na jiné cestě než je:
-traťový segment _before_ ?/erddap ? Toto nastavení by bylo vhodné pro ERDDAP™ podávané v
-A.
+Pokud ERDDAP™ se podává na jiné cestě než `/erddap` , také nastavit `X- Forward- Prefix` hlavička k
+úsek cesty _před_ `/erddap` . Toto nastavení by bylo vhodné pro ERDDAP™ podávané v
+ `/subpath/erddap` :
 
 ```
 RequestHeader set X-Forwarded-Prefix /subpath
 ```
 
-3. Poté restartujte Apache: Apache/usr/sbin/apachectl - K elegantní. ? (ale někdy je v jiném adresáři) .
+3. Pak restartujte Apache: `/usr/sbin/apachectl - K elegantní.`   (ale někdy je v jiném adresáři) .
          
 #### NGINX{#nginx} 
 
@@ -422,16 +422,16 @@ proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
 proxy_set_header X-Forwarded-Proto $scheme;
 ```
 
-Pokud ERDDAP™ se podává na jiné cestě než je:
-traťový segment _before_ ?/erddap ? Toto nastavení by bylo vhodné pro ERDDAP™ podávané v
-A.
+Pokud ERDDAP™ se podává na jiné cestě než `/erddap` , také nastavit `X- Forward- Prefix` hlavička k
+úsek cesty _před_ `/erddap` . Toto nastavení by bylo vhodné pro ERDDAP™ podávané v
+ `/subpath/erddap` :
 
 ```
 proxy_set_header X-Forwarded-Prefix /subpath
 ```
 
 
-Pro získání NGINX a ERDDAP™ správně pracovat s https , budete muset dát následující úryvek do Tomcat server.xml <Host> Blok:
+Pro získání NGINX a ERDDAP™ správně pracovat s https , musíte dát následující úryvek do Tomcat server.xml ` <Host> ` blok:
 ```
 <Valve className="org.apache.catalina.valves.RemoteIpValve"
   remoteIpHeader="X-Forwarded-For"
@@ -443,14 +443,14 @@ Pro získání NGINX a ERDDAP™ správně pracovat s https , budete muset dát 
 
 *  (Nedoporučuji používat Tomcat Web Application Manager. Pokud úplně nevypnete a nespustíte Tomcat, dříve nebo později budete mít problémy s permGen pamětí.) 
 *  (V Linuxu nebo Mac OS, pokud jste vytvořili speciálního uživatele ke spuštění Tomcat, např. Tomcat, nezapomeňte udělat následující kroky jako tento uživatel.) 
-* Pokud Tomcat už běží, zavřete Tomcat s (v Linuxu nebo Mac OS) Křepelčí
-nebo (ve Windows) Tomcat\bin\\ shutdown.bat ?
+* Pokud Tomcat už běží, zavřete Tomcat s (v Linuxu nebo Mac OS)   `Tomcat/bin/shutdown.sh` 
+nebo (ve Windows)   `tomcat\bin\\ shutdown.bat ` 
 
-U Linuxu používejte trávu | grep tomcat ? před a po ? shutdown.sh , aby se ujistil, že tomcat proces se zastavil.
+U Linuxu použijte `ps -ef | grep tomcat` před a po `Vypnout. s` aby se ujistil, že proces tomcat přestal.
 Proces by měl být uveden před vypnutím a po vypnutí by nakonec nebyl uveden.
 To může trvat minutu nebo dvě pro ERDDAP™ úplně vypnuto. Buď trpělivý. Nebo pokud to vypadá, že to sám nezastaví, použijte:
-- 9 <processID> ?
-* Začněte s Tomcat (v Linuxu nebo Mac OS) nebo (ve Windows) Tomcat\bin\\ startup.bat ?
+   `zabít - 9 <processID> ` 
+* Začněte s Tomcat (v Linuxu nebo Mac OS)   `tomcat/bin/startup.sh` nebo (ve Windows)   `Tomcat\bin\\ startup.bat` 
 
 ## Je ERDDAP™ Běhat?{#is-erddap-running} 
 
@@ -462,15 +462,15 @@ Pro zobrazení použijte prohlížečhttp://www.YourServer.org/erddap/status.htm
 * Když přijde žádost uživatele, jde do Apache (na počítačích Linux a Mac OS) , pak Tomcat, pak ERDDAP™ .
 * Můžete vidět, co přijde do Apače (a související chyby) v záznamech Apache.
 *    [Ty.](/docs/server-admin/additional-information#tomcat-logs) může vidět, co přijde na Tomcat (a související chyby) 
-v souborech protokolu Tomcat (Tomcat/logs/catalina.out a další soubory v tomto adresáři) .
+v souborech protokolu Tomcat ( `Tomcat/logs/catalina.out` a další soubory v tomto adresáři) .
 *    [Ty.](/docs/server-admin/additional-information#log) může vidět, co přijde na ERDDAP , diagnostické zprávy z ERDDAP ,
-a chybové zprávy z ERDDAP , v ERDDAP™ ? <bigParentDirectory> /logs/log.txtçaise file.
+a chybové zprávy z ERDDAP , v ERDDAP™   ` <bigParentDirectory> /logs/log.txt` Složka.
 * Tomcat nezačíná. ERDDAP™ dokud Tomcat nedostane žádost o ERDDAP™ . Takže můžete vidět v záznamech Tomcat, pokud to
 Začalo ERDDAP™ nebo pokud existuje chybová zpráva související s tímto pokusem.
-* Kdy? ERDDAP™ Začíná to, přejmenovává staré ERDDAP™ log.txt soubor (Archived V <CurrentTime> .txt;) a vytvoří nový log.txt soubor.
-Takže pokud je soubor ¶log.txt'S starý, je to znamení, že ERDDAP™ Ještě se nevrátil. ERDDAP™ zapíše informace o záznamu do bufferu
+* Kdy? ERDDAP™ Začíná to, přejmenovává staré ERDDAP™ log.txt soubor ( `logArchivedAt <CurrentTime> .txt` ) a vytvoří nový log.txt soubor.
+Takže pokud `log.txt` soubor je starý, je to znamení, že ERDDAP™ Ještě se nevrátil. ERDDAP™ zapíše informace o záznamu do bufferu
 a pouze pravidelně píše buffer do log souboru, ale můžete nutit ERDDAP™ napsat buffer do souboru protokolu návštěvou
-? /erddap/status.html Ahoj.
+     ` /erddap/status.html ` .
 
 ### Problém: Stará verze Java  {#trouble-old-version-of-java} 
 
@@ -485,7 +485,7 @@ _some/class/name_: Unsupported major.minor version _someNumber_
 
 ### Problém: Pomalé spuštění poprvé{#trouble-slow-startup-first-time} 
 
-Tomcat musí udělat hodně práce, když poprvé aplikace jako ERDDAP™ je zahájena; zejména, že musí vybalit soubor
+Tomcat musí udělat hodně práce, když poprvé aplikace jako ERDDAP™ je zahájena; zejména musí vybalit `erddap.war` soubor
  (což je jako .zip soubor) . Na některých serverech, první pokus o zobrazení ERDDAP™ stánky (30 sekund?) Dokud ta práce neskončí.
 Na jiných serverech první pokus okamžitě selže. Ale když počkáte 30 sekund a zkusíte to znovu, uspěje to, pokud ERDDAP™ byla nainstalována správně.
 
@@ -507,18 +507,18 @@ Můžete se připojit k ERDDAP™ seznam oznámení [Tady.](https://groups.googl
 ## Přizpůsobit{#customize} 
 
 *  [Přizpůsobte si svůj ERDDAP™ zvýraznit vaši organizaci (ne NOAA   ERD ) .](#customize) 
-* Změňte banner, který se objeví nahoře ERDDAP™ .html Stránky editací ? <startBodyHtml5> Štítek ve vašem štítku datasets.xml Složka.
-(Pokud žádný není, zkopírujte výchozí z ERDDAP™ "s półtomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml] soubor
-do ? datasets.xml A upravte to.) Například byste mohli:
+* Změňte banner, který se objeví nahoře ERDDAP™ .html stránky editací ` <startBodyHtml5> ` tag in your ` datasets.xml ` Složka.
+(Pokud žádný není, zkopírujte výchozí z ERDDAP™ 's `Tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/ messages.xml` soubor
+do ` datasets.xml ` a upravit.) Například byste mohli:
   * Použít jiný obrázek (tj. logo vaší organizace) .
   * Změňte barvu pozadí.
   * Změna " ERDDAP™ "na "_VašeOrganizace_ ERDDAP™ "
   * Změňte "jednodušší přístup k vědeckým datům" na "jednodušší přístup k datům _YourOrganization_."
   * Změňte odkazy "Přivedl k vám" na odkazy na vaši organizaci a zdroje financování.
-* Změňte informace na levé straně domovské stránky editací této stránky. <theShortDescriptionHtml> Štítek ve vašem štítku datasets.xml Složka.
-(Pokud žádný není, zkopírujte výchozí z ERDDAP™ "s półtomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml] soubor
-do ? datasets.xml A upravte to.) Například byste mohli:
+* Změnit informace na levé straně domovské stránky editací ` <theShortDescriptionHtml> ` tag in your ` datasets.xml ` Složka.
+(Pokud žádný není, zkopírujte výchozí z ERDDAP™ 's `Tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/ messages.xml` soubor
+do ` datasets.xml ` a upravit.) Například byste mohli:
   * Popište, co vaše organizace a/nebo skupina dělá.
   * Popište jaká data to jsou. ERDDAP™ Ano.
-  * Chcete-li změnit ikonu, která se objeví na záložce prohlížeče, vložte do vaší organizace favicon. ico in troxicita/content/erddap/images/inhibition.
+  * Chcete-li změnit ikonu, která se objeví na záložce prohlížeče, vložte do vaší organizace favicon. ico in `Tomcat/content/erddap/images/` .
 Vizhttps://en.wikipedia.org/wiki/Favicon.

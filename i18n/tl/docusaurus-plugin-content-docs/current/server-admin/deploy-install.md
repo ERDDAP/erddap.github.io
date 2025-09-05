@@ -33,8 +33,8 @@ Kapansin - pansin, ERDDAP™ ay maaaring hindi matanggal ang mga talaksang delet
 Para sa seguridad, halos laging pinakamabuting gamitin ang pinakabagong bersiyon ng Java 21.
 Paki-download at i-install ang pinakabagong bersyon ng
     [Ang OpenJDK ng Pag - aampon (Temurin) 21 (MGA LTS) ](https://adoptium.net/temurin/releases/?version=21) .
-Upang matiyak ang instalasyon, patakbuhin ang `/javaJreBin Direktory/java - Conversion`, halimbawa,
-`/usr/local/jdk-21.0.3+9/jre/bin/java - Paglipat`.
+Upang matiyak ang instalasyon, tumakbo `/javaJreBin Direktory/java - Pagkumberte` , halimbawa
+    `/usr/local/jdk-21.0.3+9/jre/bin/java - Pagkumberte` .
 
     ERDDAP™ ay gumagawang kasama ng Java mula sa ibang pinagmulan, ngunit inirerekomenda namin ang Ampon dahil ito ang pangunahin, pampamayanang-suporta,
 malaya (gaya ng sa serbesa at pagsasalita) bersyon ng Java 21 na nagbibigay ng Pangmatagalang Suporta (libreng mga upgrade sa loob ng maraming taon pagkatapos ng panimulang paglabas) .
@@ -52,33 +52,33 @@ Maaari mong gamitin ang iba Java Tagapagsilbi (e.g., Jetty) , ngunit sinusubok l
 
    * I-download Tomcat at i-track ito sa iyong server o PC.
 Para sa mga kadahilanang panseguridad, halos laging pinakamabuting gamitin ang pinakabagong bersiyon ng Tomcat 10 (bersyon 9 at sa ibaba ay hindi tanggap) 
-na dinisenyo upang gumawang kasama ng Java 21 o mas bago. Sa ibaba, ang Tomcat directory ay tatawaging `tomcat`.
+na dinisenyo upang gumawang kasama ng Java 21 o mas bago. Sa ibaba, ang Tomcat directory ay tatawaging `tomcat` .
 
 _Warning&#33;____ Kung mayroon ka nang Tomcat na nagpapatakbo ng iba pang aplikasyon sa web (lalo nang MGA THEDD) , inirerekomenda namin na maglagay kayo ERDDAP™ sa loob
       [ikalawang Tomcat](/docs/server-admin/additional-information#second-tomcat) , dahil ERDDAP™ kailangan ng iba't ibang Tomcat setting
 at hindi dapat na makipagtalo sa iba pang aplikasyon para sa memorya.
 
      * Sa Linux, [I-download ang "Core" "tar" .gz " Pamamahagi ng Tomcat](https://tomcat.apache.org/download-10.cgi) at binuksan ito.
-Iminumungkahi namin ang pagbuklat nito sa `/usr/local`.
-     * Sa isang Mac, si Tomcat ay malamang na naka-install na sa `/Library/Tomcat`, ngunit dapat i-update ito sa pinakabagong bersyon ng Tomcat 10.
-Kung kukunin mo ito, [I-download ang "Core" "tar" .gz " Pamamahagi ng Tomcat](https://tomcat.apache.org/download-10.cgi) at i-unlock ito sa `/Library/Tomcat`.
+Iminumungkahi namin ang pagbuklat nito `/usr/local` .
+     * Sa isang Mac, si Tomcat ay malamang na naluklok na `/Libray/Tomcat` , ngunit dapat itong i-update sa pinakabagong bersyon ng Tomcat 10.
+Kung kukunin mo ito, [I-download ang "Core" "tar" .gz " Pamamahagi ng Tomcat](https://tomcat.apache.org/download-10.cgi) at binuksan ito `/Libray/Tomcat` .
      * Sa Windows, maaari mong gawin [I-download ang "Core" "zip" Tomcat distribution](https://tomcat.apache.org/download-10.cgi) 
         (Na hindi nakakaabala sa Windows register at na kontrolado mo sa isang DOS command line) at binuksan ito sa isang angkop na directory.
-        (Para sa pag-unlad, ginagamit natin ang "Core" na "zip" na pamamahagi. Gumagawa kami ng `/programs` directory at binubuksan ito roon.) 
+        (Para sa pag-unlad, ginagamit natin ang "Core" na "zip" na pamamahagi. Gumagawa kami ng isang `/ Mga program` directory at buksan doon.) 
 O maaari mong i-download ang "Core" na "64-bit Windows szill" distribution, na kinabibilangan ng higit pang mga katangian.
-Kung ang distribusyon ay isang Windows installer, malamang na ilalagay nito ang Tomcat, halimbawa, `/Program Files/apache-tomat-10.0.23`.
+Kung ang distribusyon ay isang Windows installer, malamang na ilagay nito si Tomcat, halimbawa, `/Program Files/palache-tomcat-10.0.23.` .
              
 ### server.xml{#serverxml} 
 
-*  [server.xml](#serverxml) - Sa `tomcat/conf/serserver.xml` file, may dalawang pagbabago na dapat mong gawin sa bawat isa sa dalawang ` <Connector> ` tags
-   (isa para sa `&lt;Connector port="8080"` at isa para sa `&lt;Conector port="8443"`) .
-   1.  (Inirerekomenda) Dagdagan ang `connectionTimeout` parameter, marahil hanggang 300000 (Mga millisecond, na 5 minuto) .
-   2.  (Inirerekomenda) Magdagdag ng bagong parameter: `relaxedQueryChars="[] | "`. Ito ay opsyonal at bahagyang hindi matatag,
+*  [server.xml](#serverxml) -Sa loob `tomcat/conf/server.xml` file, may dalawang pagbabago na dapat ninyong gawin sa bawat isa sa dalawa ` <Connector> ` mga tag
+   (isa para sa `&lt;Connektor port="8080"` at isa pa `&lt;Conector port="8443"` ) .
+   1.  (Inirerekomenda) Dagdagan ang `koneksyon Orasan` Halaga ng parameter, marahil hanggang 3000 (Mga millisecond, na 5 minuto) .
+   2.  (Inirerekomenda) Magdagdag ng bagong parameter: `Relaks="[] | "` . Ito ay opsyonal at bahagyang hindi matatag,
 ngunit nag-aalis ng pangangailangan para sa mga gumagamit na maging porsyento-encode ang mga karakter na ito kapag nangyari ito sa parameter ng kahilingan ng gumagamit na URL.
              
 ### nilalaman.xml{#contentxml} 
 
-* konteksto.xml -- Yaman Cach - In `tomcat/conf/context.xml`, sa mismong harap ng ` </Context> ` tag, palitan ang tag ng Yaman
+* konteksto.xml -- Pag - iimbak - ng - Yaman `tomcat/conf/context.xml` , sa mismong harap ng ` </Context> ` tag, palitan ang tag ng Yaman
    (o idagdag ito kung wala na ito) upang ayusin ang cache MaxSize parameter hanggang 80000:
   ```
   <Resources cachingAllowed="true" cacheMaxSize="80000" />
@@ -92,26 +92,26 @@ Iniiwasan nito ang maraming babala sa catalina. na ang lahat ay magsimula sa
 
 * Sa mga computer na Linux, baguhin ang mga timeout setting ng Apache upang ang time-consumting user requests ay huwag mag-oras
    (na kadalasang lumilitaw bilang isang "Proxy" o "Bad Gateway" error) . Bilang tagagamit ng ugat:
-  * Pasimplehin ang Apache ` http d.conf` file (karaniwang nasa `/etc/ http d/conf/ `) :
-    * Palitan ang umiiral na ` <Timeout> ` setting (o magdagdag ng isa sa dulo ng talaksan) hanggang 3600 (mga segundo) , sa halip ng default 60 o 120 segundo.
-    * Palitan ang umiiral na ` <ProxyTimeout> ` setting (o magdagdag ng isa sa dulo ng talaksan) hanggang 3600 (mga segundo) , sa halip ng default 60 o 120 segundo.
-  * Restart Apache: `/usr/sbin/apachectl -k Maganda ` (ngunit kung minsan ito ay nasa ibang directory) .
+  * Pagpapain sa Apache ` http d.conf` talaksan (karaniwang nasa `/etc/ http d/conf/` ) :
+    * Palitan ang umiiral ` <Timeout> ` tagpo (o magdagdag ng isa sa dulo ng talaksan) hanggang 3600 (mga segundo) , sa halip ng default 60 o 120 segundo.
+    * Palitan ang umiiral ` <ProxyTimeout> ` tagpo (o magdagdag ng isa sa dulo ng talaksan) hanggang 3600 (mga segundo) , sa halip ng default 60 o 120 segundo.
+  * Restart Apache: `/usr/sbin/apachectl -k Maganda`   (ngunit kung minsan ito ay nasa ibang directory) .
 
 ### Katiwasayan{#security} 
          
 * Mungkahing panseguridad: Tingnan [Ang mga tagubiling ito](https://tomcat.apache.org/tomcat-10.0-doc/security-howto.html) upang dagdagan ang seguridad ng
 ang iyong instalasyon ng Tomcat, lalo na para sa mga pampublikong server.
          
-* Para sa publiko ERDDAP™ Mga instalasyon sa Linux at Macs, pinakamabuting itayo ang Tomcat (ang programa) kabilang sa user `tomcat `
+* Para sa publiko ERDDAP™ Mga instalasyon sa Linux at Macs, pinakamabuting itayo ang Tomcat (ang programa) bilang pag - aari ng gumagamit `tomcat` 
    (isang hiwalay na gumagamit na may limitadong pahintulot at alin ang [walang password](https://unix.stackexchange.com/questions/56765/creating-an-user-without-a-password) ) .
-Kaya, tanging ang super user lamang ang maaaring bumaling sa pag-arte bilang user `tomcat`. Ginagawa nitong imposible para sa mga hacker na pumasok sa inyong server bilang gumagamit ng `tomcat`.
-At sa anumang kaso, dapat mong gawin ito upang ang gumagamit ng `tomcat` ay may napakalimitadong mga pahintulot sa sistema ng talaksan ng server (basahin ang+write+execute na mga pribilehiyo
-para sa punong `apache-tomcat` directory at ` <bigParentDirectory> ` at basahin-lamang na mga pribilehiyo para sa mga direktoryo na may datos na ERDDAP™ kailangan i-access).
-  * Maaari mong likhain ang `tomcat` user account (na walang password) sa pamamagitan ng paggamit sa utos:
+Sa gayon, tanging ang super user lamang ang maaaring bumaling sa pagkilos bilang gumagamit `tomcat` . Ginagawa nitong imposible para sa mga hacker na pumasok sa inyong server bilang gumagamit `tomcat` .
+At sa anumang kalagayan, dapat mong gawin ito upang ang `tomcat` Ang gumagamit ay may napakalimitadong mga pahintulot sa sistema ng talaksang server (basahin ang+write+execute na mga pribilehiyo
+para sa `apache-tomcat` punong directory at ` <bigParentDirectory> ` at bumasa-lamang mga pribilehiyo para sa mga direktoryo na may datos na ERDDAP™ kailangan i-access).
+  * Maaari mong likhain ang `tomcat` account ng gumagamit (na walang password) sa pamamagitan ng paggamit sa utos:
     ```
     sudo useradd tomcat -s /bin/bash -p '*'
     ```
-  * Maaari kang lumipat sa trabaho bilang gumagamit ng `tomcat` sa pamamagitan ng paggamit ng utos
+  * Maaari kang bumaling sa trabaho bilang gumagamit `tomcat` sa pamamagitan ng paggamit ng utos
     ```
     sudo su - tomcat
     ```
@@ -120,9 +120,9 @@ para sa punong `apache-tomcat` directory at ` <bigParentDirectory> ` at basahin-
     ```
     exit
     ````
-    * Gawin ang karamihan ng natitirang bahagi ng Tomcat at ERDDAP™ Nag-setup ng mga instruksiyon bilang user `tomcat`. Pagkatapos, patakbuhin ang `startup.sh` at `shutdown.sh` scripts bilang user `tomcat `
+    * Gawin ang karamihan ng natitirang bahagi ng Tomcat at ERDDAP™ Itakda ang mga instruksiyon bilang gumagamit `tomcat` . Pagkatapos, patakbuhin ang `startup.sh` at `Pagkasiphayo. sh` Mga iskrip bilang gumagamit `tomcat` 
 kung kaya't may pahintulot si Tomcat na sumulat sa mga log files nito.
-    * Pagkatapos ibuklat ang Tomcat, mula sa magulang ng `apache-tomcat` directory:
+    * Pagkatapos buksan ang Tomcat, mula sa magulang ng `apache-tomcat` directory:
       * Palitan ang pagmamay-ari ng puno ng apache-tomcat directory sa tomacat user.
         ```
         chown -R tomcat apache-tomcat-10.0.23
@@ -147,8 +147,8 @@ Mahalaga ito, sapagkat hinahadlangan nito ang ibang gumagamit na magbasa ng posi
 Itakda ang Kaibahang Kapaligiran ni Tomcat
 
 * Sa Linux at Macs:
-Gumawa ng talaksang `tomcat/bin/setenv.sh ` (o sa Red Hat Enterprise Linux \\[ RHEL \\] , editin ang `ifimcat/conf/tomcat10.confff. `) na magpabago sa kapaligiran ni Tomcat.
-Ang talaksang ito ay gagamitin ng `tomcat/bin/startup.sh` at `shutdown.sh`. Ang talaksan ay dapat na naglalaman ng gaya ng:
+Gumawa ng talaksan `tomcat/bin/setenv.sh`   (o sa Red Hat Enterprise Linux \\[ RHEL \\] , edit `~tomcat/conf/tomcat10.conff` ) na magpabago sa kapaligiran ni Tomcat.
+Ang talaksang ito ay gagamitin ng `tomcat/bin/startup.sh` at `Pagkasiphayo. sh` . Ang talaksan ay dapat na naglalaman ng gaya ng:
   ```
   export JAVA_HOME=/usr/local/jdk-21.0.3+9
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
@@ -156,12 +156,12 @@ Ang talaksang ito ay gagamitin ng `tomcat/bin/startup.sh` at `shutdown.sh`. Ang 
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
   ```
    (ngunit ihalili ang mga pangalan ng directory mula sa iyong computer) .
-   (Kung dati mong itinakda ang `JRE_HOME`, maaari mong alisin iyan.) 
-Sa Macs, marahil ay hindi mo na kailangang magtakda ng `JAVA_HOME`.
+   (Kung naunang set `HRE_HOME` , maaari mong alisin iyan.) 
+Sa Macs, marahil ay hindi mo na kailangang magtakda `JAVA_HOME` .
 
 * Sa Windows:
-Gumawa ng talaksang `tomcat\bin\\setenv.bat` upang itakda ang mga variables ng kapaligiran ni Tomcat.
-Ang talaksang ito ay gagamitin ng `tomcat\bin\\startup.bat` at `Tut` shutdown.bat `.
+Gumawa ng talaksan `tomcat\bin\\setenv.bat` na magpabago sa kapaligiran ni Tomcat.
+Ang talaksang ito ay gagamitin ng `tomcat\bin\\startup.bat` at ` shutdown.bat ` .
 Ang talaksan ay dapat na naglalaman ng gaya ng:
   ```
   SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
@@ -171,42 +171,42 @@ Ang talaksan ay dapat na naglalaman ng gaya ng:
   ```
    (ngunit ihalili ang mga pangalan ng directory mula sa iyong computer) .
 Kung ito ay para lamang sa lokal na pagsubok, tanggalin ang "-server".
-   (Kung dati mong itinakda ang `JRE_HOME`, maaari mong alisin iyan.) 
+   (Kung naunang set `HRE_HOME` , maaari mong alisin iyan.) 
 
-Ang `-Xmx` at `-Xms` memory settings ay mahalaga dahil ang `-Xms` memory settings ay mahalaga dahil ERDDAP™ ay mas mahusay sa pag - alaala.
-Laging itakda ang `-Xms` sa parehong halaga ng `-Xmx`.
+Ang `-Xmx` at `-Xms` Mahalaga ang mga setting ng memorya dahil ERDDAP™ ay mas mahusay sa pag - alaala.
+Laging Nakatakda `-Xms` katumbas ng halaga `-Xmx` .
 
 * Para sa 32 bit Operating Systems at 32 bit Java :
 64 bit Java ay mas mabuti kaysa 32 bit Java , ngunit 32 bit Java ay magtatrabaho hangga't ang server ay hindi talagang abala.
 Mientras mas maganda ang pisikal na memorya sa server, mas mabuti: 4+ Ang GB ay talagang mabuti, 2 GB ay okay, mas kaunti ay hindi inirerekomenda.
-May 32 bit Java , kahit na may saganang pisikal na memorya, Tomcat at Java ay hindi tatakbo kung ikaw ay magtatakda ng `-Xmx` na mas mataas sa 1500M (1200M sa ilang computer) .
-Kung ang iyong server ay wala pang 2GB ng memorya, bawasan ang halaga ng `-Xmx` (sa 'M'ega Byte) sa 1/2 ng pisikal na memorya ng kompyuter.
+May 32 bit Java , kahit na may saganang pisikal na memorya, Tomcat at Java hindi tatakbo kung ikaw ay magtatakda `-Xmx` mahigit 1500M (1200M sa ilang computer) .
+Kung ang iyong server ay wala pang 2GB ng memorya, bawasan ang iyong server `-Xmx` halaga (sa 'M'ega Byte) sa 1/2 ng pisikal na memorya ng kompyuter.
 
 * Sa 64 bit Operating Systems at 64 bit Java :
 64 bit Java ay magtatrabaho lamang sa 64 na bit operating system.
-  * Kasama Java 8, kailangan niyong idagdag ang `-d64` sa Tomcat `CATALINA_OPTS` parameter sa `setenv.bat`.
+  * Kasama Java 8, kailangan mong idagdag `-d64` sa Tomcat `MGA KATOTOTOHANAN NG CATALINA` ng parameter `setenv.bat` .
   * Kasama Java 21, pinili mo ang 64 bit Java kapag nag-download ka ng bersyon ng Java Minarkahan ng "64 bit".
 
-May 64 bit Java , Tomcat at Java ay maaaring gumamit ng napakataas na `-Xmx` at `-Xms` settings. Mientras mas mahusay ang pisikal na memorya sa server.
-Bilang isang simpleng mungkahi: inirerekomenda namin sa inyo ang `-Xmx` at `-Xms` to (sa 'M'ega Byte) sa 1/2 (o mas mababa) ng pisikal na memorya ng computer.
+May 64 bit Java , Tomcat at Java ay maaaring gumamit ng napakataas `-Xmx` at `-Xms` Mga tagpo. Mientras mas mahusay ang pisikal na memorya sa server.
+Bilang simpleng mungkahi: Iminungkahi namin sa inyo ang `-Xmx` at `-Xms` hanggang sa (sa 'M'ega Byte) sa 1/2 (o mas mababa) ng pisikal na memorya ng computer.
 Makikita mo kung Tomcat, Java , at ERDDAP™ ay tunay na tumatakbo sa 64 bit mode sa pamamagitan ng paghahanap ng "bakit," sa ERDDAP ' Araw - Araw na Report email
-o sa `bigParent Direktory/logs/ [log.txt](/docs/server-admin/additional-information#log) talaksang ` (Ang `bigParent Direktory` ay nakatakda sa [setup.xml](#setupxml) ) .
+o nasa `Malaking Direktoryo/logs/ [log.txt](/docs/server-admin/additional-information#log) ` talaksan ( `Malaking Direktoryo` ay nakatakda [setup.xml](#setupxml) ) .
 
 #### Koleksiyon ng Basura{#garbage-collection} 
 
 * Sa loob ERDDAP™ ' [log.txt](/docs/server-admin/additional-information#log) talaksan, makikita mo ang maraming "GC (Pagkabigo ng Pananakop) " mga mensahe.
 Karaniwan nang hindi ito problema. Ito ang madalas na mensahe mula sa isang normal na operasyon Java na katatapos lamang nito ng isang maliit na basura
 dahil wala itong silid sa Eden (bahagi ng Java magbunton para sa napakabatang mga bagay) . Karaniwan nang ipinakikita sa iyo ng mensahe
-`memoryUse Bago-&gt;memoryUse Pagkatapos ng`. Kung ang dalawang numerong iyon ay magkalapit, nangangahulugan ito na ang koleksiyon ng basura ay hindi mabunga.
+   `memoryUse Bago-&gt;memoryUse Pagkatapos` . Kung ang dalawang numerong iyon ay magkalapit, nangangahulugan ito na ang koleksiyon ng basura ay hindi mabunga.
 Ang mensahe ay tanda lamang ng problema kung ito ay napakadalas (bawat ilang segundo) , hindi mabunga, at ang bilang ay malaki at hindi lumalaki,
 na magkasamang nagpapakita na Java Kailangan ang higit pang memorya, ang pagsisikap na alisin ang memorya, at hindi kayang alisin ang memorya.
 Ito ay maaaring mangyari sa isang maigting na panahon, pagkatapos ay umalis. Subalit kung ito ay magpapatuloy, iyan ay isang tanda ng problema.
-* Kung makikita mo ang `java.lang.OOOOOfMemoryError`s in ERDDAP™ ' [log.txt](/docs/server-admin/additional-information#log) talaksan,
+* Kung makita mo `java.lang.OOOutOMemoryEror` sa loob ng ERDDAP™ ' [log.txt](/docs/server-admin/additional-information#log) talaksan,
 tingnan [Labas ng MemoryError](/docs/server-admin/additional-information#outofmemoryerror) kung paano susuriin at lulutasin ang mga problema.
          
 ### Mga Pagpapahintulot{#permissions} 
 
-*  [Sa Linux at Macs, baguhin ang mga pahintulot](#permissions) ng lahat ng `*.sh` files in `tomcat/bin/` upang i-executable ng may-ari:
+*  [Sa Linux at Macs, baguhin ang mga pahintulot](#permissions) sa lahat `*.sh` ipinasok sa talaksan `tomcat/bin/` Na mapanunumpa ng may-ari:
   ```
   chmod +x *.sh
   ```
@@ -216,18 +216,18 @@ tingnan [Labas ng MemoryError](/docs/server-admin/additional-information#outofme
 *  [Mga larawan:](#fonts) Mas gusto namin ang libre [Mga font ng DejaVu](https://dejavu-fonts.github.io/) sa isa pa Java Mga font.
 Ang paggamit ng mga font na ito ay mahigpit na inirerekomenda ngunit hindi kinakailangan.
 
-Kung hindi mo gagamitin ang mga font ng DejaVu, kailangan mong baguhin ang font familyfamily setting sa setup.xml hanggang ` <fontFamily> Sassirif </fontFamily> `,
-na makukuha ng lahat Java distribusyon. Kung itatakda mo ang ` <fontFamily> ` sa pangalan ng font na hindi magagamit, ERDDAP™ ay hindi magkakarga
-at maglilimbag ng listahan ng magagamit na mga font sa talaksang `log.txt`. Dapat mong gamitin ang isa sa mga font na iyon.
+Kung hindi mo gagamitin ang mga font ng DejaVu, kailangan mong palitan ang font familyfamily setting sa setup.xml ` <fontFamily> Sassirif </fontFamily> ` ,
+na makukuha ng lahat Java distribusyon. Kung ikaw ang nagtatakda ` <fontFamily> ` Sa pangalan ng isang font na hindi magagamit, ERDDAP™ ay hindi magkakarga
+at mag - iimprenta ng listahan ng magagamit na mga font sa `log.txt` talaksan. Dapat mong gamitin ang isa sa mga font na iyon.
 
-Kung pipiliin mong gamitin ang mga font ng DejaVu, pakisuyong tiyakin ang ` <fontFamily> `paglalagay sa setup.xml ay ` <fontFamily> Mga San ng DejaVu </fontFamily> `.
+Kung pipiliin mong gamitin ang mga font ng DejaVu, pakisuyong tiyakin ang mga ito ` <fontFamily> ` Pagtatakda sa setup.xml ay ` <fontFamily> Mga San ng DejaVu </fontFamily> ` .
 
 Upang mailuklok ang mga font ng DejaVu, pakisuyong download [Mga DejaVuFont .zip ](/DejaVuFonts.zip)   (5,522,795 bytes, MD5=33E61FAB6A547851ED308B4FFFF42) 
 at itapon ang font files sa isang temporary directory.
 
   * Sa Linux:
     * Para sa Linux Pag - aampon Java mga distribusyon, tingnan [Ang mga tagubiling ito](https://blog.adoptopenjdk.net/2021/01/prerequisites-for-font-support-in-adoptopenjdk/) .
-    * Kasama ng iba Java mga distribusyon: Bilang gumagamit ng `tomcat`, kopyahin ang font files sa `$JAVA_HOME/lib/fonts` kaya Java ay mahahanap ang fonts.
+    * Kasama ng iba Java mga distribusyon: Bilang ang `tomcat` gumagamit, kopyahin ang font files `$JAVA_HOME/lib/fonts` gayo'y Java ay mahahanap ang fonts.
 Tandaan: kung/kapag nag-upgrade ka mamaya sa mas bagong bersyon ng Java , kailangan mong ilagay muli ang mga font na ito.
   * Sa Macs: sa bawat font file, dobleng klik dito at pagkatapos ay i-install ang Font.
   * Sa Windows 7 at 10: sa Windows Explorer, piliin ang lahat ng font files. Klik. Click na naka-install.
@@ -236,10 +236,10 @@ Tandaan: kung/kapag nag-upgrade ka mamaya sa mas bagong bersyon ng Java , kailan
 
 * Subukin ang iyong instalasyon ng Tomcat.
   * Linux:
-    * Bilang tagagamit na "tomcat", patakbuhin ang `tomcat/bin/startup.sh`.
+    * Bilang gumagamit ng "tomcat", tumakbo `tomcat/bin/startup.sh` .
     * Tingnan ang iyong URL + ":8080/" sa iyong browser (e.g., [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac (ay tumatakbo upang maging ang tagapangasiwa ng sistema) :
-    * Itakbo ang `tomcat/bin/startup.sh`.
+    * Takbo `tomcat/bin/startup.sh` .
     * Tingnan ang iyong URL + ":8080/" sa iyong browser (e.g., [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Pansinin na sa hindi pagtupad, ang iyong Tomcat ay mararating mo lamang. Hindi ito maaaring puntahan ng publiko.
   * Windows localhost:
@@ -248,7 +248,7 @@ Pansinin na sa hindi pagtupad, ang iyong Tomcat ay mararating mo lamang. Hindi i
 
 Dapat mong tingnan ang Tomcat "Criise" page.
 
-Kung may gulo, tingnan ang log file ng Tomcat sa `tomcat/logs/catalina.out`.
+Kung may problema, tingnan ang log file ng Tomcat `tomcat/logs/catalina.out` .
 
 ### Mga problema sa instalasyon ng Tomcat?{#troubles-with-the-tomcat-installation} 
 
@@ -265,10 +265,10 @@ Iyan ay dapat na bumalik sa isang linya na may katulad na:
   tcp 0 0 :::8080 :::* LISTEN ## ##### ####/java
   ```
 
-   (kung saan ang `#` ay numero) , nagpapahiwatig na isang proseso ng `java` (Malamang na Tomcat) ay nakikinig sa port "8080" para sa "tcp" traffic.
+   (kung saan `#` ay numero) , nagpapahiwatig na isang `juva` proseso (Malamang na Tomcat) ay nakikinig sa port "8080" para sa "tcp" traffic.
 Kung walang ibinalik na mga linya, kung ang linya ay bumalik ay lubhang magkaiba, o kung ang dalawa o higit pang mga linya ay ibabalik, kung gayon maaaring magkaroon ng problema sa mga setting ng daungan.
 
-* Tingnan ang Tomcat log file `tomcat/logs/catalina.out`. Mga problema sa paggamot at ilan ERDDAP™ Ang mga problema sa simula ay halos laging ipinakikita roon.
+* Tingnan ang log file ng Tomcat `tomcat/logs/catalina.out` . Mga problema sa paggamot at ilan ERDDAP™ Ang mga problema sa simula ay halos laging ipinakikita roon.
 Karaniwan na ito kapag una kang nagtayo ERDDAP™ .
 
 * Tingnan ang [Tomcat](https://tomcat.apache.org/) website o maghanap ng tulong sa web, pero pakisuyong ipaalam sa amin ang mga problema ninyo at ang mga solusyong nakita ninyo.
@@ -276,9 +276,9 @@ Karaniwan na ito kapag una kang nagtayo ERDDAP™ .
 * Tingnan ang [sa pagkuha ng karagdagang suporta](/docs/intro#support) .
              
 ###  ERDDAP™ Nasisiyahan{#erddap-content} 
-3.   [Iayos ang `tomcat/content/erddap`confix files.](#erddap-content) 
+3.   [Itakda ang `tomcat/content/erddap` Iayos ang mga file.](#erddap-content) 
 Sa Linux, Mac, at Windows, download [ErddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
-at i-unzip ito sa `tomcat` directory, na lumilikha ng `tomcat/content/erddap`.
+at ibabad sa loob `tomcat` directory, paglikha `tomcat/content/erddap` .
 
 __Version 1.0.0, 20333 bytes, MD5=2B8D2A5ED73E42B529C168C60B5, na may petsang 429 2024-10-14__
 
@@ -294,24 +294,24 @@ May ilang naunang bersyon din:
 
 Para sa Red Hat Enterprise Linux (RHEL) o para sa ibang sitwasyon kung saan hindi ka pinapayagang baguhin ang Tomcat directory o kung saan mo nais/kailangan
 upang ilagay ang ERDDAP™ directory sa ibang lugar sa ibang kadahilanan (Halimbawa, kung gumagamit ka ng Jetty sa halip na Tomcat) ,
-dizip `erddapCont .zip ` sa nais na directory (na ang gumagamit lamang ng `tomcat` ang may access) at inilagay ang ` erddapContentDirectory ` system property
- (e.g. ` erddapContentDirectory  =~tomcat/content/erddap `) gayo'y ERDDAP™ ay makasusumpong ng bagong talaang ito ng nilalaman.
+dizip `ErddapContent .zip ` sa nais na directory (na yaon lamang `tomcat` may access ang gumagamit) at itinakda ang ` erddapContentDirectory ` pag - aari ng sistema
+ (e.g. ` erddapContentDirectory  =~tomcat/content/erddap ` ) gayo'y ERDDAP™ ay makasusumpong ng bagong talaang ito ng nilalaman.
 
 ### setup.xml{#setupxml} 
 
-*  [Basahin ang mga komento sa `tomcat/content/erddap/setup.xml `](#setupxml) at gawin ang hiniling na mga pagbabago. Ang setup.xml ay ang file na may lahat ng settings na nagtatakda kung paano ang iyong ERDDAP™ ay gumagawi.
+*  [Basahin ang mga komento sa `tomcat/content/erddap/setup.xml` ](#setupxml) at gawin ang hiniling na mga pagbabago. Ang setup.xml ay ang file na may lahat ng settings na nagtatakda kung paano ang iyong ERDDAP™ ay gumagawi.
 
 Para sa panimulang setup, baguhin mo sa paano man ang mga tagpong ito:
-      * ` <bigParentDirectory> `
-      * ` <emailEverythingTo> `
-      * ` <baseUrl> `
-      * ` <email...> `Mga setting
-      * ` <admin...> `Mga setting
-      * ` <baseHttpsUrl> ` (kapag ikaw ay nagtayo https ) 
+      *  ` <bigParentDirectory> ` 
+      *  ` <emailEverythingTo> ` 
+      *  ` <baseUrl> ` 
+      *  ` <email...> ` Mga kalagayan
+      *  ` <admin...> ` Mga kalagayan
+      *  ` <baseHttpsUrl> `   (kapag ikaw ay nagtayo https ) 
 
 Kapag nililikha mo ang malaking Direktoryo ng Party, mula sa magulang na directory ng BigParent Direktory:
 
-    * Gawin ang `tomcat` user ang may-ari ng `bigParent Direktory`:
+    * Gawin ang `tomcat` gamitin ang may - ari ng `Malaking Direktoryo` :
       ```
       chown -R tomcat bigParentDirectory
       ```
@@ -332,7 +332,7 @@ sa loob ERDDAP™ Mga log file at file na may impormasyon tungkol sa mga pribado
 ### Kakaibang Kapaligiran{#environment-variables} 
 
 Pasimula sa ERDDAP™ v2.13, ERDDAP™ Maaaring pawalang-bisa ng mga administrador ang anumang halaga sa setup.xml sa pamamagitan ng pagtatakda ng isang kapaligirang variable
-pangalang ` ERDDAP _KahalagahangName` bago tumakbo ERDDAP™ . Halimbawa, gamitin ang ` ERDDAP Nilulupig ni _baseUrl` ang ` <baseUrl> `halaga.
+Pangalan ` ERDDAP _Kahalagahan` bago tumakbo ERDDAP™ . Halimbawa, gamitin ` ERDDAP _baseUrl` ang nangingibabaw sa ` <baseUrl> ` halaga.
 Ito'y kapaki - pakinabang kapag naglalagay ERDDAP™ na may lalagyan na gaya ng Docker, yamang maaari mong ilagay ang karaniwang setting sa setup.xml
 at pagkatapos ay maglaan ng pantanging mga tanawin sa pamamagitan ng iba't ibang kapaligiran. Kung magbibigay ka ng lihim na impormasyon ERDDAP™ sa pamamagitan ng pamamaraang ito,
 tiyakin na ang impormasyon ay mananatiling lihim. ERDDAP™ basahin lamang ang kapaligiran na pabagu - bago minsan sa bawat simula,
@@ -342,22 +342,22 @@ maghintay hanggang sa ERDDAP™ ay sinisimulan, pagkatapos ay hindi pa naitatakd
 ###  datasets.xml  {#datasetsxml} 
 
 * Basahin ang mga komento sa [ **Paggawang kasama ng mga kapatid datasets.xml Larawan** ](/docs/server-admin/datasets) . Sa kalaunan, pagdating mo ERDDAP™ tumatakbo
-sa unang pagkakataon (karaniwang kasama lamang ang default datasets) , babaguhin mo ang XML sa `tomcat/content/erddap/ datasets.xml `
+sa unang pagkakataon (karaniwang kasama lamang ang default datasets) , babaguhin mo ang XML sa `tomcat/content/erddap/ datasets.xml ` 
 upang tiyakin ang lahat ng datos na gusto mo ERDDAP™ upang maglingkod. Dito mo gugugulin ang malaking bahagi ng iyong panahon
 habang nagtatayo ERDDAP™ at mamaya habang pinananatili ang iyong ERDDAP™ .
 
 Makikita mo ang isang halimbawa [ datasets.xml tungkol sa GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml) .
      
 *  (Di - inaasahan) Ngayon o (bahagyang malamang) sa hinaharap, kung nais mong baguhin ang talaksang CSS ng erddap, kopya
-`tomcat/content/erddap/images/erddapStart2.cs` to `tomcat/content/erddap/images/erddap2.cs` at pagkatapos ay gumawa ng mga pagbabago rito.
-Ang mga pagbabago sa `erddap2.css` ay nangyayari lamang kapag ang ERDDAP™ ay muling naka-arte at kadalasan ay nangangailangan din ang gumagamit na alisin ang mga screw na file ng browser.
+   `tomcat/content/erddap/images/erddapStart2.cs` hanggang sa `tomcat/content/erddap/images/erddap2.cs` at pagkatapos ay gumawa ng mga pagbabago rito.
+Mga Pagbabago `erddap2.cs` saka lamang makaaapekto kapag ERDDAP™ ay muling naka-arte at kadalasan ay nangangailangan din ang gumagamit na alisin ang mga screw na file ng browser.
      
  ERDDAP™ hindi gagana nang wasto kung ang setup.xml o datasets.xml Ang talaksan ay hindi isang mahusay-pormal na talaksang XML. Kaya, pagkatapos mong ayusin ang mga file na ito,
 Ito ay isang mabuting ideya upang kumpirmahin na ang resulta ay maayos na XML sa pamamagitan ng paglalagay ng teksto ng XML sa isang XML checker tulad ng XML [Paglaganap ng xmlvalid](https://www.xmlvalidation.com/) .
      
 ### Iluklok ang erddap. talaksang digmaan{#install-the-erddapwar-file} 
 
-4. Sa Linux, Mac, at Windows, _download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) _ ilagay sa `tomcat/webapps`:
+4. Sa Linux, Mac, at Windows, _download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) _ ilagay `tomcat/webapps` :
 
 __Version 2.28.1, 622,676,238 bytes, MD5=48b42260450c8d69ef9521bbc9, na may petsang 2025-09-05__
 
@@ -382,14 +382,14 @@ Ang paghinto ng SSL/TLS ay kadalasang binabaklas din sa webserver proxy layer. A
 
 #### Apache{#apache} 
 
-1. Tiyakin na ang `mod_proxy` at `mod_proxy_ http Nakakarga ang `:
+1. Tiyakin na `mod_proxy` at `mod_proxy_ http ` ay may karga:
 
 ```
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 ```
 
-2. Pasimplehin ang umiiral na ` <VirtualHost> ` tag (kung may isa) , o magdagdag ng isa sa dulo ng talaksan:
+2. Bigyang - diin ang umiiral ` <VirtualHost> ` tag (kung may isa) , o magdagdag ng isa sa dulo ng talaksan:
 ```
 <VirtualHost *:80>
    ServerName YourDomain.org
@@ -400,15 +400,15 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 </VirtualHost>
 ```
 
-Kung ERDDAP™ ay sinisilbi sa isang landas maliban sa `/erddap`, itinakda rin ang `X-Forwarded-Prefix` header sa `X-Forwarded-Prefix` header
-Bahagi ng landas _Bago ang_ `/erddap`. Ang tagpong ito ay angkop para sa isang ERDDAP™ hain
-`/subpath/erddap`:
+Kung ERDDAP™ ay inihahain sa ibang landas `/erddap` , itinakda rin ang `X-Forwarded-Prefix` ulo patungo sa
+Bahagi ng landas _Bago ang_ `/erddap` . Ang tagpong ito ay angkop para sa isang ERDDAP™ hain
+ `/subpath/erdap` :
 
 ```
 RequestHeader set X-Forwarded-Prefix /subpath
 ```
 
-3. Pagkatapos ay restart Apache: `/usr/sbin/apachectl -k Maganda ` (ngunit kung minsan ito ay nasa ibang directory) .
+3. Pagkatapos ay ulitin ang Apache: `/usr/sbin/apachectl -k Maganda`   (ngunit kung minsan ito ay nasa ibang directory) .
          
 #### GAINX{#nginx} 
 
@@ -422,16 +422,16 @@ proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
 proxy_set_header X-Forwarded-Proto $scheme;
 ```
 
-Kung ERDDAP™ ay sinisilbi sa isang landas maliban sa `/erddap`, itinakda rin ang `X-Forwarded-Prefix` header sa `X-Forwarded-Prefix` header
-Bahagi ng landas _Bago ang_ `/erddap`. Ang tagpong ito ay angkop para sa isang ERDDAP™ hain
-`/subpath/erddap`:
+Kung ERDDAP™ ay inihahain sa ibang landas `/erddap` , itinakda rin ang `X-Forwarded-Prefix` ulo patungo sa
+Bahagi ng landas _Bago ang_ `/erddap` . Ang tagpong ito ay angkop para sa isang ERDDAP™ hain
+ `/subpath/erdap` :
 
 ```
 proxy_set_header X-Forwarded-Prefix /subpath
 ```
 
 
-Upang makakuha ng NGINX at ERDDAP™ gumagawa nang tama https , kailangan mong ilagay ang sumusunod na snippet sa loob ng Tomcat server.xml ` <Host> ` block:
+Upang makakuha ng NGINX at ERDDAP™ gumagawa nang tama https , kailangan mong ilagay ang sumusunod na snippet sa loob ng Tomcat server.xml ` <Host> ` bloke:
 ```
 <Valve className="org.apache.catalina.valves.RemoteIpValve"
   remoteIpHeader="X-Forwarded-For"
@@ -443,14 +443,14 @@ Upang makakuha ng NGINX at ERDDAP™ gumagawa nang tama https , kailangan mong i
 
 *  (Hindi ko inirerekomenda ang paggamit ng Tomcat Web Application Manler. Kung hindi mo lubusang aalisin at sisimulan ang Tomcat, sa malao't madali ay magkakaroon ka ng mga isyu sa memorya ng PermGen.) 
 *  (Sa Linux o Mac OS, kung nakalikha ka na ng isang pantanging tagagamit upang patakbuhin ang Tomcat, e.g., tomcat, tandaan na gawin ang sumusunod na mga hakbang gaya ng gumagamit na iyon.) 
-* Kung tumatakbo na si Tomcat, isara ang Tomcat kasama si Tomcat (sa Linux o Mac OS) `tomcat/bin/shutdown.sh`
-o (sa Windows) `Tomcat\bin\\ shutdown.bat `
+* Kung tumatakbo na si Tomcat, isara ang Tomcat kasama si Tomcat (sa Linux o Mac OS)   `tomcat/bin/shutdown.sh` 
+o (sa Windows)   `tomcat\bin= shutdown.bat ` 
 
-Sa Linux, gumamit ng `ps -ef | Ang grep tomcat` bago at pagkatapos ng `shutdown.sh` upang matiyak ang proseso ng tomcat ay tumigil na.
+Sa Linux, gamitin `ps -ef | Tusong tomcat` bago at pagkatapos `Pagkasiphayo. sh` upang matiyak na ang proseso ng tomcat ay huminto na.
 Ang proseso ay dapat na itala bago ang paghinto at sa wakas ay hindi itala pagkatapos ng paghinto.
 Maaaring kumuha ng isa o dalawang minuto para rito ERDDAP™ upang lubusang magsara. Maging matiyaga. O kung parang hindi ito hihinto sa ganang sarili, gamitin ito:
-`kill -9 <processID> `
-* Magsimula Ka sa Tomcat (sa Linux o Mac OS) `tomcat/bin/startup.sh` o (sa Windows) `Tomcat\bin\\startup.bat `
+   `-9 <processID> ` 
+* Magsimula Ka sa Tomcat (sa Linux o Mac OS)   `tomcat/bin/startup.sh` o (sa Windows)   `tomcat\bin\\startup.bat` 
 
 ## Ay ERDDAP™ tumatakbo?{#is-erddap-running} 
 
@@ -462,15 +462,15 @@ Gumamit ng browser para makitahttp://www.YourServer.org/erddap/status.html.
 * Kapag may dumating na kahilingan mula sa gumagamit, nagtutungo ito sa Apache (sa mga computer ng Linux at Mac OS) , pagkatapos Tomcat, pagkatapos ERDDAP™ .
 * Makikita mo kung ano ang nangyayari sa Apache (at kaugnay na mga pagkakamali) sa mga log file ng Apache.
 *    [Ikaw](/docs/server-admin/additional-information#tomcat-logs) kung ano ang nangyayari kay Tomcat (at kaugnay na mga pagkakamali) 
-sa mga log file ng Tomcat (`tomcat/logs/catalina.out` at iba pang files sa directory na iyon) .
+sa mga log file ng Tomcat ( `tomcat/logs/catalina.out` at iba pang files sa directory) .
 *    [Ikaw](/docs/server-admin/additional-information#log) kung ano ang nangyayari ERDDAP , suriin ang mga mensahe mula sa ERDDAP ,
-at mga maling mensahe mula sa ERDDAP , sa loob ERDDAP™ ` <bigParentDirectory> /logs/log.txt` file.
+at mga maling mensahe mula sa ERDDAP , sa loob ERDDAP™   ` <bigParentDirectory> /log/log.txt` talaksan.
 * Hindi nagsisimula si Tomcat ERDDAP™ hanggang sa makuha ni Tomcat ang kahilingan ERDDAP™ . Kaya makikita mo sa Tomcat log files kung ito ay
 nagsimula ERDDAP™ o kung may maling mensahe na nauugnay sa pagtatangkang iyon.
-* Kailan ERDDAP™ Nagsisimula, binabago nito ang pangalan ng matanda ERDDAP™ log.txt file (`logArchived Nasa <CurrentTime> .txt`) at lumilikha ng bagong log.txt file.
-Kaya kung ang `log.txt` file ay luma na, ito ay tanda na ERDDAP™ ay hindi na muling nag - aral kamakailan. ERDDAP™ Sumulat ng log info sa isang neutralidad
+* Kailan ERDDAP™ Nagsisimula, binabago nito ang pangalan ng matanda ERDDAP™ log.txt file ( `Nilagyan ng logArchive <CurrentTime> .txt` ) at lumilikha ng bagong log.txt file.
+Kaya kung gayon `log.txt` Ang talaksan ay luma na, ito ay tanda na ERDDAP™ ay hindi na muling nag - aral kamakailan. ERDDAP™ Sumulat ng log info sa isang neutralidad
 at isulat mo lamang paminsan - minsan ang buffer sa log file, ngunit maaari kang pilitin ERDDAP™ upang isulat ang pananggalang sa log file sa pamamagitan ng pagdalaw
-` /erddap/status.html `.
+     ` /erddap/status.html ` .
 
 ### Suliranin: Lumang Aklat ng Java  {#trouble-old-version-of-java} 
 
@@ -485,7 +485,7 @@ Ang solusyon ay i - update ang pinakabagong bersiyon ng Java at tiyakin na ginag
 
 ### Suliranin: Mabagal na Unang Pagsisimula{#trouble-slow-startup-first-time} 
 
-Kailangang magtrabaho nang husto si Tomcat sa unang pagkakataon ng aplikasyon na gaya ng ERDDAP™ ay sinisimulan; lalo na, kailangang buksan nito ang `erddap.war` file
+Kailangang magtrabaho nang husto si Tomcat sa unang pagkakataon ng aplikasyon na gaya ng ERDDAP™ ay sinisimulan; lalo na, kailangang buksan nito ang mga pakete `erddap.war` talaksan
  (na parang .zip talaksan) . Sa ilang server, ang unang pagtatangkang magmasid ERDDAP™ mga puwesto (30 segundo?) hanggang sa matapos ang gawaing ito.
 Sa ibang server, ang unang pagtatangka ay mabibigo agad. Subalit kung maghihintay ka ng 30 segundo at sisikaping muli, magtatagumpay ito kung ERDDAP™ ay tamang ikinabit.
 
@@ -507,18 +507,18 @@ maaari kang sumali ERDDAP™ listahan ng mga patalastas [dito](https://groups.go
 ## Kaugalian{#customize} 
 
 *  [Gawing kaugalian ang iyong ERDDAP™ upang itampok ang inyong organisasyon (hindi NOAA   ERD ) .](#customize) 
-* Palitan ang baner na nasa itaas ng lahat ERDDAP™ .html page sa pamamagitan ng pag-aayos ng ` <startBodyHtml5> ` tag sa iyong ` datasets.xml ` file.
-( Kung walang isa man, kopyahin ang default mula sa ERDDAP™ ''s `tomcat/webapps/erddap/WEB-INF/class/gov/noa/pfel/erddap/util/mesages.xml` talaksan
-sa ` datasets.xml ` at ayusin.) Halimbawa, maaari mong sabihin:
+* Palitan ang baner na nasa itaas ng lahat ERDDAP™ .html pahina sa pamamagitan ng pag - aayos ng mga pahina ` <startBodyHtml5> ` tag sa iyong tag ` datasets.xml ` talaksan.
+( Kung walang isa man, kopyahin ang default mula sa ERDDAP™ ' `tomcat/webapps/erddap/WEB-INF/classes/gov/noa/pfel/erddap/util/messages.xml` talaksan
+sa loob ` datasets.xml ` at ayusin ito.) Halimbawa, maaari mong sabihin:
   * Gumamit ng ibang larawan (I.e., logo ng inyong organisasyon) .
   * Palitan ang kulay sa likuran.
   * Pagbabago " ERDDAP™ " to "_Youganization_'s ERDDAP™ "
   * Palitan ang "Easier access sa datos ng agham" sa "Easier access of _Organization_'s data".
   * Palitan ang "Brought to you sa pamamagitan ng" links upang maging links sa iyong organisasyon at mga mapagkukunan ng pondo.
-* Palitan ang impormasyon sa kaliwang panig ng home page sa pamamagitan ng pag - aayos ng ` <theShortDescriptionHtml> ` tag sa iyong ` datasets.xml ` file.
-( Kung walang isa man, kopyahin ang default mula sa ERDDAP™ ''s `tomcat/webapps/erddap/WEB-INF/class/gov/noa/pfel/erddap/util/mesages.xml` talaksan
-sa ` datasets.xml ` at ayusin.) Halimbawa, maaari mong sabihin:
+* Palitan ang impormasyon sa kaliwang bahagi ng home page sa pamamagitan ng pagsasaayos ng ` <theShortDescriptionHtml> ` tag sa iyong tag ` datasets.xml ` talaksan.
+( Kung walang isa man, kopyahin ang default mula sa ERDDAP™ ' `tomcat/webapps/erddap/WEB-INF/classes/gov/noa/pfel/erddap/util/messages.xml` talaksan
+sa loob ` datasets.xml ` at ayusin ito.) Halimbawa, maaari mong sabihin:
   * Ilarawan kung ano ang ginagawa ng iyong organisasyon at/o grupo.
   * Ilarawan kung anong uri ng datos ito ERDDAP™ na ngayon.
-  * Upang baguhin ang larawan na lumilitaw sa mga buslo, ilagay ang favicon ng inyong organisasyon. ico sa `tomcat/content/erddap/images/`.
+  * Upang baguhin ang larawan na lumilitaw sa mga buslo, ilagay ang favicon ng inyong organisasyon. Ico sa `tomcat/content/erddap/images/images/` .
 Tingnanhttps://en.wikipedia.org/wiki/Favicon.

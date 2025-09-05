@@ -1082,6 +1082,31 @@ class BracesMatcher:
     processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + self.match.group(0) + " {" + str(len(processed_line["translate_text"]) -1) + "}")
     return processed_line
   
+class InlineCodeMatcher:
+  def getMatch(self, chunk):
+    self.match = re.search(r"`(.*?)`", chunk)
+  def getStart(self):
+    if self.match:
+        return self.match.start()
+    else:
+        return -1
+  def getEnd(self):
+    if self.match:
+        return self.match.end()
+    else:
+        return -1
+  def processMatch(self, processed_line, idx, chunk):
+    # before tag text
+    processed_line["translate_text"][idx] = chunk[:self.match.start()]
+    # The match text
+    processed_line["translate_text"].append(self.match.group(1))
+    # text after the tag
+    processed_line["translate_text"].append(chunk[self.match.end():])
+    # update format {idx} -> {idx} + "*" + {length-1} + "*" + "{length-2}"
+    placeholder = "{"+ str(idx) +"}"
+    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + " `" + "{" + str(len(processed_line["translate_text"]) -2) + "}` {"  + str(len(processed_line["translate_text"]) -1) + "}")
+    return processed_line
+  
 class UrlMatcher:
   def getMatch(self, chunk):
     self.match = re.search(r"(?:http|https|ftp)://[^ \)<]+(?<![.,?!])", chunk)
@@ -1114,6 +1139,7 @@ markdown_matchers = [
     StarEmphasisMatcher(),
     BoldMatcher(),
     ItalicMatcher(),
+    InlineCodeMatcher(),
     ParenthesisMatcher(),
     UrlMatcher(),
 ]

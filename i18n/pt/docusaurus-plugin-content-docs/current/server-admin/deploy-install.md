@@ -33,8 +33,8 @@ nomeadamente, ERDDAP™ pode ser incapaz de excluir e / ou renomear arquivos rap
 Por razões de segurança, é quase sempre melhor usar a versão mais recente do Java 21.
 Por favor, baixe e instale a última versão do
     [OpenJDK do adotivo (Temurin) 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
-Para verificar a instalação, execute `/javaJreBinDirectory/java -version`, por exemplo
-`/usr/local/jdk-21.0.3+9/jre/bin/java -versão.
+Para verificar a instalação, execute `/javaJreBinDirectory/java -versão` Por exemplo
+    `/usr/local/jdk-21.0.3+9/jre/bin/java -versão` .
 
     ERDDAP™ trabalhos com Java de outras fontes, mas recomendamos o Adotivo porque é o principal, apoiado pela comunidade,
 grátis (como em cerveja e fala) versão de Java 21 que oferece suporte de longo prazo (atualizações gratuitas por muitos anos após a versão inicial) .
@@ -52,33 +52,33 @@ Você pode usar outro Java Servidor de Aplicação (por exemplo, Jetty) Mas só 
 
    * Faça o download do Tomcat e descompacte-o em seu servidor ou PC.
 Por razões de segurança, é quase sempre melhor usar a versão mais recente do Tomcat 10 (versão 9 e abaixo não são aceitáveis) 
-que é projetado para trabalhar com Java 21 ou mais. Abaixo, o diretório Tomcat será chamado de `tomcat`.
+que é projetado para trabalhar com Java 21 ou mais. Abaixo, o diretório Tomcat será referido como `Toca a brincar.` .
 
 Não&#33; Se você já tem um Tomcat executando alguma outra aplicação web (especialmente TRÊS) , recomendamos que você instale ERDDAP™ em
       [um segundo Tomcat](/docs/server-admin/additional-information#second-tomcat) Porque ERDDAP™ necessidades diferentes configurações Tomcat
 e não deve ter que lidar com outras aplicações para memória.
 
      * No Linux, [baixar o "Core" "tar .gz " Distribuição Tomcat](https://tomcat.apache.org/download-10.cgi) e desempachem-no.
-Recomendamos desempachá-lo em `/usr/local`.
-     * Em um Mac, Tomcat provavelmente já está instalado em `/Library/Tomcat`, mas deve atualizá-lo para a versão mais recente do Tomcat 10.
-Se você o baixar, [baixar o "Core" "tar .gz " Distribuição Tomcat](https://tomcat.apache.org/download-10.cgi) e desempachá-lo em `/Library/Tomcat`.
+Recomendamos desempacotá-lo em `/usr/local` .
+     * Em um Mac, Tomcat provavelmente já está instalado em `/Libratório / Tomcat` , mas deve atualizá-lo para a versão mais recente do Tomcat 10.
+Se você o baixar, [baixar o "Core" "tar .gz " Distribuição Tomcat](https://tomcat.apache.org/download-10.cgi) e desempachá-lo `/Libratório / Tomcat` .
      * No Windows, você pode [baixar a distribuição "Core" "zip" Tomcat](https://tomcat.apache.org/download-10.cgi) 
         (que não se mexe com o registro do Windows e que você controla de uma linha de comando DOS) e desempachá-lo em um diretório apropriado.
-        (Para o desenvolvimento, usamos a distribuição "Core" "zip". Fazemos um diretório `/programas` e desempachá-lo lá.) 
+        (Para o desenvolvimento, usamos a distribuição "Core" "zip". Fazemos um `/programas` diretório e desempachá-lo lá.) 
 Ou você pode baixar a distribuição "Core" "64-bit Windows zip", que inclui mais recursos.
-Se a distribuição for um instalador do Windows, provavelmente colocará Tomcat em, por exemplo, `/Program Files/apache-tomcat-10.0.23`.
+Se a distribuição é um instalador do Windows, provavelmente colocará Tomcat em, por exemplo, `/ Arquivos de programas/apache-tomcat-10.0.23` .
              
 ### servidor.xml{#serverxml} 
 
-*  [servidor.xml](#serverxml) - No arquivo `tomcat/conf/server.xml`, há duas mudanças que você deve fazer para cada um dos dois ` <Connector> § tags
-   (um para `&lt;Connector port="8080"` e um para `&lt;Conector port="8443"`) .
-   1.  (Recomendado) Aumentar o valor do parâmetro `connectionTimeout`, talvez para 300000 (milissegundos, que são 5 minutos) .
-   2.  (Recomendado) Adicione um novo parâmetro: `relaxedQueryChars="[] | " Isto é opcional e ligeiramente menos seguro,
+*  [servidor.xml](#serverxml) - No `tomcat/conf/server.xml` arquivo, há duas mudanças que você deve fazer para cada um dos dois ` <Connector> ` etiquetas
+   (um para `&lt;Connector port="80"` e um para `&lt;Conector port="8443"` ) .
+   1.  (Recomendado) Aumentar o `conexão Timeout` valor do parâmetro, talvez para 300000 (milissegundos, que são 5 minutos) .
+   2.  (Recomendado) Adicione um novo parâmetro: `RelaxedQueryChars="[] | "` . Isto é opcional e ligeiramente menos seguro,
 mas remove a necessidade de usuários codificar por cento esses caracteres quando ocorrem nos parâmetros da URL de solicitação de um usuário.
              
 ### content.xml{#contentxml} 
 
-* context.xml - ... Recursos Cache - Em `tomcat/conf/context.xml`, logo antes do ` </Context> ` tag, alterar a tag Recursos
+* context.xml - ... Recursos Cache - In `tomcat/conf/context.xml` , logo antes do ` </Context> ` tag, alterar a tag Recursos
    (ou adicioná-lo se já não estiver lá) para definir o cache Parâmetro MaxSize para 80000:
   ```
   <Resources cachingAllowed="true" cacheMaxSize="80000" />
@@ -92,26 +92,26 @@ Isso evita inúmeros avisos em catalina. que tudo começar com
 
 * Em computadores Linux, altere as configurações de tempo limite do Apache para que os pedidos de usuários demorados não sejam demorados
    (com o que muitas vezes aparece como um erro "Proxy" ou "Bad Gateway") . Como usuário root:
-  * Modificar o Apache ` http arquivo d.conf` (geralmente em `/etc/ http d/conf/ ") :
-    * Alterar o ` existente <Timeout> Configuração (ou adicionar um no final do arquivo) para 3600 (segundos.) , em vez do padrão 60 ou 120 segundos.
-    * Alterar o ` existente <ProxyTimeout> Configuração (ou adicionar um no final do arquivo) para 3600 (segundos.) , em vez do padrão 60 ou 120 segundos.
-  * Reinicie Apache: `/usr/sbin/apachectl -k gracioso " (mas às vezes é em um diretório diferente) .
+  * Modificar o Apache ` http D.conf.` arquivo (geralmente em `/etc/ http d/conf/` ) :
+    * Alterar o existente ` <Timeout> ` definição (ou adicionar um no final do arquivo) para 3600 (segundos.) , em vez do padrão 60 ou 120 segundos.
+    * Alterar o existente ` <ProxyTimeout> ` definição (ou adicionar um no final do arquivo) para 3600 (segundos.) , em vez do padrão 60 ou 120 segundos.
+  * Reinicie o Apache: `/usr/sbin/apachectl -k gracioso`   (mas às vezes é em um diretório diferente) .
 
 ### Segurança{#security} 
          
 * Recomendação de segurança: Ver [estas instruções](https://tomcat.apache.org/tomcat-10.0-doc/security-howto.html) para aumentar a segurança de
 sua instalação Tomcat, especialmente para servidores públicos.
          
-* Para o público ERDDAP™ instalações no Linux e Macs, é melhor configurar o Tomcat (o programa) como pertencente ao usuário `tomcat "
+* Para o público ERDDAP™ instalações no Linux e Macs, é melhor configurar o Tomcat (o programa) como pertencente ao usuário `Toca a brincar.` 
    (um usuário separado com permissões limitadas e que [não tem senha](https://unix.stackexchange.com/questions/56765/creating-an-user-without-a-password) ) .
-Assim, apenas o super usuário pode mudar para atuar como usuário `tomcat`. Isso torna impossível para hackers fazer login em seu servidor como usuário `tomcat`.
-E, em qualquer caso, você deve fazê-lo para que o usuário `tomcat` tenha permissões muito limitadas no sistema de arquivos do servidor (leia+write+execute privilégios
-para a árvore de diretório `apache-tomcat` e ` <bigParentDirectory> ` e privilégios somente leitura para diretórios com dados que ERDDAP™ precisa de acesso a).
-  * Você pode criar a conta de usuário `tomcat` (que não tem senha) usando o comando:
+Assim, apenas o super usuário pode mudar para atuar como usuário `Toca a brincar.` . Isso torna impossível para hackers fazer login em seu servidor como usuário `Toca a brincar.` .
+E em qualquer caso, você deve fazê-lo para que o `Toca a brincar.` o usuário tem permissões muito limitadas no sistema de arquivos do servidor (leia+write+execute privilégios
+para o `Apache-tomcat` árvore de diretório e ` <bigParentDirectory> ` e privilégios somente leitura para diretórios com dados que ERDDAP™ precisa de acesso a).
+  * Você pode criar o `Toca a brincar.` conta de usuário (que não tem senha) usando o comando:
     ```
     sudo useradd tomcat -s /bin/bash -p '*'
     ```
-  * Você pode mudar para trabalhar como usuário `tomcat` usando o comando
+  * Você pode mudar para trabalhar como usuário `Toca a brincar.` usando o comando
     ```
     sudo su - tomcat
     ```
@@ -120,9 +120,9 @@ para a árvore de diretório `apache-tomcat` e ` <bigParentDirectory> ` e privil
     ```
     exit
     ````
-    * Faça a maior parte do resto do Tomcat e ERDDAP™ instruções de configuração como usuário `tomcat`. Mais tarde, execute os scripts `startup.sh` e `shutdown.sh` como usuário `tomcat "
+    * Faça a maior parte do resto do Tomcat e ERDDAP™ instruções de configuração como usuário `Toca a brincar.` . Mais tarde, execute o `startup.sh` e `desligamento. Não.` scripts como usuário `Toca a brincar.` 
 para que Tomcat tenha permissão para escrever para seus arquivos de log.
-    * Depois de descompactar Tomcat, do pai do diretório `apache-tomcat`:
+    * Depois de desfazer o Tomcat, do pai do `Apache-tomcat` diretório:
       * Alterar a propriedade da árvore de diretório apache-tomcat para o usuário tomcat.
         ```
         chown -R tomcat apache-tomcat-10.0.23
@@ -147,8 +147,8 @@ Isso é importante, porque impede que outros usuários leiam informações possi
 Definir Variáveis de Ambiente da Tomcat
 
 * No Linux e Macs:
-Criar um arquivo `tomcat/bin/setenv.sh " (ou em Red Hat Enterprise Linux \\[ RH \\] , editar `~tomcat/conf/tomcat10.conf ") para definir as variáveis de ambiente da Tomcat.
-Este arquivo será usado por `tomcat/bin/startup.sh` e `shutdown.sh`. O arquivo deve conter algo como:
+Criar um arquivo `tomcat/bin/setenv.sh`   (ou em Red Hat Enterprise Linux \\[ RH \\] , editar `~tomcat/conf/tomcat10.conf` ) para definir as variáveis de ambiente da Tomcat.
+Este arquivo será usado por `tomcat/bin/startup.sh` e `desligamento. Não.` . O arquivo deve conter algo como:
   ```
   export JAVA_HOME=/usr/local/jdk-21.0.3+9
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
@@ -156,12 +156,12 @@ Este arquivo será usado por `tomcat/bin/startup.sh` e `shutdown.sh`. O arquivo 
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
   ```
    (mas substitua os nomes de diretório do seu computador) .
-   (Se você definir anteriormente `JRE_HOME`, você pode remover isso.) 
-Em Macs, você provavelmente não precisa definir `JAVA_HOME`.
+   (Se você definir anteriormente `JRE_HOME` , você pode remover isso.) 
+No Macs, provavelmente não precisas de definir `JAVA_HOME` .
 
 * No Windows:
-Crie um arquivo `tomcat\bin\\setenv.bat` para definir as variáveis de ambiente de Tomcat.
-Este arquivo será usado por `tomcat\bin\\startup.bat` e ` shutdown.bat '.
+Criar um arquivo `tomcat\bin\\setenv.bat` para definir as variáveis de ambiente da Tomcat.
+Este arquivo será usado por `tomcat\bin\\startup.bat` e ` shutdown.bat ` .
 O arquivo deve conter algo como:
   ```
   SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
@@ -171,42 +171,42 @@ O arquivo deve conter algo como:
   ```
    (mas substitua os nomes de diretório do seu computador) .
 Se isso for apenas para testes locais, remova "-servidor".
-   (Se você definir anteriormente `JRE_HOME`, você pode remover isso.) 
+   (Se você definir anteriormente `JRE_HOME` , você pode remover isso.) 
 
-As configurações de memória `-Xmx` e `-Xms` são importantes porque ERDDAP™ funciona melhor com mais memória.
-Sempre configure `-Xms` para o mesmo valor que `-Xmx`.
+O `-Xmx` e `- Xms` configurações de memória são importantes porque ERDDAP™ funciona melhor com mais memória.
+Sempre definido `- Xms` ao mesmo valor que `-Xmx` .
 
 * Para sistemas operacionais de 32 bits e 32 bits Java :
 64 bits Java é muito melhor do que 32 bits Java , mas 32 bit Java vai funcionar enquanto o servidor não estiver realmente ocupado.
 Quanto mais memória física no servidor melhor: 4+ GB é realmente bom, 2 GB é ok, menos não é recomendado.
-Com 32 bits Java , mesmo com abundante memória física, Tomcat e Java não será executado se você tentar definir `-Xmx` muito acima de 1500M (1200M em alguns computadores) .
-Se o seu servidor tiver menos de 2GB de memória, reduza o valor `-Xmx` (em 'M'egaBytes) para 1/2 da memória física do computador.
+Com 32 bits Java , mesmo com abundante memória física, Tomcat e Java não correrá se você tentar definir `-Xmx` muito acima de 1500M (1200M em alguns computadores) .
+Se o seu servidor tiver menos de 2GB de memória, reduza o `-Xmx` valor (em 'M'egaBytes) para 1/2 da memória física do computador.
 
 * Para sistemas operacionais de 64 bits e 64 bits Java :
 64 bits Java só funcionará em um sistema operacional de 64 bits.
-  * Com Java 8, você precisa adicionar `-d64` ao parâmetro Tomcat `CATALINA_OPTS` em `setenv.bat`.
+  * Com Java 8, você precisa adicionar `- D64` para o Tomcat `CATALINA_OPAS` parâmetro in `Setenv.bat` .
   * Com Java 21, você escolhe 64 bits Java Quando você baixar uma versão do Java marcado "64 bits".
 
-Com 64 bits Java , Tomcat e Java pode usar configurações muito altas de `-Xmx` e `-Xms`. Quanto mais memória física no servidor melhor.
-Como uma sugestão simplista: recomendamos que você configure `-Xmx` e `-Xms` para (em 'M'egaBytes) para 1/2 (ou menos) da memória física do computador.
+Com 64 bits Java , Tomcat e Java pode usar muito alto `-Xmx` e `- Xms` configurações. Quanto mais memória física no servidor melhor.
+Como uma sugestão simplista: recomendamos que você definir `-Xmx` e `- Xms` para (em 'M'egaBytes) para 1/2 (ou menos) da memória física do computador.
 Podes ver se o Tomcat, Java e ERDDAP™ estão realmente em execução no modo de 64 bits, procurando por " bit," em ERDDAP 'S Daily Report email
-ou no `bigParentDirectory/logs/ [- Não.](/docs/server-admin/additional-information#log) Arquivo (`bigParentDirectory` é especificado em [setup.xml](#setupxml) ) .
+ou no `bigParentDirectory/logs/ [- Não.](/docs/server-admin/additional-information#log) ` arquivo ( `Diretriz de grande porte` é especificado em [setup.xml](#setupxml) ) .
 
 #### Coleção de lixo{#garbage-collection} 
 
 * Em ERDDAP™ ' [- Não.](/docs/server-admin/additional-information#log) arquivo, você verá muitos "GC (Incumprimento de Estado) "mensagens.
 Isto geralmente não é um problema. É uma mensagem frequente de um funcionamento normal Java dizendo que acabou de terminar um lixo menor
 coleção porque saiu do quarto em Eden (a seção da Java heap para objetos muito jovens) . Normalmente a mensagem mostra você
-`memoryUseAfore-&gt;memoryUseAfter`. Se esses dois números estão próximos, significa que a coleção de lixo não foi produtiva.
+   `memoryUse Antes-&gt;memoryUseAfter` . Se esses dois números estão próximos, significa que a coleção de lixo não foi produtiva.
 A mensagem é apenas um sinal de problemas se é muito frequente (a cada poucos segundos) , não produtivo, e os números são grandes e não crescem,
 que juntos indicam que Java precisa de mais memória, está lutando para libertar a memória, e é incapaz de liberar a memória.
 Isso pode acontecer durante um tempo estressante, então vá embora. Mas se persistir, isso é um sinal de problemas.
-* Se você vir `java.lang.OutOfMemoryError`s in ERDDAP™ ' [- Não.](/docs/server-admin/additional-information#log) arquivo,
+* Se vires `java.lang.OutOfMemoryError` em ERDDAP™ ' [- Não.](/docs/server-admin/additional-information#log) arquivo,
 ver [Erro](/docs/server-admin/additional-information#outofmemoryerror) para dicas sobre como diagnosticar e resolver os problemas.
          
 ### Permissões{#permissions} 
 
-*  [No Linux e Macs, altere as permissões](#permissions) de todos os arquivos `*.sh` em `tomcat/bin/` para ser executável pelo proprietário:
+*  [No Linux e Macs, altere as permissões](#permissions) de todos `*` arquivos em `tomcat/bin/` para ser executável pelo proprietário:
   ```
   chmod +x *.sh
   ```
@@ -216,18 +216,18 @@ ver [Erro](/docs/server-admin/additional-information#outofmemoryerror) para dica
 *  [Fontes para imagens:](#fonts) Preferimos fortemente o livre [Fontes de DejaVu](https://dejavu-fonts.github.io/) para o outro Java fontes.
 Usar essas fontes é fortemente recomendado, mas não é necessário.
 
-Se você optar por não usar as fontes DejaVu, você precisa alterar a configuração fontFamily no setup.xml para ` <fontFamily> Sansserif </fontFamily> #
-que está disponível com tudo Java distribuições. Se você definir ` <fontFamily> ` ao nome de uma fonte que não está disponível, ERDDAP™ não vai carregar
-e imprimirá uma lista de fontes disponíveis no arquivo `log.txt`. Você deve usar uma dessas fontes.
+Se você optar por não usar as fontes DejaVu, você precisa alterar a configuração fontFamily no setup.xml para ` <fontFamily> Sansserif </fontFamily> ` ,
+que está disponível com tudo Java distribuições. Se você definir ` <fontFamily> ` para o nome de uma fonte que não está disponível, ERDDAP™ não vai carregar
+e imprimirá uma lista de fontes disponíveis no `- Não.` ficheiro. Você deve usar uma dessas fontes.
 
-Se você optar por usar as fontes DejaVu, verifique se o ` <fontFamily> ` configuração em setup.xml é ` <fontFamily> DejaVu Sans </fontFamily> '.
+Se você optar por usar as fontes DejaVu, verifique se o ` <fontFamily> ` configuração em setup.xml é ` <fontFamily> DejaVu Sans </fontFamily> ` .
 
 Para instalar as fontes DejaVu, faça o download [DejaVuFontes .zip ](/DejaVuFonts.zip)   (5,522,795 bytes, MD5=33E1E61FAB06A547851ED308B4FFEF42) 
 e descompactar os arquivos de fonte para um diretório temporário.
 
   * No Linux:
     * Para Linux Adoptium Java distribuição, ver [estas instruções](https://blog.adoptopenjdk.net/2021/01/prerequisites-for-font-support-in-adoptopenjdk/) .
-    * Com outros Java distribuições: Como o usuário `tomcat`, copie os arquivos de fonte em `$JAVA_HOME/lib/fonts` assim Java pode encontrar as fontes.
+    * Com outros Java distribuições: Como `Toca a brincar.` usuário, copie os arquivos de fonte em `$JAVA_HOME/lib/fonts` Então... Java pode encontrar as fontes.
 Lembre-se: se / quando você mais tarde atualizar para uma versão mais recente de Java , você precisa reinstalar essas fontes.
   * Em Macs: para cada arquivo de fonte, clique duas vezes nele e, em seguida, clique em Instalar fonte.
   * No Windows 7 e 10: no Windows Explorer, selecione todos os arquivos de fonte. Clique com o botão direito. Clique em Instalar.
@@ -236,10 +236,10 @@ Lembre-se: se / quando você mais tarde atualizar para uma versão mais recente 
 
 * Teste sua instalação Tomcat.
   * Linux:
-    * Como usuário "tomcat", execute `tomcat/bin/startup.sh`.
+    * Como usuário "tomcat", execute `tomcat/bin/startup.sh` .
     * Ver sua URL + ":8080/" no seu navegador (por exemplo, [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac (executar tomcat como usuário administrador do sistema) :
-    * Executar `tomcat/bin/startup.sh`.
+    * Corre&#33; `tomcat/bin/startup.sh` .
     * Ver sua URL + ":8080/" no seu navegador (por exemplo, [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Note que, por padrão, seu Tomcat só é acessível por você. Não é publicamente acessível.
   * Localhost do Windows:
@@ -248,7 +248,7 @@ Note que, por padrão, seu Tomcat só é acessível por você. Não é publicame
 
 Você deve ver a página "Parabéns" Tomcat.
 
-Se houver problemas, consulte o arquivo de log do Tomcat em `tomcat/logs/catalina.out`.
+Se houver problemas, consulte o arquivo de log do Tomcat no `tomcat/logs/catalina.out` .
 
 ### Problemas com a instalação do Tomcat?{#troubles-with-the-tomcat-installation} 
 
@@ -265,10 +265,10 @@ Isso deve retornar uma linha com algo como:
   tcp 0 0 :::8080 :::* LISTEN ## ##### ####/java
   ```
 
-   (onde `#`` é algum dígito) , indicando que um processo `java` (presumivelmente Tomcat) está ouvindo na porta "8080" para tráfego "tcp".
+   (Onde? `#` é algum dígito) , indicando que um `Boa&#33;` processo (presumivelmente Tomcat) está ouvindo na porta "8080" para tráfego "tcp".
 Se nenhuma linha foi retornada, se a linha retornada é significativamente diferente, ou se duas ou mais linhas foram retornadas, então pode haver um problema com as configurações da porta.
 
-* Consulte o arquivo de log do Tomcat `tomcat/logs/catalina.out`. Problemas de Tomcat e alguns ERDDAP™ problemas de inicialização são quase sempre indicados lá.
+* Veja o arquivo de log Tomcat `tomcat/logs/catalina.out` . Problemas de Tomcat e alguns ERDDAP™ problemas de inicialização são quase sempre indicados lá.
 Isso é comum quando você está configurando primeiro ERDDAP™ .
 
 * Ver [Tomcat](https://tomcat.apache.org/) site ou pesquisar a web para ajuda, mas por favor nos avise os problemas que você tinha e as soluções que você encontrou.
@@ -276,9 +276,9 @@ Isso é comum quando você está configurando primeiro ERDDAP™ .
 * Veja o nosso [seção sobre como obter suporte adicional](/docs/intro#support) .
              
 ###  ERDDAP™ Conteúdo{#erddap-content} 
-3.   [Configure os arquivos de configuração `tomcat/content/erddap`.](#erddap-content) 
+3.   [Configurar o `tomcat/content/erddap` arquivos de configuração.](#erddap-content) 
 No Linux, Mac e Windows, download [O que é isso? .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
-e descompacte-o no diretório `tomcat`, criando `tomcat/content/erddap`.
+e descompacte-o no `Toca a brincar.` diretório, criando `tomcat/content/erddap` .
 
 __Version 1.0.0, 20333 bytes, MD5=2B8D2A5AE5ED73E3A42B529C168C60B5, datado 2024-10-14__
 
@@ -294,24 +294,24 @@ Algumas versões anteriores também estão disponíveis:
 
 Para Red Hat Enterprise Linux (RH) ou para outras situações em que você não está autorizado a modificar o diretório Tomcat ou onde você quer / precisa
 para pôr o ERDDAP™ diretório de conteúdo em algum outro local por alguma outra razão (por exemplo, se você usar Jetty em vez de Tomcat) ,
-um comentário .zip ` no diretório desejado (para o qual apenas o usuário `tomcat` tem acesso) e definir o ` erddapContentDirectory § propriedade do sistema
- (por exemplo. erddapContentDirectory  =~tomcat/content/erddap ") Então... ERDDAP™ pode encontrar este novo diretório de conteúdo.
+Apreciação `O que é isso? .zip ` no diretório desejado (a que só o `Toca a brincar.` usuário tem acesso) e definir o ` erddapContentDirectory ` propriedade do sistema
+ (por exemplo. ` erddapContentDirectory  =~tomcat/content/erddap ` ) Então... ERDDAP™ pode encontrar este novo diretório de conteúdo.
 
 ### setup.xml{#setupxml} 
 
-*  [Leia os comentários em `tomcat/content/erddap/setup.xml "](#setupxml) e fazer as alterações solicitadas. setup.xml é o arquivo com todas as configurações que especificam como seu ERDDAP™ comporta-se.
+*  [Leia os comentários em `tomcat/content/erddap/setup.xml` ](#setupxml) e fazer as alterações solicitadas. setup.xml é o arquivo com todas as configurações que especificam como seu ERDDAP™ comporta-se.
 
 Para a configuração inicial, você deve pelo menos alterar essas configurações:
-      * " <bigParentDirectory> "
-      * " <emailEverythingTo> "
-      * " <baseUrl> "
-      * " <email...> ` configurações
-      * " <admin...> ` configurações
-      * " <baseHttpsUrl> " (quando você configurar https ) 
+      *  ` <bigParentDirectory> ` 
+      *  ` <emailEverythingTo> ` 
+      *  ` <baseUrl> ` 
+      *  ` <email...> ` configurações
+      *  ` <admin...> ` configurações
+      *  ` <baseHttpsUrl> `   (quando você configurar https ) 
 
 Quando você cria o grandeParentDirectory, do diretório pai do bigParentDirectory:
 
-    * Faça do usuário `tomcat` o proprietário do `bigParentDirectory`:
+    * Faça o `Toca a brincar.` usuário o proprietário do `Diretriz de grande porte` :
       ```
       chown -R tomcat bigParentDirectory
       ```
@@ -332,7 +332,7 @@ em ERDDAP™ registrar arquivos e arquivos com informações sobre conjuntos de 
 ### Variáveis de Ambiente{#environment-variables} 
 
 Começar com ERDDAP™ V2.13, ERDDAP™ administradores podem substituir qualquer valor no setup.xml especificando uma variável de ambiente
-nomeado ` ERDDAP _valueName` antes de correr ERDDAP™ . Por exemplo, use ` ERDDAP _baseUrl` substitui o ` <baseUrl> Valor.
+nomeado ` ERDDAP Nome do valor` antes de correr ERDDAP™ . Por exemplo, use ` ERDDAP _baseUrl` substitui o ` <baseUrl> ` valor.
 Isso pode ser útil ao implantar ERDDAP™ com um recipiente como Docker, como você pode colocar configurações padrão no setup.xml
 e, em seguida, fornecer configurações especiais através de variáveis de ambiente. Se você fornecer informações secretas para ERDDAP™ através deste método,
 Certifique-se de verificar que as informações permanecerão secretas. ERDDAP™ somente lê variáveis de ambiente uma vez por startup,
@@ -342,22 +342,22 @@ esperar ERDDAP™ é iniciado, então não definir as variáveis de ambiente.
 ###  datasets.xml  {#datasetsxml} 
 
 * Leia os comentários em [ **Trabalhar com o datasets.xml Arquivo** ](/docs/server-admin/datasets) . Mais tarde, depois de você começar ERDDAP™ correndo
-pela primeira vez (geralmente com apenas os conjuntos de dados padrão) , você modificará o XML em `tomcat/content/erddap/ datasets.xml "
+pela primeira vez (geralmente com apenas os conjuntos de dados padrão) , você modificará o XML em `tomcat/content/erddap/ datasets.xml ` 
 para especificar todos os conjuntos de dados que você deseja ERDDAP™ servir. É aqui que você vai gastar a maior parte do seu tempo
 durante a configuração ERDDAP™ e mais tarde, mantendo o seu ERDDAP™ .
 
 Você pode ver um exemplo [ datasets.xml em GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml) .
      
 *  (Diferentemente) Agora ou (ligeiramente mais provável) no futuro, se você quiser modificar o arquivo CSS do erddap, copie
-`tomcat/content/erddap/images/erddapStart2.css` para `tomcat/content/erddap/images/erddap2.css` e, em seguida, fazer alterações nele.
-Alterações para `erddap2.css` só entram em vigor quando ERDDAP™ é reiniciado e muitas vezes também exigem que o usuário desmarque os arquivos em cache do navegador.
+   `tomcat/content/erddap/images/erddapStart2.css` para `tomcat/content/erddap/images/erddap2.css` e, em seguida, fazer alterações a ele.
+Mudanças para `erddap2.css` só tomar efeito quando ERDDAP™ é reiniciado e muitas vezes também exigem que o usuário desmarque os arquivos em cache do navegador.
      
  ERDDAP™ não funcionará corretamente se o setup.xml ou datasets.xml arquivo não é um arquivo XML bem formado. Então, depois de editar esses arquivos,
 é uma boa ideia verificar se o resultado é XML bem formado colando o texto XML em um verificador XML como [xmlvalidação](https://www.xmlvalidation.com/) .
      
 ### Instale o erddap. arquivo de guerra{#install-the-erddapwar-file} 
 
-4. No Linux, Mac e Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) __ em `tomcat/webapps`:
+4. No Linux, Mac e Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) Para dentro `tomcat/webapps` :
 
 __Versão 2.28.1, 622,676,238 bytes, MD5=48b4226045f950c8a8d69ef9521b9bc9, datado de 2025-09-05__________________________________________________________________________________________________________________________________________________________________________________________________________
 
@@ -382,14 +382,14 @@ A terminação SSL/TLS é frequentemente reforçada na camada proxy do servidor 
 
 #### Apache{#apache} 
 
-1. Certifique-se de que `mod_proxy` e `mod_proxy_ http ' são carregados:
+1. Certifique-se de que `mod_proxy` e `mod_proxy_ http ` são carregados:
 
 ```
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 ```
 
-2. Modificar o ` existente <VirtualHost> # tag (se houver um) , ou adicione um no final do arquivo:
+2. Modifique o existente ` <VirtualHost> ` tag (se houver um) , ou adicione um no final do arquivo:
 ```
 <VirtualHost *:80>
    ServerName YourDomain.org
@@ -400,15 +400,15 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 </VirtualHost>
 ```
 
-Se ERDDAP™ é servido em um caminho diferente de `/erddap`, também definir o cabeçalho `X-Forwarded-Prefix` para o
-segmento de caminho _before_ `/erddap`. Esta definição seria apropriada para uma ERDDAP™ servido em
-'/subpath/erddap`:
+Se ERDDAP™ é servido em um caminho diferente `- Sim.` , também definir o `X-Forwarded-Prefix` cabeçalho para o
+segmento de caminho _before_ `- Sim.` . Esta definição seria apropriada para uma ERDDAP™ servido em
+ `/subpath/erddap` :
 
 ```
 RequestHeader set X-Forwarded-Prefix /subpath
 ```
 
-3. Então reinicie Apache: `/usr/sbin/apachectl -k gracioso " (mas às vezes é em um diretório diferente) .
+3. Então reinicie o Apache: `/usr/sbin/apachectl -k gracioso`   (mas às vezes é em um diretório diferente) .
          
 #### NGINX{#nginx} 
 
@@ -422,16 +422,16 @@ proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
 proxy_set_header X-Forwarded-Proto $scheme;
 ```
 
-Se ERDDAP™ é servido em um caminho diferente de `/erddap`, também definir o cabeçalho `X-Forwarded-Prefix` para o
-segmento de caminho _before_ `/erddap`. Esta definição seria apropriada para uma ERDDAP™ servido em
-'/subpath/erddap`:
+Se ERDDAP™ é servido em um caminho diferente `- Sim.` , também definir o `X-Forwarded-Prefix` cabeçalho para o
+segmento de caminho _before_ `- Sim.` . Esta definição seria apropriada para uma ERDDAP™ servido em
+ `/subpath/erddap` :
 
 ```
 proxy_set_header X-Forwarded-Prefix /subpath
 ```
 
 
-Para obter NGINX e ERDDAP™ trabalhar corretamente com https , você precisa colocar o seguinte snippet dentro do Tomcat server.xml` <Host> ` bloco:
+Para obter NGINX e ERDDAP™ trabalhar corretamente com https , você precisa colocar o seguinte snippet dentro do Tomcat server.xml ` <Host> ` bloco:
 ```
 <Valve className="org.apache.catalina.valves.RemoteIpValve"
   remoteIpHeader="X-Forwarded-For"
@@ -443,14 +443,14 @@ Para obter NGINX e ERDDAP™ trabalhar corretamente com https , você precisa co
 
 *  (Não recomendo usar o Tomcat Web Application Manager. Se você não desligar totalmente e iniciar Tomcat, mais cedo ou mais tarde você terá problemas de memória PermGen.) 
 *  (No Linux ou Mac OS, se você criou um usuário especial para executar Tomcat, por exemplo, tomcat, lembre-se de fazer os seguintes passos como esse usuário.) 
-* Se Tomcat já estiver em execução, desligue Tomcat com (em Linux ou Mac OS) `tomcat/bin/shutdown.sh`
-ou (em Windows) "tomcat\bin\" shutdown.bat "
+* Se Tomcat já estiver em execução, desligue Tomcat com (em Linux ou Mac OS)   `tomcat/bin/shutdown.sh` 
+ou (em Windows)   `tomcat\bin\\ shutdown.bat ` 
 
-No Linux, use `ps -ef | grep tomcat` antes e depois de `shutdown.sh` para garantir que o processo de tomcat parou.
+No Linux, use `ps -ef | Atravessamento` antes e depois `desligamento. Não.` para garantir que o processo tomcat parou.
 O processo deve ser listado antes do desligamento e eventualmente não listado após o desligamento.
 Pode levar um minuto ou dois para ERDDAP™ para desligar completamente. Sê paciente. Ou se parecer que não vai parar por conta própria, use:
-'kill -9 <processID> "
-* Comece Tomcat com (em Linux ou Mac OS) `tomcat/bin/startup.sh` ou (em Windows) `tomcat\bin\\startup.bat "
+   `matar -9 <processID> ` 
+* Comece Tomcat com (em Linux ou Mac OS)   `tomcat/bin/startup.sh` ou (em Windows)   `tomcat\bin\\startup.bat` 
 
 ## É ERDDAP™ Correr?{#is-erddap-running} 
 
@@ -462,15 +462,15 @@ Use um navegador para tentar visualizarhttp://www.YourServer.org/erddap/status.h
 * Quando um pedido de um usuário entra, ele vai para o Apache (em computadores Linux e Mac OS) Então, Tomcat. ERDDAP™ .
 * Você pode ver o que vem para Apache (e erros relacionados) nos arquivos de log Apache.
 *    [Tu.](/docs/server-admin/additional-information#tomcat-logs) pode ver o que vem a Tomcat (e erros relacionados) 
-nos arquivos de log Tomcat (`tomcat/logs/catalina.out` e outros arquivos nesse diretório) .
+nos arquivos de log Tomcat ( `tomcat/logs/catalina.out` e outros arquivos nesse diretório) .
 *    [Tu.](/docs/server-admin/additional-information#log) pode ver o que vem a ERDDAP , mensagens de diagnóstico de ERDDAP ,
-e mensagens de erro ERDDAP , no ERDDAP™ " <bigParentDirectory> /logs/log.txt` arquivo.
+e mensagens de erro ERDDAP , no ERDDAP™   ` <bigParentDirectory> /logs/log.txt` ficheiro.
 * O Tomcat não começa. ERDDAP™ até Tomcat receber um pedido ERDDAP™ . Então você pode ver nos arquivos de log Tomcat se ele
 início ERDDAP™ ou se houver uma mensagem de erro relacionada a essa tentativa.
-* Quando ERDDAP™ começa, ele renomeia o velho ERDDAP™ arquivo log.txt (Tradução e Revisão: Em <CurrentTime> .txt) e cria um novo arquivo log.txt.
-Então, se o arquivo `log.txt` é velho, é um sinal de que ERDDAP™ recentemente não reiniciou. ERDDAP™ escreve informações de log para um buffer
+* Quando ERDDAP™ começa, ele renomeia o velho ERDDAP™ arquivo log.txt ( `Registo de dados <CurrentTime> Não.` ) e cria um novo arquivo log.txt.
+Então, se... `- Não.` arquivo é velho, é um sinal de que ERDDAP™ recentemente não reiniciou. ERDDAP™ escreve informações de log para um buffer
 e apenas escreve o buffer para o arquivo de log periodicamente, mas você pode forçar ERDDAP™ para escrever o buffer ao arquivo de log visitando
-" /erddap/status.html '.
+     ` /erddap/status.html ` .
 
 ### Problemas: Versão antiga de Java  {#trouble-old-version-of-java} 
 
@@ -485,7 +485,7 @@ A solução é atualizar para a versão mais recente de Java e certifique-se de 
 
 ### Problemas: Inicialização lenta Primeira vez{#trouble-slow-startup-first-time} 
 
-Tomcat tem que fazer um monte de trabalho da primeira vez um aplicativo como ERDDAP™ é iniciado; notavelmente, ele tem que descompactar o arquivo `erddap.war`
+Tomcat tem que fazer um monte de trabalho da primeira vez um aplicativo como ERDDAP™ é iniciado; notavelmente, tem de descompactar o `erddap.war` arquivo
  (que é como um .zip arquivo) . Em alguns servidores, a primeira tentativa de visualizar ERDDAP™ barracas (30 segundos?) até que este trabalho esteja terminado.
 Em outros servidores, a primeira tentativa falhará imediatamente. Mas se você esperar 30 segundos e tentar novamente, terá sucesso se ERDDAP™ foi instalado corretamente.
 
@@ -507,18 +507,18 @@ você pode se juntar ERDDAP™ lista de anúncios [aqui.](https://groups.google.
 ## Personalizar{#customize} 
 
 *  [Personalize o seu ERDDAP™ para destacar sua organização (não NOAA   ERD ) .](#customize) 
-* Alterar o banner que aparece no topo de tudo ERDDAP™ .html páginas editando o ` <startBodyHtml5> # tag in your ` datasets.xml - arquivo.
-(Se não houver um, copie o padrão ERDDAP™ 's 'tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml` arquivo
-em ` datasets.xml E editá-lo.) Por exemplo, você poderia:
+* Alterar o banner que aparece no topo de tudo ERDDAP™ .html páginas editando o ` <startBodyHtml5> ` tag em seu ` datasets.xml ` ficheiro.
+(Se não houver um, copie o padrão ERDDAP™ ' `tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml` arquivo
+para dentro ` datasets.xml ` e editá-lo.) Por exemplo, você poderia:
   * Use uma imagem diferente (ou seja, o logotipo da sua organização) .
   * Mude a cor de fundo.
   * Mudança " ERDDAP™ " para "_YourOrganization_'s ERDDAP™ "
   * Alterar "Acesso mais fácil aos dados científicos" para "Acesso mais fácil aos dados do _YourOrganization_".
   * Altere os links "Comprei para você" para ser links para sua organização e fontes de financiamento.
-* Altere as informações no lado esquerdo da página inicial editando o ` <theShortDescriptionHtml> # tag in your ` datasets.xml - arquivo.
-(Se não houver um, copie o padrão ERDDAP™ 's 'tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml` arquivo
-em ` datasets.xml E editá-lo.) Por exemplo, você poderia:
+* Altere as informações no lado esquerdo da página inicial editando a ` <theShortDescriptionHtml> ` tag em seu ` datasets.xml ` ficheiro.
+(Se não houver um, copie o padrão ERDDAP™ ' `tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml` arquivo
+para dentro ` datasets.xml ` e editá-lo.) Por exemplo, você poderia:
   * Descreva o que sua organização e/ou grupo faz.
   * Descrever que tipo de dados este ERDDAP™ Sim.
-  * Para alterar o ícone que aparece nas guias do navegador, coloque o favicon da sua organização. ico em `tomcat/content/erddap/images/`.
+  * Para alterar o ícone que aparece nas guias do navegador, coloque o favicon da sua organização. ico em ico `tomcat/content/erddap/images/` .
 Verhttps://en.wikipedia.org/wiki/Favicon.

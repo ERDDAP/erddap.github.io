@@ -33,8 +33,8 @@ særligt, ERDDAP™ kan ikke slette og/eller omdøbe filer hurtigt. Dette skylde
 Af sikkerhedsmæssige årsager er det næsten altid bedst at bruge den nyeste version af Java 21. marts
 Download og installer den nyeste version af
     [Adoptiums OpenJDK (Temurin) 21:21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
-Hvis du vil kontrollere installationen, skal du køre ‘/javaJreBinDirectory/java -version’, for eksempel
-`/usr/local/jdk-21.0.3+9/jre/bin/java -version.
+For at kontrollere installationen, køre `/javaJreBinDirectory/java -version` f.eks.
+    `/usr/local/jdk-21.0.3+9/jre/bin/java -version` .
 
     ERDDAP™ arbejder med Java fra andre kilder, men vi anbefaler Adoptium, fordi det er den vigtigste, fællesskabsstøttet,
 Gratis gratis (som i øl og tale) version af Java 21 der tilbyder Long Term Support (gratis opgraderinger i mange år tidligere den første udgivelse) .
@@ -52,33 +52,33 @@ Du kan bruge en anden Java Ansøgning Server (f.eks. Jetty) , men vi tester kun 
 
    * Hent Tomcat og udpakning det på din server eller pc.
 Af sikkerhedsmæssige årsager er det næsten altid bedst at bruge den nyeste version af Tomcat 10 (version 9 og nedenfor er ikke acceptabel) 
-som er designet til at arbejde med Java 21 eller nyere. Nedenfor henvises Tomcat-mappen til som "tomcat".
+som er designet til at arbejde med Java 21 eller nyere. Nedenfor vil Tomcat-mappen blive henvist til som `Tomcat` .
 
 __Warning&#33;__ Hvis du allerede har en Tomcat, der kører nogle andre webapplikationer (særligt særligt) , vi anbefaler, at du installerer ERDDAP™ i in in in in
       [Et andet Tomcat](/docs/server-admin/additional-information#second-tomcat) , fordi ERDDAP™ behov for forskellige Tomcat indstillinger
 og bør ikke konkurrere med andre programmer til hukommelse.
 
      * På Linux, [Download "Core" "tar .gz " Tomcat distribution](https://tomcat.apache.org/download-10.cgi) og udpakning det.
-Vi anbefaler at pakke det i `/usr/locale’.
-     * På en Mac er Tomcat sandsynligvis allerede installeret i `/Library/Tomcat’, men skal opdatere den til den nyeste version af Tomcat 10.
-Hvis du downloader det, [Download "Core" "tar .gz " Tomcat distribution](https://tomcat.apache.org/download-10.cgi) og udpakning det i `/Library/Tomcat’.
+Vi anbefaler at pakke det i `/usr/lokal` .
+     * På en Mac, Tomcat er sandsynligvis allerede installeret i `/Library/Tomcat` , men skal opdatere det til den nyeste version af Tomcat 10.
+Hvis du downloader det, [Download "Core" "tar .gz " Tomcat distribution](https://tomcat.apache.org/download-10.cgi) og udpakning det i `/Library/Tomcat` .
      * På Windows, kan du [Download "Core" "zip" Tomcat distribution](https://tomcat.apache.org/download-10.cgi) 
         (som ikke roder med Windows-registreringsdatabasen, og som du styrer fra en DOS-kommandolinje) og udpakning det i en passende mappe.
-        (Til udvikling bruger vi "Core" "zip" distribution. Vi laver en `/programmer’ mappe og pakker den der.) 
+        (Til udvikling bruger vi "Core" "zip" distribution. Vi laver en `/ programmer` mappe og pakke det der.) 
 Eller du kan downloade "Core" "64-bit Windows zip" distribution, som indeholder flere funktioner.
-Hvis distributionen er en Windows-installation, vil den sandsynligvis sætte Tomcat i, for eksempel `/Program Files/apache-tomcat-10.0.23`.
+Hvis distributionen er en Windows-installation, vil den sandsynligvis sætte Tomcat i, for eksempel, `/Program Files/apache-tomcat-10.0.23` .
              
 ### server.xml{#serverxml} 
 
-*  [server.xml](#serverxml) - I `tomcat/conf/server.xml’-filen er der to ændringer, du skal foretage for hver af de to ` <Connector> ` tags
-   (en til `&lt;Connector port Hanging808080" og en til `&lt;Conector port Clit8443") .
-   1.  (Anbefalet anbefalet) Forøg ’connectionTimeout’ parameterværdi, måske til 300000 (millisekunder, som er 5 minutter) .
-   2.  (Anbefalet anbefalet) Tilføj en ny parameter: `slaxedQueryChars RoHS[] | ". Dette er valgfrit og lidt mindre sikker,
+*  [server.xml](#serverxml) - I te `tomcat/conf/server.xml` fil, der er to ændringer, du skal foretage for hver af de to ` <Connector> ` tags
+   (en til en `&lt;Connector port Scope8080"` og en til `&lt;Conector port Hanging8443"` ) .
+   1.  (Anbefalet anbefalet) Forøgelse af `Tilslutningstilslutning Timeout` parameterværdi, måske til 300000 (millisekunder, som er 5 minutter) .
+   2.  (Anbefalet anbefalet) Tilføj en ny parameter: `Tilbage til kortet[] | " " " "` . Dette er valgfrit og lidt mindre sikker,
 Men fjerner behovet for brugere til procentkode disse tegn, når de forekommer i parametrene for en brugerkonto.
              
 ### indhold.xml{#contentxml} 
 
-* kontekst.xml -- Ressourcer cache - I `tomcat/conf/context.xml ', lige før ` </Context> « tag, ændre Ressourcer tag
+* kontekst.xml -- Ressourcer cache - I `tomcat/conf/context.xml` , lige før det ` </Context> ` Mærke, ændre Ressourcer tag
    (eller tilføje det, hvis det ikke allerede er der) for at indstille cachen MaxSize parameter til 80000:
   ```
   <Resources cachingAllowed="true" cacheMaxSize="80000" />
@@ -92,26 +92,26 @@ Dette undgår mange advarsler i katalina. ud af, at alle starter med
 
 * På Linux-computere skal du ændre indstillingerne for Apache timeout, så tidskrævende brugeranmodninger ikke timeout
    (med hvad der ofte vises som en "Proxy" eller "Bad Gateway" fejl) . Som root-brugeren:
-  * Rediger Apache ` http d.conf` fil (normalt i `/etc/ http d/konference/ „) :
-    * Ændre den eksisterende ` <Timeout> « (eller tilføje en i slutningen af filen) til 3600 (sekunder sekunder) , i stedet for standard 60 eller 120 sekunder.
-    * Ændre den eksisterende ` <ProxyTimeout> « (eller tilføje en i slutningen af filen) til 3600 (sekunder sekunder) , i stedet for standard 60 eller 120 sekunder.
-  * Genstart Apache: `/usr/sbin/apachectl -k yndefuld „ (Men nogle gange er det i en anden mappe) .
+  * Rediger Apache ` http d.conf` filfil (normalt i `/etc / http d/konference/` ) :
+    * Ændre de eksisterende ` <Timeout> ` indstilling af indstilling (eller tilføje en i slutningen af filen) til 3600 (sekunder sekunder) , i stedet for standard 60 eller 120 sekunder.
+    * Ændre de eksisterende ` <ProxyTimeout> ` indstilling af indstilling (eller tilføje en i slutningen af filen) til 3600 (sekunder sekunder) , i stedet for standard 60 eller 120 sekunder.
+  * Genstart Apache: `/usr/sbin/apachectl -k yndefuld`   (Men nogle gange er det i en anden mappe) .
 
 ### Sikkerhed for sikkerhed{#security} 
          
 * Sikkerheds anbefaling: Se endnu [disse instruktioner](https://tomcat.apache.org/tomcat-10.0-doc/security-howto.html) for at øge sikkerheden af
 Din Tomcat installation, især for offentlige servere.
          
-* Til offentligheden ERDDAP™ installationer på Linux og Macs, det er bedst at opsætte Tomcat (programmet) som tilhører brugeren `tomcat „
+* Til offentligheden ERDDAP™ installationer på Linux og Macs, det er bedst at opsætte Tomcat (programmet) som tilhører brugeren `Tomcat` 
    (en separat bruger med begrænsede tilladelser og hvilke [Ingen adgangskode](https://unix.stackexchange.com/questions/56765/creating-an-user-without-a-password) ) .
-Således kan kun superbrugeren skifte til at handle som bruger. Dette gør det umuligt for hackere at logge ind på din server som bruger `tomcat’.
-Og i alle tilfælde skal du gøre det, så brugeren har meget begrænsede tilladelser på serverens filsystem (læs+writing+execute privilegier
-for `apache-tomcat’-kataloget og ` <bigParentDirectory> „ og read-only privilegier for mapper med data, der ERDDAP™ behov for adgang til).
-  * Du kan oprette ’tomcat’ brugerkonto (som ikke har nogen adgangskode) ved at bruge kommandoen:
+Således kan kun superbrugeren skifte til at handle som bruger `Tomcat` . Dette gør det umuligt for hackere at logge ind på din server som bruger `Tomcat` .
+Og i alle tilfælde skal du gøre det så `Tomcat` Brugeren har meget begrænsede tilladelser på serverens filsystem (læs+writing + eksekverbare privilegier
+for te `apache-tomcat` mappetræ og ` <bigParentDirectory> ` og læs kun rettigheder til mapper med data, der ERDDAP™ behov for adgang til).
+  * Du kan oprette dig `Tomcat` brugerkonto (som ikke har nogen adgangskode) ved at bruge kommandoen:
     ```
     sudo useradd tomcat -s /bin/bash -p '*'
     ```
-  * Du kan skifte til at arbejde som bruger "tomcat` ved at bruge kommandoen
+  * Du kan skifte til at arbejde som bruger `Tomcat` ved at bruge kommandoen
     ```
     sudo su - tomcat
     ```
@@ -120,9 +120,9 @@ for `apache-tomcat’-kataloget og ` <bigParentDirectory> „ og read-only privi
     ```
     exit
     ````
-    * De fleste af resten af Tomcat og ERDDAP™ opsætningsinstruktioner som bruger `tomcat’. Senere kører ’startup.sh’ og `shutdown.sh’ scripts som bruger `tomcat „
+    * De fleste af resten af Tomcat og ERDDAP™ setup instruktioner som bruger `Tomcat` . Senere, køre den `opstart.sh` og og og `nedlukning. sh sh` scripts som bruger `Tomcat` 
 så Tomcat har tilladelse til at skrive til sine log filer.
-    * Efter at have pakket Tomcat, fra moderen af 'apache-tomcat'-mappen:
+    * Efter at have pakket Tomcat, fra forælderen af `apache-tomcat` Katalog:
       * Ændre ejerskab af apache-tomcat-mappens træ til brugeren.
         ```
         chown -R tomcat apache-tomcat-10.0.23
@@ -147,8 +147,8 @@ Dette er vigtigt, fordi det forhindrer andre brugere i at læse muligvis følsom
 Sæt Tomcats miljøvariabler
 
 * På Linux og Macs:
-Opret en fil `tomcat/bin/setenv.sh „ (eller i Red Hat Enterprise Linux \\[ RHEL \\] , redigere `~tomcat/conf/tomcat10.conf „) at indstille Tomcats miljøvariabler.
-Denne fil vil blive brugt af ‘tomcat/bin/startup.sh’ og `shutdown.sh’. Filen skal indeholde noget som:
+Opret en fil `tomcat/bin/setenv.sh`   (eller i Red Hat Enterprise Linux \\[ RHEL \\] , redigere `~tomcat/conf/tomcat10.conf` ) at indstille Tomcats miljøvariabler.
+Denne fil vil blive brugt af `tomcat/bin/startup.sh` og og og `nedlukning. sh sh` . Filen skal indeholde noget som:
   ```
   export JAVA_HOME=/usr/local/jdk-21.0.3+9
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
@@ -156,12 +156,12 @@ Denne fil vil blive brugt af ‘tomcat/bin/startup.sh’ og `shutdown.sh’. Fil
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
   ```
    (men erstatning af mappenavne fra din computer) .
-   (Hvis du tidligere har indstillet `JRE_HOME`, kan du fjerne det.) 
-På Macs behøver du sandsynligvis ikke at angive "JAVA_HOME".
+   (Hvis du tidligere har indstillet `JRE_HOME` , du kan fjerne det.) 
+På Macs, behøver du sandsynligvis ikke at indstille `JAVA_HOME` .
 
 * På Windows:
-Opret en fil `tomcat\bin\\setenv.bat' for at indstille Tomcat's miljøvariabler.
-Denne fil vil blive brugt af `tomcat\bin\\startup.bat’ og ` shutdown.bat „.
+Opret en fil `Tomcat\bin\\setenv.bat` at indstille Tomcats miljøvariabler.
+Denne fil vil blive brugt af `tomcat\bin\\startup.bat` og og og ` shutdown.bat ` .
 Filen skal indeholde noget som:
   ```
   SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
@@ -171,42 +171,42 @@ Filen skal indeholde noget som:
   ```
    (men erstatning af mappenavne fra din computer) .
 Hvis dette kun er for lokal test, skal du fjerne "-server".
-   (Hvis du tidligere har indstillet `JRE_HOME`, kan du fjerne det.) 
+   (Hvis du tidligere har indstillet `JRE_HOME` , du kan fjerne det.) 
 
-`Xmx’ og `Xms’ hukommelsesindstillinger er vigtige, fordi ERDDAP™ virker bedre med mere hukommelse.
-Indstil altid `Xms’ til samme værdi som `Xmx’.
+The The The The The The The `-Xmx` og og og `-Xms` hukommelsesindstillinger er vigtige, fordi ERDDAP™ virker bedre med mere hukommelse.
+Altid indstillet `-Xms` til samme værdi som `-Xmx` .
 
 * Til 32 bit operativsystemer og 32 bit Java :
 64 bit Java er meget bedre end 32 bit Java , men 32 bit Java vil arbejde så længe serveren ikke er virkelig optaget.
 Jo mere fysisk hukommelse i serveren jo bedre: 4+ GB er virkelig god, 2 GB er okay, mindre anbefales ikke.
-Med 32 bit Java , selv med rigelig fysisk hukommelse, Tomcat og Java Kør ikke, hvis du forsøger at indstille `Xmx’ meget over 1500M (1200M på nogle computere) .
-Hvis din server har mindre end 2 GB hukommelse, skal du reducere værdien " (i 'M'egaBytes) til 1/2 af computerens fysiske hukommelse.
+Med 32 bit Java , selv med rigelig fysisk hukommelse, Tomcat og Java Kør ikke, hvis du forsøger at indstille `-Xmx` langt over 1500M (1200M på nogle computere) .
+Hvis din server har mindre end 2 GB hukommelse, skal du reducere hukommelsen `-Xmx` værdiværdiværdiværdi (i 'M'egaBytes) til 1/2 af computerens fysiske hukommelse.
 
 * Til 64 bit Betjeningssystemer og 64 bit Java :
 64 bit Java vil kun arbejde på et 64 bit operativsystem.
-  * Med Java 8, du skal tilføje ‘-d64’ til Tomcat `CATALINA_OPTS’ parameter i `setenv.bat’.
+  * Med Java 8, du skal tilføje `-d64` til Tomcat `CATALINA_OPTS` parameter i `Setenv.bat` .
   * Med Java 21, du vælger 64 bit Java når du downloader en version af Java markeret "64 bit".
 
-Med 64 bit Java , Tomcat og Java kan bruge meget høj `-Xmx’ og `-Xms’ indstillinger. Jo mere fysisk hukommelse i serveren jo bedre.
-Som et forenklet forslag: Vi anbefaler, at du indstiller `Xmx’ og `Xms’ til (i 'M'egaBytes) til 1/2 (eller mindre) af computerens fysiske hukommelse.
+Med 64 bit Java , Tomcat og Java kan bruge meget høj `-Xmx` og og og `-Xms` Indstillinger. Jo mere fysisk hukommelse i serveren jo bedre.
+Som et forenklet forslag: Vi anbefaler, at du indstiller `-Xmx` og og og `-Xms` til at til (i 'M'egaBytes) til 1/2 (eller mindre) af computerens fysiske hukommelse.
 Du kan se, om Tomcat, Java , og ERDDAP™ kører faktisk i 64 bit mode ved at søge efter " bit", i ERDDAP 's Daily Report e-mail
-eller i `bigParentDirectory/logs/logs [log.txt](/docs/server-admin/additional-information#log) ` fil ('bigParentDirectory' er angivet i [opsætning.xml](#setupxml) ) .
+eller i området `bigParentDirectory/logs/logs [log.txt](/docs/server-admin/additional-information#log) ` filfil ( `bigParentDirectory` er angivet i [opsætning.xml](#setupxml) ) .
 
 #### Billeder af Garbage Collection{#garbage-collection} 
 
 * I nærheden af In In In In In In In In In In In In In In ERDDAP™ 's [log.txt](/docs/server-admin/additional-information#log) fil, vil du se mange "GC (Ombygning Failure) " beskeder.
 Dette er normalt ikke et problem. Det er en hyppig meddelelse fra en normalt drift Java at sige, at det bare er afsluttet et mindre affald
 samling, fordi det løb ud af rummet i Eden (Afsnittet i Java hanap for meget unge genstande) . Normalt vises beskeden
-„memoryBrug før-&gt;memoryBrug efter '. Hvis disse to tal er tæt sammen, betyder det, at affaldsopsamlingen ikke var produktiv.
+   `hukommelseBrug før-&gt;memoryBrug efter` . Hvis disse to tal er tæt sammen, betyder det, at affaldsopsamlingen ikke var produktiv.
 Meddelelsen er kun et tegn på problemer, hvis det er meget hyppig (hvert par sekunder) , ikke produktive, og tallene er store og ikke voksende,
 som tilsammen angiver, at Java kræver mere hukommelse, kæmper for at frigøre hukommelse, og er ikke i stand til at frigøre hukommelse.
 Det kan ske under en stressende tid, så gå væk. Men hvis det fortsætter, det er et tegn på problemer.
-* Hvis du ser `java.lang.OutOfMemory Error’s i ERDDAP™ 's [log.txt](/docs/server-admin/additional-information#log) fil,
+* Hvis du ser `Klik her for at få flere oplysninger.` s i s ERDDAP™ 's [log.txt](/docs/server-admin/additional-information#log) fil,
 Se se [FjerneMemoryFejl](/docs/server-admin/additional-information#outofmemoryerror) for tips om, hvordan du diagnosticerer og løser problemerne.
          
 ### Tilladelser{#permissions} 
 
-*  [På Linux og Macs skal du ændre tilladelser](#permissions) af alle `*.sh' filer i `tomcat/bin/' for at blive eksekverbar af ejeren:
+*  [På Linux og Macs skal du ændre tilladelser](#permissions) af alle `*.sh` filer i filer i `Tomcat/bin/` at være eksekverbar af ejeren:
   ```
   chmod +x *.sh
   ```
@@ -216,18 +216,18 @@ Se se [FjerneMemoryFejl](/docs/server-admin/additional-information#outofmemoryer
 *  [Skrifttyper til billeder:](#fonts) Vi foretrækker stærkt den gratis [DejaVu skrifttyper](https://dejavu-fonts.github.io/) til den anden Java skrifttyper.
 Brug af disse skrifttyper anbefales stærkt, men ikke påkrævet.
 
-Hvis du vælger ikke at bruge DejaVu-skrifttyper, skal du ændre skriftfamilieindstillingen i opsætning.xml til ` <fontFamily> I nærheden af SansSerif </fontFamily> `,
-som er tilgængelig med alle Java distributioner. Hvis du indstiller ` <fontFamily> „ til navnet på en skrifttype, der ikke er tilgængelig, ERDDAP™ Må ikke indlæse
-og vil udskrive en liste over tilgængelige skrifttyper i `log.txt’-filen. Du skal bruge en af disse skrifttyper.
+Hvis du vælger ikke at bruge DejaVu-skrifttyper, skal du ændre skriftfamilieindstillingen i opsætning.xml til ` <fontFamily> I nærheden af SansSerif </fontFamily> ` ,
+som er tilgængelig med alle Java distributioner. Hvis du indstiller ` <fontFamily> ` til navnet på en skrifttype, der ikke er tilgængelig, ERDDAP™ Må ikke indlæse
+og vil udskrive en liste over tilgængelige skrifttyper på listen `log.txt` fil. Du skal bruge en af disse skrifttyper.
 
-Hvis du vælger at bruge DejaVu-skrifttyperne, skal du sørge for ` <fontFamily> „ indstilling i opsætning.xml er ` <fontFamily> Flyrejser til Sans </fontFamily> „.
+Hvis du vælger at bruge DejaVu-skrifttyperne, skal du sørge for, at ` <fontFamily> ` konfiguration.xml er ` <fontFamily> Flyrejser til Sans </fontFamily> ` .
 
 For at installere DejaVu-skrifttyper, skal du downloade [DejaVuFonts .zip ](/DejaVuFonts.zip)   (5,522,795 bytes, MD5=33E1E61FAB06A547851ED308B4FFEF42) 
 og indpakke skriftfilerne til en midlertidig mappe.
 
   * På Linux:
     * Til Linux Adoptium Java distributioner, se [disse instruktioner](https://blog.adoptopenjdk.net/2021/01/prerequisites-for-font-support-in-adoptopenjdk/) .
-    * Med andre Java Fordelinger: Som `tomcat` bruger, skal du kopiere skriftfilerne til `$JAVA_HOME/lib/fonts' så Java kan finde skrifttyperne.
+    * Med andre Java Fordelinger: Som det `Tomcat` Bruger, kopiere skriftfilerne til `$JAVA_HOME/lib/fonts` så så sådan Java kan finde skrifttyperne.
 Husk: hvis/ når du senere opgraderer til en nyere version af Java , du skal geninstallere disse skrifttyper.
   * På Macs: for hver skriftfil, dobbelt klik på det, og klik derefter på Installer Font.
   * På Windows 7 og 10: I Windows Explorer skal du vælge alle skriftfiler. Højreklik. Klik på Installer.
@@ -236,10 +236,10 @@ Husk: hvis/ når du senere opgraderer til en nyere version af Java , du skal gen
 
 * Test din Tomcat installation.
   * Linux:
-    * Som bruger "tomcat", kører "tomcat/bin/startup.sh".
+    * Som bruger "tomcat", kører `tomcat/bin/startup.sh` .
     * Se din URL + ":8080/" i din browser (fx, [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac Mac Mac Mac (Kør tomcat som systemadministratorens bruger) :
-    * Løb `tomcat/bin/startup.sh'.
+    * Løb `tomcat/bin/startup.sh` .
     * Se din URL + ":8080/" i din browser (fx, [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Bemærk, at din Tomcat som standard kun er tilgængelig af dig. Det er ikke offentligt tilgængeligt.
   * Windows lokalhost:
@@ -248,7 +248,7 @@ Bemærk, at din Tomcat som standard kun er tilgængelig af dig. Det er ikke offe
 
 Du skal se Tomcat "Congratulations" side.
 
-Hvis der er problemer, kan du se Tomcat-filen på `tomcat/logs/catalina.out`.
+Hvis der er problemer, se Tomcat-filen på `tomcat/logs/catalina.out` .
 
 ### Problemer med Tomcat installation?{#troubles-with-the-tomcat-installation} 
 
@@ -265,10 +265,10 @@ Det skal returnere en linje med noget som:
   tcp 0 0 :::8080 :::* LISTEN ## ##### ####/java
   ```
 
-   (hvor ‘#’ er nogle digitaliseringer) , der angiver, at en `java’ proces (formodentlig Tomcat) lytter på port "8080" til "tcp" trafik.
+   (hvor `# # # #` er nogle digitalisering) , der angiver, at en `java` procesproces (formodentlig Tomcat) lytter på port "8080" til "tcp" trafik.
 Hvis der ikke blev returneret linjer, hvis linjen returneres markant anderledes, eller hvis to eller flere linjer blev returneret, kan der være et problem med portindstillingerne.
 
-* Se Tomcat logfilen `tomcat/logs/catalina.out'. Tomcat problemer og nogle ERDDAP™ opstartsproblemer er næsten altid angivet der.
+* Se filen Tomcat `tomcat/logs/catalina.out` . Tomcat problemer og nogle ERDDAP™ opstartsproblemer er næsten altid angivet der.
 Dette er almindeligt, når du først opretter op ERDDAP™ .
 
 * Se billederne [Tomcat](https://tomcat.apache.org/) hjemmeside eller søg på nettet for at hjælpe, men lad os vide de problemer, du havde, og de løsninger, du fandt.
@@ -276,9 +276,9 @@ Dette er almindeligt, når du først opretter op ERDDAP™ .
 * Se vores udvalg [sektion om at få ekstra støtte](/docs/intro#support) .
              
 ###  ERDDAP™ Indhold Indhold indhold{#erddap-content} 
-3.   [Opsæt `tomcat/content/erddap’ konfigurationsfiler.](#erddap-content) 
+3.   [Opsæt op af `tomcat / indhold /` konfigurationsfiler.](#erddap-content) 
 På Linux, Mac og Windows, download [ErddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
-og indpakke det ind i "tomcat'-mappen, hvilket skaber "tomcat/content/erddap".
+og riv den ind i `Tomcat` mappe, oprettelse `tomcat / indhold /` .
 
 __Version 1.0.0, 20333 bytes, MD5=2B8D2A5AE5ED73E3A42B529C168C60B5, dateret 2024-10-14-14__
 
@@ -294,24 +294,24 @@ Nogle tidligere versioner er også tilgængelige:
 
 Til Red Hat Enterprise Linux (RHEL) eller for andre situationer, hvor du ikke har tilladelse til at ændre Tomcat-mappen, eller hvor du vil/need
 at sætte den ERDDAP™ indholdskatalog på en anden grund (for eksempel, hvis du bruger Jetty i stedet for Tomcat) ,
-‘erddapContent’ .zip ` i den ønskede mappe (til hvilket kun brugeren har adgang til) og sæt ` erddapContentDirectory „system ejendom
- (f.eks. erddapContentDirectory  =~tomcat/content/erddap „) så så sådan ERDDAP™ kan finde denne nye indholdskatalog.
+Uzip `ErddapContent .zip ` i den ønskede mappe (til hvilket kun den `Tomcat` Brugeren har adgang) og sæt den ` erddapContentDirectory ` Systemejendom
+ (f.eks. ` erddapContentDirectory  =~tomcat/content/erddap ` ) så så sådan ERDDAP™ kan finde denne nye indholdskatalog.
 
 ### opsætning.xml{#setupxml} 
 
-*  [Læs kommentarerne i `tomcat/content/erddap/setup.xml „](#setupxml) og foretage de ønskede ændringer. setup.xml er filen med alle de indstillinger, der angiver, hvordan din ERDDAP™ opfører sig.
+*  [Læs kommentarerne i `tomcat/content/erddap/setup.xml` ](#setupxml) og foretage de ønskede ændringer. setup.xml er filen med alle de indstillinger, der angiver, hvordan din ERDDAP™ opfører sig.
 
 For den første opsætning, skal du mindst ændre disse indstillinger:
-      * „ <bigParentDirectory> „
-      * „ <emailEverythingTo> „
-      * „ <baseUrl> „
-      * „ <email...> Indstillinger
-      * „ <admin...> Indstillinger
-      * „ <baseHttpsUrl> „ (når du opsætter https ) 
+      *  ` <bigParentDirectory> ` 
+      *  ` <emailEverythingTo> ` 
+      *  ` <baseUrl> ` 
+      *  ` <email...> ` Indstillinger for indstillinger
+      *  ` <admin...> ` Indstillinger for indstillinger
+      *  ` <baseHttpsUrl> `   (når du opsætter https ) 
 
 Når du opretter bigParentDirectory, fra forældremappen af bigParentDirectory:
 
-    * Gør `tomcat’ bruger ejeren af `bigParentDirectory’:
+    * Gør det `Tomcat` Bruger ejeren af ejeren af `bigParentDirectory` :
       ```
       chown -R tomcat bigParentDirectory
       ```
@@ -332,7 +332,7 @@ i in in in in ERDDAP™ log filer og filer med oplysninger om private datasæt.
 ### Miljøvariabler{#environment-variables} 
 
 Begyndende med ERDDAP™ v2.13, ERDDAP™ Administratorer kan tilsidesætte enhver værdi i opsætning.xml ved at angive en miljøvariable
-navngivet ` ERDDAP _værdinavn ' før løb ERDDAP™ . Brug f.eks. ` ERDDAP _baseUrl' tilsidesætter ` <baseUrl> „værdi.
+navngivet navn ` ERDDAP _værdinavn` før løb ERDDAP™ . Brug f.eks. ` ERDDAP _baseUrl` tilsidesætter tilsidesættelsen ` <baseUrl> ` værdi.
 Dette kan være praktisk, når du installerer ERDDAP™ med en beholder som Docker, da du kan sætte standardindstillinger i opsætning.xml
 og derefter levere særlige indstillinger via miljøvariabler. Hvis du leverer hemmelige oplysninger til ERDDAP™ via denne metode,
 Sørg for at kontrollere, at oplysningerne forbliver hemmelige. ERDDAP™ kun læser miljøvariabler én gang pr. opstart,
@@ -342,22 +342,22 @@ Vent frem til ERDDAP™ Startes, og sæt derefter miljøvariablerne.
 ###  datasets.xml  {#datasetsxml} 
 
 * Læs kommentarerne i [ **Arbejde med arbejdet datasets.xml Filen fil** ](/docs/server-admin/datasets) . Senere, efter du får ERDDAP™ løbeløb
-for første gang (Normalt med kun standarddatasæt) , vil du ændre XML i "tomcat/content/erddap/ datasets.xml „
+for første gang (Normalt med kun standarddatasæt) , vil du ændre XML i `tomcat / indhold / datasets.xml ` 
 for at angive alle de data, du ønsker, ERDDAP™ at tjene. Dette er, hvor du vil bruge mængden af din tid
 samtidig med at du indstiller ERDDAP™ og senere samtidig opretholde din ERDDAP™ .
 
 Du kan se et eksempel [ datasets.xml på GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml) .
      
 *  (I modsætning til) Nu eller nu (lidt mere sandsynligt) i fremtiden, hvis du ønsker at ændre erddap's CSS-fil, kopiere
-"tomcat/content/erddap/images/erddapStart2.css " til "tomcat/content/erddap/billeder/erddap2.css' og derefter foretage ændringer af det.
-Ændringer til ‘erddap2.css’ tager kun virkning, når ERDDAP™ genstartes og kræver ofte også brugeren at rydde browserens cachede filer.
+   `tomcat/content/erddap/images/erddapStart2.css` til at til `tomcat/content/erddap/images/erddap2.css` og derefter foretage ændringer til det.
+Ændringer til `Erddap2.css` kun tage virkning, når ERDDAP™ genstartes og kræver ofte også brugeren at rydde browserens cachede filer.
      
  ERDDAP™ virker ikke korrekt, hvis opsætningen.xml eller datasets.xml filen er ikke en veldannet XML-fil. Så efter du har redigeret disse filer,
 Det er en god ide at bekræfte, at resultatet er veldannet XML ved at indsætte XML-teksten i en XML-tjeker som [xmlvalidation](https://www.xmlvalidation.com/) .
      
 ### Installer æraen. krig fil{#install-the-erddapwar-file} 
 
-4. På Linux, Mac og Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) __ i 'tomcat/webapps':
+4. På Linux, Mac og Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) __ ind i `Tomcat/webapps` :
 
 __Version 2.28.1, 622,676,238 bytes, MD5=48b4226045f950c8a8d69ef9521b9bc9, dateret 2025-09-05__
 
@@ -382,14 +382,14 @@ SSL/TLS opsigelse er ofte afdøbt på webserver proxy lag samt. Specifikke afhæ
 
 #### Apache Apache{#apache} 
 
-1. Sørg for, at `mod_proxy’ og `mod_proxy_ http " er indlæst:
+1. Sørg for, at `Mod_proxy` og og og `Mod_proxy_ http ` er indlæst:
 
 ```
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 ```
 
-2. Ændre den eksisterende ` <VirtualHost> ` tag (hvis der er en) , eller tilføj en ved udgangen af filen:
+2. Ændre den eksisterende ` <VirtualHost> ` tag tag (hvis der er en) , eller tilføj en ved udgangen af filen:
 ```
 <VirtualHost *:80>
    ServerName YourDomain.org
@@ -400,15 +400,15 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 </VirtualHost>
 ```
 
-Hvis ERDDAP™ betjenes på en anden vej end `/erddap’, også sæt 'X-Forwarded-Prefix'-headset til overskriften
-stisegment _beDerfor_ `/erddap’. Denne indstilling ville være passende for en ERDDAP™ Der serveres morgenmad på cafeen.
-`/subpath/erddap’:
+Hvis ERDDAP™ betjenes på en anden vej end `/erddap` , også sæt den `X-Forwarded-Prefix` Overskrift til sidehovedet
+stisegment _beDerfor_ `/erddap` . Denne indstilling ville være passende for en ERDDAP™ Der serveres morgenmad på cafeen.
+ `/subpath/erddap` :
 
 ```
 RequestHeader set X-Forwarded-Prefix /subpath
 ```
 
-3. Genstart derefter Apache: `/usr/sbin/apachectl -k yndefuld „ (Men nogle gange er det i en anden mappe) .
+3. Genstart derefter Apache: `/usr/sbin/apachectl -k yndefuld`   (Men nogle gange er det i en anden mappe) .
          
 #### NGINX{#nginx} 
 
@@ -422,16 +422,16 @@ proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
 proxy_set_header X-Forwarded-Proto $scheme;
 ```
 
-Hvis ERDDAP™ betjenes på en anden vej end `/erddap’, også sæt 'X-Forwarded-Prefix'-headset til overskriften
-stisegment _beDerfor_ `/erddap’. Denne indstilling ville være passende for en ERDDAP™ Der serveres morgenmad på cafeen.
-`/subpath/erddap’:
+Hvis ERDDAP™ betjenes på en anden vej end `/erddap` , også sæt den `X-Forwarded-Prefix` Overskrift til sidehovedet
+stisegment _beDerfor_ `/erddap` . Denne indstilling ville være passende for en ERDDAP™ Der serveres morgenmad på cafeen.
+ `/subpath/erddap` :
 
 ```
 proxy_set_header X-Forwarded-Prefix /subpath
 ```
 
 
-For at få NGINX og ERDDAP™ arbejde korrekt med https , du skal sætte følgende uddrag inde i Tomcat-serveren.xml ` <Host> „blok:
+For at få NGINX og ERDDAP™ arbejde korrekt med https , du skal sætte følgende uddrag inde i Tomcat-serveren.xml ` <Host> ` blok:
 ```
 <Valve className="org.apache.catalina.valves.RemoteIpValve"
   remoteIpHeader="X-Forwarded-For"
@@ -443,14 +443,14 @@ For at få NGINX og ERDDAP™ arbejde korrekt med https , du skal sætte følgen
 
 *  (Jeg anbefaler ikke at bruge Tomcat Web Application Manager. Hvis du ikke er helt lukket og starter Tomcat, før eller senere vil du have PermGen hukommelse problemer.) 
 *  (I Linux eller Mac OS, hvis du har oprettet en speciel bruger til at køre Tomcat, f.eks. tomcat, huske at gøre følgende trin som den bruger.) 
-* Hvis Tomcat allerede kører, lukkes Tomcat med (i Linux eller Mac OS) "tomcat/bin/shutdown.sh`
-eller eller eller (I Windows) „tomcat\bin\\ shutdown.bat „
+* Hvis Tomcat allerede kører, lukkes Tomcat med (i Linux eller Mac OS)   `tomcat/bin/shutdown.sh` 
+eller eller eller (I Windows)   `I nærheden af tomcat\bin\\ shutdown.bat ` 
 
-På Linux, brug `ps -ef | For at sikre, at tomcat processen er standset.
+På Linux, brug `ps -ef | Færk tomcat` før og efter `nedlukning. sh sh` for at sikre, at tomcat-processen er stoppet.
 Processen skal være opført før nedlukningen og i sidste ende ikke opført efter nedlukningen.
 Det kan tage et minut eller to til ERDDAP™ til fuldstændig lukket ned. Vær tålmodig. Eller hvis det ser ud, at det ikke stopper på sin egen, brug:
-"killelse -9 <processID> „
-* Start Tomcat med (i Linux eller Mac OS) "tomcat/bin/startup.sh' eller (I Windows) „tomcat\bin\\startup.bat „
+   `drab -9 <processID> ` 
+* Start Tomcat med (i Linux eller Mac OS)   `tomcat/bin/startup.sh` eller eller eller (I Windows)   `tomcat\bin\\startup.bat` 
 
 ## Is ERDDAP™ løb?{#is-erddap-running} 
 
@@ -462,15 +462,15 @@ Brug en browser til at forsøge at sehttp://www.YourServer.org/erddap/status.htm
 * Når en anmodning fra en bruger kommer i, går det til Apache (på Linux og Mac OS-computere) , så Tomcat, så ERDDAP™ .
 * Du kan se, hvad der kommer til Apache (og relaterede fejl) i Apache log filer.
 *    [Dig](/docs/server-admin/additional-information#tomcat-logs) kan se, hvad der kommer til Tomcat (og relaterede fejl) 
-i Tomcat log filer ('tomcat/logs/catalina.out' og andre filer i denne mappe) .
+i Tomcat log filer ( `tomcat/logs/catalina.out` og andre filer i denne mappe) .
 *    [Dig](/docs/server-admin/additional-information#log) kan se, hvad der kommer til ERDDAP , diagnostiske meddelelser fra ERDDAP ,
-og fejlmeddelelser fra ERDDAP , i den ERDDAP™ „ <bigParentDirectory> /logs/log.txt '-filen.
+og fejlmeddelelser fra ERDDAP , i den ERDDAP™   ` <bigParentDirectory> /logs/log.txt` fil.
 * Tomcat starter ikke ERDDAP™ indtil Tomcat får en anmodning om ERDDAP™ . Så du kan se i Tomcat log filer, hvis det er
 startede ERDDAP™ eller hvis der er en fejlmeddelelse relateret til dette forsøg.
-* Hvornår Hvornår skal man Hvornår ERDDAP™ starter op, det omdøber den gamle ERDDAP™ log.txt-fil („logArchived At tage på <CurrentTime> .txt`) og oprette en ny log.txt-fil.
-Så hvis ’log.txt’-filen er gammel, er det et tegn på, at ERDDAP™ har ikke for nylig genstartet. ERDDAP™ Skriv logoplysninger til en buffer
+* Hvornår Hvornår skal man Hvornår ERDDAP™ starter op, det omdøber den gamle ERDDAP™ log.txt-fil ( `Log ind <CurrentTime> .txt` ) og oprette en ny log.txt-fil.
+Så hvis det er tilfældet `log.txt` fil er gammel, det er et tegn på, at ERDDAP™ har ikke for nylig genstartet. ERDDAP™ Skriv logoplysninger til en buffer
 og skriver kun bufferen til logfilen periodisk, men du kan tvinge ERDDAP™ at skrive bufferen til logfilen ved at besøge
-„ /erddap/status.html „.
+     ` /erddap/status.html ` .
 
 ### Trouble: Gamle version af Java  {#trouble-old-version-of-java} 
 
@@ -485,7 +485,7 @@ Løsningen er at opdatere til den seneste version af Java og sørg for, at Tomca
 
 ### Trouble: Slow Startup første gang{#trouble-slow-startup-first-time} 
 
-Tomcat skal gøre en masse arbejde første gang en ansøgning som ERDDAP™ er startet; især skal det pakke ’erddap.war’-filen
+Tomcat skal gøre en masse arbejde første gang en ansøgning som ERDDAP™ er startet; især, det skal pakke pakken `Erddap.war` filfil
  (som er som en .zip filfil) . På nogle servere, det første forsøg på at se ERDDAP™ boder (30 sekunder?) indtil dette arbejde er færdigt.
 På andre servere vil det første forsøg mislykkes med det samme. Men hvis du venter 30 sekunder og prøve igen, vil det lykkes, hvis ERDDAP™ blev installeret korrekt.
 
@@ -507,18 +507,18 @@ Du kan tilmelde dig ERDDAP™ bekendtgørelser liste [her her](https://groups.go
 ## Tilpas tilpasning{#customize} 
 
 *  [Tilpas din søgning ERDDAP™ at fremhæve din organisation (Ikke ikke NOAA   ERD ) .](#customize) 
-* Ændre det banner, der vises øverst på alle ERDDAP™ .html sider ved at redigere ` <startBodyHtml5> „ tag i din ` datasets.xml ` fil.
-(Hvis der ikke er en, skal du kopiere standarden fra ERDDAP™ "tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml filfil
-ind i ` datasets.xml " og rediger det." Du kan f.eks.:
+* Ændre det banner, der vises øverst på alle ERDDAP™ .html sider ved at redigere ` <startBodyHtml5> ` tag i din ` datasets.xml ` fil.
+(Hvis der ikke er en, skal du kopiere standarden fra ERDDAP™ 's `tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml` filfil
+ind i ` datasets.xml ` og redigere det.) Du kan f.eks.:
   * Brug et andet billede (f.eks. din organisations logo) .
   * Ændre baggrundsfarven.
   * Ændre " ERDDAP™ " til "_DinOrganization_'s ERDDAP™ " " " "
   * Ændre "Easier adgang til videnskabelige data" til "Easier adgang til _DinOrganization_'s data".
   * Du kan ændre links til din organisation og finansieringskilder.
-* Ændre oplysningerne på venstre side af startsiden ved at redigere ` <theShortDescriptionHtml> „ tag i din ` datasets.xml ` fil.
-(Hvis der ikke er en, skal du kopiere standarden fra ERDDAP™ "tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml filfil
-ind i ` datasets.xml " og rediger det." Du kan f.eks.:
+* Ændre oplysningerne på venstre side af startsiden ved at redigere oplysningerne ` <theShortDescriptionHtml> ` tag i din ` datasets.xml ` fil.
+(Hvis der ikke er en, skal du kopiere standarden fra ERDDAP™ 's `tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml` filfil
+ind i ` datasets.xml ` og redigere det.) Du kan f.eks.:
   * Beskriv hvad din organisation og/eller gruppe gør.
   * Beskrive, hvilken slags data dette ERDDAP™ har.
-  * Hvis du vil ændre ikonet, der vises på browser faner, skal du sætte din organisations favicon. ico i `tomcat/content/erddap/images/`.
+  * Hvis du vil ændre ikonet, der vises på browser faner, skal du sætte din organisations favicon. ico in `tomcat/content/erddap/billeder/` .
 Se endnuhttps://en.wikipedia.org/wiki/Favicon.

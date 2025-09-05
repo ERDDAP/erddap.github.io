@@ -33,8 +33,8 @@ erityisesti, ERDDAP™ Et voi poistaa ja/tai nimetä tiedostoja nopeasti. Tämä
 Turvallisuussyistä on lähes aina parempi käyttää uusinta versiota. Java 21.
 Lataa ja asenna uusin versio
     [Adoptiumin OpenJDK (Temurin) 21 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
-Asennuksen todentamiseksi suorita ’/javaJreBinDirectory/java-versio’, esimerkiksi
-Käyttäjä/paikallinen/jdk-21.0.3+9/jre/bin/java käännöksiä.”
+Tarkista asennuksen, suorita `/javaJreBinDirectory / Java käännökset` Esimerkiksi
+    `Käyttäjä/paikallinen/jdk-21.0.3+9/jre/bin/java käännökset` .
 
     ERDDAP™ Teosten kanssa Java muista lähteistä, mutta suosittelemme Adoptiumia, koska se on tärkein, yhteisöllistä tukea.
 Ilma ilmaiseksi ilmaiseksi (Olut ja puhe) versiosta Java 21, joka tarjoaa pitkäaikaista tukea (Ilmaiset päivitykset jo vuosia ennen alkuperäistä julkaisua) .
@@ -52,33 +52,33 @@ Voit käyttää toista Java Sovelluspalvelin (Esimerkki: Jetty) Testaamme ja tue
 
    * Lataa Tomcat ja pakkaa se palvelimellesi tai PC:lle.
 Turvallisuussyistä on lähes aina parempi käyttää Tomcat 10:n uusinta versiota. (9 ja alapuolella ei ole hyväksyttävää) 
-joka on suunniteltu toimimaan Java 21 tai uudempi. Alla olevaa Tomcat-hakemistoa kutsutaan nimellä Tomcat.
+joka on suunniteltu toimimaan Java 21 tai uudempi. Alla olevaa Tomcat-hakemistoa kutsutaan `Tom` .
 
 Varokaa&#33; Jos sinulla on jo Tomcat, jolla on jokin muu verkkosovellus (Erityisesti kolme) Suosittelemme, että asennat ERDDAP™ Sisällä
       [Toinen Tomcat](/docs/server-admin/additional-information#second-tomcat) koska ERDDAP™ Tarvitset erilaisia Tomcat-asetuksia
 Ei tarvitse olla mukana muissa muistisovelluksissa.
 
      * Linuxissa, [Download "Tähti" .gz Tomcatin jakelu](https://tomcat.apache.org/download-10.cgi) Pakkaa se pois.
-Suosittelemme pakkaamaan sen ’/käyttäjä/paikallinen’.
-     * Macissa Tomcat on todennäköisesti jo asennettuna ’/Library/Tomcat’ -versioon, mutta sen tulee päivittää uusimpaan Tomcat 10 -versioon.
-Jos lataat sen, [Download "Tähti" .gz Tomcatin jakelu](https://tomcat.apache.org/download-10.cgi) Pakkaa se ’Library/Tomcat’.
+Suosittelemme pakkaamaan sen sisään `Käyttäjä/Paikallinen` .
+     * Macissa Tomcat on jo asennettu `Kirjasto / Tomcat` Tomcat 10:n uusimpaan versioon.
+Jos lataat sen, [Download "Tähti" .gz Tomcatin jakelu](https://tomcat.apache.org/download-10.cgi) Pakkaa se sisään `Kirjasto / Tomcat` .
      * Windowsissa voit [Download "Core" "Zip" Tomcat](https://tomcat.apache.org/download-10.cgi) 
         (joka ei sotke Windows-rekisteriä ja jota hallitset DOS-komentorivillä) Pakkaa se sopivaan hakemistoon.
-        (Kehittämistä varten käytämme "Core" "zip" -jakelua. Teemme hakemiston/ohjelman hakemistoon ja puramme sen sinne.) 
+        (Kehittämistä varten käytämme "Core" "zip" -jakelua. Me teemme `Ohjelmat` Pakkaa ja pakkaa se sinne.) 
 Voit ladata "Core" "64-bittinen Windows zip" -jakelun, joka sisältää enemmän ominaisuuksia.
-Jos jakelu on Windows-asennus, se saattaa Tomcatin esimerkiksi ’/Program Files/apache-tomcat-10.0.23’.
+Jos jakelu on Windows-asennus, se saattaa esimerkiksi Tomcatin. `Ohjelmatiedostot / apache-tomcat-10.0.23` .
              
 ### palvelin.xml{#serverxml} 
 
-*  [palvelin.xml](#serverxml) ’tomcat/conf/server.xml’ -tiedostossa on kaksi muutosta, jotka sinun tulisi tehdä kullekin’. <Connector> &gt; tagit
-   (Yksi αonnector-portille = "80" ja yksi πConector-portille ="8443") .
-   1.  (Suositellaan) Parametriarvon nostaminen, ehkä 300 000 (Millisekuntia, joka on 5 minuuttia) .
-   2.  (Suositellaan) Lisätään uusi parametri: "relaxedQueryChars=" | &gt; Se on valinnainen ja hieman epävarma,
+*  [palvelin.xml](#serverxml) - Sisällä `Tomcat/conf/server.xml` On olemassa kaksi muutosta, jotka sinun tulisi tehdä kullekin ` <Connector> ` Tagit
+   (Yksi `&lt;Connector Port = 8080` Yksi `&lt;Conector Port="8443"` ) .
+   1.  (Suositellaan) Lisäämällä `yhteysyhteys Timeout` Parametriarvo ehkä 300 000 (Millisekuntia, joka on 5 minuuttia) .
+   2.  (Suositellaan) Lisää uusi parametri: `Rentoutuneisuus =" | """` . Se on valinnainen ja hieman epävarma,
 mutta poistaa käyttäjien tarvetta prosenttikoodiin, kun ne esiintyvät käyttäjän pyynnön URL-osoitteen parametreissa.
              
 ### Sisältö.xml{#contentxml} 
 
-* Konteksti.xml ----- Resurssivälimuisti - In tomcat/conf/context.xml </Context> "Tag, vaihda resursseja"
+* Konteksti.xml ----- Resurssit - In `Tomcat/conf/context.xml` Juuri ennen ` </Context> ` Muuta Resursseja Tag
    (tai lisätä, jos se ei ole jo siellä) Aseta kätkön MaxSize-parametri 80000:
   ```
   <Resources cachingAllowed="true" cacheMaxSize="80000" />
@@ -92,26 +92,26 @@ Näin vältetään lukuisia varoituksia katalinassa. Kaikki alkaa
 
 * Linux-tietokoneissa Apache-aikatauluasetukset muutetaan niin, että aikaa vievät käyttäjäpyynnöt eivät aikatauluta.
    (Se, mitä usein kutsutaan "Proxy" tai "Bad Gateway" -virheeksi.) . Käyttäjänä:
-  * Muokkaa Apachea http d.conf tiedosto (Yleensä ’/etc/ http d/conf/ &gt; &gt;) :
-    * Muutetaan olemassa olevaa <Timeout> &gt; Asetukset (tai lisätä tiedoston lopussa) 3600 (Sekunnit) Oletusarvon sijaan 60 tai 120 sekuntia.
-    * Muutetaan olemassa olevaa <ProxyTimeout> &gt; Asetukset (tai lisätä tiedoston lopussa) 3600 (Sekunnit) Oletusarvon sijaan 60 tai 120 sekuntia.
-  * Restart Apache: Käyttäjä/sbin/apachectl K Graceful &gt; &gt; (Joskus se on toisessa hakemistossa.) .
+  * Muokkaa apassia ` http d.conf` tiedostotiedosto (Yleensä `/etc/ http d/conf/` ) :
+    * Muuta olemassa olevaa ` <Timeout> ` asetukset (tai lisätä tiedoston lopussa) 3600 (Sekunnit) Oletusarvon sijaan 60 tai 120 sekuntia.
+    * Muuta olemassa olevaa ` <ProxyTimeout> ` asetukset (tai lisätä tiedoston lopussa) 3600 (Sekunnit) Oletusarvon sijaan 60 tai 120 sekuntia.
+  * Käynnistä Apache uudelleen: `Käyttäjä/sbin/apachectl K Graceful`   (Joskus se on toisessa hakemistossa.) .
 
 ### Turvallisuusturvallisuus{#security} 
          
 * Turvallisuussuositus: Näytä [Nämä ohjeet](https://tomcat.apache.org/tomcat-10.0-doc/security-howto.html) lisätä turvallisuuden
 Tomcat-asennus, erityisesti julkisille palvelimille.
          
-* Yleisölle ERDDAP™ Linux- ja Mac-laitteissa on parasta perustaa Tomcat. (Ohjelman) Käyttäjä: Tomcat &gt; &gt;
+* Yleisölle ERDDAP™ Linux- ja Mac-laitteissa on parasta perustaa Tomcat. (Ohjelman) Käyttäjän kuuluminen `Tom` 
    (erillinen käyttäjä, jolla on rajalliset luvat ja [Ei salasanaa](https://unix.stackexchange.com/questions/56765/creating-an-user-without-a-password) ) .
-Vain superkäyttäjä voi siirtyä toimimaan käyttäjänä "tomcat". Tämä tekee hakkereiden mahdottomaksi kirjautua sisään palvelimeesi käyttäjänä ’tomcat’.
-Ja joka tapauksessa sinun pitäisi tehdä se niin, että ’tomcat’-käyttäjällä on hyvin rajalliset käyttöoikeudet palvelimen tiedostojärjestelmään (lue + kirjoita + suorita etuoikeudet).
-Apache-tomcat -hakemistopuun ja <bigParentDirectory> &gt; ja vain luku-oikeudet hakemistoihin, jotka ERDDAP™ tarvitaan pääsyä).
-  * Voit luoda "Tomcat" -käyttäjätilin (jolla ei ole salasanaa) Käyttämällä käskyä:
+Vain käyttäjä voi siirtyä toimimaan käyttäjänä `Tom` . Näin hakkerit voivat kirjautua sisään palvelimeesi käyttäjänä `Tom` .
+Joka tapauksessa sinun pitäisi tehdä se niin, että `Tom` Käyttäjällä on hyvin rajalliset käyttöoikeudet palvelimen tiedostojärjestelmään (lue + kirjoita + suorita etuoikeudet)
+Sillä `Apache-tomcat` Hakemistopuu ja ` <bigParentDirectory> ` Vain luku-oikeudet hakemistoihin, joissa on tietoja, jotka ERDDAP™ tarvitaan pääsyä).
+  * Voit luoda `Tom` Käyttäjätili (jolla ei ole salasanaa) Käyttämällä käskyä:
     ```
     sudo useradd tomcat -s /bin/bash -p '*'
     ```
-  * Voit siirtyä käyttäjäksi "tomcat" Käyttämällä käskyä
+  * Voit siirtyä toimimaan käyttäjänä `Tom` Käyttämällä käskyä
     ```
     sudo su - tomcat
     ```
@@ -120,9 +120,9 @@ Apache-tomcat -hakemistopuun ja <bigParentDirectory> &gt; ja vain luku-oikeudet 
     ```
     exit
     ````
-    * Suurin osa Tomcatista ja ERDDAP™ Käyttäjän ohjeet "Tomcat" Käyttäkää myöhemmin "Startup.sh"- ja "shutdown.sh"-skriptejä käyttäjänä "tomcat" &gt; &gt;
+    * Suurin osa Tomcatista ja ERDDAP™ Käyttäjän ohjeet `Tom` . Myöhemmin juoksemaan `Startup.` ja `sulku. Säv.` Käsikirjoitukset käyttäjänä `Tom` 
 Tomcatilla on oikeus kirjoittaa lokitiedostoihinsa.
-    * Tomcatin pakkaamisen jälkeen apache-tomcat-hakemiston vanhemmalta:
+    * Tomcatin pakkaamisen jälkeen, vanhempien `Apache-tomcat` Hakemisto:
       * Muuta apache-tomcat-hakemistopuun omistajuutta tomcatin käyttäjäksi.
         ```
         chown -R tomcat apache-tomcat-10.0.23
@@ -147,8 +147,8 @@ Tämä on tärkeää, koska se estää muita käyttäjiä lukemasta mahdollisest
 Tomcatin ympäristömuuttujat
 
 * Linux ja Mac:
-Luo tiedosto "Tomcat/bin/setenv.sh" &gt; &gt; (Pääosat Red Hat Enterprise Linux \\[ Ryhmä \\] , edit \tomcat/conf/tomcat10. &gt; &gt;) Tomcatin ympäristömuuttujat.
-Tätä tiedostoa käyttävät ’tomcat/bin/startup.sh’ ja ’shutdown.sh’. Tiedosto sisältää jotain:
+Luo tiedosto `Tomcat/bin/setenv.sh`   (Pääosat Red Hat Enterprise Linux \\[ Ryhmä \\] edit `Tomcat/conf/tomcat10.conf` ) Tomcatin ympäristömuuttujat.
+Tätä tiedostoa käytetään `Tomcat/bin/startup.sh` ja `sulku. Säv.` . Tiedosto sisältää jotain:
   ```
   export JAVA_HOME=/usr/local/jdk-21.0.3+9
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
@@ -156,12 +156,12 @@ Tätä tiedostoa käyttävät ’tomcat/bin/startup.sh’ ja ’shutdown.sh’. 
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
   ```
    (Korvaa hakemiston nimet tietokoneeltasi) .
-   (Jos olet aiemmin määrittänyt Jere_Homen, voit poistaa sen.) 
-Macsissa sinun ei tarvitse määritellä "JAVA_HOME".
+   (Jos olet aiemmin määrittänyt `Jre_home` Voit poistaa sen.) 
+Macsissa sinun ei välttämättä tarvitse asettaa `JAVA - Koti` .
 
 * Windowsissa:
-Luo tiedosto "tomcat\bin\\setenv.bat" asettaa Tomcatin ympäristömuuttujat.
-Tätä tiedostoa käyttävät ’tomcat\bin\\startup.bat’ ja ’’’. shutdown.bat &gt;
+Luo tiedosto `Tomcat: Setenv.bat` Tomcatin ympäristömuuttujat.
+Tätä tiedostoa käytetään `Tomcat\bin\\startup.bat` ja ` shutdown.bat ` .
 Tiedosto sisältää jotain:
   ```
   SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
@@ -171,42 +171,42 @@ Tiedosto sisältää jotain:
   ```
    (Korvaa hakemiston nimet tietokoneeltasi) .
 Jos tämä koskee vain paikallista testiä, poista "palvelin".
-   (Jos olet aiemmin määrittänyt Jere_Homen, voit poistaa sen.) 
+   (Jos olet aiemmin määrittänyt `Jre_home` Voit poistaa sen.) 
 
-XMX- ja XM-muistiasetukset ovat tärkeitä, koska ERDDAP™ toimii paremmin enemmän muistin kanssa.
-Aseta aina "Xms" samaan arvoon kuin Xmx.
+The `XMX` ja `xms` Muisti on tärkeä, koska ERDDAP™ toimii paremmin enemmän muistin kanssa.
+Aina asetettu `xms` sama arvo kuin `XMX` .
 
 * 32 bittiä ja 32 bittiä Java :
 64 bittiä Java Paljon parempi kuin 32 Java 32 bit Java Toimii niin kauan kuin palvelin ei ole kiireinen.
 Mitä enemmän fyysistä muistia palvelimessa on, sitä parempi: 4+ GB on hyvä, 2 GB on kunnossa, vähemmän ei suositella.
-32 bittiä Java fyysinen muisti, Tomcat ja Java Älä juokse, jos yrität asentaa XMX:n yli 1500 M (1200 m joissakin tietokoneissa) .
-Jos palvelimellasi on alle 2 Gt muistia, vähennä Xmx-arvoa. (Sisältää M'egaBytes) 1/2 tietokoneen fyysisestä muistista.
+32 bittiä Java fyysinen muisti, Tomcat ja Java Älä juokse, jos yrität `XMX` Yli 1500 M (1200 m joissakin tietokoneissa) .
+Jos palvelimellasi on alle 2 Gt muistia, vähennä `XMX` Arvon arvo (Sisältää M'egaBytes) 1/2 tietokoneen fyysisestä muistista.
 
 * 64 bittiä ja 64 bittiä Java :
 64 bittiä Java Toimii vain 64-bittisessä käyttöjärjestelmässä.
-  * kanssa Java 8, sinun on lisättävä ’-d64’ Tomcat ’CATALINA_OPTS’ -parametriin ’setenv.bat’.
+  * kanssa Java 8. Sinun on lisättävä `d64` Tomcatille `CATALINA_OPTS` parametriä `Televisio.bat` .
   * kanssa Java Valitse 64 bittiä Java Kun lataat version Java "64 bittiä"
 
-64 bittiä Java Tomcat ja Java Voit käyttää erittäin korkeita XMX- ja XM-asetuksia. Mitä enemmän fyysistä muistia palvelimessa on, sitä parempi.
-Yksinkertaisena ehdotuksena: suosittelemme, että asetat XMX:n ja XM:n (Sisältää M'egaBytes) 1/2 (tai vähemmän) tietokoneen fyysinen muisti.
+64 bittiä Java Tomcat ja Java voi käyttää erittäin korkea `XMX` ja `xms` asetuksia. Mitä enemmän fyysistä muistia palvelimessa on, sitä parempi.
+Yksinkertainen ehdotus: suosittelemme, että asetat `XMX` ja `xms` että (Sisältää M'egaBytes) 1/2 (tai vähemmän) tietokoneen fyysinen muisti.
 Saa nähdä, onko Tomcat Java ja ERDDAP™ 64-bittisessä tilassa etsitään "vähän" ERDDAP Päivittäinen sähköposti
-«BigParentDirectory/logs/ [log.txt](/docs/server-admin/additional-information#log) &gt; tiedostot (BigParentDirectory määritellään [Asennus.xml](#setupxml) ) .
+tai sisällä `BigParentDirectory/logs Näytä tarkat tiedot [log.txt](/docs/server-admin/additional-information#log) ` tiedostotiedosto ( `isovanhemmat` on määritelty [Asennus.xml](#setupxml) ) .
 
 #### Garbage kokoelma{#garbage-collection} 
 
 * Sisällä ERDDAP™ &gt; [log.txt](/docs/server-admin/additional-information#log) Näet monia "GC" (Jakamisen epäonnistuminen) "Viestit.
 Tämä ei yleensä ole ongelma. Se on usein viesti normaalista toiminnasta. Java Sanotaan, että se on juuri päättynyt pieneen roskaan.
 Kokoelma, koska se loppui huoneesta Eedenissä (osion Java Hyvin nuoret esineet) . Yleensä viesti näyttää
-’muistiinpanoa ennen ’muistia’. Jos nämä kaksi numeroa ovat lähellä toisiaan, se tarkoittaa, että roskat eivät ole tuottavia.
+   `MemoryUseAfter` . Jos nämä kaksi numeroa ovat lähellä toisiaan, se tarkoittaa, että roskat eivät ole tuottavia.
 Viesti on vain merkki ongelmasta, jos se on hyvin usein (joka sekunti) eivät ole tuottavia, ja määrät ovat suuria eivätkä kasva,
 jotka yhdessä osoittavat, että Java Tarvitset enemmän muistia, kamppailee vapauttaa muistia, ja ei voi vapauttaa muistia.
 Tämä voi tapahtua stressaavana aikana ja sitten mennä pois. Jos se jatkuu, se on merkki ongelmasta.
-* Jos näet ’java.lang.OutOfMemoryError’in ERDDAP™ &gt; [log.txt](/docs/server-admin/additional-information#log) tiedosto,
+* Jos näet `Java.lang.OutOfMemory Virhe` s sisään ERDDAP™ &gt; [log.txt](/docs/server-admin/additional-information#log) tiedosto,
 Katso nähkää [OutMemory-virhe](/docs/server-admin/additional-information#outofmemoryerror) vinkkejä siitä, miten diagnosoida ja ratkaista ongelmat.
          
 ### Luvat{#permissions} 
 
-*  [Linux ja Macs muuttavat käyttöoikeuksia](#permissions) kaikista ’*.sh’-tiedostoista ’tomcat/bin/’, jotka omistaja voi suorittaa:
+*  [Linux ja Macs muuttavat käyttöoikeuksia](#permissions) kaikista `*Shh.` tiedostot sisään `Tomcat/bin/` Omistajan suoritettavaksi:
   ```
   chmod +x *.sh
   ```
@@ -216,18 +216,18 @@ Katso nähkää [OutMemory-virhe](/docs/server-admin/additional-information#outo
 *  [Kuvat:](#fonts) Pidämme enemmän vapaista [DejaVu-fontit](https://dejavu-fonts.github.io/) toiseen Java fontteja.
 Näiden fonttien käyttö on suositeltavaa, mutta sitä ei tarvita.
 
-Jos päätät olla käyttämättä DejaVu-fontteja, sinun on muutettava fontFamily-asetus asennuksessa.xml <fontFamily> Sansserif </fontFamily> &gt;,
-joka on kaikkien saatavilla Java jakelua. Jos asetat " <fontFamily> "Fontin nimi, jota ei ole saatavilla, ERDDAP™ ei kuormita
-ja tulostaa luettelon saatavilla olevista fonteista "log.txt"-tiedostossa. Sinun on käytettävä yhtä näistä fonteista.
+Jos päätät olla käyttämättä DejaVu-fontteja, sinun on muutettava fontFamily-asetus asennuksessa.xml. ` <fontFamily> Sansserif </fontFamily> ` ,
+joka on kaikkien saatavilla Java jakelua. Jos asetat ` <fontFamily> ` sellaisen fontin nimi, jota ei ole saatavilla, ERDDAP™ ei kuormita
+ja tulostaa luettelon käytettävissä olevista fonteista `log.txt` tiedosto. Sinun on käytettävä yhtä näistä fonteista.
 
-Jos haluat käyttää DejaVu-fontteja, varmista, että <fontFamily> "Sentup.xml on" <fontFamily> DejaVu Sans </fontFamily> &gt;
+Jos haluat käyttää DejaVu-fontteja, varmista, että ` <fontFamily> ` asennus.xml on ` <fontFamily> DejaVu Sans </fontFamily> ` .
 
 DejaVu-fonttien asentaminen, lataa [DejaVuFonts .zip ](/DejaVuFonts.zip)   (5 522 795 tavua, MD5=33E1E61FAB06A547851ED308B4FFF42) 
 ja poista fonttitiedostot väliaikaiseen hakemistoon.
 
   * Linuxissa:
     * Linux Adoptium Java jakelua, katso [Nämä ohjeet](https://blog.adoptopenjdk.net/2021/01/prerequisites-for-font-support-in-adoptopenjdk/) .
-    * toisen kanssa Java Jakelu: ’tomcat’-käyttäjänä kopioi fonttitiedostot JAVA_HOME/lib/fonts’ -sovellukseen Java Löydä fontit.
+    * toisen kanssa Java Jakelu: Kuten `Tom` Käyttäjä, kopioi fonttitiedostot `$JAVA_HOME/Lib/Fonts` niin Java Löydä fontit.
 Muista: jos/kun päivität uudempaan versioon Java Sinun on asennettava nämä fontit uudelleen.
   * Kunkin fonttitiedoston kohdalla, kaksinkertaista napsauttamalla sitä ja valitse sitten Asenna Font.
   * Windows 7 ja 10: Windows Explorerissa valitse kaikki fonttitiedostot. Klikkaa oikein. Klikkaa asennusta.
@@ -236,10 +236,10 @@ Muista: jos/kun päivität uudempaan versioon Java Sinun on asennettava nämä f
 
 * Testaa Tomcat-asennus.
   * Linux:
-    * Käyttäjänä "tomcat", juokse "tomcat/bin/startup.sh"
+    * Käyttäjä "tomcat" `Tomcat/bin/startup.sh` .
     * Katso URL + ":80/" selaimessasi (esim. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac Mac Mac (Tomcat toimii järjestelmänvalvojana) :
-    * "Tomcat/bin/startup.sh"
+    * Juokseminen `Tomcat/bin/startup.sh` .
     * Katso URL + ":80/" selaimessasi (esim. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Huomaa, että oletusarvoisesti Tomcat on vain käytettävissäsi. Se ei ole julkisesti saatavilla.
   * Windows paikalliset:
@@ -248,7 +248,7 @@ Huomaa, että oletusarvoisesti Tomcat on vain käytettävissäsi. Se ei ole julk
 
 Tomcat "Onnittelut" -sivulla.
 
-Jos on ongelmia, katso Tomcat-lokitiedosto ’tomcat/logs/catalina.out’.
+Jos on ongelmia, katso Tomcat-lokitiedosto `Tomcat/logs/catalina.out` .
 
 ### Ongelmia Tomcatin asennuksen kanssa?{#troubles-with-the-tomcat-installation} 
 
@@ -265,10 +265,10 @@ Tämän pitäisi palauttaa yksi rivi jollakin tavalla:
   tcp 0 0 :::8080 :::* LISTEN ## ##### ####/java
   ```
 
-   (Missä on digit) Tämä viittaa siihen, että "java"-prosessi (Epäilemättä Tomcat) Satama 8080 tarkoittaa "Tcp"-liikennettä.
+   (missä missä `#` Jokin digi) osoittaa, että a `Jaava` Prosessiprosessi (Epäilemättä Tomcat) Satama 8080 tarkoittaa "Tcp"-liikennettä.
 Jos riviä ei palautettu, jos linja on merkittävästi erilainen tai jos kaksi tai useampia rivejä on palautettu, satamaasetukset voivat olla ongelma.
 
-* Katso Tomcat-lokitiedosto ’tomcat/logs/catalina.out’ Tomcan ongelmat ja jotkut ERDDAP™ Käynnistysongelmat ovat lähes aina esillä.
+* Katso Tomcat-lokitiedosto `Tomcat/logs/catalina.out` . Tomcan ongelmat ja jotkut ERDDAP™ Käynnistysongelmat ovat lähes aina esillä.
 Tämä on yleistä, kun aloitat ERDDAP™ .
 
 * Nähdään [Tomca](https://tomcat.apache.org/) Verkkosivut tai hae apua, mutta kerro meille ongelmat, joita sinulla on ja löytämäsi ratkaisut.
@@ -276,9 +276,9 @@ Tämä on yleistä, kun aloitat ERDDAP™ .
 * Katso meidän [Lisätuen saaminen](/docs/intro#support) .
              
 ###  ERDDAP™ Sisältö{#erddap-content} 
-3.   [Aseta "tomcat/content/erddap"-tiedostot.](#erddap-content) 
+3.   [Aseta ylös `Tomcat/Sisältö/erdap` tiedostojen määrittely.](#erddap-content) 
 Linux, Mac ja Windows, lataa [erdapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
-ja poista se "tomcat"-hakemistoon, luomalla "tomcat/content/erddap".
+ja purkaa sitä `Tom` Hakemisto, luominen `Tomcat/Sisältö/erdap` .
 
 __Version 1.0.0, 20333 tavua, MD5=2B8D2A5AE5ED73E3A42B529C168C60B5, päivätty 2024-10-14
 
@@ -294,24 +294,24 @@ Myös aiemmat versiot ovat saatavilla:
 
 Edeltäjä Red Hat Enterprise Linux (Ryhmä) muissa tilanteissa, joissa et saa muuttaa Tomcat-hakemistoa tai missä haluat/tarvitset
 Laittaa ERDDAP™ Sisältöhakemisto jostain muusta syystä (Jos käytät Jettyä Tomcatin sijaan) ,
-Unzip ’erdapContent .zip &gt; haluttuun hakemistoon (johon vain käyttäjällä on pääsy) ja asettaa » erddapContentDirectory Järjestelmän omaisuus
- (esim. » erddapContentDirectory  =~tomcat/content/erddap &gt; &gt;) niin ERDDAP™ Löydä tämä uusi sisältöhakemisto.
+Unzip `erdapContent .zip ` haluttuun hakemistoon (johon vain `Tom` Käyttäjällä on pääsy) ja asettaa ` erddapContentDirectory ` Järjestelmän omaisuus
+ (esim. ` erddapContentDirectory  =~tomcat/content/erddap ` ) niin ERDDAP™ Löydä tämä uusi sisältöhakemisto.
 
 ### Asennus.xml{#setupxml} 
 
-*  [Lue kommentit ’tomcat/content/erddap/setup.xml &gt; &gt;](#setupxml) Tee pyydetyt muutokset. setup.xml on tiedosto, jossa on kaikki asetukset, jotka määrittävät, miten ERDDAP™ käyttäytyä.
+*  [Lue kommentit sisään `Tomcat/content/erddap/setup.xml` ](#setupxml) Tee pyydetyt muutokset. setup.xml on tiedosto, jossa on kaikki asetukset, jotka määrittävät, miten ERDDAP™ käyttäytyä.
 
 Alkuvaiheessa sinun on ainakin muutettava näitä asetuksia:
-      * &gt; &gt; <bigParentDirectory> &gt; &gt;
-      * &gt; &gt; <emailEverythingTo> &gt; &gt;
-      * &gt; &gt; <baseUrl> &gt; &gt;
-      * &gt; &gt; <email...> &gt; asetukset
-      * &gt; &gt; <admin...> &gt; asetukset
-      * &gt; &gt; <baseHttpsUrl> &gt; &gt; (Kun olet asentanut https ) 
+      *  ` <bigParentDirectory> ` 
+      *  ` <emailEverythingTo> ` 
+      *  ` <baseUrl> ` 
+      *  ` <email...> ` asetukset
+      *  ` <admin...> ` asetukset
+      *  ` <baseHttpsUrl> `   (Kun olet asentanut https ) 
 
 Kun luot BigParentDirectoryn, BigParentDirectoryn emohakemistosta:
 
-    * Tee "tomcat" käyttäjästä "bigParentDirectory":
+    * Tee siitä `Tom` Käyttäjän omistaja `isovanhemmat` :
       ```
       chown -R tomcat bigParentDirectory
       ```
@@ -332,7 +332,7 @@ Sisällä ERDDAP™ kirjaa tiedostoja ja tiedostoja yksityisistä tietoaineistoi
 ### Ympäristömuuttujat{#environment-variables} 
 
 Aloitetaan ERDDAP™ v2.13, ERDDAP™ Järjestäjät voivat ylittää minkä tahansa arvon asennus.xml määrittämällä ympäristömuuttujan.
-Nimeä » ERDDAP arvonimeä ennen juoksemista ERDDAP™ . Esimerkiksi käyttö » ERDDAP _baseUrl ylittää <baseUrl> "arvoa.
+Nimeä ` ERDDAP _arvonimi` ennen juoksemista ERDDAP™ . Esimerkiksi käyttö ` ERDDAP _baseUrl` Ylittää ` <baseUrl> ` arvoa.
 Tämä voi olla kätevää, kun käytät ERDDAP™ Dockerin kaltaisella säiliöllä, koska voit asettaa asennusasetukset.xml
 Toimita erityisasetuksia ympäristömuuttujan kautta. Jos toimitat salaisia tietoja ERDDAP™ tämän menetelmän kautta,
 Tarkista, että tiedot pysyvät salaisina. ERDDAP™ Lue ympäristömuuttujat vain kerran käynnistysvaiheessa.
@@ -342,22 +342,22 @@ Odota kunnes ERDDAP™ Se on aloitettu ja sitten ympäristömuuttujia.
 ###  datasets.xml  {#datasetsxml} 
 
 * Lue kommentit sisään [ **Työskentelyä yhdessä datasets.xml Tiedosto** ](/docs/server-admin/datasets) . Myöhemmin, kun olet saanut ERDDAP™ Juoksen juoksemassa
-ensimmäistä kertaa (yleensä vain oletustietojen kanssa) Muutat XML:ää ’tomcat/content/erddap/ datasets.xml &gt; &gt;
+ensimmäistä kertaa (yleensä vain oletustietojen kanssa) Muutat XML:ää `Tomcat/content/erddap datasets.xml ` 
 määrittää kaikki haluamasi tietoaineistot ERDDAP™ palvelemaan. Näin vietät suurimman osan ajastasi
 Kun perustat ERDDAP™ ja myöhemmin säilyttäen ERDDAP™ .
 
 Voit nähdä esimerkin [ datasets.xml Kirjoittanut GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml) .
      
 *  (epätodennäköistä) Nyt tai (hieman todennäköisemmin) tulevaisuudessa, jos haluat muuttaa erddapin CSS-tiedostoa, kopioi
-’tomcat/content/erddap/images/erdapStart2.cs’ to ’tomcat/content/erddap/images/erddap2.cs’ ja sen jälkeen tehdä muutoksia siihen.
-Muutokset ’erdap2.cs:iin’ tulevat voimaan vain silloin, kun ERDDAP™ Käynnistetään uudelleen ja usein myös käyttäjän on puhdistettava selaimen välimuistitiedostot.
+   `Tomcat/content/erddap/images/erdapStart2.css` että `Tomcat/content/erddap/images/erddap2.css` Sitten tehdään muutoksia siihen.
+Muutoksia `Erddap2.css` Vain silloin, kun ERDDAP™ Käynnistetään uudelleen ja usein myös käyttäjän on puhdistettava selaimen välimuistitiedostot.
      
  ERDDAP™ ei toimi oikein, jos asennus.xml tai datasets.xml tiedosto ei ole hyvin muotoiltu XML-tiedosto. Kun olet muokannut näitä tiedostoja,
 On hyvä tarkistaa, että tulos on hyvin muotoiltu XML liittämällä XML-teksti XML-testiin, kuten [xmlvalidaatio](https://www.xmlvalidation.com/) .
      
 ### Asenna erddap. War tiedostot{#install-the-erddapwar-file} 
 
-4. Linux, Mac ja Windows, _download [Erddap.sota](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) _ _ Tomcat/webapps »
+4. Linux, Mac ja Windows, _download [Erddap.sota](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) Sisään `Tomcat/webapps` :
 
 __Version 2.28.1, 622,676,238 tavua, MD5=48b4226045f950c8d69ef9521b9bc9, päivätty 2025-09-05_
 
@@ -382,14 +382,14 @@ SSL/TLS-terminaatio on usein hajallaan myös webserver-proxy-kerroksessa. Riippu
 
 #### Apasseja{#apache} 
 
-1. Varmista, että "mod_proxy" ja "mod_proxy" http "On ladattu:
+1. Varmista, että `Mod_proxy` ja `Mod_proxy http ` on ladattu:
 
 ```
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 ```
 
-2. Muokkaa olemassa olevaa &gt;&gt; <VirtualHost> &gt; tag (Jos on yksi) tai lisätä tiedoston lopussa:
+2. Muokkaa olemassa olevaa ` <VirtualHost> ` Tag (Jos on yksi) tai lisätä tiedoston lopussa:
 ```
 <VirtualHost *:80>
    ServerName YourDomain.org
@@ -400,15 +400,15 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 </VirtualHost>
 ```
 
-Jos ERDDAP™ tarjoillaan muulla polulla kuin ’/erddap’, joka myös asettaa ’X-Forwarded-Prefix’-otsikon
-Polkusegmentti _before_/erddap Tämä asetus olisi sopiva ERDDAP™ Palvellen
-&gt;/subpath/erddap
+Jos ERDDAP™ tarjoillaan muulla tiellä kuin `Eddap` myös asettaa `X-Forwarded-Prefix` Otsikko kohti
+Lähde: Before_ `Eddap` . Tämä asetus olisi sopiva ERDDAP™ Palvellen
+ `Lähde/erddap` :
 
 ```
 RequestHeader set X-Forwarded-Prefix /subpath
 ```
 
-3. Käynnistä Apache uudelleen: ’/usr/sbin/apachectl’ K Graceful &gt; &gt; (Joskus se on toisessa hakemistossa.) .
+3. Aloita Apache uudelleen: `Käyttäjä/sbin/apachectl K Graceful`   (Joskus se on toisessa hakemistossa.) .
          
 #### Yhdessä{#nginx} 
 
@@ -422,16 +422,16 @@ proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
 proxy_set_header X-Forwarded-Proto $scheme;
 ```
 
-Jos ERDDAP™ tarjoillaan muulla polulla kuin ’/erddap’, joka myös asettaa ’X-Forwarded-Prefix’-otsikon
-Polkusegmentti _before_/erddap Tämä asetus olisi sopiva ERDDAP™ Palvellen
-&gt;/subpath/erddap
+Jos ERDDAP™ tarjoillaan muulla tiellä kuin `Eddap` myös asettaa `X-Forwarded-Prefix` Otsikko kohti
+Lähde: Before_ `Eddap` . Tämä asetus olisi sopiva ERDDAP™ Palvellen
+ `Lähde/erddap` :
 
 ```
 proxy_set_header X-Forwarded-Prefix /subpath
 ```
 
 
-Jotta NGINX ja ERDDAP™ toimimaan oikein https Sinun täytyy laittaa seuraava snippet sisään Tomcat-palvelin.xml <Host> blokki:
+Jotta NGINX ja ERDDAP™ toimimaan oikein https Sinun täytyy laittaa seuraava snippet sisään Tomcat-palvelin.xml ` <Host> ` Blokki:
 ```
 <Valve className="org.apache.catalina.valves.RemoteIpValve"
   remoteIpHeader="X-Forwarded-For"
@@ -443,14 +443,14 @@ Jotta NGINX ja ERDDAP™ toimimaan oikein https Sinun täytyy laittaa seuraava s
 
 *  (En suosittele Tomcat Web Application Managerin käyttöä. Jos et ole täysin suljettu ja käynnistys Tomcat, ennemmin tai myöhemmin sinulla on PermGen muistiongelmia.) 
 *  (Linuxissa tai Mac OS:ssä, jos olet luonut Tomcat-käyttäjän, esimerkiksi tomcat, muista tehdä seuraavat vaiheet käyttäjänä.) 
-* Jos Tomcat jo juoksee, sulje Tomcat (Linux tai Mac OS) Tomcat/bin/shutdown.sh
-tai tai (Windowsissa) Tomcat \bin shutdown.bat &gt; &gt;
+* Jos Tomcat jo juoksee, sulje Tomcat (Linux tai Mac OS)   `Tomcat/bin/shutdown` 
+tai tai (Windowsissa)   `Tomcat \bin shutdown.bat ` 
 
-Linux, käytä PS -ef | Tomcat ennen ja jälkeen "shutdown.sh" varmistaa, että tomcat prosessi on pysähtynyt.
+Linux, Käytä `ps -ef | Tomcat` ennen ja jälkeen `sulku. Säv.` Varmista, että tomcat-prosessi on pysähtynyt.
 Prosessi on lueteltava ennen sulkeutumista, eikä sitä lopulta ole listattu sulkeutumisen jälkeen.
 Se voi kestää minuutin tai kaksi. ERDDAP™ Täysin suljettu. Ole kärsivällinen. Jos se ei näytä pysähtyvän itsestään, käytä:
-Tappaminen -9 <processID> &gt; &gt;
-* Aloita Tomcat (Linux tai Mac OS) "Tomcat/bin/startup.sh" tai (Windowsissa) Tomcat\bin\\startup.bat &gt; &gt;
+   `tappaa -9 <processID> ` 
+* Aloita Tomcat (Linux tai Mac OS)   `Tomcat/bin/startup.sh` tai tai (Windowsissa)   `Tomcat\bin\\startup.bat` 
 
 ## on ERDDAP™ juoksemaan?{#is-erddap-running} 
 
@@ -462,15 +462,15 @@ Käytä selainta nähdäksesihttp://www.YourServer.org/erddap/status.html.
 * Kun käyttäjän pyyntö tulee sisään, se menee Apacheen. (Linux- ja Mac OS -tietokoneissa) Sitten Tomcat, ERDDAP™ .
 * Näet, mitä tulee Apache (liittyviä virheitä) Apache-lokitiedostoissa.
 *    [Sinä](/docs/server-admin/additional-information#tomcat-logs) Katso, mitä Tomcat (liittyviä virheitä) 
-Tomcat-lokitiedostot (’tomcat/logs/catalina.out’ ja muut tiedostot kyseisessä hakemistossa) .
+Tomcat-lokitiedostot ( `Tomcat/logs/catalina.out` Muut tiedostot tässä hakemistossa) .
 *    [Sinä](/docs/server-admin/additional-information#log) Saa nähdä, mitä tulee ERDDAP diagnostisia viestejä ERDDAP ,
-Viestien virheet ERDDAP Sisällä ERDDAP™ &gt; &gt; <bigParentDirectory> /logs/log.txt tiedosto
+Viestien virheet ERDDAP Sisällä ERDDAP™   ` <bigParentDirectory> Tekijät/log.txt` tiedosto.
 * Tomcat ei aloita ERDDAP™ Kun Tomcat saa pyynnön ERDDAP™ . Voit katsoa Tomcat-lokitiedostoja, jos
 Alku alkoi ERDDAP™ tai jos tähän yritykseen liittyy virheilmoitus.
-* Milloin ERDDAP™ Aloita, se nimeää vanhan ERDDAP™ log.txt-tiedosto (”Logo Archived At <CurrentTime> .txt ») Luo uusi log.txt-tiedosto.
-Jos "log.txt"-tiedosto on vanha, se on merkki siitä, että ERDDAP™ Ei ole hiljattain aloitettu uudelleen. ERDDAP™ Kirjoita lokitiedot puskuriin
+* Milloin ERDDAP™ Aloita, se nimeää vanhan ERDDAP™ log.txt-tiedosto ( `logiikka <CurrentTime> .txt` ) Luo uusi log.txt-tiedosto.
+Jos siis `log.txt` tiedosto on vanha, se on merkki siitä, että ERDDAP™ Ei ole hiljattain aloitettu uudelleen. ERDDAP™ Kirjoita lokitiedot puskuriin
 ja kirjoittaa puskurin lokitiedostoon säännöllisesti, mutta voit pakottaa ERDDAP™ Kirjoita puskuri lokitiedostoon vierailemalla
-&gt; &gt; /erddap/status.html &gt;
+     ` /erddap/status.html ` .
 
 ### Vaikeus: Vanha versio Java  {#trouble-old-version-of-java} 
 
@@ -485,7 +485,7 @@ Ratkaisu on päivittää uusin versio Java Varmista, että Tomcat käyttää sit
 
 ### Slow startup ensimmäistä kertaa{#trouble-slow-startup-first-time} 
 
-Tomcatin on tehtävä paljon työtä ensimmäisen kerran, kun sovellus on ERDDAP™ Se on aloitettu; erityisesti sen on purettava "erddap.war"-tiedosto.
+Tomcatin on tehtävä paljon työtä ensimmäisen kerran, kun sovellus on ERDDAP™ on aloitettu; varsinkin sen on purettava `Erddap.sota` tiedostotiedosto
  (joka on kuin .zip tiedostotiedosto) . Joillakin palvelimilla ensimmäinen yritys nähdä ERDDAP™ Tanssit (30 sekuntia?) kunnes tämä työ on valmis.
 Muilla palvelimilla ensimmäinen yritys epäonnistuu välittömästi. Jos odotat 30 sekuntia ja yritä uudelleen, se onnistuu, jos ERDDAP™ asennettiin oikein.
 
@@ -507,18 +507,18 @@ Voit liittyä ERDDAP™ Ilmoituslistat [täällä täällä täällä](https://g
 ## Mukautettu{#customize} 
 
 *  [Mukauta itseäsi ERDDAP™ korostaa organisaatiotasi (Ei ei ei NOAA   ERD ) .](#customize) 
-* Vaihda lippu, joka näkyy kaikkien huipulla ERDDAP™ .html-sivut muokkaamalla <startBodyHtml5> "Tag in your" (säv. datasets.xml &gt; tiedosto.
-(Jos ei ole yhtä, kopioi oletus ERDDAP™ ’tomcat/webapps/erddap/WEB-INF/Classes/Gov/noaa/pfel/erddap/util/viestit.xml’ tiedostotiedosto
-Sisään » datasets.xml ja muokkaa sitä.) Voit esimerkiksi:
+* Vaihda lippu, joka näkyy kaikkien huipulla ERDDAP™ .html-sivut muokkaamalla ` <startBodyHtml5> ` Tag in your ` datasets.xml ` tiedosto.
+(Jos ei ole yhtä, kopioi oletus ERDDAP™ &gt; `Tomcat/webapps/erddap/WEB-INF/Classes/Gov/noaa/pfel/erddap/util/viestejä.xml` tiedostotiedosto
+sisään ` datasets.xml ` ja editoida sitä.) Voit esimerkiksi:
   * Käytä erilaista kuvaa (• organisaation logo) .
   * Muuta taustaväriä.
   * Muutos" ERDDAP™ "Organisaatiosi" ERDDAP™ """
   * Vaihda "Tieteellisten tietojen helpompi saatavuus" "Sinun organisaatiosi tietojen helpompi saatavuus".
   * Vaihda "Brought to You by" -linkkejä ollaksesi linkkejä organisaatioosi ja rahoituslähteisiin.
-* Muuta kotisivun vasemmalla puolella olevaa tietoa muokkaamalla <theShortDescriptionHtml> "Tag in your" (säv. datasets.xml &gt; tiedosto.
-(Jos ei ole yhtä, kopioi oletus ERDDAP™ ’tomcat/webapps/erddap/WEB-INF/Classes/Gov/noaa/pfel/erddap/util/viestit.xml’ tiedostotiedosto
-Sisään » datasets.xml ja muokkaa sitä.) Voit esimerkiksi:
+* Muuta kotisivun vasemmalla puolella olevaa tietoa muokkaamalla ` <theShortDescriptionHtml> ` Tag in your ` datasets.xml ` tiedosto.
+(Jos ei ole yhtä, kopioi oletus ERDDAP™ &gt; `Tomcat/webapps/erddap/WEB-INF/Classes/Gov/noaa/pfel/erddap/util/viestejä.xml` tiedostotiedosto
+sisään ` datasets.xml ` ja editoida sitä.) Voit esimerkiksi:
   * Kerro, mitä organisaatiosi ja/tai ryhmäsi tekee.
   * Selvitä, millaisia tietoja tämä ERDDAP™ on.
-  * Muuttaa ikoni, joka näkyy selaimen välilehtiä, laittaa organisaation favicon. ico in ’tomcat/content/erddap/images/’.
+  * Muuttaa ikoni, joka näkyy selaimen välilehtiä, laittaa organisaation favicon. Ico sisään `Tomcat/content/erddap/images/` .
 Näytähttps://en.wikipedia.org/wiki/Favicon.

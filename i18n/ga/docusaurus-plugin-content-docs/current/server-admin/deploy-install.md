@@ -33,8 +33,8 @@ go háirithe, ERDDAP™ a bheith in ann a scriosadh agus / nó comhaid a athainm
 Ar chúiseanna slándála, tá sé beagnach i gcónaí is fearr a bhaint as an leagan is déanaí de Java 21.
 Íoslódáil agus a shuiteáil an leagan is déanaí de
     [Adoptium's OpenJDK (taiseachas aeir: fliuch) 21 Samhain (Leathanach Main) ](https://adoptium.net/temurin/releases/?version=21) .
-Chun an tsuiteáil a fhíorú, reáchtáil ` / javaJreBinDirectory / java -version `, mar shampla
-`/Dúirt / áitiúil / jdk-21.0.3 +9/jre/bin / java -version .
+Chun an tsuiteáil a fhíorú, reáchtáil `cliceáil grianghraf a mhéadú --` , mar shampla
+    `/ úsáid tírdhreach: coimeádán, flowerbed, teorann --` .
 
     ERDDAP™ oibreacha le Java ó fhoinsí eile, ach molaimid Adoptium toisc go bhfuil sé an príomh, pobail-tacaíocht,
 saor in aisce (mar atá i mbeoir agus óráid) leagan de Java 21 a thairgeann Tacaíocht Fadtéarmach (uasghrádú saor in aisce le blianta fada anuas ar an scaoileadh tosaigh) .
@@ -52,33 +52,33 @@ Is féidir leat a úsáid eile Java Freastalaí Iarratais (Cuardaigh le haghaidh
 
    * Íoslódáil Tomcat agus é a dhíphacáil ar do fhreastalaí nó ríomhaire.
 Ar chúiseanna slándála, tá sé beagnach i gcónaí is fearr a bhaint as an leagan is déanaí de Tomcat 10 (Níl leagan 9 agus thíos inghlactha) 
-atá deartha chun obair le Java 21 nó níos nuaí. Thíos, Beidh an eolaire Tomcat a tharchur mar `tomcat` .
+atá deartha chun obair le Java 21 nó níos nuaí. Anseo thíos, beidh an eolaire Tomcat a tharchur mar `taiseachas aeir: fliuch` .
 
 Tuilleadh eolais Má tá tú cheana féin Tomcat ag rith roinnt iarratas gréasáin eile (go háirithe THREDDS) , molaimid duit a shuiteáil ERDDAP™ i
       [an dara Tomcat](/docs/server-admin/additional-information#second-tomcat) , mar gheall ar ERDDAP™ riachtanais éagsúla suímh Tomcat
 agus níor chóir a contend le hiarratais eile do chuimhne.
 
      * Ar Linux, [íoslódáil an "Core" "tar .gz " Tomcat dáileadh](https://tomcat.apache.org/download-10.cgi) agus é a dhíphacáil.
-Molaimid é a dhíphacáil i `/usr/áitiúil `.
-     * Ar Mac, is dócha go bhfuil Tomcat suiteáilte cheana féin i `/Library/Tomcat`, ach ba chóir é a thabhairt cothrom le dáta go dtí an leagan is déanaí de Tomcat 10.
-Má íoslódáil tú é, [íoslódáil an "Core" "tar .gz " Tomcat dáileadh](https://tomcat.apache.org/download-10.cgi) agus é a dhíphacáil i `/Library/Tomcat` .
+Molaimid é a dhíphacáil i `Seirbhís do Chustaiméirí` .
+     * Ar Mac, is dócha go bhfuil Tomcat suiteáilte cheana féin i `/ Trádála / Trádála` , ach ba chóir é a thabhairt cothrom le dáta go dtí an leagan is déanaí de Tomcat 10.
+Má íoslódáil tú é, [íoslódáil an "Core" "tar .gz " Tomcat dáileadh](https://tomcat.apache.org/download-10.cgi) agus é a dhíphacáil i `/ Trádála / Trádála` .
      * Ar Windows, is féidir leat [íoslódáil an "Core" "zip" Tomcat dáileadh](https://tomcat.apache.org/download-10.cgi) 
         (nach praiseach leis an chlárlann Windows agus a rialú tú ó líne ordú DOS) agus é a dhíphacáil in eolaire cuí.
-        (Le haghaidh forbartha, bainimid úsáid as an dáileadh "Core" "zip". Déanaimid ` / cláir ` eolaire agus unpack sé ann .) 
+        (Le haghaidh forbartha, bainimid úsáid as an dáileadh "Core" "zip". Déanaimid `/ Cláir` eolaire agus é a dhíphacáil ann.) 
 Nó is féidir leat a íoslódáil an "Core" "64-giotán Windows zip" dáileadh, lena n-áirítear níos mó gnéithe.
-Más suiteálaí Windows é an dáileadh, is dócha go gcuirfidh sé Tomcat isteach, mar shampla, ` / Comhaid Clár / pache-tomcat-10.0.23 `.
+Más suiteálaí Windows é an dáileadh, is dócha go gcuirfidh sé Tomcat isteach, mar shampla, `/ Líonra Comhaid / pache-tomcat-10.0.23` .
              
 ### riachtanais uisce: measartha{#serverxml} 
 
-*  [riachtanais uisce: measartha](#serverxml) - Sa `tomcat / conf / server.xml ` comhad, tá dhá athruithe gur chóir duit a dhéanamh ar gach ceann den dá ` <Connector> ` clibeanna
-   (ceann amháin le haghaidh ` port tionscnóir = "80" ` agus ceann amháin le haghaidh r `Consa port = "8443" `) .
-   1.  (Molta) Méadú ar an luach paraiméadar `connectionTimeout`, b'fhéidir go 300000 (milliseconds, atá 5 nóiméad) .
-   2.  (Molta) Cuir paraiméadar nua: `relaxedQueryChars ="[] | ". Tá sé seo roghnach agus beagán níos lú slán,
+*  [riachtanais uisce: measartha](#serverxml) - Sa `cliceáil grianghraf a mhéadú` comhad, tá dhá athruithe gur chóir duit a dhéanamh ar gach ceann den dá ` <Connector> ` tags
+   (ceann amháin le haghaidh `port phraghsanna = "8080"` agus ceann amháin do `"8443"` ) .
+   1.  (Molta) Méadú `nasc nasc nasc nasc Amuigh faoin aer` luach paraiméadar, b'fhéidir go 300000 (milliseconds, atá 5 nóiméad) .
+   2.  (Molta) Cuir paraiméadar nua: `tréimhse saoil: ilbhliantúil | " " "` . Tá sé seo roghnach agus beagán níos lú slán,
 ach cuireann an gá atá le húsáideoirí chun faoin gcéad-ionchódú na carachtair nuair a tharlaíonn siad i paraiméadair URL iarraidh úsáideora.
              
 ### ábhar.xml{#contentxml} 
 
-* cineál gas: in airde -- Acmhainní Cache - I `tomcat/conf/context.xml `, ceart roimh an ` </Context> ` chlib, athrú ar an chlib Acmhainní
+* cineál gas: in airde -- Acmhainní Cache - I `cliceáil grianghraf a mhéadú` , ceart roimh an ` </Context> ` tag, athrú ar an chlib Acmhainní
    (nó é a chur más rud é nach bhfuil sé ann cheana) a shocrú ar an taisce Uasmhéid paraiméadar go 80000:
   ```
   <Resources cachingAllowed="true" cacheMaxSize="80000" />
@@ -92,26 +92,26 @@ Seachnaíonn sé seo go leor rabhaidh i catalina. amach go bhfuil gach tús le
 
 * Ar ríomhairí Linux, athrú ar na suímh timeout Apache ionas nach mbeidh iarratais úsáideora am-íditheach
    (leis an méid is cosúil go minic mar earráid "Proxy" nó "Bad Gateway") . Mar an t-úsáideoir fréimhe:
-  * Athraigh an Apache ` http d.conf ` comhad (de ghnáth i `/etc/ http d/conf/conf/ ` .) :
-    * Athrú ar an ` atá ann cheana <Timeout> ` leagan síos (nó cuir ceann ag deireadh an chomhaid) go 3600 (soicind beag) , in ionad an réamhshocraithe 60 nó 120 soicind.
-    * Athrú ar an ` atá ann cheana <ProxyTimeout> ` leagan síos (nó cuir ceann ag deireadh an chomhaid) go 3600 (soicind beag) , in ionad an réamhshocraithe 60 nó 120 soicind.
-  * Atosaigh Apache: `/usr/sbin / Feithiclí bláthanna cumhra: cumhráin ` . (ach uaireanta tá sé i eolaire éagsúla) .
+  * Athraigh an Apache ` http d.` comhad comhad (de ghnáth i `/ srl http d/conf/conf/` ) :
+    * Athrú ar an láthair ` <Timeout> ` leagan leagan (nó cuir ceann ag deireadh an chomhaid) go 3600 (soicind beag) , in ionad an réamhshocraithe 60 nó 120 soicind.
+    * Athrú ar an láthair ` <ProxyTimeout> ` leagan leagan (nó cuir ceann ag deireadh an chomhaid) go 3600 (soicind beag) , in ionad an réamhshocraithe 60 nó 120 soicind.
+  * Atosú Apache: `/ úsáid tírdhreach: bláthanna cumhra: cumhráin`   (ach uaireanta tá sé i eolaire éagsúla) .
 
 ### Slándáil agus Slándáil{#security} 
          
 * Moladh slándála: Féach ar [na treoracha seo](https://tomcat.apache.org/tomcat-10.0-doc/security-howto.html) chun slándáil a mhéadú
 do shuiteáil Tomcat, go háirithe le haghaidh freastalaithe poiblí.
          
-* Le haghaidh poiblí ERDDAP™ suiteálacha ar Linux agus Macs, is fearr Tomcat a chur ar bun (an clár) mar a bhaineann le úsáideoir `tomcat ` .
+* Le haghaidh poiblí ERDDAP™ suiteálacha ar Linux agus Macs, is fearr Tomcat a chur ar bun (an clár) mar a bhaineann le húsáideoir `taiseachas aeir: fliuch` 
    (úsáideoir ar leith le ceadanna teoranta agus a [Níl aon focal faire](https://unix.stackexchange.com/questions/56765/creating-an-user-without-a-password) ) .
-Dá bhrí sin, is féidir ach an t-úsáideoir Super athrú chun gníomhú mar úsáideoir `tomcat` . Seo a dhéanann sé dodhéanta do hackers a logáil isteach ar do fhreastalaí mar úsáideoir ` tomcat` .
-Agus in aon chás, ba chóir duit é a dhéanamh ionas go bhfuil an `tomcat` úsáideoir ceadanna an-teoranta ar chóras comhaid an fhreastalaí (léamh + scríobh + pribhléidí execute
-don `apache-tomcat` crann eolaire agus ` <bigParentDirectory> ` agus pribhléidí a léamh-amháin do eolairí le sonraí a ERDDAP™ riachtanais rochtain ar).
-  * Is féidir leat a chruthú ar an cuntas úsáideora `tomcat` (a bhfuil aon focal faire) trí úsáid a bhaint as an ordú:
+Dá bhrí sin, is féidir ach an t-úsáideoir Super athrú chun gníomhú mar úsáideoir `taiseachas aeir: fliuch` . Seo a dhéanann sé dodhéanta do hackers a logáil isteach ar do fhreastalaí mar úsáideoir `taiseachas aeir: fliuch` .
+Agus in aon chás, ba chóir duit é a dhéanamh ionas go mbeidh an `taiseachas aeir: fliuch` Tá úsáideoir ceadanna an-teoranta ar an bhfreastalaí córas comhaid (léamh + scríobh pribhléidí execute
+do na `riachtanais uisce: measartha` crann eolaire agus ` <bigParentDirectory> ` agus pribhléidí a léamh-amháin do eolairí le sonraí a ERDDAP™ riachtanais rochtain ar).
+  * Is féidir leat a chruthú `taiseachas aeir: fliuch` internet marketing (a bhfuil aon focal faire) trí úsáid a bhaint as an ordú:
     ```
     sudo useradd tomcat -s /bin/bash -p '*'
     ```
-  * Is féidir leat athrú a bheith ag obair mar úsáideoir `tomcat ` trí úsáid a bhaint as an ordú
+  * Is féidir leat athrú chun oibriú mar úsáideoir `taiseachas aeir: fliuch` trí úsáid a bhaint as an ordú
     ```
     sudo su - tomcat
     ```
@@ -120,9 +120,9 @@ don `apache-tomcat` crann eolaire agus ` <bigParentDirectory> ` agus pribhléid�
     ```
     exit
     ````
-    * An chuid is mó den chuid eile den Tomcat agus ERDDAP™ treoracha thus mar úsáideoir `tomcat` . Níos déanaí, reáchtáil an `startup.sh` agus `shutdown.sh` scripteanna mar úsáideoir ` ` .
+    * An chuid is mó den chuid eile den Tomcat agus ERDDAP™ treoracha thus mar úsáideoir `taiseachas aeir: fliuch` . Níos déanaí, reáchtáil an `tús.sh` agus `múchadh. cúthail` scripteanna mar úsáideoir `taiseachas aeir: fliuch` 
 ionas go mbeidh cead ag Tomcat scríobh chuig a chuid comhad logála.
-    * Tar éis unpacking Tomcat, ó thuismitheoir an `apache-tomcat` eolaire:
+    * Tar éis unpacking Tomcat, ó thuismitheoir an `riachtanais uisce: measartha` foirm duille: líneach
       * Athrú úinéireacht an crann eolaire apache-tomcat chuig an úsáideoir tomcat.
         ```
         chown -R tomcat apache-tomcat-10.0.23
@@ -147,8 +147,8 @@ Tá sé seo tábhachtach, toisc go gcuireann sé cosc ar úsáideoirí eile ó l
 Socraigh Athróga Comhshaoil Tomcat
 
 * Ar Linux agus Macs:
-Cruthaigh comhad `tomcat/bin / setenv.sh ` . (nó i Red Hat Enterprise Linux \\[ SEIRBHÍSÍ \\] , in eagar ` ~tomcat/conf/tomcat10.conf ` .) a shocrú athróg timpeallacht Tomcat ar.
-Beidh an comhad seo a úsáid ag `tomcat/bin/startup.sh` agus `shutdown.sh` . Ba chóir go mbeadh an comhad rud éigin cosúil le:
+Cruthaigh comhad `cliceáil grianghraf a mhéadú`   (nó i Red Hat Enterprise Linux \\[ SEIRBHÍSÍ \\] , in eagar `cliceáil grianghraf a mhéadú` ) a shocrú athróg timpeallacht Tomcat ar.
+Beidh an comhad a úsáid ag `cliceáil grianghraf a mhéadú` agus `múchadh. cúthail` . Ba chóir go mbeadh an comhad rud éigin cosúil le:
   ```
   export JAVA_HOME=/usr/local/jdk-21.0.3+9
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
@@ -156,12 +156,12 @@ Beidh an comhad seo a úsáid ag `tomcat/bin/startup.sh` agus `shutdown.sh` . Ba
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
   ```
    (ach ainmneacha eolaire ó do ríomhaire a chur in ionad) .
-   (Má leagtar tú cheana `JRE_HOME`, is féidir leat é sin a bhaint.) 
-Ar Macs, is dócha nach gá duit a shocrú `JAVA_HOME.
+   (Má shocraíonn tú roimhe seo `Seirbhís do Chustaiméirí` , is féidir leat é sin a bhaint.) 
+Ar Macs, is dócha nach gá duit a shocrú `Seirbhís do Chustaiméirí` .
 
 * Ar Windows:
-Cruthaigh comhad `tomcat\bin\\setenv.bat ` a shocrú athróg timpeallacht Tomcat ar .
-Beidh an comhad a úsáid ag `tomcat\bin\\startup.bat` agus ` shutdown.bat ` .
+Cruthaigh comhad `cliceáil grianghraf a mhéadú` a shocrú athróg timpeallacht Tomcat ar.
+Beidh an comhad a úsáid ag `cliceáil grianghraf a mhéadú` agus ` shutdown.bat ` .
 Ba chóir go mbeadh an comhad rud éigin cosúil le:
   ```
   SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
@@ -171,42 +171,42 @@ Ba chóir go mbeadh an comhad rud éigin cosúil le:
   ```
    (ach ainmneacha eolaire ó do ríomhaire a chur in ionad) .
 Má tá sé seo ach le haghaidh tástála áitiúil, bain "freastalaí".
-   (Má leagtar tú cheana `JRE_HOME`, is féidir leat é sin a bhaint.) 
+   (Má shocraíonn tú roimhe seo `Seirbhís do Chustaiméirí` , is féidir leat é sin a bhaint.) 
 
-Tá an `-Xmx` agus `-Xms ` socruithe cuimhne tábhachtach mar gheall ar ERDDAP™ Oibríonn níos fearr le cuimhne níos mó.
-I gcónaí a leagtar `-Xms` leis an luach céanna mar `-Xmx` .
+An bhfuil `Uisce agus Séarachas` agus `- XMS` Tá socruithe cuimhne tábhachtach mar gheall ar ERDDAP™ Oibríonn níos fearr le cuimhne níos mó.
+Socraigh i gcónaí `- XMS` leis an luach céanna mar `Uisce agus Séarachas` .
 
 * Do 32 Córais Oibriúcháin giotán agus 32 giotán Java :
 64 giotán Java Tá i bhfad níos fearr ná 32 giotán Java , ach 32 giotán Java beidh ag obair chomh fada agus nach bhfuil an freastalaí i ndáiríre gnóthach.
 An chuimhne níos fisiciúla sa fhreastalaí an níos fearr: Tá 4 + GB i ndáiríre go maith, tá 2 GB ceart go leor, ní mholtar níos lú.
-Le 32 giotán Java , fiú le cuimhne fhisiceach flúirseach, Tomcat agus Java Ní bheidh ar siúl má iarracht tú a shocrú `-Xmx` i bhfad os cionn 1500M (1200M ar roinnt ríomhairí) .
-Má tá do fhreastalaí níos lú ná 2GB de chuimhne, laghdú ar an luach `-Xmx` (i 'M'egaBytes) go 1/2 de chuimhne fisiciúil an ríomhaire.
+Le 32 giotán Java , fiú le cuimhne fhisiceach flúirseach, Tomcat agus Java Ní bheidh ar siúl má iarracht tú a shocrú `Uisce agus Séarachas` i bhfad os cionn 1500M (1200M ar roinnt ríomhairí) .
+Má tá do fhreastalaí níos lú ná 2GB de chuimhne, laghdú ar an `Uisce agus Séarachas` luach (i 'M'egaBytes) go 1/2 de chuimhne fisiciúil an ríomhaire.
 
 * Do 64 Córais Oibriúcháin giotán agus 64 giotán Java :
 64 giotán Java ní oibreoidh sé ach ar chóras oibriúcháin giotán 64.
-  * Le Java 8, ní mór duit a chur `-d64` leis an Tomcat ` CATALINA_OPTS ` paraiméadar i `setenv.bat` .
+  * Le Java 8, ní mór duit a chur leis `An t-eagrán is déanaí` go dtí an Tomcat `CATALINA Cuntas deimhnithe` paraiméadar i `a chur ar fáil.` .
   * Le Java 21, roghnaíonn tú 64 giotán Java nuair a íoslódáil tú leagan de Java marcáilte "64 giotán".
 
-Le 64 giotán Java , Tomcat agus Java Is féidir úsáid a bhaint as an-ard `-Xmx` agus suímh `-Xms` . An chuimhne níos fisiciúla sa fhreastalaí an níos fearr.
-Mar moladh simplistic: molaimid duit a leagtar `-Xmx` agus `-Xms`a (i 'M'egaBytes) go 1/2 (nó níos lú) de chuimhne fisiciúil an ríomhaire.
+Le 64 giotán Java , Tomcat agus Java is féidir a úsáid an-ard `Uisce agus Séarachas` agus `- XMS` socruithe. An chuimhne níos fisiciúla sa fhreastalaí an níos fearr.
+Mar mholadh simplistic: molaimid duit a leagtar `Uisce agus Séarachas` agus `- XMS` go dtí (i 'M'egaBytes) go 1/2 (nó níos lú) de chuimhne fisiciúil an ríomhaire.
 Is féidir leat a fheiceáil má Tomcat, Java , agus ERDDAP™ ag rith go deimhin i 64 mód giotán ag cuardach le haghaidh "giotán," i ERDDAP 's Daily Report ríomhphost
-nó sa `bigParentDirectory/logs/ [logáil isteach.](/docs/server-admin/additional-information#log) ` comhad (`bigParentDirectory ` sonraithe i [crios fuar: aon sonraí](#setupxml) ) .
+nó sa `Plean Gníomhaíochta don Oideachas [logáil isteach.](/docs/server-admin/additional-information#log) ` comhad comhad ( `Treoir do Thuismitheoirí` a shonraítear i [crios fuar: aon sonraí](#setupxml) ) .
 
 #### Bailiúchán Garáiste{#garbage-collection} 
 
 * I ERDDAP™ 's [logáil isteach.](/docs/server-admin/additional-information#log) comhad, feicfidh tú go leor "GC (Naisc ábhartha eile) " teachtaireachtaí.
 Níl an Tweet seo ar fáil. Is teachtaireacht go minic ó oibriú de ghnáth Java ag rá go bhfuil sé críochnaithe ach truflais saorga
 bailiúchán toisc go raibh sé as an seomra in Eden (an t-alt den Java carn do rudaí an-óg) . De ghnáth, léiríonn an teachtaireacht tú
-`Mearrbhachas-bhíseán . Má tá an dá uimhir sin gar le chéile, ciallaíonn sé nach raibh an bailiúchán truflais táirgiúil.
+   `cuimhneacháin agus monatóireachta` . Má tá an dá uimhir sin gar le chéile, ciallaíonn sé nach raibh an bailiúchán truflais táirgiúil.
 Is é an teachtaireacht ach comhartha trioblóide má tá sé an-minic (gach cúpla soicind) , nach bhfuil táirgiúil, agus tá na huimhreacha mór agus nach bhfuil ag fás,
 a léiríonn le chéile go Java riachtanais cuimhne níos mó, ag streachailt chun saor in aisce suas cuimhne, agus nach bhfuil in ann a saor in aisce suas cuimhne.
 D'fhéadfadh sé seo tarlú le linn am strusmhar, ansin dul amach. Ach má leanann sé, is comhartha trioblóide é sin.
-* Má fheiceann tú `java.lang.OutOfMemoryEror`s i ERDDAP™ 's [logáil isteach.](/docs/server-admin/additional-information#log) comhad,
+* Má fheiceann tú `cliceáil grianghraf a mhéadú` s i ERDDAP™ 's [logáil isteach.](/docs/server-admin/additional-information#log) comhad,
 féach ar [Seirbhís do Chustaiméirí](/docs/server-admin/additional-information#outofmemoryerror) le haghaidh leideanna maidir le conas na fadhbanna a dhiagnóisiú agus a réiteach.
          
 ### Ceadúnas Madraí ar Líne{#permissions} 
 
-*  [Ar Linux agus Macs, athrú na ceadanna](#permissions) de gach `*.sh` comhaid i `tomcat/bin/` a bheith inrite ag an úinéir:
+*  [Ar Linux agus Macs, athrú na ceadanna](#permissions) go léir `*.sh` comhaid i `cliceáil grianghraf a mhéadú` a bheith inrite ag an úinéir:
   ```
   chmod +x *.sh
   ```
@@ -216,18 +216,18 @@ féach ar [Seirbhís do Chustaiméirí](/docs/server-admin/additional-informatio
 *  [Fonts le haghaidh íomhánna:](#fonts) Is fearr linn go láidir ar an saor in aisce [Seirbhís do Chustaiméirí](https://dejavu-fonts.github.io/) go dtí an ceann eile Java clónna.
 Ag baint úsáide as na clónna Moltar go láidir ach ní gá.
 
-Má roghnaíonn tú gan úsáid a bhaint as na clónna DejaVu, ní mór duit a athrú ar an suíomh cló Teaghlaigh i thus.xml go ` <fontFamily> Seirbhís do Chustaiméirí </fontFamily> `,
-atá ar fáil le gach Java dáiltí. Má leagtar tú ` <fontFamily> ` leis an ainm cló nach bhfuil ar fáil, ERDDAP™ Ní bheidh ualach
-agus beidh a phriontáil liosta de na clónna ar fáil sa `log.txt ` comhad. Ní mór duit ceann de na clónna sin a úsáid.
+Má roghnaíonn tú gan úsáid a bhaint as na clónna DejaVu, ní mór duit a athrú ar an suíomh cló Teaghlaigh i thus.xml a ` <fontFamily> Seirbhís do Chustaiméirí </fontFamily> ` ,
+atá ar fáil le gach Java dáiltí. Má leagtar tú ` <fontFamily> ` le hainm cló nach bhfuil ar fáil, ERDDAP™ Ní bheidh ualach
+agus beidh a phriontáil liosta de na clónna ar fáil sna `logáil isteach.` comhad. Ní mór duit ceann de na clónna sin a úsáid.
 
-Má roghnaíonn tú na clónna DejaVu a úsáid, déan cinnte an ` <fontFamily> ` leagan síos i thus .xml ` <fontFamily> Seirbhís do Chustaiméirí </fontFamily> ` .
+Má roghnaíonn tú na clónna DejaVu a úsáid, déan cinnte go ` <fontFamily> ` leagan síos go bhfuil setup.xml ` <fontFamily> Seirbhís do Chustaiméirí </fontFamily> ` .
 
 Chun na clónna DejaVu a shuiteáil, le do thoil íoslódáil [Seirbhís do Chustaiméirí .zip ](/DejaVuFonts.zip)   (5,522,795 beart, MD5 = 33E1E61FAB06A547851ED308B4FFEF42) 
 agus unzip na comhaid cló ar eolaire sealadach.
 
   * Ar Linux:
     * Do Linux Adoptium Java dáiltí, féach [na treoracha seo](https://blog.adoptopenjdk.net/2021/01/prerequisites-for-font-support-in-adoptopenjdk/) .
-    * Le eile Java dáiltí: Mar an `tomcat` úsáideoir, cóip na comhaid cló isteach `$JAVA_HOME /lib / fonts` mar sin Java Is féidir teacht ar na clónna.
+    * Le eile Java dáiltí: Mar an `taiseachas aeir: fliuch` úsáideoir, na comhaid cló a chóipeáil isteach `$JAVA Cuntas deimhnithe` amhlaidh Java Is féidir teacht ar na clónna.
 Cuimhnigh: má / nuair a uasghrádú tú níos déanaí go leagan níos nuaí de Java , ní mór duit na clónna seo a athshuiteáil.
   * Ar Macs: do gach comhad cló, cliceáil dúbailte ar sé agus ansin cliceáil Suiteáil Font.
   * Ar Windows 7 agus 10: i Windows Explorer, roghnaigh gach ceann de na comhaid cló. Cliceáil ar dheis. Cliceáil ar Suiteáil.
@@ -236,10 +236,10 @@ Cuimhnigh: má / nuair a uasghrádú tú níos déanaí go leagan níos nuaí de
 
 * Tástáil do shuiteáil Tomcat.
   * Linux:
-    * Mar úsáideoir "tomcat", reáchtáil `tomcat / bin/startup.sh` .
+    * Mar úsáideoir "tomcat", reáchtáil `cliceáil grianghraf a mhéadú` .
     * Féach ar do URL + ":8080/" i do bhrabhsálaí (e.g., [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac an Duine (reáchtáil tomcat mar an t-úsáideoir riarthóir córas) :
-    * Rith `Tomhaltáin / tosaithe .sh .
+    * Rith `cliceáil grianghraf a mhéadú` .
     * Féach ar do URL + ":8080/" i do bhrabhsálaí (e.g., [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Tabhair faoi deara go de réir réamhshocraithe, tá do Tomcat inrochtana ach amháin ag tú. Níl sé inrochtana go poiblí.
   * Windows localhost:
@@ -248,7 +248,7 @@ Tabhair faoi deara go de réir réamhshocraithe, tá do Tomcat inrochtana ach am
 
 Ba chóir duit a fheiceáil ar an Tomcat "Comhghairdeas" leathanach.
 
-Má tá deacracht ann, féach an comhad logála Tomcat ag `tomcat / logs / catalina.out `.
+Má tá deacracht, féach ar an comhad a logáil Tomcat ag `cliceáil grianghraf a mhéadú` .
 
 ### Trioblóidí leis an suiteáil Tomcat?{#troubles-with-the-tomcat-installation} 
 
@@ -265,10 +265,10 @@ Ba chóir sin ar ais líne amháin le rud éigin cosúil le:
   tcp 0 0 :::8080 :::* LISTEN ## ##### ####/java
   ```
 
-   (i gcás ` # `Is é roinnt dhigit) , ag léiriú go bhfuil próiseas `java` (Tomcat go mór) ag éisteacht ar port "8080" le haghaidh "tcp" tráchta.
+   (i gcás `Cóipeáil nasc leis an tweet` Is maith liom é) , ag léiriú go `taiseachas aeir: fliuch` próiseas próiseas (Tomcat go mór) ag éisteacht ar port "8080" le haghaidh "tcp" tráchta.
 Más rud é nach raibh aon línte ar ais, má tá an líne ar ais go suntasach difriúil, nó má tugadh ar ais dhá líne nó níos mó, ansin d'fhéadfadh go mbeadh fadhb leis na suímh port.
 
-* Féach an comhad log Tomcat `tomcat / logs / catalina.out `. fadhbanna Tomcat agus roinnt ERDDAP™ Tá fadhbanna tosaithe le fios beagnach i gcónaí ann.
+* Féach an comhad log Tomcat `cliceáil grianghraf a mhéadú` . fadhbanna Tomcat agus roinnt ERDDAP™ Tá fadhbanna tosaithe le fios beagnach i gcónaí ann.
 Níl an Tweet seo ar fáil ERDDAP™ .
 
 * Féach an [cliceáil grianghraf a mhéadú](https://tomcat.apache.org/) láithreán gréasáin nó cuardach a dhéanamh ar an ngréasán le haghaidh cabhair, ach le do thoil in iúl dúinn na fadhbanna a bhí agat agus na réitigh a fuair tú.
@@ -276,9 +276,9 @@ Níl an Tweet seo ar fáil ERDDAP™ .
 * Féach ar ár [alt ar thacaíocht bhreise a fháil](/docs/intro#support) .
              
 ###  ERDDAP™ Clár na dToghthóirí{#erddap-content} 
-3.   [Socraigh suas an `tomcat / Content/erddap` comhaid chumraíocht .](#erddap-content) 
+3.   [Socraigh suas an `cliceáil grianghraf a mhéadú` comhaid chumraíocht.](#erddap-content) 
 Ar Linux, Mac, agus Windows, íoslódáil [erddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
-agus unzip sé isteach sa `tomcat` eolaire, a chruthú ` tomcat / Content/erddap` .
+agus unzip sé isteach sa `taiseachas aeir: fliuch` web development `cliceáil grianghraf a mhéadú` .
 
 __Version 1.0.0, 20333 beart, MD5 = 2B8D2A5AE5ED73E3A42B529C168C60B5, dáta 2024-10-14
 
@@ -294,24 +294,24 @@ Tá roinnt leaganacha roimhe seo ar fáil freisin:
 
 Do Red Hat Enterprise Linux (SEIRBHÍSÍ) nó le haghaidh cásanna eile nuair nach bhfuil tú cead a mhodhnú ar an eolaire Tomcat nó nuair is mian leat/need
 a chur ar an ERDDAP™ eolaire ábhar i roinnt suíomh eile ar chúis éigin eile (mar shampla, má úsáideann tú Jetty in ionad Tomcat) ,
-cliceáil grianghraf a mhéadú .zip ` isteach ar an eolaire atá ag teastáil (a bhfuil ach an `tomcat ` úsáideoir rochtain) agus a leagtar ar an ` erddapContentDirectory ` maoin córais
- (e.g. ` erddapContentDirectory  =~tomcat/content/erddap ` .) amhlaidh ERDDAP™ Is féidir teacht ar an eolaire ábhar nua.
+taiseachas aeir: fliuch `erddapContent .zip ` i an eolaire atá ag teastáil (a bhfuil ach an `taiseachas aeir: fliuch` Tá rochtain ag an úsáideoir) agus a leagtar ar an ` erddapContentDirectory ` online service
+ (e.g. ` erddapContentDirectory  =~tomcat/content/erddap ` ) amhlaidh ERDDAP™ Is féidir teacht ar an eolaire ábhar nua.
 
 ### crios fuar: aon sonraí{#setupxml} 
 
-*  [Léigh na tuairimí i `tomcat / Content/erddap / setup.xml ` .](#setupxml) agus na hathruithe a iarrtar a dhéanamh. Is thus.xml an comhad le gach ceann de na suímh a shonrú conas do ERDDAP™ iompar.
+*  [Léigh na tuairimí i `cliceáil grianghraf a mhéadú` ](#setupxml) agus na hathruithe a iarrtar a dhéanamh. Is thus.xml an comhad le gach ceann de na suímh a shonrú conas do ERDDAP™ iompar.
 
 Maidir leis an thus tosaigh, MUST tú ar a laghad athrú ar na socruithe:
-      * ` . <bigParentDirectory> ` .
-      * ` . <emailEverythingTo> ` .
-      * ` . <baseUrl> ` .
-      * ` . <email...> ` socruithe
-      * ` . <admin...> ` socruithe
-      * ` . <baseHttpsUrl> ` . (nuair a bhunaigh tú https ) 
+      *  ` <bigParentDirectory> ` 
+      *  ` <emailEverythingTo> ` 
+      *  ` <baseUrl> ` 
+      *  ` <email...> ` irl - Library
+      *  ` <admin...> ` irl - Library
+      *  ` <baseHttpsUrl> `   (nuair a bhunaigh tú https ) 
 
 Nuair a chruthaíonn tú an Treoir do Thuismitheoirí mór, ón eolaire tuismitheoir de Threoir do Thuismitheoirí mór:
 
-    * Déan an `tomcat` úsáideoir an t-úinéir ar an `bigParentDirectory `:
+    * Déan an `taiseachas aeir: fliuch` úsáideoir úinéir an `Treoir do Thuismitheoirí` :
       ```
       chown -R tomcat bigParentDirectory
       ```
@@ -332,7 +332,7 @@ i ERDDAP™ comhaid agus comhaid a logáil le faisnéis faoi tacair sonraí prí
 ### Athróga Comhshaoil{#environment-variables} 
 
 Ag tosú le ERDDAP™ v2.13, ERDDAP™ Is féidir le riarthóirí override aon luach i thus.xml trí shonrú athróg timpeallacht
-ainmnithe ` ERDDAP _valueName ` roimh rith ERDDAP™ . Mar shampla, úsáid ` ERDDAP _baseUrl ` overrides an ` <baseUrl> luach ` .
+ainmnithe ainmnithe ` ERDDAP Ainm Laidine` roimh rith ERDDAP™ . Mar shampla, úsáid ` ERDDAP Uisce agus Séarachas` overrides an ` <baseUrl> ` luach.
 Is féidir é seo a bheith handy nuair a imscaradh ERDDAP™ le coimeádán cosúil Docker, mar is féidir leat a chur socruithe caighdeánach i thus.xml
 agus ansin socruithe speisialta a sholáthar trí athróg comhshaoil. Má sholáthraíonn tú faisnéis rúnda ERDDAP™ tríd an modh seo,
 a bheith cinnte a sheiceáil go mbeidh an t-eolas fanacht rúnda. ERDDAP™ léann ach athróg timpeallacht uair amháin in aghaidh an tosaithe,
@@ -342,22 +342,22 @@ fanacht go dtí go ERDDAP™ Tá tús curtha, ansin unset na hathróga comhshaoi
 ###  datasets.xml  {#datasetsxml} 
 
 * Léigh na tuairimí i [ **Ag obair leis an datasets.xml Déan Teagmháil Linn** ](/docs/server-admin/datasets) . Níos déanaí, tar éis a gheobhaidh tú ERDDAP™ ag rith
-don chéad uair (de ghnáth leis na tacair sonraí réamhshocraithe) , beidh tú a mhodhnú an XML i `tomcat / ábhar / erddap / datasets.xml ` .
+don chéad uair (de ghnáth leis na tacair sonraí réamhshocraithe) , beidh tú a mhodhnú an XML i `cliceáil grianghraf a mhéadú datasets.xml ` 
 a shonrú go léir na tacair sonraí is mian leat do ERDDAP™ a sheirbheáil. Níl an Tweet seo ar fáil.
 agus a bhunú ERDDAP™ agus ina dhiaidh sin ag cothabháil do ERDDAP™ .
 
 Is féidir leat sampla a fheiceáil [ datasets.xml ar GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml) .
      
 *  (Murab ionann agus) Anois nó (beagán níos dóichí) sa todhchaí, más mian leat a mhodhnú erddap ar CSS comhad, cóip
-` tomcat/content/erddap/images/erddapStart2.cs ` go ` tomcat/content/erddap/images/erddap2.cs ` agus ansin athruithe a dhéanamh air.
-Athruithe ar `erddap2.css` ghlacadh ach amháin i bhfeidhm nuair ERDDAP™ Tá atosú agus is minic a cheangal ar an úsáideoir a soiléir an bhrabhsálaí comhaid i dtaisce.
+   `tomcat/content/erddap/images/erddapStart2.cs` go dtí `cliceáil grianghraf a mhéadú` agus ansin athruithe a dhéanamh air.
+Athruithe ar `Seirbhís do Chustaiméirí` ach éifeacht a ghlacadh nuair ERDDAP™ Tá atosú agus is minic a cheangal ar an úsáideoir a soiléir an bhrabhsálaí comhaid i dtaisce.
      
  ERDDAP™ Ní bheidh ag obair i gceart má tá an thus.xml nó datasets.xml Níl comhad XML dea-chruthaithe. Mar sin,, tar éis duit in eagar na comhaid,
 Is smaoineamh maith a fhíorú go bhfuil an toradh go maith XML trí ghreamú an téacs XML isteach i checker XML cosúil [xmlvaldation](https://www.xmlvalidation.com/) .
      
 ### Suiteáil an erddap. comhad cogadh{#install-the-erddapwar-file} 
 
-4. Ar Linux, Mac, agus Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) _ isteach i `tomcat / apps `:
+4. Ar Linux, Mac, agus Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) _ isteach `riachtanais uisce: measartha` :
 
 __Version 2.28.1, 622,676,238 beart, MD5 = 48b4226045f950c8d69ef9521b9bc9, dar dáta 2025-09-05___
 
@@ -389,7 +389,7 @@ LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 ```
 
-2. Athraigh an ` atá ann cheana . <VirtualHost> ` chlib (má tá ceann amháin) , nó cuir ceann ag deireadh an chomhaid:
+2. Athraigh na láithreacha ` <VirtualHost> ` tag tag (má tá ceann amháin) , nó cuir ceann ag deireadh an chomhaid:
 ```
 <VirtualHost *:80>
    ServerName YourDomain.org
@@ -400,15 +400,15 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 </VirtualHost>
 ```
 
-Más rud é ERDDAP™ a sheirbheáil ar cosán seachas ` / erddap`, a leagtar freisin ar an `X-Forwarded-Prefix` header leis an
-deighleog cosán _ roimhe seo ` / erddap` . Bheadh an suíomh seo oiriúnach do ERDDAP™ a sheirbheáil ar
-`/subpath/erddap`:
+Más rud é ERDDAP™ a sheirbheáil ar chonair seachas `Seirbhís do Chustaiméirí` , a leagtar freisin an `X-Forwarded-Prefix` header chuig an
+deighleog cosán _ `Seirbhís do Chustaiméirí` . Bheadh an suíomh seo oiriúnach do ERDDAP™ a sheirbheáil ar
+ `/ Subpath / erddap` :
 
 ```
 RequestHeader set X-Forwarded-Prefix /subpath
 ```
 
-3. Ansin atosú Apache: `/usr/sbin / aipectl bláthanna cumhra: cumhráin ` . (ach uaireanta tá sé i eolaire éagsúla) .
+3. Ansin atosú Apache: `/ úsáid tírdhreach: bláthanna cumhra: cumhráin`   (ach uaireanta tá sé i eolaire éagsúla) .
          
 #### NGINX{#nginx} 
 
@@ -422,9 +422,9 @@ proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
 proxy_set_header X-Forwarded-Proto $scheme;
 ```
 
-Más rud é ERDDAP™ a sheirbheáil ar cosán seachas ` / erddap`, a leagtar freisin ar an `X-Forwarded-Prefix` header leis an
-deighleog cosán _ roimhe seo ` / erddap` . Bheadh an suíomh seo oiriúnach do ERDDAP™ a sheirbheáil ar
-`/subpath/erddap`:
+Más rud é ERDDAP™ a sheirbheáil ar chonair seachas `Seirbhís do Chustaiméirí` , a leagtar freisin an `X-Forwarded-Prefix` header chuig an
+deighleog cosán _ `Seirbhís do Chustaiméirí` . Bheadh an suíomh seo oiriúnach do ERDDAP™ a sheirbheáil ar
+ `/ Subpath / erddap` :
 
 ```
 proxy_set_header X-Forwarded-Prefix /subpath
@@ -443,14 +443,14 @@ D'fhonn a fháil NGINX agus ERDDAP™ ag obair i gceart le https , ní mór duit
 
 *  (Ní féidir liom a mholadh ag baint úsáide as an Tomcat Bainisteoir Iarratais Gréasáin. Más rud é nach bhfuil tú go hiomlán múchadh agus startup Tomcat, luath nó ina dhiaidh sin beidh ort saincheisteanna cuimhne PermGen.) 
 *  (I Linux nó Mac OS, má tá tú chruthaigh úsáideoir speisialta a reáchtáil Tomcat, m.sh., tomcat, cuimhnigh a dhéanamh ar na céimeanna seo a leanas mar an t-úsáideoir.) 
-* Má tá Tomcat ag rith cheana féin, stoptar síos Tomcat le (i Linux nó Mac OS) cliceáil grianghraf a mhéadú
-nó (i Windows) cliceáil grianghraf a mhéadú shutdown.bat ` .
+* Má tá Tomcat ag rith cheana féin, stoptar síos Tomcat le (i Linux nó Mac OS)   `cliceáil grianghraf a mhéadú` 
+nó (i Windows)   `Táirgí gaolmhara shutdown.bat ` 
 
-Ar Linux, bain úsáid as `ps -ef | tomcat grep ` roimh agus tar éis `shutdown.sh` chun a chinntiú go bhfuil an próiseas tomcat stop .
+Ar Linux, úsáid `Seirbhís do Chustaiméirí | cliceáil grianghraf a mhéadú` roimh agus tar éis `múchadh. cúthail` a dhéanamh cinnte go bhfuil an próiseas tomcat stop.
 Ba chóir an próiseas a liostú roimh an múchadh agus sa deireadh nach bhfuil liostaithe tar éis an múchadh.
 Féadfaidh sé nóiméad nó dhó a ghlacadh le haghaidh ERDDAP™ a dhúnadh go hiomlán síos. Bí othar. Nó má tá sé cosúil nach mbeidh sé stop a chur ar a chuid féin, a úsáid:
-9.00 r.n. <processID> ` .
-* Tosaigh Tomcat le (i Linux nó Mac OS) ` stráice/bin/startup.sh` nó (i Windows) cliceáil grianghraf a mhéadú ` .
+   `a mharú -9 <processID> ` 
+* Tosaigh Tomcat le (i Linux nó Mac OS)   `cliceáil grianghraf a mhéadú` nó (i Windows)   `cliceáil grianghraf a mhéadú` 
 
 ## Is maith liom ERDDAP™ ag rith?{#is-erddap-running} 
 
@@ -462,15 +462,15 @@ Féadfaidh sé nóiméad nó dhó a ghlacadh le haghaidh ERDDAP™ a dhúnadh go
 * Nuair a thagann iarraidh ó úsáideoir i, téann sé go Apache (ar Linux agus Mac OS ríomhairí) , ansin Tomcat, ansin ERDDAP™ .
 * Is féidir leat a fheiceáil cad a thagann chun Apache (agus earráidí gaolmhara) sna comhaid Apache logáil.
 *    [Tá tú](/docs/server-admin/additional-information#tomcat-logs) Is féidir a fheiceáil cad a thagann chun Tomcat (agus earráidí gaolmhara) 
-i comhaid Tomcat logáil (`tomcat / logs/catalina.out ` agus comhaid eile san eolaire) .
+i comhaid Tomcat logáil ( `cliceáil grianghraf a mhéadú` agus comhaid eile sa eolaire) .
 *    [Tá tú](/docs/server-admin/additional-information#log) Is féidir a fheiceáil cad a thagann chun ERDDAP , teachtaireachtaí diagnóiseacha ó ERDDAP ,
-agus teachtaireachtaí earráide ó ERDDAP , sa ERDDAP™ ` . <bigParentDirectory> / logs / log.txt ` comhad.
+agus teachtaireachtaí earráide ó ERDDAP , sa ERDDAP™   ` <bigParentDirectory> Naisc go dtí suíomhanna eile` comhad.
 * Ní Tomcat tús ERDDAP™ go dtí go bhfaigheann Tomcat iarratas ar ERDDAP™ . Mar sin, is féidir leat a fheiceáil i comhaid log Tomcat má tá sé
 tús curtha ERDDAP™ nó má tá teachtaireacht earráide a bhaineann leis an iarracht sin.
-* Nuair a bheidh ERDDAP™ Tosaíonn suas, renames sé an sean ERDDAP™ comhad logála.txt (cliceáil grianghraf a mhéadú Ag <CurrentTime> cliceáil grianghraf a mhéadú) agus cruthaíonn comhad log.txt nua.
-Mar sin, má tá an `log.txt ` comhad d'aois, tá sé comhartha go ERDDAP™ Nach bhfuil atosaíodh le déanaí. ERDDAP™ scríobhann eolas logáil isteach ar maolán
+* Nuair a bheidh ERDDAP™ Tosaíonn suas, renames sé an sean ERDDAP™ comhad logála.txt ( `Logáil isteach <CurrentTime> .txt` ) agus cruthaíonn comhad log.txt nua.
+Mar sin, má tá an `logáil isteach.` Tá comhad d'aois, is comhartha é sin ERDDAP™ Nach bhfuil atosaíodh le déanaí. ERDDAP™ scríobhann eolas logáil isteach ar maolán
 agus scríobhann sé ach an maolán chuig an gcomhad logála go tréimhsiúil, ach is féidir leat bhfeidhm ERDDAP™ an maolán a scríobh chuig an gcomhad logála trí chuairt a thabhairt
-` . /erddap/status.html ` .
+     ` /erddap/status.html ` .
 
 ### Trioblóid: Leagan d'aois Java  {#trouble-old-version-of-java} 
 
@@ -485,7 +485,7 @@ Is é an réiteach a thabhairt cothrom le dáta ar an leagan is déanaí de Java
 
 ### Trioblóid: Slow Startup Chéad Am{#trouble-slow-startup-first-time} 
 
-Tomcat Tá a lán oibre a dhéanamh den chéad uair iarratas cosúil ERDDAP™ Tá tús curtha; go háirithe, tá sé a unpack an `erddap.war ` comhad
+Tomcat Tá a lán oibre a dhéanamh den chéad uair iarratas cosúil ERDDAP™ Tá tús curtha; go háirithe, tá sé a unpack an `erddap.war` comhad comhad
  (atá cosúil le .zip comhad comhad) . Ar roinnt freastalaithe, an chéad iarracht chun féachaint ar ERDDAP™ stallaí (30 soicind?) go dtí go bhfuil an obair seo críochnaithe.
 Ar fhreastalaithe eile, beidh an chéad iarracht theipeann láithreach. Ach má tá tú ag fanacht 30 soicind agus iarracht a dhéanamh arís, beidh sé n-éireoidh má ERDDAP™ suiteáilte i gceart.
 
@@ -507,18 +507,18 @@ is féidir leat a bheith ar an ERDDAP™ fógraí liosta [anseo](https://groups.
 ## Saincheaptha{#customize} 
 
 *  [Saincheap do ERDDAP™ aird a tharraingt ar do eagraíocht (taiseachas aeir: fliuch NOAA   ERD ) .](#customize) 
-* Athraigh an mbratach atá le feiceáil ag barr gach ERDDAP™ leathanaigh .html trí eagarthóireacht ar an ` <startBodyHtml5> ` chlib i do ` . datasets.xml ` comhad.
-(Más rud é nach bhfuil ceann, cóip an mhainneachtain ó ERDDAP™ 's ` tomcat/webapps/iarbhall/WEB-INF/aicmí/gov/nó/pfel/iarbhalla/util/messages.xml ` comhad comhad
-isteach ` datasets.xml ` agus in eagar é.) Mar shampla, d'fhéadfá:
+* Athraigh an mbratach atá le feiceáil ag barr gach ERDDAP™ .html leathanaigh ag eagarthóireacht ar an ` <startBodyHtml5> ` tag i do ` datasets.xml ` comhad.
+(Más rud é nach bhfuil ceann, cóip an mhainneachtain ó ERDDAP™ 's `cliceáil grianghraf a mhéadú` comhad comhad
+isteach i ` datasets.xml ` agus in eagar é.) Mar shampla, d'fhéadfá:
   * Bain úsáid as íomhá éagsúla (i.e., lógó d'eagraíocht) .
   * Athraigh an dath cúlra.
   * Athrú " ERDDAP™ " go dtí "_YourOrganization_'s ERDDAP™ " " "
   * Athrú "Easier access to scientific data" go "Easier access to _YourOrganization_'s data".
   * Athraigh an "Brought a thabhairt duit ag" naisc a bheith naisc chuig do eagraíocht agus foinsí maoinithe.
-* Athraigh an t-eolas ar an taobh clé den leathanach baile ag eagarthóireacht ar an ` <theShortDescriptionHtml> ` chlib i do ` . datasets.xml ` comhad.
-(Más rud é nach bhfuil ceann, cóip an mhainneachtain ó ERDDAP™ 's ` tomcat/webapps/iarbhall/WEB-INF/aicmí/gov/nó/pfel/iarbhalla/util/messages.xml ` comhad comhad
-isteach ` datasets.xml ` agus in eagar é.) Mar shampla, d'fhéadfá:
+* Athrú ar an eolas ar an taobh clé den leathanach baile ag eagarthóireacht ar an ` <theShortDescriptionHtml> ` tag i do ` datasets.xml ` comhad.
+(Más rud é nach bhfuil ceann, cóip an mhainneachtain ó ERDDAP™ 's `cliceáil grianghraf a mhéadú` comhad comhad
+isteach i ` datasets.xml ` agus in eagar é.) Mar shampla, d'fhéadfá:
   * Déan cur síos ar cad a dhéanann do eagraíocht agus / nó grúpa.
   * Déan cur síos ar cén cineál sonraí seo ERDDAP™ Tá.
-  * A athrú ar an deilbhín gur dealraitheach ar tabs bhrabhsálaí, cuir favicon do eagraíocht. i `tomcat/content/erddap/images/` .
+  * A athrú ar an deilbhín gur dealraitheach ar tabs bhrabhsálaí, cuir favicon do eagraíocht. ico i `tomcat/content/erddap/images/images/` .
 Féach arhttps://en.wikipedia.org/wiki/Favicon.

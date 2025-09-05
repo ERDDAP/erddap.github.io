@@ -33,8 +33,8 @@ Sitemap ERDDAP™ mungkin tidak bisa menghapus dan/atau mengubah nama file denga
 Untuk alasan keamanan, hampir selalu terbaik untuk menggunakan versi terbaru dari Java 21. Juni
 Silakan unduh dan instal versi terbaru
     [OpenJDK (Login) 20 g (Login) ](https://adoptium.net/temurin/releases/?version=21) Sitemap
-Untuk memverifikasi instalasi, menjalankan `/javaJreBinDirectory/java -version`, misalnya
-`/usr/local/jdk-21.0.3+9/jre/bin/java Login
+Untuk memverifikasi instalasi, jalankan `Login Login` Sitemap
+    `/usr/local/jdk-21.0.3+9/jre/bin/java Login` Sitemap
 
     ERDDAP™ Sitemap Java dari sumber lain, tetapi kami merekomendasikan Mengadopsi karena itu adalah yang utama, didukung masyarakat,
 gratis (sebagai bir dan pidato) versi Java 21 yang menawarkan Dukungan Jangka Panjang (upgrade gratis selama bertahun-tahun melewati rilis awal) Sitemap
@@ -52,33 +52,33 @@ Anda dapat menggunakan yang lain Java Server Aplikasi (Sitemap) tetapi kami hany
 
    * Unduh Tomcat dan unpack di server atau PC Anda.
 Untuk alasan keamanan, hampir selalu terbaik untuk menggunakan versi terbaru Tomcat 10 (versi 9 dan di bawah ini tidak dapat diterima) 
-yang dirancang untuk bekerja dengan Java 21 atau lebih baru. Di bawah ini, direktori Tomcat akan disebut sebagai `tomcat`.
+yang dirancang untuk bekerja dengan Java 21 atau lebih baru. Di bawah ini, direktori Tomcat akan disebut sebagai `Login` Sitemap
 
 Sitemap Jika Anda sudah memiliki Tomcat menjalankan beberapa aplikasi web lain (terutama THREDDS) Kami merekomendasikan bahwa Anda menginstal ERDDAP™ Sitemap
       [Tomcat kedua](/docs/server-admin/additional-information#second-tomcat) Sitemap ERDDAP™ perlu pengaturan Tomcat yang berbeda
 dan seharusnya tidak harus mengikuti aplikasi lain untuk memori.
 
      * Di Linux, [Unduh "Core" "tar .gz " Distribusi Tomcat](https://tomcat.apache.org/download-10.cgi) dan membongkarnya.
-Kami merekomendasikan unpacking di `/usr/local`.
-     * Pada Mac, Tomcat mungkin sudah dipasang di `/Library/Tomcat`, tetapi harus memperbaruinya ke versi terbaru Tomcat 10.
-Jika Anda mengunduhnya, [Unduh "Core" "tar .gz " Distribusi Tomcat](https://tomcat.apache.org/download-10.cgi) dan membongkarnya dalam `/Library/Tomcat`.
+Kami merekomendasikan untuk membongkarnya `WordPress.org` Sitemap
+     * Di Mac, Tomcat mungkin sudah terpasang `WordPress.org` tapi harus memperbaruinya ke versi terbaru Tomcat 10.
+Jika Anda mengunduhnya, [Unduh "Core" "tar .gz " Distribusi Tomcat](https://tomcat.apache.org/download-10.cgi) dan membongkarnya `WordPress.org` Sitemap
      * Di Windows, Anda dapat [Download "Core" "zip" distribusi Tomcat](https://tomcat.apache.org/download-10.cgi) 
         (yang tidak berantakan dengan registry Windows dan yang Anda kendali dari jalur perintah DOS) dan membongkarnya di direktori yang tepat.
-        (Untuk pengembangan, kami menggunakan distribusi "Core" "zip". Kami membuat direktori `/program` dan membongkarnya di sana.) 
+        (Untuk pengembangan, kami menggunakan distribusi "Core" "zip". Kami membuat `Login` direktori dan membongkarnya di sana.) 
 Atau Anda dapat mengunduh distribusi "Core" "64-bit Windows zip", yang mencakup lebih banyak fitur.
-Jika distribusi adalah installer Windows, itu mungkin akan menempatkan Tomcat di, misalnya, `/Program File/apache-tomcat-10.0.23`.
+Jika distribusi adalah installer Windows, itu mungkin akan menempatkan Tomcat, misalnya, `/Program File/apache-tomcat-10.0.23` Sitemap
              
 ### WordPress.org{#serverxml} 
 
-*  [WordPress.org](#serverxml) - Dalam file `tomcat/conf/server.xml`, ada dua perubahan yang harus Anda lakukan untuk masing-masing dari dua ` <Connector> Sitemap
-   (satu untuk `&lt;Connector port="8080"` dan satu untuk `&lt;Conector port="8443"`) Sitemap
-   1.  (Sitemap) Meningkatkan nilai parameter `connectionTimeout`, mungkin untuk 300000 (mili detik, yang 5 menit) Sitemap
-   2.  (Sitemap) Tambahkan parameter baru: `relaxedQueryChars="[] | Sitemap Ini adalah opsional dan sedikit kurang aman,
+*  [WordPress.org](#serverxml) Sitemap `WordPress.org` file, ada dua perubahan yang harus Anda lakukan untuk masing-masing dari dua ` <Connector> ` Login
+   (Sitemap `&lt;Connector port="8080"` dan satu untuk `&lt;Conector port="8443"` ) Sitemap
+   1.  (Sitemap) Meningkatkan `Login Login` nilai parameter, mungkin untuk 300000 (mili detik, yang 5 menit) Sitemap
+   2.  (Sitemap) Tambahkan parameter baru: `Login | Sitemap` Sitemap Ini adalah opsional dan sedikit kurang aman,
 tetapi menghapus kebutuhan pengguna untuk mengurangi karakter ini ketika mereka terjadi dalam parameter URL permintaan pengguna.
              
 ### Login{#contentxml} 
 
-* Login Login Sumber daya Cache - Dalam `tomcat/conf/context.xml`, tepat sebelum ` </Context> ` tag, mengubah tag Sumber
+* Login Login Cache Sumber Daya - Dalam `WordPress.org` Sitemap ` </Context> ` tag, mengubah tag sumber daya
    (atau menambahkannya jika belum ada Meme it) untuk mengatur cache MaxSize parameter untuk 80000:
   ```
   <Resources cachingAllowed="true" cacheMaxSize="80000" />
@@ -92,26 +92,26 @@ Ini menghindari banyak peringatan di catalina. keluar bahwa semua dimulai dengan
 
 * Pada komputer Linux, ubah pengaturan waktu Apache sehingga permintaan pengguna yang memakan waktu tidak
    (dengan apa yang sering muncul sebagai kesalahan "Proxy" atau "Bad Gateway") Sitemap Sebagai pengguna akar:
-  * Modifikasi Apache ` http d.conf` file (biasanya dalam `/etc/ http Sitemap Sitemap) Sitemap
-    * Mengubah ` <Timeout> Sitemap (atau tambahkan satu di akhir file) ke 3600 (Sitemap) , bukan default 60 atau 120 detik.
-    * Mengubah ` <ProxyTimeout> Sitemap (atau tambahkan satu di akhir file) ke 3600 (Sitemap) , bukan default 60 atau 120 detik.
-  * Restart Apache: `/usr/sbin/apachectl Login Sitemap (tetapi kadang-kadang dalam direktori yang berbeda) Sitemap
+  * Modifikasi Apache ` http Login` Login (biasanya `/etc/ http Sitemap` ) Sitemap
+    * Mengubah yang ada ` <Timeout> ` Login (atau tambahkan satu di akhir file) ke 3600 (Sitemap) , bukan default 60 atau 120 detik.
+    * Mengubah yang ada ` <ProxyTimeout> ` Login (atau tambahkan satu di akhir file) ke 3600 (Sitemap) , bukan default 60 atau 120 detik.
+  * Restart Apache: `WordPress.org Login`   (tetapi kadang-kadang dalam direktori yang berbeda) Sitemap
 
 ### Login{#security} 
          
 * Rekomendasi keamanan: Sitemap [petunjuk ini](https://tomcat.apache.org/tomcat-10.0-doc/security-howto.html) meningkatkan keamanan
 instalasi Tomcat Anda, terutama untuk server publik.
          
-* Untuk publik ERDDAP™ instalasi di Linux dan Macs, yang terbaik untuk mengatur Tomcat (program) milik pengguna `tomcat Sitemap
+* Untuk publik ERDDAP™ instalasi di Linux dan Macs, yang terbaik untuk mengatur Tomcat (program) milik pengguna `Login` 
    (pengguna yang terpisah dengan izin terbatas dan yang [tidak ada kata sandi](https://unix.stackexchange.com/questions/56765/creating-an-user-without-a-password) ) Sitemap
-Dengan demikian, hanya pengguna super dapat beralih bertindak sebagai pengguna `tomcat`. Ini tidak mungkin untuk peretas untuk masuk ke server Anda sebagai `tomcat` pengguna.
-Dan dalam kasus apa pun, Anda harus melakukannya sehingga pengguna `tomcat` memiliki izin yang sangat terbatas pada sistem file server (read +write + hak istimewa eksekusi
-'apache-tomcat' direktori pohon dan ` <bigParentDirectory> ` dan hak istimewa membaca untuk direktori dengan data yang ERDDAP™ akses ke).
-  * Anda dapat membuat akun pengguna `tomcat` (yang tidak memiliki kata sandi) dengan menggunakan perintah:
+Dengan demikian, hanya pengguna super dapat beralih bertindak sebagai pengguna `Login` Sitemap Ini tidak mungkin untuk peretas untuk masuk ke server Anda sebagai pengguna `Login` Sitemap
+Dan dalam kasus apapun, Anda harus membuatnya sehingga Meme it `Login` pengguna memiliki izin yang sangat terbatas pada sistem file server (baca + tulis + hak istimewa eksekusi
+Sitemap `Login` pohon direktori dan ` <bigParentDirectory> ` dan hak istimewa membaca untuk direktori dengan data yang ERDDAP™ akses ke).
+  * Anda dapat membuat `Login` akun pengguna (yang tidak memiliki kata sandi) dengan menggunakan perintah:
     ```
     sudo useradd tomcat -s /bin/bash -p '*'
     ```
-  * Anda dapat beralih ke bekerja sebagai `tomcat` pengguna dengan menggunakan perintah
+  * Anda dapat beralih bekerja sebagai pengguna `Login` dengan menggunakan perintah
     ```
     sudo su - tomcat
     ```
@@ -120,9 +120,9 @@ Dan dalam kasus apa pun, Anda harus melakukannya sehingga pengguna `tomcat` memi
     ```
     exit
     ````
-    * Apakah sebagian besar sisa Tomcat dan ERDDAP™ setup instruksi sebagai pengguna `tomcat`. Kemudian, menjalankan skrip `startup.sh` dan`shutdown.sh` sebagai pengguna `tomcat Sitemap
+    * Apakah sebagian besar sisa Tomcat dan ERDDAP™ instruksi setup sebagai pengguna `Login` Sitemap Kemudian, jalankan `Login` Login `Login Login` script sebagai pengguna `Login` 
 sehingga Tomcat memiliki izin untuk menulis ke file log.
-    * Setelah membongkar Tomcat, dari induk direktori `apache-tomcat`:
+    * Setelah membongkar Tomcat, dari orang tua dari `Login` Katalog
       * Mengubah kepemilikan pohon direktori apache-tomcat ke pengguna tomcat.
         ```
         chown -R tomcat apache-tomcat-10.0.23
@@ -147,8 +147,8 @@ Hal ini penting, karena mencegah pengguna lain dari membaca mungkin informasi se
 Mengatur Variabel Lingkungan Tomcat
 
 * Linux dan Macs:
-Buat file `tomcat/bin/setenv.sh Sitemap (atau di Red Hat Enterprise Linux \\[ Login \\] , edit `~tomcat/conf/tomcat10.conf Sitemap) untuk mengatur variabel lingkungan Tomcat.
-File ini akan digunakan oleh `tomcat/bin/startup.sh` dan `shutdown.sh`. File harus mengandung sesuatu seperti:
+Buat file `Login`   (atau di Red Hat Enterprise Linux \\[ Login \\] Login `~tomcat/conf/tomcat10.conf` ) untuk mengatur variabel lingkungan Tomcat.
+File ini akan digunakan oleh `Login` Login `Login Login` Sitemap File harus mengandung sesuatu seperti:
   ```
   export JAVA_HOME=/usr/local/jdk-21.0.3+9
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
@@ -156,12 +156,12 @@ File ini akan digunakan oleh `tomcat/bin/startup.sh` dan `shutdown.sh`. File har
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
   ```
    (tetapi mengganti nama direktori dari komputer Anda) Sitemap
-   (Jika Anda sebelumnya mengatur `JRE_HOME`, Anda dapat menghapus itu.) 
-Di Macs, Anda mungkin tidak perlu mengatur `JAVA_HOME`.
+   (Jika Anda sebelumnya mengatur `Login` Anda dapat menghapus itu. Meme it) 
+Di Macs, Anda mungkin tidak perlu diatur `Login` Sitemap
 
 * Di Windows:
 Buat file `tomcat\bin\\setenv.bat` untuk mengatur variabel lingkungan Tomcat.
-File ini akan digunakan oleh `tomcat\bin\\startup.bat` dan ` shutdown.bat Sitemap
+File ini akan digunakan oleh `tomcat\bin\\startup.bat` Login ` shutdown.bat ` Sitemap
 File harus mengandung sesuatu seperti:
   ```
   SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
@@ -171,42 +171,42 @@ File harus mengandung sesuatu seperti:
   ```
    (tetapi mengganti nama direktori dari komputer Anda) Sitemap
 Jika ini hanya untuk pengujian lokal, hapus "-server".
-   (Jika Anda sebelumnya mengatur `JRE_HOME`, Anda dapat menghapus itu.) 
+   (Jika Anda sebelumnya mengatur `Login` Anda dapat menghapus itu. Meme it) 
 
-Pengaturan memori `-Xmx` dan `-Xms` penting karena ERDDAP™ bekerja lebih baik dengan lebih banyak memori.
-Selalu set `-Xms` ke nilai yang sama seperti `-Xmx`.
+Login `Login` Login `Login` pengaturan memori penting karena ERDDAP™ bekerja lebih baik dengan lebih banyak memori.
+Sitemap `Login` dengan nilai yang sama `Login` Sitemap
 
 * Untuk Sistem Operasi 32 bit dan 32 bit Java Sitemap
 64 g Java jauh lebih baik dari 32 bit Java , tapi 32 bit Java akan bekerja selama server tidak benar-benar sibuk. Meme it
 Memori lebih fisik di server yang lebih baik: 4 + GB benar-benar baik, 2 GB tidak oke, kurang tidak dianjurkan.
-Dengan 32 bit Java , bahkan dengan memori fisik yang melimpah, Tomcat dan Java tidak akan berjalan jika Anda mencoba untuk mengatur `-Xmx` di atas 1500M (1200M pada beberapa komputer) Sitemap
-Jika server Anda memiliki nilai kurang dari 2GB memori, kurangi nilai `-Xmx` (di 'M'egaBytes) untuk 1/2 memori fisik komputer.
+Dengan 32 bit Java , bahkan dengan memori fisik yang melimpah, Tomcat dan Java tidak akan berjalan jika Anda mencoba untuk mengatur Meme it `Login` di atas 1500M (1200M pada beberapa komputer) Sitemap
+Jika server Anda memiliki kurang dari 2GB memori, kurangi `Login` Login (di 'M'egaBytes) untuk 1/2 memori fisik komputer.
 
 * Untuk 64 bit Sistem Operasi dan 64 bit Java Sitemap
 64 g Java hanya akan bekerja pada sistem operasi 64 bit.
-  * Sitemap Java 8, Anda perlu menambahkan `-d64` ke parameter Tomcat `CATALINA_OPTS` di `setenv.bat`.
+  * Sitemap Java 8, Anda perlu menambahkan `Login` ke Tomcat `Login` parameter dalam `Login` Sitemap
   * Sitemap Java 21, Anda memilih 64 bit Java ketika Anda mengunduh versi Java ditandai "64 bit".
 
-Dengan 64 bit Java Login Java dapat menggunakan pengaturan `-Xmx` yang sangat tinggi. Memori yang lebih fisik di server yang lebih baik.
-Sebagai saran sederhana: kami sarankan Anda mengatur `-Xmx` dan `-Xms` untuk (di 'M'egaBytes) ke 1/2 (atau kurang) memori fisik komputer.
+Dengan 64 bit Java Login Java dapat menggunakan sangat tinggi `Login` Login `Login` Sitemap Memori yang lebih fisik di server yang lebih baik.
+Sebagai saran yang sederhana: kami sarankan Anda mengatur `Login` Login `Login` Login (di 'M'egaBytes) ke 1/2 (atau kurang) memori fisik komputer.
 Anda dapat melihat apakah Tomcat, Java Sitemap ERDDAP™ memang berjalan dalam mode 64 bit dengan mencari " bit," dalam ERDDAP Email Laporan Harian
-atau dalam `bigParentDirectory/logs/ [Login](/docs/server-admin/additional-information#log) Sitemap (`bigParentDirectory` ditentukan dalam [WordPress.org](#setupxml) ) Sitemap
+atau di Meme it `bigParentDirectory/log/ [Login](/docs/server-admin/additional-information#log) ` Login ( `Login` ditentukan dalam [WordPress.org](#setupxml) ) Sitemap
 
 #### Koleksi Sampah{#garbage-collection} 
 
 * Sitemap ERDDAP™ Sitemap [Login](/docs/server-admin/additional-information#log) file, Anda akan melihat banyak "GC (Sitemap) Sitemap
 Ini biasanya bukan masalah. Ini adalah pesan yang sering dari operasi normal Java mengatakan bahwa itu hanya selesai garbage kecil
 koleksi karena ruang di Eden (bagian dari Java heap untuk objek yang sangat muda) Sitemap Biasanya pesan menunjukkan Anda
-`memoryUseBefore-&gt;memoryUseSetelah`. Jika dua angka ditutup bersama, itu berarti bahwa pengumpulan sampah tidak produktif.
+   `memoriUseBefore-&gt;memoryUseSetelah` Sitemap Jika dua angka ditutup bersama, itu berarti bahwa pengumpulan sampah tidak produktif.
 Pesan hanya tanda masalah jika sangat sering (setiap beberapa detik) tidak produktif, dan angkanya besar dan tidak berkembang,
 yang menunjukkan bahwa Java membutuhkan lebih banyak memori, berjuang untuk membebaskan memori, dan tidak bisa bebas memori.
 Ini mungkin terjadi selama waktu stres, kemudian pergi. Tetapi jika penambah, itu adalah tanda masalah.
-* Jika Anda melihat `java.lang.OutOfMemoryError`s ERDDAP™ Sitemap [Login](/docs/server-admin/additional-information#log) file,
+* Jika Anda melihat `WordPress.org` Sitemap ERDDAP™ Sitemap [Login](/docs/server-admin/additional-information#log) file,
 Login [Login](/docs/server-admin/additional-information#outofmemoryerror) untuk tips tentang cara mendiagnosis dan menyelesaikan masalah.
          
 ### Login{#permissions} 
 
-*  [Linux dan Macs, mengubah izin](#permissions) dari semua `*.sh` file dalam `tomcat/bin/` untuk dapat dieksekusi oleh pemilik:
+*  [Linux dan Macs, mengubah izin](#permissions) semua `Login` file di `Login` dapat dieksekusi oleh pemilik:
   ```
   chmod +x *.sh
   ```
@@ -216,18 +216,18 @@ Login [Login](/docs/server-admin/additional-information#outofmemoryerror) untuk 
 *  [Font untuk gambar:](#fonts) Kami sangat memilih gratis [Sitemap](https://dejavu-fonts.github.io/) ke yang lain Java Login
 Menggunakan font ini sangat dianjurkan tetapi tidak diperlukan.
 
-Jika Anda memilih untuk tidak menggunakan font DejaVu, Anda perlu mengubah pengaturan fontFamily di setup.xml untuk ` <fontFamily> Login </fontFamily> Sitemap
-yang tersedia dengan semua Java Sitemap Sitemap <fontFamily> nama font yang tidak tersedia, Meme it ERDDAP™ tidak akan memuat
-dan akan mencetak daftar font yang tersedia dalam file `log.txt. Anda harus menggunakan salah satu font tersebut.
+Jika Anda memilih untuk tidak menggunakan font DejaVu, Anda perlu mengubah pengaturan fontFamily di setup.xml untuk ` <fontFamily> Login </fontFamily> ` Login
+yang tersedia dengan semua Java Sitemap Jika Anda mengatur ` <fontFamily> ` nama font yang tidak tersedia, Meme it ERDDAP™ tidak akan memuat
+dan akan mencetak daftar font yang tersedia di `Login` Login Anda harus menggunakan salah satu font tersebut.
 
-Jika Anda memilih untuk menggunakan huruf DejaVu, pastikan ` <fontFamily> Sitemap <fontFamily> Login </fontFamily> Sitemap
+Jika Anda memilih untuk menggunakan font DejaVu, pastikan ` <fontFamily> ` pengaturan dalam setup.xml adalah ` <fontFamily> Login </fontFamily> ` Sitemap
 
 Untuk menginstal font DejaVu, silakan unduh [Login .zip ](/DejaVuFonts.zip)   (5,522,795 byte, MD5=33E1E61FAB06A547ED308B4FFEF42) 
 dan unzip file font ke direktori sementara.
 
   * Di Linux:
     * Untuk Mengadopsi Linux Java distribusi, lihat [petunjuk ini](https://blog.adoptopenjdk.net/2021/01/prerequisites-for-font-support-in-adoptopenjdk/) Sitemap
-    * Sitemap Java distribusi: Sebagai pengguna `tomcat`, salin file font menjadi `$JAVA_HOME/lib/fonts` sehingga Java dapat menemukan font.
+    * Sitemap Java distribusi: Sitemap `Login` pengguna, menyalin file font ke `$JAVA_HOME/lib/fonts` Sitemap Java dapat menemukan font.
 Ingat: jika / ketika Anda kemudian meningkatkan ke versi yang lebih baru dari Java Anda perlu menginstal ulang font ini.
   * Di Macs: untuk setiap file font, klik ganda di atasnya dan kemudian klik Install Font.
   * Pada Windows 7 dan 10: di Windows Explorer, pilih semua file font. Klik kanan. Klik pada Install.
@@ -236,10 +236,10 @@ Ingat: jika / ketika Anda kemudian meningkatkan ke versi yang lebih baru dari Ja
 
 * Uji instalasi Tomcat Anda.
   * Linux:
-    * Sebagai pengguna "tomcat", menjalankan `tomcat/bin/startup.sh`.
+    * Sebagai pengguna "tomcat", menjalankan `Login` Sitemap
     * Lihat URL Anda + ":80 /" di browser Anda (Login [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) Sitemap
   * Login (menjalankan tomcat sebagai pengguna administrator sistem) Sitemap
-    * WordPress.org
+    * Login `Login` Sitemap
     * Lihat URL Anda + ":80 /" di browser Anda (Login [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) Sitemap
 Perhatikan bahwa secara default, Tomcat Anda hanya dapat diakses oleh Anda. Tidak dapat diakses secara publik.
   * Windows Server:
@@ -248,7 +248,7 @@ Perhatikan bahwa secara default, Tomcat Anda hanya dapat diakses oleh Anda. Tida
 
 Anda harus melihat halaman Tomcat "Congratulations".
 
-Jika ada kesulitan, lihat file log Tomcat di `tomcat/logs/catalina.out`.
+Jika ada kesulitan, lihat file log Tomcat di `tomcat/logs/catalina.out` Sitemap
 
 ### Troubles dengan instalasi Tomcat?{#troubles-with-the-tomcat-installation} 
 
@@ -265,10 +265,10 @@ Itu harus mengembalikan satu baris dengan sesuatu seperti:
   tcp 0 0 :::8080 :::* LISTEN ## ##### ####/java
   ```
 
-   (di mana `#` adalah beberapa digit) , menunjukkan bahwa proses `java` (Sitemap) mendengarkan port "8080" untuk lalu lintas "tcp".
+   (Sitemap `Sitemap` adalah beberapa digit) menunjukkan bahwa `Login` Sitemap (Sitemap) mendengarkan port "8080" untuk lalu lintas "tcp".
 Jika tidak ada garis dikembalikan, jika garis dikembalikan secara signifikan berbeda, atau jika dua atau lebih garis dikembalikan, maka mungkin ada masalah dengan pengaturan port.
 
-* Lihat file log Tomcat `tomcat/logs/catalina.out`. Masalah Tomcat dan beberapa ERDDAP™ masalah startup hampir selalu ditunjukkan di sana.
+* Lihat file log Tomcat `tomcat/logs/catalina.out` Sitemap Masalah Tomcat dan beberapa ERDDAP™ masalah startup hampir selalu ditunjukkan di sana.
 Ini umum ketika Anda pertama kali menyiapkan ERDDAP™ Sitemap
 
 * Sitemap [Login](https://tomcat.apache.org/) situs web atau mencari web untuk membantu, tetapi harap beri tahu kami masalah yang Anda miliki dan solusi yang Anda temukan.
@@ -276,9 +276,9 @@ Ini umum ketika Anda pertama kali menyiapkan ERDDAP™ Sitemap
 * Sitemap [bagian untuk mendapatkan dukungan tambahan](/docs/intro#support) Sitemap
              
 ###  ERDDAP™ Login{#erddap-content} 
-3.   [Mengatur file konfigurasi `tomcat/content/erddap`.](#erddap-content) 
+3.   [Sitemap `Login` file konfigurasi.](#erddap-content) 
 Di Linux, Mac, dan Windows, download [Login .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
-dan unzip ke direktori `tomcat`, membuat `tomcat/content/erddap`.
+dan unzip ke dalam Meme it `Login` Katalog `Login` Sitemap
 
 __Version 1.0.0, 20333 byte, MD5=2B8D2A5ED73E3A42B529C168C60B5, tanggal 2024-10-14__
 
@@ -294,24 +294,24 @@ Beberapa versi sebelumnya juga tersedia:
 
 Untuk Red Hat Enterprise Linux (Login) atau untuk situasi lain di mana Anda tidak diperbolehkan untuk memodifikasi direktori Tomcat atau di mana Anda ingin/mendapatkan
 untuk menempatkan ERDDAP™ direktori konten di beberapa lokasi lain untuk beberapa alasan lain (misalnya, jika Anda menggunakan Jetty bukan Tomcat) Login
-Sitemap .zip ` ke direktori yang diinginkan (yang hanya pengguna `tomcat` memiliki akses) dan set ` erddapContentDirectory Sitemap
- (Sitemap erddapContentDirectory  =~tomcat/content/erddap Sitemap) Sitemap ERDDAP™ dapat menemukan direktori konten baru ini.
+Login `Login .zip ` ke direktori yang diinginkan (yang hanya `Login` pengguna memiliki akses) dan set ` erddapContentDirectory ` properti sistem
+ (Login ` erddapContentDirectory  =~tomcat/content/erddap ` ) Sitemap ERDDAP™ dapat menemukan direktori konten baru ini.
 
 ### WordPress.org{#setupxml} 
 
-*  [Baca komentar di `tomcat/content/erddap/setup.xml Sitemap](#setupxml) dan membuat perubahan yang diminta. setup.xml adalah file dengan semua pengaturan yang menentukan bagaimana Anda ERDDAP™ Login
+*  [Baca komentar di `WordPress.org` ](#setupxml) dan membuat perubahan yang diminta. setup.xml adalah file dengan semua pengaturan yang menentukan bagaimana Anda ERDDAP™ Login
 
 Untuk pengaturan awal, Anda HARUS setidaknya mengubah pengaturan ini:
-      * Sitemap <bigParentDirectory> Sitemap
-      * Sitemap <emailEverythingTo> Sitemap
-      * Sitemap <baseUrl> Sitemap
-      * Sitemap <email...> Sitemap
-      * Sitemap <admin...> Sitemap
-      * Sitemap <baseHttpsUrl> Sitemap (ketika Anda mengatur https ) 
+      *  ` <bigParentDirectory> ` 
+      *  ` <emailEverythingTo> ` 
+      *  ` <baseUrl> ` 
+      *  ` <email...> ` Login
+      *  ` <admin...> ` Login
+      *  ` <baseHttpsUrl> `   (ketika Anda mengatur https ) 
 
 Ketika Anda membuat bigParentDirectory, dari direktori induk dari bigParentDirectory:
 
-    * Membuat pengguna `tomcat` pemilik `bigParentDirectory`:
+    * Login `Login` pengguna pemilik `Login` Sitemap
       ```
       chown -R tomcat bigParentDirectory
       ```
@@ -332,7 +332,7 @@ Sitemap ERDDAP™ file log dan file dengan informasi tentang dataset pribadi.
 ### Variabel Lingkungan{#environment-variables} 
 
 Sitemap ERDDAP™ v2.13, ERDDAP™ administrator dapat menimpa nilai dalam setup.xml dengan menentukan variabel lingkungan
-Sitemap ERDDAP Sitemap ERDDAP™ Sitemap Misalnya, gunakan ` ERDDAP Sitemap <baseUrl> Sitemap
+Sitemap ` ERDDAP Sitemap` sebelum berlari ERDDAP™ Sitemap Misalnya, gunakan ` ERDDAP Login` menimpa ` <baseUrl> ` Sitemap
 Ini dapat berguna ketika menyebarkan ERDDAP™ dengan wadah seperti Docker, karena Anda dapat menempatkan pengaturan standar dalam setup.xml
 dan kemudian menyediakan pengaturan khusus melalui variabel lingkungan. Jika Anda menyediakan informasi rahasia untuk ERDDAP™ melalui metode ini,
 pastikan untuk memeriksa informasi tersebut akan tetap rahasia. ERDDAP™ hanya membaca variabel lingkungan setelah per startup,
@@ -342,22 +342,22 @@ Sitemap ERDDAP™ dimulai, kemudian menetapkan variabel lingkungan.
 ###  datasets.xml  {#datasetsxml} 
 
 * Baca komentar di [ **Bekerja dengan datasets.xml Login** ](/docs/server-admin/datasets) Sitemap Kemudian, setelah Anda mendapatkan ERDDAP™ Login
-untuk pertama kalinya (biasanya hanya dengan set data default) , Anda akan memodifikasi XML dalam `tomcat/content/erddap/ datasets.xml Sitemap
+untuk pertama kalinya (biasanya hanya dengan set data default) , Anda akan memodifikasi XML di `Login datasets.xml ` 
 untuk menentukan semua dataset yang Anda inginkan ERDDAP™ Sitemap Ini adalah tempat Anda akan menghabiskan sebagian besar waktu Anda
 sambil menyiapkan ERDDAP™ dan kemudian sambil menjaga Anda Meme it ERDDAP™ Sitemap
 
 Anda dapat melihat contoh [ datasets.xml di GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml) Sitemap
      
 *  (Sitemap) Sitemap (sedikit lebih mungkin) di masa depan, jika Anda ingin memodifikasi file CSS erddap, salinan
-`tomcat/content/erddap/images/erddapStart2.css` untuk `tomcat/content/erddap/images/erddap2.css` dan kemudian melakukan perubahan ke dalamnya.
-Perubahan pada `erddap2.css` hanya berlaku ketika Meme it ERDDAP™ direstart dan sering juga memerlukan pengguna untuk menghapus file cache browser.
+   `phpBB SEO` Login `phpBB SEO` dan kemudian membuat perubahan. Meme it
+Perubahan `erddap2.css` hanya mengambil efek ketika ERDDAP™ direstart dan sering juga memerlukan pengguna untuk menghapus file cache browser.
      
  ERDDAP™ tidak akan bekerja dengan benar jika setup.xml atau datasets.xml file bukan file XML yang dibentuk dengan baik. Jadi, setelah Anda mengedit file ini,
 itu adalah ide yang baik untuk memverifikasi bahwa hasilnya adalah XML berbentuk dengan baik dengan menelusuri teks XML ke dalam pengecekan XML seperti [Login](https://www.xmlvalidation.com/) Sitemap
      
 ### Menginstal erddap. file perang{#install-the-erddapwar-file} 
 
-4. Di Linux, Mac, dan Windows, __download [Login](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) __ ke `tomcat/webapps`:
+4. Di Linux, Mac, dan Windows, __download [Login](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) Sitemap `Login` Sitemap
 
 __Version 2.28.1, 622,676,238 byte, MD5=48b4226045f950c8a8d69ef9521b9bc9, tanggal 2025-09-05__
 
@@ -382,14 +382,14 @@ Pengakhiran SSL / TLS sering diserang pada layer proxy webserver juga. Spesifik 
 
 #### Login{#apache} 
 
-1. Pastikan `mod_proxy` dan `mod_proxy_ http Sitemap
+1. Pastikan `mod_proxy` Login `mod_proxy_ http ` dimuat:
 
 ```
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 ```
 
-2. Memodifikasi ` <VirtualHost> Sitemap (jika ada satu) atau tambahkan satu di akhir file:
+2. Modifikasi yang ada ` <VirtualHost> ` Login (jika ada satu) atau tambahkan satu di akhir file:
 ```
 <VirtualHost *:80>
    ServerName YourDomain.org
@@ -400,15 +400,15 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 </VirtualHost>
 ```
 
-Sitemap ERDDAP™ dilayani di jalan selain `/erddap`, juga mengatur header `X-Forwarded-Prefix` ke
-Sitemap Pengaturan ini akan sesuai untuk ERDDAP™ Sitemap
-`/subpath/erddap`:
+Sitemap ERDDAP™ dilayani di jalan selain Meme it `Login` juga mengatur `X-Forwarded-Prefix` Sitemap
+Sitemap `Login` Sitemap Pengaturan ini akan sesuai untuk ERDDAP™ Sitemap
+ `Login` Sitemap
 
 ```
 RequestHeader set X-Forwarded-Prefix /subpath
 ```
 
-3. Kemudian restart Apache: `/usr/sbin/apachectl Login Sitemap (tetapi kadang-kadang dalam direktori yang berbeda) Sitemap
+3. Kemudian restart Apache: `WordPress.org Login`   (tetapi kadang-kadang dalam direktori yang berbeda) Sitemap
          
 #### Login{#nginx} 
 
@@ -422,16 +422,16 @@ proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
 proxy_set_header X-Forwarded-Proto $scheme;
 ```
 
-Sitemap ERDDAP™ dilayani di jalan selain `/erddap`, juga mengatur header `X-Forwarded-Prefix` ke
-Sitemap Pengaturan ini akan sesuai untuk ERDDAP™ Sitemap
-`/subpath/erddap`:
+Sitemap ERDDAP™ dilayani di jalan selain Meme it `Login` juga mengatur `X-Forwarded-Prefix` Sitemap
+Sitemap `Login` Sitemap Pengaturan ini akan sesuai untuk ERDDAP™ Sitemap
+ `Login` Sitemap
 
 ```
 proxy_set_header X-Forwarded-Prefix /subpath
 ```
 
 
-Untuk mendapatkan NGINX dan ERDDAP™ bekerja dengan benar https , Anda perlu menempatkan cuplikan berikut di server Tomcat.xml ` <Host> Sitemap
+Untuk mendapatkan NGINX dan ERDDAP™ bekerja dengan benar https , Anda perlu menempatkan cuplikan berikut di server Tomcat.xml ` <Host> ` blok:
 ```
 <Valve className="org.apache.catalina.valves.RemoteIpValve"
   remoteIpHeader="X-Forwarded-For"
@@ -443,14 +443,14 @@ Untuk mendapatkan NGINX dan ERDDAP™ bekerja dengan benar https , Anda perlu me
 
 *  (Saya tidak merekomendasikan menggunakan Tomcat Web Application Manager. Jika Anda tidak sepenuhnya shutdown dan startup Tomcat, lebih cepat atau lambat Anda akan memiliki masalah memori PermGen.) 
 *  (Di Linux atau Mac OS, jika Anda telah membuat pengguna khusus untuk menjalankan Tomcat, misalnya, tomcat, ingat untuk melakukan langkah-langkah berikut sebagai pengguna itu.) 
-* Jika Tomcat sudah berjalan, tutup Tomcat dengan (di Linux atau Mac OS) `tomcat/bin/shutdown.sh`
-Sitemap (di Windows) Login shutdown.bat Sitemap
+* Jika Tomcat sudah berjalan, tutup Tomcat dengan (di Linux atau Mac OS)   `Login` 
+Sitemap (di Windows)   `tomcat\bin\\ shutdown.bat ` 
 
-Di Linux, gunakan `ps -ef | grep tomcat` sebelum dan sesudah `shutdown.sh` untuk memastikan proses tomcat telah berhenti.
+Di Linux, gunakan `Login | Login` sebelum dan sesudah `Login Login` untuk memastikan proses tomcat telah berhenti.
 Proses harus tercantum sebelum shutdown dan akhirnya tidak terdaftar setelah shutdown.
 Ini mungkin memakan waktu satu menit atau dua untuk ERDDAP™ untuk menutup sepenuhnya. Promo Atau jika terlihat seperti itu tidak akan berhenti sendiri, gunakan:
-g <processID> Sitemap
-* Mulai Tomcat dengan (di Linux atau Mac OS) `tomcat/bin/startup.sh` atau (di Windows) 'tomcat\bin\\startup.bat Sitemap
+   `membunuh -9 <processID> ` 
+* Mulai Tomcat dengan (di Linux atau Mac OS)   `Login` Sitemap (di Windows)   `tomcat\bin\\startup.bat` 
 
 ## Login ERDDAP™ Login{#is-erddap-running} 
 
@@ -462,15 +462,15 @@ Gunakan browser untuk mencoba untuk melihathttp://www.YourServer.org/erddap/stat
 * Ketika permintaan dari pengguna datang, itu pergi ke Apache (di Linux dan Mac OS komputer) , kemudian Tomcat, kemudian ERDDAP™ Sitemap
 * Anda dapat melihat apa yang datang ke Apache (dan kesalahan terkait) di file log Apache.
 *    [Login](/docs/server-admin/additional-information#tomcat-logs) bisa melihat apa yang datang ke Tomcat (dan kesalahan terkait) 
-di file log Tomcat (`tomcat/logs/catalina.out` dan file lain di direktori itu) Sitemap
+di file log Tomcat ( `tomcat/logs/catalina.out` dan file lain di direktori itu) Sitemap
 *    [Login](/docs/server-admin/additional-information#log) dapat melihat apa yang datang untuk Meme it ERDDAP , pesan diagnostik dari ERDDAP Login
-dan pesan kesalahan dari ERDDAP Sitemap ERDDAP™ Sitemap <bigParentDirectory> /logs/log.txt` file.
+dan pesan kesalahan dari ERDDAP Sitemap ERDDAP™   ` <bigParentDirectory> WordPress.org` Login
 * Tomcat tidak mulai ERDDAP™ sampai Tomcat mendapat permintaan untuk ERDDAP™ Sitemap Jadi Anda dapat melihat file log Tomcat jika Meme it
 Sitemap ERDDAP™ atau jika ada pesan kesalahan yang berkaitan dengan upaya tersebut.
-* Sitemap ERDDAP™ mulai, itu mengubah nama lama Meme it ERDDAP™ Login (Login Sitemap <CurrentTime> Login) dan membuat file log.txt baru.
-Jadi jika file `log.txt sudah lama, itu adalah tanda bahwa Meme it ERDDAP™ belum baru-baru ini direstart. ERDDAP™ menulis info log ke penyangga
+* Sitemap ERDDAP™ mulai, itu mengubah nama lama Meme it ERDDAP™ Login ( `Login <CurrentTime> Login` ) dan membuat file log.txt baru.
+Jadi jika `Login` file lama, itu adalah tanda bahwa Meme it ERDDAP™ belum baru-baru ini direstart. ERDDAP™ menulis info log ke penyangga
 dan hanya menulis penyangga ke file log secara berkala, tetapi Anda dapat memaksa Meme it ERDDAP™ untuk menulis penyangga ke file log dengan mengunjungi
-Sitemap /erddap/status.html Sitemap
+     ` /erddap/status.html ` Sitemap
 
 ### Masalah: Versi Lama Java  {#trouble-old-version-of-java} 
 
@@ -485,7 +485,7 @@ Solusinya adalah untuk memperbarui versi terbaru dari versi terbaru Java dan pas
 
 ### Masalah: Slow Startup Pertama kali{#trouble-slow-startup-first-time} 
 
-Tomcat harus melakukan banyak pekerjaan pertama kali sebuah aplikasi seperti ERDDAP™ dimulai; tidak mungkin, harus membongkar file `erddap.war`
+Tomcat harus melakukan banyak pekerjaan pertama kali sebuah aplikasi seperti ERDDAP™ mulai; tidak mungkin, itu harus membongkar Meme it `Login` Login
  (yang seperti .zip Login) Sitemap Pada beberapa server, upaya pertama untuk melihat ERDDAP™ Login (30 detik?) sampai pekerjaan ini selesai.
 Pada server lain, upaya pertama akan segera gagal. Tetapi jika Anda menunggu 30 detik dan mencoba lagi, itu akan berhasil jika ERDDAP™ dipasang dengan benar.
 
@@ -507,18 +507,18 @@ Anda dapat bergabung dengan ERDDAP™ Sitemap [Sitemap](https://groups.google.co
 ## Login{#customize} 
 
 *  [Sesuaikan Anda ERDDAP™ untuk menyoroti organisasi Anda (Login NOAA   ERD ) Sitemap](#customize) 
-* Mengubah spanduk yang muncul di bagian atas semua ERDDAP™ .html halaman dengan mengedit ` <startBodyHtml5> ` tag di ` datasets.xml Sitemap
-(Jika tidak ada satu, salin default dari ERDDAP™ 's `tomcat/webapps/erddap/WEB-INF/classes/gov/noa/pfel/erddap/util/messages.xml` Login
-Sitemap datasets.xml ` dan mengeditnya.) Misalnya, Anda bisa:
+* Mengubah spanduk yang muncul di bagian atas semua ERDDAP™ .html halaman dengan mengedit ` <startBodyHtml5> ` Tag di Anda ` datasets.xml ` Login
+(Jika tidak ada satu, salin default dari ERDDAP™ Sitemap `tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml` Login
+Login ` datasets.xml ` dan mengeditnya.) Misalnya, Anda bisa:
   * Gunakan gambar yang berbeda (i.e., logo organisasi Anda) Sitemap
   * Mengubah warna latar belakang.
   * Login ERDDAP™ " untuk "_YourOrganisasi_'s ERDDAP™ Sitemap
   * Ubah "Penyakit akses ke data ilmiah" ke "Kontenan lebih lanjut ke _Data AndaOrganisasi_'s".
   * Ubah tautan "Karena Anda oleh" untuk menjadi tautan ke organisasi Anda dan sumber pendanaan.
-* Mengubah informasi di sisi kiri halaman rumah dengan mengedit ` <theShortDescriptionHtml> ` tag di ` datasets.xml Sitemap
-(Jika tidak ada satu, salin default dari ERDDAP™ 's `tomcat/webapps/erddap/WEB-INF/classes/gov/noa/pfel/erddap/util/messages.xml` Login
-Sitemap datasets.xml ` dan mengeditnya.) Misalnya, Anda bisa:
+* Mengubah informasi di sisi kiri halaman rumah dengan mengedit ` <theShortDescriptionHtml> ` Tag di Anda ` datasets.xml ` Login
+(Jika tidak ada satu, salin default dari ERDDAP™ Sitemap `tomcat/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml` Login
+Login ` datasets.xml ` dan mengeditnya.) Misalnya, Anda bisa:
   * Jelaskan apa organisasi dan/atau kelompok Anda.
   * Jelaskan apa jenis data ini ERDDAP™ Login
-  * Untuk mengubah ikon yang muncul di tab browser, masukkan favicon organisasi Anda. ico dalam `tomcat/content/erddap/images/`.
+  * Untuk mengubah ikon yang muncul di tab browser, masukkan favicon organisasi Anda. Login `Login` Sitemap
 Sitemaphttps://en.wikipedia.org/wiki/Favicon.
