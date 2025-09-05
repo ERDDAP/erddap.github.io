@@ -7,6 +7,14 @@ ERDDAP™ is a great example of [User-Driven Innovation](https://en.wikipedia.or
 
 Here are the changes associated with each ERDDAP™ release.
 
+## Version 2.28.1 {#version-2281}
+(released 2025-09-05)
+
+*   **Things ERDDAP™ Administrators Need to Know and Do:**
+    *   Support added for X-Forwarded-Prefix. This is of particular interest to admins running servers on a subpath. Please read our updated documentation for [Apache](/docs/server-admin/deploy-install#apache) and [Nginx](/docs/server-admin/deploy-install#nginx) for more information.
+
+    Thanks to [@srstsavage](https://github.com/srstsavage)
+
 ## Version 2.28.0 {#version-2280}
 (released 2025-08-29)
 

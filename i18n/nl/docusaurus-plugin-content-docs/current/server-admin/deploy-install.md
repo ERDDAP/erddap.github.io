@@ -3,25 +3,25 @@ sidebar_position: 1
 ---
 
 # Installeren
-Hoe kunt u de eerste installatie van ERDDAP™ op uw server
+Hoe te doen de eerste instelling van ERDDAP™ op uw server
 
  ERDDAP™ kan draaien op elke server die ondersteunt Java en Tomcat (en andere applicatieservers zoals Jetty, maar we ondersteunen ze niet) .
  ERDDAP™ is getest op Linux (Inclusief Amazon's AWS) Mac en Windows computers.
 
-*  **Docker** -- Wij bieden [ ERDDAP™ in een Docker-container](https://hub.docker.com/r/erddap/erddap) 
+*  **Docker** -- Wij bieden [ ERDDAP™ in een Docker container](https://hub.docker.com/r/erddap/erddap) 
 en IOOS biedt nu een [Snelstartgids voor ERDDAP™ in een Docker Container](https://ioos.github.io/erddap-gold-standard/index.html) .
 Het is de standaard. ERDDAP™ installatie, in een Docker container.
-Via Docker Samenstellen bieden wij eenvoudige manieren om ssl en monitoring op te zetten, lees meer in uit [Documentatie van de docker](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+Via Docker Samenstellen bieden wij eenvoudige manieren om ssl en monitoring op te zetten, lees meer in uit [Docker documentatie](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
 Als u Docker al gebruikt, zult u waarschijnlijk liever de Docker versie.
-Als u op zoek bent om te draaien op cloud-diensten zult u waarschijnlijk de voorkeur geven aan de Docker-versie.
-*  **Amazon** -- Als u aan het installeren bent ERDDAP™ op een Amazon Web Services EC2 instantie, zie dit [Amazon Web Services Overzicht](/docs/server-admin/additional-information#amazon) Eerst.
-*  **Linux en Macs** -- ERDDAP™ werkt geweldig op Linux en Mac computers. Zie onderstaande instructies.
+Als u op zoek bent om te draaien op cloud-diensten zult u waarschijnlijk liever de Docker-versie.
+*  **Amazon** -- Als u installeert ERDDAP™ op een Amazon Web Services EC2 instantie, zie dit [Amazon Web Services Overzicht](/docs/server-admin/additional-information#amazon) Eerst.
+*  **Linux en Macs** -- ERDDAP™ werkt geweldig op Linux en Mac computers. Zie de instructies hieronder.
 *  **Vensters** -- Windows is prima voor het testen ERDDAP™ en voor persoonlijk gebruik (zie onderstaande instructies) ,
 maar we raden het niet aan voor publiek ERDDAP™ inzet. Uitvoeren ERDDAP™ op Windows kunnen problemen hebben:
 met name, ERDDAP™ kan bestanden niet snel kunnen verwijderen en/of hernoemen. Dit is waarschijnlijk te wijten aan antivirus software
-   (bijvoorbeeld van McAfee en Norton) die de bestanden controleert op virussen. Als u dit probleem tegenkomt
+   (bijvoorbeeld van McAfee en Norton) die de bestanden op virussen controleert. Als u dit probleem tegenkomt
 (die kan worden gezien door foutmeldingen in de [log.txt](/docs/server-admin/additional-information#log) bestand als
-"Niet in staat om te verwijderen ..."), het veranderen van de instellingen van de antivirussoftware kan gedeeltelijk verlichten het probleem. Of overwegen om in plaats daarvan een Linux of Mac server te gebruiken.
+"Niet in staat om te verwijderen ..."), het veranderen van de antivirus software instellingen kan gedeeltelijk verlichten het probleem. Of overwegen om een Linux of Mac server te gebruiken.
 
  **De norm ERDDAP™ installatie-instructies voor Linux, Macs en Windows computers zijn:** 
 
@@ -33,10 +33,10 @@ met name, ERDDAP™ kan bestanden niet snel kunnen verwijderen en/of hernoemen. 
 Om veiligheidsredenen is het bijna altijd het beste om de nieuwste versie van Java 21.
 Download en installeer de nieuwste versie van
     [Adoptium's OpenJDK (Temurin) 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
-Om de installatie te verifiëren, voer je bijvoorbeeld de directory/javaversion/javaJreBin uit
- -versie.
+Om de installatie te verifiëren, draaien `/javaJreBinDirectory/java -versie` , bijvoorbeeld
+    `/usr/local/jdk-21.3+9/jre/bin/java -versie` .
 
-    ERDDAP™ werkt met Java uit andere bronnen, maar we raden Adopdium omdat het de belangrijkste, door de gemeenschap gesteunde,
+    ERDDAP™ werkt met Java uit andere bronnen, maar we raden Adopium aan omdat het de belangrijkste, door de gemeenschap gesteunde,
 vrij (zoals in bier en speech) versie van Java 21 biedt langdurige ondersteuning (gratis upgrades voor vele jaren na de eerste release) .
 Om veiligheidsredenen, gelieve uw ERDDAP de versie van Java periodiek als nieuwe versies van Java 21 beschikbaar komen van Adopdium.
 
@@ -48,37 +48,37 @@ Om veiligheidsredenen, gelieve uw ERDDAP de versie van Java periodiek als nieuwe
 dat is Java software die tussen de netwerkdiensten van het besturingssysteem en Java serversoftware zoals ERDDAP™ .
 Het is Vrije en Open Bron Software (FOSS) .
 
-Je kunt een andere gebruiken. Java Programmaserver (bv. Jetty) , maar we testen alleen met en ondersteunen Tomcat.
+U kunt een andere gebruiken Java Programmaserver (b.v. Jetty) , maar we testen alleen met en ondersteunen Tomcat.
 
-   * Download Tomcat en pak het uit op uw server of PC.
+   * Download Tomcat en uitpakken op uw server of PC.
 Om veiligheidsredenen is het bijna altijd het beste om de nieuwste versie van Tomcat 10 te gebruiken (versie 9 en hieronder zijn niet aanvaardbaar) 
-die is ontworpen om te werken met Java 21 of nieuwer. Hieronder wordt de Tomcat-directory aangeduid als "Tomcat."
+die is ontworpen om te werken met Java 21 of nieuwer. Hieronder wordt de Tomcat directory aangeduid als `kat` .
 
-_Waarschuwing&#33; Als je al een Tomcat hebt die een andere webapplicatie draait (vooral THREDDS) , raden wij u aan te installeren ERDDAP™ in
+_Waarschuwing&#33; Als u al een Tomcat met een andere webapplicatie (met name THREDDS) , raden wij u aan te installeren ERDDAP™ in
       [een tweede Tomcat](/docs/server-admin/additional-information#second-tomcat) , omdat ERDDAP™ heeft verschillende Tomcat instellingen nodig
 en mogen niet te maken hebben met andere toepassingen voor geheugen.
 
-     * Op Linux, [download de "Core" "tar" .gz " Tomcat distributie](https://tomcat.apache.org/download-10.cgi) En uitpakken.
-We raden aan om het uit te pakken in de lokale verpakking.
-     * Op een Mac, Tomcat is waarschijnlijk al geïnstalleerd in 
-Als je het downloadt, [download de "Core" "tar" .gz " Tomcat distributie](https://tomcat.apache.org/download-10.cgi) en uitpakken in de bibliotheek.
+     * Op Linux, [download de "Core" "tar" .gz " Tomcat distributie](https://tomcat.apache.org/download-10.cgi) en uitpakken.
+We raden het uitpakken in `/usr/local` .
+     * Op een Mac is Tomcat waarschijnlijk al geïnstalleerd in `/Library/Tomcat` , maar moet het bijwerken naar de nieuwste versie van Tomcat 10.
+Als je het downloadt, [download de "Core" "tar" .gz " Tomcat distributie](https://tomcat.apache.org/download-10.cgi) en uitpakken in `/Library/Tomcat` .
      * Op Windows, kunt u [download de "Core" "zip" Tomcat distributie](https://tomcat.apache.org/download-10.cgi) 
-        (die niet knoeit met het Windows-register en die u bestuurt vanaf een DOS commandoregel) en uitpakken in een geschikte directory.
-        (Voor ontwikkeling gebruiken we de "Core" "zip" distributie. We maken een directory en pakken het daar uit.) 
-Of u kunt downloaden van de "Core" "64-bit Windows zip" distributie, die meer functies bevat.
-Als de distributie een Windows-installer is, zal het waarschijnlijk Tomcat in, bijvoorbeeld, ./Program Files/apache-tomcat-10.0.0.23.
+        (die niet knoeien met de Windows-register en die u bestuurt vanaf een DOS-commandoregel) en uitpakken in een geschikte directory.
+        (Voor ontwikkeling gebruiken we de "Core" "zip" distributie. We maken een `/programma's` directory en uitpakken daar.) 
+Of u kunt de "Core" "64-bit Windows zip" distributie downloaden, die meer functies bevat.
+Als de distributie is een Windows-installer, het zal waarschijnlijk Tomcat in, bijvoorbeeld, `/Program Files/apache-tomcat-10.0.23` .
              
 ### server.xml{#serverxml} 
 
-*  [server.xml](#serverxml) - In het bestand "Tomcat/conf/server.xml <Connector> Tags
-   (één voor de "Connector port="8080" en één voor de "Coctor port="8443") .
-   1.  (Aanbevolen) Verhoog de waarde van de  (milliseconden, dat is 5 minuten) .
-   2.  (Aanbevolen) Een nieuwe parameter toevoegen: "relaxedQueryChars="[] | "En. Dit is optioneel en iets minder veilig,
+*  [server.xml](#serverxml) - In de `tomcat/conf/server.xml` bestand, er zijn twee wijzigingen die u moet maken aan elk van de twee ` <Connector> ` labels
+   (één voor `&lt;Connectorpoort="8080"` en één voor `&lt;Conectorpoort="8443"` ) .
+   1.  (Aanbevolen) Verhoog de `verbinding Tijdslimiet` parameterwaarde, misschien tot 300000 (milliseconden, dat is 5 minuten) .
+   2.  (Aanbevolen) Een nieuwe parameter toevoegen: `relaxedQueryChars="[] | "` . Dit is optioneel en iets minder veilig,
 maar verwijdert de noodzaak voor gebruikers om deze tekens procent-encoderen wanneer ze voorkomen in de parameters van de verzoek-URL van een gebruiker.
              
 ### content.xml{#contentxml} 
 
-* context.xml -- Resources Cache - In  </Context> Tag, wijzig de Resources-tag
+* context.xml -- Resources Cache - In `tomcat/conf/context.xml` , vlak voor de ` </Context> ` tag, wijzig de Resources-tag
    (of voeg het toe als het er nog niet is) om de cache in te stellen MaxSize parameter tot 80000:
   ```
   <Resources cachingAllowed="true" cacheMaxSize="80000" />
@@ -92,26 +92,26 @@ Dit voorkomt talrijke waarschuwingen in catalina. uit dat alles beginnen met
 
 * Op Linux computers, wijzigen van de Apache timeout instellingen zodat tijdrovende gebruikersverzoeken geen timeout
    (met wat vaak verschijnt als een "Proxy" of "Bad Gateway" fout) . Als root gebruiker:
-  * De Apache wijzigen http d.conf (gewoonlijk in  http d/conf/ Wat?) :
-    * Het bestaande wijzigen <Timeout> Instellingen (of voeg er een toe aan het einde van het bestand) tot 3600 (seconden) , in plaats van de standaard 60 of 120 seconden.
-    * Het bestaande wijzigen <ProxyTimeout> Instellingen (of voeg er een toe aan het einde van het bestand) tot 3600 (seconden) , in plaats van de standaard 60 of 120 seconden.
-  * Apache herstarten: -k sierlijk Wat? (maar soms is het in een andere map) .
+  * De Apache wijzigen ` http d.conf` bestand (vaak `/etc/ http d/conf/` ) :
+    * Het bestaande ` <Timeout> ` instelling (of voeg er een toe aan het einde van het bestand) tot 3600 (seconden) , in plaats van de standaard 60 of 120 seconden.
+    * Het bestaande ` <ProxyTimeout> ` instelling (of voeg er een toe aan het einde van het bestand) tot 3600 (seconden) , in plaats van de standaard 60 of 120 seconden.
+  * Apache herstarten: `/usr/sbin/apachectl -k sierlijk`   (maar soms is het in een andere map) .
 
 ### Beveiliging{#security} 
          
 * Veiligheidsaanbeveling: Zie [deze instructies](https://tomcat.apache.org/tomcat-10.0-doc/security-howto.html) de veiligheid van
 uw Tomcat installatie, vooral voor publieke servers.
          
-* Voor publiek ERDDAP™ installaties op Linux en Macs, het is het beste om Tomcat op te zetten (het programma) als toebehorend aan gebruiker Tomcat Wat?
+* Voor publiek ERDDAP™ installaties op Linux en Macs, het is het beste om Tomcat op te zetten (het programma) als toebehorend aan gebruiker `kat` 
    (een afzonderlijke gebruiker met beperkte toegangsrechten en welke [heeft geen wachtwoord](https://unix.stackexchange.com/questions/56765/creating-an-user-without-a-password) ) .
-Dus, alleen de super gebruiker kan overstappen op het optreden als gebruiker van de Tomcat. Dit maakt het onmogelijk voor hackers om in te loggen op uw server als gebruiker 
-En in ieder geval, moet je het zo maken dat de gebruiker van Tomcat zeer beperkte toegangsrechten heeft op het bestandssysteem van de server (lees + write+execute privileges
-voor de mapboom van de  <bigParentDirectory> Alleen-lezen privileges voor mappen met data die ERDDAP™ toegang tot).
-  * U kunt het gebruikersaccount van Tomcat maken (die geen wachtwoord heeft) door het commando:
+Dus, alleen de super gebruiker kan overschakelen naar het optreden als gebruiker `kat` . Dit maakt het voor hackers onmogelijk om in te loggen op uw server als gebruiker `kat` .
+En in ieder geval, moet je het zo maken dat de `kat` gebruiker heeft zeer beperkte toegangsrechten op het bestandssysteem van de server (lees + write+execute privileges
+voor de `apache-tomcat` map boom en ` <bigParentDirectory> ` en alleen-lezen privileges voor mappen met data die ERDDAP™ toegang tot).
+  * U kunt de `kat` gebruikersaccount (die geen wachtwoord heeft) door het commando:
     ```
     sudo useradd tomcat -s /bin/bash -p '*'
     ```
-  * U kunt overschakelen naar het werken als gebruiker van Tomcat door het commando te gebruiken
+  * U kunt overschakelen naar werken als gebruiker `kat` door het commando te gebruiken
     ```
     sudo su - tomcat
     ```
@@ -120,10 +120,10 @@ voor de mapboom van de  <bigParentDirectory> Alleen-lezen privileges voor mappen
     ```
     exit
     ````
-    * Doe de rest van de Tomcat en ERDDAP™ setup-instructies als gebruiker van Tomcat. Voer later de  Wat?
+    * Doe de rest van de Tomcat en ERDDAP™ setup instructies als gebruiker `kat` . Later, run de `startup.sh` en `afsluiten. sh` scripts als gebruiker `kat` 
 zodat Tomcat toestemming heeft om naar zijn logbestanden te schrijven.
-    * Na het uitpakken van Tomcat, van de ouder van de map "Apache-tomcat":
-      * Verander de eigenaar van de map van apache-tomcat naar de Tomcat-gebruiker.
+    * Na het uitpakken van Tomcat, van de ouder van de `apache-tomcat` map:
+      * Verander de eigenaar van de mapstructuur van de apache-tomcat naar de Tomcat-gebruiker.
         ```
         chown -R tomcat apache-tomcat-10.0.23
         ```
@@ -147,8 +147,8 @@ Dit is belangrijk, omdat het voorkomt dat andere gebruikers mogelijk gevoelige i
 Omgevingsvariabelen van Tomcat instellen
 
 * Op Linux en Macs:
-Een bestand aanmaken: Tomcat/bin/setenv.sh Wat? (of in Red Hat Enterprise Linux \\[ RHEL \\] , bewerken ~tomcat/conf/tomcat10.conf Wat?) Tomcat's omgevingsvariabelen instellen.
-Dit bestand zal gebruikt worden door  Het bestand moet iets bevatten als:
+Een bestand aanmaken `Tomcat/bin/setenv.sh`   (of in Red Hat Enterprise Linux \\[ RHEL \\] , bewerken `~tomcat/conf/tomcat10.conf` ) Tomcat's omgevingsvariabelen instellen.
+Dit bestand zal worden gebruikt door `Tomcat/bin/startup.sh` en `afsluiten. sh` . Het bestand moet iets bevatten als:
   ```
   export JAVA_HOME=/usr/local/jdk-21.0.3+9
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
@@ -156,12 +156,12 @@ Dit bestand zal gebruikt worden door  Het bestand moet iets bevatten als:
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
   ```
    (maar vervang de mapnamen van uw computer) .
-   (Als u eerder hebt ingesteld op ) 
-Op Macs, hoeft u waarschijnlijk niet te stellen 
+   (Als u eerder `JRE_HOME` , u kunt verwijderen.) 
+Op Macs, je hoeft waarschijnlijk niet te zetten `JAVA_HOME` .
 
 * Op Windows:
-Maak een bestand aan om Tomcat's omgevingsvariabelen in te stellen.
-Dit bestand zal worden gebruikt door  shutdown.bat Wat?
+Een bestand aanmaken `tomcat\bin\\setsv.bat` Tomcat's omgevingsvariabelen instellen.
+Dit bestand zal worden gebruikt door `tomcat\bin\\startup.bat` en ` shutdown.bat ` .
 Het bestand moet iets bevatten als:
   ```
   SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
@@ -170,105 +170,105 @@ Het bestand moet iets bevatten als:
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
   ```
    (maar vervang de mapnamen van uw computer) .
-Als dit alleen voor lokale testen is, verwijder dan "-server."
-   (Als u eerder hebt ingesteld op ) 
+Als dit alleen voor lokale testen is, verwijder "-server."
+   (Als u eerder `JRE_HOME` , u kunt verwijderen.) 
 
-De geheugen-instellingen van Xmx en Xms zijn belangrijk omdat ERDDAP™ Werkt beter met meer geheugen.
-Altijd instellen op dezelfde waarde als Xmx.
+De `-Xmx` en `Xms` geheugeninstellingen zijn belangrijk omdat ERDDAP™ Werkt beter met meer geheugen.
+Altijd ingesteld `Xms` tot dezelfde waarde als `-Xmx` .
 
 * Voor 32 bit besturingssystemen en 32 bit Java :
-64 bit Java is veel beter dan 32 bit Java , maar 32 bit Java zal werken zolang de server niet echt bezet is.
+64 bit Java is veel beter dan 32 bit Java maar 32 bit Java werkt zolang de server niet echt bezet is.
 Hoe meer fysiek geheugen in de server, hoe beter: 4+ GB is echt goed, 2 GB is oké, minder wordt niet aanbevolen.
-Met 32 bits Java , zelfs met overvloedig fysiek geheugen, Tomcat en Java zal niet draaien als u probeert om te stellen  (1200M op sommige computers) .
-Als uw server minder dan 2GB geheugen heeft, verminder dan de waarde van de Xmx (in 'M'egaBytes) tot 1/2 van het fysieke geheugen van de computer.
+Met 32 bits Java , zelfs met overvloedig fysiek geheugen, Tomcat en Java zal niet rennen als je probeert om in te stellen `-Xmx` veel hoger dan 1500M (1200M op sommige computers) .
+Als uw server heeft minder dan 2 GB geheugen, verminderen de `-Xmx` waarde (in 'M'egaBytes) tot 1/2 van het fysieke geheugen van de computer.
 
 * Voor 64 bit besturingssystemen en 64 bit Java :
 64 bit Java werkt alleen op een 64 bit besturingssysteem.
-  * Met Java 8, u moet toevoegen 
+  * Met Java 8, u moet toevoegen `-d64` naar de Tomcat `CATALINA_OPTS` parameter in `setenv.bat` .
   * Met Java 21, u kiest 64 bit Java wanneer u een versie van Java gemarkeerd met "64 bit."
 
-Met 64 bit Java , Tomcat en Java kan gebruik maken van zeer hoge instellingen van de Xmx en Xms. Hoe meer fysiek geheugen in de server, hoe beter.
-Als een simplistische suggestie: wij raden u aan om te zetten  (in 'M'egaBytes) tot 1/2 (of minder) van het fysieke geheugen van de computer.
+Met 64 bit Java , Tomcat en Java kan zeer hoog gebruiken `-Xmx` en `Xms` instellingen. Hoe meer fysiek geheugen in de server, hoe beter.
+Als een simplistische suggestie: wij raden u set `-Xmx` en `Xms` tot (in 'M'egaBytes) tot 1/2 (of minder) van het fysieke geheugen van de computer.
 Je kunt zien of Tomcat, Java en ERDDAP™ worden inderdaad uitgevoerd in 64 bit modus door te zoeken naar "bit," in ERDDAP 's Dagelijks verslag e-mail
-of in de BigParentDirectory/logs/ [log.txt](/docs/server-admin/additional-information#log) Bestand (BigParentDirectory is gespecificeerd in [setup.xml](#setupxml) ) .
+of in de `bigParentDirectory/logs/ [log.txt](/docs/server-admin/additional-information#log) ` bestand ( `bigParentDirectory` is gespecificeerd in [setup.xml](#setupxml) ) .
 
 #### Afvalverzameling{#garbage-collection} 
 
 * In ERDDAP™ 's [log.txt](/docs/server-admin/additional-information#log) bestand, zult u veel "GC (Toewijzingsfout) " berichten.
 Dit is meestal geen probleem. Het is een frequent bericht van een normaal werkende Java zeggen dat het net klaar is met een klein afval
-collectie omdat er geen ruimte meer was in Eden (de afdeling van de Java berg voor zeer jonge objecten) . Meestal toont het bericht u
-MemoryUseBefore-&gt;memoryUseNa alles. Als die twee nummers dicht bij elkaar zijn, betekent dat dat de afvalverzameling niet productief was.
+collectie omdat er geen ruimte meer was in Eden (de afdeling Java berg voor zeer jonge objecten) . Meestal toont het bericht u
+   `geheugenUseVoor-&gt;geheugenUseNa` . Als die twee nummers dicht bij elkaar zijn, betekent dat dat de afvalverzameling niet productief was.
 Het bericht is slechts een teken van problemen als het zeer frequent (elke paar seconden) , niet productief, en de aantallen zijn groot en niet groeien,
-die samen aangeven dat Java heeft meer geheugen nodig, heeft moeite om geheugen vrij te maken en kan geen geheugen vrijmaken.
+die samen aangeven dat Java heeft meer geheugen nodig, heeft moeite om geheugen vrij te maken, en kan geen geheugen vrijmaken.
 Dit kan gebeuren tijdens een stressvolle tijd, ga dan weg. Maar als het aanhoudt, is dat een teken van problemen.
-* Als u ziet dat de Java.lang.OutOfMemoryErrors in ERDDAP™ 's [log.txt](/docs/server-admin/additional-information#log) bestand,
-zie [Buitengeheugenfout](/docs/server-admin/additional-information#outofmemoryerror) voor tips over het diagnosticeren en oplossen van de problemen.
+* Als u ziet `Java.lang.OutOfMemoryError` sm ERDDAP™ 's [log.txt](/docs/server-admin/additional-information#log) bestand,
+zie [OutOfMemoryError](/docs/server-admin/additional-information#outofmemoryerror) voor tips over het diagnosticeren en oplossen van de problemen.
          
 ### Rechten{#permissions} 
 
-*  [Op Linux en Macs, de toegangsrechten wijzigen](#permissions) van alle bestanden in de Tomcat-/bin-/
+*  [Op Linux en Macs, de toegangsrechten wijzigen](#permissions) van alles `*.sh` bestanden in `tomcat/bin/` uitvoerbaar te zijn door de eigenaar:
   ```
   chmod +x *.sh
   ```
 
 ### Lettertypen{#fonts} 
 
-*  [Lettertypen voor afbeeldingen:](#fonts) We geven de voorkeur aan de gratis [DejaVu-lettertypen](https://dejavu-fonts.github.io/) aan de andere Java Lettertypen.
+*  [Lettertypen voor afbeeldingen:](#fonts) Wij geven de voorkeur aan de gratis [DejaVu-lettertypen](https://dejavu-fonts.github.io/) aan de andere Java lettertypen.
 Het gebruik van deze lettertypen is sterk aanbevolen, maar niet vereist.
 
-Als u ervoor kiest om de lettertypen van DejaVu niet te gebruiken, moet u het lettertypeFamilie-instelling in setup.xml wijzigen naar  <fontFamily> SansSerif </fontFamily> 
-die beschikbaar is met alle Java distributies. Als u een .. <fontFamily> Op de naam van een lettertype dat niet beschikbaar is, ERDDAP™ zal niet laden
-en zal een lijst van beschikbare lettertypen afdrukken in het bestand  Je moet zo'n lettertype gebruiken.
+Als u ervoor kiest om de DejaVu lettertypen niet te gebruiken, moet u het lettertypeFamily instellen in setup.xml veranderen in ` <fontFamily> SansSerif </fontFamily> ` ,
+die beschikbaar is met alle Java distributies. Als u ` <fontFamily> ` op de naam van een lettertype dat niet beschikbaar is, ERDDAP™ zal niet laden
+en zal een lijst van beschikbare lettertypen afdrukken in de `log.txt` bestand. Je moet zo'n lettertype gebruiken.
 
-Als u ervoor kiest om de DejaVu lettertypen te gebruiken, zorg er dan voor dat de <fontFamily> De instelling in setup.xml is een <fontFamily> DejaVu Sans </fontFamily> Wat?
+Als u ervoor kiest om de DejaVu lettertypen te gebruiken, zorg er dan voor dat de ` <fontFamily> ` instellen in setup.xml is ` <fontFamily> DejaVu Sans </fontFamily> ` .
 
-Om de DejaVu lettertypen te installeren, kunt u downloaden [DejaVuFonts .zip ](/DejaVuFonts.zip)   (5,522,795 bytes, MD5=33E1E61FAB06A547851ED308B4FFEF42) 
+Om de DejaVu lettertypen te installeren, kunt u downloaden [DejaVuFonts .zip ](/DejaVuFonts.zip)   (5,522.795 bytes, MD5=33E1E61FA406A547851ED308B4FFEF42) 
 en rits de lettertypebestanden naar een tijdelijke map.
 
   * Op Linux:
     * Voor Linux Adoptionium Java distributies, zie [deze instructies](https://blog.adoptopenjdk.net/2021/01/prerequisites-for-font-support-in-adoptopenjdk/) .
-    * Met andere Java distributies: Als de gebruiker van de Tomcat... kopieer de lettertypebestanden naar  Java kan de lettertypen te vinden.
-Onthoud: als / wanneer u later upgrade naar een nieuwere versie van Java U moet deze lettertypen opnieuw installeren.
+    * Met andere Java distributies: Als de `kat` gebruiker, kopieer de lettertypebestanden in `$JAVA_HOME/lib/fonts` dus Java kan de lettertypen te vinden.
+Vergeet niet: als / wanneer u later upgrade naar een nieuwere versie van Java Je moet deze lettertypen opnieuw installeren.
   * Op Macs: voor elk lettertypebestand, dubbelklik erop en klik vervolgens op Lettertype installeren.
-  * Op Windows 7 en 10: selecteer in Windows Explorer alle lettertypebestanden. Rechter muisklik. Klik op Installeren.
+  * Op Windows 7 en 10: in Windows Explorer, selecteer alle lettertypebestanden. Rechter muisklik. Klik op Installeren.
              
 ### Test Tomcat{#test-tomcat} 
 
 * Test uw Tomcat installatie.
   * Linux:
-    * Als gebruiker "tomcat" run je "tomcat/bin/startup.sh.
+    * Als gebruiker "tomcat" uitvoeren `Tomcat/bin/startup.sh` .
     * Bekijk uw URL + ":8080" in uw browser (bv. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac (tomcat uitvoeren als systeembeheerder gebruiker) :
-    * Starten met Tomcat/bin/startup.sh.
+    * Uitvoeren `Tomcat/bin/startup.sh` .
     * Bekijk uw URL + ":8080" in uw browser (bv. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Merk op dat uw Tomcat standaard alleen toegankelijk is voor u. Het is niet openbaar toegankelijk.
   * Windows localhost:
     * Klik met de rechtermuisknop op het Tomcat-pictogram in het systeemvak en kies "Startservice."
-    * Beeld [http://127.0.0.1:8080/](http://127.0.0.1:8080/) Of misschien [http://localhost:8080/](http://localhost:8080/) , in uw browser. Merk op dat uw Tomcat standaard alleen toegankelijk is voor u. Het is niet openbaar toegankelijk.
+    * Beeld [http://127.0.0.1:8080/](http://127.0.0.1:8080/) , of [http://localhost:8080/](http://localhost:8080/) , in uw browser. Merk op dat uw Tomcat standaard alleen toegankelijk is voor u. Het is niet openbaar toegankelijk.
 
 Je zou de Tomcat "Gefeliciteerd" pagina moeten zien.
 
-Als er problemen zijn, zie de Tomcat log file op de Tomcat/logs/catalina.out.
+Als er problemen zijn, zie het Tomcat log bestand op `tomcat/logs/catalina.out` .
 
 ### Problemen met de Tomcat installatie?{#troubles-with-the-tomcat-installation} 
 
-* Op Linux en Mac, als je Tomcat niet kunt bereiken of ERDDAP™   (of misschien kun je ze niet bereiken vanaf een computer buiten je firewall) ,
+* Op Linux en Mac, als je Tomcat niet kunt bereiken of ERDDAP™   (of misschien kun je ze gewoon niet bereiken vanaf een computer buiten je firewall) ,
 U kunt testen of Tomcat luistert naar poort 8080, door te typen (als root) op een commandoregel van de server:
 
   ```
   netstat -tuplen | grep 8080
   ```
 
-Dat zou één regel moeten teruggeven met zoiets als:
+Dat zou een regel terug moeten geven met zoiets als:
 
   ```
   tcp 0 0 :::8080 :::* LISTEN ## ##### ####/java
   ```
 
-   (waar ) , waaruit blijkt dat een proces van Java (Waarschijnlijk Tomcat.) is luisteren op poort "8080" voor "tcp" verkeer.
-Als er geen regels zijn teruggegeven, als de teruggeleverde lijn aanzienlijk anders is, of als twee of meer lijnen zijn teruggegeven, dan kan er een probleem zijn met de poortinstellingen.
+   (waarbij `#` is een cijfer) , waaruit blijkt dat a `java` proces (Waarschijnlijk Tomcat.) is luisteren op poort "8080" voor "tcp" verkeer.
+Als er geen regels werden teruggegeven, als de teruggekregen lijn aanzienlijk anders is, of als er twee of meer lijnen werden teruggegeven, dan kan er een probleem zijn met de poortinstellingen.
 
-* Zie de Tomcat log file  Tomcat problemen en sommige ERDDAP™ Opstartproblemen worden daar bijna altijd aangegeven.
+* Zie het Tomcat-logbestand `tomcat/logs/catalina.out` . Tomcat problemen en sommige ERDDAP™ Opstartproblemen worden daar bijna altijd aangegeven.
 Dit komt vaak voor bij de eerste instelling ERDDAP™ .
 
 * Zie [Tomcat](https://tomcat.apache.org/) website of doorzoek het web voor hulp, maar laat ons weten welke problemen je had en welke oplossingen je hebt gevonden.
@@ -276,9 +276,9 @@ Dit komt vaak voor bij de eerste instelling ERDDAP™ .
 * Zie onze [sectie over het krijgen van extra ondersteuning](/docs/intro#support) .
              
 ###  ERDDAP™ Inhoud{#erddap-content} 
-3.   [Stel de configuratiebestanden van ](#erddap-content) 
-Op Linux, Mac en Windows, download [erddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
-en rits het uit in de directory van de Tomcat.
+3.   [Stel de `tomcat/content/erdap` configuratiebestanden.](#erddap-content) 
+Op Linux, Mac en Windows, downloaden [erddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
+en rits het los in de `kat` map, aanmaken `tomcat/content/erdap` .
 
 __Versie 1.0.0, 20333 bytes, MD5=2B8D2A5AE5ED73E3A42B529C168C60B5, gedateerd 2024-10-14__
 
@@ -294,24 +294,24 @@ Enkele eerdere versies zijn ook beschikbaar:
 
 Voor Red Hat Enterprise Linux (RHEL) of voor andere situaties waarbij u de Tomcat-map niet mag wijzigen of waar u wilt/nodig
 om de ERDDAP™ inhoud directory in een andere locatie om een andere reden (bijvoorbeeld als je Jetty gebruikt in plaats van Tomcat) ,
-unzip  .zip Naar de gewenste map (tot welke alleen de gebruiker toegang heeft) en stel de  erddapContentDirectory Systeemeigenschap
- (b.v. erddapContentDirectory  =~tomcat/content/erddap Wat?) dus ERDDAP™ kan deze nieuwe inhoud directory te vinden.
+unzip `erddapContent .zip ` in de gewenste map (waarbij alleen de `kat` gebruiker heeft toegang) en stel de ` erddapContentDirectory ` systeemeigenschap
+ (bv. ` erddapContentDirectory  =~tomcat/content/erddap ` ) dus ERDDAP™ kan deze nieuwe inhoud directory vinden.
 
 ### setup.xml{#setupxml} 
 
-*  [Lees de opmerkingen in  Wat?](#setupxml) en de gevraagde wijzigingen aanbrengen. setup.xml is het bestand met alle instellingen die aangeven hoe uw ERDDAP™ Gedraag je.
+*  [Lees de opmerkingen in `tomcat/content/erddap/setup.xml` ](#setupxml) en de gevraagde wijzigingen aanbrengen. setup.xml is het bestand met alle instellingen die aangeven hoe uw ERDDAP™ Gedraag je.
 
 Voor de eerste setup moet u tenminste deze instellingen wijzigen:
-      * Wat? <bigParentDirectory> Wat?
-      * Wat? <emailEverythingTo> Wat?
-      * Wat? <baseUrl> Wat?
-      * Wat? <email...> Instellingen
-      * Wat? <admin...> Instellingen
-      * Wat? <baseHttpsUrl> Wat? (wanneer u het opzetten https ) 
+      *  ` <bigParentDirectory> ` 
+      *  ` <emailEverythingTo> ` 
+      *  ` <baseUrl> ` 
+      *  ` <email...> ` instellingen
+      *  ` <admin...> ` instellingen
+      *  ` <baseHttpsUrl> `   (wanneer u het opzetten https ) 
 
 Wanneer u de bigParentDirectory aanmaakt, vanuit de oudermap van bigParentDirectory:
 
-    * Maak de gebruiker van Tomcat de eigenaar van de BigParentDirectory:
+    * Maak de `kat` gebruiker de eigenaar van de `bigParentDirectory` :
       ```
       chown -R tomcat bigParentDirectory
       ```
@@ -323,54 +323,54 @@ Wanneer u de bigParentDirectory aanmaakt, vanuit de oudermap van bigParentDirect
       ```
       chmod -R ug+rwx bigParentDirectory
       ```
-    * Verwijder de toegangsrechten van "andere" gebruiker om te lezen, te schrijven of uit te voeren. Dit is belangrijk om te voorkomen dat mogelijk gevoelige informatie wordt gelezen
+    * Verwijder "andere" gebruikersrechten om te lezen, te schrijven of uit te voeren. Dit is belangrijk om te voorkomen dat mogelijk gevoelige informatie wordt gelezen
 in ERDDAP™ log bestanden en bestanden met informatie over privé datasets.
       ```
       chmod -R o-rwx bigParentDirectory
       ```
 
-### Milieuvariabelen{#environment-variables} 
+### Omgevingsvariabelen{#environment-variables} 
 
 Beginnen met ERDDAP™ v2.13, ERDDAP™ beheerders kunnen elke waarde in setup.xml overschrijven door een omgevingsvariabele op te geven
-genaamd ERDDAP _valueName ERDDAP™ . Bijvoorbeeld, gebruik ERDDAP _baseUrl <baseUrl> Waarde.
-Dit kan handig zijn bij het implementeren ERDDAP™ met een container als Docker, zoals u standaardinstellingen kunt plaatsen in setup.xml
+genaamd ` ERDDAP _Waardenaam` voor het draaien ERDDAP™ . Bijvoorbeeld, gebruik ` ERDDAP _BaseUrl` overschrijft de ` <baseUrl> ` waarde.
+Dit kan handig zijn bij het implementeren ERDDAP™ met een container als Docker, zoals u standaard instellingen in setup.xml kunt zetten
 en leveren dan speciale instellingen via omgevingsvariabelen. Als u geheime informatie aan ERDDAP™ via deze methode,
-Controleer of de informatie geheim blijft. ERDDAP™ slechts één keer per opstart omgevingsvariabelen leest;
+Controleer of de informatie geheim blijft. ERDDAP™ slechts eenmaal per opstarten omgevingsvariabelen leest;
 in de eerste seconde van opstarten, dus een manier om dit te gebruiken is: stel de omgevingsvariabelen in, start ERDDAP ,
 wacht tot ERDDAP™ wordt gestart en de omgevingsvariabelen worden uitgeschakeld.
 
 ###  datasets.xml  {#datasetsxml} 
 
-* Lees de reacties in [ **Werken met de datasets.xml Bestand** ](/docs/server-admin/datasets) . Later, nadat je ERDDAP™ draait
-voor de eerste keer (meestal met alleen de standaard datasets) , u zult de XML wijzigen in Tomcat/content/erdap/ datasets.xml Wat?
-om alle datasets te specificeren die u wilt ERDDAP™ Om te dienen. Dit is waar u het grootste deel van uw tijd zult doorbrengen
-tijdens het opzetten ERDDAP™ en later met behoud van uw ERDDAP™ .
+* Lees de opmerkingen in [ **Werken met de datasets.xml Bestand** ](/docs/server-admin/datasets) . Later, nadat je ERDDAP™ draait
+voor de eerste keer (meestal met alleen de standaard datasets) , zul je de XML in `tomcat/content/erdap/ datasets.xml ` 
+om alle datasets te specificeren die u wilt ERDDAP™ Om te dienen. Hier zul je het grootste deel van je tijd doorbrengen.
+tijdens instellen ERDDAP™ en later met behoud van uw ERDDAP™ .
 
 U kunt een voorbeeld zien [ datasets.xml op GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml) .
      
-*  (Onwaarschijnlijk) Nu of (iets waarschijnlijker) in de toekomst, als u erddap's CSS-bestand wilt wijzigen, kopieer
-Tomcat/content/erddap/images/erddapStart2.css
-Veranderingen in  ERDDAP™ wordt herstart en vaak ook vereist dat de gebruiker om de browser gecached bestanden te wissen.
+*  (Onwaarschijnlijk) Nu of (iets waarschijnlijker) in de toekomst, als je erddap's CSS-bestand wilt wijzigen, kopieer
+   `tomcat/content/erddap/images/erddapStart2.css` tot `tomcat/content/erddap/image/erddap2.css` En dan veranderen.
+Wijzigingen in `erddap2.css` alleen van kracht worden wanneer ERDDAP™ wordt herstart en vereisen vaak ook de gebruiker om de gecachede bestanden van de browser te wissen.
      
- ERDDAP™ werkt niet correct als de setup.xml of datasets.xml bestand is geen goed gevormd XML-bestand. Dus, nadat je deze bestanden hebt bewerkt,
+ ERDDAP™ werkt niet correct als de setup.xml of datasets.xml bestand is geen goed gevormd XML bestand. Dus, nadat je deze bestanden hebt bewerkt,
 het is een goed idee om te controleren of het resultaat goed gevormd XML is door de XML tekst in een XML checker te plakken zoals [xmlvalidatie](https://www.xmlvalidation.com/) .
      
 ### Installeer de erddap. war-bestand{#install-the-erddapwar-file} 
 
-4. Op Linux, Mac en Windows, __downloaden [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war) __ naar Tomcat/webapps
+4. Op Linux, Mac en Windows, __downloaden [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) Naar binnen `tomcat/webapps` :
 
-__Versie 2.28.0, 620.824.288 bytes, MD5=f948b2ba603f65a83ac67af43da9e4c2, gedateerd 2025-08-29__
+__Versie 2.28,1, 622,676,238 bytes, MD5=48b4226045f950c8a8d69ef9521b9bc9, gedateerd 2025-09-05__
 
 Het .war bestand is groot omdat het hoge resolutie kustlijn, grens, en hoogte gegevens die nodig zijn om kaarten te maken bevat.
 
-Sommige vorige versies zijn ook beschikbaar.
+Sommige eerdere versies zijn ook beschikbaar.
 
    *  [2.17](https://github.com/ERDDAP/erddap/releases/download/v2.17/erddap.war)   (551,068,245 bytes, MD5=5FEA912B5D42E50EAB9591F773EA848D, gedateerd 2022-02-16) 
-   *  [2.18](https://github.com/ERDDAP/erddap/releases/download/v2.18/erddap.war)   (551,069,844 bytes, MD5=461325E97E7577EC671DD50246CCFB8B, gedateerd 2022-02-23) 
+   *  [2.18](https://github.com/ERDDAP/erddap/releases/download/v2.18/erddap.war)   (551,069.844 bytes, MD5=461325E97E7577EC671DD50246CCFB8B, gedateerd 2022-02-23) 
    *  [2,21](https://github.com/ERDDAP/erddap/releases/download/v2.21/erddap.war)   (568,644,411 bytes, MD5=F2CFF805893146E932E498FDDBD519B6, gedateerd 2022-10-09) 
    *  [2.22](https://github.com/ERDDAP/erddap/releases/download/v2.22/erddap.war)   (567,742.765 bytes, MD5=2B33354F633294213AE2AFDDCF4DA6D0, gedateerd 2022-12-08) 
    *  [2,23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddap.war)   (572,124,953 bytes, MD5=D843A043C506725EBD6F8EFDCCA8FD5F, gedateerd 2023-03-03) 
-   *  [2,24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)   (568,748,187 bytes, MD5=970fbee172e28b0b8a07756eecbc898e, gedateerd 2024-06-07) 
+   *  [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)   (568,748,187 bytes, MD5=970fbee172e28b0b8a07756eecbc898e, gedateerd 2024-06-07) 
    *  [2,25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)   (592,292,039 bytes, MD5=652AFC9D1421F00B5F789DA2C4732D4C, gedateerd 2024-11-07) 
    *  [2,26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)   (607,404,032 bytes, MD5=99a725108b37708e5420986c1616a119, gedateerd 2025-03-31) 
    *  [2,27,0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)   (620.554.403 bytes, MD5=3b2086c659ee4145ca2dff447bf4ef7, gedateerd 2025-06-11) 
@@ -378,18 +378,18 @@ Sommige vorige versies zijn ook beschikbaar.
 ### Proxy instellen (specifieke inzet)  {#proxy} 
 
  ERDDAP™ wordt meestal ingezet achter een webserver omgekeerde proxy om het te kunnen worden bediend op standaard HTTP poorten (80 en 443) .
-SSL/TLS-afsluiting wordt vaak ook aan de proxylaag van de webserver gehangen. De specifieke kenmerken hangen af van de eisen van elke inzet.
+SSL/TLS termination wordt vaak ook aan de proxylaag van de webserver gekoppeld. De specifieke kenmerken hangen af van de eisen van elke inzet.
 
 #### Apache{#apache} 
 
-1. Zorg ervoor dat  http Zijn geladen:
+1. Zorg ervoor dat `_Wijzigen` en `mod_proxy_ http ` geladen zijn:
 
 ```
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 ```
 
-2. Wijzigen van de bestaande <VirtualHost> Tag (als er één is) , of voeg een aan het einde van het bestand:
+2. Het bestaande wijzigen ` <VirtualHost> ` label (als er één is) , of voeg er een toe aan het einde van het bestand:
 ```
 <VirtualHost *:80>
    ServerName YourDomain.org
@@ -400,15 +400,15 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 </VirtualHost>
 ```
 
-Als ERDDAP™ wordt geserveerd op een ander pad dan 
-padsegment _voor_  Deze vaststelling zou geschikt zijn voor een ERDDAP™ gedagvaard te
-
+Als ERDDAP™ wordt gediend op een ander pad dan `/erdap` , zet ook de `X-Forwarded-prefix` kop naar de
+padsegment _voor_ `/erdap` . Deze vaststelling zou geschikt zijn voor een ERDDAP™ gedagvaard te
+ `/subpad/erdap` :
 
 ```
 RequestHeader set X-Forwarded-Prefix /subpath
 ```
 
-3. Herstart dan Apache: -k sierlijk Wat? (maar soms is het in een andere map) .
+3. Herstart dan Apache: `/usr/sbin/apachectl -k sierlijk`   (maar soms is het in een andere map) .
          
 #### NGINX{#nginx} 
 
@@ -422,16 +422,16 @@ proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
 proxy_set_header X-Forwarded-Proto $scheme;
 ```
 
-Als ERDDAP™ wordt geserveerd op een ander pad dan 
-padsegment _voor_  Deze vaststelling zou geschikt zijn voor een ERDDAP™ gedagvaard te
-
+Als ERDDAP™ wordt gediend op een ander pad dan `/erdap` , zet ook de `X-Forwarded-prefix` kop naar de
+padsegment _voor_ `/erdap` . Deze vaststelling zou geschikt zijn voor een ERDDAP™ gedagvaard te
+ `/subpad/erdap` :
 
 ```
 proxy_set_header X-Forwarded-Prefix /subpath
 ```
 
 
-Om NGINX en ERDDAP™ correct werken met https , je moet het volgende knipsel in de Tomcat server.xml  <Host> Blok:
+Om NGINX en ERDDAP™ correct werken met https , moet u het volgende knipsel in de Tomcat server.xml ` <Host> ` blok:
 ```
 <Valve className="org.apache.catalina.valves.RemoteIpValve"
   remoteIpHeader="X-Forwarded-For"
@@ -441,16 +441,16 @@ Om NGINX en ERDDAP™ correct werken met https , je moet het volgende knipsel in
      
 ### Tomcat starten{#start-tomcat} 
 
-*  (Ik raad het gebruik van de Tomcat Web Application Manager niet aan. Als je Tomcat niet volledig afsluit en opstart, heb je vroeg of laat PermGen geheugenproblemen.) 
+*  (Ik raad het gebruik van de Tomcat Web Application Manager niet aan. Als je Tomcat niet volledig afsluit en opstart, heb je vroeg of laat problemen met PermGen geheugen.) 
 *  (In Linux of Mac OS, als je een speciale gebruiker hebt gemaakt om Tomcat uit te voeren, bijvoorbeeld, Tomcat, vergeet niet om de volgende stappen als die gebruiker te doen.) 
-* Als Tomcat al draait, sluit Tomcat af met (in Linux of Mac OS) Tomcat/bin/shutdown.sh
-of (in vensters) Tomcat\bin\\ shutdown.bat Wat?
+* Als Tomcat al draait, sluit Tomcat af met (in Linux of Mac OS)   `Tomcat/bin/shutdown.sh` 
+of (in vensters)   `Tomcat\bin\\ shutdown.bat ` 
 
-Op Linux, gebruik  | grep tomcat
-Het proces moet worden vermeld vóór de afsluiting en uiteindelijk niet vermeld na de afsluiting.
-Het kan een minuut of twee duren voor ERDDAP™ om volledig te sluiten. Heb geduld. Of als het erop lijkt dat het niet vanzelf stopt, gebruik dan:
-Kill -9 <processID> Wat?
-* Tomcat starten met (in Linux of Mac OS) Tomcat/bin/startup.sh (in vensters) Tomcat\bin\\startup.bat Wat?
+Gebruik op Linux `ps -ef | greptomcat` voor en na `afsluiten. sh` om ervoor te zorgen dat het Tomcat proces is gestopt.
+Het proces moet vóór het afsluiten worden vermeld en uiteindelijk niet na het afsluiten.
+Het kan een minuut of twee duren voor ERDDAP™ om volledig te sluiten. Wees geduldig. Of als het erop lijkt dat het niet vanzelf stopt, gebruik dan:
+   `doden -9 <processID> ` 
+* Tomcat starten met (in Linux of Mac OS)   `Tomcat/bin/startup.sh` of (in vensters)   `tomcat\bin\\startup.bat` 
 
 ## Is ERDDAP™ Rennen?{#is-erddap-running} 
 
@@ -460,21 +460,21 @@ Gebruik een browser om te proberen te bekijkenhttp://www.YourServer.org/erddap/s
 ### Problemen oplossen{#troubleshooting} 
 
 * Wanneer een verzoek van een gebruiker binnenkomt, gaat het naar Apache (op Linux en Mac OS computers) Dan Tomcat. ERDDAP™ .
-* Je kunt zien wat er naar Apache gaat. (en gerelateerde fouten) in de Apache logbestanden.
+* Je kunt zien wat er naar Apache gaat. (en gerelateerde fouten) in de Apache log bestanden.
 *    [Jij](/docs/server-admin/additional-information#tomcat-logs) kan zien wat er met Tomcat gebeurt (en gerelateerde fouten) 
-in de Tomcat-logbestanden () .
+in de Tomcat-logbestanden ( `tomcat/logs/catalina.out` en andere bestanden in die map) .
 *    [Jij](/docs/server-admin/additional-information#log) kan zien wat er gaat gebeuren ERDDAP , diagnoseboodschappen van ERDDAP ,
-en foutmeldingen van ERDDAP In de ERDDAP™ Wat? <bigParentDirectory> /logs/log.txt
+en foutmeldingen van ERDDAP In de ERDDAP™   ` <bigParentDirectory> /logs/log.txt` bestand.
 * Tomcat start niet ERDDAP™ Totdat Tomcat een verzoek krijgt voor ERDDAP™ . Zodat je kunt zien in de Tomcat log bestanden als het
 gestart ERDDAP™ of als er een foutmelding met betrekking tot die poging.
-* Wanneer ERDDAP™ begint, het hernoemt de oude ERDDAP™ log.txt-bestand (Gearchiveerd Bij <CurrentTime> .txt) en maakt een nieuw log.txt bestand aan.
-Dus als het bestand  ERDDAP™ is niet onlangs herstart. ERDDAP™ schrijft log info naar een buffer
-en schrijft alleen de buffer naar het logbestand periodiek, maar u kunt forceren ERDDAP™ om de buffer naar het logbestand te schrijven door te bezoeken
-Wat? /erddap/status.html Wat?
+* Wanneer ERDDAP™ begint, het hernoemt de oude ERDDAP™ log.txt-bestand ( `logarchiefAt <CurrentTime> .txt` ) en maakt een nieuw log.txt bestand aan.
+Dus als de `log.txt` bestand is oud, het is een teken dat ERDDAP™ is niet onlangs herstart. ERDDAP™ schrijft log info naar een buffer
+en schrijft alleen de buffer regelmatig naar het logbestand, maar u kunt forceren ERDDAP™ om de buffer naar het logbestand te schrijven door te bezoeken
+     ` /erddap/status.html ` .
 
 ### Problemen: Oude versie van Java  {#trouble-old-version-of-java} 
 
-Als u een versie van Java dat is te oud voor ERDDAP , ERDDAP™ zal niet uitvoeren en u ziet een foutmelding in Tomcat's log bestand zoals
+Als u een versie van Java Dat is te oud voor ERDDAP , ERDDAP™ zal niet uitvoeren en u ziet een foutmelding in Tomcat's log bestand zoals
 
 ```
 Exception in thread "main" java.lang.UnsupportedClassVersionError:
@@ -485,11 +485,11 @@ De oplossing is het bijwerken van de meest recente versie van Java En zorg ervoo
 
 ### Problemen: Traag opstarten eerste keer{#trouble-slow-startup-first-time} 
 
-Tomcat moet veel werk doen de eerste keer dat een toepassing als ERDDAP™ wordt gestart; met name, het moet uitpakken van het bestand 
+Tomcat moet veel werk doen de eerste keer dat een toepassing als ERDDAP™ wordt gestart; met name moet het uitpakken van de `erddap.war` bestand
  (Dat is als een .zip bestand) . Op sommige servers, de eerste poging om te bekijken ERDDAP™ stalletjes (30 seconden?) Totdat dit werk klaar is.
-Op andere servers zal de eerste poging onmiddellijk mislukken. Maar als je 30 seconden wacht en het opnieuw probeert, zal het slagen als ERDDAP™ is correct geïnstalleerd.
+Op andere servers zal de eerste poging onmiddellijk mislukken. Maar als je 30 seconden wacht en het opnieuw probeert, zal het slagen als ERDDAP™ correct is geïnstalleerd.
 
-Hier is geen oplossing voor. Dit is gewoon hoe Tomcat werkt. Maar het gebeurt pas de eerste keer nadat u een nieuwe versie van ERDDAP™ .
+Hier is geen oplossing voor. Dit is gewoon hoe Tomcat werkt. Maar het gebeurt alleen de eerste keer nadat u een nieuwe versie van ERDDAP™ .
 
 ## Afsluiten en herstarten{#shut-down-and-restart} 
 
@@ -501,24 +501,24 @@ Problemen met de installatie van Tomcat of ERDDAP™ ? Zie onze [sectie over het
 
 ## E-mail Kennisgeving van nieuwe versies van ERDDAP  {#email-notification-of-new-versions-of-erddap} 
 
-Als u een e-mail te ontvangen wanneer een nieuwe versie van ERDDAP™ beschikbaar is of andere belangrijke ERDDAP™ aankondigingen,
+Als u een e-mail wilt ontvangen wanneer een nieuwe versie van ERDDAP™ beschikbaar is of andere belangrijke ERDDAP™ aankondigingen;
 U kunt deelnemen aan de ERDDAP™ aankondigingenlijst [Hier.](https://groups.google.com/g/erddap-announce) . Deze lijst is gemiddeld ongeveer één e-mail per drie maanden.
 
 ## Aanpassen{#customize} 
 
 *  [Pas uw ERDDAP™ om uw organisatie te markeren (niet NOAA   ERD ) .](#customize) 
-* Verander de banner die bovenaan verschijnt ERDDAP™ .html pagina's door het bewerken van de <startBodyHtml5> Een tag in je datasets.xml Bestand.
-(Als er geen is, kopieer de standaard van ERDDAP™ 's  bestand
-in datasets.xml en bewerken.) Bijvoorbeeld:
+* Wijzig de banner die bovenaan verschijnt ERDDAP™ .html pagina's door het bewerken van de ` <startBodyHtml5> ` tag in uw ` datasets.xml ` bestand.
+(Als er geen is, kopieer de standaard van ERDDAP™ 's `tomcat/webapps/erdap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml` bestand
+in ` datasets.xml ` en bewerken.) Bijvoorbeeld:
   * Een andere afbeelding gebruiken (Het logo van uw organisatie) .
   * Verander de achtergrondkleur.
-  * Wijziging ERDDAP™ " naar "_Uw organisatie_'s ERDDAP™ "
-  * Wijzig "Gemakkelijker toegang tot wetenschappelijke gegevens" in "Gemakkelijker toegang tot gegevens van _Uw organisatie."
+  * Wijziging " ERDDAP™ " naar "Uw organisatie" ERDDAP™ "
+  * Wijzig "Gemakkelijker toegang tot wetenschappelijke gegevens" in "Gemakkelijker toegang tot _Uw organisatie_'s gegevens."
   * Wijzig de "Breed to you by" links om links te zijn naar uw organisatie en financieringsbronnen.
-* Wijzig de informatie aan de linkerkant van de homepage door het bewerken van de <theShortDescriptionHtml> Een tag in je datasets.xml Bestand.
-(Als er geen is, kopieer de standaard van ERDDAP™ 's  bestand
-in datasets.xml en bewerken.) Bijvoorbeeld:
+* Wijzig de informatie aan de linkerkant van de startpagina door het bewerken van de ` <theShortDescriptionHtml> ` tag in uw ` datasets.xml ` bestand.
+(Als er geen is, kopieer de standaard van ERDDAP™ 's `tomcat/webapps/erdap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml` bestand
+in ` datasets.xml ` en bewerken.) Bijvoorbeeld:
   * Beschrijf wat uw organisatie en/of groep doet.
   * Beschrijf welke gegevens dit is ERDDAP™ heeft.
-  * Om het pictogram dat verschijnt op de browsertabbladen te wijzigen, zet je de favicon van je organisatie. ico in 
+  * Om het pictogram dat verschijnt op de browsertabbladen te wijzigen, zet u de favicon van uw organisatie. ico in `Tomcat/content/erddap/image/` .
 Ziehttps://en.wikipedia.org/wiki/Favicon.

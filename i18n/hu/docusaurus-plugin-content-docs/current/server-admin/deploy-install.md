@@ -2,394 +2,394 @@
 sidebar_position: 1
 ---
 
-# Telepítés
-Hogyan kell elvégezni a kezdeti beállítás ERDDAP™ A kiszolgáló
+# Beállítás
+Hogyan kell csinálni a kezdeti beállítást ERDDAP™ A szervered
 
- ERDDAP™ bármely támogató kiszolgálón futhat Java és Tomcat (és más alkalmazás szerverek, mint a Jetty, de nem támogatjuk őket) .
- ERDDAP™ tesztelt Linux (A LuxOpCo-nak a LuxOpCo-nak a LuxSCS-hez való csatlakozásával kapcsolatos, a LuxSCS által a LuxSCS-nek nyújtott, a LuxSCS-nek a LuxSCS-nek a LuxSCS-re történő átruházásával kapcsolatos, a LuxSCS-nek a LuxSCS-nek a LuxSCS-re történő átruházásával kapcsolatos, a LuxSCS-nek a LuxSCS-re történő átruházása.) Mac és Windows számítógépek.
+ ERDDAP™ futhat bármely olyan szerveren, amely támogatja Java Tomcat (más alkalmazásszerverek, mint a Jetty, de nem támogatjuk őket) ...
+ ERDDAP™ tesztelték a Linuxot (beleértve az Amazon AWS-t) Mac és Windows számítógépek.
 
-*  **Docker** -- Mi biztosítjuk [ ERDDAP™ Docker tartályban](https://hub.docker.com/r/erddap/erddap) 
-és IOOS most kínál [Gyorsindító útmutató ERDDAP™ Dokkoló konténerben](https://ioos.github.io/erddap-gold-standard/index.html) .
-Ez a szabvány. ERDDAP™ beépítés, dokkoló konténerbe.
-Docker A kompozit egyszerű módokat kínálunk az SSL és a monitoring felállításához, többet olvashatunk ki [Dokkoló dokumentáció](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+*  **Docker** - Biztosítunk [ ERDDAP™ egy Docker konténerben](https://hub.docker.com/r/erddap/erddap) 
+IOOS most kínál egy [Gyors indítási útmutató ERDDAP™ egy Docker Container](https://ioos.github.io/erddap-gold-standard/index.html) ...
+Ez a szabvány ERDDAP™ telepítés egy Docker konténerben.
+Docker Könnyű módszereket biztosítunk a ssl és a monitorozás létrehozásához, többet olvasunk ki [Docker dokumentáció](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) ...
 Ha már használja Docker, akkor valószínűleg inkább a Docker verzió.
-Ha felhőalapú szolgáltatásokat szeretne igénybe venni, valószínűleg a Docker verziót fogja előnyben részesíteni.
-*  **Amazon** -- Ha telepít ERDDAP™ az Amazon Web Services EC2 esetről, lásd ezt: [Amazon Web Services Overview](/docs/server-admin/additional-information#amazon) Először.
-*  **Linux és Macs** -- ERDDAP™ Jól működik Linux és Mac számítógépeken. Lásd az alábbi utasításokat.
-*  **Windows** -- A Windows jó a teszteléshez. ERDDAP™ és személyes használatra (lásd az alábbi utasításokat) ,
-De mi nem javasoljuk, hogy nyilvánosan használjuk. ERDDAP™ Bevetések. Futtatás ERDDAP™ Windows lehet problémák:
-különösen, ERDDAP™ nem lehet gyorsan törölni és / vagy átnevezni a fájlokat. Ez valószínűleg az antivírus szoftver miatt van.
-   (például, a McAfee és Norton) ami a vírusokra vonatkozó fájlokat ellenőrzi. Ha belefutsz ebbe a problémába
-(amely látható hibaüzenetek a [log.txt](/docs/server-admin/additional-information#log) fájl
-"Nem sikerült törölni"...), az antivírus szoftver beállításainak megváltoztatása részben enyhítheti a problémát. Vagy inkább Linux vagy Mac szerver.
+Ha felhőszolgáltatásokat szeretne futtatni, valószínűleg inkább a Docker verziót fogja előnyben részesíteni.
+*  **Amazon** - Ha telepíti ERDDAP™ az Amazon Web Services EC2 esetben lásd ezt [Amazon Web Services áttekintés](/docs/server-admin/additional-information#amazon) először.
+*  **Linux és Macska** - ERDDAP™ nagyszerűen működik a Linux és a Mac számítógépeken. Lásd az alábbi utasításokat.
+*  **Windows Windows** - A Windows jó a teszteléshez ERDDAP™ és személyes használatra (lásd az alábbi utasításokat) ,
+de nem javasoljuk, hogy használja a nyilvánosság számára ERDDAP™ telepítések. Running ERDDAP™ Windows-on problémák merülhetnek fel:
+nevezetesen, ERDDAP™ Lehet, hogy nem tudja törölni és / vagy renesz fájlokat gyorsan. Ez valószínűleg a víruskereső szoftver miatt van
+   (pl. McAfee és Norton) amely ellenőrzi a vírusok fájljait. Ha belefutsz erre a problémára
+(amelyet hibaüzenetek láthat a [Log.txt](/docs/server-admin/additional-information#log) fájl, mint
+"Lehetetlen törölni..."), a víruskereső szoftver beállításainak megváltoztatása részben enyhítheti a problémát. Vagy inkább egy Linux vagy Mac szerver használata.
 
- **A szabvány ERDDAP™ Linux, Macs és Windows számítógépek telepítési utasításai:** 
+ **A szabvány ERDDAP™ telepítési utasítások Linux, Macs és Windows számítógépek:** 
 
-0. Győződjön meg róla, hogy a függések vannak telepítve. Nem-Windows gépeken (Linux és Mac) Css-re van szükséged.
+0. Győződjön meg róla, hogy minden függőséget telepítenek. A nem Windows gépeken (Linux és Mac) csh.
 
 ##  Java  {#java} 
 
-1.  [A ERDDAP™ v2.19 +, beállítás Java 21.](#java) 
-Biztonsági okokból, szinte mindig a legjobb használni a legújabb változata Java 21.
-Kérjük, töltse le és telepítse a legújabb verzióját a
-    [Adoptium 's OpenJDK (Temurin) 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
-A telepítés ellenőrzéséhez futtasd a '/ javaJreBinDirectory / java -verziót', például
-"/ usr / local / jdk- 21.0.3 + 9 / jre / bin / java -verzió".
+1.  [Mert ERDDAP™ v2.19+, létrehozva Java 21.](#java) 
+Biztonsági okokból szinte mindig a legjobb, ha a legújabb verziót használja Java 21.
+Kérjük, töltse le és telepítse a legújabb verziót
+    [Adoptium OpenJDK (Temurin) 21. (LTS) ](https://adoptium.net/temurin/releases/?version=21) ...
+A telepítés ellenőrzése, futás `/javaJreBinDirectory/java - Verzió` Például
+    `/usr/local/jdk-21.0.3+9/jre/bin/java - Verzió` ...
 
-    ERDDAP™ együtt Java más forrásokból, de javasoljuk Adoptium, mert ez a fő, közösség által támogatott,
-ingyenes (mint a sör és a beszéd) változat Java 21, amely hosszú távú támogatást nyújt (ingyenes frissítések sok évvel az első kiadás után) .
-Biztonsági okokból kérjük, frissítse a ERDDAP a Java rendszeres időközönként, mint új verziók Java 21 az Adoptiumtól legyen elérhető.
+    ERDDAP™ munkával Java más forrásokból, de javasoljuk az Adoptiumot, mert ez a fő, közösségi támogatott,
+szabad (mint a sör és a beszéd) verzió Java 21, amely hosszú távú támogatást kínál (ingyenes frissítések sok éven át a kezdeti kiadás) ...
+Biztonsági okokból, kérjük, frissítse a ERDDAP "A verzió Java rendszeresen, mint új verziók Java 21 elérhetővé válik az Adoptiumtól.
 
-    ERDDAP™ 21-gyel tesztelték és használták, nem más változattal. Különböző okok miatt, nem teszteljük és nem támogatjuk más verziók Java .
+    ERDDAP™ Tesztelt és használt széles körben 21, nem más verziók. Különböző okokból nem tesztelünk, és nem támogatunk más verziókat Java ...
      
 ## Tomcat{#tomcat} 
 
-2.  [Felszerelés](#tomcat)   [Tomcat](https://tomcat.apache.org) . Tomcat a leggyakrabban használt Java Alkalmazási kiszolgáló,
-amely Java az operációs rendszer hálózati szolgáltatásai és Java szerver szoftver, mint ERDDAP™ .
-Ez a szabad és nyílt forráskódú szoftver (FOSS) .
+2.  [Beállítás](#tomcat)   [Tomcat](https://tomcat.apache.org) ... Tomcat a legszélesebb körben használt Java Application Server,
+ami Java olyan szoftver, amely az operációs rendszer hálózati szolgáltatásai és Java szerver szoftver, mint például ERDDAP™ ...
+Ez ingyenes és nyílt forráskódú szoftver (FOSS) ...
 
-Használhatsz még egyet. Java Alkalmazási kiszolgáló (például, Jetty) De csak Tomcat-tal tesztelünk.
+Használhat másikat Java Application Server (pl. Jetty) De csak teszteljük és támogatjuk a Tomcatot.
 
-   * Töltse le a Tomcat-ot és csomagolja ki a szerverére vagy a számítógépére.
-Biztonsági okokból szinte mindig a legjobb a Tomcat 10 legújabb verzióját használni (változat nem elfogadható) 
-amelyet arra terveztek, hogy Java 21 vagy újabb. Az alábbiakban a Tomcat könyvtárra "tomcat" néven hivatkozunk.
+   * Tomcat letöltése és kicsomagolása a szerverén vagy a PC-n.
+Biztonsági okokból szinte mindig a legjobb, ha a Tomcat 10 legújabb verzióját használja (a 9. és az alábbi verzió nem elfogadható) 
+amelynek célja, hogy együtt dolgozzon Java 21 vagy újabb. Az alábbiakban a Tomcat könyvtárat úgy fogják említeni, mint `Tomcat` ...
 
-Figyelem&#33; Ha már van egy Tomcat futó más webes alkalmazás (Különösen a THREDDS) , javasoljuk, hogy telepítse ERDDAP™ in
-      [egy második Tomcat](/docs/server-admin/additional-information#second-tomcat) , mert ERDDAP™ szüksége van különböző Tomcat beállítások
-és nem kellene más memóriaalkalmazásokkal küzdenie.
+__Warning&#33;__ Ha már van egy Tomcat fut más webes alkalmazás (különösen a THREDDS) Javasoljuk, hogy telepítse ERDDAP™ benne
+      [egy második Tomcat](/docs/server-admin/additional-information#second-tomcat) mert ERDDAP™ különböző Tomcat beállításokra van szüksége
+és nem kell más memóriaalkalmazásokkal folytatni.
 
-     * A Linux-on [a "Core" tar letöltése .gz "Tomcat disztribúció](https://tomcat.apache.org/download-10.cgi) és kicsomagolja.
-A '/ usr / local' -ban javasoljuk kicsomagolni.
-     * A Mac, Tomcat valószínűleg már telepített '/ Library / Tomcat', de frissíteni kell a legújabb változata Tomcat 10.
-Ha letöltöd, [a "Core" tar letöltése .gz "Tomcat disztribúció](https://tomcat.apache.org/download-10.cgi) és kicsomagolja a '/ Library / Tomcat' -ban.
-     * A Windows, akkor [Töltse le a "Core" "zip" Tomcat disztribúciót](https://tomcat.apache.org/download-10.cgi) 
-        (ami nem zavarja a Windows regisztert, és amit egy DOS parancssorból irányítasz) és kipakolja egy megfelelő könyvtárba.
-        (A fejlesztéshez a "Core" "zip" disztribúciót használjuk. Készítünk egy '/ programok' könyvtárat, és ott csomagoljuk ki.) 
-Vagy letöltheti a "Core" "64- bit Windows zip" disztribúciót, amely több funkciót tartalmaz.
-Ha a disztribúció egy Windows telepítő, akkor valószínűleg a Tomcat, például, "/ Program fájlok / apache- tomcat- 10.0.23".
+     * Linuxon, [Töltse le a "Core" "tar .gz Tomcat elosztás](https://tomcat.apache.org/download-10.cgi) és kicsomagolja.
+Javasoljuk, hogy csomagolja be `/usr/local` ...
+     * Egy Mac-en a Tomcat valószínűleg már telepítve van `/ Könyvtár / Tomcat` De frissítenie kell a Tomcat 10 legújabb verziójára.
+Ha letölti, [Töltse le a "Core" "tar .gz Tomcat elosztás](https://tomcat.apache.org/download-10.cgi) és kicsomagolja `/ Könyvtár / Tomcat` ...
+     * Windows-on, akkor lehet [letölteni a "Core" "zip" Tomcat elosztást](https://tomcat.apache.org/download-10.cgi) 
+        (amely nem zavarja a Windows-nyilvántartást, és amelyet egy DOS parancssorból irányít) és egy megfelelő könyvtárba csomagolja.
+        (A fejlesztéshez használjuk a "Core" "zip" elosztást. Készítünk `/programok` rendező és kicsomagolja ott.) 
+Vagy letöltheti a "Core" "64 bites Windows zip" elosztást, amely több funkciót tartalmaz.
+Ha a disztribúció Windows-berendezés, akkor valószínűleg a Tomcat-ot fogja bevezetni, például, `/Program Files/apache-tomcat-10.0.23` ...
              
 ### szerver.xml{#serverxml} 
 
-*  [szerver.xml](#serverxml) - A 'tomcat / conf / server.xml' file-ban két változtatást kell végrehajtanod a két <Connector> 'címkék
-   (egy "&lt; Connector port =" 8080 "és egy" &lt; Conector port = "8443" ") .
-   1.  (Ajánlott) A "connectionTimeout" paraméter értékének növelése, talán 300000-re (milliszekundum, ami 5 perc.) .
-   2.  (Ajánlott) Új paraméter hozzáadása: 'relaxedQueryChars = "[] | "". Ez nem kötelező és kevésbé biztonságos,
-de eltávolítja annak szükségességét, hogy a felhasználók titkosítsák ezeket a karaktereket, amikor azok előfordulnak a paraméterekben a felhasználó kérésére URL.
+*  [szerver.xml](#serverxml) - A `tomcat/conf/server.xml` fájl, van két változás, hogy meg kell tennie az egyes két ` <Connector> ` Tagok
+   (Egy `&lt;Connector port="8080"` és egy `&lt;Conector port="8443"` ) ...
+   1.  (Ajánlott) Növelje a `kapcsolat Időzítés` paraméterérték, talán 300000 (milliseconds, ami 5 perc) ...
+   2.  (Ajánlott) Adjon hozzá egy új paramétert: `relaxálóQueryChars="[] | "..."` ... Ez opcionális és kissé kevésbé biztonságos,
+de eltávolítja a felhasználók szükségességét, hogy százalékban kódolja ezeket a karaktereket, amikor a felhasználó kérésére URL paramétereiben fordulnak elő.
              
-### content.xml{#contentxml} 
+### tartalom.xml{#contentxml} 
 
-* context.xml -- Források gyorsítótár - A 'tomcat / conf / context.xml' -ban, közvetlenül a ' </Context> 'tag, változtatni a Források tag
-   (vagy add hozzá, ha még nincs ott.) a gyorsítótár beállítása MaxSize paraméter 80000-re:
+* kontextus.xml - Resources Cache - In `tomcat/conf/context.xml` Jobb, mielőtt ` </Context> ` tag, változtassa meg az erőforrások címkéjét
+   (vagy add hozzá, ha már nincs ott) beállítani a cache MaxSize paraméter 80000:
   ```
   <Resources cachingAllowed="true" cacheMaxSize="80000" />
   ```
-Ez elkerüli a catalinai figyelmeztetéseket. Ki, hogy minden kezdődik a
+Ez számos figyelmeztetést elkerül a katalinában. ki, hogy minden kezdődik
   ```
   WARNING [main] org.apache.catalina.webresources.Cache.getResource Unable to add the resource at [/WEB-INF/classes/...]
   ```
          
-### Apache időszámítás{#apache-timeout} 
+### Apache Timeout{#apache-timeout} 
 
-* Linux számítógépeken változtasd meg az Apache időkimaradási beállításokat, így az időigényes felhasználói kérések nem időznek
-   ("Proxy" vagy "Bad Gateway" hibával) . Mint a root felhasználó:
-  * Az Apache módosítása " http d.conf 'file (általában "/ etc / http d / conf / ') :
-    * A meglévő változtatás " <Timeout> "beállítás (vagy adjon hozzá egyet a fájl végén) 3600-3600 (másodperc) 60 vagy 120 másodperc helyett.
-    * A meglévő változtatás " <ProxyTimeout> "beállítás (vagy adjon hozzá egyet a fájl végén) 3600-3600 (másodperc) 60 vagy 120 másodperc helyett.
-  * Újraindítás Apache: '/ usr / sbin / apachectl -k kecses' (de néha egy másik könyvtárban van.) .
+* A Linux számítógépeken változtassa meg az Apache-idő beállításokat, hogy az időigényes felhasználói kérések ne ütközzenek
+   (ami gyakran úgy tűnik, mint egy "Proxy" vagy "Bad Gateway" hiba) ... Mint a gyökérfelhasználó:
+  * Módosítsa az Apache ` http d.conf` fájl (általában `/etc/ http d/conf/` ) :
+    * Változtassa meg a meglévő ` <Timeout> ` beállítás (vagy adjon hozzá egyet a fájl végén) 3600-ig (másodpercek) Az alapértelmezett 60 vagy 120 másodperc helyett.
+    * Változtassa meg a meglévő ` <ProxyTimeout> ` beállítás (vagy adjon hozzá egyet a fájl végén) 3600-ig (másodpercek) Az alapértelmezett 60 vagy 120 másodperc helyett.
+  * Restart Apache: `/usr/sbin/apachectl - k kegyes`   (de néha más könyvtárban van) ...
 
-### Biztonság{#security} 
+### biztonság{#security} 
          
-* Biztonsági ajánlás: Lásd [Ezek az utasítások](https://tomcat.apache.org/tomcat-10.0-doc/security-howto.html) a
-a Tomcat telepítés, különösen a nyilvános szerverek.
+* Biztonsági ajánlás: Lásd [Ezek az utasítások](https://tomcat.apache.org/tomcat-10.0-doc/security-howto.html) a biztonság növelése
+a Tomcat telepítése, különösen a nyilvános szerverek számára.
          
-* A nyilvánosság számára ERDDAP™ installációk Linux és Macs, a legjobb, ha a Tomcat (a program) a felhasználó macskájához tartozik '
-   (korlátozott jogosultsággal rendelkező, külön felhasználó, [nincs jelszava](https://unix.stackexchange.com/questions/56765/creating-an-user-without-a-password) ) .
-Így csak a szuper felhasználó válthat át a felhasználó "tomcat". Ez lehetetlenné teszi a hackerek számára, hogy bejelentkezzenek a szerverükre, mint felhasználó "tomcat".
-És minden esetben, meg kell, hogy ez úgy, hogy a 'tomcat' felhasználó nagyon korlátozott jogosultságai a szerver fájlrendszerben (read + write + végrehajtási jogosultságok
-az 'apache- tomcat' könyvtárfa és ' <bigParentDirectory> 'és csak olvasási jogosultságokat könyvtárak adatok ERDDAP™ hozzáférést igényel).
-  * Létrehozhatod a 'tomcat' felhasználói fiókot (amelynek nincs jelszava) a parancs használatával:
+* A nyilvánosság számára ERDDAP™ telepítések Linux és Macs, a legjobb, hogy hozzon létre Tomcat (a program) a felhasználóhoz tartozás `Tomcat` 
+   (egy külön felhasználó korlátozott engedélyekkel, és amely [nincs jelszó](https://unix.stackexchange.com/questions/56765/creating-an-user-without-a-password) ) ...
+Így csak a szuper felhasználó válthat arra, hogy felhasználóként cselekedjen `Tomcat` ... Ez lehetetlenné teszi a hackerek számára, hogy bejelentkezzenek a szerverre, mint felhasználó `Tomcat` ...
+És mindenesetre meg kell tennie, hogy a `Tomcat` A felhasználónak nagyon korlátozott engedélyei vannak a szerver fájlrendszerén (read+write+execute kiváltságok
+Mert `Apache-tomcat` rendező fa és ` <bigParentDirectory> ` és kizárólag kiváltságok a könyvtárak számára olyan adatokkal, amelyek ERDDAP™ hozzáférést igényel).
+  * Létrehozhatja a `Tomcat` felhasználói fiók (amelynek nincs jelszava) a parancs használatával:
     ```
     sudo useradd tomcat -s /bin/bash -p '*'
     ```
-  * Átválthatsz arra, hogy a felhasználó "tomcat" a parancs használatával
+  * A felhasználóként dolgozhat `Tomcat` a parancs használatával
     ```
     sudo su - tomcat
     ```
-     (Kérni fogja a superuser jelszót, hogy engedélyezze ezt.) 
-    * A parancs használatával abbahagyhatja a felhasználó tomcat munkát
+     (Azt fogja kérni, hogy a szuperfelhasználó jelszava engedélyt, hogy ezt.) 
+    * Megállíthatja a munkát felhasználói tomcatként a parancs használatával
     ```
     exit
     ````
-    * A legtöbb Tomcat és ERDDAP™ beállítási utasítások felhasználóként "tomcat". Később futtasd le a 'startupsh' és a 'shutdow.sh' szkripteket felhasználóként 'tomcat'
-Így Tomcat jogosult írni a naplófájljaira.
-    * A Tomcat kicsomagolása után az 'apache- tomcat' könyvtár szülőjétől:
-      * Az apache- tomcat könyvtárfa tulajdonjogának megváltoztatása a Tomcat felhasználóra.
+    * Tedd a Tomcat többi részét, és ERDDAP™ beállítási utasítások felhasználóként `Tomcat` ... Később futtassa a `startup.sh` és `leállítás. Árnyék` Szövegek felhasználóként `Tomcat` 
+hogy a Tomcat engedélyt kapjon a naplófájljainak írására.
+    * Tomcat kicsomagolása után, a szülőtől `Apache-tomcat` Rendező:
+      * Változtassa meg az apache-tomcat könyvtár tulajdonosát a tomcat felhasználó számára.
         ```
         chown -R tomcat apache-tomcat-10.0.23
         ```
-         (de helyettesítse a valódi nevét a tomcat könyvtár) .
-      * Változtassa meg a "csoport", hogy a tomcat, a felhasználóneved, vagy a nevét egy kis csoport, amely magában foglalja tomcat és az összes adminisztrátor Tomcat / ERDDAP :
+         (de helyettesítse a tomcat könyvtárának tényleges nevét) ...
+      * Változtassa meg a "csoport" tomcat, a felhasználónév, vagy a neve egy kis csoport, amely magában foglalja a tomcat és az összes adminisztrátorok Tomcat / ERDDAP :
         ```
         chgrp -R yourUserName apache-tomcat-10.0.23
         ```
-      * Az engedélyek módosítása, hogy a Tomcat és a csoport olvasson, írjon, hajtson végre jogosultságokat:
+      * Változtassa meg az engedélyeket, hogy a tomcat és a csoport olvassa, írja, végrehajtsa a kiváltságokat:
         ```
         chmod -R ug+rwx apache-tomcat-10.0.23
         ```
-      * Távolítsa el az "egyéb" felhasználó jogosultságait olvasni, írni vagy végrehajtani:
+      * Távolítsa el a "másik" felhasználó engedélyeit az olvasáshoz, íráshoz vagy végrehajtáshoz:
         ```
         chmod -R o-rwx apache-tomcat-10.0.23
         ```
-Ez fontos, mert megakadályozza, hogy más felhasználók esetleg érzékeny információkat ERDDAP™ beállító fájlok.
+Ez fontos, mert megakadályozza, hogy más felhasználók olvassák esetleg érzékeny információkat ERDDAP™ beállítás fájlok.
 
-### Memória{#memory} 
+### Memory{#memory} 
 
-A Tomcat környezeti változóinak beállítása
+Állítsa be Tomcat környezeti változóit
 
-* A Linux és Macs:
-Hozzon létre egy fájlt 'tomcat / bin / setenv.sh' (vagy Red Hat Enterprise Linux \\[ RHEL \\] , edit '~ tomcat / conf / tomcat10.conf') Tomcat környezeti változóinak beállítása.
-Ezt a fájlt a 'tomcat / bin / startup.sh' és a 'shutdow.sh' fogja használni. A fájlnak a következőket kell tartalmaznia:
+* Linuxon és Mac-en:
+Készítsen fájlt `Tomcat/bin/setenv.sh`   (vagy a Red Hat Enterprise Linuxban \\[ RHEL \\] szerkesztés `Tomcat/conf/tomcat10.conf` ) a Tomcat környezeti változóinak beállítása.
+Ezt a fájlt használjuk `Tomcat/bin/startup.sh` és `leállítás. Árnyék` ... A fájlnak tartalmaznia kell valamit:
   ```
   export JAVA_HOME=/usr/local/jdk-21.0.3+9
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
   ```
-   (de helyettesítse a könyvtárneveket a számítógépéről) .
-   (Ha korábban beállítod a 'JRE _ HOME' -t, azt eltávolíthatod.) 
-A Macs-en valószínűleg nem kell "JAVA _ HOME" -t beállítani.
+   (de helyettesítse a könyvtár neveit a számítógépről) ...
+   (Ha korábban `JRE_HOME` Ezt eltávolíthatja.) 
+Macskákon valószínűleg nem kell beállítani `JAVA_HOME` ...
 
-* A Windows-on:
-Hozzon létre egy 'tomcat\\ bin\\ setenv.bat' fájlt a Tomcat környezeti változóinak beállításához.
-Ezt a fájlt a 'tomcat\\ bin\\ startup.bat' és ' shutdown.bat ".
-A fájlnak a következőket kell tartalmaznia:
+* Windows:
+Készítsen fájlt `Tomcat\bin\\setenv.bat` a Tomcat környezeti változóinak beállítása.
+Ezt a fájlt használjuk `Tomcat\bin\\startup.bat` és ` shutdown.bat ` ...
+A fájlnak tartalmaznia kell valamit:
   ```
   SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
   ```
-   (de helyettesítse a könyvtárneveket a számítógépéről) .
-Ha ez csak helyi tesztelés, távolítsa el a "-server".
-   (Ha korábban beállítod a 'JRE _ HOME' -t, azt eltávolíthatod.) 
+   (de helyettesítse a könyvtár neveit a számítógépről) ...
+Ha ez csak a helyi tesztek, távolítsa el a "szervert".
+   (Ha korábban `JRE_HOME` Ezt eltávolíthatja.) 
 
-A '-Xmx' és '-Xms' memória beállításai azért fontosak, mert ERDDAP™ Több memóriával jobban működik.
-Mindig állítsuk be a '-Xms' -t ugyanabba az értékre, mint a '-Xmx'.
+A `-Xmx` és `-Xms` a memória beállításai fontosak, mert ERDDAP™ jobban működik több memóriával.
+Mindig beállítás `-Xms` ugyanazzal az értékkel, mint `-Xmx` ...
 
-* 32 bites operációs rendszerek és 32 bites Java :
-64 bit Java sokkal jobb, mint 32 bit Java , de 32 bit Java működni fog, amíg a szerver nem igazán elfoglalt.
-Minél több fizikai memória a szerver annál jobb: 4 + GB nagyon jó, 2 GB rendben van, kevesebb nem ajánlott.
-32 bittel Java , még bőséges fizikai memória, Tomcat és Java nem fut, ha megpróbál '-Xmx' sokkal több mint 1500M (1200M egyes számítógépeken) .
-Ha a szervernek kevesebb mint 2GB memóriája van, csökkentse a '-Xmx' értéket (in 'M' egaBytes) a számítógép fizikai memóriájának 1 / 2-éig.
+* 32 bites operációs rendszer és 32 bit Java :
+64 bit Java sokkal jobb, mint 32 bit Java 32 bit Java addig fog működni, amíg a szerver nem igazán elfoglalt.
+Minél több fizikai memória a szerverben jobb: 4+ GB nagyon jó, 2 GB rendben van, kevésbé ajánlott.
+32 bit Java Még bőséges fizikai memóriával, Tomcattal és Java Nem fog futni, ha megpróbálja beállítani `-Xmx` sokkal több, mint 1500M (1200M néhány számítógépen) ...
+Ha a szerver kevesebb, mint 2 GB memória, csökkenti a `-Xmx` érték (M'egaBytes) a számítógép fizikai memóriájának 1/2.
 
-* 64 bites operációs rendszerek és 64 bites Java :
-64 bit Java csak 64 bites operációs rendszeren működik.
-  * A Java 8, hozzá kell adni '-d64' a Tomcat 'CATALINA _ OPTS' paraméter 'setenv.bat'.
-  * A Java 21, te választasz 64 bitet. Java amikor letöltöd a Java 64 bites.
+* 64 bites operációs rendszer és 64 bit Java :
+64 bit Java csak egy 64 bites operációs rendszeren fog működni.
+  * Ezzel Java 8, hozzá kell adnia `-d64` a Tomcat `CATALINA_OPTS` paraméter `setenv.bat` ...
+  * Ezzel Java 21, 64 bitet választasz Java ha letölt egy verziót Java jelzett "64 bit".
 
-64 bittel Java , Tomcat és Java nagyon magas '-Xmx' és '-Xms' beállításokat használhat. Minél több fizikai memória van a szerveren, annál jobb.
-Leegyszerűsítő javaslatként: azt javasoljuk, hogy állítsuk be a '-Xmx' és '-Xms' értéket (in 'M' egaBytes) 1 / 2 (vagy kevesebb) a számítógép fizikai memóriájáról.
-Láthatod, ha Tomcat, Java , és ERDDAP™ valóban fut 64 bit módban keres "bit", ERDDAP 'Napi jelentés e-mail
-vagy a "bigParentDirectory / logs / [log.txt](/docs/server-admin/additional-information#log) 'fájl (A "bigParentDirectory" a következő meghatározásban szerepel: [szetup.xml](#setupxml) ) .
+64 bit Java Tomcat és Java Használhat nagyon magas `-Xmx` és `-Xms` beállítások. Minél több fizikai memória a szerverben jobb.
+Egyszerű javaslatként: javasoljuk, hogy állítsa be `-Xmx` és `-Xms` a (M'egaBytes) 1/2 (vagy kevesebb) a számítógép fizikai memóriája.
+Láthatja, hogy Tomcat, Java és ERDDAP™ valóban 64 bites módban fut, ha "harcot" keresünk ERDDAP Daily jelentés e-mail
+vagy a `bigParentDirectory/logs/ [Log.txt](/docs/server-admin/additional-information#log) ` fájl ( `bigParentDirectory[szerkesztés]` meg van határozva [setup.xml](#setupxml) ) ...
 
-#### Szemétgyűjtemény{#garbage-collection} 
+#### Garbage Collection{#garbage-collection} 
 
-* In ERDDAP™ s [log.txt](/docs/server-admin/additional-information#log) file, sok "GC (Kiosztási hiba) "üzenetek.
-Ez általában nem probléma. Ez egy gyakori üzenet egy normálisan működő Java Azt mondta, hogy most végzett egy kis szeméttel.
-Gyűjtemény, mert elfogyott a szoba Eden (cikk) Java halom nagyon fiatal tárgyak) . Általában az üzenet megmutatja
-"memoryUseBee- &gt; memoryUseAfter". Ha ez a két szám közel van egymáshoz, az azt jelenti, hogy a szemétgyűjtemény nem volt eredményes.
-Az üzenet csak a baj jele, ha nagyon gyakori. (másodpercenként) , nem produktív, és a számok nagy, és nem növekszik,
-amelyek együttesen jelzik, hogy Java szüksége van több memória, küzd, hogy felszabadítsa memória, és nem képes felszabadítani memória.
-Ez történhet egy stresszes időszakban, aztán menj el. De ha ez megmarad, az a baj jele.
-* Ha látod 'java.lang.OutOfMemoryError van ERDDAP™ s [log.txt](/docs/server-admin/additional-information#log) fájl,
-Látod? [OutOfMemoryError](/docs/server-admin/additional-information#outofmemoryerror) a problémák diagnosztizálására és megoldására vonatkozó tippeket.
+* Inkább ERDDAP™ A [Log.txt](/docs/server-admin/additional-information#log) fájl, látni fogja sok "GC (Elosztási hiba) Üzenetek.
+Ez általában nem probléma. Ez egy gyakori üzenet egy normális működésből Java azt mondta, hogy csak befejezte a kis szemetet
+gyűjtemény, mert kifutott a szobából Edenben (a szakasz a Java nagyon fiatal objektumokért) ... Általában az üzenet megmutatja neked
+   `memóriaUseBefore-&gt; memóriaUseAfter` ... Ha ez a két szám közel van egymáshoz, az azt jelenti, hogy a szemétgyűjtemény nem produktív.
+Az üzenet csak a baj jele, ha nagyon gyakori (néhány másodpercenként) nem termelő, és a számok nagyok és nem növekszik,
+ami együtt jelzi, hogy Java Több memóriára van szükség, küzd a memória felszabadítására, és képtelen felszabadítani a memóriát.
+Ez stresszes idő alatt megtörténhet, majd elmész. De ha továbbra is fennáll, ez a baj jele.
+* Ha látod `java.lang.OutOfMemoryError` S. ERDDAP™ A [Log.txt](/docs/server-admin/additional-information#log) fájl,
+lásd: [OutOfMemoryError](/docs/server-admin/additional-information#outofmemoryerror) tippek a problémák diagnosztizálására és megoldására.
          
-### Jogosultságok{#permissions} 
+### Engedélyek{#permissions} 
 
-*  [A Linux és Macs, változtatni a jogosultságokat](#permissions) a 'tomcat / bin /' -ben található '.sh' fájlok közül a tulajdonos által végrehajtható:
+*  [A Linuxon és a Mac-eken megváltoztatja az engedélyeket](#permissions) minden `*.sh` fájlok `Tomcat/bin/` végrehajtható a tulajdonos:
   ```
   chmod +x *.sh
   ```
 
-### Betűtípusok{#fonts} 
+### Fonts{#fonts} 
 
-*  [A képek betűtípusai:](#fonts) Erősen szeretjük a szabad [DejaVu betűtípusok](https://dejavu-fonts.github.io/) a másik Java betűtípusok.
-Ezek a betűtípusok használata erősen ajánlott, de nem szükséges.
+*  [Fonts for images:](#fonts) Erősen előnyben részesítjük a szabad [DejaVu betűk](https://dejavu-fonts.github.io/) a másik Java betűk.
+Ezeket a betűtípusokat erősen ajánlott, de nem szükséges.
 
-Ha úgy dönt, hogy nem használja a DejaVu betűtípusok, meg kell változtatni a fontFamily beállítás setup.xml " <fontFamily> SansSerif </fontFamily> ",
-amely elérhető az összes Java eloszlás. Ha beállít <fontFamily> "egy nem elérhető betűtípus nevére, ERDDAP™ nem tölt
-és kinyomtatja az elérhető betűtípusok listáját a 'log.txt' fájlban. Használnod kell az egyik betűtípust.
+Ha úgy dönt, hogy nem használja a DejaVu betűtípusokat, meg kell változtatnia a betűtípust Családi beállítás beállítás a setup.xml-ben ` <fontFamily> SansSerif </fontFamily> ` ,
+amely mindennel elérhető Java elosztás. Ha beállítás ` <fontFamily> ` egy olyan betűtípus neve, amely nem áll rendelkezésre, ERDDAP™ Nem tölt
+és kinyomtatja a rendelkezésre álló betűk listáját a `Log.txt` fájl. Használnia kell az egyik ilyen betűtípust.
 
-Ha úgy dönt, hogy használja a DejaVu betűtípusok, győződjön meg arról, hogy a " <fontFamily> 'set in setup.xml is' <fontFamily> DejaVu Sans </fontFamily> ".
+Ha úgy dönt, hogy használja a DejaVu betűk, kérjük, győződjön meg róla, hogy ` <fontFamily> ` beállítás a setup.xml ` <fontFamily> DejaVu Sans </fontFamily> ` ...
 
-A DejaVu betűtípusok telepítéséhez kérjük, töltse le [DejaVuFonts .zip ](/DejaVuFonts.zip)   (5,522,795 bájt, MD5 = 33E1E61FAB06A547851ED308B4FFEF42) 
-és húzza ki a betűtípus fájlokat egy ideiglenes könyvtárba.
+A DejaVu betűk telepítéséhez kérjük, töltse le [DejaVuFonts .zip ](/DejaVuFonts.zip)   (5,522,795 bytes, MD5=33E1E61FAB06A547851ED308B4FEF42) 
+és zip a betűtípus fájlokat egy ideiglenes könyvtárba.
 
-  * Linux:
-    * Linux Adoptium Java disztribúciók, lásd [Ezek az utasítások](https://blog.adoptopenjdk.net/2021/01/prerequisites-for-font-support-in-adoptopenjdk/) .
-    * Más Java felosztások: Mint a 'tomcat' felhasználó, másolja le a betűtípus fájlokat '$JAVA _ HOME / lib / betűtípusok', így Java megtalálja a betűtípusokat.
-Ne feledje: ha / amikor később frissíti egy újabb verziója Java , újra kell telepíteni ezeket a betűtípusokat.
-  * Macs: minden betűtípus fájl, kattintson duplán, majd kattintson Install Betűtípus.
-  * Windows 7 és 10: Windows Explorer, válassza ki az összes betűtípus fájlokat. Jobb klikk. Kattintson az Install gombra.
+  * Linuxon:
+    * Linux Adoptium Java elosztás, lásd [Ezek az utasítások](https://blog.adoptopenjdk.net/2021/01/prerequisites-for-font-support-in-adoptopenjdk/) ...
+    * Másokkal Java elosztás: Mint a `Tomcat` felhasználó, másolja a betű fájlokat `JAVA_HOME/lib/fonts` így Java megtalálhatja a betűket.
+Ne feledje: ha később frissítesz egy újabb verzióra Java újra kell telepíteni ezeket a betűtípusokat.
+  * Macskákon: minden betűtípushoz kettős kattintson rá, majd kattintson az Install Fontra.
+  * Windows 7 és 10: a Windows Explorerben válassza ki az összes betűkészletet. Jobb kattintson. Kattintson az Installra.
              
-### Test Tomcat{#test-tomcat} 
+### Tomcat teszt{#test-tomcat} 
 
-* Tesztelje a Tomcat telepítés.
+* Tesztelje meg a Tomcat telepítését.
   * Linux:
-    * Felhasználóként "tomcat", fut 'tomcat / bin / startupsh ".
-    * Tekintse meg URL + ": 8080 /" a böngészőben (például: [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
-  * Mac (fut tomcat, mint a rendszergazda felhasználó) :
-    * Fuss 'tomcat / bin / startupsh'.
-    * Tekintse meg URL + ": 8080 /" a böngészőben (például: [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
-Megjegyzés, hogy alapértelmezés szerint a Tomcat csak az Ön által elérhető. Nyilvánosan nem hozzáférhető.
-  * Windows localhost:
-    * Jobb klikk a Tomcat ikon a rendszer tálcán, és válassza "Start szolgáltatás".
-    * Nézet [http://127.0.0.1:8080/](http://127.0.0.1:8080/) , vagy talán [http://localhost:8080/](http://localhost:8080/) a böngésződben. Megjegyzés, hogy alapértelmezés szerint a Tomcat csak az Ön által elérhető. Nyilvánosan nem hozzáférhető.
+    * Mint felhasználó "tomcat", futás `Tomcat/bin/startup.sh` ...
+    * Nézd meg az URL + ":8080/" böngésződben (pl.: [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) ...
+  * Mac (Tomcat mint rendszer adminisztrátor felhasználó) :
+    * Run `Tomcat/bin/startup.sh` ...
+    * Nézd meg az URL + ":8080/" böngésződben (pl.: [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) ...
+Ne feledje, hogy alapértelmezetten a Tomcat csak Ön számára hozzáférhető. Nem nyilvánosan hozzáférhető.
+  * Windows helyihost:
+    * Jobb kattintson a Tomcat ikonra a rendszer tálcájában, és válassza a "Start szolgáltatást".
+    * Megtekintés [http://127.0.0.1:8080/](http://127.0.0.1:8080/) vagy talán [http://localhost:8080/](http://localhost:8080/) , a böngészőben. Ne feledje, hogy alapértelmezetten a Tomcat csak Ön számára hozzáférhető. Nem nyilvánosan hozzáférhető.
 
-Látnod kéne a Tomcat "Gratulálunk" oldalt.
+Látnia kell a Tomcat "Congratulálok" oldalát.
 
-Ha baj van, lásd a Tomcat naplófájlt a 'tomcat / logs / catalina.out' címen.
+Ha baj van, lásd a Tomcat logfájlt `tomcat/logs/catalina.out` ...
 
-### Problémák a Tomcat telepítés?{#troubles-with-the-tomcat-installation} 
+### Hiba a Tomcat telepítéssel?{#troubles-with-the-tomcat-installation} 
 
-* A Linux és Mac, ha nem tudja elérni Tomcat vagy ERDDAP™   (vagy talán csak nem tudod elérni őket a tűzfalon kívüli számítógépből.) ,
-akkor tesztelje, ha Tomcat hallgat port 8080, gépeléssel (gyökér) a kiszolgáló parancssorában:
+* Linuxon és Mac-en, ha nem éri el a Tomcatot vagy ERDDAP™   (vagy talán nem érheti el őket egy számítógépről a tűzfalán kívül) ,
+tesztelheti, ha a Tomcat a 8080-as portot hallgatja, ha beírja (mint gyökér) a szerver parancssorán:
 
   ```
   netstat -tuplen | grep 8080
   ```
 
-Ez egy mondatot ad vissza:
+Ez vissza kell térnie egy sorba valami hasonlóval:
 
   ```
   tcp 0 0 :::8080 :::* LISTEN ## ##### ####/java
   ```
 
-   (ahol a '#' egy számjegy) "java" eljárás feltüntetésével (Feltehetően Tomcat) "8080" -t hallgat a "tcp" forgalom miatt.
-Ha nem adtak vissza vonalakat, ha a visszaadott vonal jelentősen eltér, vagy ha két vagy több sort adtak vissza, akkor probléma lehet a port beállításaival.
+   (ahol `#` Egyes számjegy) jelzi, hogy egy `java` folyamat (feltehetően Tomcat) "8080" port hallgat a "tcp" forgalomra.
+Ha nem került sor, ha a vonal visszatért jelentősen más, vagy ha két vagy több vonalat hoztak vissza, akkor problémát jelenthet a kikötőbeállításokkal.
 
-* Lásd a Tomcat naplófájlt: 'tomcat / log / catalina.out'. Tomcat problémák és néhány ERDDAP™ Az indulási problémák szinte mindig jelzik.
-Ez gyakori, amikor az első beállítás ERDDAP™ .
+* Lásd a Tomcat log fájlt `tomcat/logs/catalina.out` ... Tomcat problémák és néhány ERDDAP™ Az induló problémák szinte mindig ott vannak.
+Ez gyakori, amikor először felállították ERDDAP™ ...
 
-* Lásd a [Tomcat](https://tomcat.apache.org/) website or search the web for help, but please know us the problems you had and the solutions you found.
+* Lásd: [Tomcat](https://tomcat.apache.org/) weboldal vagy keresse meg az internetet segítségért, de kérjük, ismerje meg a problémákat, amiket talált.
 
-* Lásd a mi [szakasz a kiegészítő támogatás megszerzéséről](/docs/intro#support) .
+* Lásd: [rész további támogatás megszerzéséről](/docs/intro#support) ...
              
 ###  ERDDAP™ Tartalom{#erddap-content} 
-3.   [Állítsa be a 'tomcat / content / erddap' konfigurációs fájlokat.](#erddap-content) 
-A Linux, Mac és Windows, letöltés [erddapTartalom .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
-és kihúzza a 'tomcat' könyvtárba, létrehozva a 'tomcat / content / erddap' -t.
+3.   [Állj fel `tomcat/content/erddap` konfigurációs fájlok.](#erddap-content) 
+Linux, Mac és Windows, letöltés [erddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
+és bezárja azt `Tomcat` rendező, létrehozás `tomcat/content/erddap` ...
 
-_ _ Version 1.0.0, 20333 bytes, MD5 = 2B8D2A5AE5ED73E3A42B529C168C60B5, dated 2024- 10- 14 _ _
+__Version 1.0.0, 20333 byte, MD5=2B8D2A5AE5ED73E3A42B529C168C60B5, dátumozott 2024-10-14__
 
 Néhány korábbi verzió is elérhető:
 
-    *  [2, 17](https://github.com/ERDDAP/erddap/releases/download/v2.17/erddapContent.zip)   (19,792 bájt, MD5 = 8F892616BAEEF 2DF0F4BB036DCB4AD7C, 2022- 02- 16) 
-    *  [2, 18](https://github.com/ERDDAP/erddap/releases/download/v2.18/erddapContent.zip)   (19,792 bájt, MD5 = 8F892616BAEEF 2DF0F4BB036DCB4AD7C, 2022- 02- 16) 
-    *  [2, 21](https://github.com/ERDDAP/erddap/releases/download/v2.21/erddapContent.zip)   (19,810 bájt, MD5 = 1E26F62E7A06191EE6868C40B9A29362, 2022- 10- 09) 
-    *  [2, 22](https://github.com/ERDDAP/erddap/releases/download/v2.22/erddapContent.zip)   (19,810 bájt, MD5 = 1E26F62E7A06191EE6868C40B9A29362, 2022- 12- 08) 
-    *  [2, 23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddapContent.zip)   (19,810 bájt, MD5 = 1E26F62E7A06191EE6868C40B9A29362, 2023- 02- 27) 
+    *  [2.17](https://github.com/ERDDAP/erddap/releases/download/v2.17/erddapContent.zip)   (19,792 bytes, MD5=8F892616BAEEF2DF0F4BB036DCB4AD7C, 2022-02-16) 
+    *  [2.18](https://github.com/ERDDAP/erddap/releases/download/v2.18/erddapContent.zip)   (19,792 bytes, MD5=8F892616BAEEF2DF0F4BB036DCB4AD7C, 2022-02-16) 
+    *  [2.21.](https://github.com/ERDDAP/erddap/releases/download/v2.21/erddapContent.zip)   (19 810 byte, MD5=1E26F62E7A06191EE6868C40B9A29362, 2022-10-09) 
+    *  [2.22](https://github.com/ERDDAP/erddap/releases/download/v2.22/erddapContent.zip)   (19 810 byte, MD5=1E26F62E7A06191EE6868C40B9A29362, 2022-12-08) 
+    *  [2.23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddapContent.zip)   (19 810 byte, MD5=1E26F62E7A06191EE6868C40B9A29362, 2023-02-27) 
 
-#### Más könyvtár{#other-directory} 
+#### Egyéb könyvtár{#other-directory} 
 
-Red Hat Enterprise Linux (RHEL) vagy más helyzetekben, amikor nem engedélyezett a Tomcat könyvtár módosítása, vagy ahol szeretné / szükség
-a ERDDAP™ tartalomjegyzék más helyen valamilyen más okból (például, ha a Jetty helyett Tomcat) ,
-unzip 'erddapContent .zip 'a kívánt könyvtárba (amelyhez csak a 'tomcat' felhasználó férhet hozzá) és állítsa be a " erddapContentDirectory "rendszertulajdon
- (például " erddapContentDirectory  =~tomcat/content/erddap ') így ERDDAP™ megtalálja ezt az új tartalomjegyzéket.
+A Red Hat Enterprise Linux (RHEL) vagy más helyzetekben, ahol nem lehet módosítani a Tomcat könyvtárat, vagy ahol akarja / szükséges
+tegyük fel ERDDAP™ tartalom könyvtár egy másik helyen valamilyen más okból (Például, ha a Jetty-t használja a Tomcat helyett) ,
+Zip `erddapContent .zip ` a kívánt könyvtárba (amely csak `Tomcat` felhasználó hozzáféréssel rendelkezik) és állítsa be ` erddapContentDirectory ` Rendszertulajdon
+ (pl. ` erddapContentDirectory  =~tomcat/content/erddap ` ) így ERDDAP™ megtalálhatja ezt az új tartalomjegyzéket.
 
-### szetup.xml{#setupxml} 
+### setup.xml{#setupxml} 
 
-*  [Olvassa el a "tomcat / content / erddap / setup.xml '](#setupxml) és elvégzi a kért változtatásokat. setup.xml a fájl az összes beállítással, amely meghatározza, hogyan ERDDAP™ Viselkedik.
+*  [Olvassa el a megjegyzéseket `tomcat/content/erddap/setup.xml` ](#setupxml) és a kért változásokat. setup.xml a fájl az összes olyan beállítással, amely meghatározza, hogy a ERDDAP™ viselkedik.
 
-A kezdeti beállításhoz legalább ezeket a beállításokat meg kell változtatnia:
-      * ' <bigParentDirectory> '
-      * ' <emailEverythingTo> '
-      * ' <baseUrl> '
-      * ' <email...> 'beállítások
-      * ' <admin...> 'beállítások
-      * ' <baseHttpsUrl> ' (amikor beállítasz https ) 
+Az eredeti beállításhoz legalább megváltoztathatja ezeket a beállításokat:
+      *  ` <bigParentDirectory> ` 
+      *  ` <emailEverythingTo> ` 
+      *  ` <baseUrl> ` 
+      *  ` <email...> ` beállítások
+      *  ` <admin...> ` beállítások
+      *  ` <baseHttpsUrl> `   (Amikor létrehoztál https ) 
 
-Amikor létrehozod a bigParentDirectory-t, a BigParentDirectory szülőkönyvtárából:
+Amikor létrehozod a bigParentDirectory-t, a BigParentDirectory szülői könyvtárából:
 
-    * Legyen a 'tomcat' felhasználó a 'bigParentDirectory' tulajdonosa:
+    * Készítsd el `Tomcat` felhasználó a tulajdonos a `bigParentDirectory[szerkesztés]` :
       ```
       chown -R tomcat bigParentDirectory
       ```
-    * Változtassa meg a "csoport", hogy a tomcat, a felhasználóneved, vagy a nevét egy kis csoport, amely magában foglalja tomcat és az összes adminisztrátor Tomcat / ERDDAP :
+    * Változtassa meg a "csoport" tomcat, a felhasználónév, vagy a neve egy kis csoport, amely magában foglalja a tomcat és az összes adminisztrátorok Tomcat / ERDDAP :
       ```
       chgrp -R yourUserName bigParentDirectory
       ```
-    * Az engedélyek módosítása, hogy a Tomcat és a csoport olvasson, írjon, hajtson végre jogosultságokat:
+    * Változtassa meg az engedélyeket, hogy a tomcat és a csoport olvassa, írja, végrehajtsa a kiváltságokat:
       ```
       chmod -R ug+rwx bigParentDirectory
       ```
-    * Távolítsa el az "egyéb" felhasználó jogosultságát az olvasásra, írásra vagy végrehajtásra. Ez fontos, hogy megakadályozza az olvasást esetleg érzékeny információk
-in ERDDAP™ log fájlok és fájlok információkat a privát adatkészletek.
+    * Távolítsa el a "másik" felhasználó engedélyeit az olvasáshoz, íráshoz vagy végrehajtáshoz. Ez fontos megelőzni az olvasást esetleg érzékeny információ
+benne ERDDAP™ naplófájlok és fájlok a magán adatkészletekről szóló információkkal.
       ```
       chmod -R o-rwx bigParentDirectory
       ```
 
-### Környezetvédelmi változók{#environment-variables} 
+### Környezeti lehetőségek{#environment-variables} 
 
-Kezdve ERDDAP™ v2.13, ERDDAP™ A rendszergazdák felülbírálhatják a setup.xml értéket egy környezeti változó megadásával
-Neve: ERDDAP _ értéknév "futás előtt ERDDAP™ . Például, használat " ERDDAP _ baseUrl 'felülírja a' <baseUrl> "érték.
-Ez hasznos lehet, amikor a telepítés ERDDAP™ egy konténer, mint a Docker, mint akkor tegye standard beállítások setup.xml
-majd speciális beállításokat biztosít környezeti változókkal. Ha titkos információt szolgáltat ERDDAP™ e módszerrel,
-Ellenőrizze, hogy az információ titokban marad-e. ERDDAP™ csak indításonként egyszer olvassa el a környezeti változókat,
-az első másodpercben indítás, így az egyik módja annak, hogy ezt használja: állítsa be a környezeti változók, start ERDDAP ,
-Várj, amíg ERDDAP™ megkezdődött, majd kibontja a környezeti változókat.
+Kezdőlap ERDDAP™ v2.13, ERDDAP™ Az adminisztrátorok felülírhatnak bármilyen értéket a setup.xml-ben a környezet változó meghatározásával
+neve ` ERDDAP _valueName` futás ERDDAP™ ... Például használjon ` ERDDAP _baseUrl` felülírja ` <baseUrl> ` érték.
+Ez hasznos lehet a telepítés során ERDDAP™ konténerrel, mint a Docker, mivel standard beállításokat lehet beállítani a setup.xml-be
+majd speciális beállításokat kínál a környezeti változókon keresztül. Ha titkos információkat nyújt ERDDAP™ ezen módszeren keresztül,
+győződjön meg róla, hogy az információ titokban marad. ERDDAP™ csak a környezeti változókat olvassa el az induláskor,
+az indulás első második szakaszában, így az egyik módja annak, hogy ezt használja: a környezet változóit állítsa be, kezdje el ERDDAP ,
+Várjon ERDDAP™ Elkezdődik, majd beállítja a környezet változóit.
 
 ###  datasets.xml  {#datasetsxml} 
 
-* Olvassa el a hozzászólásokat: [ **Együttműködés a datasets.xml Fájl** ](/docs/server-admin/datasets) . Később, miután ERDDAP™ futó
-Most először (általában csak az alapértelmezett adatok) , akkor módosítsa az XML 'tomcat / content / erddap / datasets.xml '
-megadni az összes adatot, amit szeretne ERDDAP™ hogy szolgáljak. Itt fogod tölteni az időd nagy részét.
-a felállítás alatt ERDDAP™ és később, miközben a ERDDAP™ .
+* Olvassa el a megjegyzéseket [ **Együttműködés datasets.xml File** ](/docs/server-admin/datasets) ... Később, miután megkapod ERDDAP™ futás
+első alkalommal (általában csak az alapértelmezett adatkészletekkel) Ön módosítja az XML-t `tomcat/content/erddap/ datasets.xml ` 
+megadni az összes adatkészletet, amit akarsz ERDDAP™ szolgálni. Ez az, ahol eltölti az idejétek tömegét
+beállítás közben ERDDAP™ később, miközben fenntartja a ERDDAP™ ...
 
-Láthatsz egy példát. [ datasets.xml a GitHub-ról](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml) .
+Láthat egy példát [ datasets.xml GitHub](https://github.com/ERDDAP/erddap/blob/main/development/jetty/config/datasets.xml) ...
      
-*  (Nem valószínű) Most vagy (valamivel valószínűbb) a jövőben, ha módosítani szeretné az erddap CSS fájlt, másolja
-'tomcat / content / erddap / images / erddapStart2.css' to 'tomcat / content / erddap / images / erddap2.css' and do changes to it.
-Az 'erddap2.css' változtatása csak akkor lép hatályba, ha ERDDAP™ újraindul, és gyakran azt is megköveteli a felhasználótól, hogy törölje a böngésző tárolt fájljait.
+*  (Valószínűleg) Most vagy (kissé valószínűbb) a jövőben, ha szeretné módosítani az erddap CSS fájlt, másolat
+   `tomcat/content/erddap/images/erddapStart2.css` a `tomcat/content/erddap/images/erddap2.css` és aztán változtatni.
+Változások `erddap2.css` csak akkor léphet hatályba, ha ERDDAP™ újraindításra kerül, és gyakran megköveteli a felhasználótól, hogy törölje a böngésző csésze fájljait.
      
- ERDDAP™ nem működik megfelelően, ha a setup.xml vagy datasets.xml A fájl nem egy jól kidolgozott XML fájl. Szóval, miután átszerkesztetted ezeket a fájlokat,
-jó ötlet ellenőrizni, hogy az eredmény jól alakult XML azáltal, hogy az XML szöveg egy XML ellenőrző, mint [xmlvalidation](https://www.xmlvalidation.com/) .
+ ERDDAP™ nem működik megfelelően, ha a setup.xml vagy datasets.xml A fájl nem egy jól kialakított XML fájl. Tehát, miután szerkesztette ezeket a fájlokat,
+jó ötlet, hogy ellenőrizze, hogy az eredmény jól formált XML az XML szöveg beillesztése egy XML ellenőrző, mint például [xmlvalidáció](https://www.xmlvalidation.com/) ...
      
-### Telepítsd az erddap-ot. háborús akták{#install-the-erddapwar-file} 
+### Telepítse az erddapot. háborús fájl{#install-the-erddapwar-file} 
 
-4. A Linux, Mac és Windows, _ _ letöltés [Erddap. War](https://github.com/ERDDAP/erddap/releases/download/v2.28.0/erddap.war) _ _ be 'tomcat / webapps':
+4. Linux, Mac és Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) Belépés `Tomcat/webapps` :
 
-_ _ Version 2.28.0, 620,824,288 bytes, MD5 = f948b2ba603f65a83ac67af43da9e4c2, dated 2025- 08- 29 _
+__Version 2.28.1, 622.676.238 byte, MD5=48b4226045f950c8a8d69ef9521b9bc9, 2025-09-05___
 
-A .war fájl nagy, mert tartalmaz nagy felbontású partvonal, határ, és magassági adatok szükségesek a térképek létrehozásához.
+A .war fájl nagy, mert magas állásfoglalási partvonalat, határt és emelési adatokat tartalmaz a térképek létrehozásához.
 
 Néhány korábbi verzió is elérhető.
 
-   *  [2, 17](https://github.com/ERDDAP/erddap/releases/download/v2.17/erddap.war)   (551,068,245 bájt, MD5 = 5FEA912B5D42E50EAB9591F773EA848D, 2022- 02- 16) 
-   *  [2, 18](https://github.com/ERDDAP/erddap/releases/download/v2.18/erddap.war)   (551,069,844 bájt, MD5 = 461325E97E7577EC671DD50246CCFB8B, 2022- 02- 23) 
-   *  [2, 21](https://github.com/ERDDAP/erddap/releases/download/v2.21/erddap.war)   (568,644,411 bájt, MD5 = F2CFF805893146E932E498FDD519B6, 2022- 10- 09) 
-   *  [2, 22](https://github.com/ERDDAP/erddap/releases/download/v2.22/erddap.war)   (567,742,765 bájt, MD5 = 2B33354F633294213AE2AFDCF4DA6D0, 2022- 12- 08) 
-   *  [2, 23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddap.war)   (572,124,953 bájt, MD5 = D843A043C506725EBD6F8EFDCCA8FD5F, 2023- 03- 03) 
-   *  [2, 24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)   (568,748,187 bájt, MD5 = 970fbee172e28b0b8a07756eecbc898e, 2024- 06- 07) 
-   *  [2, 25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)   (592,292,039 bájt, MD5 = 652AFC9D1421F00B5F789DA2C4732D4C, 2024- 11- 07) 
-   *  [2, 26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)   (607,404,032 bájt, MD5 = 99a725108b37708e5420986c1616a119, 2025- 03- 31) 
-   *  [2, 27, 0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)   (620,554,403 bájt, MD5 = 3b2086c659eee4145ca2dff447bf4ef7, 2025- 06- 11) 
+   *  [2.17](https://github.com/ERDDAP/erddap/releases/download/v2.17/erddap.war)   (551,068,245 bytes, MD5=5FEA912B5D42E50EAB9591F773EA848D, 2022-02-16) 
+   *  [2.18](https://github.com/ERDDAP/erddap/releases/download/v2.18/erddap.war)   (551,069,844 byte, MD5=461325E97E7577EC671D50246CCFB8B, 2022-02-23) 
+   *  [2.21.](https://github.com/ERDDAP/erddap/releases/download/v2.21/erddap.war)   (568,644,411 bytes, MD5=F2CF805893146E932E498FDBD519B6, 2022-10-09) 
+   *  [2.22](https://github.com/ERDDAP/erddap/releases/download/v2.22/erddap.war)   (567,742,765 bytes, MD5=2B33354F633294213AE2AFDDCF4DA6D0, 2022-12-08) 
+   *  [2.23](https://github.com/ERDDAP/erddap/releases/download/v2.23/erddap.war)   (572,124,953 bytes, MD5=D843A043C506725EBD6F8EFDCCA8FD5F, 2023-03-03) 
+   *  [2.24](https://github.com/ERDDAP/erddap/releases/download/v2.24/erddap.war)   (568,748,187 bytes, MD5=970fbee172e28b0b8a07756eecbc898e, 2024-06-07) 
+   *  [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)   (592,292,039 byte, MD5=652AFC9D1421F00B5F789DA2C4732D4C, 2024-11-07) 
+   *  [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)   (607,404,032 byte, MD5=99a725108b37708e5420986c16a119, 2025-03-31) 
+   *  [2.27.0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)   (620,554,403 bytes, MD5=3b2086c659ee4145ca2dff447bf4ef7, 2025-06-11) 
 
-### A proxy beállítása (telepítési specifikus)  {#proxy} 
+### Configure proxy (speciális telepítés)  {#proxy} 
 
- ERDDAP™ jellemzően egy webszerver fordított proxy mögött telepítik, hogy azt a standard HTTP portokon lehessen kiszolgálni (80 és 443) .
-SSL / TLS terminál gyakran kiosztja a webszerver proxy réteg is. A specifikációk az egyes telepítések követelményeitől függenek.
+ ERDDAP™ jellemzően egy webszerver fordított proxy mögött van telepítve, amely lehetővé teszi, hogy szabványos HTTP portokon szolgáljon (80 és 443) ...
+Az SSL/TLS felmondást gyakran a webszerver proxy rétegben is megkötik. A specifikusok az egyes telepítések követelményeitől függnek.
 
 #### Apache{#apache} 
 
-1. Biztosítani kell, hogy a 'mod _ proxy' és 'mod _ proxy' http "meg vannak töltve:
+1. Győződjön meg róla `mod_proxy` és `mod_proxy_ http ` betöltve:
 
 ```
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 ```
 
-2. Módosítsa a meglévő " <VirtualHost> 'tag (ha van) vagy adjon hozzá egyet a fájl végén:
+2. A meglévő módosítás ` <VirtualHost> ` tag (ha van egy) , vagy adjon hozzá egyet a fájl végén:
 ```
 <VirtualHost *:80>
    ServerName YourDomain.org
@@ -400,19 +400,19 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 </VirtualHost>
 ```
 
-Ha ERDDAP™ az 'erddap' -től eltérő útvonalon szolgál, az 'X- Forwarded- Prefix' fejlécet is be kell állítani a
-"path szegmens _ before _ '/ erddap". Ez a beállítás a ERDDAP™ kézbesítve:
-"/ subpath / erddap":
+Ha ERDDAP™ más úton szolgálnak, mint `/erddap` is állítsa be `X-Forwarded Profix` fejléc a
+útszegmens _before_ `/erddap` ... Ez a beállítás megfelelő lenne egy ERDDAP™ szolgáljon
+ `/Subpath/erddap` :
 
 ```
 RequestHeader set X-Forwarded-Prefix /subpath
 ```
 
-3. Ezután indítsa újra az Apache-t: '/ usr / sbin / apachectl -k kecses' (de néha egy másik könyvtárban van.) .
+3. Ezután indítsa el az Apache-t: `/usr/sbin/apachectl - k kegyes`   (de néha más könyvtárban van) ...
          
 #### NGINX{#nginx} 
 
-Az nginx config fájlban állítsa be ezeket a fejléceket:
+A nginx konfigurációs fájlban állítsa be ezeket a fejléceket:
 ```
 proxy_set_header Host              $http_host;
 proxy_set_header X-Real-IP         $remote_addr;
@@ -422,16 +422,16 @@ proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
 proxy_set_header X-Forwarded-Proto $scheme;
 ```
 
-Ha ERDDAP™ az 'erddap' -től eltérő útvonalon szolgál, az 'X- Forwarded- Prefix' fejlécet is be kell állítani a
-"path szegmens _ before _ '/ erddap". Ez a beállítás a ERDDAP™ kézbesítve:
-"/ subpath / erddap":
+Ha ERDDAP™ más úton szolgálnak, mint `/erddap` is állítsa be `X-Forwarded Profix` fejléc a
+útszegmens _before_ `/erddap` ... Ez a beállítás megfelelő lenne egy ERDDAP™ szolgáljon
+ `/Subpath/erddap` :
 
 ```
 proxy_set_header X-Forwarded-Prefix /subpath
 ```
 
 
-Annak érdekében, hogy az NGINX és ERDDAP™ megfelelően működik https , akkor tegye a következő snippet a Tomcat server.xml " <Host> 'blokk:
+Annak érdekében, hogy NGINX és ERDDAP™ megfelelően működik https , meg kell tenni a következő snippet belül Tomcat szerver.xml ` <Host> ` blokk:
 ```
 <Valve className="org.apache.catalina.valves.RemoteIpValve"
   remoteIpHeader="X-Forwarded-For"
@@ -439,86 +439,86 @@ Annak érdekében, hogy az NGINX és ERDDAP™ megfelelően működik https , ak
   protocolHeaderHttpsValue="https" />
 ```
      
-### A Tomcat indítása{#start-tomcat} 
+### Kezdőlap Tomcat{#start-tomcat} 
 
-*  (Nem ajánlom, hogy a Tomcat Webes Alkalmazási Menedzsert használd. Ha nem teljesen leáll és indul Tomcat, előbb vagy utóbb lesz PermGen memória problémák.) 
-*  (Linuxban vagy Mac OS-ban, ha létrehoztál egy speciális felhasználót a Tomcat futtatására, pl., tomcat, ne feledd megtenni a következő lépéseket, mint a felhasználó.) 
-* Ha Tomcat már fut, állítsa le Tomcat (Linux vagy Mac OS) "tomcat / bin / shutdown"
-vagy (Windows) 'tomcat\\ bin\\ shutdown.bat '
+*  (Nem ajánlom a Tomcat Web Application Manager használatát. Ha nem zárja le és indítsa el a Tomcatot, előbb vagy utóbb PermGen memóriaproblémái lesznek.) 
+*  (Linuxban vagy Mac OS-ban, ha létrehozott egy speciális felhasználót, hogy futtassa a Tomcat-ot, például tomcat-ot, ne felejtse el a következő lépéseket, mint a felhasználó.) 
+* Ha Tomcat már fut, zárja le Tomcat (Linux vagy Mac OS)   `Tomcat/bin/shutdown.sh` 
+vagy (Windows-ban)   `Tomcat\bin\\ shutdown.bat ` 
 
-Linux-on 'ps -ef | grep tomcat 'előtt és után' shutdow.sh ', hogy megbizonyosodjon arról, hogy a tomcat folyamat megállt.
-A folyamatot a leállítás előtt kell felsorolni, és végül a leállítás után nem.
-Eltarthat egy-két percig. ERDDAP™ hogy teljesen leálljanak. Légy türelmes. Vagy ha úgy tűnik, nem áll meg magától, használd:
-'kill -9 <processID> '
-* Kezdje Tomcat (Linux vagy Mac OS) "tomcat / bin / startupsh" vagy (Windows) 'tomcat\\ bin\\ startup.bat'
+Linuxon, használja `ps -ef | grep tomcat` előtte és utána `leállítás. Árnyék` annak biztosítása érdekében, hogy a tomcat folyamat leálljon.
+A folyamatot a leállítás előtt kell felsorolni, és végül nem szerepel a leállítás után.
+Lehet, hogy egy-két percet vesz igénybe ERDDAP™ teljesen leállni. Légy türelmes&#33; Vagy ha úgy néz ki, mintha nem hagyja abba a sajátját, használja:
+   `gyilkosság -9 <processID> ` 
+* Start Tomcat (Linux vagy Mac OS)   `Tomcat/bin/startup.sh` vagy (Windows-ban)   `Tomcat\bin\\startup.bat` 
 
-## Is ERDDAP™ Futni?{#is-erddap-running} 
+## Az ERDDAP™ futás?{#is-erddap-running} 
 
-A böngésző segítségével próbálja megtekintenihttp://www.YourServer.org/erddap/status.html.
- ERDDAP™ Az adatok betöltése nélkül indul. Az adatbázisok háttérszálba vannak betöltve, így elérhetőkké válnak.
+Használjon egy böngészőt, hogy megpróbálja megtekintenihttp://www.YourServer.org/erddap/status.html.
+ ERDDAP™ elkezdődik minden adatkészlet betöltése nélkül. Az adatkészleteket háttér szálba helyezik, így elérhetővé válik egy-egy.
 
-### Problémamegoldás{#troubleshooting} 
+### Hibaelhárítás{#troubleshooting} 
 
-* Ha egy felhasználó kéri, az Apache-ba megy. (a Linux és Mac OS számítógépeken) aztán Tomcat, akkor ERDDAP™ .
-* Láthatod, mi jön Apache-ba. (és kapcsolódó hibák) az Apache naplófájlokban.
-*    [Te&#33;](/docs/server-admin/additional-information#tomcat-logs) Látod, mi jön Tomcat-ba? (és kapcsolódó hibák) 
-a Tomcat naplófájlban ("tomcat / log / catalina.out" és más fájlok abban a könyvtárban) .
-*    [Te&#33;](/docs/server-admin/additional-information#log) látni, hogy mi jön ERDDAP , diagnosztikai üzenetek ERDDAP ,
-és hibaüzenetek ERDDAP , a ERDDAP™ ' <bigParentDirectory> / log.txt 'file.
-* Tomcat nem indul ERDDAP™ amíg Tomcat nem kap egy kérelmet ERDDAP™ . Tehát láthatja a Tomcat naplófájlokban, ha
-indítás ERDDAP™ vagy ha a kísérlethez hibaüzenet kapcsolódik.
-* Mikor? ERDDAP™ start up, it renales the old ERDDAP™ log.txt fájl ('logArchived A <CurrentTime> .txt ") és létrehoz egy új log.txt fájlt.
-Tehát ha a 'log.txt' fájl régi, az egy jel arra, hogy ERDDAP™ nem kezdte újra. ERDDAP™ naplóadatokat ír egy pufferbe
-és csak írja a pufferet a naplófájlba rendszeres időközönként, de lehet kényszeríteni ERDDAP™ hogy írja a pufferet a naplófájlba látogatással
-' /erddap/status.html ".
+* Amikor egy felhasználó kérése érkezik, az Apache-ba megy (Linux és Mac OS számítógépeken) Aztán Tomcat, akkor ERDDAP™ ...
+* Láthatja, mi jön az Apache-hoz (és kapcsolódó hibák) az Apache log fájlokban.
+*    [Te vagy](/docs/server-admin/additional-information#tomcat-logs) Láthatja, mi jön Tomcat (és kapcsolódó hibák) 
+a Tomcat log fájlokban ( `tomcat/logs/catalina.out` más fájlok ebben a könyvtárban) ...
+*    [Te vagy](/docs/server-admin/additional-information#log) Látni, mi jön ERDDAP diagnosztikai üzenetek ERDDAP ,
+hibaüzenetek ERDDAP , a ERDDAP™   ` <bigParentDirectory> /log/log.txt` fájl.
+* Tomcat nem indul ERDDAP™ amíg Tomcat kérelmet kap ERDDAP™ ... Tehát a Tomcat logfájljaiban látható, ha
+kezdődött ERDDAP™ vagy ha van egy hibaüzenet, amely ehhez a kísérlethez kapcsolódik.
+* Mikor ERDDAP™ kezdődik, újranevezi a régit ERDDAP™ log.txt fájl ( `LogArchivedA <CurrentTime> .txt` ) és létrehoz egy új log.txt fájlt.
+Tehát, ha `Log.txt` fájl régi, ez egy jel, hogy ERDDAP™ Nem nemrégiben újraindult. ERDDAP™ logisztikai információt ír egy puffernek
+és csak rendszeresen írja a puffert a naplófájlhoz, de kényszerítheti ERDDAP™ írni a puffert a naplófájlba látogatva
+     ` /erddap/status.html ` ...
 
-### Probléma: régi verziója Java  {#trouble-old-version-of-java} 
+### Trouble: Régi verzió Java  {#trouble-old-version-of-java} 
 
-Ha a Java Ez túl öreg ahhoz, hogy ERDDAP , ERDDAP™ nem fut, és látni fogsz egy hibaüzenetet Tomcat naplófájljában, mint
+Ha egy verziót használ Java túl öreg ahhoz, hogy ERDDAP , ERDDAP™ Nem fog futni, és hibaüzenetet fog látni Tomcat logfájljában, mint
 
 ```
 Exception in thread "main" java.lang.UnsupportedClassVersionError:
 _some/class/name_: Unsupported major.minor version _someNumber_
 ```
 
-A megoldás az, hogy frissítse a legújabb változata a Java És győződjön meg róla, hogy Tomcat használja.
+A megoldás az, hogy frissítsük a legújabb verzióját Java és győződjön meg róla, hogy a Tomcat használja.
 
-### Probléma: Lassú első alkalom{#trouble-slow-startup-first-time} 
+### Hiba: Lassú indítás első alkalommal{#trouble-slow-startup-first-time} 
 
-Tomcat kell csinálni egy csomó munkát az első alkalommal egy alkalmazás, mint ERDDAP™ Elkezdődött; nevezetesen ki kell csomagolnia az "erddap.war" fájlt
- (ami olyan, mint a .zip fájl) . Egyes szervereken, az első kísérlet a megtekintésre ERDDAP™ standok (30 másodperc?) amíg ez a munka be nem fejeződik.
-Más szervereken az első kísérlet azonnal megbukik. De ha vársz 30 másodpercet, és újra megpróbálod, sikerülni fog, ha ERDDAP™ helyesen szerelték fel.
+A Tomcatnak sok munkát kell végeznie az első alkalommal, amikor egy olyan alkalmazást kell végeznie, mint ERDDAP™ kezdődnek; nevezetesen, ki kell csomagolnia `erddap.war` fájl
+ (olyan, mint egy .zip fájl) ... Egyes szervereken az első kísérlet, hogy megtekintse ERDDAP™ Hátrányok (30 másodperc?) amíg ez a munka befejeződik.
+Más szervereken az első kísérlet azonnal kudarcot vall. De ha 30 másodpercet vársz, és próbálj újra, akkor sikerül, ha ERDDAP™ megfelelően telepítették.
 
-Erre nincs megoldás. A Tomcat egyszerűen így működik. De ez csak akkor fordul elő az első alkalommal, miután telepít egy új változata ERDDAP™ .
+Nincs javítás erre. Ez egyszerűen így működik Tomcat. De csak akkor fordul elő, amikor telepít egy új verziót ERDDAP™ ...
 
-## Állítsa le és indítsa újra.{#shut-down-and-restart} 
+## Shut lefelé és újraindítva{#shut-down-and-restart} 
 
-A jövőben, hogy bezárják (és újraindul)   ERDDAP™ Látod? [Hogyan kell bezárni és visszaállítani Tomcat és ERDDAP ](/docs/server-admin/additional-information#shut-down-and-restart) .
+A jövőben leállni (újraindítás)   ERDDAP™ lásd [Hogyan kell leülni és újraindítani Tomcatot ERDDAP ](/docs/server-admin/additional-information#shut-down-and-restart) ...
 
-## Baj van?{#trouble} 
+## Hiba?{#trouble} 
 
-Problémák telepítése Tomcat vagy ERDDAP™ ? Lásd a mi [szakasz a kiegészítő támogatás megszerzéséről](/docs/intro#support) .
+Tomcat vagy ERDDAP™ ? Lásd: [rész további támogatás megszerzéséről](/docs/intro#support) ...
 
-## Új verziók e-mail bejelentése ERDDAP  {#email-notification-of-new-versions-of-erddap} 
+## E-mail értesítés az új verziókról ERDDAP  {#email-notification-of-new-versions-of-erddap} 
 
-Ha szeretne kapni egy e-mailt, amikor egy új változata ERDDAP™ rendelkezésre áll vagy más fontos ERDDAP™ bejelentések,
-csatlakozhat a ERDDAP™ A bejelentések listája [Tessék.](https://groups.google.com/g/erddap-announce) . Ez a lista háromhavonta átlagosan egy e-mailt tartalmaz.
+Ha e-mailt szeretne kapni, amikor egy új változata ERDDAP™ elérhető vagy egyéb fontos ERDDAP™ bejelentések,
+csatlakozhatsz ERDDAP™ Bejelentési lista [itt](https://groups.google.com/g/erddap-announce) ... Ez a lista nagyjából egy e-mail három hónaponként.
 
-## Egyéni{#customize} 
+## Testreszabás{#customize} 
 
-*  [Testreszabása ERDDAP™ hogy kiemelje a szervezet (nem NOAA   ERD ) .](#customize) 
-* Változtassa meg a zászlót, hogy megjelenik a tetején az összes ERDDAP™ html oldalak szerkesztésével a " <startBodyHtml5> 'tag in your' datasets.xml 'fájl.
-(Ha nincs, másolja le az alapértelmezett ERDDAP™ 'tomcat / webapps / erddap / WEB- INF / class / gov / noaa / pfel / erddap / util / messages.xml' fájl
-' datasets.xml "és szerkeszti.) Például:
-  * Más kép használata (azaz a szervezet logója) .
-  * A háttérszín megváltoztatása.
-  * Változás " ERDDAP™ "to" _ YourOrganization _ 's ERDDAP™ "
-  * A tudományos adatokhoz való könnyebb hozzáférés módosítása a _ YourOrganization _ 's adatokhoz való könnyebb hozzáférés felé.
-  * Változtassa meg a "által hozott" linkek, hogy linkek a szervezet és a finanszírozási források.
-* A honlap bal oldalán található információk módosítása a " <theShortDescriptionHtml> 'tag in your' datasets.xml 'fájl.
-(Ha nincs, másolja le az alapértelmezett ERDDAP™ 'tomcat / webapps / erddap / WEB- INF / class / gov / noaa / pfel / erddap / util / messages.xml' fájl
-' datasets.xml "és szerkeszti.) Például:
-  * Írja le, mit csinál a szervezet és / vagy csoport.
-  * Írja le, milyen adatok ezek ERDDAP™ Igen.
-  * A böngésző fülein megjelenő ikon megváltoztatásához helyezze a szervezet kedvencét. ico in 'tomcat / content / erddap / images /'.
+*  [Testreszabja ERDDAP™ Kiemelni a szervezetet (nem NOAA   ERD ) ...](#customize) 
+* Változtassa meg a bannert, amely minden tetején megjelenik ERDDAP™ .html oldalak szerkesztésével ` <startBodyHtml5> ` címke ` datasets.xml ` fájl.
+(Ha nincs egy, másolja az alapértelmezettet ERDDAP™ A `tomcat/webapps/erddap/WEB-INF/classes/gov/noa/pfel/erddap/util/messages.xml` fájl
+a ` datasets.xml ` szerkeszteni.) Például:
+  * Használjon más képet (azaz a szervezet logója) ...
+  * Változtassa meg a háttér színét.
+  * Változás " ERDDAP™ "YourOrganization_'s ERDDAP™ "..."
+  * A "Könnyebb hozzáférés a tudományos adatokhoz" a "Könnyebb hozzáférés a _YourOrganization_ adataihoz".
+  * Változtassa meg a "Brought to you" linkeket, amelyek kapcsolódnak a szervezetéhez és finanszírozási forrásokhoz.
+* Változtassa meg az információt a honlap bal oldaláról a szerkesztés révén ` <theShortDescriptionHtml> ` címke ` datasets.xml ` fájl.
+(Ha nincs egy, másolja az alapértelmezettet ERDDAP™ A `tomcat/webapps/erddap/WEB-INF/classes/gov/noa/pfel/erddap/util/messages.xml` fájl
+a ` datasets.xml ` szerkeszteni.) Például:
+  * Írja le, mit csinál a szervezet és/vagy csoport.
+  * Írja le, hogy milyen adat ez ERDDAP™ van.
+  * Ahhoz, hogy megváltoztassa az ikont, amely megjelenik a böngésző lapokon, helyezze a szervezet tanácsát. ico in `tomcat/content/erddap/images/` ...
 Lásdhttps://en.wikipedia.org/wiki/Favicon.
