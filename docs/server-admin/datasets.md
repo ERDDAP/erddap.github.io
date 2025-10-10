@@ -387,7 +387,7 @@ After you edit the dataset.xml file, it is a good idea to verify that the result
     *   If you get stuck, see our [section on getting additional support](/docs/intro#support).
          
 ### Special variables {#special-variables}
-*   **[The longitude, latitude, altitude (or depth), and time (LLAT) variable](#destinationname) [destinationName](#destinationname)s are special.**
+*   **[The longitude, latitude, altitude, depth, pressure, and time (LLAT) variable](#destinationname) [destinationName](#destinationname)s are special.**
     *   In general:
         *   LLAT variables are made known to ERDDAP™ if the axis variable's (for EDDGrid datasets) or data variable's (for EDDTable datasets) [destinationName](#destinationname) is "longitude", "latitude", "altitude", "depth", or "time".
         *   We strongly encourage you to use these standard names for these variables whenever possible. None of them is required. If you don't use these special variable names, ERDDAP™ won't recognize their significance. For example, LLAT variables are treated specially by Make A Graph (*datasetID*.graph): if the X Axis variable is "longitude" and the Y Axis variable is "latitude", you will get a map (using a standard projection, and with a land mask, political boundaries, etc.) instead of a graph.
@@ -398,12 +398,13 @@ After you edit the dataset.xml file, it is a good idea to verify that the result
     *   For the "longitude" variable and the "latitude" variable:
         *   Use the [destinationName](#destinationname)s "longitude" and "latitude" only if the [units](#units) are degrees\_east and degrees\_north, respectively. If your data doesn't fit these requirements, use different variable names (for example, x, y, lonRadians, latRadians).
         *   If you have longitude and latitude data expressed in different units and thus with different destinationNames, for example, lonRadians and latRadians, Make A Graph (*datasetID*.graph) will make graphs (for example, time series) instead of maps.
-    *   For the "altitude" variable and the "depth" variable:
+    *   For the "altitude", "presure", or "depth" variable:
         *   Use the [destinationName](#destinationname) "altitude" to identify the data's distance above sea level (positive="up" values). Optionally, you may use "altitude" for distances below sea level if the values are negative below the sea (or if you use, for example,  
             [&lt;att name="scale\_factor" type="int">-1&lt;/att>](#scale_factor) to convert depth values into altitude values.
         *   Use the destinationName "depth" to identify the data's distance below sea level (positive="down" values).
-        *   A dataset may not have both "altitude" and "depth" variables.
-        *   For these variable names, the [units](#units) must be "m", "meter", or "meters". If the units different (for example, fathoms), you can use  
+        *   Alternatively, for elevations defined by air pressure levels (such as [isobars](https://en.wikipedia.org/wiki/Contour_line#Barometric_pressure)), you should set the destinationName to "pressure". This supports units in "hPa", "Pa", and "mbar" (positive="down" values).
+        *   A dataset may have only one "altitude", "pressure", or "depth" variable.
+        *   For these "altitude" and "depth" variables, the [units](#units) must be "m", "meter", or "meters". If the units different (for example, fathoms), you can use  
             [&lt;att name="scale\_factor">*someValue*&lt;/att>](#scale_factor) and [&lt;att name="units">meters&lt;/att>](#units) to convert the units to meters.
         *   If your data doesn't fit these requirements, use a different destinationName (for example, aboveGround, distanceToBottom).
         *   If you know the vertical CRS please specify it in the metadata, e.g., "EPSG:5829" (instantaneous height above sea level), "EPSG:5831" (instantaneous depth below sea level), or "EPSG:5703" (NAVD88 height).
@@ -1413,9 +1414,7 @@ When an EDDGridFromFiles dataset is first loaded, EDDGridFromFiles reads informa
       dirTable.nc (which holds a list of unique directory names),  
       fileTable.nc (which holds the table with each valid file's information),  
       badFiles.nc (which holds the table with each bad file's information).
-*   To speed up access to an EDDGridFromFiles dataset (but at the expense of using more memory), you can use  
->   [<fileTableInMemory>true</fileTableInMemory>](#filetableinmemory)  
-    to tell ERDDAP™ to keep a copy of the file information tables in memory.
+*   To speed up access to an EDDGridFromFiles dataset (but at the expense of using more memory), you can use [&lt;fileTableInMemory>true&lt;/fileTableInMemory>](#filetableinmemory) to tell ERDDAP™ to keep a copy of the file information tables in memory.
 *   The copy of the file information tables on disk is also useful when ERDDAP™ is shut down and restarted: it saves EDDGridFromFiles from having to re-read all of the data files.
 *   When a dataset is reloaded, ERDDAP™ only needs to read the data in new files and files that have changed.
 *   If a file has a different structure from the other files (for example, a different data type for one of the variables, or a different value for the "[units](#units)" attribute), ERDDAP adds the file to the list of "bad" files. Information about the problem with the file will be written to the *bigParentDirectory*/logs/log.txt file.
