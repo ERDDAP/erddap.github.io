@@ -617,6 +617,10 @@ The corresponding URl for that object is
 
 AWS supports a little variation in how that URL is constructed, but ERDDAP™ requires this one specific format:  
   https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+
+As of ERDDAP v2.29, you can now use the `s3://` URI format instead of the bucket URL. This is the format used by the [AWS s3 cli](https://docs.aws.amazon.com/cli/latest/reference/s3/).
+  s3://*bucketName*/*key*
+
 It is common practice, as with this example, to make key names look like a hierarchical path plus a file name, but technically they aren't. Since it is common and useful, ERDDAP™ treats keys with /'s as if they are a hierarchical path plus file name, and this documentation will refer to them as such. If a bucket's keys don't use /'s (e.g., a key like  
 ABI-Lib.2018.052.22.OR\_ABI-L1b-RadM2-M3C10\_G16\_s20180522247575), then ERDDAP™ will just treat the whole key as a long file name.
 
@@ -628,6 +632,21 @@ To make it so that ERDDAP™ can read the contents of private buckets, you need 
 *   /files/ system -- The ERDDAP™ [/files/ system](#accessibleviafiles) allows users to download the source files for a dataset. We recommend that you turn this on for all datasets with source files because many users want to download the original source files.
     *   If the files are in a private S3 bucket, the user's request to download a file will be handled by ERDDAP™, which will read the data from the file and then transmit it to the user, thus increasing the load on your ERDDAP™, using incoming and outgoing bandwidth, and making you (the ERDDAP™ administrator) pay the data egress fee to AWS.
     *   If the files are in a public S3 bucket, the user's request to download a file will be redirected to the AWS S3 URL for that file, so the data won't flow through ERDDAP™, thus reducing the load on ERDDAP. And if the files are in an Amazon Open Data (free) public bucket, then you (the ERDDAP™ administrator) won't have to pay any data egress fee to AWS. Thus, there is a big advantage serving data from public (not private) S3 buckets, and a huge advantage to serving data from Amazon Open Data (free) buckets.
+
+ERDDAP also supports anonymous credentials for public buckets. To use anonymous credentials, add `<useAwsAnonymous>true</useAwsAnonymous>` to your setup.xml. 
+
+#### Custom S3 Endpoints {#custom-s3-endpoints}
+For S3 compatible object storage not hosted by Amazon, you need to configure the [endpoint_url](https://docs.aws.amazon.com/sdkref/latest/guide/feature-ss-endpoints.html) along with specifing your bucket/key using an `s3://` URI. 
+
+The *endpoint_url* can be specified in one of three ways:
+- The *endpoint_url* in the Tomcat user's `~/.aws/config` profile
+- The `AWS_ENDPOINT_URL` environment variable
+- The `aws.endpointUrl` JVM variable (in setenv.sh for Tomcat)
+
+For a full list of S3 configuration variables, [See the Amazon documentation](https://docs.aws.amazon.com/cli/latest/topic/config-vars.html).
+
+**Self-signed certificates**
+For self-hosted S3 buckets, you will often have self-signed SSL certificates. For ERDDAP to read from these buckets, you need to add your certificate chain to the JVM truststore at `$JAVA_HOME/jre/lib/security/cacerts`. Additionally, ERDDAP uses the [AWS Common Runtime](https://docs.aws.amazon.com/sdkref/latest/guide/common-runtime.html) to access the bucket asynchronously. This boosts performance, but also requires that your self-signed certificates get added to your OS specific truststore. If you want to avoid doing this, you can disable AWS CRT with `<useAwsCrt>false</useAwsCrt>` in your setup.xml.
 
 #### ERDDAP™ and AWS S3 Buckets {#erddap-and-aws-s3-buckets}
 [**ERDDAP™ and AWS S3 Buckets**](#erddap-and-aws-s3-buckets)  
