@@ -621,6 +621,11 @@ AWS supports a little variation in how that URL is constructed, but ERDDAP™ re
 As of ERDDAP v2.29, you can now use the `s3://` URI format instead of the bucket URL. This is the format used by the [AWS s3 cli](https://docs.aws.amazon.com/cli/latest/reference/s3/).
   s3://*bucketName*/*key*
 
+The *region* for the S3 URI can be specified in one of three ways:
+- The *region* in the Tomcat user's `~/.aws/config` profile
+- The `AWS_DEFAULT_REGION` environment variable
+- The `aws.region` JVM variable (in setenv.sh for Tomcat)
+
 It is common practice, as with this example, to make key names look like a hierarchical path plus a file name, but technically they aren't. Since it is common and useful, ERDDAP™ treats keys with /'s as if they are a hierarchical path plus file name, and this documentation will refer to them as such. If a bucket's keys don't use /'s (e.g., a key like  
 ABI-Lib.2018.052.22.OR\_ABI-L1b-RadM2-M3C10\_G16\_s20180522247575), then ERDDAP™ will just treat the whole key as a long file name.
 
