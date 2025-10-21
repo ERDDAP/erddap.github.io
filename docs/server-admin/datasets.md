@@ -1655,6 +1655,11 @@ The big advantage of this class is that it provides a way to deal with different
         *   If the child dataset is not an EDDGridFromErddap dataset that is on the same ERDDAP™, the LonPM180 dataset will try to use the regular subscription system to subscribe to the underlying dataset. If you have the subscription system in your ERDDAP™ turned on, you should get emails asking you to validate the subscription. Please do so.
         *   If you have the subscription system in your ERDDAP™ turned off, the LonPM180 dataset may sometimes have outdated metadata until the LonPM180 dataset is reloaded. So if the subscription system is turned off, you should set the [&lt;reloadEveryNMinutes>](#reloadeverynminutes) setting of the LonPM180 dataset to a smaller number, so that it is more likely to catch changes to the child dataset sooner.
 
+*   For datasets with maximum longitude > 360, use the following optional configuration to set the maximum value and the dataset will get corrected to -180 to 180. 
+```
+    <maxSourceLon>540</maxSourceLon>
+```
+
 #### EDDGridLonPM180 skeleton XML {#eddgridlonpm180-skeleton-xml}
 
 >&nbsp;&nbsp;&lt;dataset type="EDDGridLonPM180" [datasetID](#datasetid)\="..." [active](#active)\="..." >  
