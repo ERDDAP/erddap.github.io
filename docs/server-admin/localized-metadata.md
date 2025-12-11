@@ -20,5 +20,5 @@ To enable and use them, follow these steps:
    ```
 
 2. **Default Behavior**:
-   - If no xml:lang tags are provided, the provided information will be displayed for all languages. This matches the previous behavoir.
+   - If no xml:lang tags are provided, the provided information will be displayed for all languages. This matches the previous behavior.
    - If some xml:lang tags are provided, those values will be used for requests in those languages. If a user requests a language that does not have a provided xml:lang value, the value from the default language (English) will be used.

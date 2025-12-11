@@ -13,9 +13,11 @@ mvn versions:update-properties // (updates versions in the property block)
 ```
 mvn versions:display-plugin-updates // (displays updates, need to manually update)
 ```
-* Run tests to make sure dependency updates didn’t break anything for all major configurations (datasets parsing in particular, though any other significant settings as well)
+* Run tests to make sure dependency updates didn’t break anything for all major configurations (datasets parsing in particular, though any other significant settings as well). Note that the external test suite can be very flaky. The slowAWS test suite can take a very long time.
 ```
 mvn verify
+mvn verify -P external
+mvn verify -P slowAWS
 ```
 * Use TranslateMessages.translate() to update translations if needed
 * EDStatic.java set developmentMode to false, change the version number and specify the release date.
