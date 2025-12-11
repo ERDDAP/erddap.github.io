@@ -5258,7 +5258,7 @@ ERDDAP's reload system is proactive -- datasets are reloaded soon after their re
     ```
     But ERDDAP™ now recommends ACDD-1.3. If you have [switched your datasets to use ACDD-1.3](#switch-to-acdd-13), use of Metadata\_Conventions is STRONGLY DISCOURAGED: just use [&lt;Conventions>](#conventions) instead.  
 ###### processing\_level {#processing_level}
-*   [**processing\_level**](#processing_level) (from the [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) metadata standard) is a RECOMMENDED textual description of the processing (for example, [NASA satellite data processing levels](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels), for example, Level 3) or quality control level (for example, Science Quality) of the data. For example,  
+*   [**processing\_level**](#processing_level) (from the [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) metadata standard) is a RECOMMENDED textual description of the processing (for example, [NASA's Earth Observing System Data and Information System data processing levels](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels), for example, Level 3) or quality control level (for example, Science Quality) of the data. For example,  
     ```
     <att name="processing\_level">3</att>  
     ```
