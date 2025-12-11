@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 İşte her biri ile ilişkili değişiklikler ERDDAP™ salıver.
 
+
+## Version 2.29.09.0{#version-2290} 
+ (2025-12-15) 
+
+Gerekli Eylem.
+
+ ERDDAP™ 2.29.0, jdk 25 veya daha sonra gerektirir. Lütfen jdk versiyonunu güncelleyin. Eğer bu bir problemse, inşa edebilirsiniz ERDDAP™ Yaşlı bir jdkk için (En az 17) pom.xml dosyasını değiştirerek. JDK 25 bir LTS serbest bırakılması Java Ve birçok gelişme içerir, özellikle de gelişmiş performans.
+
+*    **Yeni Özellikler ve Değişiklikler (kullanıcılar için) :** 
+    * ISO 19115 versiyonları: admin bilgileri için aşağıda görün. Kullanıcılar için artık ISO 19115 metadata'nın belirli versiyonları isteyebilirsiniz. Bunu ızgaradan yapın / tabledap Dosya türündeki bir veri kümesi için sayfalar aşağı düşer. Bu versiyonlar sunucu varsayılanından bağımsız olacaktır.
+
+*    **Şeyler Şeyler ERDDAP™ Yöneticilerin Bilme ve Yapması Gerekiyor:** 
+    * Yeni özellik, MQTT desteği. Detaylar için okumanızı öneririm [Bu konuda yeni sayfa.](/docs/server-admin/mqtt-integration.md) Bu, MQTT mesajlarından veri setlerini inşa edebilir ve bir veri kümesi değişiklikleri olduğunda MQTT mesajlarını yayınlayabilirsiniz. Varsayılan olarak kapalıdır, bu yüzden onu kullanmak istiyorsanız, bunu etkinleştirmelisiniz.
+
+MQTT üzerinde çalışmak için Ayush Singh sayesinde&#33;
+
+    * S3 geliştirme: S3 URIs için önbellek değeri olarak destek ekleyin. Bu izin verecektir ERDDAP Amazonaws.com'un ev sahipliği yaptığı özel kovaları desteklemek. Ayrıca bir S3 hafıza sızıntı sorunu ele aldı.
+
+S3'teki çalışma için @SethChampagneNRL sayesinde&#33;
+
+    * ISO 19115 versiyonları: ISO 19115 metadata'nın 3 farklı versiyonu için şimdi destek var. Varsayılan sürüm, kurulumunuzda ayarlar tarafından kontrol edilir.xml. SisISO19115 kullanımı yanlışsa, sunucu varsayılan olarak sağlayacaktır NOAA ISO19115_2 olarak değiştirildi.SisISO19115 kullanımı doğruysa, sunucu, SisISO19139'in değerine bağlı olarak farklı bir versiyon kullanır. SisISO19139 kullanıyorsanız, varsayılan ISO19139_2007 olacaktır, eğerSisISO19139 kullanıyorsanız varsayılan ISO19115_3_2016 olacaktır.SisISO19115 = gerçek ve kullanımSisISO19139=false. Organizasyonunuz farklı ayarlar gerektirebilir.
+
+    * Java'ya özür dilerim. Zaman kütüphanesi (Java.util yerine. GregorianCalendar) . Bu, tarih/zaman sütunlarını içeren sorgularda performans iyileştirmeleri sağlamalıdır. Veri kümelerinin büyük çoğunluğu için belirgin bir etki olmamalıdır. Bilinen tek durum bu bir değişiklike neden oluyorsa veri seti kullanılıyorsa `0000-01-01-01 günden beri günler` veya benzer. Bu değişken için bir sorunsa, ekebilirsiniz ` <att name="legacy_time_adjust"> Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek </att> ` Ve addAttributes Bölüm of either a dataVariable veya axisVariable .
+    
+    *    datasets.xml Şimdi bir iş tarafından işleniyor [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Bu özel değerleri belirlemek dahil birçok kullanım vardır (Parola gibi) Çevre değişkenlerini kullanarak. Bu, kurulumun yanlışına izin vererek devre dışı kalabilir.xml.
+
+    * Basınç Axis: Basınç tarafından tanımlanan yükseklikler için özel bir vaka ekleyin. Bu öncelikle Meteoroloji veri kümelerinde dikey yükseklikleri tanımlamak için kullanılır. NOT: Küçük basınç değerleri daha yüksek yükseklik anlamına gelir, bu yüzden eksen, metre veya ayaklarda tanımlanan normal yüksekliklerin tam tersi çalışır.
+
+Teşekkürler teşekkürler [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid NcFiles'ten farklı boyutlarda: Orada var (deneysel deneysel deneysel deneysel deneysel) destek için destek için EDDGrid NcFiles datasets'ten aynı eksenleri kullanmayan değişkenlere sahip olmak. Lütfen bu sizin için nasıl çalıştığını tekrar rapor edin, yoksa davranış oldukça doğru görünmüyorsa.
+
+    * Güvenli olması gereken bir optimizasyon koleksiyonu var, ancak gerektiğinde eski davranışlara geri dönmek için bayraklar var. Eğer bayraklardan herhangi birini ayarlamanız gerekiyorsa, lütfen bir hata yapın. Bunların çoğunun gelecekte yeni davranış varsayılanlığı ile çözülmeyeceğini duyuyoruz. There's a a [Özel bayraklar hakkında yeni sayfa](/docs/server-admin/feature-flags.md) Bu ve diğer bayraklar hakkında nerede okuyabilirsiniz.
+
+      * dokunuş dokunuş Thread Thread Thread Sadece Sadece Sadece Sadece Sadece Sadece Items: Bu bir değişikliktir, böylece touchThread sadece dokunacak kuyrukta öğeler olduğunda çalışır. Daha az çalışan bir iplik küçük bir optimizasyondur ancak hala kullanışlıdır. Doğruya sıralayıcılar.
+
+      * useNcMetadata ForFileTable: Bu değişiklik, iç dosya tablosunun nc özelliklerini kullanmasına izin verir, özellikle tüm nc dosyasını okumaktan kaçınmak için değişken bir gerçek_range özelliği. Bu, her dosyadaki her değişken için gerçek_range'ın bir özellik olarak dahil edildiği nc dosyalarına dayanan ilk veri setlerini büyük ölçüde hızlandırabilir. Bunun değeri olduğuna dikkat edin, bu yüzden yanlışsa, iç dosya masası yanlış bilgilere sahip olacaktır. Doğruya sıralayıcılar.
+
+      * ncHeader MakeFile: Bu değişiklik, temsilci nc dosyasını ilk oluşturmadan temel dosyaların yaratılmasına izin verir. Bu, EDDTable için küçük bir optimizasyondur, ancak birçok için büyük bir optimizasyon EDDGrid Talepler. Sahtekarlara (Sahte olarak, amaçlanan optimize edilmiş davranıştır) .
+
+      * Arka arka arka arka arka arka arka arka arka arka arka arka arka arka arka arka plan CreateSubset Tablolar: Bu değişiklik, veri setlerinin ilk işlemlerinden bazılarını arka plan bir konuya taşır. Bu, veri kümelerinin yüklenmesi için zamanı geliştirmeli. Özellikle gecikmiş kısım, gecikmiş işleme henüz gerçekleşmemiş olsa da ihtiyaç duyduğunda da ortaya çıkmaktadır. Doğruya sıralayıcılar.
+
+    * Bazı küçük değişiklikler, bug düzeltmeleri (The Italo Borrelli for the Fix for EDDTable FromAggregateRows, Teşekkürler teşekkürler @SethChampagneNRL, uzun yıllar 360'tan daha büyük olmasına izin vermek için EDDGrid LonPM180 ve diğer birkaç hata) Ve optimizasyonlar.
+
+*    **For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For ERDDAP™ Geliştiriciler:** 
+    * Ek optimizasyonlar, testin yarısı zaman çalıştırma dahil.
+
+    * Çok flaky için yeni test profilleri (Dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış dış) veya son derece yavaş yavaş (YavaşAWS) Testler.
+
 ## Version 2.28.1{#version-2281} 
  (2025-09-05) 
 
@@ -49,7 +98,7 @@ Teşekkürler teşekkürler [@ocefpaf](https://github.com/ocefpaf) , [@abkfenris
     * New data to colorbar dönüştürücü on servers at /erddap /convert /color.html
 
 *    **Şeyler Şeyler ERDDAP™ Yöneticilerin Bilme ve Yapması Gerekiyor:** 
-    * Varsayılan behavoir, önbellek artık büyük yük veri setlerinin görevinden bağımsız olarak temizlenecektir. Bu, eski önbellek dosyalarının daha güvenilir ve düzenli olarak açıklanmasına izin verecektir. Disk uzayında düşük olduğunda sunucu behavoir geliştirmek için ek bir çalışma var (Sunucunun uzaydan tükenmesini talep etmek için bir hata döndürür ve düşük disk koşullarında daha sık önbellekleri açıklayarak hataları önlemek için hataları açıklayın) . In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In datasets.xml   (veya kurulum.xml) Yeni önbelleği ekleyebilirsiniz ClearMinutes parametresi, sunucunun önbelleği nasıl açıklayacağını kontrol etmek için. Not, mevcut önbellek parametresi dosyaların tutulmasını kontrol eder, yeni önbellekli ClearMinutes, bir chache net yapmak için ne sıklıkta.
+    * Varsayılan davranış şu ki, önbellek şimdi büyük yük veri setlerinin görevinden bağımsız olarak temizlenecektir. Bu, eski önbellek dosyalarının daha güvenilir ve düzenli olarak açıklanmasına izin verecektir. Disk uzayında düşük olduğunda sunucu davranışını geliştirmek için ek iş var (Sunucunun uzaydan tükenmesini talep etmek için bir hata döndürür ve düşük disk koşullarında daha sık önbellekleri açıklayarak hataları önlemek için hataları açıklayın) . In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In In datasets.xml   (veya kurulum.xml) Yeni önbelleği ekleyebilirsiniz ClearMinutes parametresi, sunucunun önbelleği nasıl açıklayacağını kontrol etmek için. Not, mevcut önbellek parametresi dosyaların tutulmasını kontrol eder, yeni önbellekli ClearMinutes, bir chache net yapmak için ne sıklıkta.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Güncellenen görünümün yanı sıra gelişmiş navigasyon, arama, çeviri ve 
 
     * UI'deki veri kümeleri hakkında gösterilen bilgileri özelleştirmek için yeni özellik. Bunun veri setleri gibi şeyleri eklemek özellikle kullanışlı olmasını bekliyoruz. Daha fazla ayrıntı için, okuyabilirsiniz [Yeni Belgeler](/docs/server-admin/display-info) . Katkı için Ayush Singh sayesinde&#33;
 
-    * Ek Prometheus metrics. En büyük olanı " http _request_duration_sans', istek yanıtlarını içeren zamanlar şunları içerir: "request_type", "dataset_id", "file_type", "lang_code", "status_code"
+    * Ek Prometheus metrics. En büyük olanı ` http _request_duration_seconds` Bu, istek yanıt süreleri tarafından bozuldu: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 Bu makine okunabilir format, kullanıcıların sunucuyu nasıl kullandıklarını anlamak için daha iyi ölçüm koleksiyonu sağlayacaktır.
 
     * ISO19115 XML dosyaları oluşturmak için yeni bir yol. Apache SIS kullanıyor ve bu sürümde yeni bir seçenek. Lütfen bunu etkinleştirin ve geri bildirim gönderin.

@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Aceasta pagina este o schita. Acesta va fi vizibil doar în dev și va fi exclus din construcția producției.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(se deschide în tab nou)",
+    "description": "The ARIA label for the external link icon"
   }
 }

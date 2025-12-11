@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # Prometheus
 
-[Prometheus metrics](https://prometheus.io/)/erddap /metriklerde mevcuttur. J VM çekirdeği metrikleri 225 yılında eklendiERDDAP™2.26 sürümde ölçümler eklendi. metrikleri kullanmak istiyorsanız en azından 2.26 sürümde olduğundan emin olun. etkinleştirilmeleri için varsayılan olarak, onları eklenerek devre dışı bırakabilirsin
+ [Prometheus metrics](https://prometheus.io/) /erddap /metriklerde mevcuttur. J VM çekirdeği metrikleri 225 yılında eklendi ERDDAP™ 2.26 sürümde ölçümler eklendi. metrikleri kullanmak istiyorsanız en azından 2.26 sürümde olduğundan emin olun. etkinleştirilmeleri için varsayılan olarak, onları eklenerek devre dışı bırakabilirsin
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ Bu ölçümler makine okunabilir olmak için tasarlanmıştır. metrik sayfayı 
 
 ## Run Prometheus server
 
-İzleme yığını koşmak için en iyi belge (Prometheus + Grafana) Prometheus'ta[readme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md).
+İzleme yığını koşmak için en iyi belge (Prometheus + Grafana) Prometheus'ta [readme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) .
 
-## ERDDAP™metrics
+##  ERDDAP™ metrics
 
 ### JVM
 
-ERDDAP™Yarayabileceğiniz bir dizi metrik ihracat (BaşlangıçERDDAP™2.25) . JVM'nin sağlığının genel izlemesi için Prometheus müşterisi tarafından toplanan ölçümleri kullanırız. Bu, çöp koleksiyonu, hafıza kullanımı, iplikler ve daha fazlası hakkında veriler içerir. Daha fazla bilgi için bakınız[PrometheusJavaMüşteri JVM belgeleri](https://prometheus.github.io/client_java/instrumentation/jvm/).
+ ERDDAP™ Yarayabileceğiniz bir dizi metrik ihracat (Başlangıç ERDDAP™ 2.25) . JVM'nin sağlığının genel izlemesi için Prometheus müşterisi tarafından toplanan ölçümleri kullanırız. Bu, çöp koleksiyonu, hafıza kullanımı, iplikler ve daha fazlası hakkında veriler içerir. Daha fazla bilgi için bakınız [Prometheus Java Müşteri JVM belgeleri](https://prometheus.github.io/client_java/instrumentation/jvm/) .
 
-### ERDDAP™Belirli spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel
+###  ERDDAP™ Belirli spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik spesifik özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel özel
 
-Ayrıca bir dizi ihracat yapıyoruzERDDAP™Özel metrikler (BaşlangıçERDDAP™2.26) . Koda kazmak istiyorsanız, toplanan ölçümleri bulabilirsiniz[Metrikler.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java).
+Ayrıca bir dizi ihracat yapıyoruz ERDDAP™ Özel metrikler (Başlangıç ERDDAP™ 2.26) . Koda kazmak istiyorsanız, toplanan ölçümleri bulabilirsiniz [Metrikler.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) .
 
-#### ERDDAP_build_info
+####  ERDDAP _build_info
 
-Bu, inşa bilgileri içinERDDAP™sunucu. Versiyonu içerir (Büyük.minor) , Version_full (Büyük.minor.patch) , ve dağıtım_info (Sunucunun nasıl dağıtıldığını göstermek için kullanılır, tıpkı ‘Docker ‘ ‘ ‘) .
+Bu, inşa bilgileri için ERDDAP™ sunucu. Versiyonu içerir (Büyük.minor) , Version_full (Büyük.minor.patch) , ve dağıtım_info (Sunucunun nasıl dağıtıldığını göstermek için kullanılır, tıpkı ‘Docker ‘ ‘ ‘) .
 
 #### feature_flags
 
@@ -37,9 +37,9 @@ Bu, mevcut özel bayrakların durumunu gösteren bir bilgi metriktir. Çoğu boo
 
 Bu, grafik hızlandırmanın mevcut olup olmadığını gösteren bir bilgi metriktir.
 
-#### http_request_duration_seconds
+####  http _request_duration_seconds
 
-Bu, saniyeler içinde istek yanıt süreleri histogramıdır. Etiketler istek_type (Örneğin griddap,tabledapdosyaları, wms) , dataset_id (Eğer uygulanabilirse, aksi takdirde istek tipini tekrarlar) , file_type (Talep Formu E.g. '.html', '.csv', '.iso19115 ‘ ‘ ‘) , lang_code (İstek için dil veya varsayılan olarak varsayılan) , durum_code (httpİstek e.g 200, 302, 404) .
+Bu, saniyeler içinde istek yanıt süreleri histogramıdır. Etiketler istek_type (Örneğin griddap, tabledap dosyaları, wms) , dataset_id (Eğer uygulanabilirse, aksi takdirde istek tipini tekrarlar) , file_type (Talep Formu E.g. '.html', '.csv', '.iso19115 ‘ ‘ ‘) , lang_code (İstek için dil veya varsayılan olarak varsayılan) , durum_code ( http İstek e.g 200, 302, 404) .
 
 Bu, sunucunun popüler veri setlerini belirlemek için veri kümesi id tarafından istekleri takip etmek için kullanılabilir. Ayrıca sunucunuzda yavaş olan özel istekler olup olmadığını tanımlamaya yardımcı olabilir.
 

@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # Prometheus
 
-[Mga metrikong Prometheus](https://prometheus.io/)ay makukuha sa /erddap/metrics. Ang JVM core metriko ay idinagdag noong 2.25 sa maramiERDDAP™Idinagdag ang mga metriko sa bersyong 2.26. Kung nais mong gamitin ang mga metriko ay tiyakin na ikaw ay nasa kahit papaanong bersyon 2.26. Hindi nila nagawa, maaari mo silang sirain sa pamamagitan ng pagdaragdag
+ [Mga metrikong Prometheus](https://prometheus.io/) ay makukuha sa /erddap/metrics. Ang JVM core metriko ay idinagdag noong 2.25 sa marami ERDDAP™ Idinagdag ang mga metriko sa bersyong 2.26. Kung nais mong gamitin ang mga metriko ay tiyakin na ikaw ay nasa kahit papaanong bersyon 2.26. Hindi nila nagawa, maaari mo silang sirain sa pamamagitan ng pagdaragdag
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ Ang mga metrikong ito ay dinisenyo upang mabasa ang makina. Bagaman maaari mong 
 
 ## Pagtakbo sa Prometheus server
 
-Ang pinakamahusay na dokumentasyon para sa pagpapatakbo ng salansan ng pagsubaybay (Prometheus + Gramana) nasa Prometheus[basahin](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md).
+Ang pinakamahusay na dokumentasyon para sa pagpapatakbo ng salansan ng pagsubaybay (Prometheus + Gramana) nasa Prometheus [basahin](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) .
 
-## ERDDAP™metriko
+##  ERDDAP™ metriko
 
 ### JVM
 
-ERDDAP™Magluwas ng maraming metriko na maaaring masumpungan mong kapaki - pakinabang (pasimula saERDDAP™2.25) . Para sa pangkalahatang pagsubaybay sa kalusugan ng JVM ginagamit natin ang mga metrikong tinipon ng kliyenteng Prometheus. Kabilang dito ang mga datos tungkol sa pangongolekta ng basura, paggamit ng memorya, mga sinulid, at higit pa. Para sa higit pang impormasyon tingnan ang[PrometheusJavaClient JVM dokuments](https://prometheus.github.io/client_java/instrumentation/jvm/).
+ ERDDAP™ Magluwas ng maraming metriko na maaaring masumpungan mong kapaki - pakinabang (pasimula sa ERDDAP™ 2.25) . Para sa pangkalahatang pagsubaybay sa kalusugan ng JVM ginagamit natin ang mga metrikong tinipon ng kliyenteng Prometheus. Kabilang dito ang mga datos tungkol sa pangongolekta ng basura, paggamit ng memorya, mga sinulid, at higit pa. Para sa higit pang impormasyon tingnan ang [Prometheus Java Client JVM dokuments](https://prometheus.github.io/client_java/instrumentation/jvm/) .
 
-### ERDDAP™espesipiko
+###  ERDDAP™ espesipiko
 
-Iniluluwas din namin ang ilang bansaERDDAP™espesipikong mga metriko (pasimula saERDDAP™2.26) . Kung nais mong saliksikin ang kodigo, masusumpungan mo ang mga metriko na natipon[Mertrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java).
+Iniluluwas din namin ang ilang bansa ERDDAP™ espesipikong mga metriko (pasimula sa ERDDAP™ 2.26) . Kung nais mong saliksikin ang kodigo, masusumpungan mo ang mga metriko na natipon [Mertrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) .
 
-#### ERDDAP_Magtayo ng_info
+####  ERDDAP _Magtayo ng_info
 
-Ito ang info sa pagtatayo para saERDDAP™server. Kasama rito ang bersyon (Malaki.minor) , bersyon_full (Pangunahin.minor.patch) , at ang paglalagay ng_info (na ginagamit upang ipakita kung paano ginagamit ang server, gaya ng 'Docker ') .
+Ito ang info sa pagtatayo para sa ERDDAP™ server. Kasama rito ang bersyon (Malaki.minor) , bersyon_full (Pangunahin.minor.patch) , at ang paglalagay ng_info (na ginagamit upang ipakita kung paano ginagamit ang server, gaya ng 'Docker ') .
 
 #### tampok na mga_flag
 
@@ -37,9 +37,9 @@ Ito ay isang metric na info na nagpapakita ng kasalukuyang estado ng tampok na m
 
 Ito ay isang metric na info na nagpapakita kung mayroon bang graphics spark.
 
-#### http_Magtanong_duriation_seconds
+####  http _Magtanong_duriation_seconds
 
-Ito ay isang hitogram ng tugong request sa loob ng mga segundo. Ang mga etiketa ay humihiling ng_type (halimbawa ng griddap,tabledap, files, wms) , dataset_id (Kung angkop, ulitin ang uri ng hinihiling) , talaksan_type (anyo ng output para sa kahilingan e.g. '.html', '.csv', '.iso19115 ') , Bang_code (wika para sa kahilingan, o walang laman na string kung default) , kalagayan_code (httpstatus code ng request e.g. 200, 302, 404) .
+Ito ay isang hitogram ng tugong request sa loob ng mga segundo. Ang mga etiketa ay humihiling ng_type (halimbawa ng griddap, tabledap , files, wms) , dataset_id (Kung angkop, ulitin ang uri ng hinihiling) , talaksan_type (anyo ng output para sa kahilingan e.g. '.html', '.csv', '.iso19115 ') , Bang_code (wika para sa kahilingan, o walang laman na string kung default) , kalagayan_code ( http status code ng request e.g. 200, 302, 404) .
 
 Ito ay maaaring gamitin upang matunton ang mga kahilingan ng dataset id upang malaman ang mga popular na dataset ng server. Makatutulong din na malaman kung may partikular na mga uri ng kahilingan na mabagal sa iyong server.
 

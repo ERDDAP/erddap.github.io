@@ -1,6 +1,6 @@
 # 许可证
 
-## NOAA软件公共域声明{#noaa-software-public-domain-statement} 
+##  NOAA 软件公共域声明{#noaa-software-public-domain-statement} 
 
 作为美国政府的一项工作,这个项目在美国国内属于公有领域. 本文所理解的软件应广义地解释为包括算法、源代码、对象代码、数据库和相关文件,所有这些文件均应免费提供给用户。
 
@@ -8,7 +8,7 @@
 
 ### CC0 1.0 普遍摘要{#cc0-10-universal-summary} 
 
-这是人类可以阅读的[法典](https://github.com/ERDDAP/erddap/blob/main/LICENSE)  (读取全文) 。 。 。 。
+这是人类可以阅读的 [法典](https://github.com/ERDDAP/erddap/blob/main/LICENSE)   (读取全文) 。 。 。 。
 
 ### 无版权{#no-copyright} 
 
@@ -16,4 +16,4 @@
 
 ### 其他资料{#other-information} 
 
-使用NOAA  (National Oceanic and Atmospheric Administration) 或NMFS和ERDDAP™名称和/或视觉识别特征受商标法保护,未经商标法许可不得使用。NOAA。 。 。 使用这些名称和(或)可视识别符来识别未更改的NOAA内容或链接到NOAA网站是允许使用的。 不需要权限显示未更改NOAA产品,包括NOAA, (中文).NMFS,或ERDDAP™名称和/或视觉标识作为原始产品的一部分。 但是,名字或可视识别特征的使用方式都不得意味着认可或附属于NOAA。 。 。 。
+使用 NOAA   ( National Oceanic and Atmospheric Administration ) 或 NMFS 和 ERDDAP™ 名称和/或视觉识别特征受商标法保护,未经商标法许可不得使用。 NOAA 。 。 。 使用这些名称和(或)可视识别符来识别未更改的 NOAA 内容或链接到 NOAA 网站是允许使用的。 不需要权限显示未更改 NOAA 产品,包括 NOAA , (中文). NMFS ,或 ERDDAP™ 名称和/或视觉标识作为原始产品的一部分。 但是,名字或可视识别特征的使用方式都不得意味着认可或附属于 NOAA 。 。 。 。

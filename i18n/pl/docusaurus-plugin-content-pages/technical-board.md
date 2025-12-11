@@ -1,6 +1,6 @@
 # Rada Techniczna
 
-WERDDAP™Komisja techniczna odpowiada za kierunek techniczny, któryERDDAP™Bierze. WERDDAP™Rada Techniczna jest odpowiedzialna za kierunek technicznyERDDAP™. Podejmuje decyzje w sprawie priorytetyzacji pracy, zawiera mapy drogowe, zależności, wszelkie procesy wpływające na prace rozwojowe oraz wszelkie inne kwestie wymagające nadzoru technicznego w zakresie:ERDDAP™. Zarząd dokona również przeglądu i zatwierdzi dokumenty projektowe pod kątem istotnych nowych funkcji. Warunki techniczne są 2 lata z możliwością przedłużenia. Oczekuje się również, że członkowie rady technicznej przyczynią się do realizacji projektu, w szczególności poprzez wnioski o uruchomienie i przeglądy kodów.
+W ERDDAP™ Komisja techniczna odpowiada za kierunek techniczny, który ERDDAP™ Bierze. W ERDDAP™ Rada Techniczna jest odpowiedzialna za kierunek techniczny ERDDAP™ . Podejmuje decyzje w sprawie priorytetyzacji pracy, zawiera mapy drogowe, zależności, wszelkie procesy wpływające na prace rozwojowe oraz wszelkie inne kwestie wymagające nadzoru technicznego w zakresie: ERDDAP™ . Zarząd dokona również przeglądu i zatwierdzi dokumenty projektowe pod kątem istotnych nowych funkcji. Warunki techniczne są 2 lata z możliwością przedłużenia. Oczekuje się również, że członkowie rady technicznej przyczynią się do realizacji projektu, w szczególności poprzez wnioski o uruchomienie i przeglądy kodów.
 
 ## Cel{#purpose} 
 
@@ -8,13 +8,13 @@ Komisja Techniczna jest odpowiedzialna za następujące dokumenty i procesy:
 
 *  **Przegląd i zatwierdzenie nowych funkcji** które są proponowane w GitHub Dyskusje.
 
-*  **ERDDAP™Projekty priorytetowe** listę, która określa projekty, nad którymi pracujemy. Sprawdź bieżący[wykaz projektów priorytetowych](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Projekty priorytetowe** listę, która określa projekty, nad którymi pracujemy. Sprawdź bieżący [wykaz projektów priorytetowych](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Cele dotyczące uwolnienia** , które określają specyficzne cechy, które chcemy uwzględnić w każdym wydaniuERDDAP™. Są one udokumentowane w projekcie GitHub dla każdego wydania.
+*  ** ERDDAP™ Cele dotyczące uwolnienia** , które określają specyficzne cechy, które chcemy uwzględnić w każdym wydaniu ERDDAP™ . Są one udokumentowane w projekcie GitHub dla każdego wydania.
 
-*  **ERDDAP™Podręcznik stylu** który określa style i praktyki kodowania, które należy stosować wERDDAP™Kod.
+*  ** ERDDAP™ Podręcznik stylu** który określa style i praktyki kodowania, które należy stosować w ERDDAP™ Kod.
 
-WERDDAP™Rada Techniczna działa na następujących zasadach:
+W ERDDAP™ Rada Techniczna działa na następujących zasadach:
 
 * W miarę możliwości komunikacja Rady Technicznej powinna być publiczna i asynchroniczna. W wielu przypadkach oznacza to wykorzystanie GitHub Dyskusje i problemy.
 
@@ -50,7 +50,7 @@ WERDDAP™Rada Techniczna działa na następujących zasadach:
 
 ## Program{#agenda} 
 
-Jeśli chcesz dodać element do Planu Rady Technicznej do dyskusji lub wierzyć, że jesteś dobry dla tablicy technicznej, prosimy o e-mail[Christian. John.@noaa.gov](mailto:chris.john@noaa.gov).
+Jeśli chcesz dodać element do Planu Rady Technicznej do dyskusji lub wierzyć, że jesteś dobry dla tablicy technicznej, prosimy o e-mail [Christian. John. @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Członkowie{#members} 
 

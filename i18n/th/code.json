@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "หน้านี้เป็นฉบับร่าง มันจะมองเห็นได้เฉพาะใน Dev และแยกออกจากการสร้าง",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(เปิดในแท็บใหม่)",
+    "description": "The ARIA label for the external link icon"
   }
 }

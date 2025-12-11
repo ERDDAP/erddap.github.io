@@ -1,38 +1,38 @@
 ---
 sidebar_position: 7
 ---
-# "displayInfo" és "displayAttribute" Tagok
+#  `Kijelző Info` és `megjelenítés` Tagok
 
 ## Leírás
-Ez a funkció lehetővé teszi, hogy megjelenítse a választott globális tulajdonságait az adatkészletek oldalon a "Information" sorban.
+Ez a funkció lehetővé teszi, hogy megjelenítse a választás globális tulajdonságait az adatkészletek oldalon `Információ` sor.
 
 ## Használati utasítások
-Ezeket a címkéket csak a "Sax parser" segítségével lehet használni. Hogy lehetővé tegyük és használjuk őket, kövessük ezeket a lépéseket:
+Ezek a címkék csak használhatók a `Sax parser` ... Hogy lehetővé tegyük és használjuk őket, kövessük ezeket a lépéseket:
 
 1.  **Lehetővé teszi az SAX Parser** :
-Adja hozzá a következő sort a "setup.xml" fájlhoz:
+Adja hozzá a következő sort a `setup.xml` fájl:
    ```xml
    <useSaxParser>true</useSaxParser>
    ```
 
-2.  **Adjon hozzá Tagokat a `datasets.xml`** :
-A `datasets.xml` fájl, tartalmaz két felső szintű címkét:
+2.  **Adjon Tagokat ` datasets.xml ` ** :
+A ` datasets.xml ` fájl, beleértve két felső szintű címkét:
    ```xml
    <displayInfo></displayInfo>
    <displayAttribute></displayAttribute>
    ```
 
 3.  **Alapértelmezett viselkedés** :
-   - Ha ezeket a címkéket nem adják hozzá, vagy üresen hagyják a "datasets.xml`fájl, az alapértelmezett értékeket az alábbiak szerint alkalmazzák:
-     - "displayInfo": "Feltétel, licenc `
-     - "displayAttribute": "összefoglaló, licenc `
+   - Ha ezeket a címkéket nem adják hozzá, vagy üres maradnak ` datasets.xml ` fájl, az alapértelmezett értékeket az alábbiak szerint alkalmazzák:
+     -  `Kijelző Info` : `Összefoglaló, licenc` 
+     -  `megjelenítés` : `összefoglaló,licensz` 
 
 4.  **Biztonsági ellenállás biztosítása** :
-A comma-választott értékek száma mind a "displayInfo", mind a "displayAttribute" címkéknek ugyanaznak kell lenniük.
+A comma-választott értékek száma mind a `Kijelző Info` és `megjelenítés` A címkéknek ugyanaznak kell lenniük.
 
 ## Hogyan működik
-- A „displayAttribute” címke meghatározza a globális tulajdonságokat (amelyet a&lt;`addAttributes`&gt; tag) minden adatkészlet esetében jelenik meg.
-- A "displayInfo" címke megfelelő értékei az UI "Information" sorában található címkékként jelennek meg.
+- A `megjelenítés` a címke meghatározza a globális tulajdonságokat (amelyet a&lt; ` addAttributes ` és gt; tag) minden adatkészlet számára megjelenítendő.
+- A megfelelő értékek a `Kijelző Info` címkeként jelenik meg a címkén `Információ` Az UI sora.
 - Amikor a felhasználó a megjelenített címkék felett ül, megjelenik egy tooltip, megmutatva a globális tulajdonság értékét.
 
 ## Példa
@@ -48,13 +48,13 @@ A comma-választott értékek száma mind a "displayInfo", mind a "displayAttrib
 ```
 
 ### UI viselkedés:
-- A "Display1" és a "Display2" szavak a "Information" sorban jelennek meg az UI-n.
+- A szavak `Kijelző1` és `Kijelző2` jelenik meg a `Információ` sor az UI-n.
 - Amikor a tooltips megjeleníti a megfelelő tulajdonságértékeket:
-  - dalszöveg: Tooltip Shows - This att1_
-  - dalszöveg: Tooltip Shows - This att2_
+  -  `Kijelző1` Tooltip megmutatja _Ez att1_
+  -  `Kijelző2` Tooltip megmutatja _Ez att2_
 
 ## Megjegyzések
-- Gondoskodjon a „displayAttribute” címkeben meghatározott tulajdonságnevekről az adatkészletben meghatározott globális tulajdonságokkal.
+- Győződjön meg a megadott tulajdonságnevekről `megjelenítés` a címke megfelel az adatkészletben meghatározott globális tulajdonságoknak.
 - A helytelen vagy hiányzó tulajdonságok hibás üzeneteket fognak bejelenteni.
 
-Ezen lépések követésével testreszabhatja az „Information” sort az adatkészletek oldalon, hogy megjelenítse a vonatkozó globális tulajdonságokat a megfelelő tooltipokkal.
+Ezen lépések követésével testreszabhatja a `Információ` sorolja az adatkészletek oldalát, hogy megjelenítse a vonatkozó globális tulajdonságokat a megfelelő tooltipokkal.

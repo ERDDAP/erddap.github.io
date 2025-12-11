@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # Prometheus
 
-[Prometheus metrics](https://prometheus.io/)beschikbaar zijn op /erddap/metrics. JVM kernmetrics werden toegevoegd in 2.25 met veelERDDAP™metrics toegevoegd in versie 2.26. Als je de metrics wilt gebruiken, zorg dan dat je tenminste versie 2.26 hebt. Ze zijn standaard ingeschakeld, u kunt ze uitschakelen door het toevoegen
+ [Prometheus metrics](https://prometheus.io/) beschikbaar zijn op /erddap/metrics. JVM kernmetrics werden toegevoegd in 2.25 met veel ERDDAP™ metrics toegevoegd in versie 2.26. Als je de metrics wilt gebruiken, zorg dan dat je tenminste versie 2.26 hebt. Ze zijn standaard ingeschakeld, u kunt ze uitschakelen door het toevoegen
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ Deze metrics zijn ontworpen om machineleesbaar te zijn. Terwijl u de metrics pag
 
 ## Uitvoeren van Prometheus-server
 
-De beste documentatie voor het uitvoeren van de monitoring stack (Prometheus + Grafana) is in de Prometheus[leesme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md).
+De beste documentatie voor het uitvoeren van de monitoring stack (Prometheus + Grafana) is in de Prometheus [leesme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) .
 
-## ERDDAP™metrics
+##  ERDDAP™ metrics
 
 ### JVM
 
-ERDDAP™exporteert een aantal metrics die u nuttig kunt vinden (beginnend inERDDAP™2,25) . Voor algemene monitoring van de gezondheid van de JVM gebruiken we de door de Prometheus klant verzamelde metrics. Dit omvat gegevens over afvalverzameling, geheugengebruik, threads en meer. Voor meer informatie zie de[PrometheusJavaClient JVM documentatie](https://prometheus.github.io/client_java/instrumentation/jvm/).
+ ERDDAP™ exporteert een aantal metrics die u nuttig kunt vinden (beginnend in ERDDAP™ 2,25) . Voor algemene monitoring van de gezondheid van de JVM gebruiken we de door de Prometheus klant verzamelde metrics. Dit omvat gegevens over afvalverzameling, geheugengebruik, threads en meer. Voor meer informatie zie de [Prometheus Java Client JVM documentatie](https://prometheus.github.io/client_java/instrumentation/jvm/) .
 
-### ERDDAP™specifiek
+###  ERDDAP™ specifiek
 
-Wij exporteren ook een aantalERDDAP™specifieke maatstaven (beginnend inERDDAP™2,26) . Als je wilt graven in de code, kunt u de statistieken verzameld in[Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java).
+Wij exporteren ook een aantal ERDDAP™ specifieke maatstaven (beginnend in ERDDAP™ 2,26) . Als je wilt graven in de code, kunt u de statistieken verzameld in [Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) .
 
-#### ERDDAP_Build_info
+####  ERDDAP _Build_info
 
-Dit is de bouw info voor deERDDAP™server. Het bevat versie (major.minor) , versie_volledig (major.minor.patch) , en deployment_info (gebruikt om aan te geven hoe de server wordt ingezet, zoals 'Docker ') .
+Dit is de bouw info voor de ERDDAP™ server. Het bevat versie (major.minor) , versie_volledig (major.minor.patch) , en deployment_info (gebruikt om aan te geven hoe de server wordt ingezet, zoals 'Docker ') .
 
 #### feature_vlaggen
 
@@ -37,9 +37,9 @@ Dit is een info metriek die de huidige status van feature vlaggen toont. De mees
 
 Dit is een informatie metriek die aangeeft of grafische acceleratie beschikbaar is.
 
-#### http_Aanvragen_duur_seconden
+####  http _Aanvragen_duur_seconden
 
-Dit is een histogram van de responsduur in seconden. De labels zijn request_type (bijvoorbeeld griddap,tabledap, bestanden, wms) , dataset_id (indien van toepassing, herhaalt het verzoektype anders) , bestand_type (uitvoerformaat voor verzoek bv. '.html', '.csv', '.iso19115' ') , lang_code (taal voor het verzoek, of lege tekenreeks indien standaard) , status_code (httpstatuscode van het verzoek bv. 200, 302, 404) .
+Dit is een histogram van de responsduur in seconden. De labels zijn request_type (bijvoorbeeld griddap, tabledap , bestanden, wms) , dataset_id (indien van toepassing, herhaalt het verzoektype anders) , bestand_type (uitvoerformaat voor verzoek bv. '.html', '.csv', '.iso19115' ') , lang_code (taal voor het verzoek, of lege tekenreeks indien standaard) , status_code ( http statuscode van het verzoek bv. 200, 302, 404) .
 
 Dit kan worden gebruikt om verzoeken te volgen door dataset id om de populaire datasets van de server te bepalen. Het kan ook helpen identificeren als er bepaalde soorten verzoeken die traag zijn op uw server.
 

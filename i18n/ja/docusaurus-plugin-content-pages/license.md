@@ -1,6 +1,6 @@
 # ライセンス
 
-## NOAAソフトウェア パブリック ドメインの声明{#noaa-software-public-domain-statement} 
+##  NOAA ソフトウェア パブリック ドメインの声明{#noaa-software-public-domain-statement} 
 
 米国政府の仕事として、このプロジェクトは米国内のパブリックドメインにあります。 本ソフトウェアは、アルゴリズム、ソースコード、オブジェクトコード、データベース、および関連する文書の包括的なものとして広く解釈され、これらすべてが、ユーザーに無償で提供するものとします。
 
@@ -8,7 +8,7 @@
 
 ### CC0 1.0 ユニバーサルサマリー{#cc0-10-universal-summary} 
 
-これは、人間の読みやすい要約です[法的コード](https://github.com/ERDDAP/erddap/blob/main/LICENSE)  (完全なテキストを読む) お問い合わせ
+これは、人間の読みやすい要約です [法的コード](https://github.com/ERDDAP/erddap/blob/main/LICENSE)   (完全なテキストを読む) お問い合わせ
 
 ### 著作権なし{#no-copyright} 
 
@@ -16,4 +16,4 @@
 
 ### その他の情報{#other-information} 
 
-利用方法NOAA  (National Oceanic and Atmospheric Administration) またはNMFSそして、ERDDAP™名前および/または視覚識別子は商標法の下で保護され、書面による許可なしに使用されないかもしれませんNOAAお問い合わせ これらの名前および/または視覚識別子を使用して、未指定の特定NOAAコンテンツまたはリンクNOAAウェブサイトの利用は可能です。 未登録表示の許可は必要ありません。NOAA含まれているプロダクトNOAA,NMFSまたはERDDAP™元のプロダクトの部分として名前および/または視覚識別子。 名前や視覚識別子は、しかしながら、支持や付随を及ぼすような方法で使用することができる。NOAAお問い合わせ
+利用方法 NOAA   ( National Oceanic and Atmospheric Administration ) または NMFS そして、 ERDDAP™ 名前および/または視覚識別子は商標法の下で保護され、書面による許可なしに使用されないかもしれません NOAA お問い合わせ これらの名前および/または視覚識別子を使用して、未指定の特定 NOAA コンテンツまたはリンク NOAA ウェブサイトの利用は可能です。 未登録表示の許可は必要ありません。 NOAA 含まれているプロダクト NOAA , NMFS または ERDDAP™ 元のプロダクトの部分として名前および/または視覚識別子。 名前や視覚識別子は、しかしながら、支持や付随を及ぼすような方法で使用することができる。 NOAA お問い合わせ

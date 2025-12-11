@@ -1,6 +1,6 @@
 # Licens
 
-## NOAAProgramvara Public Domain Statement{#noaa-software-public-domain-statement} 
+##  NOAA Programvara Public Domain Statement{#noaa-software-public-domain-statement} 
 
 Som ett verk av Förenta staternas regering är detta projekt offentligt inom Förenta staterna. Programvaran, som framgår häri, ska i stor utsträckning tolkas som inkluderande av algoritmer, källkod, objektkod, databaser och tillhörande dokumentation, som alla ska lämnas gratis till användaren.
 
@@ -8,7 +8,7 @@ Dessutom avstår vi från upphovsrätt och relaterade rättigheter i arbetet öv
 
 ### CC0 1.0 Universell Sammanfattning{#cc0-10-universal-summary} 
 
-Detta är en mänsklig läsbar sammanfattning av[Juridisk kod](https://github.com/ERDDAP/erddap/blob/main/LICENSE)  (Läs hela texten) .
+Detta är en mänsklig läsbar sammanfattning av [Juridisk kod](https://github.com/ERDDAP/erddap/blob/main/LICENSE)   (Läs hela texten) .
 
 ### Ingen upphovsrätt{#no-copyright} 
 
@@ -16,4 +16,4 @@ Den person som associerade ett arbete med denna handling har ägnat arbetet till
 
 ### Övrig information{#other-information} 
 
-Användning avNOAA  (National Oceanic and Atmospheric Administration) ellerNMFSochERDDAP™namn och/eller visuella identifierare skyddas enligt varumärkesrätt och får inte användas utan skriftligt tillstånd frånNOAA. Användning av dessa namn och/eller visuella identifierare för att identifiera oförändradNOAAinnehåll eller länkar tillNOAAwebbplatser är tillåtna användningar. Tillstånd krävs inte för att visa oförändradNOAAprodukter som inkluderarNOAA,NMFSellerERDDAP™namn och/eller visuella identifierare som en del av den ursprungliga produkten. Varken namnen eller de visuella identifierarna får användas på ett sätt som innebär ett godkännande eller anslutning tillNOAA.
+Användning av NOAA   ( National Oceanic and Atmospheric Administration ) eller NMFS och ERDDAP™ namn och/eller visuella identifierare skyddas enligt varumärkesrätt och får inte användas utan skriftligt tillstånd från NOAA . Användning av dessa namn och/eller visuella identifierare för att identifiera oförändrad NOAA innehåll eller länkar till NOAA webbplatser är tillåtna användningar. Tillstånd krävs inte för att visa oförändrad NOAA produkter som inkluderar NOAA , NMFS eller ERDDAP™ namn och/eller visuella identifierare som en del av den ursprungliga produkten. Varken namnen eller de visuella identifierarna får användas på ett sätt som innebär ett godkännande eller anslutning till NOAA .

@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "이 페이지는 초안입니다. 그것은 단지 dev에서 볼 수 있으며 생산 빌드에서 제외됩니다.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(새 탭에서 열림)",
+    "description": "The ARIA label for the external link icon"
   }
 }

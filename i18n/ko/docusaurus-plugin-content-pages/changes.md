@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 각각의 변화는 다음과 같습니다. ERDDAP™ 다운로드
 
+
+## 버전 2.29.0{#version-2290} 
+ (출시 2025-12-15) 
+
+자주 묻는 질문
+
+ ERDDAP™ 버전 2.29.0는 jdk 25 이상을 요구합니다. jdk 버전을 업데이트하십시오. 문제가 있다면, 빌드 할 수 있습니다. ERDDAP™ 이전 jdk에 대한 (적어도 17) pom.xml 파일을 변경하여. JDK 25는 LTS 출시 Java 그리고 많은 개선을 포함, 가장 주목할만한 성능.
+
+*    **새로운 기능 및 변경 (사용자 정의) ::** 
+    * ISO 19115 버전: 자주 묻는 질문 사용자는 이제 ISO 19115 메타데이터의 특정 버전을 요청할 수 있습니다. griddap/에서 이것을 하십시오 tabledap 파일 유형 드롭 다운으로 dataset 페이지. 이 버전은 서버 기본값의 독립적일 것입니다.
+
+*    **기타 ERDDAP™ 관리자는 알아야 할:** 
+    * 새로운 기능, MQTT 지원. 자주 묻는 질문 [새로운 페이지에 대해.](/docs/server-admin/mqtt-integration.md) MQTT 메시지에서 데이터셋을 구축할 수 있으며, 데이터셋 변경 시 MQTT 메시지를 게시할 수 있습니다. 그것은 기본적으로 꺼져있어, 그래서 당신이 그것을 사용하려는 경우, 당신은 그것을 활성화해야합니다.
+
+MQTT 작업을위한 Ayush Singh 덕분에&#33;
+
+    * S3 개선: cacheFromUrl 값으로 S3 URI에 대한 지원 추가. 이 허용 ERDDAP amazonaws.com에서 호스팅되는 개인 버킷을 지원 또한 S3 메모리 누출 문제를 해결했습니다.
+
+S3에서 작업을위한 @SethChampagneNRL 덕분에&#33;
+
+    * ISO 19115 버전: 이제 ISO 19115 메타데이터의 3가지 버전을 지원합니다. 기본 버전은 setup.xml의 설정에 의해 제어됩니다. useSisISO19115가 false인 경우, 서버는 기본적으로 제공 NOAA 수정된 ISO19115_2. useSisISO19115이 true인 경우, 서버는 useSisISO19139의 값에 따라 다른 버전을 사용할 수 있습니다. useSisISO19139이 true인 경우, 기본값은 ISO19139_2007일 것입니다. useSisISO19139이 기본값은 ISO19115_3_2016일 것입니다. useSisISO19115=true 및 useSisISO19139=false를 사용하는 것이 좋습니다. 귀하의 조직은 다른 설정을 요구할 수 있습니다.
+
+    * 자바로 마이그레이션. 시간 도서관 (java.util 대신. GregorianCalendar, 그리스) · 날짜/시간 열을 포함하는 쿼리에 성능 개선을 제공해야합니다. datasets의 광대한 대다수를 위한 눈에 띄는 충격이 없습니다. dataset이 사용하는 경우 알려진 경우 `일 이후 0000-01-01` 또는 유사한. 변수에 문제가 있다면, 추가할 수 있습니다. ` <att name="legacy_time_adjust"> 한국어 </att> ` 으로 addAttributes 중 하나 dataVariable 또는 axisVariable ·
+    
+    *    datasets.xml 현재 처리 중 [문자열Substitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) · 이것은 개인 값 설정 포함 많은 사용 (비밀번호) 환경 변수를 사용하여. enableEnvParsing에서 false로 설정할 수 있습니다. setup.xml.
+
+    * 압력 축선: 압력에 의해 정의된 고도를 위한 특별한 케이스를 추가하십시오. 이것은 isobaric 수준에서 수직 고도를 정의하는 Meteorology datasets에서 1 차적으로 사용됩니다. 참고: 작은 압력 값은 더 높은 고도를 의미하므로 축은 미터 또는 피트에서 정의 된 정상적인 고도를 반대합니다.
+
+이름 * [세스캄파뉴NRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid fromNcFiles 다양한 차원: 있음 (연구분야) 지원하다 EDDGrid fromNcFiles datasets to have variables that don't use the same set of axes. 이 작업을 수행하는 방법에 대한 보고서를 작성하거나 행동이 꽤 옳지 않다면.
+
+    * 안전해야 할 최적화 모음이 있지만 필요한 경우 오래된 행동으로 뒤집을 수 있습니다. 플래그를 설정할 필요가 있다면 버그를 제출하십시오. 이러한 문제의 대부분이 미래에 새로운 행동 기본으로 제거되지 않는 경우. 있다. [기능 플래그에 대한 새로운 페이지](/docs/server-admin/feature-flags.md) 이와 다른 플래그에 대해 읽을 수 있습니다.
+
+      * 제품정보 제품정보 지원하다 whenItems: 이것은 터치 스레드가 터치에 항목이있을 때만 실행되도록 변경됩니다. 1개의 몇몇 실 달리는 사소한 최적화 그러나 아직도 유용합니다. 기본값은 true입니다.
+
+      * 사용NcMetadata 파일 형식 : 이 변경은 nc 속성을 사용하여 내부 파일 테이블을 허용, 특히 전체 nc 파일을 읽을 수있는 변수 real_range 속성. 이것은 각 파일에 있는 각 변수에 대한 real_range가 속성으로 포함되는 경우에 nc 파일에 근거를 둔 datasets의 초기 로딩을 가속화할 수 있습니다. 이 값을 신뢰하므로 잘못된 경우 내부 파일 테이블이 잘못된 정보가 있습니다. 기본값은 true입니다.
+
+      * 채용정보 파일 형식 : 이 변경은 nc 헤더 파일이 먼저 nc 파일을 생성하지 않고 생성 할 수 있습니다. 이것은 EDDTable에 대 한 작은 최적화, 하지만 많은 대 한 최적화 EDDGrid 이름 * false로 기본값 (false로 최적화된 동작) ·
+
+      * 이름 * 생성Subset 테이블: 이 변화는 datasets의 초기 처리의 일부를 배경 스레드로 이동합니다. 데이터셋의 로딩 시간을 개선해야 합니다. 특정 지연 된 부분은 지연 처리가 아직 발생하지 않은 경우 필요한 경우 생성 된 하위 설정 테이블입니다. 기본값은 true입니다.
+
+    * 몇몇 작은 변화, 버그 수정 (EDDTableFromAggregateRows에 대한 수정을위한 Italo Borrelli 감사, 이름 * @SethChampagneNRL은 경도가 360보다 커집니다. EDDGrid LonPM180 및 다른 버그 수정) , 및 최적화.
+
+*    **제품 정보 ERDDAP™ 개발자:** 
+    * 절단 테스트 런타임을 포함하여 추가 최적화.
+
+    * 매우 flaky에 대한 새로운 테스트 프로파일 (기타 제품) 또는 매우 느립니다. (느린AWS) 시험.
+
 ## 버전 2.28.1{#version-2281} 
  (출시 2025-09-05) 
 
@@ -49,7 +98,7 @@ title: "ERDDAP™ - Changes"
     * /erddap/convert/color.html에서 서버의 colorbar 변환기에 새로운 자료
 
 *    **기타 ERDDAP™ 관리자는 알아야 할:** 
-    * Default behavoir는 캐시가 이제 주요 로드 데이터셋 작업의 독립적으로 삭제됩니다. 이것은 오래된 캐시 파일의 믿을 수 있고 일정한 정리를 허용합니다. 디스크 공간에 낮은 경우 서버 behavoir를 개선하는 추가 작업 (서버가 공간을 실행하고, 오류를 방지하기 위해 낮은 디스크 환경에서 캐시를 더 자주 삭제하는 요청의 오류를 반환) · 내 계정 datasets.xml   (또는 setup.xml) 새 캐시를 추가/설정할 수 있습니다. ClearMinutes 매개 변수는 자주 서버가 캐시를 삭제하는 방법을 제어합니다. 참고, 기존의 cacheMinutes 매개 변수는 파일의 나이를 유지, 새로운 캐시 ClearMinutes는 종종 chache를 맑게하는 방법입니다.
+    * 기본 동작은 캐시가 이제 주요 로드 데이터셋 작업의 독립적으로 삭제됩니다. 이것은 오래된 캐시 파일의 믿을 수 있고 일정한 정리를 허용합니다. 디스크 공간에서 낮은 서버 동작을 개선하는 추가 작업 (서버가 공간을 실행하고, 오류를 방지하기 위해 낮은 디스크 환경에서 캐시를 더 자주 삭제하는 요청의 오류를 반환) · 내 계정 datasets.xml   (또는 setup.xml) 새 캐시를 추가/설정할 수 있습니다. ClearMinutes 매개 변수는 자주 서버가 캐시를 삭제하는 방법을 제어합니다. 참고, 기존의 cacheMinutes 매개 변수는 파일의 나이를 유지, 새로운 캐시 ClearMinutes는 종종 chache를 맑게하는 방법입니다.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ setup.xml에 false로 taskCacheClear을 설정하여 새로운 캐시 클리어 
 
     * UI의 datasets에 대해 표시된 정보를 사용자 정의하는 새로운 기능. Dataset 인용과 같은 것들을 추가하는 것이 특히 유용합니다. 더 자세한 내용은 읽을 수 있습니다 [새 문서](/docs/server-admin/display-info) · 기여에 대한 Ayush Singh 덕분에&#33;
 
-    * 추가 Prometheus 미터. 가장 큰 것은 ` http _request_duration_seconds`: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
+    * 추가 Prometheus 미터. 가장 큰 것은 ` http _request_duration_seconds_duration_seconds에 대한 자세한 정보` 요청 응답 시간을 포함: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 이 기계 읽기 쉬운 체재는 사용자가 서버를 사용하는 방법을 이해하기 위하여 미터의 더 나은 수집을 가능하게 할 것입니다.
 
     * ISO19115 XML 파일을 생성하는 새로운 방법. 그것은 Apache SIS를 사용하고이 릴리스의 새로운 옵션입니다. 이를 활성화하고 피드백을 보낼 수 있습니다.

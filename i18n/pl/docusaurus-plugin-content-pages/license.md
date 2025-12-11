@@ -1,6 +1,6 @@
 # Licencja
 
-## NOAAOprogramowanie Public Domain Omówienie{#noaa-software-public-domain-statement} 
+##  NOAA Oprogramowanie Public Domain Omówienie{#noaa-software-public-domain-statement} 
 
 Jako praca rządu Stanów Zjednoczonych projekt ten leży w sferze publicznej w Stanach Zjednoczonych. Oprogramowanie rozumiane w niniejszym dokumencie powinno być szeroko rozumiane jako obejmujące algorytmy, kod źródłowy, kod obiektu, bazy danych i związaną z nimi dokumentację, z których wszystkie są dostarczane Użytkownikowi bezpłatnie.
 
@@ -8,7 +8,7 @@ Dodatkowo zrzekamy się praw autorskich i praw pokrewnych w pracy na całym świ
 
 ### CC0 1.0 Uniwersalne podsumowanie{#cc0-10-universal-summary} 
 
-Jest to czytelne dla człowieka podsumowanie[Kod prawny](https://github.com/ERDDAP/erddap/blob/main/LICENSE)  (przeczytaj cały tekst) .
+Jest to czytelne dla człowieka podsumowanie [Kod prawny](https://github.com/ERDDAP/erddap/blob/main/LICENSE)   (przeczytaj cały tekst) .
 
 ### Brak praw autorskich{#no-copyright} 
 
@@ -16,4 +16,4 @@ Osoba, która powiązała pracę z tym czynem, poświęciła tę pracę domenie 
 
 ### Inne informacje{#other-information} 
 
-StosowanieNOAA  (National Oceanic and Atmospheric Administration) lubNMFSorazERDDAP™nazwy i / lub identyfikatory wizualne są chronione na mocy prawa znaków towarowych i nie mogą być używane bez pisemnej zgodyNOAA. Wykorzystanie tych nazw i / lub identyfikatorów wizualnych do identyfikacji niezmienionychNOAAtreści lub linków doNOAAstrony internetowe są dozwolone. Zezwolenie nie jest wymagane do wyświetlania bez zmianNOAAproduktów, które obejmująNOAA,NMFSlubERDDAP™nazwy lub identyfikatory wizualne jako część oryginalnego produktu. Nie można jednak używać nazw ani identyfikatorów wizualnych w sposób, który zakłada potwierdzenie lub powiązanie zNOAA.
+Stosowanie NOAA   ( National Oceanic and Atmospheric Administration ) lub NMFS oraz ERDDAP™ nazwy i / lub identyfikatory wizualne są chronione na mocy prawa znaków towarowych i nie mogą być używane bez pisemnej zgody NOAA . Wykorzystanie tych nazw i / lub identyfikatorów wizualnych do identyfikacji niezmienionych NOAA treści lub linków do NOAA strony internetowe są dozwolone. Zezwolenie nie jest wymagane do wyświetlania bez zmian NOAA produktów, które obejmują NOAA , NMFS lub ERDDAP™ nazwy lub identyfikatory wizualne jako część oryginalnego produktu. Nie można jednak używać nazw ani identyfikatorów wizualnych w sposób, który zakłada potwierdzenie lub powiązanie z NOAA .

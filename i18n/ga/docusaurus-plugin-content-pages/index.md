@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## Déan Teagmháil Linn ERDDAP™ leagan leagan{#latest-erddap-version} 
 
-2.28.1, féach [data recovery](/changes#version-2281) agus [íoslódáil](https://github.com/ERDDAP/erddap/releases/tag/v2.28.1) .
+2.29.0, féach ar an [data recovery](/changes#version-2290) agus [íoslódáil](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) .
 
 ##  ERDDAP™ Eochairfhocal information{#erddap-information} 
 

@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Narito ang mga pagbabagong nauugnay sa bawat isa ERDDAP™ paglaya.
 
+
+## Bersiyong 2.29.0{#version-2290} 
+ (inilabas 2025-12-15) 
+
+Kailangan ang pagkilos.
+
+ ERDDAP™ Ang bersyong 2.29.0 ay nangangailangan ng jdk 25 o mamaya. Paki-update ang inyong jdk na bersyon. Kung iyan ay isang problema, maaari kang magtayo ERDDAP™ para sa mas lumang jdk (pabalik sa di - kukulanging 17) sa pamamagitan ng pagpapalit ng talaksang pom.xml. Ang JDK 25 ay isang LTS release ng Java at kasali rito ang maraming pagsulong, lalo na ang pinagbuting pagganap.
+
+*    **Bagong mga Katangian at Pagbabago (para sa mga gumagamit) :** 
+    * Mga bersyon ng ISO 19115: Tingnan ang ibaba para sa admin info. Para sa mga gumagamit nito, maaari ka na ngayong humiling ng espesipikong mga bersiyon ng ISO 19115 metadata. Gawin ito mula sa griddap/ tabledap pahina para sa isang dataset na ang file type ay bumababa. Ang mga bersyong ito ay magiging independiyente sa sign default.
+
+*    **Mga Bagay ERDDAP™ Kailangang Malaman at Gawin ng mga Administrador:** 
+    * Bagong tampok, suporta ng MQTT. Para sa mga detalye iminumungkahi ko ang pagbabasa ng [bagong pahina tungkol dito.](/docs/server-admin/mqtt-integration.md) Kasama rito ang paggawa ng mga dataset mula sa mga mensaheng MQTT, at paglalathala ng mga mensaheng MQTTT kapag nagbago ang isang dataset. Ito'y hindi mabisa, kaya kung nais mong gamitin ito, kailangan mong gawin ito.
+
+Salamat kay Ayush Singh sa pagtatrabaho sa MQTT&#33;
+
+    * Mga pagsulong sa S3: Pagdagdag ng suporta para sa S3 URIs bilang cache FromUrl halaga. Magpapahintulot ito ERDDAP upang suportahan ang mga pribadong timba na nasa tabi ng mga amazonaw.com Isaalang - alang din ang isyu ng S3 na tumatagas na memorya.
+
+Dahil sa @SethChamagneNRL para sa gawain sa S3&#33;
+
+    * Mga bersyon ng ISO 19115: Mayroon na ngayong suporta para sa 3 iba't ibang bersyon ng ISO 19115 metadata. Ang default na bersyon ay kinokontrol ng settings sa iyong setup.xml. Kung mali ang gamit na SISISO19115, ang server ay magbibigay sa pamamagitan ng default NOAA Binagong ISO19115_2. Kung totoo ang paggamit ng sesio19115, kung gayon ay gagamit ang server ng ibang bersyon depende sa halaga ng paggamit ng usersiSISISO19139. Kung totoo ang paggamit ng SISISO19139, ang default ay iSO19139_2007, kung ang paggamit ng SISISO19139 ay mali ang default ay iSO19115_3_2016. Inirirekomenda namin ang paggamit ng usersiISO19115=Greature at paggamit ng SISISISOS19139= false. Maaaring kailanganin ng inyong organisasyon ang iba't ibang kalagayan.
+
+    * Nandayuhan sa java. aklatan (Sa halip na java.util. GregorianCalendar) . Ito ay dapat magbigay ng mga pagpapabuti sa pagganap sa mga queries na kinasasangkutan ng mga kolumna ng petsa/panahon. Hindi dapat magkaroon ng kapansin-pansing epekto sa karamihan ng mga dataset. Ang kilalang kaso na sanhi ng pagbabago ay kung ang dataset ay gumagamit `mga araw mula noong 0000-01-01` o katulad nito. Kung ito ay isang problema para sa isang pagbabago, maaari mong idagdag ` <att name="legacy_time_adjust"> totoo </att> ` sa addAttributes bahagi ng alinman sa isang dataVariable o axisVariable .
+    
+    *    datasets.xml ay pinoproseso na ngayon ng isang [Kabigha - bighaning Patutot](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Marami itong gamit kabilang ang pagtatakda ng mga pribadong pamantayan (tulad ng mga password) na gumagamit ng iba't ibang kapaligiran. Ito ay maaaring mabalda sa pamamagitan ng pagtatakda ay nagpapangyari sa EnvParsing na magsinungaling sa setup.xml.
+
+    * Mga Epekto ng Panggigipit: Dagdag pa ang isang espesyal na kaso para sa mga taas na itinakda ng presyon. Ito ay pangunahing ginagamit sa Meteorology datasets na nagbibigay kahulugan sa mga patayong taas sa mga antas na isobariko. WALA: Ang mas maliliit na presyo ay nangangahulugan ng mas mataas na lugar, kaya ang axis ay nasa tapat ng normal na taas na mga metro o talampakan.
+
+Salamat [SetChammagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid Mula sa mga NNcFile na may iba't ibang sukat: Mayroon (Pag - eeksperimento) suporta EDDGrid Mula saNcFiles datasets magkaroon ng mga variables na hindi gumagamit ng parehong set ng mga palakol. Pakisuyong iulat kung paano ito mabisa para sa iyo, o kung ang paggawi ay waring hindi tama.
+
+    * Mayroong koleksiyon ng mga optimisasyon na dapat ay ligtas, ngunit may mga watawat na ibabalik sa dating gawi kung kinakailangan. Kung masumpungan mo ang pangangailangang magtakda ng alinman sa mga bandila, pakisuyong magsalansan ka ng isang bug. Kung wala tayong maririnig na mga isyu na karamihan sa mga ito ay aalisin na may bagong kabiguan sa paggawi sa hinaharap. Meron [bagong pahina tungkol sa tampok na mga bandila](/docs/server-admin/feature-flags.md) kung saan mababasa mo ang tungkol dito at sa iba pang mga bandila.
+
+      * Paghipo Hugis Tanging ang Kapag Items: Ito ay isang pagbabago upang ang touchThread ay tumatakbo lamang kapag may mga bagay sa queue upang hawakan. Ang mas kaunting sinulid sa pagtakbo ay isang maliit na optimisasyon subalit kapaki - pakinabang pa rin. Totoo naman ang mga hula.
+
+      * Gumamit ng NNcMetadata Walang Kapintasan: Ang pagbabagong ito ay pumapayag sa panloob na file table na gumamit ng nc attributes, partikular na ang isang variable aktwal_range attribute upang maiwasan ang pagbabasa ng buong nc file. Ito ay maaaring lubhang mapabilis ang simulang pagkarga ng mga datasets batay sa mga nc file kung ang aktwal na_range para sa bawat variable sa bawat file ay isama bilang isang attribute. Pansinin na ito ay nagtitiwala sa halaga, kaya kung ito ay mali, ang panloob na file table ay magkakaroon ng maling impormasyon. Totoo naman ang mga hula.
+
+      * Tagapagpagaling Gumawa ng Mabuti: Ang pagbabagong ito ay pumapayag sa mga talaksang nc header na malikha nang hindi muna nililikha ang kinatawang talaksang nc. Ito ay isang maliit na optimisasyon para sa EDDTable, ngunit isang napakalaking optimisasyon para sa marami EDDGrid tanong. Mga Pagkadama ng Kasinungalingan (gaya ng huwad ay ang intensiyong maging optimente) .
+
+      * background Paglikha Talaan: Ang pagbabagong ito ay naglilipat ng ilan sa paunang pagpoproseso ng mga datasets sa isang background sinulid. Ito ay dapat mapahusay ang oras ng pagkarga ng mga dataset. Espesipikong ang naantalang bahagi ay subset tables, na ginagawa rin kapag kinakailangan kung ang naantalang pagpoproseso ay hindi pa nangyayari. Totoo naman ang mga hula.
+
+    * Ilang maliliit na pagbabago, mga bug fix (Salamat kay Italo Borrelli para sa fix para sa EDDTable FromAggregateRows, Salamat @SethChampagneNRL para sa pagpapainam ng mga longhitud na mas malaki sa 360 in EDDGrid LonPM180, at ilan pang mga bug fix) , at mga optimisasyon.
+
+*    **Sapagkat ERDDAP™ Mga Nagpapaunlad:** 
+    * Ang karagdagang mga optimisasyon, pati na ang pagbabawas ng pagsusulit ay tumatakbo ng kalahati ng oras.
+
+    * Bagong mga profile ng pagsubok para sa napakalabo (panlabas) o lubhang mabagal (MGA ABAW) pagsubok.
+
 ## Bersiyong 2.28.1{#version-2281} 
  (inilabas 2025-09-05) 
 
@@ -49,7 +98,7 @@ Salamat [@ocefpaf](https://github.com/ocefpaf) , [@abkfenris](https://github.com
     * Bagong datos sa colorbar converter sa mga server sa /erddap/convert/color.html
 
 *    **Mga Bagay ERDDAP™ Kailangang Malaman at Gawin ng mga Administrador:** 
-    * Ang default behavoir ay na ang cache ay aalisin na ngayon nang hiwalay sa malaking trabahong datasets. Magpapahintulot ito ng mas maaasahan at regular na pag - aalis ng lumang mga salansan ng cache. May karagdagang gawain upang mapabuti ang server behavoir kapag mababa sa disk space (Ang pagbabalik ng isang pagkakamali sa mga kahilingan ay malamang na gumawa sa server na maubusan ng lugar, at ang pag - aalis sa cache nang mas madalas sa mababang kalagayan ng disk upang maiwasan ang mga pagkakamali) . Sa loob datasets.xml   (o setup.xml) maaari mong idagdag/set ang bagong cache Ang mga clearMinute ay naghahanda upang kontrolin kung gaano kadalas na sinusuri ng server ang cache. Pansinin, kinokontrol ng umiiral na mga cacheMinutes parameter ang panahon ng pag - iimbak ng mga file, ang bagong cache Ang ClearMinutes ay para sa kung gaano kadalas gawin ang isang chache maliwanag.
+    * Ang paggawing default ay na ang cache ay aalisin na ngayon nang hiwalay sa pangunahing trabahong datasets. Magpapahintulot ito ng mas maaasahan at regular na pag - aalis ng lumang mga salansan ng cache. May karagdagang gawain upang mapabuti ang pag-uugaling server kapag mababa sa disk space (Ang pagbabalik ng isang pagkakamali sa mga kahilingan ay malamang na gumawa sa server na maubusan ng lugar, at ang pag - aalis sa cache nang mas madalas sa mababang kalagayan ng disk upang maiwasan ang mga pagkakamali) . Sa loob datasets.xml   (o setup.xml) maaari mong idagdag/set ang bagong cache Ang mga clearMinute ay naghahanda upang kontrolin kung gaano kadalas na sinusuri ng server ang cache. Pansinin, kinokontrol ng umiiral na mga cacheMinutes parameter ang panahon ng pag - iimbak ng mga file, ang bagong cache Ang ClearMinutes ay para sa kung gaano kadalas gawin ang isang chache maliwanag.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Bukod sa bagong hitsura roon, dapat na mas madali pa ang paglalayag, paghahanap,
 
     * Bagong katangian upang gawing maayos ang impormasyon na ipinakikita tungkol sa mga dataset sa UI. Inaasahan namin na ito'y lalo nang kapaki - pakinabang upang magdagdag ng mga bagay na gaya ng dataset scripts. Para sa higit pang detalye mababasa mo [bagong dokumentasyon](/docs/server-admin/display-info) . Salamat kay Ayush Singh sa kontribusyon&#33;
 
-    * Karagdagang mga metrikong Prometheus. Ang pinakamalaki ay ang ` http _request_duration_seconds` na kinabibilangan ng mga oras ng request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code".
+    * Karagdagang mga metrikong Prometheus. Ang pinakamalaki ay ang ` http _Magtanong_duriation_seconds` na kinabibilangan ng mga oras ng request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code".
 Ang magagamit na format ng makinang ito ay tutulong sa mas mabuting koleksiyon ng mga metriko na maunawaan kung paano ginagamit ng mga gumagamit ang server.
 
     * Bagong paraan ng paglikha ng ISO19115 XML files. Gumagamit ito ng Apache SIS at isang bagong opsiyon sa pagpapalabas na ito. Pakisuyong gawin ito at magpadala ng impormasyon.

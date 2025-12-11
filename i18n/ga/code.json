@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Tá an leathanach seo dréacht. Ní bheidh sé le feiceáil ach amháin i dev agus a eisiamh ó thógáil táirgthe.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(Osclaíonn i cluaisín nua)",
+    "description": "The ARIA label for the external link icon"
   }
 }

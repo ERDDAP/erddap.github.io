@@ -1,6 +1,6 @@
 # Technical Board
 
-The The The The The The The TheERDDAP™Teknik Kurul teknik yönde sorumludur,ERDDAP™alır. The The The The The The The TheERDDAP™Teknik Kurul teknik yönde sorumludurERDDAP™. Çalışmanın önceliklendirilmesine karar verir, özellik yol haritaları, bağımlılıklar, gelişim çalışmalarını etkileyen herhangi bir işlem ve teknik denetim gerektiren başka bir konuERDDAP™. Kurul ayrıca önemli yeni özellikler için tasarım belgelerini inceleyecek ve onaylayacaktır. Teknik yönetim şartları uzatma seçeneği ile 2 yıldır. Teknik yönetim kurulu üyelerinin de projeye katkıda bulunması bekleniyor, özellikle çekme talepleri ve kod incelemeleri yoluyla.
+The The The The The The The The ERDDAP™ Teknik Kurul teknik yönde sorumludur, ERDDAP™ alır. The The The The The The The The ERDDAP™ Teknik Kurul teknik yönde sorumludur ERDDAP™ . Çalışmanın önceliklendirilmesine karar verir, özellik yol haritaları, bağımlılıklar, gelişim çalışmalarını etkileyen herhangi bir işlem ve teknik denetim gerektiren başka bir konu ERDDAP™ . Kurul ayrıca önemli yeni özellikler için tasarım belgelerini inceleyecek ve onaylayacaktır. Teknik yönetim şartları uzatma seçeneği ile 2 yıldır. Teknik yönetim kurulu üyelerinin de projeye katkıda bulunması bekleniyor, özellikle çekme talepleri ve kod incelemeleri yoluyla.
 
 ## Amaç{#purpose} 
 
@@ -8,13 +8,13 @@ Teknik Kurul aşağıdaki belgeler ve süreçlerden sorumludur:
 
 *  **Review and Approve new features** GitHub Tartışmalarında bu önerilir.
 
-*  **ERDDAP™Öncelik Projeleri** Liste, hangi projeler üzerinde çalıştığımızı belirler. Mevcut durumu kontrol edin[öncelik projeleri listesi listesi listesi](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Öncelik Projeleri** Liste, hangi projeler üzerinde çalıştığımızı belirler. Mevcut durumu kontrol edin [öncelik projeleri listesi listesi listesi](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Yayınlanma Hedefleri** Her bir serbest bırakılmasını içerecek özel özellikleri belirleyenERDDAP™. Bunlar her salı için GitHub projesinde belgelenmiştir.
+*  ** ERDDAP™ Yayınlanma Hedefleri** Her bir serbest bırakılmasını içerecek özel özellikleri belirleyen ERDDAP™ . Bunlar her salı için GitHub projesinde belgelenmiştir.
 
-*  **ERDDAP™Style Guide** Hangi kodlama stilleri ve uygulamaları takip etmek için belirtirERDDAP™Kod.
+*  ** ERDDAP™ Style Guide** Hangi kodlama stilleri ve uygulamaları takip etmek için belirtir ERDDAP™ Kod.
 
-The The The The The The The TheERDDAP™Teknik Kurul aşağıdaki temel üzerinde çalışır:
+The The The The The The The The ERDDAP™ Teknik Kurul aşağıdaki temel üzerinde çalışır:
 
 * Teknik Kurul'un olası iletişimi halk ve asynchronous olmalıdır. Birçok durumda bu, GitHub Tartışmalarını ve Sorunlarını kullanmak anlamına gelir.
 
@@ -50,7 +50,7 @@ The The The The The The The TheERDDAP™Teknik Kurul aşağıdaki temel üzerind
 
 ## Agenda{#agenda} 
 
-Tartışma için Teknik Board Agenda'ya bir öğe eklemek veya teknik tahta için iyi bir uyum olduğuna inanmak istiyorsanız, lütfen e-posta tahtasına e-posta gönderin.[chris.john@noaa.gov](mailto:chris.john@noaa.gov).
+Tartışma için Teknik Board Agenda'ya bir öğe eklemek veya teknik tahta için iyi bir uyum olduğuna inanmak istiyorsanız, lütfen e-posta tahtasına e-posta gönderin. [chris.john @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Üye Üyeleri{#members} 
 

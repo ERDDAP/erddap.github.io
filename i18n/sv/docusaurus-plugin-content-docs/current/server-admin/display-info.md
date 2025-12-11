@@ -1,38 +1,38 @@
 ---
 sidebar_position: 7
 ---
-# "displayInfo" och "displayAttribute" Taggar
+#  `display Info` och `displayAttribute` Taggar
 
 ## Beskrivning
-Den här funktionen låter dig visa globala attribut för ditt val på datasetsidan i raden "Information".
+Den här funktionen låter dig visa globala attribut för ditt val på datasetsidan i `Information om information` row.
 
 ## Användningsinstruktioner
-Dessa taggar kan endast användas med "Sax parser". För att aktivera och använda dem, följ dessa steg:
+Dessa taggar kan endast användas med `Sax parser` . För att aktivera och använda dem, följ dessa steg:
 
 1.  **Aktivera SAX Parser** Från:
-Lägg till följande rad till din "setup.xml"-fil:
+Lägg till följande rad till din `setup.xml` Fil:
    ```xml
    <useSaxParser>true</useSaxParser>
    ```
 
-2.  **Lägga till tags i `datasets.xml`** Från:
-I `datasets.xml`-fil, inkludera två top-level taggar:
+2.  **Lägga till taggar i ` datasets.xml ` ** Från:
+I den ` datasets.xml ` fil, inkludera två top-level taggar:
    ```xml
    <displayInfo></displayInfo>
    <displayAttribute></displayAttribute>
    ```
 
 3.  **Standardbeteende** Från:
-   - Om dessa taggar inte läggs till eller lämnas tomma idatasets.xml`-fil, standardvärdena tillämpas enligt följande:
-     - "displayInfo": "Summary, licens `
-     - "displayAttribute": "summary,license `
+   - Om dessa taggar inte läggs till eller lämnas tomma i ` datasets.xml ` fil, standardvärdena tillämpas enligt följande:
+     -  `display Info` Från: `Sammanfattning, licens` 
+     -  `displayAttribute` Från: `Sammanfattning, licens` 
 
 4.  **Säkerställ konsistens** Från:
-Antalet kommaseparerade värden i både "displayInfo" och "displayAttribute" taggar måste vara samma.
+Antalet sammanlagda värden i båda `display Info` och `displayAttribute` taggar måste vara samma.
 
 ## Hur det fungerar
-- "displayAttribute"-taggen anger globala attribut (definieras inom&lt;`addAttributes"&gt; tag) som ska visas för varje dataset.
-- Motsvarande värden i "displayInfo"-taggen visas som etiketter i "Information" raden av UI.
+- och `displayAttribute` tag anger globala attribut (definieras inom&lt; ` addAttributes ` &gt; tag) visas för varje dataset.
+- motsvarande värden i `display Info` tag visas som etiketter i `Information om information` raden av UI.
 - När användaren svävar över de visade etiketterna kommer ett verktyg att visas, vilket visar värdet av det globala attributet.
 
 ## Exempel
@@ -48,13 +48,13 @@ Antalet kommaseparerade värden i både "displayInfo" och "displayAttribute" tag
 ```
 
 ### UI Behavior:
-- Orden "Display1" och "Display2" kommer att visas i raden "Information" på UI.
+- Orden `Display1` och `Display2` visas i `Information om information` rad på UI.
 - Vid svävning kommer verktygsspetsar att visa motsvarande attributvärden:
-  - "Display1": Tooltip visar _This is Att1_
-  - "Display2": Tooltip visar _This is Att2_
+  -  `Display1` Tooltip visar: Detta är att1_
+  -  `Display2` Tooltip visar: Detta är att2_
 
 ## Anteckningar
-- Se till att attributnamnen som anges i "displayAttribute"-taggen matchar de globala attributen som definieras i datasetet.
+- Se till att attributnamnen anges i `displayAttribute` tag matcha de globala attribut som definieras i datasetet.
 - Felaktiga eller saknade attribut loggar felmeddelanden.
 
-Genom att följa dessa steg kan du anpassa raden "Information" på datasetsidan för att visa relevanta globala attribut med motsvarande verktygstips.
+Genom att följa dessa steg kan du anpassa `Information om information` rad på sidan datamängder för att visa relevanta globala attribut med motsvarande verktyg.

@@ -1,38 +1,38 @@
 ---
 sidebar_position: 7
 ---
-# `displayInfo` und `displayAttribute` Schlagwörter
+#  `Anzeige Info` und `Anzeige auf der Karte` Schlagwörter
 
 ## Warenbezeichnung
-Mit dieser Funktion können Sie in der Zeile "Information" globale Attribute Ihrer Wahl auf der Seite der Datensätze anzeigen.
+Diese Funktion ermöglicht es Ihnen, globale Attribute Ihrer Wahl auf der Datensatzseite in der `Informationen` Zeile.
 
 ## Gebrauchsanweisung
-Diese Tags können nur mit dem `Sax parser` verwendet werden. Um sie zu aktivieren und zu nutzen, folgen Sie diesen Schritten:
+Diese Tags können nur mit dem `Sax parser` . Um sie zu aktivieren und zu nutzen, folgen Sie diesen Schritten:
 
 1.  **Aktivieren Sie den SAX Parser** :
-Fügen Sie die folgende Zeile zu Ihrer `setup.xml`-Datei hinzu:
+Fügen Sie die folgende Zeile zu Ihrem `Setup.xml` Datei:
    ```xml
    <useSaxParser>true</useSaxParser>
    ```
 
-2.  **Tags in `datasets.xml`** :
-In der `datasets.xml`-Datei, beinhalten zwei Top-Level-Tags:
+2.  **Fügen Sie Tags in ` datasets.xml ` ** :
+In der ` datasets.xml ` Datei, beinhalten zwei Top-Level-Tags:
    ```xml
    <displayInfo></displayInfo>
    <displayAttribute></displayAttribute>
    ```
 
 3.  **Default Behavior** :
-   - Wenn diese Tags nicht hinzugefügt oder leer in der `datasets.xml` Datei, die Standardwerte werden wie folgt angewendet:
-     - `displayInfo`: `Summary,License `
-     - `displayAttribute`: `summary,license `
+   - Wenn diese Tags nicht hinzugefügt oder leer in der ` datasets.xml ` Datei, die Standardwerte werden wie folgt angewendet:
+     -  `Anzeige Info` : `Zusammenfassung,License` 
+     -  `Anzeige auf der Karte` : `Zusammenfassung, Lizenz` 
 
 4.  **Konsistenz sicherstellen** :
-Die Anzahl der `displayInfo`- und `displayAttribute`-Tags muss gleich sein.
+Die Anzahl der Komma-separierten Werte in beiden `Anzeige Info` und `Anzeige auf der Karte` tags müssen gleich sein.
 
 ## Wie es funktioniert
-- Das `displayAttribute`-Tag gibt globale Attribute an (definiert innerhalb der&lt;`addAttributes`&gt; tag) für jeden Datensatz angezeigt werden.
-- Die entsprechenden Werte im `displayInfo`-Tag werden in der Reihe `Information` der UI als Label angezeigt.
+- Die `Anzeige auf der Karte` tag spezifiziert globale Attribute (definiert innerhalb der&lt; ` addAttributes ` &gt; tag) für jeden Datensatz angezeigt werden.
+- Die entsprechenden Werte in der `Anzeige Info` tag werden als Labels in der `Informationen` Reihe der UI.
 - Wenn der Benutzer über die angezeigten Etiketten schwebt, erscheint ein Tooltip, der den Wert des globalen Attributs zeigt.
 
 ## Beispiel
@@ -48,13 +48,13 @@ Die Anzahl der `displayInfo`- und `displayAttribute`-Tags muss gleich sein.
 ```
 
 ### UI Behavior:
-- Die Wörter `Display1` und `Display2` werden in der Zeile `Information` auf der UI angezeigt.
+- Die Worte `Anzeige 1` und `Anzeige2` wird in der `Informationen` Zeile auf der UI.
 - Beim Hochfahren werden die entsprechenden Attributwerte angezeigt:
-  - `Display1`: Tooltip zeigt _This is att1_
-  - `Display2`: Tooltip zeigt _This is att2_
+  -  `Anzeige 1` : Tooltip zeigt _This is att1_
+  -  `Anzeige2` : Tooltip zeigt _This is att2_
 
 ## Anmerkungen
-- Stellen Sie sicher, dass die im `displayAttribute`-Tag angegebenen Attributnamen den im Datensatz definierten globalen Attributen entsprechen.
+- Stellen Sie sicher, dass die in der `Anzeige auf der Karte` tag passt zu den globalen Attributen, die im Datensatz definiert sind.
 - Falsche oder fehlende Attribute protokollieren Fehlermeldungen.
 
-Durch die folgenden Schritte können Sie die `Information` Zeile auf der Datensätze-Seite anpassen, um relevante globale Attribute mit entsprechenden Tooltips anzuzeigen.
+Durch die folgenden Schritte können Sie die `Informationen` Zeile auf der Datasets-Seite, um relevante globale Attribute mit entsprechenden Tooltips anzuzeigen.

@@ -277,10 +277,10 @@ Karaniwan na ito kapag una kang nagtayo ERDDAP™ .
              
 ###  ERDDAP™ Nasisiyahan{#erddap-content} 
 3.   [Itakda ang `tomcat/content/erddap` Iayos ang mga file.](#erddap-content) 
-Sa Linux, Mac, at Windows, download [ErddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
+Sa Linux, Mac, at Windows, download [ErddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.1/erddapContent.zip) 
 at ibabad sa loob `tomcat` directory, paglikha `tomcat/content/erddap` .
 
-__Version 1.0.0, 20333 bytes, MD5=2B8D2A5ED73E42B529C168C60B5, na may petsang 429 2024-10-14__
+__Version 1.0.1, 20683 bytes, MD5=98a8099e7°59da5eN 2025-06-02____
 
 May ilang naunang bersyon din:
 
@@ -357,9 +357,9 @@ Ito ay isang mabuting ideya upang kumpirmahin na ang resulta ay maayos na XML sa
      
 ### Iluklok ang erddap. talaksang digmaan{#install-the-erddapwar-file} 
 
-4. Sa Linux, Mac, at Windows, _download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) _ ilagay `tomcat/webapps` :
+4. Sa Linux, Mac, at Windows, _download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) _ ilagay `tomcat/webapps` :
 
-__Version 2.28.1, 622,676,238 bytes, MD5=48b42260450c8d69ef9521bbc9, na may petsang 2025-09-05__
+__Version 2.29.0, 706,788,135 bytes, MD5=A5ED0C8D46CA27640FFFEB8CE8560, na may petsang MD5=A5ED0CC8D46CA2740FFFFFFFEB8CE8560 12-15-2025__
 
 Ang talaksang .war ay malaki dahil ito ay naglalaman ng mataas na resolution baybayin, hangganan, at taas na mga datos na kinakailangan upang lumikha ng mga mapa.
 
@@ -374,6 +374,7 @@ May ilang naunang bersyon din na makukuha.
    *  [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)   (592,292,039 bytes, MD5=652AFC9D1421F00B5F789DA2C4732D4C, na may petsang 2024-11-07) 
    *  [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)   (607,404,032 bytes, MD5=99a725108b37708e5420986c16a119, na may petsang 2025-03-31) 
    *  [2.27.0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)   (620,554,403 bytes, MD5=3b2086c659°N 2025-06-11) 
+   *  [2.28.1](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war)   (622,676,238 bytes, MD5=48b42260450c8a8d69ef9521bbc9, may petsang 2025-09-05) 
 
 ### Configure proxy (Espesipikong paglalagay)  {#proxy} 
 

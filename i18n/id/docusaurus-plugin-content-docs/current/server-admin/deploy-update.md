@@ -11,8 +11,8 @@ Bagaimana Cara Melakukan Pembaruan ERDDAP™ Login
 2. Apabila Anda mengupgrade dari ERDDAP™ versi 2.18 atau di bawah ini, Anda perlu beralih ke Java 20 g (Sitemap) dan Tomcat terkait 10. Sitemap ERDDAP™ instruksi instalasi untuk [ Java ](/docs/server-admin/deploy-install#java) Login [Login](/docs/server-admin/deploy-install#tomcat) Sitemap Anda juga harus menyalin Anda Meme it _tomcat_/content/erddap direktori dari instalasi Tomcat lama Anda ke instalasi Tomcat baru Anda.
 
 ## Login{#download} 
-3. Login [Login](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) ke _tomcat_/webapps.
-     (versi 2.28.1, 622,676,238 byte, MD5=48b4226045f950c8a8d69ef9521b9bc9, tanggal 09-05-2025) 
+3. Login [Login](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) ke _tomcat_/webapps.
+     (versi 2.29.0, 706,788,135 byte, MD5 = A5ED0DCC8D46CA27640FFEB8CE4A8560, tanggal 12-15-2025) 
      
 ## Login{#messagesxml} 
 4. 

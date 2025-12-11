@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Íme a változások, amelyek mindegyikhez kapcsolódnak ERDDAP™ kiadás.
 
+
+## Verzió 2.29.0{#version-2290} 
+ (2025-12-15) 
+
+Akció szükséges.
+
+ ERDDAP™ A 2.29.0 verzió a jdk 25-et vagy későbbi verziót igényel. Kérjük, frissítse a jdk verzióját. Ha ez egy probléma, akkor építhet ERDDAP™ egy idősebb jdk (legalább 17) a pom.xml fájl megváltoztatásával. A JDK 25 egy LTS kiadás Java és számos fejlesztést tartalmaz, leginkább javított teljesítményt.
+
+*    **Új funkciók és változások (felhasználók számára) :** 
+    * ISO 19115 verziók: Lásd alább az admin információért. A felhasználók számára most az ISO 19115 metaadata speciális verzióit kérheti. Tedd ezt a griddap/ tabledap Az adatkészlet oldalai a fájltípus leesése. Ezek a verziók függetlenek lesznek a szerver alapértelmezettségétől.
+
+*    **A dolgok ERDDAP™ Az adminisztrátoroknak tudniuk kell és meg kell tenniük:** 
+    * Új funkció, MQTT támogatás. A részletekért ajánlom olvasni a [új oldal erről.](/docs/server-admin/mqtt-integration.md) Ez magában foglalja, hogy képes adatokat építeni az MQTT üzenetekből, és közzéteszi az MQTT üzeneteket, amikor egy adatkészlet változik. Ez az alapértelmezett, így ha használni akarja, lehetővé kell tennie.
+
+Köszönjük Ayush Singh munkáját az MQTT&#33;
+
+    * S3 fejlesztések: Az S3 URI-k támogatása a cacheFromUrl értékként. Ez lehetővé teszi ERDDAP a magánbucketek támogatása az amazonaws.com-on Szintén foglalkozott egy S3 memória szivárgással.
+
+Hála a @SethChampagneNRL-nek az S3 munkájához&#33;
+
+    * ISO 19115 verziók: Jelenleg az ISO 19115 metaadata 3 különböző verzióját támogatja. Az alapértelmezett verziót a beállítások vezérlik a setup.xml-ben. Ha a használatSisO19115 hamis, a szerver alapértelmezett nyújtással rendelkezik NOAA módosított ISO19115_2. Ha a használatSisO19115 igaz, akkor a szerver más verziót használ a használat értékétől függőenSisISO19139. Ha a használatSisO19139 igaz, az alapértelmezés ISO19139_2007 lesz, ha a SisISO19139 hamis, az alapértelmezés ISO19115_3_2016 lesz. Javasoljuk, hogy használja használniSisISO19115=igaz és használjaSisISO19139=hamis. A szervezete különböző beállításokat igényelhet.
+
+    * Migrált a javára. Idő könyvtár (java.util helyett. GregorianCalendar) ... Ennek teljesítményjavítást kell biztosítania a dátum/idő oszlopokat érintő kérdésekben. Nem szabad észrevehető hatást gyakorolni az adatkészletek túlnyomó többségére. Az egyik ismert eset, hogy ez változást okoz, ha az adatkészlet használata `napok óta 0000-01-01` vagy hasonló. Ha ez egy változó probléma, akkor hozzáadhatja ` <att name="legacy_time_adjust"> Igaz </att> ` a addAttributes vagy egy dataVariable vagy axisVariable ...
+    
+    *    datasets.xml most feldolgozott egy [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) ... Ez sok felhasználással rendelkezik, beleértve a magánértékek beállítását (mint a jelszavak) környezeti változók használata. Ezt letilthatja a beállítás lehetővé teszi az EnvParsing számára, hogy hamis a setup.xml-ben.
+
+    * Nyomás tengely: Speciális esetet ad a nyomás által meghatározott emelésekhez. Ezt elsősorban a Meteorológiai adatkészletekben használják, amelyek a vertikális magasságokat az isobarikus szintekben határozzák meg. MEGJEGYZÉS: A kisebb nyomásértékek magasabb emeléseket jelentenek, így a tengely ellentétes a normál emelkedésekkel, melyeket mérőkben vagy lábakban határoznak meg.
+
+Köszönöm [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid FromNcFiles különböző dimenziókkal: Ott van (kísérleti) támogatás EDDGrid FromNcFiles adatkészletek, hogy olyan változók, amelyek nem használják ugyanazt a tengelyt. Kérjük, jelentse meg, hogy ez hogyan működik az Ön számára, vagy ha a viselkedés nem tűnik elég helyesnek.
+
+    * Vannak olyan optimalizálások gyűjteménye, amelyeknek biztonságosnak kell lenniük, de szükség esetén zászlókkal kell visszatérni a régi viselkedéshez. Ha megtalálja annak szükségességét, hogy beállítsa a zászlók, kérjük, adja meg a hibát. Ha nem hallunk ilyen kérdéseket, akkor a jövőben eltávolítjuk az új viselkedési alapot. Van egy [új oldal a zászlókról](/docs/server-admin/feature-flags.md) ahol olvashatsz ezekről és más zászlókról.
+
+      * Kapcsolat Szál Csak Amikor Items: Ez egy változás, hogy az érintésThread csak akkor fog futni, ha vannak tárgyak a sorban érinteni. Egy kevesebb szál futás egy kisebb optimalizálás, de még mindig hasznos. Alapértelmek az igazhoz.
+
+      * NcMetadata ForFileTable: Ez a változás lehetővé teszi a belső fájl táblázatot, hogy nc tulajdonságokat használjon, különösen egy változó tényleges_range tulajdonságot, hogy elkerülje az egész nc fájl olvasását. Ez drasztikusan felgyorsíthatja a nc fájlokon alapuló adatkészletek kezdeti betöltését, ha az egyes fájlokban lévő minden variálható tényleges_range jellemző. Vegye figyelembe, hogy ez bízik az értékben, így ha helytelen, a belső fájl táblázatnak helytelen információi lesznek. Alapértelmek az igazhoz.
+
+      * ncHeader MakeFile: Ez a változás lehetővé teszi a nc header fájlok generálását anélkül, hogy először generálná a reprezentatív nc fájlt. Ez egy kis optimalizálás az EDDTable számára, de sok optimalizálás EDDGrid kérések. Alapértelmek hamis (mint a hamis, a tervezett optimalizált viselkedés) ...
+
+      * háttér háttér CreateSubset táblázatok: Ez a változás az adatkészletek kezdeti feldolgozását egy háttérszálba helyezi. Ez javítja az adatkészletek betöltésének idejét. Konkrétan a késleltetett rész táblák, amelyeket szükség esetén is generálnak, ha a késleltetett feldolgozás még nem történt meg. Alapértelmek az igazhoz.
+
+    * Néhány kis változás, hibajavítás (Köszönöm Italo Borrellinek az EDDTableFromAggregateRows javítását, Köszönöm @SethChampagneNRL, hogy lehetővé tegye a hosszúságok nagyobb, mint 360-ban EDDGrid LonPM180 és számos más hibajavaslat) , és optimalizálás.
+
+*    **Mert ERDDAP™ Fejlesztők:** 
+    * További optimalizálások, beleértve a vágási teszt időtartamát félig.
+
+    * Új tesztprofilok nagyon flaky (külső) vagy rendkívül lassú (LassúAWS) tesztek.
+
 ## Verzió 2.28.1{#version-2281} 
  (2025-09-05) 
 
@@ -49,7 +98,7 @@ Köszönöm [@ocefpaf](https://github.com/ocefpaf) , [@abkfenris](https://github
     * Új adatok a színesbar konverterhez a szervereken /erddap / Convert / Color.html
 
 *    **A dolgok ERDDAP™ Az adminisztrátoroknak tudniuk kell és meg kell tenniük:** 
-    * Az alapértelmezett magatartás az, hogy a gyorsítótárat most a nagy terhelési adatkészletek feladatától függetlenül tisztázzák. Ez lehetővé teszi a régi cache fájlok megbízhatóbb és rendszeresebb tisztítását. További munka van a szerver viselkedésének javítására, amikor alacsony a lemezterületen (hiba visszatérése a kérésekhez valószínű, hogy a kiszolgáló kifut az űrből, és gyakrabban az alacsony lemezes körülmények között, hogy megpróbálja megakadályozni a hibákat) ... Inkább datasets.xml   (vagy setup.xml) hozzáadhatja / állíthatja az új gyorsítótárat A ClearMinutes paramétere annak ellenőrzésére, hogy a szerver milyen gyakran ellenőrzi a gyorsítót. Vegye figyelembe, hogy a meglévő cacheMinutes paraméter irányítja a fájlok korát, az új cache A ClearMinutes az, hogy milyen gyakran kell egy láncot tisztázni.
+    * Az alapértelmezett viselkedés az, hogy a gyorsítótárat mostantól függetlenül tisztázzák a nagy terhelési adatkészletek feladatától. Ez lehetővé teszi a régi cache fájlok megbízhatóbb és rendszeresebb tisztítását. További munka van a szerver viselkedésének javítására, ha alacsony a lemezterületen (hiba visszatérése a kérésekhez valószínű, hogy a kiszolgáló kifut az űrből, és gyakrabban az alacsony lemezes körülmények között, hogy megpróbálja megakadályozni a hibákat) ... Inkább datasets.xml   (vagy setup.xml) hozzáadhatja / állíthatja az új gyorsítótárat A ClearMinutes paramétere annak ellenőrzésére, hogy a szerver milyen gyakran ellenőrzi a gyorsítót. Vegye figyelembe, hogy a meglévő cacheMinutes paraméter irányítja a fájlok korát, az új cache A ClearMinutes az, hogy milyen gyakran kell egy láncot tisztázni.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ A frissített megjelenés mellett jobb navigáció, keresés, fordítás, és k�
 
     * Új funkció az UI adatkészleteiről megjelenített információk testreszabásához. Arra számítunk, hogy ez különösen hasznos lehet olyan dolgokat hozzáadni, mint az adatállomány idézetei. További részletekért olvassa el a [új dokumentáció](/docs/server-admin/display-info) ... Köszönjük Ayush Singh-nak a hozzájárulásért&#33;
 
-    * További Prometheus metrikák. A legnagyobb a ` http _request_duration_seconds`, amely magában foglalja a kérelemre adott válaszidőket: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
+    * További Prometheus metrikák. A legnagyobb az ` http _request_duration_ másodpercek` amely magában foglalja a kérelemre adott válaszidőket: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 Ez a gép olvasható formátum lehetővé teszi a mutatók jobb gyűjtését, hogy megértsék, hogy a felhasználók hogyan használják a szervert.
 
     * Új módja az ISO19115 XML fájlok létrehozásának. Az Apache SIS-t használja, és ez egy új lehetőség ebben a kiadásban. Kérjük, engedélyezze és küldjön visszajelzést.

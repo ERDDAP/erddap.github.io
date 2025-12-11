@@ -1,6 +1,6 @@
 # Teknisk styrelse
 
-ochERDDAP™Tekniska styrelse ansvarar för den tekniska riktning somERDDAP™tar. ochERDDAP™Tekniska styrelsen ansvarar för den tekniska riktningenERDDAP™. Det fattar beslut om prioritering av arbete, funktion färdplaner, beroenden, eventuella processer som påverkar utvecklingsarbetet och alla andra frågor som kräver teknisk övervakning iERDDAP™. Styrelsen kommer också att granska och godkänna designdokument för betydande nya funktioner. Tekniska styrelsevillkor är 2 år med möjlighet att förlänga. Tekniska styrelseledamöter förväntas också bidra till projektet, särskilt genom pull requests och code reviews.
+och ERDDAP™ Tekniska styrelse ansvarar för den tekniska riktning som ERDDAP™ tar. och ERDDAP™ Tekniska styrelsen ansvarar för den tekniska riktningen ERDDAP™ . Det fattar beslut om prioritering av arbete, funktion färdplaner, beroenden, eventuella processer som påverkar utvecklingsarbetet och alla andra frågor som kräver teknisk övervakning i ERDDAP™ . Styrelsen kommer också att granska och godkänna designdokument för betydande nya funktioner. Tekniska styrelsevillkor är 2 år med möjlighet att förlänga. Tekniska styrelseledamöter förväntas också bidra till projektet, särskilt genom pull requests och code reviews.
 
 ## Syfte{#purpose} 
 
@@ -8,13 +8,13 @@ Tekniska styrelsen ansvarar för följande dokument och processer:
 
 *  **Granska och godkänna nya funktioner** Det föreslås i GitHub Discussions.
 
-*  **ERDDAP™Prioriterade projekt** lista, som bestämmer projekt som vi arbetar med. Kolla in nuvarande[prioriterade projektlista](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Prioriterade projekt** lista, som bestämmer projekt som vi arbetar med. Kolla in nuvarande [prioriterade projektlista](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Frigör funktionsmål** , som avgör specifika funktioner som vi syftar till att inkludera i varje release avERDDAP™. Dessa dokumenteras i GitHub-projektet för varje release.
+*  ** ERDDAP™ Frigör funktionsmål** , som avgör specifika funktioner som vi syftar till att inkludera i varje release av ERDDAP™ . Dessa dokumenteras i GitHub-projektet för varje release.
 
-*  **ERDDAP™Style Guide** som specificerar kodningsstilar och metoder som ska följas iERDDAP™kod.
+*  ** ERDDAP™ Style Guide** som specificerar kodningsstilar och metoder som ska följas i ERDDAP™ kod.
 
-ochERDDAP™Tekniska styrelsen verkar på följande grund:
+och ERDDAP™ Tekniska styrelsen verkar på följande grund:
 
 * Om det är möjligt bör tekniska styrelsens kommunikation vara offentlig och asynkron. I många fall innebär detta att använda GitHub Diskussioner och frågor.
 
@@ -50,7 +50,7 @@ ochERDDAP™Tekniska styrelsen verkar på följande grund:
 
 ## Agenda{#agenda} 
 
-Om du vill lägga till ett objekt i Technical Board Agenda för diskussion eller tror att du är en bra passform för den tekniska styrelsen, vänligen e-post[chris.john@noaa.gov](mailto:chris.john@noaa.gov).
+Om du vill lägga till ett objekt i Technical Board Agenda för diskussion eller tror att du är en bra passform för den tekniska styrelsen, vänligen e-post [chris.john @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Medlemmar{#members} 
 

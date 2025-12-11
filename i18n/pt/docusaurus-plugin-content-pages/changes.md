@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Aqui estão as mudanças associadas a cada ERDDAP™ liberar.
 
+
+## Versão 2.29.0{#version-2290} 
+ (lançado 2025-12-15) 
+
+Acção necessária.
+
+ ERDDAP™ versão 2.29.0 requer jdk 25 ou posterior. Por favor, atualize sua versão jdk. Se isso é um problema, você pode construir ERDDAP™ para um jdk mais velho (voltar para pelo menos 17) alterando o arquivo pom.xml. JDK 25 é um lançamento do LTS Java e inclui muitas melhorias, mais notavelmente melhor desempenho.
+
+*    **Novos recursos e mudanças (para usuários) :** 
+    * ISO 19115 versões: Veja abaixo as informações de admin. Para usuários, agora você pode solicitar versões específicas de metadados ISO 19115. Faça isso do griddap/ tabledap páginas para um conjunto de dados com o tipo de arquivo cair. Essas versões serão independentes do padrão do servidor.
+
+*    **Coisas ERDDAP™ Os administradores precisam saber e fazer:** 
+    * Novo recurso, suporte MQTT. Para detalhes eu recomendo ler o [nova página sobre isso.](/docs/server-admin/mqtt-integration.md) Isso inclui ser capaz de construir conjuntos de dados de mensagens MQTT e publicar mensagens MQTT quando um conjunto de dados muda. Está desligado por padrão, então se você quiser usá-lo, você precisa habilitar.
+
+Graças a Ayush Singh por trabalhar no MQTT&#33;
+
+    * Melhorias S3: Adicionando suporte para S3 URIs como o cacheDe valor Url. Isso permitirá ERDDAP para apoiar baldes privados hospedados fora amazonaws.com Também abordado um problema de vazamento de memória S3.
+
+Graças a @SethChampagneNRL para o trabalho em S3&#33;
+
+    * ISO 19115 versões: Há agora suporte para 3 versões diferentes de metadados ISO 19115. A versão padrão é controlada por configurações em seu setup.xml. Se o useSisISO19115 for falso, o servidor irá por padrão fornecer NOAA modificado ISO19115_2. Se o useSisISO19115 for verdadeiro, o servidor usará uma versão diferente dependendo do valor do useSisISO19139. Se o useSisISO19139 for verdadeiro, o padrão será ISO19139_2007, se o useSisISO19139 for false, o padrão será ISO19115_3_2016. Recomendamos usar useSisISO19115=true e useSisISO19139=false. Sua organização pode exigir diferentes configurações.
+
+    * Migrado com o java. biblioteca de tempo (em vez de java.util. GregorianCalendar) . Isso deve fornecer melhorias de desempenho em consultas que envolvem colunas de data/hora. Não deve haver impacto notável para a grande maioria dos conjuntos de dados. O caso conhecido que causa uma mudança é se o conjunto de dados estiver usando `dias desde 0000-01-01` ou similar. Se este for um problema para uma variável, você pode adicionar ` <att name="legacy_time_adjust"> verdadeiro </att> ` ao addAttributes seção de qualquer uma dataVariable ou axisVariable .
+    
+    *    datasets.xml é agora processado por um [Segmento Substituto](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Isso tem muitos usos, incluindo definir valores privados (como senhas) usando variáveis de ambiente. Isso pode ser desativado, configurando enableEnvParsing para false no setup.xml.
+
+    * Eixo de pressão: Adiciona um caso especial para elevações definidas pela pressão. Isso é usado principalmente em conjuntos de dados de Meteorologia que definem elevações verticais em níveis isobáricos. NOTA: Valores de pressão menores significam elevações mais elevadas, de modo que o eixo corre em frente às elevações normais definidas em metros ou pés.
+
+Graças a [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid FromNcFiles com diferentes dimensões: Há (experimental) suporte para EDDGrid De conjuntos de dados NcFiles para ter variáveis que não usam o mesmo conjunto de eixos. Por favor, volte a relatar como isso funciona para você, ou se o comportamento não parece bem.
+
+    * Há uma coleção de otimizações que devem ser seguras, mas têm bandeiras para reverter ao comportamento antigo, se necessário. Se você encontrar a necessidade de definir qualquer uma das bandeiras, arquiva um bug. Se não soubermos de problemas, a maioria deles será removida com o novo padrão de comportamento no futuro. Há um [nova página sobre bandeiras de recursos](/docs/server-admin/feature-flags.md) onde você pode ler sobre estas e outras bandeiras.
+
+      * toque Linha de produção Apenas Quando Items: Esta é uma mudança de modo que o touchThread só será executado quando houver itens na fila para tocar. Um menos thread executando é uma otimização menor, mas ainda útil. As falhas são verdadeiras.
+
+      * Usar o código ParaQuadro de Arquivo: Esta alteração permite que a tabela de arquivos interna use atributos nc, especificamente um atributo current_range variável para evitar ler todo o arquivo nc. Isso pode acelerar drasticamente o carregamento inicial de conjuntos de dados com base em arquivos nc se o real_range para cada variável em cada arquivo for incluído como um atributo. Note que isso confia no valor, então se estiver errado, a tabela de arquivos interna terá informações incorretas. As falhas são verdadeiras.
+
+      * NcHeader MakeFile: Esta mudança permite que os arquivos de cabeçalho nc sejam gerados sem primeiro gerar o arquivo nc representativo. Esta é uma pequena otimização para EDDTable, mas uma enorme otimização para muitos EDDGrid pedidos. Defeitos para falso (como em falso é o comportamento otimizado pretendido) .
+
+      * fundo Criar Subconjunto Tabelas: Esta mudança move alguns dos conjuntos de dados iniciais para um segmento de fundo. Isso deve melhorar o tempo de carregamento de conjuntos de dados. Especificamente, a parte atrasada é tabelas subconjuntas, que também são geradas quando necessário se o processamento atrasado ainda não tiver acontecido. As falhas são verdadeiras.
+
+    * Algumas pequenas mudanças, correções de bugs (obrigado Italo Borrelli para a correção para EDDTableDe agregadoRows, Obrigado. @SethChampagneNRL para permitir longitudes maiores que 360 em EDDGrid LonPM180, e várias outras correções de bugs) e otimizações.
+
+*    **Para ERDDAP™ Desenvolvedores:** 
+    * Otimizações adicionais, incluindo o tempo de execução do teste de corte ao meio.
+
+    * Novos perfis de teste para muito flaky (externo) ou extremamente lento (AUXÍLIOS) testes.
+
 ## Versão 2.28.1{#version-2281} 
  (lançado 2025-09-05) 
 
@@ -49,7 +98,7 @@ Graças a [@ocefpaf](https://github.com/ocefpaf) , [@abkfenris](https://github.c
     * Novos dados para conversor de barra de cores em servidores em /erddap/convert/color.html
 
 *    **Coisas ERDDAP™ Os administradores precisam saber e fazer:** 
-    * O behavoir padrão é que o cache será agora compensado independente da principal tarefa de conjuntos de dados de carga. Isso permitirá uma limpeza mais confiável e regular de arquivos de cache antigos. Há trabalho adicional para melhorar o behavoir do servidor quando baixo no espaço em disco (retornar um erro para solicitações susceptíveis de fazer o servidor ficar sem espaço e limpar o cache com mais frequência em circunstâncias de disco baixo para tentar evitar erros) . Em datasets.xml   (ou setup.xml) você pode adicionar / definir o novo cache Parâmetro ClearMinutes para controlar com que frequência o servidor verifica para limpar o cache. Nota, o parâmetro cacheMinutes existente controla a idade dos arquivos a serem mantidos, o novo cache ClearMinutes é para como frequentemente fazer um chache claro.
+    * Comportamento padrão é que o cache será agora compensado independente da tarefa principais conjuntos de dados de carga. Isso permitirá uma limpeza mais confiável e regular de arquivos de cache antigos. Há trabalho adicional para melhorar o comportamento do servidor quando baixo no espaço em disco (retornar um erro para solicitações susceptíveis de fazer o servidor ficar sem espaço e limpar o cache com mais frequência em circunstâncias de disco baixo para tentar evitar erros) . Em datasets.xml   (ou setup.xml) você pode adicionar / definir o novo cache Parâmetro ClearMinutes para controlar com que frequência o servidor verifica para limpar o cache. Nota, o parâmetro cacheMinutes existente controla a idade dos arquivos a serem mantidos, o novo cache ClearMinutes é para como frequentemente fazer um chache claro.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```

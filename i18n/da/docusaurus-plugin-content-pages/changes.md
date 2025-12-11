@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Her er de ændringer, der er forbundet med hinanden ERDDAP™ udgivelse.
 
+
+## Version 2.29.0{#version-2290} 
+ (udgivet 2025-12-15) 
+
+Handling påkrævet.
+
+ ERDDAP™ version 2.29.0 kræver jdk 25 eller nyere. Opdater din jdk-version. Hvis det er et problem, kan du opbygge ERDDAP™ for en ældre jdk (tilbage til mindst 17) ved at ændre pom.xml-filen. JDK 25 er en LTS udgivelse af Java og indeholder mange forbedringer, især forbedret ydeevne.
+
+*    **Nye funktioner og ændringer (for brugere) :** 
+    * ISO 19115 versioner: Se nedenfor for admin info. For brugere kan du nu anmode specifikke versioner af ISO 19115 metadata. Gør dette fra gitterdap/ tabledap sider for et datasæt med filtypen drop ned. Disse versioner vil være uafhængige af serveren som standard.
+
+*    **Ting, ting ERDDAP™ Administratorer har brug for at vide og gøre:** 
+    * Ny funktion, MQTT support. For detaljer, jeg anbefaler at læse [Ny side om det.](/docs/server-admin/mqtt-integration.md) Dette omfatter at være i stand til at opbygge datasæt fra MQTT-beskeder og udgive MQTT-beskeder, når en datasæt ændres. Det er som standard, så hvis du ønsker at bruge det, skal du aktivere det.
+
+Tak til Ayush Singh for at arbejde på MQTT&#33;
+
+    * S3 forbedringer: Tilføjelse af understøttelse af S3 URIs som cacheFraUrl værdi. Dette vil tillade ERDDAP at støtte private skovle hostet af forbløffeonaws.com Også løst en S3 hukommelse lækage problem.
+
+Tak til @SethChampagneNRL for arbejdet på S3&#33;
+
+    * ISO 19115 versioner: Der er nu understøttelse af 3 forskellige versioner af ISO 19115 metadata. Standardversionen styres af indstillinger i din opsætning.xml. Hvis brugSisISO19115 er falsk, vil serveren som standard give NOAA ændret ISO19115_2. Hvis brugSisISO19115 er sandt, vil serveren bruge en anden version afhængigt af værdien af brugSisISO19139. Hvis brugSisISO19139 er sandt, vil standarden være ISO19139_2007, hvis brugSisISO19139 er falsk standarden vil være ISO19115_3_2016. Vi anbefaler at brugeSisISO19115=and og brugSisISO19139=false. Din organisation kan kræve forskellige indstillinger.
+
+    * Migeret til java. tidsbibliotek (i stedet for java.util. I nærheden af GregorianCalendar) . Dette bør give ydeevne forbedringer på forespørgsler, der involverer dato / time kolonner. Der bør ikke være nogen mærkbar indvirkning for de fleste datasæt. Den kendte sag, der forårsager en ændring, er, hvis datasættet bruger `dage siden 0000-01` eller lignende. Hvis dette er et problem for en variabel, kan du tilføje ` <att name="legacy_time_adjust"> sande sande sande sande </att> ` Til højre addAttributes sektion af enten en dataVariable eller eller eller axisVariable .
+    
+    *    datasets.xml behandles nu af en [StrygSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Dette har mange anvendelser, herunder indstilling af private værdier (som adgangskoder) Brug af miljøvariabler. Dette kan deaktiveres ved at aktivereEnvParsing til falsk i opsætning.xml.
+
+    * Trykaksel: Tilføjer en særlig sag for højder defineret ved tryk. Dette bruges primært i Meteorology datasæt, der definerer lodrette højder i erobaric niveauer. BEMÆRK: Mindre trykværdier betyder højere højder, så aksen kører over de normale højder defineret i meter eller fødder.
+
+Tak til [I nærheden af SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid FraNcFiles med varierende dimensioner: Der er der (eksperimenterende forsøg) Støtte til støtte EDDGrid FraNcFiles datasæt til at have variabler, der ikke bruger det samme sæt akser. Rapporter venligst tilbage om, hvordan dette virker for dig, eller hvis adfærden ikke virker ret.
+
+    * Der er en samling af optimeringer, der skal være sikker, men har flag til at vende tilbage til gammel adfærd, hvis det er nødvendigt. Hvis du finder behovet for at indstille nogen af flagene, skal du skrive en fejl. Hvis vi hører om ingen problemer, de fleste af disse vil blive fjernet med den nye adfærd som standard i fremtiden. Der er en [Ny side om funktionsflag](/docs/server-admin/feature-flags.md) hvor du kan læse om disse og andre flag.
+
+      * touch touch touch Trådtråd Kun kun NårDetems: Dette er en ændring, så touchThread kun kører, når der er elementer i køen til at røre. En mindre trådløb er en mindre optimering, men stadig nyttig. Standarder til ægte.
+
+      * Brug afNcMetadata TilFileTable: Denne ændring gør det muligt for den interne filtabel at bruge nc attributter, især en variabel faktiske_range egenskab for at undgå at læse hele nc-filen. Dette kan fremskynde indledende indlæsning af datasæt baseret på nc-filer, hvis den faktiske_range for hver variabel i hver fil er inkluderet som en egenskab. Bemærk, at denne stoler på værdien, så hvis det er forkert, vil den interne fil tabel have forkerte oplysninger. Standarder til ægte.
+
+      * ncHeader MakeFile: Denne ændring giver nc header-filer til at blive genereret uden først at generere den repræsentative nc-fil. Dette er en lille optimering for EDDTable, men en enorm optimering for mange EDDGrid anmodninger. Standarder til falske (som i falsk er den planlagte optimeret adfærd) .
+
+      * baggrundsbaggrund Opret e-mail Tabeller: Denne ændring flytter nogle af den første behandling af datasæt til en baggrundstråd. Dette bør forbedre tiden for indlæsning af datasæt. Specifikt den forsinkede del er subset tabeller, som også genereres, hvis den forsinkede behandling ikke er sket endnu. Standarder til ægte.
+
+    * Nogle små ændringer, fejlrettelser (takket være Italo Borrelli til fix for EDDTableFraAggregateRows, takket være tak @SethChampagneNRL for at aktivere længder større end 360 i EDDGrid LonPM180, og flere andre fejlrettelser)  og optimeringer.
+
+*    **For For For For For ERDDAP™ Udviklere:** 
+    * Yderligere optimeringer, herunder skære test køretid i halvdelen.
+
+    * Nye test profiler for meget flaky (ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern ekstern eksternt) eller ekstremt langsom (langsomAWS) tests.
+
 ## Version 2.28.1{#version-2281} 
  (udgivet 2025-09-05) 
 
@@ -49,7 +98,7 @@ Tak til [I nærheden af @ocefpaf](https://github.com/ocefpaf) , [I nærheden af 
     * Nye data til farvebar konverter på servere på /erddap/convert/farve.html
 
 *    **Ting, ting ERDDAP™ Administratorer har brug for at vide og gøre:** 
-    * Standard behavoir er, at cachen nu bliver ryddet uafhængigt af den store belastningsdatasæt opgave. Dette vil tillade mere pålidelig og regelmæssig clearing af gamle cache-filer. Der er yderligere arbejde for at forbedre server behavoir, når det er lavt på diskplads (returnere en fejl for anmodninger, der sandsynligvis vil gøre serveren køre ud af rummet, og clearing cachen oftere under lave diskforhold for at forsøge at forhindre fejl) . I nærheden af In In In In In In In In In In In In In In datasets.xml   (eller opsætning.xml) Du kan tilføje/sæt den nye cache ClearMinutes parameter til at kontrollere, hvor ofte serveren kontrollerer for at rydde cachen. Bemærk, den eksisterende cacheMinutes parameter styrer alder af filer, der skal gemmes, den nye cache ClearMinutes er for, hvordan ofte at gøre en kache klar.
+    * Standard adfærd er, at cachen nu vil blive ryddet uafhængigt af den store belastningsdatasæt opgave. Dette vil tillade mere pålidelig og regelmæssig clearing af gamle cache-filer. Der er yderligere arbejde for at forbedre serveradfærd, når det er lavt på diskplads (returnere en fejl for anmodninger, der sandsynligvis vil gøre serveren køre ud af rummet, og clearing cachen oftere under lave diskforhold for at forsøge at forhindre fejl) . I nærheden af In In In In In In In In In In In In In In datasets.xml   (eller opsætning.xml) Du kan tilføje/sæt den nye cache ClearMinutes parameter til at kontrollere, hvor ofte serveren kontrollerer for at rydde cachen. Bemærk, den eksisterende cacheMinutes parameter styrer alder af filer, der skal gemmes, den nye cache ClearMinutes er for, hvordan ofte at gøre en kache klar.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Udover det opdaterede udseende er der forbedret navigation, søg, oversættelse,
 
     * Ny funktion til at tilpasse de oplysninger, der vises om datasæt i UI. Vi forventer, at det er særligt nyttigt at tilføje ting som datasæt citationer. For flere detaljer kan du læse [Ny dokumentation](/docs/server-admin/display-info) . Tak til Ayush Singh for bidraget&#33;
 
-    * Yderligere Prometheus metrics. Den største er ` http _request_duration_kunder', der indeholder anmodning svartider brudt ned af: "request_type", "dataset_id", "dataset_type", "fil_type", "lang_code", "status_code"
+    * Yderligere Prometheus metrics. Den største er ` http _request_duration_kunder` som omfatter anmodning svartider brudt ned af: "request_type", "dataset_id", "dataset_type", "fil_type", "lang_code", "status_code"
 Denne maskine læsbar format vil give bedre samling af metrics til at forstå, hvordan brugerne bruger serveren.
 
     * Ny måde at generere ISO19115 XML-filer. Det bruger Apache SIS og er en ny mulighed i denne udgivelse. Aktiver det og send feedback.

@@ -1,7 +1,7 @@
 ---
 title: "ERDDAP™ and the Cloud"
 ---
-# ERDDAP™和云层
+#  ERDDAP™ 和云层
 
 ## 云何为
 
@@ -13,24 +13,24 @@ title: "ERDDAP™ and the Cloud"
 
 这就不需要维持一个数据中心/服务器室。 它还允许将计算资源按比例用于当前的需要。 和云一样, 也意味着很多不同的事情, 能够扩大你的资源。 可能意味着付出更多 (或更少) 无服务器资源 。 它可能意味着从共享服务器转移到私人服务器. 这可能意味着升级为更大的专用物理服务器.
 
-## 可以吗?ERDDAP™在云中运行?
+## 可以吗? ERDDAP™ 在云中运行?
 
 对
 
-ERDDAP™目的是在Tomcat内部运行,可以在当地运行,也可以在云环境运行. 有社区支持在多克运行,有[公务 Docker的支持即将到来](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md)。 。 。 。
+ ERDDAP™ 目的是在Tomcat内部运行,可以在当地运行,也可以在云环境运行. 有社区支持在多克运行,有 [公务 Docker的支持即将到来](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) 。 。 。 。
 
-这么说ERDDAP™是在专用服务器成为规范的时候设计的。 它不是没有服务器的,如果不是不可能使它没有服务器,将是极其困难的。
+这么说 ERDDAP™ 是在专用服务器成为规范的时候设计的。 它不是没有服务器的,如果不是不可能使它没有服务器,将是极其困难的。
 
-### 可以吗?ERDDAP™缩放?
+### 可以吗? ERDDAP™ 缩放?
 
-缩放ERDDAP™比起使用更多的无服务器资源, 我们有一些伟大的文件[如何缩放ERDDAP™](https://erddap.github.io/docs/server-admin/scaling)。 。 。 。 使规模更方便ERDDAP™我们对此感兴趣。
+缩放 ERDDAP™ 比起使用更多的无服务器资源, 我们有一些伟大的文件 [如何缩放 ERDDAP™ ](https://erddap.github.io/docs/server-admin/scaling) 。 。 。 。 使规模更方便 ERDDAP™ 我们对此感兴趣。
 
 ### 是什么阻止了自动缩放?
 
-ERDDAP™正在做许多工作,包括不断更新数据集,通知用户数据集的更改,缓存数据,处理用户请求等等。 足够大ERDDAP™服务器喜欢[海岸观察](https://coastwatch.pfeg.noaa.gov/erddap/index.html)这意味着它一直在做一些事情。 对没有服务器的选项来说,持续使用实际上是一个极其昂贵的情况 (你做无服务器时会付出很高的计算费 所以主要的好处是偶尔打电话) 。 。 。 此外,试图移动所有ERDDAP™无服务器版本的各种功能最终将会出现一个更复杂的管理员设置。
+ ERDDAP™ 正在做许多工作,包括不断更新数据集,通知用户数据集的更改,缓存数据,处理用户请求等等。 足够大 ERDDAP™ 服务器喜欢 [海岸观察](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 这意味着它一直在做一些事情。 对没有服务器的选项来说,持续使用实际上是一个极其昂贵的情况 (你做无服务器时会付出很高的计算费 所以主要的好处是偶尔打电话) 。 。 。 此外,试图移动所有 ERDDAP™ 无服务器版本的各种功能最终将会出现一个更复杂的管理员设置。
 
-### 可以吗?ERDDAP™用云存储器?
+### 可以吗? ERDDAP™ 用云存储器?
 
 对
 
-ERDDAP™支持云存储 (包括AWS S3) 改善这种支持 (例如,非AWS S3) 是一个高度优先的ERDDAP™发展路线图。ERDDAP™还能够从许多现有的在线服务中提取数据。 我建议你看看我们[数据集类型文档](https://erddap.github.io/docs/server-admin/datasets#detailed-descriptions-of-dataset-types)。 。 。 。
+ ERDDAP™ 支持云存储 (包括AWS S3) 改善这种支持 (例如,非AWS S3) 是一个高度优先的 ERDDAP™ 发展路线图。 ERDDAP™ 还能够从许多现有的在线服务中提取数据。 我建议你看看我们 [数据集类型文档](https://erddap.github.io/docs/server-admin/datasets#detailed-descriptions-of-dataset-types) 。 。 。 。

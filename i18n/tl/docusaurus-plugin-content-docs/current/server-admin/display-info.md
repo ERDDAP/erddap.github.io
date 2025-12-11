@@ -1,38 +1,38 @@
 ---
 sidebar_position: 7
 ---
-# `display Info` at `display Attribute` Mga Tag
+#  `display Info` at `display Attribute` Mga Tag
 
 ## Paglalarawan
-Ang bahaging ito ay nagpapangyari sa iyo na ipakita ang pangglobong mga katangian ng iyong pagpili sa datasets page sa `Information` row.
+Ang bahaging ito ay nagpapangyari sa iyo na ipakita ang pangglobong mga katangian ng iyong pinipili sa datasets page sa `Impormasyon` hanay.
 
 ## Mga Tagubilin sa Paggamit
-Ang mga tag na ito ay maaari lamang gamitin kasama ng `Sax parser`. Upang magawa at magamit ang mga ito, sundin ang mga hakbang na ito:
+Ang mga tag na ito ay magagamit lamang sa pamamagitan ng `Sax parser` . Upang magawa at magamit ang mga ito, sundin ang mga hakbang na ito:
 
 1.  **Ipakilala ang SAX Parser** :
-Idagdag ang sumusunod na linya sa iyong `setup.xml` file:
+Idagdag ang sumusunod na linya `setup.xml` talaksan:
    ```xml
    <useSaxParser>true</useSaxParser>
    ```
 
-2.  **Idagdag ang Tag sa `datasets.xml`** :
-Sa `datasets.xml` file, isama ang dalawang top-level tag:
+2.  **Ilagay ang mga Tag ` datasets.xml ` ** :
+Nasa ` datasets.xml ` Kasama sa talaksan, ang dalawang top-level tag:
    ```xml
    <displayInfo></displayInfo>
    <displayAttribute></displayAttribute>
    ```
 
 3.  **Masaklap na Paggawi** :
-   - Kung ang mga tag na ito ay hindi nilalagyan o iniiwang walang laman sa `datasets.xml` file, ang default na halaga ay nilalapat na ganito:
-     - `display Info`: `Summary,License `
-     - `display Attribute`: `summary,license `
+   - Kung ang mga tag na ito ay hindi idaragdag o iiwang walang laman sa ` datasets.xml ` file, ang default na halaga ay nilalapat gaya ng sumusunod:
+     -  `display Info` : `Sumaryo, Makatuwiran` 
+     -  `display Attribute` : `buod, Panulaang` 
 
 4.  **Pagiging Makatuwiran** :
-Ang bilang ng mga comma-nahating halaga sa parehong `display Info` at `display Attribute` tags ay dapat pareho.
+Ang bilang ng komma-nahating halaga sa parehong `display Info` at `display Attribute` Ang mga tag ay dapat na pareho.
 
 ## Kung Paano Ito Umaandar
-- Ang `display Attribute` tag ay nagpapahiwatig ng pangglobong mga katangian (ang kahulugan ay nasa loob ng `display Attribute` tag&lt;`addAttributes`Bugtget' tag) na ididispley sa bawat dataset.
-- Ang mga katumbas na halaga sa `display Info` tag ay tinatanghal bilang mga tatak sa `Information` row ng UI.
+- Ang `display Attribute` tag ang pangglobong mga katangian (kakahulugan sa loob ng&lt; ` addAttributes ` &gt. tag) na ididispley para sa bawat dataset.
+- Ang katumbas na mga pamantayan sa katumbas na mga pamantayan `display Info` Tinatanghal ang tag bilang mga etiketa sa `Impormasyon` hanay ng UI.
 - Kapag ang gumagamit ay umaali - aligid sa mga etiketang nakadispley, lilitaw ang dulo ng kagamitan, na nagpapakita sa halaga ng pangglobong katangian.
 
 ## Halimbawa
@@ -48,13 +48,13 @@ Ang bilang ng mga comma-nahating halaga sa parehong `display Info` at `display A
 ```
 
 ### Pag - uugaling UI:
-- Ang mga salitang `Display1` at `Display2` ay ipapalabas sa `Information` row sa UI.
+- Ang mga salita `Pagtatanghal1` at `Pagtatanghal2` ay ipakikita sa `Impormasyon` hanay sa UI.
 - Kapag lumilipad, ipakikita ng mga dulo ng kagamitan ang katumbas na mga halaga ng attribute:
-  - `Display1`: Tooltip shows _Ito ay sat1_
-  - `Display2`: Tooltip shows _Ito ay att2_
+  -  `Pagtatanghal1` : Kasangkapang pangtip na mga palabas _Ito ay att1_
+  -  `Pagtatanghal2` : Kasangkapang pangtip ay nagpapakita _ Ito ay att2_
 
 ## Mga Noble
-- Ensure ang mga pangalang attribute na tinukoy sa `display Attribute` tag ay tumutugma sa mga katangiang global na binigyang kahulugan sa dataset.
+- Tiyakin ang mga pangalang attribute na binanggit sa `display Attribute` tag ang pangglobong mga katangian na binibigyang - kahulugan sa dataset.
 - Ang di - wasto o nawawalang mga katangian ay mag - uulat ng maling mga mensahe.
 
-Sa pagsunod sa mga hakbang na ito, maaari mong gawing kaugalian ang `Information` row sa datasets page upang ipakita ang mga kaugnay na katangiang global na may katumbas na mga tooltip.
+Sa pagsunod sa mga hakbang na ito, maaari mong baguhin ang iyong kalagayan `Impormasyon` sa pahina ng datasets upang ipakita ang kaugnay na pangglobong mga katangian na may katumbas na mga dulo ng kagamitan.

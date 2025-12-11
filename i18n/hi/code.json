@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "यह पृष्ठ एक प्रारूप है। यह केवल देव में दिखाई देगा और उत्पादन निर्माण से बाहर रखा जाएगा।",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(नया टैब में खुलता है)",
+    "description": "The ARIA label for the external link icon"
   }
 }

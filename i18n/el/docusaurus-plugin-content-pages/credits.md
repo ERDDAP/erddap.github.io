@@ -1,17 +1,17 @@
 # Πιστώσεις
 
-## ΣυνεισφορέςERDDAP™κωδικός{#contributions-to-erddap-code} 
+## Συνεισφορές ERDDAP™ κωδικός{#contributions-to-erddap-code} 
 * Συγχώνευση
-    [EDDGridΑπόMergeIRFiles.java](/docs/server-admin/datasets#eddgridfrommergeirfiles)γράφτηκε και συνεισέφερε ο Jonathan Lafite και ο Philippe Makowski της R.Tech Engineering (άδεια: πνευματικά δικαιώματα ανοικτού κώδικα) . Ευχαριστώ, Τζόναθαν και Φιλίπ&#33;
+     [ EDDGrid ΑπόMergeIRFiles.java](/docs/server-admin/datasets#eddgridfrommergeirfiles) γράφτηκε και συνεισέφερε ο Jonathan Lafite και ο Philippe Makowski της R.Tech Engineering (άδεια: πνευματικά δικαιώματα ανοικτού κώδικα) . Ευχαριστώ, Τζόναθαν και Φιλίπ&#33;
      
 * Πίνακας WriterData
-    [.δεδομένα Πίνακας (Πίνακας δεδομένων πίνακαWriter.java) ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#fileType)γράφτηκε και συνεισέφερε ο Roland Schweitzer τηςNOAA  (άδεια: πνευματικά δικαιώματα ανοικτού κώδικα) . Ευχαριστώ. Ρόλαντ&#33;
+     [.δεδομένα Πίνακας (Πίνακας δεδομένων πίνακαWriter.java) ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#fileType) γράφτηκε και συνεισέφερε ο Roland Schweitzer της NOAA   (άδεια: πνευματικά δικαιώματα ανοικτού κώδικα) . Ευχαριστώ. Ρόλαντ&#33;
      
 * Ισον-λδ.
-Η αρχική έκδοση του[Σημασιολογικό σήμα των Datasets με json-ld (JSON Συνδεδεμένα δεδομένα) ](/docs/server-admin/additional-information#json-ld)χαρακτηριστικό (και έτσι όλη η σκληρή δουλειά στο σχεδιασμό του περιεχομένου) γράφτηκε και συνεισέφερε (άδεια: πνευματικά δικαιώματα ανοικτού κώδικα) από τον Adam Leadbetter και τον Rob Fuller του Marine Institute στην Ιρλανδία. Ευχαριστώ. Άνταμ και Ρομπ&#33;
+Η αρχική έκδοση του [Σημασιολογικό σήμα των Datasets με json-ld (JSON Συνδεδεμένα δεδομένα) ](/docs/server-admin/additional-information#json-ld) χαρακτηριστικό (και έτσι όλη η σκληρή δουλειά στο σχεδιασμό του περιεχομένου) γράφτηκε και συνεισέφερε (άδεια: πνευματικά δικαιώματα ανοικτού κώδικα) από τον Adam Leadbetter και τον Rob Fuller του Marine Institute στην Ιρλανδία. Ευχαριστώ. Άνταμ και Ρομπ&#33;
      
-*   orderBy  
-Ο κώδικας[orderByMeanφίλτρο](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#orderByMean)μέσαtabledapκαι τις εκτεταμένες αλλαγές στον κώδικα για την υποστήριξη της[_ΜεταβλητήName/ Divisor: offset_ notation](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#orderByDivisorOptions)για όλουςorderByΓράφτηκε και συνεισέφερε φίλτρα (άδεια: πνευματικά δικαιώματα ανοικτού κώδικα) από τους Rob Fuller και Adam Leadbetter του Ινστιτούτου Θαλάσσιας Αεροπορίας στην Ιρλανδία. Ευχαριστώ. Ρομπ και Άνταμ&#33;
+*    orderBy   
+Ο κώδικας [ orderByMean φίλτρο](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#orderByMean) μέσα tabledap και τις εκτεταμένες αλλαγές στον κώδικα για την υποστήριξη της [_ΜεταβλητήName/ Divisor: offset_ notation](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#orderByDivisorOptions) για όλους orderBy Γράφτηκε και συνεισέφερε φίλτρα (άδεια: πνευματικά δικαιώματα ανοικτού κώδικα) από τους Rob Fuller και Adam Leadbetter του Ινστιτούτου Θαλάσσιας Αεροπορίας στην Ιρλανδία. Ευχαριστώ. Ρομπ και Άνταμ&#33;
      
 * Τύποι χωρίς σύνορα
 Ο κωδικός για τρεις νέους τύπους δεικτών (Τετράγωνο χωρίς σύνορα, κύκλος χωρίς σύνορα, τρίγωνο χωρίς σύνορα) Συνεισέφερε ο Μάρκο Άλμπα της Φυσικής ETT / EMODnet. Ευχαριστώ. Μάρκο Άλμπα&#33;
@@ -19,17 +19,17 @@
 * Μεταφράσεις μηνυμάτων.xml
 Η αρχική έκδοση του κώδικα στο TranslateMessages.java που χρησιμοποιεί την υπηρεσία μετάφρασης της Google για να μεταφράσει μηνύματα.xml σε διάφορες γλώσσες γράφτηκε από τον Qi Zeng, ο οποίος εργαζόταν ως βοηθός Google Summer of Code. Ευχαριστώ. Τσι&#33;
      
-*   orderByΆθροισμα
-Ο κώδικας[orderByΦίλτρο αθροίσματος](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#orderBySum)μέσαtabledap  (βασισμένο στο Rob Fuller και Adam Leadbetter τουorderByMean) και το Check All and Uncheck Όλα τα κουμπιά στοEDDGridΤο έντυπο πρόσβασης δεδομένων γράφτηκε και συνεισέφερε (άδεια: πνευματικά δικαιώματα ανοικτού κώδικα) από τον Marco Alba των ETT Solutions και EMODnet. Ευχαριστώ. Μάρκο&#33;
+*    orderBy Άθροισμα
+Ο κώδικας [ orderBy Φίλτρο αθροίσματος](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#orderBySum) μέσα tabledap   (βασισμένο στο Rob Fuller και Adam Leadbetter του orderByMean ) και το Check All and Uncheck Όλα τα κουμπιά στο EDDGrid Το έντυπο πρόσβασης δεδομένων γράφτηκε και συνεισέφερε (άδεια: πνευματικά δικαιώματα ανοικτού κώδικα) από τον Marco Alba των ETT Solutions και EMODnet. Ευχαριστώ. Μάρκο&#33;
      
 * Διαφανές Αιτήματα Png
-    ERDDAP™τώρα δέχεται αιτήματα για . διαφανές Png όταν οι τιμές γεωγραφικού πλάτους και/ή γεωγραφικού μήκους είναι εν μέρει ή πλήρως εκτός εμβέλειας. (Αυτό ήτανERDDAP™GitHub Issues #19, δημοσιεύτηκε από Rob Fuller -- ευχαριστώ για την ανάρτηση, Rob.) Ο κώδικας για να διορθωθεί αυτό γράφτηκε από τον Κρις Τζον. Ευχαριστώ. Κρις&#33;
+     ERDDAP™ τώρα δέχεται αιτήματα για . διαφανές Png όταν οι τιμές γεωγραφικού πλάτους και/ή γεωγραφικού μήκους είναι εν μέρει ή πλήρως εκτός εμβέλειας. (Αυτό ήταν ERDDAP™ GitHub Issues #19, δημοσιεύτηκε από Rob Fuller -- ευχαριστώ για την ανάρτηση, Rob.) Ο κώδικας για να διορθωθεί αυτό γράφτηκε από τον Κρις Τζον. Ευχαριστώ. Κρις&#33;
      
-* Εμφάνιση δεδομένων εικόνας base64 in.htmlTableαπαντήσεις
-Ο κωδικός για την εμφάνιση δεδομένων εικόνας base64.htmlTableαπαντήσεις συνεισέφερε ο Marco Alba της Φυσικής ETT / EMODnet. Ευχαριστώ. Μάρκο Άλμπα&#33;
+* Εμφάνιση δεδομένων εικόνας base64 in .htmlTable απαντήσεις
+Ο κωδικός για την εμφάνιση δεδομένων εικόνας base64 .htmlTable απαντήσεις συνεισέφερε ο Marco Alba της Φυσικής ETT / EMODnet. Ευχαριστώ. Μάρκο Άλμπα&#33;
      
 * nThreads βελτίωση
-Το σύστημα nThreads για το EDDTableFromFiles βελτιώθηκε σημαντικά. Οι αλλαγές αυτές οδηγούν σε τεράστια βελτίωση της ταχύτητας (π.χ. ταχύτητα 2X όταν nThreads έχει οριστεί σε 2 ή περισσότερα) για τα πιο προκλητικά αιτήματα (όταν ένας μεγάλος αριθμός αρχείων πρέπει να υποβληθεί σε επεξεργασία για τη συγκέντρωση των αποτελεσμάτων) . Οι αλλαγές αυτές θα οδηγήσουν επίσης σε μια γενική επιτάχυνση σε όλη τηνERDDAP™. Ο κώδικας για αυτές τις αλλαγές συνεισέφερε ο Κρις Τζον. Ευχαριστώ. Κρις&#33;
+Το σύστημα nThreads για το EDDTableFromFiles βελτιώθηκε σημαντικά. Οι αλλαγές αυτές οδηγούν σε τεράστια βελτίωση της ταχύτητας (π.χ. ταχύτητα 2X όταν nThreads έχει οριστεί σε 2 ή περισσότερα) για τα πιο προκλητικά αιτήματα (όταν ένας μεγάλος αριθμός αρχείων πρέπει να υποβληθεί σε επεξεργασία για τη συγκέντρωση των αποτελεσμάτων) . Οι αλλαγές αυτές θα οδηγήσουν επίσης σε μια γενική επιτάχυνση σε όλη την ERDDAP™ . Ο κώδικας για αυτές τις αλλαγές συνεισέφερε ο Κρις Τζον. Ευχαριστώ. Κρις&#33;
 
 * Παλέτα χρωμάτων EK80 για ακουστικά σύνολα δεδομένων. Σας ευχαριστώ Rob Cermak&#33;
 

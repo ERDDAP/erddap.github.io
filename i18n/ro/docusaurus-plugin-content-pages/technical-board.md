@@ -1,6 +1,6 @@
 # Comitetul tehnic
 
-ăERDDAP™Comitetul tehnic este responsabil pentru direcția tehnică careERDDAP™Ia. ăERDDAP™Comitetul tehnic este responsabil pentru direcția tehnică aERDDAP™. Acesta ia decizii cu privire la prioritizarea muncii, include foi de parcurs, dependențe, orice procese care afectează activitatea de dezvoltare și orice alte aspecte care necesită supraveghere tehnică înERDDAP™. De asemenea, consiliul va revizui și aproba documentele de proiectare pentru noi caracteristici semnificative. Termenii consiliului tehnic sunt de 2 ani, cu posibilitatea de a extinde. De asemenea, se preconizează că membrii consiliului tehnic vor contribui la proiect, în special prin cereri de tragere și prin revizuiri ale codurilor.
+ă ERDDAP™ Comitetul tehnic este responsabil pentru direcția tehnică care ERDDAP™ Ia. ă ERDDAP™ Comitetul tehnic este responsabil pentru direcția tehnică a ERDDAP™ . Acesta ia decizii cu privire la prioritizarea muncii, include foi de parcurs, dependențe, orice procese care afectează activitatea de dezvoltare și orice alte aspecte care necesită supraveghere tehnică în ERDDAP™ . De asemenea, consiliul va revizui și aproba documentele de proiectare pentru noi caracteristici semnificative. Termenii consiliului tehnic sunt de 2 ani, cu posibilitatea de a extinde. De asemenea, se preconizează că membrii consiliului tehnic vor contribui la proiect, în special prin cereri de tragere și prin revizuiri ale codurilor.
 
 ## Scop{#purpose} 
 
@@ -8,13 +8,13 @@ Comitetul tehnic este responsabil pentru următoarele documente și procese:
 
 *  **Revizuirea și aprobarea unor noi caracteristici** care sunt propuse în discuţiile GitHub.
 
-*  **ERDDAP™Proiecte prioritare** lista, care determină proiectele la care lucrăm. Verifică curentul[lista proiectelor prioritare](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Proiecte prioritare** lista, care determină proiectele la care lucrăm. Verifică curentul [lista proiectelor prioritare](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Obiective ale caracteristicilor de lansare** , care determină caracteristici specifice pe care dorim să le includem în fiecare versiune deERDDAP™. Acestea sunt documentate în proiectul GitHub pentru fiecare versiune.
+*  ** ERDDAP™ Obiective ale caracteristicilor de lansare** , care determină caracteristici specifice pe care dorim să le includem în fiecare versiune de ERDDAP™ . Acestea sunt documentate în proiectul GitHub pentru fiecare versiune.
 
-*  **ERDDAP™Ghid stil** care specifică stilurile și practicile de codificare care trebuie urmate înERDDAP™Cod.
+*  ** ERDDAP™ Ghid stil** care specifică stilurile și practicile de codificare care trebuie urmate în ERDDAP™ Cod.
 
-ăERDDAP™Comitetul tehnic funcționează pe baza următoarelor elemente:
+ă ERDDAP™ Comitetul tehnic funcționează pe baza următoarelor elemente:
 
 * Atunci când este posibil, comunicarea consiliului tehnic ar trebui să fie publică și asincronă. În multe cazuri, acest lucru înseamnă utilizarea GitHub Discuții și Probleme.
 
@@ -50,7 +50,7 @@ Comitetul tehnic este responsabil pentru următoarele documente și procese:
 
 ## Agendă{#agenda} 
 
-Dacă doriți să adăugați un element la Agenda Comitetului tehnic pentru discuții sau să credeți că sunteți o potrivire bună pentru consiliul tehnic, vă rugăm să trimiteți un e-mail[Chris. John.@noaa.gov](mailto:chris.john@noaa.gov).
+Dacă doriți să adăugați un element la Agenda Comitetului tehnic pentru discuții sau să credeți că sunteți o potrivire bună pentru consiliul tehnic, vă rugăm să trimiteți un e-mail [Chris. John. @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Membri{#members} 
 

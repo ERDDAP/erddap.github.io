@@ -1,6 +1,6 @@
 # Technischer Leiter
 
-DieERDDAP™Technisches Gremium ist für die technische Leitung zuständig,ERDDAP™nimmt. DieERDDAP™Technisches Board ist für die technische Richtung verantwortlichERDDAP™. Es trifft Entscheidungen über die Priorisierung der Arbeit, über Fahrpläne, Abhängigkeiten, alle Prozesse, die die Entwicklung beeinflussen, und alle anderen Fragen, die technische Überwachung inERDDAP™. Das Board wird auch Design-Dokumente für wichtige neue Features überprüfen und billigen. Technische Boardbedingungen sind 2 Jahre mit der Möglichkeit der Verlängerung. Technische Board-Mitglieder sollen auch zum Projekt beitragen, insbesondere durch Zug-Anfragen und Code-Bewertungen.
+Die ERDDAP™ Technisches Gremium ist für die technische Leitung zuständig, ERDDAP™ nimmt. Die ERDDAP™ Technisches Board ist für die technische Richtung verantwortlich ERDDAP™ . Es trifft Entscheidungen über die Priorisierung der Arbeit, über Fahrpläne, Abhängigkeiten, alle Prozesse, die die Entwicklung beeinflussen, und alle anderen Fragen, die technische Überwachung in ERDDAP™ . Das Board wird auch Design-Dokumente für wichtige neue Features überprüfen und billigen. Technische Boardbedingungen sind 2 Jahre mit der Möglichkeit der Verlängerung. Technische Board-Mitglieder sollen auch zum Projekt beitragen, insbesondere durch Zug-Anfragen und Code-Bewertungen.
 
 ## Zweck{#purpose} 
 
@@ -8,13 +8,13 @@ Der Technische Vorstand ist für folgende Dokumente und Prozesse verantwortlich:
 
 *  **Bewertung und Genehmigung neuer Features** die in GitHub-Diskussionen vorgeschlagen werden.
 
-*  **ERDDAP™Prioritätsprojekte** eine Liste, an der Projekte festgelegt werden, an denen wir arbeiten. Überprüfen Sie die aktuelle[Liste der Projekte](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Prioritätsprojekte** eine Liste, an der Projekte festgelegt werden, an denen wir arbeiten. Überprüfen Sie die aktuelle [Liste der Projekte](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Release Feature Gos** , die bestimmte Merkmale bestimmen, die wir in jede Freigabe vonERDDAP™. Diese werden im GitHub-Projekt für jede Veröffentlichung dokumentiert.
+*  ** ERDDAP™ Release Feature Gos** , die bestimmte Merkmale bestimmen, die wir in jede Freigabe von ERDDAP™ . Diese werden im GitHub-Projekt für jede Veröffentlichung dokumentiert.
 
-*  **ERDDAP™Style Guide** die Codierung Stile und Praktiken, die inERDDAP™Code.
+*  ** ERDDAP™ Style Guide** die Codierung Stile und Praktiken, die in ERDDAP™ Code.
 
-DieERDDAP™Technischer Vorstand arbeitet auf folgender Grundlage:
+Die ERDDAP™ Technischer Vorstand arbeitet auf folgender Grundlage:
 
 * Soweit möglich sollte die Kommunikation des Technischen Ausschusses öffentlich und asynchron erfolgen. In vielen Fällen bedeutet dies, GitHub Diskussionen und Probleme zu nutzen.
 
@@ -50,7 +50,7 @@ DieERDDAP™Technischer Vorstand arbeitet auf folgender Grundlage:
 
 ## Agenda{#agenda} 
 
-Wenn Sie einen Artikel in die Technical Board Agenda zur Diskussion oder glauben, dass Sie eine gute Passform für das technische Board sind, bitte E-Mail[chris.john@noaa.gov](mailto:chris.john@noaa.gov).
+Wenn Sie einen Artikel in die Technical Board Agenda zur Diskussion oder glauben, dass Sie eine gute Passform für das technische Board sind, bitte E-Mail [chris.john @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Mitglieder{#members} 
 

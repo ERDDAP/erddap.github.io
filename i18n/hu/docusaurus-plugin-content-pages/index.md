@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## Legutóbb ERDDAP™ verzió{#latest-erddap-version} 
 
-2.28.1 lásd: [változások dokumentáció](/changes#version-2281) és [Töltse le](https://github.com/ERDDAP/erddap/releases/tag/v2.28.1) ...
+2.29.0, lásd a [változások dokumentáció](/changes#version-2290) és [Töltse le](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) ...
 
 ##  ERDDAP™ információ{#erddap-information} 
 

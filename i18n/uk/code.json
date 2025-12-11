@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Ця сторінка є проектом. Він буде виданий в дезі і буде виключено з виробничого будівництва.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(відкривається в новій вкладці)",
+    "description": "The ARIA label for the external link icon"
   }
 }

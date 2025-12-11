@@ -1,6 +1,6 @@
 # Tekninen hallitus
 
-TheERDDAP™Tekninen johto vastaa teknisestä suunnasta.ERDDAP™ottaa. TheERDDAP™Tekninen johto vastaa teknisestä suunnastaERDDAP™. Se tekee päätöksiä työn priorisoinnista, tiekartoista, riippuvuuksista, kaikista kehitystyötä vaikuttavista prosesseista ja muista teknistä valvontaa vaativista asioista.ERDDAP™. Hallitus tarkastelee ja hyväksyy myös muotoiluasiakirjat uusista merkittävistä ominaisuuksista. Tekniset käsitteet ovat kaksi vuotta, ja ne ovat mahdollisuus laajentaa. Myös teknisen hallituksen jäsenten odotetaan osallistuvan hankkeeseen erityisesti vetäytymispyyntöjen ja koodiarvioiden avulla.
+The ERDDAP™ Tekninen johto vastaa teknisestä suunnasta. ERDDAP™ ottaa. The ERDDAP™ Tekninen johto vastaa teknisestä suunnasta ERDDAP™ . Se tekee päätöksiä työn priorisoinnista, tiekartoista, riippuvuuksista, kaikista kehitystyötä vaikuttavista prosesseista ja muista teknistä valvontaa vaativista asioista. ERDDAP™ . Hallitus tarkastelee ja hyväksyy myös muotoiluasiakirjat uusista merkittävistä ominaisuuksista. Tekniset käsitteet ovat kaksi vuotta, ja ne ovat mahdollisuus laajentaa. Myös teknisen hallituksen jäsenten odotetaan osallistuvan hankkeeseen erityisesti vetäytymispyyntöjen ja koodiarvioiden avulla.
 
 ## Tarkoitus{#purpose} 
 
@@ -8,13 +8,13 @@ Tekninen hallitus vastaa seuraavista asiakirjoista ja prosesseista:
 
 *  **Tarkista ja hyväksy uusia ominaisuuksia** Tämä on esitetty GitHub-keskusteluissa.
 
-*  **ERDDAP™Ensisijaiset projektit** Lista, joka määrittää projektit, joissa työskentelemme. Katso nykyinen[Ensisijaiset projektit](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Ensisijaiset projektit** Lista, joka määrittää projektit, joissa työskentelemme. Katso nykyinen [Ensisijaiset projektit](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Ominaisuudet Tavoitteet** jotka määrittävät erityispiirteet, joita pyrimme sisällyttämään jokaiseen julkaisuunERDDAP™. Tämä on dokumentoitu GitHub-hankkeessa jokaisen julkaisun osalta.
+*  ** ERDDAP™ Ominaisuudet Tavoitteet** jotka määrittävät erityispiirteet, joita pyrimme sisällyttämään jokaiseen julkaisuun ERDDAP™ . Tämä on dokumentoitu GitHub-hankkeessa jokaisen julkaisun osalta.
 
-*  **ERDDAP™Tyyliohjaus** jotka määrittävät koodaustyylit ja -käytännöt, joita noudatetaanERDDAP™koodi.
+*  ** ERDDAP™ Tyyliohjaus** jotka määrittävät koodaustyylit ja -käytännöt, joita noudatetaan ERDDAP™ koodi.
 
-TheERDDAP™Tekninen hallitus toimii seuraavasti:
+The ERDDAP™ Tekninen hallitus toimii seuraavasti:
 
 * Jos mahdollista, tekninen viestintä on julkista ja asynkronista. Useimmissa tapauksissa tämä tarkoittaa GitHub-keskustelujen ja -kysymysten käyttöä.
 
@@ -50,7 +50,7 @@ TheERDDAP™Tekninen hallitus toimii seuraavasti:
 
 ## Agenda{#agenda} 
 
-Jos haluat lisätä esineen tekniikan hallituksen esityslistalle keskustelua varten tai uskot, että olet hyvä tekninen johto, ota yhteyttä sähköpostitse.[Kirjoittaja: John@noaa.gov](mailto:chris.john@noaa.gov).
+Jos haluat lisätä esineen tekniikan hallituksen esityslistalle keskustelua varten tai uskot, että olet hyvä tekninen johto, ota yhteyttä sähköpostitse. [Kirjoittaja: John @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Jäsenet{#members} 
 

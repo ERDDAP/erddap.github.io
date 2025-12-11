@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Tahle stránka je draft. Bude viditelná pouze v devu a bude vyloučena z výroby.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(otevře v nové kartě)",
+    "description": "The ARIA label for the external link icon"
   }
 }

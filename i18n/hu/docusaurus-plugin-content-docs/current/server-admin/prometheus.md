@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # Prometheus
 
-[Prometheus metrikák](https://prometheus.io/)rendelkezésre állnak /erddap / metrikus. A JVM alapmérőit 2,25-ben adták hozzá, sokERDDAP™a 2.26-os verzióban hozzáadott metrikák. Ha a metrikusokat szeretné használni, győződjön meg róla, hogy legalább 2.26 verzióban van. Alapértelmezettek, hogy lehetővé tegyék, tilthatjátok őket azzal, hogy hozzáadjátok őket.
+ [Prometheus metrikák](https://prometheus.io/) rendelkezésre állnak /erddap / metrikus. A JVM alapmérőit 2,25-ben adták hozzá, sok ERDDAP™ a 2.26-os verzióban hozzáadott metrikák. Ha a metrikusokat szeretné használni, győződjön meg róla, hogy legalább 2.26 verzióban van. Alapértelmezettek, hogy lehetővé tegyék, tilthatjátok őket azzal, hogy hozzáadjátok őket.
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ Ezeket a metrikákat úgy tervezték, hogy géppel olvashatók legyenek. Bár ma
 
 ## Futás Prometheus szerver
 
-A legjobb dokumentáció a monitoring csomag működtetéséhez (Prometheus + Grafana) a Prometheusban van[olvasó](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md)...
+A legjobb dokumentáció a monitoring csomag működtetéséhez (Prometheus + Grafana) a Prometheusban van [olvasó](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) ...
 
-## ERDDAP™metrikák
+##  ERDDAP™ metrikák
 
 ### JVM
 
-ERDDAP™számos metrikát exportál, amelyeket hasznosnak találhat (KezdőlapERDDAP™2.25) ... A JVM egészségének általános figyelemmel kísérésére a Prometheus ügyfél által gyűjtött metrikákat használjuk. Ez magában foglalja a szemétgyűjtésről, a memóriafelhasználásról, a szálakról és még többet. További információkért lásd:[PrometheusJavaÜgyfél JVM dokumentáció](https://prometheus.github.io/client_java/instrumentation/jvm/)...
+ ERDDAP™ számos metrikát exportál, amelyeket hasznosnak találhat (Kezdőlap ERDDAP™ 2.25) ... A JVM egészségének általános figyelemmel kísérésére a Prometheus ügyfél által gyűjtött metrikákat használjuk. Ez magában foglalja a szemétgyűjtésről, a memóriafelhasználásról, a szálakról és még többet. További információkért lásd: [Prometheus Java Ügyfél JVM dokumentáció](https://prometheus.github.io/client_java/instrumentation/jvm/) ...
 
-### ERDDAP™specifikus
+###  ERDDAP™ specifikus
 
-Többet is exportálunkERDDAP™konkrét metrikák (KezdőlapERDDAP™2.26) ... Ha bele akarsz ásni a kódba, megtalálhatod a begyűjtött metrikákat[Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java)...
+Többet is exportálunk ERDDAP™ konkrét metrikák (Kezdőlap ERDDAP™ 2.26) ... Ha bele akarsz ásni a kódba, megtalálhatod a begyűjtött metrikákat [Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) ...
 
-#### ERDDAP_build_info
+####  ERDDAP _build_info
 
-Ez az építési információ aERDDAP™szerver. Tartalmazza a verziót (fő.minor) , verzió_full (fő.minor.patch) , és telepítés_info (jelzi, hogy a szerver hogyan telepítve van, mint a "Docker" "...") ...
+Ez az építési információ a ERDDAP™ szerver. Tartalmazza a verziót (fő.minor) , verzió_full (fő.minor.patch) , és telepítés_info (jelzi, hogy a szerver hogyan telepítve van, mint a "Docker" "...") ...
 
 #### funkció_ zászlók
 
@@ -37,9 +37,9 @@ Ez egy információs metrika, amely megmutatja a jelenlegi jellemző zászlók �
 
 Ez egy információs metrika, amely azt jelzi, hogy a grafikai gyorsulás elérhető-e.
 
-#### http_request_duration_ másodpercek
+####  http _request_duration_ másodpercek
 
-Ez egy titokzatos kérelemre válaszidő másodpercekben. A címkék kérelem_típus (például griddap,tabledap, fájlok, wms) , adatset_id (ha alkalmazható, egyébként megismétli a kérelem típusát) , fájl_típus (kimeneti formátum kérésre pl. ".html", ".csv", ".iso19115 "...") , lang_code (nyelv a kérésre, vagy üres sztring, ha az alapértelmezett) status_code (httpa kérelem állapotkódja, például 200, 302, 404) ...
+Ez egy titokzatos kérelemre válaszidő másodpercekben. A címkék kérelem_típus (például griddap, tabledap , fájlok, wms) , adatset_id (ha alkalmazható, egyébként megismétli a kérelem típusát) , fájl_típus (kimeneti formátum kérésre pl. ".html", ".csv", ".iso19115 "...") , lang_code (nyelv a kérésre, vagy üres sztring, ha az alapértelmezett) status_code ( http a kérelem állapotkódja, például 200, 302, 404) ...
 
 Ez felhasználható a kérelmek nyomon követésére az adatkészlet segítségével, hogy meghatározza a szerver népszerű adatkészleteit. Segíthet azonosítani, hogy vannak-e olyan kérések, amelyek lassúak a szerveren.
 

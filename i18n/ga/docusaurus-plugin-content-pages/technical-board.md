@@ -1,6 +1,6 @@
 # An Bord Teicniúil
 
-An bhfuilERDDAP™Tá an Bord Teicniúil freagrach as an treo teicniúil goERDDAP™Bíonn. An bhfuilERDDAP™Tá an Bord Teicniúil freagrach as treo teicniúilERDDAP™. Déanann sé cinntí maidir le tosaíocht oibre, treochláir gné, spleáchais, aon phróisis a dhéanann obair forbartha tionchar, agus aon ábhar eile a éilíonn maoirseacht theicniúil iERDDAP™. Déanfaidh an bord athbhreithniú agus formheas ar dhoiciméid deartha le haghaidh gnéithe suntasacha nua. Tá téarmaí bord Teicniúil 2 bliain leis an rogha a leathnú. Táthar ag súil go mbeidh comhaltaí boird teicniúla ag cur leis an tionscadal, go háirithe trí iarrataí agus athbhreithnithe ar chód a tharraingt.
+An bhfuil ERDDAP™ Tá an Bord Teicniúil freagrach as an treo teicniúil go ERDDAP™ Bíonn. An bhfuil ERDDAP™ Tá an Bord Teicniúil freagrach as treo teicniúil ERDDAP™ . Déanann sé cinntí maidir le tosaíocht oibre, treochláir gné, spleáchais, aon phróisis a dhéanann obair forbartha tionchar, agus aon ábhar eile a éilíonn maoirseacht theicniúil i ERDDAP™ . Déanfaidh an bord athbhreithniú agus formheas ar dhoiciméid deartha le haghaidh gnéithe suntasacha nua. Tá téarmaí bord Teicniúil 2 bliain leis an rogha a leathnú. Táthar ag súil go mbeidh comhaltaí boird teicniúla ag cur leis an tionscadal, go háirithe trí iarrataí agus athbhreithnithe ar chód a tharraingt.
 
 ## Cuspóir an togra{#purpose} 
 
@@ -8,13 +8,13 @@ Tá an Bord Teicniúil freagrach as na doiciméid agus na próisis seo a leanas:
 
 *  **Athbhreithniú agus Approve gnéithe nua** atá beartaithe i GitHub Plé.
 
-*  **ERDDAP™Amharc ar gach eolas** liosta, a chinneadh tionscadail go bhfuil muid ag obair ar. Seiceáil amach an reatha[Liosta na dtionscadal tosaíochta](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Amharc ar gach eolas** liosta, a chinneadh tionscadail go bhfuil muid ag obair ar. Seiceáil amach an reatha [Liosta na dtionscadal tosaíochta](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Naisc ábhartha eile** , a chinneann gnéithe sonracha a bhfuil sé mar aidhm againn a chur san áireamh i ngach scaoileadhERDDAP™. Déantar iad seo a dhoiciméadú sa tionscadal GitHub do gach scaoileadh.
+*  ** ERDDAP™ Naisc ábhartha eile** , a chinneann gnéithe sonracha a bhfuil sé mar aidhm againn a chur san áireamh i ngach scaoileadh ERDDAP™ . Déantar iad seo a dhoiciméadú sa tionscadal GitHub do gach scaoileadh.
 
-*  **ERDDAP™Treoir maidir le** a shonraíonn stíleanna agus cleachtais códaithe atá le leanúint iERDDAP™cód.
+*  ** ERDDAP™ Treoir maidir le** a shonraíonn stíleanna agus cleachtais códaithe atá le leanúint i ERDDAP™ cód.
 
-An bhfuilERDDAP™Feidhmíonn an Bord Teicniúil ar an mbonn seo a leanas:
+An bhfuil ERDDAP™ Feidhmíonn an Bord Teicniúil ar an mbonn seo a leanas:
 
 * I gcás inar féidir cumarsáid a dhéanamh leis an mBord Teicniúil ba cheart a bheith poiblí agus asynchronous. I go leor cásanna ciallaíonn sé seo ag baint úsáide as GitHub Pléigh agus Saincheisteanna.
 
@@ -50,7 +50,7 @@ An bhfuilERDDAP™Feidhmíonn an Bord Teicniúil ar an mbonn seo a leanas:
 
 ## Clár na dToghthóirí{#agenda} 
 
-Más mian leat mír a chur leis an gClár Oibre don Bhord Teicniúil le haghaidh plé nó creidim go bhfuil tú oiriúnach go maith don bhord teicniúil, seol ríomhphost le do thoil[cliceáil grianghraf a mhéadú@noaa.gov](mailto:chris.john@noaa.gov).
+Más mian leat mír a chur leis an gClár Oibre don Bhord Teicniúil le haghaidh plé nó creidim go bhfuil tú oiriúnach go maith don bhord teicniúil, seol ríomhphost le do thoil [cliceáil grianghraf a mhéadú @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Ba mhaith liom...{#members} 
 

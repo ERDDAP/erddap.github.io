@@ -1,38 +1,38 @@
 ---
 sidebar_position: 7
 ---
-# 'displayInfo' i 'displayAttribute' Tags
+#  `wyświetlacz Informacja` oraz `displayAtribution` Tags
 
 ## Opis
-Ta funkcja pozwala na wyświetlanie globalnych atrybutów wybranych w zakładce zbiorów danych w wierszu "Informacje".
+Ta funkcja pozwala na wyświetlanie globalnych atrybutów wybranych w zakładce zbiorów danych `Informacje` rząd.
 
 ## Instrukcja użycia
-Te znaczniki mogą być używane tylko z 'Sax parser'. Aby je włączyć i wykorzystać, należy wykonać następujące czynności:
+Te znaczniki mogą być używane tylko z `Sax parser` . Aby je włączyć i wykorzystać, należy wykonać następujące czynności:
 
 1.  **Włącz parser SAX** :
-Dodaj następujący wiersz do pliku 'setup.xml':
+Dodaj następujący wiersz do swojego `setup.xml` plik:
    ```xml
    <useSaxParser>true</useSaxParser>
    ```
 
-2.  **Dodaj znacznikidatasets.xml'** :
-W "datasets.xml'file, include two top- level tags:
+2.  **Dodaj znaczniki ` datasets.xml ` ** :
+W ` datasets.xml ` plik, zawiera dwa znaczniki najwyższego poziomu:
    ```xml
    <displayInfo></displayInfo>
    <displayAttribute></displayAttribute>
    ```
 
 3.  **Domyślne zachowanie** :
-   - Jeśli te znaczniki nie są dodawane lub pozostawione puste w 'datasets.xml'Plik, wartości domyślne są stosowane w następujący sposób:
-     - 'displayInfo': "Podsumowanie, licencja '
-     - 'displayAtribution': 'streszczenie, licencja'
+   - Jeśli te znaczniki nie są dodawane lub pozostawione puste w ` datasets.xml ` plik, wartości domyślne są stosowane w następujący sposób:
+     -  `wyświetlacz Informacja` : `Podsumowanie, Licencja` 
+     -  `displayAtribution` : `streszczenie, licencja` 
 
 4.  **Zapewnienie spójności** :
-Liczba wartości oddzielonych od comma- w znacznikach 'displayInfo' i 'displayAtribution' musi być taka sama.
+Liczba wartości oddzielonych comma- `wyświetlacz Informacja` oraz `displayAtribution` Znaczniki muszą być takie same.
 
 ## Jak to działa
-- Znacznik 'displayAtribution' określa atrybuty globalne (zdefiniowane w&lt;'addAttributes'& gt; tag) zostanie wyświetlony dla każdego zbioru danych.
-- Odpowiednie wartości w znaczniku 'displayInfo' są wyświetlane jako etykiety w wierszu 'Information' interfejsu użytkownika.
+- W `displayAtribution` tag określa atrybuty globalne (zdefiniowane w&lt; ` addAttributes ` & gt; tag) zostanie wyświetlony dla każdego zbioru danych.
+- Odpowiednie wartości w `wyświetlacz Informacja` tag są wyświetlane jako etykiety w `Informacje` rząd UI.
 - Kiedy użytkownik przewija się nad wyświetlanymi etykietami, pojawi się podpowiedź, pokazująca wartość atrybutu globalnego.
 
 ## Przykład
@@ -48,13 +48,13 @@ Liczba wartości oddzielonych od comma- w znacznikach 'displayInfo' i 'displayAt
 ```
 
 ### UI Zachowanie:
-- Słowa "Display1" i "Display2" zostaną wyświetlone w wierszu "Information" w UI.
+- Słowa `Wyświetl 1` oraz `Wyświetla2` będzie wyświetlany w `Informacje` wiosłować na autostradzie.
 - Podczas podświetlania, podpowiedzi wyświetlają odpowiednie wartości atrybutów:
-  - 'Display1': Tooltip pokazuje _ To jest att1 _
-  - 'Display2': Tooltip pokazuje _ To jest att2 _
+  -  `Wyświetl 1` : Tooltip pokazuje _ To jest att1 _
+  -  `Wyświetla2` : Tooltip pokazuje _ To jest att2 _
 
 ## Uwagi
-- Upewnij się, że nazwy atrybutów podane w znaczniku 'displayAtribution' pasują do atrybutów globalnych zdefiniowanych w zbiorze danych.
+- Zapewnienie nazw atrybutów określonych w `displayAtribution` tag pasuje do atrybutów globalnych zdefiniowanych w zbiorze danych.
 - Nieprawidłowe lub brakujące atrybuty rejestrują komunikaty błędów.
 
-Podążając za tymi krokami, możesz dostosować wiersz 'Information' na stronie zbiorów danych, aby wyświetlić odpowiednie atrybuty globalne z odpowiednimi podpowiedzi.
+Podążając za tymi krokami, można dostosować `Informacje` wiersz na stronie zbiorów danych, aby wyświetlić odpowiednie atrybuty globalne z odpowiednimi wskazówkami.

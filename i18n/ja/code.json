@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "このページはドラフトです。 dev でのみ表示され、生産ビルドから除外されます。",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(新しいタブで開きます)",
+    "description": "The ARIA label for the external link icon"
   }
 }

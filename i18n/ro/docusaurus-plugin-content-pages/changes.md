@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Aici sunt modificările asociate cu fiecare ERDDAP™ Eliberare.
 
+
+## Versiunea 2.29.0{#version-2290} 
+ (eliberat în 2025-12-15) 
+
+Acţiune necesară.
+
+ ERDDAP™ versiunea 2.29.0 necesită jdk 25 sau mai târziu. Vă rugăm să actualizați versiunea JDK. Dacă asta e o problemă, poţi construi ERDDAP™ pentru un jdk mai vechi (înapoi la cel puțin 17) prin schimbarea fișierului pom.xml. JDK 25 este o versiune LTS de Java și include multe îmbunătățiri, în special îmbunătățirea performanței.
+
+*    **Noi caracteristici și schimbări (pentru utilizatori) :** 
+    * Versiuni ISO 19115: Vezi mai jos pentru informaţii admin. Pentru utilizatori, puteți solicita acum versiuni specifice ale metadatelor ISO 19115. Face acest lucru din griddap / tabledap pagini pentru un set de date cu tipul de fișier picătură în jos. Aceste versiuni vor fi independente de implicit server.
+
+*    **Lucruri ERDDAP™ Administratorii trebuie să cunoască și să facă:** 
+    * O caracteristică nouă, suport MQTT. Pentru detalii Vă recomandăm să citiţi [O pagină nouă despre asta.](/docs/server-admin/mqtt-integration.md) Aceasta include posibilitatea de a construi seturi de date din mesajele MQTT și publicarea mesajelor MQTT atunci când se modifică un set de date. Este oprit în mod implicit, așa că dacă doriți să-l utilizați, trebuie să-l activați.
+
+Mulţumită lui Ayush Singh pentru că a lucrat la MQTT&#33;
+
+    * Îmbunătăţiri S3: Adăugare suport pentru S3 URI cacheFromUrl valoare. Acest lucru va permite ERDDAP pentru a sprijini găleți private găzduit pe amazonaws.com De asemenea, a abordat o problemă S3 scurgere de memorie.
+
+Datorită @SethChampagneNRL pentru munca pe S3&#33;
+
+    * Versiuni ISO 19115: Există acum suport pentru 3 versiuni diferite ale metadatelor ISO 19115. Versiunea implicită este controlată de setările din setup.xml. Dacă utilizareaSissISO19115 este falsă, serverul va furniza implicit NOAA modificat ISO19115_2. Dacă utilizareaSissISO19115 este adevărată, atunci serverul va utiliza o versiune diferită în funcție de valoarea utilizăriiSisISO19139. Dacă utilizareaSisISO19139 este adevărată, implicitul va fi ISO19139_2007, dacă utilizareaSisISO19139 este falsă, implicitul va fi ISO19115_3_2016. Vă recomandăm utilizarea SisISO19115=adevărat și utilizareSisISO19139=fals. Organizația dumneavoastră poate necesita diferite setări.
+
+    * Migrat la java. biblioteca timpului (în loc de java.util. GregorianCalendar) . Acest lucru ar trebui să ofere îmbunătățiri ale performanței în ceea ce privește întrebările care implică coloane de date/ora. Nu ar trebui să existe un impact vizibil pentru marea majoritate a seturilor de date. Singurul caz cunoscut care cauzează o schimbare este dacă setul de date utilizează `zile de la 0000-01-01` sau similare. Dacă aceasta este o problemă pentru o variabilă, puteți adăuga ` <att name="legacy_time_adjust"> Adevărat. </att> ` la addAttributes secţiunea a dataVariable sau axisVariable .
+    
+    *    datasets.xml este acum procesată de o [Substitutor string](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Acest lucru are multe utilizări, inclusiv stabilirea valorilor private (ca parole) utilizarea variabilelor de mediu. Acest lucru poate fi dezactivat prin setarea activEnvParsing la fals în configurare.xml.
+
+    * Axa de presiune: Adăugați un caz special pentru creșterile definite de presiune. Aceasta se utilizează în principal în seturile de date meteorologice care definesc creșterile verticale ale nivelurilor izobare. NOTĂ: Valorile de presiune mai mici înseamnă creșteri mai mari, astfel încât axa se execută în dreptul creșterilor normale definite în metri sau picioare.
+
+Mulţumită [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid FromNcFiles cu dimensiuni diferite: Există (experimental) sprijin pentru EDDGrid De la NcFiles seturi de date pentru a avea variabile care nu folosesc același set de axe. Vă rugăm să raportați înapoi cu privire la modul în care acest lucru funcționează pentru tine, sau în cazul în care comportamentul nu pare destul de corect.
+
+    * Există o colecție de optimizari care ar trebui să fie în siguranță, dar au steaguri pentru a reveni la comportamentul vechi, dacă este necesar. Dacă găsiți necesitatea de a seta oricare dintre steaguri, vă rugăm să depuneți un bug. Dacă nu auzim de probleme cele mai multe dintre acestea vor fi eliminate cu noul comportament implicit în viitor. Există o [pagină nouă despre steagurile caracteristicilor](/docs/server-admin/feature-flags.md) unde puteți citi despre aceste și alte steaguri.
+
+      * atingere Fire Numai WhenItems: Aceasta este o schimbare astfel încât touchThread va fi difuzate numai atunci când există elemente în coada de a atinge. Un fir mai puțin rulează este o optimizare minoră, dar încă util. Implicit faţă de adevăr.
+
+      * utilizareNcMetadata Pentru tabel: Această modificare permite tabelul de fișiere interne pentru a utiliza atributele NC, în special un atribut real_interval variabil pentru a evita citirea întregului fișier NC. Acest lucru poate accelera drastic încărcarea inițială a seturilor de date pe baza fișierelor NC în cazul în care valoarea reală_interval pentru fiecare variabilă din fiecare fișier este inclusă ca atribut. Rețineți că acest lucru are încredere în valoare, așa că dacă este greșit, tabelul de fișiere interne va avea informații incorecte. Implicit faţă de adevăr.
+
+      * ncHeader MakeFile: Această modificare permite generarea fișierelor antet NC fără a genera mai întâi fișierul NC reprezentativ. Aceasta este o optimizare mică pentru tabelul EDD, dar o optimizare uriașă pentru mulți EDDGrid cereri. Implicite față de false (ca în fals este comportamentul optimizat intenționat) .
+
+      * fundal Creeazăsubset Tabele: Această modificare duce o parte din prelucrarea inițială a seturilor de date la un fir de fundal. Acest lucru ar trebui să îmbunătățească timpul pentru încărcarea seturilor de date. Mai exact, partea întârziată este tabelele de subset, care sunt, de asemenea, generate atunci când este necesar în cazul în care prelucrarea întârziată nu sa întâmplat încă. Implicit faţă de adevăr.
+
+    * Unele mici modificări, bug fixs (Mulțumesc Italo Borrelli pentru fixarea pentru EDDtableFromAggregateRows, Mulţumesc. @SethChampagneNRL pentru a permite longitudinea mai mare de 360 in EDDGrid LonPM180 și alte câteva soluții de bug) Şi optimizări.
+
+*    **Pentru ERDDAP™ Dezvoltatori:** 
+    * Optimizări suplimentare, inclusiv timpul de testare de tăiere în jumătate.
+
+    * Profiluri de încercare noi pentru foarte fulgi (extern) sau extrem de lent (SlowAWS) teste.
+
 ## Versiunea 2.28.1{#version-2281} 
  (eliberat în 2025-09-05) 
 
@@ -49,7 +98,7 @@ Mulţumită [@ocefpaf](https://github.com/ocefpaf) , [@abkfenris](https://github
     * Date noi pentru convertorul bara de culoare pe servere la /erddap/convert/color.html
 
 *    **Lucruri ERDDAP™ Administratorii trebuie să cunoască și să facă:** 
-    * Behavoir implicit este că cache-ul va fi eliminat acum independent de sarcina de seturi de sarcini majore. Acest lucru va permite o compensare mai fiabile și regulate de fișiere vechi cache. Există lucrări suplimentare pentru a îmbunătăți Behavoir server atunci când scăzut pe spațiu disc (returnarea unei erori pentru cererile susceptibile de a face serverul să rămână fără spațiu, și curățarea cache-ului mai frecvent în circumstanțe de disc scăzut pentru a încerca să prevină erorile) . În datasets.xml   (sau configurare. xml) puteți adăuga/seta noua cache ClearMinutes parametru pentru a controla cât de frecvent verifică serverul pentru a șterge cache-ul. Notă, parametrul cacheMinutes existent controlează vârsta fișierelor care trebuie păstrate, noul cache ClearMinutes este pentru cât de des pentru a face un Chache clar.
+    * Comportamentul implicit este că cache-ul va fi eliminat acum independent de sarcina seturilor de sarcini majore. Acest lucru va permite o compensare mai fiabile și regulate de fișiere vechi cache. Există lucrări suplimentare pentru a îmbunătăți comportamentul serverului atunci când este scăzut pe spațiu pe disc (returnarea unei erori pentru cererile susceptibile de a face serverul să rămână fără spațiu, și curățarea cache-ului mai frecvent în circumstanțe de disc scăzut pentru a încerca să prevină erorile) . În datasets.xml   (sau configurare. xml) puteți adăuga/seta noua cache ClearMinutes parametru pentru a controla cât de frecvent verifică serverul pentru a șterge cache-ul. Notă, parametrul cacheMinutes existent controlează vârsta fișierelor care trebuie păstrate, noul cache ClearMinutes este pentru cât de des pentru a face un Chache clar.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Detalii suplimentare disponibile în [documentație de metadate localizate](/doc
 
     * O caracteristică nouă pentru personalizarea informațiilor afișate despre seturile de date din UI. Ne așteptăm ca acest lucru să fie deosebit de util pentru a adăuga lucruri cum ar fi citări de seturi de date. Pentru mai multe detalii puteți citi [documentație nouă](/docs/server-admin/display-info) . Mulţumită lui Ayush Singh pentru contribuţie&#33;
 
-    * Indicatori suplimentari Prometheus. Cel mai mare dintre ele este: http _Cerere_durata_secunde care include timpii de răspuns la cerere descriși prin: "Cerere_type," "dataset_id," "dataset_type," "file_type," "lang_code," "status_code"
+    * Indicatori suplimentari Prometheus. Cel mai mare este ` http _Cere_durata_secunde` care include timpii de răspuns la cerere descriși prin: "cerere_type," "dataset_id," "dataset_type," "file_type," "lang_code," "status_code"
 Acest format lizibil va permite o mai bună colectare de indicatori pentru a înțelege modul în care utilizatorii folosesc serverul.
 
     * Mod nou de a genera fișiere XML ISO19115. Acesta utilizează SIS Apache și este o nouă opțiune în această versiune. Vă rugăm să activați și să trimiteți feedback.

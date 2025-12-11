@@ -277,10 +277,10 @@ Dette er vanlig når du først setter opp ERDDAP™ ..
              
 ###  ERDDAP™ Innhold{#erddap-content} 
 3.   [Sett opp `tomcat/innhold/erddap` konfigurasjonsfiler.](#erddap-content) 
-På Linux, Mac og Windows, last ned [erddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
+På Linux, Mac og Windows, last ned [erddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.1/erddapContent.zip) 
 og zip det inn i `tomcat` mappe, opprette `tomcat/innhold/erddap` ..
 
-__Versjon 1.0.0, 20333 bytes, MD(2005)2B8D2A5E5ED73E3A42B529C168C60B5, datert 2024-10-14__
+__Versjon 1.0.1, 20683 bytes, MD(2005)98a8099e7e674da59fe35e9c96efa7b5, dateret 2025-06-02__
 
 Noen tidligere versjoner er også tilgjengelige:
 
@@ -357,9 +357,9 @@ det er en god ide å bekrefte at resultatet er velformet XML ved å lime XML-tek
      
 ### Installer erddap. krigsfil{#install-the-erddapwar-file} 
 
-4. På Linux, Mac og Windows _ Last ned [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) _inn i `tomcat/webapps` :)
+4. På Linux, Mac og Windows _ Last ned [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) _inn i `tomcat/webapps` :)
 
-__Versjon 2.28.1, 622.676.238 bytes, MD(2005)48b426045f950c8a8d69ef9521b9bc9, datert 2025-09-05_
+__Versjon 2.29.0, 706.788.135 bytes, MD(2005)A5ED0DCC4D46CA27640FANGS4A8560, datert 12-15-2025__
 
 .war-filen er stor fordi den inneholder høy oppløsning kystlinje, grenser og høydedata som trengs for å opprette kart.
 
@@ -374,6 +374,7 @@ Noen tidligere versjoner er også tilgjengelige.
    *  [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)   (592,292,039 bytes, MD(2005)652AFC9D1421F00B5F789DA2C4732D4C, datert 2024-11-07) 
    *  [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)   (607.404.032 bytes, MD(2005)99a725108b37708e5420986c1616a119, datert 2025-03-31) 
    *  [2.27.0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)   (620,554,403 bytes, MD(2005)3b2086c659eee4145ca2dff447bf4ef7, datert 2025-06-11) 
+   *  [2.28.1](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war)   (622 676 238 bytes, MD3=48b4226045f950c8a8d69ef9521b9bc9, datert 2025-09-05) 
 
 ### Konfigurer proxy (bruksspesifikk)  {#proxy} 
 

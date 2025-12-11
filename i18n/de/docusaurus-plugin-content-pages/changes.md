@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Hier sind die Änderungen, die jeder ERDDAP™ Veröffentlichung.
 
+
+## Version 2.29.0{#version-2290} 
+ (veröffentlicht 2025-12-15) 
+
+Aktion erforderlich.
+
+ ERDDAP™ Version 2.29.0 benötigt jdk 25 oder später. Bitte aktualisieren Sie Ihre jdk-Version. Wenn das ein Problem ist, können Sie bauen ERDDAP™ für einen älteren jdk (zurück zu mindestens 17) durch Änderung der pom.xml-Datei. JDK 25 ist eine LTS-Veröffentlichung Java und enthält viele Verbesserungen, vor allem verbesserte Leistung.
+
+*    **Neue Funktionen und Änderungen (für Benutzer) :** 
+    * ISO 19115 Versionen: Siehe unten für admin info. Für Anwender können Sie jetzt spezielle Versionen von ISO 19115 Metadaten anfordern. Tun Sie dies aus dem Raster/ tabledap Seiten für einen Datensatz mit dem Dateityp abfallen. Diese Versionen sind unabhängig vom Server-Standard.
+
+*    **Dinge ERDDAP™ Administratoren müssen wissen und tun:** 
+    * Neue Funktion, MQTT-Unterstützung. Für Details empfehle ich das Lesen der [neue Seite darüber.](/docs/server-admin/mqtt-integration.md) Dazu gehören die Möglichkeit, Datensätze aus MQTT-Nachrichten zu erstellen und MQTT-Nachrichten zu veröffentlichen, wenn sich ein Datensatz ändert. Es ist standardmäßig deaktiviert, also wenn Sie es verwenden möchten, müssen Sie es aktivieren.
+
+Dank Ayush Singh für die Arbeit an MQTT&#33;
+
+    * S3 Verbesserungen: Unterstützung für S3 URIs als CacheFromUrl-Wert hinzufügen. Dies ermöglicht ERDDAP um private Eimer von amazonaws.com gehostet zu unterstützen Auch adressiert ein S3 Speicherleck Problem.
+
+Dank @SethChampagneNRL für die Arbeit an S3&#33;
+
+    * ISO 19115 Versionen: Es gibt jetzt Unterstützung für 3 verschiedene Versionen von ISO 19115 Metadaten. Die Standardversion wird durch Einstellungen in Ihrem setup.xml gesteuert. Wenn die VerwendungSisISO19115 falsch ist, wird der Server standardmäßig NOAA modifizierte ISO19115_2. Wenn die VerwendungSisISO19115 wahr ist, dann wird der Server eine andere Version verwenden, abhängig vom Wert der VerwendungSisISO19139. Wenn die VerwendungSisISO19139 wahr ist, ist die Standardeinstellung ISO19139_2007, wenn die VerwendungSisISO19139 falsch ist, wird die Standardeinstellung ISO19115_3_2016 sein. Wir empfehlen die VerwendungSisISO19115=true und verwendenSisISO19139=false. Ihre Organisation kann verschiedene Einstellungen erfordern.
+
+    * In die Java gezogen. Zeitbibliothek (statt java.util. GregorianischCalendar) . Dies sollte Leistungsverbesserungen bei Abfragen mit Datums-/Zeitspalten bieten. Für die überwiegende Mehrheit der Datensätze sollte es keine spürbaren Auswirkungen geben. Der eine bekannte Fall, der eine Änderung bewirkt, ist, wenn der Datensatz verwendet wird `Tage seit 0000-01` oder ähnlich. Wenn dies ein Problem für eine Variable ist, können Sie hinzufügen ` <att name="legacy_time_adjust"> wahr </att> ` in der addAttributes Abschnitt eines dataVariable oder axisVariable .
+    
+    *    datasets.xml wird nun von a [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Dies hat viele Anwendungen, einschließlich der Einstellung privater Werte (wie Passwörter) Verwendung von Umgebungsvariablen. Dies kann durch die Einstellung aktivierenEnvParsing auf false in setup.xml deaktiviert werden.
+
+    * Druck Axis: Fügt einen speziellen Fall für durch Druck definierte Erhebungen hinzu. Dies wird vor allem in Meteorologie-Datensätzen verwendet, die vertikale Erhebungen in isobarischen Ebenen definieren. HINWEIS: Kleinere Druckwerte bedeuten höhere Erhebungen, so dass die Achse den in Metern oder Füßen definierten normalen Erhebungen gegenüberliegt.
+
+Dank [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid FromNcFiles mit unterschiedlichen Abmessungen: Es gibt (Experiment) Unterstützung für EDDGrid FromNcFiles-Datensätze haben Variablen, die nicht denselben Satz von Achsen verwenden. Bitte melden Sie sich zurück, wie das für Sie funktioniert, oder wenn das Verhalten nicht ganz richtig aussieht.
+
+    * Es gibt eine Sammlung von Optimierungen, die sicher sein sollten, aber Flaggen haben, um auf altes Verhalten bei Bedarf zurückzukehren. Wenn Sie die Notwendigkeit finden, eine der Flaggen zu setzen, bitte Datei einen Fehler. Wenn wir keine Probleme hören, werden die meisten dieser mit dem neuen Verhaltensstandard in der Zukunft entfernt. Da ist ein [neue Seite über Feature-Flags](/docs/server-admin/feature-flags.md) wo Sie über diese und andere Flaggen lesen können.
+
+      * Kontakt Gewinde Nur WhenItems: Dies ist eine Änderung, so dass die touchThread nur läuft, wenn es Elemente in der Warteschlange zu berühren. Ein weniger Fadenlauf ist eine kleinere Optimierung, aber dennoch nützlich. Defaults to true.
+
+      * NcMetadata ForFileTable: Diese Änderung ermöglicht es der internen Dateitabelle, nc-Attribute zu verwenden, und zwar ein variables Ist_range-Attribut, um das Lesen der gesamten nc-Datei zu vermeiden. Dies kann das anfängliche Laden von Datensätzen basierend auf nc-Dateien drastisch beschleunigen, wenn die Ist_range für jede Variable in jeder Datei als Attribut enthalten ist. Beachten Sie, dass dies den Wert vertraut, wenn es falsch ist, wird die interne Dateitabelle falsche Informationen haben. Defaults to true.
+
+      * ncHeader MakeFile: Diese Änderung ermöglicht es, nc-Header-Dateien zu erzeugen, ohne die repräsentative nc-Datei zuerst zu generieren. Dies ist eine kleine Optimierung für EDDTable, aber eine riesige Optimierung für viele EDDGrid Anträge. Fehler auf false (wie falsch ist das beabsichtigte optimierte Verhalten) .
+
+      * Hintergrund Erstellen Subset Tabelle: Diese Änderung bewegt einige der ersten Verarbeitung von Datensätzen auf einen Hintergrundfaden. Dies sollte die Zeit für das Laden von Datensätzen verbessern. Konkret handelt es sich bei dem verzögerten Teil um Teilmengentabellen, die auch bei Bedarf generiert werden, wenn die verzögerte Verarbeitung noch nicht passiert ist. Defaults to true.
+
+    * Einige kleine Änderungen, Fehlerbehebungen (Dank Italo Borrelli für die Befestigung für EDDTableFromAggregateRows, Danke. @SethChampagneNRL zur Ermöglichung von Längen größer als 360 in EDDGrid LonPM180 und mehrere andere Fehlerbehebungen) , und Optimierungen.
+
+*    **Für ERDDAP™ Entwickler:** 
+    * Zusätzliche Optimierungen, einschließlich Schneidtestlaufzeit in der Hälfte.
+
+    * Neue Testprofile für sehr flaky (externe) oder extrem langsam (Slowenisch) Tests.
+
 ## Version 2.28.1{#version-2281} 
  (veröffentlicht 2025-09-05) 
 
@@ -49,7 +98,7 @@ Dank [@ocefpaf](https://github.com/ocefpaf) , [@abkfenris](https://github.com/ab
     * Neue Daten zum Colorbar-Konverter auf Servern bei /erddap/convert/color.html
 
 *    **Dinge ERDDAP™ Administratoren müssen wissen und tun:** 
-    * Default behavoir ist, dass der Cache jetzt unabhängig von der großen Lastdatensätze Aufgabe gelöscht wird. Dies ermöglicht eine zuverlässigere und regelmäßige Clearing von alten Cache-Dateien. Es gibt zusätzliche Arbeit, um Server-Behavoir zu verbessern, wenn niedrig auf Festplattenspeicherplatz (Rückgabe eines Fehlers für Anfragen, die den Server möglicherweise aus dem Raum ausführen, und das Löschen des Caches häufiger unter niedrigen Festplattenbedingungen, um Fehler zu verhindern) . In datasets.xml   (oder Setup.xml) Sie können den neuen Cache hinzufügen/einfügen ClearMinutes-Parameter, um zu steuern, wie häufig der Server überprüft, um den Cache zu löschen. Hinweis, der vorhandene Parameter cacheMinutes steuert das Alter der zu haltenden Dateien, den neuen Cache ClearMinutes ist, wie oft eine Chache klar zu machen.
+    * Default-Verhalten ist, dass der Cache jetzt unabhängig von der großen Belastungsdatensätze Aufgabe gelöscht wird. Dies ermöglicht eine zuverlässigere und regelmäßige Clearing von alten Cache-Dateien. Es gibt zusätzliche Arbeit, um das Serververhalten zu verbessern, wenn niedriger auf Festplattenspeicherplatz (Rückgabe eines Fehlers für Anfragen, die den Server möglicherweise aus dem Raum ausführen, und das Löschen des Caches häufiger unter niedrigen Festplattenbedingungen, um Fehler zu verhindern) . In datasets.xml   (oder Setup.xml) Sie können den neuen Cache hinzufügen/einfügen ClearMinutes-Parameter, um zu steuern, wie häufig der Server überprüft, um den Cache zu löschen. Hinweis, der vorhandene Parameter cacheMinutes steuert das Alter der zu haltenden Dateien, den neuen Cache ClearMinutes ist, wie oft eine Chache klar zu machen.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Neben dem aktualisierten Erscheinungsbild gibt es eine verbesserte Navigation, S
 
     * Neue Funktion, um die Informationen, die über Datensätze in der UI angezeigt werden, anzupassen. Wir erwarten, dass dies besonders nützlich ist, um Dinge wie Dataset Zitate hinzuzufügen. Für weitere Details können Sie die [neue Dokumentation](/docs/server-admin/display-info) . Dank Ayush Singh für den Beitrag&#33;
 
-    * Zusätzliche Prometheus Metriken. Der größte ist ` http _request_duration_seconds`, die Anforderungs-Antwortzeiten nach unten durch: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code" umfasst
+    * Zusätzliche Prometheus Metriken. Die größte ist ` http _request_duration_Sekunden` die Anfrage-Antwort-Zeiten nach unten durch: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 Dieses maschinenlesbare Format ermöglicht eine bessere Sammlung von Metriken, um zu verstehen, wie Benutzer den Server verwenden.
 
     * Neue Art, ISO19115 XML-Dateien zu generieren. Es verwendet Apache SIS und ist eine neue Option in dieser Veröffentlichung. Bitte aktivieren Sie es und senden Sie Feedback.

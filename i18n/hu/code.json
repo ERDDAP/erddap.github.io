@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Ez az oldal egy tervezet. Csak a devben lesz látható, és kizárják a termelés építését.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(új fülbe kerül)",
+    "description": "The ARIA label for the external link icon"
   }
 }

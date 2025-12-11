@@ -1,8 +1,8 @@
 ---
 sidebar_position: 3
 ---
-# ERDDAP™Release Process
-* Se till att bild jämförelse filer är tillgängliga (Detta kan innebära att du kör "mvn verify", om du vill påskynda den upp restriktionen för bara ImageComparison-gruppen men notera att det fortfarande kräver att du kör Jetty-test.) 
+#  ERDDAP™ Release Process
+* Se till att bild jämförelse filer är tillgängliga (Detta kan innebära att köra `Mvn verifiera` Om du vill påskynda den uppehållsbegränsningen till bara ImageComparison-gruppen, men notera att det fortfarande kräver att du kör Jetty-test.) 
 * Uppdatera beroenden
 ```
 mvn versions:display-dependency-updates   // (displays updates)
@@ -13,9 +13,11 @@ mvn versions:update-properties // (updates versions in the property block)
 ```
 mvn versions:display-plugin-updates // (displays updates, need to manually update)
 ```
-* Kör tester för att se till att beroendeuppdateringar inte bryta något för alla större konfigurationer (datamängder i synnerhet, även om andra betydande inställningar samt) 
+* Kör tester för att se till att beroendeuppdateringar inte bryta något för alla större konfigurationer (datamängder i synnerhet, även om andra betydande inställningar samt) . Observera att den externa testsviten kan vara mycket fläckig. Den slowAWS test svit kan ta mycket lång tid.
 ```
 mvn verify
+mvn verify -P external
+mvn verify -P slowAWS
 ```
 * Använd TranslateMessages.translate () uppdatera översättningar om det behövs
 * EDStatic.java sätter utveckling Ändra versionsnumret och ange lanseringsdatumet.
@@ -32,35 +34,34 @@ Vi vill försöka hitta fel innan bredare distribution av byggnaden.
 Inkludera meddelande när du berättar om en ny release.
 
 Standardförfarandet är:
-* Ladda upp .war-filen till kustwatch\\[Tomcat\\]/innehåll/erddap/
+* Ladda upp .war-filen till kustwatch \\[ Tomcat \\] /innehåll/erddap/
 * Som användare=tomcat:
-  * Inom\\[Tomcat\\]/bin/ :
+  * Inom \\[ Tomcat \\] /bin/ :
 ./shutdown.sh //use "ps-fu tomcat" för att säkerställa att den har stoppats
-  * Inom\\[Tomcat\\]/webapps/ :
+  * Inom \\[ Tomcat \\] /webapps/ :
 RM -rf Erddap
 Rm erddap. krig
 cp ../innehåll/erddap/erddap2.22. Erddap.war //eller vad numret är
-  * Inom\\[Tomcat\\]/bin/ :
+  * Inom \\[ Tomcat \\] /bin/ :
 Startup.sh
-  * EfterERDDAPhar återvänt en webbsida,\\[Tomcat\\]/webapps/ :
+  * Efter ERDDAP har återvänt en webbsida, \\[ Tomcat \\] /webapps/ :
 chgrp -R erddap erddap
 chmod -R g+rw erddap
 chmod -R o-rwx erddap
 
 ## GitHub frigör
-Draft GitHub release, inkluderar erddap.war och erddapContent.zip  (Inga versionsnummer) 
+Draft GitHub release, inkluderar erddap.war och erddapContent .zip   (Inga versionsnummer) 
 
 title: The official v2.25 version
 beskriva: Se ändringslistan på
-       https://erddap.github.io/changes#version-225
- 
+      https://erddap.github.io/changes#version-225
 
 ## Dokumentationsuppdatering
 * Uppdatera versionsnummer i docusaurus.config.ts-filen (i sidosektionen) .
 * Redigera dokumentationssidorna (deploy-install.md och deploy-update.md) .
-  * Sök efter\\[Erddap.war\\] 
+  * Sök efter \\[ Erddap.war \\]  
   * Kopiera befintlig information (Lite reformaterade) till listan över tidigare installationer 2.
-  * Ändra den aktuella releaseinformationen för erddap. krig vid\\[Erddap.war\\]
+  * Ändra den aktuella releaseinformationen för erddap. krig vid \\[ Erddap.war \\] 
 * Kör översättningarna för dokumentationswebbplatsen.
 * Gör en pull request och slå samman ändringarna.
 * Utplacera dokumentationswebbplatsen (Se Readme) .
@@ -71,21 +72,19 @@ Främst betyder detta ErddapContent och ErddapTest, men de bör hållas uppdater
 ## Meddela användare
 Först meddela alla användare som begärde ändringar (eller vars buggar var fixerade) . Ge dem tid att verifiera förändringar och/eller höja problem.
 
-ERDDAPversion 2.25 är nu tillgänglig&#33;
+ ERDDAP version 2.25 är nu tillgänglig&#33;
 
 Du kan läsa om förändringarna på
- https://erddap.github.io/changes#version-225
- 
+https://erddap.github.io/changes#version-225
 
 Några av förändringarna är förändringar som du föreslog. Tack så mycket för dina förslag. Sök efter ditt namn i listan över ändringar för att se detaljerna. Det skulle vara bra om du kunde prova de nya funktionerna snart, innan jag tillkännager denna nya version till en bredare publik.
 
-Om du är enERDDAPadministratör, instruktionerna för uppgradering är på
- https://erddap.github.io/docs/server-admin/deploy-update
- 
+Om du är en ERDDAP administratör, instruktionerna för uppgradering är på
+https://erddap.github.io/docs/server-admin/deploy-update
 
 Om du har några problem, frågor, förslag, vänligen maila mig.
 
-Tack för att du använderERDDAP.
+Tack för att du använder ERDDAP .
 
 ### Announce release
 Skicka ett meddelande till Announcements Mailing-listan.

@@ -1,6 +1,6 @@
 # Technical Board
 
-AngERDDAP™Ang Technical Board ang may pananagutan sa teknikal na direksiyon naERDDAP™ay tumatanggap. AngERDDAP™Ang Technical Board ang may pananagutan sa teknikal na direksiyon ngERDDAP™. Gumagawa ito ng mga desisyon hinggil sa patiunang paghahanda sa trabaho, nagtatampok ng mga daang - daan, dependensiya, anumang proseso na nakaaapekto sa gawaing pag - unlad, at iba pang bagay na nangangailangan ng teknikal na pangangasiwaERDDAP™. Rerepasuhin din at sasang - ayunan ng lupon ang mga dokumento ng disenyo para sa mahahalagang bagong katangian. Ang mga terminong pantechnical board ay 2 taon na may opsiyon ng pagpapalawig. Ang mga miyembro ng Technical board ay inaasahan ding tumutulong sa proyekto, lalo na sa pamamagitan ng mga kahilingan sa paghila at mga pagsusuri ng kodigo.
+Ang ERDDAP™ Ang Technical Board ang may pananagutan sa teknikal na direksiyon na ERDDAP™ ay tumatanggap. Ang ERDDAP™ Ang Technical Board ang may pananagutan sa teknikal na direksiyon ng ERDDAP™ . Gumagawa ito ng mga desisyon hinggil sa patiunang paghahanda sa trabaho, nagtatampok ng mga daang - daan, dependensiya, anumang proseso na nakaaapekto sa gawaing pag - unlad, at iba pang bagay na nangangailangan ng teknikal na pangangasiwa ERDDAP™ . Rerepasuhin din at sasang - ayunan ng lupon ang mga dokumento ng disenyo para sa mahahalagang bagong katangian. Ang mga terminong pantechnical board ay 2 taon na may opsiyon ng pagpapalawig. Ang mga miyembro ng Technical board ay inaasahan ding tumutulong sa proyekto, lalo na sa pamamagitan ng mga kahilingan sa paghila at mga pagsusuri ng kodigo.
 
 ## Layunin{#purpose} 
 
@@ -8,13 +8,13 @@ Ang Technical Board ang may pananagutan sa sumusunod na mga dokumento at mga pro
 
 *  **Repasuhin at sang - ayunan ang bagong mga bahagi** na iminungkahi sa mga Talakayan sa GitHub.
 
-*  **ERDDAP™Mga Proyekto Bago ang Kasal** listahan, na tumitiyak sa mga proyektong ginagawa natin. Suriin ang agos[listahan ng mga pangunahing proyekto](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Mga Proyekto Bago ang Kasal** listahan, na tumitiyak sa mga proyektong ginagawa natin. Suriin ang agos [listahan ng mga pangunahing proyekto](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Mga Tunguhin sa Pagpapalaya** , na nagtatakda ng espesipikong mga bahagi na nilalayon nating ilakip sa bawat paglalabasERDDAP™. Ang mga ito ay dokumentado sa proyektong GitHub para sa bawat release.
+*  ** ERDDAP™ Mga Tunguhin sa Pagpapalaya** , na nagtatakda ng espesipikong mga bahagi na nilalayon nating ilakip sa bawat paglalabas ERDDAP™ . Ang mga ito ay dokumentado sa proyektong GitHub para sa bawat release.
 
-*  **ERDDAP™Istilong Patnubay** na bumabanggit ng mga istilo at mga kaugalian sa pag - e - coding na dapat sundinERDDAP™kodigo.
+*  ** ERDDAP™ Istilong Patnubay** na bumabanggit ng mga istilo at mga kaugalian sa pag - e - coding na dapat sundin ERDDAP™ kodigo.
 
-AngERDDAP™Ang Technical Board ay kumikilos sa sumusunod na saligan:
+Ang ERDDAP™ Ang Technical Board ay kumikilos sa sumusunod na saligan:
 
 * Kung saan ang posibleng komunikasyon ng Technical Board ay dapat na pampubliko at walang kahulugan. Sa maraming kaso ito'y nangangahulugan ng paggamit ng GitHub Contractions and Issues.
 
@@ -50,7 +50,7 @@ AngERDDAP™Ang Technical Board ay kumikilos sa sumusunod na saligan:
 
 ## Agenda{#agenda} 
 
-Kung nais mong magdagdag ng isang bagay sa Technical Board Agnda para sa talakayan o maniwala ka na ikaw ay isang mahusay na bagay para sa teknikal na lupon, pakisuyong email[ch.john@noaa.gov](mailto:chris.john@noaa.gov).
+Kung nais mong magdagdag ng isang bagay sa Technical Board Agnda para sa talakayan o maniwala ka na ikaw ay isang mahusay na bagay para sa teknikal na lupon, pakisuyong email [ch.john @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Mga miyembro{#members} 
 

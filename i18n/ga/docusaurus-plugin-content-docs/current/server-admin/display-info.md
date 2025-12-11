@@ -1,38 +1,38 @@
 ---
 sidebar_position: 7
 ---
-# `displayInfo` agus `displayAttribute ` Clibeanna
+#  `taispeáint taispeáint Eolas ar do Chomhairle` agus `taispeántas ómós` Clibeanna
 
 ## Cur síos ar an Táirge
-Ligeann an ghné seo duit tréithe domhanda de do rogha a thaispeáint ar an leathanach tacar sonraí sa tsraith `Information` .
+Ceadaíonn an ghné seo duit tréithe domhanda de do rogha a thaispeáint ar an leathanach tacar sonraí sa `irl - Library Service` as a chéile.
 
 ## Úsáid Treoracha
-Is féidir na clibeanna a úsáid ach amháin leis an `Sax parser` . Chun iad a chumasú agus a úsáid, lean na céimeanna seo:
+Is féidir na clibeanna a úsáid ach amháin leis an `Seirbhís do Chustaiméirí` . Chun iad a chumasú agus a úsáid, lean na céimeanna seo:
 
 1.  **Cumasaigh an Parser SAX** :
-Cuir an líne seo a leanas le do ` thus.xml ` comhad:
+Cuir an líne seo a leanas le do `crios fuar: aon sonraí` comhad:
    ```xml
    <useSaxParser>true</useSaxParser>
    ```
 
-2.  **Cuir Clibeanna i `datasets.xml` .** :
-Sa `datasets.xml` comhad, san áireamh dhá barr-leibhéal clibeanna:
+2.  **Cuir Clibeanna i ` datasets.xml ` ** :
+I an ` datasets.xml ` comhad, san áireamh dhá barr-leibhéal clibeanna:
    ```xml
    <displayInfo></displayInfo>
    <displayAttribute></displayAttribute>
    ```
 
 3.  **Réamhshocrú Iompar** :
-   - Más rud é nach bhfuil na clibeanna seo a leanas nó a fhágáil folamh sa `datasets.xml` comhad, na luachanna réamhshocraithe i bhfeidhm mar seo a leanas:
-     - `Díreach: cliceáil grianghraf a mhéadú ` .
-     - ` athsheoladh `: ` samhradh, ceadú ` .
+   - Más rud é nach bhfuil na clibeanna seo a leanas nó a fhágáil folamh sa ` datasets.xml ` comhad, na luachanna réamhshocraithe i bhfeidhm mar seo a leanas:
+     -  `taispeáint taispeáint Eolas ar do Chomhairle` : `Achoimre, License` 
+     -  `taispeántas ómós` : `achoimre, cheadú` 
 
 4.  **Comhsheasmhacht a chinntiú** :
-Ní mór líon na luachanna coma-scartha sa dá `displayInfo` agus `displayAttribute ` clibeanna a bheith mar an gcéanna .
+Líon na luachanna coma-scartha sa dá `taispeáint taispeáint Eolas ar do Chomhairle` agus `taispeántas ómós` Ní mór clibeanna a bheith mar an gcéanna.
 
 ## Conas a Oibríonn sé
-- Sonraíonn an `displayAttribute ` chlib tréithe domhanda (sainithe laistigh den&lt;` .addAttributes` &amp; tag) a chur ar taispeáint do gach tacar sonraí.
-- Na luachanna comhfhreagracha sa chlib `displayInfo ` ar taispeáint mar lipéid sa tsraith `Information` an Chomhéadain .
+- An bhfuil `taispeántas ómós` sonraí chlib tréithe domhanda (sainithe laistigh den&lt; ` addAttributes ` &amp; gt; tag) le taispeáint do gach tacar sonraí.
+- Na luachanna comhfhreagracha sa `taispeáint taispeáint Eolas ar do Chomhairle` tag ar taispeáint mar lipéid sa `irl - Library Service` sraith an Chomhéadain.
 - Nuair a théann an t-úsáideoir thar na lipéid ar taispeáint, beidh tooltip le feiceáil, a léiríonn luach an tréith domhanda.
 
 ## Samplaí
@@ -48,13 +48,13 @@ Ní mór líon na luachanna coma-scartha sa dá `displayInfo` agus `displayAttri
 ```
 
 ### UI Iompar:
-- Beidh na focail `Display1` agus `Display2` a chur ar taispeáint sa tsraith `Information` ar an Chomhéadain .
+- Na focail `Uaireadóirí macasamhail Chopard` agus `Uaireadóirí macasamhail` a chur ar taispeáint sa `irl - Library Service` as a chéile ar an Chomhéadain.
 - Nuair a hovered, beidh tooltips taispeáint na luachanna tréith comhfhreagrach:
-  - `Display1 `: Léiríonn Tooltip Is é seo att1_
-  - `Display2`: Léiríonn Tooltip _ Níl an Tweet seo ar fáil
+  -  `Uaireadóirí macasamhail Chopard` : Léiríonn Tooltip _ Níl an Tweet seo ar fáil
+  -  `Uaireadóirí macasamhail` : Léiríonn Tooltip _ Tá sé seo agt2_
 
 ## Nótaí
-- A chinntiú na hainmneacha tréith a shonraítear sa `displayAttribute ` chlib mheaitseáil na tréithe domhanda a shainmhínítear sa tacar sonraí .
+- A chinntiú na hainmneacha tréith a shonraítear sa `taispeántas ómós` tag mheaitseáil na tréithe domhanda a shainmhínítear sa tacar sonraí.
 - Beidh tréithe mícheart nó ar iarraidh teachtaireachtaí earráide log.
 
-De réir na céimeanna seo a leanas, is féidir leat a shaincheapadh ar an tsraith `Faisnéis ` ar an leathanach tacar sonraí a thaispeáint tréithe domhanda ábhartha le tooltips comhfhreagrach.
+De réir na céimeanna seo a leanas, is féidir leat a shaincheapadh ar an `irl - Library Service` a chéile ar an leathanach tacar sonraí a thaispeáint tréithe domhanda ábhartha le tooltips comhfhreagrach.

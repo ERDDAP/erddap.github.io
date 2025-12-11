@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # 普羅米修斯
 
-[普羅米修斯度量衡](https://prometheus.io/)以/erddap/度量衡提供。 JVM核心度量衡在2.25中加入很多ERDDAP™2.26版本中添加的度量衡。 若您要使用測量, 請確認您至少是2. 26 版 。 它們默认啟用, 您可以新增以關閉它們
+ [普羅米修斯度量衡](https://prometheus.io/) 以/erddap/度量衡提供。 JVM核心度量衡在2.25中加入很多 ERDDAP™ 2.26版本中添加的度量衡。 若您要使用測量, 請確認您至少是2. 26 版 。 它們默认啟用, 您可以新增以關閉它們
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ sidebar_position: 9
 
 ## 執行 Prometheus 伺服器
 
-管理監控堆栈的最佳文件 (普羅米修斯 + Grafana) 在普羅米修斯[讀取我](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md).
+管理監控堆栈的最佳文件 (普羅米修斯 + Grafana) 在普羅米修斯 [讀取我](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) .
 
-## ERDDAP™公尺
+##  ERDDAP™ 公尺
 
 ### JVM( 日文)
 
-ERDDAP™匯出您可能發現有用的一些公尺 (起始于ERDDAP™2.25) . 我們用普羅米修斯客戶收集的量表來監控JVM的健康 包括垃圾收集、記憶體使用、線索等數據。 更多信息,请参阅[普羅米修斯Java客戶端 JVM 文件](https://prometheus.github.io/client_java/instrumentation/jvm/).
+ ERDDAP™ 匯出您可能發現有用的一些公尺 (起始于 ERDDAP™ 2.25) . 我們用普羅米修斯客戶收集的量表來監控JVM的健康 包括垃圾收集、記憶體使用、線索等數據。 更多信息,请参阅 [普羅米修斯 Java 客戶端 JVM 文件](https://prometheus.github.io/client_java/instrumentation/jvm/) .
 
-### ERDDAP™特定
+###  ERDDAP™ 特定
 
-我們也匯出一些ERDDAP™特定尺度 (起始于ERDDAP™2.26) . 如果你想挖掘密碼,可以找到收集的公制[Metrics.java (日文)](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java).
+我們也匯出一些 ERDDAP™ 特定尺度 (起始于 ERDDAP™ 2.26) . 如果你想挖掘密碼,可以找到收集的公制 [Metrics.java (日文)](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) .
 
-#### ERDDAP建置(_F)
+####  ERDDAP 建置(_F)
 
-這是建築資訊ERDDAP™伺服器。 包含版本 (主要. 小于) 完整版本 (少校. minor.patch) 和部署_ info (用于指示伺服器的部署方式, 如 'Docker' ' ') .
+這是建築資訊 ERDDAP™ 伺服器。 包含版本 (主要. 小于) 完整版本 (少校. minor.patch) 和部署_ info (用于指示伺服器的部署方式, 如 'Docker' ' ') .
 
 #### 特性旗(_F)
 
@@ -37,9 +37,9 @@ ERDDAP™匯出您可能發現有用的一些公尺 (起始于ERDDAP™2.25) . �
 
 這是一個資訊測量, 指示圖像是否可使用加速 。
 
-#### http要求(_D)
+####  http 要求(_D)
 
-這是要求回應的直方圖 。 標籤為要求型態 (例如,网格dap,tabledap,文件, wms) , 数据集_ id (如果适用,否则重复要求型態) ,檔案型態 (要求的輸出格式 例如 '.html', '.csv', '.iso19115' ' ') 字元 (要求的語言, 或缺省時的空字串) 狀態(_C) (http要求的狀態代碼, 例如 200, 302, 404) .
+這是要求回應的直方圖 。 標籤為要求型態 (例如,网格dap, tabledap ,文件, wms) , 数据集_ id (如果适用,否则重复要求型態) ,檔案型態 (要求的輸出格式 例如 '.html', '.csv', '.iso19115' ' ') 字元 (要求的語言, 或缺省時的空字串) 狀態(_C) ( http 要求的狀態代碼, 例如 200, 302, 404) .
 
 這可以用於追蹤用數據集 id 來決定伺服器的流行數據集 。 它也可以幫助辨識您的伺服器是否有特殊類型的慢要求 。
 

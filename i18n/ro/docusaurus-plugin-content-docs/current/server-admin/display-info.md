@@ -1,38 +1,38 @@
 ---
 sidebar_position: 7
 ---
-#  Etichete
+#  `ecran Informații` şi `AfișeazăAtribut` Etichete
 
 ## Descriere
-Această caracteristică vă permite să afișați atribute globale ale alegerii dvs. pe pagina de seturi de date în rândul 
+Această caracteristică vă permite să afișați atributele globale ale alegerii dumneavoastră pe pagina seturilor de date din `Informații` Rând.
 
 ## Instrucțiuni de utilizare
-Aceste tag-uri pot fi folosite numai cu parser-ul Sax. Pentru a le permite și utiliza, urmați acești pași:
+Aceste etichete pot fi utilizate numai cu `Sax parser` . Pentru a le permite și utiliza, urmați acești pași:
 
 1.  **Activează parserul SAX** :
-Adăugaţi următoarea linie la fişierul dvs. de setup.xml:
+Adaugă următoarea linie `setup.xml` fișier:
    ```xml
    <useSaxParser>true</useSaxParser>
    ```
 
-2.  **Adaugă etichete în datasets.xml** :
-Îndatasets.xml
+2.  **Adaugă etichete ` datasets.xml ` ** :
+În ` datasets.xml ` fișier, include două etichete de nivel superior:
    ```xml
    <displayInfo></displayInfo>
    <displayAttribute></displayAttribute>
    ```
 
 3.  **Comportament implicit** :
-   - În cazul în care aceste etichete nu sunt adăugate sau lăsate goale îndatasets.xml
-     -   
-     -  
+   - Dacă aceste etichete nu sunt adăugate sau lăsate goale în ` datasets.xml ` fișier, valorile implicite se aplică după cum urmează:
+     -  `ecran Informații` : `Rezumat,License` 
+     -  `AfișeazăAtribut` : `sumar,licence` 
 
 4.  **Asigurarea coerenței** :
-Numărul de valori comma-separate atât în 
+Numărul de valori separate de virgulă în ambele `ecran Informații` şi `AfișeazăAtribut` Etichetele trebuie să fie la fel.
 
 ## Cum funcţionează
-- Tag-ul "DisplayAttribute" specifică atribute globale (definite în cadrul&lt;addAttributesTag-ul trebuie afișat pentru fiecare set de date.
-- Valorile corespunzătoare în tag-ul "DisplayInfo" sunt afișate ca etichete în rândul "UI."
+- ă `AfișeazăAtribut` eticheta specifică atributele globale (definite în cadrul&lt; ` addAttributes ` &gt; etichetă) care trebuie afișată pentru fiecare set de date.
+- Valorile corespunzătoare în `ecran Informații` eticheta este afișată ca etichete în `Informații` Rândul UI.
 - Atunci când utilizatorul plutește peste etichetele afișate, va apărea un tip de instrument, indicând valoarea atributului global.
 
 ## Exemplu
@@ -48,13 +48,13 @@ Numărul de valori comma-separate atât în
 ```
 
 ### Comportamentul UI:
-- Cuvintele "Display1" şi "Display2" vor fi afişate în rândul "I."
+- Cuvintele `Display1` şi `Display2` va fi afișat în `Informații` Rândul pe UI.
 - Atunci când planează, vârfurile de unelte vor afișa valorile atributelor corespunzătoare:
-  - 
-  - 
+  -  `Display1` : Tooltip shows _This is att1_
+  -  `Display2` : Tooltip shows _This is att2_
 
 ## Note
-- Asigurați-vă că denumirile atributelor specificate în tag-ul "DisplayAttribute" corespund atributelor globale definite în setul de date.
+- Asigură numele atributelor specificate în `AfișeazăAtribut` eticheta corespunde atributelor globale definite în setul de date.
 - Incorecte sau lipsesc atribute va loga mesaje de eroare.
 
-Urmând acești pași, puteți personaliza rândul de pe pagina de seturi de date pentru a afișa atributele relevante globale cu vârfuri de instrumente corespunzătoare.
+Prin urmărirea acestor pași, puteți personaliza `Informații` rândul de pe pagina seturilor de date pentru a afișa atribute globale relevante cu vârfuri de instrumente corespunzătoare.

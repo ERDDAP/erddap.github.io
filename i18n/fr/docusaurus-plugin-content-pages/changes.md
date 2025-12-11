@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Voici les changements associés à chaque ERDDAP™ libérer.
 
+
+## Version 2.29.0{#version-2290} 
+ (publié le 2025-12-15) 
+
+Mesures à prendre.
+
+ ERDDAP™ La version 2.29.0 nécessite jdk 25 ou une version ultérieure. Veuillez mettre à jour votre version jdk. Si c'est un problème, vous pouvez construire ERDDAP™ pour un vieux jdk (retour à au moins 17) en modifiant le fichier pom.xml. JDK 25 est une version LTS de Java et comprend de nombreuses améliorations, notamment une amélioration de la performance.
+
+*    **Nouvelles caractéristiques et changements (pour les utilisateurs) :** 
+    * Version ISO 19115: Voir ci-dessous pour les informations administratives. Pour les utilisateurs, vous pouvez maintenant demander des versions spécifiques des métadonnées ISO 19115. Faites-le à partir de la grille tabledap pages pour un jeu de données avec le type de fichier déroulant. Ces versions seront indépendantes du serveur par défaut.
+
+*    **Les choses ERDDAP™ Les administrateurs doivent savoir et faire :** 
+    * Nouvelle fonctionnalité, support MQTT. Pour plus de détails, je recommande de lire [nouvelle page à ce sujet.](/docs/server-admin/mqtt-integration.md) Cela comprend la possibilité de créer des ensembles de données à partir de messages MQTT et de publier des messages MQTT lorsqu'un ensemble de données change. Il est désactivé par défaut, donc si vous voulez l'utiliser, vous devez l'activer.
+
+Merci à Ayush Singh d'avoir travaillé sur MQTT&#33;
+
+    * Améliorations S3 : Ajout de la prise en charge des URI S3 comme valeur cacheFromUrl. Cela permettra ERDDAP pour soutenir les seaux privés hébergés sur amazonaws.com A également abordé un problème de fuite de mémoire S3.
+
+Merci à @SethChampagneNRL pour le travail sur S3&#33;
+
+    * Version ISO 19115: Trois versions différentes des métadonnées ISO 19115 sont désormais prises en charge. La version par défaut est contrôlée par paramètres dans votre setup.xml. Si useSisISO19115 est faux, le serveur fournira par défaut NOAA ISO19115_2 modifié. Si useSisISO19115 est vrai, le serveur utilisera une version différente selon la valeur de useSisISO19139. Si useSisISO19139 est vrai, la valeur par défaut sera ISO19139_2007, si useSisISO19139 est faux, la valeur par défaut sera ISO19115_3_2016. Nous vous recommandons d'utiliser useSisISO19115=true et useSisISO19139=false. Votre organisation peut exiger différents paramètres.
+
+    * Migré au java. time library (au lieu de java.util. Calendrier grégorien) . Cela devrait permettre d'améliorer le rendement des requêtes qui comportent des colonnes date/heure. La grande majorité des ensembles de données ne devraient pas avoir d'impact notable. Le seul cas connu qui provoque une modification est si l'ensemble de données utilise `jours depuis 0000-01-01` ou similaire. Si c'est un problème pour une variable, vous pouvez ajouter ` <att name="legacy_time_adjust"> vrai </att> ` aux addAttributes de l'une ou l'autre des parties dataVariable ou axisVariable .
+    
+    *    datasets.xml est maintenant traité par [Sous-titrage](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Cela a de nombreuses utilisations, y compris la fixation de valeurs privées (comme les mots de passe) en utilisant des variables d'environnement. Cela peut être désactivé en définissant enableEnvParsing to false in setup.xml.
+
+    * Axe de pression: Ajoute un cas particulier pour les élévations définies par pression. Ceci est principalement utilisé dans les ensembles de données de météorologie définissant les élévations verticales dans les niveaux isobares. NOTE: Les valeurs de pression plus faibles signifient des élévations plus élevées, de sorte que l'axe court en face des élévations normales définies en mètres ou en pieds.
+
+Grâce à [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid DeNcFiles avec différentes dimensions: Il y a (expérimental) appui à EDDGrid Des ensembles de données de NcFiles pour avoir des variables qui n'utilisent pas le même ensemble d'axes. S'il vous plaît rapportez comment cela fonctionne pour vous, ou si le comportement ne semble pas tout à fait correct.
+
+    * Il y a une collection d'optimisations qui devrait être sûre, mais avoir des drapeaux pour revenir à l'ancien comportement si nécessaire. Si vous trouvez le besoin de définir l'un des drapeaux, veuillez déposer un bug. Si nous n'entendons pas de problèmes, la plupart de ceux-ci seront supprimés avec le nouveau comportement par défaut dans le futur. Il y a une [nouvelle page sur les drapeaux de fonctionnalités](/docs/server-admin/feature-flags.md) où vous pouvez lire sur ces drapeaux et d'autres.
+
+      * toucher Fil Seulement QuandItems : Il s'agit d'un changement afin que le touchThread ne s'exécute que lorsqu'il y a des éléments dans la file d'attente à toucher. Un filetage de moins est une optimisation mineure mais toujours utile. Par défaut.
+
+      * utilisationNcMetadata Table des matières: Ce changement permet à la table de fichiers interne d'utiliser des attributs nc, en particulier un attribut current_range variable pour éviter de lire le fichier nc entier. Cela peut considérablement accélérer le chargement initial des ensembles de données basés sur des fichiers nc si le_range réel pour chaque variable dans chaque fichier est inclus comme attribut. Notez que cela fait confiance à la valeur, donc si c'est faux, la table de fichiers interne aura des informations incorrectes. Par défaut.
+
+      * ncEn-tête MarqueFichier: Ce changement permet de générer des fichiers d'en-tête nc sans générer le fichier nc représentatif. C'est une petite optimisation pour EDDTable, mais une énorme optimisation pour beaucoup EDDGrid les demandes. Défaut de faux (comme en faux est le comportement optimisé prévu) .
+
+      * Historique Créer un sous-ensemble Tableaux: Ce changement déplace une partie du traitement initial des ensembles de données vers un fil de fond. Cela devrait améliorer le temps de chargement des ensembles de données. Plus précisément, la partie retardée est une table de sous-ensemble, qui est également générée au besoin si le traitement retardé n'a pas encore eu lieu. Par défaut.
+
+    * Quelques petits changements, corrections de bugs (remercie Italo Borrelli pour le fix pour EDDTableFromAggregateRows, merci @SethChampagneNRL pour permettre des longitudes supérieures à 360 EDDGrid LonPM180, et plusieurs autres corrections de bug) , et des optimisations.
+
+*    **Pour ERDDAP™ Développeurs :** 
+    * Des optimisations supplémentaires, y compris le temps d'essai de coupe en deux.
+
+    * Nouveaux profils d'essai pour très minces (externe) ou extrêmement lent (LentAWS) essais.
+
 ## Version 2.28.1{#version-2281} 
  (publié le 2025-09-05) 
 
@@ -49,7 +98,7 @@ Grâce à [@ocefpaf](https://github.com/ocefpaf) , [Conformément à l'article 4
     * Nouvelles données au convertisseur colorbar sur les serveurs à /erddap/convert/color.html
 
 *    **Les choses ERDDAP™ Les administrateurs doivent savoir et faire :** 
-    * Par défaut behavoir est que le cache sera maintenant effacé indépendamment de la tâche des ensembles de données de charge. Cela permettra une compensation plus fiable et régulière des anciens fichiers cache. Il y a du travail supplémentaire pour améliorer le comportement du serveur lorsque faible sur l'espace disque (retour d'une erreur pour les requêtes susceptibles de faire manquer le serveur de l'espace, et nettoyage du cache plus fréquemment dans des circonstances de disque faible pour tenter d'éviter les erreurs) . En datasets.xml   (ou setup.xml) vous pouvez ajouter/configurer le nouveau cache Paramètre ClearMinutes pour contrôler la fréquence des vérifications du serveur pour effacer le cache. Note, le paramètre cacheMinutes existant contrôle l'âge des fichiers à conserver, le nouveau cache ClearMinutes est pour la fréquence à faire un clair de cache.
+    * Le comportement par défaut est que le cache sera maintenant effacé indépendamment de la tâche principale des ensembles de données de charge. Cela permettra une compensation plus fiable et régulière des anciens fichiers cache. Il y a du travail supplémentaire pour améliorer le comportement du serveur quand faible sur l'espace disque (retour d'une erreur pour les requêtes susceptibles de faire manquer le serveur de l'espace, et nettoyage du cache plus fréquemment dans des circonstances de disque faible pour tenter d'éviter les erreurs) . En datasets.xml   (ou setup.xml) vous pouvez ajouter/configurer le nouveau cache Paramètre ClearMinutes pour contrôler la fréquence des vérifications du serveur pour effacer le cache. Note, le paramètre cacheMinutes existant contrôle l'âge des fichiers à conserver, le nouveau cache ClearMinutes est pour la fréquence à faire un clair de cache.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Outre l'apparence mise à jour, il y a une meilleure navigation, recherche, trad
 
     * Nouvelle fonctionnalité pour personnaliser les informations affichées sur les ensembles de données dans l'interface utilisateur. Nous nous attendons à ce que cela soit particulièrement utile pour ajouter des choses comme les citations de jeux de données. Pour plus de détails, vous pouvez lire le [nouvelle documentation](/docs/server-admin/display-info) . Merci à Ayush Singh pour la contribution&#33;
 
-    * Mesures Prométhée supplémentaires. La plus grosse est ` http _request_duration_seconds` qui inclut les temps de réponse de la requête ventilés par: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
+    * Mesures Prométhée supplémentaires. Le plus gros est ` http _request_duration_secondes` qui inclut les temps de réponse des requêtes ventilés par: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 Ce format lisible par machine permettra une meilleure collecte de métriques pour comprendre comment les utilisateurs utilisent le serveur.
 
     * Nouvelle façon de générer des fichiers XML ISO19115. Il utilise Apache SIS et est une nouvelle option dans cette version. Veuillez l'activer et envoyer vos commentaires.

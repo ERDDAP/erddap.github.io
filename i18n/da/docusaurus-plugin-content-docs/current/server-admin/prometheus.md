@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # I nærheden af Prometheus
 
-[Prometheus metrics](https://prometheus.io/)er tilgængelig på /erddap/metrics. JVM kernemålinger blev tilføjet i 2.25 med mangeERDDAP™metrics tilføjet i version 2.26. Hvis du vil bruge metrics, skal du sørge for, at du er i mindst version 2.26. De kan som standard deaktivere dem ved at tilføje
+ [Prometheus metrics](https://prometheus.io/) er tilgængelig på /erddap/metrics. JVM kernemålinger blev tilføjet i 2.25 med mange ERDDAP™ metrics tilføjet i version 2.26. Hvis du vil bruge metrics, skal du sørge for, at du er i mindst version 2.26. De kan som standard deaktivere dem ved at tilføje
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ Disse metrics er designet til at være maskinlæsbar. Mens du kan kontrollere me
 
 ## Kør Prometheus server
 
-Den bedste dokumentation for at køre overvågningstabellen (Prometheus + Grafana) er i Prometheus[readme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md).
+Den bedste dokumentation for at køre overvågningstabellen (Prometheus + Grafana) er i Prometheus [readme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) .
 
-## ERDDAP™metrics
+##  ERDDAP™ metrics
 
 ### JVM
 
-ERDDAP™eksporterer en række målinger, som du kan finde nyttige (begyndende i startenERDDAP™2.25) . For generel overvågning af JVMs sundhed bruger vi de metrics indsamlet af Prometheus-klienten. Dette omfatter data om affaldsopsamling, hukommelsesforbrug, tråde og mere. For flere oplysninger se oplysningerne[I nærheden af PrometheusJavaKlient JVM dokumentation](https://prometheus.github.io/client_java/instrumentation/jvm/).
+ ERDDAP™ eksporterer en række målinger, som du kan finde nyttige (begyndende i starten ERDDAP™ 2.25) . For generel overvågning af JVMs sundhed bruger vi de metrics indsamlet af Prometheus-klienten. Dette omfatter data om affaldsopsamling, hukommelsesforbrug, tråde og mere. For flere oplysninger se oplysningerne [I nærheden af Prometheus Java Klient JVM dokumentation](https://prometheus.github.io/client_java/instrumentation/jvm/) .
 
-### ERDDAP™specifikke specifikke specifikke specifikke
+###  ERDDAP™ specifikke specifikke specifikke specifikke
 
-Vi eksporterer også en rækkeERDDAP™specifikke målinger (begyndende i startenERDDAP™2.26) . Hvis du vil grave ind i koden, kan du finde de metrics indsamlet i[Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java).
+Vi eksporterer også en række ERDDAP™ specifikke målinger (begyndende i starten ERDDAP™ 2.26) . Hvis du vil grave ind i koden, kan du finde de metrics indsamlet i [Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) .
 
-#### ERDDAP_build_info
+####  ERDDAP _build_info
 
-Dette er byggeinfo for byggepladsenERDDAP™server. Den indeholder version (store.minor) , version_full (store.minor.patch) , og implementering_info (Bruges til at angive, hvordan serveren er indsat, som "Docker '') .
+Dette er byggeinfo for byggepladsen ERDDAP™ server. Den indeholder version (store.minor) , version_full (store.minor.patch) , og implementering_info (Bruges til at angive, hvordan serveren er indsat, som "Docker '') .
 
 #### funktion_flags
 
@@ -37,9 +37,9 @@ Dette er en info metric, der viser den aktuelle tilstand af trækflag. De fleste
 
 Dette er en info metric, der angiver, om grafikacceleration er tilgængelig.
 
-#### http_request_duration_kunder
+####  http _request_duration_kunder
 
-Dette er et histogram af anmodning svar varigheder på få sekunder. Etiketterne er anmodning_type (for eksempel gitterdap,tabledap, filer, wms) , datasæt_id (hvis det er relevant, ellers gentager anmodningstype) , filtype (outputformat til anmodning f.eks. '.html', '.csv', '.iso19115 '') , lang_code (sprog for anmodning, eller tom streng, hvis standard) , status_code (httpStatuskode for anmodningen f.eks. 200, 302, 404) .
+Dette er et histogram af anmodning svar varigheder på få sekunder. Etiketterne er anmodning_type (for eksempel gitterdap, tabledap , filer, wms) , datasæt_id (hvis det er relevant, ellers gentager anmodningstype) , filtype (outputformat til anmodning f.eks. '.html', '.csv', '.iso19115 '') , lang_code (sprog for anmodning, eller tom streng, hvis standard) , status_code ( http Statuskode for anmodningen f.eks. 200, 302, 404) .
 
 Dette kan bruges til at spore anmodninger fra datasæt id for at afgøre serverens populære datasæt. Det kan også hjælpe med at identificere, om der er særlige former for anmodninger, der er langsom på din server.
 

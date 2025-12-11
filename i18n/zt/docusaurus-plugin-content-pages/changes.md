@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 以下是與每項變更相關的變更 ERDDAP™ 釋放
 
+
+## 2.29.0版本{#version-2290} 
+ (2025-12-15年) 
+
+需要的行動。
+
+ ERDDAP™ 2.29.0版本需要jdk 25或以后。 請更新您的 Jdk 版本 。 如果有問題,你可以建造 ERDDAP™ 老JDK (返回到至少 17) 更改 pom.xml 檔案。 JDK 25 是 LTS 的版本 Java 包括很多改善,最显著的改善。
+
+*    **新特性和變更 (使用者) :** 
+    * ISO 19115 版本 : 行政信息见下文。 对于使用者, 您可以要求 ISO 19115 中繼資料的特定版本 。 從網格dap/ 做這個 tabledap 檔案類型的數據集的頁面下降 。 這些版本將独立于伺服器預設 。
+
+*    **事情 ERDDAP™ 管理者需要知道和做:** 
+    * 新功能, MQTT 支援 。 我建議你讀一下 [新的一頁](/docs/server-admin/mqtt-integration.md) 其中包括從 MQTT 訊息建立數據集, 以及當數據集變更時公布 MQTT 訊息 。 它默认是關閉的,所以如果你想要使用它, 你需要啟動它。
+
+多虧Ayush Singh在MQTT工作&#33;
+
+    * S3 改进: 新增 S3 URI 支援為快取 FromUrl 值 。 這將允許 ERDDAP 支持在 amazonaws.com 上的私人桶 也處理了 S3 記憶泄露的問題
+
+多虧了@SethChampagneNRL,
+
+    * ISO 19115 版本 : 目前支持3個不同版本的ISO 19115中繼資料。 預設版本由您設定的設定控制. xml 。 如果使用SisISO19115是假的, 伺服器默认會提供 NOAA 修改 ISO19115_2. 如果使用SisISO19115是真的,那么伺服器會根据使用SisISO19139的值使用不同的版本. 如果使用SisISO19139是真實的,默认為ISO19139_2007,如果使用SisISO19139是假的,默认為ISO19115_3_2016. 我們建議使用SisISO19115=校對, 您的組織可能需要不同的設定值 。
+
+    * 游到日本了 時光庫 (而不是java.util。 格雷戈里亞卡倫達) . 這會改善查詢的性能 。 大部分數據集都不會有显著的影響 造成改變的已知案例是數據集是否在使用 `自000-01-01日起` 或相似。 如果對變數有問題, 您可以加入 ` <att name="legacy_time_adjust"> 真 </att> ` 至 addAttributes 區域a dataVariable 或 axisVariable .
+    
+    *    datasets.xml 正在由 a 處理 [字符串替代器](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . 這有很多用途,包括設置私人值 (像密碼) 使用環境變數。 可以在設定. xml 中設定 EnvParsing 到 file 。
+
+    * 壓力轴 : 新增由壓力定義的海拔特例 。 這主要用于定義同位素水平垂直海拔的气象學數據集。 注:壓力值较小,表示海拔较高,因此轴向對面是按公尺或英尺定義的正常海拔。
+
+多虧了 [塞斯尚帕尼尼NRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid 來自不同尺寸的 NcFiles : 有 (實驗) 支持 EDDGrid 來自 NcFiles 資料集的變數不使用同一套斧頭 。 請回報這對你有什么用 或者如果行為不正確的話
+
+    * 有一些优化的集體應該很安全, 但有旗子在有需要的時候會恢復舊的行為。 如果您發現需要設定任何旗號, 請提交 bug 檔 。 如果我們沒有聽到任何問題, 有 [關於特性旗的新頁面](/docs/server-admin/feature-flags.md) 你可以讀到這些和其他的旗子
+
+      * 觸摸 串列 只有 當項目 : 這是變更, 只有在隊列中有要觸碰的項目時, 觸摸程式才會執行 。 少一個線程是小小的优化,但仍有用 。 假設是真實的。
+
+      * 使用NcMetadata 檔案表 : 此變更讓內部檔案表格可以使用 nc 屬性, 特別是變數實際的_ 範圍屬性, 以避免讀取整份 nc 檔案 。 如果檔案中的每個變數的實際距離被列為屬性的話, 這可以大大加速以nc檔案为基础的數據集的初始載入 。 注意此值信任值, 因此如果它錯了, 內部檔案表會有不正確的信息 。 假設是真實的。
+
+      * 北平 MakeFile : 此變更可以讓 nc 頭檔產生而不先產生代表 nc 檔 。 這是 EDD Table 的小型优化, 但對許多人來說是巨大的优化 EDDGrid 要求。 預設為假 (假的就是所謂的优化行為) .
+
+      * 背景 建立子集 表 : 此變更將一些數據集的初始處理移到背景線中 。 這會增加裝入數據集的時間 。 具体地說, 延遲的部分是子集表, 如果延遲的處理尚未發生, 需要時也會產生。 假設是真實的。
+
+    * 一些小變更, 錯誤修正 (感謝Italo Borrelli為EDD Table From Aggregate Rows 做的修复, 謝謝你 @SethChampagneNRL 的經度大于360 EDDGrid LonPM180 和其他多個錯誤修正) 和优化。
+
+*    **為 ERDDAP™ 發展者 :** 
+    * 其他优化,包括把測試跑時間切成一半。
+
+    * 非常片面的新測試設定檔 (外部) 或极慢 (慢AWS) 測試
+
 ## 2.28.1版本{#version-2281} 
  (2025-09-05年) 
 
@@ -49,7 +98,7 @@ title: "ERDDAP™ - Changes"
     * 在 /erddap/convert/color.html 的伺服器上新增數據到色彩列轉換器
 
 *    **事情 ERDDAP™ 管理者需要知道和做:** 
-    * 預設比喻是, 缓存將被清除 。 這樣可以更可靠和定期地清理舊的缓存檔案 。 磁碟空間低時還有更多改善伺服器空間的工作 (傳回可能讓伺服器耗盡空間的要求的錯誤, 並在低磁碟環境下更常地清理快取以試圖防止錯誤) . 在 datasets.xml   (或設定.xml) 您可以新增/ 設定新快取 清除Minutes 參數以控制伺服器檢查清除快取的频率 。 注意, 现有的缓存Minutes 參數控制要保存的檔案的年齡, 新的缓存 清除Minutes是多 频繁做一個 cache 清除。
+    * 預設的行為是快取將被清除, 独立于主要載入數據集的工作 。 這樣可以更可靠和定期地清理舊的缓存檔案 。 磁碟空間低時還有更多工作可以改善伺服器的行為 (傳回可能讓伺服器耗盡空間的要求的錯誤, 並在低磁碟環境下更常地清理快取以試圖防止錯誤) . 在 datasets.xml   (或設定.xml) 您可以新增/ 設定新快取 清除Minutes 參數以控制伺服器檢查清除快取的频率 。 注意, 现有的缓存Minutes 參數控制要保存的檔案的年齡, 新的缓存 清除Minutes是多 频繁做一個 cache 清除。
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ title: "ERDDAP™ - Changes"
 
     * 自訂 UI 中顯示的數據集資訊的新功能 。 我們期望這對加入數據集引文等項目尤其有用。 更多細節你可以讀到 [新文件](/docs/server-admin/display-info) . 感謝阿尤什·辛格的貢獻&#33;
 
-    * 附加的普羅米修斯度量衡 最大的是 http _ request_duration_seconds 包括按 request_type 、 "dataset_id"、 "dataset_type"、 "file_type"、 "lang_code"、 "status_code" 细分的應答時間
+    * 附加的普羅米修斯度量衡 最大的是 ` http 要求(_D)` 包括以「 request_type 」、「 dataset_id 」、「 dataset_type 」、「 file_type 」、 「lang_code 」、 「status_code 」來细分的應答時間 。
 此機型可讀格式可以更好地收集公制以了解使用者如何使用伺服器 。
 
     * 產生 ISO19115 XML 檔案的新方式 。 它使用Apache SIS, 是此版本中的新選項 。 請啟用並發送回復 。

@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Zde jsou změny spojené s každým ERDDAP™ Uvolnit.
 
+
+## Verze 2.29.0{#version-2290} 
+ (uvolněno 2025-12-15) 
+
+Akce nutná.
+
+ ERDDAP™ verze 2.29.0 vyžaduje jdk 25 nebo novější. Prosím aktualizujte si verzi jdk. Pokud je to problém, můžete stavět ERDDAP™ pro starší jdk (nejméně 17) změnou souboru pom.xml. JDK 25 je LTS uvolnění Java a zahrnuje mnoho zlepšení, zejména zlepšení výkonnosti.
+
+*    **Nové funkce a změny (pro uživatele) :** 
+    * ISO 19115 verze: Viz níže pro admin info. Pro uživatele si nyní můžete vyžádat konkrétní verze ISO 19115 metadat. Udělejte to z mřížky/ tabledap stránky pro datový soubor s typem souboru klesá. Tyto verze budou nezávislé na výchozím nastavení serveru.
+
+*    **Věci ERDDAP™ Administrátoři potřebují vědět a udělat:** 
+    * Nová funkce, MQTT podpora. Pro podrobnosti doporučuji přečíst [Nová stránka.](/docs/server-admin/mqtt-integration.md) To zahrnuje možnost vytvářet soubory dat ze zpráv MQTT a zveřejňovat zprávy MQTT, když se soubor dat změní. Je vypnuta ve výchozím nastavení, takže pokud ji chcete použít, musíte ji povolit.
+
+Díky Ayush Singh za práci na MQTT&#33;
+
+    * Zlepšení S3: Přidání podpory S3 URI jako cacheFromUrl hodnoty. To umožní ERDDAP na podporu soukromých kbelíků hosted off amazonaws.com Také řešil problém úniku paměti S3.
+
+Díky @SethChampagneNRL za práci na S3&#33;
+
+    * ISO 19115 verze: Nyní existuje podpora pro 3 různé verze metadat ISO 19115. Výchozí verze je řízena nastavením ve vašem nastavení.xml. Pokud je použitíSisISO19115 nepravdivé, server bude standardně poskytovat NOAA upravená ISO19115_2. Pokud je použitíSisISO19115 pravdivé, pak server použije jinou verzi v závislosti na hodnotě použitíSisISO19139. Pokud je použitíSisISO19139 pravdivé, bude výchozí hodnotou ISO19139_2007, pokud je použitíSisISO19139 nepravdivé, bude výchozí hodnotou ISO19115_3_2016. Doporučujeme používatSisISO19115=true a používatSisISO19139=false. Vaše organizace může vyžadovat různá nastavení.
+
+    * Migroval do javy. knihovna času (místo Java.util. GregorianKalendar) . To by mělo poskytnout zlepšení výkonnosti dotazů, které zahrnují sloupce datum/čas. Pro drtivou většinu souborů údajů by neměl existovat žádný zřetelný dopad. Jediný známý případ, který způsobí změnu, je, pokud soubor dat používá `dny od 0000-01-01` nebo podobné. Pokud je to problém proměnné, můžete přidat ` <att name="legacy_time_adjust"> pravda </att> ` do addAttributes a dataVariable nebo axisVariable .
+    
+    *    datasets.xml nyní zpracovává [Stringsubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . To má mnoho využití včetně nastavení soukromých hodnot (jako hesla) pomocí proměnných prostředí. To může být vypnuto nastavením EnvParsing na false v setup.xml.
+
+    * Tlaková osa: Přidá speciální případ pro zvýšení definované tlakem. To se používá především v meteorologických souborech definujících vertikální zvýšení izobarických hladin. POZNÁMKA: Menší hodnoty tlaku znamenají vyšší nadmořská výška, takže osa běží proti normálnímu zvýšení definovanému v metrech nebo stopách.
+
+Díky [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid FromNcFiles s různými rozměry: Existuje. (experimentální) podpora EDDGrid Soubory souborů FromNcFiles mají proměnné, které nepoužívají stejnou sadu os. Prosím, informujte mě o tom, jak to pro vás funguje, nebo jestli se to chování nezdá správné.
+
+    * Je tu sbírka optimizací, které by měly být bezpečné, ale mají vlajky, které se vrátí ke starému chování, pokud bude třeba. Pokud zjistíte, že je třeba nastavit některou z vlajek, vyplňte prosím chybu. Pokud se nedozvíme žádné problémy, většina z nich bude odstraněna s novým chováním v budoucnu. Je tu [nová stránka o vlajkách funkcí](/docs/server-admin/feature-flags.md) kde si můžete přečíst o těchto a dalších vlajek.
+
+      * dotek Nitě Pouze WhenItems: To je změna tak, že dotykThread bude běžet pouze tehdy, když jsou položky ve frontě se dotknout. O jedno vlákno méně běží je menší optimalizace, ale stále užitečné. Defaulty k pravdě.
+
+      * useNcMetadata Pro FileTable: Tato změna umožňuje interní tabulce souborů používat atributy nc, konkrétně atribut proměnné actual_range, aby se zabránilo čtení celého souboru nc. To může drasticky urychlit počáteční načítání souborů založených na souborech nc, pokud je skutečný_range pro každou proměnnou v každém souboru zahrnut jako atribut. Všimněte si, že toto má hodnotu, takže pokud je špatná, vnitřní tabulka souboru bude mít nesprávné informace. Defaulty k pravdě.
+
+      * ncheader MakeFile: Tato změna umožňuje generovat soubory nc header bez prvního generování reprezentativního souboru nc. To je malá optimalizace pro EDDTable, ale obrovská optimalizace pro mnohé EDDGrid žádosti. Výchozí hodnoty false (jako ve falešné je zamýšlené optimalizované chování) .
+
+      * pozadí VytvořitSubset Tabulky: Tato změna posune některé z počátečních zpracování souborů dat na zadní vlákno. To by mělo zlepšit dobu nakládání souborů údajů. Konkrétně opožděná část je podmnožina tabulek, které jsou také generovány v případě potřeby, pokud se zpoždění zpracování ještě nestalo. Defaulty k pravdě.
+
+    * Některé malé změny, opravy chyb (děkuji Italo Borrelli za opravu pro EDDTableFromAgregateRows, Díky. @SethChampagneNRL pro umožnění délky větší než 360 v EDDGrid LonPM180 a několik dalších oprav chyb) a optimalizace.
+
+*    **Pro ERDDAP™ Vývojáři:** 
+    * Dodatečné optimalizace, včetně doby řezu na polovinu.
+
+    * Nové zkušební profily pro velmi vločkovité (vnější) nebo extrémně pomalu (slowAWS) testy.
+
 ## Verze 2.28.1{#version-2281} 
  (propuštěn 2025-09-05) 
 
@@ -49,7 +98,7 @@ Díky [@ocefpaf](https://github.com/ocefpaf) , [@abkfenris](https://github.com/a
     * Nová data do převodníku barev na serverech na /erddap/convert/color.html
 
 *    **Věci ERDDAP™ Administrátoři potřebují vědět a udělat:** 
-    * Výchozím behavoirem je, že cache bude nyní vymazána nezávisle na úkolu hlavního souboru souborů zatížení. To umožní spolehlivější a pravidelné čištění starých cache souborů. Je zde další práce na vylepšení serveru behavoir, když je málo na diskovém prostoru (vrácení chyby pro žádosti, které mohou způsobit, že server vyprší z místa, a vyčištění cache častěji za nízkých okolností disku, aby se pokusil zabránit chybám) . In datasets.xml   (nebo nastavení.xml) můžete přidat/nastavit novou cache Parametr ClearMinutes pro kontrolu toho, jak často server kontroluje pro odstranění cache. Poznámka: stávající parametr cacheMinutes řídí věk souborů, které mají být uchovávány, novou cache ClearMinutes je pro to, jak často dělat Chache jasné.
+    * Výchozí chování spočívá v tom, že cache bude nyní vymazána nezávisle na úkolu hlavního souboru souborů zatížení. To umožní spolehlivější a pravidelné čištění starých cache souborů. K dispozici je další práce na zlepšení chování serveru při nízkém prostoru na disku (vrácení chyby pro žádosti, které mohou způsobit, že server vyprší z místa, a vyčištění cache častěji za nízkých okolností disku, aby se pokusil zabránit chybám) . In datasets.xml   (nebo nastavení.xml) můžete přidat/nastavit novou cache Parametr ClearMinutes pro kontrolu toho, jak často server kontroluje pro odstranění cache. Poznámka: stávající parametr cacheMinutes řídí věk souborů, které mají být uchovávány, novou cache ClearMinutes je pro to, jak často dělat Chache jasné.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Kromě aktualizovaného vzhledu je lepší navigace, vyhledávání, překlad, a
 
     * Nová funkce pro přizpůsobení informací o datových souborech v UI. Očekáváme, že to bude obzvlášť užitečné, když přidáme věci jako citace souborů dat. Další podrobnosti si můžete přečíst [nová dokumentace](/docs/server-admin/display-info) . Díky Ayush Singh za příspěvek&#33;
 
-    * Další Prometheovy metriky. Největší z nich je: http _request_duration_sekundy [65], které zahrnují časy odezvy na žádost v členění podle: "request_type," "dataset_id," "dataset_type," "file_type," "lang_code," "status_code"
+    * Další Prometheovy metriky. Největší je ` http _request_durace_sekundy` který zahrnuje doby odezvy na žádost v členění podle: "request_type," "dataset_id," "dataset_type," "file_type," "lang_code," "status_code"
 Tento stroj čitelný formát umožní lepší sběr metrik pochopit, jak uživatelé používají server.
 
     * Nový způsob generování souborů ISO19115 XML. Používá Apache SIS a je novou volbou v tomto vydání. Prosím, povolte to a pošlete zpětnou vazbu.

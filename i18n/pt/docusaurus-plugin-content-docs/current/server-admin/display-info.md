@@ -1,38 +1,38 @@
 ---
 sidebar_position: 7
 ---
-# `displayInfo` e `displayAttribute` Tags
+#  `exibição de exibição Info` e `Visualização` Tags
 
 ## Descrição
-Este recurso permite que você exiba atributos globais de sua escolha na página de conjuntos de dados na linha `Information`.
+Este recurso permite exibir atributos globais de sua escolha na página de conjuntos de dados na `Informação` linha.
 
 ## Instruções de uso
-Estas tags só podem ser usadas com o `Sax parser`. Para habilitar e usá-los, siga estes passos:
+Estas tags só podem ser usadas com o `Sax parser` . Para habilitar e usá-los, siga estes passos:
 
 1.  **Habilitar o SAX Parser** :
-Adicione a seguinte linha ao seu arquivo `setup.xml`:
+Adicione a seguinte linha ao seu `setup.xml` arquivo:
    ```xml
    <useSaxParser>true</useSaxParser>
    ```
 
-2.  **Adicionar etiquetas em `datasets.xml"** :
-No `datasets.xml` arquivo, inclua duas tags de nível superior:
+2.  **Adicionar etiquetas ` datasets.xml ` ** :
+No ` datasets.xml ` arquivo, inclua duas tags de nível superior:
    ```xml
    <displayInfo></displayInfo>
    <displayAttribute></displayAttribute>
    ```
 
 3.  **Comportamento padrão** :
-   - Se estas tags não forem adicionadas ou deixadas vazias no `datasets.xml` arquivo, os valores padrão são aplicados da seguinte forma:
-     - `displayInfo`: "Summary, License "
-     - `displayAttribute`: `summary,license "
+   - Se estas tags não forem adicionadas ou deixadas vazias no ` datasets.xml ` arquivo, os valores padrão são aplicados da seguinte forma:
+     -  `exibição de exibição Info` : `Resumo, Licenso` 
+     -  `Visualização` : `resumo, licença` 
 
 4.  **Garantir a consistência** :
-O número de valores separados por vírgula em ambas as tags `displayInfo` e `displayAttribute` deve ser o mesmo.
+O número de valores separados por vírgula em ambos `exibição de exibição Info` e `Visualização` As etiquetas devem ser as mesmas.
 
 ## Como funciona
-- A tag `displayAttribute` especifica atributos globais (definidos dentro do&lt;"addAttributes` &gt; tag) a ser exibido para cada conjunto de dados.
-- Os valores correspondentes na tag `displayInfo` são exibidos como rótulos na linha `Information` da interface do usuário.
+- O `Visualização` tag especifica atributos globais (definidos dentro do&lt; ` addAttributes ` &gt; tag) a ser exibido para cada conjunto de dados.
+- Os valores correspondentes no `exibição de exibição Info` tag são exibidos como rótulos no `Informação` linha da UI.
 - Quando o usuário passa sobre as etiquetas exibidas, aparecerá uma dica de ferramenta, mostrando o valor do atributo global.
 
 ## Exemplo
@@ -48,13 +48,13 @@ O número de valores separados por vírgula em ambas as tags `displayInfo` e `di
 ```
 
 ### Comportamento da UI:
-- As palavras `Display1` e `Display2` serão exibidas na linha `Information` na interface do usuário.
+- As palavras `Exibição1` e `Exibição2` será exibido no `Informação` linha na UI.
 - Quando pairado, as dicas de ferramentas exibirão os valores de atributos correspondentes:
-  - `Display1`: mostra a ponta da ferramenta _This is att1_
-  - `Display2`: mostra a ponta da ferramenta _This is att2_
+  -  `Exibição1` : mostra a ponta da ferramenta _This is att1_
+  -  `Exibição2` : mostra a ponta da ferramenta _Este é o att2_
 
 ## Notas
-- Certifique-se de que os nomes de atributos especificados na tag `displayAttribute` correspondem aos atributos globais definidos no conjunto de dados.
+- Garantir os nomes de atributos especificados no `Visualização` tag corresponder aos atributos globais definidos no conjunto de dados.
 - Os atributos incorretos ou ausentes registrarão mensagens de erro.
 
-Ao seguir estas etapas, você pode personalizar a linha `Information` na página de conjuntos de dados para exibir atributos globais relevantes com a ponta de ferramenta correspondente.
+Seguindo estes passos, você pode personalizar o `Informação` linha na página de conjuntos de dados para exibir atributos globais relevantes com a ponta da ferramenta correspondente.

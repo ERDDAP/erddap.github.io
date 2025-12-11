@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # プロメテウス
 
-[Prometheus メトリック](https://prometheus.io/)/erddap/metrics で利用できます。 JVMコアメトリックは2.25に多く追加されましたERDDAP™バージョン 2.26 で追加されたメトリック。 メトリックを使用する場合は、少なくともバージョン2.26にあることを確認してください。 デフォルトで有効にするには、追加することで無効にできます。
+ [Prometheus メトリック](https://prometheus.io/) /erddap/metrics で利用できます。 JVMコアメトリックは2.25に多く追加されました ERDDAP™ バージョン 2.26 で追加されたメトリック。 メトリックを使用する場合は、少なくともバージョン2.26にあることを確認してください。 デフォルトで有効にするには、追加することで無効にできます。
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ setup.xml へ。
 
 ## Prometheusサーバーの実行
 
-監視スタックを実行するための最良のドキュメント (プロメテウス+グラファナ) プロメテウス[フィードバック](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md)お問い合わせ
+監視スタックを実行するための最良のドキュメント (プロメテウス+グラファナ) プロメテウス [フィードバック](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) お問い合わせ
 
-## ERDDAP™メトリック
+##  ERDDAP™ メトリック
 
 ### JVMについて
 
-ERDDAP™役に立つメトリックの数をエクスポート (はじめにERDDAP™2.25) お問い合わせ JVMの健康全般のモニタリングでは、Prometheusクライアントが収集したメトリックを使用します。 ゴミ収集、メモリ使用、ネジなどのデータが含まれています。 詳細については、こちらをご覧ください[プロメテウスJavaクライアント JVM ドキュメント](https://prometheus.github.io/client_java/instrumentation/jvm/)お問い合わせ
+ ERDDAP™ 役に立つメトリックの数をエクスポート (はじめに ERDDAP™ 2.25) お問い合わせ JVMの健康全般のモニタリングでは、Prometheusクライアントが収集したメトリックを使用します。 ゴミ収集、メモリ使用、ネジなどのデータが含まれています。 詳細については、こちらをご覧ください [プロメテウス Java クライアント JVM ドキュメント](https://prometheus.github.io/client_java/instrumentation/jvm/) お問い合わせ
 
-### ERDDAP™仕様
+###  ERDDAP™ 仕様
 
-私達はまた数を輸出しますERDDAP™特定のメトリック (はじめにERDDAP™2.26) お問い合わせ コードに掘り込む場合は、収集したメトリックを調べることができます。[メトリクス.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java)お問い合わせ
+私達はまた数を輸出します ERDDAP™ 特定のメトリック (はじめに ERDDAP™ 2.26) お問い合わせ コードに掘り込む場合は、収集したメトリックを調べることができます。 [メトリクス.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) お問い合わせ
 
-#### ERDDAPアーカイブ _build_info
+####  ERDDAP アーカイブ _build_info
 
-これはビルド情報です。ERDDAP™サーバ。 バージョンが含まれています (メジャー.マイナー) , バージョン_full (メジャー.マイナー.パッチ) , デプロイメント_info ('Docker のようなサーバーがデプロイされる方法を示すのに使われます お問い合わせ) お問い合わせ
+これはビルド情報です。 ERDDAP™ サーバ。 バージョンが含まれています (メジャー.マイナー) , バージョン_full (メジャー.マイナー.パッチ) , デプロイメント_info ('Docker のようなサーバーがデプロイされる方法を示すのに使われます お問い合わせ) お問い合わせ
 
 #### 関数_flags
 
@@ -37,9 +37,9 @@ ERDDAP™役に立つメトリックの数をエクスポート (はじめにERD
 
 これは、グラフィックアクセラレーションが利用可能なかどうかを示す情報メトリックです。
 
-#### http_request_duration_秒
+####  http _request_duration_秒
 
-これは、応答時間秒単位のヒストグラムリクエストです。 ラベルは request_type です。 (例えば Griddap,tabledap, ファイル, wms) , データセット_id (該当する場合、そうしないとリクエストタイプを繰り返す) , ファイル_type (要求のための出力フォーマット 例:'.html'、'.csv'、'.iso19115 お問い合わせ) 、 lang_code の (リクエストの言語、またはデフォルトで空の文字列) , ステータス_code (httpリクエストのステータスコード 200, 302, 404) お問い合わせ
+これは、応答時間秒単位のヒストグラムリクエストです。 ラベルは request_type です。 (例えば Griddap, tabledap , ファイル, wms) , データセット_id (該当する場合、そうしないとリクエストタイプを繰り返す) , ファイル_type (要求のための出力フォーマット 例:'.html'、'.csv'、'.iso19115 お問い合わせ) 、 lang_code の (リクエストの言語、またはデフォルトで空の文字列) , ステータス_code ( http リクエストのステータスコード 200, 302, 404) お問い合わせ
 
 これは、サーバの一般的なデータセットを決定するために、データセットIDでリクエストを追跡するために使用できます。 また、サーバーに遅くなっている要求の特定の種類があるかどうかを識別するのに役立ちます。
 

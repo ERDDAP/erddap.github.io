@@ -277,10 +277,10 @@ Níl an Tweet seo ar fáil ERDDAP™ .
              
 ###  ERDDAP™ Clár na dToghthóirí{#erddap-content} 
 3.   [Socraigh suas an `cliceáil grianghraf a mhéadú` comhaid chumraíocht.](#erddap-content) 
-Ar Linux, Mac, agus Windows, íoslódáil [erddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
+Ar Linux, Mac, agus Windows, íoslódáil [erddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.1/erddapContent.zip) 
 agus unzip sé isteach sa `taiseachas aeir: fliuch` web development `cliceáil grianghraf a mhéadú` .
 
-__Version 1.0.0, 20333 beart, MD5 = 2B8D2A5AE5ED73E3A42B529C168C60B5, dáta 2024-10-14
+__Version 1.0.1, 20683 beart, MD5 =98a8099e7e674d59fe35e9c96efa7b5, dáta 2025-06-02__
 
 Tá roinnt leaganacha roimhe seo ar fáil freisin:
 
@@ -357,9 +357,9 @@ Is smaoineamh maith a fhíorú go bhfuil an toradh go maith XML trí ghreamú an
      
 ### Suiteáil an erddap. comhad cogadh{#install-the-erddapwar-file} 
 
-4. Ar Linux, Mac, agus Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) _ isteach `riachtanais uisce: measartha` :
+4. Ar Linux, Mac, agus Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) _ isteach `riachtanais uisce: measartha` :
 
-__Version 2.28.1, 622,676,238 beart, MD5 = 48b4226045f950c8d69ef9521b9bc9, dar dáta 2025-09-05___
+__Version 2.29.0, 706,788,135 beart, MD5 = A5ED0DCC8D46CA27640FFEB8CE4A8560, dátaithe Tuilleadh eolais
 
 Is é an comhad .war mór toisc go bhfuil sé chósta réiteach ard, teorainn, agus sonraí ingearchló is gá chun léarscáileanna a chruthú.
 
@@ -374,6 +374,7 @@ Tá roinnt leaganacha roimhe seo ar fáil freisin.
    *  [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)   (592,292,039 beart, MD5 = 652AFC9D1421F00B5F789DA2C4732D4C, dar dáta 2024-11-07) 
    *  [Déan teagmháil anois](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)   (607,404,032 beart, MD5 = 99a725108b37708e5420986c16119, dar dáta 2025-03-31) 
    *  [2.27.0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)   (620,554,403 beart, MD5 = 3b2086c659eee41452dff447bf4ef7, dátaithe 2025-06-11) 
+   *  [2.28.1](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war)   (622,676,238 beart, MD5 = 48b4226045f950c8d69ef9521b9bc9, dar dáta 2025-09-05) 
 
 ### Cumraigh seachfhreastalaí (internet)  {#proxy} 
 

@@ -277,10 +277,10 @@ Ini umum ketika Anda pertama kali menyiapkan ERDDAP™ Sitemap
              
 ###  ERDDAP™ Login{#erddap-content} 
 3.   [Sitemap `Login` file konfigurasi.](#erddap-content) 
-Di Linux, Mac, dan Windows, download [Login .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
+Di Linux, Mac, dan Windows, download [Login .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.1/erddapContent.zip) 
 dan unzip ke dalam Meme it `Login` Katalog `Login` Sitemap
 
-__Version 1.0.0, 20333 byte, MD5=2B8D2A5ED73E3A42B529C168C60B5, tanggal 2024-10-14__
+__Version 1.0.1, 20683 byte, MD5=98a8099e7e674da59fe35e9c96efa7b5, tanggal 2025-06-02__
 
 Beberapa versi sebelumnya juga tersedia:
 
@@ -357,9 +357,9 @@ itu adalah ide yang baik untuk memverifikasi bahwa hasilnya adalah XML berbentuk
      
 ### Menginstal erddap. file perang{#install-the-erddapwar-file} 
 
-4. Di Linux, Mac, dan Windows, __download [Login](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) Sitemap `Login` Sitemap
+4. Di Linux, Mac, dan Windows, __download [Login](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) Sitemap `Login` Sitemap
 
-__Version 2.28.1, 622,676,238 byte, MD5=48b4226045f950c8a8d69ef9521b9bc9, tanggal 2025-09-05__
+__Version 2.29.0, 706,788,135 byte, MD5=A5ED0DCC8D46CA27640FFEB8CE4A8560, tanggal 12-15-2025__
 
 File .war besar karena mengandung garis pantai resolusi tinggi, batas, dan data elevasi yang diperlukan untuk membuat peta.
 
@@ -374,6 +374,7 @@ Beberapa versi sebelumnya juga tersedia.
    *  [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)   (592,292,039 byte, MD5=652AFC9D1421F00B5F789DA2C4732D4C, tanggal 2024-11-07) 
    *  [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)   (607,404,032 byte, MD5=99a725108b37708e5420986c16a119, tanggal 2025-03-31) 
    *  [SmadAV 11.4](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)   (620,554,403 byte, MD5=3b2086c659eee4145ca2dff447bf4ef7, tanggal 2025-06-11) 
+   *  [SmadAV 11.3](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war)   (622,676,238 byte, MD5=48b4226045f950c8a8d69ef9521b9bc9, tanggal 2025-09-05) 
 
 ### Login (penyebaran spesifik)  {#proxy} 
 

@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Ang pahinang ito ay isang draft. Ito ay makikita lamang sa dev at ililiban sa gusali ng produksiyon.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "( Buksan sa bagong tab)",
+    "description": "The ARIA label for the external link icon"
   }
 }

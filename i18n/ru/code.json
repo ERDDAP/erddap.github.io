@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Эта страница — черновик. Он будет виден только в разработчике и будет исключен из производственной сборки.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(открывается в новой вкладке)",
+    "description": "The ARIA label for the external link icon"
   }
 }

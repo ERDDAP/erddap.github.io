@@ -3,15 +3,15 @@ title: "NCCSV 1.10"
 ---
 
 # Billeder af NCCSV
-A A A A A ANetCDF-Kompatibel ASCII CSV Fil specifikation,
+A A A A A A NetCDF -Kompatibel ASCII CSV Fil specifikation,
 Version 1.10
 
 Bob Simons og Steve Hankin
-"NCCSV" af Bob Simons og Steve Hankin er licenseret under[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+"NCCSV" af Bob Simons og Steve Hankin er licenseret under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 
 
-## [Introduktion](#introduction) {#introduction} 
+##  [Introduktion](#introduction)  {#introduction} 
 
-Dette dokument angiver et ASCII CSV tekstfilformat, der kan indeholde alle oplysninger (metadata og data) der kan findes i enNetCDF .ncfil, der indeholder en CSV-fil-lignende tabel af data. Filudvidelse for en ASCII CSV-fil efter denne specifikation skal være .csv, så den kan læses let og korrekt i regnearksprogrammer som Excel og Google Sheets. Bob Simons vil skrive software til at konvertere en NCCSV fil til enNetCDF-3 (og måske også enNetCDF-4)  .ncfil, og omvendt, uden tab af oplysninger. Bob Simons har ændret sig[ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html)at understøtte læsning og skrive denne type fil.
+Dette dokument angiver et ASCII CSV tekstfilformat, der kan indeholde alle oplysninger (metadata og data) der kan findes i en NetCDF   .nc fil, der indeholder en CSV-fil-lignende tabel af data. Filudvidelse for en ASCII CSV-fil efter denne specifikation skal være .csv, så den kan læses let og korrekt i regnearksprogrammer som Excel og Google Sheets. Bob Simons vil skrive software til at konvertere en NCCSV fil til en NetCDF -3 (og måske også en NetCDF -4)   .nc fil, og omvendt, uden tab af oplysninger. Bob Simons har ændret sig [ ERDDAP™ ](https://coastwatch.pfeg.noaa.gov/erddap/index.html) at understøtte læsning og skrive denne type fil.
 
 NCCSV-formatet er designet, så regnearkssoftware som Excel og Google Sheets kan importere en NCCSV-fil som en csv-fil, med alle oplysninger i regnearkets celler klar til redigering. Eller et regneark kan oprettes fra bunden efter NCCSV konventionerne. Uanset kilden til regnearket, hvis det derefter eksporteres som en .csv-fil, vil den i overensstemmelse med NCCSV-specifikationerne, og ingen oplysninger vil blive tabt. De eneste forskelle mellem NCCSV-filer og de analoge regnearksfiler, der følger disse konventioner, er:
 
@@ -22,19 +22,19 @@ Strenge i regneark er aldrig omgivet af dobbelte citater.
 * Interne dobbelttilbud (" " " ") i Strings i NCCSV filer vises som 2 dobbelte citater.
 Interne dobbelttilbud i regneark vises som 1 dobbeltværelse.
 
-Se billederne[Olieark](#spreadsheets)Klik her for flere oplysninger.
+Se billederne [Olieark](#spreadsheets) Klik her for flere oplysninger.
 
 ### Streambar{#streamable} 
-Ligesom CSV-filer generelt, NCCSV-filer er streambare. Således, hvis en NCSV genereres på-flyet af en dataserver som f.eks.[ERDDAP™](https://coastwatch.pfeg.noaa.gov/erddap/index.html), serveren kan begynde at streame data til anmodningeren, før alle data er indsamlet. Dette er en nyttig og ønskelig funktion.NetCDFfiler, med kontrast, er ikke streambare.
+Ligesom CSV-filer generelt, NCCSV-filer er streambare. Således, hvis en NCSV genereres på-flyet af en dataserver som f.eks. [ ERDDAP™ ](https://coastwatch.pfeg.noaa.gov/erddap/index.html) , serveren kan begynde at streame data til anmodningeren, før alle data er indsamlet. Dette er en nyttig og ønskelig funktion. NetCDF filer, med kontrast, er ikke streambare.
 
-### ERDDAP™ {#erddap} 
-Denne specifikation er designet, så NCCSV-filer og.ncfiler, der kan oprettes fra dem, kan bruges af en[ERDDAP™Dataserver](https://coastwatch.pfeg.noaa.gov/erddap/index.html)  (via via[EDDTableFraNccsvFiles](/docs/server-admin/datasets#eddtablefromnccsvfiles)og og og[EDDTableFraNcFiles](/docs/server-admin/datasets#eddtablefromncfiles)Datasæt typer) , men denne specifikation er ekstern tilERDDAP.ERDDAP™har flere nødvendige globale attributter og mange anbefalede globale og variable attributter, hovedsagelig baseret på CF og ACDD attributter (se
-[/docs/server-admin / Datasets#global-attributes](/docs/server-admin/datasets#global-attributes)).
+###  ERDDAP™  {#erddap} 
+Denne specifikation er designet, så NCCSV-filer og .nc filer, der kan oprettes fra dem, kan bruges af en [ ERDDAP™ Dataserver](https://coastwatch.pfeg.noaa.gov/erddap/index.html)   (via via [EDDTableFraNccsvFiles](/docs/server-admin/datasets#eddtablefromnccsvfiles) og og og [EDDTableFraNcFiles](/docs/server-admin/datasets#eddtablefromncfiles) Datasæt typer) , men denne specifikation er ekstern til ERDDAP . ERDDAP™ har flere nødvendige globale attributter og mange anbefalede globale og variable attributter, hovedsagelig baseret på CF og ACDD attributter (se
+ [/docs/server-admin / Datasets#global-attributes](/docs/server-admin/datasets#global-attributes) ).
 
 ### Balancebalance{#balance} 
 Designet af NCCSV format er en balance mellem flere krav:
 
-* Filerne skal indeholde alle de data og metadata, der ville være i en faneNetCDFfil, herunder specifikke datatyper.
+* Filerne skal indeholde alle de data og metadata, der ville være i en fane NetCDF fil, herunder specifikke datatyper.
 * Filerne skal kunne læses ind og derefter skrives ud af et regneark uden tab af oplysninger.
 * Filerne skal være nemme for mennesker at oprette, redigere, læse og forstå.
 * Filerne skal være i stand til at være utvetydigt parsed af computerprogrammer.
@@ -45,61 +45,61 @@ Hvis nogle krav i dette dokument synes mærkeligt eller picky, er det sandsynlig
 Denne specifikation henviser til flere andre specifikationer og biblioteker, som det er designet til at arbejde med, men denne specifikation er ikke en del af nogen af disse andre specifikationer, og heller ikke har brug for ændringer til dem, og heller ikke konflikten med dem. Hvis en detalje i forbindelse med en af disse standarder ikke er angivet her, se den relaterede specifikation. Det omfatter navnlig:
 
 * Intributekonventionen for Dataset Discovery (ACDD) metadata standard:
-    [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3).
+     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * Klima og prognoser (CF) metadata standard:
-    [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html).
-* The The The The The The TheNetCDFBrugerguide (NUG) :
-    [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html).
-* The The The The The The TheNetCDFsoftwarebiblioteker somNetCDF-java ogNetCDF-c:
-    [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/). Disse biblioteker kan ikke læse NCCSV-filer, men de kan læse.ncfiler oprettet fra NCCSV filer.
-* JSON:[ https://www.json.org/ ](https://www.json.org/)
+     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+* The The The The The The The NetCDF Brugerguide (NUG) :
+     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+* The The The The The The The NetCDF softwarebiblioteker som NetCDF -java og NetCDF -c:
+     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Disse biblioteker kan ikke læse NCCSV-filer, men de kan læse .nc filer oprettet fra NCCSV filer.
+* JSON: [https://www.json.org/](https://www.json.org/) 
 
 ### Ikkeering{#notation} 
-I denne specifikation, beslag,\\[ \\], note valgfrie elementer.
+I denne specifikation, beslag, \\[   \\] , note valgfrie elementer.
 
-## [Filstruktur](#file-structure) {#file-structure} 
+##  [Filstruktur](#file-structure)  {#file-structure} 
 
 En komplet NCCSV-fil består af to sektioner: metadata sektionen, efterfulgt af data sektionen.
 
-NCCSV filer skal indeholde kun 7bit ASCII tegn. På grund af dette, kan tegnsættet eller kodning bruges til at skrive og læse filen være ethvert tegnsæt eller kodning, der er kompatibel med 7-bit ASCII-tegnsættet, f.eks. ISO-8859-1.ERDDAP™Læser og skriver NCCSV-filer med ISO-8859-1 charset.
+NCCSV filer skal indeholde kun 7bit ASCII tegn. På grund af dette, kan tegnsættet eller kodning bruges til at skrive og læse filen være ethvert tegnsæt eller kodning, der er kompatibel med 7-bit ASCII-tegnsættet, f.eks. ISO-8859-1. ERDDAP™ Læser og skriver NCCSV-filer med ISO-8859-1 charset.
 
-NCCSV filer kan bruge enten nyline (\\n)   (som er fælles på Linux og Mac OS X-computere) eller vognReturn plus nyline (\\r\\n)   (som er fælles på Windows-computere) som end-of-line markører, men ikke begge.
+NCCSV filer kan bruge enten nyline ( \\n )   (som er fælles på Linux og Mac OS X-computere) eller vognReturn plus nyline ( \\r\\n )   (som er fælles på Windows-computere) som end-of-line markører, men ikke begge.
 
-### .nccsvMetadata{#nccsvmetadata} 
-Når både skaberen og læseren forventer det, er det også muligt og nogle gange nyttigt at lave en variant af en NCCSV-fil, der indeholder kun metadata sektionen (herunder\\*END\\_METADATA\\*Linjelinje) . Resultatet giver en komplet beskrivelse af filens attributter, variable navne og datatyper, således at det samme formål som .das plus .dds svar fra enOPeNDAPserver.ERDDAP™vil returnere denne variation, hvis du anmoder om fil Type=.nccsvMetadata fra enERDDAP™Datasæt.
+###  .nccsv Metadata{#nccsvmetadata} 
+Når både skaberen og læseren forventer det, er det også muligt og nogle gange nyttigt at lave en variant af en NCCSV-fil, der indeholder kun metadata sektionen (herunder\\*END\\_METADATA\\*Linjelinje) . Resultatet giver en komplet beskrivelse af filens attributter, variable navne og datatyper, således at det samme formål som .das plus .dds svar fra en OPeNDAP server. ERDDAP™ vil returnere denne variation, hvis du anmoder om fil Type= .nccsv Metadata fra en ERDDAP™ Datasæt.
 
-## [Metadataafsnittet](#the-metadata-section) {#the-metadata-section} 
+##  [Metadataafsnittet](#the-metadata-section)  {#the-metadata-section} 
 
 I en NCCSV-fil bruger hver linje af metadatasektionen formatet
-[variabel variabel variabel variabel Navn](#variablename),[attribut Navn](#attributename),[værdi1](#value)\\[, værdi2\\]\\[, værdi3\\]\\[, værdi4\\]\\[......\\]  
+ [variabel variabel variabel variabel Navn](#variablename) , [attribut Navn](#attributename) , [værdi1](#value)  \\[ , værdi2 \\]  \\[ , værdi3 \\]  \\[ , værdi4 \\]  \\[ ...... \\]   
 Pladser før eller efter elementer er ikke tilladt, fordi de forårsager problemer, når de importerer filen til regnearksprogrammer.
 
 ### Konventioner{#conventions} 
-Den første linje af en NCCSV-fil er den første linje af metadata sektionen og skal have en[\\*GLOBAL\\*](#global)Konventioner egenskab noterer alle konventioner, der anvendes i filen som en streng, der indeholder en CSV-liste, for eksempel:
-\\*GLOBAL\\*, Konventioner,"COARDS, CF-1.6, ACDD-1.3, NCCSV-1.1"
+Den første linje af en NCCSV-fil er den første linje af metadata sektionen og skal have en [\\*GLOBAL\\*](#global) Konventioner egenskab noterer alle konventioner, der anvendes i filen som en streng, der indeholder en CSV-liste, for eksempel:
+\\*GLOBAL\\*, Konventioner," COARDS , CF-1.6, ACDD-1.3, NCCSV-1.1"
 En af de konventioner, der er opført, skal være NCCSV-1.1, som refererer til den aktuelle version af denne specifikation.
 
 ### END_METADATA{#end_metadata} 
 Slutningen af metadatasektionen i en NCCSV-fil skal afvises af en linje med kun
 \\*END\\_METADATA\\*
 
-Det anbefales, men ikke påkrævet, at alle attributter for en given variabel vises på tilstødende linjer i metadata sektionen. Hvis en NCCSV fil bliver konverteret til enNetCDFfil, den rækkefølge, at de variablenavne først vises i metadata sektionen, vil være rækkefølgen af variablerne i afsnittetNetCDFfil.
+Det anbefales, men ikke påkrævet, at alle attributter for en given variabel vises på tilstødende linjer i metadata sektionen. Hvis en NCCSV fil bliver konverteret til en NetCDF fil, den rækkefølge, at de variablenavne først vises i metadata sektionen, vil være rækkefølgen af variablerne i afsnittet NetCDF fil.
 
-Valgfrie tomme linjer er tilladt i metadata sektionen efter den krævede første linje med[\\*GLOBAL\\*](#global) [Konventioner](#conventions)Oplysninger om information (se nedenfor) og før den krævede sidste linje med\\*END\\_METADATA\\*.
+Valgfrie tomme linjer er tilladt i metadata sektionen efter den krævede første linje med [\\*GLOBAL\\*](#global)   [Konventioner](#conventions) Oplysninger om information (se nedenfor) og før den krævede sidste linje med\\*END\\_METADATA\\*.
 
 Hvis et regneark oprettes fra en NCCSV-fil, vises metadatadata sektionen med variable navne i kolonne A, attributnavne i kolonne B og værdier i kolonne C.
 
-Hvis et regneark efter disse konventioner gemmes som en CSV-fil, vil der ofte være ekstra kommaer i slutningen af linjerne i metadata sektionen. Den software, der konverterer NCCSV filer til.ncfiler vil ignorere de ekstra kommaer.
+Hvis et regneark efter disse konventioner gemmes som en CSV-fil, vil der ofte være ekstra kommaer i slutningen af linjerne i metadata sektionen. Den software, der konverterer NCCSV filer til .nc filer vil ignorere de ekstra kommaer.
 
-### [variabel variabel variabel variabel Navn](#variablename) {#variablename} 
+###  [variabel variabel variabel variabel Navn](#variablename)  {#variablename} 
 
  *variabel variabel variabel variabel Navn* er det tilfældefølsomme navn på en variabel i datafilen. Alle variable navne skal begynde med et 7-bit ASCII brev eller understreg og være sammensat af 7-bit ASCII breve, understregninger og 7-bit ASCII cifre.
 #### GLOBAL{#global} 
-Den særlige variabelnavn[\\*GLOBAL\\*](#global)bruges til at beskrive globale metadata.
+Den særlige variabelnavn [\\*GLOBAL\\*](#global) bruges til at beskrive globale metadata.
 
-### [attribut Navn](#attributename) {#attributename} 
+###  [attribut Navn](#attributename)  {#attributename} 
 
- *attribut Navn* er det tilfældefølsomme navn for en attribut, der er forbundet med en variabel eller[\\*GLOBAL\\*](#global). Alle attributnavne skal begynde med et 7-bit ASCII brev eller underscore og være sammensat af 7-bit ASCII breve, understregninger og 7-bit ASCII cifre.
+ *attribut Navn* er det tilfældefølsomme navn for en attribut, der er forbundet med en variabel eller [\\*GLOBAL\\*](#global) . Alle attributnavne skal begynde med et 7-bit ASCII brev eller underscore og være sammensat af 7-bit ASCII breve, understregninger og 7-bit ASCII cifre.
 
 #### SCALAR{#scalar} 
 Den særlige egenskab Navn\\*SCALAR\\*Kan bruges til at oprette en scalar datavariabel og definere dens værdi. Datatypen af\\*SCALAR\\*definerer datatypen for variablen, så specificer ikke en\\*Oplysninger om cookies\\*egenskab for scalar variabler. Bemærk, at der ikke skal være data til den scalar variable i Data Section of te NCCSV-filen.
@@ -107,13 +107,13 @@ Den særlige egenskab Navn\\*SCALAR\\*Kan bruges til at oprette en scalar datava
 For eksempel for at oprette en scalar variabel opkaldt "ship" med værdien "Okeanos Explorer" og en cf\\_role attribut, brug:
 Skib,\\*SCALAR\\*,"Okeanos Explorer"
 Skib, jf.
-Når en scalar data variabel læses indERDDAP™, afskalværdien omdannes til en kolonne i datatabellen med samme værdi på hver række.
+Når en scalar data variabel læses ind ERDDAP™ , afskalværdien omdannes til en kolonne i datatabellen med samme værdi på hver række.
 
-### [værdiværdiværdiværdi](#value) {#value} 
+###  [værdiværdiværdiværdi](#value)  {#value} 
 
  *værdiværdiværdiværdi* er værdien af metadata attributten og skal være en array med en eller flere af enten en byte, ubyte, kort, ukort, int, uint, lang, ulong, flyt, dobbelt, String eller char. Ingen andre datatyper understøttes. Attributter uden værdi ignoreres. Hvis der er mere end én underværdi, skal underværdierne alle være af samme datatype og adskilt af kommaer, for eksempel:
-sst,actual\\_range,0.17f,23.58f
-Hvis der er flere strenge værdier, skal du bruge en enkelt streng med\\n  (Nyline) tegn, der adskiller understrengene.
+ sst , actual\\_range ,0.17f,23.58f
+Hvis der er flere strenge værdier, skal du bruge en enkelt streng med \\n   (Nyline) tegn, der adskiller understrengene.
 
 Definitionerne af attributdatatyper er:
 
@@ -121,25 +121,25 @@ Definitionerne af attributdatatyper er:
 * [e] attributværdier (8-bit, underskrevet) skal skrives med suffix 'b', f.eks. -7b, 0b, 7b. Rækken af gyldige afte værdier er -128 til 127. Et tal, der ser ud som et byte, men er ugyldig (f.eks. 128b) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse.
     
 #### ubyte{#ubyte} 
-* Ubyte egenskabsværdier (8-bit, usigned) skal skrives med suffix 'ub', f.eks. 0ub, 7ub, 250ub. Rækken af gyldige byte værdier er 0 til 255. Et tal, der ligner en ubyte, men er ugyldig (f.eks. 256ub) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse. Brug af byte i stedet for ubyte, fordi mange systemer ikke understøtter usignede bytes (f.eks. attributter iNetCDF-3 filer) .
+* Ubyte egenskabsværdier (8-bit, usigned) skal skrives med suffix 'ub', f.eks. 0ub, 7ub, 250ub. Rækken af gyldige byte værdier er 0 til 255. Et tal, der ligner en ubyte, men er ugyldig (f.eks. 256ub) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse. Brug af byte i stedet for ubyte, fordi mange systemer ikke understøtter usignede bytes (f.eks. attributter i NetCDF -3 filer) .
     
 #### Kort kort kort kort{#short} 
 * Korte egenskabsværdier (16-bit, underskrevet) skal skrives med suffix 's', f.eks. -30000s, 0s, 30000s. Rækken af gyldige kortværdier er -32768 til 32767. Et tal, der ligner en kort, men er ugyldig (fx 32768s) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse.
      
 #### Ukort{#ushort} 
-* Ukorte egenskabsværdier (16-bit, usigned) skal skrives med suffix 'us', f.eks. 0us, 30000us, 60000us. Rækken af gyldige kortværdier er 0 til 65535. Et tal, der ligner en ukortlig, men er ugyldig (f.eks. 65536us) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse. Når det er muligt, skal du bruge kort i stedet for ukort, fordi mange systemer ikke understøtter usignede bytes (f.eks. attributter iNetCDF-3 filer) .
+* Ukorte egenskabsværdier (16-bit, usigned) skal skrives med suffix 'us', f.eks. 0us, 30000us, 60000us. Rækken af gyldige kortværdier er 0 til 65535. Et tal, der ligner en ukortlig, men er ugyldig (f.eks. 65536us) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse. Når det er muligt, skal du bruge kort i stedet for ukort, fordi mange systemer ikke understøtter usignede bytes (f.eks. attributter i NetCDF -3 filer) .
      
 #### int{#int} 
 * int attributværdier (32-bit, underskrevet) skal skrives som JSON ints uden et decimalpunkt eller eksponent, men med suffix 'i', f.eks. -12078i, 0i, 12067978i. Rækken af gyldige værdier er -2147483648 til 2147483647. Et tal, der ser ud som et int, men er ugyldig (fx 2147483648i) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse.
      
 #### uint{#uint} 
-* Uint attributværdier (32-bit, usigned) skal skrives som JSON ints uden et decimalpunkt eller eksponent, men med suffix 'ui', f.eks. 0ui, 12067978ui, 4123456789ui. Rækken af gyldige værdier er 0 til 4294967295. Et tal, der ligner en uint, men er ugyldig (fx 2147483648ui) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse. Brug int i stedet for uint, fordi mange systemer ikke understøtter usignede bytes (f.eks. attributter iNetCDF-3 filer) .
+* Uint attributværdier (32-bit, usigned) skal skrives som JSON ints uden et decimalpunkt eller eksponent, men med suffix 'ui', f.eks. 0ui, 12067978ui, 4123456789ui. Rækken af gyldige værdier er 0 til 4294967295. Et tal, der ligner en uint, men er ugyldig (fx 2147483648ui) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse. Brug int i stedet for uint, fordi mange systemer ikke understøtter usignede bytes (f.eks. attributter i NetCDF -3 filer) .
      
 #### længe{#long} 
-* lange egenskabsværdier (64-bit, underskrevet, i øjeblikket understøttet af NUG ogERDDAP™men endnu ikke understøttet af CF) skal skrives uden decimal punkt og med suffix 'L', f.eks. -12345678987654321L, 0L, 12345678987654321L . Hvis du bruger konverteringssoftwaren til at konvertere en NCCSV-fil med lange værdier til enNetCDF-3 fil, vil alle lange værdier blive konverteret til dobbelt værdier. Udvalget af gyldige lange værdier er -9223372036854775808 til 9223372036854775807. Et tal, der ligner en lang, men er ugyldig (f.eks. 9223372036854775808L) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse. Når det er muligt, skal du bruge dobbelt i stedet for ulong, fordi mange systemer ikke understøtter længe (fx,NetCDF-3 filer) .
+* lange egenskabsværdier (64-bit, underskrevet, i øjeblikket understøttet af NUG og ERDDAP™ men endnu ikke understøttet af CF) skal skrives uden decimal punkt og med suffix 'L', f.eks. -12345678987654321L, 0L, 12345678987654321L . Hvis du bruger konverteringssoftwaren til at konvertere en NCCSV-fil med lange værdier til en NetCDF -3 fil, vil alle lange værdier blive konverteret til dobbelt værdier. Udvalget af gyldige lange værdier er -9223372036854775808 til 9223372036854775807. Et tal, der ligner en lang, men er ugyldig (f.eks. 9223372036854775808L) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse. Når det er muligt, skal du bruge dobbelt i stedet for ulong, fordi mange systemer ikke understøtter længe (fx, NetCDF -3 filer) .
      
 #### Ulong{#ulong} 
-* Ulænge egenskabsværdier (64-bit, usigned, i øjeblikket understøttet af NUG ogERDDAP™men endnu ikke understøttet af CF) skal skrives uden et decimalpunkt og med suffix 'uL', f.eks. 0uL, 12345678987654321uL, 9007199254740992uL . Hvis du bruger konverteringssoftwaren til at konvertere en NCCSV-fil med lange værdier til enNetCDF-3 fil, vil alle lange værdier blive konverteret til dobbelt værdier. Rækken af gyldige lange værdier er 0 til 18446744073709551615. Et tal, der ser ud som en ulong, men er ugyldig (f.eks. 18446744073709551616uL) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse. Når det er muligt, skal du bruge dobbelt i stedet for ulong, fordi mange systemer ikke understøtter underskrevet eller ikke-signed lang (fx,NetCDF-3 filer) .
+* Ulænge egenskabsværdier (64-bit, usigned, i øjeblikket understøttet af NUG og ERDDAP™ men endnu ikke understøttet af CF) skal skrives uden et decimalpunkt og med suffix 'uL', f.eks. 0uL, 12345678987654321uL, 9007199254740992uL . Hvis du bruger konverteringssoftwaren til at konvertere en NCCSV-fil med lange værdier til en NetCDF -3 fil, vil alle lange værdier blive konverteret til dobbelt værdier. Rækken af gyldige lange værdier er 0 til 18446744073709551615. Et tal, der ser ud som en ulong, men er ugyldig (f.eks. 18446744073709551616uL) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse. Når det er muligt, skal du bruge dobbelt i stedet for ulong, fordi mange systemer ikke understøtter underskrevet eller ikke-signed lang (fx, NetCDF -3 filer) .
      
 #### flyder{#float} 
 * Flydende egenskabsværdier (32-bit) skal skrives med suffix 'f' og kan have et decimalpunkt og/eller en eksponent, f.eks. 0f, 1f, 12.34f, 1e12f, 1,23e+12f, 1.87E-7f. Brug NaNf til en flyt NaN (mangler) værdi. Rækkevidde er ca. +/-3.40282347E+38f (~7 væsentlige decimaltal) . Et tal, der ligner en flyt, men er ugyldig (f.eks. 1.0e39f) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse.
@@ -148,57 +148,57 @@ Definitionerne af attributdatatyper er:
 * Dobbelt attributværdier (64-bit) skal skrives med suffix 'd' og kan have et decimalpunkt og/eller en eksponent, f.eks. 0d, 1d, 12.34d, 1e12d, 1.23e+12d, 1.87E-7d. Brug NaNd til en dobbelt NaN (mangler) værdi. Serien af dobbelt er ca. +/-1.79313486231570E+308d (~15 betydelige decimalcifre) . Et tal, der ligner en dobbelt, men er ugyldig (f.eks. 1.0e309d) vil blive konverteret til en manglende værdi eller generere en fejlmeddelelse.
      
 #### streng streng streng{#string} 
-* Strenge attributværdier er en sekvens af UCS-2 tegn (i.e., 2-byte Unicode tegn, som iJava) , som skal skrives som 7-bit ASCII, JSON-lignende strenge, så ikke-ASCII tegn kan specificeres.
+* Strenge attributværdier er en sekvens af UCS-2 tegn (i.e., 2-byte Unicode tegn, som i Java ) , som skal skrives som 7-bit ASCII, JSON-lignende strenge, så ikke-ASCII tegn kan specificeres.
     * Dobbelte tilbud (" " " ") skal kodes som to dobbelte citater ("") . Det er, hvad regnearksprogrammer kræver, når du læser .csv-filer. Det er, hvad regnearksprogrammer skriver, når du gemmer et regneark som en .csv-fil.
-    * De særlige JSON back skråkodede tegn skal kodes som i JSON (især JSON)\\n(nyline), men også \\\\ (backslash), "f (formfeed), "t (tab), "r (bilriage tilbagevenden) eller med the[« *hhhh* ](#uhhhh)Syntaksen. Brug ikke Alt Indtast for at angive en ny linje inden for en tekstcelle; i stedet skal du bruge\\n  (2 tegn: backslash og 'n '') at angive en ny linje.
-##### uhhhh {#uhhhh} 
-    * « *hhhh - Alle tegn mindre end karakter #32 eller større end tegn #126, og ikke på anden måde kodet, skal kodes med syntaks «u»* hhhh*, hvor hhhh er det 4-cifrede hexadecimalnummer af karakteren, f.eks. Euro-tegnet er "u20AC. Se de kodesider, der er nævnt på[ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode)for at finde de hæxadecimal tal, der er forbundet med specifikke Unicode-tegn, eller brug et softwarebibliotek.
+    * De særlige JSON back skråkodede tegn skal kodes som i JSON (især JSON) \\n (nyline), men også \\\\ (backslash), "f (formfeed), "t (tab), "r (bilriage tilbagevenden) eller med the [« *hhhh* ](#uhhhh) Syntaksen. Brug ikke Alt Indtast for at angive en ny linje inden for en tekstcelle; i stedet skal du bruge \\n   (2 tegn: backslash og 'n '') at angive en ny linje.
+#####  uhhhh  {#uhhhh} 
+    * « *hhhh - Alle tegn mindre end karakter #32 eller større end tegn #126, og ikke på anden måde kodet, skal kodes med syntaks «u»* hhhh*, hvor hhhh er det 4-cifrede hexadecimalnummer af karakteren, f.eks. Euro-tegnet er "u20AC. Se de kodesider, der er nævnt på [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) for at finde de hæxadecimal tal, der er forbundet med specifikke Unicode-tegn, eller brug et softwarebibliotek.
     * Hvis strengen har plads i begyndelsen eller slutningen, eller omfatter " (Dobbelt citat) eller en komma, eller indeholder værdier, der ellers ville blive fortolket som nogle andre data type (f.eks. en int) , eller er ordet "null", skal hele String være lukket i dobbelt citater; ellers er det i modsætning til JSON, de kloning dobbelt citater er valgfri. Vi anbefaler: når du er i tvivl, lukkes hele String i dobbelt citater. Pladser i begyndelsen eller slutningen af en streng er stærkt diskotek.
-    * For nu er brugen af tegn større end #255 diskotek. NCCSV understøtter dem.ERDDAP™understøtter dem internt. Nogle output filtyper understøtter dem (fx,.jsonog og og.nccsv) . Men mange output filtyper understøtter ikke dem. For eksempel,NetCDF-3 filer understøtter ikke sådanne tegn, fordiNetCDFfiler bruger 1-byte tegn og CF i øjeblikket ikke har et system til at angive, hvordan Unicode tegn er kodet iNetCDFStrenge (f.eks. UTF-8) . Dette vil sandsynligvis forbedre sig over tid.
+    * For nu er brugen af tegn større end #255 diskotek. NCCSV understøtter dem. ERDDAP™ understøtter dem internt. Nogle output filtyper understøtter dem (fx, .json og og og .nccsv ) . Men mange output filtyper understøtter ikke dem. For eksempel, NetCDF -3 filer understøtter ikke sådanne tegn, fordi NetCDF filer bruger 1-byte tegn og CF i øjeblikket ikke har et system til at angive, hvordan Unicode tegn er kodet i NetCDF Strenge (f.eks. UTF-8) . Dette vil sandsynligvis forbedre sig over tid.
          
 #### Billeder af char{#char} 
-* Valuta attributværdier er en enkelt UCS-2 tegn (i.e., 2-byte Unicode tegn, som iJava) , som skal skrives som 7-bit ASCII, JSON-lignende tegn, så andre tegn kan specificeres (se String-definitionen ovenfor for kodning af særlige tegn, med tilføjelse af kodning et enkelt citat som « '') . Char attributværdier skal være lukket i enkelt citat (de indre citater) og dobbelt tilbud (de ydre citater) , f.eks. "'a'", "'""" (et dobbelt citat tegn) """" (et enkelt citat tegn) , "" (en fane) , "" (Et Euro-tegn) . Dette system til brug af enkelt- og dobbelt citater er ulige og besværlige, men det er en måde at skelne char værdier fra strenge på en måde, der arbejder med regneark. En værdi, der ligner en char, men er ugyldig, vil generere en fejlmeddelelse. Som med strenge, brugen af tegn større end #255 er i øjeblikket brudt.
+* Valuta attributværdier er en enkelt UCS-2 tegn (i.e., 2-byte Unicode tegn, som i Java ) , som skal skrives som 7-bit ASCII, JSON-lignende tegn, så andre tegn kan specificeres (se String-definitionen ovenfor for kodning af særlige tegn, med tilføjelse af kodning et enkelt citat som « '') . Char attributværdier skal være lukket i enkelt citat (de indre citater) og dobbelt tilbud (de ydre citater) , f.eks. "'a'", "'""" (et dobbelt citat tegn) """" (et enkelt citat tegn) , "" (en fane) , "" (Et Euro-tegn) . Dette system til brug af enkelt- og dobbelt citater er ulige og besværlige, men det er en måde at skelne char værdier fra strenge på en måde, der arbejder med regneark. En værdi, der ligner en char, men er ugyldig, vil generere en fejlmeddelelse. Som med strenge, brugen af tegn større end #255 er i øjeblikket brudt.
 
 ### Suffix{#suffix} 
 Bemærk, at i attributter sektionen af en NCCSV-fil, skal alle numeriske egenskabsværdier have et suffikbrev (f.eks. "b") for at identificere den numeriske datatype (f.eks. byte) . Men i datasektionen i en NCCSV-fil skal numeriske dataværdier aldrig have disse blæk bogstaver (med undtagelse af 'L' for lange integers og 'uL' for ulong integers) — datatypen er angivet af\\*Oplysninger om cookies\\*attribut for den variable.
 
 ### Oplysninger om DATA_TYPE{#data_type} 
-Datatypen for hver ikke-[scalar](#scalar)variabel skal specificeres af en\\*Oplysninger om cookies\\*attribut, der kan have en værdi af byte, ubyte, kort, ukort, int, uint, lang, ulong, fly, dobbelt, String eller char (Tilfælde i følsom) . For eksempel,
+Datatypen for hver ikke- [scalar](#scalar) variabel skal specificeres af en\\*Oplysninger om cookies\\*attribut, der kan have en værdi af byte, ubyte, kort, ukort, int, uint, lang, ulong, fly, dobbelt, String eller char (Tilfælde i følsom) . For eksempel,
 qc\\_flag,\\*Oplysninger om cookies\\*,byte
-ADVARSEL: Angiv den korrekte\\*Oplysninger om cookies\\*er dit ansvar. Angiv den forkerte datatype (f.eks. int, når du skal have specificeret fly) vil ikke generere en fejlmeddelelse og kan forårsage oplysninger, der skal gå tabt (f.eks. vil flydeværdierne afrundes til ints) når NCCSV-filen læses afERDDAP™eller konverteret til enNetCDFfil.
+ADVARSEL: Angiv den korrekte\\*Oplysninger om cookies\\*er dit ansvar. Angiv den forkerte datatype (f.eks. int, når du skal have specificeret fly) vil ikke generere en fejlmeddelelse og kan forårsage oplysninger, der skal gå tabt (f.eks. vil flydeværdierne afrundes til ints) når NCCSV-filen læses af ERDDAP™ eller konverteret til en NetCDF fil.
 
 ### Char Disco{#char-discouraged} 
-Brugen af velgørenhedsdataværdier er brudt, fordi de ikke er bredt understøttet i andre filtyper. Valutaværdier kan skrives i datasektionen som enkelttegn eller som strenge (Især, hvis du har brug for at skrive en speciel figur) . Hvis en streng findes, vil den første figur af String blive brugt som char's værdi. Nuværende længde Strenge og manglende værdier vil blive konverteret til karakter "uFF. Bemærk, atNetCDFfiler understøtter kun single byte chars, så enhver chars større end char #255 vil blive konverteret til '?' når du skriverNetCDFfiler. Medmindre en charset attribut bruges til at angive en anden charset for en variabel, vil ISO-8859-1 charset blive brugt.
+Brugen af velgørenhedsdataværdier er brudt, fordi de ikke er bredt understøttet i andre filtyper. Valutaværdier kan skrives i datasektionen som enkelttegn eller som strenge (Især, hvis du har brug for at skrive en speciel figur) . Hvis en streng findes, vil den første figur af String blive brugt som char's værdi. Nuværende længde Strenge og manglende værdier vil blive konverteret til karakter "uFF. Bemærk, at NetCDF filer understøtter kun single byte chars, så enhver chars større end char #255 vil blive konverteret til '?' når du skriver NetCDF filer. Medmindre en charset attribut bruges til at angive en anden charset for en variabel, vil ISO-8859-1 charset blive brugt.
 
 ### Lang og Usigned Disco{#long-and-unsigned-discouraged} 
-Selv om mange filtyper (fx,NetCDF-4 og json) og og ogERDDAP™Støtte længe og usigned (ubyte, ukort, uint, ulong) værdier, brug af lange og usignede værdier i NCCSV-filer er i øjeblikket brudt, fordi de i øjeblikket ikke understøttes af Excel, CF ogNetCDF-3 filer. Hvis du vil angive lange eller usignede værdier i en NCCSV-fil (eller i det tilsvarende Excel-ark) , skal du bruge suffix 'L', så Excel ikke behandler tallene som flydende punktnumre med lavere præcision. I øjeblikket, hvis en NCCSV-filer konverteres til enNetCDF-3.ncfil, lange og ulange dataværdier vil blive konverteret til dobbeltværdier, hvilket forårsager et tab af præcision for meget store værdier (mindre end -2^53 i lang tid eller større end 2^53 i lang og ulong) . I nærheden af In In In In In In In In In In In In In InNetCDF-3.ncfiler, ubyte, ukort, og uint variabler vises som byte, kort og int med \\_Unsigned=true metadata attribut. I nærheden af In In In In In In In In In In In In In InNetCDF-3.ncfiler, ubyte, ukort, og uint attributter vises som byte, korte og inte attributter, der indeholder de tilsvarende tos-komplementværdi (f.eks. 255ub vises som -1b) . Dette er naturligvis problemer, så signerede datatyper skal bruges i stedet for ikke-signede datatyper, når det er muligt.
+Selv om mange filtyper (fx, NetCDF -4 og json) og og og ERDDAP™ Støtte længe og usigned (ubyte, ukort, uint, ulong) værdier, brug af lange og usignede værdier i NCCSV-filer er i øjeblikket brudt, fordi de i øjeblikket ikke understøttes af Excel, CF og NetCDF -3 filer. Hvis du vil angive lange eller usignede værdier i en NCCSV-fil (eller i det tilsvarende Excel-ark) , skal du bruge suffix 'L', så Excel ikke behandler tallene som flydende punktnumre med lavere præcision. I øjeblikket, hvis en NCCSV-filer konverteres til en NetCDF -3 .nc fil, lange og ulange dataværdier vil blive konverteret til dobbeltværdier, hvilket forårsager et tab af præcision for meget store værdier (mindre end -2^53 i lang tid eller større end 2^53 i lang og ulong) . I nærheden af In In In In In In In In In In In In In In NetCDF -3 .nc filer, ubyte, ukort, og uint variabler vises som byte, kort og int med \\_Unsigned=true metadata attribut. I nærheden af In In In In In In In In In In In In In In NetCDF -3 .nc filer, ubyte, ukort, og uint attributter vises som byte, korte og inte attributter, der indeholder de tilsvarende tos-komplementværdi (f.eks. 255ub vises som -1b) . Dette er naturligvis problemer, så signerede datatyper skal bruges i stedet for ikke-signede datatyper, når det er muligt.
 
-### CF, ACDD ogERDDAP™Metadata{#cf-acdd-and-erddap-metadata} 
-Da det er forestillet, at de fleste NCCSV-filer eller de.ncfiler oprettet fra dem, vil blive læst iERDDAP, det anbefales stærkt, at NCCSV-filer omfatter de metadata attributter, der kræves eller anbefales afERDDAP™(se
-[/docs/server-admin / Datasets#global-attributes](/docs/server-admin/datasets#global-attributes)). attributterne er næsten alle fra CF og ACDD metadata standarder og tjener til korrekt at beskrive datasættet (hvem, hvad, når, hvor, hvorfor, hvordan) til nogen, der ellers kender intet om datasættet. Af særlig betydning bør næsten alle numeriske variabler have en enheds attribut med enUDUNITS-kompatibel værdi, f.eks.
-sst,enheder, graduer\\_C
+### CF, ACDD og ERDDAP™ Metadata{#cf-acdd-and-erddap-metadata} 
+Da det er forestillet, at de fleste NCCSV-filer eller de .nc filer oprettet fra dem, vil blive læst i ERDDAP , det anbefales stærkt, at NCCSV-filer omfatter de metadata attributter, der kræves eller anbefales af ERDDAP™ (se
+ [/docs/server-admin / Datasets#global-attributes](/docs/server-admin/datasets#global-attributes) ). attributterne er næsten alle fra CF og ACDD metadata standarder og tjener til korrekt at beskrive datasættet (hvem, hvad, når, hvor, hvorfor, hvordan) til nogen, der ellers kender intet om datasættet. Af særlig betydning bør næsten alle numeriske variabler have en enheds attribut med en UDUNITS -kompatibel værdi, f.eks.
+ sst ,enheder, graduer\\_C
 
-Det er fint at inkludere ekstra attributter, som ikke er fra CF eller ACDD standarder eller fraERDDAP.
+Det er fint at inkludere ekstra attributter, som ikke er fra CF eller ACDD standarder eller fra ERDDAP .
 
-## [Dataafsnittet](#the-data-section) {#the-data-section} 
+##  [Dataafsnittet](#the-data-section)  {#the-data-section} 
 
-### [Strukturstruktur](#structure) {#structure} 
+###  [Strukturstruktur](#structure)  {#structure} 
 
-Den første linje af datasektionen skal have en kassefølsom, kommanderet liste over variable navne. Alle variable på denne liste skal beskrives i metadatasektionen, og omvendt (andet end[\\*GLOBAL\\*](#global)attributter og attributter[\\*SCALAR\\*](#scalar)variabler) .
+Den første linje af datasektionen skal have en kassefølsom, kommanderet liste over variable navne. Alle variable på denne liste skal beskrives i metadatasektionen, og omvendt (andet end [\\*GLOBAL\\*](#global) attributter og attributter [\\*SCALAR\\*](#scalar) variabler) .
 
-Den anden gennem datasektionens penultimate linjer skal have en kompasliste af værdier. Hver række data skal have samme antal værdier som den komparerede liste over variable navne. Pladser før eller efter værdier er ikke tilladt, fordi de forårsager problemer, når de importerer filen til regnearksprogrammer. Hver kolonne i dette afsnit skal indeholde kun værdier af\\*Oplysninger om cookies\\*angivet for denne variabel af den\\*Oplysninger om cookies\\*attribut for den variable. I modsætning til attributtersektionen skal numeriske værdier i datasektionen ikke have suffik bogstaver til at angive datatypen. I modsætning til attributtersektionen kan velgørenhedsværdierne i datasektionen udelade et enkelt citat, hvis de ikke er nødvendige for at deaktivere individuelle citater (Det skal således citeres som vist her.) . Der kan være mange af disse data rækker i en NCCSV-fil, men i øjeblikketERDDAP™kan kun læse NCCSV-filer med op til omkring 2 milliarder rækker. Generelt anbefales det, at du opdeler store datasæt i flere NCCSV-datafiler med færre end 1 million rækker hver.
+Den anden gennem datasektionens penultimate linjer skal have en kompasliste af værdier. Hver række data skal have samme antal værdier som den komparerede liste over variable navne. Pladser før eller efter værdier er ikke tilladt, fordi de forårsager problemer, når de importerer filen til regnearksprogrammer. Hver kolonne i dette afsnit skal indeholde kun værdier af\\*Oplysninger om cookies\\*angivet for denne variabel af den\\*Oplysninger om cookies\\*attribut for den variable. I modsætning til attributtersektionen skal numeriske værdier i datasektionen ikke have suffik bogstaver til at angive datatypen. I modsætning til attributtersektionen kan velgørenhedsværdierne i datasektionen udelade et enkelt citat, hvis de ikke er nødvendige for at deaktivere individuelle citater (Det skal således citeres som vist her.) . Der kan være mange af disse data rækker i en NCCSV-fil, men i øjeblikket ERDDAP™ kan kun læse NCCSV-filer med op til omkring 2 milliarder rækker. Generelt anbefales det, at du opdeler store datasæt i flere NCCSV-datafiler med færre end 1 million rækker hver.
 
 #### END_DATA{#end_data} 
 Slutningen af datasektionen skal afvises af en linje med kun
 \\*END\\_DATA\\*
 
-Hvis der er yderligere indhold i NCCSV-filen efter\\*END\\_DATA\\*linje, vil det ignoreres, når NCCSV-filen er konverteret til en.ncfil. Et sådant indhold afbrydes derfor.
+Hvis der er yderligere indhold i NCCSV-filen efter\\*END\\_DATA\\*linje, vil det ignoreres, når NCCSV-filen er konverteret til en .nc fil. Et sådant indhold afbrydes derfor.
 
 I et regneark efter disse konventioner vil de variable navne og dataværdier være i flere kolonner. Se eksemplet nedenfor.
 
-### [Manglende værdier](#missing-values) {#missing-values} 
+###  [Manglende værdier](#missing-values)  {#missing-values} 
 
-Numeriske manglende værdier kan skrives som ennumerisk værdi identificeret af enmissing\\_valueeller \\_FillValue attribut for den variable. Du kan f.eks. se den anden værdi på denne datarække:
+Numeriske manglende værdier kan skrives som ennumerisk værdi identificeret af en missing\\_value eller \\_FillValue attribut for den variable. Du kan f.eks. se den anden værdi på denne datarække:
 Bell M. Shimada,99,123.4
 Dette er den anbefalede måde at håndtere manglende værdier for byte, ubyte, kort, ukort, int, uint, lang og ulong variabler.
 
@@ -208,57 +208,57 @@ Hoteller i nærheden af Bell M. Shimada
 Strenge og numeriske manglende værdier kan angives af et tomt felt. Du kan f.eks. se den anden værdi på denne datarække:
 Bell M. Shimada,123.4
 
-For byte, ubyte, kort, ukort, int, uint, lang og ulong variabler, NCCSV konverter værktøj ogERDDAP™vil konvertere et tomt felt til den maksimale tilladte værdi for den pågældende datatype (f.eks. 127 for bytes) . Hvis du gør dette, skal du sørge for at tilføje enmissing\\_valueeller \\_FillValue attribut for den variable at identificere denne værdi, f.eks.
+For byte, ubyte, kort, ukort, int, uint, lang og ulong variabler, NCCSV konverter værktøj og ERDDAP™ vil konvertere et tomt felt til den maksimale tilladte værdi for den pågældende datatype (f.eks. 127 for bytes) . Hvis du gør dette, skal du sørge for at tilføje en missing\\_value eller \\_FillValue attribut for den variable at identificere denne værdi, f.eks.
  *variabel variabel variabel variabel Navn* , \\_FillValue,127b
 Til flyt- og dobbeltvariabler konverteres et tomt felt til NaN.
 
-### [Datotid værdier](#datetime-values) {#datetime-values} 
+###  [Datotid værdier](#datetime-values)  {#datetime-values} 
 
-Datotid værdier (herunder datoværdier, der ikke har en tidskomponent) kan repræsenteres som tal eller som Strings i NCCSV-filer. En given datoTime variabel kan kun have strenge værdier eller kun numeriske værdier, ikke begge. NCCSV-softwaren vil konvertere streng datoTime-værdier til numeriske dato Tidsværdier ved oprettelse.ncfiler filer filer (som påkrævet af CF) . Strenge datoTime værdier har den fordel at være letlæselige af mennesker.
+Datotid værdier (herunder datoværdier, der ikke har en tidskomponent) kan repræsenteres som tal eller som Strings i NCCSV-filer. En given datoTime variabel kan kun have strenge værdier eller kun numeriske værdier, ikke begge. NCCSV-softwaren vil konvertere streng datoTime-værdier til numeriske dato Tidsværdier ved oprettelse .nc filer filer filer (som påkrævet af CF) . Strenge datoTime værdier har den fordel at være letlæselige af mennesker.
 
-DatoTime værdier repræsenteret som numeriske værdier skal have en enheds attribut, der angiver " *enheder* siden siden siden *Datosdato Tidstid* " som påkrævet af CF og angivet afUDUNITSf.eks.
+DatoTime værdier repræsenteret som numeriske værdier skal have en enheds attribut, der angiver " *enheder* siden siden siden *Datosdato Tidstid* " som påkrævet af CF og angivet af UDUNITS f.eks.
 tid,enheder, sekunder siden 1970-01T00:00:00Z
 
-DatoTime værdier repræsenteret som strenge værdier skal have en streng\\*Oplysninger om cookies\\*attribut og en enhed egenskab, der angiver en dato Tidsmønster som angivet afJavaDateTimeFormatter klasse
- ([ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)) . For eksempel,
-tid, enheder,yyyy-MM-dd'T'HH:mm:ssZ
+DatoTime værdier repræsenteret som strenge værdier skal have en streng\\*Oplysninger om cookies\\*attribut og en enhed egenskab, der angiver en dato Tidsmønster som angivet af Java DateTimeFormatter klasse
+ ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . For eksempel,
+tid, enheder, yyyy-MM-dd 'T'HH:mm:ssZ
 Alle datotidsværdier for en given datavariabel skal bruge det samme format.
 I de fleste tilfælde, datoTime mønster, du har brug for til attributten, vil være en variation af en af disse formater:
 
-*   yyyy-MM-dd'T'HH:mm:ss. SSSZ — som er ISO 8601:2004 (E) Datosdato Tidsformat. Du kan bruge en afkortet version af dette, f.eks.yyyy-MM-dd'T'HH:mm:ssZ (det eneste anbefalede format) eller eller elleryyyy-MM-dd. Hvis du ændrer formatet af dine datotidsværdier, anbefaler NCCSV kraftigt, at du ændrer dette format (måske forkortet) . Dette er det format, der erERDDAP™vil bruge, når det skriver NCCSV-filer.
+*    yyyy-MM-dd 'T'HH:mm:ss. SSSZ — som er ISO 8601:2004 (E) Datosdato Tidsformat. Du kan bruge en afkortet version af dette, f.eks. yyyy-MM-dd 'T'HH:mm:ssZ (det eneste anbefalede format) eller eller eller yyyy-MM-dd . Hvis du ændrer formatet af dine datotidsværdier, anbefaler NCCSV kraftigt, at du ændrer dette format (måske forkortet) . Dette er det format, der er ERDDAP™ vil bruge, når det skriver NCCSV-filer.
 * yyyMMddHHmmss.SSS — som er den kompakte version af ISO 8601:2004 dato Tidsformat. Du kan bruge en afkortet version af dette, f.eks. yyyMMdd.
 * M/d/yyyyyy H:mm:s. SSS — der håndterer amerikansk-stil datoer og datoTimes som "3/23/2017 16:22:03.000". Du kan bruge en afkortet version af dette, f.eks. M/d/yyyyyyyyyyy.
 * yyyyyDDDHHmmsSSS - som er året plus den nul-padded dag i året (f.eks. 001 = Jan 1, 365 = Dec 31 i et ikke-leapår; dette kaldes undertiden Julian dato) . Du kan bruge en afkortet version af dette, f.eks. yyyyyDDD .
 
 #### Præcisionspræcision{#precision} 
-Når et softwarebibliotek konverterer en.ncfil i en NCCSV-fil, hele dato Tidsværdierne vil blive skrevet som strenge med ISO 8601:2004 (E) Datosdato Tidsformat, f.eks. 1970-01T00:00:00Z . Du kan styre præcisionen med præcisionenERDDAP-specifik egenskabtime\\_precision. Se endnu
-[/docs/server-admin/datasæt#time\\_precision](/docs/server-admin/datasets#time_precision).
+Når et softwarebibliotek konverterer en .nc fil i en NCCSV-fil, hele dato Tidsværdierne vil blive skrevet som strenge med ISO 8601:2004 (E) Datosdato Tidsformat, f.eks. 1970-01T00:00:00Z . Du kan styre præcisionen med præcisionen ERDDAP -specifik egenskab time\\_precision . Se endnu
+ [/docs/server-admin/datasæt# time\\_precision ](/docs/server-admin/datasets#time_precision) .
 
 #### Tidszoner{#time-zone} 
-Standard tidszone for dato Tidsværdierne erZulu  (eller GMT) tidszone, som ikke har nogen dagslysbesparende tidsperioder. Hvis en datoTime variabel har datoTime værdier fra en anden tidszone, skal du angive dette med denERDDAP-specifik egenskabtime\\_zone. Dette er et krav tilERDDAP™(se
-[/docs/server-admin/datasæt#time\\_zone](/docs/server-admin/datasets#time_zone)).
+Standard tidszone for dato Tidsværdierne er Zulu   (eller GMT) tidszone, som ikke har nogen dagslysbesparende tidsperioder. Hvis en datoTime variabel har datoTime værdier fra en anden tidszone, skal du angive dette med den ERDDAP -specifik egenskab time\\_zone . Dette er et krav til ERDDAP™ (se
+ [/docs/server-admin/datasæt# time\\_zone ](/docs/server-admin/datasets#time_zone) ).
 
-### [Gradsværdi](#degree-values) {#degree-values} 
+###  [Gradsværdi](#degree-values)  {#degree-values} 
 
 Som krævet af CF, alle gradsværdier (f.eks. for længde og breddegrad) skal angives som decimaler dobbeltværdier, ikke som en grad °min'sec" streng eller som separate variabler i niveauer, minutter, sekunder. Den retningsdesignere N, S, E og W er ikke tilladt. Brug negative værdier for vestlige længder og for syd breddegrader.
 
-## [DSG Feature Typer](#dsg-feature-types) {#dsg-feature-types} 
+##  [DSG Feature Typer](#dsg-feature-types)  {#dsg-feature-types} 
 
 En NCCSV fil kan indeholde CF Discrete Sampling Geometry
- ([ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries)) data. Det er de attributter, der gør dette arbejde:
+ ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) data. Det er de attributter, der gør dette arbejde:
 
-1. Som krævet af CF skal NCCSV-filen indeholde en linje i metadatasektionen, der identificerer det[\\*GLOBAL\\*](#global) featureTypeattribut, f.eks.,
-    \\*GLOBAL\\*,featureType,
-2. Til brug iERDDAP™, NCCSV-filen skal indeholde en linje eller linjer i metadatasektionen, der identificerer cf\\_role=...\\_id variabler, f.eks.
+1. Som krævet af CF skal NCCSV-filen indeholde en linje i metadatasektionen, der identificerer det [\\*GLOBAL\\*](#global)   featureType attribut, f.eks.,
+    \\*GLOBAL\\*, featureType ,
+2. Til brug i ERDDAP™ , NCCSV-filen skal indeholde en linje eller linjer i metadatasektionen, der identificerer cf\\_role=...\\_id variabler, f.eks.
 Skib, jf.
 Dette er valgfrit til CF, men kræves i NCCSV.
-3. Til brug iERDDAP™, NCCSV-filen skal indeholde en linje eller linjer i metadatasektionen, der identificerer, hvilke variabler der er forbundet med hver timeSeries, trajectory eller profil, der kræves afERDDAP™(se
-    [/docs/server-admin/datasets#cdm\\_data\\_type](/docs/server-admin/datasets#cdm_data_type)), f.eks.
+3. Til brug i ERDDAP™ , NCCSV-filen skal indeholde en linje eller linjer i metadatasektionen, der identificerer, hvilke variabler der er forbundet med hver timeSeries, trajectory eller profil, der kræves af ERDDAP™ (se
+     [/docs/server-admin/datasets#cdm\\_data\\_type](/docs/server-admin/datasets#cdm_data_type) ), f.eks.
     \\*GLOBAL\\*,cdm\\_trajectory\\_variables,"ship"
 eller eller eller
     \\*GLOBAL\\*,cdm\\_timeseries\\_variables,"station\\_id,lat,lon"
 
-## [Prøvefil](#sample-file) {#sample-file} 
+##  [Prøvefil](#sample-file)  {#sample-file} 
 
 Her er en prøvefil, der viser mange af funktionerne i en NCCSV-fil:
 ```
@@ -331,12 +331,12 @@ Noter:
 * Det ville være klarere og bedre, hvis enheds attributten for testLong variabel blev skrevet i dobbelt citater, der angiver, at det er en streng værdi. Men den nuværende repræsentation (1, uden tilbud) vil blive fortolket korrekt som en streng, ikke en heltals, fordi der ikke er 'i' suffik.
 * I modsætning til andrenumeriske datatyper, har de lange værdier i datasektionen suffix ("L") der identificerer deres numeriske datatype. Det er nødvendigt at forhindre regneark i at fortolke værdierne som flydende punktnumre og dermed miste præcision.
 
-## [Brændeark](#spreadsheets) {#spreadsheets} 
+##  [Brændeark](#spreadsheets)  {#spreadsheets} 
 
 I et regneark, som i en NCCSV-fil:
 
 * Skriv numeriske attributværdier som angivet for NCCSV-filer (f.eks. med et suffix-brev, f.eks. "f" til at identificere egenskabens datatype) .
-* I Strings, skrive alle tegn mindre end ASCII karakter #32 eller større end tegn #126 som enten en JSON-lignende tilbage skrå figur (fx,\\nfor nyline) eller som hexadecimal Unicode karakter nummer (Tilfælde i følsom) med syntaks[« *hhhh* ](#uhhhh)  (f.eks. "u20AC for Euro-skiltet) . Brug\\n  (2 tegn: backslash og 'n '') at angive en ny linje, ikke Alt Indtast.
+* I Strings, skrive alle tegn mindre end ASCII karakter #32 eller større end tegn #126 som enten en JSON-lignende tilbage skrå figur (fx, \\n for nyline) eller som hexadecimal Unicode karakter nummer (Tilfælde i følsom) med syntaks [« *hhhh* ](#uhhhh)   (f.eks. "u20AC for Euro-skiltet) . Brug \\n   (2 tegn: backslash og 'n '') at angive en ny linje, ikke Alt Indtast.
 
 De eneste forskelle mellem NCCSV-filer og det analoge regneark, der følger disse konventioner, er:
 
@@ -347,9 +347,9 @@ Strenge i regneark er aldrig omgivet af dobbelte citater.
 * Interne dobbelttilbud (" " " ") i Strings i NCCSV filer vises som 2 dobbelte citater.
 Interne dobbelttilbud i regneark vises som 1 dobbeltværelse.
 
-Hvis et regneark efter disse konventioner gemmes som en CSV-fil, vil der ofte være ekstra kommaer i slutningen af mange af linjerne. Den software, der konverterer NCCSV filer til.ncfiler vil ignorere de ekstra kommaer.
+Hvis et regneark efter disse konventioner gemmes som en CSV-fil, vil der ofte være ekstra kommaer i slutningen af mange af linjerne. Den software, der konverterer NCCSV filer til .nc filer vil ignorere de ekstra kommaer.
 
-### [Excel Excel Excel](#excel) {#excel} 
+###  [Excel Excel Excel](#excel)  {#excel} 
 
 Sådan importeres en NCCSV-fil til Excel:
 
@@ -369,7 +369,7 @@ I Excel vises prøven NCCSV-fil over som
 
 ![prøveEkscel.png](/img/sampleExcel.png)
 
-### [Google Sheets](#google-sheets) {#google-sheets} 
+###  [Google Sheets](#google-sheets)  {#google-sheets} 
 
 Sådan importeres en NCCSV-fil til Google Sheets:
 
@@ -385,17 +385,17 @@ Sådan oprettes en NCCSV-fil fra et Google Sheets-regneark:
 3. Klik på Ja .
 4. Den resulterende .csv-fil vil have ekstra kommaer i slutningen af alle rækker andet end CSV rækker. Ignorer dem.
 
-## [Problemer/Warnings](#problemswarnings) {#problemswarnings} 
+##  [Problemer/Warnings](#problemswarnings)  {#problemswarnings} 
 
 * Hvis du opretter en NCCSV-fil med en teksteditor, eller hvis du opretter et analogt regneark i et regnearksprogram, vil teksteditoren eller regnearksprogrammet ikke kontrollere, at du fulgte disse konventioner korrekt. Det er op til dig at følge disse konventioner korrekt.
-* Omdannelsen af et regneark efter denne konvention til en csv-fil (Således en NCCSV-fil) vil føre til ekstra kommaer i slutningen af alle rækker andre end CSV data rækker. Ignorer dem. Den software derefter konvertere NCCSV filer til.ncfiler vil ignorere dem.
-* Hvis en NCCSV fil har overskydende kommaer i slutningen af rækker, kan du fjerne dem ved at konvertere NCCSV-filen til enNetCDFfil og derefter konvertere filenNetCDFfil tilbage i en NCCSV-fil.
-* Når du forsøger at konvertere en NCCSV fil til enNetCDFfil, vil nogle fejl blive opdaget af softwaren og vil generere fejlmeddelelser, der forårsager konvertering til fejl. Andre problemer er svære eller umulige at fange og vil ikke generere fejlmeddelelser eller advarsler. Andre problemer (f.eks. overskydende kommaer i slutningen af rækker) vil blive ignoreret. Fil konverteren vil kun foretage minimal kontrol af korrekthed af resultatetNetCDFfil, f.eks. i forbindelse med CF-overensstemmelse. Det er filudviklerens og filbrugerens ansvar at kontrollere, at resultaterne af konverteringen er som ønsket og korrekt. To måder at tjekke er:
-    * Udskriv indholdet af indholdet.ncfil med ncdump
-         ([ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump) ) .
-    * Se indholdet af dataene iERDDAP.
+* Omdannelsen af et regneark efter denne konvention til en csv-fil (Således en NCCSV-fil) vil føre til ekstra kommaer i slutningen af alle rækker andre end CSV data rækker. Ignorer dem. Den software derefter konvertere NCCSV filer til .nc filer vil ignorere dem.
+* Hvis en NCCSV fil har overskydende kommaer i slutningen af rækker, kan du fjerne dem ved at konvertere NCCSV-filen til en NetCDF fil og derefter konvertere filen NetCDF fil tilbage i en NCCSV-fil.
+* Når du forsøger at konvertere en NCCSV fil til en NetCDF fil, vil nogle fejl blive opdaget af softwaren og vil generere fejlmeddelelser, der forårsager konvertering til fejl. Andre problemer er svære eller umulige at fange og vil ikke generere fejlmeddelelser eller advarsler. Andre problemer (f.eks. overskydende kommaer i slutningen af rækker) vil blive ignoreret. Fil konverteren vil kun foretage minimal kontrol af korrekthed af resultatet NetCDF fil, f.eks. i forbindelse med CF-overensstemmelse. Det er filudviklerens og filbrugerens ansvar at kontrollere, at resultaterne af konverteringen er som ønsket og korrekt. To måder at tjekke er:
+    * Udskriv indholdet af indholdet .nc fil med ncdump
+         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+    * Se indholdet af dataene i ERDDAP .
 
-## [Ændringer](#changes) {#changes} 
+##  [Ændringer](#changes)  {#changes} 
 
 * Ændringer Introduced in v1.10 (april 2020) :
     * Tilføjet understøttelse af ubyte, ukort, uint, ulong.
