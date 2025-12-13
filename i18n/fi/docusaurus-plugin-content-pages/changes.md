@@ -19,7 +19,7 @@ tarvittavaa toimintaa.
     * ISO 19115 -versiot: Alla on admin info. Käyttäjille voit hakea erityisversioita ISO 19115 -metadatasta. Tehdään tämä Griddap/ tabledap Sivut, joilla tiedostotyyppi laskee. Nämä versiot ovat riippumattomia palvelimen oletusarvosta.
 
 *    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Uutta, MQTT-tukea. Yksityiskohtia suosittelen lukemaan [Uusi sivu aiheesta.](/docs/server-admin/mqtt-integration.md) Tämä sisältää tietoaineistojen rakentamisen MQTT-viesteistä ja MQTT-viestien julkaisemisen, kun tietoaineisto muuttuu. Se on pois oletusarvoisesti, joten jos haluat käyttää sitä, sinun on otettava se käyttöön.
+    * Uutta, MQTT-tukea. Yksityiskohtia suosittelen lukemaan [Uusi sivu aiheesta.](/docs/server-admin/mqtt-integration) Tämä sisältää tietoaineistojen rakentamisen MQTT-viesteistä ja MQTT-viestien julkaisemisen, kun tietoaineisto muuttuu. Se on pois oletusarvoisesti, joten jos haluat käyttää sitä, sinun on otettava se käyttöön.
 
 Kiitos Ayush Singhille MQTT:stä&#33;
 
@@ -39,7 +39,7 @@ Kiitos [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid FromNcFiles, jossa on erilaisia ulottuvuuksia: On olemassa (Kokeellinen kokeilu) Tukea EDDGrid FromNcFiles-tietokoneissa on muuttujia, jotka eivät käytä samoja akseleita. Kerro, miten tämä toimii sinulle tai jos käytös ei näytä oikealta.
 
-    * On olemassa kokoelma optimointia, joiden pitäisi olla turvallisia, mutta on lippuja palata vanhaan käytökseen tarvittaessa. Jos löydät tarvetta asettaa jokin lippu, ilmoita vika. Jos kuulemme näistä ongelmista, suurin osa poistetaan tulevaisuudessa. Siellä on A [Uusi sivu ominaisuuslipuista](/docs/server-admin/feature-flags.md) Voit lukea näistä ja muista lipuista.
+    * On olemassa kokoelma optimointia, joiden pitäisi olla turvallisia, mutta on lippuja palata vanhaan käytökseen tarvittaessa. Jos löydät tarvetta asettaa jokin lippu, ilmoita vika. Jos kuulemme näistä ongelmista, suurin osa poistetaan tulevaisuudessa. Siellä on A [Uusi sivu ominaisuuslipuista](/docs/server-admin/feature-flags) Voit lukea näistä ja muista lipuista.
 
       * kosketa kosketus Threads Vain vain vain vain Kun kohteet: Tämä on muutos, jotta touchThread toimii vain, kun kosketusjonossa on kohteita. Vähemmän lankaa on pieni optimointi, mutta silti hyödyllinen. Oletus on totta.
 

@@ -19,7 +19,7 @@ Mesures à prendre.
     * Version ISO 19115: Voir ci-dessous pour les informations administratives. Pour les utilisateurs, vous pouvez maintenant demander des versions spécifiques des métadonnées ISO 19115. Faites-le à partir de la grille tabledap pages pour un jeu de données avec le type de fichier déroulant. Ces versions seront indépendantes du serveur par défaut.
 
 *    **Les choses ERDDAP™ Les administrateurs doivent savoir et faire :** 
-    * Nouvelle fonctionnalité, support MQTT. Pour plus de détails, je recommande de lire [nouvelle page à ce sujet.](/docs/server-admin/mqtt-integration.md) Cela comprend la possibilité de créer des ensembles de données à partir de messages MQTT et de publier des messages MQTT lorsqu'un ensemble de données change. Il est désactivé par défaut, donc si vous voulez l'utiliser, vous devez l'activer.
+    * Nouvelle fonctionnalité, support MQTT. Pour plus de détails, je recommande de lire [nouvelle page à ce sujet.](/docs/server-admin/mqtt-integration) Cela comprend la possibilité de créer des ensembles de données à partir de messages MQTT et de publier des messages MQTT lorsqu'un ensemble de données change. Il est désactivé par défaut, donc si vous voulez l'utiliser, vous devez l'activer.
 
 Merci à Ayush Singh d'avoir travaillé sur MQTT&#33;
 
@@ -39,7 +39,7 @@ Grâce à [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid DeNcFiles avec différentes dimensions: Il y a (expérimental) appui à EDDGrid Des ensembles de données de NcFiles pour avoir des variables qui n'utilisent pas le même ensemble d'axes. S'il vous plaît rapportez comment cela fonctionne pour vous, ou si le comportement ne semble pas tout à fait correct.
 
-    * Il y a une collection d'optimisations qui devrait être sûre, mais avoir des drapeaux pour revenir à l'ancien comportement si nécessaire. Si vous trouvez le besoin de définir l'un des drapeaux, veuillez déposer un bug. Si nous n'entendons pas de problèmes, la plupart de ceux-ci seront supprimés avec le nouveau comportement par défaut dans le futur. Il y a une [nouvelle page sur les drapeaux de fonctionnalités](/docs/server-admin/feature-flags.md) où vous pouvez lire sur ces drapeaux et d'autres.
+    * Il y a une collection d'optimisations qui devrait être sûre, mais avoir des drapeaux pour revenir à l'ancien comportement si nécessaire. Si vous trouvez le besoin de définir l'un des drapeaux, veuillez déposer un bug. Si nous n'entendons pas de problèmes, la plupart de ceux-ci seront supprimés avec le nouveau comportement par défaut dans le futur. Il y a une [nouvelle page sur les drapeaux de fonctionnalités](/docs/server-admin/feature-flags) où vous pouvez lire sur ces drapeaux et d'autres.
 
       * toucher Fil Seulement QuandItems : Il s'agit d'un changement afin que le touchThread ne s'exécute que lorsqu'il y a des éléments dans la file d'attente à toucher. Un filetage de moins est une optimisation mineure mais toujours utile. Par défaut.
 

@@ -19,7 +19,7 @@ Actie vereist.
     * ISO 19115 versies: Zie hieronder voor admin info. Voor gebruikers kunt u nu specifieke versies van ISO 19115 metadata aanvragen. Doe dit vanuit de griddap/ tabledap pagina's voor een dataset met het bestandstype omlaag. Deze versies zullen onafhankelijk zijn van de standaardserver.
 
 *    **Dingen ERDDAP™ Beheerders moeten weten en doen:** 
-    * Nieuwe functie, MQTT ondersteuning. Voor details raad ik het lezen van de [Nieuwe pagina erover.](/docs/server-admin/mqtt-integration.md) Dit omvat het kunnen bouwen van datasets van MQTT berichten, en het publiceren van MQTT berichten wanneer een dataset verandert. Het is standaard uitgeschakeld, dus als je het wilt gebruiken, moet je het inschakelen.
+    * Nieuwe functie, MQTT ondersteuning. Voor details raad ik het lezen van de [Nieuwe pagina erover.](/docs/server-admin/mqtt-integration) Dit omvat het kunnen bouwen van datasets van MQTT berichten, en het publiceren van MQTT berichten wanneer een dataset verandert. Het is standaard uitgeschakeld, dus als je het wilt gebruiken, moet je het inschakelen.
 
 Met dank aan Ayush Singh voor het werken aan MQTT&#33;
 
@@ -39,7 +39,7 @@ Dankzij [SethChampagneNLL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid VanNcFiles met verschillende afmetingen: Die is er. (experimenteel) steun voor EDDGrid VanNcFiles datasets om variabelen te hebben die niet dezelfde reeks assen gebruiken. Rapporteer alsjeblieft hoe dit werkt voor jou, of als het gedrag niet helemaal juist lijkt.
 
-    * Er is een verzameling van optimalisaties die veilig moeten zijn, maar hebben vlaggen om terug te keren naar oud gedrag indien nodig. Als u de noodzaak vindt om een van de vlaggen in te stellen, dient u een bug in te dienen. Als we horen van geen problemen de meeste van deze zullen worden verwijderd met de nieuwe gedrag standaard in de toekomst. Er is een [nieuwe pagina over featurevlaggen](/docs/server-admin/feature-flags.md) waar je kunt lezen over deze en andere vlaggen.
+    * Er is een verzameling van optimalisaties die veilig moeten zijn, maar hebben vlaggen om terug te keren naar oud gedrag indien nodig. Als u de noodzaak vindt om een van de vlaggen in te stellen, dient u een bug in te dienen. Als we horen van geen problemen de meeste van deze zullen worden verwijderd met de nieuwe gedrag standaard in de toekomst. Er is een [nieuwe pagina over featurevlaggen](/docs/server-admin/feature-flags) waar je kunt lezen over deze en andere vlaggen.
 
       * aanraking Thread Alleen WhenItems: Dit is een verandering zodat de touchThread alleen draait als er items in de wachtrij zijn om aan te raken. Een minder draad draaien is een kleine optimalisatie maar toch nuttig. Standaardwaarden voor waar.
 

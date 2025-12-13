@@ -13,7 +13,7 @@
 
 ##  ERDDAP Som MQTT-klient
 
- ERDDAP kan fungera som en MQTT-klient för att prenumerera på ämnen på en extern eller egen inbäddad MQTT-mäklare. Detta uppnås med hjälp av den nya `EDDTableFromMqtt` datasettyp, som fungerar på samma sätt som den befintliga `EDDTableFromHttpGet` dataset.
+ ERDDAP kan fungera som en MQTT-klient för att prenumerera på ämnen på en extern eller egen inbäddad MQTT-mäklare. Detta uppnås med hjälp av den nya `EDDTableFromMqtt` datasettyp, som fungerar på samma sätt som den befintliga [ `EDDTableFromHttpGet` ](/docs/server-admin/datasets#eddtablefromhttpget) dataset.
 
 För närvarande stöder klientgenomförandet endast **Prenumerera** ämnen.
 

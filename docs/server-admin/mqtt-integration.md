@@ -13,7 +13,7 @@ ERDDAP can leverage MQTT in two primary ways:
 
 ## ERDDAP as an MQTT Client
 
-ERDDAP can act as an MQTT client to subscribe to topics on an external or its own embedded MQTT broker. This is achieved using the new  `EDDTableFromMqtt`  dataset type, which functions similarly to the existing  `EDDTableFromHttpGet`  dataset.
+ERDDAP can act as an MQTT client to subscribe to topics on an external or its own embedded MQTT broker. This is achieved using the new  `EDDTableFromMqtt`  dataset type, which functions similarly to the existing [`EDDTableFromHttpGet`](/docs/server-admin/datasets#eddtablefromhttpget) dataset.
 
 Currently, the client implementation only supports  **subscribing**  to topics.
 

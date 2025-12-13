@@ -32,6 +32,10 @@ Als je in deze ideeën gelooft en de moeite doet om de XML te maken voor dataset
 De datasets.xml vergt aanzienlijke inspanning voor de eerste paar datasets, maar **Het wordt makkelijker.** . Na de eerste dataset kunt u vaak veel van uw werk opnieuw gebruiken voor de volgende dataset. Gelukkig, ERDDAP™ komt met twee [Hulpmiddelen](#tools) om u te helpen de XML te maken voor elke dataset in datasets.xml .
 Als je vastzit, zie je onze [sectie over het krijgen van extra ondersteuning](/docs/intro#support) .
 
+### Variabelen in datasets.xml  {#varaibles-in-datasetsxml} 
+
+Vanaf ERDDAP™ versie 2.29.0, datasets.xml is nu (facultatief) verwerkt door een [Tekenreeksondernemer](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Dit heeft vele toepassingen, waaronder het instellen van private waarden (zoals wachtwoorden) gebruik van omgevingsvariabelen. Dit kan worden uitgeschakeld door EnvParsing in te stellen op false in setup.xml.
+
 ### Gegevensaanbieder Formulier{#data-provider-form} 
 Wanneer een data provider komt naar u in de hoop om sommige gegevens toe te voegen aan uw ERDDAP , het kan moeilijk en tijdrovend zijn om alle metagegevens te verzamelen (informatie over de dataset) nodig om de dataset toe te voegen aan ERDDAP . Veel gegevensbronnen (bijvoorbeeld .csv-bestanden, Excel-bestanden, databases) geen interne metadata hebben, dus ERDDAP™ heeft een Data Provider Form dat metadata verzamelt van de dataprovider en geeft de gegevensprovider enige andere begeleiding, waaronder uitgebreide begeleiding voor [Gegevens in databases](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) . De ingediende informatie wordt omgezet in de datasets.xml formaat en vervolgens gemaild naar de ERDDAP™ beheerder (u) en geschreven (bijlage) tot *bigParentDirectory* /logs/dataProviderForm.log . Dus, de vorm semi-automatiseert het proces van het krijgen van een dataset in ERDDAP , maar de ERDDAP™ De beheerder moet de datasets.xml brok en omgaan met het verkrijgen van het gegevensbestand (s) van de aanbieder of verbinding met de database.
 
@@ -900,6 +904,7 @@ De soorten datasets vallen in twee categorieën. ( [Waarom?](#why-just-two-basic
     * Er MOET een asvariabele zijn voor elke dimensie. De asvariabelen moeten worden gespecificeerd in de volgorde waarin de gegevensvariabelen deze gebruiken.
     * In EDDGrid datasets, alle gegevensvariabelen MOET gebruiken (aandeel) alle asvariabelen.
          ( [Waarom?](#why-just-two-basic-data-structures)   [Wat als ze dat niet doen?](#dimensions) ) 
+Nieuw in ERDDAP™ versie 2.29.0 met EDDGrid FromNcFiles is experimentele ondersteuning voor gegevensvariabelen die niet alle asvariabelen ondersteunen (of zoals sommigen het 1D en 2D data hebben genoemd in dezelfde dataset) .
     * Gesorteerde dimensiewaarden - In totaal EDDGrid datasets, elke dimensie MOET in gesorteerde volgorde zijn (oplopend of dalend) . Elk kan onregelmatig worden verdeeld. Er kunnen geen banden zijn. Dit is een vereiste van de [CF-metadatastandaard](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) . Als de waarden van een dimensie niet in gesorteerde volgorde zijn, wordt de dataset niet geladen en ERDDAP™ zal de eerste ongesorteerde waarde in het logbestand identificeren; *bigParentDirectory* /logs/log.txt .
         
 Enkele subklassen hebben extra beperkingen (met name: EDDGrid AggregatedExistingDimension vereist dat de buitenste (linkste, eerste) dimensie oplopend is.
@@ -949,6 +954,7 @@ Ongesorteerde dimensiewaarden geven bijna altijd een probleem aan met de bronset
         *    [EDDTabelVan ongeldige CRAFiles](#eddtablefrominvalidcrafiles) geaggregeerde gegevens van NetCDF   (v3 of v4)   .nc bestanden die een specifieke, ongeldige variant van de CF DSG Contiguous Ragged Array gebruiken (CRA) dossiers. Hoewel ERDDAP™ ondersteunt dit bestandstype, het is een ongeldig bestandstype dat niemand zou moeten gebruiken. Groepen die momenteel dit bestandstype gebruiken worden sterk aangemoedigd om te gebruiken ERDDAP™ om geldige CF DSG CRA bestanden te genereren en te stoppen met het gebruik van deze bestanden.
         *    [EDDtabelVanafJsonlCSVFiles](#eddtablefromjsonlcsvfiles) geaggregeerde gegevens van [JSON Lijnen CSV-bestanden](https://jsonlines.org/examples/) .
         *    [EDDtabelVanMultidimNcFiles](#eddtablefrommultidimncfiles) geaggregeerde gegevens van NetCDF   (v3 of v4)   .nc bestanden met verschillende variabelen met gedeelde dimensies.
+        *    [EDDTableFromMqtt](/docs/server-admin/mqtt-integration) bouwt een dataset op basis van MQTT-berichten. De documentatie staat op een speciale pagina. Merk op dat er veel overeenkomsten zijn met [EDDTableFromHttpGet](#eddtablefromhttpget) .
         *    [EDDtabelVanNcFiles](#eddtablefromncfiles) geaggregeerde gegevens van NetCDF   (v3 of v4)   .nc bestanden met verschillende variabelen met gedeelde dimensies. Het is prima om dit datasettype te blijven gebruiken voor bestaande datasets, maar voor nieuwe datasets raden we in plaats daarvan EDDTableFromMultidimNcFiles aan.
         *    [EDDtabelVanNcCFFiles](#eddtablefromnccffiles) geaggregeerde gegevens van NetCDF   (v3 of v4)   .nc bestanden die gebruik maken van een van de bestandsformaten die door de [CF Discrete bemonsteringsgeometrie (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) conventies. Maar voor bestanden met behulp van een van de multidimensionale CF DSG varianten, gebruik [EDDtabelVanMultidimNcFiles](#eddtablefrommultidimncfiles) In plaats daarvan.
         *    [EDDtabelVanNccsvFiles](#eddtablefromnccsvfiles) geaggregeerde gegevens van [NCCSV](/docs/user/nccsv-1.00) ASCII .csv bestanden.
@@ -1577,6 +1583,8 @@ Wij raden het gebruik van de [GenererenDatasets Xml-programma](#generatedatasets
  
 ###  EDDGrid VanNcFiles{#eddgridfromncfiles} 
  [ ** EDDGrid VanNcFiles** ](#eddgridfromncfiles) geaggregeerde gegevens van lokale, gerasterde, [GRIB .grb en .grb2](https://en.wikipedia.org/wiki/GRIB) bestanden, [ HDF   (v4 of v5)   .hdf ](https://www.hdfgroup.org/) bestanden, [ .nc ml](#ncml-files) bestanden, [ NetCDF   (v3 of v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) bestanden, en [Zarr](https://github.com/zarr-developers/zarr-python) bestanden (vanaf versie 2.25) . Zarr-bestanden hebben iets anders gedrag en vereisen ofwel het bestandNameRegex of het padRegex om "zarr" op te nemen.
+
+Nieuw in ERDDAP™ versie 2.29.0 is experimentele ondersteuning voor gegevensvariabelen die niet alle asvariabelen ondersteunen (of zoals sommigen het 1D en 2D data hebben genoemd in dezelfde dataset) . Gelieve te contacteren op GitHub (discussies of kwesties) met feedback en bugs.
 
 Dit kan werken met andere bestandstypen (Bijvoorbeeld, BUFR) We hebben het alleen nog niet getest. Stuur ons alsjeblieft wat proefdossiers.
 
@@ -5258,7 +5266,7 @@ Als een dataset ACDD 1.0 gebruikt, is dit attribuut STRONGLY AANGEVALD, bijvoorb
     ```
 Maar ERDDAP™ beveelt nu ACDD-1.3. Als u [wisselde uw datasets om ACDD-1.3 te gebruiken](#switch-to-acdd-13) , gebruik Metadata\\_Conventions is STRONGLY DISCOURAGED: gewoon gebruiken [&lt;Overeenkomsten&gt;] (#Conventions) In plaats daarvan.
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (van de [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Metadatastandaard) is een aanbevolen tekstuele beschrijving van de verwerking (bijvoorbeeld, [NASA-satellietgegevensverwerkingsniveaus](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) , bijvoorbeeld, niveau 3) of kwaliteitscontroleniveau (bijvoorbeeld, Science Quality) van de gegevens. Bijvoorbeeld,
+*    [ ** processing\\_level ** ](#processing_level)   (van de [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Metadatastandaard) is een aanbevolen tekstuele beschrijving van de verwerking (bijvoorbeeld, [NASA's gegevensverwerkingsniveaus van het aardobservatiesysteem voor gegevens- en informatiesysteem](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) , bijvoorbeeld, niveau 3) of kwaliteitscontroleniveau (bijvoorbeeld, Science Quality) van de gegevens. Bijvoorbeeld,
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ unpackedValue = packed Waarde scale\\_factor + add\\_offset
     * Voor tijdstempelvariabelen met brongegevens van Strings, dit attribuut kunt u een tijdzone die leidt specificeren ERDDAP™ om de lokale-tijd-zone brontijden te converteren (sommige in Standaard tijd, sommige in Daglicht Besparen tijd) in Zulu tijden (die altijd in Standaardtijd zijn) . De lijst met geldige tijdzonenamen is waarschijnlijk identiek aan de lijst in de TZ kolom op [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Gemeenschappelijke Amerikaanse tijdzones zijn: US/Hawaii, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, US/East.
     * Voor tijdstempelvariabelen met numerieke brongegevens kunt u de " time\\_zone " attribuut, maar de waarde moet " Zulu "of "UTC." Als je ondersteuning nodig hebt voor andere tijdzones, stuur dan een e-mail naar Chris. John at noaa.gov .
          
+###### legacy_time_adjust{#legacy_time_adjust} 
+*    [ **legacy_time_adjust** ](#legacy_time_adjust) Beginnen met ERDDAP™ 2.29.0, tijdvariabelen werken iets anders. In zeldzame gevallen, hoogstwaarschijnlijk bij gebruik `dagen sinds` en een jaar vóór 1582 (dus `dagen sinds 0000-01-01` of `dagen sinds 1-1-1 00:00:0.0` ) u moet aangeven voor een aanpassing aan de datumvariabele. De reden hiervoor is ERDDAP™ gebruikt de Java.time bibliotheek om data intern te beheren. Er zijn enkele datasets die wel nodig zijn met behulp van de oude GregorianCalendar bibliotheek om de juiste data te verkrijgen.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### eenheden{#units} 
 *    [ **eenheden** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , [CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) en [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Metadatastandaard) definieert de eenheden van de gegevenswaarden. Bijvoorbeeld,
     ```

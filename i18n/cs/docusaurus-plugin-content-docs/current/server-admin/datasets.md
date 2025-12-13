@@ -32,6 +32,10 @@ Pokud si koupíte do těchto myšlenek a vynaložit úsilí vytvořit XML pro da
 Making the datasets.xml vyžaduje značné úsilí pro prvních několik souborů údajů, ale **Je to jednodušší.** . Po prvním datovém souboru můžete často pro další datový soubor použít mnoho své práce. Naštěstí, ERDDAP™ přichází se dvěma [Nástroje](#tools) vám pomůže vytvořit XML pro každý soubor dat v datasets.xml .
 Když se zasekneš, uvidíš naše [oddíl o získání dodatečné podpory](/docs/intro#support) .
 
+### Proměnné v datasets.xml  {#varaibles-in-datasetsxml} 
+
+Od ERDDAP™ verze 2.29.0, datasets.xml je nyní (volitelně) zpracované [Stringsubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . To má mnoho využití včetně nastavení soukromých hodnot (jako hesla) pomocí proměnných prostředí. To může být vypnuto nastavením EnvParsing na false v setup.xml.
+
 ### Poskytovatel údajů Formulář{#data-provider-form} 
 Když k vám přijde poskytovatel údajů a doufá, že vám přidá nějaké údaje ERDDAP , může být obtížné a časově náročné shromažďovat všechna metadata (informace o datovém souboru) potřeba přidat soubor údajů do ERDDAP . Mnoho zdrojů údajů (například .csv soubory, Soubory Excelu, databáze) nemají žádná interní metadata, takže ERDDAP™ má formulář poskytovatele údajů, který shromažďuje metadata od poskytovatele údajů a poskytuje poskytovateli údajů další pokyny, včetně rozsáhlých pokynů pro [Data v databázích](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) . Předložené informace jsou převedeny na datasets.xml formát a pak e-mailem na ERDDAP™ Správce (Ty) a psáno (Přiložené) až *velkýRodič rodičů* /logs/dataProviderForm.log . Forma tak částečně automatizuje proces získání datového souboru do ERDDAP , ale ERDDAP™ Správce musí ještě dokončit datasets.xml střih a vypořádat se s získáním datového souboru (án) od poskytovatele nebo připojení k databázi.
 
@@ -900,6 +904,7 @@ Typy souborů dat spadají do dvou kategorií. ( [Proč?](#why-just-two-basic-da
     * Pro každý rozměr musí existovat proměnná osy. Proměnné osy MUSÍ být specifikovány v pořadí, v jakém je datové proměnné používají.
     * In EDDGrid Soubory údajů, všechny datové proměnné MUSÍ používat (podíl) všechny proměnné osy.
          ( [Proč?](#why-just-two-basic-data-structures)   [Co když ne?](#dimensions) ) 
+Nový ERDDAP™ verze 2.29.0 EDDGrid FromNcFiles je experimentální podpora datových proměnných, které nepodporují všechny proměnné osy (nebo jak to někteří nazvali 1D a 2D dat ve stejném datovém souboru) .
     * Vytříděné hodnoty rozměrů - Celkem EDDGrid Soubory údajů, každý rozměr musí být v seřazeném pořadí (vzestupně nebo sestupně) . Každý může být nepravidelně mezerný. Nejsou žádné vazby. To je požadavek [Standard metadat CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) . Pokud hodnoty jakéhokoli rozměru nejsou v seřazeném pořadí, soubor dat se nenačte a ERDDAP™ určí první netříděnou hodnotu v souboru záznamu, *velkýRodič rodičů* /logs/log.txt .
         
 Několik podtříd má další omezení (zejména, EDDGrid AgregátExistingDimension vyžaduje, aby vnější (nejlevější, první) rozměr byl vzestupný.
@@ -949,6 +954,7 @@ Netříděné hodnoty rozměrů téměř vždy indikují problém se zdrojovým 
         *    [EDDTableFromNeplatnéCRAFile](#eddtablefrominvalidcrafiles) Údaje z agregátů NetCDF   (V3 nebo v4)   .nc soubory, které používají specifický, neplatný, varianta CF DSG Contiguous Ragged Array (CRA) Složky. I když ERDDAP™ podporuje tento typ souboru, je to neplatný typ souboru, který by nikdo neměl používat. Skupiny, které v současné době používají tento typ souboru, jsou důrazně vybízeny k používání ERDDAP™ generovat platné soubory CF DSG CRA a přestat používat tyto soubory.
         *    [EDDTableFromJsoniCSVFiles](#eddtablefromjsonlcsvfiles) Údaje z agregátů [JSON Řádky CSV souborů](https://jsonlines.org/examples/) .
         *    [EDDTablefromMultidimNcFiles](#eddtablefrommultidimncfiles) Údaje z agregátů NetCDF   (V3 nebo v4)   .nc soubory s několika proměnnými se sdílenými rozměry.
+        *    [EDDTableFromMqtt](/docs/server-admin/mqtt-integration) konstruuje soubor založený na MQTT zprávách. Poznámka: dokumentace je na vyhrazené stránce. Všimněte si, že existuje mnoho podobností s [EDDTableFromHttpGet](#eddtablefromhttpget) .
         *    [EDDTableFromNcFiles](#eddtablefromncfiles) Údaje z agregátů NetCDF   (V3 nebo v4)   .nc soubory s několika proměnnými se sdílenými rozměry. Je v pořádku pokračovat v používání tohoto datového souboru pro stávající datové soubory, ale pro nové datové soubory doporučujeme použít místo toho EDDTableFromMultidimNcFiles.
         *    [EDDTableFromNcCFFiles](#eddtablefromnccffiles) Údaje z agregátů NetCDF   (V3 nebo v4)   .nc soubory, které používají jeden ze formátů souborů uvedených v [CF Geometrie diskrétního odběru vzorků (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Konvence. Ale pro soubory používající jednu z multidimenzionálních CF DSG variant, použijte [EDDTablefromMultidimNcFiles](#eddtablefrommultidimncfiles) Místo toho.
         *    [EDDTableFromNccsvFiles](#eddtablefromnccsvfiles) Údaje z agregátů [NCCSV](/docs/user/nccsv-1.00) ASCII .csv soubory.
@@ -1577,6 +1583,8 @@ Důrazně doporučujeme použít [Generovat soubory dat Xml program](#generateda
  
 ###  EDDGrid FromNcFiles{#eddgridfromncfiles} 
  [ ** EDDGrid FromNcFiles** ](#eddgridfromncfiles) souhrnné údaje z místní, mřížkované, [GRIB .grb a .grb2](https://en.wikipedia.org/wiki/GRIB) soubory, [ HDF   (v4 nebo v5)   .hdf ](https://www.hdfgroup.org/) soubory, [ .nc ml](#ncml-files) soubory, [ NetCDF   (V3 nebo v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) soubory a [Zarr](https://github.com/zarr-developers/zarr-python) soubory (od verze 2.25) . Soubory Zarr mají mírně odlišné chování a vyžadují buď souborNameRegex nebo cestuRegex zahrnout "zarr."
+
+Nový ERDDAP™ verze 2.29.0 je experimentální podpora datových proměnných, které nepodporují všechny proměnné osy (nebo jak to někteří nazvali 1D a 2D dat ve stejném datovém souboru) . Prosím, kontaktujte GitHuba. (diskuse nebo otázky) se zpětnou vazbou a brouky.
 
 To může fungovat s jinými typy souborů (například BUFR) Jen jsme to neotestovali. Prosím, pošlete nám nějaké vzorky.
 
@@ -5258,7 +5266,7 @@ Pokud datový soubor používá ACDD 1.0, tento atribut je například STRONGLY 
     ```
 Ale... ERDDAP™ Nyní doporučujeme ACDD-1.3. Jestliže máte [přepnul vaše soubory dat k použití ACDD-1.3](#switch-to-acdd-13) , použití Metadata\\_Conventions STRONGLIE SLEVA: stačí použít [&lt;Úmluva &gt;] (#konvence) Místo toho.
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (z [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) standard metadat) je textový popis zpracování (například: [Úroveň satelitního zpracování dat NASA](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) Například úroveň 3) nebo úroveň kontroly jakosti (např. kvalita vědy) údajů. Například,
+*    [ ** processing\\_level ** ](#processing_level)   (z [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) standard metadat) je textový popis zpracování (například: [Úroveň zpracování dat ze Země NASA](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) Například úroveň 3) nebo úroveň kontroly jakosti (např. kvalita vědy) údajů. Například,
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ unpackedValue = baleno Hodnota \\* scale\\_factor + add\\_offset
     * Pro proměnné časového razítka se zdrojovými daty ze Strings vám tento atribut umožňuje určit časové pásmo, které vede ERDDAP™ převést na místní čas-zóna zdrojové časy (někteří ve standardním čase, někteří v denním světle šetří čas) do Zulu časy (které jsou vždy ve standardním čase) . Seznam platných názvů časových pásem je pravděpodobně totožný se seznamem ve sloupci TZ [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Společná americká časová pásma jsou: USA/Hawaii, USA/Alaska, USA/Pacific, USA/Mountain, USA/Arizona, USA/Central, USA/Východ.
     * Pro proměnné časového razítka s číselnými zdrojovými daty můžete zadat " time\\_zone " atribut, ale hodnota musí být " Zulu "nebo "UTC." Pokud potřebujete podporu pro jiná časová pásma, prosím e-mail Chris. John at noaa.gov .
          
+###### odkaz_time_adjust{#legacy_time_adjust} 
+*    [ **odkaz_time_adjust** ](#legacy_time_adjust) Začínáme ERDDAP™ 2.29.0, časové proměnné fungují trochu jinak. Ve vzácných případech, s největší pravděpodobností při užívání `dny od` a rok před 1582 (tak `dny od 0000-01-01` nebo `den od 1-1- 1 00:00: 0. 0` ) budete muset uvést pro úpravu proměnné datum. Důvodem je ERDDAP™ pomocí java.time knihovny spravovat data interně. Existují některé soubory, které vyžadují použití staré GregorianKalendář knihovny, aby bolavé správné data.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### jednotky{#units} 
 *    [ **jednotky** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , [CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) a [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) standard metadat) definuje jednotky hodnot dat. Například,
     ```

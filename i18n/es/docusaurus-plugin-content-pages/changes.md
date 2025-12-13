@@ -19,7 +19,7 @@ Medidas necesarias.
     * Versión ISO 19115: Ver abajo para información de administración. Para los usuarios, ahora puede solicitar versiones específicas de metadatos ISO 19115. Haga esto desde el griddap/ tabledap páginas para un conjunto de datos con el tipo de archivo desplegable. Estas versiones serán independientes del defecto del servidor.
 
 *    **Cosas ERDDAP™ Los administradores necesitan saber y hacer:** 
-    * Nueva función, soporte MQTT. Para más detalles recomiendo leer [nueva página al respecto.](/docs/server-admin/mqtt-integration.md) Esto incluye ser capaz de crear conjuntos de datos de mensajes MQTT, y publicar mensajes MQTT cuando un conjunto de datos cambia. Está apagado por defecto, así que si desea utilizarlo, necesita habilitarlo.
+    * Nueva función, soporte MQTT. Para más detalles recomiendo leer [nueva página al respecto.](/docs/server-admin/mqtt-integration) Esto incluye ser capaz de crear conjuntos de datos de mensajes MQTT, y publicar mensajes MQTT cuando un conjunto de datos cambia. Está apagado por defecto, así que si desea utilizarlo, necesita habilitarlo.
 
 ¡Gracias a Ayush Singh por trabajar en MQTT&#33;
 
@@ -39,7 +39,7 @@ Gracias [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid FromNcFiles con dimensiones variables: Hay (experimental) apoyo para EDDGrid FromNcFiles datasets para tener variables que no usen el mismo conjunto de ejes. Por favor informe de nuevo sobre cómo funciona esto para usted, o si el comportamiento no parece bien.
 
-    * Hay una colección de optimizaciones que deben ser seguras, pero tienen banderas para volver a la vieja conducta si es necesario. Si encuentra la necesidad de establecer cualquiera de las banderas, por favor, archiva un error. Si no escuchamos problemas la mayoría de estos serán eliminados con el nuevo comportamiento predeterminado en el futuro. Hay un [nueva página sobre banderas de características](/docs/server-admin/feature-flags.md) donde puedes leer sobre estas y otras banderas.
+    * Hay una colección de optimizaciones que deben ser seguras, pero tienen banderas para volver a la vieja conducta si es necesario. Si encuentra la necesidad de establecer cualquiera de las banderas, por favor, archiva un error. Si no escuchamos problemas la mayoría de estos serán eliminados con el nuevo comportamiento predeterminado en el futuro. Hay un [nueva página sobre banderas de características](/docs/server-admin/feature-flags) donde puedes leer sobre estas y otras banderas.
 
       * tacto Thread Sólo WhenItems: Este es un cambio para que el toqueTread sólo funcione cuando hay elementos en la cola para tocar. Un hilo menos es una optimización menor pero todavía útil. Defaults to true.
 

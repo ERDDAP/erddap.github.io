@@ -32,6 +32,10 @@ Ha megveszi ezeket az ötleteket, és kitölti az XML létrehozására irányul�
 A készítés datasets.xml jelentős erőfeszítéseket tesz az első néhány adatkészlet számára, de **könnyebb lesz** ... Az első adatkészlet után gyakran újra felhasználhatja a munkát a következő adatkészlethez. szerencsére, ERDDAP™ jön két [Eszközök](#tools) hogy segítsen létrehozni az XML-t minden adatkészlethez datasets.xml ...
 Ha megragadsz, lásd a mi [rész további támogatás megszerzéséről](/docs/intro#support) ...
 
+### Variables in datasets.xml  {#varaibles-in-datasetsxml} 
+
+Mint ERDDAP™ verzió 2.29.0, datasets.xml most van (Opcionálisan) feldolgozott egy [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) ... Ez sok felhasználással rendelkezik, beleértve a magánértékek beállítását (mint a jelszavak) környezeti változók használata. Ezt letilthatja a beállítás lehetővé teszi az EnvParsing számára, hogy hamis a setup.xml-ben.
+
 ### Adatszolgáltató Formátum{#data-provider-form} 
 Amikor egy adatszolgáltató érkezik hozzád, remélve, hogy hozzáad néhány adatot a ERDDAP Nehéz és időigényes, hogy összegyűjtse az összes metaadatát (információ az adatkészletről) szükséges az adatkészlet hozzáadásához ERDDAP ... Számos adatforrás (például .csv fájlok, Excel fájlok, adatbázisok) nincs belső metaadata, így ERDDAP™ rendelkezik olyan adatszolgáltatói formanyomtatványsal, amely összegyűjti a metaadatot az adatszolgáltatótól, és más iránymutatást ad az adatszolgáltatónak, ideértve a kiterjedt útmutatást is. [Adatbázisok](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) ... A benyújtott információ átalakul a datasets.xml formátum, majd e-mailben ERDDAP™ adminisztrátor (Te vagy) írás (Megjelent) a *bigParentDirectory[szerkesztés]* /logs/dataProviderForm.log Így a forma félautomatizálja az adatkészlet beszerzésének folyamatát ERDDAP de a ERDDAP™ Az adminisztrátornak még mindig befejeznie kell datasets.xml cunk és foglalkozik az adatfájl megszerzésével (s) a szolgáltatótól vagy az adatbázishoz való csatlakozástól.
 
@@ -900,6 +904,7 @@ Az adatkészletek típusai két kategóriába tartoznak. ( [Miért?](#why-just-t
     * Ott lehet egy tengely változó minden dimenzióban. Axis változók MUST van meghatározva annak érdekében, hogy az adatok változók használja őket.
     * Inkább EDDGrid adatkészletek, minden adatváltozat MUST használat (Részvény) az összes tengely változó.
          ( [Miért?](#why-just-two-basic-data-structures)   [Mi van, ha nem?](#dimensions) ) 
+Újdonság ERDDAP™ verzió 2.29.0 EDDGrid FromNcFiles kísérleti támogatást nyújt az olyan adatok változóinak, amelyek nem támogatják az összes tengelyváltozatot (vagy ahogy néhányan úgy hívták, hogy az 1D és a 2D adatok ugyanazon adatkészletben) ...
     * Osztott dimenziós értékek - Minden EDDGrid adatkészletek, minden dimenzió MUST rendezett rendben (Felemelkedés vagy leszármazás) ... Mindegyik szabálytalanul helyet foglalhat. Nem lehetnek kapcsolatok. Ez a követelmény a [CF metaadat szabvány](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) ... Ha bármely dimenzió értéke nem rendezett rendben van, az adatkészlet nem lesz betöltve és ERDDAP™ azonosítja az első fel nem szorított értéket a logfájlban, *bigParentDirectory[szerkesztés]* /logs/log.txt .
         
 Néhány alosztálynak további korlátozásai vannak (különösen, EDDGrid Az AggregateExistingDimension megköveteli, hogy a külső (balra, első) dimenzió felemelkedjen.
@@ -949,6 +954,7 @@ A nem szorított dimenziós értékek szinte mindig problémát jelentenek a for
         *    [EDDTableFromInvalidCRAFiles](#eddtablefrominvalidcrafiles) összesített adatok NetCDF   (v3 vagy v4)   .nc fájlok, amelyek egy adott, érvénytelen, változata a CF DSG Contiguous Ragged Array (CRA) fájlok. Bár ERDDAP™ támogatja ezt a fájltípust, ez egy érvénytelen fájltípus, amelyet senkinek nem kell használnia. Azok a csoportok, amelyek jelenleg ezt a fájltípust használják, erősen ösztönzik a használatra ERDDAP™ hiteles CF DSG CRA fájlok generálására, és hagyja abba ezeket a fájlokat.
         *    [EDDTableFromJsonlCSVFiles](#eddtablefromjsonlcsvfiles) összesített adatok [JSON Lines CSV fájlok](https://jsonlines.org/examples/) ...
         *    [EDDTableFromMultidimNcFiles](#eddtablefrommultidimncfiles) összesített adatok NetCDF   (v3 vagy v4)   .nc több változóval rendelkező fájlok közös dimenziókkal.
+        *    [EDDTableFromMqt](/docs/server-admin/mqtt-integration) az MQTT üzeneteken alapuló adatkészletet épít. Vegye figyelembe, hogy a dokumentáció egy dedikált oldalon van. Ne feledje, hogy sok hasonlóság van [EDDTableFromHttpGet](#eddtablefromhttpget) ...
         *    [EDDTableFromNcFiles](#eddtablefromncfiles) összesített adatok NetCDF   (v3 vagy v4)   .nc több változóval rendelkező fájlok közös dimenziókkal. Jó, ha továbbra is használja ezt az adatkészlettípust a meglévő adatkészletekhez, de új adatkészletek esetében inkább az EDDTableFromMultidimNcFiles használatát javasoljuk.
         *    [EDDTableFromNcCFFiles](#eddtablefromnccffiles) összesített adatok NetCDF   (v3 vagy v4)   .nc fájlokat, amelyek az egyik fájlformátumot használják, amelyet a [CF Discrete Sampling Geometries (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) egyezmények. De az egyik multidimenzionális CF DSG változatot használó fájlokhoz, használjon [EDDTableFromMultidimNcFiles](#eddtablefrommultidimncfiles) Ehelyett.
         *    [EDDTableFromNccsvFiles](#eddtablefromnccsvfiles) összesített adatok [NCCSV](/docs/user/nccsv-1.00) ASCII .csv fájlok.
@@ -1577,6 +1583,8 @@ Erősen ajánljuk a használatát [GenerateDatasets Xml program](#generatedatase
  
 ###  EDDGrid FromNcFiles{#eddgridfromncfiles} 
  [ ** EDDGrid FromNcFiles** ](#eddgridfromncfiles) aggregálja az adatokat a helyi, rácsos, [GRIB .grb és .grb2](https://en.wikipedia.org/wiki/GRIB) fájlok, [ HDF   (v4 vagy v5)   .hdf ](https://www.hdfgroup.org/) fájlok, [ .nc ml ml](#ncml-files) fájlok, [ NetCDF   (v3 vagy v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) fájlok és [Zarr](https://github.com/zarr-developers/zarr-python) fájlok (2.25 verzió) ... A Zarr fájlok kissé eltérő viselkedéssel rendelkeznek, és megkövetelik a fájltNameRegex vagy az útRegex, hogy tartalmazza a "zarr".
+
+Újdonság ERDDAP™ A 2.29.0 verzió kísérleti támogatást nyújt az olyan adatok változóinak, amelyek nem támogatják az összes tengelyváltozatot (vagy ahogy néhányan úgy hívták, hogy az 1D és a 2D adatok ugyanazon adatkészletben) ... Kérjük, érje el a GitHub-ot (beszélgetések vagy kérdések) visszajelzésekkel és hibákkal.
 
 Ez működhet más fájltípusokkal (Például a BUFR) Csak nem teszteltük - kérjük, küldjön nekünk néhány minta fájlt.
 
@@ -5258,7 +5266,7 @@ Ha egy adatkészlet ACDD 1.0-t használ, ez a tulajdonság például szigorúan 
     ```
 De ERDDAP™ most javasolja az ACDD-1.3-at. Ha van [kapcsolta be az adatkészleteit az ACDD-1.3 használatára](#switch-to-acdd-13) Használata Metadata\\_Conventions STRONGLY DISCOURAGED: Csak használja [&lt;Egyezmények&gt;] (#konvenciók) Ehelyett.
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (a [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) metadata szabvány) a feldolgozás szöveges leírása (például, [NASA műholdas adatfeldolgozási szint](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) Például a 3. szint) vagy minőségellenőrzési szint (Például a Science Quality) az adatok. Például,
+*    [ ** processing\\_level ** ](#processing_level)   (a [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) metadata szabvány) a feldolgozás szöveges leírása (például, [A NASA Föld-megfigyelő rendszeradat- és információs rendszeradat-feldolgozási szintje](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) Például a 3. szint) vagy minőségellenőrzési szint (Például a Science Quality) az adatok. Például,
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ UnpackedValue = csomagolás Érték \\* scale\\_factor + add\\_offset
     * Az időbélyegző változók forrásadatokkal a Strings-tól, ez a tulajdonság lehetővé teszi, hogy meghatározza az időzónát, amely vezet ERDDAP™ átalakítani a helyi-time-zóna forrási időket (néhány a Standard időben, néhány a Daylight Saving Time) a Zulu Időnként (amelyek mindig a szabványos időben vannak) ... Az érvényes időzóna nevek listája valószínűleg azonos a TZ oszlop listáján [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ... A közös amerikai időzónák: US/Hawaii, US/Alaska, US/Cacific, US/Mountain, US/Arizona, US/Central, US/Kelet.
     * Az időbélyegző változók számszerű forrásadatokkal, megadhatja a " time\\_zone tulajdonság, de az értéknek " Zulu " vagy "UTC". Ha más időzónák támogatására van szüksége, kérjük, e-mailben Chris. John at noaa.gov.
          
+###### Legacy_time_adjust{#legacy_time_adjust} 
+*    [ **Legacy_time_adjust** ](#legacy_time_adjust) Kezdőlap ERDDAP™ 2.29.0, az idő változói valamivel másképp működnek. Ritka esetekben, legvalószínűbb, ha használja `napok óta` egy évvel 1582 előtt (így `napok óta 0000-01-01` vagy `napok 1-1 00:00:0.0` ) jeleznie kell egy kiigazítást a dátum változójához. Ennek oka az ERDDAP™ használja a java.time könyvtárat, hogy belsőleg kezelje a dátumokat. Vannak olyan adatkészletek, amelyek megkövetelik a régi GregorianCalendar könyvtár használatát a helyes dátumok megragadásához.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### egység{#units} 
 *    [ **egység** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , [CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) és [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) metadata szabvány) meghatározza az adatértékek egységeit. Például,
     ```

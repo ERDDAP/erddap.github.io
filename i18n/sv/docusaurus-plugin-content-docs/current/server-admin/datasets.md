@@ -32,6 +32,10 @@ Om du köper in dessa idéer och spenderar ansträngningen att skapa XML för at
 Göra datasets.xml ansträngning för de första datamängderna, men **Det blir lättare** . Efter den första datamängden kan du ofta återanvända mycket av ditt arbete för nästa datamängd. Som tur är, ERDDAP™ Kommer med två [Verktyg](#tools) för att hjälpa dig att skapa XML för varje dataset i datasets.xml .
 Om du fastnar, se vår [sektion om att få ytterligare stöd](/docs/intro#support) .
 
+### Variabler i datasets.xml  {#varaibles-in-datasetsxml} 
+
+Från ERDDAP™ version 2.29.0, datasets.xml är nu (valfritt) Bearbetad av en [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Detta har många användningsområden inklusive att ställa in privata värden (som lösenord) använda miljövariabler. Detta kan inaktiveras genom att ställa in aktiveraEnvParsing till falsk i setup.xml.
+
 ### Dataleverantör Formulär{#data-provider-form} 
 När en dataleverantör kommer till dig hoppas du lägga till lite data till din ERDDAP Det kan vara svårt och tidskrävande att samla alla metadata (Information om dataset) behövs för att lägga till dataset i ERDDAP . Många datakällor (till exempel .csv-filer, Excel-filer, databaser) har inga interna metadata, så ERDDAP™ har ett dataleverantörsformulär som samlar metadata från dataleverantören och ger dataleverantören någon annan vägledning, inklusive omfattande vägledning för [Data i databaser](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) . Den inlämnade informationen omvandlas till datasets.xml format och sedan skickas till ERDDAP™ Administratör (Du du) och skriftlig (Appenderad) att *bigParentDirectory* /logs/dataProviderForm.log . Således formuläret halvautomatiserar processen att få en dataset in i ERDDAP Men den ERDDAP™ Administratören måste fortfarande slutföra datasets.xml chunk och hantera att få datafilen (s) från leverantören eller anslutning till databasen.
 
@@ -900,6 +904,7 @@ De typer av dataset faller i två kategorier. ( [Varför?](#why-just-two-basic-d
     * Det måste finnas en axelvariabel för varje dimension. Axis variabler måste anges i den ordning som datavariablerna använder dem.
     * Inom EDDGrid dataset, alla datavariabler MÅSTE använda (aktie) alla axelvariabler.
          ( [Varför?](#why-just-two-basic-data-structures)   [Tänk om de inte gör det?](#dimensions) ) 
+Nytt i ERDDAP™ version 2.29.0 med EDDGrid FromNcFiles är experimentellt stöd för data variabler som inte stöder alla axel variabler (eller som vissa har kallat det 1D- och 2D-data i samma dataset) .
     * Sorterade dimensionsvärden - I allt EDDGrid datamängder, varje dimension måste vara i sorterad ordning (Uppstigning eller nedstigning) . Var och en kan vara oregelbundet placerad. Det kan inte finnas några band. Detta är ett krav på [CF metadata standard](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) . Om någon dimensions värderingar inte är i sorterad ordning kommer datamängden inte att laddas och ERDDAP™ identifiera det första osorterade värdet i loggfilen, *bigParentDirectory* /logs/log.txt.
         
 Några underklasser har ytterligare begränsningar (särskilt EDDGrid AggregateExistingDimension kräver att den yttersta (vänstra, första) dimensionen stiger upp.
@@ -949,6 +954,7 @@ Osorterade dimensionsvärden indikerar nästan alltid ett problem med källdatam
         *    [EDDTableFromInvalidCRAFiles](#eddtablefrominvalidcrafiles) aggregerar data från NetCDF   (v3 eller v4)   .nc filer som använder en specifik, ogiltig, variant av CF DSG Contiguous Ragged Array (CRA) filer. Även om ERDDAP™ stöder denna filtyp, det är en ogiltig filtyp som ingen ska börja använda. Grupper som för närvarande använder denna filtyp uppmuntras starkt att använda ERDDAP™ för att generera giltiga CF DSG CRA-filer och sluta använda dessa filer.
         *    [EDDTableFromJsonlCSVFiles](#eddtablefromjsonlcsvfiles) aggregerar data från [JSON Lines CSV-filer](https://jsonlines.org/examples/) .
         *    [EDDTableFromMultidimNcFiles](#eddtablefrommultidimncfiles) aggregerar data från NetCDF   (v3 eller v4)   .nc filer med flera variabler med delade dimensioner.
+        *    [EDDTableFromMqtt](/docs/server-admin/mqtt-integration) konstruerar en dataset baserat på MQTT-meddelanden. Observera att dokumentationen finns på en dedikerad sida. Observera att det finns många likheter [EDDTableFromHttpGet](#eddtablefromhttpget) .
         *    [EDDTableFromNcFiles](#eddtablefromncfiles) aggregerar data från NetCDF   (v3 eller v4)   .nc filer med flera variabler med delade dimensioner. Det är bra att fortsätta använda denna datasettyp för befintliga dataset, men för nya dataset rekommenderar vi att du använder EDDTableFromMultidimNcFiles istället.
         *    [EDDTableFromNcCFFiles](#eddtablefromnccffiles) aggregerar data från NetCDF   (v3 eller v4)   .nc filer som använder ett av de filformat som anges av [CF Diskret sampling geometrier (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) konventioner. Men för filer som använder en av de multidimensionella CF DSG-varianterna, använd [EDDTableFromMultidimNcFiles](#eddtablefrommultidimncfiles) I stället.
         *    [EDDTableFromNccsvFiles](#eddtablefromnccsvfiles) aggregerar data från [NCCSV](/docs/user/nccsv-1.00) ASCII .csv filer.
@@ -1577,6 +1583,8 @@ Vi rekommenderar starkt att du använder [GenerateDatasets Xml program](#generat
  
 ###  EDDGrid FrånNcFiles{#eddgridfromncfiles} 
  [ ** EDDGrid FrånNcFiles** ](#eddgridfromncfiles) aggregerar data från lokala, ruttna, [GRIB .grb och .grb2](https://en.wikipedia.org/wiki/GRIB) filer, [ HDF   (v4 eller v5)   .hdf ](https://www.hdfgroup.org/) filer, [ .nc ml](#ncml-files) filer, [ NetCDF   (v3 eller v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) filer och [Zarr](https://github.com/zarr-developers/zarr-python) filer filer (Från och med version 2.25) . Zarr-filer har något annorlunda beteende och kräver antingen filenNameRegex eller vägenRegex för att inkludera "zarr".
+
+Nytt i ERDDAP™ version 2.29.0 är experimentellt stöd för datavariabler som inte stöder alla axelvariabler (eller som vissa har kallat det 1D- och 2D-data i samma dataset) . Vänligen nå ut på GitHub (diskussioner eller frågor) med feedback och buggar.
 
 Detta kan fungera med andra filtyper (Till exempel BUFR) Vi har bara inte testat det - skicka oss några provfiler.
 
@@ -5258,7 +5266,7 @@ Om en dataset använder ACDD 1.0, är detta attribut STRONGLY RECOMMENDED, till 
     ```
 Men ERDDAP™ rekommenderar nu ACDD-1.3. Om du har [Byt dataset för att använda ACDD-1.3](#switch-to-acdd-13) , användning av Metadata\\_Conventions STRONGLY DISCOURAGED: Använd bara&lt;Konventioner&gt;] (#konventioner) I stället.
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (från [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) metadata standard) är en rekommenderad textbeskrivning av bearbetningen (till exempel, [NASA satellit databehandling nivåer](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) Till exempel nivå 3) eller kvalitetskontrollnivå (Till exempel vetenskaplig kvalitet) av data. Till exempel,
+*    [ ** processing\\_level ** ](#processing_level)   (från [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) metadata standard) är en rekommenderad textbeskrivning av bearbetningen (till exempel, [NASAs Earth Observing System Data and Information System databehandlingsnivåer](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) Till exempel nivå 3) eller kvalitetskontrollnivå (Till exempel vetenskaplig kvalitet) av data. Till exempel,
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ unpackedValue = packad Värde \\* scale\\_factor + + + add\\_offset
     * För tidsstämpelvariabler med källdata från Strings, låter detta attribut dig ange en tidszon som leder ERDDAP™ Omvandla lokala tidszonens källtider (Några i standardtid, några i dagsljus spara tid) in i Zulu gånger (som alltid är i standardtid) . Listan över giltiga tidszonnamn är förmodligen identisk med listan i TZ-kolumnen på [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Vanliga amerikanska tidszoner är: US/Hawaii, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, US/Eastern.
     * För tidsstämpelvariabler med numeriska källdata kan du ange " time\\_zone attribut, men värdet måste vara " Zulu eller "UTC". Om du behöver stöd för andra tidszoner, vänligen maila Chris. John på noaa.gov.
          
+###### legacy_time_adjust{#legacy_time_adjust} 
+*    [ **legacy_time_adjust** ](#legacy_time_adjust) Börjar i ERDDAP™ 2.29.0, tidsvariabler fungerar något annorlunda. I sällsynta fall, troligtvis vid användning `dagar sedan` och ett år före 1582 (Så `dagar sedan 0000-01-01` eller `dagar sedan 1-1-1 00:00:0.0` ) Du måste ange för en justering till datumvariabeln. Anledningen till detta är ERDDAP™ använder java.time biblioteket för att hantera datum internt. Det finns vissa datamängder som kräver att du använder det gamla GregorianCalendar-biblioteket för att uppmuntra rätt datum.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### enheter{#units} 
 *    [ **enheter** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , [CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) och [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) metadata standard) definierar enheterna i datavärdena. Till exempel,
     ```

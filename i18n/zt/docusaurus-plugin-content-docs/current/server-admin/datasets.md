@@ -32,6 +32,10 @@ sidebar_position: 3
 制作 datasets.xml 第一批數據集需要大量努力,但 **越來越容易** . 在第一個數據集之後, 您常常可以重新使用很多工作來做下一個數據集 。 很幸運 ERDDAP™ 帶兩個來 [工具](#tools) 以幫助您建立 XML 每套資料 datasets.xml .
 如果你卡住了,看我們的 [部分](/docs/intro#support) .
 
+### 變數在 datasets.xml  {#varaibles-in-datasetsxml} 
+
+截至 ERDDAP™ 2.29.0版本, datasets.xml 現在 (可選擇) 由 a 處理 [字符串替代器](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . 這有很多用途,包括設置私人值 (像密碼) 使用環境變數。 可以在設定. xml 中設定 EnvParsing 到 file 。
+
 ### 資料提供者 表單{#data-provider-form} 
 當數據提供者來到您想要將一些數據加入您的 ERDDAP ,收集所有的中繼資料可能很困難和耗時 (數據集的資訊) 需要將數據集加入 ERDDAP . 很多資料來源 (例如,.csv文件, Excel 文件, 資料庫) 沒有內部中繼資料 所以 ERDDAP™ 有一個資料提供方表格,它收集資料提供者的中繼資料,并給資料提供者一些其他的指導,包括廣泛的指導 [數據庫中的資料](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) . 提交的資訊已轉換成 datasets.xml 格式,然后發到 ERDDAP™ 管理者 (你) 已寫入 (附 件) 至 *大家长會* /logs/data 提供form.log. 因此,窗体半自動將數據集的進化过程 ERDDAP 但是 ERDDAP™ 管理員仍然需要完成 datasets.xml 區塊與處理取得資料檔 (s) 從提供者或連接數據庫。
 
@@ -900,6 +904,7 @@ nco/ ncatted - a 單位, time, o, c, 自1970-01-01T00:00Z' QQ .nc
     * 每個維度都有一個轴變數 。 Axis 變數必須指定為數據變數使用的順序 。
     * 在 EDDGrid 數據集,所有數據變數都使用 (共享) 所有轴變數。
          ( [為什麼?](#why-just-two-basic-data-structures)   [如果他們沒有呢?](#dimensions) ) 
+新增于 ERDDAP™ 2.29.0版本 EDDGrid FromNcFiles 是對不支援所有轴變數的數據變數的實驗支持 (或是有人在同樣的數據庫中稱它為 1D 與 2D 資料) .
     * 排序尺寸值 - 全部 EDDGrid 數據集,每個維度必須排序 (升降) . 每個區域可以不規定 不能有領帶。 要求 [CF 中繼資料標準](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) . 如果任何維度的數值沒有排序,數據集不會被載入, ERDDAP™ 表示日志文件中第一個未排序的值, *大家长會* /日志/log.txt.
         
 有一些子類有附加的限制(尤其是, EDDGrid 聚合的分量要求外( 最左, 第一個) 維度要上升 。
@@ -949,6 +954,7 @@ nco/ ncatted - a 單位, time, o, c, 自1970-01-01T00:00Z' QQ .nc
         *    [來自 InvalidCRA 檔案的 IDD 表格](#eddtablefrominvalidcrafiles) 總和資料來自 NetCDF   (v3 或 v4)   .nc 使用 CF DSG 相關列的變體的檔案 (CRA 磁碟) 文件。 雖然 ERDDAP™ 支援此檔案類型, 是無效的檔案類型, 沒有人可以開始使用 。 目前使用此檔案類型的群組被強烈鼓勵使用 ERDDAP™ 以產生有效的 CF DSG CRA 檔案, 並停止使用這些檔案 。
         *    [JsonlCSV 檔案中的 EDD 表格](#eddtablefromjsonlcsvfiles) 總和資料來自 [杰森 行 CSV 文件](https://jsonlines.org/examples/) .
         *    [多晶格檔案的 IDD 表格](#eddtablefrommultidimncfiles) 總和資料來自 NetCDF   (v3 或 v4)   .nc 包含若干個有共享尺寸的變數的檔案。
+        *    [從 Mqtt 取自 EDD 表格](/docs/server-admin/mqtt-integration) 建構基于 MQTT 訊息的資料集 。 注意文件在專頁上。 注意,有很多相似性 [從 HttpGet 的 EDD 表格](#eddtablefromhttpget) .
         *    [NcFiles 的 EDD 表格](#eddtablefromncfiles) 總和資料來自 NetCDF   (v3 或 v4)   .nc 包含若干個有共享尺寸的變數的檔案。 繼續使用此數據集的類型可以, 但對於新的數據集, 我們建議使用 EDD Table From MultidimNcFiles 。
         *    [来自 NcCFF 的 EDD 表格](#eddtablefromnccffiles) 總和資料來自 NetCDF   (v3 或 v4)   .nc 使用檔案格式的檔案 [CF 分解采样 (副秘书长) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) 公约。 但對使用多面性 CF DSG 變體之一的檔案,使用 [多晶格檔案的 IDD 表格](#eddtablefrommultidimncfiles) 相反。
         *    [Nccsv 檔案中的 IDD 表格](#eddtablefromnccsvfiles) 總和資料來自 [NCCSV 檔案](/docs/user/nccsv-1.00) ASCII.csv 檔案.
@@ -1577,6 +1583,8 @@ int 音效FrameSize 2; // # 每帧數據位元組
  
 ###  EDDGrid 來自 Nc 檔案{#eddgridfromncfiles} 
  [ ** EDDGrid 來自 Nc 檔案** ](#eddgridfromncfiles) 汇总本地、 网格、 [GRIB. grb和. grb2](https://en.wikipedia.org/wiki/GRIB) 文件, [ HDF   (v4 或 v5)   .hdf ](https://www.hdfgroup.org/) 文件, [ .nc 毫升](#ncml-files) 文件, [ NetCDF   (v3 或 v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) 文件,以及 [扎爾](https://github.com/zarr-developers/zarr-python) 文件 (截至第2.25版) . Zarr 檔案的行為稍有不同, 需要檔案Name Regex 或路徑 Regex 加入"zarr" 。
+
+新增于 ERDDAP™ 2.29.0版本是實驗支援不支援所有轴變數的數據變數 (或是有人在同樣的數據庫中稱它為 1D 與 2D 資料) . 請聯繫GitHub (或) 有回應和蟲子
 
 這可能會和其他檔案類型一起工作 (例如,BUFR) 我們只是還沒測試... 請給我們一些樣本文件
 
@@ -5258,7 +5266,7 @@ MUST 清單包含 Cf\\_role=profile\\_id 變數和其他所有變數, 包含關�
     ```
 但是 ERDDAP™ 現在建議使用ACDD-1.3。 如果你有 [切換您的數據集以使用 ACDD- 1. 3](#switch-to-acdd-13) ,使用 Metadata\\_Conventions 使用&lt;公约 &gt;] (傳統) 相反。
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (從 [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) 中繼資料標準) 對處理的文字描述 (例如, [NASA 衛星數據處理水平](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) 例如,三级) 或质量控制水平 (例如,科學质量) 中。 例如,
+*    [ ** processing\\_level ** ](#processing_level)   (從 [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) 中繼資料標準) 對處理的文字描述 (例如, [NASA的地球观测系统 数据和信息系統 資料處理層](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) 例如,三级) 或质量控制水平 (例如,科學质量) 中。 例如,
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ ubyte255, ushort65535, uint4294967295, ulong1844744073709551615。
     * 使用 Strings 的來源資料的時間戳變數, 此屬性讓您指定一個時區 。 ERDDAP™ 以轉換本地時區來源時間 (有的在標準時間,有的在日光節) 成 Zulu 倍 (總在標準時間) . 有效的時區名稱列表可能與 TZ 列中的列表完全相同 。 [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . 美國的時區是:美國/哈瓦伊、美國/阿拉斯卡、美國/太平洋、美國/山地、美國/阿里索納、美國/中部、美國/東部。
     * 对于有數字來源數據的時間戳變數, 您可以指定 " time\\_zone " 屬性,但值必須是 " Zulu "或"UTC"。 如果你需要其他時區的支援 請發郵件給克里斯 約翰在諾亞戈夫
          
+###### 傳統(_T){#legacy_time_adjust} 
+*    [ **傳統(_T)** ](#legacy_time_adjust) 起始於 ERDDAP™ 2.29.0, 時間變數作用稍有不同。 在少數情况下,最有可能使用 `自` 1582年之前的一年 (所以 `自000-01-01日起` 或 `1-11 00: 00: 0.0` ) 您需要指出日期變數的調整。 原因就是 ERDDAP™ 使用 Java.time 圖書館管理內部日期。 有些數據集需要使用舊的 GregorianCalendar 圖書館來切斷正確的日期 。
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### 單位{#units} 
 *    [ **單位** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , [CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) 和 [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) 中繼資料標準) 定义數值的單位。 例如,
     ```

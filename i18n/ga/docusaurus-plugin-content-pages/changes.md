@@ -19,7 +19,7 @@ Gníomh ag teastáil.
     * ISO 19115 leaganacha: Féach thíos le haghaidh eolas admin. I gcás úsáideoirí, is féidir leat leaganacha sonracha de mheiteashonraí ISO 19115 a iarraidh anois. Déan é seo as an eangachdap / tabledap leathanaigh le haghaidh tacar sonraí leis an titim cineál comhaid síos. Beidh na leaganacha a bheith neamhspleách ar an mainneachtain freastalaí.
 
 *    **Cad a bhí mícheart leis an láithreán ERDDAP™ Riarthóirí An riachtanas is gá a fhios agus a dhéanamh:** 
-    * Gné nua, tacaíocht MQTT. Le haghaidh sonraí Molaim léamh [leathanach nua mar gheall air.](/docs/server-admin/mqtt-integration.md) Áirítear leis seo a bheith in ann tacair sonraí a thógáil ó theachtaireachtaí MQTT, agus teachtaireachtaí MQTT a fhoilsiú nuair a athraíonn tacar sonraí. Tá sé as de réir réamhshocraithe, mar sin más mian leat é a úsáid, ní mór duit é a chumasú.
+    * Gné nua, tacaíocht MQTT. Le haghaidh sonraí Molaim léamh [leathanach nua mar gheall air.](/docs/server-admin/mqtt-integration) Áirítear leis seo a bheith in ann tacair sonraí a thógáil ó theachtaireachtaí MQTT, agus teachtaireachtaí MQTT a fhoilsiú nuair a athraíonn tacar sonraí. Tá sé as de réir réamhshocraithe, mar sin más mian leat é a úsáid, ní mór duit é a chumasú.
 
 Buíochas le Ayush Singh le bheith ag obair ar MQTT&#33;
 
@@ -39,7 +39,7 @@ Go raibh maith agat as [cliceáil grianghraf a mhéadú](https://github.com/ERDD
 
     *    EDDGrid Ó NcFiles le gnéithe éagsúla: Níl ann (turgnamhach) tacaíocht do EDDGrid As NcFiles datasets a bheith athróg nach bhfuil a úsáid an tsraith chéanna de aiseanna. Déan tuairisciú ar ais ar conas a oibríonn sé seo ar do shon, nó más rud é nach bhfuil an t-iompar cosúil go leor ceart.
 
-    * Níl bailiúchán de leas iomlán a ba chóir a bheith sábháilte, ach tá bratacha a revert chuig iompar d'aois más gá. Má fhaigheann tú an gá atá le haon cheann de na bratacha a shocrú, comhad le do thoil fabht. Má chloiseann muid aon saincheisteanna is mó de na a chur as oifig leis an teip iompair nua sa todhchaí. Níl ann [leathanach nua faoi bratacha gné](/docs/server-admin/feature-flags.md) áit ar féidir leat léamh faoi na bratacha agus eile.
+    * Níl bailiúchán de leas iomlán a ba chóir a bheith sábháilte, ach tá bratacha a revert chuig iompar d'aois más gá. Má fhaigheann tú an gá atá le haon cheann de na bratacha a shocrú, comhad le do thoil fabht. Má chloiseann muid aon saincheisteanna is mó de na a chur as oifig leis an teip iompair nua sa todhchaí. Níl ann [leathanach nua faoi bratacha gné](/docs/server-admin/feature-flags) áit ar féidir leat léamh faoi na bratacha agus eile.
 
       * cineál gas: in airde Snáithe Sreang ach amháin Cathain: Is athrú é seo ionas go mbeidh an touchThread ag rith ach amháin nuair a bhíonn míreanna sa scuaine le teagmháil. Is é ceann amháin snáithe níos lú ag rith ná leas iomlán a bhaint as saorga ach fós úsáideach. Ionsaí a bheith fíor.
 

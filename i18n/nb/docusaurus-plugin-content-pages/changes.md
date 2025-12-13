@@ -19,7 +19,7 @@ Handling nødvendig.
     * ISO 19115 versjoner: Se nedenfor for admin info. For brukere kan du nå be om spesifikke versjoner av ISO 19115 metadata. Gjør dette fra griddap/ tabledap sider for et datasett med filtypen faller ned. Disse versjonene vil være uavhengig av serverens standard.
 
 *    **Ting ERDDAP™ Administratorer trenger å vite og gjøre:** 
-    * Ny funksjon, støtte for MQTT. For detaljer anbefaler jeg å lese [Ny side om det.](/docs/server-admin/mqtt-integration.md) Dette inkluderer å kunne bygge datasett fra MQTT-meldinger og publisere MQTT-meldinger når et datasett endres. Det er av som standard, så hvis du vil bruke det, må du aktivere det.
+    * Ny funksjon, støtte for MQTT. For detaljer anbefaler jeg å lese [Ny side om det.](/docs/server-admin/mqtt-integration) Dette inkluderer å kunne bygge datasett fra MQTT-meldinger og publisere MQTT-meldinger når et datasett endres. Det er av som standard, så hvis du vil bruke det, må du aktivere det.
 
 Takk til Ayush Singh for å jobbe på MQTT&#33;
 
@@ -39,7 +39,7 @@ Takket være [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid FraNcFiles med varierende dimensjoner: Det er (eksperimentell) Støtte til EDDGrid FraNcFiles datasett å ha variabler som ikke bruker det samme settet akser. Vennligst rapporter tilbake om hvordan dette fungerer for deg, eller hvis oppførselen ikke virker helt riktig.
 
-    * Det er en samling optimaliseringer som bør være trygge, men har flagg for å gå tilbake til gammel oppførsel om nødvendig. Hvis du finner behovet for å angi noe av flaggene, vennligst fil en feil. Hvis vi hører om ingen problemer vil de fleste av disse bli fjernet med den nye atferdsstandarden i fremtiden. Det er en [ny side om funksjonsflagg](/docs/server-admin/feature-flags.md) der du kan lese om disse og andre flagg.
+    * Det er en samling optimaliseringer som bør være trygge, men har flagg for å gå tilbake til gammel oppførsel om nødvendig. Hvis du finner behovet for å angi noe av flaggene, vennligst fil en feil. Hvis vi hører om ingen problemer vil de fleste av disse bli fjernet med den nye atferdsstandarden i fremtiden. Det er en [ny side om funksjonsflagg](/docs/server-admin/feature-flags) der du kan lese om disse og andre flagg.
 
       * Touch Tråd Bare Når elementene: Dette er en endring slik at touchTread bare vil kjøres når det er elementer i køen å røre. En færre trådkjøring er en mindre optimering, men fortsatt nyttig. Standard til sant.
 

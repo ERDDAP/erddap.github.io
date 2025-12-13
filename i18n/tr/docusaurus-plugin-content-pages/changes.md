@@ -19,7 +19,7 @@ Gerekli Eylem.
     * ISO 19115 versiyonları: admin bilgileri için aşağıda görün. Kullanıcılar için artık ISO 19115 metadata'nın belirli versiyonları isteyebilirsiniz. Bunu ızgaradan yapın / tabledap Dosya türündeki bir veri kümesi için sayfalar aşağı düşer. Bu versiyonlar sunucu varsayılanından bağımsız olacaktır.
 
 *    **Şeyler Şeyler ERDDAP™ Yöneticilerin Bilme ve Yapması Gerekiyor:** 
-    * Yeni özellik, MQTT desteği. Detaylar için okumanızı öneririm [Bu konuda yeni sayfa.](/docs/server-admin/mqtt-integration.md) Bu, MQTT mesajlarından veri setlerini inşa edebilir ve bir veri kümesi değişiklikleri olduğunda MQTT mesajlarını yayınlayabilirsiniz. Varsayılan olarak kapalıdır, bu yüzden onu kullanmak istiyorsanız, bunu etkinleştirmelisiniz.
+    * Yeni özellik, MQTT desteği. Detaylar için okumanızı öneririm [Bu konuda yeni sayfa.](/docs/server-admin/mqtt-integration) Bu, MQTT mesajlarından veri setlerini inşa edebilir ve bir veri kümesi değişiklikleri olduğunda MQTT mesajlarını yayınlayabilirsiniz. Varsayılan olarak kapalıdır, bu yüzden onu kullanmak istiyorsanız, bunu etkinleştirmelisiniz.
 
 MQTT üzerinde çalışmak için Ayush Singh sayesinde&#33;
 
@@ -39,7 +39,7 @@ Teşekkürler teşekkürler [SethChampagneNRL](https://github.com/ERDDAP/erddap/
 
     *    EDDGrid NcFiles'ten farklı boyutlarda: Orada var (deneysel deneysel deneysel deneysel deneysel) destek için destek için EDDGrid NcFiles datasets'ten aynı eksenleri kullanmayan değişkenlere sahip olmak. Lütfen bu sizin için nasıl çalıştığını tekrar rapor edin, yoksa davranış oldukça doğru görünmüyorsa.
 
-    * Güvenli olması gereken bir optimizasyon koleksiyonu var, ancak gerektiğinde eski davranışlara geri dönmek için bayraklar var. Eğer bayraklardan herhangi birini ayarlamanız gerekiyorsa, lütfen bir hata yapın. Bunların çoğunun gelecekte yeni davranış varsayılanlığı ile çözülmeyeceğini duyuyoruz. There's a a [Özel bayraklar hakkında yeni sayfa](/docs/server-admin/feature-flags.md) Bu ve diğer bayraklar hakkında nerede okuyabilirsiniz.
+    * Güvenli olması gereken bir optimizasyon koleksiyonu var, ancak gerektiğinde eski davranışlara geri dönmek için bayraklar var. Eğer bayraklardan herhangi birini ayarlamanız gerekiyorsa, lütfen bir hata yapın. Bunların çoğunun gelecekte yeni davranış varsayılanlığı ile çözülmeyeceğini duyuyoruz. There's a a [Özel bayraklar hakkında yeni sayfa](/docs/server-admin/feature-flags) Bu ve diğer bayraklar hakkında nerede okuyabilirsiniz.
 
       * dokunuş dokunuş Thread Thread Thread Sadece Sadece Sadece Sadece Sadece Sadece Items: Bu bir değişikliktir, böylece touchThread sadece dokunacak kuyrukta öğeler olduğunda çalışır. Daha az çalışan bir iplik küçük bir optimizasyondur ancak hala kullanışlıdır. Doğruya sıralayıcılar.
 

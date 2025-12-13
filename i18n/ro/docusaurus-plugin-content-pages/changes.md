@@ -19,7 +19,7 @@ Acţiune necesară.
     * Versiuni ISO 19115: Vezi mai jos pentru informaţii admin. Pentru utilizatori, puteți solicita acum versiuni specifice ale metadatelor ISO 19115. Face acest lucru din griddap / tabledap pagini pentru un set de date cu tipul de fișier picătură în jos. Aceste versiuni vor fi independente de implicit server.
 
 *    **Lucruri ERDDAP™ Administratorii trebuie să cunoască și să facă:** 
-    * O caracteristică nouă, suport MQTT. Pentru detalii Vă recomandăm să citiţi [O pagină nouă despre asta.](/docs/server-admin/mqtt-integration.md) Aceasta include posibilitatea de a construi seturi de date din mesajele MQTT și publicarea mesajelor MQTT atunci când se modifică un set de date. Este oprit în mod implicit, așa că dacă doriți să-l utilizați, trebuie să-l activați.
+    * O caracteristică nouă, suport MQTT. Pentru detalii Vă recomandăm să citiţi [O pagină nouă despre asta.](/docs/server-admin/mqtt-integration) Aceasta include posibilitatea de a construi seturi de date din mesajele MQTT și publicarea mesajelor MQTT atunci când se modifică un set de date. Este oprit în mod implicit, așa că dacă doriți să-l utilizați, trebuie să-l activați.
 
 Mulţumită lui Ayush Singh pentru că a lucrat la MQTT&#33;
 
@@ -39,7 +39,7 @@ Mulţumită [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid FromNcFiles cu dimensiuni diferite: Există (experimental) sprijin pentru EDDGrid De la NcFiles seturi de date pentru a avea variabile care nu folosesc același set de axe. Vă rugăm să raportați înapoi cu privire la modul în care acest lucru funcționează pentru tine, sau în cazul în care comportamentul nu pare destul de corect.
 
-    * Există o colecție de optimizari care ar trebui să fie în siguranță, dar au steaguri pentru a reveni la comportamentul vechi, dacă este necesar. Dacă găsiți necesitatea de a seta oricare dintre steaguri, vă rugăm să depuneți un bug. Dacă nu auzim de probleme cele mai multe dintre acestea vor fi eliminate cu noul comportament implicit în viitor. Există o [pagină nouă despre steagurile caracteristicilor](/docs/server-admin/feature-flags.md) unde puteți citi despre aceste și alte steaguri.
+    * Există o colecție de optimizari care ar trebui să fie în siguranță, dar au steaguri pentru a reveni la comportamentul vechi, dacă este necesar. Dacă găsiți necesitatea de a seta oricare dintre steaguri, vă rugăm să depuneți un bug. Dacă nu auzim de probleme cele mai multe dintre acestea vor fi eliminate cu noul comportament implicit în viitor. Există o [pagină nouă despre steagurile caracteristicilor](/docs/server-admin/feature-flags) unde puteți citi despre aceste și alte steaguri.
 
       * atingere Fire Numai WhenItems: Aceasta este o schimbare astfel încât touchThread va fi difuzate numai atunci când există elemente în coada de a atinge. Un fir mai puțin rulează este o optimizare minoră, dar încă util. Implicit faţă de adevăr.
 

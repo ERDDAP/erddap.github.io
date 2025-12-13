@@ -19,7 +19,7 @@ Här är förändringarna i samband med varje ERDDAP™ release.
     * ISO 19115 versioner: Se nedan för admin info. För användare kan du nu begära specifika versioner av ISO 19115-metadata. Gör detta från griddap/ tabledap sidor för en dataset med filtypen sjunker ner. Dessa versioner kommer att vara oberoende av server standard.
 
 *    **Saker att göra saker ERDDAP™ Administratörer behöver veta och göra:** 
-    * Ny funktion, MQTT stöd. För detaljer rekommenderar jag att läsa [Ny sida om det.](/docs/server-admin/mqtt-integration.md) Detta inkluderar att kunna bygga datamängder från MQTT-meddelanden och publicera MQTT-meddelanden när en datamängd ändras. Det är av som standard, så om du vill använda den måste du aktivera den.
+    * Ny funktion, MQTT stöd. För detaljer rekommenderar jag att läsa [Ny sida om det.](/docs/server-admin/mqtt-integration) Detta inkluderar att kunna bygga datamängder från MQTT-meddelanden och publicera MQTT-meddelanden när en datamängd ändras. Det är av som standard, så om du vill använda den måste du aktivera den.
 
 Tack till Ayush Singh för att ha jobbat på MQTT&#33;
 
@@ -39,7 +39,7 @@ Tack vare [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid FrånNcFiles med varierande dimensioner: Det finns (experimentell) Stöd för EDDGrid FrånNcFiles dataset för att ha variabler som inte använder samma uppsättning axlar. Vänligen rapportera tillbaka om hur detta fungerar för dig, eller om beteendet inte verkar rätt.
 
-    * Det finns en samling optimeringar som ska vara säkra, men har flaggor att återgå till gammalt beteende om det behövs. Om du hittar behovet av att ställa in någon av flaggorna, vänligen lämna in en bugg. Om vi inte hör några problem kommer de flesta av dessa att tas bort med den nya beteendestandarden i framtiden. Det finns en [Ny sida om funktionsflaggor](/docs/server-admin/feature-flags.md) där du kan läsa om dessa och andra flaggor.
+    * Det finns en samling optimeringar som ska vara säkra, men har flaggor att återgå till gammalt beteende om det behövs. Om du hittar behovet av att ställa in någon av flaggorna, vänligen lämna in en bugg. Om vi inte hör några problem kommer de flesta av dessa att tas bort med den nya beteendestandarden i framtiden. Det finns en [Ny sida om funktionsflaggor](/docs/server-admin/feature-flags) där du kan läsa om dessa och andra flaggor.
 
       * Rör vid Tråd Endast endast Närobjekt: Detta är en förändring så att touchThread bara körs när det finns objekt i kön att röra. En färre tråd körning är en mindre optimering men fortfarande användbar. Standarder till sant.
 

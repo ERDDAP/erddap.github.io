@@ -32,6 +32,10 @@ Jos ostat näitä ideoita ja käytät yritystä luoda XML datasets.xml Saat kaik
 Making the datasets.xml Se on erittäin tärkeää ensimmäisten tietojen kohdalla, mutta **Se helpottaa** . Ensimmäisen tietoaineiston jälkeen voit usein uudelleenkäyttää paljon työtäsi seuraavaan tietoaineistoon. Onneksi, ERDDAP™ Sisältää kaksi [Työkalut](#tools) auttaa sinua luomaan XML:n jokaiseen tietoaineistoon datasets.xml .
 Jos olet jumissa, katso meidän [Lisätuen saaminen](/docs/intro#support) .
 
+### Muuttujia datasets.xml  {#varaibles-in-datasetsxml} 
+
+kuin ERDDAP™ versio 2.29.0, datasets.xml Nyt on (Vaihtoehtoisesti) Käsittelyssä A [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Sillä on monia käyttötarkoituksia, kuten yksityisten arvojen asettaminen. (kuin salasanat) ympäristömuuttujat. Tämä voidaan poistaa asettamalla EnvParsing väärennös asennus.xml.
+
 ### Datan tarjoaja Muoto{#data-provider-form} 
 Kun tietopalveluntarjoaja tulee luoksesi toivoen lisättävän joitakin tietoja ERDDAP Voi olla vaikeaa ja aikaa vievää kerätä kaikki metatiedot (Tietoa datasta) Tarvitsetko lisätietoja ERDDAP . Useita tietolähteitä (.csv-tiedostoja, Excel-tiedostot, tietokannat) Ei sisäisiä metatietoja, joten ERDDAP™ on Datantarjoajamuoto, joka kerää metatietoja tietojen tarjoajalta ja antaa tietojen tarjoajalle muita ohjeita, mukaan lukien laajat ohjeet tietojen toimittamiseen. [Databaseissa](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) . Toimitetut tiedot muunnetaan datasets.xml Muotoilu ja sitten sähköpostitse ERDDAP™ Hallinnollinen (Sinä) ja kirjoitettu (liitetty) että *isovanhemmat* Lähde: DataProviderForm.log Näin muoto puoliautomatisoi prosessin saada tietoaineiston ERDDAP mutta ERDDAP™ Järjestäjän on vielä täytettävä datasets.xml Klikkaa ja käsittele datatiedoston hankkimista (s) Palveluntarjoaja tai yhteys tietokantaan.
 
@@ -900,6 +904,7 @@ Tietokannan tyypit kuuluvat kahteen luokkaan. ( [Miksi?](#why-just-two-basic-dat
     * Jokaiselle ulottuvuudelle on oltava akselimuuttuja. Akselimuuttujat on määriteltävä siinä järjestyksessä, että tietomuuttujat käyttävät niitä.
     * Sisällä EDDGrid aineistot, kaikki tietomuuttujat on käytettävä (Osakkeet) kaikki akselimuuttujat.
          ( [Miksi?](#why-just-two-basic-data-structures)   [Entä jos he eivät?](#dimensions) ) 
+Uudessa ERDDAP™ versio 2.29.0 EDDGrid FromNcFiles on kokeellinen tuki tietomuuttujat, jotka eivät tue kaikkia akselimuuttujat. (tai kuten jotkut ovat kutsuneet sitä 1D- ja 2D-tiedostoiksi samassa tietoaineistossa.) .
     * Dimension arvot - Kaikessa EDDGrid Tiedot, jokainen ulottuvuus on järjestettävä (nouseminen tai laskeutuminen) . Jokainen voi olla epäsäännöllinen. Ei voi olla siteitä. Tämä on vaatimus [CF:n metatiedot](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) . Jos minkään ulottuvuuden arvot eivät ole lajitellussa järjestyksessä, aineistoa ei ladata ja ERDDAP™ tunnistaa lokitiedoston ensimmäisen arvon, *isovanhemmat* /logs/log.txt.
         
 Joillakin aloilla on lisärajoituksia (esim. EDDGrid AggregateExistingDimension edellyttää, että ulompi (vasemmalla) ulottuvuus nousee.
@@ -949,6 +954,7 @@ Rajoittamattomat ulottuvuudet osoittavat lähes aina ongelman lähdeaineiston ka
         *    [EDDTableFromInvalidCRAFiles](#eddtablefrominvalidcrafiles) Aggregoituja tietoja NetCDF   (V3 tai v4)   .nc tiedostot, jotka käyttävät CF DSG Contiguous Ragged Array -versiota (CRA) tiedostoja. Vaikka vaikka ERDDAP™ tukee tätä tiedostotyyppiä, se on mitätön tiedostotyyppi, jota kenenkään ei pitäisi aloittaa. Ryhmiä, jotka käyttävät tätä tiedostotyyppiä, kannustetaan voimakkaasti käyttämään ERDDAP™ luoda kelvollisia CF DSG CRA -tiedostoja ja lopettaa näiden tiedostojen käyttö.
         *    [EDDTableFromJsonlCSVFiles](#eddtablefromjsonlcsvfiles) Aggregoituja tietoja [JSON CSV-tiedostot](https://jsonlines.org/examples/) .
         *    [EDDTableFromMultidimNcFiles Näytä tarkat tiedot](#eddtablefrommultidimncfiles) Aggregoituja tietoja NetCDF   (V3 tai v4)   .nc tiedostoja, joissa on useita muuttujia, joilla on jaettu ulottuvuus.
+        *    [EDDTableFromMqtt](/docs/server-admin/mqtt-integration) Tietokanta perustuu MQTT-viestiin. Huomaa, että dokumentaatio on osoitetulla sivulla. Huomaa, että samankaltaisuuksia on paljon [EdDTableFromHttpGet](#eddtablefromhttpget) .
         *    [EDDTableFromNcFiles](#eddtablefromncfiles) Aggregoituja tietoja NetCDF   (V3 tai v4)   .nc tiedostoja, joissa on useita muuttujia, joilla on jaettu ulottuvuus. On hienoa jatkaa tätä tietoaineistotyyppiä olemassa oleville tietoaineistoille, mutta uusille tietoaineistoille suosittelemme käyttämään EDDTableFromMultidimNcFilesiä.
         *    [EDDTableFromNcFiles](#eddtablefromnccffiles) Aggregoituja tietoja NetCDF   (V3 tai v4)   .nc tiedostot, jotka käyttävät yhtä tiedostomuodoista, jotka on määritetty [CF Discrete Sampling Geometria (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) yleissopimuksia. Jos tiedostot käyttävät yhtä moniulotteista CF DSG-muuttujaa, käytä [EDDTableFromMultidimNcFiles Näytä tarkat tiedot](#eddtablefrommultidimncfiles) Sen sijaan.
         *    [EDDTableFromNccsvfiilit](#eddtablefromnccsvfiles) Aggregoituja tietoja [NCCSV](/docs/user/nccsv-1.00) ASCII .csv-tiedostoja.
@@ -1577,6 +1583,8 @@ Suosittelemme voimakkaasti käyttämään [GenerateDatasets XML-ohjelma](#genera
  
 ###  EDDGrid Lähde: NCFiles{#eddgridfromncfiles} 
  [ ** EDDGrid Lähde: NCFiles** ](#eddgridfromncfiles) aggregoida tietoja paikallisesta, verkosta, [GRIB .grb ja .grb2](https://en.wikipedia.org/wiki/GRIB) tiedostoja, [ HDF   (V4 tai v5)   .hdf ](https://www.hdfgroup.org/) tiedostoja, [ .nc ml](#ncml-files) tiedostoja, [ NetCDF   (V3 tai v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) tiedostoja ja [Zarr](https://github.com/zarr-developers/zarr-python) tiedostoja (versio 2.25) . Zarr-tiedostot ovat hieman erilaisia ja vaativat joko tiedoston NameRegex tai PathRegex sisällyttää "sarr".
+
+Uudessa ERDDAP™ 2.29.0 on kokeellinen tuki tietomuuttujat, jotka eivät tue kaikkia akselimuuttujat. (tai kuten jotkut ovat kutsuneet sitä 1D- ja 2D-tiedostoiksi samassa tietoaineistossa.) . Lähde: GitHub (keskusteluja tai kysymyksiä) Palautetta ja vikoja.
 
 Tämä voi toimia muiden tiedostotyyppien kanssa (Esimerkiksi BUFR) Emme ole vain testanneet sitä, joten lähetä meille joitakin näytetiedostoja.
 
@@ -5258,7 +5266,7 @@ Jos aineisto käyttää ACD 1.0:aa, tämä ominaisuus on vahvasti valmistettu, e
     ```
 Mutta kuitenkin ERDDAP™ Suosittelemme ACD-1.3:aa. Jos sinulla on [siirtää tietoaineistosi ACDD-1.3:n käyttöön](#switch-to-acdd-13) käyttää Metadata\\_Conventions Välttämätön: Käytä [&lt;Yleissopimukset » (#konventiot) Sen sijaan.
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (From the [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Metadata Standard) Rekisteröity tekstikuvaus käsittelystä (esimerkiksi [Nasan satelliittitietojen käsittelytaso](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) Esimerkiksi taso 3) Laadunvalvonta (Esimerkiksi tieteen laatu) datasta. Esimerkiksi,
+*    [ ** processing\\_level ** ](#processing_level)   (From the [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Metadata Standard) Rekisteröity tekstikuvaus käsittelystä (esimerkiksi [NASA:n Earth Observing System Data and Information System -tietojärjestelmän tietojenkäsittelytasot](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) Esimerkiksi taso 3) Laadunvalvonta (Esimerkiksi tieteen laatu) datasta. Esimerkiksi,
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ Pakkausarvo = pakattu Arvo \\ * scale\\_factor + add\\_offset
     * Aikaleimamuuttujat, joissa on lähdetietoja Stringsistä, tämän ominaisuuden avulla voit määrittää aikavyöhykkeen, joka johtaa ERDDAP™ Paikallis-aika-alueen lähdeajat (Joitakin vakio-aikoja, osa päivänvalon säästöaikaa) sisään Zulu Kertoja (joka on aina normaalia aikaa) . Luettelo voimassa olevista aikavyöhykkeiden nimistä on todennäköisesti sama kuin TZ-sarakkeessa olevassa luettelossa. [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Yhdysvaltain aikavyöhykkeet ovat: US/Hawaii, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, US/Itä.
     * Aikaleimamuuttujat, joissa on numeerisia lähteitä koskevia tietoja, voit määrittää time\\_zone "Anteeksi, mutta arvon on oltava" Zulu Tai ”UTC”. Jos tarvitset tukea muihin aikavyöhykkeisiin, lähetä sähköpostia. Johannes osoitteessa Noaa.gov.
          
+###### Alkuperäinen nimi: Time_adjust{#legacy_time_adjust} 
+*    [ **Alkuperäinen nimi: Time_adjust** ](#legacy_time_adjust) Aloita sisään ERDDAP™ 2.29 Muuttujat toimivat hieman eri tavalla. Harvinaisissa tapauksissa todennäköisimmin käytettynä `päivistä lähtien` vuotta ennen vuotta 1582 (niin `Vuodet 20000-01-01` tai tai `Päivät 1-1:00:0.0` ) Sinun täytyy ilmoittaa mukautumisesta päivämäärään muuttuja. Syy tähän on ERDDAP™ Java.time-kirjasto käyttää päivämääriä sisäisesti. On olemassa joitakin tietoaineistoja, jotka edellyttävät vanhan GregorianCalendar-kirjaston käyttöä oikean päivämäärän määrittämiseksi.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### Yksiköt{#units} 
 *    [ **Yksiköt** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , [CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) ja [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Metadata Standard) määrittää data-arvojen yksiköt. Esimerkiksi,
     ```

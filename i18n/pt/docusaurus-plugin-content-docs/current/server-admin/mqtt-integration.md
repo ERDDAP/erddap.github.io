@@ -13,7 +13,7 @@
 
 ##  ERDDAP como um cliente MQTT
 
- ERDDAP pode atuar como um cliente MQTT para se inscrever em tópicos em um corretor MQTT externo ou próprio incorporado. Isso é alcançado usando o novo `EDDTable FromMqtt` tipo de dataset, que funciona de forma semelhante ao existente `EDDTable FromHttpGet` conjunto de dados.
+ ERDDAP pode atuar como um cliente MQTT para se inscrever em tópicos em um corretor MQTT externo ou próprio incorporado. Isso é alcançado usando o novo `EDDTable FromMqtt` tipo de dataset, que funciona de forma semelhante ao existente [ `EDDTable FromHttpGet` ](/docs/server-admin/datasets#eddtablefromhttpget) conjunto de dados.
 
 Atualmente, a implementação do cliente só suporta **subscrevendo** para tópicos.
 

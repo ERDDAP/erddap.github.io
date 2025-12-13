@@ -13,7 +13,7 @@
 
 ##  ERDDAP MQTT-asiakkaana
 
- ERDDAP voi toimia MQTT-asiakkaana tilaamaan aiheita ulkoisella tai omalla upotetulla MQTT-välittäjällä. Tämä saavutetaan käyttämällä uutta `EDDTableFromMqtt` tietotyyppi, joka toimii samalla tavalla kuin nykyinen `EdDTableFromHttpGet` Dataa.
+ ERDDAP voi toimia MQTT-asiakkaana tilaamaan aiheita ulkoisella tai omalla upotetulla MQTT-välittäjällä. Tämä saavutetaan käyttämällä uutta `EDDTableFromMqtt` tietotyyppi, joka toimii samalla tavalla kuin nykyinen [ `EdDTableFromHttpGet` ](/docs/server-admin/datasets#eddtablefromhttpget) Dataa.
 
 Tällä hetkellä asiakaspalvelu tukee vain **subscribing** aiheita.
 

@@ -13,7 +13,7 @@
 
 ##  ERDDAP MQTTクライアントとして
 
- ERDDAP MQTT クライアントとして、外部または独自の MQTT ブローカーのトピックを購読することができます。 新規で実現 `EDDTableFromMqttの特長` 既存のデータセットタイプと同様に機能する `EDDTableFromHttpGetの特長` データセット。
+ ERDDAP MQTT クライアントとして、外部または独自の MQTT ブローカーのトピックを購読することができます。 新規で実現 `EDDTableFromMqttの特長` 既存のデータセットタイプと同様に機能する [ `EDDTableFromHttpGetの特長` ](/docs/server-admin/datasets#eddtablefromhttpget) データセット。
 
 現在、クライアントの実装のみがサポート **サブスクライブ** トピック
 

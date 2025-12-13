@@ -32,6 +32,10 @@ sidebar_position: 3
 创造 datasets.xml 最初的几个数据集需要大量努力,但 **变容易了** 。 。 。 在第一个数据集之后,您可以经常为下一个数据集重新使用很多工作. 幸运的是, ERDDAP™ 来两个 [工具](#tools) 帮助您为每个数据集创建 XML datasets.xml 。 。 。 。
 如果你卡住了,见我们的 [关于获得额外支助的章节](/docs/intro#support) 。 。 。 。
 
+### 变量在 datasets.xml  {#varaibles-in-datasetsxml} 
+
+截止 ERDDAP™ 2.2.9.0版本, datasets.xml 现在 (可选) a 处理 [字符串替代器](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) 。 。 。 这有许多用途,包括设置私有值 (如密码) 使用环境变量。 可以通过设置 EnvParsing 在设置. xml 中设置为假来禁用此选项 。
+
 ### 数据提供者 表单{#data-provider-form} 
 当一个数据提供者来 想要添加一些数据到您的 ERDDAP 收集所有元数据可能既困难又费时 (关于数据集的信息) 需要将数据集添加到 ERDDAP 。 。 。 。 许多数据来源 (例如,.csv文件, Excel 文件、数据库) 没有内部元数据,所以 ERDDAP™ 拥有一个数据提供者表格,从数据提供者收集元数据,并向数据提供者提供一些其他指导,包括广泛的指导 [数据库中的数据](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) 。 。 。 所提交的信息转换成 datasets.xml 格式,然后发电子邮件到 ERDDAP™ 管理员 (老师) 并写入 (附 录) 改为 *大家长会* /logs/data ProviderForm.log. (原始内容存档于2018-03-09). 因此,表格半自动化了将数据集输入 ERDDAP 不过 ERDDAP™ 管理员仍然需要完成 datasets.xml 块并处理获取数据文件 (编号) 从提供者或连接到数据库。
 
@@ -900,6 +904,7 @@ nco/ncatted - a单位,时间,o,c,秒数自1970-01-01T00:00Z'QQ .nc
     * 每个维都有一个轴变量。 轴变量 MUSST 以数据变量使用它们的顺序指定。
     * 内 EDDGrid 数据集,所有数据变量使用MUSST (份额) 所有轴变量。
          ( [为什么?](#why-just-two-basic-data-structures)   [如果他们不呢?](#dimensions) ) 
+新建于 ERDDAP™ 2.2.9.0版本为 EDDGrid From NcFiles 是对不支持所有轴变量的数据变量的实验支持 (或像有人在同一个数据集中称之为 1D 和 2D 数据) 。 。 。 。
     * 排序的维度值 - 总之 EDDGrid 数据集,每个维度必须排序 (上升或下降) 。 。 。 每个空间都可以不规则。 没有联系 这是法院的一项要求。 [CF 元数据标准](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) 。 。 。 如果任何维度的值没有排序顺序,数据集将不会被加载,并且 ERDDAP™ 将识别日志文件中的第一个未排序的值, *大家长会* /logs/log.txt (英语).
         
 少数子类有额外的限制(尤其是: EDDGrid 聚合分化要求外(最左,第一)维度是上升的.
@@ -949,6 +954,7 @@ nco/ncatted - a单位,时间,o,c,秒数自1970-01-01T00:00Z'QQ .nc
         *    [来自 InvalidCRA 文件的 EDD 表](#eddtablefrominvalidcrafiles) 数据汇总 NetCDF   (v3 或 v4 类型)   .nc 使用 CF DSG 相邻标记阵列的特定、无效的变体的文件 (庇护上诉委员会) 文档。 虽然 ERDDAP™ 支持此文件类型, 这是一个无效的文件类型, 任何人都不应开始使用 。 强烈鼓励当前使用此文件类型的组使用 ERDDAP™ 生成有效的 CF DSG CRA 文件,并停止使用这些文件。
         *    [来自 JsonlCSV 的 EDD 表格](#eddtablefromjsonlcsvfiles) 数据汇总 [贾森 线条 CSV 文件](https://jsonlines.org/examples/) 。 。 。 。
         *    [来自多分位Nc Files的 EDD表](#eddtablefrommultidimncfiles) 数据汇总 NetCDF   (v3 或 v4 类型)   .nc 带有多个具有共享维度的变量的文件。
+        *    [来自Mqtt的 EDD 表格](/docs/server-admin/mqtt-integration) 基于 MQTT 消息构建数据集。 注意文件在专页上。 注意有很多相似之处 [来自 HttpGet 的 EDD 表格](#eddtablefromhttpget) 。 。 。 。
         *    [来自 NcFiles 的 EDD 表格](#eddtablefromncfiles) 数据汇总 NetCDF   (v3 或 v4 类型)   .nc 带有多个具有共享维度的变量的文件。 继续使用该数据集类型用于现有数据集是好的,但对于新的数据集,我们建议使用EDDTable From MultidimNcFiles。
         *    [来自 NcCFF 的 EDD 表格](#eddtablefromnccffiles) 数据汇总 NetCDF   (v3 或 v4 类型)   .nc 使用文件格式之一的文件 [CF 数字 断层采样 (副秘书长) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) 公约。 但对于使用一个多维CF DSG变体的文件,请使用 [来自多分位Nc Files的 EDD表](#eddtablefrommultidimncfiles) 相反。
         *    [来自 Nccsv 文件的 EDD 表格](#eddtablefromnccsvfiles) 数据汇总 [NCCSV 网络](/docs/user/nccsv-1.00) ASCII.csv 文档.
@@ -1577,6 +1583,8 @@ int 音频FrameSize 2; //# 每个帧的数据字节
  
 ###  EDDGrid 从NcFiles调用{#eddgridfromncfiles} 
  [ ** EDDGrid 从NcFiles调用** ](#eddgridfromncfiles) 本地、网格、 [GRIB . grb和. grb2 (英语).](https://en.wikipedia.org/wiki/GRIB) 文档, [ HDF   (v4 或 v5 类型)   .hdf ](https://www.hdfgroup.org/) 文档, [ .nc 门L](#ncml-files) 文档, [ NetCDF   (v3 或 v4 类型)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) 文件,和 [扎尔](https://github.com/zarr-developers/zarr-python) 文件 (第2.25号版本) 。 。 。 Zarr文件行为略有不同,需要文件NameRegex或路径Regex包含"zarr".
+
+新建于 ERDDAP™ 2.29.0版本是对不支持所有轴变量的数据变量的实验支持 (或像有人在同一个数据集中称之为 1D 和 2D 数据) 。 。 。 请联系GitHub (讨论或议题) 有反馈和错误。
 
 这与其他文件类型可能有效 (例如,BUFR) 我们只是还没有测试过 -- 请给我们一些样本文件。
 
@@ -5258,7 +5266,7 @@ md5 - djsmith: (中文(简体) ). ERDDAP : MyPassword 语句
     ```
 不过 ERDDAP™ 现在推荐ACDD-1.3。 如果你有的话 [切换您的数据集以使用 ACDD- 1. 3](#switch-to-acdd-13) ,使用 Metadata\\_Conventions 使用 [&lt;公约 &gt;] (公约) 相反。
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (从 [APDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) 元数据标准) 是建议处理的文字说明 (比如说, [美国航天局卫星数据处理级别](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) 例如,三级) 或质量控制级别 (例如,科学质量) 数据。 举例来说,
+*    [ ** processing\\_level ** ](#processing_level)   (从 [APDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) 元数据标准) 是建议处理的文字说明 (比如说, [NASA的地球观测系统数据与信息系统数据处理级别](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) 例如,三级) 或质量控制级别 (例如,科学质量) 数据。 举例来说,
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ EDD Table FromFiles 数据集可以使用一些特殊编码的,伪的 sourceName
     * 对于带有 Strings 源数据的时间戳变量,此属性允许您指定一个导致的时区 ERDDAP™ 转换本地时区源时间 (有些在标准时间,有些在日光节时) 输入 Zulu 时间 (标准时间) 。 。 。 有效时区名称列表可能与TZ列列表完全相同 。 [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 。 。 。 美国常见的时区有:美国/夏威夷,美国/阿拉斯加,美国/太平洋,美国/山地,美国/阿里索纳,美国/中部,美国/东部.
     * 对于带有数字源数据的时间戳变量,可以指定 " time\\_zone " 属性,但价值必须是 " Zulu " 或"UTC"(UTC). 如果您需要其他时区的支持,请发电子邮件给克里斯. 约翰在Noaa.gov。
          
+###### 遗留时间(_T){#legacy_time_adjust} 
+*    [ **遗留时间(_T)** ](#legacy_time_adjust) 开始于 ERDDAP™ 2.29.0 时间变量的作用略有不同。 在极少数情况下,最有可能使用 `日期` 1582年之前的一年 (这样 `从000-01-01起` 或 `1-1-1 00: 00: 0.0起的天数` ) 您需要显示日期变量的调整。 原因是 ERDDAP™ 使用java.time库管理内部日期. 有些数据集确实需要使用旧的GregorianCalendar库来缩短正确的日期.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### 单位{#units} 
 *    [ **单位** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , (中文). [CF 数字](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) 和 [APDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) 元数据标准) 定义数据值的单位。 举例来说,
     ```

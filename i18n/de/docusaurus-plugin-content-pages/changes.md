@@ -19,7 +19,7 @@ Aktion erforderlich.
     * ISO 19115 Versionen: Siehe unten für admin info. Für Anwender können Sie jetzt spezielle Versionen von ISO 19115 Metadaten anfordern. Tun Sie dies aus dem Raster/ tabledap Seiten für einen Datensatz mit dem Dateityp abfallen. Diese Versionen sind unabhängig vom Server-Standard.
 
 *    **Dinge ERDDAP™ Administratoren müssen wissen und tun:** 
-    * Neue Funktion, MQTT-Unterstützung. Für Details empfehle ich das Lesen der [neue Seite darüber.](/docs/server-admin/mqtt-integration.md) Dazu gehören die Möglichkeit, Datensätze aus MQTT-Nachrichten zu erstellen und MQTT-Nachrichten zu veröffentlichen, wenn sich ein Datensatz ändert. Es ist standardmäßig deaktiviert, also wenn Sie es verwenden möchten, müssen Sie es aktivieren.
+    * Neue Funktion, MQTT-Unterstützung. Für Details empfehle ich das Lesen der [neue Seite darüber.](/docs/server-admin/mqtt-integration) Dazu gehören die Möglichkeit, Datensätze aus MQTT-Nachrichten zu erstellen und MQTT-Nachrichten zu veröffentlichen, wenn sich ein Datensatz ändert. Es ist standardmäßig deaktiviert, also wenn Sie es verwenden möchten, müssen Sie es aktivieren.
 
 Dank Ayush Singh für die Arbeit an MQTT&#33;
 
@@ -39,7 +39,7 @@ Dank [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid FromNcFiles mit unterschiedlichen Abmessungen: Es gibt (Experiment) Unterstützung für EDDGrid FromNcFiles-Datensätze haben Variablen, die nicht denselben Satz von Achsen verwenden. Bitte melden Sie sich zurück, wie das für Sie funktioniert, oder wenn das Verhalten nicht ganz richtig aussieht.
 
-    * Es gibt eine Sammlung von Optimierungen, die sicher sein sollten, aber Flaggen haben, um auf altes Verhalten bei Bedarf zurückzukehren. Wenn Sie die Notwendigkeit finden, eine der Flaggen zu setzen, bitte Datei einen Fehler. Wenn wir keine Probleme hören, werden die meisten dieser mit dem neuen Verhaltensstandard in der Zukunft entfernt. Da ist ein [neue Seite über Feature-Flags](/docs/server-admin/feature-flags.md) wo Sie über diese und andere Flaggen lesen können.
+    * Es gibt eine Sammlung von Optimierungen, die sicher sein sollten, aber Flaggen haben, um auf altes Verhalten bei Bedarf zurückzukehren. Wenn Sie die Notwendigkeit finden, eine der Flaggen zu setzen, bitte Datei einen Fehler. Wenn wir keine Probleme hören, werden die meisten dieser mit dem neuen Verhaltensstandard in der Zukunft entfernt. Da ist ein [neue Seite über Feature-Flags](/docs/server-admin/feature-flags) wo Sie über diese und andere Flaggen lesen können.
 
       * Kontakt Gewinde Nur WhenItems: Dies ist eine Änderung, so dass die touchThread nur läuft, wenn es Elemente in der Warteschlange zu berühren. Ein weniger Fadenlauf ist eine kleinere Optimierung, aber dennoch nützlich. Defaults to true.
 

@@ -13,7 +13,7 @@
 
 ##  ERDDAP come client MQTT
 
- ERDDAP può agire come client MQTT per sottoscrivere argomenti su un broker MQTT esterno o suo embedded. Questo si ottiene utilizzando il nuovo `EDDTable FromMqt` tipo di dataset, che funziona in modo simile all'esistente `EDDTableDaHttpGet` Dataset.
+ ERDDAP può agire come client MQTT per sottoscrivere argomenti su un broker MQTT esterno o suo embedded. Questo si ottiene utilizzando il nuovo `EDDTable FromMqt` tipo di dataset, che funziona in modo simile all'esistente [ `EDDTableDaHttpGet` ](/docs/server-admin/datasets#eddtablefromhttpget) Dataset.
 
 Attualmente, l'implementazione client supporta solo **sottoscrizione** a argomenti.
 

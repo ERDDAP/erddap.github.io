@@ -32,6 +32,10 @@ Si vous achetez dans ces idées et dépensez l'effort pour créer le XML pour da
 Faire le datasets.xml demande des efforts considérables pour les premiers ensembles de données, mais **ça devient plus facile** . Après le premier jeu de données, vous pouvez souvent réutiliser beaucoup de votre travail pour le prochain jeu de données. Heureusement, ERDDAP™ vient avec deux [Outils](#tools) pour vous aider à créer le XML pour chaque ensemble de données datasets.xml .
 Si vous êtes coincé, voyez notre [section sur l'obtention d'un soutien supplémentaire](/docs/intro#support) .
 
+### Variables en datasets.xml  {#varaibles-in-datasetsxml} 
+
+Dès ERDDAP™ version 2.29.0, datasets.xml est maintenant (facultativement) traités par [Sous-titrage](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Cela a de nombreuses utilisations, y compris la fixation de valeurs privées (comme les mots de passe) en utilisant des variables d'environnement. Cela peut être désactivé en définissant enableEnvParsing to false in setup.xml.
+
 ### Fournisseur de données Formulaire{#data-provider-form} 
 Quand un fournisseur de données vient à vous en espérant ajouter quelques données à votre ERDDAP , il peut être difficile et long de collecter toutes les métadonnées (informations sur l'ensemble de données) nécessaire pour ajouter l'ensemble de données ERDDAP . Nombreuses sources de données (par exemple, fichiers .csv, Fichiers Excel, bases de données) n'ont pas de métadonnées internes, donc ERDDAP™ a un formulaire de fournisseur de données qui recueille les métadonnées du fournisseur de données et donne au fournisseur de données d'autres orientations, y compris des directives détaillées pour [Données dans les bases de données](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) . Les informations soumises sont converties en datasets.xml format puis envoyé par courriel au ERDDAP™ administrateur (vous) et écrit (Annexe) à *BigParent Directory* /logs/dataProviderForm.log . Ainsi, le formulaire semi-automatise le processus d'obtention d'un ensemble de données ERDDAP Mais les ERDDAP™ administrateur doit encore compléter le datasets.xml morceaux et traiter avec obtenir le fichier de données (s) le fournisseur ou la connexion à la base de données.
 
@@ -900,6 +904,7 @@ Les types de séries de données se répartissent en deux catégories. ( [Pourqu
     * Il DOIT y avoir une variable d'axe pour chaque dimension. Les variables d'axe DOIVENT être spécifiées dans l'ordre où les variables de données les utilisent.
     * En EDDGrid ensembles de données, toutes les variables de données DOIVENT être utilisées (part) toutes les variables d'axe.
          ( [Pourquoi ?](#why-just-two-basic-data-structures)   [Et s'ils ne le font pas ?](#dimensions) ) 
+Nouveautés ERDDAP™ version 2.29.0 avec EDDGrid DeNcFiles est le support expérimental des variables de données qui ne supportent pas toutes les variables d'axe (ou comme certains l'ont appelé les données 1D et 2D dans le même ensemble de données) .
     * Valeurs de dimension triées - En tout EDDGrid ensembles de données, chaque dimension DOIT être triée (ascendant ou descendant) . Chacun peut être irrégulièrement espacé. Il ne peut y avoir de liens. C'est une exigence de la [Norme sur les métadonnées des FC](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) . Si les valeurs d'une dimension ne sont pas triées, l'ensemble de données ne sera pas chargé et ERDDAP™ identifiera la première valeur non triée dans le fichier journal, *BigParent Directory* /logs/log.txt .
         
 Quelques sous-classes ont des restrictions supplémentaires (notamment : EDDGrid AgrégateExistingDimension exige que la dimension extérieure (la plus gauche, la première) soit ascendante.
@@ -949,6 +954,7 @@ Les valeurs de dimension non triées indiquent presque toujours un problème ave
         *    [EDDTableFromInvalidCRAFiles](#eddtablefrominvalidcrafiles) données agrégées NetCDF   (v3 ou v4)   .nc fichiers qui utilisent une variante spécifique, non valide, du DSG Contiguous Array (ARC) fichiers. Bien que ERDDAP™ prend en charge ce type de fichier, c'est un type de fichier invalide que personne ne devrait commencer à utiliser. Les groupes qui utilisent actuellement ce type de fichier sont fortement encouragés à utiliser ERDDAP™ pour générer des fichiers valides de l'ARC DSG des FC et cesser d'utiliser ces fichiers.
         *    [Tableau EDD deJsonlCSVFiles](#eddtablefromjsonlcsvfiles) données agrégées [JSON Fichiers CSV de lignes](https://jsonlines.org/examples/) .
         *    [EDDTableFromMultidimNcFiles](#eddtablefrommultidimncfiles) données agrégées NetCDF   (v3 ou v4)   .nc fichiers avec plusieurs variables avec des dimensions partagées.
+        *    [EDDTableFromMqtt](/docs/server-admin/mqtt-integration) construit un ensemble de données basé sur les messages MQTT. Notez que la documentation est sur une page dédiée. Notez qu'il y a beaucoup de similitudes avec [EDDTableFromHttpGet](#eddtablefromhttpget) .
         *    [EDDTableFromNcFiles](#eddtablefromncfiles) données agrégées NetCDF   (v3 ou v4)   .nc fichiers avec plusieurs variables avec des dimensions partagées. Il est bon de continuer à utiliser ce type d'ensemble de données pour les ensembles de données existants, mais pour les nouveaux ensembles de données, nous recommandons plutôt d'utiliser EDDTableFromMultidimNcFiles.
         *    [EDDTableFromNcCFFiles](#eddtablefromnccffiles) données agrégées NetCDF   (v3 ou v4)   .nc fichiers qui utilisent un des formats de fichiers spécifiés par le [FC Géométries d'échantillonnage discrètes (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Convention. Mais pour les fichiers utilisant une des variantes multidimensionnelles CF DSG, utiliser [EDDTableFromMultidimNcFiles](#eddtablefrommultidimncfiles) à la place.
         *    [EDDTableFromNccsvFiles](#eddtablefromnccsvfiles) données agrégées [NCCSV](/docs/user/nccsv-1.00) Fichiers ASCII .csv.
@@ -1577,6 +1583,8 @@ Nous recommandons fortement l'utilisation de [Générer des ensembles de donnée
  
 ###  EDDGrid DeNcFiles{#eddgridfromncfiles} 
  [ ** EDDGrid DeNcFiles** ](#eddgridfromncfiles) les données des agrégats locaux, [GRIB .grb et .grb2](https://en.wikipedia.org/wiki/GRIB) fichiers, [ HDF   (v4 ou v5)   .hdf ](https://www.hdfgroup.org/) fichiers, [ .nc ml](#ncml-files) fichiers, [ NetCDF   (v3 ou v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) fichiers, et [Zarr](https://github.com/zarr-developers/zarr-python) fichiers (à partir de la version 2.25) . Les fichiers Zarr ont un comportement légèrement différent et nécessitent soit le fichierNameRegex ou le cheminRegex pour inclure "zarr".
+
+Nouveautés ERDDAP™ version 2.29.0 est le support expérimental des variables de données qui ne supportent pas toutes les variables d'axe (ou comme certains l'ont appelé les données 1D et 2D dans le même ensemble de données) . Veuillez contacter GitHub (débats ou questions) avec rétroaction et bugs.
 
 Cela peut fonctionner avec d'autres types de fichiers (par exemple, BUFR) Nous ne l'avons pas testé -- envoyez-nous des exemples de fichiers.
 
@@ -5258,7 +5266,7 @@ Si un ensemble de données utilise ACDD 1.0, cet attribut est STRONGEMENT RECOMM
     ```
 Mais ERDDAP™ recommande maintenant ACDD-1.3. Si vous avez [commuté vos ensembles de données pour utiliser ACDD-1.3](#switch-to-acdd-13) , utilisation de Metadata\\_Conventions est STRONGEMENT DISCOURAGED: il suffit d'utiliser [&lt;Conventions&gt;] (#conventions) à la place.
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (des [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Norme de métadonnées) est une description textuelle RECOMMANDÉE du traitement (par exemple, [Niveaux de traitement des données satellitaires de la NASA](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) , par exemple, niveau 3) ou niveau de contrôle de qualité (par exemple, Qualité des sciences) des données. Par exemple,
+*    [ ** processing\\_level ** ](#processing_level)   (des [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Norme de métadonnées) est une description textuelle RECOMMANDÉE du traitement (par exemple, [Niveaux de traitement des données du système d'observation de la Terre et du système d'information de la NASA](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) , par exemple, niveau 3) ou niveau de contrôle de qualité (par exemple, Qualité des sciences) des données. Par exemple,
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ non emballéValue = emballé Valeur \\* scale\\_factor + add\\_offset
     * Pour les variables timestamp avec les données sources de Strings, cet attribut vous permet de spécifier un fuseau horaire qui mène ERDDAP™ pour convertir les heures de source de la zone locale (certains dans l'heure standard, certains dans l'heure avancée) dans Zulu heures (qui sont toujours en temps standard) . La liste des noms de fuseaux horaires valides est probablement identique à la liste dans la colonne TZ à [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Les fuseaux horaires communs aux États-Unis sont les suivants : États-Unis/Hawaii, États-Unis/Alaska, États-Unis/Pacifique, États-Unis/Montagne, États-Unis/ARIZONA, États-Unis/Centre, États-Unis/Est.
     * Pour les variables timestamp avec des données source numériques, vous pouvez spécifier le " time\\_zone " attribut, mais la valeur doit être " Zulu "ou "UTC". Si vous avez besoin d'aide pour d'autres fuseaux horaires, veuillez envoyer un courriel à Chris. John à noaa.gov .
          
+###### legacy_time_adjust{#legacy_time_adjust} 
+*    [ **legacy_time_adjust** ](#legacy_time_adjust) À partir de ERDDAP™ 2.29.0, les variables temporelles fonctionnent légèrement différemment. Dans de rares cas, il est probable que `jours depuis` et un an avant 1582 (donc `jours depuis 0000-01-01` ou `jours depuis 1-1-1 00:00:0.0` ) vous devrez indiquer un ajustement à la variable de date. La raison en est ERDDAP™ utilise la bibliothèque java.time pour gérer les dates en interne. Il y a quelques ensembles de données qui nécessitent l'utilisation de l'ancienne bibliothèque GregorianCalendar pour régler les dates correctes.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### unités{#units} 
 *    [ **unités** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , [FC](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) et [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Norme de métadonnées) définit les unités des valeurs de données. Par exemple,
     ```

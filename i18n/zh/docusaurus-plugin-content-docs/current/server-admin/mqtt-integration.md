@@ -13,7 +13,7 @@
 
 ##  ERDDAP 作为 MQTT 客户端
 
- ERDDAP 可以作为一个MQTT客户端在外部或自己的嵌入式MQTT经纪人上订阅话题. 使用新的 `来自Mqtt的 EDD 表格` 数据集类型,其功能类似于现有的 `来自 HttpGet 的 EDD 表格` 数据集。
+ ERDDAP 可以作为一个MQTT客户端在外部或自己的嵌入式MQTT经纪人上订阅话题. 使用新的 `来自Mqtt的 EDD 表格` 数据集类型,其功能类似于现有的 [ `来自 HttpGet 的 EDD 表格` ](/docs/server-admin/datasets#eddtablefromhttpget) 数据集。
 
 目前,客户端只支持 **签名** 改为主题。
 

@@ -13,7 +13,7 @@
 
 ##  ERDDAP som MQTT-klient
 
- ERDDAP kan fungere som en MQTT-klient for å abonnere på emner på en ekstern eller sin egen innebygd MQTT-megler. Dette oppnås ved hjelp av det nye `EDDTableFraMqtt` Datasett, som fungerer på samme måte som eksisterende `EDDTableFraHttpGet` - Datasett.
+ ERDDAP kan fungere som en MQTT-klient for å abonnere på emner på en ekstern eller sin egen innebygd MQTT-megler. Dette oppnås ved hjelp av det nye `EDDTableFraMqtt` Datasett, som fungerer på samme måte som eksisterende [ `EDDTableFraHttpGet` ](/docs/server-admin/datasets#eddtablefromhttpget) - Datasett.
 
 Kundens implementering støtter for tiden kun **abonnerer** til emner.
 

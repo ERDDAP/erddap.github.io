@@ -32,6 +32,10 @@ dataset 설정 ERDDAP™ dataset의 디렉토리 또는 URL에 포인팅의 문�
 이름 * datasets.xml 몇 가지 datasets에 대한 상당한 노력이 필요하지만, **더 쉽게** · 첫번째 dataset 후에, 당신은 수시로 다음 dataset를 위한 당신의 일의 많음을 재사용할 수 있습니다. 다행히, ERDDAP™ 두 가지 [제품정보](#tools) 각 dataset에 XML을 만들 수 있도록 datasets.xml ·
 갇혀있는 경우, 우리를 참조하십시오 [더 많은 지원 얻기에 섹션](/docs/intro#support) ·
 
+### 변수에 datasets.xml  {#varaibles-in-datasetsxml} 
+
+이름 * ERDDAP™ 버전 2.29.0, datasets.xml 현재 위치 (옵션으로) 제품정보 [문자열Substitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) · 이것은 개인 값 설정 포함 많은 사용 (비밀번호) 환경 변수를 사용하여. enableEnvParsing에서 false로 설정할 수 있습니다. setup.xml.
+
 ### 데이터 공급자 이름 *{#data-provider-form} 
 데이터 공급자가 귀하의 데이터에 추가 할 때 ERDDAP , 그것은 어려울 수 있고 metadata의 모든 것을 수집하는 시간 consuming (dataset에 대한 정보) dataset을 추가하는 데 필요한 ERDDAP · 많은 데이터 소스 (예를 들면, .csv 파일, Excel 파일, 데이터베이스) 내부 metadata가 없습니다. ERDDAP™ 데이터 제공 업체의 메타데이터 수집 및 데이터 제공 업체에 대한 광범위한 지도를 포함한 데이터 제공 업체 양식을 보유하고 있습니다. [데이터베이스의 데이터](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) · 제출된 정보는 datasets.xml 형식과 그 다음에 이메일 ERDDAP™ 관련 기사 (이름 *) 관련 기사 (이름 *) 이름 * *큰Parent감독* /logs/dataProviderForm.log . 또는 . 따라서, the form semi-automates the process of getting dataset into ERDDAP , 하지만 ERDDAP™ 관리자는 여전히 완료해야 datasets.xml chunk 과 거래 와 getting 데이터 파일 (₢ 킹) 공급자에서 또는 데이터베이스에 연결.
 
@@ -900,6 +904,7 @@ datasets의 유형은 2개의 종류로 떨어졌습니다. ( [왜?](#why-just-t
     * 각 치수의 축 변수가 있습니다. Axis variables MUST는 데이터 변수가 그(것)들을 사용한다는 순서로 지정됩니다.
     * 내 계정 EDDGrid datasets, 모든 데이터 변수 MUST 사용 (공유하기) 모든 축 변수.
          ( [왜?](#why-just-two-basic-data-structures)   [그렇지 않으면?](#dimensions) ) 
+새로운 기능 ERDDAP™ 버전 2.29.0 와 EDDGrid fromNcFiles는 모든 축 변수를 지원하지 않는 데이터 변수에 대한 실험적 지원입니다. (또는 몇몇은 동일한 dataset에 있는 1D와 2D 자료를 불렀습니다) ·
     * 분류된 차원 가치 - 모든 것 EDDGrid datasets, 각 차원 MUST는 분류한 순서에서 일 것입니다 (ascending 또는 후손) · 각각은 불규칙하게 간격을 붙일 수 있습니다. 아무 것도 없습니다. 이것은의 필요조건입니다 [CF 메타데이터 표준](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) · 어떤 차원의 값이 정렬되지 않은 경우, dataset는 로드되지 않고 ERDDAP™ 로그 파일에 첫 번째 취소 된 값을 식별합니다. *큰Parent감독* /logs/log.txt 파일 형식
         
 몇 가지 하위 클래스에는 추가 제한이 있습니다 (notably, EDDGrid AggregateExistingDimension은 외부 (왼쪽, 첫 번째) 차원이 간결되어야합니다.
@@ -949,6 +954,7 @@ Unsorted 치수 값은 거의 항상 소스 데이터 세트와 문제를 나타
         *    [EDDTableInvalidCRAFiles에서](#eddtablefrominvalidcrafiles) 데이터 수집 NetCDF   (v3 또는 v4)   .nc 특정, 잘못된, CF DSG Contiguous Ragged Array의 변형을 사용하는 파일 (사이트맵) 파일. 그러나 ERDDAP™ 이 파일 형식을 지원, 그것은 잘못된 파일 유형은 아무도 사용 시작해야. 이 파일 형식을 사용하는 그룹은 강력하게 사용하도록 권장합니다. ERDDAP™ 유효한 CF DSG CRA 파일을 생성하고 이 파일을 사용하여 중지합니다.
         *    [EDDTableFromJsonlCSV파일](#eddtablefromjsonlcsvfiles) 데이터 수집 [구글 맵 라인 CSV 파일](https://jsonlines.org/examples/) ·
         *    [EDDTableMultidimNcFiles에서](#eddtablefrommultidimncfiles) 데이터 수집 NetCDF   (v3 또는 v4)   .nc 몇 가지 변수를 가진 파일 공유 차원.
+        *    [EDDTableMqtt에서](/docs/server-admin/mqtt-integration) MQTT 메시지에 근거한 dataset를 건설합니다. 문서는 전용 페이지에 있습니다. 많은 유사점이 있습니다. [다운로드](#eddtablefromhttpget) ·
         *    [EDDTableFromNcFiles는](#eddtablefromncfiles) 데이터 수집 NetCDF   (v3 또는 v4)   .nc 몇 가지 변수를 가진 파일 공유 차원. 기존 데이터셋을 위한 이 데이터셋 유형을 계속 사용하는 것이 좋습니다. 하지만 새로운 데이터셋을 위해 대신 EDDTableFromMultidimNcFiles를 사용하는 것이 좋습니다.
         *    [EDDTableNcCFFiles에서](#eddtablefromnccffiles) 데이터 수집 NetCDF   (v3 또는 v4)   .nc 지정된 파일 형식 중 하나를 사용하는 파일 [사이트맵 분리된 표본 추출 Geometries (사이트맵) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) 대회. 그러나 다차원 CF DSG 변형 중 하나를 사용하여 파일에 대한 사용 [EDDTableMultidimNcFiles에서](#eddtablefrommultidimncfiles) 대신.
         *    [EDDTableNccsvFiles에서](#eddtablefromnccsvfiles) 데이터 수집 [사이트맵](/docs/user/nccsv-1.00) ASCII .csv 파일.
@@ -1577,6 +1583,8 @@ Generate데이터셋 Xml는 이것을 격려하고 도움을 줄 것입니다.
  
 ###  EDDGrid 파일 형식{#eddgridfromncfiles} 
  [ ** EDDGrid 파일 형식** ](#eddgridfromncfiles) 현지의 데이터, 그리드, [GRIB .grb 및 .grb2](https://en.wikipedia.org/wiki/GRIB) 파일, [ HDF   (v4 또는 v5)   .hdf ](https://www.hdfgroup.org/) 파일, [ .nc 단백질](#ncml-files) 파일, [ NetCDF   (v3 또는 v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) 파일 및 [로드 중 ...](https://github.com/zarr-developers/zarr-python) 파일 형식 (버전 2.25의) · Zarr 파일은 약간 다른 행동을 가지고 있으며 fileNameRegex 또는 pathRegex는 "zarr"을 포함해야합니다.
+
+새로운 기능 ERDDAP™ 버전 2.29.0는 모든 축 변수를 지원하지 않는 데이터 변수에 대한 실험적 지원 (또는 몇몇은 동일한 dataset에 있는 1D와 2D 자료를 불렀습니다) · GitHub에서 (토론 및 문제) 피드백과 버그로.
 
 이것은 다른 파일 유형과 함께 작동 할 수 있습니다. (예를 들어, BUFR) , 우리는 그것을 시험하지 않았습니다 -- 저희에게 몇몇 표본 파일을 보내십시오.
 
@@ -5258,7 +5266,7 @@ dataset가 ACDD 1.0을 사용하는 경우, 이 속성은 STRONGLY RECOMMENDED, 
     ```
 한국어 ERDDAP™ 이제 ACDD-1.3을 추천합니다. 당신은 [ACDD-1.3을 사용하여 데이터셋을 전환](#switch-to-acdd-13) , 사용 Metadata\\_Conventions STRONGLY DISCOURAGED: 그냥 사용 [&lt;대회&gt;] (#컨벤션) 대신.
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (이름 * [사이트맵](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) metadata 표준) 처리의 RECOMMENDED 텍스트 설명 (예를 들어, [NASA 위성 데이터 처리 수준](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) , 예를 들면, 수준 3) 또는 품질 관리 수준 (예를 들면, 과학 질) 데이터의. 예를 들어,
+*    [ ** processing\\_level ** ](#processing_level)   (이름 * [사이트맵](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) metadata 표준) 처리의 RECOMMENDED 텍스트 설명 (예를 들어, [NASA의 지구 관측 시스템 데이터 및 정보 시스템 데이터 처리 수준](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) , 예를 들면, 수준 3) 또는 품질 관리 수준 (예를 들면, 과학 질) 데이터의. 예를 들어,
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ unpackedValue = 포장 가치 \\* scale\\_factor + 더보기 add\\_offset
     * Strings에서 소스 데이터를 가진 timestamp 변수를 위해, 이 속성은 당신이 리드 타임 영역을 지정할 수 있습니다 ERDDAP™ 로컬 시간대 소스 시간을 변환 (어떤 표준 시간에, 일광 절약 시간에 약간) 로그인 Zulu 시간 : (항상 표준 시간에) · 유효한 시간대의 목록은 아마도 TZ 칼럼의 목록과 동일합니다. [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) · 일반 미국 시간대는 미국/하와이, 미국/알래스카, 미국/태평양, 미국/산, 미국/아리조나, 미국/중앙, 미국/동부입니다.
     * numeric source data를 가진 timestamp variables를 위해, 당신은 "를 지정할 수 있습니다 time\\_zone " 속성이지만 값은 "이어야한다. Zulu "또는 "UTC". 다른 시간대에 대한 지원이 필요하면 Chris에게 이메일을 보내주십시오. noaaa.gov의 존.
          
+###### 레거시_time_adjust{#legacy_time_adjust} 
+*    [ **레거시_time_adjust** ](#legacy_time_adjust) 시작하다 ERDDAP™ 2.29.0, 시간 변수는 약간 다르게 작동합니다. 드문 경우, 대부분 사용할 때 `일 이후` 1 년 전 1582 (· `일 이후 0000-01-01` 또는 `일 이후 1-1-1 00:00:0.0` ) 당신은 날짜 변수에 대한 조정을 표시해야합니다. 이 이유는 ERDDAP™ java.time 라이브러리를 사용하여 내부 날짜를 관리합니다. 오래된 GregorianCalendar 라이브러리를 사용하여 올바른 날짜를 캐시 할 필요가있는 일부 데이터 세트가 있습니다.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### 단위 단위{#units} 
 *    [ **단위 단위** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) · [사이트맵](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) 이름 * [사이트맵](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) metadata 표준) 데이터 값의 단위를 정의합니다. 예를 들어,
     ```

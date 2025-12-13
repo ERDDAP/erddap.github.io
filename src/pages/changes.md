@@ -19,7 +19,7 @@ ERDDAP™ version 2.29.0 requires jdk 25 or later. Please update your jdk versio
     *   ISO 19115 versions: See below for admin info. For users, you can now request specific versions of ISO 19115 metadata. Do this from the griddap/tabledap pages for a dataset with the file type drop down. These versions will be independent of the server default.
 
 *   **Things ERDDAP™ Administrators Need to Know and Do:**
-    *   New feature, MQTT support. For details I recommend reading the [new page about it.](/docs/server-admin/mqtt-integration.md) This includes being able to build datasets from MQTT messages, and publishing MQTT messages when a dataset changes. It is off by default, so if you want to use it, you need to enable it.
+    *   New feature, MQTT support. For details I recommend reading the [new page about it.](/docs/server-admin/mqtt-integration) This includes being able to build datasets from MQTT messages, and publishing MQTT messages when a dataset changes. It is off by default, so if you want to use it, you need to enable it.
 
     Thanks to Ayush Singh for working on MQTT!
 
@@ -39,7 +39,7 @@ ERDDAP™ version 2.29.0 requires jdk 25 or later. Please update your jdk versio
 
     *   EDDGridFromNcFiles with varying dimensions: There is (experimental) support for EDDGridFromNcFiles datasets to have variables that don't use the same set of axes. Please do report back on how this works for you, or if the behavior doesn't seem quite right.
 
-    *   There's a collection of optimizations that should be safe, but have flags to revert to old behavior if needed. If you find the need to set any of the flags, please file a bug. If we hear of no issues most of these will be removed with the new behavior default in the future. There's a [new page about feature flags](/docs/server-admin/feature-flags.md) where you can read about these and other flags.
+    *   There's a collection of optimizations that should be safe, but have flags to revert to old behavior if needed. If you find the need to set any of the flags, please file a bug. If we hear of no issues most of these will be removed with the new behavior default in the future. There's a [new page about feature flags](/docs/server-admin/feature-flags) where you can read about these and other flags.
 
       *  touchThreadOnlyWhenItems: This is a change so that the touchThread will only be running when there are items in the queue to touch. One fewer thread running is a minor optimization but still useful. Defaults to true.
 

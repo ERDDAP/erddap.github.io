@@ -32,6 +32,10 @@ Jika Anda membeli ide-ide ini dan mengeluarkan upaya untuk membuat XML untuk dat
 Membuat datasets.xml mengambil upaya yang cukup untuk beberapa dataset pertama, tetapi **itu akan lebih mudah** Sitemap Setelah dataset pertama, Anda sering dapat menggunakan banyak pekerjaan Anda untuk dataset berikutnya. Sitemap ERDDAP™ datang dengan dua [Login](#tools) untuk membantu Anda membuat XML untuk setiap dataset di datasets.xml Sitemap
 Jika Anda terjebak, lihat [bagian untuk mendapatkan dukungan tambahan](/docs/intro#support) Sitemap
 
+### Variabel datasets.xml  {#varaibles-in-datasetsxml} 
+
+Sitemap ERDDAP™ versi 2.29.0, datasets.xml Sitemap (Sitemap) diproses oleh [Login](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) Sitemap Ini memiliki banyak kegunaan termasuk menetapkan nilai pribadi (seperti kata sandi) menggunakan variabel lingkungan. Ini dapat dinonaktifkan dengan mengatur mengaktifkanEnvParsing untuk palsu dalam setup.xml.
+
 ### Database Login{#data-provider-form} 
 Ketika penyedia data datang ke Anda berharap untuk menambahkan beberapa data ke Anda ERDDAP , itu bisa sulit dan memakan waktu untuk mengumpulkan semua metadata (dataset) diperlukan untuk menambahkan dataset ke ERDDAP Sitemap Banyak sumber data (misalnya, file .csv, File Excel, database) tidak memiliki metadata internal, sehingga ERDDAP™ memiliki Formulir Penyedia Data yang mengumpulkan metadata dari penyedia data dan memberikan penyedia data beberapa panduan lain, termasuk panduan yang luas untuk [Database](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) Sitemap Informasi yang diajukan diubah menjadi datasets.xml format dan kemudian diemail ke ERDDAP™ Login (Login) dan tulisan (Sitemap) Login *Login* /logs/dataProviderForm.log . Dengan demikian, bentuk semi-otomatis proses mendapatkan dataset menjadi ERDDAP tapi ERDDAP™ administrator masih harus menyelesaikan datasets.xml chunk dan kesepakatan dengan mendapatkan file data (Login) dari penyedia atau menghubungkan ke database.
 
@@ -900,6 +904,7 @@ Jenis dataset jatuh ke dalam dua kategori. ( [Sitemap](#why-just-two-basic-data-
     * Tidak ada variabel sumbu untuk setiap dimensi. Variabel Axis MUST ditentukan dalam urutan variabel data menggunakannya.
     * Sitemap EDDGrid dataset, semua variabel data penggunaan MUST (Login) semua variabel sumbu.
          ( [Sitemap](#why-just-two-basic-data-structures)   [Bagaimana jika mereka tidak?](#dimensions) ) 
+Sitemap ERDDAP™ versi 2.29.0 dengan EDDGrid DariNFiles adalah dukungan eksperimental untuk variabel data yang tidak mendukung semua variabel sumbu (atau beberapa telah menyebutnya data 1D dan 2D di dataset yang sama) Sitemap
     * Nilai Dimensi Terurut - Sitemap EDDGrid dataset, setiap dimensi MUST dalam urutan yang diurutkan (menangguhkan atau turun) Sitemap Masing-masing dapat disampingkan. Tidak ada hubungan. Ini adalah persyaratan [Standar metadata CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) Sitemap Jika nilai dimensi tidak dalam urutan yang diurutkan, dataset tidak akan dimuat dan ERDDAP™ akan mengidentifikasi nilai pertama yang tidak disortasi dalam file log, *Login* Login
         
 Beberapa subklas memiliki pembatasan tambahan (mungkin, EDDGrid AggregateExistingDimensi mengharuskan dimensi luar (paling, pertama) akan berakhir.
@@ -949,6 +954,7 @@ Unsorted nilai dimensi hampir selalu menunjukkan masalah dengan dataset sumber. 
         *    [Login](#eddtablefrominvalidcrafiles) data agregat dari NetCDF   (v3 atau v4)   .nc file yang menggunakan khusus, tidak valid, varian CF DSG Contiguous Ragged Array (Login) Login Login ERDDAP™ mendukung jenis file ini, itu adalah jenis file yang tidak valid yang tidak ada yang harus mulai menggunakan. Kelompok yang saat ini menggunakan jenis file ini sangat didorong untuk digunakan ERDDAP™ untuk menghasilkan file CF DSG CRA yang valid dan berhenti menggunakan file ini.
         *    [Login](#eddtablefromjsonlcsvfiles) data agregat dari [Login Garis file CSV](https://jsonlines.org/examples/) Sitemap
         *    [Sitemap](#eddtablefrommultidimncfiles) data agregat dari NetCDF   (v3 atau v4)   .nc file dengan beberapa variabel dengan dimensi bersama.
+        *    [Login](/docs/server-admin/mqtt-integration) membangun dataset berdasarkan pesan MQTT. Perhatikan dokumentasi di halaman yang berdedikasi. Perhatikan bahwa ada banyak kesamaan [Login](#eddtablefromhttpget) Sitemap
         *    [Login](#eddtablefromncfiles) data agregat dari NetCDF   (v3 atau v4)   .nc file dengan beberapa variabel dengan dimensi bersama. Sangat baik untuk terus menggunakan jenis dataset ini untuk dataset yang ada, tetapi untuk dataset baru kami merekomendasikan menggunakan EDDTableDariMultidimNcFiles.
         *    [Sitemap](#eddtablefromnccffiles) data agregat dari NetCDF   (v3 atau v4)   .nc file yang menggunakan salah satu format file yang ditentukan oleh [Login Sitemap (Login) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) konvensi. Tapi untuk file menggunakan salah satu varian CF DSG multidimensional, gunakan [Sitemap](#eddtablefrommultidimncfiles) Sitemap
         *    [Login](#eddtablefromnccsvfiles) data agregat dari [Login](/docs/user/nccsv-1.00) ASCII .csv file.
@@ -1577,6 +1583,8 @@ Kami sangat merekomendasikan menggunakan [Login Program Xml](#generatedatasetsxm
  
 ###  EDDGrid Login{#eddgridfromncfiles} 
  [ ** EDDGrid Login** ](#eddgridfromncfiles) data agregat dari lokal, gridded, [GRIB .grb](https://en.wikipedia.org/wiki/GRIB) file, [ HDF   (v4 atau v5)   .hdf ](https://www.hdfgroup.org/) file, [ .nc Login](#ncml-files) file, [ NetCDF   (v3 atau v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) file, dan [Login](https://github.com/zarr-developers/zarr-python) Login (versi 2.25) Sitemap File Zarr memiliki perilaku yang sedikit berbeda dan memerlukan fileNameRegex atau pathRegex untuk menyertakan "zarr".
+
+Sitemap ERDDAP™ versi 2.29.0 adalah dukungan eksperimental untuk variabel data yang tidak mendukung semua variabel sumbu (atau beberapa telah menyebutnya data 1D dan 2D di dataset yang sama) Sitemap Silahkan hubungi GitHub (diskusi atau masalah) dengan umpan balik dan bug.
 
 Ini dapat bekerja dengan jenis file lainnya (misalnya, BUFR) , kami tidak mengujinya - silakan kirim beberapa file sampel.
 
@@ -5258,7 +5266,7 @@ Jika dataset menggunakan ACDD 1.0, atribut ini STRONGLY RECOMMENDED, misalnya,
     ```
 Login ERDDAP™ Sekarang merekomendasikan ACDD-1.3. Jika Anda memiliki [beralih dataset Anda untuk menggunakan ACDD-1.3](#switch-to-acdd-13) Penggunaan Metadata\\_Conventions DISCOURAGED STRONGLY: hanya menggunakan [&lt;Login (Login) Sitemap
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (dari [Login](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Metadata) adalah deskripsi teks yang direproduksi dari pemrosesan (Sitemap [Tingkat pemrosesan data satelit NASA](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) , misalnya, Tingkat 3) atau tingkat kontrol kualitas (misalnya, Kualitas Sains) data. Sitemap
+*    [ ** processing\\_level ** ](#processing_level)   (dari [Login](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Metadata) adalah deskripsi teks yang direproduksi dari pemrosesan (Sitemap [Sistem Pengawasan Bumi NASA Data dan Tingkat pemrosesan data Sistem Informasi](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) , misalnya, Tingkat 3) atau tingkat kontrol kualitas (misalnya, Kualitas Sains) data. Sitemap
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ unpackedValue = dikemas Login scale\\_factor Sitemap add\\_offset
     * Untuk variabel kalitamp dengan data sumber dari String, atribut ini memungkinkan Anda menentukan zona waktu yang mengarah ERDDAP™ untuk mengubah waktu-waktu sumber zona lokal (beberapa dalam Waktu Standar, beberapa dalam Waktu Hemat Daylight) Login Zulu Sitemap (yang selalu dalam waktu Standar) Sitemap Daftar nama zona waktu yang valid mungkin identik dengan daftar di kolom TZ di [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) Sitemap Zona waktu AS umum adalah: US / Hawaii, US / Alaska, US / US / US / Mountain, US / Arizona, AS / Tengah, AS / Timur.
     * Untuk variabel timestamp dengan data sumber numerik, Anda dapat menentukan " time\\_zone " atribut, tetapi nilai harus " Zulu " atau "UTC". Jika Anda butuh dukungan untuk zona waktu lainnya, silakan email Chris. John di noaaa.gov .
          
+###### legacy_time_adjust{#legacy_time_adjust} 
+*    [ **legacy_time_adjust** ](#legacy_time_adjust) Sitemap ERDDAP™ 2.29.0, variabel waktu bekerja sedikit berbeda. Dalam kasus yang jarang terjadi, kemungkinan besar ketika menggunakan `Sitemap` dan setahun sebelum 1582 (Sitemap `hari sejak 0000-01` Sitemap `hari sejak 1-1-1 00:00:0.0` ) Anda harus menunjukkan penyesuaian pada variabel tanggal. Alasan ini ERDDAP™ menggunakan perpustakaan java.time untuk mengelola tanggal secara internal. Ada beberapa dataset yang membutuhkan menggunakan perpustakaan GregorianCalendar lama untuk mengelakkan tanggal yang benar.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### Login{#units} 
 *    [ **Login** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) Login [Login](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) Login [Login](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Metadata) mendefinisikan unit nilai data. Sitemap
     ```

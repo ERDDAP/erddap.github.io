@@ -32,6 +32,10 @@ Jeśli kupić do tych pomysłów i wydać wysiłek, aby utworzyć XML dla datase
 Dokonywanie datasets.xml podejmuje znaczne wysiłki w odniesieniu do kilku pierwszych zbiorów danych, ale **będzie łatwiej** . Po pierwszym zbiorze danych, można często ponownie użyć dużo swojej pracy do następnego zbioru danych. Na szczęście, ERDDAP™ ma dwa [Narzędzia](#tools) pomóc w tworzeniu XML dla każdego zbioru danych w datasets.xml .
 Jeśli utkniesz, zobacz nasze [rozdział dotyczący uzyskania dodatkowego wsparcia](/docs/intro#support) .
 
+### Zmienne w datasets.xml  {#varaibles-in-datasetsxml} 
+
+Od ERDDAP™ wersja 2.29.0, datasets.xml jest teraz (opcjonalnie) Przetworzone przez [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Ma to wiele zastosowań, w tym ustalanie wartości prywatnych (jak hasła) przy użyciu zmiennych środowiskowych. To może być wyłączone przez ustawienie enableEnvParsing do false w setup.xml.
+
 ### Dostawca danych Formularz{#data-provider-form} 
 Kiedy dostawca danych przychodzi do Ciebie mając nadzieję na dodanie niektórych danych do ERDDAP , zbieranie wszystkich metadanych może być trudne i czasochłonne (informacje o zbiorze danych) potrzebne do dodania zbioru danych ERDDAP . Wiele źródeł danych (na przykład pliki .csv, Pliki Excel, bazy danych) nie posiadają wewnętrznych metadanych, więc ERDDAP™ posiada formularz dostawcy danych, który gromadzi metadane od dostawcy danych i daje dostawcy danych inne wytyczne, w tym obszerne wytyczne dla [Dane w bazach danych](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) . Przedstawione informacje przelicza się na datasets.xml format, a następnie email do ERDDAP™ administrator (Ty) i napisane (załączone) do *bigParentDirectory* / logs / dataProviderForm.log. Tak więc, forma pół-automatyzuje proces uzyskiwania zbioru danych do ERDDAP , ale ERDDAP™ administrator nadal musi ukończyć datasets.xml kawałek i zająć się uzyskiwaniem pliku danych (s) od dostawcy lub połączenia z bazą danych.
 
@@ -900,6 +904,7 @@ Rodzaje zbiorów danych dzielą się na dwie kategorie. ( [Dlaczego?](#why-just-
     * Musi istnieć zmienna osi dla każdego wymiaru. Zmienne osiowe MUSI być określone w kolejności, w której zmienne danych ich używają.
     * W EDDGrid Zestawy danych, wszystkie zmienne danych MUSI używać (udział) wszystkie zmienne osi.
          ( [Dlaczego?](#why-just-two-basic-data-structures)   [A jeśli nie?](#dimensions) ) 
+Nowy ERDDAP™ wersja 2.29.0 z EDDGrid FromNcFiles to eksperymentalne wsparcie zmiennych danych, które nie obsługują wszystkich zmiennych osi (lub jak niektórzy nazwali to danymi 1D i 2D w tym samym zbiorze danych) .
     * Wymiary sortowane - W sumie EDDGrid Zestawy danych, każdy wymiar MUSI być uporządkowany (Wznoszące się lub zstępujące) . Każdy może być nieregularnie rozmieszczony. Nie może być żadnych powiązań. Jest to wymóg [Standard metadanych CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) . Jeśli jakiekolwiek wartości wymiarów nie są uporządkowane, zbiór danych nie zostanie załadowany i ERDDAP™ zidentyfikuje pierwszą niesortowaną wartość w pliku dziennika, *bigParentDirectory* / logs / log.txt.
         
 Kilka podklas ma dodatkowe ograniczenia (w szczególności, EDDGrid AgregateExistingDimension wymaga, aby zewnętrzny (najbardziej lewy, pierwszy) wymiar był wznoszący.
@@ -949,6 +954,7 @@ Niesortowane wartości wymiarów prawie zawsze wskazują na problem z zbiorem da
         *    [Pliki EDDTableFromInvalidCRAFiles](#eddtablefrominvalidcrafiles) dane zagregowane z NetCDF   (v3 lub v4)   .nc pliki, które korzystają z określonego, niepoprawnego wariantu karty DSG CF (CRA) pliki. Chociaż ERDDAP™ obsługuje ten typ pliku, jest to nieprawidłowy typ pliku, którego nikt nie powinien używać. Grupy, które obecnie korzystają z tego typu plików, są zdecydowanie zachęcane do korzystania z ERDDAP™ generowanie ważnych plików CF DSG CRA i zaprzestanie korzystania z tych plików.
         *    [Pliki EDDTableFromJsonlCSVFiles](#eddtablefromjsonlcsvfiles) dane zagregowane z [JSON Linie plików CSV](https://jsonlines.org/examples/) .
         *    [Pliki EDDTableFromMultidimNc@@](#eddtablefrommultidimncfiles) dane zagregowane z NetCDF   (v3 lub v4)   .nc pliki z kilkoma zmiennymi o wspólnych wymiarach.
+        *    [EDDTableFromMqtt](/docs/server-admin/mqtt-integration) konstruuje zbiór danych na podstawie komunikatów MQTT. Uwaga: dokumentacja znajduje się na specjalnej stronie. Zauważ, że istnieje wiele podobieństw do [EDDTableFromHttpGet](#eddtablefromhttpget) .
         *    [Pliki EDDTableFromNc@@](#eddtablefromncfiles) dane zagregowane z NetCDF   (v3 lub v4)   .nc pliki z kilkoma zmiennymi o wspólnych wymiarach. Dobrze jest nadal używać tego typu zbioru danych dla istniejących zbiorów danych, ale dla nowych zbiorów danych zalecamy stosowanie EDDTableFromMultidimNcFiles zamiast.
         *    [Pliki EDDTableFromNcCFFiles](#eddtablefromnccffiles) dane zagregowane z NetCDF   (v3 lub v4)   .nc plików, które używają jednego z formatów plików określonych przez [CF Geometrie do pobierania próbek dyskretnych (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) konwencje. Ale dla plików wykorzystujących jeden z wielowymiarowych wariantów CF DSG, użyj [Pliki EDDTableFromMultidimNc@@](#eddtablefrommultidimncfiles) Zamiast tego.
         *    [Pliki EDDTableFromNccsvName](#eddtablefromnccsvfiles) dane zagregowane z [NCSSV](/docs/user/nccsv-1.00) Pliki ASCII .csv.
@@ -1577,6 +1583,8 @@ Zdecydowanie zalecamy użycie [GenerateDatasets Program Xml](#generatedatasetsxm
  
 ###  EDDGrid Pliki FromNc@@{#eddgridfromncfiles} 
  [ ** EDDGrid Pliki FromNc@@** ](#eddgridfromncfiles) dane zagregowane pochodzące z lokalnych, zakodowanych, [GRIB .grb oraz .grb2](https://en.wikipedia.org/wiki/GRIB) pliki, [ HDF   (v4 lub v5)   .hdf ](https://www.hdfgroup.org/) pliki, [ .nc ml](#ncml-files) pliki, [ NetCDF   (v3 lub v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) pliki oraz [Zarr Przewodniczący](https://github.com/zarr-developers/zarr-python) pliki (od wersji 2.25) . Pliki Zarr mają nieco inne zachowanie i wymagają albo fileNameRegex lub pathRegex zawierać "zarr".
+
+Nowy ERDDAP™ Wersja 2.29.0 to eksperymentalne wsparcie zmiennych danych, które nie obsługują wszystkich zmiennych osi (lub jak niektórzy nazwali to danymi 1D i 2D w tym samym zbiorze danych) . Proszę sięgnąć po GitHub. (dyskusje lub kwestie) ze sprzężeniem zwrotnym i robakami.
 
 Może to działać z innymi typami plików (na przykład, BUFR) Nie sprawdziliśmy go. Proszę wysłać nam próbki.
 
@@ -5258,7 +5266,7 @@ Jeśli zbiór danych używa ACDD 1.0, atrybut ten jest ZALECANY, na przykład,
     ```
 Ale... ERDDAP™ teraz zaleca ACDD- 1.3 Jeśli [przełączanie zestawów danych do użycia ACDD- 1.3](#switch-to-acdd-13) , stosowanie Metadata\\_Conventions jest STRONGLY ZAINTERESOWANY: po prostu używać [&lt;Konwencja &gt;] (# konwencje) Zamiast tego.
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (od [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) standard metadanych) jest zalecanym opisem tekstowym przetwarzania (na przykład: [Poziomy przetwarzania danych satelitarnych NASA](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) na przykład poziom 3) lub poziom kontroli jakości (na przykład, Jakość nauki) danych. Na przykład:
+*    [ ** processing\\_level ** ](#processing_level)   (od [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) standard metadanych) jest zalecanym opisem tekstowym przetwarzania (na przykład: [Poziomy przetwarzania danych przez system obserwacji Ziemi i systemu informacyjnego NASA](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) na przykład poziom 3) lub poziom kontroli jakości (na przykład, Jakość nauki) danych. Na przykład:
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ unpackedValue = spakowany Wartość\\ * scale\\_factor + add\\_offset
     * Dla zmiennych timestamp z danymi źródłowymi ze Strings atrybut ten pozwala określić strefę czasową, która prowadzi ERDDAP™ aby przekonwertować czas-strefa źródłowa (niektóre w czasie standardowym, niektóre w czasie dziennym) do Zulu razy (które są zawsze w czasie standardowym) . Lista ważnych nazw stref czasowych jest prawdopodobnie identyczna z listą w kolumnie TZ [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Wspólne strefy czasowe USA to: US / Hawaje, US / Alaska, US / Pacific, US / Mountain, US / Arizona, US / Central, US / Eastern.
     * Dla zmiennych timestamp z numerycznymi danymi źródłowymi można określić " time\\_zone "atrybut, ale wartość musi być" Zulu "lub" UTC ". Jeśli potrzebujesz wsparcia dla innych stref czasowych, proszę wysłać e-mail do Chrisa. John w Noa.gov.
          
+###### legacy _ time _ adjuste{#legacy_time_adjust} 
+*    [ **legacy _ time _ adjuste** ](#legacy_time_adjust) Początek ERDDAP™ 2.29.0, zmienne czasowe działają nieco inaczej. W rzadkich przypadkach, najprawdopodobniej podczas stosowania `dni od` i rok przed 1582 (więc `dni od 0000- 01- 01` lub `dni od 1- 1-1 00: 00: 0.0` ) trzeba będzie wskazać dla korekty zmiennej daty. Powodem jest ERDDAP™ używa biblioteki java.time do zarządzania datami wewnętrznie. Istnieje kilka zbiorów danych, które wymagają użycia starej biblioteki GregorianCalendar, aby uzyskać poprawne daty.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### jednostki{#units} 
 *    [ **jednostki** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , [CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) oraz [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) standard metadanych) określa jednostki wartości danych. Na przykład:
     ```

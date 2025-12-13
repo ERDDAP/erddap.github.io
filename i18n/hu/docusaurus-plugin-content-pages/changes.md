@@ -19,7 +19,7 @@ Akció szükséges.
     * ISO 19115 verziók: Lásd alább az admin információért. A felhasználók számára most az ISO 19115 metaadata speciális verzióit kérheti. Tedd ezt a griddap/ tabledap Az adatkészlet oldalai a fájltípus leesése. Ezek a verziók függetlenek lesznek a szerver alapértelmezettségétől.
 
 *    **A dolgok ERDDAP™ Az adminisztrátoroknak tudniuk kell és meg kell tenniük:** 
-    * Új funkció, MQTT támogatás. A részletekért ajánlom olvasni a [új oldal erről.](/docs/server-admin/mqtt-integration.md) Ez magában foglalja, hogy képes adatokat építeni az MQTT üzenetekből, és közzéteszi az MQTT üzeneteket, amikor egy adatkészlet változik. Ez az alapértelmezett, így ha használni akarja, lehetővé kell tennie.
+    * Új funkció, MQTT támogatás. A részletekért ajánlom olvasni a [új oldal erről.](/docs/server-admin/mqtt-integration) Ez magában foglalja, hogy képes adatokat építeni az MQTT üzenetekből, és közzéteszi az MQTT üzeneteket, amikor egy adatkészlet változik. Ez az alapértelmezett, így ha használni akarja, lehetővé kell tennie.
 
 Köszönjük Ayush Singh munkáját az MQTT&#33;
 
@@ -39,7 +39,7 @@ Köszönöm [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid FromNcFiles különböző dimenziókkal: Ott van (kísérleti) támogatás EDDGrid FromNcFiles adatkészletek, hogy olyan változók, amelyek nem használják ugyanazt a tengelyt. Kérjük, jelentse meg, hogy ez hogyan működik az Ön számára, vagy ha a viselkedés nem tűnik elég helyesnek.
 
-    * Vannak olyan optimalizálások gyűjteménye, amelyeknek biztonságosnak kell lenniük, de szükség esetén zászlókkal kell visszatérni a régi viselkedéshez. Ha megtalálja annak szükségességét, hogy beállítsa a zászlók, kérjük, adja meg a hibát. Ha nem hallunk ilyen kérdéseket, akkor a jövőben eltávolítjuk az új viselkedési alapot. Van egy [új oldal a zászlókról](/docs/server-admin/feature-flags.md) ahol olvashatsz ezekről és más zászlókról.
+    * Vannak olyan optimalizálások gyűjteménye, amelyeknek biztonságosnak kell lenniük, de szükség esetén zászlókkal kell visszatérni a régi viselkedéshez. Ha megtalálja annak szükségességét, hogy beállítsa a zászlók, kérjük, adja meg a hibát. Ha nem hallunk ilyen kérdéseket, akkor a jövőben eltávolítjuk az új viselkedési alapot. Van egy [új oldal a zászlókról](/docs/server-admin/feature-flags) ahol olvashatsz ezekről és más zászlókról.
 
       * Kapcsolat Szál Csak Amikor Items: Ez egy változás, hogy az érintésThread csak akkor fog futni, ha vannak tárgyak a sorban érinteni. Egy kevesebb szál futás egy kisebb optimalizálás, de még mindig hasznos. Alapértelmek az igazhoz.
 

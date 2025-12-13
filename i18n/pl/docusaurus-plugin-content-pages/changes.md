@@ -19,7 +19,7 @@ Wymagane działania.
     * Wersja ISO 19115: Poniżej znajdują się informacje o administratorze. Dla użytkowników można teraz zażądać konkretnych wersji metadanych ISO 19115. Zrób to z griddap / tabledap strony dla zbioru danych z rozwijanym typem pliku. Wersje te będą niezależne od domyślnego serwera.
 
 *    **Rzeczy ERDDAP™ Administratorzy muszą wiedzieć i robić:** 
-    * Nowa funkcja, obsługa MQTT. Dla szczegółów polecam przeczytać [Nowa strona o tym.](/docs/server-admin/mqtt-integration.md) Obejmuje to możliwość tworzenia zbiorów danych z komunikatów MQTT oraz publikowanie komunikatów MQTT przy zmianie zbioru danych. Jest domyślnie wyłączony, więc jeśli chcesz go używać, musisz go włączyć.
+    * Nowa funkcja, obsługa MQTT. Dla szczegółów polecam przeczytać [Nowa strona o tym.](/docs/server-admin/mqtt-integration) Obejmuje to możliwość tworzenia zbiorów danych z komunikatów MQTT oraz publikowanie komunikatów MQTT przy zmianie zbioru danych. Jest domyślnie wyłączony, więc jeśli chcesz go używać, musisz go włączyć.
 
 Dzięki Ayush Singh za pracę nad MQTT&#33;
 
@@ -39,7 +39,7 @@ Dzięki [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid Pliki FromNcFiles o różnych wymiarach: Jest. (eksperymentalne) wsparcie dla EDDGrid Pliki FromNcFiles mają zmienne, które nie używają tego samego zestawu osi. Proszę zgłosić, jak to dla pana działa, albo jeśli zachowanie nie wydaje się właściwe.
 
-    * Istnieje zbiór optymalizacji, które powinny być bezpieczne, ale mają flagi do powrotu do starego zachowania w razie potrzeby. Jeśli znajdziesz potrzebę ustawienia którejkolwiek z flag, wpisz błąd. Jeśli usłyszymy o żadnych problemach większość z nich zostanie usunięta z nowym domyślnym zachowaniem w przyszłości. Jest [nowa strona o flagach funkcji](/docs/server-admin/feature-flags.md) gdzie można przeczytać o tych i innych flagach.
+    * Istnieje zbiór optymalizacji, które powinny być bezpieczne, ale mają flagi do powrotu do starego zachowania w razie potrzeby. Jeśli znajdziesz potrzebę ustawienia którejkolwiek z flag, wpisz błąd. Jeśli usłyszymy o żadnych problemach większość z nich zostanie usunięta z nowym domyślnym zachowaniem w przyszłości. Jest [nowa strona o flagach funkcji](/docs/server-admin/feature-flags) gdzie można przeczytać o tych i innych flagach.
 
       * dotyk Nitka Tylko WhenItems: Jest to zmiana tak, że touchThread będzie działać tylko wtedy, gdy są elementy w kolejce do dotknięcia. Jedna mniejsza liczba wątków to niewielka optymalizacja, ale wciąż przydatna. Domyślnie prawdziwe.
 

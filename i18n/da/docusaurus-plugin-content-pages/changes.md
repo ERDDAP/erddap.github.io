@@ -19,7 +19,7 @@ Handling påkrævet.
     * ISO 19115 versioner: Se nedenfor for admin info. For brugere kan du nu anmode specifikke versioner af ISO 19115 metadata. Gør dette fra gitterdap/ tabledap sider for et datasæt med filtypen drop ned. Disse versioner vil være uafhængige af serveren som standard.
 
 *    **Ting, ting ERDDAP™ Administratorer har brug for at vide og gøre:** 
-    * Ny funktion, MQTT support. For detaljer, jeg anbefaler at læse [Ny side om det.](/docs/server-admin/mqtt-integration.md) Dette omfatter at være i stand til at opbygge datasæt fra MQTT-beskeder og udgive MQTT-beskeder, når en datasæt ændres. Det er som standard, så hvis du ønsker at bruge det, skal du aktivere det.
+    * Ny funktion, MQTT support. For detaljer, jeg anbefaler at læse [Ny side om det.](/docs/server-admin/mqtt-integration) Dette omfatter at være i stand til at opbygge datasæt fra MQTT-beskeder og udgive MQTT-beskeder, når en datasæt ændres. Det er som standard, så hvis du ønsker at bruge det, skal du aktivere det.
 
 Tak til Ayush Singh for at arbejde på MQTT&#33;
 
@@ -39,7 +39,7 @@ Tak til [I nærheden af SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/
 
     *    EDDGrid FraNcFiles med varierende dimensioner: Der er der (eksperimenterende forsøg) Støtte til støtte EDDGrid FraNcFiles datasæt til at have variabler, der ikke bruger det samme sæt akser. Rapporter venligst tilbage om, hvordan dette virker for dig, eller hvis adfærden ikke virker ret.
 
-    * Der er en samling af optimeringer, der skal være sikker, men har flag til at vende tilbage til gammel adfærd, hvis det er nødvendigt. Hvis du finder behovet for at indstille nogen af flagene, skal du skrive en fejl. Hvis vi hører om ingen problemer, de fleste af disse vil blive fjernet med den nye adfærd som standard i fremtiden. Der er en [Ny side om funktionsflag](/docs/server-admin/feature-flags.md) hvor du kan læse om disse og andre flag.
+    * Der er en samling af optimeringer, der skal være sikker, men har flag til at vende tilbage til gammel adfærd, hvis det er nødvendigt. Hvis du finder behovet for at indstille nogen af flagene, skal du skrive en fejl. Hvis vi hører om ingen problemer, de fleste af disse vil blive fjernet med den nye adfærd som standard i fremtiden. Der er en [Ny side om funktionsflag](/docs/server-admin/feature-flags) hvor du kan læse om disse og andre flag.
 
       * touch touch touch Trådtråd Kun kun NårDetems: Dette er en ændring, så touchThread kun kører, når der er elementer i køen til at røre. En mindre trådløb er en mindre optimering, men stadig nyttig. Standarder til ægte.
 

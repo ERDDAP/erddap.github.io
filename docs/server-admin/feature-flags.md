@@ -286,7 +286,7 @@ Legacy behavior was to generate subset variables only for EDDTableFromNcCFFiles 
 | **Long-term Goal** | false |
 | **History** | Added in 2.26 |
 
-## **🔔 Subscriptions and Notifications **
+## **🔔 Subscriptions and Notifications**
 
 ### **subscriptionSystemActive**
 

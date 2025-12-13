@@ -32,6 +32,10 @@ Kung bibilhin mo ang mga ideyang ito at gagamitin mo ang pagsisikap upang likhai
 Paggawa ng datasets.xml ay nangangailangan ng malaking pagsisikap para sa unang ilang datasets, subalit **nagiging mas madali ito** . Pagkatapos ng unang dataset, madalas na maaari mong gamitin muli ang marami sa iyong gawa para sa susunod na dataset. Mabuti na lamang, ERDDAP™ sa dalawa [Mga Kasangkapan](#tools) upang tulungan kang lumikha ng XML para sa bawat dataset datasets.xml .
 Kung maipit ka, tingnan ang aming [sa pagkuha ng karagdagang suporta](/docs/intro#support) .
 
+### Iba't Ibang Paraan datasets.xml  {#varaibles-in-datasetsxml} 
+
+Kung Tungkol sa ERDDAP™ bersyon 2.29.0, datasets.xml ngayon (Hindi sapilitan) pinoproseso ng isang [Kabigha - bighaning Patutot](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Marami itong gamit kabilang ang pagtatakda ng mga pribadong pamantayan (tulad ng mga password) na gumagamit ng iba't ibang kapaligiran. Ito ay maaaring mabalda sa pamamagitan ng pagtatakda ay nagpapangyari sa EnvParsing na magsinungaling sa setup.xml.
+
 ### Tagapaglaan ng mga Data Anyo{#data-provider-form} 
 Kapag lumapit sa iyo ang isang data provider sa pag - asang magdagdag ng ilang impormasyon sa iyo ERDDAP , maaari itong maging mahirap at nakauubos ng panahon upang tipunin ang lahat ng metadata (tungkol sa dataset) Kailangang idagdag ang dataset ERDDAP . Maraming pinagmulang datos (Halimbawa, .csv files, Mga excel file, database) walang panloob na metadata, kaya ERDDAP™ ay may Data Provider Form na nagtitipon ng metadata mula sa data provider at nagbibigay sa tagapaglaan ng impormasyon ng iba pang patnubay, pati na ang malawak na patnubay para sa [Talaan ng mga Nilalaman](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) . Ang impormasyon na isinumite ay ginagawang ang datasets.xml format at pagkatapos ay email ERDDAP™ Tagapangasiwa (ikaw) at isinulat (Iniapela) hanggang sa *Malaking Direktoryo* /logs/data ProviderForm.log . Kaya, ang anyong semi-automates ang proseso ng pagkuha ng dataset ERDDAP , ngunit ang ERDDAP™ Kailangan pa ring tapusin ng administrador ang datasets.xml Ayusin at pakitunguhan ang pagkuha ng data file (s) mula sa tagapaglaan o nagdurugtong sa database.
 
@@ -900,6 +904,7 @@ Ang mga uri ng datasets ay nahahati sa dalawang kategorya. ( [Bakit?](#why-just-
     * MAY isang axis na iba - iba para sa bawat dimensiyon. Axis variables MUST ay itukoy ayon sa pagkakasunud-sunod na ang mga data variables ay gumagamit nito.
     * Sa loob EDDGrid datasets, lahat ng data variables MUST gamitin (makibahagi) lahat ng axis ay iba't iba.
          ( [Bakit?](#why-just-two-basic-data-structures)   [Paano kung hindi nila gawin iyon?](#dimensions) ) 
+Bago ERDDAP™ bersyon 2.29.0 na may EDDGrid Mula saNcFiles ay eksperimental na suporta para sa mga data variables na hindi sumusuporta sa lahat ng axis variables (o gaya ng tawag dito ng ilan sa 1D at 2D data sa iisang dataset) .
     * Pinag - uriang Pamantayan - Lahat EDDGrid mga dataset, ang bawat dimensiyong MUST ay maaaring uriin (Pag - akyat o pagbaba) . Ang bawat isa ay maaaring maging iregular ang layo. Walang mga ugnayan. Ito ay isang kahilingan sa [Pamantayang CF metadata](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) . Kung ang mga halaga ng anumang dimensiyon ay hindi ayon sa pagkakasunud - sunod, ang dataset ay hindi ididiskarga at ang dataset ay hindi ididiskarga ERDDAP™ ay matutukoy ang unang di-nababababang halaga sa log file, *Malaking Direktoryo* /log/log.txt .
         
 Ang ilang subclass ay may karagdagang mga pagbabawal (marahil, EDDGrid Ang AggregateExisting Dimension ay humihiling na ang panlabas (pinakakaliwa, una) na dimensiyon ay umakyat.
@@ -949,6 +954,7 @@ Ang mga hindi natukoy na dimensiyonal na halaga ay halos palaging nagpapahiwatig
         *    [Mapagkakatiwalaan Mula sa mga Di - pangkaraniwang CRAFile](#eddtablefrominvalidcrafiles) Inaalam ang mga impormasyon mula sa NetCDF   (v3 o v4)   .nc mga talaksan na gumagamit ng espesipiko, hindi tanggap, at iba't ibang uri ng CF DSG Contiguous Ragged Array (CRA) mga file. Bagaman ERDDAP™ ay sumusuporta sa uring ito ng talaksan, ito ay isang hindi tanggap na uri ng talaksan na hindi dapat simulan ng sinuman na gamitin. Ang mga grupo na kasalukuyang gumagamit ng uring ito ng talaksan ay lubhang hinihimok na gamitin ERDDAP™ upang lumikha ng mga tanggap na talaksang CF DSG CRA at tumigil sa paggamit ng mga file na ito.
         *    [EDDTable Mula saJsonlCSVFiles](#eddtablefromjsonlcsvfiles) Inaalam ang mga impormasyon mula sa [JON Mga file ng Lines CSV](https://jsonlines.org/examples/) .
         *    [Mga EDDTable Mula sa mga MultidimNcFile](#eddtablefrommultidimncfiles) Inaalam ang mga impormasyon mula sa NetCDF   (v3 o v4)   .nc ang mga talaksan na may ilang mga variable na may kabahaging dimensiyon.
+        *    [Mapagkakatiwalaan Mula saMqtt](/docs/server-admin/mqtt-integration) gumagawa ng isang dataset batay sa mga mensahe ng MQTT. Pansinin na ang dokumento ay nasa isang nakaalay na pahina. Pansinin na maraming pagkakahawig sa [NABAUTISAN NG EDDTTEGO](#eddtablefromhttpget) .
         *    [Mapagkakatiwalaan Mula sa mga Latian](#eddtablefromncfiles) Inaalam ang mga impormasyon mula sa NetCDF   (v3 o v4)   .nc ang mga talaksan na may ilang mga variable na may kabahaging dimensiyon. Mainam na ipagpatuloy ang paggamit ng dataset type na ito para sa umiiral na datasets, ngunit para sa mga bagong datasets inirerekomenda namin gamit ang EDDTable FromMultimNcFiles sa halip.
         *    [Mga EDDTable Mula sa mga Latian](#eddtablefromnccffiles) Inaalam ang mga impormasyon mula sa NetCDF   (v3 o v4)   .nc mga talaksan na gumagamit ng isa sa mga format ng talaksan na itinakda ng [CF Mga Sampling Geometriya (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Mga kombensiyon. Subalit para sa mga file na gumagamit ng isa sa mga multidimensional na CF DSG variant, gamitin [Mga EDDTable Mula sa mga MultidimNcFile](#eddtablefrommultidimncfiles) sa halip.
         *    [Nakasusuyang mga Latian](#eddtablefromnccsvfiles) Inaalam ang mga impormasyon mula sa [NCSV](/docs/user/nccsv-1.00) ASCII .csv files.
@@ -1577,6 +1583,8 @@ Mahigpit naming inirerekomenda ang paggamit ng [Mga GenerateDataset Xml programa
  
 ###  EDDGrid Mula sa mga Uso{#eddgridfromncfiles} 
  [ ** EDDGrid Mula sa mga Uso** ](#eddgridfromncfiles) Hinahati ang mga impormasyon mula sa lokal, grided, [GRIB .grb at .grb2](https://en.wikipedia.org/wiki/GRIB) mga talaksan, [ HDF   (v4 o v5)   .hdf ](https://www.hdfgroup.org/) mga talaksan, [ .nc ml](#ncml-files) mga talaksan, [ NetCDF   (v3 o v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) mga talaksan, at [Kumandante](https://github.com/zarr-developers/zarr-python) mga talaksan (ng bersyon 2.25) . Ang mga talaksang Zar ay may bahagyang kakaibang pag-uugali at nangangailangan ng alin sa fileNameRegex o ang pathRegex upang isama ang "zarr".
+
+Bago ERDDAP™ Ang bersyong 2.29.0 ay eksperimental na suporta para sa mga data variable na hindi sumusuporta sa lahat ng axis variables (o gaya ng tawag dito ng ilan sa 1D at 2D data sa iisang dataset) . Pakisuyong abutin ang GitHub (mga talakayan o mga isyu) sa pamamagitan ng pagbibigay ng impormasyon at mga insekto.
 
 Maaaring gumana ito sa iba pang uri ng talaksan (Halimbawa, BUFR) , basta hindi namin sinubukan -- pakisuyong padalhan kami ng ilang sampol na files.
 
@@ -5258,7 +5266,7 @@ Kung ang isang dataset ay gumagamit ng ACD 1.0, ang attribute na ito ay SSTROGLY
     ```
 Subalit ERDDAP™ ang mungkahi ngayon ng ACDD-1.3. Kung mayroon ka [Binuksan ang inyong datasets upang gamitin ang ACDD-1.3](#switch-to-acdd-13) , paggamit ng Metadata\\_Conventions ay NATATAGUMPAYAN: gamitin lamang&lt;Mga Kombensiyon&gt;] (Mga Karaniwan) sa halip.
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (mula sa [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Pamantayang metadata) ay isang RECOMENDED na paglalarawan ng teksto sa pagpoproseso (Halimbawa, [Mga antas ng pagpoproseso ng data sa pamamagitan ng NASA](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) , halimbawa, ang Level 3) o antas ng pagkontrol sa kalidad (Halimbawa, sa Siyensiya) ng datos. Halimbawa,
+*    [ ** processing\\_level ** ](#processing_level)   (mula sa [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Pamantayang metadata) ay isang RECOMENDED na paglalarawan ng teksto sa pagpoproseso (Halimbawa, [Ang Earth Obserbasyon ng NASA System Data at ang mga antas ng pagpoproseso ng data System](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) , halimbawa, ang Level 3) o antas ng pagkontrol sa kalidad (Halimbawa, sa Siyensiya) ng datos. Halimbawa,
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ na nakabuklat na Talaksan = siksik Halaga \\* scale\\_factor + add\\_offset
     * Para sa mga timestamp variable na may source data mula sa Strings, ang attribute na ito ay nagpapahintulot sa iyo na magtakda ng isang sona ng oras na patungo sa ERDDAP™ upang makomberte ang lokal-time-zone source times (ang ilan sa karaniwang panahon, ang ilan sa Daylight Saving time) sa loob Zulu ng mga panahon (na laging nasa Pamantayang panahon) . Ang talaan ng tanggap na mga pangalan ng sona ng oras ay malamang na katulad ng talaan sa hanay ng TZ sa [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Ang mga karaniwang sona ng oras ng US ay: US/Hawaii, US/Alaska, US/Pacific, US/Eastern, US/Arizona, US/Central, US/Eastern.
     * Para sa mga timestamp variable na may numeromeric source data, maaari mong tiyakin ang " time\\_zone " Aminin ninyo, ngunit ang halaga ay tiyak na " Zulu " o "UTC". Kung kailangan mo ng suporta para sa ibang sona ng oras, pakisuyong email Chris. Juan sa noaa.gov .
          
+###### Halimbawa_time_adjust{#legacy_time_adjust} 
+*    [ **Halimbawa_time_adjust** ](#legacy_time_adjust) Pasimula ERDDAP™ 2.29.0, medyo magkakaiba ang takbo ng oras. Sa bihirang mga kaso, malamang na kapag gumagamit `araw mula noon` at isang taon bago ang 1582 (gayo'y `mga araw mula noong 0000-01-01` o `araw mula noong 1-1-1 00:00:0.0.` ) kakailanganin mong ipahiwatig ang pagbabago sa petsa. Ang dahilan nito ay ERDDAP™ ang ginagamit ng aklatan ng java.time upang pangasiwaan ang mga petsa sa loob. May ilang mga dataset na kinakailangan gamit ang lumang aklatan ng GregorianCalendar upang i-cheive ang mga tamang petsa.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### mga yunit{#units} 
 *    [ **mga yunit** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , [CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) at [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Pamantayang metadata) bigyan ng kahulugan ang mga yunit ng mga halagang datos. Halimbawa,
     ```

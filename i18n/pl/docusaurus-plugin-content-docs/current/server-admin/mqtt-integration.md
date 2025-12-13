@@ -13,7 +13,7 @@ Czy...
 
 ##  ERDDAP jako klient MQTT
 
- ERDDAP może działać jako klient MQTT subskrybować tematy na zewnętrznych lub własnych wbudowanych MQTT broker. Jest to osiągnięte za pomocą nowego `EDDTableFromMqtt` typ zbioru danych, który działa podobnie do istniejącego `EDDTableFromHttpGet` zestaw danych.
+ ERDDAP może działać jako klient MQTT subskrybować tematy na zewnętrznych lub własnych wbudowanych MQTT broker. Jest to osiągnięte za pomocą nowego `EDDTableFromMqtt` typ zbioru danych, który działa podobnie do istniejącego [ `EDDTableFromHttpGet` ](/docs/server-admin/datasets#eddtablefromhttpget) zestaw danych.
 
 Aktualnie, implementacja klienta obsługuje tylko **subskrypcja** do tematów.
 

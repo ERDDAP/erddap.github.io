@@ -13,7 +13,7 @@ Login
 
 ##  ERDDAP sebagai Klien MQTT
 
- ERDDAP dapat bertindak sebagai klien MQTT untuk berlangganan topik di broker MQTT eksternal atau tertanam sendiri. Ini dicapai dengan menggunakan yang baru `Login` jenis dataset, yang berfungsi mirip dengan yang ada `Login` Login
+ ERDDAP dapat bertindak sebagai klien MQTT untuk berlangganan topik di broker MQTT eksternal atau tertanam sendiri. Ini dicapai dengan menggunakan yang baru `Login` jenis dataset, yang berfungsi mirip dengan yang ada [ `Login` ](/docs/server-admin/datasets#eddtablefromhttpget) Login
 
 Saat ini, implementasi klien hanya mendukung **Login** untuk topik.
 

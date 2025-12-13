@@ -19,7 +19,7 @@ Tindakan yang diperlukan.
     * ISO 19115 versi: Lihat di bawah ini untuk info admin. Untuk pengguna, Anda sekarang dapat meminta versi spesifik dari metadata ISO 19115. Apakah ini dari griddap/ tabledap halaman untuk dataset dengan jenis file turun. Versi ini akan independen dari default server.
 
 *    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Fitur baru, dukungan MQTT. Untuk detail saya merekomendasikan membaca [halaman baru tentang itu.](/docs/server-admin/mqtt-integration.md) Ini termasuk dapat membangun dataset dari pesan MQTT, dan menerbitkan pesan MQTT ketika perubahan dataset. Dimatikan secara default, jadi jika Anda ingin menggunakannya, Anda perlu mengaktifkannya.
+    * Fitur baru, dukungan MQTT. Untuk detail saya merekomendasikan membaca [halaman baru tentang itu.](/docs/server-admin/mqtt-integration) Ini termasuk dapat membangun dataset dari pesan MQTT, dan menerbitkan pesan MQTT ketika perubahan dataset. Dimatikan secara default, jadi jika Anda ingin menggunakannya, Anda perlu mengaktifkannya.
 
 Terima kasih kepada Ayush Singh untuk bekerja di MQTT&#33;
 
@@ -39,7 +39,7 @@ Sitemap [Login](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid DariNcFiles dengan dimensi yang bervariasi: Sitemap (Login) dukungan untuk EDDGrid DariNFiles dataset untuk memiliki variabel yang tidak menggunakan set yang sama dari kapak. Silakan lakukan laporan kembali tentang bagaimana karya ini untuk Anda, atau jika perilaku tidak tampak cukup tepat.
 
-    * Ada koleksi optimasi yang harus aman, tetapi memiliki bendera untuk mengubah perilaku lama jika diperlukan. Jika Anda menemukan kebutuhan untuk mengatur semua bendera, silakan mengajukan bug. Jika kita mendengar tentang tidak ada masalah yang paling dari ini akan dihapus dengan perilaku baru default di masa depan. Ada [halaman baru tentang bendera fitur](/docs/server-admin/feature-flags.md) di mana Anda dapat membaca tentang bendera ini dan lainnya.
+    * Ada koleksi optimasi yang harus aman, tetapi memiliki bendera untuk mengubah perilaku lama jika diperlukan. Jika Anda menemukan kebutuhan untuk mengatur semua bendera, silakan mengajukan bug. Jika kita mendengar tentang tidak ada masalah yang paling dari ini akan dihapus dengan perilaku baru default di masa depan. Ada [halaman baru tentang bendera fitur](/docs/server-admin/feature-flags) di mana Anda dapat membaca tentang bendera ini dan lainnya.
 
       * Login Login Sitemap KetikaItems: Ini adalah perubahan sehingga touchThread hanya akan berjalan ketika ada item di antrian untuk menyentuh. Satu benang yang lebih sedikit berjalan adalah optimasi kecil tetapi masih berguna. Default untuk benar.
 

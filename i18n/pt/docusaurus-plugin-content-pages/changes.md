@@ -19,7 +19,7 @@ Acção necessária.
     * ISO 19115 versões: Veja abaixo as informações de admin. Para usuários, agora você pode solicitar versões específicas de metadados ISO 19115. Faça isso do griddap/ tabledap páginas para um conjunto de dados com o tipo de arquivo cair. Essas versões serão independentes do padrão do servidor.
 
 *    **Coisas ERDDAP™ Os administradores precisam saber e fazer:** 
-    * Novo recurso, suporte MQTT. Para detalhes eu recomendo ler o [nova página sobre isso.](/docs/server-admin/mqtt-integration.md) Isso inclui ser capaz de construir conjuntos de dados de mensagens MQTT e publicar mensagens MQTT quando um conjunto de dados muda. Está desligado por padrão, então se você quiser usá-lo, você precisa habilitar.
+    * Novo recurso, suporte MQTT. Para detalhes eu recomendo ler o [nova página sobre isso.](/docs/server-admin/mqtt-integration) Isso inclui ser capaz de construir conjuntos de dados de mensagens MQTT e publicar mensagens MQTT quando um conjunto de dados muda. Está desligado por padrão, então se você quiser usá-lo, você precisa habilitar.
 
 Graças a Ayush Singh por trabalhar no MQTT&#33;
 
@@ -39,7 +39,7 @@ Graças a [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid FromNcFiles com diferentes dimensões: Há (experimental) suporte para EDDGrid De conjuntos de dados NcFiles para ter variáveis que não usam o mesmo conjunto de eixos. Por favor, volte a relatar como isso funciona para você, ou se o comportamento não parece bem.
 
-    * Há uma coleção de otimizações que devem ser seguras, mas têm bandeiras para reverter ao comportamento antigo, se necessário. Se você encontrar a necessidade de definir qualquer uma das bandeiras, arquiva um bug. Se não soubermos de problemas, a maioria deles será removida com o novo padrão de comportamento no futuro. Há um [nova página sobre bandeiras de recursos](/docs/server-admin/feature-flags.md) onde você pode ler sobre estas e outras bandeiras.
+    * Há uma coleção de otimizações que devem ser seguras, mas têm bandeiras para reverter ao comportamento antigo, se necessário. Se você encontrar a necessidade de definir qualquer uma das bandeiras, arquiva um bug. Se não soubermos de problemas, a maioria deles será removida com o novo padrão de comportamento no futuro. Há um [nova página sobre bandeiras de recursos](/docs/server-admin/feature-flags) onde você pode ler sobre estas e outras bandeiras.
 
       * toque Linha de produção Apenas Quando Items: Esta é uma mudança de modo que o touchThread só será executado quando houver itens na fila para tocar. Um menos thread executando é uma otimização menor, mas ainda útil. As falhas são verdadeiras.
 

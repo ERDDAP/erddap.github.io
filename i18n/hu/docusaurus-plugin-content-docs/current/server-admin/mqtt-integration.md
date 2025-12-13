@@ -13,7 +13,7 @@
 
 ##  ERDDAP MQTT ügyfél
 
- ERDDAP MQTT ügyfélként lehet feliratkozni a témákra egy külső vagy saját beágyazott MQTT bróker. Ez az új használatával érhető el `EDDTableFromMqt` adatkészlet típus, amely hasonlóan működik a meglévő `EDDTableFromHttpGet` adatkészlet.
+ ERDDAP MQTT ügyfélként lehet feliratkozni a témákra egy külső vagy saját beágyazott MQTT bróker. Ez az új használatával érhető el `EDDTableFromMqt` adatkészlet típus, amely hasonlóan működik a meglévő [ `EDDTableFromHttpGet` ](/docs/server-admin/datasets#eddtablefromhttpget) adatkészlet.
 
 Jelenleg az ügyfél végrehajtása csak támogatja **aláírás** témák.
 

@@ -32,6 +32,10 @@ sidebar_position: 3
 作る datasets.xml 最初のデータセットはかなりの労力を要しますが、 **それはより容易になります** お問い合わせ 最初のデータセットの後、次のデータセットで多くの作業を再利用することができます。 幸いなことに、 ERDDAP™ 2つ付属 [ツール](#tools) データセットごとにXMLを作成するのに役立ちます datasets.xml お問い合わせ
 あなたが立ち往生したら、私たちを参照してください [追加サポートを受けるセクション](/docs/intro#support) お問い合わせ
 
+### 変数 datasets.xml  {#varaibles-in-datasetsxml} 
+
+お問い合わせ ERDDAP™ バージョン 2.29.0, datasets.xml これから (オプション) によって処理される [文字列置換器](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) お問い合わせ これは、プライベート値の設定を含む多くの用途を持っています (パスワードのように) 環境変数を使用して。 enableEnvParsing を setup.xml で false に設定することで無効にできます。
+
 ### データプロバイダ フォーム{#data-provider-form} 
 データプロバイダがあなたにデータを追加しようとすると ERDDAP すべてのメタデータを収集するために困難で時間がかかることがあります (データセットに関する情報) データセットを追加するために必要な ERDDAP お問い合わせ 多くのデータソース (たとえば、.csv ファイル、 Excelファイル、データベース) 内部メタデータがないので、 ERDDAP™ データプロバイダからメタデータを収集し、広範なガイダンスを含むデータプロバイダのフォームを持っています [データベース内のデータ](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) お問い合わせ 提出された情報は、送信された情報に変換されます datasets.xml フォーマットおよびそれから電子メールを ERDDAP™ 管理者権限 (お問い合わせ) と書かれている (リクエスト) お問い合わせ *bigParentディレクトリ* /logs/dataProviderForm.log . したがって、フォームは半自動でデータセットを取得するプロセスを自動化します ERDDAP , しかし、 ERDDAP™ 管理者はまだ完了しなければならない datasets.xml chunk とデータファイルを取得する対処 (ツイート) プロバイダーから、またはデータベースに接続します。
 
@@ -900,6 +904,7 @@ nco/ncatted -a単位、時間、o、c、1970-01-01T00:00:00Z'以来の秒\\* .nc
     * 各次元の軸線変数である必要があります。 軸変数は、データ変数がそれらを使用する順番で指定される必要があります。
     * インスタグラム EDDGrid データセット、すべてのデータ変数は使用しなければ (シェア) 軸変数のすべて。
          ( [なぜ?](#why-just-two-basic-data-structures)   [彼らがそうでないならば?](#dimensions) ) 
+新着情報 ERDDAP™ バージョン 2.29.0 と EDDGrid FromNcFilesは、すべての軸変数をサポートしないデータ変数の実験的サポートです。 (または、同じデータセットで1Dと2Dデータを呼び出すように) お問い合わせ
     * ソートされた寸法値 - すべてで EDDGrid データセット、各次元は分類された順序でであって下さい (昇降または降下) お問い合わせ それぞれ不規則にスペースを置くことができます。 何もない。 これはの条件です [CFメタデータ規格](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) お問い合わせ 次元の値はソート順でない場合、データセットはロードされず、 ERDDAP™ ログファイルの最初の無ソート値を特定します。 *bigParentディレクトリ* /logs/log.txt ディレクティブ
         
 いくつかのサブクラスには、追加の制限があります(特に、 EDDGrid AggregateExistingDimensionは、外側(左端、最初の)寸法が昇順であることを要求します。
@@ -949,6 +954,7 @@ nco/ncatted -a単位、時間、o、c、1970-01-01T00:00:00Z'以来の秒\\* .nc
         *    [EDDTableFromInvalidCRAファイル](#eddtablefrominvalidcrafiles) データを集計する NetCDF   (v3 または v4)   .nc 特定の、無効、CF DSG Contiguous Ragged Array の variant を使用するファイル (キュラ) ファイル。 しかし、 ERDDAP™ このファイルタイプをサポートし、使用し始めるべきでない無効なファイルタイプです。 現在、このファイルタイプを使用するグループが強く推奨されています ERDDAP™ 有効なCF DSG CRAファイルを生成し、これらのファイルを使用して停止します。
         *    [EDDTableFromJsonlCSVファイル](#eddtablefromjsonlcsvfiles) データを集計する [ジェイソン CSVファイルライン](https://jsonlines.org/examples/) お問い合わせ
         *    [EDDTableFromMultidimNcファイル](#eddtablefrommultidimncfiles) データを集計する NetCDF   (v3 または v4)   .nc 共有寸法で複数の変数を持つファイル。
+        *    [EDDTableFromMqttの特長](/docs/server-admin/mqtt-integration) MQTT メッセージに基づいてデータセットを構築します。 ドキュメントは専用のページです。 似ているものが多いことに注意 [EDDTableFromHttpGetの特長](#eddtablefromhttpget) お問い合わせ
         *    [EDDTableFromNcFiles (EDDTableFromNcFiles) は、](#eddtablefromncfiles) データを集計する NetCDF   (v3 または v4)   .nc 共有寸法で複数の変数を持つファイル。 既存のデータセット用のこのデータセットタイプを引き続き使用しても構いませんが、新しいデータセットでは、代わりにEDDTableFromMultidimNcFilesを使用することをお勧めします。
         *    [EDDTableFromNcCFファイル](#eddtablefromnccffiles) データを集計する NetCDF   (v3 または v4)   .nc 指定したファイル形式の1つを使用するファイル [CFシリーズ 分離されたサンプリングの幾何学 (DSGについて) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) コンベンション しかし多次元CF DSGの変形の1つを使用してファイルのために、使用して下さい [EDDTableFromMultidimNcファイル](#eddtablefrommultidimncfiles) 代わりに。
         *    [EDDTableFromNccsvファイル](#eddtablefromnccsvfiles) データを集計する [NCCSVの特長](/docs/user/nccsv-1.00) ASCII .csv ファイル。
@@ -1577,6 +1583,8 @@ int オーディオSampleSizeInBits 16; //サンプルごとのチャネルご�
  
 ###  EDDGrid からNcFiles{#eddgridfromncfiles} 
  [ ** EDDGrid からNcFiles** ](#eddgridfromncfiles) ローカル、グリッド、 [GRIB .grb と .grb2](https://en.wikipedia.org/wiki/GRIB) ファイル, [ HDF   (v4 または v5)   .hdf ](https://www.hdfgroup.org/) ファイル, [ .nc ミリリットル](#ncml-files) ファイル, [ NetCDF   (v3 または v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) ファイル、および [ザラー](https://github.com/zarr-developers/zarr-python) ファイル (バージョン 2.25 の) お問い合わせ Zarrファイルには少し異なる動作があり、fileNameRegex または pathRegex のいずれかで "zarr" を含める必要があります。
+
+新着情報 ERDDAP™ バージョン 2.29.0 は、すべての軸変数をサポートしないデータ変数の実験的サポートです。 (または、同じデータセットで1Dと2Dデータを呼び出すように) お問い合わせ GitHub にご連絡ください。 (ディスカッションや問題) フィードバックとバグ。
 
 これは他のファイルタイプで動作する可能性があります (例えば、BUFR) 、私達はちょうどそれをテストしませんでした --サンプル ファイルを送って下さい。
 
@@ -5258,7 +5266,7 @@ A-Za-z0-9\\_-以外のすべての文字をパーセントエンコードする�
     ```
 しかし、 ERDDAP™ ACDD-1.3をお勧めします。 お問い合わせ [ACDD-1.3 を使用するデータセットを切り替える](#switch-to-acdd-13) 、使用の Metadata\\_Conventions 強烈な記述: ちょうど使用 [&lt;コンベンション&gt; (#イベント) 代わりに。
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (お問い合わせ [パスワード](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) メタデータ規格) 処理の推奨テキストの説明です。 (例えば、 [NASA衛星データ処理レベル](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) 例えば、レベル3) または品質管理のレベル (例えば、科学の質) データ。 例えば、
+*    [ ** processing\\_level ** ](#processing_level)   (お問い合わせ [パスワード](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) メタデータ規格) 処理の推奨テキストの説明です。 (例えば、 [NASAの地球観測システムデータと情報システムのデータ処理レベル](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) 例えば、レベル3) または品質管理のレベル (例えば、科学の質) データ。 例えば、
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ unpackedValue = パック 値 \\* scale\\_factor + + + + + + + + + + + + + + + +
     * 文字列からソースデータを持つタイムスタンプ変数の場合、この属性は、リードするタイムゾーンを指定できます。 ERDDAP™ ローカルタイムゾーンのソース時間を変換する (標準的な時間、日光のセービングの時間である) お問い合わせ Zulu タイムタイム (常に標準時間) お問い合わせ 有効なタイムゾーン名のリストは、TZ 列の一覧とおそらく同一です [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) お問い合わせ 一般的な米国タイムゾーン:米国/ハワイ、米国/アラスカ、米国/太平洋、米国/マレーシア、米国/アリゾナ州、米国/中央、米国/東部。
     * 数値ソースデータのタイムスタンプ変数の場合、" time\\_zone " 属性, しかし、値は " Zulu または「UTC」。 他のタイムゾーンのサポートが必要な場合は、Chrisにメールをお送りください。 noaaa.gov のジョン。
          
+###### レガシー_time_adjust{#legacy_time_adjust} 
+*    [ **レガシー_time_adjust** ](#legacy_time_adjust) はじめに ERDDAP™ 2.29.0、時間変数は若干異なります。 まれに、使用するとき最も可能性が高い `今日から` 1582年以前の (お問い合わせ `0000-01-01以来の日` または `1-1-1 00:00:0.0 以降` ) 日付変数への調整を記述する必要があります。 この理由は ERDDAP™ java.timeライブラリを使用して、内部で日付を管理します。 古い GregorianCalendar ライブラリを使用して正しい日付をキャッシュするために必要なデータセットがあります。
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### ユニット{#units} 
 *    [ **ユニット** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , [CFシリーズ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) そして、 [パスワード](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) メタデータ規格) データ値の単位を定義します。 例えば、
     ```

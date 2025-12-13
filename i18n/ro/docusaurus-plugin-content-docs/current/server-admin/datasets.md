@@ -32,6 +32,10 @@ Dacă cumpărați în aceste idei și cheltui efortul de a crea XML pentru datas
 Realizarea datasets.xml necesită eforturi considerabile pentru primele seturi de date, dar **Devine mai uşor.** . După primul set de date, puteți folosi adesea o mulțime de muncă pentru următorul set de date. Din fericire, ERDDAP™ vine cu două [Unelte](#tools) pentru a vă ajuta să creați XML pentru fiecare set de date în datasets.xml .
 Dacă te blochezi, ne vezi [secțiunea privind obținerea de sprijin suplimentar](/docs/intro#support) .
 
+### Variabile în datasets.xml  {#varaibles-in-datasetsxml} 
+
+Ca de ERDDAP™ versiunea 2.29.0, datasets.xml este acum (opțional) prelucrate de o [Substitutor string](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Acest lucru are multe utilizări, inclusiv stabilirea valorilor private (ca parole) utilizarea variabilelor de mediu. Acest lucru poate fi dezactivat prin setarea activEnvParsing la fals în configurare.xml.
+
 ### Furnizor de date Forma{#data-provider-form} 
 Când un furnizor de date vine la tine în speranța de a adăuga unele date la dvs. ERDDAP , poate fi dificil și consumatoare de timp pentru a colecta toate metadatele (informații privind setul de date) necesar pentru adăugarea setului de date în ERDDAP . Multe surse de date (de exemplu, fișiere .csv; Fișiere Excel, baze de date) nu au metadate interne, deci ERDDAP™ are un formular de furnizor de date care colectează metadate de la furnizorul de date și oferă furnizorului de date alte orientări, inclusiv orientări extinse pentru [Date în baze de date](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) . Informațiile transmise se convertesc în datasets.xml format și apoi e-mailat la ERDDAP™ administrator (Tu) şi scris (anexată) la *Big ParentDirectory* /loguri/dateProviderForm.log . Astfel, forma semi-automate procesul de a obține un set de date în ERDDAP Dar ERDDAP™ administratorul încă trebuie să completeze datasets.xml bucată și se ocupă cu obținerea fișierului de date (s) de la furnizor sau conectarea la baza de date.
 
@@ -900,6 +904,7 @@ Tipurile de seturi de date se încadrează în două categorii. ( [De ce?](#why-
     * Trebuie să existe o variabilă a axei pentru fiecare dimensiune. Variabilele axei trebuie specificate în ordinea în care variabilele de date le utilizează.
     * În EDDGrid Seturi de date, toate variabilele de date TREBUIE utilizate (cotă) toate variabilele axei.
          ( [De ce?](#why-just-two-basic-data-structures)   [Şi dacă nu o fac?](#dimensions) ) 
+Nou în ERDDAP™ versiunea 2.29.0 cu EDDGrid FromNcFiles este suport experimental pentru variabilele de date care nu suportă toate variabilele axei (sau după cum unii au numit-o date 1D și 2D în același set de date) .
     * Valori de dimensiune sortare - În total EDDGrid Seturile de date, fiecare dimensiune trebuie să fie în ordine sortate (ascendentă sau descendentă) . Fiecare poate fi spaţiată neregulat. Nu pot exista legături. Aceasta este o cerinţă a [Standardul metadatelor CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) . Dacă valorile oricărei dimensiuni nu sunt în ordine sortate, setul de date nu va fi încărcat și ERDDAP™ va identifica prima valoare nesortate în fișierul jurnal; *Big ParentDirectory* /logs/log.txt.
         
 Câteva subclase au restricții suplimentare (în special, EDDGrid Dimensiunea totală necesită ca dimensiunea exterioară (cea mai stângă, prima) să fie ascendentă.
@@ -949,6 +954,7 @@ Valorile de dimensiune nesortate indică aproape întotdeauna o problemă cu set
         *    [Tabel EDD din InvalidCRAFile](#eddtablefrominvalidcrafiles) date agregate din NetCDF   (v3 sau v4)   .nc fișiere care utilizează o variantă specifică, invalidă, a CF DSG Contiguous Ragged Array (CRA) Dosare. Deşi... ERDDAP™ acceptă acest tip de fișier, este un tip de fișier invalid pe care nimeni nu ar trebui să înceapă să-l utilizeze. Grupurile care utilizează în prezent acest tip de fișier sunt puternic încurajate să utilizeze ERDDAP™ să genereze fișiere DSG CRA valabile și să înceteze să mai utilizeze aceste fișiere.
         *    [Tabel EDD De la JsonlCSVFiles](#eddtablefromjsonlcsvfiles) date agregate din [JSON Linii fișiere CSV](https://jsonlines.org/examples/) .
         *    [Tabel EDD Din mai multe DosareNc](#eddtablefrommultidimncfiles) date agregate din NetCDF   (v3 sau v4)   .nc fișiere cu mai multe variabile cu dimensiuni comune.
+        *    [Tabel EDD din Mqtt](/docs/server-admin/mqtt-integration) construiește un set de date bazat pe mesajele MQTT. Notă documentaţia este pe o pagină dedicată. Rețineți că există o mulțime de similitudini cu [Tabel EDD de la HttpGet](#eddtablefromhttpget) .
         *    [Tabel EDDFromNcFiles](#eddtablefromncfiles) date agregate din NetCDF   (v3 sau v4)   .nc fișiere cu mai multe variabile cu dimensiuni comune. Este bine să continuăm să folosim acest tip de set de date pentru seturile de date existente, dar pentru noi seturi de date recomandăm utilizarea tabelului EDDFromMultidimNcFiles în schimb.
         *    [Tabel EDD din NCFFile](#eddtablefromnccffiles) date agregate din NetCDF   (v3 sau v4)   .nc fișiere care utilizează unul dintre formatele de fișiere specificate de [CF Geometrii de eșantionare discrete (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Convenţii. Dar pentru fișiere care utilizează una dintre variantele multidimensionale CF DSG, utilizați [Tabel EDD Din mai multe DosareNc](#eddtablefrommultidimncfiles) În schimb.
         *    [Tabel EDD de la NCCSvFiles](#eddtablefromnccsvfiles) date agregate din [NCCSV](/docs/user/nccsv-1.00) Fișiere ASCII.csv.
@@ -1577,6 +1583,8 @@ Vă recomandăm cu tărie utilizarea [Generează dateName Programul Xml](#genera
  
 ###  EDDGrid DinNcFiles{#eddgridfromncfiles} 
  [ ** EDDGrid DinNcFiles** ](#eddgridfromncfiles) date agregate de la nivel local, regrupate; [GRIB.grb și .grb2](https://en.wikipedia.org/wiki/GRIB) fișiere; [ HDF   (v4 sau v5)   .hdf ](https://www.hdfgroup.org/) fișiere; [ .nc ml](#ncml-files) fișiere; [ NetCDF   (v3 sau v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) fișiere și [Zarr](https://github.com/zarr-developers/zarr-python) fișiere (din versiunea 2.25) . Fișierele Zarr au un comportament ușor diferit și necesită fie fișierulNameRegex, fie caleaRegex pentru a include "zarr."
+
+Nou în ERDDAP™ versiunea 2.29.0 este suport experimental pentru variabilele de date care nu suportă toate variabilele axei (sau după cum unii au numit-o date 1D și 2D în același set de date) . Vă rugăm să ajungeţi la GitHub (discuții sau probleme) cu feedback și bug-uri.
 
 Acest lucru poate funcționa cu alte tipuri de fișiere (de exemplu, BUFR) Nu l-am testat. Vă rugăm să ne trimiteţi nişte dosare.
 
@@ -5258,7 +5266,7 @@ Atunci când un set de date este încărcat ERDDAP ,
     ```
 Dar... ERDDAP™ Acum recomandă ACDD-1.3. Dacă aveţi [ați schimbat setările de date pentru a utiliza ACDD-1.3](#switch-to-acdd-13) , utilizarea Metadata\\_Conventions este puternic distorsionat: doar utilizaţi [&lt;Convenții &gt;] (#convenții) În schimb.
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (de la [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) standard de metadate) este o descriere textuală RECOMANDATĂ a prelucrării (de exemplu, [Nivelurile de prelucrare a datelor prin satelit ale NASA](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) , de exemplu, nivelul 3) sau nivelul de control al calității (De exemplu, Calitate Ştiinţifică) a datelor. De exemplu,
+*    [ ** processing\\_level ** ](#processing_level)   (de la [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) standard de metadate) este o descriere textuală RECOMANDATĂ a prelucrării (de exemplu, [Nivelul de prelucrare a datelor sistemului de observare a Pământului al NASA](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) , de exemplu, nivelul 3) sau nivelul de control al calității (De exemplu, Calitate Ştiinţifică) a datelor. De exemplu,
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ despachetatValue = ambalat Valoare \\ * scale\\_factor + add\\_offset
     * Pentru variabilele timbru cu date sursă de la Strings, acest atribut vă permite să specificați o zonă de timp care conduce ERDDAP™ pentru a converti timpul local-zonă de sursă ori (unele în timp standard, unele în lumina zilei de economisire a timpului) în Zulu ori (care sunt întotdeauna în timp standard) . Lista numelor de fus orar valabile este probabil identică cu lista din coloana TZ la [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Zonele orare comune din SUA sunt: SUA/Hawaii, SUA/Alaska, SUA/Pacific, SUA/Mountain, SUA/Arizona, SUA/Central, SUA/Est.
     * Pentru variabilele de timp cu date de sursă numerice, puteți specifica " time\\_zone " atribut, dar valoarea trebuie să fie " Zulu "sau "UTC." Dacă aveți nevoie de sprijin pentru alte zone de timp, vă rugăm să trimiteți un e-mail lui Chris. John la Noaa.gov.
          
+###### moștenire_timp_adjust{#legacy_time_adjust} 
+*    [ **moștenire_timp_adjust** ](#legacy_time_adjust) Începând cu ERDDAP™ 2.29.0, variabilele timpului funcţionează uşor diferit. În cazuri rare, cel mai probabil atunci când se utilizează `zile de la` și cu un an înainte de 1582 (Deci... `zile de la 0000-01-01` sau `zile de la 1-1-1 00:00:0.0` ) va trebui să indicaţi pentru o ajustare la data variabilei. Motivul pentru acest lucru este ERDDAP™ foloseste biblioteca Java.time pentru a gestiona datele interne. Există unele seturi de date care necesită utilizarea vechii biblioteci GregorianCalendar pentru a îndura datele corecte.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### unități{#units} 
 *    [ **unități** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , [CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) şi [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) standard de metadate) definește unitățile valorilor datelor. De exemplu,
     ```

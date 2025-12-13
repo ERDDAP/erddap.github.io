@@ -19,7 +19,7 @@ Azione richiesta.
     * Versione ISO 19115: Vedi di seguito per info admin. Per gli utenti, è ora possibile richiedere versioni specifiche dei metadati ISO 19115. Fate questo dalla grigliata/ tabledap pagine per un set di dati con il tipo di file a discesa. Queste versioni saranno indipendenti dal server predefinito.
 
 *    **Cose ERDDAP™ Gli amministratori devono sapere e fare:** 
-    * Nuova funzionalità, supporto MQTT. Per i dettagli vi consiglio di leggere [nuova pagina su di esso.](/docs/server-admin/mqtt-integration.md) Questo include essere in grado di costruire set di dati da messaggi MQTT, e la pubblicazione di messaggi MQTT quando un dataset cambia. È spento per impostazione predefinita, quindi se si desidera utilizzarlo, è necessario abilitarlo.
+    * Nuova funzionalità, supporto MQTT. Per i dettagli vi consiglio di leggere [nuova pagina su di esso.](/docs/server-admin/mqtt-integration) Questo include essere in grado di costruire set di dati da messaggi MQTT, e la pubblicazione di messaggi MQTT quando un dataset cambia. È spento per impostazione predefinita, quindi se si desidera utilizzarlo, è necessario abilitarlo.
 
 Grazie a Ayush Singh per aver lavorato su MQTT&#33;
 
@@ -39,7 +39,7 @@ Grazie a [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid DaNcFiles con dimensioni variabili: C'è (sperimentale) supporto per EDDGrid Da NcFiles datasets per avere variabili che non utilizzano lo stesso set di assi. Si prega di fare rapporto su come funziona per voi, o se il comportamento non sembra abbastanza giusto.
 
-    * C'è una raccolta di ottimizzazioni che dovrebbe essere sicuro, ma hanno bandiere per tornare al vecchio comportamento, se necessario. Se si trova la necessità di impostare una delle bandiere, si prega di archiviare un bug. Se sentiamo parlare di nessun problema la maggior parte di questi verrà rimosso con il nuovo comportamento predefinito in futuro. C'è un [nuova pagina sulle bandiere di funzionalità](/docs/server-admin/feature-flags.md) dove puoi leggere su queste e altre bandiere.
+    * C'è una raccolta di ottimizzazioni che dovrebbe essere sicuro, ma hanno bandiere per tornare al vecchio comportamento, se necessario. Se si trova la necessità di impostare una delle bandiere, si prega di archiviare un bug. Se sentiamo parlare di nessun problema la maggior parte di questi verrà rimosso con il nuovo comportamento predefinito in futuro. C'è un [nuova pagina sulle bandiere di funzionalità](/docs/server-admin/feature-flags) dove puoi leggere su queste e altre bandiere.
 
       * tocco File Solo WhenItems: Questo è un cambiamento in modo che il touchThread sarà in esecuzione solo quando ci sono elementi nella coda per toccare. Un meno thread running è un'ottimizzazione minore ma ancora utile. Predefiniti.
 

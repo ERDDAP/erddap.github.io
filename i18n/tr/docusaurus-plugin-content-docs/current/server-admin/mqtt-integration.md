@@ -13,7 +13,7 @@
 
 ##  ERDDAP Bir MQTT Müşterisi Olarak
 
- ERDDAP Bir MQTT müşteri olarak dış veya kendi gömülü MQTT brokerine abone olmak için hareket edebilir. Bu yeni kullanılarak elde edilir `EDDTable FromMqtttt` Mevcut verilere benzer şekilde işlev gösteren veri kümesi tipi, `EDDTable FromHttpGet` dataset.
+ ERDDAP Bir MQTT müşteri olarak dış veya kendi gömülü MQTT brokerine abone olmak için hareket edebilir. Bu yeni kullanılarak elde edilir `EDDTable FromMqtttt` Mevcut verilere benzer şekilde işlev gösteren veri kümesi tipi, [ `EDDTable FromHttpGet` ](/docs/server-admin/datasets#eddtablefromhttpget) dataset.
 
 Şu anda, müşteri uygulamaları yalnızca destekler **alt** konulara.
 

@@ -13,7 +13,7 @@
 
 ##  ERDDAP în calitate de client MQTT
 
- ERDDAP poate acționa ca un client MQTT pentru a subscrie la subiecte pe un broker MQTT extern sau propriul său încorporat. Acest lucru se realizează folosind noul `Tabel EDD din Mqtt` tipul setului de date, care funcționează similar cu cel existent; `Tabel EDD de la HttpGet` Set de date.
+ ERDDAP poate acționa ca un client MQTT pentru a subscrie la subiecte pe un broker MQTT extern sau propriul său încorporat. Acest lucru se realizează folosind noul `Tabel EDD din Mqtt` tipul setului de date, care funcționează similar cu cel existent; [ `Tabel EDD de la HttpGet` ](/docs/server-admin/datasets#eddtablefromhttpget) Set de date.
 
 În prezent, implementarea clientului susține doar **subscrie** la subiecte.
 

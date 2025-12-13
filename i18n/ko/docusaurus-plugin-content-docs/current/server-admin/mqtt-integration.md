@@ -13,7 +13,7 @@
 
 ##  ERDDAP MQTT 클라이언트로
 
- ERDDAP MQTT 클라이언트가 외부 또는 자체 임베디드 MQTT 브로커에 주제를 구독 할 수 있습니다. 이것은 새로운 것을 사용하여 달성됩니다. `EDDTableMqtt에서` dataset 유형, 기존과 비슷한 기능 `다운로드` 데이터셋.
+ ERDDAP MQTT 클라이언트가 외부 또는 자체 임베디드 MQTT 브로커에 주제를 구독 할 수 있습니다. 이것은 새로운 것을 사용하여 달성됩니다. `EDDTableMqtt에서` dataset 유형, 기존과 비슷한 기능 [ `다운로드` ](/docs/server-admin/datasets#eddtablefromhttpget) 데이터셋.
 
 현재 클라이언트 구현만 지원 **관련 기사** 관련 기사
 

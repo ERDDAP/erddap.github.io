@@ -13,7 +13,7 @@
 
 ##  ERDDAP 作为 MQTT 客戶端
 
- ERDDAP 可以用 MQTT 用戶端來訂閱外部或自己嵌入的 MQTT 介面 。 使用新的 `從 Mqtt 取自 EDD 表格` 數據集類型,其功能類似於现有的 `從 HttpGet 的 EDD 表格` 數據集。
+ ERDDAP 可以用 MQTT 用戶端來訂閱外部或自己嵌入的 MQTT 介面 。 使用新的 `從 Mqtt 取自 EDD 表格` 數據集類型,其功能類似於现有的 [ `從 HttpGet 的 EDD 表格` ](/docs/server-admin/datasets#eddtablefromhttpget) 數據集。
 
 目前,客戶端只支援 **簽署** 至主題。
 

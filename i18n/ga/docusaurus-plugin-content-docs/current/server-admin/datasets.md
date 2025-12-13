@@ -32,6 +32,10 @@ Má cheannaíonn tú isteach sna smaointe seo agus an iarracht a chaitheamh chun
 Ag déanamh an datasets.xml Bíonn iarracht mhór do na chéad chúpla tacar sonraí, ach **faigheann sé níos éasca** . Tar éis an chéad tacar sonraí, is féidir leat a lán de do chuid oibre a athúsáid go minic don chéad tacar sonraí eile. Fortunately, ERDDAP™ thagann le dhá [Uirlisí](#tools) chun cabhrú leat a chruthú ar an XML do gach tacar sonraí i datasets.xml .
 Má fhaigheann tú i bhfostú, féach ar ár [alt ar thacaíocht bhreise a fháil](/docs/intro#support) .
 
+### Athróga i datasets.xml  {#varaibles-in-datasetsxml} 
+
+As ERDDAP™ leagan 2.29.0, datasets.xml Is maith liom é (go roghnach) próiseáilte ag [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Tá sé seo go leor úsáidí lena n-áirítear leagan luachanna príobháideacha (cosúil le focal faire) ag baint úsáide as athróg comhshaoil. Is féidir é seo a bheith faoi mhíchumas trí shuíomh ar chumas EnvParsing bréagach i thus.xml.
+
 ### Sonraí a Sholáthar Foirm Iarratais{#data-provider-form} 
 Nuair a thagann soláthraí sonraí chun tú ag súil a chur ar roinnt sonraí le do ERDDAP , is féidir é a bheith deacair agus am Tógann a bhailiú gach ceann de na meiteashonraí (faisnéis faoin tacar sonraí) is gá a chur leis an tacar sonraí isteach ERDDAP . Go leor foinsí sonraí (mar shampla, .csv comhaid, Comhaid Excel, bunachair sonraí) nach bhfuil aon meiteashonraí inmheánacha, mar sin ERDDAP™ Tá Foirm Soláthraí Sonraí a bhailíonn meiteashonraí ón soláthraí sonraí agus tugann sé treoir éigin eile don soláthraí sonraí, lena n-áirítear treoir fhairsing do [Sonraí i mBunscoileanna](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases) . Déantar an fhaisnéis a chuirtear isteach a thiontú go datasets.xml formáid agus ansin ríomhphost chuig an ERDDAP™ internet marketing (tú thú) agus scríofa (aguisín) go dtí *Treoir do Thuismitheoirí* / logs / dataProviderForm.log . Dá bhrí sin, an fhoirm leath-uathoibríoch an próiseas ag fáil tacar sonraí isteach ERDDAP , ach an ERDDAP™ riarthóir fós a chur i gcrích ar an datasets.xml smután agus déileáil le dul ar an comhad sonraí (s s) ón soláthraí nó nascadh leis an mbunachar sonraí.
 
@@ -900,6 +904,7 @@ Tagann na cineálacha tacar sonraí i dhá chatagóir. ( [Cén fáth?](#why-just
     * Tá MUST a bheith ina athróg ais do gach gné. Ais athróg MUST a shonrú san ord go n-úsáideann na hathróga sonraí iad.
     * I EDDGrid datasets, gach athróg sonraí MUST úsáid (scair) gach ceann de na hathróga ais.
          ( [Cén fáth?](#why-just-two-basic-data-structures)   [Cad a tharlaíonn mura bhfuil siad?](#dimensions) ) 
+Nua i ERDDAP™ leagan 2.29.0 le EDDGrid Is FromNcFiles tacaíocht turgnamhach do athróg sonraí nach bhfuil tacaíocht ar fad de na hathróga ais (nó mar a bhfuil roinnt ar a dtugtar sé 1D agus 2D sonraí sa tacar sonraí céanna) .
     * Luachanna Toise Sórtáilte - I ngach EDDGrid datasets, gach MUST gné a bheith in ord sórtáilte (dul suas nó íslitheach) . Is féidir le gach a bheith spásáilte neamhrialta. Ní féidir a bheith aon ceangail. Níl an Tweet seo ar fáil [CF meiteashonraí caighdeánach](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) . Más rud é nach bhfuil aon ghné luachanna in ord sórtáilte, ní bheidh an tacar sonraí a luchtú agus ERDDAP™ a aithint an chéad luach unsorted sa chomhad logáil, *Treoir do Thuismitheoirí* / logs / log.txt .
         
 Tá roinnt fo-aicmí srianta breise (go suntasach, EDDGrid Éilíonn Comhiomlán AssistingDimension go bhfuil an taobh amuigh (beagnach, an chéad) gné a bheith ag dul suas.
@@ -949,6 +954,7 @@ luachanna gné unsorted fios beagnach i gcónaí fadhb leis an tacar sonraí foi
         *    [EDDTableFrom InvalidCRAFiles](#eddtablefrominvalidcrafiles) comhiomlánaithe sonraí ó NetCDF   (v3 nó v4)   .nc comhaid a úsáideann ar leith, neamhbhailí, leagan den CF DSG Dtiguous Ragged Array (irl - Library Service) comhaid. Cén fáth Cé ERDDAP™ Tacaíonn sé leis an gcineál comhaid seo, is cineál comhaid neamhbhailí é nár chóir do dhuine tosú ag úsáid. Moltar go láidir do ghrúpaí a úsáideann an cineál comhaid seo faoi láthair úsáid a bhaint as ERDDAP™ a ghiniúint bailí CF DSG comhaid CRA agus stop ag baint úsáide as na comhaid.
         *    [Seirbhísí ar líne](#eddtablefromjsonlcsvfiles) comhiomlánaithe sonraí ó [JSON Línte comhaid CSV](https://jsonlines.org/examples/) .
         *    [EDDTableFromMultidimNcFiles](#eddtablefrommultidimncfiles) comhiomlánaithe sonraí ó NetCDF   (v3 nó v4)   .nc comhaid le hathróga éagsúla le toisí roinnte.
+        *    [EDDTableFromMq](/docs/server-admin/mqtt-integration) Tógann tacar sonraí bunaithe ar theachtaireachtaí MQTT. Tabhair faoi deara go bhfuil an doiciméadú ar leathanach tiomnaithe. Tabhair faoi deara go bhfuil a lán de na cosúlachtaí a [Féachaint ar Fholúntais](#eddtablefromhttpget) .
         *    [EDDTableFromNcFiles](#eddtablefromncfiles) comhiomlánaithe sonraí ó NetCDF   (v3 nó v4)   .nc comhaid le hathróga éagsúla le toisí roinnte. Tá sé breá leanúint ar aghaidh ag baint úsáide as an gcineál tacar sonraí seo le haghaidh tacar sonraí atá ann cheana, ach le haghaidh tacar sonraí nua molaimid ag baint úsáide as EDDTableFromMultidimNcFiles ina ionad sin.
         *    [EDDTableFromNcCFFiles](#eddtablefromnccffiles) comhiomlánaithe sonraí ó NetCDF   (v3 nó v4)   .nc comhaid a úsáideann ceann de na formáidí comhaid sonraithe ag an [CF Diosca Geometris Sampling (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) coinbhinsiúin. Ach le haghaidh comhaid ag baint úsáide as ceann de na leaganacha CF multidimensional DSG, úsáid [EDDTableFromMultidimNcFiles](#eddtablefrommultidimncfiles) ina ionad sin.
         *    [Seirbhís do Chustaiméirí](#eddtablefromnccsvfiles) comhiomlánaithe sonraí ó [NCCSV](/docs/user/nccsv-1.00) ASCII .csv comhaid.
@@ -1577,6 +1583,8 @@ Molaimid go láidir ag baint úsáide as [Sonraí a ghiniúint Xml clár](#gener
  
 ###  EDDGrid Seirbhís do Chustaiméirí{#eddgridfromncfiles} 
  [ ** EDDGrid Seirbhís do Chustaiméirí** ](#eddgridfromncfiles) comhiomlánaí sonraí ó áitiúil, gridded, [GRIB .grb agus .grb2](https://en.wikipedia.org/wiki/GRIB) comhaid, [ HDF   (v4 nó v5)   .hdf ](https://www.hdfgroup.org/) comhaid, [ .nc ml ml](#ncml-files) comhaid, [ NetCDF   (v3 nó v4)   .nc ](https://www.unidata.ucar.edu/software/netcdf/) comhaid, agus [riachtanais uisce: measartha](https://github.com/zarr-developers/zarr-python) comhaid comhad (mar leagan 2.25) . Tá comhaid Zarr iompar beagán difriúil agus a cheangal ar an comhad NameRegex nó an pathRegex a chur san áireamh "zarr".
+
+Nua i ERDDAP™ leagan 2.29.0 Is tacaíocht turgnamhach do athróg sonraí nach bhfuil tacaíocht ar fad de na hathróga ais (nó mar a bhfuil roinnt ar a dtugtar sé 1D agus 2D sonraí sa tacar sonraí céanna) . Faigh amach faoi GitHub (plé nó saincheisteanna) le haiseolas agus bugs.
 
 D'fhéadfadh sé seo a bheith ag obair le cineálacha comhaid eile (mar shampla, BUFR) , ní mór dúinn ach tástáil sé - le do thoil a sheoladh chugainn roinnt comhaid sampla.
 
@@ -5258,7 +5266,7 @@ Má úsáideann tacar sonraí ACDD 1.0, is é an tréith seo ná STRONGLY AMNDED
     ```
 Ach ERDDAP™ Moltar anois ACDD-1.3. Má tá tú [athrú ar do thacair sonraí a úsáid ACDD-1.3](#switch-to-acdd-13) , úsáid Metadata\\_Conventions Is STRONGLY DISCOURAGED: ach úsáid [&lt;Coinbhinsiúin." (Tuilleadh eolais) ina ionad sin.
 ######  processing\\_level  {#processing_level} 
-*    [ ** processing\\_level ** ](#processing_level)   (ó na [Clár na dToghthóirí](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) caighdeán meiteashonraí) Is cur síos théacsúil IMMENDED ar an bpróiseáil (mar shampla, [leibhéil próiseála sonraí satailíte NASA](https://en.wikipedia.org/wiki/Remote_sensing#Data_processing_levels) , mar shampla, Leibhéal 3) nó leibhéal rialaithe cáilíochta (mar shampla, Cáilíocht Eolaíochta) de na sonraí. Mar shampla,
+*    [ ** processing\\_level ** ](#processing_level)   (ó na [Clár na dToghthóirí](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) caighdeán meiteashonraí) Is cur síos théacsúil IMMENDED ar an bpróiseáil (mar shampla, [Córas Breathnú na Cruinne NASA Sonraí agus Córas Faisnéise leibhéil próiseála sonraí](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/data-processing-levels) , mar shampla, Leibhéal 3) nó leibhéal rialaithe cáilíochta (mar shampla, Cáilíocht Eolaíochta) de na sonraí. Mar shampla,
     ```
     <att name="processing\\_level">3</att>  
     ```
@@ -5944,6 +5952,24 @@ unpackedValue = pacáilte Luach \\* scale\\_factor + + + + add\\_offset
     * Le haghaidh athróg ama le sonraí foinse ó Stringsa, ligeann an tréith tú a shonrú crios ama a thoradh ERDDAP™ na hamanna foinse áitiúil-chrios a thiontú (roinnt in am caighdeánach, cuid acu in am a shábháil ar an Solas) isteach i Zulu amanna (atá i gcónaí i Am caighdeánach) . Is dócha go bhfuil liosta na n-ainmneacha crios ama bailí comhionann leis an liosta sa cholún TZ ag [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Tá criosanna ama coitianta na Stát Aontaithe: US / Hawaii, Stáit Aontaithe Mheiriceá / Alaska, SAM / Saor, US / Montain, US / Arizona, SAM / Lár, SAM / Eastern.
     * Le haghaidh athróg ama le sonraí foinse uimhriúil, is féidir leat a shonrú ar an " time\\_zone " tréith, ach ní mór an luach a bheith " Zulu " nó "UTC". Más gá duit tacaíocht do chriosanna ama eile, le do thoil ríomhphost Chris. John ag noaa.gov.
          
+###### Oidhreacht_time_adjust{#legacy_time_adjust} 
+*    [ **Oidhreacht_time_adjust** ](#legacy_time_adjust) Ag tosú i ERDDAP™ 2.29.0, obair athróg ama beagán difriúil. I gcásanna neamhchoitianta, is dócha nuair a úsáid `laethanta ó shin` agus bliain roimh 1582 (amhlaidh `laethanta ó 0000-01-01` nó `laethanta ó 1-1-1 00:00:0.0` ) beidh ort a chur in iúl le haghaidh coigeartú go dtí an dáta athraitheach. Níl an Tweet seo ar fáil ERDDAP™ Úsáideann an leabharlann java.time chun dátaí a bhainistiú go hinmheánach. Tá roinnt tacar sonraí a éilíonn ag baint úsáide as an leabharlann GregorianCalendar sean chun acheive na dátaí ceart.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### minicíocht uisce: flúirseach{#units} 
 *    [ **minicíocht uisce: flúirseach** ](#units)   ( [ COARDS ](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html) , [CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) agus [Clár na dToghthóirí](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) caighdeán meiteashonraí) Sainmhíníonn na haonaid na luachanna sonraí. Mar shampla,
     ```

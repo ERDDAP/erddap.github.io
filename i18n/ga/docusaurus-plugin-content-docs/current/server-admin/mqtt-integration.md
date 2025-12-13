@@ -13,7 +13,7 @@
 
 ##  ERDDAP mar Cliant MQTT
 
- ERDDAP Is féidir gníomhú mar chliant MQTT chun síntiús a íoc le topaicí ar bhróicéir MQTT seachtrach nó leabaithe féin. Tá sé seo a bhaint amach ag baint úsáide as an nua `EDDTableFromMq` cineál tacar sonraí, a fheidhmíonn cosúil leis an atá ann cheana `Féachaint ar Fholúntais` tacar sonraí.
+ ERDDAP Is féidir gníomhú mar chliant MQTT chun síntiús a íoc le topaicí ar bhróicéir MQTT seachtrach nó leabaithe féin. Tá sé seo a bhaint amach ag baint úsáide as an nua `EDDTableFromMq` cineál tacar sonraí, a fheidhmíonn cosúil leis an atá ann cheana [ `Féachaint ar Fholúntais` ](/docs/server-admin/datasets#eddtablefromhttpget) tacar sonraí.
 
 Faoi láthair, ní thacaíonn an cur i bhfeidhm cliaint ach amháin **Amharc ar gach eolas** le topaicí.
 

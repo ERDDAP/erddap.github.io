@@ -13,7 +13,7 @@
 
 ##  ERDDAP jako MQTT klient
 
- ERDDAP může působit jako MQTT klient, aby se přihlásil k tématům na externí nebo vlastní zabudovaný MQTT broker. Toho je dosaženo pomocí nového `EDDTableFromMqtt` Typ datového souboru, který funguje podobně jako stávající `EDDTableFromHttpGet` Soubor dat.
+ ERDDAP může působit jako MQTT klient, aby se přihlásil k tématům na externí nebo vlastní zabudovaný MQTT broker. Toho je dosaženo pomocí nového `EDDTableFromMqtt` Typ datového souboru, který funguje podobně jako stávající [ `EDDTableFromHttpGet` ](/docs/server-admin/datasets#eddtablefromhttpget) Soubor dat.
 
 V současné době klientská implementace podporuje pouze **Přihlášení** na témata.
 

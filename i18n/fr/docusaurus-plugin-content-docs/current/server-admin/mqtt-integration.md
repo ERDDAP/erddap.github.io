@@ -13,7 +13,7 @@
 
 ##  ERDDAP en tant que client MQTT
 
- ERDDAP peut agir comme client MQTT pour s'abonner à des sujets sur un courtier MQTT externe ou son propre courtier intégré. Ceci est réalisé en utilisant la nouvelle `EDDTableFromMqtt` type d'ensemble de données, qui fonctionne de la même manière que l'actuel `EDDTableFromHttpGet` ensemble de données.
+ ERDDAP peut agir comme client MQTT pour s'abonner à des sujets sur un courtier MQTT externe ou son propre courtier intégré. Ceci est réalisé en utilisant la nouvelle `EDDTableFromMqtt` type d'ensemble de données, qui fonctionne de la même manière que l'actuel [ `EDDTableFromHttpGet` ](/docs/server-admin/datasets#eddtablefromhttpget) ensemble de données.
 
 Actuellement, la mise en œuvre du client ne prend en charge que **abonnement** à des sujets.
 

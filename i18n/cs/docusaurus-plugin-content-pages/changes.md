@@ -19,7 +19,7 @@ Akce nutná.
     * ISO 19115 verze: Viz níže pro admin info. Pro uživatele si nyní můžete vyžádat konkrétní verze ISO 19115 metadat. Udělejte to z mřížky/ tabledap stránky pro datový soubor s typem souboru klesá. Tyto verze budou nezávislé na výchozím nastavení serveru.
 
 *    **Věci ERDDAP™ Administrátoři potřebují vědět a udělat:** 
-    * Nová funkce, MQTT podpora. Pro podrobnosti doporučuji přečíst [Nová stránka.](/docs/server-admin/mqtt-integration.md) To zahrnuje možnost vytvářet soubory dat ze zpráv MQTT a zveřejňovat zprávy MQTT, když se soubor dat změní. Je vypnuta ve výchozím nastavení, takže pokud ji chcete použít, musíte ji povolit.
+    * Nová funkce, MQTT podpora. Pro podrobnosti doporučuji přečíst [Nová stránka.](/docs/server-admin/mqtt-integration) To zahrnuje možnost vytvářet soubory dat ze zpráv MQTT a zveřejňovat zprávy MQTT, když se soubor dat změní. Je vypnuta ve výchozím nastavení, takže pokud ji chcete použít, musíte ji povolit.
 
 Díky Ayush Singh za práci na MQTT&#33;
 
@@ -39,7 +39,7 @@ Díky [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid FromNcFiles s různými rozměry: Existuje. (experimentální) podpora EDDGrid Soubory souborů FromNcFiles mají proměnné, které nepoužívají stejnou sadu os. Prosím, informujte mě o tom, jak to pro vás funguje, nebo jestli se to chování nezdá správné.
 
-    * Je tu sbírka optimizací, které by měly být bezpečné, ale mají vlajky, které se vrátí ke starému chování, pokud bude třeba. Pokud zjistíte, že je třeba nastavit některou z vlajek, vyplňte prosím chybu. Pokud se nedozvíme žádné problémy, většina z nich bude odstraněna s novým chováním v budoucnu. Je tu [nová stránka o vlajkách funkcí](/docs/server-admin/feature-flags.md) kde si můžete přečíst o těchto a dalších vlajek.
+    * Je tu sbírka optimizací, které by měly být bezpečné, ale mají vlajky, které se vrátí ke starému chování, pokud bude třeba. Pokud zjistíte, že je třeba nastavit některou z vlajek, vyplňte prosím chybu. Pokud se nedozvíme žádné problémy, většina z nich bude odstraněna s novým chováním v budoucnu. Je tu [nová stránka o vlajkách funkcí](/docs/server-admin/feature-flags) kde si můžete přečíst o těchto a dalších vlajek.
 
       * dotek Nitě Pouze WhenItems: To je změna tak, že dotykThread bude běžet pouze tehdy, když jsou položky ve frontě se dotknout. O jedno vlákno méně běží je menší optimalizace, ale stále užitečné. Defaulty k pravdě.
 

@@ -19,7 +19,7 @@ Kailangan ang pagkilos.
     * Mga bersyon ng ISO 19115: Tingnan ang ibaba para sa admin info. Para sa mga gumagamit nito, maaari ka na ngayong humiling ng espesipikong mga bersiyon ng ISO 19115 metadata. Gawin ito mula sa griddap/ tabledap pahina para sa isang dataset na ang file type ay bumababa. Ang mga bersyong ito ay magiging independiyente sa sign default.
 
 *    **Mga Bagay ERDDAP™ Kailangang Malaman at Gawin ng mga Administrador:** 
-    * Bagong tampok, suporta ng MQTT. Para sa mga detalye iminumungkahi ko ang pagbabasa ng [bagong pahina tungkol dito.](/docs/server-admin/mqtt-integration.md) Kasama rito ang paggawa ng mga dataset mula sa mga mensaheng MQTT, at paglalathala ng mga mensaheng MQTTT kapag nagbago ang isang dataset. Ito'y hindi mabisa, kaya kung nais mong gamitin ito, kailangan mong gawin ito.
+    * Bagong tampok, suporta ng MQTT. Para sa mga detalye iminumungkahi ko ang pagbabasa ng [bagong pahina tungkol dito.](/docs/server-admin/mqtt-integration) Kasama rito ang paggawa ng mga dataset mula sa mga mensaheng MQTT, at paglalathala ng mga mensaheng MQTTT kapag nagbago ang isang dataset. Ito'y hindi mabisa, kaya kung nais mong gamitin ito, kailangan mong gawin ito.
 
 Salamat kay Ayush Singh sa pagtatrabaho sa MQTT&#33;
 
@@ -39,7 +39,7 @@ Salamat [SetChammagneNRL](https://github.com/ERDDAP/erddap/pull/373)
 
     *    EDDGrid Mula sa mga NNcFile na may iba't ibang sukat: Mayroon (Pag - eeksperimento) suporta EDDGrid Mula saNcFiles datasets magkaroon ng mga variables na hindi gumagamit ng parehong set ng mga palakol. Pakisuyong iulat kung paano ito mabisa para sa iyo, o kung ang paggawi ay waring hindi tama.
 
-    * Mayroong koleksiyon ng mga optimisasyon na dapat ay ligtas, ngunit may mga watawat na ibabalik sa dating gawi kung kinakailangan. Kung masumpungan mo ang pangangailangang magtakda ng alinman sa mga bandila, pakisuyong magsalansan ka ng isang bug. Kung wala tayong maririnig na mga isyu na karamihan sa mga ito ay aalisin na may bagong kabiguan sa paggawi sa hinaharap. Meron [bagong pahina tungkol sa tampok na mga bandila](/docs/server-admin/feature-flags.md) kung saan mababasa mo ang tungkol dito at sa iba pang mga bandila.
+    * Mayroong koleksiyon ng mga optimisasyon na dapat ay ligtas, ngunit may mga watawat na ibabalik sa dating gawi kung kinakailangan. Kung masumpungan mo ang pangangailangang magtakda ng alinman sa mga bandila, pakisuyong magsalansan ka ng isang bug. Kung wala tayong maririnig na mga isyu na karamihan sa mga ito ay aalisin na may bagong kabiguan sa paggawi sa hinaharap. Meron [bagong pahina tungkol sa tampok na mga bandila](/docs/server-admin/feature-flags) kung saan mababasa mo ang tungkol dito at sa iba pang mga bandila.
 
       * Paghipo Hugis Tanging ang Kapag Items: Ito ay isang pagbabago upang ang touchThread ay tumatakbo lamang kapag may mga bagay sa queue upang hawakan. Ang mas kaunting sinulid sa pagtakbo ay isang maliit na optimisasyon subalit kapaki - pakinabang pa rin. Totoo naman ang mga hula.
 

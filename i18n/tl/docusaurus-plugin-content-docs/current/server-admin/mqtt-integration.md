@@ -13,7 +13,7 @@
 
 ##  ERDDAP bilang Isang MQTT Client
 
- ERDDAP ay maaaring gumanap bilang isang kliyenteng MQTT na magskripto ng mga paksa sa isang panlabas o sa sarili nitong nakapaloob na MQTT broker. Ito ay nakakamit gamit ang bago `Mapagkakatiwalaan Mula saMqtt` tipo ng dataset, na kahawig ng umiiral `NABAUTISAN NG EDDTTEGO` datos.
+ ERDDAP ay maaaring gumanap bilang isang kliyenteng MQTT na magskripto ng mga paksa sa isang panlabas o sa sarili nitong nakapaloob na MQTT broker. Ito ay nakakamit gamit ang bago `Mapagkakatiwalaan Mula saMqtt` tipo ng dataset, na kahawig ng umiiral [ `NABAUTISAN NG EDDTTEGO` ](/docs/server-admin/datasets#eddtablefromhttpget) datos.
 
 Sa kasalukuyan, ang pagpapatupad ng kliyente ay sumusuporta lamang **ipinasok** sa mga paksa.
 
