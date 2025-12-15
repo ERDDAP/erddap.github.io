@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="tr" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-server-admin/feature-flags" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Özel Bayraklar | ERDDAP™ Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://erddap.github.io/tr/img/noaa_simple.gif"><meta data-rh="true" name="twitter:image" content="https://erddap.github.io/tr/img/noaa_simple.gif"><meta data-rh="true" property="og:url" content="https://erddap.github.io/tr/docs/server-admin/feature-flags"><meta data-rh="true" property="og:locale" content="tr"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" property="og:locale:alternate" content="bn"><meta data-rh="true" property="og:locale:alternate" content="zh"><meta data-rh="true" property="og:locale:alternate" content="zt"><meta data-rh="true" property="og:locale:alternate" content="cs"><meta data-rh="true" property="og:locale:alternate" content="da"><meta data-rh="true" property="og:locale:alternate" content="nl"><meta data-rh="true" property="og:locale:alternate" content="fi"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" property="og:locale:alternate" content="de"><meta data-rh="true" property="og:locale:alternate" content="el"><meta data-rh="true" property="og:locale:alternate" content="hi"><meta data-rh="true" property="og:locale:alternate" content="hu"><meta data-rh="true" property="og:locale:alternate" content="id"><meta data-rh="true" property="og:locale:alternate" content="ga"><meta data-rh="true" property="og:locale:alternate" content="it"><meta data-rh="true" property="og:locale:alternate" content="ja"><meta data-rh="true" property="og:locale:alternate" content="ko"><meta data-rh="true" property="og:locale:alternate" content="nb"><meta data-rh="true" property="og:locale:alternate" content="pl"><meta data-rh="true" property="og:locale:alternate" content="pt"><meta data-rh="true" property="og:locale:alternate" content="ro"><meta data-rh="true" property="og:locale:alternate" content="ru"><meta data-rh="true" property="og:locale:alternate" content="es"><meta data-rh="true" property="og:locale:alternate" content="sv"><meta data-rh="true" property="og:locale:alternate" content="tl"><meta data-rh="true" property="og:locale:alternate" content="th"><meta data-rh="true" property="og:locale:alternate" content="uk"><meta data-rh="true" property="og:locale:alternate" content="ur"><meta data-rh="true" name="docusaurus_locale" content="tr"><meta data-rh="true" name="docsearch:language" content="tr"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Özel Bayraklar | ERDDAP™ Documentation"><meta data-rh="true" name="description" content="Bu sayfa, sistemde mevcut olan yapılandırma bayraklarını belgeliyor. Bu bayraklar çeşitli özellikleri, deneysel yetenekleri ve mirası kontrol eder."><meta data-rh="true" property="og:description" content="Bu sayfa, sistemde mevcut olan yapılandırma bayraklarını belgeliyor. Bu bayraklar çeşitli özellikleri, deneysel yetenekleri ve mirası kontrol eder."><link data-rh="true" rel="icon" href="/tr/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://erddap.github.io/tr/docs/server-admin/feature-flags"><link data-rh="true" rel="alternate" href="https://erddap.github.io/docs/server-admin/feature-flags" hreflang="en"><link data-rh="true" rel="alternate" href="https://erddap.github.io/bn/docs/server-admin/feature-flags" hreflang="bn"><link data-rh="true" rel="alternate" href="https://erddap.github.io/zh/docs/server-admin/feature-flags" hreflang="zh"><link data-rh="true" rel="alternate" href="https://erddap.github.io/zt/docs/server-admin/feature-flags" hreflang="zt"><link data-rh="true" rel="alternate" href="https://erddap.github.io/cs/docs/server-admin/feature-flags" hreflang="cs"><link data-rh="true" rel="alternate" href="https://erddap.github.io/da/docs/server-admin/feature-flags" hreflang="da"><link data-rh="true" rel="alternate" href="https://erddap.github.io/nl/docs/server-admin/feature-flags" hreflang="nl"><link data-rh="true" rel="alternate" href="https://erddap.github.io/fi/docs/server-admin/feature-flags" hreflang="fi"><link data-rh="true" rel="alternate" href="https://erddap.github.io/fr/docs/server-admin/feature-flags" hreflang="fr"><link data-rh="true" rel="alternate" href="https://erddap.github.io/de/docs/server-admin/feature-flags" hreflang="de"><link data-rh="true" rel="alternate" href="https://erddap.github.io/el/docs/server-admin/feature-flags" hreflang="el"><link data-rh="true" rel="alternate" href="https://erddap.github.io/hi/docs/server-admin/feature-flags" hreflang="hi"><link data-rh="true" rel="alternate" href="https://erddap.github.io/hu/docs/server-admin/feature-flags" hreflang="hu"><link data-rh="true" rel="alternate" href="https://erddap.github.io/id/docs/server-admin/feature-flags" hreflang="id"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ga/docs/server-admin/feature-flags" hreflang="ga"><link data-rh="true" rel="alternate" href="https://erddap.github.io/it/docs/server-admin/feature-flags" hreflang="it"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ja/docs/server-admin/feature-flags" hreflang="ja"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ko/docs/server-admin/feature-flags" hreflang="ko"><link data-rh="true" rel="alternate" href="https://erddap.github.io/nb/docs/server-admin/feature-flags" hreflang="nb"><link data-rh="true" rel="alternate" href="https://erddap.github.io/pl/docs/server-admin/feature-flags" hreflang="pl"><link data-rh="true" rel="alternate" href="https://erddap.github.io/pt/docs/server-admin/feature-flags" hreflang="pt"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ro/docs/server-admin/feature-flags" hreflang="ro"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ru/docs/server-admin/feature-flags" hreflang="ru"><link data-rh="true" rel="alternate" href="https://erddap.github.io/es/docs/server-admin/feature-flags" hreflang="es"><link data-rh="true" rel="alternate" href="https://erddap.github.io/sv/docs/server-admin/feature-flags" hreflang="sv"><link data-rh="true" rel="alternate" href="https://erddap.github.io/tl/docs/server-admin/feature-flags" hreflang="tl"><link data-rh="true" rel="alternate" href="https://erddap.github.io/th/docs/server-admin/feature-flags" hreflang="th"><link data-rh="true" rel="alternate" href="https://erddap.github.io/tr/docs/server-admin/feature-flags" hreflang="tr"><link data-rh="true" rel="alternate" href="https://erddap.github.io/uk/docs/server-admin/feature-flags" hreflang="uk"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ur/docs/server-admin/feature-flags" hreflang="ur"><link data-rh="true" rel="alternate" href="https://erddap.github.io/docs/server-admin/feature-flags" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Server Yönetimi","item":"https://erddap.github.io/tr/docs/category/server-administration"},{"@type":"ListItem","position":2,"name":"Özel Bayraklar","item":"https://erddap.github.io/tr/docs/server-admin/feature-flags"}]}</script><link rel="stylesheet" href="/tr/assets/css/styles.c47a40ba.css">
+<script src="/tr/assets/js/runtime~main.ad9041b4.js" defer="defer"></script>
+<script src="/tr/assets/js/main.afb5cd86.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/tr/img/noaab.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main Main Main Main" class="theme-layout-navbar navbar navbar--fixed-top navbar--dark"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigasyon bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/tr/"><div class="navbar__logo"><img src="/tr/img/noaab.png" alt="NOAAlogo logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/tr/img/noaab.png" alt="NOAAlogo logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">ERDDAP™</b></a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>Türkçe</a><ul class="dropdown__menu"><li><a href="/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en">English</a></li><li><a href="/bn/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="bn">বাংলা</a></li><li><a href="/zh/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="zh">中文</a></li><li><a href="/zt/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="zt">Zt</a></li><li><a href="/cs/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="cs">Čeština</a></li><li><a href="/da/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="da">Dansk</a></li><li><a href="/nl/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="nl">Nederlands</a></li><li><a href="/fi/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="fi">Suomi</a></li><li><a href="/fr/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="fr">Français</a></li><li><a href="/de/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="de">Deutsch</a></li><li><a href="/el/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="el">Ελληνικά</a></li><li><a href="/hi/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="hi">हिन्दी</a></li><li><a href="/hu/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="hu">Magyar</a></li><li><a href="/id/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="id">Indonesia</a></li><li><a href="/ga/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ga">Gaeilge</a></li><li><a href="/it/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="it">Italiano</a></li><li><a href="/ja/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ja">日本語</a></li><li><a href="/ko/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ko">한국어</a></li><li><a href="/nb/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="nb">Norsk bokmål</a></li><li><a href="/pl/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="pl">Polski</a></li><li><a href="/pt/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="pt">Português</a></li><li><a href="/ro/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ro">Română</a></li><li><a href="/ru/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ru">Русский</a></li><li><a href="/es/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="es">Español</a></li><li><a href="/sv/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="sv">Svenska</a></li><li><a href="/tl/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="tl">Filipino</a></li><li><a href="/th/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="th">ไทย</a></li><li><a href="/tr/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="tr">Türkçe</a></li><li><a href="/uk/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="uk">Українська</a></li><li><a href="/ur/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ur">اردو</a></li></ul></div><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/tr/docs/intro">Docs</a><a class="navbar__item navbar__link" href="/tr/governance">Yönetim Yönetimi</a><a class="navbar__item navbar__link" href="/tr/cloud">Bulut Bulut Bulut</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Arama Arama" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><a href="https://github.com/erddap/erddap" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(Yeni sekmede açılır)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS darkNavbarColorModeToggle_X3D1" type="button" disabled="" title="sistem modu" aria-label="Karanlık ve ışık modu arasında geçiş (şimdiye kadar)sistem modu)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/tr/docs/intro"><span title="Dokümantasyon Intro" class="linkLabel_WmDU">Dokümantasyon Intro</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/tr/docs/category/server-administration"><span title="Server Yönetimi" class="categoryLinkLabel_W154">Server Yönetimi</span></a><button aria-label="Colalt sidebar kategori ‘ ‘ ‘Server Yönetimi‘ ‘ ‘" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/tr/docs/category/admin-tips"><span title="Admin İpuçları" class="categoryLinkLabel_W154">Admin İpuçları</span></a><button aria-label="Expand sidebar kategorisi ‘ ‘ ‘Admin İpuçları‘ ‘ ‘" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/tr/docs/server-admin/deploy-install"><span title="Yükleme" class="linkLabel_WmDU">Yükleme</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/tr/docs/server-admin/deploy-update"><span title="Update Update Update Update Update Update Update" class="linkLabel_WmDU">Update Update Update Update Update Update Update</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/tr/docs/server-admin/datasets"><span title="Çalışmak ile çalışmak datasets.xml Dosya" class="linkLabel_WmDU">Çalışmak ile çalışmak datasets.xml Dosya</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/tr/docs/server-admin/additional-information"><span title="Ek Bilgiler" class="linkLabel_WmDU">Ek Bilgiler</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/tr/docs/server-admin/scaling"><span title="Scaling" class="linkLabel_WmDU">Scaling</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/tr/docs/server-admin/EDDTableFromEML"><span title="EDDTableFromEML" class="linkLabel_WmDU">EDDTableFromEML</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/tr/docs/server-admin/display-info"><span title="Ekran görüntüsü Info Info ve EkranAttribute Etiketler" class="linkLabel_WmDU">Ekran görüntüsü Info Info ve EkranAttribute Etiketler</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/tr/docs/server-admin/localized-metadata"><span title="Yerelleştirilmiş Metadata" class="linkLabel_WmDU">Yerelleştirilmiş Metadata</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/tr/docs/server-admin/prometheus"><span title="Prometheus" class="linkLabel_WmDU">Prometheus</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/tr/docs/server-admin/feature-flags"><span title="Özel Bayraklar" class="linkLabel_WmDU">Özel Bayraklar</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/tr/docs/server-admin/mqtt-integration"><span title="ERDDAP MQTT Entegrasyonu" class="linkLabel_WmDU">ERDDAP MQTT Entegrasyonu</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/tr/docs/category/contributing"><span title="katkıda bulunmak" class="categoryLinkLabel_W154">katkıda bulunmak</span></a><button aria-label="Expand sidebar kategorisi ‘ ‘ ‘katkıda bulunmak‘ ‘ ‘" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/tr/docs/dokka"><span title="Dataset scripts Code Documentation" class="categoryLinkLabel_W154">Dataset scripts Code Documentation</span></a><button aria-label="Expand sidebar kategorisi ‘ ‘ ‘Dataset scripts Code Documentation‘ ‘ ‘" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/tr/docs/category/user"><span title="Kullanıcı Kullanıcı" class="categoryLinkLabel_W154">Kullanıcı Kullanıcı</span></a><button aria-label="Expand sidebar kategorisi ‘ ‘ ‘Kullanıcı Kullanıcı‘ ‘ ‘" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Ekmekler"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/tr/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/tr/docs/category/server-administration"><span>Server Yönetimi</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Özel Bayraklar</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">Bu sayfada</button></div><div class="theme-doc-markdown markdown"><header><h1>Özel Bayraklar</h1></header>
+<p>Bu sayfa, sistemde mevcut olan yapılandırma bayraklarını belgeliyor. Bu bayraklar çeşitli özellikleri, deneysel yetenekleri ve mirası kontrol eder.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="bayrak-lifecycle-legend"><strong>Bayrak Lifecycle Legend</strong><a href="#bayrak-lifecycle-legend" class="hash-link" aria-label="Doğrudan bağlantıbayrak-lifecycle-legend" title="Doğrudan bağlantıbayrak-lifecycle-legend" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Stable:</strong> Uzun vadeli bayraklar, yöneticilerin işlevselliği değiştirmelerine izin verme eğilimindeydi. Üretim için güvenli.</li>
+<li class=""><strong>Test:</strong> Test için hazır olan Özellikler. Bunlar ya &quot;Stable&quot; ya da sonunda hedef değerlerine ayarlanacak ve bayrağı kaldıracaktır.</li>
+<li class=""><strong>İnşaat altında:</strong> Şu anda kodda yanlış kodda, yapılandırmadan bağımsız olarak. Bu özellik henüz kullanıma hazır değildir.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="--testlerde-optimizasyonlar">**  Testlerde Optimizasyonlar**<a href="#--testlerde-optimizasyonlar" class="hash-link" aria-label="Doğrudan bağlantı**  Testlerde Optimizasyonlar**" title="Doğrudan bağlantı**  Testlerde Optimizasyonlar**" translate="no">​</a></h2>
+<p>Bunlar gelecekte kaldırılacak bayraklar.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="touchthread-only-whenitems"><strong>touchThread Only WhenItems</strong><a href="#touchthread-only-whenitems" class="hash-link" aria-label="Doğrudan bağlantıtouchthread-only-whenitems" title="Doğrudan bağlantıtouchthread-only-whenitems" translate="no">​</a></h3>
+<p>Açıklama
+Optimizasyon bayrağı. Eğer doğruysa, dokunma iplik sadece işlem için öğeler olduğunda çalışır.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Test Testi Test Testi |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 2.29.0&#x27;da eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="görevcacheclear"><strong>GörevCacheClear</strong><a href="#görevcacheclear" class="hash-link" aria-label="Doğrudan bağlantıgörevcacheclear" title="Doğrudan bağlantıgörevcacheclear" translate="no">​</a></h3>
+<p>Açıklama
+Hazırlanan arka plan görevi önbelleklerden sona ermiş.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 2.27.0 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ncheadermakefile"><strong>ncHeaderMakeFile</strong><a href="#ncheadermakefile" class="hash-link" aria-label="Doğrudan bağlantıncheadermakefile" title="Doğrudan bağlantıncheadermakefile" translate="no">​</a></h3>
+<p>Açıklama
+Eğer gerçek bir sunucu, ncheader sonucu oluşturmadan önce tüm nc dosyasını üretecektir. Yeni The new (tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih) Sahte olan davranış doğrudan ncheader sonucu yaratır.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Test Testi Test Testi |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış |
+|   <strong>Long-term Goal</strong>   | Sahte sahte yanlış |
+|   <strong>Tarih Tarihi</strong>   | 2.29.0&#x27;da eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="eddreflection"><strong>EddReflection</strong><a href="#eddreflection" class="hash-link" aria-label="Doğrudan bağlantıeddreflection" title="Doğrudan bağlantıeddreflection" translate="no">​</a></h3>
+<p>Açıklama
+Enables the use of Java Şimdiye Kadar Düşünmek ( ERDDAP Dataset) Sınıflar.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Test Testi Test Testi |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | Varsayılan olarak 2.28.0&#x27;te doğru değiştirildi, 2.25&#x27;te eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="arka-plancreatesubsettables"><strong>arka planCreateSubsetTables</strong><a href="#arka-plancreatesubsettables" class="hash-link" aria-label="Doğrudan bağlantıarka-plancreatesubsettables" title="Doğrudan bağlantıarka-plancreatesubsettables" translate="no">​</a></h3>
+<p>Açıklama
+Veri setlerini yükleme süresini geliştirmek için arka ipliklerde oluşturulacak alt masalara izin verin.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Test Testi Test Testi |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 2.29.0&#x27;da eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="usencmetadaforfiletable"><strong>useNcMetadaForFileTable</strong><a href="#usencmetadaforfiletable" class="hash-link" aria-label="Doğrudan bağlantıusencmetadaforfiletable" title="Doğrudan bağlantıusencmetadaforfiletable" translate="no">​</a></h3>
+<p>Açıklama
+Kullanımları NetCDF Metadata dosyayı görüntülemek için. Özellikle bir nc dosyası her değişken için gerçek_range içeriyorsa, dataset yükleme tüm dosyayı okumayı atabilir.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 2.29.0&#x27;da eklendi. |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="--system--core-davranış">**  System &amp; Core Davranış**<a href="#--system--core-davranış" class="hash-link" aria-label="Doğrudan bağlantı**  System &amp; Core Davranış**" title="Doğrudan bağlantı**  System &amp; Core Davranış**" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="e-posta-e-posta-e-posta-e-posta-isactive"><strong>e-posta e-posta e-posta e-posta IsActive</strong><a href="#e-posta-e-posta-e-posta-e-posta-isactive" class="hash-link" aria-label="Doğrudan bağlantıe-posta-e-posta-e-posta-e-posta-isactive" title="Doğrudan bağlantıe-posta-e-posta-e-posta-e-posta-isactive" translate="no">​</a></h3>
+<p>Açıklama
+Sistem gerçek e-posta göndermeye çalışırsa kontroller (e.g., abonelik güncelleştirmeleri veya hata raporları için) yapılandırılmış SMTP sunucusu aracılığıyla.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek (Yönetici yapılandırmasına bağlı olarak)   |
+|   <strong>Tarih Tarihi</strong>   | Mirası |</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Mantık</div><div class="admonitionContent_BuS1"><p>Bu bayrak başlangıçta dinamik olarak hesaplanmıştır. Tüm gerekli SMTP kimlik bilgilerini gerekli olmadıkça yanlış varsayılanlar (host, port, user, password, from-address) Kurulumda kesinlikle sağlanır.xml.</p></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="loaderrorsonstatuspage"><strong>LoadErrorsOnStatusPage</strong><a href="#loaderrorsonstatuspage" class="hash-link" aria-label="Doğrudan bağlantıloaderrorsonstatuspage" title="Doğrudan bağlantıloaderrorsonstatuspage" translate="no">​</a></h3>
+<p>Açıklama
+Belirli veri kümesi yük hatalarının durum sayfasında halka açık gösterilmesini belirler.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | İstenildiği gibi seti |
+|   <strong>Tarih Tarihi</strong>   | 2.25 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="varsayılan-kayıt"><strong>Varsayılan kayıt</strong><a href="#varsayılan-kayıt" class="hash-link" aria-label="Doğrudan bağlantıvarsayılan-kayıt" title="Doğrudan bağlantıvarsayılan-kayıt" translate="no">​</a></h3>
+<p>Açıklama
+Bir veri kümesinin altta yatan dosyaların dosyaların dosyalarda erişilebilir olup olmadığı için varsayılan davranışı ayarlar.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış |
+|   <strong>Long-term Goal</strong>   | Sahte sahte yanlış |
+|   <strong>Tarih Tarihi</strong>   | 2.10&#x27;da eklendi. |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-datasets"><strong>🗃️ Datasets</strong><a href="#️-datasets" class="hash-link" aria-label="Doğrudan bağlantı️-datasets" title="Doğrudan bağlantı️-datasets" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="hızlırestart"><strong>HızlıRestart</strong><a href="#hızlırestart" class="hash-link" aria-label="Doğrudan bağlantıhızlırestart" title="Doğrudan bağlantıhızlırestart" translate="no">​</a></h3>
+<p>Açıklama
+Eğer etkinleştirilirse, sistem başlangıçta veri setlerinde belirli derin doğrulama kontrollerini atlayarak daha hızlı başlamaya çalışır.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 1.38 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="etkinleştirin"><strong>etkinleştirin</strong><a href="#etkinleştirin" class="hash-link" aria-label="Doğrudan bağlantıetkinleştirin" title="Doğrudan bağlantıetkinleştirin" translate="no">​</a></h3>
+<p>Açıklama
+Enables processing the Enables processing the datasets.xml Bir dosya ile <a href="https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html" target="_blank" rel="noopener noreferrer" class="">StringSubstitutor</a> . Bu özel değerleri belirlemek dahil birçok kullanım vardır (Parola gibi) Çevre değişkenlerini kullanarak.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | İstenildiği gibi seti |
+|   <strong>Tarih Tarihi</strong>   | 2.29.0&#x27;da eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="usesaxparser"><strong>useSaxParser</strong><a href="#usesaxparser" class="hash-link" aria-label="Doğrudan bağlantıusesaxparser" title="Doğrudan bağlantıusesaxparser" translate="no">​</a></h3>
+<p>Açıklama
+Bir SAX kullanmak için iç XML parsing motoru Anahtarlar (XML için Basit API) DOM . yerine .. Bu, XInclude gibi bazı yeni gelişmiş özellikler sağlar ve <a href="https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions" target="_blank" rel="noopener noreferrer" class="">Özel ekran özellikleri</a> .</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Test Testi Test Testi |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 2.25 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="listeözel-verisets"><strong>ListeÖzel Verisets</strong><a href="#listeözel-verisets" class="hash-link" aria-label="Doğrudan bağlantılisteözel-verisets" title="Doğrudan bağlantılisteözel-verisets" translate="no">​</a></h3>
+<p>Açıklama
+Özel veri kümeleri belirlerse (Kimlik doğrulama gerektirenler) Ana veri kümesi listesinde görünür.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış |
+|   <strong>Long-term Goal</strong>   | Sahte sahte yanlış |
+|   <strong>Tarih Tarihi</strong>   | 1.20 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="siyasi-sınırlaractive"><strong>Siyasi SınırlarActive</strong><a href="#siyasi-sınırlaractive" class="hash-link" aria-label="Doğrudan bağlantısiyasi-sınırlaractive" title="Doğrudan bağlantısiyasi-sınırlaractive" translate="no">​</a></h3>
+<p>Açıklama
+Siyasi sınırların haritalarda çizilebileceği kontroller.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 1.80 yılında eklendi. |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-meta-metadata--standards">** Meta Metadata &amp; Standards**<a href="#-meta-metadata--standards" class="hash-link" aria-label="Doğrudan bağlantı** Meta Metadata &amp; Standards**" title="Doğrudan bağlantı** Meta Metadata &amp; Standards**" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="fgdcactive"><strong>fgdcActive</strong><a href="#fgdcactive" class="hash-link" aria-label="Doğrudan bağlantıfgdcactive" title="Doğrudan bağlantıfgdcactive" translate="no">​</a></h3>
+<p>Açıklama
+Genrates ve FGDC&#x27;ye hizmet eder (Federal Coğrafya Data Committee) metadata.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 1.38 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="iso19115-aktif-aktif-aktif-aktif-aktif-aktif-aktif"><strong>iso19115 Aktif Aktif Aktif Aktif Aktif Aktif Aktif</strong><a href="#iso19115-aktif-aktif-aktif-aktif-aktif-aktif-aktif" class="hash-link" aria-label="Doğrudan bağlantıiso19115-aktif-aktif-aktif-aktif-aktif-aktif-aktif" title="Doğrudan bağlantıiso19115-aktif-aktif-aktif-aktif-aktif-aktif-aktif" translate="no">​</a></h3>
+<p>Açıklama
+Genrates ve ISO 19115 metadata&#x27;ya hizmet eder.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 1.38 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sisiso19115"><strong>SisISO19115</strong><a href="#sisiso19115" class="hash-link" aria-label="Doğrudan bağlantısisiso19115" title="Doğrudan bağlantısisiso19115" translate="no">​</a></h3>
+<p>Açıklama
+Geleneksel jeneratör yerine ISO 19115 metadata oluşturmak için Apache SIS kütüphanesini kullanın. Eğer bu devam ediyor veSisISO19139 kullanmıyorsa, varsayılan IOS 19115 metadata ISO19115_3_2016 formatında olacak. Bu doğruysa varsayılan format, değiştirilmiş ISO19115_2 formatında olacaktır.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Test Testi Test Testi |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 2.26 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sisiso19139"><strong>SisISO19139</strong><a href="#sisiso19139" class="hash-link" aria-label="Doğrudan bağlantısisiso19139" title="Doğrudan bağlantısisiso19139" translate="no">​</a></h3>
+<p>Açıklama
+ISO19139_2007 metadata üretmek için Apache SIS kütüphanesini kullanın.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Test Testi Test Testi |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış |
+|   <strong>Long-term Goal</strong>   | Sahte sahte yanlış |
+|   <strong>Tarih Tarihi</strong>   | 2.29.0&#x27;da eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="jsonldactive"><strong>jsonldActive</strong><a href="#jsonldactive" class="hash-link" aria-label="Doğrudan bağlantıjsonldactive" title="Doğrudan bağlantıjsonldactive" translate="no">​</a></h3>
+<p>Açıklama
+Genrates ve JSON-LD&#x27;a hizmet eder (Linked Data) metadata.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | Mirası |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="croissantschema"><strong>CroissantSchema</strong><a href="#croissantschema" class="hash-link" aria-label="Doğrudan bağlantıcroissantschema" title="Doğrudan bağlantıcroissantschema" translate="no">​</a></h3>
+<p>Açıklama
+Genrates &quot;Croissant&quot; metadata şeması, makine öğrenimi hazırlığı için varsayılan şema olarak.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Test Testi Test Testi |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 2.28.0&#x27;te eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="değişkenlermust-haveiooscategory"><strong>DeğişkenlerMust HaveIoosCategory</strong><a href="#değişkenlermust-haveiooscategory" class="hash-link" aria-label="Doğrudan bağlantıdeğişkenlermust-haveiooscategory" title="Doğrudan bağlantıdeğişkenlermust-haveiooscategory" translate="no">​</a></h3>
+<p>Açıklama
+Değişkenlerin IOOS kategorisi özelliği olması gerekir.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | İstenildiği gibi seti |
+|   <strong>Tarih Tarihi</strong>   | Mirası |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="nccfsubsetvariables"><strong>NcCFSubsetVariables</strong><a href="#nccfsubsetvariables" class="hash-link" aria-label="Doğrudan bağlantınccfsubsetvariables" title="Doğrudan bağlantınccfsubsetvariables" translate="no">​</a></h3>
+<p>Açıklama
+Miras davranışı sadece EDDTable FromNcCFFiles datasets için alt küme değişkenler üretmekti. Bu, EDDTableFromNcCFFiles&#x27;in diğer veri setleri ile tutarlı olması için davranışını varsayılan olarak eklendi. Geleneksel otomatikliğe ihtiyacınız varsa subsetVariables Bunu etkinleştirebilirsiniz. Daha iyi çözüm eklemek olacaktır subsetVariables Veri kümesi tanımına.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Test Testi Test Testi |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış |
+|   <strong>Long-term Goal</strong>   | Sahte sahte yanlış |
+|   <strong>Tarih Tarihi</strong>   | 2.26 yılında eklendi. |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="abonelikler-ve-bildirimler"><strong>Abonelikler ve Bildirimler</strong><a href="#abonelikler-ve-bildirimler" class="hash-link" aria-label="Doğrudan bağlantıabonelikler-ve-bildirimler" title="Doğrudan bağlantıabonelikler-ve-bildirimler" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="abonelik-sistemiactive"><strong>Abonelik SistemiActive</strong><a href="#abonelik-sistemiactive" class="hash-link" aria-label="Doğrudan bağlantıabonelik-sistemiactive" title="Doğrudan bağlantıabonelik-sistemiactive" translate="no">​</a></h3>
+<p>Açıklama
+Veri set güncellemeleri için e-posta abonelik sistemi kullanılabilir.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 1.14&#x27;te eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="abonetoremoteerddapdataset"><strong>aboneToRemoteErddapDataset</strong><a href="#abonetoremoteerddapdataset" class="hash-link" aria-label="Doğrudan bağlantıabonetoremoteerddapdataset" title="Doğrudan bağlantıabonetoremoteerddapdataset" translate="no">​</a></h3>
+<p>Açıklama
+Buna izin verin ERDDAP Örneğin uzaktan abone olmak için ERDDAP Güncellemeler için datasets.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 1.70 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="updatesubsrsonfilechanges"><strong>UpdateSubsRsOnFileChanges</strong><a href="#updatesubsrsonfilechanges" class="hash-link" aria-label="Doğrudan bağlantıupdatesubsrsonfilechanges" title="Doğrudan bağlantıupdatesubsrsonfilechanges" translate="no">​</a></h3>
+<p>Açıklama
+Promosyonlar abonelik ve RSS Altta yatan dosyalar değiştiğinde güncelleştirmeler. Geleneksel davranış sadece dataset reload üzerinde güncellemeler yapmaktı (Hangi bazı sunucular haftalık olarak dayanılmaz bir şekilde vardı) .</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 2.26 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="enable-enable-enable-enable-enable-enable-mqttbroker"><strong>enable enable enable enable enable enable MqttBroker</strong><a href="#enable-enable-enable-enable-enable-enable-mqttbroker" class="hash-link" aria-label="Doğrudan bağlantıenable-enable-enable-enable-enable-enable-mqttbroker" title="Doğrudan bağlantıenable-enable-enable-enable-enable-enable-mqttbroker" translate="no">​</a></h3>
+<p>Açıklama
+mesajlaşmayı işlemek için uygulama içinde bir iç MQTT brokerine başlayın.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Test Testi Test Testi |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış |
+|   <strong>Long-term Goal</strong>   | İstenildiği gibi seti |
+|   <strong>Tarih Tarihi</strong>   | 2.29.0&#x27;da eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="yayınlanmamış"><strong>Yayınlanmamış</strong><a href="#yayınlanmamış" class="hash-link" aria-label="Doğrudan bağlantıyayınlanmamış" title="Doğrudan bağlantıyayınlanmamış" translate="no">​</a></h3>
+<p>Açıklama
+Enables yayını bildirimleri (Dataset gibi değişiklikler) MQTT brokerine.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Test Testi Test Testi |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış |
+|   <strong>Long-term Goal</strong>   | İstenildiği gibi seti |
+|   <strong>Tarih Tarihi</strong>   | 2.29.0&#x27;da eklendi. |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="--web-headers-configuration">**  Web Headers /Configuration**<a href="#--web-headers-configuration" class="hash-link" aria-label="Doğrudan bağlantı**  Web Headers /Configuration**" title="Doğrudan bağlantı**  Web Headers /Configuration**" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="headersforfor-url"><strong>HeadersForFor Url</strong><a href="#headersforfor-url" class="hash-link" aria-label="Doğrudan bağlantıheadersforfor-url" title="Doğrudan bağlantıheadersforfor-url" translate="no">​</a></h3>
+<p>Açıklama
+HTTP başlıkları kullanarak istek URL ayrıntılarını belirlemek için izinler (Yararlı arka proxy) .</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | Varsayılan olarak 2.28.0&#x27;te doğru olarak değiştirildi, 2.27.0&#x27;da eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="enable-enable-enable-enable-enable-enable-cors"><strong>enable enable enable enable enable enable Cors</strong><a href="#enable-enable-enable-enable-enable-enable-cors" class="hash-link" aria-label="Doğrudan bağlantıenable-enable-enable-enable-enable-enable-cors" title="Doğrudan bağlantıenable-enable-enable-enable-enable-enable-cors" translate="no">​</a></h3>
+<p>Açıklama
+Enables Cross-Origin Resource Paylaşım (KURUMSAL) HTTP yanıtlarına dikkat edin.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış |
+|   <strong>Long-term Goal</strong>   | İstenildiği gibi seti |
+|   <strong>Tarih Tarihi</strong>   | 2.26 yılında eklendi. |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="--arama">**  Arama**<a href="#--arama" class="hash-link" aria-label="Doğrudan bağlantı**  Arama**" title="Doğrudan bağlantı**  Arama**" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lucenearamühendis"><strong>LuceneAraMühendis</strong><a href="#lucenearamühendis" class="hash-link" aria-label="Doğrudan bağlantılucenearamühendis" title="Doğrudan bağlantılucenearamühendis" translate="no">​</a></h3>
+<p>Açıklama
+Apache Lucene&#x27;yi kullanmak için iç arama motoruna işaret eder.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Test Testi Test Testi |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış |
+|   <strong>Long-term Goal</strong>   | ?? |
+|   <strong>Tarih Tarihi</strong>   | Mirası |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-hizmetler-ve-protokoller"><strong>📡 Hizmetler ve Protokoller</strong><a href="#-hizmetler-ve-protokoller" class="hash-link" aria-label="Doğrudan bağlantı-hizmetler-ve-protokoller" title="Doğrudan bağlantı-hizmetler-ve-protokoller" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dosyalarıactivee"><strong>dosyalarıActivee</strong><a href="#dosyalarıactivee" class="hash-link" aria-label="Doğrudan bağlantıdosyalarıactivee" title="Doğrudan bağlantıdosyalarıactivee" translate="no">​</a></h3>
+<p>Açıklama
+Enables the &quot;Files&quot; browser view for datasets that support it.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 1.58 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dönüştürücüleractive"><strong>dönüştürücülerActive</strong><a href="#dönüştürücüleractive" class="hash-link" aria-label="Doğrudan bağlantıdönüştürücüleractive" title="Doğrudan bağlantıdönüştürücüleractive" translate="no">​</a></h3>
+<p>Açıklama
+UI&#x27;deki enables dönüştürme araçları.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 1.44 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slidesorteractive"><strong>slideSorterActive</strong><a href="#slidesorteractive" class="hash-link" aria-label="Doğrudan bağlantıslidesorteractive" title="Doğrudan bağlantıslidesorteractive" translate="no">​</a></h3>
+<p>Açıklama
+Enables the Slide Sorter.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 1.44 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="verilerproviderformactive"><strong>VerilerProviderFormActive</strong><a href="#verilerproviderformactive" class="hash-link" aria-label="Doğrudan bağlantıverilerproviderformactive" title="Doğrudan bağlantıverilerproviderformactive" translate="no">​</a></h3>
+<p>Açıklama
+Form veri sağlayıcılarının metadata&#x27;ya girmesine izin verir.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | Mirası |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="outofdatedatasetsactive"><strong>outOfDateDatasetsActive</strong><a href="#outofdatedatasetsactive" class="hash-link" aria-label="Doğrudan bağlantıoutofdatedatasetsactive" title="Doğrudan bağlantıoutofdatedatasetsactive" translate="no">​</a></h3>
+<p>Açıklama
+Mevcut veri kümelerinin raporlanması.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 1.82&#x27;de eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="wmsactive"><strong>wmsActive</strong><a href="#wmsactive" class="hash-link" aria-label="Doğrudan bağlantıwmsactive" title="Doğrudan bağlantıwmsactive" translate="no">​</a></h3>
+<p>Açıklama
+Web Map Service ( WMS ) arayüz.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | 1.44 yılında eklendi. |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="wmsclientactive"><strong>wmsClientActive</strong><a href="#wmsclientactive" class="hash-link" aria-label="Doğrudan bağlantıwmsclientactive" title="Doğrudan bağlantıwmsclientactive" translate="no">​</a></h3>
+<p>Açıklama
+İçilebilirler WMS müşteri özellikleri.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | Stable Stable |
+|   <strong>Mevcut Tembel</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |
+|   <strong>Tarih Tarihi</strong>   | Mirası |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="geoservicesrestactive"><strong>geoServicesRestActive</strong><a href="#geoservicesrestactive" class="hash-link" aria-label="Doğrudan bağlantıgeoservicesrestactive" title="Doğrudan bağlantıgeoservicesrestactive" translate="no">​</a></h3>
+<p>Açıklama
+Enables the RESTful Geospatial Hizmetleri için arayüz. Tamamen uygulanmadı.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | İnşaatın Altında |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış (Hardcoded)   |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="wcsactive"><strong>wcsActive</strong><a href="#wcsactive" class="hash-link" aria-label="Doğrudan bağlantıwcsactive" title="Doğrudan bağlantıwcsactive" translate="no">​</a></h3>
+<p>Açıklama
+Web Coverage Service ( WCS ) arayüz. Tamamen uygulanmadı.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | İnşaatın Altında |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış (Hardcoded)   |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sosactive"><strong>SosActive</strong><a href="#sosactive" class="hash-link" aria-label="Doğrudan bağlantısosactive" title="Doğrudan bağlantısosactive" translate="no">​</a></h3>
+<p>Açıklama
+Sensör Gözlem Servisi ( SOS ) arayüz.</p>
+<p>| Emlak | Detaylar |
+| : | : |
+|   <strong>Yaşam döngüsü</strong>   | İnşaatın Altında |
+|   <strong>Mevcut Tembel</strong>   | Sahte sahte yanlış (Hardcoded)   |
+|   <strong>Long-term Goal</strong>   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek |</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/erddap/erddap.github.io/tree/main/docs/server-admin/feature-flags.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Bu sayfayı Düzenle</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs sayfalar"><a class="pagination-nav__link pagination-nav__link--prev" href="/tr/docs/server-admin/prometheus"><div class="pagination-nav__sublabel">Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki Önceki</div><div class="pagination-nav__label">Prometheus</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/tr/docs/server-admin/mqtt-integration"><div class="pagination-nav__sublabel">Sonraki Sonraki Sonraki Sonraki Sonraki Sonraki Sonraki Sonraki</div><div class="pagination-nav__label">ERDDAP MQTT Entegrasyonu</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#bayrak-lifecycle-legend" class="table-of-contents__link toc-highlight"><strong>Bayrak Lifecycle Legend</strong></a></li><li><a href="#--testlerde-optimizasyonlar" class="table-of-contents__link toc-highlight">**  Testlerde Optimizasyonlar**</a><ul><li><a href="#touchthread-only-whenitems" class="table-of-contents__link toc-highlight"><strong>touchThread Only WhenItems</strong></a></li><li><a href="#görevcacheclear" class="table-of-contents__link toc-highlight"><strong>GörevCacheClear</strong></a></li><li><a href="#ncheadermakefile" class="table-of-contents__link toc-highlight"><strong>ncHeaderMakeFile</strong></a></li><li><a href="#eddreflection" class="table-of-contents__link toc-highlight"><strong>EddReflection</strong></a></li><li><a href="#arka-plancreatesubsettables" class="table-of-contents__link toc-highlight"><strong>arka planCreateSubsetTables</strong></a></li><li><a href="#usencmetadaforfiletable" class="table-of-contents__link toc-highlight"><strong>useNcMetadaForFileTable</strong></a></li></ul></li><li><a href="#--system--core-davranış" class="table-of-contents__link toc-highlight">**  System &amp; Core Davranış**</a><ul><li><a href="#e-posta-e-posta-e-posta-e-posta-isactive" class="table-of-contents__link toc-highlight"><strong>e-posta e-posta e-posta e-posta IsActive</strong></a></li><li><a href="#loaderrorsonstatuspage" class="table-of-contents__link toc-highlight"><strong>LoadErrorsOnStatusPage</strong></a></li><li><a href="#varsayılan-kayıt" class="table-of-contents__link toc-highlight"><strong>Varsayılan kayıt</strong></a></li></ul></li><li><a href="#️-datasets" class="table-of-contents__link toc-highlight"><strong>🗃️ Datasets</strong></a><ul><li><a href="#hızlırestart" class="table-of-contents__link toc-highlight"><strong>HızlıRestart</strong></a></li><li><a href="#etkinleştirin" class="table-of-contents__link toc-highlight"><strong>etkinleştirin</strong></a></li><li><a href="#usesaxparser" class="table-of-contents__link toc-highlight"><strong>useSaxParser</strong></a></li><li><a href="#listeözel-verisets" class="table-of-contents__link toc-highlight"><strong>ListeÖzel Verisets</strong></a></li><li><a href="#siyasi-sınırlaractive" class="table-of-contents__link toc-highlight"><strong>Siyasi SınırlarActive</strong></a></li></ul></li><li><a href="#-meta-metadata--standards" class="table-of-contents__link toc-highlight">** Meta Metadata &amp; Standards**</a><ul><li><a href="#fgdcactive" class="table-of-contents__link toc-highlight"><strong>fgdcActive</strong></a></li><li><a href="#iso19115-aktif-aktif-aktif-aktif-aktif-aktif-aktif" class="table-of-contents__link toc-highlight"><strong>iso19115 Aktif Aktif Aktif Aktif Aktif Aktif Aktif</strong></a></li><li><a href="#sisiso19115" class="table-of-contents__link toc-highlight"><strong>SisISO19115</strong></a></li><li><a href="#sisiso19139" class="table-of-contents__link toc-highlight"><strong>SisISO19139</strong></a></li><li><a href="#jsonldactive" class="table-of-contents__link toc-highlight"><strong>jsonldActive</strong></a></li><li><a href="#croissantschema" class="table-of-contents__link toc-highlight"><strong>CroissantSchema</strong></a></li><li><a href="#değişkenlermust-haveiooscategory" class="table-of-contents__link toc-highlight"><strong>DeğişkenlerMust HaveIoosCategory</strong></a></li><li><a href="#nccfsubsetvariables" class="table-of-contents__link toc-highlight"><strong>NcCFSubsetVariables</strong></a></li></ul></li><li><a href="#abonelikler-ve-bildirimler" class="table-of-contents__link toc-highlight"><strong>Abonelikler ve Bildirimler</strong></a><ul><li><a href="#abonelik-sistemiactive" class="table-of-contents__link toc-highlight"><strong>Abonelik SistemiActive</strong></a></li><li><a href="#abonetoremoteerddapdataset" class="table-of-contents__link toc-highlight"><strong>aboneToRemoteErddapDataset</strong></a></li><li><a href="#updatesubsrsonfilechanges" class="table-of-contents__link toc-highlight"><strong>UpdateSubsRsOnFileChanges</strong></a></li><li><a href="#enable-enable-enable-enable-enable-enable-mqttbroker" class="table-of-contents__link toc-highlight"><strong>enable enable enable enable enable enable MqttBroker</strong></a></li><li><a href="#yayınlanmamış" class="table-of-contents__link toc-highlight"><strong>Yayınlanmamış</strong></a></li></ul></li><li><a href="#--web-headers-configuration" class="table-of-contents__link toc-highlight">**  Web Headers /Configuration**</a><ul><li><a href="#headersforfor-url" class="table-of-contents__link toc-highlight"><strong>HeadersForFor Url</strong></a></li><li><a href="#enable-enable-enable-enable-enable-enable-cors" class="table-of-contents__link toc-highlight"><strong>enable enable enable enable enable enable Cors</strong></a></li></ul></li><li><a href="#--arama" class="table-of-contents__link toc-highlight">**  Arama**</a><ul><li><a href="#lucenearamühendis" class="table-of-contents__link toc-highlight"><strong>LuceneAraMühendis</strong></a></li></ul></li><li><a href="#-hizmetler-ve-protokoller" class="table-of-contents__link toc-highlight"><strong>📡 Hizmetler ve Protokoller</strong></a><ul><li><a href="#dosyalarıactivee" class="table-of-contents__link toc-highlight"><strong>dosyalarıActivee</strong></a></li><li><a href="#dönüştürücüleractive" class="table-of-contents__link toc-highlight"><strong>dönüştürücülerActive</strong></a></li><li><a href="#slidesorteractive" class="table-of-contents__link toc-highlight"><strong>slideSorterActive</strong></a></li><li><a href="#verilerproviderformactive" class="table-of-contents__link toc-highlight"><strong>VerilerProviderFormActive</strong></a></li><li><a href="#outofdatedatasetsactive" class="table-of-contents__link toc-highlight"><strong>outOfDateDatasetsActive</strong></a></li><li><a href="#wmsactive" class="table-of-contents__link toc-highlight"><strong>wmsActive</strong></a></li><li><a href="#wmsclientactive" class="table-of-contents__link toc-highlight"><strong>wmsClientActive</strong></a></li><li><a href="#geoservicesrestactive" class="table-of-contents__link toc-highlight"><strong>geoServicesRestActive</strong></a></li><li><a href="#wcsactive" class="table-of-contents__link toc-highlight"><strong>wcsActive</strong></a></li><li><a href="#sosactive" class="table-of-contents__link toc-highlight"><strong>SosActive</strong></a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/tr/docs/intro">Dokümantasyon</a></li><li class="footer__item"><a class="footer__link-item" href="/tr/docs/contributing">katkıda bulunmak</a></li><li class="footer__item"><a class="footer__link-item" href="/tr/license">Lisans Lisans Lisans Lisans Lisans Lisans Lisans</a></li><li class="footer__item"><a class="footer__link-item" href="/tr/changes">Değişiklikler Değişiklikler Değişiklikler</a></li><li class="footer__item"><a class="footer__link-item" href="/tr/cloud">Bulut Bulut Bulut</a></li><li class="footer__item"><a class="footer__link-item" href="/tr/docs/intro#support">Destek/İletişim</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Topluluk Topluluğu</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/tr/governance">Yönetim Yönetimi</a></li><li class="footer__item"><a class="footer__link-item" href="/tr/technical-board">Technical Board</a></li><li class="footer__item"><a href="https://groups.google.com/g/erddap" target="_blank" rel="noopener noreferrer" class="footer__link-item">ERDDAP™Kullanıcı Grubu<svg width="13.5" height="13.5" aria-label="(Yeni sekmede açılır)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://groups.google.com/g/erddap-announce" target="_blank" rel="noopener noreferrer" class="footer__link-item">ERDDAP™Duyuru<svg width="13.5" height="13.5" aria-label="(Yeni sekmede açılır)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/ERDDAP/erddap/" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(Yeni sekmede açılır)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/tr/credits">Krediler</a></li><li class="footer__item"><a class="footer__link-item" href="/tr/acknowledgements">Tanıklıklar</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Brought to you Tarafından</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.noaa.gov" target="_blank" rel="noopener noreferrer" class="footer__link-item">NOAA<svg width="13.5" height="13.5" aria-label="(Yeni sekmede açılır)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.fisheries.noaa.gov" target="_blank" rel="noopener noreferrer" class="footer__link-item">NMFS<svg width="13.5" height="13.5" aria-label="(Yeni sekmede açılır)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center" target="_blank" rel="noopener noreferrer" class="footer__link-item">SWFSC<svg width="13.5" height="13.5" aria-label="(Yeni sekmede açılır)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.fisheries.noaa.gov/about/environmental-research-division-southwest-fisheries-science-center" target="_blank" rel="noopener noreferrer" class="footer__link-item">ERD<svg width="13.5" height="13.5" aria-label="(Yeni sekmede açılır)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">ERDDAP™, Version 2.28.1. Copyright © 2025ERDDAP™. Docusaurus ile inşa edilmiştir.</div></div></div></footer></div>
+</body>
+</html>

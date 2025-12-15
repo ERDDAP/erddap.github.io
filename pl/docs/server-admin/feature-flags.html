@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="pl" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-server-admin/feature-flags" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Flagi | ERDDAP™ Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://erddap.github.io/pl/img/noaa_simple.gif"><meta data-rh="true" name="twitter:image" content="https://erddap.github.io/pl/img/noaa_simple.gif"><meta data-rh="true" property="og:url" content="https://erddap.github.io/pl/docs/server-admin/feature-flags"><meta data-rh="true" property="og:locale" content="pl"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" property="og:locale:alternate" content="bn"><meta data-rh="true" property="og:locale:alternate" content="zh"><meta data-rh="true" property="og:locale:alternate" content="zt"><meta data-rh="true" property="og:locale:alternate" content="cs"><meta data-rh="true" property="og:locale:alternate" content="da"><meta data-rh="true" property="og:locale:alternate" content="nl"><meta data-rh="true" property="og:locale:alternate" content="fi"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" property="og:locale:alternate" content="de"><meta data-rh="true" property="og:locale:alternate" content="el"><meta data-rh="true" property="og:locale:alternate" content="hi"><meta data-rh="true" property="og:locale:alternate" content="hu"><meta data-rh="true" property="og:locale:alternate" content="id"><meta data-rh="true" property="og:locale:alternate" content="ga"><meta data-rh="true" property="og:locale:alternate" content="it"><meta data-rh="true" property="og:locale:alternate" content="ja"><meta data-rh="true" property="og:locale:alternate" content="ko"><meta data-rh="true" property="og:locale:alternate" content="nb"><meta data-rh="true" property="og:locale:alternate" content="pt"><meta data-rh="true" property="og:locale:alternate" content="ro"><meta data-rh="true" property="og:locale:alternate" content="ru"><meta data-rh="true" property="og:locale:alternate" content="es"><meta data-rh="true" property="og:locale:alternate" content="sv"><meta data-rh="true" property="og:locale:alternate" content="tl"><meta data-rh="true" property="og:locale:alternate" content="th"><meta data-rh="true" property="og:locale:alternate" content="tr"><meta data-rh="true" property="og:locale:alternate" content="uk"><meta data-rh="true" property="og:locale:alternate" content="ur"><meta data-rh="true" name="docusaurus_locale" content="pl"><meta data-rh="true" name="docsearch:language" content="pl"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Flagi | ERDDAP™ Documentation"><meta data-rh="true" name="description" content="Ta strona dokumentuje flagi konfiguracyjne dostępne w systemie. Flagi te kontrolują różne funkcje, zdolności eksperymentalne i zachowania dziedziczne."><meta data-rh="true" property="og:description" content="Ta strona dokumentuje flagi konfiguracyjne dostępne w systemie. Flagi te kontrolują różne funkcje, zdolności eksperymentalne i zachowania dziedziczne."><link data-rh="true" rel="icon" href="/pl/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://erddap.github.io/pl/docs/server-admin/feature-flags"><link data-rh="true" rel="alternate" href="https://erddap.github.io/docs/server-admin/feature-flags" hreflang="en"><link data-rh="true" rel="alternate" href="https://erddap.github.io/bn/docs/server-admin/feature-flags" hreflang="bn"><link data-rh="true" rel="alternate" href="https://erddap.github.io/zh/docs/server-admin/feature-flags" hreflang="zh"><link data-rh="true" rel="alternate" href="https://erddap.github.io/zt/docs/server-admin/feature-flags" hreflang="zt"><link data-rh="true" rel="alternate" href="https://erddap.github.io/cs/docs/server-admin/feature-flags" hreflang="cs"><link data-rh="true" rel="alternate" href="https://erddap.github.io/da/docs/server-admin/feature-flags" hreflang="da"><link data-rh="true" rel="alternate" href="https://erddap.github.io/nl/docs/server-admin/feature-flags" hreflang="nl"><link data-rh="true" rel="alternate" href="https://erddap.github.io/fi/docs/server-admin/feature-flags" hreflang="fi"><link data-rh="true" rel="alternate" href="https://erddap.github.io/fr/docs/server-admin/feature-flags" hreflang="fr"><link data-rh="true" rel="alternate" href="https://erddap.github.io/de/docs/server-admin/feature-flags" hreflang="de"><link data-rh="true" rel="alternate" href="https://erddap.github.io/el/docs/server-admin/feature-flags" hreflang="el"><link data-rh="true" rel="alternate" href="https://erddap.github.io/hi/docs/server-admin/feature-flags" hreflang="hi"><link data-rh="true" rel="alternate" href="https://erddap.github.io/hu/docs/server-admin/feature-flags" hreflang="hu"><link data-rh="true" rel="alternate" href="https://erddap.github.io/id/docs/server-admin/feature-flags" hreflang="id"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ga/docs/server-admin/feature-flags" hreflang="ga"><link data-rh="true" rel="alternate" href="https://erddap.github.io/it/docs/server-admin/feature-flags" hreflang="it"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ja/docs/server-admin/feature-flags" hreflang="ja"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ko/docs/server-admin/feature-flags" hreflang="ko"><link data-rh="true" rel="alternate" href="https://erddap.github.io/nb/docs/server-admin/feature-flags" hreflang="nb"><link data-rh="true" rel="alternate" href="https://erddap.github.io/pl/docs/server-admin/feature-flags" hreflang="pl"><link data-rh="true" rel="alternate" href="https://erddap.github.io/pt/docs/server-admin/feature-flags" hreflang="pt"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ro/docs/server-admin/feature-flags" hreflang="ro"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ru/docs/server-admin/feature-flags" hreflang="ru"><link data-rh="true" rel="alternate" href="https://erddap.github.io/es/docs/server-admin/feature-flags" hreflang="es"><link data-rh="true" rel="alternate" href="https://erddap.github.io/sv/docs/server-admin/feature-flags" hreflang="sv"><link data-rh="true" rel="alternate" href="https://erddap.github.io/tl/docs/server-admin/feature-flags" hreflang="tl"><link data-rh="true" rel="alternate" href="https://erddap.github.io/th/docs/server-admin/feature-flags" hreflang="th"><link data-rh="true" rel="alternate" href="https://erddap.github.io/tr/docs/server-admin/feature-flags" hreflang="tr"><link data-rh="true" rel="alternate" href="https://erddap.github.io/uk/docs/server-admin/feature-flags" hreflang="uk"><link data-rh="true" rel="alternate" href="https://erddap.github.io/ur/docs/server-admin/feature-flags" hreflang="ur"><link data-rh="true" rel="alternate" href="https://erddap.github.io/docs/server-admin/feature-flags" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Administracja serwera","item":"https://erddap.github.io/pl/docs/category/server-administration"},{"@type":"ListItem","position":2,"name":"Flagi","item":"https://erddap.github.io/pl/docs/server-admin/feature-flags"}]}</script><link rel="stylesheet" href="/pl/assets/css/styles.c47a40ba.css">
+<script src="/pl/assets/js/runtime~main.665d6993.js" defer="defer"></script>
+<script src="/pl/assets/js/main.381d9322.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/pl/img/noaab.png"><div role="region" aria-label="Przejdź do głównej treści"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Przejdź do głównej treści</a></div><nav aria-label="Główne" class="theme-layout-navbar navbar navbar--fixed-top navbar--dark"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Przełączanie paska nawigacyjnego" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/pl/"><div class="navbar__logo"><img src="/pl/img/noaab.png" alt="NOAAlogo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/pl/img/noaab.png" alt="NOAAlogo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">ERDDAP™</b></a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>Polski</a><ul class="dropdown__menu"><li><a href="/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en">English</a></li><li><a href="/bn/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="bn">বাংলা</a></li><li><a href="/zh/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="zh">中文</a></li><li><a href="/zt/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="zt">Zt</a></li><li><a href="/cs/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="cs">Čeština</a></li><li><a href="/da/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="da">Dansk</a></li><li><a href="/nl/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="nl">Nederlands</a></li><li><a href="/fi/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="fi">Suomi</a></li><li><a href="/fr/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="fr">Français</a></li><li><a href="/de/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="de">Deutsch</a></li><li><a href="/el/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="el">Ελληνικά</a></li><li><a href="/hi/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="hi">हिन्दी</a></li><li><a href="/hu/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="hu">Magyar</a></li><li><a href="/id/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="id">Indonesia</a></li><li><a href="/ga/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ga">Gaeilge</a></li><li><a href="/it/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="it">Italiano</a></li><li><a href="/ja/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ja">日本語</a></li><li><a href="/ko/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ko">한국어</a></li><li><a href="/nb/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="nb">Norsk bokmål</a></li><li><a href="/pl/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="pl">Polski</a></li><li><a href="/pt/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="pt">Português</a></li><li><a href="/ro/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ro">Română</a></li><li><a href="/ru/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ru">Русский</a></li><li><a href="/es/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="es">Español</a></li><li><a href="/sv/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="sv">Svenska</a></li><li><a href="/tl/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="tl">Filipino</a></li><li><a href="/th/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="th">ไทย</a></li><li><a href="/tr/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="tr">Türkçe</a></li><li><a href="/uk/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="uk">Українська</a></li><li><a href="/ur/docs/server-admin/feature-flags" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ur">اردو</a></li></ul></div><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/pl/docs/intro">Dokumenty</a><a class="navbar__item navbar__link" href="/pl/governance">Zarządzanie</a><a class="navbar__item navbar__link" href="/pl/cloud">Chmura</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Szukaj" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><a href="https://github.com/erddap/erddap" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(otwiera się w nowej zakładce)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS darkNavbarColorModeToggle_X3D1" type="button" disabled="" title="tryb systemowy" aria-label="Przełączanie pomiędzy trybem ciemnym a światłem (obecnietryb systemowy)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Przewiń do góry" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Pasek boczny dokumentów" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/pl/docs/intro"><span title="Intro dokumentacji" class="linkLabel_WmDU">Intro dokumentacji</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/pl/docs/category/server-administration"><span title="Administracja serwera" class="categoryLinkLabel_W154">Administracja serwera</span></a><button aria-label="Kategoria boczna Zwiń &#x27;Administracja serwera&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/pl/docs/category/admin-tips"><span title="Admin Porady" class="categoryLinkLabel_W154">Admin Porady</span></a><button aria-label="Rozszerz pasek boczny &#x27;Admin Porady&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/pl/docs/server-admin/deploy-install"><span title="Instalacja" class="linkLabel_WmDU">Instalacja</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/pl/docs/server-admin/deploy-update"><span title="Aktualizacja" class="linkLabel_WmDU">Aktualizacja</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/pl/docs/server-admin/datasets"><span title="Praca z datasets.xml Plik" class="linkLabel_WmDU">Praca z datasets.xml Plik</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/pl/docs/server-admin/additional-information"><span title="Dodatkowe informacje" class="linkLabel_WmDU">Dodatkowe informacje</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/pl/docs/server-admin/scaling"><span title="Skalowanie" class="linkLabel_WmDU">Skalowanie</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/pl/docs/server-admin/EDDTableFromEML"><span title="EDDTableFromEML" class="linkLabel_WmDU">EDDTableFromEML</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/pl/docs/server-admin/display-info"><span title="wyświetlacz Informacja oraz displayAtribution Tags" class="linkLabel_WmDU">wyświetlacz Informacja oraz displayAtribution Tags</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/pl/docs/server-admin/localized-metadata"><span title="Lokalizowane metadane" class="linkLabel_WmDU">Lokalizowane metadane</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/pl/docs/server-admin/prometheus"><span title="Prometeusz" class="linkLabel_WmDU">Prometeusz</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/pl/docs/server-admin/feature-flags"><span title="Flagi" class="linkLabel_WmDU">Flagi</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/pl/docs/server-admin/mqtt-integration"><span title="ERDDAP Integracja MQTT" class="linkLabel_WmDU">ERDDAP Integracja MQTT</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/pl/docs/category/contributing"><span title="Wkład" class="categoryLinkLabel_W154">Wkład</span></a><button aria-label="Rozszerz pasek boczny &#x27;Wkład&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/pl/docs/dokka"><span title="Dokumentacja kodów skryptów dataset" class="categoryLinkLabel_W154">Dokumentacja kodów skryptów dataset</span></a><button aria-label="Rozszerz pasek boczny &#x27;Dokumentacja kodów skryptów dataset&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/pl/docs/category/user"><span title="Użytkownik" class="categoryLinkLabel_W154">Użytkownik</span></a><button aria-label="Rozszerz pasek boczny &#x27;Użytkownik&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Okruszki chleba"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Strona główna" class="breadcrumbs__link" href="/pl/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/pl/docs/category/server-administration"><span>Administracja serwera</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Flagi</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">Na tej stronie</button></div><div class="theme-doc-markdown markdown"><header><h1>Flagi</h1></header>
+<p>Ta strona dokumentuje flagi konfiguracyjne dostępne w systemie. Flagi te kontrolują różne funkcje, zdolności eksperymentalne i zachowania dziedziczne.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="flaga-lifecycle-legenda"><strong>Flaga Lifecycle Legenda</strong><a href="#flaga-lifecycle-legenda" class="hash-link" aria-label="Bezpośredni link doflaga-lifecycle-legenda" title="Bezpośredni link doflaga-lifecycle-legenda" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Stabilny:</strong> Przeznaczone jako długoterminowe flagi, aby umożliwić administratorom zmianę funkcjonalności. Bezpieczna do produkcji.</li>
+<li class=""><strong>Badanie:</strong> Funkcje, które są gotowe do testowania. Będą one albo ukończyć do &quot;Stabilny&quot; lub ostatecznie być ustawione do ich wartości docelowej i usunąć flagę.</li>
+<li class=""><strong>W ramach budowy:</strong> Obecnie zaszyfrowane do false w kodzie, niezależnie od konfiguracji. Funkcja nie jest jeszcze gotowa do użycia.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="uzasadnienie-optymalizacja-badań"><strong>Uzasadnienie Optymalizacja badań</strong><a href="#uzasadnienie-optymalizacja-badań" class="hash-link" aria-label="Bezpośredni link douzasadnienie-optymalizacja-badań" title="Bezpośredni link douzasadnienie-optymalizacja-badań" translate="no">​</a></h2>
+<p>Są to flagi, które prawdopodobnie zostaną usunięte w przyszłości.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="touchthreadonly-when-enelements"><strong>touchThreadOnly When enElements</strong><a href="#touchthreadonly-when-enelements" class="hash-link" aria-label="Bezpośredni link dotouchthreadonly-when-enelements" title="Bezpośredni link dotouchthreadonly-when-enelements" translate="no">​</a></h3>
+<p>Opis
+Flaga optymalizacji. Jeśli to prawda, wątek dotykowy działa tylko wtedy, gdy są elementy do przetworzenia.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Badanie |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 2.29.0 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="taskcacheclear"><strong>taskCacheClear</strong><a href="#taskcacheclear" class="hash-link" aria-label="Bezpośredni link dotaskcacheclear" title="Bezpośredni link dotaskcacheclear" translate="no">​</a></h3>
+<p>Opis
+Włącza zadanie tła, które usuwa wygasłe elementy z pamięci podręcznej.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 2.27.0 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="plik-ncheadermakename"><strong>Plik ncHeaderMakeName</strong><a href="#plik-ncheadermakename" class="hash-link" aria-label="Bezpośredni link doplik-ncheadermakename" title="Bezpośredni link doplik-ncheadermakename" translate="no">​</a></h3>
+<p>Opis
+Jeśli to prawda, serwer wygeneruje cały plik nc przed utworzeniem ncheadera. Nowy (preferowane) zachowanie, gdy false jest bezpośrednio generować wynik ntaniej.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Badanie |
+|   <strong>Aktualny domyślny</strong>   | false |
+|   <strong>Cel długoterminowy</strong>   | false |
+|   <strong>Historia</strong>   | Dodano w 2.29.0 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="useeddreflection"><strong>useEddReflection</strong><a href="#useeddreflection" class="hash-link" aria-label="Bezpośredni link douseeddreflection" title="Bezpośredni link douseeddreflection" translate="no">​</a></h3>
+<p>Opis
+Umożliwia użycie Java Refleksja do zahamowania EDD ( ERDDAP Zestaw danych) zajęcia.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Badanie |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Domyślnie zmienione na prawdziwe w 2.28.0, dodane w 2.25 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="backgroundcreatesubsettablice"><strong>backgroundCreateSubsetTablice</strong><a href="#backgroundcreatesubsettablice" class="hash-link" aria-label="Bezpośredni link dobackgroundcreatesubsettablice" title="Bezpośredni link dobackgroundcreatesubsettablice" translate="no">​</a></h3>
+<p>Opis
+Pozwala na tworzenie tabel podzakreślonych w wątkach tła, aby poprawić czas wczytywania zbiorów danych.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Badanie |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 2.29.0 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-ncmetadataforfiletable"><strong>User NcMetadataForFileTable</strong><a href="#user-ncmetadataforfiletable" class="hash-link" aria-label="Bezpośredni link douser-ncmetadataforfiletable" title="Bezpośredni link douser-ncmetadataforfiletable" translate="no">​</a></h3>
+<p>Opis
+Wykorzystanie NetCDF metadane do popularyzacji widoku tabeli plików. W szczególności jeśli plik nc zawiera rzeczywiste _ range dla każdej zmiennej, wczytanie zbioru danych może pominąć odczytanie całego pliku.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 2.29.0 |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="system--zachowanie-rdzenia"><strong>System &amp; zachowanie rdzenia</strong><a href="#system--zachowanie-rdzenia" class="hash-link" aria-label="Bezpośredni link dosystem--zachowanie-rdzenia" title="Bezpośredni link dosystem--zachowanie-rdzenia" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="e-mail-isactive"><strong>e-mail Isactive</strong><a href="#e-mail-isactive" class="hash-link" aria-label="Bezpośredni link doe-mail-isactive" title="Bezpośredni link doe-mail-isactive" translate="no">​</a></h3>
+<p>Opis
+Kontroluje, czy system próbuje wysłać faktyczne wiadomości e-mail (np. dla aktualizacji subskrypcji lub raportów błędów) za pośrednictwem skonfigurowanego serwera SMTP.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | false |
+|   <strong>Cel długoterminowy</strong>   | prawda (Zależny od konfiguracji administratora)   |
+|   <strong>Historia</strong>   | Dziedzictwo |</p>
+<p>::: info Logika
+Flaga ta jest obliczana dynamicznie przy starcie. Domyślnie false, chyba że wszystkie wymagane referencje SMTP (host, port, użytkownik, hasło, adres) są ściśle przewidziane w setup.xml.
+::</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="showloaderrorsonstatuspage"><strong>showLoadErrorsOnStatusPage</strong><a href="#showloaderrorsonstatuspage" class="hash-link" aria-label="Bezpośredni link doshowloaderrorsonstatuspage" title="Bezpośredni link doshowloaderrorsonstatuspage" translate="no">​</a></h3>
+<p>Opis
+Określa, czy szczegółowe błędy obciążenia zbioru danych są wyświetlane publicznie na stronie statusu.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | ustawione zgodnie z życzeniem |
+|   <strong>Historia</strong>   | Dodano w 2.25 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="defaultaccessibleviafiles"><strong>defaultAccessibleViaFiles</strong><a href="#defaultaccessibleviafiles" class="hash-link" aria-label="Bezpośredni link dodefaultaccessibleviafiles" title="Bezpośredni link dodefaultaccessibleviafiles" translate="no">​</a></h3>
+<p>Opis
+Ustawia domyślne zachowanie dla tego, czy podstawowe pliki zbioru danych mogą być dostępne w serwisie plików.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | false |
+|   <strong>Cel długoterminowy</strong>   | false |
+|   <strong>Historia</strong>   | Dodano w 2.10 |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ustawienia-datasety"><strong>Ustawienia Datasety</strong><a href="#ustawienia-datasety" class="hash-link" aria-label="Bezpośredni link doustawienia-datasety" title="Bezpośredni link doustawienia-datasety" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="szybkie-wznowienie"><strong>szybkie wznowienie</strong><a href="#szybkie-wznowienie" class="hash-link" aria-label="Bezpośredni link doszybkie-wznowienie" title="Bezpośredni link doszybkie-wznowienie" translate="no">​</a></h3>
+<p>Opis
+Jeśli jest to włączone, system stara się rozpocząć szybciej, pomijając niektóre głębokie kontrole walidacji zbiorów danych podczas inicjalizacji.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 1.38 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="enableenvparsing"><strong>enableEnvParsing</strong><a href="#enableenvparsing" class="hash-link" aria-label="Bezpośredni link doenableenvparsing" title="Bezpośredni link doenableenvparsing" translate="no">​</a></h3>
+<p>Opis
+Umożliwia przetwarzanie datasets.xml plik z <a href="https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html" target="_blank" rel="noopener noreferrer" class="">StringSubstitutor</a> . Ma to wiele zastosowań, w tym ustalanie wartości prywatnych (jak hasła) przy użyciu zmiennych środowiskowych.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | ustawione zgodnie z życzeniem |
+|   <strong>Historia</strong>   | Dodano w 2.29.0 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="usesaxparser"><strong>useSaxParser</strong><a href="#usesaxparser" class="hash-link" aria-label="Bezpośredni link dousesaxparser" title="Bezpośredni link dousesaxparser" translate="no">​</a></h3>
+<p>Opis
+Przełącza wewnętrzny silnik parsujący XML na SAX (Prosty API dla XML) Parser zamiast DOM parser. Umożliwia to kilka nowych zaawansowanych funkcji, takich jak XInclude, i <a href="https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions" target="_blank" rel="noopener noreferrer" class="">niestandardowe atrybuty wyświetlania</a> .</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Badanie |
+|   <strong>Aktualny domyślny</strong>   | false |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 2.25 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="listprivatedatasets"><strong>listPrivateDatasets</strong><a href="#listprivatedatasets" class="hash-link" aria-label="Bezpośredni link dolistprivatedatasets" title="Bezpośredni link dolistprivatedatasets" translate="no">​</a></h3>
+<p>Opis
+Określa, czy prywatne zbiory danych (osoby wymagające uwierzytelniania) pojawi się na liście głównych zbiorów danych.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | false |
+|   <strong>Cel długoterminowy</strong>   | false |
+|   <strong>Historia</strong>   | Dodano w 1.20 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="politicalboundariesactive"><strong>PoliticalBoundariesActive</strong><a href="#politicalboundariesactive" class="hash-link" aria-label="Bezpośredni link dopoliticalboundariesactive" title="Bezpośredni link dopoliticalboundariesactive" translate="no">​</a></h3>
+<p>Opis
+Sprawdza, czy granice polityczne mogą być rysowane na mapach.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 1.80 |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="metadane-i-normy"><strong>Metadane i normy</strong><a href="#metadane-i-normy" class="hash-link" aria-label="Bezpośredni link dometadane-i-normy" title="Bezpośredni link dometadane-i-normy" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="fgdcactive"><strong>fgdcActive</strong><a href="#fgdcactive" class="hash-link" aria-label="Bezpośredni link dofgdcactive" title="Bezpośredni link dofgdcactive" translate="no">​</a></h3>
+<p>Opis
+Generuje i obsługuje FGDC (Federalny Geograficzny Komitet ds. Danych) metadane.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 1.38 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="iso19115-aktywne"><strong>iso19115 Aktywne</strong><a href="#iso19115-aktywne" class="hash-link" aria-label="Bezpośredni link doiso19115-aktywne" title="Bezpośredni link doiso19115-aktywne" translate="no">​</a></h3>
+<p>Opis
+Generuje i obsługuje metadane ISO 19115.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 1.38 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="uzysiso19115"><strong>UZYSISO19115</strong><a href="#uzysiso19115" class="hash-link" aria-label="Bezpośredni link douzysiso19115" title="Bezpośredni link douzysiso19115" translate="no">​</a></h3>
+<p>Opis
+Wykorzystuje bibliotekę Apache SIS do generowania metadanych ISO 19115 zamiast istniejącego generatora. Jeśli to jest włączone i nie jest używane SisISO19139, domyślne metadane IOS 19115 będą w formacie ISO19115 _ 3 _ 2016. Jeśli jest to false, domyślny format będzie w zmienionym formacie ISO19115 _ 2.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Badanie |
+|   <strong>Aktualny domyślny</strong>   | false |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 2.26 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="uzysiso19139"><strong>UZYSISO19139</strong><a href="#uzysiso19139" class="hash-link" aria-label="Bezpośredni link douzysiso19139" title="Bezpośredni link douzysiso19139" translate="no">​</a></h3>
+<p>Opis
+Wykorzystuje bibliotekę Apache SIS do generowania metadanych ISO19139 _ 2007.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Badanie |
+|   <strong>Aktualny domyślny</strong>   | false |
+|   <strong>Cel długoterminowy</strong>   | false |
+|   <strong>Historia</strong>   | Dodano w 2.29.0 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="jsonldactive"><strong>jsonldActive</strong><a href="#jsonldactive" class="hash-link" aria-label="Bezpośredni link dojsonldactive" title="Bezpośredni link dojsonldactive" translate="no">​</a></h3>
+<p>Opis
+Generuje i obsługuje JSON- LD (Dane powiązane) metadane.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dziedzictwo |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="generatecroissantschema"><strong>generateCroissantSchema</strong><a href="#generatecroissantschema" class="hash-link" aria-label="Bezpośredni link dogeneratecroissantschema" title="Bezpośredni link dogeneratecroissantschema" translate="no">​</a></h3>
+<p>Opis
+Generuje schemat metadanych &quot;Croissant&quot; jako domyślny schemat gotowości do uczenia się maszynowego.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Badanie |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 2.28.0 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="variablesmusthavelooscategory"><strong>variablesMustHaveloosCategory</strong><a href="#variablesmusthavelooscategory" class="hash-link" aria-label="Bezpośredni link dovariablesmusthavelooscategory" title="Bezpośredni link dovariablesmusthavelooscategory" translate="no">​</a></h3>
+<p>Opis
+Wymusza, że zmienne muszą mieć atrybut kategorii IOOS.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | ustawione zgodnie z życzeniem |
+|   <strong>Historia</strong>   | Dziedzictwo |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="includenccfsubsetzmienne"><strong>includeNcCFSubsetZmienne</strong><a href="#includenccfsubsetzmienne" class="hash-link" aria-label="Bezpośredni link doincludenccfsubsetzmienne" title="Bezpośredni link doincludenccfsubsetzmienne" translate="no">​</a></h3>
+<p>Opis
+Zachowanie Legacy miało na celu generowanie zmiennych tylko dla zbiorów danych EDDTableFromNcCFFiles. Zostało to dodane do domyślnego zachowania EDDTableFromNcCFFiles, aby być spójne z innymi typami danych. Jeśli potrzebujesz dziedzicznego automatycznego subsetVariables Możesz to włączyć. Lepszym rozwiązaniem byłoby dodanie subsetVariables do definicji zbioru danych.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Badanie |
+|   <strong>Aktualny domyślny</strong>   | false |
+|   <strong>Cel długoterminowy</strong>   | false |
+|   <strong>Historia</strong>   | Dodano w 2.26 |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="oznaczenia-subskrypcji-i-powiadomień"><strong>Oznaczenia subskrypcji i powiadomień</strong><a href="#oznaczenia-subskrypcji-i-powiadomień" class="hash-link" aria-label="Bezpośredni link dooznaczenia-subskrypcji-i-powiadomień" title="Bezpośredni link dooznaczenia-subskrypcji-i-powiadomień" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="subscriptionsystemactive"><strong>subscriptionSystemActive</strong><a href="#subscriptionsystemactive" class="hash-link" aria-label="Bezpośredni link dosubscriptionsystemactive" title="Bezpośredni link dosubscriptionsystemactive" translate="no">​</a></h3>
+<p>Opis
+Włącza system subskrypcji e-mail dla aktualizacji zbioru danych.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 1.14 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="subscribetoremoteerddapdataset"><strong>subscribeToRemoteErddapDataset</strong><a href="#subscribetoremoteerddapdataset" class="hash-link" aria-label="Bezpośredni link dosubscribetoremoteerddapdataset" title="Bezpośredni link dosubscribetoremoteerddapdataset" translate="no">​</a></h3>
+<p>Opis
+Umożliwia to ERDDAP instancja do subskrypcji zdalnego ERDDAP zbiory danych do aktualizacji.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 1.70 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="updatesubsrssonfilechanges"><strong>updateSubsRssOnFileChanges</strong><a href="#updatesubsrssonfilechanges" class="hash-link" aria-label="Bezpośredni link doupdatesubsrssonfilechanges" title="Bezpośredni link doupdatesubsrssonfilechanges" translate="no">​</a></h3>
+<p>Opis
+Podajniki subskrypcji i RSS aktualizacje po zmianie podstawowych plików. Zachowanie było tylko po to, aby zrobić aktualizacje o przeładowaniu zbioru danych (które niektóre serwery miały rzadko co tydzień) .</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 2.26 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="włącz-mqttbroker"><strong>Włącz MqttBroker</strong><a href="#włącz-mqttbroker" class="hash-link" aria-label="Bezpośredni link dowłącz-mqttbroker" title="Bezpośredni link dowłącz-mqttbroker" translate="no">​</a></h3>
+<p>Opis
+Rozpoczyna wewnętrzny broker MQTT w aplikacji do obsługi wiadomości.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Badanie |
+|   <strong>Aktualny domyślny</strong>   | false |
+|   <strong>Cel długoterminowy</strong>   | ustawione zgodnie z życzeniem |
+|   <strong>Historia</strong>   | Dodano w 2.29.0 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="publishmqttnotif"><strong>publishMqttNotif</strong><a href="#publishmqttnotif" class="hash-link" aria-label="Bezpośredni link dopublishmqttnotif" title="Bezpośredni link dopublishmqttnotif" translate="no">​</a></h3>
+<p>Opis
+Umożliwia publikację powiadomień (jak zmiany zbioru danych) do pośrednika MQTT.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Badanie |
+|   <strong>Aktualny domyślny</strong>   | false |
+|   <strong>Cel długoterminowy</strong>   | ustawione zgodnie z życzeniem |
+|   <strong>Historia</strong>   | Dodano w 2.29.0 |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="name"><strong>Name</strong><a href="#name" class="hash-link" aria-label="Bezpośredni link doname" title="Bezpośredni link doname" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dla-url"><strong>dla Url</strong><a href="#dla-url" class="hash-link" aria-label="Bezpośredni link dodla-url" title="Bezpośredni link dodla-url" translate="no">​</a></h3>
+<p>Opis
+Umożliwia korzystanie z nagłówków HTTP w celu określenia szczegółów URL żądania (przydatne za proxy) .</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Domyślnie zmienione na prawdziwe w 2.28.0, Dodano w 2.27.0 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="włącz-kors"><strong>Włącz Kors</strong><a href="#włącz-kors" class="hash-link" aria-label="Bezpośredni link dowłącz-kors" title="Bezpośredni link dowłącz-kors" translate="no">​</a></h3>
+<p>Opis
+Umożliwia dzielenie się zasobami na krzyże-pochodzenie (CORS) nagłówki odpowiedzi HTTP.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | false |
+|   <strong>Cel długoterminowy</strong>   | ustawione zgodnie z życzeniem |
+|   <strong>Historia</strong>   | Dodano w 2.26 |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="znajdź"><strong>Znajdź</strong><a href="#znajdź" class="hash-link" aria-label="Bezpośredni link doznajdź" title="Bezpośredni link doznajdź" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="use-lucienesearchengine"><strong>Use LucieneSearchEngine</strong><a href="#use-lucienesearchengine" class="hash-link" aria-label="Bezpośredni link douse-lucienesearchengine" title="Bezpośredni link douse-lucienesearchengine" translate="no">​</a></h3>
+<p>Opis
+Przełącza wewnętrzną wyszukiwarkę, aby używać Apache Lucene.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Badanie |
+|   <strong>Aktualny domyślny</strong>   | false |
+|   <strong>Cel długoterminowy</strong>   | ? |
+|   <strong>Historia</strong>   | Dziedzictwo |</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="usługi-i-protokoły"><strong>Usługi i protokoły</strong><a href="#usługi-i-protokoły" class="hash-link" aria-label="Bezpośredni link dousługi-i-protokoły" title="Bezpośredni link dousługi-i-protokoły" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="filesactive"><strong>filesActive</strong><a href="#filesactive" class="hash-link" aria-label="Bezpośredni link dofilesactive" title="Bezpośredni link dofilesactive" translate="no">​</a></h3>
+<p>Opis
+Włącza widok przeglądarki &quot;Pliki&quot; dla pakietów danych, które go obsługują.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 1.58 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="convertersactive"><strong>convertersActive</strong><a href="#convertersactive" class="hash-link" aria-label="Bezpośredni link doconvertersactive" title="Bezpośredni link doconvertersactive" translate="no">​</a></h3>
+<p>Opis
+Włącza narzędzia do konwersji w UI.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 1.44 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slidesorteractive"><strong>slideSorterActive</strong><a href="#slidesorteractive" class="hash-link" aria-label="Bezpośredni link doslidesorteractive" title="Bezpośredni link doslidesorteractive" translate="no">​</a></h3>
+<p>Opis
+Włącza Slide Sorter.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 1.44 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dataproviderformactive"><strong>dataProviderFormActive</strong><a href="#dataproviderformactive" class="hash-link" aria-label="Bezpośredni link dodataproviderformactive" title="Bezpośredni link dodataproviderformactive" translate="no">​</a></h3>
+<p>Opis
+Włącza formularz umożliwiający dostawcom danych wprowadzanie metadanych.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dziedzictwo |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="outofdatedatasetsactive"><strong>outOfDateDatasetsActive</strong><a href="#outofdatedatasetsactive" class="hash-link" aria-label="Bezpośredni link dooutofdatedatasetsactive" title="Bezpośredni link dooutofdatedatasetsactive" translate="no">​</a></h3>
+<p>Opis
+Umożliwia zgłaszanie zbiorów danych po terminie.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano do 1.82 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="wmsactive"><strong>wmsActive</strong><a href="#wmsactive" class="hash-link" aria-label="Bezpośredni link dowmsactive" title="Bezpośredni link dowmsactive" translate="no">​</a></h3>
+<p>Opis
+Włącza usługę Web Map ( WMS ) interfejs.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dodano w 1.44 |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="wmsclientactive"><strong>wmsClientActive</strong><a href="#wmsclientactive" class="hash-link" aria-label="Bezpośredni link dowmsclientactive" title="Bezpośredni link dowmsclientactive" translate="no">​</a></h3>
+<p>Opis
+Włącza wewnętrzną WMS funkcje klienta.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | Stabilny |
+|   <strong>Aktualny domyślny</strong>   | prawda |
+|   <strong>Cel długoterminowy</strong>   | prawda |
+|   <strong>Historia</strong>   | Dziedzictwo |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="geoservicesrestactive"><strong>geoServicesRestActive</strong><a href="#geoservicesrestactive" class="hash-link" aria-label="Bezpośredni link dogeoservicesrestactive" title="Bezpośredni link dogeoservicesrestactive" translate="no">​</a></h3>
+<p>Opis
+Włącza RESTful interfejs dla usług geoprzestrzennych. Nie w pełni wdrożony.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | W trakcie budowy |
+|   <strong>Aktualny domyślny</strong>   | false (Hardcode)   |
+|   <strong>Cel długoterminowy</strong>   | prawda |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="wcsactive"><strong>wcsActive</strong><a href="#wcsactive" class="hash-link" aria-label="Bezpośredni link dowcsactive" title="Bezpośredni link dowcsactive" translate="no">​</a></h3>
+<p>Opis
+Włącza usługę pokrycia stron internetowych ( WCS ) interfejs. Nie w pełni wdrożony.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | W trakcie budowy |
+|   <strong>Aktualny domyślny</strong>   | false (Hardcode)   |
+|   <strong>Cel długoterminowy</strong>   | prawda |</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sodactive"><strong>sodActive</strong><a href="#sodactive" class="hash-link" aria-label="Bezpośredni link dosodactive" title="Bezpośredni link dosodactive" translate="no">​</a></h3>
+<p>Opis
+Włącza usługę obserwacji czujników ( SOS ) interfejs.</p>
+<p>| Własność | Szczegóły |
+| : -- | : -- |
+|   <strong>Cykl życia</strong>   | W trakcie budowy |
+|   <strong>Aktualny domyślny</strong>   | false (Hardcode)   |
+|   <strong>Cel długoterminowy</strong>   | prawda |</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/erddap/erddap.github.io/tree/main/docs/server-admin/feature-flags.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edytuj tę stronę</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Strony dokumentacji"><a class="pagination-nav__link pagination-nav__link--prev" href="/pl/docs/server-admin/prometheus"><div class="pagination-nav__sublabel">Poprzedni</div><div class="pagination-nav__label">Prometeusz</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/pl/docs/server-admin/mqtt-integration"><div class="pagination-nav__sublabel">Następny</div><div class="pagination-nav__label">ERDDAP Integracja MQTT</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#flaga-lifecycle-legenda" class="table-of-contents__link toc-highlight"><strong>Flaga Lifecycle Legenda</strong></a></li><li><a href="#uzasadnienie-optymalizacja-badań" class="table-of-contents__link toc-highlight"><strong>Uzasadnienie Optymalizacja badań</strong></a><ul><li><a href="#touchthreadonly-when-enelements" class="table-of-contents__link toc-highlight"><strong>touchThreadOnly When enElements</strong></a></li><li><a href="#taskcacheclear" class="table-of-contents__link toc-highlight"><strong>taskCacheClear</strong></a></li><li><a href="#plik-ncheadermakename" class="table-of-contents__link toc-highlight"><strong>Plik ncHeaderMakeName</strong></a></li><li><a href="#useeddreflection" class="table-of-contents__link toc-highlight"><strong>useEddReflection</strong></a></li><li><a href="#backgroundcreatesubsettablice" class="table-of-contents__link toc-highlight"><strong>backgroundCreateSubsetTablice</strong></a></li><li><a href="#user-ncmetadataforfiletable" class="table-of-contents__link toc-highlight"><strong>User NcMetadataForFileTable</strong></a></li></ul></li><li><a href="#system--zachowanie-rdzenia" class="table-of-contents__link toc-highlight"><strong>System &amp; zachowanie rdzenia</strong></a><ul><li><a href="#e-mail-isactive" class="table-of-contents__link toc-highlight"><strong>e-mail Isactive</strong></a></li><li><a href="#showloaderrorsonstatuspage" class="table-of-contents__link toc-highlight"><strong>showLoadErrorsOnStatusPage</strong></a></li><li><a href="#defaultaccessibleviafiles" class="table-of-contents__link toc-highlight"><strong>defaultAccessibleViaFiles</strong></a></li></ul></li><li><a href="#ustawienia-datasety" class="table-of-contents__link toc-highlight"><strong>Ustawienia Datasety</strong></a><ul><li><a href="#szybkie-wznowienie" class="table-of-contents__link toc-highlight"><strong>szybkie wznowienie</strong></a></li><li><a href="#enableenvparsing" class="table-of-contents__link toc-highlight"><strong>enableEnvParsing</strong></a></li><li><a href="#usesaxparser" class="table-of-contents__link toc-highlight"><strong>useSaxParser</strong></a></li><li><a href="#listprivatedatasets" class="table-of-contents__link toc-highlight"><strong>listPrivateDatasets</strong></a></li><li><a href="#politicalboundariesactive" class="table-of-contents__link toc-highlight"><strong>PoliticalBoundariesActive</strong></a></li></ul></li><li><a href="#metadane-i-normy" class="table-of-contents__link toc-highlight"><strong>Metadane i normy</strong></a><ul><li><a href="#fgdcactive" class="table-of-contents__link toc-highlight"><strong>fgdcActive</strong></a></li><li><a href="#iso19115-aktywne" class="table-of-contents__link toc-highlight"><strong>iso19115 Aktywne</strong></a></li><li><a href="#uzysiso19115" class="table-of-contents__link toc-highlight"><strong>UZYSISO19115</strong></a></li><li><a href="#uzysiso19139" class="table-of-contents__link toc-highlight"><strong>UZYSISO19139</strong></a></li><li><a href="#jsonldactive" class="table-of-contents__link toc-highlight"><strong>jsonldActive</strong></a></li><li><a href="#generatecroissantschema" class="table-of-contents__link toc-highlight"><strong>generateCroissantSchema</strong></a></li><li><a href="#variablesmusthavelooscategory" class="table-of-contents__link toc-highlight"><strong>variablesMustHaveloosCategory</strong></a></li><li><a href="#includenccfsubsetzmienne" class="table-of-contents__link toc-highlight"><strong>includeNcCFSubsetZmienne</strong></a></li></ul></li><li><a href="#oznaczenia-subskrypcji-i-powiadomień" class="table-of-contents__link toc-highlight"><strong>Oznaczenia subskrypcji i powiadomień</strong></a><ul><li><a href="#subscriptionsystemactive" class="table-of-contents__link toc-highlight"><strong>subscriptionSystemActive</strong></a></li><li><a href="#subscribetoremoteerddapdataset" class="table-of-contents__link toc-highlight"><strong>subscribeToRemoteErddapDataset</strong></a></li><li><a href="#updatesubsrssonfilechanges" class="table-of-contents__link toc-highlight"><strong>updateSubsRssOnFileChanges</strong></a></li><li><a href="#włącz-mqttbroker" class="table-of-contents__link toc-highlight"><strong>Włącz MqttBroker</strong></a></li><li><a href="#publishmqttnotif" class="table-of-contents__link toc-highlight"><strong>publishMqttNotif</strong></a></li></ul></li><li><a href="#name" class="table-of-contents__link toc-highlight"><strong>Name</strong></a><ul><li><a href="#dla-url" class="table-of-contents__link toc-highlight"><strong>dla Url</strong></a></li><li><a href="#włącz-kors" class="table-of-contents__link toc-highlight"><strong>Włącz Kors</strong></a></li></ul></li><li><a href="#znajdź" class="table-of-contents__link toc-highlight"><strong>Znajdź</strong></a><ul><li><a href="#use-lucienesearchengine" class="table-of-contents__link toc-highlight"><strong>Use LucieneSearchEngine</strong></a></li></ul></li><li><a href="#usługi-i-protokoły" class="table-of-contents__link toc-highlight"><strong>Usługi i protokoły</strong></a><ul><li><a href="#filesactive" class="table-of-contents__link toc-highlight"><strong>filesActive</strong></a></li><li><a href="#convertersactive" class="table-of-contents__link toc-highlight"><strong>convertersActive</strong></a></li><li><a href="#slidesorteractive" class="table-of-contents__link toc-highlight"><strong>slideSorterActive</strong></a></li><li><a href="#dataproviderformactive" class="table-of-contents__link toc-highlight"><strong>dataProviderFormActive</strong></a></li><li><a href="#outofdatedatasetsactive" class="table-of-contents__link toc-highlight"><strong>outOfDateDatasetsActive</strong></a></li><li><a href="#wmsactive" class="table-of-contents__link toc-highlight"><strong>wmsActive</strong></a></li><li><a href="#wmsclientactive" class="table-of-contents__link toc-highlight"><strong>wmsClientActive</strong></a></li><li><a href="#geoservicesrestactive" class="table-of-contents__link toc-highlight"><strong>geoServicesRestActive</strong></a></li><li><a href="#wcsactive" class="table-of-contents__link toc-highlight"><strong>wcsActive</strong></a></li><li><a href="#sodactive" class="table-of-contents__link toc-highlight"><strong>sodActive</strong></a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Dokumenty</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/pl/docs/intro">Dokumentacja</a></li><li class="footer__item"><a class="footer__link-item" href="/pl/docs/contributing">Wkład</a></li><li class="footer__item"><a class="footer__link-item" href="/pl/license">Licencja</a></li><li class="footer__item"><a class="footer__link-item" href="/pl/changes">Zmiany</a></li><li class="footer__item"><a class="footer__link-item" href="/pl/cloud">Chmura</a></li><li class="footer__item"><a class="footer__link-item" href="/pl/docs/intro#support">Wsparcie / Kontakt</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Wspólnota</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/pl/governance">Zarządzanie</a></li><li class="footer__item"><a class="footer__link-item" href="/pl/technical-board">Rada Techniczna</a></li><li class="footer__item"><a href="https://groups.google.com/g/erddap" target="_blank" rel="noopener noreferrer" class="footer__link-item">ERDDAP™Grupa użytkowników<svg width="13.5" height="13.5" aria-label="(otwiera się w nowej zakładce)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://groups.google.com/g/erddap-announce" target="_blank" rel="noopener noreferrer" class="footer__link-item">ERDDAP™Ogłoszenie<svg width="13.5" height="13.5" aria-label="(otwiera się w nowej zakładce)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/ERDDAP/erddap/" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(otwiera się w nowej zakładce)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/pl/credits">Kredyty</a></li><li class="footer__item"><a class="footer__link-item" href="/pl/acknowledgements">Podziękowania</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Sprowadzony do Ciebie przez</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.noaa.gov" target="_blank" rel="noopener noreferrer" class="footer__link-item">NOAA<svg width="13.5" height="13.5" aria-label="(otwiera się w nowej zakładce)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.fisheries.noaa.gov" target="_blank" rel="noopener noreferrer" class="footer__link-item">NMFS<svg width="13.5" height="13.5" aria-label="(otwiera się w nowej zakładce)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center" target="_blank" rel="noopener noreferrer" class="footer__link-item">SWFSC<svg width="13.5" height="13.5" aria-label="(otwiera się w nowej zakładce)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.fisheries.noaa.gov/about/environmental-research-division-southwest-fisheries-science-center" target="_blank" rel="noopener noreferrer" class="footer__link-item">ERD<svg width="13.5" height="13.5" aria-label="(otwiera się w nowej zakładce)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">ERDDAP™, Wersja 2.28.1. Copyright © 2025ERDDAP™. Zbudowany z Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
