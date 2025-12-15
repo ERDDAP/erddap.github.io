@@ -1128,7 +1128,7 @@ class UrlMatcher:
     processed_line["translate_text"].append(chunk[self.match.end():])
     # update format {idx} -> {idx} + "<" + match.group(0) + ">" + "{length-1}"
     placeholder = "{"+ str(idx) +"}"
-    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + self.match.group(0) + "{" + str(len(processed_line["translate_text"]) -1) + "}")
+    processed_line["format"] = processed_line["format"].replace(placeholder, placeholder + " " + self.match.group(0) + " {" + str(len(processed_line["translate_text"]) -1) + "}")
     return processed_line
 
 markdown_matchers = [
