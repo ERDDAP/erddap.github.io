@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Berikut adalah perubahan yang terkait dengan masing-masing ERDDAP™ Sitemap
 
+
+## Versi 2.29.0{#version-2290} 
+ (dirilis 2025-12-15) 
+
+Tindakan yang diperlukan.
+
+ ERDDAP™ versi 2.29.0 membutuhkan jdk 25 atau kemudian. Silakan memperbarui versi jdk Anda. Jika itu masalah, Anda dapat membangun Meme it ERDDAP™ untuk jdk tua (kembali ke setidaknya 17) dengan mengubah file pom.xml. JDK 25 adalah rilis LTS dari Java dan mencakup banyak perbaikan, kinerja yang paling tidak dapat ditingkatkan.
+
+*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
+    * ISO 19115 versi: Lihat di bawah ini untuk info admin. Untuk pengguna, Anda sekarang dapat meminta versi spesifik dari metadata ISO 19115. Apakah ini dari griddap/ tabledap halaman untuk dataset dengan jenis file turun. Versi ini akan independen dari default server.
+
+*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Fitur baru, dukungan MQTT. Untuk detail saya merekomendasikan membaca [halaman baru tentang itu.](/docs/server-admin/mqtt-integration) Ini termasuk dapat membangun dataset dari pesan MQTT, dan menerbitkan pesan MQTT ketika perubahan dataset. Dimatikan secara default, jadi jika Anda ingin menggunakannya, Anda perlu mengaktifkannya.
+
+Terima kasih kepada Ayush Singh untuk bekerja di MQTT&#33;
+
+    * Peningkatan S3: Menambahkan dukungan untuk S3 URIs sebagai nilai cacheFromUrl. Ini akan memungkinkan ERDDAP WordPress.org Juga menjawab masalah kebocoran memori S3.
+
+Terima kasih kepada @SethChampagneNRL untuk pekerjaan di S3&#33;
+
+    * ISO 19115 versi: Sekarang dukungan untuk 3 versi yang berbeda dari metadata ISO 19115. Versi default dikendalikan oleh pengaturan di setup Anda.xml. Jika useSisISO19115 palsu, server akan secara default memberikan NOAA dimodifikasi ISO19115_2. Jika useSisISO19115 benar, maka server akan menggunakan versi yang berbeda tergantung pada nilai useSisISO19139. Jika useSisISO19139 benar, default akan ISO19139_2007, jika useSisISO19139 palsu default akan ISO19115_3_2016. Kami merekomendasikan menggunakan useSisISO19115=true dan useSisISO19139=false. Organisasi Anda mungkin memerlukan pengaturan yang berbeda.
+
+    * Migrasi ke java. perpustakaan waktu (daripada java.util. Login) Sitemap Ini harus memberikan peningkatan kinerja atas pertanyaan yang melibatkan kolom tanggal/waktu. Tidak ada dampak nyata untuk sebagian besar dataset. Kasus yang diketahui ini menyebabkan perubahan adalah jika dataset menggunakan `hari sejak 0000-01` atau serupa. Jika ini adalah masalah untuk variabel, Anda dapat menambahkan ` <att name="legacy_time_adjust"> Login </att> ` Login addAttributes bagian baik dataVariable Sitemap axisVariable Sitemap
+    
+    *    datasets.xml sekarang diproses oleh [Login](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) Sitemap Ini memiliki banyak kegunaan termasuk menetapkan nilai pribadi (seperti kata sandi) menggunakan variabel lingkungan. Ini dapat dinonaktifkan dengan mengatur mengaktifkanEnvParsing untuk palsu dalam setup.xml.
+
+    * Sumbu Tekanan: Menambahkan kasus khusus untuk ketinggian yang ditentukan oleh tekanan. Ini terutama digunakan dalam data Meteorologi mendefinisikan ketinggian vertikal dalam tingkat isobaric. CATATAN: Nilai tekanan yang lebih kecil berarti ketinggian yang lebih tinggi, sehingga sumbu berjalan berlawanan ketinggian normal yang didefinisikan dalam meter atau kaki.
+
+Sitemap [Login](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid DariNcFiles dengan dimensi yang bervariasi: Sitemap (Login) dukungan untuk EDDGrid DariNFiles dataset untuk memiliki variabel yang tidak menggunakan set yang sama dari kapak. Silakan lakukan laporan kembali tentang bagaimana karya ini untuk Anda, atau jika perilaku tidak tampak cukup tepat.
+
+    * Ada koleksi optimasi yang harus aman, tetapi memiliki bendera untuk mengubah perilaku lama jika diperlukan. Jika Anda menemukan kebutuhan untuk mengatur semua bendera, silakan mengajukan bug. Jika kita mendengar tentang tidak ada masalah yang paling dari ini akan dihapus dengan perilaku baru default di masa depan. Ada [halaman baru tentang bendera fitur](/docs/server-admin/feature-flags) di mana Anda dapat membaca tentang bendera ini dan lainnya.
+
+      * Login Login Sitemap KetikaItems: Ini adalah perubahan sehingga touchThread hanya akan berjalan ketika ada item di antrian untuk menyentuh. Satu benang yang lebih sedikit berjalan adalah optimasi kecil tetapi masih berguna. Default untuk benar.
+
+      * Login Sitemap Perubahan ini memungkinkan tabel file internal untuk menggunakan atribut nc, khususnya atribut aktual_range variabel untuk menghindari membaca seluruh file nc. Ini dapat secara drastis mempercepat pemuatan awal dataset berdasarkan file nc jika aktual_range untuk setiap variabel dalam setiap file disertakan sebagai atribut. Perhatikan bahwa ini mempercayai nilai, jadi jika salah, tabel file internal akan memiliki informasi yang salah. Default untuk benar.
+
+      * Login Login: Perubahan ini memungkinkan file header nc untuk dihasilkan tanpa menghasilkan file nc perwakilan pertama. Ini adalah optimasi kecil untuk EDDTable, tetapi optimasi besar untuk banyak EDDGrid Sitemap Default untuk palsu (palsu adalah perilaku yang dioptimalkan dimaksudkan) Sitemap
+
+      * Login Login Tabel: Perubahan ini memindahkan beberapa pemrosesan awal dataset ke benang latar belakang. Ini harus meningkatkan waktu untuk memuat dataset. Secara spesifik bagian yang ditunda adalah tabel subset, yang juga dihasilkan bila diperlukan jika pemrosesan yang tertunda belum terjadi. Default untuk benar.
+
+    * Beberapa perubahan kecil, perbaikan bug (terima kasih Italo Borrelli untuk perbaikan untuk EDDTableDariAggregateRows, Sitemap @SethChampagneNRL untuk memungkinkan longitude lebih dari 360 in EDDGrid LonPM180, dan beberapa perbaikan bug lainnya) , dan optimasi.
+
+*    **Sitemap ERDDAP™ Pengembang:** 
+    * Optimasi tambahan, termasuk waktu uji pemotongan dalam waktu paruh.
+
+    * Profil tes baru untuk sangat flaky (Login) atau sangat lambat (Login) Sitemap
+
 ## Versi 2.28.1{#version-2281} 
  (dirilis 2025-09-05) 
 
@@ -49,7 +98,7 @@ Sitemap [Login](https://github.com/ocefpaf) Login [Login](https://github.com/abk
     * Data baru untuk converter warnabar pada server di /erddap/convert/color.html
 
 *    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Default behavoir adalah bahwa cache sekarang akan dibersihkan independen dari tugas dataset beban utama. Ini akan memungkinkan untuk menghapus file cache yang lebih andal dan teratur. Ada pekerjaan tambahan untuk meningkatkan server berperilaku ketika rendah di ruang disk (mengembalikan kesalahan untuk permintaan mungkin untuk membuat server keluar dari ruang, dan membersihkan cache lebih sering dalam keadaan disk rendah untuk mencoba untuk mencegah kesalahan) Sitemap Sitemap datasets.xml   (atau setup.xml) Anda dapat menambahkan / mengatur cache baru Jelaskan parameter untuk mengontrol seberapa sering server memeriksa untuk menghapus cache. Catatan, parameter cacheMinutes yang ada mengontrol usia file yang akan disimpan, cache baru ClearMinutes adalah untuk seberapa sering melakukan kekacauan.
+    * Perilaku default adalah bahwa cache sekarang akan dibersihkan independen tugas dataset beban utama. Ini akan memungkinkan untuk menghapus file cache yang lebih andal dan teratur. Ada pekerjaan tambahan untuk meningkatkan perilaku server ketika rendah di ruang disk (mengembalikan kesalahan untuk permintaan mungkin untuk membuat server keluar dari ruang, dan membersihkan cache lebih sering dalam keadaan disk rendah untuk mencoba untuk mencegah kesalahan) Sitemap Sitemap datasets.xml   (atau setup.xml) Anda dapat menambahkan / mengatur cache baru Jelaskan parameter untuk mengontrol seberapa sering server memeriksa untuk menghapus cache. Catatan, parameter cacheMinutes yang ada mengontrol usia file yang akan disimpan, cache baru ClearMinutes adalah untuk seberapa sering melakukan kekacauan.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Selain tampilan yang diperbarui ada navigasi yang lebih baik, pencarian, terjema
 
     * Fitur baru untuk menyesuaikan informasi yang ditampilkan tentang set data di UI. Kami berharap ini sangat berguna untuk menambahkan hal-hal seperti eksitasi dataset. Untuk detail lebih lanjut, Anda dapat membaca [dokumentasi baru](/docs/server-admin/display-info) Sitemap Terima kasih kepada Ayush Singh untuk kontribusi&#33;
 
-    * metrik Prometheus tambahan. Yang terbesar adalah ` http _request_duration_seconds` yang mencakup waktu respon permintaan rusak oleh: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
+    * metrik Prometheus tambahan. Yang terbesar adalah ` http _request_duration_detik` yang mencakup waktu respon permintaan rusak oleh: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 Format yang dapat dibaca mesin ini akan memungkinkan pengumpulan metrik yang lebih baik untuk memahami bagaimana pengguna menggunakan server.
 
     * Cara baru untuk menghasilkan file XML ISO19115. Menggunakan Apache SIS dan merupakan pilihan baru dalam rilis ini. Harap aktifkan dan kirim umpan balik.

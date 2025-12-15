@@ -277,10 +277,10 @@ sidebar_position: 1
              
 ###  ERDDAP™ বিষয়বস্তু{#erddap-content} 
 3.   [সংকলন নির্ধারণ করুন `উজ্জ্বলতা` কনফিগারেশন ফাইল।](#erddap-content) 
-লিনাক্স, Mac এবং Windows, ডাউনলোড [সীমা অতিক্রমকারী .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
+লিনাক্স, Mac এবং Windows, ডাউনলোড [সীমা অতিক্রমকারী .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.1/erddapContent.zip) 
 আর ওকে আমরা বানাই না `নিক্তি` ডিরেক্টরি নির্মাণ করা হচ্ছে `উজ্জ্বলতা` . .
 
-০. ০, ২০৩৩৩ বাইট, এমডি৫ডি২ডি২ডিএডিএডি৫৩. ২০২৪-১৪_BAR_
+১. ০, ২০৬৮৩ বাইট, এম.ডি.৫=৯৮৮০৯৯৪৪৪৪৪৯৬৪-৯৯৬৯৬৯৬৯৪, ২০২৫-২৫-২৫-২৫-২৫-২
 
 পূর্ববর্তী কয়েকটি সংস্করণও পাওয়া যাচ্ছে:
 
@@ -357,9 +357,9 @@ XML সহযোগে voice-র সাহায্যে নির্মিত 
      
 ### স্ট্রেডপটা ধরো। যুদ্ধ ফাইল{#install-the-erddapwar-file} 
 
-4. Linux, Mac ও Windows-র মধ্যে (_i) [সার্দ্দি।](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) চিহ্নিত স্থানে `চিহ্নিত প্রোগ্রাম সহযোগে খুলুন` :
+4. Linux, Mac ও Windows-র মধ্যে (_i) [সার্দ্দি।](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) চিহ্নিত স্থানে `চিহ্নিত প্রোগ্রাম সহযোগে খুলুন` :
 
-২. ২. ০, ৬২৬,৬৭৬,২৩৮ বাইট, এম.
+২. ০, ৭০৬,৭৮৮,১৩৫ বাইট, এমডি৫ বাইট, এমডি৫ডি৫ডি৮৬ডি৮৬৪৪৪-৬৪৬৪৩০৪৩০৪-৬৬০৬০। ১২-১৫-২০২৫
 
 ..war ফাইল বড় কারণ সেখানে উচ্চ পর্যায়ের সমুদ্র উপকূল, সীমানা এবং মানচিত্র নির্মাণের জন্য প্রয়োজনীয় তথ্য রয়েছে।
 
@@ -374,6 +374,7 @@ XML সহযোগে voice-র সাহায্যে নির্মিত 
    *  [২.২৫](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)   (৫৯,২৯২,০৩৯ বাইট, এম.ডি.৫=৬৫ডি.৫১এফ.৫৩এফএফএফএফএফএফএফএফএফএফএফএফএফএফএফএফবি৪-৪৪৪৪৪, তারিখ ২০২৪-১-১১) 
    *  [২.২৬](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)   (৬,৪০৪৩২ বাইট, এম.৫৯৯১০৮০৮০৮০৮০৮০৮৩৫৫-১৬১৬১৬১৬৯, ২০২৫-০৩-৩১) 
    *  [২. ২৭।](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)   (১৬,৫৫,৫৫৪, ৪০৩ বাইট, এম.ডি.৫=৩৬৫৪৪৪৪৪৪৪৪৪৪৪৪৪৪৪ডিফরফেফফফিফ৭, ২০২৫-০৬-০৬-১১) 
+   *  [২.২৮১](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war)   (৬২২,৬৭৬,২৩৮ বাইট, এমডি৫৪:৪৮৪২২২২৪৫৪৫৯৮৮৯৪৯৪৯৯৯৯৯৯৯২-৯০৯২২৫-০৯০৯-০৯৯২-০৯৯০৯২) 
 
 ### কে- মেইল কনফিগার করো (& সক্রিয়)  {#proxy} 
 

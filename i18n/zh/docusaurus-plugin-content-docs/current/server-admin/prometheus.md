@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # 普罗米修斯
 
-[普罗米修斯度量衡](https://prometheus.io/)以/erddap/度量计。 2.25中增加了联合核查机制的核心衡量标准,其中有许多ERDDAP™2.26版中添加了度量衡。 如果您想要使用这些度量衡,请确保您至少处于2.26版本。 它们默认启用, 您可以通过添加来禁用
+ [普罗米修斯度量衡](https://prometheus.io/) 以/erddap/度量计。 2.25中增加了联合核查机制的核心衡量标准,其中有许多 ERDDAP™ 2.26版中添加了度量衡。 如果您想要使用这些度量衡,请确保您至少处于2.26版本。 它们默认启用, 您可以通过添加来禁用
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ sidebar_position: 9
 
 ## 运行 Prometheus 服务器
 
-运行监视堆栈的最佳文档 (普罗米修斯+格拉法纳) 在普罗米修斯[读我](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md)。 。 。 。
+运行监视堆栈的最佳文档 (普罗米修斯+格拉法纳) 在普罗米修斯 [读我](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) 。 。 。 。
 
-## ERDDAP™计量
+##  ERDDAP™ 计量
 
 ### 联合核查团
 
-ERDDAP™导出您可能发现有用的一些度量衡 (开始于ERDDAP™2.25 联合国) 。 。 。 为了对JVM的健康进行总体监测,我们使用普罗米修斯客户收集的衡量标准。 这包括关于垃圾收集、内存使用、线程等数据。 更多信息见[普罗米修斯JavaJVM 客户端文档](https://prometheus.github.io/client_java/instrumentation/jvm/)。 。 。 。
+ ERDDAP™ 导出您可能发现有用的一些度量衡 (开始于 ERDDAP™ 2.25 联合国) 。 。 。 为了对JVM的健康进行总体监测,我们使用普罗米修斯客户收集的衡量标准。 这包括关于垃圾收集、内存使用、线程等数据。 更多信息见 [普罗米修斯 Java JVM 客户端文档](https://prometheus.github.io/client_java/instrumentation/jvm/) 。 。 。 。
 
-### ERDDAP™具体
+###  ERDDAP™ 具体
 
-我们还出口一些ERDDAP™具体指标 (开始于ERDDAP™2.26 国家) 。 。 。 如果您想要挖掘代码, 您可以找到收集到的参数[Metrics.java (英语).](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java)。 。 。 。
+我们还出口一些 ERDDAP™ 具体指标 (开始于 ERDDAP™ 2.26 国家) 。 。 。 如果您想要挖掘代码, 您可以找到收集到的参数 [Metrics.java (英语).](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) 。 。 。 。
 
-#### ERDDAP构建_ info
+####  ERDDAP 构建_ info
 
-这是建筑信息ERDDAP™服务器。 它包括版本 (主要. 小于) , 版本 _ 完整 (校长. minor.patch) 和部署_ info (用于显示服务器是如何部署的, 如“ Docker ”  ') 。 。 。 。
+这是建筑信息 ERDDAP™ 服务器。 它包括版本 (主要. 小于) , 版本 _ 完整 (校长. minor.patch) 和部署_ info (用于显示服务器是如何部署的, 如“ Docker ”  ') 。 。 。 。
 
 #### 特性(_F)
 
@@ -37,9 +37,9 @@ ERDDAP™导出您可能发现有用的一些度量衡 (开始于ERDDAP™2.25 �
 
 这是一个信息度量法,它表明是否有图形加速。
 
-#### http请求(_D)
+####  http 请求(_D)
 
-这是请求响应时间数秒的直方图 。 标签为请求_ 类型 (例如,网格dap,tabledap,文件, wms 数据) ,数据集编号 (如果适用,以其他方式重复请求类型) , 文件类型 (请求的产出格式 例如'.html','.csv','.iso19115  ') 代码 (请求的语言,或者默认情况下的空字符串) 状态_代码 (http请求的状态代码,例如200、302、404) 。 。 。 。
+这是请求响应时间数秒的直方图 。 标签为请求_ 类型 (例如,网格dap, tabledap ,文件, wms 数据) ,数据集编号 (如果适用,以其他方式重复请求类型) , 文件类型 (请求的产出格式 例如'.html','.csv','.iso19115  ') 代码 (请求的语言,或者默认情况下的空字符串) 状态_代码 ( http 请求的状态代码,例如200、302、404) 。 。 。 。
 
 这可用于通过数据集ID跟踪请求,以确定服务器的流行数据集. 也可以帮助识别服务器上是否有特殊类型的请求缓慢.
 

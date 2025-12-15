@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # Prometeu
 
-[Prometheus metrics](https://prometheus.io/)sunt disponibile la /erddap/metrice. Parametrii de bază JVM au fost adăugați în 2.25 cu mulțiERDDAP™valorile adăugate în versiunea 2.26. Dacă doriți să utilizați indicatorii asigurați-vă că sunteți în cel puțin versiunea 2.26. Ei implicit pentru a activa, le puteți dezactiva prin adăugarea
+ [Prometheus metrics](https://prometheus.io/) sunt disponibile la /erddap/metrice. Parametrii de bază JVM au fost adăugați în 2.25 cu mulți ERDDAP™ valorile adăugate în versiunea 2.26. Dacă doriți să utilizați indicatorii asigurați-vă că sunteți în cel puțin versiunea 2.26. Ei implicit pentru a activa, le puteți dezactiva prin adăugarea
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ Aceste indicatori sunt concepute pentru a fi ușor de citit. În timp ce puteți
 
 ## Rulează serverul Prometeu
 
-Cea mai bună documentație pentru funcționarea stiva de monitorizare (Prometeu + Grafana) este în Prometheus[readme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md).
+Cea mai bună documentație pentru funcționarea stiva de monitorizare (Prometeu + Grafana) este în Prometheus [readme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) .
 
-## ERDDAP™Indicatori
+##  ERDDAP™ Indicatori
 
 ### JVM
 
-ERDDAP™exportă o serie de indicatori pe care le-ar putea găsi utile (începând cuERDDAP™2, 25) . Pentru monitorizarea generală a stării de sănătate a JVM folosim indicatorii colectaţi de clientul Prometheus. Acest lucru include date despre colectarea gunoiului, utilizarea memoriei, fire, și mai mult. Pentru mai multe informații, a se vedea[PrometeuJavaDocumentația JVM a clientului](https://prometheus.github.io/client_java/instrumentation/jvm/).
+ ERDDAP™ exportă o serie de indicatori pe care le-ar putea găsi utile (începând cu ERDDAP™ 2, 25) . Pentru monitorizarea generală a stării de sănătate a JVM folosim indicatorii colectaţi de clientul Prometheus. Acest lucru include date despre colectarea gunoiului, utilizarea memoriei, fire, și mai mult. Pentru mai multe informații, a se vedea [Prometeu Java Documentația JVM a clientului](https://prometheus.github.io/client_java/instrumentation/jvm/) .
 
-### ERDDAP™specific
+###  ERDDAP™ specific
 
-De asemenea, exportăm o serie deERDDAP™indicatori specifici (începând cuERDDAP™2, 26) . Dacă doriți să sape în codul, puteți găsi valorile colectate în[Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java).
+De asemenea, exportăm o serie de ERDDAP™ indicatori specifici (începând cu ERDDAP™ 2, 26) . Dacă doriți să sape în codul, puteți găsi valorile colectate în [Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) .
 
-#### ERDDAP_build_info
+####  ERDDAP _build_info
 
-Aceasta este informaţia de construcţie pentruERDDAP™server. Include versiunea (major. minor) , versiunea_plină (major.minor.patch) , și implementarea_info (folosit pentru a indica modul în care serverul este implementat, cum ar fi 'Docker ') .
+Aceasta este informaţia de construcţie pentru ERDDAP™ server. Include versiunea (major. minor) , versiunea_plină (major.minor.patch) , și implementarea_info (folosit pentru a indica modul în care serverul este implementat, cum ar fi 'Docker ') .
 
 #### feature_flags
 
@@ -37,9 +37,9 @@ Acesta este un indicator informativ care arată starea actuală a steagurilor ca
 
 Acesta este un metric info care indică dacă accelerația grafică este disponibilă.
 
-#### http_Cere_durata_secunde
+####  http _Cere_durata_secunde
 
-Aceasta este o histogramă a duratei de răspuns la cerere în câteva secunde. Etichetele sunt de tip cerere_tip (de exemplu griddap;tabledap, fișiere, wMS) , Set de date_id (dacă este cazul, repetă altfel tipul de cerere) , fișier_tip (Formatul de ieșire pentru cerere de exemplu "html," "csv," ".iso19115 ') , lang_cod (limba pentru cerere sau șirul gol dacă este implicit) , status_code (httpcodul de stare al cererii, de exemplu 200, 302, 404) .
+Aceasta este o histogramă a duratei de răspuns la cerere în câteva secunde. Etichetele sunt de tip cerere_tip (de exemplu griddap; tabledap , fișiere, wMS) , Set de date_id (dacă este cazul, repetă altfel tipul de cerere) , fișier_tip (Formatul de ieșire pentru cerere de exemplu "html," "csv," ".iso19115 ') , lang_cod (limba pentru cerere sau șirul gol dacă este implicit) , status_code ( http codul de stare al cererii, de exemplu 200, 302, 404) .
 
 Acest lucru poate fi folosit pentru a urmări cererile prin set de date pentru a determina setările de date populare ale serverului. De asemenea, poate ajuta la identificarea dacă există anumite tipuri de cereri care sunt lente pe server.
 

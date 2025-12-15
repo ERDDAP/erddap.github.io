@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Denne side er et udkast. Det vil kun være synligt i dev og være udelukket fra produktionsbyggeriet.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(åbner i ny fane)",
+    "description": "The ARIA label for the external link icon"
   }
 }

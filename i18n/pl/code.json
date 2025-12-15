@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Ta strona to szkic. Będzie ona widoczna tylko w dev i wyłączona z produkcji.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(otwiera się w nowej zakładce)",
+    "description": "The ARIA label for the external link icon"
   }
 }

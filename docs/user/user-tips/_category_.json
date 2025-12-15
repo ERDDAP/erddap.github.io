@@ -1,0 +1,8 @@
+{
+  "label": "User Tips",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Tip and trick writeups for users"
+  }
+}

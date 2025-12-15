@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # Táirgí gaolmhara
 
-[méadracht Prometheus](https://prometheus.io/)ar fáil ag /erddap / méadracht. JVM croí méadracht cuireadh i 2.25 le go leorERDDAP™méadracht leanas i leagan 2.26. Más mian leat a bhaint as an méadracht a dhéanamh cinnte go bhfuil tú i leagan ar a laghad 2.26. réamhshocraithe siad a chumasú, is féidir leat iad a dhíchumasú trí chur
+ [méadracht Prometheus](https://prometheus.io/) ar fáil ag /erddap / méadracht. JVM croí méadracht cuireadh i 2.25 le go leor ERDDAP™ méadracht leanas i leagan 2.26. Más mian leat a bhaint as an méadracht a dhéanamh cinnte go bhfuil tú i leagan ar a laghad 2.26. réamhshocraithe siad a chumasú, is féidir leat iad a dhíchumasú trí chur
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ Tá na méadrachta deartha chun a bheith inléite meaisín. Cé gur féidir leat
 
 ## Rith freastalaí Prometheus
 
-An doiciméadú is fearr le haghaidh reáchtáil an chairn monatóireachta (Táirgí gaolmhara) Tá sa Prometheus[Léigh níos mó](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md).
+An doiciméadú is fearr le haghaidh reáchtáil an chairn monatóireachta (Táirgí gaolmhara) Tá sa Prometheus [Léigh níos mó](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) .
 
-## ERDDAP™méadracht
+##  ERDDAP™ méadracht
 
 ### JVM
 
-ERDDAP™onnmhairí roinnt méadrachta gur féidir leat a fháil úsáideach (ag tosú iERDDAP™2.25) . Le haghaidh monatóireacht ghinearálta ar shláinte an JVM úsáidimid na méadrachta a bhailíonn an cliant Prometheus. Áirítear leis seo sonraí faoi bhailiú truflais, úsáid chuimhne, snáitheanna, agus níos mó. Le haghaidh tuilleadh eolais féach ar an[Táirgí gaolmharaJavaCliant JVM doiciméadú](https://prometheus.github.io/client_java/instrumentation/jvm/).
+ ERDDAP™ onnmhairí roinnt méadrachta gur féidir leat a fháil úsáideach (ag tosú i ERDDAP™ 2.25) . Le haghaidh monatóireacht ghinearálta ar shláinte an JVM úsáidimid na méadrachta a bhailíonn an cliant Prometheus. Áirítear leis seo sonraí faoi bhailiú truflais, úsáid chuimhne, snáitheanna, agus níos mó. Le haghaidh tuilleadh eolais féach ar an [Táirgí gaolmhara Java Cliant JVM doiciméadú](https://prometheus.github.io/client_java/instrumentation/jvm/) .
 
-### ERDDAP™ar leith
+###  ERDDAP™ ar leith
 
-Táimid ag onnmhairiú freisin roinntERDDAP™méadracht ar leith (ag tosú iERDDAP™Déan teagmháil anois) . Más mian leat a tochailt isteach sa chód, is féidir leat teacht ar an méadracht a bailíodh i[riachtanais uisce: measartha](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java).
+Táimid ag onnmhairiú freisin roinnt ERDDAP™ méadracht ar leith (ag tosú i ERDDAP™ Déan teagmháil anois) . Más mian leat a tochailt isteach sa chód, is féidir leat teacht ar an méadracht a bailíodh i [riachtanais uisce: measartha](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) .
 
-#### ERDDAPDéan Teagmháil Linn
+####  ERDDAP Déan Teagmháil Linn
 
-Níl an Tweet seo ar fáilERDDAP™freastalaí. Cuimsíonn sé leagan (riachtanais uisce: measartha) , leagan_full (mór.minor.pat) agus imscaradh_info (a úsáidtear a chur in iúl conas a úsáidtear an freastalaí, cosúil le 'Docker '') .
+Níl an Tweet seo ar fáil ERDDAP™ freastalaí. Cuimsíonn sé leagan (riachtanais uisce: measartha) , leagan_full (mór.minor.pat) agus imscaradh_info (a úsáidtear a chur in iúl conas a úsáidtear an freastalaí, cosúil le 'Docker '') .
 
 #### Uirlisí ilchuspóireacha
 
@@ -37,9 +37,9 @@ Is é seo an méadrach info a léiríonn an staid reatha na bratacha gné. Tá a
 
 Is méadrach info é seo a léiríonn an bhfuil luasghéarú grafaicí ar fáil.
 
-#### httpDéan staidéar
+####  http Déan staidéar
 
-Is é seo an histeagram na réanna freagartha a iarraidh i soicind. Is iad na lipéid a iarraidh_type (mar shampla griddap,tabledap, comhaid, wms) , dataset_id (más infheidhme, an cineál iarrata arís ar shlí eile) , file_type (formáid aschur d'iarraidh e.g. '.html', '.csv', '.iso19115 '') , lang_code (teanga don iarratas, nó teaghrán folamh má réamhshocraithe) , status_code (httpcód stádais na hiarrata e.g. 200, 302, 404) .
+Is é seo an histeagram na réanna freagartha a iarraidh i soicind. Is iad na lipéid a iarraidh_type (mar shampla griddap, tabledap , comhaid, wms) , dataset_id (más infheidhme, an cineál iarrata arís ar shlí eile) , file_type (formáid aschur d'iarraidh e.g. '.html', '.csv', '.iso19115 '') , lang_code (teanga don iarratas, nó teaghrán folamh má réamhshocraithe) , status_code ( http cód stádais na hiarrata e.g. 200, 302, 404) .
 
 Is féidir é seo a úsáid chun iarratais a rianú ag dataset id chun a chinneadh an fhreastalaí ar tacar sonraí tóir. Is féidir leis cabhrú freisin a aithint má tá cineálacha áirithe na n-iarratas atá mall ar do fhreastalaí.
 

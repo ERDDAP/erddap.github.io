@@ -11,8 +11,8 @@ Hur man gör en uppdatering av en befintlig ERDDAP™ på din server
 2. Om du uppgraderar från ERDDAP™ version 2.18 eller nedan måste du byta till Java 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 (eller nyare) och tillhörande Tomcat 10. Se regelbunden ERDDAP™ installationsanvisningar för [ Java ](/docs/server-admin/deploy-install#java) och [Tomcat](/docs/server-admin/deploy-install#tomcat) . Du måste också kopiera din _tomcat_/content/erddap Katalog från din gamla Tomcat installation till din nya Tomcat installation.
 
 ## Ladda ner{#download} 
-3. Ladda ner [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) till _tomcat_/webapps.
-     (version 2.28.1, 622,676,238 byte, MD5=48b4226045f950c8a8d69ef9521b9bc9, daterad 09-05-2025) 
+3. Ladda ner [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) till _tomcat_/webapps.
+     (version 2.29.0, 706.788.135 byte, MD5=A5ED0DCC8D46CA27640FFEB8CE4A8560, daterad 12-15-2025) 
      
 ## meddelanden.xml{#messagesxml} 
 4. 

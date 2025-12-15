@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Oto zmiany związane z każdym ERDDAP™ Wypuścić.
 
+
+## Wersja 2.29.0{#version-2290} 
+ (wydany 2025- 12- 15) 
+
+Wymagane działania.
+
+ ERDDAP™ Wersja 2.29.0 wymaga jdk 25 lub nowszego. Proszę zaktualizować wersję jdk. Jeśli jest to problem, można zbudować ERDDAP™ dla starszego jdk (powrót do co najmniej 17) poprzez zmianę pliku pom.xml. JDK 25 jest LTS wydania Java i obejmuje wiele ulepszeń, w szczególności poprawę wydajności.
+
+*    **Nowe funkcje i zmiany (dla użytkowników) :** 
+    * Wersja ISO 19115: Poniżej znajdują się informacje o administratorze. Dla użytkowników można teraz zażądać konkretnych wersji metadanych ISO 19115. Zrób to z griddap / tabledap strony dla zbioru danych z rozwijanym typem pliku. Wersje te będą niezależne od domyślnego serwera.
+
+*    **Rzeczy ERDDAP™ Administratorzy muszą wiedzieć i robić:** 
+    * Nowa funkcja, obsługa MQTT. Dla szczegółów polecam przeczytać [Nowa strona o tym.](/docs/server-admin/mqtt-integration) Obejmuje to możliwość tworzenia zbiorów danych z komunikatów MQTT oraz publikowanie komunikatów MQTT przy zmianie zbioru danych. Jest domyślnie wyłączony, więc jeśli chcesz go używać, musisz go włączyć.
+
+Dzięki Ayush Singh za pracę nad MQTT&#33;
+
+    * Poprawa S3: Dodawanie wsparcia dla S3 URI jako wartość cacheFromUrl. Pozwoli to ERDDAP do obsługi prywatnych wiader hostowane na amazonaus.com Zajął się również problemem wycieku pamięci S3.
+
+Dzięki @ SethChampagneNRL za pracę na S3&#33;
+
+    * Wersja ISO 19115: Istnieje teraz wsparcie dla 3 różnych wersji metadanych ISO 19115. Domyślna wersja jest kontrolowana przez ustawienia w Twoim setup.xml. Jeśli uzyteSisISO19115 jest fałszywy, serwer domyślnie zapewni NOAA zmodyfikowany ISO19115 _ 2. Jeśli użyj SisISO19115 jest prawdą, to serwer będzie używał innej wersji w zależności od wartości useSisISO19139. Jeżeli używalny Sissiso19139 jest prawdą, domyślna wartość to ISO19139 _ 2007, jeśli używalny Sissiso19139 jest fałszywy, domyślna wartość to ISO19115 _ 3 _ 2016. Polecamy użycie useSissiSO19115 = true i useSissiSO19139 = false. Twoja organizacja może wymagać różnych ustawień.
+
+    * Migrował do Javy. biblioteka czasu (zamiast Java.util. GregorianCalendar) . Powinno to zapewnić poprawę wyników w odniesieniu do zapytań obejmujących kolumny daty / czasu. Znaczna większość zbiorów danych nie powinna mieć zauważalnego wpływu. Jeden znany przypadek powoduje zmianę jest jeśli zbiór danych jest używany `dni od 0000- 01- 01` lub podobne. Jeśli jest to problem dla zmiennej, możesz dodać ` <att name="legacy_time_adjust"> prawda </att> ` do addAttributes od dataVariable lub axisVariable .
+    
+    *    datasets.xml jest teraz przetwarzane przez [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Ma to wiele zastosowań, w tym ustalanie wartości prywatnych (jak hasła) przy użyciu zmiennych środowiskowych. To może być wyłączone przez ustawienie enableEnvParsing do false w setup.xml.
+
+    * Oś ciśnieniowa: Dodaje specjalny przypadek dla podnoszenia określonych przez ciśnienie. Jest to stosowane przede wszystkim w zestawach danych Meteorologicznych określających pionowe podwyższenie poziomu izobarycznego. UWAGA: Mniejsze wartości ciśnienia oznaczają wyższe poziomy, tak więc oś biegnie naprzeciwko normalnych poziomów określonych w metrach lub stopach.
+
+Dzięki [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid Pliki FromNcFiles o różnych wymiarach: Jest. (eksperymentalne) wsparcie dla EDDGrid Pliki FromNcFiles mają zmienne, które nie używają tego samego zestawu osi. Proszę zgłosić, jak to dla pana działa, albo jeśli zachowanie nie wydaje się właściwe.
+
+    * Istnieje zbiór optymalizacji, które powinny być bezpieczne, ale mają flagi do powrotu do starego zachowania w razie potrzeby. Jeśli znajdziesz potrzebę ustawienia którejkolwiek z flag, wpisz błąd. Jeśli usłyszymy o żadnych problemach większość z nich zostanie usunięta z nowym domyślnym zachowaniem w przyszłości. Jest [nowa strona o flagach funkcji](/docs/server-admin/feature-flags) gdzie można przeczytać o tych i innych flagach.
+
+      * dotyk Nitka Tylko WhenItems: Jest to zmiana tak, że touchThread będzie działać tylko wtedy, gdy są elementy w kolejce do dotknięcia. Jedna mniejsza liczba wątków to niewielka optymalizacja, ale wciąż przydatna. Domyślnie prawdziwe.
+
+      * useNcMetadane ForFileTable: Ta zmiana pozwala wewnętrznej tabeli plików na użycie atrybutów nc, w szczególności atrybutu actual _ range, aby uniknąć odczytu całego pliku nc. Może to drastycznie przyspieszyć początkowe wczytywanie zbiorów danych w oparciu o pliki nc, jeżeli rzeczywisty _ zakres dla każdej zmiennej w każdym pliku jest włączony jako atrybut. Zauważ, że to ufa wartości, więc jeśli jest źle, wewnętrzna tabela plików będzie miała błędne informacje. Domyślnie prawdziwe.
+
+      * ncHeader MakeFile: Ta zmiana pozwala na generowanie plików nagłówka nc bez generowania najpierw reprezentatywnego pliku nc. Jest to mała optymalizacja EDDTable, ale ogromna optymalizacja dla wielu EDDGrid żądania. Domyślnie false (jak w false jest zamierzony zoptymalizowany zachowanie) .
+
+      * tło Subset CreateSubset Tabele: Ta zmiana przenosi część początkowego przetwarzania zbiorów danych do wątku tła. Powinno to poprawić czas ładowania zbiorów danych. W szczególności opóźniona część jest podzbiór tabel, które są również generowane w razie potrzeby, jeśli opóźnione przetwarzanie nie miało jeszcze miejsce. Domyślnie prawdziwe.
+
+    * Niektóre drobne zmiany, poprawki błędów (dzięki Italio Borrelli za naprawę EDDTableFromAggregateRows, Dzięki. @ SethChampagneNRL za umożliwienie wystąpienia więcej niż 360 w EDDGrid LonPM180 i kilka innych poprawek błędów) i optymalizacji.
+
+*    **Dla ERDDAP™ Programiści:** 
+    * Dodatkowe optymalizacje, w tym czas trwania próby cięcia w połowie.
+
+    * Nowe profile testowe dla bardzo płaskich (zewnętrzne) lub bardzo wolno (slowAWS) badania.
+
 ## Wersja 2.28.1{#version-2281} 
  (wydany 2025- 09- 05) 
 
@@ -49,7 +98,7 @@ Dzięki [@ ocefpaf](https://github.com/ocefpaf) , [@ abkfenris](https://github.c
     * Nowe dane dla konwertera barów na serwerach / erddap / convert / color.html
 
 *    **Rzeczy ERDDAP™ Administratorzy muszą wiedzieć i robić:** 
-    * Domyślnie behavoir jest to, że cache zostanie teraz oczyszczony niezależnie od głównego zadania zbioru danych obciążenia. Umożliwi to bardziej wiarygodne i regularne czyszczenie starych plików buforowych. Istnieje dodatkowa praca, aby poprawić zachowanie serwera, gdy niski na powierzchni dysku (zwracanie błędu w przypadku żądań, które mogą spowodować wyczerpanie się serwera i częstsze czyszczenie pamięci podręcznej w warunkach niskiego poziomu dysku w celu zapobiegania błędom) . W datasets.xml   (lub setup.xml) możesz dodać / ustawić nowy podręcznik Parametr ClearMinutes do kontrolowania jak często serwer sprawdza czyszczenie bufora. Uwaga, istniejący parametr CacheMinut kontroluje wiek plików, które mają być przechowywane, nowy cache ClearMinutes jest dla jak często wykonać dreszcz jasne.
+    * Domyślne zachowanie jest to, że cache zostanie teraz wyczyszczone niezależnie od głównego zadania zbioru danych obciążenia. Umożliwi to bardziej wiarygodne i regularne czyszczenie starych plików buforowych. Istnieje dodatkowa praca w celu poprawy zachowania serwera, gdy niski na dysku przestrzeni (zwracanie błędu w przypadku żądań, które mogą spowodować wyczerpanie się serwera i częstsze czyszczenie pamięci podręcznej w warunkach niskiego poziomu dysku w celu zapobiegania błędom) . W datasets.xml   (lub setup.xml) możesz dodać / ustawić nowy podręcznik Parametr ClearMinutes do kontrolowania jak często serwer sprawdza czyszczenie bufora. Uwaga, istniejący parametr CacheMinut kontroluje wiek plików, które mają być przechowywane, nowy cache ClearMinutes jest dla jak często wykonać dreszcz jasne.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Oprócz zaktualizowanego wyglądu istnieje ulepszona nawigacja, wyszukiwanie, t�
 
     * Nowa funkcja dostosowywania wyświetlanych informacji o zbiorach danych w UI. Oczekujemy, że będzie to szczególnie przydatne w dodaniu takich rzeczy jak cytaty z zestawem danych. Aby uzyskać więcej szczegółów można przeczytać [nowa dokumentacja](/docs/server-admin/display-info) . Dzięki Ayush Singh za wkład&#33;
 
-    * Dodatkowe wskaźniki Prometeusza. Największy to " http _ request _ direction _ seconds ", który zawiera czasy odpowiedzi na żądanie w podziale na:" request _ type "," dataset _ id "," dataset _ type "," file _ type "," lang _ code "," status _ code "
+    * Dodatkowe wskaźniki Prometeusza. Największym jest ` http _ request _ time _ seconds` który zawiera czasy odpowiedzi na żądanie w podziale na: "request _ type", "dataset _ id", "dataset _ type", "file _ type", "lang _ code", "status _ code"
 Ten format do odczytu maszynowego umożliwi lepsze zbieranie danych pomiarowych, aby zrozumieć, jak użytkownicy korzystają z serwera.
 
     * Nowy sposób generowania plików ISO19115 XML. Wykorzystuje Apache SIS i jest nową opcją w tym wydaniu. Proszę włączyć i wysłać informacje zwrotne.

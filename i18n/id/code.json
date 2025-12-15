@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Halaman ini adalah draft. Ini hanya akan terlihat di dev dan dikecualikan dari pembuatan produksi.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(terbuka di tab baru)",
+    "description": "The ARIA label for the external link icon"
   }
 }

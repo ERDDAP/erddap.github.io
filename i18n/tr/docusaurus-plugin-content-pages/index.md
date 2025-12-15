@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## Son Son Son Son Son Son Son Son ERDDAP™ sürüm sürüm sürüm sürüm sürüm sürüm sürüm sürüm sürüm versiyonu{#latest-erddap-version} 
 
-2.28.1, bakınız [Değişiklikler](/changes#version-2281) ve [indir](https://github.com/ERDDAP/erddap/releases/tag/v2.28.1) .
+2.29.0, bakınız [Değişiklikler](/changes#version-2290) ve [indir](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) .
 
 ##  ERDDAP™ Bilgi Bilgileri{#erddap-information} 
 

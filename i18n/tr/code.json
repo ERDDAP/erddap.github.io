@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Bu sayfa bir taslaktır. Sadece içinde görünür olacak ve üretim inşasından dışlanacaktır.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(Yeni sekmede açılır)",
+    "description": "The ARIA label for the external link icon"
   }
 }

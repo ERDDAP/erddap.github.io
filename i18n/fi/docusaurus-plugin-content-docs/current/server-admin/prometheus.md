@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # Prometheus
 
-[Prometheus metriikka](https://prometheus.io/)Saatavilla osoitteessa /erddap/metrics. JVM:n ydinmittarit lisättiin 2,25:een.ERDDAP™Lisätty versiossa 2.26. Jos haluat käyttää mittareita, varmista, että olet vähintään versiossa 2.26. Ne ovat oletusarvoisia, voit poistaa ne lisäämällä
+ [Prometheus metriikka](https://prometheus.io/) Saatavilla osoitteessa /erddap/metrics. JVM:n ydinmittarit lisättiin 2,25:een. ERDDAP™ Lisätty versiossa 2.26. Jos haluat käyttää mittareita, varmista, että olet vähintään versiossa 2.26. Ne ovat oletusarvoisia, voit poistaa ne lisäämällä
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ Nämä mittarit on suunniteltu koneellisesti luettavaksi. Vaikka voit tarkistaa 
 
 ## Prometheus-palvelin
 
-Parhaat dokumentit seurantaan (Prometheus + Grafana) on Prometheuksessa[Lukeminen](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md).
+Parhaat dokumentit seurantaan (Prometheus + Grafana) on Prometheuksessa [Lukeminen](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) .
 
-## ERDDAP™Metriikka
+##  ERDDAP™ Metriikka
 
 ### JVM
 
-ERDDAP™Vie useita mittareita, joista voi olla hyötyä (AloitetaanERDDAP™2.25) . JVM:n terveyden yleisessä seurannassa käytetään Prometheus-asiakkaan keräämiä mittareita. Tämä sisältää tietoja roskapostien keräämisestä, muistin käytöstä, langoista ja muista. Lisätiedot näkevät[PrometheusJavaAsiakas JVM-dokumentointi](https://prometheus.github.io/client_java/instrumentation/jvm/).
+ ERDDAP™ Vie useita mittareita, joista voi olla hyötyä (Aloitetaan ERDDAP™ 2.25) . JVM:n terveyden yleisessä seurannassa käytetään Prometheus-asiakkaan keräämiä mittareita. Tämä sisältää tietoja roskapostien keräämisestä, muistin käytöstä, langoista ja muista. Lisätiedot näkevät [Prometheus Java Asiakas JVM-dokumentointi](https://prometheus.github.io/client_java/instrumentation/jvm/) .
 
-### ERDDAP™Erityistä erityistä
+###  ERDDAP™ Erityistä erityistä
 
-Viemme myös useitaERDDAP™Erityiset mittarit (AloitetaanERDDAP™2.26) . Jos haluat kaivaa koodiin, löydät mittarit, jotka on kerätty[Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java).
+Viemme myös useita ERDDAP™ Erityiset mittarit (Aloitetaan ERDDAP™ 2.26) . Jos haluat kaivaa koodiin, löydät mittarit, jotka on kerätty [Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) .
 
-#### ERDDAPRakennettu_info
+####  ERDDAP Rakennettu_info
 
-Tämä on rakentamisen infoaERDDAP™palvelin. Sisältää version (Pääartikkeli: Minor) versio_full (Pääartikkeli: Minor.patch) Käyttöönotto_info (käytetään osoittamaan, miten palvelin on otettu käyttöön, kuten Docker """) .
+Tämä on rakentamisen infoa ERDDAP™ palvelin. Sisältää version (Pääartikkeli: Minor) versio_full (Pääartikkeli: Minor.patch) Käyttöönotto_info (käytetään osoittamaan, miten palvelin on otettu käyttöön, kuten Docker """) .
 
 #### Esiintyjät: Flags
 
@@ -37,9 +37,9 @@ Tämä on infomittari, joka näyttää nykyisen ominaisuuslipun. Useimpia boolee
 
 Tämä on infomittari, joka osoittaa, onko grafiikka kiihtyvyys käytettävissä.
 
-#### http_request_duration_seconds Näytä tarkat tiedot
+####  http _request_duration_seconds Näytä tarkat tiedot
 
-Tämä on histogrammi pyynnön vastauksen kesto sekunneissa. Etiketit ovat pyynnön_tyyppisiä (esimerkiksi griddap,tabledaptiedostoja, wms) Dataset_id (soveltuvin osin toistaa pyynnön tyyppi) tiedosto_type (Tuotantomuoto pyyntöön .html, .csv, .iso19115 """) Lang_code (pyynnön kieli tai tyhjä kieli, jos oletus) Tila_koodi (httpPyynnön tilakoodi: 200, 302, 404) .
+Tämä on histogrammi pyynnön vastauksen kesto sekunneissa. Etiketit ovat pyynnön_tyyppisiä (esimerkiksi griddap, tabledap tiedostoja, wms) Dataset_id (soveltuvin osin toistaa pyynnön tyyppi) tiedosto_type (Tuotantomuoto pyyntöön .html, .csv, .iso19115 """) Lang_code (pyynnön kieli tai tyhjä kieli, jos oletus) Tila_koodi ( http Pyynnön tilakoodi: 200, 302, 404) .
 
 Tätä voidaan käyttää pyyntöjen seuraamiseen tietoaineiston id avulla palvelimen suosittujen tietoaineistojen määrittämiseksi. Se voi myös auttaa tunnistamaan, onko palvelimellasi hitaita pyyntöjä.
 

@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "یہ صفحہ ڈرافٹ ہے۔ اسے ڈی وی وی میں ہی دیکھا جائے گا اور پیداواری مصنوعات سے مستثنیٰ کیا جائے گا۔",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "( نئے تبتی میں اتارے)",
+    "description": "The ARIA label for the external link icon"
   }
 }

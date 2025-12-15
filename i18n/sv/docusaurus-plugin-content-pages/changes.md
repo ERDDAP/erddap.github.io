@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Här är förändringarna i samband med varje ERDDAP™ release.
 
+
+## Version 2.29.0{#version-2290} 
+ (släppt 2025-12-15) 
+
+Åtgärder som krävs.
+
+ ERDDAP™ version 2.29.0 kräver jdk 25 eller senare. Vänligen uppdatera din jdk version. Om det är ett problem kan du bygga ERDDAP™ För en äldre jdk (tillbaka till minst 17) genom att ändra pom.xml-filen. JDK 25 är en LTS release Java och omfattar många förbättringar, framför allt förbättrad prestanda.
+
+*    **Nya funktioner och förändringar (för användare) Från:** 
+    * ISO 19115 versioner: Se nedan för admin info. För användare kan du nu begära specifika versioner av ISO 19115-metadata. Gör detta från griddap/ tabledap sidor för en dataset med filtypen sjunker ner. Dessa versioner kommer att vara oberoende av server standard.
+
+*    **Saker att göra saker ERDDAP™ Administratörer behöver veta och göra:** 
+    * Ny funktion, MQTT stöd. För detaljer rekommenderar jag att läsa [Ny sida om det.](/docs/server-admin/mqtt-integration) Detta inkluderar att kunna bygga datamängder från MQTT-meddelanden och publicera MQTT-meddelanden när en datamängd ändras. Det är av som standard, så om du vill använda den måste du aktivera den.
+
+Tack till Ayush Singh för att ha jobbat på MQTT&#33;
+
+    * S3 förbättringar: Lägga till stöd för S3-URI som cacheFromUrl-värdet. Detta kommer att tillåta ERDDAP för att stödja privata hinkar värd amazonaws.com Adresserade också ett S3-minnesläckproblem.
+
+Tack till @SethChampagneNRL för arbetet på S3&#33;
+
+    * ISO 19115 versioner: Det finns nu stöd för 3 olika versioner av ISO 19115-metadata. Standardversionen styrs av inställningar i din setup.xml. Om användningSisISO19115 är falsk, kommer servern som standard att tillhandahålla NOAA modifierad ISO19115_2. Om användningSisISO19115 är sant, kommer servern att använda en annan version beroende på värdet av användningSisISO19139. Om användningSisISO19139 är sant kommer standarden att vara ISO19139_2007, om användningSisISO19139 är falskt är standarden ISO19115_3_2016. Vi rekommenderar att du använder UseSisISO19115=true and useSisISO19139=false. Din organisation kan kräva olika inställningar.
+
+    * Migrerad till java. Tidsbibliotek (I stället för java.util. GregorianCalendar) . Detta bör ge prestandaförbättringar på frågor som involverar datum/tidskolumner. Det bör inte finnas någon märkbar effekt för de allra flesta datamängder. Det kända fallet orsakar en förändring är om datamängden använder `dagar sedan 0000-01-01` eller liknande. Om detta är ett problem för en variabel kan du lägga till ` <att name="legacy_time_adjust"> sanning sant </att> ` till addAttributes sektion av antingen dataVariable eller axisVariable .
+    
+    *    datasets.xml Bearbetas nu av en [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Detta har många användningsområden inklusive att ställa in privata värden (som lösenord) använda miljövariabler. Detta kan inaktiveras genom att ställa in aktiveraEnvParsing till falsk i setup.xml.
+
+    * Tryckaxel: Lägger till ett speciellt fall för höjder som definieras av tryck. Detta används främst i meteorologiska dataset som definierar vertikala höjder i isobariska nivåer. Obs&#33;: Mindre tryckvärden betyder högre höjder, så axeln går mot de normala höjderna som definieras i meter eller fötter.
+
+Tack vare [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid FrånNcFiles med varierande dimensioner: Det finns (experimentell) Stöd för EDDGrid FrånNcFiles dataset för att ha variabler som inte använder samma uppsättning axlar. Vänligen rapportera tillbaka om hur detta fungerar för dig, eller om beteendet inte verkar rätt.
+
+    * Det finns en samling optimeringar som ska vara säkra, men har flaggor att återgå till gammalt beteende om det behövs. Om du hittar behovet av att ställa in någon av flaggorna, vänligen lämna in en bugg. Om vi inte hör några problem kommer de flesta av dessa att tas bort med den nya beteendestandarden i framtiden. Det finns en [Ny sida om funktionsflaggor](/docs/server-admin/feature-flags) där du kan läsa om dessa och andra flaggor.
+
+      * Rör vid Tråd Endast endast Närobjekt: Detta är en förändring så att touchThread bara körs när det finns objekt i kön att röra. En färre tråd körning är en mindre optimering men fortfarande användbar. Standarder till sant.
+
+      * AnvändNcMetadata ForFileTable: Denna förändring gör det möjligt för den interna filtabellen att använda nc-attribut, särskilt en variabel faktisk_range-attribut för att undvika att läsa hela nc-filen. Detta kan drastiskt påskynda inledande laddning av dataset baserat på nc-filer om den faktiska_range för varje variabel i varje fil ingår som ett attribut. Observera att detta litar på värdet, så om det är fel kommer den interna filtabellen att ha felaktig information. Standarder till sant.
+
+      * ncHeader MakeFile: Denna förändring gör att nc-rubrikfiler kan genereras utan att först generera den representativa nc-filen. Detta är en liten optimering för EDDTable, men en stor optimering för många. EDDGrid Förfrågningar. Standarder till falska (som falskt är det avsedda optimerade beteendet) .
+
+      * bakgrund bakgrund CreateSubset Tabeller: Denna förändring flyttar några av den första behandlingen av dataset till en bakgrundstråd. Detta bör förbättra tiden för laddning av datamängder. Specifikt är den försenade delen subsettabeller, som också genereras vid behov om den försenade behandlingen inte har hänt ännu. Standarder till sant.
+
+    * Några små förändringar, buggfixar (tack Italo Borrelli för fix för EDDTableFromAggregateRows, Tack tack @SethChampagneNRL för att möjliggöra longitud större än 360 i EDDGrid LonPM180 och flera andra buggfixar) och optimeringar.
+
+*    **För ERDDAP™ Utvecklare:** 
+    * Ytterligare optimeringar, inklusive skärningstest körtid i hälften.
+
+    * Nya testprofiler för mycket flakiga (externa) eller extremt långsam (långsamt) tester.
+
 ## Version 2.28.1{#version-2281} 
  (släppt 2025-09-05) 
 
@@ -90,7 +139,7 @@ Förutom det uppdaterade utseendet finns det förbättrad navigering, sökning, 
 
     * Ny funktion för att anpassa den information som visas om datamängder i UI. Vi förväntar oss att detta är särskilt användbart för att lägga till saker som datasetcitationer. För mer information kan du läsa [Ny dokumentation](/docs/server-admin/display-info) . Tack till Ayush Singh för bidraget&#33;
 
-    * Ytterligare Prometheus mätvärden. Den största är " http _request_duration_seconds' som inkluderar förfrågningstider som bryts ned av: "request_type", "dataset_id", "file_type", "lang_code", "status_code"
+    * Ytterligare Prometheus mätvärden. Den största är ` http _request_duration_seconds` som inkluderar förfrågningstider som bryts ned av: "request_type", "dataset_id", "file_type", "lang_code", "status_code"
 Detta maskinläsbara format möjliggör bättre samling av mätvärden för att förstå hur användare använder servern.
 
     * Nytt sätt att generera ISO19115 XML-filer. Den använder Apache SIS och är ett nytt alternativ i denna release. Vänligen aktivera det och skicka feedback.

@@ -5,62 +5,86 @@
   },
   "sidebar.docSidebar.category.Server Administration": {
     "message": "Riarachán Freastalaí",
-    "description": "The label for category Server Administration in sidebar docSidebar"
+    "description": "The label for category 'Server Administration' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Server Administration.link.generated-index.description": {
     "message": "Eolas úsáideach do riarthóirí freastalaí",
-    "description": "The generated-index page description for category Server Administration in sidebar docSidebar"
+    "description": "The generated-index page description for category 'Server Administration' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Contributing": {
     "message": "Ag cur",
-    "description": "The label for category Contributing in sidebar docSidebar"
+    "description": "The label for category 'Contributing' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Contributing.link.generated-index.description": {
     "message": "Eolas dóibh siúd a chuireann leERDDAP",
-    "description": "The generated-index page description for category Contributing in sidebar docSidebar"
+    "description": "The generated-index page description for category 'Contributing' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Dataset Scripts Code Documentation": {
     "message": "Clár na dToghthóirí",
-    "description": "The label for category Dataset Scripts Code Documentation in sidebar docSidebar"
+    "description": "The label for category 'Dataset Scripts Code Documentation' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ERDDAP": {
     "message": "ERDDAP",
-    "description": "The label for category ERDDAP in sidebar docSidebar"
+    "description": "The label for category 'ERDDAP' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ERDDAP.link.generated-index.description": {
     "message": "Doiciméid a ghiniúint faoiERDDAP™cód cód cód",
-    "description": "The generated-index page description for category ERDDAP in sidebar docSidebar"
+    "description": "The generated-index page description for category 'ERDDAP' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.com.cohort.util": {
     "message": "Déan teagmháil linn",
-    "description": "The label for category com.cohort.util in sidebar docSidebar"
+    "description": "The label for category 'com.cohort.util' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptCalendar2": {
     "message": "ScriptCalendar2",
-    "description": "The label for category ScriptCalendar2 in sidebar docSidebar"
+    "description": "The label for category 'ScriptCalendar2' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptMath": {
     "message": "Script an Duine",
-    "description": "The label for category ScriptMath in sidebar docSidebar"
+    "description": "The label for category 'ScriptMath' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptMath2": {
     "message": "Script an Duine",
-    "description": "The label for category ScriptMath2 in sidebar docSidebar"
+    "description": "The label for category 'ScriptMath2' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptRow": {
     "message": "Amharc ar gach eolas",
-    "description": "The label for category ScriptRow in sidebar docSidebar"
+    "description": "The label for category 'ScriptRow' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptString2": {
     "message": "Script a Thástáil",
-    "description": "The label for category ScriptString2 in sidebar docSidebar"
+    "description": "The label for category 'ScriptString2' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User": {
     "message": "Úsáideora",
-    "description": "The label for category User in sidebar docSidebar"
+    "description": "The label for category 'User' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "Eolas cabhrach d'úsáideoirí",
-    "description": "The generated-index page description for category User in sidebar docSidebar"
+    "description": "The generated-index page description for category 'User' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Tips": {
+    "message": "Leideanna agus Leideanna",
+    "description": "The label for category Tips in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.Tips.link.generated-index.description": {
+    "message": "Tip agus scríobhaithe trick do riarthóirí freastalaí",
+    "description": "The generated-index page description for category Tips in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.Admin Tips": {
+    "message": "Leideanna Riarachán",
+    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
+    "message": "Tip agus scríobhaithe trick do riarthóirí freastalaí",
+    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.User Tips": {
+    "message": "Leideanna Úsáideora",
+    "description": "The label for category 'User Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.User Tips.link.generated-index.description": {
+    "message": "Tip agus scríobhaithe trick d'úsáideoirí",
+    "description": "The generated-index page description for category 'User Tips' in sidebar 'docSidebar'"
   }
 }

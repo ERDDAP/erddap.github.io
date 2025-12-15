@@ -1,7 +1,7 @@
 ---
 title: "ERDDAP™ and the Cloud"
 ---
-# ERDDAP™a mračno
+#  ERDDAP™ a mračno
 
 ## Co je to mrak
 
@@ -13,24 +13,24 @@ Existuje mnoho důvodů, proč se organizace chtějí přestěhovat do cloudu. N
 
 Tím se eliminuje potřeba udržovat datacentrum/server místnost. To také umožňuje škálování výpočetních zdrojů pro vaše současné potřeby. Stejně jako mrak může znamenat mnoho různých věcí, být schopen škálovat své zdroje také dělá. Mohlo by to znamenat platit víc. (nebo méně) Zdroje bez serverů. Může to znamenat přesun ze sdíleného serveru na soukromý server. Mohlo by to znamenat vylepšení na větší vyhrazený fyzický server.
 
-## MůžešERDDAP™Běhat v oblacích?
+## Můžeš ERDDAP™ Běhat v oblacích?
 
 Ano.
 
-ERDDAP™je navržen tak, aby běžel v rámci Tomcat, který může být provozován lokálně nebo v cloudovém prostředí. V Dockeru je komunitní podpora.[úřední Dockerská podpora brzy přijde.](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md).
+ ERDDAP™ je navržen tak, aby běžel v rámci Tomcat, který může být provozován lokálně nebo v cloudovém prostředí. V Dockeru je komunitní podpora. [úřední Dockerská podpora brzy přijde.](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
 
-To znamená,ERDDAP™byl navržen v době, kdy dedikované servery byly normou. Není bez serveru a bylo by nesmírně obtížné, kdyby nebylo nemožné, aby byl server bez serveru.
+To znamená, ERDDAP™ byl navržen v době, kdy dedikované servery byly normou. Není bez serveru a bylo by nesmírně obtížné, kdyby nebylo nemožné, aby byl server bez serveru.
 
-### MůžešERDDAP™Stupnice?
+### Můžeš ERDDAP™ Stupnice?
 
-StříkáníERDDAP™je složitější než jen využívat více zdrojů bez serveru. Máme skvělou dokumentaci.[jak zvětšitERDDAP™](https://erddap.github.io/docs/server-admin/scaling). Usnadňuje to škálováníERDDAP™je něco, co nás zajímá.
+Stříkání ERDDAP™ je složitější než jen využívat více zdrojů bez serveru. Máme skvělou dokumentaci. [jak zvětšit ERDDAP™ ](https://erddap.github.io/docs/server-admin/scaling) . Usnadňuje to škálování ERDDAP™ je něco, co nás zajímá.
 
 ### Co brání automatizaci?
 
-ERDDAP™dělá mnoho věcí, včetně udržování aktuálních souborů dat, oznamování předplatitelů změn souborů dat, cachování dat, zpracování žádostí uživatelů a dalších. Pro dostatečně velkouERDDAP™server jako[CoastWatch](https://coastwatch.pfeg.noaa.gov/erddap/index.html)To znamená, že neustále něco dělá. Kontinuální používání je ve skutečnosti extrémně nákladná situace pro volby bez serveru (platíte velkou prémii za výpočet, když děláte bez serveru a tak hlavní výhodou je, když jen občas děláte hovory) . Navíc, snaží se přesunout všechnyERDDAP™Různé funkce bez serveru by skončily s podstatně složitějším nastavením potřebným pro administrátory.
+ ERDDAP™ dělá mnoho věcí, včetně udržování aktuálních souborů dat, oznamování předplatitelů změn souborů dat, cachování dat, zpracování žádostí uživatelů a dalších. Pro dostatečně velkou ERDDAP™ server jako [CoastWatch](https://coastwatch.pfeg.noaa.gov/erddap/index.html) To znamená, že neustále něco dělá. Kontinuální používání je ve skutečnosti extrémně nákladná situace pro volby bez serveru (platíte velkou prémii za výpočet, když děláte bez serveru a tak hlavní výhodou je, když jen občas děláte hovory) . Navíc, snaží se přesunout všechny ERDDAP™ Různé funkce bez serveru by skončily s podstatně složitějším nastavením potřebným pro administrátory.
 
-### MůžešERDDAP™použít cloud Storage?
+### Můžeš ERDDAP™ použít cloud Storage?
 
 Ano.
 
-ERDDAP™podporuje ukládání cloudů (včetně AWS S3) a zlepšení této podpory (např. non-AWS S3) je vysoká priorita naERDDAP™plán rozvoje.ERDDAP™je také schopen čerpat data z mnoha stávajících on-line služeb. Pro více informací doporučuji prohlédnout si naše[Dokumentace typu souboru](https://erddap.github.io/docs/server-admin/datasets#detailed-descriptions-of-dataset-types).
+ ERDDAP™ podporuje ukládání cloudů (včetně AWS S3) a zlepšení této podpory (např. non-AWS S3) je vysoká priorita na ERDDAP™ plán rozvoje. ERDDAP™ je také schopen čerpat data z mnoha stávajících on-line služeb. Pro více informací doporučuji prohlédnout si naše [Dokumentace typu souboru](https://erddap.github.io/docs/server-admin/datasets#detailed-descriptions-of-dataset-types) .

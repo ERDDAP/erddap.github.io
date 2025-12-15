@@ -277,10 +277,10 @@ sidebar_position: 1
              
 ###  ERDDAP™ 内容{#erddap-content} 
 3.   [设置 `Tomcat/内容/erddap` 配置文件。](#erddap-content) 
-在Linux、Mac和Windows上下载 [erddap 组件 .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
+在Linux、Mac和Windows上下载 [erddap 组件 .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.1/erddapContent.zip) 
 并把它打开 `移动猫` 目录,创建 `Tomcat/内容/erddap` 。 。 。 。
 
-− Version 1.0.0, 20333字节, MD5=2B8D2A5 AE5ED73E3A42B529C168C60B5,日期: 2024-10-14___
+^ Version 1.0.1, 20683字节, MD5=98a8099e7e674da59fe35e9c96efa7b5,日期为2025-06-02_
 
 以前的一些版本也有:
 
@@ -357,9 +357,9 @@ sidebar_position: 1
      
 ### 安装 erddap 。 战争文件{#install-the-erddapwar-file} 
 
-4. 在 Linux, Mac 和 Windows 上, 下载 [战争](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) 改为 `Tomcat/网络应用程序` 数字 :
+4. 在 Linux, Mac 和 Windows 上, 下载 [战争](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) 改为 `Tomcat/网络应用程序` 数字 :
 
-^ Version 2.28.1, 622 676 238字节,MD5=48b4226045f950c8a8d69ef9521b9bc9,日期为2025-09-05_
+− 2.29.0、706,788,135字节、MD5=A5ED0DCC8D46CA27640FFEB8CE4A8560,日期: 12-15-2025___
 
 .war文件很大,因为它包含了高分辨率的海岸线,边界,以及创建地图所需的海拔数据.
 
@@ -374,6 +374,7 @@ sidebar_position: 1
    *  [2.25 联合国](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)   (592,292,039字节,MD5=652AFC9D1421F00B5F789DA2C4732D4C,日期为2024-11-07) 
    *  [2.26 国家](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)   (607,404,032字节,MD5=99a725108b37708e5420986c1616a119,日期2025-03-31) 
    *  [2.27.0 (简体中文)](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)   (620,554,403字节,MD5=3b2086c659ee4145ca2dff447bf4ef7,日期为2025-06-11) 
+   *  [2.28.1 国家](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war)   (622,676,238字节,MD5=48b4226045f950c8a8d69ef9521b9bc9,日期为2025-09-05) 
 
 ### 配置代理服务器 (具体部署)  {#proxy} 
 

@@ -1,6 +1,6 @@
 # Junta Técnica
 
-ElERDDAP™Technical Board is responsible for the technical direction thatERDDAP™Toma. ElERDDAP™Technical Board is responsible for the technical direction ofERDDAP™. Toma decisiones sobre la priorización del trabajo, las guías de carreteras, las dependencias, los procesos que repercuten en la labor de desarrollo y cualquier otro asunto que requiera supervisión técnicaERDDAP™. La junta también revisará y aprobará documentos de diseño para características nuevas significativas. Los términos de la junta técnica son 2 años con la opción de ampliar. También se espera que los miembros de la junta técnica contribuyan al proyecto, en particular mediante solicitudes de tiradas y exámenes de código.
+El ERDDAP™ Technical Board is responsible for the technical direction that ERDDAP™ Toma. El ERDDAP™ Technical Board is responsible for the technical direction of ERDDAP™ . Toma decisiones sobre la priorización del trabajo, las guías de carreteras, las dependencias, los procesos que repercuten en la labor de desarrollo y cualquier otro asunto que requiera supervisión técnica ERDDAP™ . La junta también revisará y aprobará documentos de diseño para características nuevas significativas. Los términos de la junta técnica son 2 años con la opción de ampliar. También se espera que los miembros de la junta técnica contribuyan al proyecto, en particular mediante solicitudes de tiradas y exámenes de código.
 
 ## Propósito{#purpose} 
 
@@ -8,13 +8,13 @@ La Junta Técnica se encarga de los siguientes documentos y procesos:
 
 *  **Revisar y Aprobar nuevas características** que se proponen en Discusiones GitHub.
 
-*  **ERDDAP™Proyectos prioritarios** lista, que determinan proyectos en los que estamos trabajando. Mira la corriente[lista de proyectos prioritarios](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Proyectos prioritarios** lista, que determinan proyectos en los que estamos trabajando. Mira la corriente [lista de proyectos prioritarios](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Objetivos de la función de liberación** , que determinan características específicas que pretendemos incluir en cada liberación deERDDAP™. Estos se documentan en el proyecto GitHub para cada lanzamiento.
+*  ** ERDDAP™ Objetivos de la función de liberación** , que determinan características específicas que pretendemos incluir en cada liberación de ERDDAP™ . Estos se documentan en el proyecto GitHub para cada lanzamiento.
 
-*  **ERDDAP™Guía de estilo** que especifica estilos de codificación y prácticas a seguirERDDAP™código.
+*  ** ERDDAP™ Guía de estilo** que especifica estilos de codificación y prácticas a seguir ERDDAP™ código.
 
-ElERDDAP™La Junta Técnica actúa sobre la base siguiente:
+El ERDDAP™ La Junta Técnica actúa sobre la base siguiente:
 
 * Cuando sea posible la comunicación de la Junta Técnica debe ser pública y asincrónica. En muchos casos esto significa utilizar debates y cuestiones de GitHub.
 
@@ -50,7 +50,7 @@ ElERDDAP™La Junta Técnica actúa sobre la base siguiente:
 
 ## Programa{#agenda} 
 
-Si desea agregar un tema a la Agenda de la Junta Técnica para el debate o cree que es un buen ajuste para la junta técnica, por favor envíe un correo electrónico[chris.john@noaa.gov](mailto:chris.john@noaa.gov).
+Si desea agregar un tema a la Agenda de la Junta Técnica para el debate o cree que es un buen ajuste para la junta técnica, por favor envíe un correo electrónico [chris.john @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Miembros{#members} 
 

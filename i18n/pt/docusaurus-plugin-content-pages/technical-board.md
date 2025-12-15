@@ -1,6 +1,6 @@
 # Conselho Técnico
 
-OERDDAP™Conselho Técnico é responsável pela direção técnica queERDDAP™Leva. OERDDAP™Conselho Técnico é responsável pela direção técnica deERDDAP™. Toma decisões sobre priorização do trabalho, características roadmaps, dependências, quaisquer processos que impactam o trabalho de desenvolvimento, e qualquer outra matéria que requer supervisão técnica emERDDAP™. O conselho também irá rever e aprovar documentos de projeto para novos recursos significativos. Os termos técnicos do conselho são 2 anos com a opção de estender. Os membros do conselho técnico também devem estar contribuindo para o projeto, em particular através de pedidos de pull e revisões de código.
+O ERDDAP™ Conselho Técnico é responsável pela direção técnica que ERDDAP™ Leva. O ERDDAP™ Conselho Técnico é responsável pela direção técnica de ERDDAP™ . Toma decisões sobre priorização do trabalho, características roadmaps, dependências, quaisquer processos que impactam o trabalho de desenvolvimento, e qualquer outra matéria que requer supervisão técnica em ERDDAP™ . O conselho também irá rever e aprovar documentos de projeto para novos recursos significativos. Os termos técnicos do conselho são 2 anos com a opção de estender. Os membros do conselho técnico também devem estar contribuindo para o projeto, em particular através de pedidos de pull e revisões de código.
 
 ## Propósito{#purpose} 
 
@@ -8,13 +8,13 @@ O Conselho Técnico é responsável pelos seguintes documentos e processos:
 
 *  **Reveja e Aprovar novos recursos** que são propostos em Discussões GitHub.
 
-*  **ERDDAP™Projectos prioritários** lista, que determinam projetos em que estamos trabalhando. Confira a corrente[lista de projectos prioritários](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Projectos prioritários** lista, que determinam projetos em que estamos trabalhando. Confira a corrente [lista de projectos prioritários](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Metas de recursos de lançamento** , que determinam características específicas que pretendemos incluir em cada versão deERDDAP™. Estes são documentados no projeto GitHub para cada versão.
+*  ** ERDDAP™ Metas de recursos de lançamento** , que determinam características específicas que pretendemos incluir em cada versão de ERDDAP™ . Estes são documentados no projeto GitHub para cada versão.
 
-*  **ERDDAP™Guia de estilo** que especifica estilos e práticas de codificação a serem seguidosERDDAP™código.
+*  ** ERDDAP™ Guia de estilo** que especifica estilos e práticas de codificação a serem seguidos ERDDAP™ código.
 
-OERDDAP™O Conselho Técnico opera na seguinte base:
+O ERDDAP™ O Conselho Técnico opera na seguinte base:
 
 * Sempre que possível comunicação do Conselho Técnico deve ser pública e assíncrona. Em muitos casos, isso significa utilizar discussões e questões do GitHub.
 
@@ -50,7 +50,7 @@ OERDDAP™O Conselho Técnico opera na seguinte base:
 
 ## Agenda{#agenda} 
 
-Se você gostaria de adicionar um item à Agenda do Conselho Técnico para discussão ou acreditar que você é um bom ajuste para o conselho técnico, por favor e-mail[Chris.@noaa.gov](mailto:chris.john@noaa.gov).
+Se você gostaria de adicionar um item à Agenda do Conselho Técnico para discussão ou acreditar que você é um bom ajuste para o conselho técnico, por favor e-mail [Chris. @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Membros{#members} 
 

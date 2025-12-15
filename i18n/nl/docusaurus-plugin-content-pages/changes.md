@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Hier zijn de veranderingen in verband met elk ERDDAP™ Laat los.
 
+
+## Versie 2.29.0{#version-2290} 
+ (vrijgegeven 2025-12-15) 
+
+Actie vereist.
+
+ ERDDAP™ versie 2.29.0 vereist jdk 25 of later. Update uw jdk-versie. Als dat een probleem is, kunt u bouwen ERDDAP™ voor een oudere jdk (terug naar ten minste 17) door het pom.xml bestand te veranderen. JDK 25 is een LTS release van Java en bevat vele verbeteringen, met name verbeterde prestaties.
+
+*    **Nieuwe functies en wijzigingen (voor gebruikers) :** 
+    * ISO 19115 versies: Zie hieronder voor admin info. Voor gebruikers kunt u nu specifieke versies van ISO 19115 metadata aanvragen. Doe dit vanuit de griddap/ tabledap pagina's voor een dataset met het bestandstype omlaag. Deze versies zullen onafhankelijk zijn van de standaardserver.
+
+*    **Dingen ERDDAP™ Beheerders moeten weten en doen:** 
+    * Nieuwe functie, MQTT ondersteuning. Voor details raad ik het lezen van de [Nieuwe pagina erover.](/docs/server-admin/mqtt-integration) Dit omvat het kunnen bouwen van datasets van MQTT berichten, en het publiceren van MQTT berichten wanneer een dataset verandert. Het is standaard uitgeschakeld, dus als je het wilt gebruiken, moet je het inschakelen.
+
+Met dank aan Ayush Singh voor het werken aan MQTT&#33;
+
+    * S3 verbeteringen: Ondersteuning voor S3 URI's toevoegen als de cacheFromUrl waarde. Dit zal toelaten ERDDAP ter ondersteuning van particuliere emmers gehost op amazonaws.com Behandelde ook een S3-geheugenlek probleem.
+
+Met dank aan @SethChampagneNRL voor het werk op S3&#33;
+
+    * ISO 19115 versies: Er is nu ondersteuning voor 3 verschillende versies van ISO 19115 metadata. De standaard versie wordt bestuurd door instellingen in uw setup.xml. Als useSisISO19115 onjuist is, zal de server standaard NOAA gewijzigde ISO19115_2. Als useSisISO19115 waar is, dan zal de server een andere versie gebruiken, afhankelijk van de waarde van gebruikSisISO19139. Als useSisISO19139 waar is, zal de standaard ISO19139_2007 zijn, als useSisISO19139 vals is zal de standaard ISO19115_3_2016 zijn. Wij raden u aan gebruik te maken vanSisISO19115=true en gebruikSisISO19139=false. Uw organisatie kan verschillende instellingen vereisen.
+
+    * Aan de java. tijdbibliotheek (In plaats van java.util. GregorianCalendar) . Dit moet zorgen voor verbeteringen van de prestaties van vragen die betrekking hebben op datum/tijd kolommen. Voor de overgrote meerderheid van de datasets mag er geen merkbaar effect zijn. Het enige bekende geval dat dit een verandering veroorzaakt is als de dataset wordt gebruikt `dagen sinds 0000-01-01` of vergelijkbaar. Als dit een probleem is voor een variabele, kunt u toevoegen ` <att name="legacy_time_adjust"> waar </att> ` aan de addAttributes sectie van hetzij a dataVariable of axisVariable .
+    
+    *    datasets.xml wordt nu verwerkt door een [Tekenreeksondernemer](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Dit heeft vele toepassingen, waaronder het instellen van private waarden (zoals wachtwoorden) gebruik van omgevingsvariabelen. Dit kan worden uitgeschakeld door EnvParsing in te stellen op false in setup.xml.
+
+    * Drukas: Voegt een speciaal geval voor verhogingen gedefinieerd door druk. Dit wordt voornamelijk gebruikt in Meteorologie datasets definiëren verticale verhogingen in isobarische niveaus. OPMERKING: Kleinere drukwaarden betekenen hogere hoogtes, zodat de as tegenover de normale hoogtes loopt, gedefinieerd in meters of voeten.
+
+Dankzij [SethChampagneNLL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid VanNcFiles met verschillende afmetingen: Die is er. (experimenteel) steun voor EDDGrid VanNcFiles datasets om variabelen te hebben die niet dezelfde reeks assen gebruiken. Rapporteer alsjeblieft hoe dit werkt voor jou, of als het gedrag niet helemaal juist lijkt.
+
+    * Er is een verzameling van optimalisaties die veilig moeten zijn, maar hebben vlaggen om terug te keren naar oud gedrag indien nodig. Als u de noodzaak vindt om een van de vlaggen in te stellen, dient u een bug in te dienen. Als we horen van geen problemen de meeste van deze zullen worden verwijderd met de nieuwe gedrag standaard in de toekomst. Er is een [nieuwe pagina over featurevlaggen](/docs/server-admin/feature-flags) waar je kunt lezen over deze en andere vlaggen.
+
+      * aanraking Thread Alleen WhenItems: Dit is een verandering zodat de touchThread alleen draait als er items in de wachtrij zijn om aan te raken. Een minder draad draaien is een kleine optimalisatie maar toch nuttig. Standaardwaarden voor waar.
+
+      * useNcMetadata VoorBestandstabel: Deze wijziging laat de interne bestandstabel toe om nc attributen te gebruiken, specifiek een variable actual_range attribuut om het hele nc bestand te vermijden. Dit kan de initiële laden van datasets op basis van nc-bestanden drastisch versnellen als de werkelijke_range voor elke variabele in elk bestand als een attribuut is opgenomen. Merk op dat dit de waarde vertrouwt, dus als het fout is, zal de interne bestandstabel onjuiste informatie hebben. Standaardwaarden voor waar.
+
+      * ncHeader MakeFile: Deze wijziging maakt het mogelijk nc header bestanden te genereren zonder eerst het representatieve nc bestand te genereren. Dit is een kleine optimalisatie voor EDDTable, maar een enorme optimalisatie voor velen EDDGrid verzoeken. Standaardinstellingen voor onjuist (zoals in vals is het beoogde geoptimaliseerd gedrag) .
+
+      * achtergrond AanmakenSubset Tabellen: Deze verandering verplaatst enkele van de eerste verwerking van datasets naar een achtergrondthread. Dit zou de tijd voor het laden van datasets moeten verbeteren. Met name het vertraagde deel is deeltabellen, die ook worden gegenereerd wanneer nodig als de vertraagde verwerking nog niet is gebeurd. Standaardwaarden voor waar.
+
+    * Enkele kleine wijzigingen, fouten herstellen (bedankt Italo Borrelli voor de fix voor EDDTableFromAggregateRows, bedankt @SethChampagneNRL voor het inschakelen van lengtegraden groter dan 360 in EDDGrid LonPM180, en verschillende andere bug fixes) En optimalisaties.
+
+*    **Voor ERDDAP™ Ontwikkelaars:** 
+    * Extra optimalisaties, inclusief het snijden van de testtijd in de helft.
+
+    * Nieuwe testprofielen voor zeer schilferig (extern) of extreem langzaam (langzaamAWS) tests.
+
 ## Versie 2.28,1{#version-2281} 
  (uitgebracht 2025-09-05) 
 
@@ -49,7 +98,7 @@ Dankzij [@ocefpaf](https://github.com/ocefpaf) , [@abkfenris](https://github.com
     * Nieuwe gegevens voor kleurbalkconverter op servers op /erddap/convert/color.html
 
 *    **Dingen ERDDAP™ Beheerders moeten weten en doen:** 
-    * Standaard behavoir is dat de cache nu wordt gewist onafhankelijk van de belangrijkste taak van de datasets. Dit zal zorgen voor meer betrouwbare en regelmatige opruiming van oude cache bestanden. Er is extra werk om servergedrag te verbeteren als er weinig schijfruimte is (returning a error for requests to make the server out of space, and clearing the cache more frequenter in low disk conditions to try to prevent fouten) . In datasets.xml   (of setup.xml) kunt u de nieuwe cache toevoegen/instellen ClearMinutes parameter om te bepalen hoe vaak de server controleert om de cache te wissen. Opmerking, de bestaande cacheMinutes parameter controleert de leeftijd van bestanden die moeten worden bewaard, de nieuwe cache ClearMinutes is voor hoe vaak een chache duidelijk te maken.
+    * Standaardgedrag is dat de cache nu wordt gewist onafhankelijk van de taak van de belangrijkste laaddatasets. Dit zal zorgen voor meer betrouwbare en regelmatige opruiming van oude cache bestanden. Er is extra werk om servergedrag te verbeteren wanneer er weinig schijfruimte is (returning a error for requests to make the server out of space, and clearing the cache more frequenter in low disk conditions to try to prevent fouten) . In datasets.xml   (of setup.xml) kunt u de nieuwe cache toevoegen/instellen ClearMinutes parameter om te bepalen hoe vaak de server controleert om de cache te wissen. Opmerking, de bestaande cacheMinutes parameter controleert de leeftijd van bestanden die moeten worden bewaard, de nieuwe cache ClearMinutes is voor hoe vaak een chache duidelijk te maken.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Naast de bijgewerkte verschijning is er verbeterde navigatie, zoeken, vertaling,
 
     * Nieuwe functie om de informatie over datasets in de UI aan te passen. We verwachten dat dit bijzonder nuttig is om dingen als dataset citaten toe te voegen. Voor meer details kunt u de [nieuwe documentatie](/docs/server-admin/display-info) . Met dank aan Ayush Singh voor de bijdrage&#33;
 
-    * Aanvullende Prometheus statistieken. De grootste is... http _request_dure_seconden
+    * Aanvullende Prometheus statistieken. De grootste is ` http _Aanvragen_duur_seconden` waarin de reactietijden van het verzoek zijn onderverdeeld in: "request_type," "dataset_id," "dataset_type," "file_type," "lang_code," "status_code"
 Dit machineleesbare formaat zal een betere verzameling metrics mogelijk maken om te begrijpen hoe gebruikers de server gebruiken.
 
     * Nieuwe manier om ISO19115 XML bestanden te genereren. Het maakt gebruik van Apache SIS en is een nieuwe optie in deze release. Schakel het in en stuur feedback.

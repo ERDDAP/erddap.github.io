@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # Prometeusz
 
-[Wskaźniki prometeusza](https://prometheus.io/)są dostępne na / erddap / metrics. Mierniki rdzenia JVM zostały dodane w 2.25 z wieluERDDAP™wskaźniki dodane w wersji 2.26. Jeśli chcesz użyć pomiarów upewnij się, że jesteś w co najmniej wersji 2.26. Domyślnie włączone, można je wyłączyć poprzez dodanie
+ [Wskaźniki prometeusza](https://prometheus.io/) są dostępne na / erddap / metrics. Mierniki rdzenia JVM zostały dodane w 2.25 z wielu ERDDAP™ wskaźniki dodane w wersji 2.26. Jeśli chcesz użyć pomiarów upewnij się, że jesteś w co najmniej wersji 2.26. Domyślnie włączone, można je wyłączyć poprzez dodanie
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ Te wskaźniki są zaprojektowane tak, aby były do odczytu maszynowego. Podczas 
 
 ## Uruchomienie serwera Prometheus
 
-Najlepsza dokumentacja do uruchomienia stosu monitorowania (Prometeusz + Grafana) jest w Prometeuszu[readme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md).
+Najlepsza dokumentacja do uruchomienia stosu monitorowania (Prometeusz + Grafana) jest w Prometeuszu [readme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) .
 
-## ERDDAP™metryka
+##  ERDDAP™ metryka
 
 ### JVM
 
-ERDDAP™eksportuj wiele wskaźników, które mogą okazać się przydatne (odERDDAP™2, 25) . Do ogólnego monitorowania zdrowia JVM używamy pomiarów zebranych przez klienta Prometeusza. Obejmuje to dane dotyczące zbierania śmieci, wykorzystania pamięci, wątków i więcej. Więcej informacji można znaleźć na stronie internetowej:[PrometeuszJavaDokumentacja klienta JVM](https://prometheus.github.io/client_java/instrumentation/jvm/).
+ ERDDAP™ eksportuj wiele wskaźników, które mogą okazać się przydatne (od ERDDAP™ 2, 25) . Do ogólnego monitorowania zdrowia JVM używamy pomiarów zebranych przez klienta Prometeusza. Obejmuje to dane dotyczące zbierania śmieci, wykorzystania pamięci, wątków i więcej. Więcej informacji można znaleźć na stronie internetowej: [Prometeusz Java Dokumentacja klienta JVM](https://prometheus.github.io/client_java/instrumentation/jvm/) .
 
-### ERDDAP™specyficzny
+###  ERDDAP™ specyficzny
 
-Eksportujemy również kilkaERDDAP™Specyficzne wskaźniki (odERDDAP™2, 26) . Jeśli chcesz przekopać się do kodu, możesz znaleźć metryki zebrane w[Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java).
+Eksportujemy również kilka ERDDAP™ Specyficzne wskaźniki (od ERDDAP™ 2, 26) . Jeśli chcesz przekopać się do kodu, możesz znaleźć metryki zebrane w [Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) .
 
-#### ERDDAP_ build _ info
+####  ERDDAP _ build _ info
 
-To jest build info dlaERDDAP™serwer. Zawiera on wersję (major.minor) , version _ full (major.minor.patch) oraz wdrożenie_ info (używane do wskazania jak serwer jest rozmieszczany, jak 'Docker') .
+To jest build info dla ERDDAP™ serwer. Zawiera on wersję (major.minor) , version _ full (major.minor.patch) oraz wdrożenie_ info (używane do wskazania jak serwer jest rozmieszczany, jak 'Docker') .
 
 #### feature _ flags
 
@@ -37,9 +37,9 @@ Jest to metryka informacyjna, która pokazuje aktualny stan flag funkcji. Więks
 
 Jest to metryka informacyjna, która wskazuje, czy przyspieszenie graficzne jest dostępne.
 
-#### http_ request _ time _ seconds
+####  http _ request _ time _ seconds
 
-To jest histogram czasu trwania odpowiedzi w sekundach. Etykiety to request _ type (na przykład griddap,tabledap, pliki, wms) , dataset _ id (w stosownych przypadkach, w inny sposób powtarza typ wniosku) , file _ type (format wyjścia na żądanie np. '.html', '.csv', '.iso19115') , lang _ code (język dla żądania, lub pusty ciąg jeśli domyślnie) , status _ code (httpkod statusu wniosku np. 200, 302, 404) .
+To jest histogram czasu trwania odpowiedzi w sekundach. Etykiety to request _ type (na przykład griddap, tabledap , pliki, wms) , dataset _ id (w stosownych przypadkach, w inny sposób powtarza typ wniosku) , file _ type (format wyjścia na żądanie np. '.html', '.csv', '.iso19115') , lang _ code (język dla żądania, lub pusty ciąg jeśli domyślnie) , status _ code ( http kod statusu wniosku np. 200, 302, 404) .
 
 Można to wykorzystać do śledzenia żądań przy pomocy id dataset w celu określenia popularnych zbiorów danych serwera. Może również pomóc zidentyfikować, czy istnieją szczególne rodzaje żądań, które są wolne na serwerze.
 

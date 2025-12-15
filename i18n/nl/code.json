@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Deze pagina is een ontwerp. Het zal alleen zichtbaar zijn in dev en worden uitgesloten van de productiebouw.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(opent in nieuw tabblad)",
+    "description": "The ARIA label for the external link icon"
   }
 }

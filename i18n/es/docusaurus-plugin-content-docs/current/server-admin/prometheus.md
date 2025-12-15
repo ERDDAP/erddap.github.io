@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # Prometeo
 
-[Prometheus metrics](https://prometheus.io/)están disponibles en /erddap/metrics. Las métricas de núcleo JVM se agregaron en 2.25 con muchosERDDAP™métricas agregadas en la versión 2.26. Si desea utilizar las métricas, asegúrese de estar en al menos la versión 2.26. Por defecto para habilitar, puede deshabilitarlos añadiendo
+ [Prometheus metrics](https://prometheus.io/) están disponibles en /erddap/metrics. Las métricas de núcleo JVM se agregaron en 2.25 con muchos ERDDAP™ métricas agregadas en la versión 2.26. Si desea utilizar las métricas, asegúrese de estar en al menos la versión 2.26. Por defecto para habilitar, puede deshabilitarlos añadiendo
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ Estas métricas están diseñadas para ser legibles por máquina. Si bien puede 
 
 ## Running Prometheus server
 
-La mejor documentación para ejecutar la pila de monitoreo (Prometeo + Grafana) está en el Prometeo[readme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md).
+La mejor documentación para ejecutar la pila de monitoreo (Prometeo + Grafana) está en el Prometeo [readme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) .
 
-## ERDDAP™métricas
+##  ERDDAP™ métricas
 
 ### JVM
 
-ERDDAP™exporta una serie de métricas que puede encontrar útil (empezandoERDDAP™2.25) . Para el monitoreo general de la salud del JVM utilizamos las métricas recolectadas por el cliente Prometheus. Esto incluye datos sobre recolección de basura, uso de memoria, hilos y más. Para más información vea el[PrometeoJavaDocumentación del cliente JVM](https://prometheus.github.io/client_java/instrumentation/jvm/).
+ ERDDAP™ exporta una serie de métricas que puede encontrar útil (empezando ERDDAP™ 2.25) . Para el monitoreo general de la salud del JVM utilizamos las métricas recolectadas por el cliente Prometheus. Esto incluye datos sobre recolección de basura, uso de memoria, hilos y más. Para más información vea el [Prometeo Java Documentación del cliente JVM](https://prometheus.github.io/client_java/instrumentation/jvm/) .
 
-### ERDDAP™específico
+###  ERDDAP™ específico
 
-También exportamos una serie deERDDAP™métricas específicas (empezandoERDDAP™2.26) . Si quieres investigar el código, puedes encontrar las métricas recogidas en[Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java).
+También exportamos una serie de ERDDAP™ métricas específicas (empezando ERDDAP™ 2.26) . Si quieres investigar el código, puedes encontrar las métricas recogidas en [Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) .
 
-#### ERDDAP_build_info
+####  ERDDAP _build_info
 
-Esta es la información de construcción paraERDDAP™servidor. Incluye versión (major.minor) , version_full (major.minor.patch) , y deployment_info (utilizado para indicar cómo se implementa el servidor, como 'Docker ') .
+Esta es la información de construcción para ERDDAP™ servidor. Incluye versión (major.minor) , version_full (major.minor.patch) , y deployment_info (utilizado para indicar cómo se implementa el servidor, como 'Docker ') .
 
 #### característica_flags
 
@@ -37,9 +37,9 @@ Esta es una métrica de información que muestra el estado actual de las bandera
 
 Esta es una métrica de información que indica si la aceleración gráfica está disponible.
 
-#### http_request_duration_seconds
+####  http _request_duration_seconds
 
-Este es un histograma de duración de respuesta de solicitud en segundos. Las etiquetas son request_type (por ejemplo griddap,tabledap, archivos, wms) , dataset_id (si es aplicable, repite el tipo de solicitud) , file_type (formato de salida para solicitud e.g. '.html', '.csv', '.iso19115 ') , lang_code (idioma para la solicitud, o cadena vacía si por defecto) , status_code (httpcódigo de estado de la solicitud, por ejemplo 200, 302, 404) .
+Este es un histograma de duración de respuesta de solicitud en segundos. Las etiquetas son request_type (por ejemplo griddap, tabledap , archivos, wms) , dataset_id (si es aplicable, repite el tipo de solicitud) , file_type (formato de salida para solicitud e.g. '.html', '.csv', '.iso19115 ') , lang_code (idioma para la solicitud, o cadena vacía si por defecto) , status_code ( http código de estado de la solicitud, por ejemplo 200, 302, 404) .
 
 Esto se puede utilizar para rastrear las solicitudes por dataset id para determinar los conjuntos de datos populares del servidor. También puede ayudar a identificar si hay tipos particulares de solicitudes que son lentas en su servidor.
 

@@ -277,10 +277,10 @@ sidebar_position: 1
              
 ###  ERDDAP™ Περιεχόμενο{#erddap-content} 
 3.   [Ρυθμίστε το `tomcat/περιεχόμενο/erddap` αρχεία ρυθμίσεων.](#erddap-content) 
-Σε Linux, Mac και Windows, κατεβάστε [erddapΠεριεχόμενο .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
+Σε Linux, Mac και Windows, κατεβάστε [erddapΠεριεχόμενο .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.1/erddapContent.zip) 
 και να το αποσυμπιέσει στο `τομκάτ` κατάλογος, δημιουργία `tomcat/περιεχόμενο/erddap` .
 
-__Έκδοση 1.0.0, 20333 bytes, MD5=2B8D2A5AE5ED73E3A42B529C168C60B5, με ημερομηνία 2024-10-14___
+__Έκδοση 1.0.1, 20683 bytes, MD5=98a8099e7e674da59fe35e9c96efa7b5, με ημερομηνία 2025-06-02___
 
 Μερικές προηγούμενες εκδόσεις είναι επίσης διαθέσιμες:
 
@@ -357,9 +357,9 @@ __Έκδοση 1.0.0, 20333 bytes, MD5=2B8D2A5AE5ED73E3A42B529C168C60B5, με η
      
 ### Εγκαταστήστε το erddap. αρχείο πολέμου{#install-the-erddapwar-file} 
 
-4. Σε Linux, Mac, και Windows, __download [Erddap.war (στα Αγγλικά).](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) - Μέσα `tomcat/webapps` :
+4. Σε Linux, Mac, και Windows, __download [Erddap.war (στα Αγγλικά).](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) - Μέσα `tomcat/webapps` :
 
-__Έκδοση 2.28.1, 622.676,238 bytes, MD5=48b4226045f950c8a8d69ef9521b9bc9, με ημερομηνία 2025-09-05__
+__Παροχή 2.29.0, 706.788.135 bytes, MD5=A5ED0DCC8D46CA27640FFEB8CE4A8560, με ημερομηνία 12-15-2025___
 
 Το αρχείο .war είναι μεγάλο επειδή περιέχει ακτογραμμή υψηλής ανάλυσης, όρια και δεδομένα ανύψωσης που απαιτούνται για τη δημιουργία χαρτών.
 
@@ -374,6 +374,7 @@ __Έκδοση 2.28.1, 622.676,238 bytes, MD5=48b4226045f950c8a8d69ef9521b9bc9, 
    *  [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)   (592,292,039 bytes, MD5=652AFC9D1421F00B5F789DA2C4732D4C, με ημερομηνία 2024-11-07) 
    *  [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)   (607,404,032 bytes, MD5=99a725108b37708e5420986c1616a119, με ημερομηνία 2025-03-31) 
    *  [2.27.0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)   (620,554,403 bytes, MD5=3b2086c659ee4145ca2dff447bf4ef7, με ημερομηνία 2025-06-11) 
+   *  [2.28.1](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war)   (622.676,238 bytes, MD5=48b4226045f950c8a8d69ef9521b9bc9, με ημερομηνία 2025-09-05) 
 
 ### Configure διαμεσολαβητή (ειδική εγκατάσταση)  {#proxy} 
 

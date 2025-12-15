@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # Prometheus
 
-[Prometheovy metriky](https://prometheus.io/)jsou k dispozici v /erddap/metrics. JVM jádro metriky byly přidány v 2.25 s mnohaERDDAP™metriky přidané ve verzi 2.26. Pokud chcete použít metriky, ujistěte se, že jste alespoň ve verzi 2.26. Oni výchozí povolit, můžete je zakázat přidáním
+ [Prometheovy metriky](https://prometheus.io/) jsou k dispozici v /erddap/metrics. JVM jádro metriky byly přidány v 2.25 s mnoha ERDDAP™ metriky přidané ve verzi 2.26. Pokud chcete použít metriky, ujistěte se, že jste alespoň ve verzi 2.26. Oni výchozí povolit, můžete je zakázat přidáním
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ Tyto metriky jsou navrženy tak, aby byly strojově čitelné. Zatímco můžete
 
 ## Spuštění serveru Prometheus
 
-Nejlepší dokumentace pro spuštění monitorovacího zásobníku (Prometheus + Grafana) je v Prometheu[readme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md).
+Nejlepší dokumentace pro spuštění monitorovacího zásobníku (Prometheus + Grafana) je v Prometheu [readme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) .
 
-## ERDDAP™metriky
+##  ERDDAP™ metriky
 
 ### JVM
 
-ERDDAP™exportuje řadu metrik, které můžete najít užitečné (začínámeERDDAP™2. 25) . Pro obecné sledování zdraví JVM používáme metriky shromážděné klientem Prometheus. To zahrnuje data o sběru odpadků, využití paměti, nitě a další. Více informací viz[PrometheusJavaKlientská dokumentace JVM](https://prometheus.github.io/client_java/instrumentation/jvm/).
+ ERDDAP™ exportuje řadu metrik, které můžete najít užitečné (začínáme ERDDAP™ 2. 25) . Pro obecné sledování zdraví JVM používáme metriky shromážděné klientem Prometheus. To zahrnuje data o sběru odpadků, využití paměti, nitě a další. Více informací viz [Prometheus Java Klientská dokumentace JVM](https://prometheus.github.io/client_java/instrumentation/jvm/) .
 
-### ERDDAP™specifické
+###  ERDDAP™ specifické
 
-Také jsme exportovat řaduERDDAP™specifické metriky (začínámeERDDAP™2. 26) . Pokud chcete kopat do kódu, můžete najít metriky shromážděné v[Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java).
+Také jsme exportovat řadu ERDDAP™ specifické metriky (začínáme ERDDAP™ 2. 26) . Pokud chcete kopat do kódu, můžete najít metriky shromážděné v [Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) .
 
-#### ERDDAP_build_info
+####  ERDDAP _build_info
 
-Tohle je informace o stavběERDDAP™server. Obsahuje verzi (major. menší) , verze_plná (major. minor.patch) , a nasazení_info (slouží k označení, jak je server nasazen, jako 'Docker ') .
+Tohle je informace o stavbě ERDDAP™ server. Obsahuje verzi (major. menší) , verze_plná (major. minor.patch) , a nasazení_info (slouží k označení, jak je server nasazen, jako 'Docker ') .
 
 #### feature_flags
 
@@ -37,9 +37,9 @@ Jedná se o informační metriku, která ukazuje aktuální stav vlajek funkcí.
 
 Jedná se o informační metriku, která udává, zda je k dispozici grafické zrychlení.
 
-#### http_request_durace_sekundy
+####  http _request_durace_sekundy
 
-Tohle je histogram doby odezvy na žádost v sekundách. Štítky jsou request_type (například griddap,tabledap, soubory, wms) , database_id (případně jinak opakuje typ žádosti) , soubor_typ (výstupní formát pro žádost např. '.html', '.csv', '.iso19115 ') , lang_kód (jazyk žádosti nebo prázdný řetězec, pokud je výchozí) , status_code (httpstavový kód žádosti, např. 200, 302, 404) .
+Tohle je histogram doby odezvy na žádost v sekundách. Štítky jsou request_type (například griddap, tabledap , soubory, wms) , database_id (případně jinak opakuje typ žádosti) , soubor_typ (výstupní formát pro žádost např. '.html', '.csv', '.iso19115 ') , lang_kód (jazyk žádosti nebo prázdný řetězec, pokud je výchozí) , status_code ( http stavový kód žádosti, např. 200, 302, 404) .
 
 To lze použít pro sledování požadavků pomocí souboru dat k určení populárních souborů serveru. Může také pomoci určit, zda existují určité druhy požadavků, které jsou pomalé na vašem serveru.
 

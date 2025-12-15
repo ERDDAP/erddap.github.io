@@ -1,6 +1,6 @@
 # Conseil technique
 
-LesERDDAP™Le conseil technique est responsable de la direction techniqueERDDAP™Ça prend. LesERDDAP™Le Conseil technique est chargé de la direction techniqueERDDAP™. Il prend des décisions sur la hiérarchisation des travaux, présente des feuilles de route, des dépendances, tout processus ayant une incidence sur les travaux de développement, et toute autre question nécessitant une supervision technique dans les domaines suivants:ERDDAP™. Le conseil examinera et approuvera également les documents de conception pour les nouvelles caractéristiques importantes. Les mandats du conseil technique sont de 2 ans avec possibilité de prolongation. On s'attend également à ce que les membres du conseil technique contribuent au projet, en particulier par le biais de demandes de tirage et d'examens de codes.
+Les ERDDAP™ Le conseil technique est responsable de la direction technique ERDDAP™ Ça prend. Les ERDDAP™ Le Conseil technique est chargé de la direction technique ERDDAP™ . Il prend des décisions sur la hiérarchisation des travaux, présente des feuilles de route, des dépendances, tout processus ayant une incidence sur les travaux de développement, et toute autre question nécessitant une supervision technique dans les domaines suivants: ERDDAP™ . Le conseil examinera et approuvera également les documents de conception pour les nouvelles caractéristiques importantes. Les mandats du conseil technique sont de 2 ans avec possibilité de prolongation. On s'attend également à ce que les membres du conseil technique contribuent au projet, en particulier par le biais de demandes de tirage et d'examens de codes.
 
 ## Objet{#purpose} 
 
@@ -8,13 +8,13 @@ Le Conseil technique est responsable des documents et des processus suivants :
 
 *  **Examiner et approuver les nouvelles fonctionnalités** qui sont proposées dans GitHub Discussions.
 
-*  **ERDDAP™Projets prioritaires** qui déterminent les projets sur lesquels nous travaillons. Vérifiez le courant[liste des projets prioritaires](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Projets prioritaires** qui déterminent les projets sur lesquels nous travaillons. Vérifiez le courant [liste des projets prioritaires](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Objectifs de la fonctionnalité de publication** , qui déterminent les caractéristiques spécifiques que nous visons à inclure dans chaque sortie deERDDAP™. Ils sont documentés dans le projet GitHub pour chaque sortie.
+*  ** ERDDAP™ Objectifs de la fonctionnalité de publication** , qui déterminent les caractéristiques spécifiques que nous visons à inclure dans chaque sortie de ERDDAP™ . Ils sont documentés dans le projet GitHub pour chaque sortie.
 
-*  **ERDDAP™Guide de style** qui spécifie les styles de codage et les pratiques à suivreERDDAP™Code.
+*  ** ERDDAP™ Guide de style** qui spécifie les styles de codage et les pratiques à suivre ERDDAP™ Code.
 
-LesERDDAP™Le Conseil technique fonctionne comme suit :
+Les ERDDAP™ Le Conseil technique fonctionne comme suit :
 
 * Dans la mesure du possible, la communication du Conseil technique devrait être publique et asynchrone. Dans de nombreux cas, cela signifie utiliser les discussions et les enjeux de GitHub.
 
@@ -50,7 +50,7 @@ LesERDDAP™Le Conseil technique fonctionne comme suit :
 
 ## Ordre du jour{#agenda} 
 
-Si vous souhaitez ajouter un point à l'ordre du jour du conseil technique pour discussion ou si vous pensez que vous êtes bien adapté au conseil technique, veuillez envoyer un courriel[Chris.john@noaa.gov](mailto:chris.john@noaa.gov).
+Si vous souhaitez ajouter un point à l'ordre du jour du conseil technique pour discussion ou si vous pensez que vous êtes bien adapté au conseil technique, veuillez envoyer un courriel [Chris.john @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Membres{#members} 
 

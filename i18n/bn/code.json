@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "এই পৃষ্ঠা একটি খসড়া। এটা শুধু নমুনায় দেখা যাবে এবং উৎপাদনশীল নির্মাণ থেকে বঞ্চিত হবে।",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(নতুন ট্যাবের মধ্যে খোলা হবে)",
+    "description": "The ARIA label for the external link icon"
   }
 }

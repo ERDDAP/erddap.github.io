@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Tässä ovat muutokset, jotka liittyvät jokaiseen ERDDAP™ Vapautuminen.
 
+
+## Versio 2.29.0{#version-2290} 
+ (2025-12-15) 
+
+tarvittavaa toimintaa.
+
+ ERDDAP™ versio 2.29.0 edellyttää jdk 25 tai uudempaa. Päivitä jdk-versiosi. Jos tämä on ongelma, voit rakentaa ERDDAP™ Vanhempi jdk (Ainakin 17) Muuttamalla pom.xml-tiedostoa. JDK 25 on LTS-versio Java Se sisältää paljon parannuksia, erityisesti parannettua suorituskykyä.
+
+*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
+    * ISO 19115 -versiot: Alla on admin info. Käyttäjille voit hakea erityisversioita ISO 19115 -metadatasta. Tehdään tämä Griddap/ tabledap Sivut, joilla tiedostotyyppi laskee. Nämä versiot ovat riippumattomia palvelimen oletusarvosta.
+
+*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
+    * Uutta, MQTT-tukea. Yksityiskohtia suosittelen lukemaan [Uusi sivu aiheesta.](/docs/server-admin/mqtt-integration) Tämä sisältää tietoaineistojen rakentamisen MQTT-viesteistä ja MQTT-viestien julkaisemisen, kun tietoaineisto muuttuu. Se on pois oletusarvoisesti, joten jos haluat käyttää sitä, sinun on otettava se käyttöön.
+
+Kiitos Ayush Singhille MQTT:stä&#33;
+
+    * S3-parannukset: Lisätään S3 URI: n tuki kacheFromUrlin arvoksi. Tämä mahdollistaa ERDDAP Amazonaws.comin isännöimien yksityisten bucketien tukeminen Käsiteltiin myös S3-muistivuotokysymystä.
+
+Kiitos @SethChampagneNRL työstä S3&#33;
+
+    * ISO 19115 -versiot: ISO 19115 -metadatasta löytyy nyt kolme eri versiota. Oletusversiota ohjataan asetuksella.xml. Jos SISO19115 on virheellinen, palvelin antaa oletusarvoisesti NOAA Muutettu ISO19115_2. Jos SISISO19115 on totta, palvelin käyttää eri versiota sen mukaan, kuinka paljon se on. Jos SISO19139 on totta, oletusarvo on ISO19139_2007, jos se on väärä, oletusarvo on ISO19115_3_2016. Suosittelemme käyttämään SISISO19115=true ja käyttää SISO19139=false. Organisaatio voi vaatia erilaisia asetuksia.
+
+    * Siirtyi Javaan. Aikakirjasto (Java.utilin sijaan. Gregoriaaninen kalenteri) . Tämä antaa suorituskyvyn parannuksia kyselyihin, joihin sisältyy päivämäärä / aika sarakkeet. Suurimmalle osalle aineistoista ei saisi olla havaittavia vaikutuksia. Yksi tiedossa oleva tapaus aiheuttaa muutoksen, jos tietoaineistoa käytetään `Vuodet 20000-01-01` tai vastaava. Jos ongelma on muuttuja, voit lisätä ` <att name="legacy_time_adjust"> Todellista </att> ` ja addAttributes Joko osa A dataVariable tai tai axisVariable .
+    
+    *    datasets.xml on nyt käsitelty a [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Sillä on monia käyttötarkoituksia, kuten yksityisten arvojen asettaminen. (kuin salasanat) ympäristömuuttujat. Tämä voidaan poistaa asettamalla EnvParsing väärennös asennus.xml.
+
+    * Paineakseli: Lisätään erityistapaus paineen määrittämiin korkeuksiin. Tätä käytetään pääasiassa meteorologian aineistoissa, joissa määritellään vertikaaliset korkeudet isobarisella tasolla. HUOMAUTUS: Pienemmät painearvot merkitsevät korkeampia korkeuksia, joten akseli kulkee metreissä tai jaloissa määritettyjen normaaleiden korkeuksien vastaisesti.
+
+Kiitos [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid FromNcFiles, jossa on erilaisia ulottuvuuksia: On olemassa (Kokeellinen kokeilu) Tukea EDDGrid FromNcFiles-tietokoneissa on muuttujia, jotka eivät käytä samoja akseleita. Kerro, miten tämä toimii sinulle tai jos käytös ei näytä oikealta.
+
+    * On olemassa kokoelma optimointia, joiden pitäisi olla turvallisia, mutta on lippuja palata vanhaan käytökseen tarvittaessa. Jos löydät tarvetta asettaa jokin lippu, ilmoita vika. Jos kuulemme näistä ongelmista, suurin osa poistetaan tulevaisuudessa. Siellä on A [Uusi sivu ominaisuuslipuista](/docs/server-admin/feature-flags) Voit lukea näistä ja muista lipuista.
+
+      * kosketa kosketus Threads Vain vain vain vain Kun kohteet: Tämä on muutos, jotta touchThread toimii vain, kun kosketusjonossa on kohteita. Vähemmän lankaa on pieni optimointi, mutta silti hyödyllinen. Oletus on totta.
+
+      * Käytännöllinen ForFiletable: Tämä muutos mahdollistaa sisäisen tiedostotaulukon käyttää nc-ominaisuuksia, erityisesti muuttuvaa todellista_range-ominaisuutta, jotta vältetään koko nc-tiedoston lukeminen. Tämä voi jyrkästi nopeuttaa nc-tiedostoihin perustuvien tietoaineistojen alkuperäistä lataamista, jos kunkin tiedoston muuttujan todellinen_range sisältyy attribuuttiin. Huomaa, että tämä luottaa arvoon, joten jos se on väärä, sisäinen tiedostotaulukko sisältää virheellisiä tietoja. Oletus on totta.
+
+      * ncheader Makefilia: Tämä muutos mahdollistaa nc-otsikkotiedostojen luomisen ilman edustavan nc-tiedoston ensimmäistä luomista. Tämä on pieni optimointi EDDTable, mutta suuri optimointi monille. EDDGrid pyyntöjä. Epäonnistuminen valheeseen (Väärin on suunniteltu optimoitu käyttäytyminen) .
+
+      * taustalla taustalla CreateSubset Pöytät: Tämä muutos siirtää osan tietoaineistojen alkuperäisestä käsittelystä taustasäikeeseen. Tämä parantaa tietojen lataamisen aikaa. Erityisesti viivästynyt osa on subset-taulukoita, jotka syntyvät tarvittaessa myös, jos viivästynyt käsittely ei ole vielä tapahtunut. Oletus on totta.
+
+    * Muutamia pieniä muutoksia, vikoja (Kiitos Italo Borrelli EDDTableFromAggregateRowsin korjauksesta, Kiitos @SethChampagneNRL, joka mahdollistaa yli 360 pituudet EDDGrid LonPM180 ja useita muita vikoja) ja optimointi.
+
+*    **For For ERDDAP™ Kehittäjät:** 
+    * Lisäoptimoinnit, mukaan lukien testiaika puoleen.
+
+    * Uusia testiprofiileja erittäin flaky (Ulkoinen ulkoinen ulkoinen ulkoinen ulkoinen ulkoinen ulkoinen ulkoinen ulko ulkoinen ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko) Erittäin hidasta (hitaasti) testejä.
+
 ## versio 2.28.1{#version-2281} 
  (Lähde: 2025-09-05) 
 
@@ -49,7 +98,7 @@ Kiitos [@ocefpaf](https://github.com/ocefpaf) , [@abkfenris](https://github.com/
     * Uusia tietoja väripalkkien muuntimeen palvelimilla osoitteessa /erddap/convert/color.html
 
 *    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Oletusarvo on, että välimuisti on nyt puhdistettu riippumattomaksi tärkeimmästä kuorma-aineistotehtävästä. Tämä mahdollistaa vanhojen välimuistitiedostojen luotettavamman ja säännöllisemmän puhdistuksen. Lisätyötä palvelimen käyttäytymisen parantamiseksi, kun levytila on alhainen (palauttaa virheen pyyntöihin, jotka saattavat saada palvelimen loppumaan avaruudesta, ja puhdistaa välimuistia useammin matalissa levytilanteissa, jotta virheet voidaan estää.) . Sisällä datasets.xml   (Asennus.xml) Voit lisätä / asettaa uuden välimuistin ClearMinutes-parametri valvoo, kuinka usein palvelin tarkistaa välimuistin puhdistamiseksi. Huomautus: olemassa oleva kacheMinutes-parametri ohjaa säilytettävien tiedostojen ikää, uutta välimuistia ClearMinutes on sitä, kuinka usein selkeitä on.
+    * Oletuskäyttäytyminen on, että välimuisti on nyt puhdistettu riippumattomaksi tärkeimmästä kuorma-aineistotehtävästä. Tämä mahdollistaa vanhojen välimuistitiedostojen luotettavamman ja säännöllisemmän puhdistuksen. Lisätyötä palvelimen käyttäytymisen parantamiseksi, kun levytila on alhainen (palauttaa virheen pyyntöihin, jotka saattavat saada palvelimen loppumaan avaruudesta, ja puhdistaa välimuistia useammin matalissa levytilanteissa, jotta virheet voidaan estää.) . Sisällä datasets.xml   (Asennus.xml) Voit lisätä / asettaa uuden välimuistin ClearMinutes-parametri valvoo, kuinka usein palvelin tarkistaa välimuistin puhdistamiseksi. Huomautus: olemassa oleva kacheMinutes-parametri ohjaa säilytettävien tiedostojen ikää, uutta välimuistia ClearMinutes on sitä, kuinka usein selkeitä on.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Päivitetyn ulkonäön lisäksi on parannettu navigointia, hakua, käännöstä,
 
     * Uusi ominaisuus muokata tietoja, jotka on esitetty UI: n tietoaineistoista. Odotamme, että tämä on erityisen hyödyllistä, jotta voidaan lisätä esimerkiksi tietoaineistoa. Lisätietoja voit lukea [Uusia dokumentteja](/docs/server-admin/display-info) . Kiitos Ayush Singhille&#33;
 
-    * Lisätietoja Prometheus Metrics Suurin on " http _request_duration_seconds, joka sisältää pyynnön vastausajat, jotka on jaettu seuraavasti: "Request_type", "dataset_id", "dataset_type", "lang_code", "status_code"
+    * Lisätietoja Prometheus Metrics Suurin on ` http _request_duration_seconds Näytä tarkat tiedot` jotka sisältävät pyynnön vastausajat, jotka on jaettu: "pyyntö_tyyppi", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 Tämä kone luettava muoto mahdollistaa paremman kokoelman mittareita ymmärtää, miten käyttäjät käyttävät palvelinta.
 
     * Uusi tapa luoda ISO19115 XML -tiedostoja Se käyttää Apache SIS ja on uusi vaihtoehto tässä julkaisussa. Ole hyvä ja lähetä palautetta.

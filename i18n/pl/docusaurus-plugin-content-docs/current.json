@@ -5,62 +5,86 @@
   },
   "sidebar.docSidebar.category.Server Administration": {
     "message": "Administracja serwera",
-    "description": "The label for category Server Administration in sidebar docSidebar"
+    "description": "The label for category 'Server Administration' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Server Administration.link.generated-index.description": {
     "message": "Pomocne informacje dla administratorów serwerów",
-    "description": "The generated-index page description for category Server Administration in sidebar docSidebar"
+    "description": "The generated-index page description for category 'Server Administration' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Contributing": {
     "message": "Wkład",
-    "description": "The label for category Contributing in sidebar docSidebar"
+    "description": "The label for category 'Contributing' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Contributing.link.generated-index.description": {
     "message": "Informacje dla osób wnoszących wkładERDDAP",
-    "description": "The generated-index page description for category Contributing in sidebar docSidebar"
+    "description": "The generated-index page description for category 'Contributing' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Dataset Scripts Code Documentation": {
     "message": "Dokumentacja kodów skryptów dataset",
-    "description": "The label for category Dataset Scripts Code Documentation in sidebar docSidebar"
+    "description": "The label for category 'Dataset Scripts Code Documentation' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ERDDAP": {
     "message": "ERDDAP",
-    "description": "The label for category ERDDAP in sidebar docSidebar"
+    "description": "The label for category 'ERDDAP' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ERDDAP.link.generated-index.description": {
     "message": "Generowana dokumentacjaERDDAP™kod",
-    "description": "The generated-index page description for category ERDDAP in sidebar docSidebar"
+    "description": "The generated-index page description for category 'ERDDAP' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.com.cohort.util": {
     "message": "com.cohort.util",
-    "description": "The label for category com.cohort.util in sidebar docSidebar"
+    "description": "The label for category 'com.cohort.util' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptCalendar2": {
     "message": "ScriptCalendar2",
-    "description": "The label for category ScriptCalendar2 in sidebar docSidebar"
+    "description": "The label for category 'ScriptCalendar2' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptMath": {
     "message": "ScriptMath",
-    "description": "The label for category ScriptMath in sidebar docSidebar"
+    "description": "The label for category 'ScriptMath' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptMath2": {
     "message": "ScriptMath2",
-    "description": "The label for category ScriptMath2 in sidebar docSidebar"
+    "description": "The label for category 'ScriptMath2' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptRow": {
     "message": "ScriptRow",
-    "description": "The label for category ScriptRow in sidebar docSidebar"
+    "description": "The label for category 'ScriptRow' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptString2": {
     "message": "SkryptString2",
-    "description": "The label for category ScriptString2 in sidebar docSidebar"
+    "description": "The label for category 'ScriptString2' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User": {
     "message": "Użytkownik",
-    "description": "The label for category User in sidebar docSidebar"
+    "description": "The label for category 'User' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "Pomocne informacje dla użytkowników",
-    "description": "The generated-index page description for category User in sidebar docSidebar"
+    "description": "The generated-index page description for category 'User' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Tips": {
+    "message": "Wskazówki",
+    "description": "The label for category Tips in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.Tips.link.generated-index.description": {
+    "message": "Tip and trick writeups dla administratorów serwerów",
+    "description": "The generated-index page description for category Tips in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.Admin Tips": {
+    "message": "Admin Porady",
+    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
+    "message": "Tip and trick writeups dla administratorów serwerów",
+    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.User Tips": {
+    "message": "Porady użytkowników",
+    "description": "The label for category 'User Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.User Tips.link.generated-index.description": {
+    "message": "Tip i trick writeup dla użytkowników",
+    "description": "The generated-index page description for category 'User Tips' in sidebar 'docSidebar'"
   }
 }

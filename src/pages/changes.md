@@ -7,6 +7,55 @@ ERDDAP™ is a great example of [User-Driven Innovation](https://en.wikipedia.or
 
 Here are the changes associated with each ERDDAP™ release.
 
+
+## Version 2.29.0 {#version-2290}
+(released 2025-12-15)
+
+Action required.
+
+ERDDAP™ version 2.29.0 requires jdk 25 or later. Please update your jdk version. If that is a problem, you can build ERDDAP™ for an older jdk (back to at least 17) by changing the pom.xml file. JDK 25 is an LTS release of Java and includes many improvements, most notably improved performance.
+
+*   **New Features and Changes (for users):**
+    *   ISO 19115 versions: See below for admin info. For users, you can now request specific versions of ISO 19115 metadata. Do this from the griddap/tabledap pages for a dataset with the file type drop down. These versions will be independent of the server default.
+
+*   **Things ERDDAP™ Administrators Need to Know and Do:**
+    *   New feature, MQTT support. For details I recommend reading the [new page about it.](/docs/server-admin/mqtt-integration) This includes being able to build datasets from MQTT messages, and publishing MQTT messages when a dataset changes. It is off by default, so if you want to use it, you need to enable it.
+
+    Thanks to Ayush Singh for working on MQTT!
+
+    *   S3 improvements: Adding support for S3 URIs as the cacheFromUrl value. This will allow ERDDAP to support private buckets hosted off amazonaws.com Also addressed an S3 memory leak issue. 
+
+    Thanks to @SethChampagneNRL for the work on S3!
+
+    *   ISO 19115 versions: There is now support for 3 different versions of ISO 19115 metadata. The default version is controlled by settings in your setup.xml. If useSisISO19115 is false, the server will by default provide NOAA modified ISO19115_2. If useSisISO19115 is true, then the server will use a different version depending on the value of useSisISO19139. If useSisISO19139 is true, the default will be ISO19139_2007, if useSisISO19139 is false the default will be ISO19115_3_2016. We recommend using useSisISO19115=true and useSisISO19139=false. Your organization may require different settings.
+
+    *   Migrated to the java.time library (instead of java.util.GregorianCalendar). This should provide performance improvements on queries that involve date/time columns. There should be no noticeable impact for the vast majority of datasets. The one known case this causes a change is if the dataset is using `days since 0000-01-01` or similar. If this is a problem for a variable, you can add `<att name="legacy_time_adjust">true</att>` to the addAttributes section of either a dataVariable or axisVariable.
+    
+    *   datasets.xml is now processed by a [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html). This has many uses including setting private values (like passwords) using environment variables. This can be disabled by setting enableEnvParsing to false in setup.xml.
+
+    *   Pressure Axis: Adds a special case for elevations defined by pressure. This is primarily used in Meteorology datasets defining vertical elevations in isobaric levels. NOTE: Smaller pressure values mean higher elevations, so the axis runs opposite the normal elevations defined in meters or feet.
+
+    Thanks to [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373)
+
+    *   EDDGridFromNcFiles with varying dimensions: There is (experimental) support for EDDGridFromNcFiles datasets to have variables that don't use the same set of axes. Please do report back on how this works for you, or if the behavior doesn't seem quite right.
+
+    *   There's a collection of optimizations that should be safe, but have flags to revert to old behavior if needed. If you find the need to set any of the flags, please file a bug. If we hear of no issues most of these will be removed with the new behavior default in the future. There's a [new page about feature flags](/docs/server-admin/feature-flags) where you can read about these and other flags.
+
+      *  touchThreadOnlyWhenItems: This is a change so that the touchThread will only be running when there are items in the queue to touch. One fewer thread running is a minor optimization but still useful. Defaults to true.
+
+      *   useNcMetadataForFileTable: This change allows the internal file table to use nc attributes, specifically a variable actual_range attribute to avoid reading the entire nc file. This can drastically speed up initial loading of datasets based on nc files if the actual_range for each variable in each file is included as an attribute. Note that this trusts the value, so if it's wrong, the internal file table will have incorrect information. Defaults to true.
+
+      *   ncHeaderMakeFile: This change allows nc header files to be generated without first generating the representative nc file. This is a small optimization for EDDTable, but a huge optimization for many EDDGrid requests. Defaults to false (as in false is the intended optimized behavior).
+
+      *   backgroundCreateSubsetTables: This change moves some of the initial processing of datasets to a background thread. This should improve the time for loading of datasets. Specifically the delayed part is subset tables, which are also generated when needed if the delayed processing hasn't happened yet. Defaults to true.
+
+    *   Some small changes, bug fixes (thanks Italo Borrelli for the fix for EDDTableFromAggregateRows, thanks @SethChampagneNRL for enabling longitudes greater than 360 in EDDGridLonPM180, and several other bug fixes), and optimizations.  
+
+*   **For ERDDAP™ Developers:**
+    *   Additional optimizations, including cutting test run time in half.
+
+    *   New test profiles for very flaky (external) or extremely slow (slowAWS) tests.
+
 ## Version 2.28.1 {#version-2281}
 (released 2025-09-05)
 
@@ -49,7 +98,7 @@ Here are the changes associated with each ERDDAP™ release.
     *   New data to colorbar converter on servers at /erddap/convert/color.html
 
 *   **Things ERDDAP™ Administrators Need to Know and Do:**
-    *   Default behavoir is that the cache will now be cleared independent of the major load datasets task. This will allow for more reliable and regular clearing of old cache files. There is additional work to improve server behavoir when low on disk space (returning an error for requests likely to make the server run out of space, and clearing the cache more frequently in low disk circumstances to attempt to prevent errors). In datasets.xml (or setup.xml) you can add/set the new cacheClearMinutes parameter to control how frequently the server checks to clear the cache. Note, the existing cacheMinutes parameter controls the age of files to be kept, the new cacheClearMinutes is for how frequently to do a chache clear.
+    *   Default behavior is that the cache will now be cleared independent of the major load datasets task. This will allow for more reliable and regular clearing of old cache files. There is additional work to improve server behavior when low on disk space (returning an error for requests likely to make the server run out of space, and clearing the cache more frequently in low disk circumstances to attempt to prevent errors). In datasets.xml (or setup.xml) you can add/set the new cacheClearMinutes parameter to control how frequently the server checks to clear the cache. Note, the existing cacheMinutes parameter controls the age of files to be kept, the new cacheClearMinutes is for how frequently to do a chache clear.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```

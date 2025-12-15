@@ -1,6 +1,6 @@
 # Teknisk bestyrelse
 
-The The The The The The TheERDDAP™Tekniske Board er ansvarlig for den tekniske retningERDDAP™tager. The The The The The The TheERDDAP™Tekniske Board er ansvarlig for den tekniske retning afERDDAP™. Det træffer beslutninger om prioritering af arbejde, træk roadmaps, afhængigheder, alle processer, der påvirker udviklingsarbejde, og ethvert andet, der kræver teknisk tilsyn iERDDAP™. Bestyrelsen vil også gennemgå og godkende designdokumenter for væsentlige nye funktioner. Tekniske bestyrelsesvilkår er 2 år med mulighed for at udvide. Tekniske bestyrelsesmedlemmer forventes også at bidrage til projektet, især ved at trække anmodninger og kode anmeldelser.
+The The The The The The The ERDDAP™ Tekniske Board er ansvarlig for den tekniske retning ERDDAP™ tager. The The The The The The The ERDDAP™ Tekniske Board er ansvarlig for den tekniske retning af ERDDAP™ . Det træffer beslutninger om prioritering af arbejde, træk roadmaps, afhængigheder, alle processer, der påvirker udviklingsarbejde, og ethvert andet, der kræver teknisk tilsyn i ERDDAP™ . Bestyrelsen vil også gennemgå og godkende designdokumenter for væsentlige nye funktioner. Tekniske bestyrelsesvilkår er 2 år med mulighed for at udvide. Tekniske bestyrelsesmedlemmer forventes også at bidrage til projektet, især ved at trække anmodninger og kode anmeldelser.
 
 ## Formål Formål Formål{#purpose} 
 
@@ -8,13 +8,13 @@ Den tekniske bestyrelse er ansvarlig for følgende dokumenter og processer:
 
 *  **Gennemgå nye funktioner** der foreslås i GitHub Diskussioner.
 
-*  **ERDDAP™Prioritetsprojekter** liste, som bestemmer projekter, vi arbejder på. Tjek den aktuelle[prioriterede projekter liste](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Prioritetsprojekter** liste, som bestemmer projekter, vi arbejder på. Tjek den aktuelle [prioriterede projekter liste](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Udgivelsesfunktionsmål** , som bestemmer specifikke funktioner, som vi har til formål at inkludere i hver udgivelse afERDDAP™. Disse dokumenteres i GitHub-projektet for hver udgivelse.
+*  ** ERDDAP™ Udgivelsesfunktionsmål** , som bestemmer specifikke funktioner, som vi har til formål at inkludere i hver udgivelse af ERDDAP™ . Disse dokumenteres i GitHub-projektet for hver udgivelse.
 
-*  **ERDDAP™Stilguide** som specificerer kodning stilarter og praksis, der skal følges iERDDAP™kode.
+*  ** ERDDAP™ Stilguide** som specificerer kodning stilarter og praksis, der skal følges i ERDDAP™ kode.
 
-The The The The The The TheERDDAP™Tekniske Board arbejder på følgende basis:
+The The The The The The The ERDDAP™ Tekniske Board arbejder på følgende basis:
 
 * Hvor mulig kommunikation af det tekniske Board skal være offentligt og asynkront. I mange tilfælde betyder det at bruge GitHub Diskussioner og problemer.
 
@@ -50,7 +50,7 @@ The The The The The The TheERDDAP™Tekniske Board arbejder på følgende basis:
 
 ## Oversigt{#agenda} 
 
-Hvis du ønsker at tilføje et produkt til den tekniske Board-dagsorden for diskussion eller tro, at du er en god pasform til det tekniske board, bedes du sende en mail[chris.john@noaa.gov](mailto:chris.john@noaa.gov).
+Hvis du ønsker at tilføje et produkt til den tekniske Board-dagsorden for diskussion eller tro, at du er en god pasform til det tekniske board, bedes du sende en mail [chris.john @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Medlemmer{#members} 
 

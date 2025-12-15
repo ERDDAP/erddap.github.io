@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "此页面为草稿. 它只在dev中可见,并被排除在生产建设之外.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(打开新标签)",
+    "description": "The ARIA label for the external link icon"
   }
 }

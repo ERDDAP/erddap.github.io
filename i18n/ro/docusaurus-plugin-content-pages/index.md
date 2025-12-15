@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## Ultimele ERDDAP™ versiune{#latest-erddap-version} 
 
-2, 28, 1, vezi pct. [documentația privind modificările](/changes#version-2281) şi [descarcă](https://github.com/ERDDAP/erddap/releases/tag/v2.28.1) .
+2, 29, 0; a se vedea [documentația privind modificările](/changes#version-2290) şi [descarcă](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) .
 
 ##  ERDDAP™ informații{#erddap-information} 
 

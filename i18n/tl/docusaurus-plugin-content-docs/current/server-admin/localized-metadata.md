@@ -4,13 +4,13 @@ sidebar_position: 8
 # Lokalisadong Metadata
 
 ### Paglalarawan
-Ang katangiang ito ay nagpapahintulot sa iyo na isama ang lokalisadong metadata tungkol sa iyong datasets at variables. Anumang katangian na ibinigay sa loob ng isang attributeaddAttributesMaaaring gawing lokal ang tag. Ito ay nilalayong gamitin para sa mga karaniwang katangiang strando tulad ng pamagat, buod, lisensiya, instituion. Hindi ito inirerekomendang gamitin para sa numeriko (e.g. "_FillValue".) o pamantayang mga pamantayan (e.g. "ioos_category") at ang paggamit ng ganitong mga uri ng pamantayan ay maaaring may nakapagtatakang paggawi.
+Ang katangiang ito ay nagpapahintulot sa iyo na isama ang lokalisadong metadata tungkol sa iyong datasets at variables. Anumang katangian na ibinigay sa loob ng isang attribute addAttributes Maaaring gawing lokal ang tag. Ito ay nilalayong gamitin para sa mga karaniwang katangiang strando tulad ng pamagat, buod, lisensiya, instituion. Hindi ito inirerekomendang gamitin para sa numeriko (e.g. "_FillValue".) o pamantayang mga pamantayan (e.g. "ioos_category") at ang paggamit ng ganitong mga uri ng pamantayan ay maaaring may nakapagtatakang paggawi.
 
 ### Mga Tagubilin sa Paggamit
 Upang magawa at magamit ang mga ito, sundin ang mga hakbang na ito:
 
-1.  **Idagdag ang Tag sa `datasets.xml`** :
-Sa `datasets.xml` file, idagdag ang inyong lokalisadong metadata sa karagdagang seksiyon ng attributes:
+1.  **Ilagay ang mga Tag ` datasets.xml ` ** :
+Nasa ` datasets.xml ` file, idagdag ang inyong lokalisadong metadata sa karagdagang seksiyon ng mga attribute:
    ```xml
    <addAttributes>
         <att name="title">Data from a local source.</att>
@@ -20,5 +20,5 @@ Sa `datasets.xml` file, idagdag ang inyong lokalisadong metadata sa karagdagang 
    ```
 
 2.  **Masaklap na Paggawi** :
-   - Kung walang xml: inilalaan ang mga tagong panglang, ididispley ang inilaang impormasyon para sa lahat ng mga wika. Ito ay tumutugma sa nakaraang behavoir.
+   - Kung walang xml: inilalaan ang mga tagong panglang, ididispley ang inilaang impormasyon para sa lahat ng mga wika. Katugma ito ng dating gawi.
    - Kung may inilalaang mga xml: Mga tag ng salang, ang mga pamantayang iyon ay gagamitin para sa mga kahilingan sa mga wikang iyon. Kung ang isang gumagamit ay humiling ng isang wika na walang inilaang xml: halaga nglang, ang halaga mula sa default language (Tagalog) ay gagamitin.

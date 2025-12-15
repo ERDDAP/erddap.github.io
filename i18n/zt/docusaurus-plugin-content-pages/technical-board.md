@@ -1,6 +1,6 @@
 # 技工委
 
-其ERDDAP™技術委員會負責ERDDAP™收 其ERDDAP™技術委員會負責ERDDAP™. 它就工作的优先次序、地圖、依賴性、影響發展工作的任何进程以及需要技術監督的其他事项做出決定。ERDDAP™. 校對:Soup 技術委員會任期為2年, 技術委員也將為此計畫捐款,
+其 ERDDAP™ 技術委員會負責 ERDDAP™ 收 其 ERDDAP™ 技術委員會負責 ERDDAP™ . 它就工作的优先次序、地圖、依賴性、影響發展工作的任何进程以及需要技術監督的其他事项做出決定。 ERDDAP™ . 校對:Soup 技術委員會任期為2年, 技術委員也將為此計畫捐款,
 
 ## 目的{#purpose} 
 
@@ -8,13 +8,13 @@
 
 *  **审查和批准新特征** GitHub 討論中提出。
 
-*  **ERDDAP™优先工程** 列表,它決定了我們正在進行的專案。 看看目前[优先工程列表](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ 优先工程** 列表,它決定了我們正在進行的專案。 看看目前 [优先工程列表](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™釋放特性目標** ,它确定了我們打算列入每份ERDDAP™. 這些都記錄在 GitHub 專案中,
+*  ** ERDDAP™ 釋放特性目標** ,它确定了我們打算列入每份 ERDDAP™ . 這些都記錄在 GitHub 專案中,
 
-*  **ERDDAP™樣式指南** 指定要遵循的編碼樣式和做法ERDDAP™密碼
+*  ** ERDDAP™ 樣式指南** 指定要遵循的編碼樣式和做法 ERDDAP™ 密碼
 
-其ERDDAP™技工委按以下方式开展工作:
+其 ERDDAP™ 技工委按以下方式开展工作:
 
 * 技術委員會的公開和同步 許多情況下,
 
@@ -50,7 +50,7 @@
 
 ## 议程{#agenda} 
 
-如果您想在技術委員會的會議中加入一個項目供討論或認為您適合技術委員會, 請發送電子郵件[克里斯·喬恩@noaa.gov](mailto:chris.john@noaa.gov).
+如果您想在技術委員會的會議中加入一個項目供討論或認為您適合技術委員會, 請發送電子郵件 [克里斯·喬恩 @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## 成員{#members} 
 

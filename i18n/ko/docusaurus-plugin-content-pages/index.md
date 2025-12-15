@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## 인기 있는 ERDDAP™ 이름 *{#latest-erddap-version} 
 
-2.28.1, 참조 [관련 문서](/changes#version-2281) 이름 * [다운로드](https://github.com/ERDDAP/erddap/releases/tag/v2.28.1) ·
+2.29.0, 참조 [관련 문서](/changes#version-2290) 이름 * [다운로드](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) ·
 
 ##  ERDDAP™ * 이름{#erddap-information} 
 

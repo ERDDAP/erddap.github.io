@@ -1,6 +1,6 @@
 # Technická rada
 
-TheERDDAP™Technická rada odpovídá za technický směr, kterýERDDAP™bere. TheERDDAP™Technická rada odpovídá za technický směrERDDAP™. Rozhoduje o prioritizaci práce, celostavbách, závislostech, procesech, které ovlivňují vývoj, a všech dalších záležitostech, které vyžadují technický dohled vERDDAP™. Rada rovněž přezkoumá a schválí návrhové dokumenty pro významné nové prvky. Technické podmínky správní rady jsou 2 roky s možností prodloužení. Očekává se také, že členové technické rady budou přispívat k projektu, zejména prostřednictvím žádostí o stažení a přezkumů kódů.
+The ERDDAP™ Technická rada odpovídá za technický směr, který ERDDAP™ bere. The ERDDAP™ Technická rada odpovídá za technický směr ERDDAP™ . Rozhoduje o prioritizaci práce, celostavbách, závislostech, procesech, které ovlivňují vývoj, a všech dalších záležitostech, které vyžadují technický dohled v ERDDAP™ . Rada rovněž přezkoumá a schválí návrhové dokumenty pro významné nové prvky. Technické podmínky správní rady jsou 2 roky s možností prodloužení. Očekává se také, že členové technické rady budou přispívat k projektu, zejména prostřednictvím žádostí o stažení a přezkumů kódů.
 
 ## Účel{#purpose} 
 
@@ -8,13 +8,13 @@ Technická rada odpovídá za tyto dokumenty a postupy:
 
 *  **Přezkum a schválení nových funkcí** které jsou navrženy v diskuzích GitHub.
 
-*  **ERDDAP™Prioritní projekty** seznam, který určuje projekty, na kterých pracujeme. Podívejte se na proud[Seznam prioritních projektů](https://github.com/ERDDAP/erddap/issues/158).
+*  ** ERDDAP™ Prioritní projekty** seznam, který určuje projekty, na kterých pracujeme. Podívejte se na proud [Seznam prioritních projektů](https://github.com/ERDDAP/erddap/issues/158) .
 
-*  **ERDDAP™Uvolnění hlavních cílů** , které určují specifické rysy, které chceme zahrnout do každého uvolněníERDDAP™. Ty jsou zdokumentovány v projektu GitHub pro každou verzi.
+*  ** ERDDAP™ Uvolnění hlavních cílů** , které určují specifické rysy, které chceme zahrnout do každého uvolnění ERDDAP™ . Ty jsou zdokumentovány v projektu GitHub pro každou verzi.
 
-*  **ERDDAP™Příručka pro styl** který určuje kódovací styly a postupy, které mají být dodržovány vERDDAP™kód.
+*  ** ERDDAP™ Příručka pro styl** který určuje kódovací styly a postupy, které mají být dodržovány v ERDDAP™ kód.
 
-TheERDDAP™Technická rada pracuje na tomto základě:
+The ERDDAP™ Technická rada pracuje na tomto základě:
 
 * Pokud je to možné, měla by být komunikace technické rady veřejná a asynchronní. V mnoha případech to znamená využít GitHub diskuse a otázky.
 
@@ -50,7 +50,7 @@ TheERDDAP™Technická rada pracuje na tomto základě:
 
 ## Agenda{#agenda} 
 
-Pokud byste chtěli přidat položku do programu technické rady pro diskusi nebo si myslíte, že jste vhodný pro technickou radu, prosím e-mail[Chris. John@noaa.gov](mailto:chris.john@noaa.gov).
+Pokud byste chtěli přidat položku do programu technické rady pro diskusi nebo si myslíte, že jste vhodný pro technickou radu, prosím e-mail [Chris. John @noaa.gov ](mailto:chris.john@noaa.gov) .
 
 ## Členové{#members} 
 

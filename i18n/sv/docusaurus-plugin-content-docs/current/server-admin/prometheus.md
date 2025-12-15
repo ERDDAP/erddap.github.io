@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # Prometheus
 
-[Prometheus Metrics](https://prometheus.io/)finns på /erddap/metri. JVM kärnmätningar tillsattes i 2,25 med mångaERDDAP™mätvärden som läggs till i version 2.26. Om du vill använda mätvärdena se till att du är i minst version 2.26. De standard för att aktivera, du kan inaktivera dem genom att lägga till
+ [Prometheus Metrics](https://prometheus.io/) finns på /erddap/metri. JVM kärnmätningar tillsattes i 2,25 med många ERDDAP™ mätvärden som läggs till i version 2.26. Om du vill använda mätvärdena se till att du är i minst version 2.26. De standard för att aktivera, du kan inaktivera dem genom att lägga till
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ Dessa mätvärden är utformade för att vara maskinläsbara. Medan du kan kontr
 
 ## Running Prometheus server
 
-Den bästa dokumentationen för att köra övervakningsstapeln (Prometheus + Grafana) finns i Prometheus[Läsme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md).
+Den bästa dokumentationen för att köra övervakningsstapeln (Prometheus + Grafana) finns i Prometheus [Läsme](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) .
 
-## ERDDAP™Metrics
+##  ERDDAP™ Metrics
 
 ### JVM
 
-ERDDAP™exporterar ett antal mätvärden som du kan hitta användbart (Börjar iERDDAP™2.25) . För allmän övervakning av hälsan hos JVM använder vi de mätvärden som samlats in av Prometheus-klienten. Detta inkluderar data om skräpsamling, minnesanvändning, trådar och mer. För mer information se[PrometheusJavaKlient JVM dokumentation](https://prometheus.github.io/client_java/instrumentation/jvm/).
+ ERDDAP™ exporterar ett antal mätvärden som du kan hitta användbart (Börjar i ERDDAP™ 2.25) . För allmän övervakning av hälsan hos JVM använder vi de mätvärden som samlats in av Prometheus-klienten. Detta inkluderar data om skräpsamling, minnesanvändning, trådar och mer. För mer information se [Prometheus Java Klient JVM dokumentation](https://prometheus.github.io/client_java/instrumentation/jvm/) .
 
-### ERDDAP™specifika
+###  ERDDAP™ specifika
 
-Vi exporterar också ett antalERDDAP™specifika mätvärden (Börjar iERDDAP™2.26) . Om du vill gräva i koden kan du hitta de mätvärden som samlas in i[Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java).
+Vi exporterar också ett antal ERDDAP™ specifika mätvärden (Börjar i ERDDAP™ 2.26) . Om du vill gräva i koden kan du hitta de mätvärden som samlas in i [Metrics.java](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) .
 
-#### ERDDAP_build_info
+####  ERDDAP _build_info
 
-Detta är bygg info förERDDAP™Server. Den innehåller version (major.minor) version_full (major.minor.patch) och deployment_info (används för att ange hur servern distribueras, som "Docker ") .
+Detta är bygg info för ERDDAP™ Server. Den innehåller version (major.minor) version_full (major.minor.patch) och deployment_info (används för att ange hur servern distribueras, som "Docker ") .
 
 #### _Flags
 
@@ -37,9 +37,9 @@ Detta är en info metrisk som visar det aktuella läget för funktionsflaggor. D
 
 Detta är en info metrisk som indikerar om grafikacceleration är tillgänglig.
 
-#### http_request_duration_seconds
+####  http _request_duration_seconds
 
-Detta är ett histogram av begäran svar varaktigheter på några sekunder. Etiketterna är request_type (till exempel griddap,tabledapfiler, wms) Dataset_id (om tillämpligt, annars upprepar begäran typ) Fil_type (Utgångsformat för begäran t.ex. ".html", ".csv", ".iso19115 ") Lang_code (språk för begäran, eller tom sträng om standard) status_code (httpstatuskod för begäran t.ex. 200, 302, 404) .
+Detta är ett histogram av begäran svar varaktigheter på några sekunder. Etiketterna är request_type (till exempel griddap, tabledap filer, wms) Dataset_id (om tillämpligt, annars upprepar begäran typ) Fil_type (Utgångsformat för begäran t.ex. ".html", ".csv", ".iso19115 ") Lang_code (språk för begäran, eller tom sträng om standard) status_code ( http statuskod för begäran t.ex. 200, 302, 404) .
 
 Detta kan användas för att spåra förfrågningar av dataset id för att bestämma serverns populära dataset. Det kan också hjälpa till att identifiera om det finns särskilda typer av förfrågningar som är långsamma på din server.
 

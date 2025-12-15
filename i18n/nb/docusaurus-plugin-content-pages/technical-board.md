@@ -1,6 +1,6 @@
 # Teknisk styre
 
-DenERDDAP™Det tekniske styret har ansvaret for den tekniske retningen somERDDAP™Ta. DenERDDAP™Teknisk styre er ansvarlig for den tekniske retningen tilERDDAP™.. Det tar beslutninger om prioritering av arbeid, funksjonsveikart, avhengigheter, eventuelle prosesser som påvirker utviklingsarbeidet, og alle andre saker som krever teknisk tilsyn iERDDAP™.. Styret vil også revidere og godkjenne designdokumenter for viktige nye funksjoner. Tekniske styrevilkår er 2 år med mulighet til å forlenge. Tekniske styremedlemmer forventes også å bidra til prosjektet, spesielt gjennom trekkforespørsler og kodeanmeldelser.
+Den ERDDAP™ Det tekniske styret har ansvaret for den tekniske retningen som ERDDAP™ Ta. Den ERDDAP™ Teknisk styre er ansvarlig for den tekniske retningen til ERDDAP™ .. Det tar beslutninger om prioritering av arbeid, funksjonsveikart, avhengigheter, eventuelle prosesser som påvirker utviklingsarbeidet, og alle andre saker som krever teknisk tilsyn i ERDDAP™ .. Styret vil også revidere og godkjenne designdokumenter for viktige nye funksjoner. Tekniske styrevilkår er 2 år med mulighet til å forlenge. Tekniske styremedlemmer forventes også å bidra til prosjektet, spesielt gjennom trekkforespørsler og kodeanmeldelser.
 
 ## Formål{#purpose} 
 
@@ -8,13 +8,13 @@ Det tekniske styret er ansvarlig for følgende dokumenter og prosesser:
 
 *  **Gjennomgang og approve nye funksjoner** Dette foreslås i GitHub-debatter.
 
-*  **ERDDAP™Prioritetsprosjekter** Liste som bestemmer prosjekter som vi jobber med. Sjekk ut den nåværende[Prioritert prosjektliste](https://github.com/ERDDAP/erddap/issues/158)..
+*  ** ERDDAP™ Prioritetsprosjekter** Liste som bestemmer prosjekter som vi jobber med. Sjekk ut den nåværende [Prioritert prosjektliste](https://github.com/ERDDAP/erddap/issues/158) ..
 
-*  **ERDDAP™Utgivelsesfunksjonsmål** som avgjør bestemte funksjoner som vi tar sikte på å inkludere i hver utgivelse avERDDAP™.. Disse er dokumentert i GitHub-prosjektet for hver utgivelse.
+*  ** ERDDAP™ Utgivelsesfunksjonsmål** som avgjør bestemte funksjoner som vi tar sikte på å inkludere i hver utgivelse av ERDDAP™ .. Disse er dokumentert i GitHub-prosjektet for hver utgivelse.
 
-*  **ERDDAP™Stilguide** som angir kodestil og praksis som skal følges iERDDAP™Kode.
+*  ** ERDDAP™ Stilguide** som angir kodestil og praksis som skal følges i ERDDAP™ Kode.
 
-DenERDDAP™Teknisk styre opererer på følgende grunnlag:
+Den ERDDAP™ Teknisk styre opererer på følgende grunnlag:
 
 * Når det er mulig, bør det tekniske styres kommunikasjon være offentlig og asynkron. I mange tilfeller betyr dette å bruke GitHub diskusjoner og problemer.
 
@@ -50,7 +50,7 @@ DenERDDAP™Teknisk styre opererer på følgende grunnlag:
 
 ## Agenda{#agenda} 
 
-Hvis du ønsker å legge til et element i Technical Board Agenda for diskusjon eller tro at du passer bra for det tekniske styret, vennligst e-post[chris.john@noaa.gov](mailto:chris.john@noaa.gov)..
+Hvis du ønsker å legge til et element i Technical Board Agenda for diskusjon eller tro at du passer bra for det tekniske styret, vennligst e-post [chris.john @noaa.gov ](mailto:chris.john@noaa.gov) ..
 
 ## Medlemmer{#members} 
 

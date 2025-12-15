@@ -1,6 +1,6 @@
 # Licence
 
-## NOAAProhlášení veřejné domény softwaru{#noaa-software-public-domain-statement} 
+##  NOAA Prohlášení veřejné domény softwaru{#noaa-software-public-domain-statement} 
 
 Jako práce vlády Spojených států je tento projekt ve veřejném vlastnictví ve Spojených státech. Software, jak je zde chápán, musí být obecně vykládán tak, že zahrnuje algoritmy, zdrojový kód, kód objektu, databáze a související dokumentaci, z nichž všechny musí být uživateli poskytovány zdarma.
 
@@ -8,7 +8,7 @@ Kromě toho se vzdáváme autorských práv a práv souvisejících s prací po 
 
 ### CC0 1.0 Univerzální souhrn{#cc0-10-universal-summary} 
 
-To je lidský-čitelný souhrn[Právní řád](https://github.com/ERDDAP/erddap/blob/main/LICENSE)  (přečíst celý text) .
+To je lidský-čitelný souhrn [Právní řád](https://github.com/ERDDAP/erddap/blob/main/LICENSE)   (přečíst celý text) .
 
 ### Žádné autorské právo{#no-copyright} 
 
@@ -16,4 +16,4 @@ Osoba, která spojila práci s tímto skutkem, věnovala dílo veřejné domén�
 
 ### Další informace{#other-information} 
 
-PoužitíNOAA  (National Oceanic and Atmospheric Administration) neboNMFSaERDDAP™názvy a/nebo vizuální identifikátory jsou chráněny zákonem o ochranných známkách a nesmějí být použity bez písemného svoleníNOAA. Použití těchto názvů a/nebo vizuálních identifikátorů k identifikaci nezměněnýchNOAAobsah nebo odkazy naNOAAWebové stránky jsou přípustné použití. Povolení není vyžadováno pro zobrazení nezměněnéNOAAprodukty, které zahrnujíNOAA,NMFSneboERDDAP™názvy a/nebo vizuální identifikátory jako součást původního výrobku. Názvy ani vizuální identifikátory však nesmějí být použity způsobem, který zahrnuje potvrzení nebo příslušnost kNOAA.
+Použití NOAA   ( National Oceanic and Atmospheric Administration ) nebo NMFS a ERDDAP™ názvy a/nebo vizuální identifikátory jsou chráněny zákonem o ochranných známkách a nesmějí být použity bez písemného svolení NOAA . Použití těchto názvů a/nebo vizuálních identifikátorů k identifikaci nezměněných NOAA obsah nebo odkazy na NOAA Webové stránky jsou přípustné použití. Povolení není vyžadováno pro zobrazení nezměněné NOAA produkty, které zahrnují NOAA , NMFS nebo ERDDAP™ názvy a/nebo vizuální identifikátory jako součást původního výrobku. Názvy ani vizuální identifikátory však nesmějí být použity způsobem, který zahrnuje potvrzení nebo příslušnost k NOAA .

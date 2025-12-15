@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Seo iad na hathruithe a bhaineann le gach ERDDAP™ scaoileadh.
 
+
+## Leagan 2.2.0{#version-2290} 
+ (2025-12) 
+
+Gníomh ag teastáil.
+
+ ERDDAP™ leagan 2.29.0 éilíonn jdk 25 nó níos déanaí. Tabhair cothrom le dáta do leagan jdk. Más fadhb é sin, is féidir leat a thógáil ERDDAP™ le haghaidh jdk níos sine (ar ais go 17 ar a laghad) ag athrú an comhad pom.xml. Is JDK 25 scaoileadh LTS Java agus folaíonn sé go leor feabhsuithe, feidhmíocht níos fearr go háirithe.
+
+*    **Gnéithe agus Athruithe Nua (d'úsáideoirí) :** 
+    * ISO 19115 leaganacha: Féach thíos le haghaidh eolas admin. I gcás úsáideoirí, is féidir leat leaganacha sonracha de mheiteashonraí ISO 19115 a iarraidh anois. Déan é seo as an eangachdap / tabledap leathanaigh le haghaidh tacar sonraí leis an titim cineál comhaid síos. Beidh na leaganacha a bheith neamhspleách ar an mainneachtain freastalaí.
+
+*    **Cad a bhí mícheart leis an láithreán ERDDAP™ Riarthóirí An riachtanas is gá a fhios agus a dhéanamh:** 
+    * Gné nua, tacaíocht MQTT. Le haghaidh sonraí Molaim léamh [leathanach nua mar gheall air.](/docs/server-admin/mqtt-integration) Áirítear leis seo a bheith in ann tacair sonraí a thógáil ó theachtaireachtaí MQTT, agus teachtaireachtaí MQTT a fhoilsiú nuair a athraíonn tacar sonraí. Tá sé as de réir réamhshocraithe, mar sin más mian leat é a úsáid, ní mór duit é a chumasú.
+
+Buíochas le Ayush Singh le bheith ag obair ar MQTT&#33;
+
+    * feabhsúcháin S3: Tacaíocht a chur le haghaidh URIs S3 mar an luach taisceFromUrl. Ceadóidh sé seo ERDDAP chun tacú le buicéid phríobháideacha a óstáil as amazonaws.com Chomh maith leis sin aghaidh ceist sceitheadh cuimhne S3.
+
+A bhuíochas le @SethChampagneNRL as an obair ar S3&#33;
+
+    * ISO 19115 leaganacha: Tá tacaíocht anois do 3 leaganacha éagsúla de mheiteashonraí ISO 19115. Tá an leagan réamhshocraithe á rialú ag suímh i do thus.xml. Má tá úsáid SisISO19115 bréagach, beidh an freastalaí a chur ar fáil de réir réamhshocraithe NOAA mhodhnú ISO19115_2. Má tá úsáid SisISO19115 fíor, ansin beidh an freastalaí a úsáid leagan éagsúla ag brath ar an luach a úsáidSisISO19139. Má tá úsáid SisISO19139 fíor, beidh an réamhshocraithe ISO19139_2007, má tá úsáidSisISO19139 bréagach beidh an réamhshocraithe a bheith ISO19115_3_2016. Molaimid úsáid a bhaint as SisISO19115 = fíor agus úsáid SisISO19139 = False. D'fhéadfadh go mbeadh socruithe éagsúla ag teastáil ó d'eagraíocht.
+
+    * Migrated leis an java. tréimhse saoil: ilbhliantúil (in ionad java.util. cliceáil grianghraf a mhéadú) . Ba cheart go gcuirfeadh sé seo feabhas ar fheidhmíocht ar cheisteanna a bhaineann le colúin dáta/ama. Níor cheart go mbeadh aon tionchar suntasach ag formhór mór na tacar sonraí. Is é an cás amháin ar a dtugtar cúiseanna seo athrú má tá an tacar sonraí ag baint úsáide as `laethanta ó 0000-01-01` nó a leithéid. Más fadhb é seo le haghaidh athróg, is féidir leat a chur ` <att name="legacy_time_adjust"> fíor fíor </att> ` go dtí an addAttributes alt de cheachtar dataVariable nó axisVariable .
+    
+    *    datasets.xml a phróiseáil anois ag [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Tá sé seo go leor úsáidí lena n-áirítear leagan luachanna príobháideacha (cosúil le focal faire) ag baint úsáide as athróg comhshaoil. Is féidir é seo a bheith faoi mhíchumas trí shuíomh ar chumas EnvParsing bréagach i thus.xml.
+
+    * Axis brú: Cuireann cás speisialta le haghaidh ingearchlónna sainithe ag brú. Úsáidtear é seo go príomha i tacair shonraí meitéareolaíochta lena sainítear ingearchlónna ingearacha i leibhéil isobaric. NÓTA: Ciallaíonn luachanna brú níos lú ingearchlónna níos airde, mar sin ritheann an ais os coinne na n-ingearchlónna gnáth sainithe i méadair nó cosa.
+
+Go raibh maith agat as [cliceáil grianghraf a mhéadú](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid Ó NcFiles le gnéithe éagsúla: Níl ann (turgnamhach) tacaíocht do EDDGrid As NcFiles datasets a bheith athróg nach bhfuil a úsáid an tsraith chéanna de aiseanna. Déan tuairisciú ar ais ar conas a oibríonn sé seo ar do shon, nó más rud é nach bhfuil an t-iompar cosúil go leor ceart.
+
+    * Níl bailiúchán de leas iomlán a ba chóir a bheith sábháilte, ach tá bratacha a revert chuig iompar d'aois más gá. Má fhaigheann tú an gá atá le haon cheann de na bratacha a shocrú, comhad le do thoil fabht. Má chloiseann muid aon saincheisteanna is mó de na a chur as oifig leis an teip iompair nua sa todhchaí. Níl ann [leathanach nua faoi bratacha gné](/docs/server-admin/feature-flags) áit ar féidir leat léamh faoi na bratacha agus eile.
+
+      * cineál gas: in airde Snáithe Sreang ach amháin Cathain: Is athrú é seo ionas go mbeidh an touchThread ag rith ach amháin nuair a bhíonn míreanna sa scuaine le teagmháil. Is é ceann amháin snáithe níos lú ag rith ná leas iomlán a bhaint as saorga ach fós úsáideach. Ionsaí a bheith fíor.
+
+      * cliceáil grianghraf a mhéadú ForFileTable: Ceadaíonn an t-athrú seo an tábla comhad inmheánach a úsáid tréithe nc, go sonrach tréith athraitheach iarbhír_range a sheachaint léamh an comhad nc ar fad. Is féidir é seo luas suntasach suas luchtú tosaigh tacar sonraí bunaithe ar chomhaid nc má tá an iarbhír_range do gach athróg i ngach comhad san áireamh mar tréith. Tabhair faoi deara go n-iontaobhas seo an luach, mar sin má tá sé mícheart, beidh faisnéis mhícheart ag an tábla comhad inmheánach. Ionsaí a bheith fíor.
+
+      * ncHeader DéanFile: Ceadaíonn an t-athrú comhaid header nc a ghiniúint gan an chéad ghiniúint an t-ionadaí nc comhad. Is é seo an leas iomlán a bhaint beag do EDDTable, ach leas iomlán a bhaint ollmhór do go leor EDDGrid iarratais. Ionsaí bréagach (mar atá i bréagach é an t-iompar atá beartaithe Optamaithe) .
+
+      * cineál gas: in airde Déan Teagmháil Linn Táblaí: Gluaiseann an t-athrú seo cuid de phróiseáil tosaigh tacar sonraí go snáithe cúlra. Ba cheart an t-am a fheabhsú chun tacar sonraí a luchtú. Go sonrach tá an chuid moill táblaí fo-thacar, a ghintear freisin nuair is gá más rud é nach bhfuil an phróiseáil moill a tharla go fóill. Ionsaí a bheith fíor.
+
+    * Roinnt athruithe beaga, Ceartúcháin bug (go raibh maith agat Italo Borrelli do shocrú do EDDTableFromAggregateRows, go raibh maith agat Ag tabhairt freagra ar @SethChampagneNRL @SethChampagneNRL EDDGrid LonPM180, agus roinnt Ceartúcháin eile) , agus optimizations.
+
+*    **Le haghaidh ERDDAP™ Forbróirí:** 
+    * optimizations breise, lena n-áirítear am a reáchtáil tástála a ghearradh i leath.
+
+    * Próifílí tástála nua le haghaidh flaky (seachtrach) nó thar a bheith mall (mall AWS) tástálacha.
+
 ## Leagan 2.28.1{#version-2281} 
  (2025-09-05 scaoileadh) 
 
@@ -49,7 +98,7 @@ Go raibh maith agat as [Cuntas deimhnithe](https://github.com/ocefpaf) , [Cuntas
     * Sonraí nua chun tiontaire dathbharra ar fhreastalaithe ag / bairille / ciorcal / dath.html
 
 *    **Cad a bhí mícheart leis an láithreán ERDDAP™ Riarthóirí An riachtanas is gá a fhios agus a dhéanamh:** 
-    * Is Default behavoir go mbeidh an taisce a ghlanadh anois neamhspleách ar an ualach mór datasets tasc. Beidh sé seo ar chumas imréitigh níos iontaofa agus rialta de chomhaid taisce d'aois. Tá obair bhreise a fheabhsú behavoir freastalaí nuair íseal ar spás diosca (ag filleadh ar earráid le haghaidh iarrataí dócha a dhéanamh ar an bhfreastalaí reáchtáil amach as spás, agus imréitigh an taisce níos minice i gcúinsí diosca íseal chun iarracht a dhéanamh earráidí a chosc) . I datasets.xml   (nó setup.xml) is féidir leat a chur / a leagtar an taisce nua ClearMinutes paraiméadar a rialú cé chomh minic na seiceálacha freastalaí a ghlanadh an taisce. Tabhair faoi deara, rialaíonn an paraiméadar atá ann cheana i dtaiscMinutes aois na gcomhad atá le coinneáil, an taisce nua Is ClearMinutes do cé chomh minic a dhéanamh chache soiléir.
+    * Is é iompar réamhshocraithe go mbeidh an taisce a ghlanadh anois neamhspleách ar an ualach mór tacar sonraí tasc. Beidh sé seo ar chumas imréitigh níos iontaofa agus rialta de chomhaid taisce d'aois. Tá obair bhreise a fheabhsú iompar freastalaí nuair íseal ar spás diosca (ag filleadh ar earráid le haghaidh iarrataí dócha a dhéanamh ar an bhfreastalaí reáchtáil amach as spás, agus imréitigh an taisce níos minice i gcúinsí diosca íseal chun iarracht a dhéanamh earráidí a chosc) . I datasets.xml   (nó setup.xml) is féidir leat a chur / a leagtar an taisce nua ClearMinutes paraiméadar a rialú cé chomh minic na seiceálacha freastalaí a ghlanadh an taisce. Tabhair faoi deara, rialaíonn an paraiméadar atá ann cheana i dtaiscMinutes aois na gcomhad atá le coinneáil, an taisce nua Is ClearMinutes do cé chomh minic a dhéanamh chache soiléir.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Chomh maith leis an chuma cothrom le dáta tá feabhas a chur ar nascleanúint, 
 
     * Gné nua a shaincheapadh ar an eolas ar taispeáint faoi thacair sonraí sa Chomhéadain. Táimid ag súil go mbeidh sé seo úsáideach go háirithe chun rudaí a chur ar nós lua sonraí. Le haghaidh tuilleadh sonraí is féidir leat a léamh [data recovery](/docs/server-admin/display-info) . A bhuíochas le Ayush Singh don ranníocaíocht&#33;
 
-    * méadracht Prometheus breise. Is é an ceann is mó ` http _request_duration_seconds` lena n-áirítear amanna freagartha a iarraidh briste síos ag: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
+    * méadracht Prometheus breise. Is é an ceann is mó ` http Déan staidéar` lena n-áirítear amanna freagartha d'iarraidh arna miondealú de réir: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
 Beidh an fhormáid seo meaisín inléite ar chumas bailiúchán níos fearr de méadracht a thuiscint conas úsáideoirí ag baint úsáide as an bhfreastalaí.
 
     * Bealach nua a ghiniúint comhaid ISO19115 XML. Úsáideann sé Apache SIS agus is rogha nua sa scaoileadh. Cuir ar chumas é agus aiseolas a sheoladh.

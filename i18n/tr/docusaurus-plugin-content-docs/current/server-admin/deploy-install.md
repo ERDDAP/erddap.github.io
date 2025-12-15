@@ -277,10 +277,10 @@ Bu ilk ayarlandığında yaygındır ERDDAP™ .
              
 ###  ERDDAP™ Content Content Content{#erddap-content} 
 3.   [Set up the the `tomcat/content/erddap` konfigürasyon dosyaları.](#erddap-content) 
-Linux, Mac ve Windows üzerinde, indir [HeddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
+Linux, Mac ve Windows üzerinde, indir [HeddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.1/erddapContent.zip) 
 Ve bunu kabul etme `tomcat` Rehber, oluşturmak `tomcat/content/erddap` .
 
-__Version 1.0.0, 20333 bytes, MD5=2B8D2A5AE5ED73E3A42B529C168C60B5 2024-10-14__
+__Version 1.0.1, 20683 bytes, MD5=98a8099e7e674da59fe35e9c96efa7b5, 2025-06
 
 Bazı önceki versiyonlar da mevcuttur:
 
@@ -357,9 +357,9 @@ Sonuç XML metnini bir XML çekerine geçmiş olarak iyi bilgilendirilmiş XML o
      
 ### Erddap'ı yükleyin. Savaş dosyası{#install-the-erddapwar-file} 
 
-4. Linux, Mac ve Windows, __download [Heddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) __ into __ into __ `tomcat /webapps` :
+4. Linux, Mac ve Windows, __download [Heddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) __ into __ into __ `tomcat /webapps` :
 
-__Version 2.28.1, 622,676,238 bytes, MD5=48b4226045f950c8a8d69ef9521b9bc9, 2025-09__-05
+__Version 2.29.0, 706,788,135 bytes, MD5=A5ED0DCC8D46CA27640FFEB8CE4A8560 12-15-2025__
 
 Savaş dosyası büyük çünkü harita oluşturmak için gereken yüksek çözünürlüklü, sınır ve yükseklik verileri içeriyor.
 
@@ -374,6 +374,7 @@ Bazı önceki versiyonlar da mevcuttur.
    *  [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)   (592,292,039 bytes, MD5=652AFC9D1421F00B5F789DA2C4732D4C, 2024-11-07-07) 
    *  [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)   (607,404,032 bytes, MD5=99a725108b37708e5420986c16a119, 2025-03-31) 
    *  [2.27.0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)   (620,554,403 bytes, MD5=3b2086c659eeee4145ca2dff447bf4ef7, 2025-06-11-11) 
+   *  [2.28.1](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war)   (622,676,238 bytes, MD5=48b4226045f950c8a8d69ef9521b9bc9) 
 
 ### Configure proxy (Belirli dağıtım belirli)  {#proxy} 
 

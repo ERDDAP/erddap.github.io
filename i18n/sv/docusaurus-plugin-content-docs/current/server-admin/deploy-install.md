@@ -277,10 +277,10 @@ Detta är vanligt när du först ställer in ERDDAP™ .
              
 ###  ERDDAP™ Innehåll{#erddap-content} 
 3.   [Ställ in the `Tomcat/content/erddap` Konfigurationsfiler.](#erddap-content) 
-På Linux, Mac och Windows, ladda ner [ErddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.0/erddapContent.zip) 
+På Linux, Mac och Windows, ladda ner [ErddapContent .zip ](https://github.com/ERDDAP/erddapContent/releases/download/content1.0.1/erddapContent.zip) 
 och unzip det i `Tomcat` katalog, skapa `Tomcat/content/erddap` .
 
-__Version 1.0.0, 20333 byte, MD5=2B8D2A5AE5ED73E3A42B529C168C60B5, daterad 2024-10-14___
+__Version 1.0.1, 20683 byte, MD5=98a8099e7e674da59fe35e9c96efa7b5, daterad 2025-06-02_____________________________________________________________________________________________________________________________________________________________________________________________________________
 
 Några tidigare versioner finns också tillgängliga:
 
@@ -357,9 +357,9 @@ Det är en bra idé att verifiera att resultatet är välformat XML genom att kl
      
 ### Installera erddap. krigsfil{#install-the-erddapwar-file} 
 
-4. På Linux, Mac och Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war) __ in `Tomcat/webapps` Från:
+4. På Linux, Mac och Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) __ in `Tomcat/webapps` Från:
 
-__Version 2.28.1, 622.676.238 byte, MD5=48b4226045f950c8a8d69ef9521b9bc9, daterad 2025-09-05_______________________________________________________________________________________________________________________________________________________________________________________________________
+__Version 2.29.0, 706.788.135 byte, MD5=A5ED0DCC8D46CA27640FEB8CE4A8560, daterad 12-15-2025
 
 Krigsfilen är stor eftersom den innehåller högupplöst kustlinje, gräns och höjddata som behövs för att skapa kartor.
 
@@ -374,6 +374,7 @@ Vissa tidigare versioner finns också tillgängliga.
    *  [2.25](https://github.com/ERDDAP/erddap/releases/download/v2.25.1/erddap.war)   (592,292,039 byte, MD5=652AFC9D1421F00B5F789DA2C4732D4C, daterad 2024-11-07) 
    *  [2.26](https://github.com/ERDDAP/erddap/releases/download/v2.26.0/erddap.war)   (607,404,032 byte, MD5=99a725108b37708e5420986c16a119, daterad 2025-03-31) 
    *  [2.27.0](https://github.com/ERDDAP/erddap/releases/download/v2.27.0/erddap.war)   (620,554,403 byte, MD5=3b2086c659eee4145ca2dff447bf4ef7, daterad 2025-06-11) 
+   *  [2.28.1](https://github.com/ERDDAP/erddap/releases/download/v2.28.1/erddap.war)   (622,676,238 byte, MD5=48b4226045f950c8a8d69ef9521b9bc9, daterad 2025-09-05) 
 
 ### Konfigurera proxy (Utplaceringsspecifik)  {#proxy} 
 

@@ -5,62 +5,86 @@
   },
   "sidebar.docSidebar.category.Server Administration": {
     "message": "伺服器管理",
-    "description": "The label for category Server Administration in sidebar docSidebar"
+    "description": "The label for category 'Server Administration' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Server Administration.link.generated-index.description": {
     "message": "伺服器管理員的有用資訊",
-    "description": "The generated-index page description for category Server Administration in sidebar docSidebar"
+    "description": "The generated-index page description for category 'Server Administration' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Contributing": {
     "message": "捐款",
-    "description": "The label for category Contributing in sidebar docSidebar"
+    "description": "The label for category 'Contributing' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Contributing.link.generated-index.description": {
     "message": "向促进者提供信息ERDDAP",
-    "description": "The generated-index page description for category Contributing in sidebar docSidebar"
+    "description": "The generated-index page description for category 'Contributing' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Dataset Scripts Code Documentation": {
     "message": "數據集文稿碼文件",
-    "description": "The label for category Dataset Scripts Code Documentation in sidebar docSidebar"
+    "description": "The label for category 'Dataset Scripts Code Documentation' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ERDDAP": {
     "message": "ERDDAP",
-    "description": "The label for category ERDDAP in sidebar docSidebar"
+    "description": "The label for category 'ERDDAP' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ERDDAP.link.generated-index.description": {
     "message": "產生的檔案ERDDAP™代碼",
-    "description": "The generated-index page description for category ERDDAP in sidebar docSidebar"
+    "description": "The generated-index page description for category 'ERDDAP' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.com.cohort.util": {
     "message": "com.cohort.ul",
-    "description": "The label for category com.cohort.util in sidebar docSidebar"
+    "description": "The label for category 'com.cohort.util' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptCalendar2": {
     "message": "文稿卡倫達2",
-    "description": "The label for category ScriptCalendar2 in sidebar docSidebar"
+    "description": "The label for category 'ScriptCalendar2' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptMath": {
     "message": "文稿Math",
-    "description": "The label for category ScriptMath in sidebar docSidebar"
+    "description": "The label for category 'ScriptMath' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptMath2": {
     "message": "文稿Math2",
-    "description": "The label for category ScriptMath2 in sidebar docSidebar"
+    "description": "The label for category 'ScriptMath2' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptRow": {
     "message": "文稿",
-    "description": "The label for category ScriptRow in sidebar docSidebar"
+    "description": "The label for category 'ScriptRow' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptString2": {
     "message": "文稿串2",
-    "description": "The label for category ScriptString2 in sidebar docSidebar"
+    "description": "The label for category 'ScriptString2' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User": {
     "message": "使用者",
-    "description": "The label for category User in sidebar docSidebar"
+    "description": "The label for category 'User' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "幫助使用者的資訊",
-    "description": "The generated-index page description for category User in sidebar docSidebar"
+    "description": "The generated-index page description for category 'User' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Tips": {
+    "message": "提示",
+    "description": "The label for category Tips in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.Tips.link.generated-index.description": {
+    "message": "伺服器管理員的提示與技巧寫入",
+    "description": "The generated-index page description for category Tips in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.Admin Tips": {
+    "message": "管理提示",
+    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
+    "message": "伺服器管理員的提示與技巧寫入",
+    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.User Tips": {
+    "message": "使用者提示",
+    "description": "The label for category 'User Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.User Tips.link.generated-index.description": {
+    "message": "使用者的提示與技巧寫入",
+    "description": "The generated-index page description for category 'User Tips' in sidebar 'docSidebar'"
   }
 }

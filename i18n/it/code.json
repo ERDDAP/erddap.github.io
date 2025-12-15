@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Questa pagina è una bozza. Sarà visibile solo in dev ed essere escluso dalla produzione.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(apre nella nuova scheda)",
+    "description": "The ARIA label for the external link icon"
   }
 }

@@ -32,6 +32,10 @@ If you buy into these ideas and expend the effort to create the XML for datasets
 Making the datasets.xml takes considerable effort for the first few datasets, but **it gets easier**. After the first dataset, you can often re-use a lot of your work for the next dataset. Fortunately, ERDDAP™ comes with two [Tools](#tools) to help you create the XML for each dataset in datasets.xml.  
 If you get stuck, see our [section on getting additional support](/docs/intro#support).
 
+### Variables in datasets.xml {#varaibles-in-datasetsxml}
+
+As of ERDDAP™ version 2.29.0, datasets.xml is now (optionally) processed by a [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html). This has many uses including setting private values (like passwords) using environment variables. This can be disabled by setting enableEnvParsing to false in setup.xml.
+
 ### Data Provider Form {#data-provider-form}
 When a data provider comes to you hoping to add some data to your ERDDAP, it can be difficult and time consuming to collect all of the metadata (information about the dataset) needed to add the dataset into ERDDAP. Many data sources (for example, .csv files, Excel files, databases) have no internal metadata, so ERDDAP™ has a Data Provider Form which gathers metadata from the data provider and gives the data provider some other guidance, including extensive guidance for [Data In Databases](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html#databases). The information submitted is converted into the datasets.xml format and then emailed to the ERDDAP™ administrator (you) and written (appended) to *bigParentDirectory*/logs/dataProviderForm.log . Thus, the form semi-automates the process of getting a dataset into ERDDAP, but the ERDDAP™ administrator still has to complete the datasets.xml chunk and deal with getting the data file(s) from the provider or connecting to the database.
 
@@ -900,6 +904,7 @@ The types of datasets fall into two categories. ([Why?](#why-just-two-basic-data
     *   There MUST be an axis variable for each dimension. Axis variables MUST be specified in the order that the data variables use them.
     *   In EDDGrid datasets, all data variables MUST use (share) all of the axis variables.  
         ([Why?](#why-just-two-basic-data-structures) [What if they don't?](#dimensions))
+        New in ERDDAP™ version 2.29.0 with EDDGridFromNcFiles is experimental support for data variables that don't support all of the axis variables (or as some have called it 1D and 2D data in the same dataset).
     *   Sorted Dimension Values - In all EDDGrid datasets, each dimension MUST be in sorted order (ascending or descending). Each can be irregularly spaced. There can be no ties. This is a requirement of the [CF metadata standard](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html). If any dimension's values aren't in sorted order, the dataset won't be loaded and ERDDAP™ will identify the first unsorted value in the log file, *bigParentDirectory*/logs/log.txt .
         
         A few subclasses have additional restrictions (notably, EDDGridAggregateExistingDimension requires that the outer (leftmost, first) dimension be ascending.
@@ -949,6 +954,7 @@ The types of datasets fall into two categories. ([Why?](#why-just-two-basic-data
         *   [EDDTableFromInvalidCRAFiles](#eddtablefrominvalidcrafiles) aggregates data from NetCDF (v3 or v4) .nc files which use a specific, invalid, variant of the CF DSG Contiguous Ragged Array (CRA) files. Although ERDDAP™ supports this file type, it is an invalid file type that no one should start using. Groups that currently use this file type are strongly encouraged to use ERDDAP™ to generate valid CF DSG CRA files and stop using these files.
         *   [EDDTableFromJsonlCSVFiles](#eddtablefromjsonlcsvfiles) aggregates data from [JSON Lines CSV files](https://jsonlines.org/examples/).
         *   [EDDTableFromMultidimNcFiles](#eddtablefrommultidimncfiles) aggregates data from NetCDF (v3 or v4) .nc files with several variables with shared dimensions.
+        *   [EDDTableFromMqtt](/docs/server-admin/mqtt-integration) constructs a dataset based on MQTT messages. Note the documentation is on a dedicated page. Note that there are a lot of similarities to [EDDTableFromHttpGet](#eddtablefromhttpget).
         *   [EDDTableFromNcFiles](#eddtablefromncfiles) aggregates data from NetCDF (v3 or v4) .nc files with several variables with shared dimensions. It is fine to continue using this dataset type for existing datasets, but for new datasets we recommend using EDDTableFromMultidimNcFiles instead.
         *   [EDDTableFromNcCFFiles](#eddtablefromnccffiles) aggregates data from NetCDF (v3 or v4) .nc files which use one of the file formats specified by the [CF Discrete Sampling Geometries (DSG)](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) conventions. But for files using one of the multidimensional CF DSG variants, use [EDDTableFromMultidimNcFiles](#eddtablefrommultidimncfiles) instead.
         *   [EDDTableFromNccsvFiles](#eddtablefromnccsvfiles) aggregates data from [NCCSV](/docs/user/nccsv-1.00) ASCII .csv files.
@@ -1577,6 +1583,8 @@ We strongly recommend using the [GenerateDatasetsXml program](#generatedatasetsx
  
 ### EDDGridFromNcFiles {#eddgridfromncfiles}
 [**EDDGridFromNcFiles**](#eddgridfromncfiles) aggregates data from local, gridded, [GRIB .grb and .grb2](https://en.wikipedia.org/wiki/GRIB) files, [HDF (v4 or v5) .hdf](https://www.hdfgroup.org/) files, [.ncml](#ncml-files) files, [NetCDF (v3 or v4) .nc](https://www.unidata.ucar.edu/software/netcdf/) files, and [Zarr](https://github.com/zarr-developers/zarr-python) files (as of version 2.25). Zarr files have slightly different behavior and require either the fileNameRegex or the pathRegex to include "zarr".
+
+New in ERDDAP™ version 2.29.0 is experimental support for data variables that don't support all of the axis variables (or as some have called it 1D and 2D data in the same dataset). Please reach out on GitHub (discussions or issues) with feedback and bugs.
 
 This may work with other file types (for example, BUFR), we just haven't tested it -- please send us some sample files.
 
@@ -5944,6 +5952,24 @@ For numeric variables, the default for both is NaN.
     *   For timestamp variables with source data from Strings, this attribute lets you specify a time zone which leads ERDDAP™ to convert the local-time-zone source times (some in Standard time, some in Daylight Saving time) into Zulu times (which are always in Standard time). The list of valid time zone names is probably identical to the list in the TZ column at [https://en.wikipedia.org/wiki/List\_of\_tz\_database\_time\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Common US time zones are: US/Hawaii, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, US/Eastern.
     *   For timestamp variables with numeric source data, you can specify the "time\_zone" attribute, but the value must be "Zulu" or "UTC". If you need support for other time zones, please email Chris.John at noaa.gov .  
          
+###### legacy_time_adjust {#legacy_time_adjust}
+*   [**legacy_time_adjust**](#legacy_time_adjust) Starting in ERDDAP™ 2.29.0, time variables work slightly differently. In rare cases, most likely when using `days since` and a year before 1582 (so `days since 0000-01-01` or `days since 1-1-1 00:00:0.0`) you will need to indicate for an adjustment to the date variable. The reason for this is ERDDAP™ uses the java.time library to manage dates internally. There are some datasets that do require using the old GregorianCalendar library to acheive the correct dates.
+
+```
+<axisVariable>
+    <sourceName>time</sourceName>
+    <destinationName>time</destinationName>
+    <!-- sourceAttributes>
+        ... removed several lines ...
+        <att name="units">days since 1-1-1 00:00:0.0</att>
+    </sourceAttributes -->
+    <addAttributes>
+        ... removed several lines ...
+        <att name="legacy_time_adjust">true</att>
+    </addAttributes>
+</axisVariable>
+```
+
 ###### units {#units}
 *   [**units**](#units) ([COARDS](https://ferret.pmel.noaa.gov/noaa_coop/coop_cdf_profile.html), [CF](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) and [ACDD](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) metadata standard) defines the units of the data values. For example,  
     ```

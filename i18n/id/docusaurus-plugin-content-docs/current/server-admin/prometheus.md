@@ -3,7 +3,7 @@ sidebar_position: 9
 ---
 # Login
 
-[Prometheus metrik](https://prometheus.io/)tersedia di /erddap/metrik. JVM inti metrik ditambahkan dalam 2.25 dengan banyakERDDAP™metrik ditambahkan dalam versi 2.26. Jika Anda ingin menggunakan metrik pastikan Anda setidaknya versi 2.26. Mereka default untuk diaktifkan, Anda dapat menonaktifkan mereka dengan menambahkan
+ [Prometheus metrik](https://prometheus.io/) tersedia di /erddap/metrik. JVM inti metrik ditambahkan dalam 2.25 dengan banyak ERDDAP™ metrik ditambahkan dalam versi 2.26. Jika Anda ingin menggunakan metrik pastikan Anda setidaknya versi 2.26. Mereka default untuk diaktifkan, Anda dapat menonaktifkan mereka dengan menambahkan
 ```xml
 <usePrometheusMetrics>false</usePrometheusMetrics>
 ```
@@ -13,21 +13,21 @@ metrik ini dirancang untuk menjadi mesin yang dapat dibaca. Meskipun Anda dapat 
 
 ## Web Server
 
-Dokumentasi terbaik untuk menjalankan tumpukan pemantauan (WordPress.org) di Prometheus[Login](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md)Sitemap
+Dokumentasi terbaik untuk menjalankan tumpukan pemantauan (WordPress.org) di Prometheus [Login](https://github.com/ERDDAP/erddap/blob/main/docker/prometheus/README.md) Sitemap
 
-## ERDDAP™metrik
+##  ERDDAP™ metrik
 
 ### Login
 
-ERDDAP™ekspor sejumlah metrik yang mungkin Anda temukan (SitemapERDDAP™2.25) Sitemap Untuk pemantauan umum kesehatan JVM kita menggunakan metrik yang dikumpulkan oleh klien Prometheus. Ini termasuk data tentang pengumpulan sampah, penggunaan memori, benang, dan banyak lagi. Untuk informasi lebih lanjut[LoginJavaKlien JVM dokumentasi](https://prometheus.github.io/client_java/instrumentation/jvm/)Sitemap
+ ERDDAP™ ekspor sejumlah metrik yang mungkin Anda temukan (Sitemap ERDDAP™ 2.25) Sitemap Untuk pemantauan umum kesehatan JVM kita menggunakan metrik yang dikumpulkan oleh klien Prometheus. Ini termasuk data tentang pengumpulan sampah, penggunaan memori, benang, dan banyak lagi. Untuk informasi lebih lanjut [Login Java Klien JVM dokumentasi](https://prometheus.github.io/client_java/instrumentation/jvm/) Sitemap
 
-### ERDDAP™Sitemap
+###  ERDDAP™ Sitemap
 
-Kami juga mengekspor sejumlahERDDAP™metrik spesifik (SitemapERDDAP™2.26) Sitemap Jika Anda ingin menggali kode, Anda dapat menemukan metrik yang dikumpulkan dalam[Login](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java)Sitemap
+Kami juga mengekspor sejumlah ERDDAP™ metrik spesifik (Sitemap ERDDAP™ 2.26) Sitemap Jika Anda ingin menggali kode, Anda dapat menemukan metrik yang dikumpulkan dalam [Login](https://github.com/ERDDAP/erddap/blob/main/WEB-INF/classes/gov/noaa/pfel/erddap/util/Metrics.java) Sitemap
 
-#### ERDDAP_build_info
+####  ERDDAP _build_info
 
-Ini adalah info build untukERDDAP™Login Ini termasuk versi (Login) versi_full (WordPress.org) Sitemap (digunakan untuk menunjukkan bagaimana server digunakan, seperti 'Docker Sitemap) Sitemap
+Ini adalah info build untuk ERDDAP™ Login Ini termasuk versi (Login) versi_full (WordPress.org) Sitemap (digunakan untuk menunjukkan bagaimana server digunakan, seperti 'Docker Sitemap) Sitemap
 
 #### Login
 
@@ -37,9 +37,9 @@ Ini adalah metrik info yang menunjukkan keadaan saat ini dari bendera fitur. Keb
 
 Ini adalah metrik info yang menunjukkan apakah akselerasi grafis tersedia.
 
-#### http_request_duration_detik
+####  http _request_duration_detik
 
-Ini adalah histogram dari durasi respon permintaan dalam hitungan detik. Label adalah tipe request_ (misalnya griddap,tabledapfile, wms) Dataset_id (jika berlaku, jika tidak mengulangi jenis permintaan) Login (format output untuk permintaan e.g. '.html', '.csv', '.iso19115 Sitemap) lang_kode (bahasa untuk permintaan, atau string kosong jika default) status_kode (httpKode status permintaan misalnya 200, 302, 404) Sitemap
+Ini adalah histogram dari durasi respon permintaan dalam hitungan detik. Label adalah tipe request_ (misalnya griddap, tabledap file, wms) Dataset_id (jika berlaku, jika tidak mengulangi jenis permintaan) Login (format output untuk permintaan e.g. '.html', '.csv', '.iso19115 Sitemap) lang_kode (bahasa untuk permintaan, atau string kosong jika default) status_kode ( http Kode status permintaan misalnya 200, 302, 404) Sitemap
 
 Ini dapat digunakan untuk melacak permintaan dengan dataset id untuk menentukan dataset populer server. Hal ini juga dapat membantu mengidentifikasi apakah ada jenis permintaan tertentu yang lambat pada server Anda.
 

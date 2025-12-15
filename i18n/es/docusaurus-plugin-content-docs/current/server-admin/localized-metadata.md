@@ -4,13 +4,13 @@ sidebar_position: 8
 # Metadatos localizados
 
 ### Descripción
-Esta función le permite incluir metadatos localizados sobre sus conjuntos de datos y variables. Cualquier atributo definido dentro de unaddAttributesla etiqueta puede ser localizada. Esto se pretende utilizar para atributos comunes de cadena como título, resumen, licencia, instituto. No se recomienda utilizar para numérico (por ejemplo "_FillValue") o valores estandarizados (por ejemplo "ioos_categoría") y localización de estos tipos de valores puede tener comportamiento sorprendente.
+Esta función le permite incluir metadatos localizados sobre sus conjuntos de datos y variables. Cualquier atributo definido dentro de un addAttributes la etiqueta puede ser localizada. Esto se pretende utilizar para atributos comunes de cadena como título, resumen, licencia, instituto. No se recomienda utilizar para numérico (por ejemplo "_FillValue") o valores estandarizados (por ejemplo "ioos_categoría") y localización de estos tipos de valores puede tener comportamiento sorprendente.
 
 ### Instrucciones de uso
 Para habilitarlos y utilizarlos, siga estos pasos:
 
-1.  **Agregar etiquetas en `datasets.xml`** :
-En eldatasets.xml` archivo, agregue sus metadatos localizados en la sección atributos agregados:
+1.  **Añadir etiquetas en ` datasets.xml ` ** :
+En el ` datasets.xml ` archivo, agregue sus metadatos localizados en la sección atributos agregados:
    ```xml
    <addAttributes>
         <att name="title">Data from a local source.</att>

@@ -7,6 +7,55 @@ title: "ERDDAP™ - Changes"
 
 Her er endringene som er forbundet med hver ERDDAP™ Frigjøring.
 
+
+## Versjon 2.29.0{#version-2290} 
+ (utgitt 2025-12-15) 
+
+Handling nødvendig.
+
+ ERDDAP™ versjon 2.29.0 krever jdk 25 eller senere. Oppdater din Jdk versjon. Hvis det er et problem, kan du bygge ERDDAP™ For en eldre jdk (Tilbake til minst 17) ved å endre pom.xml-filen. JDK 25 er en LTS utgivelse av Java og inkluderer mange forbedringer, spesielt forbedret ytelse.
+
+*    **Nye funksjoner og endringer (for brukere) :)** 
+    * ISO 19115 versjoner: Se nedenfor for admin info. For brukere kan du nå be om spesifikke versjoner av ISO 19115 metadata. Gjør dette fra griddap/ tabledap sider for et datasett med filtypen faller ned. Disse versjonene vil være uavhengig av serverens standard.
+
+*    **Ting ERDDAP™ Administratorer trenger å vite og gjøre:** 
+    * Ny funksjon, støtte for MQTT. For detaljer anbefaler jeg å lese [Ny side om det.](/docs/server-admin/mqtt-integration) Dette inkluderer å kunne bygge datasett fra MQTT-meldinger og publisere MQTT-meldinger når et datasett endres. Det er av som standard, så hvis du vil bruke det, må du aktivere det.
+
+Takk til Ayush Singh for å jobbe på MQTT&#33;
+
+    * S3 forbedringer: Legge til støtte for S3-adresser som cacheFromUrl-verdi. Dette vil tillate ERDDAP å støtte private bøtter hostet av amazonaws.com Også løst et S3-minne lekkasjeproblem.
+
+Takk til @SethChampagneNRL for arbeidet med S3&#33;
+
+    * ISO 19115 versjoner: Det er nå støtte for 3 forskjellige versjoner av ISO 19115 metadata. Standardversjonen styres av innstillinger i config.xml. Hvis brukSisISO19115 er falsk, vil serveren som standard gi NOAA modifisert ISO19115_2. Hvis brukSisISO19115 er sant, vil serveren bruke en annen versjon avhengig av verdien av brukSisISO19139. Hvis brukSisISO19139 er sann, vil standarden være ISO19139_2007, hvis brukSisISO19139 er falsk, vil standarden være ISO19115_3_2016. Vi anbefaler å bruke brukSisISO19113=true og brukSisISO19139=falske. Organisasjonen din kan kreve ulike innstillinger.
+
+    * Migrert til java. tidsbibliotek (I stedet for java.util. Gregorianske Kalender) .. Dette bør gi ytelsesforbedringer på spørsmål som involverer dato/tid kolonner. Det bør ikke være noen merkbar effekt for de aller fleste datasett. Det eneste kjente tilfellet dette forårsaker en endring er hvis datasettet bruker `dager siden 0000-01-01` eller lignende. Hvis dette er et problem for en variabel, kan du legge til ` <att name="legacy_time_adjust"> sant </att> ` til addAttributes delen av enten dataVariable eller axisVariable ..
+    
+    *    datasets.xml Nå behandles av en [StringSubstitor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) .. Dette har mange bruksområder inkludert å sette private verdier (som passord) bruk av miljøvariabler. Dette kan deaktiveres ved å innstilling av EnvParsing til falsk i setup.xml.
+
+    * Trykkakse: Legger til et spesielt tilfelle for forhøyelser definert av trykk. Dette brukes primært i Meteorologidatasett som definerer vertikale økninger i isobare nivåer. MERK: Mindre trykkverdier betyr høyere økninger, slik at aksen går overfor de normale høydene definert i meter eller føtter.
+
+Takket være [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
+
+    *    EDDGrid FraNcFiles med varierende dimensjoner: Det er (eksperimentell) Støtte til EDDGrid FraNcFiles datasett å ha variabler som ikke bruker det samme settet akser. Vennligst rapporter tilbake om hvordan dette fungerer for deg, eller hvis oppførselen ikke virker helt riktig.
+
+    * Det er en samling optimaliseringer som bør være trygge, men har flagg for å gå tilbake til gammel oppførsel om nødvendig. Hvis du finner behovet for å angi noe av flaggene, vennligst fil en feil. Hvis vi hører om ingen problemer vil de fleste av disse bli fjernet med den nye atferdsstandarden i fremtiden. Det er en [ny side om funksjonsflagg](/docs/server-admin/feature-flags) der du kan lese om disse og andre flagg.
+
+      * Touch Tråd Bare Når elementene: Dette er en endring slik at touchTread bare vil kjøres når det er elementer i køen å røre. En færre trådkjøring er en mindre optimering, men fortsatt nyttig. Standard til sant.
+
+      * NcMetadata ForFiltabell: Denne endringen lar den interne filtabellen bruke nc-attributter, spesielt en variabel actual_range-attributt for å unngå å lese hele nc-filen. Dette kan drastisk øke den initiale lastingen av datasett basert på nc-filer hvis det faktiske_range for hver variabel i hver fil er inkludert som en attributt. Merk at dette stoler på verdien, så hvis det er feil, vil den interne filtabellen ha feil informasjon. Standard til sant.
+
+      * ncHeader MakeFile: Denne endringen gjør det mulig å generere nc-hodefiler uten først å generere den representative nc-filen. Dette er en liten optimering for EDDTable, men en enorm optimering for mange EDDGrid Forespørsler. Standard til falsk (som i falsk er den tiltenkte optimaliserte oppførselen) ..
+
+      * bakgrunn OpprettSubset Tabeller: Denne endringen beveger noe av den første behandlingen av datasett til en bakgrunnstråd. Dette bør forbedre tiden for lasting av datasett. Spesielt er den forsinkede delen tabeller, som også genereres når det er nødvendig hvis den forsinkede behandlingen ikke har skjedd ennå. Standard til sant.
+
+    * Noen små endringer, feilrettinger (Takk Italo Borrelli for løsningen for EDDTableFra Aggregate Rooks, Takk @SethChampagneNRL for å muliggjøre lengdegrader større enn 360 i EDDGrid LonPM180 og flere andre feilrettinger) og optimalisering.
+
+*    **For ERDDAP™ Utviklere:** 
+    * Ytterligere optimaliseringer, inkludert kuttetestkjøringstid i to.
+
+    * Nye testprofiler for veldig flaky (Ekstern) eller ekstremt langsom (sakteAWS) tester.
+
 ## Versjon 2.28.1{#version-2281} 
  (utgitt 2025-09-05) 
 
@@ -49,7 +98,7 @@ Takket være [@ocefpaf](https://github.com/ocefpaf) , [@abkfenris](https://githu
     * Nye data til colorbar converter på servere på /erddap/convert/color.html
 
 *    **Ting ERDDAP™ Administratorer trenger å vite og gjøre:** 
-    * Standard behavoir er at cache nå vil bli slettet uavhengig av de store belastningsdatasett oppgaven. Dette vil tillate mer pålitelig og regelmessig fjerning av gamle cache-filer. Det er ekstra arbeid for å forbedre serverbehavoir når det er lavt på diskplass (å returnere en feil for forespørsler som sannsynligvis vil få serveren til å gå tom for plass, og å rydde cache oftere under lave diskforhold for å forsøke å hindre feil) .. I datasets.xml   (eller setup.xml) du kan legge til / angi den nye cache ClearMinutes parameter for å kontrollere hvor ofte serveren sjekker for å rydde cache. Merk at den eksisterende cacheMinutes parameteren kontrollerer alderen på filer som skal oppbevares, den nye cache ClearMinutes er for hvor ofte å gjøre en chach klar.
+    * Standard atferd er at cache nå vil bli slettet uavhengig av de store lastdatasett oppgaven. Dette vil tillate mer pålitelig og regelmessig fjerning av gamle cache-filer. Det er ekstra arbeid for å forbedre serveradferd når lavt på diskplass (å returnere en feil for forespørsler som sannsynligvis vil få serveren til å gå tom for plass, og å rydde cache oftere under lave diskforhold for å forsøke å hindre feil) .. I datasets.xml   (eller setup.xml) du kan legge til / angi den nye cache ClearMinutes parameter for å kontrollere hvor ofte serveren sjekker for å rydde cache. Merk at den eksisterende cacheMinutes parameteren kontrollerer alderen på filer som skal oppbevares, den nye cache ClearMinutes er for hvor ofte å gjøre en chach klar.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
@@ -90,7 +139,7 @@ Foruten det oppdaterte utseendet er det forbedret navigasjon, søk, oversettelse
 
     * Ny funksjon for å tilpasse informasjonen som vises om datasett i UI. Vi forventer at dette er spesielt nyttig å legge til ting som datasett siteringer. For mer informasjon kan du lese [ny dokumentasjon](/docs/server-admin/display-info) .. Takk til Ayush Singh for bidraget&#33;
 
-    * Ytterligere Prometheus metrikk. Den største er: http _request_duration_seconds» som inkluderer forespørselsresponstider delt ned av: "request_type", "dataset_id", "dataset_type", " fil_type", "lang_kode " "status_kode"
+    * Ytterligere Prometheus metrikk. Den største er ` http _Request_duration_sekunder` som inkluderer forespørselsresponstider oppdelt etter: "Request_type", "dataset_id", "datadataset_type", "fil_type", "lang_kode", "status_kode"
 Dette maskinlesbare formatet vil tillate bedre samling av metriske for å forstå hvordan brukerne bruker serveren.
 
     * Ny måte å generere ISO19115 XML-filer. Det bruker Apache SIS og er et nytt alternativ i denne utgivelsen. Vennligst aktiver det og send tilbakemeldinger.

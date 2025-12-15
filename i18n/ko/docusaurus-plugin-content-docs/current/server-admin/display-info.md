@@ -1,38 +1,38 @@
 ---
 sidebar_position: 7
 ---
-# `displayInfo`와 `displayAttribute` 이름 *
+#  `제품정보 - 한국어` 이름 * `디스플레이Attribute` 이름 *
 
 ## 이름 *
-이 기능은 `Information` 행의 datasets 페이지에서 선택된 글로벌 속성을 표시할 수 있습니다.
+이 기능은 데이터셋 페이지에서 선택한 글로벌 속성을 표시할 수 있습니다. `- 기타` 이름 *
 
 ## 사용 설명서
-이 태그는 `Sax 파서`에서만 사용할 수 있습니다. 사용 및 사용하려면 다음 단계를 따르십시오.
+이 태그는 사용할 수 있습니다 `Sax 파서` · 사용 및 사용하려면 다음 단계를 따르십시오.
 
 1.  **SAX 파서 사용** ::
-`setup.xml` 파일에 다음 줄을 추가하십시오.
+다음 줄을 추가하여 `설정.xml` 파일 :
    ```xml
    <useSaxParser>true</useSaxParser>
    ```
 
-2.  **태그 추가datasets.xml₢ 킹** ::
-으로datasets.xml` 파일, 두 개의 최상위 태그를 포함:
+2.  **태그 추가 ` datasets.xml ` ** ::
+내 계정 ` datasets.xml ` 파일에는, 2개의 최고 수준 꼬리표가 있습니다:
    ```xml
    <displayInfo></displayInfo>
    <displayAttribute></displayAttribute>
    ```
 
 3.  **기본 Behavior** ::
-   - 이 태그가 추가되지 않은 경우 또는 ``에서 빈을 왼쪽datasets.xml` 파일, 기본 값은 다음과 같이 적용됩니다:
-     - `displayInfo`: `Summary,라이센스 ₢ 킹
-     - `displayAttribute`: `summary,라이센스 ₢ 킹
+   - 이 태그가 추가되지 않은 경우 또는 빈에서 왼쪽 ` datasets.xml ` 파일, 기본 값은 다음과 같이 적용됩니다:
+     -  `제품정보 - 한국어` :: `요약,License` 
+     -  `디스플레이Attribute` :: `요약,license` 
 
 4.  **책임감** ::
-`displayInfo`와 `displayAttribute` 태그 모두에서 comma-separated 값의 수는 동일해야합니다.
+둘 다에 있는 comma-separated 가치의 수 `제품정보 - 한국어` 이름 * `디스플레이Attribute` 태그는 동일해야합니다.
 
 ## 어떻게 작동합니까?
-- `displayAttribute` 태그는 글로벌 속성을 지정합니다.&lt;₢ 킹addAttributes`&gt; tag)는 각 dataset를 위해 표시될 것입니다.
-- `displayInfo` 태그의 해당 값은 UI의 `Information` 행에서 레이블으로 표시됩니다.
+- 더 보기 `디스플레이Attribute` 태그는 글로벌 속성을 지정합니다 (내 정의 된)&lt; ` addAttributes ` &gt; tag)는 각 dataset를 위해 표시될 것입니다.
+- 해당 값 `제품정보 - 한국어` 꼬리표는 상표로 표시됩니다 `- 기타` UI의 행.
 - 표시된 라벨을 통해 사용자가 표시되면, 도구 끝이 나타납니다.
 
 ## 이름 *
@@ -48,13 +48,13 @@ sidebar_position: 7
 ```
 
 ### UI 행동:
-- `Display1`와 `Display2`는 UI에서 `Information` 행에 표시됩니다.
+- 이름 * `디스플레이1` 이름 * `디스플레이2` 표시될 것 `- 기타` UI의 행.
 - hovered 때, tooltips는 해당 속성 값을 표시한다:
-  - `Display1`: Tooltip show _이 att1_입니다.
-  - `Display2`: Tooltip show _이 att2_입니다.
+  -  `디스플레이1` : 툴팁 쇼 _ 이것은 att1_입니다.
+  -  `디스플레이2` : 툴팁 쇼 _이 att2_
 
 ## 지원하다
-- 'displayAttribute` 태그에 지정된 속성 이름을 dataset에서 정의 된 글로벌 속성에 일치시킵니다.
+- 속성 이름을 지정합니다. `디스플레이Attribute` dataset에서 정의된 글로벌 속성을 일치합니다.
 - 잘못된 또는 누락 된 속성은 오류 메시지를 기록합니다.
 
-이 단계에 따라 해당 툴팁과 관련된 글로벌 속성을 표시하기 위해 datasets 페이지의 `Information` 행을 사용자 정의할 수 있습니다.
+다음 단계로, 당신은 사용자 정의 할 수 있습니다 `- 기타` datasets 페이지의 행은 해당 툴팁과 관련된 글로벌 속성을 표시합니다.

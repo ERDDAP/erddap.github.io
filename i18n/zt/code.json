@@ -356,5 +356,9 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "這頁是草稿 它只會在 dev 中可见,並被排除於生产建築之外.",
     "description": "The draft content banner message"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(在新分頁中開啟)",
+    "description": "The ARIA label for the external link icon"
   }
 }

@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## تاریخ ERDDAP™ ورژن{#latest-erddap-version} 
 
-2.28.1، دیکھیں [دستاویز تبدیل کریں](/changes#version-2281) اور [اسے اتار دو](https://github.com/ERDDAP/erddap/releases/tag/v2.28.1) . .
+2.29.0، دیکھیں [دستاویز تبدیل کریں](/changes#version-2290) اور [اسے اتار دو](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) . .
 
 ##  ERDDAP™ معلومات{#erddap-information} 
 

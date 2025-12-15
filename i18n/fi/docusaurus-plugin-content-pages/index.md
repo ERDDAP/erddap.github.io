@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## Viimeisin ERDDAP™ versio versio versio versio versio{#latest-erddap-version} 
 
-2.28.1 Katso lisää [Muutoksen dokumentointi](/changes#version-2281) ja [Lataa](https://github.com/ERDDAP/erddap/releases/tag/v2.28.1) .
+29.0 Katso lisää [Muutoksen dokumentointi](/changes#version-2290) ja [Lataa](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) .
 
 ##  ERDDAP™ Tietoa{#erddap-information} 
 

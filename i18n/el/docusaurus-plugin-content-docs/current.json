@@ -5,62 +5,86 @@
   },
   "sidebar.docSidebar.category.Server Administration": {
     "message": "Διαχείριση εξυπηρετητή",
-    "description": "The label for category Server Administration in sidebar docSidebar"
+    "description": "The label for category 'Server Administration' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Server Administration.link.generated-index.description": {
     "message": "Χρήσιμες πληροφορίες για τους διαχειριστές εξυπηρετητών",
-    "description": "The generated-index page description for category Server Administration in sidebar docSidebar"
+    "description": "The generated-index page description for category 'Server Administration' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Contributing": {
     "message": "Συνεισφορά",
-    "description": "The label for category Contributing in sidebar docSidebar"
+    "description": "The label for category 'Contributing' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Contributing.link.generated-index.description": {
     "message": "Πληροφορίες για τους συνεισφέροντεςERDDAP",
-    "description": "The generated-index page description for category Contributing in sidebar docSidebar"
+    "description": "The generated-index page description for category 'Contributing' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.Dataset Scripts Code Documentation": {
     "message": "Τεκμηρίωση κώδικα σεναρίων δεδομένων",
-    "description": "The label for category Dataset Scripts Code Documentation in sidebar docSidebar"
+    "description": "The label for category 'Dataset Scripts Code Documentation' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ERDDAP": {
     "message": "ERDDAP",
-    "description": "The label for category ERDDAP in sidebar docSidebar"
+    "description": "The label for category 'ERDDAP' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ERDDAP.link.generated-index.description": {
     "message": "Δημιουργία τεκμηρίωσης σχετικά μεERDDAP™κωδικός",
-    "description": "The generated-index page description for category ERDDAP in sidebar docSidebar"
+    "description": "The generated-index page description for category 'ERDDAP' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.com.cohort.util": {
     "message": "com.cohort.util (κογχορτ.util)",
-    "description": "The label for category com.cohort.util in sidebar docSidebar"
+    "description": "The label for category 'com.cohort.util' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptCalendar2": {
     "message": "Κάλενταρ σεναρίου2",
-    "description": "The label for category ScriptCalendar2 in sidebar docSidebar"
+    "description": "The label for category 'ScriptCalendar2' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptMath": {
     "message": "Math σεναρίου",
-    "description": "The label for category ScriptMath in sidebar docSidebar"
+    "description": "The label for category 'ScriptMath' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptMath2": {
     "message": "Μάθημα σεναρίου2",
-    "description": "The label for category ScriptMath2 in sidebar docSidebar"
+    "description": "The label for category 'ScriptMath2' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptRow": {
     "message": "Προβολή σεναρίου",
-    "description": "The label for category ScriptRow in sidebar docSidebar"
+    "description": "The label for category 'ScriptRow' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.ScriptString2": {
     "message": "Στρινγκ σεναρίου2",
-    "description": "The label for category ScriptString2 in sidebar docSidebar"
+    "description": "The label for category 'ScriptString2' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User": {
     "message": "Χρήστης",
-    "description": "The label for category User in sidebar docSidebar"
+    "description": "The label for category 'User' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "Βοηθητικές πληροφορίες για τους χρήστες",
-    "description": "The generated-index page description for category User in sidebar docSidebar"
+    "description": "The generated-index page description for category 'User' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Tips": {
+    "message": "Συμβουλές",
+    "description": "The label for category Tips in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.Tips.link.generated-index.description": {
+    "message": "Συμβουλή και τέχνασμα εγγραφής για τους διαχειριστές server",
+    "description": "The generated-index page description for category Tips in sidebar docSidebar"
+  },
+  "sidebar.docSidebar.category.Admin Tips": {
+    "message": "Συμβουλές διαχειριστή",
+    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
+    "message": "Συμβουλή και τέχνασμα εγγραφής για τους διαχειριστές server",
+    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.User Tips": {
+    "message": "Συμβουλές χρήστη",
+    "description": "The label for category 'User Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.User Tips.link.generated-index.description": {
+    "message": "Συμβουλή και τέχνασμα εγγραφές για τους χρήστες",
+    "description": "The generated-index page description for category 'User Tips' in sidebar 'docSidebar'"
   }
 }

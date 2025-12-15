@@ -4,13 +4,13 @@ sidebar_position: 8
 # Gelokaliseerde metadata
 
 ### Omschrijving
-Met deze functie kunt u gelokaliseerde metadata over uw datasets en variabelen opnemen. Een attribuut gedefinieerd in eenaddAttributestag kan gelokaliseerd worden. Dit is bedoeld voor gemeenschappelijke string attributen zoals titel, samenvatting, licentie, instelling. Het wordt niet aanbevolen voor numerieke (bv. "_FillValue") of gestandaardiseerde waarden (b.v. "ios_categorie") en het lokaliseren van deze soorten waarden kan verrassend gedrag.
+Met deze functie kunt u gelokaliseerde metadata over uw datasets en variabelen opnemen. Een attribuut gedefinieerd in een addAttributes tag kan gelokaliseerd worden. Dit is bedoeld voor gemeenschappelijke string attributen zoals titel, samenvatting, licentie, instelling. Het wordt niet aanbevolen voor numerieke (bv. "_FillValue") of gestandaardiseerde waarden (b.v. "ios_categorie") en het lokaliseren van deze soorten waarden kan verrassend gedrag.
 
 ### Gebruiksinstructies
 Volg deze stappen om ze in te schakelen en te gebruiken:
 
-1.  **Tags toevoegen aandatasets.xmlWat?** :
-In dedatasets.xmlVoeg uw gelokaliseerde metadata toe in de sectie attributen toevoegen:
+1.  **Tags toevoegen in ` datasets.xml ` ** :
+In de ` datasets.xml ` bestand, voeg je gelokaliseerde metadata toe in de sectie attributen toevoegen:
    ```xml
    <addAttributes>
         <att name="title">Data from a local source.</att>
