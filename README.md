@@ -21,6 +21,7 @@ Make sure the english json translation files are generated. In the documentation
 ```
 npm run write-translations
 ```
+Note that when doing a release build it is recommended to delete all of the en *.json files to ensure all tags are properly updated (for example the copyright tag needs to have the most recent version). 
 
 From the main project directory run:
 ```

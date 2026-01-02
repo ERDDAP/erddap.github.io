@@ -3,6 +3,10 @@
     "message": "Ez az oldal összeomlott.",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Scroll vissza a csúcsra",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "Archívum",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "régebbi bejegyzések",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Scroll vissza a csúcsra",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "Nézd meg az összes címkét",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Blog Post oldal navigáció",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "Régebbi poszt",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Nézd meg az összes címkét",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "rendszermód",
@@ -178,9 +178,17 @@
     "message": "Összeomlás oldalbar kategória \"...\"{label}\"...\"",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(új fülbe kerül)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "Főoldal",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Nyelvek",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "Nem találtuk meg, amit kerestünk.",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "Kérjük, vegye fel a kapcsolatot a webhely tulajdonosával, amely az eredeti URL-hez kapcsolódik, és hagyja, hogy ismerje meg a kapcsolatát.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Nyelvek",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Ezen az oldalon",
@@ -270,6 +274,22 @@
     "message": "Expand oldalbar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "Nincs eredmény"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Lásd az összes eredményt kívül \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Lásd az összes eredményt \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Lásd az összes eredményt"
+  },
+  "theme.SearchBar.label": {
+    "message": "Keresés",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Keresési eredmények \"{query}\"",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "Nincsenek dokumentumok",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Nincs eredmény"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Lásd az összes eredményt kívül \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Lásd az összes eredményt \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Lásd az összes eredményt"
-  },
-  "theme.SearchBar.label": {
-    "message": "Keresés",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "Próbálj újra",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "Skip a fő tartalomhoz",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "Tagok",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "Egy hozzászólás|{count}Hozzászólások",
@@ -357,8 +349,16 @@
     "message": "Ez az oldal egy tervezet. Csak a devben lesz látható, és kizárják a termelés építését.",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(új fülbe kerül)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Próbálj újra",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Skip a fő tartalomhoz",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Tagok",
+    "description": "The title of the tag list page"
   }
 }

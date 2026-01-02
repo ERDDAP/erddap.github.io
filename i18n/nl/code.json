@@ -3,6 +3,10 @@
     "message": "Deze pagina crashte.",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Scroll terug naar boven",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "Archief",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "Oudere items",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Scroll terug naar boven",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "Alle tags tonen",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Blog post pagina navigatie",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "Oudere post",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Alle tags tonen",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "systeemmodus",
@@ -178,9 +178,17 @@
     "message": "Categorie zijbalk invouwen '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(opent in nieuw tabblad)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "Hoofd",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Talen",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "We konden niet vinden wat je zocht.",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "Neem contact op met de eigenaar van de site die u heeft gekoppeld aan de originele URL en laat hen weten dat hun link is verbroken.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Talen",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Op deze pagina",
@@ -270,6 +274,22 @@
     "message": "Zijbalk uitvouwen",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "Geen resultaten"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Zie alle resultaten buiten \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Zie alle resultaten binnen \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Bekijk alle resultaten"
+  },
+  "theme.SearchBar.label": {
+    "message": "Zoeken",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Zoekresultaten voor \"{query}\"",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "Er zijn geen documenten gevonden",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Geen resultaten"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Zie alle resultaten buiten \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Zie alle resultaten binnen \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Bekijk alle resultaten"
-  },
-  "theme.SearchBar.label": {
-    "message": "Zoeken",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "Probeer opnieuw",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "Overslaan en naar de inhoud gaan",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "Tags",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "Eén post|{count}posten",
@@ -357,8 +349,16 @@
     "message": "Deze pagina is een ontwerp. Het zal alleen zichtbaar zijn in dev en worden uitgesloten van de productiebouw.",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(opent in nieuw tabblad)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Probeer opnieuw",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Overslaan en naar de inhoud gaan",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Tags",
+    "description": "The title of the tag list page"
   }
 }

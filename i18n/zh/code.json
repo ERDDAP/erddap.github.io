@@ -3,6 +3,10 @@
     "message": "此页面已崩溃 。",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "向上滚动",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "存档",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "旧条目",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "向上滚动",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "查看所有标签",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "博客邮页导航",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "老年员额",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "查看所有标签",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "系统模式",
@@ -178,9 +178,17 @@
     "message": "折叠侧边栏类别  '{label} '",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(打开新标签)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "主要",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "语文",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "我们找不到你要找的",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "请联系将您链接到原始 URL 的站点的所有者, 并让他们知道他们的链接已中断 。",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "语文",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "在本页",
@@ -270,6 +274,22 @@
     "message": "展开侧边栏",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "无结果"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "看到外面的所有结果 \"{context}&#123;\fn华文楷体\fs16\\1cHE0E0E0&#125;\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "看见所有结果在\"{context}&#123;\fn华文楷体\fs16\\1cHE0E0E0&#125;\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "看见所有结果"
+  },
+  "theme.SearchBar.label": {
+    "message": "搜索",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "搜索结果 \\ ”{query}&#123;\fn华文楷体\fs16\\1cHE0E0E0&#125;\"",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "没有找到文件",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "无结果"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "看到外面的所有结果 \"{context}&#123;\fn华文楷体\fs16\\1cHE0E0E0&#125;\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "看见所有结果在\"{context}&#123;\fn华文楷体\fs16\\1cHE0E0E0&#125;\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "看见所有结果"
-  },
-  "theme.SearchBar.label": {
-    "message": "搜索",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "再试一次",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "跳转到主内容",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "标记",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "1个员额|{count}员额",
@@ -357,8 +349,16 @@
     "message": "此页面为草稿. 它只在dev中可见,并被排除在生产建设之外.",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(打开新标签)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "再试一次",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "跳转到主内容",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "标记",
+    "description": "The title of the tag list page"
   }
 }

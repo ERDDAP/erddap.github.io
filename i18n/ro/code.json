@@ -3,6 +3,10 @@
     "message": "Această pagină sa prăbușit.",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Derulează înapoi în sus",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "Arhivă",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "Articole mai vechi",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Derulează înapoi în sus",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "Vezi toate etichetele",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Navigare pagina post blog",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "Post mai vechi",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Vezi toate etichetele",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "modul sistemului",
@@ -178,9 +178,17 @@
     "message": "Categorie bară laterală de colaps '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(se deschide în tab nou)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "Principal",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Limbi",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "Nu am putut găsi ceea ce căutai.",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "Vă rugăm să contactați proprietarul site-ului care v-a legat de URL-ul original și să le spuneți că link-ul lor este rupt.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Limbi",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Pe această pagină",
@@ -270,6 +274,22 @@
     "message": "Extinde bara laterală",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "Niciun rezultat"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Vezi toate rezultatele afara \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Vezi toate rezultatele din \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Vezi toate rezultatele"
+  },
+  "theme.SearchBar.label": {
+    "message": "Caută",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Rezultate căutare pentru \"{query}\"",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "Nu s-au găsit documente.",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Niciun rezultat"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Vezi toate rezultatele afara \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Vezi toate rezultatele din \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Vezi toate rezultatele"
-  },
-  "theme.SearchBar.label": {
-    "message": "Caută",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "Încearcă din nou.",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "Sari la conținutul principal",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "Etichete",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "Un singur post|{count}Posturi",
@@ -357,8 +349,16 @@
     "message": "Aceasta pagina este o schita. Acesta va fi vizibil doar în dev și va fi exclus din construcția producției.",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(se deschide în tab nou)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Încearcă din nou.",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Sari la conținutul principal",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Etichete",
+    "description": "The title of the tag list page"
   }
 }

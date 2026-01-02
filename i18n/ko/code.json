@@ -3,6 +3,10 @@
     "message": "이 페이지는 추락했습니다.",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "맨 위로 돌아가기",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "- 연혁",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "이전 항목",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "맨 위로 돌아가기",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "모든 태그보기",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "블로그 게시물 페이지 탐색",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "이전 게시물",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "모든 태그보기",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "시스템 모드",
@@ -178,9 +178,17 @@
     "message": "Collapse 사이드바 범주 이름 *{label}이름 *",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(새 탭에서 열림)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "주요 특징",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "한국어",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "우리는 당신이 찾고있는 것을 찾을 수 없습니다.",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "원래 URL에 연결되어있는 사이트의 소유자에게 연락하여 링크가 깨어납니다.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "한국어",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "이 페이지에",
@@ -270,6 +274,22 @@
     "message": "사이드바를 확장",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "결과 없음"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "외부의 모든 결과보기 \"{context}·"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "모든 결과보기 \"{context}·"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "모든 결과보기"
+  },
+  "theme.SearchBar.label": {
+    "message": "제품정보",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "검색 결과 \"{query}·",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "문서가 없습니다.",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "결과 없음"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "외부의 모든 결과보기 \"{context}·"
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "모든 결과보기 \"{context}·"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "모든 결과보기"
-  },
-  "theme.SearchBar.label": {
-    "message": "제품정보",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "다시 시도",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "본문 바로가기",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "이름 *",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "1개의 포스트|{count}이름 *",
@@ -357,8 +349,16 @@
     "message": "이 페이지는 초안입니다. 그것은 단지 dev에서 볼 수 있으며 생산 빌드에서 제외됩니다.",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(새 탭에서 열림)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "다시 시도",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "본문 바로가기",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "이름 *",
+    "description": "The title of the tag list page"
   }
 }

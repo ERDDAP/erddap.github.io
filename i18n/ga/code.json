@@ -3,6 +3,10 @@
     "message": "An leathanach seo crashed.",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Scroll ar ais go dtí an barr",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "Bhí an t-eolas úsáideach",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "iontrálacha níos sine",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Scroll ar ais go dtí an barr",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "Féach ar na clibeanna",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Blag leathanach post nascleanúint",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "Post níos sine",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Féach ar na clibeanna",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "modh córas",
@@ -178,9 +178,17 @@
     "message": "Catagóir sidebar Collapse ''{label}''",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(Osclaíonn i cluaisín nua)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "Príomhchathair",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Teangacha",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "Ní fhéadfaimis teacht ar an méid a bhí á lorg agat.",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "Téigh i dteagmháil le húinéir an láithreáin a bhfuil nasc agat leis an URL bunaidh agus lig dóibh a fhios go bhfuil a nasc briste.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Teangacha",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Ar an leathanach seo",
@@ -270,6 +274,22 @@
     "message": "taobhbharra leathnaithe",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "Níl aon torthaí"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Féach ar na torthaí go léir taobh amuigh de \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Féach na torthaí go léir laistigh de \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Féach na torthaí go léir"
+  },
+  "theme.SearchBar.label": {
+    "message": "Cuardaigh Cuardaigh Cuardaigh",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Torthaí Cuardaigh le haghaidh \\ \"{query}\"",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "Níor aimsíodh aon doiciméid",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Níl aon torthaí"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Féach ar na torthaí go léir taobh amuigh de \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Féach na torthaí go léir laistigh de \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Féach na torthaí go léir"
-  },
-  "theme.SearchBar.label": {
-    "message": "Cuardaigh Cuardaigh Cuardaigh",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "Bain triail as arís",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "Skip to main content",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "Clibeanna",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "One post|{count}post post post",
@@ -357,8 +349,16 @@
     "message": "Tá an leathanach seo dréacht. Ní bheidh sé le feiceáil ach amháin i dev agus a eisiamh ó thógáil táirgthe.",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(Osclaíonn i cluaisín nua)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Bain triail as arís",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Skip to main content",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Clibeanna",
+    "description": "The title of the tag list page"
   }
 }

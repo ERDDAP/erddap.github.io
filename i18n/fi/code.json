@@ -3,6 +3,10 @@
     "message": "Tämä sivu kaatui.",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Palaa sivulle Top",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "Arkisto",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "Vanhemmat merkinnät",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Palaa sivulle Top",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "Katso kaikki merkit",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Blogisivun navigointi",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "Vanhempi postaus",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Katso kaikki merkit",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "Järjestelmä",
@@ -178,9 +178,17 @@
     "message": "Collapsen sivupersoona \"\"\"{label}\"\"\"",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(Ohjattu sivulta New Tab)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "Pää",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Kielet",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "Emme löytäneet sitä, mitä etsit.",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "Ota yhteyttä sivuston omistajaan, joka liitti sinut alkuperäiseen URL-osoitteeseen ja kerro heille, että linkki on rikki.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Kielet",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Tällä sivulla",
@@ -270,6 +274,22 @@
     "message": "Laajennettu sivubaari",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "Ei tuloksia"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Katso kaikki tulokset ulkona{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Katso kaikki tulokset \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Katso kaikki tulokset"
+  },
+  "theme.SearchBar.label": {
+    "message": "Etsintä",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Etsi tuloksia \"{query}\"",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "Asiakirjoja ei löytynyt",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Ei tuloksia"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Katso kaikki tulokset ulkona{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Katso kaikki tulokset \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Katso kaikki tulokset"
-  },
-  "theme.SearchBar.label": {
-    "message": "Etsintä",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "Kokeile uudelleen",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "Taito pääsisältöön",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "Tagit",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "Yksi postaus|{count}Posts",
@@ -357,8 +349,16 @@
     "message": "Tämä sivu on luonnos. Se näkyy vain dev:ssä ja jätetään pois tuotantorakennuksesta.",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(Ohjattu sivulta New Tab)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Kokeile uudelleen",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Taito pääsisältöön",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Tagit",
+    "description": "The title of the tag list page"
   }
 }

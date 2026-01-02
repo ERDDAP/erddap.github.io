@@ -11,6 +11,14 @@
     "message": "সার্ভার সংক্রান্ত সহায়তা ব্যবস্থা",
     "description": "The generated-index page description for category 'Server Administration' in sidebar 'docSidebar'"
   },
+  "sidebar.docSidebar.category.Admin Tips": {
+    "message": "অ্যাডমিন টিপ",
+    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
+    "message": "সার্ভার অ্যাডমিনস্ট্রেটরের জন্য টিপ এবং ট্রিপ ব্যবস্থা",
+    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
   "sidebar.docSidebar.category.Contributing": {
     "message": "বাতিল করা",
     "description": "The label for category 'Contributing' in sidebar 'docSidebar'"
@@ -62,22 +70,6 @@
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "ব্যবহারকারীদের জন্য সাহায্য তথ্য",
     "description": "The generated-index page description for category 'User' in sidebar 'docSidebar'"
-  },
-  "sidebar.docSidebar.category.Tips": {
-    "message": "টিপস",
-    "description": "The label for category Tips in sidebar docSidebar"
-  },
-  "sidebar.docSidebar.category.Tips.link.generated-index.description": {
-    "message": "সার্ভার অ্যাডমিনস্ট্রেটরের জন্য টিপ এবং ট্রিপ ব্যবস্থা",
-    "description": "The generated-index page description for category Tips in sidebar docSidebar"
-  },
-  "sidebar.docSidebar.category.Admin Tips": {
-    "message": "অ্যাডমিন টিপ",
-    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
-  },
-  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
-    "message": "সার্ভার অ্যাডমিনস্ট্রেটরের জন্য টিপ এবং ট্রিপ ব্যবস্থা",
-    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User Tips": {
     "message": "ব্যবহারকারীর টিপ",
