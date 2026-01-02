@@ -11,6 +11,14 @@
     "message": "Pomocne informacje dla administratorów serwerów",
     "description": "The generated-index page description for category 'Server Administration' in sidebar 'docSidebar'"
   },
+  "sidebar.docSidebar.category.Admin Tips": {
+    "message": "Admin Porady",
+    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
+    "message": "Tip and trick writeups dla administratorów serwerów",
+    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
   "sidebar.docSidebar.category.Contributing": {
     "message": "Wkład",
     "description": "The label for category 'Contributing' in sidebar 'docSidebar'"
@@ -62,22 +70,6 @@
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "Pomocne informacje dla użytkowników",
     "description": "The generated-index page description for category 'User' in sidebar 'docSidebar'"
-  },
-  "sidebar.docSidebar.category.Tips": {
-    "message": "Wskazówki",
-    "description": "The label for category Tips in sidebar docSidebar"
-  },
-  "sidebar.docSidebar.category.Tips.link.generated-index.description": {
-    "message": "Tip and trick writeups dla administratorów serwerów",
-    "description": "The generated-index page description for category Tips in sidebar docSidebar"
-  },
-  "sidebar.docSidebar.category.Admin Tips": {
-    "message": "Admin Porady",
-    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
-  },
-  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
-    "message": "Tip and trick writeups dla administratorów serwerów",
-    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User Tips": {
     "message": "Porady użytkowników",

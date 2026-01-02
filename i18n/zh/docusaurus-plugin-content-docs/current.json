@@ -11,6 +11,14 @@
     "message": "服务器管理员的有用信息",
     "description": "The generated-index page description for category 'Server Administration' in sidebar 'docSidebar'"
   },
+  "sidebar.docSidebar.category.Admin Tips": {
+    "message": "管理提示",
+    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
+    "message": "服务器管理员提示和诡计写入",
+    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
   "sidebar.docSidebar.category.Contributing": {
     "message": "捐款",
     "description": "The label for category 'Contributing' in sidebar 'docSidebar'"
@@ -62,22 +70,6 @@
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "用户的有用信息",
     "description": "The generated-index page description for category 'User' in sidebar 'docSidebar'"
-  },
-  "sidebar.docSidebar.category.Tips": {
-    "message": "提示",
-    "description": "The label for category Tips in sidebar docSidebar"
-  },
-  "sidebar.docSidebar.category.Tips.link.generated-index.description": {
-    "message": "服务器管理员提示和诡计写入",
-    "description": "The generated-index page description for category Tips in sidebar docSidebar"
-  },
-  "sidebar.docSidebar.category.Admin Tips": {
-    "message": "管理提示",
-    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
-  },
-  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
-    "message": "服务器管理员提示和诡计写入",
-    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User Tips": {
     "message": "用户提示",

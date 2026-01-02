@@ -3,6 +3,10 @@
     "message": "หน้านี้ตก",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "เลื่อนกลับไปยังด้านบน",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "แฟ้มจัดเก็บ",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "รายการที่เก่ากว่า",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "เลื่อนกลับไปยังด้านบน",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "แสดงป้ายกํากับทั้งหมด",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "การนําบล็อกโพสต์เพจ",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "โพสต์เก่า",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "แสดงป้ายกํากับทั้งหมด",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "โหมดของระบบ",
@@ -178,9 +178,17 @@
     "message": "ย่อเก็บเธรด '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(เปิดในแท็บใหม่)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "หลัก",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "ภาษา",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "เราไม่พบสิ่งที่คุณกําลังมองหา",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "โปรดติดต่อเจ้าของเว็บไซต์ที่เชื่อมโยงคุณไปยังที่อยู่ URL เดิม และให้พวกเขาทราบว่าลิงก์ของพวกเขาเสียหาย",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "ภาษา",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "ในหน้านี้",
@@ -270,6 +274,22 @@
     "message": "ขยายแถบด้านข้าง",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "ไม่มีผล"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "ดูผลทั้งหมดข้างนอก\"{context}-\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "ดูผลลัพธ์ทั้งหมดภายใน /\"{context}-\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "ดูผลทั้งหมด"
+  },
+  "theme.SearchBar.label": {
+    "message": "ค้นหา",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "สืบค้นผลสําหรับ /\"{query}-\"",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "ไม่พบเอกสารใด ๆ",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "ไม่มีผล"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "ดูผลทั้งหมดข้างนอก\"{context}-\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "ดูผลลัพธ์ทั้งหมดภายใน /\"{context}-\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "ดูผลทั้งหมด"
-  },
-  "theme.SearchBar.label": {
-    "message": "ค้นหา",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "ลองอีกครั้ง",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "ข้ามไปยังเนื้อหาหลัก",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "ป้ายกํากับ",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "หนึ่งตําแหน่ง|{count}เสา",
@@ -357,8 +349,16 @@
     "message": "หน้านี้เป็นฉบับร่าง มันจะมองเห็นได้เฉพาะใน Dev และแยกออกจากการสร้าง",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(เปิดในแท็บใหม่)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "ลองอีกครั้ง",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "ข้ามไปยังเนื้อหาหลัก",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "ป้ายกํากับ",
+    "description": "The title of the tag list page"
   }
 }

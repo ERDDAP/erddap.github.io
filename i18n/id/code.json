@@ -3,6 +3,10 @@
     "message": "Halaman ini hancur.",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Gulir kembali ke atas",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "Login",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "Login",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Gulir kembali ke atas",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "Lihat semua tag",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "WordPress.org",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "Pos yang lebih tua",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Lihat semua tag",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "mode sistem",
@@ -178,9 +178,17 @@
     "message": "Kategori sidebar yang lebih baik Sitemap{label}Sitemap",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(terbuka di tab baru)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "Login",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Login",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "Kita tidak bisa menemukan apa yang Anda cari.",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "Silakan hubungi pemilik situs yang menghubungkan Anda ke URL asli dan beri tahu tautan mereka rusak.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Login",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Di halaman ini",
@@ -270,6 +274,22 @@
     "message": "Login",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "Sitemap"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Lihat semua hasil di luar \"{context}Sitemap"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Lihat semua hasil dalam \"{context}Sitemap"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Lihat semua hasil"
+  },
+  "theme.SearchBar.label": {
+    "message": "Login",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Cari hasil untuk \"{query}Sitemap",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "Tidak ada dokumen yang ditemukan",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Sitemap"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Lihat semua hasil di luar \"{context}Sitemap"
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Lihat semua hasil dalam \"{context}Sitemap"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Lihat semua hasil"
-  },
-  "theme.SearchBar.label": {
-    "message": "Login",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "Coba lagi",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "Login",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "Login",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "Satu posting|{count}Login",
@@ -357,8 +349,16 @@
     "message": "Halaman ini adalah draft. Ini hanya akan terlihat di dev dan dikecualikan dari pembuatan produksi.",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(terbuka di tab baru)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Coba lagi",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Login",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Login",
+    "description": "The title of the tag list page"
   }
 }

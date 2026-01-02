@@ -3,6 +3,10 @@
     "message": "Cette page s'est écrasée.",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Retour en haut",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "Archive",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "Entrées plus anciennes",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Retour en haut",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "Afficher toutes les balises",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Blog post page navigation",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "Autre poste",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Afficher toutes les balises",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "mode système",
@@ -178,9 +178,17 @@
     "message": "Catégorie de barre latérale '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(ouvre dans un nouvel onglet)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "Principale",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Langues",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "On n'a pas trouvé ce que vous cherchiez.",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "Veuillez contacter le propriétaire du site qui vous a lié à l'URL originale et leur faire savoir que leur lien est rompu.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Langues",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Sur cette page",
@@ -270,6 +274,22 @@
     "message": "Élargir la barre latérale",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "Aucun résultat"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Voir tous les résultats à l'extérieur \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Voir tous les résultats dans \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Voir tous les résultats"
+  },
+  "theme.SearchBar.label": {
+    "message": "Recherche",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Résultats de recherche pour \"{query}\"",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "Aucun document n'a été trouvé",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Aucun résultat"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Voir tous les résultats à l'extérieur \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Voir tous les résultats dans \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Voir tous les résultats"
-  },
-  "theme.SearchBar.label": {
-    "message": "Recherche",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "Essaie encore",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "Passer au contenu principal",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "Étiquettes",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "Un poste|{count}postes",
@@ -357,8 +349,16 @@
     "message": "Cette page est une ébauche. Elle ne sera visible qu'en dev et sera exclue de la production.",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(ouvre dans un nouvel onglet)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Essaie encore",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Passer au contenu principal",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Étiquettes",
+    "description": "The title of the tag list page"
   }
 }

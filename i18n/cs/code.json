@@ -3,6 +3,10 @@
     "message": "Tahle stránka havarovala.",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Skrolovat zpět nahoru",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "Archiv",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "Starší záznamy",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Skrolovat zpět nahoru",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "Zobrazit všechny značky",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Blog post page navigation",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "Starší příspěvek",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Zobrazit všechny značky",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "systémový režim",
@@ -178,9 +178,17 @@
     "message": "Kategorie vedlejšího panelu '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(otevře v nové kartě)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "Hlavní",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Jazyky",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "Nemohli jsme najít to, co jste hledal.",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "Kontaktujte prosím majitele stránky, která vás spojila s původní URL a dejte jim vědět, že je jejich odkaz porušen.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Jazyky",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Na této stránce",
@@ -270,6 +274,22 @@
     "message": "Rozšířit postranní lištu",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "Žádné výsledky"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Zobrazit všechny výsledky mimo \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Zobrazit všechny výsledky v rámci \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Zobrazit všechny výsledky"
+  },
+  "theme.SearchBar.label": {
+    "message": "Hledat",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Výsledky hledání pro \"{query}\"",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "Nebyly nalezeny žádné dokumenty",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Žádné výsledky"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Zobrazit všechny výsledky mimo \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Zobrazit všechny výsledky v rámci \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Zobrazit všechny výsledky"
-  },
-  "theme.SearchBar.label": {
-    "message": "Hledat",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "Zkus to znovu.",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "Přeskočit na hlavní obsah",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "Štítky",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "Jedna pošta|{count}příspěvky",
@@ -357,8 +349,16 @@
     "message": "Tahle stránka je draft. Bude viditelná pouze v devu a bude vyloučena z výroby.",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(otevře v nové kartě)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Zkus to znovu.",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Přeskočit na hlavní obsah",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Štítky",
+    "description": "The title of the tag list page"
   }
 }

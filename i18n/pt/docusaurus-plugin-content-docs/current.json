@@ -11,6 +11,14 @@
     "message": "InformaÃ§Ãμes Ãoteis para administradores de servidor",
     "description": "The generated-index page description for category 'Server Administration' in sidebar 'docSidebar'"
   },
+  "sidebar.docSidebar.category.Admin Tips": {
+    "message": "Dicas de administrador",
+    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
+    "message": "Dicas e truques para administradores de servidores",
+    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
   "sidebar.docSidebar.category.Contributing": {
     "message": "Contribuição",
     "description": "The label for category 'Contributing' in sidebar 'docSidebar'"
@@ -62,22 +70,6 @@
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "InformaÃ§Ãμes Ãoteis para usuários",
     "description": "The generated-index page description for category 'User' in sidebar 'docSidebar'"
-  },
-  "sidebar.docSidebar.category.Tips": {
-    "message": "Dicas",
-    "description": "The label for category Tips in sidebar docSidebar"
-  },
-  "sidebar.docSidebar.category.Tips.link.generated-index.description": {
-    "message": "Dicas e truques para administradores de servidores",
-    "description": "The generated-index page description for category Tips in sidebar docSidebar"
-  },
-  "sidebar.docSidebar.category.Admin Tips": {
-    "message": "Dicas de administrador",
-    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
-  },
-  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
-    "message": "Dicas e truques para administradores de servidores",
-    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User Tips": {
     "message": "Dicas de usuário",

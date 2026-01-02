@@ -11,6 +11,14 @@
     "message": "서버 관리자에 대한 유용한 정보",
     "description": "The generated-index page description for category 'Server Administration' in sidebar 'docSidebar'"
   },
+  "sidebar.docSidebar.category.Admin Tips": {
+    "message": "관리 팁",
+    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
+    "message": "서버 관리자를위한 팁 및 트릭 작성",
+    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
   "sidebar.docSidebar.category.Contributing": {
     "message": "관련 기사",
     "description": "The label for category 'Contributing' in sidebar 'docSidebar'"
@@ -62,22 +70,6 @@
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "사용자에 대한 유용한 정보",
     "description": "The generated-index page description for category 'User' in sidebar 'docSidebar'"
-  },
-  "sidebar.docSidebar.category.Tips": {
-    "message": "제품 정보",
-    "description": "The label for category Tips in sidebar docSidebar"
-  },
-  "sidebar.docSidebar.category.Tips.link.generated-index.description": {
-    "message": "서버 관리자를위한 팁 및 트릭 작성",
-    "description": "The generated-index page description for category Tips in sidebar docSidebar"
-  },
-  "sidebar.docSidebar.category.Admin Tips": {
-    "message": "관리 팁",
-    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
-  },
-  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
-    "message": "서버 관리자를위한 팁 및 트릭 작성",
-    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User Tips": {
     "message": "사용자 팁",

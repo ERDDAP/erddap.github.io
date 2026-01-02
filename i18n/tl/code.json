@@ -3,6 +3,10 @@
     "message": "Ang pahinang ito ay bumagsak.",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Umatras sa itaas",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "Larawan",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "Mas lumang mga akda",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Umatras sa itaas",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "Tingnan ang lahat ng tag",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Bilog post page nabigasyon",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "Mas lumang puwesto",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Tingnan ang lahat ng tag",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "mode ng sistema",
@@ -178,9 +178,17 @@
     "message": "Magulong kategorya ng sidebar '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "( Buksan sa bagong tab)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "Pangunahin",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Wika",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "Hindi namin makita ang hinahanap mo.",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "Pakisuyong makipag-ugnayan sa may-ari ng site na nag-uugnay sa iyo sa orihinal na URL at ipaalam sa kanila na ang kanilang link ay sira.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Wika",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Sa pahinang ito",
@@ -270,6 +274,22 @@
     "message": "Pinalawak na bahagibar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "Walang mga resulta"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Tingnan ang lahat ng resulta sa labas ng \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Tingnan ang lahat ng resulta sa loob ng \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Tingnan ang lahat ng resulta"
+  },
+  "theme.SearchBar.label": {
+    "message": "Paghahanap",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Paghahanap ng mga resulta para sa \"{query}\"",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "Walang natagpuang dokumento",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Walang mga resulta"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Tingnan ang lahat ng resulta sa labas ng \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Tingnan ang lahat ng resulta sa loob ng \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Tingnan ang lahat ng resulta"
-  },
-  "theme.SearchBar.label": {
-    "message": "Paghahanap",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "Subukan muli",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "Lumapit sa pangunahing nilalaman",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "Mga Tag",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "Isang poste|{count}mga poste",
@@ -357,8 +349,16 @@
     "message": "Ang pahinang ito ay isang draft. Ito ay makikita lamang sa dev at ililiban sa gusali ng produksiyon.",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "( Buksan sa bagong tab)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Subukan muli",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Lumapit sa pangunahing nilalaman",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Mga Tag",
+    "description": "The title of the tag list page"
   }
 }

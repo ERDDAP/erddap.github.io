@@ -11,6 +11,14 @@
     "message": "サーバ管理者のための役立つ情報",
     "description": "The generated-index page description for category 'Server Administration' in sidebar 'docSidebar'"
   },
+  "sidebar.docSidebar.category.Admin Tips": {
+    "message": "管理者のヒント",
+    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
+    "message": "サーバ管理者のためのヒントとトリックの書き込みアップ",
+    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
+  },
   "sidebar.docSidebar.category.Contributing": {
     "message": "貢献する",
     "description": "The label for category 'Contributing' in sidebar 'docSidebar'"
@@ -62,22 +70,6 @@
   "sidebar.docSidebar.category.User.link.generated-index.description": {
     "message": "ユーザーの役に立つ情報",
     "description": "The generated-index page description for category 'User' in sidebar 'docSidebar'"
-  },
-  "sidebar.docSidebar.category.Tips": {
-    "message": "ニュース",
-    "description": "The label for category Tips in sidebar docSidebar"
-  },
-  "sidebar.docSidebar.category.Tips.link.generated-index.description": {
-    "message": "サーバ管理者のためのヒントとトリックの書き込みアップ",
-    "description": "The generated-index page description for category Tips in sidebar docSidebar"
-  },
-  "sidebar.docSidebar.category.Admin Tips": {
-    "message": "管理者のヒント",
-    "description": "The label for category 'Admin Tips' in sidebar 'docSidebar'"
-  },
-  "sidebar.docSidebar.category.Admin Tips.link.generated-index.description": {
-    "message": "サーバ管理者のためのヒントとトリックの書き込みアップ",
-    "description": "The generated-index page description for category 'Admin Tips' in sidebar 'docSidebar'"
   },
   "sidebar.docSidebar.category.User Tips": {
     "message": "ユーザーのヒント",

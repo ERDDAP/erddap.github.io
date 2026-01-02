@@ -3,6 +3,10 @@
     "message": "このページがクラッシュしました。",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "トップへ戻る",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "アーカイブ",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "古いエントリ",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "トップへ戻る",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "すべてのタグを見る",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "ブログ投稿ページ ナビゲーション",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "古い投稿",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "すべてのタグを見る",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "システムモード",
@@ -178,9 +178,17 @@
     "message": "Collapse サイドバー カテゴリ お問い合わせ{label}お問い合わせ",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(新しいタブで開きます)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "メインページ",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "語学学校",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "探していたものが見つかりませんでした。",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "元のURLにリンクしたサイトの所有者に連絡し、リンクが壊れていることを知らせてください。",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "語学学校",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "サイトマップ",
@@ -270,6 +274,22 @@
     "message": "サイドバーを拡張",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "結果なし"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "外部の全ての結果を見る \"{context}お問い合わせ"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "\"内のすべての結果を参照してください。{context}お問い合わせ"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "すべての結果を見る"
+  },
+  "theme.SearchBar.label": {
+    "message": "インフォメーション",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "\"の検索結果{query}お問い合わせ",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "文書が見つかりませんでした",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "結果なし"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "外部の全ての結果を見る \"{context}お問い合わせ"
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "\"内のすべての結果を参照してください。{context}お問い合わせ"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "すべての結果を見る"
-  },
-  "theme.SearchBar.label": {
-    "message": "インフォメーション",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "もう一度お試しください",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "メインコンテンツへスキップ",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "ニュース",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "1つの投稿|{count}ニュース",
@@ -357,8 +349,16 @@
     "message": "このページはドラフトです。 dev でのみ表示され、生産ビルドから除外されます。",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(新しいタブで開きます)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "もう一度お試しください",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "メインコンテンツへスキップ",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "ニュース",
+    "description": "The title of the tag list page"
   }
 }

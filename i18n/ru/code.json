@@ -3,6 +3,10 @@
     "message": "Эта страница разбилась.",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Скачать Back to Top",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "архив",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "Старые записи",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Скачать Back to Top",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "Смотреть все теги",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "Навигация по страницам блога",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "Старый пост",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Смотреть все теги",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "режим работы системы",
@@ -178,9 +178,17 @@
     "message": "Категория коллапса боковой панели \"{label}\"",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(открывается в новой вкладке)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "Главный",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Языки",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "Мы не смогли найти то, что вы искали.",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "Пожалуйста, свяжитесь с владельцем сайта, который связал вас с исходным URL-адресом, и сообщите им, что их ссылка сломана.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Языки",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "На этой странице",
@@ -270,6 +274,22 @@
     "message": "Расширить боковую панель",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "Нет результатов"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Смотреть все результаты снаружи{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Смотреть все результаты внутри \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Смотреть все результаты"
+  },
+  "theme.SearchBar.label": {
+    "message": "Поиск",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Результаты поиска для \"{query}\"",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "Никаких документов обнаружено не было",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "Нет результатов"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Смотреть все результаты снаружи{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Смотреть все результаты внутри \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Смотреть все результаты"
-  },
-  "theme.SearchBar.label": {
-    "message": "Поиск",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "Попробуйте еще раз",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "Пропустить основной контент",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "Тэги",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "Один пост|{count}посты",
@@ -357,8 +349,16 @@
     "message": "Эта страница — черновик. Он будет виден только в разработчике и будет исключен из производственной сборки.",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(открывается в новой вкладке)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Попробуйте еще раз",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Пропустить основной контент",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Тэги",
+    "description": "The title of the tag list page"
   }
 }

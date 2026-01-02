@@ -3,6 +3,10 @@
     "message": "یہ صفحہ تباہ ہو گیا۔",
     "description": "The title of the fallback page when the page crashed"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "اوپري ميں واپسی",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.archive.title": {
     "message": "محفوظہ:",
     "description": "The page & hero title of the blog archive page"
@@ -23,14 +27,6 @@
     "message": "عمررسیدہ اشخاص",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "اوپري ميں واپسی",
-    "description": "The ARIA label for the back to top button"
-  },
-  "theme.tags.tagsPageLink": {
-    "message": "تمام ٹیگس دیکھیں",
-    "description": "The label of the link targeting the tag list page"
-  },
   "theme.blog.post.paginator.navAriaLabel": {
     "message": "بلاگ پوسٹ",
     "description": "The ARIA label for the blog posts pagination"
@@ -42,6 +38,10 @@
   "theme.blog.post.paginator.olderPost": {
     "message": "قدیم پوسٹ",
     "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "تمام ٹیگس دیکھیں",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
     "message": "سسٹم طریقہ",
@@ -178,9 +178,17 @@
     "message": "مرکزی کنارہ '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "( نئے تبتی میں اتارے)",
+    "description": "The ARIA label for the external link icon"
+  },
   "theme.NavBar.navAriaLabel": {
     "message": "مین",
     "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "زبانیں",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
     "message": "ہم آپ کی تلاش میں کیا تلاش کر رہے تھے تلاش نہیں کر سکتے.",
@@ -189,10 +197,6 @@
   "theme.NotFound.p2": {
     "message": "براہ مہربانی اس سائٹ کے مالک سے رابطہ کریں جو آپ کو اصل محور سے منسلک کرتا ہے اور انہیں پتہ چلتا ہے کہ ان کا تعلق ٹوٹ گیا ہے.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "زبانیں",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "اس صفحہ پر",
@@ -270,6 +274,22 @@
     "message": "قریبی کنارہ",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "کوئی نتیجہ نہیں"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "تمام نتائج خارجہ –{context}٭"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "2008 کے اندر سب نتائج دیکھیں\"{context}٭"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "تمام نتائج دیکھیں"
+  },
+  "theme.SearchBar.label": {
+    "message": "تلاش",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.SearchPage.existingResultsTitle": {
     "message": "تلاش کے نتائج %d{query}٭",
     "description": "The search page title for non-empty query"
@@ -288,34 +308,6 @@
   "theme.SearchPage.noResultsText": {
     "message": "کوئی دستاویز نہیں ملی تھی",
     "description": "The paragraph for empty search result"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "کوئی نتیجہ نہیں"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "تمام نتائج خارجہ –{context}٭"
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "2008 کے اندر سب نتائج دیکھیں\"{context}٭"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "تمام نتائج دیکھیں"
-  },
-  "theme.SearchBar.label": {
-    "message": "تلاش",
-    "description": "The ARIA label and placeholder for search button"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "دوبارہ کوشش",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "بنیادی مواد پر مہارت حاصل کریں",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "تاج",
-    "description": "The title of the tag list page"
   },
   "theme.blog.post.plurals": {
     "message": "ایک پوسٹ|{count}پوسٹ",
@@ -357,8 +349,16 @@
     "message": "یہ صفحہ ڈرافٹ ہے۔ اسے ڈی وی وی میں ہی دیکھا جائے گا اور پیداواری مصنوعات سے مستثنیٰ کیا جائے گا۔",
     "description": "The draft content banner message"
   },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "( نئے تبتی میں اتارے)",
-    "description": "The ARIA label for the external link icon"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "دوبارہ کوشش",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "بنیادی مواد پر مہارت حاصل کریں",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "تاج",
+    "description": "The title of the tag list page"
   }
 }
