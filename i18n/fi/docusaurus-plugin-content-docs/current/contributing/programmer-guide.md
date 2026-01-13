@@ -52,7 +52,7 @@ Siitä lähtien ERDDAP™ Se on tarkoitettu pääasiassa Tomcatissa toimivaksi p
 
   - Käytämme erätiedostoa, joka poistaa kaikki .class-tiedostot lähdepuusta varmistaaksemme, että meillä on puhdas kokoelma. (Javac) .
 
-  - Tällä hetkellä käytämme Adoptiumin javac jdk-21.0.3+9:ää gov.noaa.pfeg.coastwatch.TestAll. (Sillä on linkkejä joihinkin luokkiin, joita ei muuten olisi koottu.) ja suorittaa testejä. Turvallisuussyistä on lähes aina parempi käyttää uusimpia versioita. Java 21 ja Tomcat 10.
+  - Tällä hetkellä käytämme Adoptiumin javac jdk-25.0.1+8:a kootaksemme gov.noaa.pfeg.coastwatch.TestAllin. (Sillä on linkkejä joihinkin luokkiin, joita ei muuten olisi koottu.) ja suorittaa testejä. Turvallisuussyistä on lähes aina parempi käyttää uusimpia versioita. Java 25 ja Tomcat 10.
 
     - Javac tai Java, nykyinen hakemisto on _tomcat_/webapps/erddap/WEB-INF.
 
@@ -68,7 +68,7 @@ Siitä lähtien ERDDAP™ Se on tarkoitettu pääasiassa Tomcatissa toimivaksi p
 
     - Jos testi Kaikki kootut, kaikki ERDDAP™ Tarpeet on koottu. Muutamia luokkia on koottu, joita ei tarvita ERDDAP™ . Jos TestAllin kokoaminen onnistuu, mutta ei kokoa luokkaa, sitä ei tarvita. (On olemassa keskeneräisiä / käyttämättömiä luokkia.) 
 
-  - Joissakin tapauksissa käytämme kolmannen osapuolen lähdekoodia .jar-tiedostojen sijaan. (erityisesti DODS ) ja muuttanut niitä hieman, jotta vältettäisiin ongelmat. Java Usein on tehty pieniä muutoksia (erityisesti DODS ) muista syistä.
+  - Joissakin tapauksissa käytämme kolmannen osapuolen lähdekoodia .jar-tiedostojen sijaan. (erityisesti DODS ) ja muuttanut niitä hieman, jotta vältettäisiin ongelmat. Java 25. Olemme usein tehneet pieniä muutoksia (erityisesti DODS ) muista syistä.
 
   - Useimmilla luokkilla on testimenetelmät src/test-tiedostossa. Voit suorittaa JUnit-testit `Mvn-testi` käsky. Tämä lataa useita zip-tiedostoja, joita testit luottavat uusimpaan julkaisuun. [ ERDDAP Eddap Testi](https://github.com/ERDDAP/erddapTest/releases/) . . \\
      

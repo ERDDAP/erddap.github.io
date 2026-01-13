@@ -52,7 +52,7 @@ sidebar_position: 2
 
   - 우리는 소스 트리의 .class 파일을 모두 삭제하는 일괄 파일을 사용하여 깨끗한 컴파일을 보장합니다. (javac와 함께) ·
 
-  - 현재 Adoptium의 javac jdk-21.0.3+9를 사용하여 gov.noaa.pfeg.coastwatch.TestAll를 컴파일합니다. (컴파일되지 않을 몇 가지 클래스에 대한 링크가 있습니다.) 테스트 실행. 보안상의 이유로, 그것은 항상 최신 버전을 사용하는 것이 가장 좋습니다 Java 21 및 톰캣 10.
+  - 현재 Adoptium의 javac jdk-25.0.1+8를 사용하여 gov.noaa.pfeg.coastwatch.TestAll를 컴파일합니다. (컴파일되지 않을 몇 가지 클래스에 대한 링크가 있습니다.) 테스트 실행. 보안상의 이유로, 그것은 항상 최신 버전을 사용하는 것이 가장 좋습니다 Java 25 및 톰캣 10.
 
     - javac 또는 java를 실행할 때, 현재 디렉토리는 _tomcat_/webapps/erddap/WEB-INF입니다.
 
@@ -68,7 +68,7 @@ sidebar_position: 2
 
     - 테스트 모든 컴파일, 모든 ERDDAP™ 컴파일 된 필요. 몇 가지 클래스가 컴파일되어 있지 않다. ERDDAP™ · TestAll가 성공하지만 일부 클래스를 컴파일하지 않으면 클래스가 필요하지 않습니다. (일부 unfinished/unused 클래스가 있습니다.) 
 
-  - 몇몇 경우에, 우리는 .jar 파일 대신 제 3 자 소스 코드를 사용합니다 (할 수 없습니다 DODS ) 그리고 그 문제를 방지하기 위해 약간 수정 Java 21. 우리는 수시로 다른 약간 수정을 만들었습니다 (뚱 베어 DODS ) 다른 이유.
+  - 몇몇 경우에, 우리는 .jar 파일 대신 제 3 자 소스 코드를 사용합니다 (할 수 없습니다 DODS ) 그리고 그 문제를 방지하기 위해 약간 수정 Java 25. 우리는 수시로 다른 약간 수정을 만들었습니다 (뚱 베어 DODS ) 다른 이유.
 
   - 대부분의 클래스는 관련 src/test 파일에서 테스트 방법을 가지고 있습니다. JUnit 테스트를 실행할 수 있습니다. `mvn 테스트` 명령. 이것은 테스트가 최신 릴리스에서 의존하는 데이터의 여러 zip 파일을 다운로드합니다. [ ERDDAP 팟캐스트 제품정보](https://github.com/ERDDAP/erddapTest/releases/) ·
      

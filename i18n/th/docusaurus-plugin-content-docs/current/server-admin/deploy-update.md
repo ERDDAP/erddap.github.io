@@ -8,7 +8,7 @@ sidebar_position: 2
 1. ทําการเปลี่ยนแปลงรายการใน [เปลี่ยน](/changes) ในส่วนของเรื่อง "เรื่อง" ERDDAP™ ผู้บริหารจําเป็นต้องรู้จักและทํา"สําหรับทั้งหมดของ ERDDAP™ รุ่นที่คุณใช้
      
 ##  Java  {#java} 
-2. ถ้าคุณกําลังเพิ่มขึ้นจาก ERDDAP™ รุ่น 2.18 หรือด้านล่าง คุณต้องสลับที่ Java 21 (หรือใหม่กว่า) และทอมแคท 10 คนที่เกี่ยวข้อง ดูปกติ ERDDAP™ คําสั่งการติดตั้งสําหรับ [ Java ](/docs/server-admin/deploy-install#java) ถึง [ทอมแคท](/docs/server-admin/deploy-install#tomcat) . คุณจะต้องคัดลอก _tomcat_/content/erddap ไดเรกทอรีจากการติดตั้ง Tomcat เก่าของคุณ ไปการติดตั้งทอมแคทใหม่ของคุณ
+2. ถ้าคุณกําลังเพิ่มขึ้นจาก ERDDAP™ รุ่น 2.18 หรือด้านล่าง คุณต้องสลับที่ Java 25 (หรือใหม่กว่า) และทอมแคท 10 คนที่เกี่ยวข้อง ดูปกติ ERDDAP™ คําสั่งการติดตั้งสําหรับ [ Java ](/docs/server-admin/deploy-install#java) ถึง [ทอมแคท](/docs/server-admin/deploy-install#tomcat) . คุณจะต้องคัดลอก _tomcat_/content/erddap ไดเรกทอรีจากการติดตั้ง Tomcat เก่าของคุณ ไปการติดตั้งทอมแคทใหม่ของคุณ
 
 ## ดาวน์โหลด{#download} 
 3. ดาวน์โหลด [เอดดาป](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) ลงใน_สื่อย่อย

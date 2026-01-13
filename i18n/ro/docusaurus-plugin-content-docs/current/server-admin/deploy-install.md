@@ -29,18 +29,18 @@ Dar noi nu recomandăm utilizarea sa pentru public ERDDAP™ Desfășurări. Rul
 
 ##  Java  {#java} 
 
-1.  [Pentru ERDDAP™ v2.19+, înființat Java 21.](#java) 
-Din motive de securitate, este aproape întotdeauna cel mai bine să utilizați cea mai recentă versiune a Java 21.
+1.  [Pentru ERDDAP™ v2.29.0+, înființat Java 25.](#java) 
+Din motive de securitate, este aproape întotdeauna cel mai bine să utilizați cea mai recentă versiune a Java 25.
 Vă rugăm să descărcați și să instalați ultima versiune a
-    [OpenJDK de adopție (Temurină) 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
+    [OpenJDK de adopție (Temurină) 25 (LTS) ](https://adoptium.net/temurin/releases/?version=25) .
 Pentru a verifica instalarea, executați `/javaJreBinDirectory/java -versiune` , de exemplu
-    `/usr/local/jdk-21.0.3+9/jre/bin/java -versiune` .
+    `/usr/local/jdk-25.0.1+8/jre/bin/java -versiune` .
 
     ERDDAP™ funcționează cu Java din alte surse, dar recomandăm Admissionium, deoarece este principalul, sprijinit de comunitate,
-gratuit (ca în bere și vorbire) versiunea Java 21 care oferă suport pe termen lung (upgrade-uri gratuite pentru mulți ani trecut eliberarea inițială) .
-Din motive de securitate, vă rugăm să actualizați ERDDAP Versiunea Java periodic ca noi versiuni ale Java 21 devin disponibile de la Admissionium.
+gratuit (ca în bere și vorbire) versiunea Java 25 care oferă suport pe termen lung (upgrade-uri gratuite pentru mulți ani trecut eliberarea inițială) .
+Din motive de securitate, vă rugăm să actualizați ERDDAP Versiunea Java periodic ca noi versiuni ale Java 25 devin disponibile de la Admissionium.
 
-    ERDDAP™ a fost testat și utilizat pe scară largă cu 21, nu alte versiuni. Din diferite motive, nu testăm cu nici un suport alte versiuni ale Java .
+    ERDDAP™ a fost testat și utilizat pe scară largă cu 25, nu alte versiuni. Din diferite motive, nu testăm cu nici un suport alte versiuni ale Java .
      
 ## Tomcat{#tomcat} 
 
@@ -52,7 +52,7 @@ Poţi folosi altul. Java Server de aplicații (De exemplu, Jetty) Dar îl testă
 
    * Descărcaţi Tomcat şi despachetaţi-l pe server sau PC.
 Din motive de securitate, este aproape întotdeauna cel mai bine să utilizați cea mai recentă versiune a Tomcat 10 (versiunea 9 și mai jos nu sunt acceptabile) 
-care este conceput pentru a lucra cu Java 21 sau mai nou. Mai jos, directorul Tomcat va fi menționat ca `Tomcat` .
+care este conceput pentru a lucra cu Java 25 sau mai nou. Mai jos, directorul Tomcat va fi menționat ca `Tomcat` .
 
 Avertizare&#33; Dacă aveți deja un Tomcat care rulează alte aplicații web (în special THREDDS) Vă recomandăm să instalaţi ERDDAP™ în
       [un al doilea Tomcat](/docs/server-admin/additional-information#second-tomcat) , pentru că ERDDAP™ are nevoie de diferite setări Tomcat
@@ -150,7 +150,7 @@ Setează variabilele de mediu ale Tomcat
 Creează un fișier `Tomcat/bin/setenv.sh`   (sau în Red Hat Enterprise Linux \\[ RHEL \\] , editează `~tomcat/conf/tomcat10.conf` ) pentru a seta variabilele de mediu Tomcat.
 Acest fișier va fi utilizat de către `Tomcat/bin/startup.sh` şi `Oprire. sh` . Fișierul ar trebui să conțină ceva de genul:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Creează un fișier `tomcat\bin\\setenv.bat` pentru a seta variabilele de mediu 
 Acest fișier va fi utilizat de către `tomcat\bin\\startup.bat` şi ` shutdown.bat ` .
 Fișierul ar trebui să conțină ceva de genul:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ Amintiți-vă: dacă / atunci când upgrade mai târziu la o versiune mai nouă 
 * Testați instalarea Tomcat.
   * Linux:
     * Ca utilizator "Tomcat," executați `Tomcat/bin/startup.sh` .
-    * Vizualizați URL-ul + ":8080/" în browser (de exemplu, [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Vizualizați URL-ul + ":8080/" în browser (de exemplu, [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac (rulează tomcat ca utilizator administrator de sistem) :
     * Fugi&#33; `Tomcat/bin/startup.sh` .
-    * Vizualizați URL-ul + ":8080/" în browser (de exemplu, [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Vizualizați URL-ul + ":8080/" în browser (de exemplu, [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Rețineți că în mod implicit, Tomcat dvs. este accesibil doar de tine. Nu este accesibil publicului.
   * Windows localhost:
     * Faceţi clic dreapta pe pictograma Tomcat în tava de sistem, şi alegeţi "Start service."
-    * Vizualizare [http://127.0.0.1:8080/](http://127.0.0.1:8080/) , sau poate [http://localhost:8080/](http://localhost:8080/) În browser. Rețineți că în mod implicit, Tomcat dvs. este accesibil doar de tine. Nu este accesibil publicului.
+    * Vizualizare [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) , sau poate [ http://localhost:8080/ ](http://localhost:8080/) În browser. Rețineți că în mod implicit, Tomcat dvs. este accesibil doar de tine. Nu este accesibil publicului.
 
 Ar trebui să vezi pagina Tomcat "Felicitări."
 
@@ -455,7 +455,8 @@ Acesta poate dura un minut sau două pentru ERDDAP™ să se închidă complet. 
 
 ## Este ERDDAP™ Să alerg?{#is-erddap-running} 
 
-Utilizați un browser pentru a încerca să vizualizațihttp://www.YourServer.org/erddap/status.html.
+Utilizați un browser pentru a încerca să vizualizați http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ începe fără să fie încărcate seturile de date. Seturile de date sunt încărcate într-un fir de fundal și astfel devin disponibile unul câte unul.
 
 ### Depanare{#troubleshooting} 
@@ -522,4 +523,5 @@ te poţi alătura ERDDAP™ lista anunțurilor [Aici.](https://groups.google.com
   * Descrieți ce face organizația și/sau grupul dumneavoastră.
   * Descrie ce fel de date sunt acestea ERDDAP™ Are.
   * Pentru a schimba pictograma care apare pe file browser, pune favicon organizației dumneavoastră. ico in `Tomcat/content/erddap/images/` .
-Vezi?https://en.wikipedia.org/wiki/Favicon.
+Vezi? https://en.wikipedia.org/wiki/Favicon.
+ 

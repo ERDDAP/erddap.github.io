@@ -8,7 +8,7 @@ sidebar_position: 2
 1. تبدیلیاں فہرست میں شامل کریں [تبدیلیاں](/changes) سیکشن میں جس کا عنوان "Things" ہے۔ ERDDAP™ منتظمین کو جاننے اور کام کرنے کی ضرورت ہے ERDDAP™ نسخہ چونکہ آپ استعمال کر رہے تھے۔
      
 ##  Java  {#java} 
-2. اگر تم نے سوچا ہے کہ ERDDAP™ ورژن 2.18 یا نیچے، آپکو تبدیل کرنے کی ضرورت ہے۔ Java 21 (یا نیا) اور متعلقہ ٹومکاٹ 10۔ باقاعدہ دیکھیں ERDDAP™ کے لئے ہدایات انسٹال کریں [ Java ](/docs/server-admin/deploy-install#java) اور [قبرص](/docs/server-admin/deploy-install#tomcat) . . آپ کو بھی اپنی نقل کرنا پڑے گا _tomcat_/content/erddap آپ کی پرانی ٹامکاٹ تنصیب سے آپ کی نئی ٹامکاٹ تنصیب تک ڈائریکٹری.
+2. اگر تم نے سوچا ہے کہ ERDDAP™ ورژن 2.18 یا نیچے، آپکو تبدیل کرنے کی ضرورت ہے۔ Java 25 (یا نیا) اور متعلقہ ٹومکاٹ 10۔ باقاعدہ دیکھیں ERDDAP™ کے لئے ہدایات انسٹال کریں [ Java ](/docs/server-admin/deploy-install#java) اور [قبرص](/docs/server-admin/deploy-install#tomcat) . . آپ کو بھی اپنی نقل کرنا پڑے گا _tomcat_/content/erddap آپ کی پرانی ٹامکاٹ تنصیب سے آپ کی نئی ٹامکاٹ تنصیب تک ڈائریکٹری.
 
 ## گر تے ہوئے{#download} 
 3. گر تے ہوئے [ایوارڈ.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) _atomcate webops میں.

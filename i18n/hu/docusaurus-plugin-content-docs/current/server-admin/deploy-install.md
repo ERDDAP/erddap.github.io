@@ -29,18 +29,18 @@ nevezetesen, ERDDAP™ Lehet, hogy nem tudja törölni és / vagy renesz fájlok
 
 ##  Java  {#java} 
 
-1.  [Mert ERDDAP™ v2.19+, létrehozva Java 21.](#java) 
-Biztonsági okokból szinte mindig a legjobb, ha a legújabb verziót használja Java 21.
+1.  [Mert ERDDAP™ v2.29.0+, létrehozva Java 25.](#java) 
+Biztonsági okokból szinte mindig a legjobb, ha a legújabb verziót használja Java 25.
 Kérjük, töltse le és telepítse a legújabb verziót
-    [Adoptium OpenJDK (Temurin) 21. (LTS) ](https://adoptium.net/temurin/releases/?version=21) ...
+    [Adoptium OpenJDK (Temurin) 25. (LTS) ](https://adoptium.net/temurin/releases/?version=25) ...
 A telepítés ellenőrzése, futás `/javaJreBinDirectory/java - Verzió` Például
-    `/usr/local/jdk-21.0.3+9/jre/bin/java - Verzió` ...
+    `/usr/local/jdk-25.0.1+8/jre/bin/java - Verzió` ...
 
     ERDDAP™ munkával Java más forrásokból, de javasoljuk az Adoptiumot, mert ez a fő, közösségi támogatott,
-szabad (mint a sör és a beszéd) verzió Java 21, amely hosszú távú támogatást kínál (ingyenes frissítések sok éven át a kezdeti kiadás) ...
-Biztonsági okokból, kérjük, frissítse a ERDDAP "A verzió Java rendszeresen, mint új verziók Java 21 elérhetővé válik az Adoptiumtól.
+szabad (mint a sör és a beszéd) verzió Java 25, amely hosszú távú támogatást kínál (ingyenes frissítések sok éven át a kezdeti kiadás) ...
+Biztonsági okokból, kérjük, frissítse a ERDDAP "A verzió Java rendszeresen, mint új verziók Java 25 elérhetővé válik az Adoptiumtól.
 
-    ERDDAP™ Tesztelt és használt széles körben 21, nem más verziók. Különböző okokból nem tesztelünk, és nem támogatunk más verziókat Java ...
+    ERDDAP™ tesztelték és széles körben használták 25, nem pedig más verziókat. Különböző okokból nem tesztelünk, és nem támogatunk más verziókat Java ...
      
 ## Tomcat{#tomcat} 
 
@@ -52,7 +52,7 @@ Használhat másikat Java Application Server (pl. Jetty) De csak teszteljük és
 
    * Tomcat letöltése és kicsomagolása a szerverén vagy a PC-n.
 Biztonsági okokból szinte mindig a legjobb, ha a Tomcat 10 legújabb verzióját használja (a 9. és az alábbi verzió nem elfogadható) 
-amelynek célja, hogy együtt dolgozzon Java 21 vagy újabb. Az alábbiakban a Tomcat könyvtárat úgy fogják említeni, mint `Tomcat` ...
+amelynek célja, hogy együtt dolgozzon Java 25 vagy újabb. Az alábbiakban a Tomcat könyvtárat úgy fogják említeni, mint `Tomcat` ...
 
 __Warning&#33;__ Ha már van egy Tomcat fut más webes alkalmazás (különösen a THREDDS) Javasoljuk, hogy telepítse ERDDAP™ benne
       [egy második Tomcat](/docs/server-admin/additional-information#second-tomcat) mert ERDDAP™ különböző Tomcat beállításokra van szüksége
@@ -150,7 +150,7 @@ Ez fontos, mert megakadályozza, hogy más felhasználók olvassák esetleg érz
 Készítsen fájlt `Tomcat/bin/setenv.sh`   (vagy a Red Hat Enterprise Linuxban \\[ RHEL \\] szerkesztés `Tomcat/conf/tomcat10.conf` ) a Tomcat környezeti változóinak beállítása.
 Ezt a fájlt használjuk `Tomcat/bin/startup.sh` és `leállítás. Árnyék` ... A fájlnak tartalmaznia kell valamit:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Készítsen fájlt `Tomcat\bin\\setenv.bat` a Tomcat környezeti változóinak b
 Ezt a fájlt használjuk `Tomcat\bin\\startup.bat` és ` shutdown.bat ` ...
 A fájlnak tartalmaznia kell valamit:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ Ne feledje: ha később frissítesz egy újabb verzióra Java újra kell telepí
 * Tesztelje meg a Tomcat telepítését.
   * Linux:
     * Mint felhasználó "tomcat", futás `Tomcat/bin/startup.sh` ...
-    * Nézd meg az URL + ":8080/" böngésződben (pl.: [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) ...
+    * Nézd meg az URL + ":8080/" böngésződben (pl.: [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) ...
   * Mac (Tomcat mint rendszer adminisztrátor felhasználó) :
     * Run `Tomcat/bin/startup.sh` ...
-    * Nézd meg az URL + ":8080/" böngésződben (pl.: [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) ...
+    * Nézd meg az URL + ":8080/" böngésződben (pl.: [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) ...
 Ne feledje, hogy alapértelmezetten a Tomcat csak Ön számára hozzáférhető. Nem nyilvánosan hozzáférhető.
   * Windows helyihost:
     * Jobb kattintson a Tomcat ikonra a rendszer tálcájában, és válassza a "Start szolgáltatást".
-    * Megtekintés [http://127.0.0.1:8080/](http://127.0.0.1:8080/) vagy talán [http://localhost:8080/](http://localhost:8080/) , a böngészőben. Ne feledje, hogy alapértelmezetten a Tomcat csak Ön számára hozzáférhető. Nem nyilvánosan hozzáférhető.
+    * Megtekintés [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) vagy talán [ http://localhost:8080/ ](http://localhost:8080/) , a böngészőben. Ne feledje, hogy alapértelmezetten a Tomcat csak Ön számára hozzáférhető. Nem nyilvánosan hozzáférhető.
 
 Látnia kell a Tomcat "Congratulálok" oldalát.
 
@@ -455,7 +455,8 @@ Lehet, hogy egy-két percet vesz igénybe ERDDAP™ teljesen leállni. Légy tü
 
 ## Az ERDDAP™ futás?{#is-erddap-running} 
 
-Használjon egy böngészőt, hogy megpróbálja megtekintenihttp://www.YourServer.org/erddap/status.html.
+Használjon egy böngészőt, hogy megpróbálja megtekinteni http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ elkezdődik minden adatkészlet betöltése nélkül. Az adatkészleteket háttér szálba helyezik, így elérhetővé válik egy-egy.
 
 ### Hibaelhárítás{#troubleshooting} 
@@ -522,4 +523,5 @@ a ` datasets.xml ` szerkeszteni.) Például:
   * Írja le, mit csinál a szervezet és/vagy csoport.
   * Írja le, hogy milyen adat ez ERDDAP™ van.
   * Ahhoz, hogy megváltoztassa az ikont, amely megjelenik a böngésző lapokon, helyezze a szervezet tanácsát. ico in `tomcat/content/erddap/images/` ...
-Lásdhttps://en.wikipedia.org/wiki/Favicon.
+Lásd https://en.wikipedia.org/wiki/Favicon.
+ 

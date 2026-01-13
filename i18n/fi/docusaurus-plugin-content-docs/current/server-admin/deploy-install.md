@@ -29,18 +29,18 @@ erityisesti, ERDDAP™ Et voi poistaa ja/tai nimetä tiedostoja nopeasti. Tämä
 
 ##  Java  {#java} 
 
-1.  [For For ERDDAP™ V2.19+, perustettu Java 21.](#java) 
-Turvallisuussyistä on lähes aina parempi käyttää uusinta versiota. Java 21.
+1.  [For For ERDDAP™ V2.29.0+, perustettu Java 25.](#java) 
+Turvallisuussyistä on lähes aina parempi käyttää uusinta versiota. Java 25.
 Lataa ja asenna uusin versio
-    [Adoptiumin OpenJDK (Temurin) 21 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
+    [Adoptiumin OpenJDK (Temurin) 25 25 (LTS) ](https://adoptium.net/temurin/releases/?version=25) .
 Tarkista asennuksen, suorita `/javaJreBinDirectory / Java käännökset` Esimerkiksi
-    `Käyttäjä/paikallinen/jdk-21.0.3+9/jre/bin/java käännökset` .
+    `Käyttäjä/paikallinen/jdk-25.0.1+8/jre/bin/java käännökset` .
 
     ERDDAP™ Teosten kanssa Java muista lähteistä, mutta suosittelemme Adoptiumia, koska se on tärkein, yhteisöllistä tukea.
-Ilma ilmaiseksi ilmaiseksi (Olut ja puhe) versiosta Java 21, joka tarjoaa pitkäaikaista tukea (Ilmaiset päivitykset jo vuosia ennen alkuperäistä julkaisua) .
-Turvallisuussyistä päivitä ERDDAP versiosta Java säännöllisesti uusina versioina Java 21 on saatavana Adoptiumilta.
+Ilma ilmaiseksi ilmaiseksi (Olut ja puhe) versiosta Java 25, joka tarjoaa pitkäaikaista tukea (Ilmaiset päivitykset jo vuosia ennen alkuperäistä julkaisua) .
+Turvallisuussyistä päivitä ERDDAP versiosta Java säännöllisesti uusina versioina Java 25 on saatavissa Adoptiumilta.
 
-    ERDDAP™ Sitä on testattu ja käytetty laajasti 21:llä, ei muilla versioilla. Erilaisista syistä emme testaa tai tue muita versioita. Java .
+    ERDDAP™ Sitä on testattu ja käytetty laajasti 25:llä, ei muilla versioilla. Erilaisista syistä emme testaa tai tue muita versioita. Java .
      
 ## Tomca{#tomcat} 
 
@@ -52,7 +52,7 @@ Voit käyttää toista Java Sovelluspalvelin (Esimerkki: Jetty) Testaamme ja tue
 
    * Lataa Tomcat ja pakkaa se palvelimellesi tai PC:lle.
 Turvallisuussyistä on lähes aina parempi käyttää Tomcat 10:n uusinta versiota. (9 ja alapuolella ei ole hyväksyttävää) 
-joka on suunniteltu toimimaan Java 21 tai uudempi. Alla olevaa Tomcat-hakemistoa kutsutaan `Tom` .
+joka on suunniteltu toimimaan Java 25 tai uudempi. Alla olevaa Tomcat-hakemistoa kutsutaan `Tom` .
 
 Varokaa&#33; Jos sinulla on jo Tomcat, jolla on jokin muu verkkosovellus (Erityisesti kolme) Suosittelemme, että asennat ERDDAP™ Sisällä
       [Toinen Tomcat](/docs/server-admin/additional-information#second-tomcat) koska ERDDAP™ Tarvitset erilaisia Tomcat-asetuksia
@@ -150,7 +150,7 @@ Tomcatin ympäristömuuttujat
 Luo tiedosto `Tomcat/bin/setenv.sh`   (Pääosat Red Hat Enterprise Linux \\[ Ryhmä \\] edit `Tomcat/conf/tomcat10.conf` ) Tomcatin ympäristömuuttujat.
 Tätä tiedostoa käytetään `Tomcat/bin/startup.sh` ja `sulku. Säv.` . Tiedosto sisältää jotain:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Luo tiedosto `Tomcat: Setenv.bat` Tomcatin ympäristömuuttujat.
 Tätä tiedostoa käytetään `Tomcat\bin\\startup.bat` ja ` shutdown.bat ` .
 Tiedosto sisältää jotain:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ Muista: jos/kun päivität uudempaan versioon Java Sinun on asennettava nämä f
 * Testaa Tomcat-asennus.
   * Linux:
     * Käyttäjä "tomcat" `Tomcat/bin/startup.sh` .
-    * Katso URL + ":80/" selaimessasi (esim. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Katso URL + ":80/" selaimessasi (esim. [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac Mac Mac (Tomcat toimii järjestelmänvalvojana) :
     * Juokseminen `Tomcat/bin/startup.sh` .
-    * Katso URL + ":80/" selaimessasi (esim. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Katso URL + ":80/" selaimessasi (esim. [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Huomaa, että oletusarvoisesti Tomcat on vain käytettävissäsi. Se ei ole julkisesti saatavilla.
   * Windows paikalliset:
     * Napsauta Tomcat-kuvaketta järjestelmän lokerossa ja valitse "Aloita palvelu".
-    * Näkymä [http://127.0.0.1:8080/](http://127.0.0.1:8080/) Tai ehkä [http://localhost:8080/](http://localhost:8080/) Selaimessasi. Huomaa, että oletusarvoisesti Tomcat on vain käytettävissäsi. Se ei ole julkisesti saatavilla.
+    * Näkymä [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) Tai ehkä [ http://localhost:8080/ ](http://localhost:8080/) Selaimessasi. Huomaa, että oletusarvoisesti Tomcat on vain käytettävissäsi. Se ei ole julkisesti saatavilla.
 
 Tomcat "Onnittelut" -sivulla.
 
@@ -455,7 +455,8 @@ Se voi kestää minuutin tai kaksi. ERDDAP™ Täysin suljettu. Ole kärsivälli
 
 ## on ERDDAP™ juoksemaan?{#is-erddap-running} 
 
-Käytä selainta nähdäksesihttp://www.YourServer.org/erddap/status.html.
+Käytä selainta nähdäksesi http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ Käynnistetään ilman tiedostoja. Datasetit ladataan taustasäikeeseen, joten ne ovat saatavilla yksi kerrallaan.
 
 ### Troubleshoot{#troubleshooting} 
@@ -522,4 +523,5 @@ sisään ` datasets.xml ` ja editoida sitä.) Voit esimerkiksi:
   * Kerro, mitä organisaatiosi ja/tai ryhmäsi tekee.
   * Selvitä, millaisia tietoja tämä ERDDAP™ on.
   * Muuttaa ikoni, joka näkyy selaimen välilehtiä, laittaa organisaation favicon. Ico sisään `Tomcat/content/erddap/images/` .
-Näytähttps://en.wikipedia.org/wiki/Favicon.
+Näytä https://en.wikipedia.org/wiki/Favicon.
+ 

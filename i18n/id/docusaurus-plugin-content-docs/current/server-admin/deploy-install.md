@@ -29,18 +29,18 @@ Sitemap ERDDAP™ mungkin tidak bisa menghapus dan/atau mengubah nama file denga
 
 ##  Java  {#java} 
 
-1.  [Sitemap ERDDAP™ v2.19+, set up Java 21. Juni](#java) 
-Untuk alasan keamanan, hampir selalu terbaik untuk menggunakan versi terbaru dari Java 21. Juni
+1.  [Sitemap ERDDAP™ v2.29.0+, set up Java 5. Juni](#java) 
+Untuk alasan keamanan, hampir selalu terbaik untuk menggunakan versi terbaru dari Java 5. Juni
 Silakan unduh dan instal versi terbaru
-    [OpenJDK (Login) 20 g (Login) ](https://adoptium.net/temurin/releases/?version=21) Sitemap
+    [OpenJDK (Login) 25 g (Login) ](https://adoptium.net/temurin/releases/?version=25) Sitemap
 Untuk memverifikasi instalasi, jalankan `Login Login` Sitemap
-    `/usr/local/jdk-21.0.3+9/jre/bin/java Login` Sitemap
+    `/usr/local/jdk-25.0.1+8/jre/bin/java Login` Sitemap
 
     ERDDAP™ Sitemap Java dari sumber lain, tetapi kami merekomendasikan Mengadopsi karena itu adalah yang utama, didukung masyarakat,
-gratis (sebagai bir dan pidato) versi Java 21 yang menawarkan Dukungan Jangka Panjang (upgrade gratis selama bertahun-tahun melewati rilis awal) Sitemap
-Untuk alasan keamanan, harap perbarui Anda ERDDAP 's versi Java secara berkala sebagai versi baru Java 21 tersedia dari Adopsiium.
+gratis (sebagai bir dan pidato) versi Java 25 yang menawarkan Dukungan Jangka Panjang (upgrade gratis selama bertahun-tahun melewati rilis awal) Sitemap
+Untuk alasan keamanan, harap perbarui Anda ERDDAP 's versi Java secara berkala sebagai versi baru Java 25 menjadi tersedia dari Adopsiium.
 
-    ERDDAP™ telah diuji dan digunakan secara luas dengan 21, bukan versi lain. Untuk berbagai alasan, kami tidak menguji dengan atau mendukung versi lain Java Sitemap
+    ERDDAP™ telah diuji dan digunakan secara luas dengan 25, bukan versi lain. Untuk berbagai alasan, kami tidak menguji dengan atau mendukung versi lain Java Sitemap
      
 ## Login{#tomcat} 
 
@@ -52,7 +52,7 @@ Anda dapat menggunakan yang lain Java Server Aplikasi (Sitemap) tetapi kami hany
 
    * Unduh Tomcat dan unpack di server atau PC Anda.
 Untuk alasan keamanan, hampir selalu terbaik untuk menggunakan versi terbaru Tomcat 10 (versi 9 dan di bawah ini tidak dapat diterima) 
-yang dirancang untuk bekerja dengan Java 21 atau lebih baru. Di bawah ini, direktori Tomcat akan disebut sebagai `Login` Sitemap
+yang dirancang untuk bekerja dengan Java 25 atau lebih baru. Di bawah ini, direktori Tomcat akan disebut sebagai `Login` Sitemap
 
 Sitemap Jika Anda sudah memiliki Tomcat menjalankan beberapa aplikasi web lain (terutama THREDDS) Kami merekomendasikan bahwa Anda menginstal ERDDAP™ Sitemap
       [Tomcat kedua](/docs/server-admin/additional-information#second-tomcat) Sitemap ERDDAP™ perlu pengaturan Tomcat yang berbeda
@@ -150,7 +150,7 @@ Mengatur Variabel Lingkungan Tomcat
 Buat file `Login`   (atau di Red Hat Enterprise Linux \\[ Login \\] Login `~tomcat/conf/tomcat10.conf` ) untuk mengatur variabel lingkungan Tomcat.
 File ini akan digunakan oleh `Login` Login `Login Login` Sitemap File harus mengandung sesuatu seperti:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Buat file `tomcat\bin\\setenv.bat` untuk mengatur variabel lingkungan Tomcat.
 File ini akan digunakan oleh `tomcat\bin\\startup.bat` Login ` shutdown.bat ` Sitemap
 File harus mengandung sesuatu seperti:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ Ingat: jika / ketika Anda kemudian meningkatkan ke versi yang lebih baru dari Ja
 * Uji instalasi Tomcat Anda.
   * Linux:
     * Sebagai pengguna "tomcat", menjalankan `Login` Sitemap
-    * Lihat URL Anda + ":80 /" di browser Anda (Login [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) Sitemap
+    * Lihat URL Anda + ":80 /" di browser Anda (Login [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) Sitemap
   * Login (menjalankan tomcat sebagai pengguna administrator sistem) Sitemap
     * Login `Login` Sitemap
-    * Lihat URL Anda + ":80 /" di browser Anda (Login [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) Sitemap
+    * Lihat URL Anda + ":80 /" di browser Anda (Login [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) Sitemap
 Perhatikan bahwa secara default, Tomcat Anda hanya dapat diakses oleh Anda. Tidak dapat diakses secara publik.
   * Windows Server:
     * Klik kanan pada ikon Tomcat di baki sistem, dan pilih "Layanan Start".
-    * Login [http://127.0.0.1:8080/](http://127.0.0.1:8080/) atau mungkin [http://localhost:8080/](http://localhost:8080/) di browser Anda. Perhatikan bahwa secara default, Tomcat Anda hanya dapat diakses oleh Anda. Tidak dapat diakses secara publik.
+    * Login [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) atau mungkin [ http://localhost:8080/ ](http://localhost:8080/) di browser Anda. Perhatikan bahwa secara default, Tomcat Anda hanya dapat diakses oleh Anda. Tidak dapat diakses secara publik.
 
 Anda harus melihat halaman Tomcat "Congratulations".
 
@@ -455,7 +455,8 @@ Ini mungkin memakan waktu satu menit atau dua untuk ERDDAP™ untuk menutup sepe
 
 ## Login ERDDAP™ Login{#is-erddap-running} 
 
-Gunakan browser untuk mencoba untuk melihathttp://www.YourServer.org/erddap/status.html.
+Gunakan browser untuk mencoba untuk melihat http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ dimulai tanpa dataset dimuat. Dataset dimuat dalam benang latar belakang dan jadi menjadi yang tersedia.
 
 ### Login{#troubleshooting} 
@@ -522,4 +523,5 @@ Login ` datasets.xml ` dan mengeditnya.) Misalnya, Anda bisa:
   * Jelaskan apa organisasi dan/atau kelompok Anda.
   * Jelaskan apa jenis data ini ERDDAP™ Login
   * Untuk mengubah ikon yang muncul di tab browser, masukkan favicon organisasi Anda. Login `Login` Sitemap
-Sitemaphttps://en.wikipedia.org/wiki/Favicon.
+Sitemap https://en.wikipedia.org/wiki/Favicon.
+ 

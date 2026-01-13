@@ -29,18 +29,18 @@ nomeadamente, ERDDAP™ pode ser incapaz de excluir e / ou renomear arquivos rap
 
 ##  Java  {#java} 
 
-1.  [Para ERDDAP™ v2.19+, configurar Java 21.](#java) 
-Por razões de segurança, é quase sempre melhor usar a versão mais recente do Java 21.
+1.  [Para ERDDAP™ v2.29.0+, configurar Java 25.](#java) 
+Por razões de segurança, é quase sempre melhor usar a versão mais recente do Java 25.
 Por favor, baixe e instale a última versão do
-    [OpenJDK do adotivo (Temurin) 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
+    [OpenJDK do adotivo (Temurin) 25 (LTS) ](https://adoptium.net/temurin/releases/?version=25) .
 Para verificar a instalação, execute `/javaJreBinDirectory/java -versão` Por exemplo
-    `/usr/local/jdk-21.0.3+9/jre/bin/java -versão` .
+    `/usr/local/jdk-25.0.1+8/jre/bin/java -versão` .
 
     ERDDAP™ trabalhos com Java de outras fontes, mas recomendamos o Adotivo porque é o principal, apoiado pela comunidade,
-grátis (como em cerveja e fala) versão de Java 21 que oferece suporte de longo prazo (atualizações gratuitas por muitos anos após a versão inicial) .
-Por razões de segurança, atualize o seu ERDDAP A versão de Java periodicamente como novas versões de Java 21 tornam-se disponíveis a partir do Adotivo.
+grátis (como em cerveja e fala) versão de Java 25 que oferece suporte de longo prazo (atualizações gratuitas por muitos anos após a versão inicial) .
+Por razões de segurança, atualize o seu ERDDAP A versão de Java periodicamente como novas versões de Java 25 ficam disponíveis a partir do Adotivo.
 
-    ERDDAP™ foi testado e usado extensivamente com 21, não outras versões. Por várias razões, não testamos nem apoiamos outras versões de Java .
+    ERDDAP™ foi testado e usado extensivamente com 25, não outras versões. Por várias razões, não testamos nem apoiamos outras versões de Java .
      
 ## Tomcat{#tomcat} 
 
@@ -52,7 +52,7 @@ Você pode usar outro Java Servidor de Aplicação (por exemplo, Jetty) Mas só 
 
    * Faça o download do Tomcat e descompacte-o em seu servidor ou PC.
 Por razões de segurança, é quase sempre melhor usar a versão mais recente do Tomcat 10 (versão 9 e abaixo não são aceitáveis) 
-que é projetado para trabalhar com Java 21 ou mais. Abaixo, o diretório Tomcat será referido como `Toca a brincar.` .
+que é projetado para trabalhar com Java 25 ou mais. Abaixo, o diretório Tomcat será referido como `Toca a brincar.` .
 
 Não&#33; Se você já tem um Tomcat executando alguma outra aplicação web (especialmente TRÊS) , recomendamos que você instale ERDDAP™ em
       [um segundo Tomcat](/docs/server-admin/additional-information#second-tomcat) Porque ERDDAP™ necessidades diferentes configurações Tomcat
@@ -150,7 +150,7 @@ Definir Variáveis de Ambiente da Tomcat
 Criar um arquivo `tomcat/bin/setenv.sh`   (ou em Red Hat Enterprise Linux \\[ RH \\] , editar `~tomcat/conf/tomcat10.conf` ) para definir as variáveis de ambiente da Tomcat.
 Este arquivo será usado por `tomcat/bin/startup.sh` e `desligamento. Não.` . O arquivo deve conter algo como:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Criar um arquivo `tomcat\bin\\setenv.bat` para definir as variáveis de ambiente
 Este arquivo será usado por `tomcat\bin\\startup.bat` e ` shutdown.bat ` .
 O arquivo deve conter algo como:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ Lembre-se: se / quando você mais tarde atualizar para uma versão mais recente 
 * Teste sua instalação Tomcat.
   * Linux:
     * Como usuário "tomcat", execute `tomcat/bin/startup.sh` .
-    * Ver sua URL + ":8080/" no seu navegador (por exemplo, [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Ver sua URL + ":8080/" no seu navegador (por exemplo, [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac (executar tomcat como usuário administrador do sistema) :
     * Corre&#33; `tomcat/bin/startup.sh` .
-    * Ver sua URL + ":8080/" no seu navegador (por exemplo, [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Ver sua URL + ":8080/" no seu navegador (por exemplo, [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Note que, por padrão, seu Tomcat só é acessível por você. Não é publicamente acessível.
   * Localhost do Windows:
     * Clique com o botão direito no ícone Tomcat na bandeja do sistema e escolha "Serviço inicial".
-    * Visualização [http://127.0.0.1:8080/](http://127.0.0.1:8080/) , ou talvez [http://localhost:8080/](http://localhost:8080/) , no seu navegador. Note que, por padrão, seu Tomcat só é acessível por você. Não é publicamente acessível.
+    * Visualização [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) , ou talvez [ http://localhost:8080/ ](http://localhost:8080/) , no seu navegador. Note que, por padrão, seu Tomcat só é acessível por você. Não é publicamente acessível.
 
 Você deve ver a página "Parabéns" Tomcat.
 
@@ -455,7 +455,8 @@ Pode levar um minuto ou dois para ERDDAP™ para desligar completamente. Sê pac
 
 ## É ERDDAP™ Correr?{#is-erddap-running} 
 
-Use um navegador para tentar visualizarhttp://www.YourServer.org/erddap/status.html.
+Use um navegador para tentar visualizar http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ inicia-se sem nenhum conjunto de dados carregado. Os conjuntos de dados são carregados em um segmento de fundo e assim tornar-se disponível one-by-one.
 
 ### Resolução de problemas{#troubleshooting} 
@@ -522,4 +523,5 @@ para dentro ` datasets.xml ` e editá-lo.) Por exemplo, você poderia:
   * Descreva o que sua organização e/ou grupo faz.
   * Descrever que tipo de dados este ERDDAP™ Sim.
   * Para alterar o ícone que aparece nas guias do navegador, coloque o favicon da sua organização. ico em ico `tomcat/content/erddap/images/` .
-Verhttps://en.wikipedia.org/wiki/Favicon.
+Ver https://en.wikipedia.org/wiki/Favicon.
+ 

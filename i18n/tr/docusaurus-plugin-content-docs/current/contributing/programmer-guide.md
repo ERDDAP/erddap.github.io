@@ -52,7 +52,7 @@ O zamandan beri ERDDAP™ Temel olarak Tomcat'ta çalışan bir servlet olmak am
 
   - Tüm .class dosyalarını kaynak ağacında silen bir toplu dosyayı kullanıyoruz, böylece temiz bir derleyicimiz olmasını sağlamak için (javac ile) .
 
-  - Şu anda, Impium'un javac jdk-21.0.3+9'u gov.noaa.pfeg.coastwatch.AllTest. (Aksi halde derlemeyecek birkaç sınıfla bağlantı vardır.) Ve testleri çalıştırın. Güvenlik nedenleri için, neredeyse her zaman en son versiyonlarını kullanmak en iyisidir Java 21 ve Tomcat 10.
+  - Şu anda, Impium'un javac jdk-25.0.1+8'i, gov.noaa.pfeg.coastwatch.AllTest. (Aksi halde derlemeyecek birkaç sınıfla bağlantı vardır.) Ve testleri çalıştırın. Güvenlik nedenleri için, neredeyse her zaman en son versiyonlarını kullanmak en iyisidir Java 25 ve Tomcat 10.
 
     - javac veya java çalıştırdığımızda, mevcut dizi _tomcat_/webapps/erddap/WEB-INF .
 
@@ -68,7 +68,7 @@ O zamandan beri ERDDAP™ Temel olarak Tomcat'ta çalışan bir servlet olmak am
 
     - Test ederseniz Tüm derlemeler, her şey ERDDAP™ İhtiyaçlar derlenmiştir. Birkaç sınıf, gerekli olmayan bir şekilde derlenir ERDDAP™ . TestAll başarılı olursa ancak bazı sınıfları derlemez, bu sınıf gerekli değildir. (Bazı tamamlanmamış / kullanılmış sınıflar var.) 
 
-  - Birkaç durumda, .jar dosyaları yerine 3. parti kaynak kodu kullanıyoruz. (Özellikle özellikle için DODS ) Ve onları, problemleri çözmek için biraz değiştirdiler Java 21. Sık sık diğer hafif değişiklikler yaptık (Özellikle özellikle de özellikle de DODS ) Diğer nedenlerle.
+  - Birkaç durumda, .jar dosyaları yerine 3. parti kaynak kodu kullanıyoruz. (Özellikle özellikle için DODS ) Ve onları, problemleri çözmek için biraz değiştirdiler Java 25. Sık sık diğer hafif değişiklikler yaptık (Özellikle özellikle de özellikle de DODS ) Diğer nedenlerle.
 
   - Çoğu sınıf ilişkili src/test dosyasında test yöntemleri vardır. JUnit testleri ile çalıştırabilirsiniz `mvn testi` komut. Bu, testlerin en son serbest bırakılmasına güvendiği birkaç zip dosyalarını indirecektir. [ ERDDAP /erddap Test Testi](https://github.com/ERDDAP/erddapTest/releases/) .\\
      

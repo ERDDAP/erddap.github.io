@@ -52,7 +52,7 @@ Seit ERDDAP™ ist vor allem ein servlet in Tomcat, wir empfehlen dringend, dass
 
   - Wir verwenden eine Batch-Datei, die alle .class Dateien im Quellbaum gelöscht, um sicherzustellen, dass wir ein sauberes Kompilieren haben (mit Javac) .
 
-  - Zurzeit verwenden wir Adoptiums Javac jdk-21.0.3+9, um gov.noaa.pfeg.coastwatch.TestAll (es hat Links zu einigen Klassen, die nicht anders kompiliert werden) und die Tests durchführen. Aus Sicherheitsgründen ist es fast immer am besten, die neuesten Versionen von Java 21 und Tomcat 10.
+  - Zurzeit verwenden wir Adoptiums Javac jdk-25.0.1+8, um gov.noaa.pfeg.coastwatch.TestAll (es hat Links zu einigen Klassen, die nicht anders kompiliert werden) und die Tests durchführen. Aus Sicherheitsgründen ist es fast immer am besten, die neuesten Versionen von Java 25 und Tomcat 10.
 
     - Wenn wir javac oder java ausführen, ist das aktuelle Verzeichnis _tomcat_/webapps/erddap/WEB-INF .
 
@@ -68,7 +68,7 @@ Seit ERDDAP™ ist vor allem ein servlet in Tomcat, wir empfehlen dringend, dass
 
     - Prüfung Alle Komplizen, alles ERDDAP™ Die Bedürfnisse wurden zusammengestellt. Einige Klassen werden kompiliert, die nicht für ERDDAP™ . Wenn TestAll erfolgreich ist, aber keine Klasse kompiliert, ist diese Klasse nicht nötig. (Es gibt einige unfertige/ungenutzte Klassen.) 
 
-  - In einigen Fällen verwenden wir 3rd Party Quellcode anstelle von .jar Dateien (insbesondere für DODS ) und haben sie leicht modifiziert, um Probleme zu vermeiden, die mit Java 21. Wir haben oft andere leichte Änderungen vorgenommen (insbesondere DODS ) aus anderen Gründen.
+  - In einigen Fällen verwenden wir 3rd Party Quellcode anstelle von .jar Dateien (insbesondere für DODS ) und haben sie leicht modifiziert, um Probleme zu vermeiden, die mit Java 25. Wir haben oft andere leichte Änderungen vorgenommen (insbesondere DODS ) aus anderen Gründen.
 
   - Die meisten Klassen haben Testmethoden in ihrer zugehörigen src/test-Datei. Sie können die JUnit-Tests mit der `mvn-Test` Befehl. Dies wird mehrere Zip-Dateien von Daten herunterladen, auf die die Tests von der neuesten Veröffentlichung vertrauen [ ERDDAP /erddap Prüfung](https://github.com/ERDDAP/erddapTest/releases/) .
      

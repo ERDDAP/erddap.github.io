@@ -52,7 +52,7 @@ sidebar_position: 2
 
   - 我們使用一個批次檔案來刪除來源樹上的 . class 檔案,以确保我們有清潔的編譯 (使用 Javac) .
 
-  - 我們目前使用領養的javac jdk-21.0.3+9來編譯 gov.noaa.pfeg.coastwatch。 (它有幾個課程的連結 否則不會編譯) 做測試 出于安全原因,使用最新版本的 Java 21和Tomcat 10.
+  - 目前我們使用領養者的javac jdk-25.0.1+8來編譯 gov.noaa.pfeg.coastwatch. Test All (它有幾個課程的連結 否則不會編譯) 做測試 出于安全原因,使用最新版本的 Java 25和湯姆卡特10。
 
     - 目前的目錄為_tomcat_/webapps/erddap/WEB-INF。
 
@@ -68,7 +68,7 @@ sidebar_position: 2
 
     - 如果測試 所有編譯,一切 ERDDAP™ 需求已汇编。 幾堂課是不需要的 ERDDAP™ . 如果編譯 TestAll 成功但沒有編譯一些課程,那就不需要了. (有一些未完成/未使用的課程。) 
 
-  - 在少數情況下,我們使用第三黨源碼而不是.jar檔案 (特别是 DODS ) 並稍作修改,以避免編譯有問題 Java 21. 我們常做其他微小的修改 (特别是 DODS ) 其他原因。
+  - 在少數情況下,我們使用第三黨源碼而不是.jar檔案 (特别是 DODS ) 並稍作修改,以避免編譯有問題 Java 25. 我們常做其他微小的修改 (特别是 DODS ) 其他原因。
 
   - 大多數課程在相關的src/test文件中都有測試方法. 您可以使用 `mvn 測試` 命令。 這會下載數個測試所依赖的 zip 檔案 [ ERDDAP / erddap 中 測試](https://github.com/ERDDAP/erddapTest/releases/) .\\
      

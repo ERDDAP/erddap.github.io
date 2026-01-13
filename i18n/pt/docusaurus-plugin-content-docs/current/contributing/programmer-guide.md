@@ -52,7 +52,7 @@ Desde então ERDDAP™ destina-se principalmente a ser um servlet em execução 
 
   - Usamos um arquivo em lote que exclui todos os arquivos .class na árvore de origem para garantir que temos um compilado limpo (com javac) .
 
-  - Atualmente, usamos o javac jdk-21.0.3+9 da Adoptium para compilar gov.noaa.pfeg.coastwatch.TestAll (tem links para algumas classes que não seriam compiladas de outra forma) e executar os testes. Por razões de segurança, é quase sempre melhor usar as versões mais recentes Java 21 e Tomcat 10.
+  - Atualmente, usamos o javac jdk-25.0.1+8 da Adoptium para compilar gov.noaa.pfeg.coastwatch.TestAll (tem links para algumas classes que não seriam compiladas de outra forma) e executar os testes. Por razões de segurança, é quase sempre melhor usar as versões mais recentes Java 25 e Tomcat 10.
 
     - Quando executamos javac ou java, o diretório atual é _tomcat_/webapps/erddap/WEB-INF .
 
@@ -68,7 +68,7 @@ Desde então ERDDAP™ destina-se principalmente a ser um servlet em execução 
 
     - Se o teste Todas as compilações, tudo ERDDAP™ as necessidades foram compiladas. Algumas classes são compiladas que não são necessárias para ERDDAP™ . Se compilar TestAll tiver sucesso, mas não compilar alguma classe, essa classe não é necessária. (Há algumas classes inacabadas/não usadas.) 
 
-  - Em alguns casos, usamos o código fonte de terceiros em vez de arquivos .jar (nomeadamente DODS ) e os modificaram ligeiramente para evitar problemas de compilação Java 21. Muitas vezes fizemos outras pequenas modificações (nomeadamente DODS ) por outras razões.
+  - Em alguns casos, usamos o código fonte de terceiros em vez de arquivos .jar (nomeadamente DODS ) e os modificaram ligeiramente para evitar problemas de compilação Java 25. Muitas vezes fizemos outras pequenas modificações (nomeadamente DODS ) por outras razões.
 
   - A maioria das classes tem métodos de teste em seu arquivo src/test associado. Você pode executar os testes JUnit com o `Teste de mvn` Comando. Isso irá baixar vários arquivos zip de dados que os testes dependem da versão mais recente do [ ERDDAP - Sim. Teste de teste](https://github.com/ERDDAP/erddapTest/releases/) .
      

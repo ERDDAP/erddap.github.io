@@ -29,18 +29,18 @@ Kapansin - pansin, ERDDAP™ ay maaaring hindi matanggal ang mga talaksang delet
 
 ##  Java  {#java} 
 
-1.  [Sapagkat ERDDAP™ v2.19+, itinayo Java 21.](#java) 
-Para sa seguridad, halos laging pinakamabuting gamitin ang pinakabagong bersiyon ng Java 21.
+1.  [Sapagkat ERDDAP™ 0.29.0+, itinayo Java 25.](#java) 
+Para sa seguridad, halos laging pinakamabuting gamitin ang pinakabagong bersiyon ng Java 25.
 Paki-download at i-install ang pinakabagong bersyon ng
-    [Ang OpenJDK ng Pag - aampon (Temurin) 21 (MGA LTS) ](https://adoptium.net/temurin/releases/?version=21) .
+    [Ang OpenJDK ng Pag - aampon (Temurin) 25 (MGA LTS) ](https://adoptium.net/temurin/releases/?version=25) .
 Upang matiyak ang instalasyon, tumakbo `/javaJreBin Direktory/java - Pagkumberte` , halimbawa
-    `/usr/local/jdk-21.0.3+9/jre/bin/java - Pagkumberte` .
+    `/usr/local/jdk-25.0.1+8/jre/bin/java - Pagkumberte` .
 
     ERDDAP™ ay gumagawang kasama ng Java mula sa ibang pinagmulan, ngunit inirerekomenda namin ang Ampon dahil ito ang pangunahin, pampamayanang-suporta,
-malaya (gaya ng sa serbesa at pagsasalita) bersyon ng Java 21 na nagbibigay ng Pangmatagalang Suporta (libreng mga upgrade sa loob ng maraming taon pagkatapos ng panimulang paglabas) .
-Para sa mga kadahilanang panseguridad, pakisuyong i-update ang iyong ERDDAP 'Ang bersiyon ng Java Sa pana - panahon bilang mga bagong bersiyon ng Java 21 ang makukuha mula sa Repsium.
+malaya (gaya ng sa serbesa at pagsasalita) bersyon ng Java 25 na nagbibigay ng Panghabang - panahong Suporta (libreng mga upgrade sa loob ng maraming taon pagkatapos ng panimulang paglabas) .
+Para sa mga kadahilanang panseguridad, pakisuyong i-update ang iyong ERDDAP 'Ang bersiyon ng Java Sa pana - panahon bilang mga bagong bersiyon ng Java 25 ang makukuha mula sa Acponium.
 
-    ERDDAP™ ay sinubok at malawakang ginamit na may 21, hindi ang ibang bersiyon. Sa iba't ibang kadahilanan, hindi natin sinusubok ni sinusuportahan man ang ibang bersiyon ng Java .
+    ERDDAP™ ay sinubok at malawakang ginamit sa 25, hindi sa ibang bersiyon. Sa iba't ibang kadahilanan, hindi natin sinusubok ni sinusuportahan man ang ibang bersiyon ng Java .
      
 ## Tomcat{#tomcat} 
 
@@ -52,7 +52,7 @@ Maaari mong gamitin ang iba Java Tagapagsilbi (e.g., Jetty) , ngunit sinusubok l
 
    * I-download Tomcat at i-track ito sa iyong server o PC.
 Para sa mga kadahilanang panseguridad, halos laging pinakamabuting gamitin ang pinakabagong bersiyon ng Tomcat 10 (bersyon 9 at sa ibaba ay hindi tanggap) 
-na dinisenyo upang gumawang kasama ng Java 21 o mas bago. Sa ibaba, ang Tomcat directory ay tatawaging `tomcat` .
+na dinisenyo upang gumawang kasama ng Java 25 o mas bago. Sa ibaba, ang Tomcat directory ay tatawaging `tomcat` .
 
 _Warning&#33;____ Kung mayroon ka nang Tomcat na nagpapatakbo ng iba pang aplikasyon sa web (lalo nang MGA THEDD) , inirerekomenda namin na maglagay kayo ERDDAP™ sa loob
       [ikalawang Tomcat](/docs/server-admin/additional-information#second-tomcat) , dahil ERDDAP™ kailangan ng iba't ibang Tomcat setting
@@ -150,7 +150,7 @@ Itakda ang Kaibahang Kapaligiran ni Tomcat
 Gumawa ng talaksan `tomcat/bin/setenv.sh`   (o sa Red Hat Enterprise Linux \\[ RHEL \\] , edit `~tomcat/conf/tomcat10.conff` ) na magpabago sa kapaligiran ni Tomcat.
 Ang talaksang ito ay gagamitin ng `tomcat/bin/startup.sh` at `Pagkasiphayo. sh` . Ang talaksan ay dapat na naglalaman ng gaya ng:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Gumawa ng talaksan `tomcat\bin\\setenv.bat` na magpabago sa kapaligiran ni Tomca
 Ang talaksang ito ay gagamitin ng `tomcat\bin\\startup.bat` at ` shutdown.bat ` .
 Ang talaksan ay dapat na naglalaman ng gaya ng:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ Tandaan: kung/kapag nag-upgrade ka mamaya sa mas bagong bersyon ng Java , kailan
 * Subukin ang iyong instalasyon ng Tomcat.
   * Linux:
     * Bilang gumagamit ng "tomcat", tumakbo `tomcat/bin/startup.sh` .
-    * Tingnan ang iyong URL + ":8080/" sa iyong browser (e.g., [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Tingnan ang iyong URL + ":8080/" sa iyong browser (e.g., [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac (ay tumatakbo upang maging ang tagapangasiwa ng sistema) :
     * Takbo `tomcat/bin/startup.sh` .
-    * Tingnan ang iyong URL + ":8080/" sa iyong browser (e.g., [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Tingnan ang iyong URL + ":8080/" sa iyong browser (e.g., [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Pansinin na sa hindi pagtupad, ang iyong Tomcat ay mararating mo lamang. Hindi ito maaaring puntahan ng publiko.
   * Windows localhost:
     * Hango sa Tomcat icon sa system tray, at pumili ng "Start service".
-    * Pangmalas [http://127.0.0.1:8080/](http://127.0.0.1:8080/) , o marahil [http://localhost:8080/](http://localhost:8080/) , sa iyong browser. Pansinin na sa hindi pagtupad, ang iyong Tomcat ay mararating mo lamang. Hindi ito maaaring puntahan ng publiko.
+    * Pangmalas [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) , o marahil [ http://localhost:8080/ ](http://localhost:8080/) , sa iyong browser. Pansinin na sa hindi pagtupad, ang iyong Tomcat ay mararating mo lamang. Hindi ito maaaring puntahan ng publiko.
 
 Dapat mong tingnan ang Tomcat "Criise" page.
 
@@ -455,7 +455,8 @@ Maaaring kumuha ng isa o dalawang minuto para rito ERDDAP™ upang lubusang mags
 
 ## Ay ERDDAP™ tumatakbo?{#is-erddap-running} 
 
-Gumamit ng browser para makitahttp://www.YourServer.org/erddap/status.html.
+Gumamit ng browser para makita http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ ay nagsisimula nang walang anumang datasets na nakakarga. Nakakarga ang mga Data sa isang sinulid sa likuran kaya't nagiging makukuhang one-by-one.
 
 ### Pagputok ng Problema{#troubleshooting} 
@@ -522,4 +523,5 @@ sa loob ` datasets.xml ` at ayusin ito.) Halimbawa, maaari mong sabihin:
   * Ilarawan kung ano ang ginagawa ng iyong organisasyon at/o grupo.
   * Ilarawan kung anong uri ng datos ito ERDDAP™ na ngayon.
   * Upang baguhin ang larawan na lumilitaw sa mga buslo, ilagay ang favicon ng inyong organisasyon. Ico sa `tomcat/content/erddap/images/images/` .
-Tingnanhttps://en.wikipedia.org/wiki/Favicon.
+Tingnan https://en.wikipedia.org/wiki/Favicon.
+ 

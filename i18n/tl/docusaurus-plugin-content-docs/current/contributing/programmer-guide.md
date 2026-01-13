@@ -52,7 +52,7 @@ Mula Noon ERDDAP™ ay pangunahin nang nilayon upang maging isang servlet na tum
 
   - Gumagamit kami ng talaksan na nag - aalis ng lahat ng .class files sa punong pinagmulan upang matiyak na mayroon kaming malinis na koleksiyon (kasama ng javac) .
 
-  - Kasalukuyan naming ginagamit ang javac jdk-21.0.3+9 upang tipunin ang gov.noaa.pfeg.coastwatch.Test All (ito ay may mga link sa ilang klase na hindi iipon kung hindi) at tapusin ang mga pagsubok. Para sa seguridad, halos laging pinakamabuting gamitin ang pinakabagong mga bersiyon ng Java 21 at Tomcat 10.
+  - Kasalukuyan naming ginagamit ang javac jdk-25.0.1+8 upang tipunin ang gov.noaa.pfeg.coastwatch.Test All (ito ay may mga link sa ilang klase na hindi iipon kung hindi) at tapusin ang mga pagsubok. Para sa seguridad, halos laging pinakamabuting gamitin ang pinakabagong mga bersiyon ng Java 25 at Tomcat 10.
 
     - Kapag nagpapatakbo tayo ng javac o java, ang kasalukuyang directory ay _tomcat_/webapps/erddap/WEB-INF .
 
@@ -68,7 +68,7 @@ Mula Noon ERDDAP™ ay pangunahin nang nilayon upang maging isang servlet na tum
 
     - Kung Subukin Lahat ay nagtitipon, lahat ay ERDDAP™ ang mga pangangailangan. May ilang klase na hindi naman kailangan para sa ERDDAP™ . Kung ang Pagtitipon ng Test All ay magtatagumpay ngunit hindi nakatipon ng ilang klase, ang klaseng iyon ay hindi na kailangan. (May ilang mga hindi tapos/unusadong klase.) 
 
-  - Sa ilang kaso, gumagamit kami ng 3rd party source code sa halip na .jar files (Partikular na para sa DODS ) at bahagyang binago ang mga ito upang maiwasan ang mga problema sa pagtitipon Java 21. (Partikular na sa DODS ) sa iba pang mga dahilan.
+  - Sa ilang kaso, gumagamit kami ng 3rd party source code sa halip na .jar files (Partikular na para sa DODS ) at bahagyang binago ang mga ito upang maiwasan ang mga problema sa pagtitipon Java 25. (Partikular na sa DODS ) sa iba pang mga dahilan.
 
   - Karamihan sa mga klase ay may mga paraan ng pagsubok sa kanilang kaugnay na talaksang src/test. Maaari mong patakbuhin ang JUnit tests sa pamamagitan ng `mvn test` Iutos. Ito ay mag-download ng ilang mga talaksan ng zip ng datos na ang mga pagsubok ay umaasa mula sa pinakabagong release ng [ ERDDAP /erddap Pagsubok](https://github.com/ERDDAP/erddapTest/releases/) .\\
      

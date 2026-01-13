@@ -52,7 +52,7 @@ Siden ERDDAP™ er hovedsakelig ment å være en server som kjører i Tomcat, an
 
   - Vi bruker en batchfil som sletter alle .class-filer i kildetreet for å sikre at vi har en ren kompilering (med javac) ..
 
-  - Vi bruker for tiden Adoptiums javac jdk-21.0.3+9 til å samle gov.noaa.pfeg.coastwatch.TestAll (den har koblinger til noen klasser som ikke vil bli kompilert ellers) Kjør testene. Av sikkerhetsgrunner er det nesten alltid best å bruke de siste versjonene av Java 21 og Tomcat 10.
+  - Vi bruker for tiden Adoptiums javac jdk-25.0.1+8 til å kompilere gov.noaa.pfeg.coastwatch.TestAll (den har koblinger til noen klasser som ikke vil bli kompilert ellers) Kjør testene. Av sikkerhetsgrunner er det nesten alltid best å bruke de siste versjonene av Java 25 og Tomcat 10.
 
     - Når vi kjører javac eller java, er den gjeldende katalogen _tomcat_/webapps/erddap/WEB-INF .
 
@@ -68,7 +68,7 @@ Siden ERDDAP™ er hovedsakelig ment å være en server som kjører i Tomcat, an
 
     - Hvis test Alle kompileringer, alt ERDDAP™ Det er samlet behov. Noen få klasser er samlet som ikke er nødvendig for ERDDAP™ .. Hvis det lykkes å utarbeide TestAll, men ikke kompilere noen klasse, er den klassen ikke nødvendig. (Det er noen uferdige/ubrukte klasser.) 
 
-  - I noen tilfeller bruker vi 3rd party kildekode i stedet for .jar filer (særlig for DODS ) og har endret dem litt for å unngå problemer å samle sammen med Java 21. Vi har ofte gjort andre små endringer (spesielt til DODS ) av andre grunner.
+  - I noen tilfeller bruker vi 3rd party kildekode i stedet for .jar filer (særlig for DODS ) og har endret dem litt for å unngå problemer å samle sammen med Java 25. Vi har ofte gjort andre små endringer (spesielt til DODS ) av andre grunner.
 
   - De fleste klasser har testmetoder i sin tilhørende src/testfil. Du kan kjøre JUnit-testene med `mvn-test` kommando. Dette vil laste ned flere zip-filer av data som testene er avhengig av fra den siste utgivelsen av [ ERDDAP /erddap Test](https://github.com/ERDDAP/erddapTest/releases/) .\\
      

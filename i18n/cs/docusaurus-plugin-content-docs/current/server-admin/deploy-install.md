@@ -29,18 +29,18 @@ zejména: ERDDAP™ nemusí být schopen rychle smazat a/nebo přejmenovat soubo
 
 ##  Java  {#java} 
 
-1.  [Pro ERDDAP™ v2.19+, nastaveno Java 21.](#java) 
-Z bezpečnostních důvodů je téměř vždy nejlepší použít nejnovější verzi Java 21.
+1.  [Pro ERDDAP™ v2.29.0+, nastaveno Java 25.](#java) 
+Z bezpečnostních důvodů je téměř vždy nejlepší použít nejnovější verzi Java 25.
 Stáhnout a nainstalovat nejnovější verzi
-    [Adoptium OpenJDK (Temurin) 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
+    [Adoptium OpenJDK (Temurin) 25 (LTS) ](https://adoptium.net/temurin/releases/?version=25) .
 Pro ověření instalace spusťte `/javaJreBinDirectory/java -verze` , například
-    `/usr/local/jdk-21.0.3+9/jre/bin/java -verze` .
+    `/usr/local/jdk-25.0.1+8/jre/bin/java -verze` .
 
     ERDDAP™ spolupracuje s Java z jiných zdrojů, ale doporučujeme Adoptium, protože je to hlavní, komunitně podporované,
-volný (jako pivo a řeč) verze Java 21, která nabízí dlouhodobou podporu (bezplatné upgrady pro mnoho let po počáteční vydání) .
-Z bezpečnostních důvodů, prosím aktualizujte ERDDAP 's verzí Java pravidelně jako nové verze Java 21 bude k dispozici z Adoptia.
+volný (jako pivo a řeč) verze Java 25, která nabízí dlouhodobou podporu (bezplatné upgrady pro mnoho let po počáteční vydání) .
+Z bezpečnostních důvodů, prosím aktualizujte ERDDAP 's verzí Java pravidelně jako nové verze Java 25 bude k dispozici z Adoptia.
 
-    ERDDAP™ byl testován a používán rozsáhle s 21, nikoli s jinými verzemi. Z různých důvodů netestujeme s jinými verzemi Java .
+    ERDDAP™ byl testován a používán rozsáhle s 25, nikoli s jinými verzemi. Z různých důvodů netestujeme s jinými verzemi Java .
      
 ## Tomcat{#tomcat} 
 
@@ -52,7 +52,7 @@ Můžeš použít jiný. Java Aplikační server (např. Jetty) Ale testujeme je
 
    * Stáhněte si Tomcat a vybalte ho na server nebo PC.
 Z bezpečnostních důvodů je téměř vždy nejlepší použít nejnovější verzi Tomcat 10 (Verze 9 a níže nejsou přijatelné) 
-která je určena pro práci s Java 21 nebo novější. Níže bude adresář Tomcat označován jako `tomcat` .
+která je určena pro práci s Java 25 nebo novější. Níže bude adresář Tomcat označován jako `tomcat` .
 
 __ Varování&#33;_ Pokud již máte Tomcat spuštěnou jinou webovou aplikaci (zejména THREDDS) , Doporučujeme vám nainstalovat ERDDAP™ v
       [druhý Tomcat](/docs/server-admin/additional-information#second-tomcat) , protože ERDDAP™ potřebuje různé nastavení Tomcat
@@ -150,7 +150,7 @@ Nastavit proměnné prostředí Tomcat
 Vytvořit soubor `Tomcat/bin/setenv.sh`   (nebo v Red Hat Enterprise Linux \\[ RHEL \\] , upravit `~tomcat/conf/tomcat10.conf` ) nastavit Tomcatovy proměnné prostředí.
 Tento soubor bude použit `tomcat/bin/startup.sh` a `Vypnout. s` . Soubor by měl obsahovat něco jako:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Vytvořit soubor `Tomcat\bin\\setenv.bat` nastavit Tomcatovy proměnné prostře
 Tento soubor bude použit `Tomcat\bin\\ startup.bat` a ` shutdown.bat ` .
 Soubor by měl obsahovat něco jako:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ Pamatujte: pokud/když později upgrade na novější verzi Java , musíte reins
 * Otestujte si instalaci Tomcat.
   * Linux:
     * Jako uživatel "tomcat," spustit `tomcat/bin/startup.sh` .
-    * Zobrazit své URL + ":8080/" ve svém prohlížeči (např. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Zobrazit své URL + ":8080/" ve svém prohlížeči (např. [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac (spustit tomcat jako uživatel správce systému) :
     * Utíkej. `tomcat/bin/startup.sh` .
-    * Zobrazit své URL + ":8080/" ve svém prohlížeči (např. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Zobrazit své URL + ":8080/" ve svém prohlížeči (např. [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Všimněte si, že ve výchozím nastavení je váš Tomcat přístupný pouze vámi. Není veřejně přístupná.
   * Localhost Windows:
     * Klikněte pravým tlačítkem na ikonu Tomcat v systémové podnose a vyberte "Spustit službu."
-    * Pohled [http://127.0.0.1:8080/](http://127.0.0.1:8080/) nebo snad [http://localhost:8080/](http://localhost:8080/) Ve vašem prohlížeči. Všimněte si, že ve výchozím nastavení je váš Tomcat přístupný pouze vámi. Není veřejně přístupná.
+    * Pohled [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) nebo snad [ http://localhost:8080/ ](http://localhost:8080/) Ve vašem prohlížeči. Všimněte si, že ve výchozím nastavení je váš Tomcat přístupný pouze vámi. Není veřejně přístupná.
 
 Měli byste vidět stránku Tomcat "Gratulujeme."
 
@@ -455,7 +455,8 @@ To může trvat minutu nebo dvě pro ERDDAP™ úplně vypnuto. Buď trpělivý.
 
 ## Je ERDDAP™ Běhat?{#is-erddap-running} 
 
-Pro zobrazení použijte prohlížečhttp://www.YourServer.org/erddap/status.html.
+Pro zobrazení použijte prohlížeč http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ Začíná bez načtení dat. Datasety jsou načteny v podkladovém vlákně, takže jsou dostupné jedno po druhém.
 
 ### Řešení problémů{#troubleshooting} 
@@ -522,4 +523,5 @@ do ` datasets.xml ` a upravit.) Například byste mohli:
   * Popište, co vaše organizace a/nebo skupina dělá.
   * Popište jaká data to jsou. ERDDAP™ Ano.
   * Chcete-li změnit ikonu, která se objeví na záložce prohlížeče, vložte do vaší organizace favicon. ico in `Tomcat/content/erddap/images/` .
-Vizhttps://en.wikipedia.org/wiki/Favicon.
+Viz https://en.wikipedia.org/wiki/Favicon.
+ 

@@ -52,7 +52,7 @@ Visszatér egy EDDTable vagy EDDGrid adatkészlet. Tekintettel erre az esetre, h
 
   - Olyan tételfájlt használunk, amely törli az összes .class fájlt a forrásfa-ban, hogy biztosítsuk, hogy tiszta kompile (javac) ...
 
-  - Jelenleg az Adoptium javac jdk-21.0.3+9-et használjuk a gov.noaa.pfeg.coastwatch.TestAll számára (néhány osztályhoz kapcsolódik, amelyek egyébként nem fognak összeállítani) és futtassa a teszteket. Biztonsági okokból szinte mindig a legjobb, ha a legújabb verziókat használja Java 21 és Tomcat 10.
+  - Jelenleg az Adoptium javac jdk-25.0.1+8-at használjuk a gov.noaa.pfeg.coastwatch.TestAll számára (néhány osztályhoz kapcsolódik, amelyek egyébként nem fognak összeállítani) és futtassa a teszteket. Biztonsági okokból szinte mindig a legjobb, ha a legújabb verziókat használja Java 25 és Tomcat 10.
 
     - Amikor javac-ot vagy javát futtatjuk, a jelenlegi könyvtár _tomcat_/webapps/erddap/WEB-INF.
 
@@ -68,7 +68,7 @@ Visszatér egy EDDTable vagy EDDGrid adatkészlet. Tekintettel erre az esetre, h
 
     - Ha teszt Minden összetétel, minden ERDDAP™ Az igényeket összeállították. Néhány osztályt összeállítanak, amelyek nem szükségesek ERDDAP™ ... Ha a TestAll összeállítása sikerrel jár, de nem képes egyes osztályokat összeállítani, akkor az osztály nem szükséges. (Vannak befejezetlen / nem használt osztályok.) 
 
-  - Néhány esetben a .jar fájlok helyett a 3. fél forráskódot használjuk. (különösen DODS ) és kissé módosította őket, hogy elkerüljék a problémákat, amelyek összefüggnek Java 21. Gyakran tettünk más enyhe módosításokat (nevezetesen DODS ) egyéb okokból.
+  - Néhány esetben a .jar fájlok helyett a 3. fél forráskódot használjuk. (különösen DODS ) és kissé módosította őket, hogy elkerüljék a problémákat, amelyek összefüggnek Java 25. Gyakran tettünk más enyhe módosításokat (nevezetesen DODS ) egyéb okokból.
 
   - A legtöbb osztálynak van tesztmódja a kapcsolódó src/test fájlban. Futtathatja a JUnit teszteket a `mvn teszt` parancs. Ez több zip adatfájlot letölt, amelyeket a tesztek a legújabb kiadástól támaszkodnak [ ERDDAP /erddap Test](https://github.com/ERDDAP/erddapTest/releases/) .
      

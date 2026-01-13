@@ -29,18 +29,18 @@ sidebar_position: 1
 
 ##  Java  {#java} 
 
-1.  [对于 ERDDAP™ v2.19+,设置. Java 21岁](#java) 
-出于安全考虑,几乎总是最好使用最新版本的 Java 21岁
+1.  [对于 ERDDAP™ v2.29.0+, 设置 Java 25号.](#java) 
+出于安全考虑,几乎总是最好使用最新版本的 Java 25号.
 请下载并安装最新版本
-    [收养的 OpenJDK (特穆林语Name) 页:1 (长期) ](https://adoptium.net/temurin/releases/?version=21) 。 。 。 。
+    [收养的 OpenJDK (特穆林语Name) 第25条 (长期) ](https://adoptium.net/temurin/releases/?version=25) 。 。 。 。
 为验证安装, 运行 `贾瓦·杰里宾 导演/贾瓦 - 转换` ,例如,
-    `/usr/当地/jdk-21.0.3+9/jre/bin/java - 转换` 。 。 。 。
+    `/usr/当地/jdk-25.0.1+8/jre/bin/java - 转换` 。 。 。 。
 
     ERDDAP™ 与 Java 我们建议领养,因为它是社区支持的主体
-免费 (如啤酒和演讲) 版本 Java 21个提供长期支助的国家 (初版后多年免费升级) 。 。 。 。
-出于安全考虑,请更新您 ERDDAP 其版本为 Java 定期作为新版本 Java 21从领养处获得。
+免费 (如啤酒和演讲) 版本 Java 25个提供长期支助的机构 (初版后多年免费升级) 。 。 。 。
+出于安全考虑,请更新您 ERDDAP 其版本为 Java 定期作为新版本 Java 25 可以从收养院获得。
 
-    ERDDAP™ 已经与21个版本而不是其他版本进行了广泛测试和使用。 出于各种原因,我们不测试也不支持其他版本的 Java 。 。 。 。
+    ERDDAP™ 测试和广泛使用了25个版本,而不是其他版本。 出于各种原因,我们不测试也不支持其他版本的 Java 。 。 。 。
      
 ## 汤姆猫{#tomcat} 
 
@@ -52,7 +52,7 @@ sidebar_position: 1
 
    * 下载Tomcat并在您的服务器或个人电脑上打开它。
 出于安全考虑,几乎总是最好使用最新版本的Tomcat 10 (无法接受第9版及以下) 
-旨在与 Java 21岁或更新. 下面,Tomcat目录将称为 `移动猫` 。 。 。 。
+旨在与 Java 25岁或更年轻。 下面,Tomcat目录将称为 `移动猫` 。 。 。 。
 
 警告 警告 警告 警告 警告 如果您已经有一个 Tomcat 运行一些其他的网络应用程序 (特别是热带木材) 我们建议你安装 ERDDAP™ 输入
       [第二个汤姆猫](/docs/server-admin/additional-information#second-tomcat) ,因为 ERDDAP™ 需要不同的Tomcat设置
@@ -150,7 +150,7 @@ sidebar_position: 1
 创建文件 `Tomcat/bin/setenv.sh (中文(简体) ).`   (或红帽企业 Linux \\[ 莱尔 \\] 编辑 `~tomcat/conf/tomcat10.conf` ) 设置Tomcat的环境变量。
 此文件将由 `Tomcat/bin/启动.sh` 和 `关闭。 嘘` 。 。 。 文件应该包含类似的东西:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ sidebar_position: 1
 此文件将由 `Tomcat\bin\\启动.bat` 和 ` shutdown.bat ` 。 。 。 。
 文件应该包含类似的东西:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ sidebar_position: 1
 * 测试你的Tomcat安装。
   * 林纳:
     * 作为用户"tomcat",运行 `Tomcat/bin/启动.sh` 。 。 。 。
-    * 在浏览器中查看您的 URL + ": 8080/" (例如, [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) 。 。 。 。
+    * 在浏览器中查看您的 URL + ": 8080/" (例如, [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) 。 。 。 。
   * 麦克 (作为系统管理员用户运行 tomcat) 数字 :
     * 运行 `Tomcat/bin/启动.sh` 。 。 。 。
-    * 在浏览器中查看您的 URL + ": 8080/" (例如, [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) 。 。 。 。
+    * 在浏览器中查看您的 URL + ": 8080/" (例如, [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) 。 。 。 。
 请注意,默认情况下,你的Tomcat只有你才能访问. 它不向公众开放。
   * 视窗本地主机 :
     * 右键点击系统托盘中的Tomcat图标,并选择"Start service".
-    * 视图 [http://127.0.0.1:8080/](http://127.0.0.1:8080/) ,或者也许 [http://localhost:8080/](http://localhost:8080/) 在您的浏览器中。 请注意,默认情况下,你的Tomcat只有你才能访问. 它不向公众开放。
+    * 视图 [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) ,或者也许 [ http://localhost:8080/ ](http://localhost:8080/) 在您的浏览器中。 请注意,默认情况下,你的Tomcat只有你才能访问. 它不向公众开放。
 
 你应该看看Tomcat"恭喜"的一页
 
@@ -455,7 +455,8 @@ proxy_set_header X-Forwarded-Prefix /subpath
 
 ## 已经 ERDDAP™ 运行?{#is-erddap-running} 
 
-使用浏览器尝试查看http://www.YourServer.org/erddap/status.html.
+使用浏览器尝试查看 http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ 启动时没有装入任何数据集。 数据集被装入一个背景线条,因此可以逐一使用.
 
 ### 解决问题{#troubleshooting} 
@@ -522,4 +523,5 @@ Tomcat在第一次申请的时候必须做很多工作 ERDDAP™ - 特别是它�
   * 描述你的组织和/或团体的工作。
   * 描述这种数据类型 ERDDAP™ 对
   * 要更改浏览器标签上出现的图标, 请将您的组织的favicon 。 进入 `Tomcat/内容/erddap/图像/` 。 。 。 。
-见https://en.wikipedia.org/wiki/Favicon.
+见 https://en.wikipedia.org/wiki/Favicon.
+ 

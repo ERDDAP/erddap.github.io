@@ -29,18 +29,18 @@ ERDDAP™ has been tested on Linux (including on Amazon's AWS), Mac, and Windows
 
 ## Java {#java}
 
-1. [For ERDDAP™ v2.19+, set up Java 21.](#java)
-   For security reasons, it is almost always best to use the latest version of Java 21.
+1. [For ERDDAP™ v2.29.0+, set up Java 25.](#java)
+   For security reasons, it is almost always best to use the latest version of Java 25.
    Please download and install the latest version of
-   [Adoptium's OpenJDK (Temurin) 21 (LTS)](https://adoptium.net/temurin/releases/?version=21).
+   [Adoptium's OpenJDK (Temurin) 25 (LTS)](https://adoptium.net/temurin/releases/?version=25).
    To verify the installation, run `/javaJreBinDirectory/java -version`, for example
-   `/usr/local/jdk-21.0.3+9/jre/bin/java -version`.
+   `/usr/local/jdk-25.0.1+8/jre/bin/java -version`.
 
    ERDDAP™ works with Java from other sources, but we recommend Adoptium because it is the main, community-supported,
-   free (as in beer and speech) version of Java 21 that offers Long Term Support (free upgrades for many years past the initial release).
-   For security reasons, please update your ERDDAP's version of Java periodically as new versions of Java 21 become available from Adoptium.
+   free (as in beer and speech) version of Java 25 that offers Long Term Support (free upgrades for many years past the initial release).
+   For security reasons, please update your ERDDAP's version of Java periodically as new versions of Java 25 become available from Adoptium.
 
-   ERDDAP™ has been tested and used extensively with 21, not other versions. For various reasons, we don't test with nor support other versions of Java.
+   ERDDAP™ has been tested and used extensively with 25, not other versions. For various reasons, we don't test with nor support other versions of Java.
      
 ## Tomcat {#tomcat}
 
@@ -52,7 +52,7 @@ ERDDAP™ has been tested on Linux (including on Amazon's AWS), Mac, and Windows
 
    * Download Tomcat and unpack it on your server or PC.
      For security reasons, it is almost always best to use the latest version of Tomcat 10 (version 9 and below are not acceptable)
-     which is designed to work with Java 21 or newer. Below, the Tomcat directory will be referred to as `tomcat`.
+     which is designed to work with Java 25 or newer. Below, the Tomcat directory will be referred to as `tomcat`.
 
      __Warning!__ If you already have a Tomcat running some other web application (especially THREDDS), we recommend that you install ERDDAP™ in
      [a second Tomcat](/docs/server-admin/additional-information#second-tomcat), because ERDDAP™ needs different Tomcat settings
@@ -150,7 +150,7 @@ Set Tomcat's Environment Variables
   Create a file `tomcat/bin/setenv.sh` (or in Red Hat Enterprise Linux \[RHEL\], edit `~tomcat/conf/tomcat10.conf`) to set Tomcat's environment variables.
   This file will be used by `tomcat/bin/startup.sh` and `shutdown.sh`. The file should contain something like:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Set Tomcat's Environment Variables
   This file will be used by `tomcat\bin\startup.bat` and `shutdown.bat`.
   The file should contain something like:
   ```
-  SET "JAVA_HOME=\someDirectory\jdk-21.0.3+9"
+  SET "JAVA_HOME=\someDirectory\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\Program Files\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\Program Files\apache-tomcat-10.0.23"

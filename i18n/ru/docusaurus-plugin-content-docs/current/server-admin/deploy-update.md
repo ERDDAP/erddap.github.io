@@ -8,7 +8,7 @@ sidebar_position: 2
 1. Внесите изменения, перечисленные в [Изменения](/changes) в разделе, озаглавленном "Вещи ERDDAP™ Администраторы должны знать и делать для всех ERDDAP™ Версия, которую вы использовали.
      
 ##  Java  {#java} 
-2. Если вы совершенствуетесь от ERDDAP™ Версия 2.18 или ниже, вы должны перейти на Java 21 (или новый) Похожие игры Tomcat 10 Смотрите регулярные ERDDAP™ Инструкции по установке для [ Java ](/docs/server-admin/deploy-install#java) и [Томкат](/docs/server-admin/deploy-install#tomcat) . Вам также придется скопировать _tomcat_/content/erddap От старой установки Tomcat до новой установки Tomcat.
+2. Если вы совершенствуетесь от ERDDAP™ Версия 2.18 или ниже, вы должны перейти на Java 25 (или новый) Похожие игры Tomcat 10 Смотрите регулярные ERDDAP™ Инструкции по установке для [ Java ](/docs/server-admin/deploy-install#java) и [Томкат](/docs/server-admin/deploy-install#tomcat) . Вам также придется скопировать _tomcat_/content/erddap От старой установки Tomcat до новой установки Tomcat.
 
 ## скачать{#download} 
 3. скачать [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) _tomcat_/webapps.

@@ -52,7 +52,7 @@ cliceáil grianghraf a mhéadú XLUMX (Teaghrán SOLAS t-ádh)
 
   - Bainimid úsáid as comhad bhaisc a scriosadh gach ceann de na. comhaid rang sa chrann foinse chun a chinntiú go bhfuil muid ar compile glan (le javac) .
 
-  - Táimid ag úsáid faoi láthair javac Adoptium ar jdk-21.0.3+9 a thiomsú gov.noaaa.pfeg.coastwatch.TestAll (tá sé naisc le roinnt ranganna nach mbeadh a thiomsú ar shlí eile) agus a reáchtáil na tástálacha. Ar chúiseanna slándála, tá sé beagnach i gcónaí is fearr a bhaint as na leaganacha is déanaí de Java 21 agus Tomcat 10.
+  - Táimid ag úsáid faoi láthair javac Adoptium ar jdk-25.0.1+8 a thiomsú gov.noaaa.pfeg.coastwatch.TestAll (tá sé naisc le roinnt ranganna nach mbeadh a thiomsú ar shlí eile) agus a reáchtáil na tástálacha. Ar chúiseanna slándála, tá sé beagnach i gcónaí is fearr a bhaint as na leaganacha is déanaí de Java 25 agus Tomcat 10.
 
     - Nuair a reáchtáil muid javac nó java, Is é an t-eolaire atá ann faoi láthair _tomcat_/webapps / erddap / WEB-INF.
 
@@ -68,7 +68,7 @@ cliceáil grianghraf a mhéadú XLUMX (Teaghrán SOLAS t-ádh)
 
     - Má tástáil Gach compiles, gach rud ERDDAP™ Tá riachtanais curtha le chéile. Tá roinnt ranganna le chéile nach bhfuil ag teastáil le haghaidh ERDDAP™ . Má éiríonn Tiomsú TestAll ach ní compile roinnt rang, nach bhfuil an rang ag teastáil. (Tá roinnt ranganna neamhchríochnaithe / gan úsáid.) 
 
-  - I roinnt cásanna, úsáidimid 3ú páirtí cód foinse ionad .jar comhaid (go háirithe le haghaidh DODS ) agus tá siad mhodhnú beagán chun fadhbanna a réiteach le Java 21. Is minic a dhéantar modhnuithe beaga eile (go háirithe i DODS ) ar chúiseanna eile.
+  - I roinnt cásanna, úsáidimid 3ú páirtí cód foinse ionad .jar comhaid (go háirithe le haghaidh DODS ) agus tá siad mhodhnú beagán chun fadhbanna a réiteach le Java 25. Táimid tar éis a rinneadh go minic modhnuithe beag eile (go háirithe i DODS ) ar chúiseanna eile.
 
   - Tá an chuid is mó ranganna modhanna tástála ina gcomhad src / tástála a bhaineann leo. Is féidir leat a reáchtáil na tástálacha JUnit leis an `tástáil mvn` ordú. Beidh sé seo íoslódáil roinnt comhaid zip sonraí go bhfuil na tástálacha ag brath ar ó scaoileadh is déanaí [ ERDDAP Seirbhís do Chustaiméirí Tástáil Tástáil](https://github.com/ERDDAP/erddapTest/releases/) .
      

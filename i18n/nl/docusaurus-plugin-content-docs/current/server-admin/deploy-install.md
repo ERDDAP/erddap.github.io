@@ -29,18 +29,18 @@ met name, ERDDAP™ kan bestanden niet snel kunnen verwijderen en/of hernoemen. 
 
 ##  Java  {#java} 
 
-1.  [Voor ERDDAP™ v2.19+, ingesteld Java 21.](#java) 
-Om veiligheidsredenen is het bijna altijd het beste om de nieuwste versie van Java 21.
+1.  [Voor ERDDAP™ v2.29.0+, ingesteld Java 25.](#java) 
+Om veiligheidsredenen is het bijna altijd het beste om de nieuwste versie van Java 25.
 Download en installeer de nieuwste versie van
-    [Adoptium's OpenJDK (Temurin) 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
+    [Adoptium's OpenJDK (Temurin) 25 (LTS) ](https://adoptium.net/temurin/releases/?version=25) .
 Om de installatie te verifiëren, draaien `/javaJreBinDirectory/java -versie` , bijvoorbeeld
-    `/usr/local/jdk-21.3+9/jre/bin/java -versie` .
+    `/usr/local/jdk-25.0.1+8/jre/bin/java -versie` .
 
     ERDDAP™ werkt met Java uit andere bronnen, maar we raden Adopium aan omdat het de belangrijkste, door de gemeenschap gesteunde,
-vrij (zoals in bier en speech) versie van Java 21 biedt langdurige ondersteuning (gratis upgrades voor vele jaren na de eerste release) .
-Om veiligheidsredenen, gelieve uw ERDDAP de versie van Java periodiek als nieuwe versies van Java 21 beschikbaar komen van Adopdium.
+vrij (zoals in bier en speech) versie van Java 25 biedt langdurige ondersteuning (gratis upgrades voor vele jaren na de eerste release) .
+Om veiligheidsredenen, gelieve uw ERDDAP de versie van Java periodiek als nieuwe versies van Java 25 beschikbaar komen van Adopdium.
 
-    ERDDAP™ is getest en uitgebreid gebruikt met 21, niet met andere versies. Om verschillende redenen testen we niet met andere versies van Java .
+    ERDDAP™ is getest en uitgebreid gebruikt met 25, niet met andere versies. Om verschillende redenen testen we niet met andere versies van Java .
      
 ## Tomcat{#tomcat} 
 
@@ -52,7 +52,7 @@ U kunt een andere gebruiken Java Programmaserver (b.v. Jetty) , maar we testen a
 
    * Download Tomcat en uitpakken op uw server of PC.
 Om veiligheidsredenen is het bijna altijd het beste om de nieuwste versie van Tomcat 10 te gebruiken (versie 9 en hieronder zijn niet aanvaardbaar) 
-die is ontworpen om te werken met Java 21 of nieuwer. Hieronder wordt de Tomcat directory aangeduid als `kat` .
+die is ontworpen om te werken met Java 25 of nieuwer. Hieronder wordt de Tomcat directory aangeduid als `kat` .
 
 _Waarschuwing&#33; Als u al een Tomcat met een andere webapplicatie (met name THREDDS) , raden wij u aan te installeren ERDDAP™ in
       [een tweede Tomcat](/docs/server-admin/additional-information#second-tomcat) , omdat ERDDAP™ heeft verschillende Tomcat instellingen nodig
@@ -150,7 +150,7 @@ Omgevingsvariabelen van Tomcat instellen
 Een bestand aanmaken `Tomcat/bin/setenv.sh`   (of in Red Hat Enterprise Linux \\[ RHEL \\] , bewerken `~tomcat/conf/tomcat10.conf` ) Tomcat's omgevingsvariabelen instellen.
 Dit bestand zal worden gebruikt door `Tomcat/bin/startup.sh` en `afsluiten. sh` . Het bestand moet iets bevatten als:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Een bestand aanmaken `tomcat\bin\\setsv.bat` Tomcat's omgevingsvariabelen instel
 Dit bestand zal worden gebruikt door `tomcat\bin\\startup.bat` en ` shutdown.bat ` .
 Het bestand moet iets bevatten als:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ Vergeet niet: als / wanneer u later upgrade naar een nieuwere versie van Java Je
 * Test uw Tomcat installatie.
   * Linux:
     * Als gebruiker "tomcat" uitvoeren `Tomcat/bin/startup.sh` .
-    * Bekijk uw URL + ":8080" in uw browser (bv. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Bekijk uw URL + ":8080" in uw browser (bv. [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac (tomcat uitvoeren als systeembeheerder gebruiker) :
     * Uitvoeren `Tomcat/bin/startup.sh` .
-    * Bekijk uw URL + ":8080" in uw browser (bv. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Bekijk uw URL + ":8080" in uw browser (bv. [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Merk op dat uw Tomcat standaard alleen toegankelijk is voor u. Het is niet openbaar toegankelijk.
   * Windows localhost:
     * Klik met de rechtermuisknop op het Tomcat-pictogram in het systeemvak en kies "Startservice."
-    * Beeld [http://127.0.0.1:8080/](http://127.0.0.1:8080/) , of [http://localhost:8080/](http://localhost:8080/) , in uw browser. Merk op dat uw Tomcat standaard alleen toegankelijk is voor u. Het is niet openbaar toegankelijk.
+    * Beeld [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) , of [ http://localhost:8080/ ](http://localhost:8080/) , in uw browser. Merk op dat uw Tomcat standaard alleen toegankelijk is voor u. Het is niet openbaar toegankelijk.
 
 Je zou de Tomcat "Gefeliciteerd" pagina moeten zien.
 
@@ -455,7 +455,8 @@ Het kan een minuut of twee duren voor ERDDAP™ om volledig te sluiten. Wees ged
 
 ## Is ERDDAP™ Rennen?{#is-erddap-running} 
 
-Gebruik een browser om te proberen te bekijkenhttp://www.YourServer.org/erddap/status.html.
+Gebruik een browser om te proberen te bekijken http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ start zonder datasets geladen. Datasets worden geladen in een achtergrond thread en zo worden beschikbaar een-voor-een.
 
 ### Problemen oplossen{#troubleshooting} 
@@ -522,4 +523,5 @@ in ` datasets.xml ` en bewerken.) Bijvoorbeeld:
   * Beschrijf wat uw organisatie en/of groep doet.
   * Beschrijf welke gegevens dit is ERDDAP™ heeft.
   * Om het pictogram dat verschijnt op de browsertabbladen te wijzigen, zet u de favicon van uw organisatie. ico in `Tomcat/content/erddap/image/` .
-Ziehttps://en.wikipedia.org/wiki/Favicon.
+Zie https://en.wikipedia.org/wiki/Favicon.
+ 

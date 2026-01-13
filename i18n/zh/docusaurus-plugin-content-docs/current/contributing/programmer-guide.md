@@ -52,7 +52,7 @@ sidebar_position: 2
 
   - 我们使用一个批量文件删除源树中所有 . class 文件,以确保我们有一个干净的编译 (带Javac) 。 。 。 。
 
-  - 目前我们使用领养的javac jdk-21.0.3+9来编译gov.noaa.pfeg.coastwatch.Testall. (它有链接到几个类,否则不会编译) 并进行测试。 出于安全考虑,几乎总是最好使用最新的版本。 Java 21和汤姆卡特10。
+  - 目前我们使用领养的javac jdk-25.0.1+8来编译gov.noaa.pfeg.coastwatch.Testall. (它有链接到几个类,否则不会编译) 并进行测试。 出于安全考虑,几乎总是最好使用最新的版本。 Java 25和汤姆卡特10。
 
     - 当运行 javac 或 java 时, 当前目录为 _tomcat_/webapps/erddap/WEB-INF 。
 
@@ -68,7 +68,7 @@ sidebar_position: 2
 
     - 如果测试 所有编译,一切 ERDDAP™ 已经汇编了需求。 几门课是编的 不需要用于 ERDDAP™ 。 。 。 如果编译TestAll成功,但不编译一些类,那类就不需要了. (有一些未完成/未使用的课程。) 
 
-  - 在少数情况下,我们使用第三方源代码而不是.jar文件 (特别针对 DODS ) 并稍作修改,以避免出现与 Java 21. 我们经常作出其他微小修改。 (目标 DODS ) 由于其他原因。
+  - 在少数情况下,我们使用第三方源代码而不是.jar文件 (特别针对 DODS ) 并稍作修改,以避免出现与 Java 25. 我们经常作出其他微小修改。 (目标 DODS ) 由于其他原因。
 
   - 大多数班级在其相关的src/test文件中都有测试方法. 您可以使用 `mvn 测试` 命令。 这将下载从最近发布的测试中依赖的数个数据zip文件 [ ERDDAP /埃尔达普 测试](https://github.com/ERDDAP/erddapTest/releases/) 。 。 。 。 。
      
