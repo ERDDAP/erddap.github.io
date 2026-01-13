@@ -52,7 +52,7 @@ Sinds ERDDAP™ is voornamelijk bedoeld om een servlet lopen in Tomcat, wij rade
 
   - We gebruiken een batch bestand dat alle .class bestanden in de bronboom verwijdert om ervoor te zorgen dat we een schone compilatie hebben (met javac) .
 
-  - Momenteel gebruiken we de javac jdk-21.0.3+9 van Adopium om gov.noaa.pfeg.coastwatch.TestAll te compileren (het heeft links naar een paar klassen die anders niet zouden worden samengesteld) En doe de testen. Om veiligheidsredenen is het bijna altijd het beste om de nieuwste versies van Java 21 en Tomcat 10.
+  - Momenteel gebruiken we de javac jdk-25.0.1+8 van Adopium om gov.noaaa.pfeg.coastwatch.TestAlles te compileren (het heeft links naar een paar klassen die anders niet zouden worden samengesteld) En doe de testen. Om veiligheidsredenen is het bijna altijd het beste om de nieuwste versies van Java 25 en Tomcat 10.
 
     - Wanneer we javac of java uitvoeren, is de huidige map _tomcat_/webapps/erddap/WEB-INF .
 
@@ -68,7 +68,7 @@ Klassen voor java-cp;../../../lib/servlet-apijar;lib/* -Xmx4000M -Xms4000M Klass
 
     - Als test Alle compilaties, alles ERDDAP™ De behoeften zijn samengesteld. Een paar klassen zijn samengesteld die niet nodig zijn voor ERDDAP™ . Als het compileren van TestAll slaagt maar geen klasse compileert, is die klasse niet nodig. (Er zijn een aantal onafgemaakte/ongebruikte klassen.) 
 
-  - In een paar gevallen gebruiken we 3rd party broncode in plaats van .jar bestanden (met name voor DODS ) en hebben ze enigszins gewijzigd om problemen compileren met Java 21. We hebben vaak andere kleine wijzigingen aangebracht (met name DODS ) om andere redenen.
+  - In een paar gevallen gebruiken we 3rd party broncode in plaats van .jar bestanden (met name voor DODS ) en hebben ze enigszins gewijzigd om problemen compileren met Java 25. We hebben vaak andere kleine wijzigingen aangebracht (met name DODS ) om andere redenen.
 
   - De meeste klassen hebben testmethoden in hun bijbehorende src/test bestand. U kunt de JUnit testen uitvoeren met de `mvn-test` Commando. Dit zal downloaden verschillende zip-bestanden van gegevens die de tests vertrouwen op de nieuwste release van [ ERDDAP /erdap Test](https://github.com/ERDDAP/erddapTest/releases/) \\
      

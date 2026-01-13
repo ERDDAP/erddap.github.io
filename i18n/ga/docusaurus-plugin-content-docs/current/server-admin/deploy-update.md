@@ -8,7 +8,7 @@ Conas a dhéanamh Nuashonrú de atá ann cheana ERDDAP™ ar do Freastalaí
 1. Déan na hathruithe atá liostaithe in [Amharc ar gach eolas](/changes) sa roinn dar teideal "Things ERDDAP™ Riarthóirí An riachtanas is gá a fhios agus a dhéanamh" do gach ceann de na ERDDAP™ leaganacha ó na leagan a bhí tú ag baint úsáide as.
      
 ##  Java  {#java} 
-2. Má tá tú ag uasghrádú ó ERDDAP™ leagan 2.18 nó thíos, ní mór duit a athrú go Java 21 Samhain (nó newer) agus Tomcat 10. Féach an rialta ERDDAP™ treoracha a shuiteáil [ Java ](/docs/server-admin/deploy-install#java) agus [cliceáil grianghraf a mhéadú](/docs/server-admin/deploy-install#tomcat) . Beidh ort freisin a chóipeáil do _tomcat_/content/erddap eolaire ó do shuiteáil Tomcat d'aois le do shuiteáil Tomcat nua.
+2. Má tá tú ag uasghrádú ó ERDDAP™ leagan 2.18 nó thíos, ní mór duit a athrú go Java 25 - 25 (nó newer) agus Tomcat 10. Féach an rialta ERDDAP™ treoracha a shuiteáil [ Java ](/docs/server-admin/deploy-install#java) agus [cliceáil grianghraf a mhéadú](/docs/server-admin/deploy-install#tomcat) . Beidh ort freisin a chóipeáil do _tomcat_/content/erddap eolaire ó do shuiteáil Tomcat d'aois le do shuiteáil Tomcat nua.
 
 ## Íoslódáil{#download} 
 3. Íoslódáil [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) isteach _ síos / iarratais.

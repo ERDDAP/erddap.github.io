@@ -52,7 +52,7 @@ Desde ERDDAP™ está destinado principalmente a ser un servlet corriendo en Tom
 
   - Utilizamos un archivo de lotes que elimina todos los archivos de clase . en el árbol fuente para asegurar que tenemos una compilación limpia (con javac) .
 
-  - Actualmente utilizamos el javac jdk-21.0.3+9 de Adoptium para compilar gov.noaa.pfeg.coastwatch.TestAll (tiene enlaces a algunas clases que no se compilan de otra manera) y hacer las pruebas. Por razones de seguridad, es casi siempre mejor utilizar las últimas versiones de Java 21 y Tomcat 10.
+  - Actualmente utilizamos el javac jdk-25.0.1+8 de Adoptium para compilar gov.noaa.pfeg.coastwatch.TestAll (tiene enlaces a algunas clases que no se compilan de otra manera) y hacer las pruebas. Por razones de seguridad, es casi siempre mejor utilizar las últimas versiones de Java 25 y Tomcat 10.
 
     - Cuando ejecutamos javac o java, el directorio actual es _tomcat_/webapps/erddap/WEB-INF .
 
@@ -68,7 +68,7 @@ Desde ERDDAP™ está destinado principalmente a ser un servlet corriendo en Tom
 
     - Si prueba Todo compila, todo ERDDAP™ se han recopilado las necesidades. Algunas clases son compiladas que no son necesarias para ERDDAP™ . Si compilar TestAll tiene éxito pero no compila alguna clase, esa clase no es necesaria. (Hay algunas clases inacabadas o no utilizadas.) 
 
-  - En algunos casos, utilizamos código fuente de terceros en lugar de archivos .jar (en particular DODS ) y los han modificado ligeramente para evitar problemas compilando con Java 21. A menudo hemos hecho otras pequeñas modificaciones (en particular DODS ) por otras razones.
+  - En algunos casos, utilizamos código fuente de terceros en lugar de archivos .jar (en particular DODS ) y los han modificado ligeramente para evitar problemas compilando con Java 25. A menudo hemos hecho otras pequeñas modificaciones (en particular DODS ) por otras razones.
 
   - La mayoría de las clases tienen métodos de prueba en su archivo src/test asociado. Usted puede ejecutar las pruebas JUnit con el `prueba mvn` Comando. Esto descargará varios archivos zip de datos que las pruebas se basan en la última versión de [ ERDDAP /erddap Prueba](https://github.com/ERDDAP/erddapTest/releases/) .
      

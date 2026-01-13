@@ -29,18 +29,18 @@ Ancak bunu halk için kullanmayı önermiyoruz ERDDAP™ Dağıtımlar. Koşu Ko
 
 ##  Java  {#java} 
 
-1.  [For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For ERDDAP™ v2.19+, yukarı yukarı Java 21.](#java) 
-Güvenlik nedenleri için, neredeyse her zaman en son sürümünü kullanmak en iyisidir Java 21.
+1.  [For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For For ERDDAP™ v2.29.0+, set up Java 25.](#java) 
+Güvenlik nedenleri için, neredeyse her zaman en son sürümünü kullanmak en iyisidir Java 25.
 Lütfen indirmek ve en son sürümü yüklemek
-    [Kabulium'un AçıkJDK (Temin) 21 21 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
+    [Kabulium'un AçıkJDK (Temin) 25 (LTS) ](https://adoptium.net/temurin/releases/?version=25) .
 Yüklemeyi doğrulamak için, koşmak `/javaJreBin Yönetmeni /java -` Örneğin,
-    `/usr/local/jdk-21.0.3+9/jre/bin/javavava -` .
+    `/usr/local/jdk-25.0.1+8/jre/bin/javavava -` .
 
     ERDDAP™ İşlerle birlikte çalışır Java Diğer kaynaklardan, ama biz Kabulium'u öneriyoruz çünkü ana, topluluk destekli,
-ücretsiz ücretsiz ücretsiz ücretsiz (Bira ve konuşma olarak) versiyonu Java 21, Long Term Support (Uzun yıllar boyunca ücretsiz yükseltmeler, ilk sürüm) .
-Güvenlik nedenleri için lütfen güncellemenizi ERDDAP 's version of' Java periyodik olarak yeni versiyonları olarak Java 21 Buyium'dan kullanılabilir.
+ücretsiz ücretsiz ücretsiz ücretsiz (Bira ve konuşma olarak) versiyonu Java 25, Long Term Support (Uzun yıllar boyunca ücretsiz yükseltmeler, ilk sürüm) .
+Güvenlik nedenleri için lütfen güncellemenizi ERDDAP 's version of' Java periyodik olarak yeni versiyonları olarak Java 25 Buyium'dan kullanılabilir.
 
-    ERDDAP™ 21 ile yoğun olarak test edildi ve başka versiyonlarla kullanılmadı. Çeşitli nedenlerle, diğer versiyonlarını test etmiyoruz veya diğer sürümlerini desteklemiyoruz Java .
+    ERDDAP™ 25, diğer versiyonlarla yaygın olarak test edildi ve yaygın olarak kullanıldı. Çeşitli nedenlerle, diğer versiyonlarını test etmiyoruz veya diğer sürümlerini desteklemiyoruz Java .
      
 ## Tomcat{#tomcat} 
 
@@ -52,7 +52,7 @@ Başkasını kullanabilirsiniz Java Uygulama Server (E.g., Jetty) Ama sadece Tom
 
    * Tomcat'ı indirin ve sunucunuzda veya PC'de paketlenme.
 Güvenlik nedenleri için, Tomcat 10'un son versiyonunu kullanmak neredeyse her zaman en iyisidir (9 ve aşağıda kabul edilemez) 
-Hangi ile çalışmak için tasarlanmıştır Java 21 veya yeni. Aşağıda, Tomcat rehberi olarak adlandırılacaktır `tomcat` .
+Hangi ile çalışmak için tasarlanmıştır Java 25 veya yeni. Aşağıda, Tomcat rehberi olarak adlandırılacaktır `tomcat` .
 
 __Warning&#33;__ Zaten bir Tomcat başka bir web uygulaması çalıştırıyorsanız (Özellikle THREDDS) , yüklemenizi tavsiye ediyoruz ERDDAP™ in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in in
       [ikinci bir Tomcat](/docs/server-admin/additional-information#second-tomcat) Çünkü ERDDAP™ Farklı Tomcat ayarlarına ihtiyaç vardır
@@ -150,7 +150,7 @@ Set Tomcat'ın Çevre Değişkenleri
 Bir dosya oluşturun `tomcat/bin/setenv.sh`   (veya Red Hat Enterprise Linux'ta \\[ REL \\] , düzenlemek `~tomcat /conf /tomcat10.conf` ) Tomcat'ın çevre değişkenlerini belirlemek.
 Bu dosya tarafından kullanılacak `tomcat/bin/startup.sh` ve `kapatma. sh` . Dosya gibi bir şey içermelidir:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Bir dosya oluşturun `tomcat\bin\\setenv.bat` Tomcat'ın çevre değişkenlerini
 Bu dosya tarafından kullanılacak `tomcat\bin'in başlangıcı.bat` ve ` shutdown.bat ` .
 Dosya gibi bir şey içermelidir:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ Unutmayın: Eğer / daha sonra yeni bir sürüme yükseltdiğinizde Java Bu font
 * Tomcat kurulumunuzu test edin.
   * Linux:
     * Kullanıcı "tomcat" olarak, koşmak `tomcat/bin/startup.sh` .
-    * URL + ":8080 /" tarayıcınızda (E.g., [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * URL + ":8080 /" tarayıcınızda (E.g., [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac Mac Mac (Sistem yöneticisi kullanıcı olarak tomcat çalıştırın) :
     * Run Run Run `tomcat/bin/startup.sh` .
-    * URL + ":8080 /" tarayıcınızda (E.g., [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * URL + ":8080 /" tarayıcınızda (E.g., [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Varsayılan olarak, Tomcatınız sadece sizin tarafınızdan erişilebilir. Açık olarak erişilebilir değildir.
   * Windows yerelhost:
     * Sistem tepsisindeki Tomcat ikonuna doğru tıklayın ve "Start service" seçeneğini seçin.
-    * View View View View [http://127.0.0.1:8080/](http://127.0.0.1:8080/) Ya da belki [http://localhost:8080/](http://localhost:8080/) Tarayıcınızda. Varsayılan olarak, Tomcatınız sadece sizin tarafınızdan erişilebilir. Açık olarak erişilebilir değildir.
+    * View View View View [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) Ya da belki [ http://localhost:8080/ ](http://localhost:8080/) Tarayıcınızda. Varsayılan olarak, Tomcatınız sadece sizin tarafınızdan erişilebilir. Açık olarak erişilebilir değildir.
 
 Tomcat "Congratulations" sayfasını görmeniz gerekir.
 
@@ -455,7 +455,8 @@ Bir dakika veya iki dakika sürebilir ERDDAP™ Tamamen kapat. Sabırlı olun. Y
 
 ## Is Is Is Is Is Is Is Is Is Is Is Is Is ERDDAP™ koşmak?{#is-erddap-running} 
 
-Görmeye çalışmak için bir tarayıcı kullanınhttp://www.YourServer.org/erddap/status.html.
+Görmeye çalışmak için bir tarayıcı kullanın http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ Herhangi bir veri setleri yüklenmeden başlar. Datasets bir arka planda yüklenir ve bu yüzden bir tane -bir tane kullanılabilir.
 
 ### Sorun Giderme{#troubleshooting} 
@@ -522,4 +523,5 @@ içine ` datasets.xml ` Ve bunu düzenler.) Örneğin, yapabilirsiniz:
   * Organizasyonunuzun ve/veya grubun ne yaptığını açıklayın.
   * Ne tür bir veriyi bu şekilde açıklayın ERDDAP™ Var.
   * Tarayıcı sekmelerinde görünen ikonu değiştirmek için, kuruluşunuzun faviconunu koyun. ico in `tomcat/content/erddap/images /` .
-See See See Seehttps://en.wikipedia.org/wiki/Favicon.
+See See See See https://en.wikipedia.org/wiki/Favicon.
+ 

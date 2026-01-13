@@ -52,7 +52,7 @@ Sedan dess ERDDAP™ är främst avsett att vara en servlet i Tomcat, vi rekomme
 
   - Vi använder en batchfil som tar bort alla .class-filer i källträdet för att säkerställa att vi har en ren kompilator (med javac) .
 
-  - Vi använder för närvarande Adoptium javac jdk-21.0.3+9 för att sammanställa gov.noaa.pfeg.coastwatch.TestAll (Det har länkar till några klasser som inte skulle sammanställas annars) och kör testerna. Av säkerhetsskäl är det nästan alltid bäst att använda de senaste versionerna av Java 21 och Tomcat 10.
+  - Vi använder för närvarande Adoptium javac jdk-25.0.1+8 för att sammanställa gov.noaa.pfeg.coastwatch.TestAll (Det har länkar till några klasser som inte skulle sammanställas annars) och kör testerna. Av säkerhetsskäl är det nästan alltid bäst att använda de senaste versionerna av Java 25 och Tomcat 10.
 
     - När vi kör javac eller java är den aktuella katalogen _tomcat_/webapps/erddap/WEB-INF.
 

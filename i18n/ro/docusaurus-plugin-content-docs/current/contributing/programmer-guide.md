@@ -52,7 +52,7 @@ De când ERDDAP™ este destinat in principal sa fie o serveta care rulează în
 
   - Folosim un fișier lot care șterge toate fișierele .class din arborele sursă pentru a ne asigura că avem o compilație curată (cu javac) .
 
-  - În prezent folosim javac jdk-21.0.3+9 pentru a compila gov.noaa.pfeg.coastwatch.testAll (are legături cu câteva clase care nu ar fi compilate altfel) Şi fă testele. Din motive de securitate, este aproape întotdeauna cel mai bine să utilizați cele mai recente versiuni ale Java 21 şi Tomcat 10.
+  - În prezent folosim javac jdk-25.0.1+8 pentru a compila gov.noaa.pfeg.coastwatch.testAll (are legături cu câteva clase care nu ar fi compilate altfel) Şi fă testele. Din motive de securitate, este aproape întotdeauna cel mai bine să utilizați cele mai recente versiuni ale Java 25 şi Tomcat 10.
 
     - Când rulăm javac sau java, directorul curent este _tomcat_/webapps/erddap/WEB-INF.
 
@@ -68,7 +68,7 @@ De când ERDDAP™ este destinat in principal sa fie o serveta care rulează în
 
     - Dacă testul Toate compilaţiile, totul ERDDAP™ au fost elaborate nevoi. Câteva clase sunt compilate care nu sunt necesare pentru ERDDAP™ . Dacă compilarea TestAll reușește, dar nu compila o anumită clasă, acea clasă nu este necesară. (Există câteva clase neterminate/nefolosite.) 
 
-  - În câteva cazuri, folosim codul sursă 3rd Party în loc de fișiere .jar (în special pentru DODS ) și le-au modificat ușor pentru a evita problemele de compilare cu Java 21. Am făcut adesea alte mici modificări (în special DODS ) din alte motive.
+  - În câteva cazuri, folosim codul sursă 3rd Party în loc de fișiere .jar (în special pentru DODS ) și le-au modificat ușor pentru a evita problemele de compilare cu Java 25. Am făcut de multe ori alte mici modificări (în special DODS ) din alte motive.
 
   - Cele mai multe clase au metode de testare în dosarul asociat Src/test. Puteți rula testele Junit cu `Încercarea mvn` Comanda. Acest lucru va descărca mai multe fişiere zip de date pe care testele se bazează de la ultima versiune de [ ERDDAP /erddap Test](https://github.com/ERDDAP/erddapTest/releases/) .\\
      

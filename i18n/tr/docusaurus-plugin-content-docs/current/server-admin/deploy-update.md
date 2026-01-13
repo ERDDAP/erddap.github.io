@@ -8,7 +8,7 @@ Bir Varan Güncelleme Nasıl Yapılır ERDDAP™ Your Server
 1. listelenen değişiklikleri yapın [Değişiklikler Değişiklikler Değişiklikler](/changes) Bölümde "Things ERDDAP™ Yöneticilerin Bilmeniz ve Yapması Gerekiyor” ERDDAP™ Kullandığınız sürümden beri sürümler.
      
 ##  Java  {#java} 
-2. Eğer yükseltme yapıyorsanız ERDDAP™ 2.18 veya aşağıda, geçmek zorundasınız Java 21 21 21 (veya yeni) Ve ilgili Tomcat 10. Düzenli olarak bakınız ERDDAP™ yükleme talimatları için yükleme talimatları [ Java ](/docs/server-admin/deploy-install#java) ve [Tomcat](/docs/server-admin/deploy-install#tomcat) . Ayrıca kopyasını kopyalamanız gerekecek _tomcat_/content/erddap Eski Tomcat kurulumunuzdan yeni Tomcat kurulumuna dizin.
+2. Eğer yükseltme yapıyorsanız ERDDAP™ 2.18 veya aşağıda, geçmek zorundasınız Java 25 (veya yeni) Ve ilgili Tomcat 10. Düzenli olarak bakınız ERDDAP™ yükleme talimatları için yükleme talimatları [ Java ](/docs/server-admin/deploy-install#java) ve [Tomcat](/docs/server-admin/deploy-install#tomcat) . Ayrıca kopyasını kopyalamanız gerekecek _tomcat_/content/erddap Eski Tomcat kurulumunuzdan yeni Tomcat kurulumuna dizin.
 
 ## Download Download Download Download Download{#download} 
 3. Download Download Download Download Download [Heddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) _tomcat_/webapps .

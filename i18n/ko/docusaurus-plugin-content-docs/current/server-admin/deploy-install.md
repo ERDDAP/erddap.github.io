@@ -29,18 +29,18 @@ Docker를 통해 Compose 우리는 SSL 및 모니터링을 설정하는 쉬운 �
 
 ##  Java  {#java} 
 
-1.  [제품 정보 ERDDAP™ v2.19+, 설정 Java 21. ·](#java) 
-보안상의 이유로, 그것은 항상 최신 버전을 사용하는 것이 가장 좋습니다 Java 21. ·
+1.  [제품 정보 ERDDAP™ v2.29.0+, 설정 Java 25. ·](#java) 
+보안상의 이유로, 그것은 항상 최신 버전을 사용하는 것이 가장 좋습니다 Java 25. ·
 최신 버전을 다운로드하고 설치하십시오
-    [채택의 OpenJDK (테무린) 24시간 (사이트맵) ](https://adoptium.net/temurin/releases/?version=21) ·
+    [채택의 OpenJDK (테무린) 25 분 (사이트맵) ](https://adoptium.net/temurin/releases/?version=25) ·
 설치를 확인하려면 실행 `/javaJreBin감독/java -버전` , 예를 들면
-    `/usr/local/jdk-21.0.3+9/jre/bin/java -버전` ·
+    `/usr/local/jdk-25.0.1+8/jre/bin/java -버전` ·
 
     ERDDAP™ 일하기 Java 다른 소스에서, 하지만 우리는 Adoptium을 권장 하기 때문에 주요, 지역 사회 지원,
-무료 와이파이 (맥주와 연설) 버전의 Java 21 장기 지원 제공 (몇 년 동안 무료 업그레이드 초기 출시) ·
-보안상의 이유로, 업데이트하십시오 ERDDAP 's 버전 Java 주기적으로 새로운 버전의 Java 21는 Adoptium에서 유효합니다.
+무료 와이파이 (맥주와 연설) 버전의 Java 장기 지원을 제공하는 25 (몇 년 동안 무료 업그레이드 초기 출시) ·
+보안상의 이유로, 업데이트하십시오 ERDDAP 's 버전 Java 주기적으로 새로운 버전의 Java 25는 Adoptium에서 유효합니다.
 
-    ERDDAP™ 테스트 되었으며 광범위하게 사용되었습니다. 21, 다른 버전. 다양한 이유로, 우리는 다른 버전을 지원하지 않습니다 Java ·
+    ERDDAP™ 테스트 되었으며 널리 25, 다른 버전. 다양한 이유로, 우리는 다른 버전을 지원하지 않습니다 Java ·
      
 ## 톰캣{#tomcat} 
 
@@ -52,7 +52,7 @@ Docker를 통해 Compose 우리는 SSL 및 모니터링을 설정하는 쉬운 �
 
    * Tomcat을 다운로드하고 서버 또는 PC에서 해제하십시오.
 보안상의 이유로 Tomcat 10의 최신 버전을 사용하는 것이 거의 항상 최고입니다. (버전 9 이하 허용되지 않습니다) 
-일하기 위하여 디자인되는 Java 21명 이상 아래, Tomcat 디렉토리는 다음과 같습니다. `뚱 베어` ·
+일하기 위하여 디자인되는 Java 25명 이상 아래, Tomcat 디렉토리는 다음과 같습니다. `뚱 베어` ·
 
 ₢ 킹 이미 Tomcat이 다른 웹 응용 프로그램을 실행하는 경우 (특히 THREDDS) , 우리는 당신이 설치하는 것을 추천합니다 ERDDAP™ 내 계정
       [두 번째 톰캣](/docs/server-admin/additional-information#second-tomcat) , 때문에 ERDDAP™ 다른 Tomcat 설정 필요
@@ -150,7 +150,7 @@ Tomcat의 환경 변수 설정
 파일 만들기 `tomcat/빈/setenv.sh`   (또는 Red Hat Enterprise Linux에서 \\[ IR 정보 \\] , 편집 `~tomcat/conf/tomcat10.conf의 경우` ) Tomcat의 환경 변수 설정.
 이 파일은 `tomcat/빈/startup.sh` 이름 * `종료. 뚱 베어` · 파일은 다음과 같이 무언가를 포함해야 한다:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Mac에서 설정할 필요가 없습니다. `자바 스크립트` ·
 이 파일은 `tomcat\bin\\startup.bat로 이동` 이름 * ` shutdown.bat ` ·
 파일은 다음과 같이 무언가를 포함해야 한다:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ DejaVu 글꼴을 설치하려면 다운로드하십시오. [디자비프 .zip ](
 * Tomcat 설치를 테스트하십시오.
   * 리눅스:
     * 사용자 "tomcat", 실행 `tomcat/빈/startup.sh` ·
-    * 브라우저에서 URL + ":8080/" 보기 (₢ 킹 [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) ·
+    * 브라우저에서 URL + ":8080/" 보기 (₢ 킹 [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) ·
   * 한국어 (tomcat을 시스템 관리자 사용자로 실행) ::
     * 지원하다 `tomcat/빈/startup.sh` ·
-    * 브라우저에서 URL + ":8080/" 보기 (₢ 킹 [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) ·
+    * 브라우저에서 URL + ":8080/" 보기 (₢ 킹 [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) ·
 기본적으로 Tomcat을 사용할 수 있습니다. 그것은 공개적으로 접근 할 수 없습니다.
   * Windows 로컬 호스트:
     * 시스템 트레이에서 Tomcat 아이콘을 마우스 오른쪽 클릭하고 "Start service"를 선택하십시오.
-    * (주) [http://127.0.0.1:8080/](http://127.0.0.1:8080/) , 또는 아마 [http://localhost:8080/](http://localhost:8080/) , 브라우저에서. 기본적으로 Tomcat을 사용할 수 있습니다. 그것은 공개적으로 접근 할 수 없습니다.
+    * (주) [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) , 또는 아마 [ http://localhost:8080/ ](http://localhost:8080/) , 브라우저에서. 기본적으로 Tomcat을 사용할 수 있습니다. 그것은 공개적으로 접근 할 수 없습니다.
 
 Tomcat "Congratulations" 페이지를 참조하십시오.
 
@@ -455,7 +455,8 @@ Linux에서 사용 `사이트맵 | 사이트맵` 전후 `종료. 뚱 베어` tom
 
 ## 이름 * ERDDAP™ 실행?{#is-erddap-running} 
 
-본문 바로가기http://www.YourServer.org/erddap/status.html.
+본문 바로가기 http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ 로드된 모든 datasets 없이 시작. Datasets는 배경 실에서 적재되고 그래서 유효한 1-by-one가 됩니다.
 
 ### 문제 해결{#troubleshooting} 
@@ -522,4 +523,5 @@ Tomcat 설치 또는 ERDDAP™ · 더 보기 [더 많은 지원 얻기에 섹션
   * 조직 및/또는 그룹이 무엇인지 설명합니다.
   * 이 데이터의 어떤 종류의 설명 ERDDAP™ 이름 *
   * 브라우저 탭에 나타나는 아이콘을 변경하려면 조직의 favicon을 넣으십시오. ico에 `tomcat/content/erddap/이미지/` ·
-이름 *https://en.wikipedia.org/wiki/Favicon.
+이름 * https://en.wikipedia.org/wiki/Favicon.
+ 

@@ -8,7 +8,7 @@ sidebar_position: 2
 1. 更改列表 [变动](/changes) 在题为“事项”的一节中 ERDDAP™ 管理者需要知道和做" ERDDAP™ 自你使用的版本以来的版本。
      
 ##  Java  {#java} 
-2. 如果你正在升级 从 ERDDAP™ 2.18或以下版本,需要切换到 Java 页:1 (或更新) 和相关的Tomcat 10. 见常规 ERDDAP™ 安装指令 [ Java ](/docs/server-admin/deploy-install#java) 和 [汤姆猫](/docs/server-admin/deploy-install#tomcat) 。 。 。 你也得复制你的书 _tomcat_/content/erddap 从旧的Tomcat安装到新的Tomcat安装的目录。
+2. 如果你正在升级 从 ERDDAP™ 2.18或以下版本,需要切换到 Java 第25条 (或更新) 和相关的Tomcat 10. 见常规 ERDDAP™ 安装指令 [ Java ](/docs/server-admin/deploy-install#java) 和 [汤姆猫](/docs/server-admin/deploy-install#tomcat) 。 。 。 你也得复制你的书 _tomcat_/content/erddap 从旧的Tomcat安装到新的Tomcat安装的目录。
 
 ## 下载{#download} 
 3. 下载 [战争](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) 输入 _tomcat_/webapps 。

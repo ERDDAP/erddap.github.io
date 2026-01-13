@@ -29,18 +29,18 @@ go háirithe, ERDDAP™ a bheith in ann a scriosadh agus / nó comhaid a athainm
 
 ##  Java  {#java} 
 
-1.  [Le haghaidh ERDDAP™ v2.19+, ar bun Java 21.](#java) 
-Ar chúiseanna slándála, tá sé beagnach i gcónaí is fearr a bhaint as an leagan is déanaí de Java 21.
+1.  [Le haghaidh ERDDAP™ v2.29.0 +, ar bun Java 25.](#java) 
+Ar chúiseanna slándála, tá sé beagnach i gcónaí is fearr a bhaint as an leagan is déanaí de Java 25.
 Íoslódáil agus a shuiteáil an leagan is déanaí de
-    [Adoptium's OpenJDK (taiseachas aeir: fliuch) 21 Samhain (Leathanach Main) ](https://adoptium.net/temurin/releases/?version=21) .
+    [Adoptium's OpenJDK (taiseachas aeir: fliuch) 25 - 25 (Leathanach Main) ](https://adoptium.net/temurin/releases/?version=25) .
 Chun an tsuiteáil a fhíorú, reáchtáil `cliceáil grianghraf a mhéadú --` , mar shampla
     `/ úsáid tírdhreach: coimeádán, flowerbed, teorann --` .
 
     ERDDAP™ oibreacha le Java ó fhoinsí eile, ach molaimid Adoptium toisc go bhfuil sé an príomh, pobail-tacaíocht,
-saor in aisce (mar atá i mbeoir agus óráid) leagan de Java 21 a thairgeann Tacaíocht Fadtéarmach (uasghrádú saor in aisce le blianta fada anuas ar an scaoileadh tosaigh) .
-Ar chúiseanna slándála, le do thoil thabhairt cothrom le dáta do ERDDAP 's leagan de Java go tréimhsiúil mar leaganacha nua de Java 21 bheith ar fáil ó Adoptium.
+saor in aisce (mar atá i mbeoir agus óráid) leagan de Java 25 a thairgeann Tacaíocht Fadtéarmach (uasghrádú saor in aisce le blianta fada anuas ar an scaoileadh tosaigh) .
+Ar chúiseanna slándála, le do thoil thabhairt cothrom le dáta do ERDDAP 's leagan de Java go tréimhsiúil mar leaganacha nua de Java 25 bheith ar fáil ó Adoptium.
 
-    ERDDAP™ Tá tástáil agus a úsáidtear go forleathan le 21, ní leaganacha eile. Ar chúiseanna éagsúla, ní dhéanaimid tástáil le leaganacha eile de Java .
+    ERDDAP™ Tá tástáil agus a úsáidtear go forleathan le 25, ní leaganacha eile. Ar chúiseanna éagsúla, ní dhéanaimid tástáil le leaganacha eile de Java .
      
 ## cliceáil grianghraf a mhéadú{#tomcat} 
 
@@ -52,7 +52,7 @@ Is féidir leat a úsáid eile Java Freastalaí Iarratais (Cuardaigh le haghaidh
 
    * Íoslódáil Tomcat agus é a dhíphacáil ar do fhreastalaí nó ríomhaire.
 Ar chúiseanna slándála, tá sé beagnach i gcónaí is fearr a bhaint as an leagan is déanaí de Tomcat 10 (Níl leagan 9 agus thíos inghlactha) 
-atá deartha chun obair le Java 21 nó níos nuaí. Anseo thíos, beidh an eolaire Tomcat a tharchur mar `taiseachas aeir: fliuch` .
+atá deartha chun obair le Java 25 nó níos nuaí. Anseo thíos, beidh an eolaire Tomcat a tharchur mar `taiseachas aeir: fliuch` .
 
 Tuilleadh eolais Má tá tú cheana féin Tomcat ag rith roinnt iarratas gréasáin eile (go háirithe THREDDS) , molaimid duit a shuiteáil ERDDAP™ i
       [an dara Tomcat](/docs/server-admin/additional-information#second-tomcat) , mar gheall ar ERDDAP™ riachtanais éagsúla suímh Tomcat
@@ -150,7 +150,7 @@ Socraigh Athróga Comhshaoil Tomcat
 Cruthaigh comhad `cliceáil grianghraf a mhéadú`   (nó i Red Hat Enterprise Linux \\[ SEIRBHÍSÍ \\] , in eagar `cliceáil grianghraf a mhéadú` ) a shocrú athróg timpeallacht Tomcat ar.
 Beidh an comhad a úsáid ag `cliceáil grianghraf a mhéadú` agus `múchadh. cúthail` . Ba chóir go mbeadh an comhad rud éigin cosúil le:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Cruthaigh comhad `cliceáil grianghraf a mhéadú` a shocrú athróg timpeallach
 Beidh an comhad a úsáid ag `cliceáil grianghraf a mhéadú` agus ` shutdown.bat ` .
 Ba chóir go mbeadh an comhad rud éigin cosúil le:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ Cuimhnigh: má / nuair a uasghrádú tú níos déanaí go leagan níos nuaí de
 * Tástáil do shuiteáil Tomcat.
   * Linux:
     * Mar úsáideoir "tomcat", reáchtáil `cliceáil grianghraf a mhéadú` .
-    * Féach ar do URL + ":8080/" i do bhrabhsálaí (e.g., [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Féach ar do URL + ":8080/" i do bhrabhsálaí (e.g., [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac an Duine (reáchtáil tomcat mar an t-úsáideoir riarthóir córas) :
     * Rith `cliceáil grianghraf a mhéadú` .
-    * Féach ar do URL + ":8080/" i do bhrabhsálaí (e.g., [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Féach ar do URL + ":8080/" i do bhrabhsálaí (e.g., [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Tabhair faoi deara go de réir réamhshocraithe, tá do Tomcat inrochtana ach amháin ag tú. Níl sé inrochtana go poiblí.
   * Windows localhost:
     * cliceáil ar dheis ar an deilbhín Tomcat sa tráidire córas, agus roghnaigh "seirbhís ealaíne".
-    * Féach ar an roghchlár [http://127.0.0.1:8080/](http://127.0.0.1:8080/) , nó b'fhéidir [http://localhost:8080/](http://localhost:8080/) , i do bhrabhsálaí. Tabhair faoi deara go de réir réamhshocraithe, tá do Tomcat inrochtana ach amháin ag tú. Níl sé inrochtana go poiblí.
+    * Féach ar an roghchlár [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) , nó b'fhéidir [ http://localhost:8080/ ](http://localhost:8080/) , i do bhrabhsálaí. Tabhair faoi deara go de réir réamhshocraithe, tá do Tomcat inrochtana ach amháin ag tú. Níl sé inrochtana go poiblí.
 
 Ba chóir duit a fheiceáil ar an Tomcat "Comhghairdeas" leathanach.
 
@@ -455,7 +455,8 @@ Féadfaidh sé nóiméad nó dhó a ghlacadh le haghaidh ERDDAP™ a dhúnadh go
 
 ## Is maith liom ERDDAP™ ag rith?{#is-erddap-running} 
 
-Úsáid brabhsálaí chun iarracht a dhéanamh féachainthttp://www.YourServer.org/erddap/status.html.
+Úsáid brabhsálaí chun iarracht a dhéanamh féachaint http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ Tosaíonn suas gan aon tacar sonraí luchtaithe. Tá tacar sonraí luchtaithe i snáithe cúlra agus mar sin a bheith ar fáil aon-ar-aon.
 
 ### Fabhtcheartú{#troubleshooting} 
@@ -522,4 +523,5 @@ isteach i ` datasets.xml ` agus in eagar é.) Mar shampla, d'fhéadfá:
   * Déan cur síos ar cad a dhéanann do eagraíocht agus / nó grúpa.
   * Déan cur síos ar cén cineál sonraí seo ERDDAP™ Tá.
   * A athrú ar an deilbhín gur dealraitheach ar tabs bhrabhsálaí, cuir favicon do eagraíocht. ico i `tomcat/content/erddap/images/images/` .
-Féach arhttps://en.wikipedia.org/wiki/Favicon.
+Féach ar https://en.wikipedia.org/wiki/Favicon.
+ 

@@ -52,7 +52,7 @@ Da ERDDAP™ è principalmente destinato ad essere un servlet in esecuzione in T
 
   - Usiamo un file batch che elimina tutti i file .class nell'albero di origine per garantire che abbiamo una compilazione pulita (con javac) .
 
-  - Usiamo attualmente il javac di Adoptium jdk-21.0.3+9 per compilare gov.noaa.pfeg.coastwatch.TestAll (ha collegamenti a alcune classi che non sarebbero compilati altrimenti) e eseguire i test. Per motivi di sicurezza, è quasi sempre meglio utilizzare le ultime versioni di Java 21 e Tomcat 10.
+  - Utilizziamo attualmente il javac jdk-25.0.1+8 di Adoptium per compilare gov.noaa.pfeg.coastwatch.TestAll (ha collegamenti a alcune classi che non sarebbero compilati altrimenti) e eseguire i test. Per motivi di sicurezza, è quasi sempre meglio utilizzare le ultime versioni di Java 25 e Tomcat 10.
 
     - Quando eseguiamo javac o java, la directory corrente è _tomcat_/webapps/erddap/WEB-INF .
 
@@ -68,7 +68,7 @@ Da ERDDAP™ è principalmente destinato ad essere un servlet in esecuzione in T
 
     - Se prova Tutte le compilazioni, tutto ERDDAP™ i bisogni sono stati compilati. Alcune classi sono compilate che non sono necessarie per ERDDAP™ . Se la compilazione di TestAll riesce, ma non compila una certa classe, quella classe non è necessaria. (Ci sono alcune classi incompiute/non utilizzate.) 
 
-  - In alcuni casi, utilizziamo il codice sorgente di terze parti invece dei file .jar (in particolare DODS ) e li hanno modificati leggermente per evitare problemi di compilazione Java 21. Abbiamo spesso fatto altre piccole modifiche (in particolare DODS ) per altri motivi.
+  - In alcuni casi, utilizziamo il codice sorgente di terze parti invece dei file .jar (in particolare DODS ) e li hanno modificati leggermente per evitare problemi di compilazione Java 25. Abbiamo spesso fatto altre piccole modifiche (in particolare DODS ) per altri motivi.
 
   - La maggior parte delle classi hanno metodi di test nel loro file src/test associato. È possibile eseguire i test JUnit con il `test mvn` comando. Questo scaricherà diversi file zip di dati che i test si basano sull'ultima versione di [ ERDDAP Traduzione: Test](https://github.com/ERDDAP/erddapTest/releases/) .
      

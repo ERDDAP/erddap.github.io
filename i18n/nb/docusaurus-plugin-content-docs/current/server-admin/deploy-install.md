@@ -29,18 +29,18 @@ særlig, ERDDAP™ kan være i stand til å slette og/eller omdøpe filer raskt.
 
 ##  Java  {#java} 
 
-1.  [For ERDDAP™ v2.19+, sett opp Java 21.](#java) 
-Av sikkerhetsgrunner er det nesten alltid best å bruke den nyeste versjonen av Java 21.
+1.  [For ERDDAP™ v2.29.0+, sett opp Java 25.](#java) 
+Av sikkerhetsgrunner er det nesten alltid best å bruke den nyeste versjonen av Java 25.
 Last ned og installer den nyeste versjonen av
-    [Adoptiums OpenJDK (Temurin) 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) ..
+    [Adoptiums OpenJDK (Temurin) 25 (LTS) ](https://adoptium.net/temurin/releases/?version=25) ..
 For å verifisere installasjonen, kjør `/javaJreBinDirectory/java -versjon` For eksempel
-    `/usr/lokal/jdk-21.0.3+9/jre/bin/java -versjon` ..
+    `/usr/lokal/jdk-25.0.1+8/jre/bin/java -versjon` ..
 
     ERDDAP™ jobber med Java fra andre kilder, men vi anbefaler Adoptium fordi det er det viktigste, samfunnsstøttede,
-gratis (som i øl og tale) versjon av Java 21 som tilbyr langtidsstøtte (gratis oppgraderinger i mange år forbi den første utgivelsen) ..
-Av sikkerhetsgrunner, vennligst oppdater din ERDDAP versjon av Java periodisk som nye versjoner av Java 21 blir tilgjengelig fra Adoptium.
+gratis (som i øl og tale) versjon av Java 25 som tilbyr langvarig støtte (gratis oppgraderinger i mange år forbi den første utgivelsen) ..
+Av sikkerhetsgrunner, vennligst oppdater din ERDDAP versjon av Java periodisk som nye versjoner av Java 25 blir tilgjengelig fra Adoptium.
 
-    ERDDAP™ har blitt testet og brukt mye med 21, ikke andre versjoner. Av ulike grunner tester vi ikke med eller støtter andre versjoner av Java ..
+    ERDDAP™ har blitt testet og brukt mye med 25, ikke andre versjoner. Av ulike grunner tester vi ikke med eller støtter andre versjoner av Java ..
      
 ## Tomcat{#tomcat} 
 
@@ -52,7 +52,7 @@ Du kan bruke en annen Java Applikasjonsserver (f.eks. Jetty) Men vi tester bare 
 
    * Last ned Tomcat og pakke det ut på serveren eller PCen.
 Av sikkerhetsgrunner er det nesten alltid best å bruke den nyeste versjonen av Tomcat 10 (versjon 9 og nedenfor er ikke akseptable) 
-som er designet for å jobbe med Java 21 eller nyere. Nedenfor vil Tomcat-katalogen bli omtalt som `tomcat` ..
+som er designet for å jobbe med Java 25 eller nyere. Nedenfor vil Tomcat-katalogen bli omtalt som `tomcat` ..
 
 _Varsel&#33;___ Hvis du allerede har en Tomcat som kjører noe annet webprogram (Spesielt tredder) Vi anbefaler at du installerer ERDDAP™ i
       [En andre Tomcat](/docs/server-admin/additional-information#second-tomcat) fordi ERDDAP™ trenger forskjellige Tomcat-innstillinger
@@ -150,7 +150,7 @@ Sett Tomcats miljøvariabler
 Opprett en fil `tomcat/bin/setenv.sh`   (eller i Red Hat Enterprise Linux \\[ RHEL \\] , rediger `~tomcat/conf/tomcat10.conf` ) For å sette Tomcats miljøvariabler.
 Denne filen vil bli brukt av `tomcat/bin/startup.sh` og `Nedleggelse. sh` .. Filen skal inneholde noe som:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Opprett en fil `nomcat\bin\\setenv.bat` For å sette Tomcats miljøvariabler.
 Denne filen vil bli brukt av `Tomcat\bin\\startup.bat` og ` shutdown.bat ` ..
 Filen skal inneholde noe som:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ Husk: Hvis/når du senere oppgraderer til en nyere versjon av Java , må du inst
 * Test din Tomcat installasjon.
   * Linux:
     * Som bruker "tomcat", kjører `tomcat/bin/startup.sh` ..
-    * Vis din URL + ":8080/" i nettleseren din (f.eks. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) ..
+    * Vis din URL + ":8080/" i nettleseren din (f.eks. [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) ..
   * Mac (kjøre tomcat som systemadministrator bruker) :)
     * Kjør `tomcat/bin/startup.sh` ..
-    * Vis din URL + ":8080/" i nettleseren din (f.eks. [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) ..
+    * Vis din URL + ":8080/" i nettleseren din (f.eks. [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) ..
 Merk at Tomcat som standard er kun tilgjengelig for deg. Det er ikke offentlig tilgjengelig.
   * Windows localhost:
     * Høyreklikk på Tomcat-ikonet i systembrettet, og velg " Start service".
-    * Vis [http://127.0.0.1:8080/](http://127.0.0.1:8080/) Eller kanskje [http://localhost:8080/](http://localhost:8080/) I nettleseren din. Merk at Tomcat som standard er kun tilgjengelig for deg. Det er ikke offentlig tilgjengelig.
+    * Vis [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) Eller kanskje [ http://localhost:8080/ ](http://localhost:8080/) I nettleseren din. Merk at Tomcat som standard er kun tilgjengelig for deg. Det er ikke offentlig tilgjengelig.
 
 Du bør se Tomcat-Congratulations - siden.
 
@@ -455,7 +455,8 @@ Det kan ta et minutt eller to for ERDDAP™ Fullstendig lukket ned. Vær tålmod
 
 ## Er ERDDAP™ Løper?{#is-erddap-running} 
 
-Bruk en nettleser til å prøve å visehttp://www.YourServer.org/erddap/status.html.
+Bruk en nettleser til å prøve å vise http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ starter uten datasett. Datasett er lastet i en bakgrunnstråd og så bli tilgjengelig en for én.
 
 ### Feilsøking{#troubleshooting} 
@@ -522,4 +523,5 @@ i ` datasets.xml ` og rediger det.) For eksempel kan du:
   * Beskriv hva din organisasjon og/eller gruppe gjør.
   * Beskriv hva slags data dette ERDDAP™ Det har det.
   * Hvis du vil endre ikonet som vises på nettleserfanene, setter du organisasjonens favicon. ico i `tomcat/innhold/erddap/bilder/` ..
-Sehttps://en.wikipedia.org/wiki/Favicon.
+Se https://en.wikipedia.org/wiki/Favicon.
+ 

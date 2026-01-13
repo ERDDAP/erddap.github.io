@@ -52,7 +52,7 @@ Od ERDDAP™ jest przeznaczony głównie do bycia servlet działa w Tomcat, zale
 
   - Używamy pliku wsadowego, który usuwa wszystkie pliki .class w drzewie źródłowym, aby upewnić się, że mamy czystą kompilację (z javac) .
 
-  - Obecnie używamy Javac jdk- 21.0.3 + 9 Adoptium do kompilacji gov.noaa.pfeg.coashwatch.TestAll (ma linki do kilku klas, które nie zostałyby skompilowane inaczej) i przeprowadzić testy. Ze względów bezpieczeństwa, prawie zawsze najlepiej jest korzystać z najnowszych wersji Java 21 i Tomcat 10.
+  - Obecnie używamy Javac jdk- 25.0.1 + 8 Adoptium do kompilacji gov.noaa.pfeg.coashwatch.TestAll (ma linki do kilku klas, które nie zostałyby skompilowane inaczej) i przeprowadzić testy. Ze względów bezpieczeństwa, prawie zawsze najlepiej jest korzystać z najnowszych wersji Java 25 i Tomcat 10.
 
     - Kiedy uruchomimy javac lub java, bieżący katalog to _ tomcat _ / webapps / erddap / WEB-INF.
 
@@ -68,7 +68,7 @@ Od ERDDAP™ jest przeznaczony głównie do bycia servlet działa w Tomcat, zale
 
     - Jeżeli badanie Wszystkie kompilacje, wszystko ERDDAP™ potrzeby zostały opracowane. Skompilowano kilka zajęć, które nie są potrzebne do ERDDAP™ . Jeśli kompilacja TestAll powiedzie się, ale nie skompiluje jakiejś klasy, ta klasa nie jest potrzebna. (Są pewne niedokończone / niewykorzystane klasy.) 
 
-  - W kilku przypadkach używamy kodu źródłowego strony trzeciej zamiast plików .jar (w szczególności DODS ) i nieznacznie je zmodyfikować, aby uniknąć problemów kompilacji z Java 21. Często dokonywaliśmy innych drobnych modyfikacji (w szczególności DODS ) z innych powodów.
+  - W kilku przypadkach używamy kodu źródłowego strony trzeciej zamiast plików .jar (w szczególności DODS ) i nieznacznie je zmodyfikować, aby uniknąć problemów kompilacji z Java 25. Często dokonywaliśmy innych drobnych modyfikacji (w szczególności DODS ) z innych powodów.
 
   - Większość klas posiada metody badań w powiązanym pliku src / test. Możesz przeprowadzić testy JUnit z `Badanie mvn` Rozkaz. To pobierze kilka plików zip danych, na których opierają się testy z najnowszego wydania [ ERDDAP / erddap Badanie](https://github.com/ERDDAP/erddapTest/releases/) .
      

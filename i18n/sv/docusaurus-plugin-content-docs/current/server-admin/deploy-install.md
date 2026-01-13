@@ -29,18 +29,18 @@ i synnerhet, ERDDAP™ kan vara oförmögen att radera och/eller byta namn snabb
 
 ##  Java  {#java} 
 
-1.  [För ERDDAP™ v2.19+, inrätta Java 21.](#java) 
-Av säkerhetsskäl är det nästan alltid bäst att använda den senaste versionen av Java 21.
+1.  [För ERDDAP™ v2.29.0+, upprätta Java 25.](#java) 
+Av säkerhetsskäl är det nästan alltid bäst att använda den senaste versionen av Java 25.
 Ladda ner och installera den senaste versionen av
-    [Adoptium OpenJDK (Temurin) 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 21 (LTS) ](https://adoptium.net/temurin/releases/?version=21) .
+    [Adoptium OpenJDK (Temurin) 25 25 25 25 (LTS) ](https://adoptium.net/temurin/releases/?version=25) .
 För att verifiera installationen, kör `/javaJreBinDirectory/java -version` till exempel
-    `/usr/local/jdk-21.0.3+9/jre/bin/java -version` .
+    `/usr/local/jdk-25.0.1+8/jre/bin/java -version` .
 
     ERDDAP™ arbete med Java från andra källor, men vi rekommenderar Adoptium eftersom det är det viktigaste, community-stödda.
-Gratis gratis (som i öl och tal) version av Java 21 som erbjuder långsiktig support (gratis uppgraderingar under många år förbi den första releasen) .
-Av säkerhetsskäl, vänligen uppdatera din ERDDAP version av Java periodiskt som nya versioner av Java 21 blir tillgängligt från Adoptium.
+Gratis gratis (som i öl och tal) version av Java 25 som erbjuder långsiktig support (gratis uppgraderingar under många år förbi den första releasen) .
+Av säkerhetsskäl, vänligen uppdatera din ERDDAP version av Java periodiskt som nya versioner av Java 25 blir tillgängligt från Adoptium.
 
-    ERDDAP™ har testats och använts omfattande med 21, inte andra versioner. Av olika skäl testar vi inte med eller stöder andra versioner av Java .
+    ERDDAP™ har testats och använts i stor utsträckning med 25, inte andra versioner. Av olika skäl testar vi inte med eller stöder andra versioner av Java .
      
 ## Tomcat{#tomcat} 
 
@@ -52,7 +52,7 @@ Du kan använda en annan Java Applikationsserver (t.ex. Jetty) Vi testar bara me
 
    * Ladda ner Tomcat och packa upp den på din server eller PC.
 Av säkerhetsskäl är det nästan alltid bäst att använda den senaste versionen av Tomcat 10. (version 9 och nedan är inte acceptabla) 
-som är utformad för att arbeta med Java 21 eller nyare. Nedan kommer Tomcat-katalogen att kallas `Tomcat` .
+som är utformad för att arbeta med Java 25 eller nyare. Nedan kommer Tomcat-katalogen att kallas `Tomcat` .
 
 Varning&#33;__ Om du redan har en Tomcat kör någon annan webbapplikation (Särskilt TREDDS) Vi rekommenderar att du installerar ERDDAP™ in i
       [En andra Tomcat](/docs/server-admin/additional-information#second-tomcat) för att ERDDAP™ behöver olika Tomcat-inställningar
@@ -150,7 +150,7 @@ Ställ Tomcats miljövariabler
 Skapa en fil `tomcat/bin/setenv.sh`   (Eller i Red Hat Enterprise Linux \\[ RHEL \\] , edit `~tomcat/conf/tomcat10.conf` ) att ställa in Tomcats miljövariabler.
 Denna fil kommer att användas av `tomcat/bin/startup.sh` och `Avstängning. Skräck` . Filen ska innehålla något som:
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Skapa en fil `tomcat\bin\\setenv.bat` att ställa in Tomcats miljövariabler.
 Denna fil kommer att användas av `tomcat\bin\\startup.bat` och ` shutdown.bat ` .
 Filen ska innehålla något som:
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ Kom ihåg: om/när du senare uppgraderar till en nyare version Java Du måste in
 * Testa din Tomcat installation.
   * Linux:
     * Som användare "tomcat", kör `tomcat/bin/startup.sh` .
-    * Visa din URL + ":8080/" i din webbläsare (t.ex., [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Visa din URL + ":8080/" i din webbläsare (t.ex., [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
   * Mac Mac Mac Mac Mac Mac (kör tomcat som systemadministratörens användare) Från:
     * Kör `tomcat/bin/startup.sh` .
-    * Visa din URL + ":8080/" i din webbläsare (t.ex., [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) .
+    * Visa din URL + ":8080/" i din webbläsare (t.ex., [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) .
 Observera att som standard är din Tomcat endast tillgänglig för dig. Det är inte allmänt tillgängligt.
   * Windows localhost:
     * Högerklicka på Tomcat-ikonen i systembrickan och välj "Start service".
-    * Utsikt [http://127.0.0.1:8080/](http://127.0.0.1:8080/) eller kanske [http://localhost:8080/](http://localhost:8080/) i din webbläsare. Observera att som standard är din Tomcat endast tillgänglig för dig. Det är inte allmänt tillgängligt.
+    * Utsikt [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) eller kanske [ http://localhost:8080/ ](http://localhost:8080/) i din webbläsare. Observera att som standard är din Tomcat endast tillgänglig för dig. Det är inte allmänt tillgängligt.
 
 Du bör se sidan Tomcat "Grattis".
 
@@ -455,7 +455,8 @@ Det kan ta en minut eller två för ERDDAP™ att helt stänga ner. Var tålmodi
 
 ## Är ERDDAP™ Kör?{#is-erddap-running} 
 
-Använd en webbläsare för att försöka visahttp://www.YourServer.org/erddap/status.html.
+Använd en webbläsare för att försöka visa http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ startar upp utan några datamängder laddade. Dataset laddas i en bakgrundstråd och blir därmed tillgänglig en-för-en.
 
 ### Felsökning{#troubleshooting} 
@@ -522,4 +523,5 @@ in i ` datasets.xml ` och redigera den.) Du kan till exempel:
   * Beskriv vad din organisation och/eller grupp gör.
   * Beskriv vilken typ av data detta ERDDAP™ har.
   * För att ändra ikonen som visas på webbläsarflikar, sätt din organisations favicon. ico i `tomcat/content/erddap/images/` .
-Sehttps://en.wikipedia.org/wiki/Favicon.
+Se https://en.wikipedia.org/wiki/Favicon.
+ 

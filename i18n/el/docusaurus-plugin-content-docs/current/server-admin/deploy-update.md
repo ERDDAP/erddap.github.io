@@ -8,7 +8,7 @@ sidebar_position: 2
 1. Κάντε τις αλλαγές που αναφέρονται στο [Μεταβολές](/changes) στο τμήμα με τίτλο " Πράγματα ERDDAP™ Οι διαχειριστές πρέπει να γνωρίζουν και να κάνουν" για όλους τους ERDDAP™ εκδόσεις μετά την έκδοση που χρησιμοποιούσατε.
      
 ##  Java  {#java} 
-2. Εάν είστε αναβάθμιση από ERDDAP™ έκδοση 2.18 ή κάτω, θα πρέπει να μεταβείτε σε Java 21 (ή νεότερος) και το σχετικό Tomcat 10. Δείτε την τακτική ERDDAP™ οδηγίες εγκατάστασης για [ Java ](/docs/server-admin/deploy-install#java) και [Τομκάτ](/docs/server-admin/deploy-install#tomcat) . Θα πρέπει επίσης να αντιγράψετε το _tomcat_/content/erddap κατάλογος από την παλιά εγκατάσταση Tomcat σας στη νέα εγκατάσταση Tomcat.
+2. Εάν είστε αναβάθμιση από ERDDAP™ έκδοση 2.18 ή κάτω, θα πρέπει να μεταβείτε σε Java 25 (ή νεότερος) και το σχετικό Tomcat 10. Δείτε την τακτική ERDDAP™ οδηγίες εγκατάστασης για [ Java ](/docs/server-admin/deploy-install#java) και [Τομκάτ](/docs/server-admin/deploy-install#tomcat) . Θα πρέπει επίσης να αντιγράψετε το _tomcat_/content/erddap κατάλογος από την παλιά εγκατάσταση Tomcat σας στη νέα εγκατάσταση Tomcat.
 
 ## Λήψη{#download} 
 3. Λήψη [Erddap.war (στα Αγγλικά).](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) _tomcat_/webapps .

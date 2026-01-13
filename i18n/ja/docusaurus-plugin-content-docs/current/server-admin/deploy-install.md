@@ -29,18 +29,18 @@ Docker を既に使用している場合は、Docker のバージョンが優先
 
 ##  Java  {#java} 
 
-1.  [お問い合わせ ERDDAP™ v2.19+, 設定 Java 21. .](#java) 
-セキュリティ上の理由から、最新バージョンを使用するのはほぼ常に最善です Java 21. .
+1.  [お問い合わせ ERDDAP™ v2.29.0+, 設定 Java 25。](#java) 
+セキュリティ上の理由から、最新バージョンを使用するのはほぼ常に最善です Java 25。
 最新バージョンをダウンロードしてインストールしてください
-    [採用のOpenJDK (テムリン) 21日 (ツイート) ](https://adoptium.net/temurin/releases/?version=21) お問い合わせ
+    [採用のOpenJDK (テムリン) 25 日 (ツイート) ](https://adoptium.net/temurin/releases/?version=25) お問い合わせ
 インストールを確認するには、実行 `/javaJreBinDirectory/java リリース -バージョン` 例えば
-    `/usr/local/jdk-21.0.3+9/jre/bin/java -バージョン` お問い合わせ
+    `/usr/local/jdk-25.0.1+8/jre/bin/java -バージョン` お問い合わせ
 
     ERDDAP™ 作品紹介 Java 他のソースから, しかし、我々はそれがメインであるので、, コミュニティをサポート,
-無料 (ビール・スピーチ) バージョン Java 長期的なサポートを提供する21 (初期リリースを過ぎた数年間無料アップグレード) お問い合わせ
-セキュリティ上の理由は、更新してください ERDDAP 's バージョン Java 定期的に新しいバージョンとして Java 採用から21が利用可能になりました。
+無料 (ビール・スピーチ) バージョン Java 長期サポートを提供する25 (初期リリースを過ぎた数年間無料アップグレード) お問い合わせ
+セキュリティ上の理由は、更新してください ERDDAP 's バージョン Java 定期的に新しいバージョンとして Java 採用から25個まで対応可能
 
-    ERDDAP™ 他のバージョンではなく21と広範囲にテストされ、使用されました。 様々な理由で、他のバージョンの対応やサポートは行いません。 Java お問い合わせ
+    ERDDAP™ 他のバージョンではなく25で広範囲にテストされ、使用されました。 様々な理由で、他のバージョンの対応やサポートは行いません。 Java お問い合わせ
      
 ## トムキャット{#tomcat} 
 
@@ -52,7 +52,7 @@ Docker を既に使用している場合は、Docker のバージョンが優先
 
    * Tomcatをダウンロードし、サーバーまたはPCに解凍します。
 セキュリティ上の理由から、Tomcat 10の最新バージョンを使用するのはほぼ常に最善です (バージョン9以下は受け付けておりません。) 
-機能するように設計されています Java 21 以降 以下では、Tomcat ディレクトリは次のように呼びます。 `トームキャット` お問い合わせ
+機能するように設計されています Java 25 または新しい。 以下では、Tomcat ディレクトリは次のように呼びます。 `トームキャット` お問い合わせ
 
 __学習&#33;__ すでに他のWebアプリケーションを実行しているTomcatを持っている場合 (特にTHREDDS) 、私達は取付けることを推薦します ERDDAP™ お問い合わせ
       [2 番目の Tomcat](/docs/server-admin/additional-information#second-tomcat) , ので ERDDAP™ 異なる Tomcat の設定が必要
@@ -150,7 +150,7 @@ Tomcatの環境変数を設定する
 ファイルを作成する `tomcat/bin/setenv.sh ディレクティブ`   (またはRed Hat Enterprise Linuxで \\[ フリル \\] 、編集して下さい `~tomcat/conf/tomcat10.conf から` ) Tomcat の環境変数を設定する。
 このファイルは、 `tomcat/bin/startup.sh ディレクティブ` そして、 `シャットダウン。 ログイン` お問い合わせ ファイルが以下のようなものを含んでいる必要があります。
   ```
-  export JAVA_HOME=/usr/local/jdk-21.0.3+9
+  export JAVA_HOME=/usr/local/jdk-25.0.1+8
   export JAVA_OPTS='-server -Djava.awt.headless=true -Xmx1500M -Xms1500M'
   export TOMCAT_HOME=/usr/local/apache-tomcat-10.0.23
   export CATALINA_HOME=/usr/local/apache-tomcat-10.0.23
@@ -164,7 +164,7 @@ Macでは、設定する必要はありません `JAVA_HOME(ジャヴァ)` お�
 このファイルは、 `tomcat\bin\\startup.bat ディレクティブ` そして、 ` shutdown.bat ` お問い合わせ
 ファイルが以下のようなものを含んでいる必要があります。
   ```
-  SET "JAVA_HOME=\\someDirectory\\jdk-21.0.3+9"
+  SET "JAVA_HOME=\\someDirectory\\jdk-25.0.1+8"
   SET "JAVA_OPTS=-server -Xmx1500M -Xms1500M"
   SET "TOMCAT_HOME=\\Program Files\\apache-tomcat-10.0.23"
   SET "CATALINA_HOME=\\Program Files\\apache-tomcat-10.0.23"
@@ -237,14 +237,14 @@ DejaVuフォントをインストールするには、ダウンロードして�
 * Tomcatのインストールをテストします。
   * リナックス:
     * ユーザとして "tomcat" を実行します。 `tomcat/bin/startup.sh ディレクティブ` お問い合わせ
-    * お使いのブラウザでURL + ":8080/" を表示 (例: [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) お問い合わせ
+    * お使いのブラウザでURL + ":8080/" を表示 (例: [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) お問い合わせ
   * メニュー (システム管理者ユーザとしてtomcatを実行) : : :
     * ログイン `tomcat/bin/startup.sh ディレクティブ` お問い合わせ
-    * お使いのブラウザでURL + ":8080/" を表示 (例: [http://coastwatch.pfeg.noaa.gov:8080/](http://coastwatch.pfeg.noaa.gov:8080/) ) お問い合わせ
+    * お使いのブラウザでURL + ":8080/" を表示 (例: [ http://coastwatch.pfeg.noaa.gov:8080/ ](http://coastwatch.pfeg.noaa.gov:8080/) ) お問い合わせ
 デフォルトでは、Tomcat がアクセス可能です。 公然アクセスできません。
   * Windowsのlocalhost:
     * システムトレイの Tomcat アイコンを右クリックし、「サービス開始」を選択します。
-    * ニュース [http://127.0.0.1:8080/](http://127.0.0.1:8080/) または多分 [http://localhost:8080/](http://localhost:8080/) お使いのブラウザで デフォルトでは、Tomcat がアクセス可能です。 公然アクセスできません。
+    * ニュース [ http://127.0.0.1:8080/ ](http://127.0.0.1:8080/) または多分 [ http://localhost:8080/ ](http://localhost:8080/) お使いのブラウザで デフォルトでは、Tomcat がアクセス可能です。 公然アクセスできません。
 
 Tomcat "Congratulations"のページが表示されます。
 
@@ -455,7 +455,8 @@ Linux では、 `ps -効果 | grep トームキャット` 前後 `シャット�
 
 ## お問い合わせ ERDDAP™ ランニング?{#is-erddap-running} 
 
-ブラウザで閲覧しようとするhttp://www.YourServer.org/erddap/status.html.
+ブラウザで閲覧しようとする http://www.YourServer.org/erddap/status.html.
+ 
  ERDDAP™ ロードされたデータセットなしで起動します。 背景のスレッドにデータセットが読み込まれるので、一対一で利用できるようになります。
 
 ### トラブルシューティング{#troubleshooting} 
@@ -522,4 +523,5 @@ Tomcat や ERDDAP™ お問い合わせ お問い合わせ [追加サポート�
   * 組織やグループが何をしているかを記述します。
   * データの種類を記述する ERDDAP™ お問い合わせ
   * ブラウザタブに表示されるアイコンを変更するには、組織のファビコンを設定します。 ログイン `tomcat/content/erddap/images/ から` お問い合わせ
-お問い合わせhttps://en.wikipedia.org/wiki/Favicon.
+お問い合わせ https://en.wikipedia.org/wiki/Favicon.
+ 

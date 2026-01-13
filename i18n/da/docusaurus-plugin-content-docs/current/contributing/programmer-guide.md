@@ -52,7 +52,7 @@ Siden ERDDAP™ er primært beregnet til at være en servlet, der kører i Tomca
 
   - Vi bruger en batch-fil, der sletter alle .class-filer i kildetræet for at sikre, at vi har en ren kompilere (med javac) .
 
-  - Vi bruger i øjeblikket Adoptiums javac jdk-21.0.3+9 til at kompilere gov.noaa.pfeg.coastwatch.TestAll (det har links til et par klasser, der ikke ville blive kompileret ellers) og køre testen. Af sikkerhedsmæssige årsager er det næsten altid bedst at bruge de nyeste versioner af Java 21 og Tomcat 10.
+  - Vi bruger i øjeblikket Adoptiums javac jdk-25.0.1+8 til at kompilere gov.noaa.pfeg.coastwatch.TestAll (det har links til et par klasser, der ikke ville blive kompileret ellers) og køre testen. Af sikkerhedsmæssige årsager er det næsten altid bedst at bruge de nyeste versioner af Java 25 og Tomcat 10.
 
     - Når vi kører javac eller java, er den nuværende mappe _tomcat_/webapps/erddap/WEB-INF.
 
@@ -68,7 +68,7 @@ Siden ERDDAP™ er primært beregnet til at være en servlet, der kører i Tomca
 
     - Hvis test Alle kompilerer, alt ERDDAP™ Der er udarbejdet behov. Et par klasser kompileres, der ikke er nødvendige for at ERDDAP™ . Hvis du kompilerer TestAll lykkes, men ikke kompilere nogle klasse, er denne klasse ikke nødvendig. (Der er nogle ubehandlede klasser.) 
 
-  - I et par tilfælde bruger vi 3. parts kildekode i stedet for .jar filer (særligt for DODS ) og har ændret dem lidt for at undgå problemer med at kompilere med Java 21. Vi har ofte lavet andre små ændringer (særligt til DODS ) af andre grunde.
+  - I et par tilfælde bruger vi 3. parts kildekode i stedet for .jar filer (særligt for DODS ) og har ændret dem lidt for at undgå problemer med at kompilere med Java 25. Vi har ofte lavet andre små ændringer (særligt til DODS ) af andre grunde.
 
   - De fleste klasser har testmetoder i deres tilknyttede src/test-fil. Du kan køre JUnit-testerne med `mvn test` kommando. Dette vil downloade flere zip-filer af data, som testen er afhængige af fra den seneste udgivelse af [ ERDDAP /erddap Test af test](https://github.com/ERDDAP/erddapTest/releases/) .\\
      

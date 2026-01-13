@@ -8,7 +8,7 @@ sidebar_position: 2
 1. Зробіть внесені зміни [Зміни](/changes) в розділі «Поради» ERDDAP™ Адміністратори повинні знати і зробити ERDDAP™ версії з версії, яку ви використовували.
      
 ##  Java  {#java} 
-2. Якщо ви готові ERDDAP™ версія 2.18 або нижче, необхідно перейти до Java 21 мар (або нові) і пов'язаний Tomcat 10. Дивитися регулярні ERDDAP™ Інструкція по монтажу [ Java ](/docs/server-admin/deploy-install#java) і [Кошик](/docs/server-admin/deploy-install#tomcat) й Ви також повинні копіювати ваш _tomcat_/content/erddap каталог з вашої старої установки Tomcat до нової установки Tomcat.
+2. Якщо ви готові ERDDAP™ версія 2.18 або нижче, необхідно перейти до Java 25 мар (або нові) і пов'язаний Tomcat 10. Дивитися регулярні ERDDAP™ Інструкція по монтажу [ Java ](/docs/server-admin/deploy-install#java) і [Кошик](/docs/server-admin/deploy-install#tomcat) й Ви також повинні копіювати ваш _tomcat_/content/erddap каталог з вашої старої установки Tomcat до нової установки Tomcat.
 
 ## Завантажити{#download} 
 3. Завантажити [ерддап.воєнний](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) в _tomcat_/webapps .

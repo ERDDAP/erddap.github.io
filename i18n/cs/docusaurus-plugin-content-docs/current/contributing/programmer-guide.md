@@ -52,7 +52,7 @@ Od ERDDAP™ je určen především jako servírku běžící v Tomcatu, důrazn
 
   - Používáme dávkový soubor, který smaže všechny soubory .class ve zdrojovém stromu, abychom zajistili, že budeme mít čistý překlad (s javacem) .
 
-  - V současné době používáme Adoptium javac jdk-21.0.3+9 pro sestavení gov.noaa.pfeg.coastwatch.TestAll (má vazby na několik tříd, které by jinak nebyly sestaveny.) a proveďte testy. Z bezpečnostních důvodů je téměř vždy nejlepší použít nejnovější verze Java 21 a Tomcat 10.
+  - V současné době používáme Adoptium javac jdk-25.0.1+8 pro sestavení gov.noaa.pfeg.coastwatch.TestVšechny (má vazby na několik tříd, které by jinak nebyly sestaveny.) a proveďte testy. Z bezpečnostních důvodů je téměř vždy nejlepší použít nejnovější verze Java 25 a Tomcat 10.
 
     - Při spuštění javac nebo java, aktuální adresář je _tomcat_/webapps/erddap/WEB-INF .
 
@@ -68,7 +68,7 @@ C. třídy/gov/noaa/pfel/pobřežní hlídka/testVšechny
 
     - Při zkoušce Všechny kompilace, všechno ERDDAP™ potřeby byly sestaveny. Několik tříd je sestaveno, které nejsou potřebné pro ERDDAP™ . Pokud kompilace TestAll uspěje, ale nesloží nějakou třídu, tato třída není nutná. (Jsou tu nedokončené nebo nepoužité hodiny.) 
 
-  - V několika případech používáme zdrojový kód třetí strany místo .jar souborů (zejména pro DODS ) a mírně je upravil, aby se zabránilo problémům s kompilací s Java 21. Často jsme dělali jiné drobné úpravy (zejména DODS ) z jiných důvodů.
+  - V několika případech používáme zdrojový kód třetí strany místo .jar souborů (zejména pro DODS ) a mírně je upravil, aby se zabránilo problémům s kompilací s Java 25. Často jsme dělali jiné drobné úpravy (zejména DODS ) z jiných důvodů.
 
   - Většina tříd má zkušební metody ve svém přidruženém souboru src/test. Můžete spustit JUnit testy s `mvn test` Veliteli. To bude stahovat několik zip souborů dat, které testy spoléhají na nejnovější vydání [ ERDDAP /erddap Zkouška](https://github.com/ERDDAP/erddapTest/releases/) .\\
      

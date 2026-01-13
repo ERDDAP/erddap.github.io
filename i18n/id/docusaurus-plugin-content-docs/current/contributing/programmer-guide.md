@@ -52,7 +52,7 @@ Sitemap ERDDAP™ terutama dimaksudkan untuk menjadi servlet berjalan di Tomcat,
 
   - Kami menggunakan file batch yang menghapus semua file .class di pohon sumber untuk memastikan bahwa kami memiliki kompilasi bersih (dengan javac) Sitemap
 
-  - Saat ini kami menggunakan javac adopsis jdk-21.0.3+9 untuk mengkompilasi gov.noa.pfeg.coastwatch.TestAll (memiliki link ke beberapa kelas yang tidak akan dikompilasi jika Meme it) dan menjalankan tes. Untuk alasan keamanan, hampir selalu terbaik untuk menggunakan versi terbaru dari Java 21 dan Tomcat 10.
+  - Saat ini kami menggunakan Javac jdk-25.0.1+8 untuk mengkompilasi gov.noaa.pfeg.coastwatch.TestAll (memiliki link ke beberapa kelas yang tidak akan dikompilasi jika Meme it) dan menjalankan tes. Untuk alasan keamanan, hampir selalu terbaik untuk menggunakan versi terbaru dari Java 25 dan Tomcat 10.
 
     - Ketika kita menjalankan javac atau java, direktori saat ini adalah _tomcat_/webapps/erddap/WEB-INF.
 
@@ -68,7 +68,7 @@ Sitemap ERDDAP™ terutama dimaksudkan untuk menjadi servlet berjalan di Tomcat,
 
     - Sitemap Semua kompila, semuanya ERDDAP™ kebutuhan telah dikompilasi. Beberapa kelas disusun yang tidak diperlukan untuk ERDDAP™ Sitemap Jika membandingkan TestAll berhasil tetapi tidak mengkompilasi beberapa kelas, kelas itu tidak diperlukan. (Ada beberapa kelas yang belum selesai/digunakan.) 
 
-  - Dalam beberapa kasus, kami menggunakan kode sumber pihak ke-3 daripada file .jar (Sitemap DODS ) dan telah memodifikasi mereka sedikit untuk menghindari masalah mematuhi Meme it Java 21. Kami sering membuat modifikasi sedikit lainnya (Sitemap DODS ) untuk alasan lain.
+  - Dalam beberapa kasus, kami menggunakan kode sumber pihak ke-3 daripada file .jar (Sitemap DODS ) dan telah memodifikasi mereka sedikit untuk menghindari masalah mematuhi Meme it Java 25. Kami sering membuat modifikasi sedikit lainnya (Sitemap DODS ) untuk alasan lain.
 
   - Sebagian besar kelas memiliki metode pengujian dalam file src/test yang terkait. Anda dapat menjalankan tes JUnit dengan `tes mvn` Login Ini akan men-download beberapa file zip data yang tes bergantung dari rilis terbaru dari [ ERDDAP Login Sitemap](https://github.com/ERDDAP/erddapTest/releases/) Login
      

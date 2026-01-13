@@ -52,7 +52,7 @@ Depuis ERDDAP™ est principalement destiné à être un servlet courant dans To
 
   - Nous utilisons un fichier batch qui supprime tous les fichiers .class dans l'arborescence source pour nous assurer que nous avons une compilation propre (avec javac) .
 
-  - Nous utilisons actuellement Javac jdk-21.0.3+9 d'Adptium pour compiler gov.noaa.pfeg.coastwatch.TestTous (il a des liens vers quelques classes qui ne seraient pas compilées autrement) et faire les tests. Pour des raisons de sécurité, il est presque toujours préférable d'utiliser les dernières versions de Java 21 et Tomcat 10.
+  - Nous utilisons actuellement Javac jdk-25.0.1+8 d'Adoptium pour compiler gov.noaa.pfeg.coastwatch.TestAll (il a des liens vers quelques classes qui ne seraient pas compilées autrement) et faire les tests. Pour des raisons de sécurité, il est presque toujours préférable d'utiliser les dernières versions de Java 25 et Tomcat 10.
 
     - Lorsque nous courons javac ou java, le répertoire courant est _tomcat_/webapps/erddap/WEB-INF .
 
@@ -68,7 +68,7 @@ Cours de java-cp;../../lib/servlet-api.jar;lib/* -Xmx4000M -Xms4000M classes/gov
 
     - Si essai Tout compile, tout ERDDAP™ les besoins ont été compilés. Quelques classes sont compilées qui ne sont pas nécessaires pour ERDDAP™ . Si compiler TestAll réussit mais ne compile pas une classe, cette classe n'est pas nécessaire. (Il y a des cours inachevés/inutilisés.) 
 
-  - Dans quelques cas, nous utilisons le code source 3ème partie au lieu de fichiers .jar (notamment pour DODS ) et les ont légèrement modifiés pour éviter les problèmes de compilation avec Java 21. Nous avons souvent fait d'autres légères modifications (notamment pour DODS ) pour d'autres raisons.
+  - Dans quelques cas, nous utilisons le code source 3ème partie au lieu de fichiers .jar (notamment pour DODS ) et les ont légèrement modifiés pour éviter les problèmes de compilation avec Java 25. Nous avons souvent fait d'autres légères modifications (notamment pour DODS ) pour d'autres raisons.
 
   - La plupart des classes ont des méthodes de test dans leur fichier src/test associé. Vous pouvez exécuter les tests Junit avec `Essai` commande. Ceci va télécharger plusieurs fichiers zip de données sur lesquels les tests comptent de la dernière version de [ ERDDAP /erddap Essai](https://github.com/ERDDAP/erddapTest/releases/) .\\
      
