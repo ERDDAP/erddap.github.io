@@ -1,10 +1,10 @@
 感谢Roy Mendelssohn的写作。
 
-那个 Python 软件包“xarray”对于以多种格式访问、子设置和可视化网格数据已变得非常流行。 "战列舰"可以 ERDDAP™ 一旦你明白如何正确使用它。 我要指出的是, Python 软件包“ erdadpy”  ' ( https://github.com/ioos/erddapy ) 可以从 ERDDAP™ 使用“ griddap” 和“ ” 的服务器 tabledap ',而'xarray'仅限于网格数据,而'erdadapy'可以导出数据用于'xarray'. 但如果你习惯于使用"xarray",并且有使用软件包的工作流程,那么仅仅在单一软件包内工作是可取的.
+那个 Python 软件包“xarray”对于以多种格式访问、子设置和可视化网格数据已变得非常流行。 "战列舰"可以 ERDDAP™ 一旦你明白如何正确使用它。 我要指出的是, Python 软件包“ erdadpy”  ' ( https://github.com/ioos/erddapy ) 可以从 ERDDAP™ 使用“ griddap” 和“ ” 的服务器 tabledap ',和'erdadapy'可以导出数据用于'xarray'. 但如果你习惯于使用"xarray",并且有使用软件包的工作流程,那么仅仅在单一软件包内工作是可取的. 以下是一个带有“ griddap” 数据集的例子 。
 
 我最喜欢的一个数据集是 JPL MURv4.1 SST 数据 https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html 。 。 。 如果我想做一个数据子集 2026年1月28日 (20 50个) 和经度 (-140, -105 (英语).) ,并下载 netcdf 文件, ERDDAP™ 这个的 URL 是 https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z : 1 个: (2026-01-28 T09:00:00Z) [ (20 (简体中文).) : 1 个: (50个) [ (-140号) : 1 个: (-105岁) 假设这就是你用在"轴心"里 但事实上,如果你这样做,你是一个错误。
 
-产生错误的原因是“ xarray” 使用 OPeNDAP   ( https://www.opendap.org ) 作为远程访问的协议,以及 ERDDAP™ 语法基于 OPeNDAP 语法,以及 ERDDAP™ 服务器也可以作为 OPeNDAP 服务器时,两种服务如何进行有差异。 (见例如 https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) 。 。 。 。
+产生错误的原因是“ xarray” 使用 OPeNDAP   ( https://www.opendap.org ) 作为远程访问的协议,以及 ERDDAP™ 语法基于 OPeNDAP 语法,以及 ERDDAP™ 服务器也可以作为 OPeNDAP 服务器时,两种服务如何进行有差异。 (见例如 https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) 。 。 。 。 任意 ERDDAP 没有切片或过滤器的 URL,只有 datasetID 表现得像一个 OPeNDAP URL 和 xarray 兼容 。
 
 如果我们想到 进入本地的步骤 NetCDF 在“ xarray” 中,我们会采取以下步骤:
 

@@ -1,10 +1,10 @@
 多虧羅伊·門德爾索恩寫了這封信
 
-其 Python 套件「 xarray 」 已經非常流行, 用于以多种格式存取、 子設定和可視化網格化的資料 。 "神舟"行得通 ERDDAP™ 一旦你明白如何正确使用它。 我要指出的是 Python 套件 ' ' ( https://github.com/ioos/erddapy ) 可以存取資料 ERDDAP™ 使用“ griddap” 和“ ” 的伺服器 tabledap ', 而 'xarray' 仅限于網格化的資料, 'erdadapy' 可以匯出 'xarray' 的資料 。 但如果你習慣使用「 xarray」 , 並且有工作流程使用套件, 那么只用單個套件就可以了 。
+其 Python 套件「 xarray 」 已經非常流行, 用于以多种格式存取、 子設定和可視化網格化的資料 。 "神舟"行得通 ERDDAP™ 一旦你明白如何正确使用它。 我要指出的是 Python 套件 ' ' ( https://github.com/ioos/erddapy ) 可以存取資料 ERDDAP™ 使用“ griddap” 和“ ” 的伺服器 tabledap ', 而 'erdadapy' 可以匯出 'xarray' 的資料 。 但如果你習慣使用「 xarray」 , 並且有工作流程使用套件, 那么只用單個套件就可以了 。 以下為「 griddap」 資料集的示例 。
 
 我最喜歡的數據集是 JPL MURv4.1 SST 資料 https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . 如果我想做2026年1月28日的數據的子集, (20,50) 和經度 (-140, -105) 下載 netcdf 檔案 ERDDAP™ 網址會是 https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z : 1: (2026-01-28 T09:00Z) [ (20) : 1: (50) [ (-140) : 1: (-105) 並且可以合理推測這就是你在"x"中會用到的. 但事實上,如果你這樣做,你就會有錯誤。
 
-造成錯誤的原因是「 xarray」 使用 OPeNDAP   ( https://www.opendap.org ) 作為遠端存取的協議, ERDDAP™ 語法基于 OPeNDAP 語法,和 a ERDDAP™ 伺服器也可以做為 OPeNDAP 伺服器, 兩項服務的處理方式不同 。 (例如, https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) .
+造成錯誤的原因是「 xarray」 使用 OPeNDAP   ( https://www.opendap.org ) 作為遠端存取的協議, ERDDAP™ 語法基于 OPeNDAP 語法,和 a ERDDAP™ 伺服器也可以做為 OPeNDAP 伺服器, 兩項服務的處理方式不同 。 (例如, https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) . 任何 ERDDAP URL 沒有切片或滤波器,只有 datasetID 表現得像個 OPeNDAP URL 與 xarray 兼容 。
 
 如果我們想一想到一個本地人 NetCDF 檔案在「 xarray 」 中會做以下的步數 :
 
