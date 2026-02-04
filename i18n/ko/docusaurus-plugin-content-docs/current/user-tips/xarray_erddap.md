@@ -1,10 +1,10 @@
 이 쓰기에 대한 로이 Mendelssohn 덕분에.
 
-더 보기 Python 패키지 'xarray'는 다양한 형식의 그리드 데이터에 액세스, 축소 및 시각화에 매우 인기가 있습니다. 'xarray'는 잘 작동합니다. ERDDAP™ 제대로 사용하는 방법을 이해 한 번. 나는 그것을 지적한다 Python 패키지 'erddapy 이름 * ( https://github.com/ioos/erddapy ) 데이터 액세스 ERDDAP™ 'griddap'과 '를 사용하는 서버 tabledap ', 'xarray'는 그리드 데이터로 제한되고 'erddapy'는 'xarray'의 데이터를 수출 할 수 있습니다. 하지만 'xarray'를 사용 하 고 패키지를 사용 하 여 작업 흐름을가지고, 단 하나 패키지 내에서 단지 작업에 바람직할 수 있습니다.
+더 보기 Python 패키지 'xarray'는 다양한 형식의 그리드 데이터에 액세스, 축소 및 시각화에 매우 인기가 있습니다. 'xarray'는 잘 작동합니다. ERDDAP™ 제대로 사용하는 방법을 이해 한 번. 나는 그것을 지적한다 Python 패키지 'erddapy 이름 * ( https://github.com/ioos/erddapy ) 데이터 액세스 ERDDAP™ 'griddap'과 '를 사용하는 서버 tabledap ', 'erddapy'는 'xarray'의 데이터를 수출할 수 있습니다. 하지만 'xarray'를 사용 하 고 패키지를 사용 하 여 작업 흐름을가지고, 단 하나 패키지 내에서 단지 작업에 바람직할 수 있습니다. 아래는 'griddap' 데이터 세트와 예입니다.
 
 가장 좋아하는 데이터 세트 중 하나는 JPL MURv4.1 SST 데이터입니다. https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html · 1 월 28, 2026, latitdues 라고 데이터의 하위 설정하려면 (20,50명) 및 경도 (-140, -105명) , 그리고 netcdf 파일을 다운로드, ERDDAP™ 이 URL은 https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00:00Z) ₢ 킹 (20명) : 1 :: (50-100 원) ₢ 킹 (-140명) : 1 :: (-105명) ] 그리고 이것은 당신이 'xarray'에서 사용하는 것이 무엇인지 가정하는 것이 합리적입니다. 그러나 당신이 그렇게하면 당신은 오류를 얻을.
 
-오류가 발생하면 'xarray'가 사용됩니다. OPeNDAP   ( https://www.opendap.org ) 원격 액세스의 프로토콜로, 그리고 동안 ERDDAP™ 구문은 OPeNDAP 구문, 그리고 ERDDAP™ 서버는 또한 행동할 수 있습니다 OPeNDAP 서버, 이 두 서비스를 위해 수행되는 방법에 차이가 있습니다. (예를 들어 https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) ·
+오류가 발생하면 'xarray'가 사용됩니다. OPeNDAP   ( https://www.opendap.org ) 원격 액세스의 프로토콜로, 그리고 동안 ERDDAP™ 구문은 OPeNDAP 구문, 그리고 ERDDAP™ 서버는 또한 행동할 수 있습니다 OPeNDAP 서버, 이 두 서비스를 위해 수행되는 방법에 차이가 있습니다. (예를 들어 https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) · 이름 * ERDDAP slicing 또는 필터없이 URL, 그냥 datasetID , 행동 OPeNDAP URL과 xarray와 호환됩니다.
 
 지역에 접근하기 위한 단계의 생각 NetCDF 'xarray' 파일은 다음 단계를 수행 할 것입니다.
 
