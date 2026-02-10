@@ -1,12 +1,19 @@
 Kiitos Roy Mendelssohnille tästä kirjoituksesta.
 
-The Python Paketista ”harmaa” on tullut erittäin suosittu pääsy, alisääminen ja visualisointi verkkotietojen eri muodoissa. "Ray toimii hyvin" ERDDAP™ Kun ymmärtää, miten sitä käytetään oikein. huomauttaisin, että Python Pakkaus &gt; erddapy """ ( https://github.com/ioos/erddapy ) voi käyttää tietoja ERDDAP™ palvelimet, jotka käyttävät sekä Griddap- että tabledap " ja "erddapy" voivat viedä dataa räjähdykseen. Mutta jos olet tottunut käyttämään räjähdystä ja työnkulkuja pakkauksen avulla, voi olla toivottavaa vain työskennellä yhden paketin sisällä. Alla on esimerkki "griddap"-aineistosta.
+The Python Paketista ”harmaa” on tullut erittäin suosittu pääsy, alisääminen ja visualisointi verkkotietojen eri muodoissa. Huomioithan, että ryppy toimii hyvin ERDDAP™ Avoin DAP Vastaus molempiin tabledap Griddap-protokollat röntgenkuvien avulla DAP Netcdf4 tai pydap. Mikä on OPeNDAP Vastaus? Se on mikä tahansa ERDDAP URL ilman liukumista tai suodattimia, vain datasetID . Kun käytät suodattimia tai jopa OPeNDAP Itse voi käyttää erddapiaa ( https://github.com/ioos/erddapy ) kuin röntgenmoottori. Alla olevassa esimerkissä kerrotaan, kuinka ladata "griddap"-aineisto.
 
-Yksi suosikkitietokoneistani on JPL MURv4.1 SST -tiedot, jotka ovat saatavilla https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Jos haluan tehdä osan tiedoista 28. tammikuuta 2026, (20,50) ja pituus (140, 105) ja lataa netcdf-tiedosto, ERDDAP™ URL-osoite olisi tämä https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z :1: (2026-01-28T09:00) [1] (20 20) :1: (50) [1] (-140) :1: (105) On järkevää olettaa, että tämä on sitä, mitä käyttäisit rypäleessä. Mutta jos teet niin, saat virheen.
+Yksi suosikkitietokoneistani on JPL MURv4.1 SST -tiedot, jotka ovat saatavilla https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Jos haluan tehdä osan tiedoista 28. tammikuuta 2026, (20,50) ja pituus (140, 105) ja lataa netcdf-tiedosto, ERDDAP™ URL-osoite olisi tämä https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z :1: (2026-01-28T09:00) [1] (20 20) :1: (50) [1] (-140) :1: (105) )
 
-Syynä tähän on se, että räjähdys käyttää OPeNDAP   ( https://www.opendap.org ) etäkäytön pöytäkirjana ja ERDDAP™ syntaksi perustuu OPeNDAP syntaksi ja ERDDAP™ Palvelin voi toimia myös OPeNDAP Palvelin, on eroja, miten tämä tehdään kahden palvelun. (Katso esimerkiksi https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) . Kaikki ERDDAP URL ilman liukumista tai suodattimia, vain datasetID käyttäytyy kuin yksi OPeNDAP URL-osoite on yhteensopiva röntgenkuvien kanssa.
+```python
+import xarray as xr
 
-Jos mietimme, miten pääsemme paikalliseen NetCDF Tiedostossa "Carray" teemme seuraavat vaiheet:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+Saman voi tehdä vain käyttämällä OPeNDAP URL. Jos mietimme, miten pääsemme paikalliseen NetCDF Tiedostossa "Carray" teemme seuraavat vaiheet:
 
 - Avaa tiedosto osoittamalla koko reitti tiedostoon
 - Katso yhteensovitettu tieto ensimmäisestä askeleesta
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-Kotiviestin otsikko on, että räjähdys toimii erinomaisesti verkkotietoihin ERDDAP™ palvelin, jos siirryt osoitteeseen xr.open_dataset () &gt; ERDDAP™ URL ilman tiedostotyyppiä ja ilman rajoituksia.
+Kotiviestin otsikko on se, että räjähdys toimii erinomaisesti dataan ERDDAP™ palvelin, jos siirryt osoitteeseen xr.open_dataset () &gt; ERDDAP™ URL ilman tiedostotyyppiä ja ilman rajoituksia tai käytä erddapy-moottoria.

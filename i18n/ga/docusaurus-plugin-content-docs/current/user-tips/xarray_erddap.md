@@ -1,12 +1,19 @@
 Buíochas le Roy Mendelssohn le haghaidh seo a scríobh suas.
 
-An bhfuil Python pacáiste 'xarray' tar éis éirí an-tóir le haghaidh rochtain, fothacar agus amharcléiriú sonraí gridded i bhformáidí éagsúla. 'xarray' oibreacha fíneáil le ERDDAP™ nuair a thuigeann tú conas é a úsáid i gceart. Ba mhaith liom pointe amach go bhfuil an Python pacáiste 'erddapy '' ( https://github.com/ioos/erddapy ) is féidir rochtain a fháil ar shonraí ó ERDDAP™ freastalaithe ag baint úsáide as 'griddap' agus ' tabledap ', agus is féidir le 'erddapy' na sonraí a onnmhairiú le haghaidh 'xarray'. Ach má tá tú i dtaithí ar 'xarray' a úsáid agus a bhfuil sreabhadh oibre ag baint úsáide as an bpacáiste, ansin is féidir é a bheith inmhianaithe a bheith ag obair go díreach laistigh den phacáiste amháin. Is sampla é seo thíos le tacar sonraí 'griddap'.
+An bhfuil Python pacáiste 'xarray' tar éis éirí an-tóir le haghaidh rochtain, fothacar agus amharcléiriú sonraí gridded i bhformáidí éagsúla. Tabhair faoi deara go n-oibríonn 'xarray' fíneáil le ERDDAP™ Níl an Tweet seo ar fáil DAP freagra ar an dá tabledap agus prótacail griddap ag baint úsáide as OPen xarray DAP innill cosúil netcdf4 nó pydap. Cad é OPeNDAP foirm duille: líneach Is maith liom é ERDDAP URL gan slicing nó scagairí, ach an datasetID . Nuair a úsáid slices de scagairí, áfach, nó fiú OPeNDAP féin, is féidir le duine a bhaint as an erddapy ( https://github.com/ioos/erddapy ) mar inneall xarray. Léiríonn an sampla thíos conas tacar sonraí 'griddap' a luchtú.
 
-Is é ceann de mo tacar sonraí is fearr leat na sonraí JPL MURv4.1 SST ar fáil ag https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Más mian liom fo-thacar de na sonraí a dhéanamh le rá 28 Eanáir, 2026, latitdues (20,50) agus fad saoil (tréimhse saoil: ilbhliantúil) , agus íoslódáil comhad netcdf, an ERDDAP™ Bheadh URL seo a bheith https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ): 1: (2026-01-28T09:00:00Z) [7] (20 bliain) : 1: (50 50 50) [7] (-140) : 1: (-105) ] agus tá sé réasúnach glacadh leis go bhfuil sé seo cad a bheadh tú ag úsáid i 'xarray'. Ach i ndáiríre má dhéanann tú amhlaidh a bhí tú a fháil ar earráid.
+Is é ceann de mo tacar sonraí is fearr leat na sonraí JPL MURv4.1 SST ar fáil ag https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Más mian liom fo-thacar de na sonraí a dhéanamh le rá 28 Eanáir, 2026, latitdues (20,50) agus fad saoil (tréimhse saoil: ilbhliantúil) , agus íoslódáil comhad netcdf, an ERDDAP™ Bheadh URL seo a bheith https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ): 1: (2026-01-28T09:00:00Z) [7] (20 bliain) : 1: (50 50 50) [7] (-140) : 1: (-105) ]
 
-Is é an chúis a tháirgeann sé seo ná go n-úsáideann 'xarray' OPeNDAP   ( https://www.opendap.org ) mar phrótacal do rochtain iargúlta, agus cé go bhfuil an ERDDAP™ Tá syntax bunaithe ar OPeNDAP syntax, agus ERDDAP™ Is féidir le freastalaí gníomhú freisin mar OPeNDAP freastalaí, tá difríochtaí i conas é seo a dhéanamh don dá seirbhísí. (Féach mar shampla https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) . Aon duine ERDDAP URL gan slicing nó scagairí, ach an datasetID , behaves cosúil le OPeNDAP URL agus beidh sé ag luí leis xarray.
+```python
+import xarray as xr
 
-Má cheapann muid na céimeanna chun rochtain a fháil ar áitiúil NetCDF comhad i 'xarray' ba mhaith linn a dhéanamh ar na céimeanna seo a leanas:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+Is féidir a bhaint amach mar an gcéanna ag baint úsáide as ach an OPeNDAP URL. Má cheapann muid na céimeanna chun rochtain a fháil ar áitiúil NetCDF comhad i 'xarray' ba mhaith linn a dhéanamh ar na céimeanna seo a leanas:
 
 - Oscail an comhad ag cur in iúl ar an cosán iomlán leis an gcomhad
 - Féach ar an t-eolas a chomhordú ón gcéad chéim
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-Mar sin, is é an teachtaireacht bhaile a ghlacadh go n-oibríonn 'xarray' mór le haghaidh sonraí gridded ar ERDDAP™ freastalaí má théann tú chuig 'xr.open_dataset () ' an ERDDAP™ URL gan cineál comhaid agus gan srianta.
+Mar sin, is é an teachtaireacht bhaile a ghlacadh go n-oibríonn 'xarray' mór le haghaidh sonraí ar ERDDAP™ freastalaí má théann tú chuig 'xr.open_dataset () ' an ERDDAP™ URL gan cineál comhaid agus gan srianta, nó bain úsáid as an inneall erddapy.

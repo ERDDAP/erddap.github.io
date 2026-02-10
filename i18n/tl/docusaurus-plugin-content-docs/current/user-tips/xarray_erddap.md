@@ -1,12 +1,19 @@
 Salamat kay Roy Mendelssohn sa pagsulat na ito.
 
-Ang Python Naging napakapopular ng paketeng 'xarray' para sa pag-akses, subsetting at pagkokokodigo ng mga datos sa iba't ibang format. Ang mga gawa ni 'xarray' ay mahusay sa mga gawa ni ERDDAP™ Minsan ay nauunawaan mo kung paano ito gagamitin nang wasto. Ituturo ko na ang Python 'erdapy' ng pakete ' ( https://github.com/ioos/erddapy ) maaaring ma-akses ang datos mula sa ERDDAP™ Mga server na ginagamit kapuwa ang 'griddap' at ' tabledap ', at 'erdapy' ay maaaring magluwas ng datos para sa 'xarray'. Ngunit kung ikaw ay sanay sa paggamit ng 'xarray' at may mga workflows gamit ang pakete, kung gayon maaaring kanais-nais na magtrabaho lamang sa loob ng isang pakete. Ang nasa ibaba ay isang halimbawa na may 'griddap' dataset.
+Ang Python Naging napakapopular ng paketeng 'xarray' para sa pag-akses, subsetting at pagkokokodigo ng mga datos sa iba't ibang format. Pansinin na ang mga gawa ni 'xarray' ay mainam sa pamamagitan ng ERDDAP™ 'OPen DAP sagot sa dalawang ito tabledap at mga protocol ng griddap na gumagamit ng OPen ng xarray DAP Mga makinang katulad ng netcdf4 o pydap. Ang isang bagay ay OPeNDAP ang tugon? Ito ay anumang ERDDAP URL nang hindi binabaybay o sinasala, yaon lamang datasetID . Gayunman, kapag gumagamit ng mga hiwa ng panala o maging ng mga filter OPeNDAP sa ganang sarili, magagamit ng isa ang erddapy ( https://github.com/ioos/erddapy ) bilang isang makinang xarray. Ang halimbawa sa ibaba ay nagpapakita kung paano magkarga ng isang 'griddap' dataset.
 
-Ang isa sa paborito kong datasets ay ang JPL MURv4.1 SST data na makukuha sa JPL MURv4.1 SST data https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Kung nais kong gumawa ng isang subset ng datos para sabihin Enero 28, 2026, latitdues (20,50) at mga longhitud (-140, -105) , at download ang isang netcdf file, ang ERDDAP™ URL para rito https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00:00Z) ][ (20) :1: (50) ][ (-140) :1: (-105) ] at makatuwirang ipalagay na ito ang gagamitin mo sa 'xarray'. Subalit sa katunayan kung gagawin mo ito ikaw ay nagkakamali.
+Ang isa sa paborito kong datasets ay ang JPL MURv4.1 SST data na makukuha sa JPL MURv4.1 SST data https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Kung nais kong gumawa ng isang subset ng datos para sabihin Enero 28, 2026, latitdues (20,50) at mga longhitud (-140, -105) , at download ang isang netcdf file, ang ERDDAP™ URL para rito https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00:00Z) ][ (20) :1: (50) ][ (-140) :1: (-105) ]
 
-Ang dahilan kung bakit ito lumilikha ng pagkakamali ay ang paggamit ng 'xarray' OPeNDAP   ( https://www.opendap.org ) bilang protocol nito para sa remote access, at habang ang ERDDAP™ Ang pagtutulungan ay batay sa OPeNDAP Pagtatalik, at Pag - iisa ERDDAP™ Maaari ring kumilos ang server bilang isang OPeNDAP server, may mga pagkakaiba sa kung paano ito ginagawa para sa dalawang serbisyo. (Tingnan ang halimbawa https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) . Sinuman ERDDAP URL nang hindi binabaybay o sinasala, yaon lamang datasetID , gumawi na parang isang tao OPeNDAP URL at magiging katugma ng xarray.
+```python
+import xarray as xr
 
-Kung iisipin natin ang mga hakbang upang makausap ang isang tagaroon NetCDF talaksan sa 'xarray' ay gagawin natin ang mga sumusunod na hakbang:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+Magagawa rin ng isa ang gayon sa paggamit lamang ng OPeNDAP URL. Kung iisipin natin ang mga hakbang upang makausap ang isang tagaroon NetCDF talaksan sa 'xarray' ay gagawin natin ang mga sumusunod na hakbang:
 
 - Buksan ang talaksan sa pamamagitan ng pagtutok sa buong landas patungo sa talaksan
 - Tingnan ang magkakaugnay na impormasyon mula sa unang hakbang
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-Kaya't ang mensahe sa pag - uwi ng bahay ay na ang 'xarray' ay gumagawa ng malaking bagay para sa nakatiklop na impormasyon tungkol sa isang nakatiklop na impormasyon ERDDAP™ server kung daraan ka sa 'xr. buksan_dataset () ' yung ERDDAP™ URL na walang file type at walang demand.
+Kaya ang mensahe sa pag-uwi ay na ang 'xarray' ay gumagana nang mahusay para sa datos sa isang ERDDAP™ server kung daraan ka sa 'xr. buksan_dataset () ' yung ERDDAP™ URL na walang file type at walang demand, o gamitin ang erddapy engine.

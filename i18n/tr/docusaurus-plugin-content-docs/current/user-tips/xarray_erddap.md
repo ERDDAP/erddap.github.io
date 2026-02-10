@@ -1,12 +1,19 @@
 Bu yazı için Roy Mendelssohn sayesinde.
 
-The The The The The The The The Python Paket ‘xarray’ çeşitli formatlarda ağlayan verileri erişim için çok popüler hale geldi. 'xarray' iyi çalışıyor ERDDAP™ Bir kez onu doğru şekilde nasıl kullanacağınızı anlıyorsunuz. Bunun üzerine işaret ediyorum ki, Python Paket ‘erddapy ‘ ‘ ‘ ( https://github.com/ioos/erddapy ) Verilere buradan erişebilir ERDDAP™ Hem "griddap" hem de " tabledap " ve 'erddapy', verileri 'xarray' için ihraç edebilir. Ancak ‘xarray’ kullanmaya alışkınsanız ve paketi kullanarak iş akışları varsa, o zaman sadece tek paket içinde çalışmak arzu edilebilir. Aşağıdaki bir ‘griddap’ veri kümesi ile bir örnek.
+The The The The The The The The Python Paket ‘xarray’ çeşitli formatlarda ağlayan verileri erişim için çok popüler hale geldi. 'xarray'ın iyi çalıştığını unutmayın ERDDAP™ "Ey OPen DAP Her ikisi için de yanıt tabledap ve griddap protokolleri xarray'ın OPen DAP netcdf4 veya pydap gibi motorlar. Nedir? OPeNDAP Cevap? Herhangi bir şeydir ERDDAP Link veya filtreler olmadan URL, sadece datasetID . Ancak filtrelerini kullanırken veya hatta hatta OPeNDAP Kendisi, biri erddapy kullanabilir ( https://github.com/ioos/erddapy ) xarray motoru olarak. Aşağıdaki örnek, bir 'griddap' veri setini nasıl yükleyeceğinizi gösteriyor.
 
-En sevdiğim veri setlerimden biri, mevcut JPL MURv4.1 SST verileridir https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . 28 Ocak 2026 diyor için verilerin bir alt kümesi yapmak istiyorsam latitdues (20,50) Ve uzun (-140, -105) , ve bir netcdf dosyasını indir, ERDDAP™ Bu URL için URL olurdu https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z 1): (2026-01-28T09:00Z) [8] (20 20) :1: (50 50 50) [8] (-140) :1: (-105) ] ve bunun ‘xarray’da ne kullanacağınızı varsaymak makul. Ama aslında bunu yaparsanız bir hata alırsınız.
+En sevdiğim veri setlerimden biri, mevcut JPL MURv4.1 SST verileridir https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . 28 Ocak 2026 diyor için verilerin bir alt kümesi yapmak istiyorsam latitdues (20,50) Ve uzun (-140, -105) , ve bir netcdf dosyasını indir, ERDDAP™ Bu URL için URL olurdu https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z 1): (2026-01-28T09:00Z) [8] (20 20) :1: (50 50 50) [8] (-140) :1: (-105) ]
 
-Bunun bir hata yapmasının nedeni ‘xarray’ kullanımıdır. OPeNDAP   ( https://www.opendap.org ) Uzak erişim için protokolü olarak ve iken ERDDAP™ Gazetecilik, sözcülüğe dayanmaktadır OPeNDAP Kelimeler ve bir antropolog ERDDAP™ sunucusu da bir an olarak hareket edebilir OPeNDAP sunucu, bu iki hizmet için nasıl yapıldığı konusunda farklılıklar var. (Örneğin bakınız https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) . Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any Any ERDDAP Link veya filtreler olmadan URL, sadece datasetID , bir an gibi davranır OPeNDAP URL ve xarray ile uyumlu olacaktır.
+```python
+import xarray as xr
 
-Yerel bir siteye erişmek için adımları düşünürsek NetCDF 'xarray'da dosya aşağıdaki adımları yaparız:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+Biri sadece aynı şeyi kullanarak elde edebilir OPeNDAP URL. Yerel bir siteye erişmek için adımları düşünürsek NetCDF 'xarray'da dosya aşağıdaki adımları yaparız:
 
 - Dosyayı dosyayı dosyaya işaret ederek açın
 - İlk adımdan koordinat bilgilere bakın
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-Bu yüzden ev mesajı, ‘xarray’ın ızgara bir veri için büyük çalıştığıdır ERDDAP™ Eğer 'xr.open_dataset () " ERDDAP™ Bir dosya türü olmadan ve kısıtlamalar olmadan URL.
+Bu yüzden ev mesajı, 'xarray'ın veri için harika çalıştığıdır ERDDAP™ Eğer 'xr.open_dataset () " ERDDAP™ Bir dosya türü olmadan ve kısıtlamalar olmadan URL veya hatalı motoru kullanın.

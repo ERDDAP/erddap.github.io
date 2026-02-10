@@ -1,12 +1,19 @@
 Roy Mendelssohn-nak köszönhetően ezt írja fel.
 
-A Python A "xarray" csomag nagyon népszerűvé vált a hálózati adatok különböző formátumokban történő hozzáférése, leállítása és vizualizálása szempontjából. "xarray" jól működik ERDDAP™ Ha egyszer megérti, hogyan kell megfelelően használni. Rámutatnék, hogy a Python "erddapy" csomag "..." ( https://github.com/ioos/erddapy ) az adatokhoz való hozzáférés ERDDAP™ szerverek mind a "griddap", mind a " tabledap ", és a "erddapy" exportálhatja az adatokat "xarray"-re. De ha hozzászokik, hogy használja a "xarray" és a munkafolyamatok a csomagot, akkor kívánatos lehet, hogy csak működjön az egységes csomagban. Az alábbiakban egy példa egy "griddap" adatkészlettel.
+A Python A "xarray" csomag nagyon népszerűvé vált a hálózati adatok különböző formátumokban történő hozzáférése, leállítása és vizualizálása szempontjából. Ne feledje, hogy a "xarray" jól működik ERDDAP™ OPen DAP válasz mindkettőre tabledap és griddap protokollok az xarray OPen használatával DAP motorok, mint a netcdf4 vagy a pydap. Mi az egy OPeNDAP válasz? Ez minden ERDDAP URL szeletelés vagy szűrés nélkül, csak a datasetID ... Szűrők szeleteinek használata esetén, vagy akár OPeNDAP önmagát, használhatja az erddapiát ( https://github.com/ioos/erddapy ) mint röntgenmotor. Az alábbi példa megmutatja, hogyan kell betölteni egy "griddap" adatkészletet.
 
-Az egyik kedvenc adatkészletem a JPL MURv4.1 SST-adatok. https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html ... Ha meg akarom tenni az adatkészletet, mondjuk 2026. január 28., latitdues (20,50) és hosszúság (-140, -105) és letölteni egy netcdf fájlt, ERDDAP™ URL ez lenne https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z 1:1: (2026-01-28T09:00Z) [[Ki]]] (20.) :1:1: (50.) [[Ki]]] (-140) :1:1: (-105) ] ésszerű feltételezni, hogy ez az, amit a „szürke”-ben használ. De valójában, ha ezt megteszitek, hibát kaptok.
+Az egyik kedvenc adatkészletem a JPL MURv4.1 SST-adatok. https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html ... Ha meg akarom tenni az adatkészletet, mondjuk 2026. január 28., latitdues (20,50) és hosszúság (-140, -105) és letölteni egy netcdf fájlt, ERDDAP™ URL ez lenne https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z 1:1: (2026-01-28T09:00Z) [[Ki]]] (20.) :1:1: (50.) [[Ki]]] (-140) :1:1: (-105) ]
 
-Az ok, amiért ez hibát okoz, az az, hogy a „szürke” használata OPeNDAP   ( https://www.opendap.org ) mint a távoli hozzáférés protokollja, és míg ERDDAP™ A szintax alapul OPeNDAP Szintaxis és ERDDAP™ szerver is működhet, mint egy OPeNDAP szerver, vannak különbségek, hogy ez hogyan történik a két szolgáltatás. (Lásd például https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) ... Minden ERDDAP URL szeletelés vagy szűrés nélkül, csak a datasetID úgy viselkedik, mint egy OPeNDAP URL és kompatibilis lesz az röntgenszel.
+```python
+import xarray as xr
 
-Ha úgy gondoljuk, hogy milyen lépések vannak a helyi hozzáféréshez NetCDF fájl "xarray" mi tennénk a következő lépéseket:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+Ugyanezt lehet elérni, csak a OPeNDAP URL. Ha úgy gondoljuk, hogy milyen lépések vannak a helyi hozzáféréshez NetCDF fájl "xarray" mi tennénk a következő lépéseket:
 
 - Nyissa meg a fájlt, ha rámutat a fájl teljes útjára
 - Nézze meg az első lépés koordinált adatait
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-Tehát az otthoni üzenet az, hogy a „szürke” nagyszerűen működik a rácsos adatokhoz egy ERDDAP™ szerver, ha átmegy a "xr.open_dataset () A ERDDAP™ URL fájltípus nélkül és korlátozások nélkül.
+Tehát az otthoni üzenet az, hogy a "xarray" nagy adatokkal működik ERDDAP™ szerver, ha átmegy a "xr.open_dataset () A ERDDAP™ URL fájltípus és korlátozások nélkül, vagy használja az erddapy motort.

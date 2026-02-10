@@ -1,12 +1,19 @@
 Tack till Roy Mendelssohn för den här skrivningen.
 
-och Python paketet "xarray" har blivit mycket populärt för att komma åt, subsetting och visualisera rutnätsdata i en mängd olika format. "xarray" fungerar bra med ERDDAP™ När du förstår hur du använder den ordentligt. Jag skulle påpeka att Python paketet "erddapy " ( https://github.com/ioos/erddapy ) kan komma åt data från ERDDAP™ servrar som använder både "griddap" och " tabledap ", och "erddapy" kan exportera data för "xarray". Men om du är van vid att använda "xarray" och har arbetsflöden med hjälp av paketet, kan det vara önskvärt att bara arbeta inom det enskilda paketet. Nedan är ett exempel med en "griddap" dataset.
+och Python paketet "xarray" har blivit mycket populärt för att komma åt, subsetting och visualisera rutnätsdata i en mängd olika format. Observera att "xarray" fungerar bra med ERDDAP™ OPen DAP Svar för båda tabledap och griddap protokoll med röntgen OPen DAP motorer som netcdf4 eller pydap. Vad är en OPeNDAP svar? Det är någon ERDDAP URL utan skivning eller filter, bara datasetID . När du använder skivor av filter, eller till och med OPeNDAP Själv kan man använda erddapy ( https://github.com/ioos/erddapy ) Som röntgenmotor. Exemplet nedan visar hur man laddar en "griddap" dataset.
 
-En av mina favoritdatamängder är JPL MURv4.1 SST-data tillgänglig på https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Om jag vill göra en delmängd av data för säg 28 januari 2026, latitdues (20,50) och longituds (-140, -105) och ladda ner en netcdf-fil, ERDDAP™ URL för detta skulle vara https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00:00Z) ][[f]] (20 20 20 20) 1:1: (50 50 50) ][[f]] (-140) 1:1: (-105) Och det är rimligt att anta att detta är vad du skulle använda i "xarray". Men i själva verket om du gör det fick du ett fel.
+En av mina favoritdatamängder är JPL MURv4.1 SST-data tillgänglig på https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Om jag vill göra en delmängd av data för säg 28 januari 2026, latitdues (20,50) och longituds (-140, -105) och ladda ner en netcdf-fil, ERDDAP™ URL för detta skulle vara https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00:00Z) ][[f]] (20 20 20 20) 1:1: (50 50 50) ][[f]] (-140) 1:1: (-105) ]
 
-Anledningen till att detta ger ett fel är att "xarray" använder OPeNDAP   ( https://www.opendap.org ) som protokoll för fjärråtkomst, och medan ERDDAP™ syntax baseras på OPeNDAP syntax och en ERDDAP™ server kan också fungera som en OPeNDAP Server, det finns skillnader i hur detta görs för de två tjänsterna. (Se till exempel https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) . Alla ERDDAP URL utan skivning eller filter, bara datasetID Beter sig som en OPeNDAP URL och kommer att vara kompatibel med röntgen.
+```python
+import xarray as xr
 
-Om vi tänker på stegen för att komma åt en lokal NetCDF fil i "xarray" skulle vi göra följande steg:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+Man kan uppnå samma sak med bara den OPeNDAP URL. Om vi tänker på stegen för att komma åt en lokal NetCDF fil i "xarray" skulle vi göra följande steg:
 
 - Öppna filen genom att peka på hela vägen till filen
 - Koordinera information från första steget
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-Så ta hem meddelandet är att "xarray" fungerar bra för ruttna data på en ERDDAP™ server om du passerar till "xr.open_dataset () "den ERDDAP™ URL utan filtyp och utan begränsningar.
+Så ta hem meddelande är att "xarray" fungerar bra för data på en ERDDAP™ server om du passerar till "xr.open_dataset () "den ERDDAP™ URL utan filtyp och utan begränsningar, eller använda erddapy-motorn.

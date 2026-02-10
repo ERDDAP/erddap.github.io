@@ -1,12 +1,19 @@
 感谢Roy Mendelssohn的写作。
 
-那个 Python 软件包“xarray”对于以多种格式访问、子设置和可视化网格数据已变得非常流行。 "战列舰"可以 ERDDAP™ 一旦你明白如何正确使用它。 我要指出的是, Python 软件包“ erdadpy”  ' ( https://github.com/ioos/erddapy ) 可以从 ERDDAP™ 使用“ griddap” 和“ ” 的服务器 tabledap ',和'erdadapy'可以导出数据用于'xarray'. 但如果你习惯于使用"xarray",并且有使用软件包的工作流程,那么仅仅在单一软件包内工作是可取的. 以下是一个带有“ griddap” 数据集的例子 。
+那个 Python 软件包“xarray”对于以多种格式访问、子设置和可视化网格数据已变得非常流行。 注意,“ 轴线” 效果不错 ERDDAP™ '是OPEN语 DAP 两者的答复 tabledap 和使用 xarray 的 OPen 的网格dap 协议 DAP 引擎如netcdf4或pydap. 什么是一个 OPeNDAP 反应? 这是任何 ERDDAP 没有切片或过滤器的 URL,只有 datasetID 。 。 。 然而,当使用过滤片时,甚至 OPeNDAP 本身,人们可以使用Erddapy ( https://github.com/ioos/erddapy ) 作为X阵列引擎. 下面的例子说明如何装入“ griddap” 数据集 。
 
-我最喜欢的一个数据集是 JPL MURv4.1 SST 数据 https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html 。 。 。 如果我想做一个数据子集 2026年1月28日 (20 50个) 和经度 (-140, -105 (英语).) ,并下载 netcdf 文件, ERDDAP™ 这个的 URL 是 https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z : 1 个: (2026-01-28 T09:00:00Z) [ (20 (简体中文).) : 1 个: (50个) [ (-140号) : 1 个: (-105岁) 假设这就是你用在"轴心"里 但事实上,如果你这样做,你是一个错误。
+我最喜欢的一个数据集是 JPL MURv4.1 SST 数据 https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html 。 。 。 如果我想做一个数据子集 2026年1月28日 (20 50个) 和经度 (-140, -105 (英语).) ,并下载 netcdf 文件, ERDDAP™ 这个的 URL 是 https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z : 1 个: (2026-01-28 T09:00:00Z) [ (20 (简体中文).) : 1 个: (50个) [ (-140号) : 1 个: (-105岁) [ . ]
 
-产生错误的原因是“ xarray” 使用 OPeNDAP   ( https://www.opendap.org ) 作为远程访问的协议,以及 ERDDAP™ 语法基于 OPeNDAP 语法,以及 ERDDAP™ 服务器也可以作为 OPeNDAP 服务器时,两种服务如何进行有差异。 (见例如 https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) 。 。 。 。 任意 ERDDAP 没有切片或过滤器的 URL,只有 datasetID 表现得像一个 OPeNDAP URL 和 xarray 兼容 。
+```python
+import xarray as xr
 
-如果我们想到 进入本地的步骤 NetCDF 在“ xarray” 中,我们会采取以下步骤:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+一个人可以实现同样的,只要 OPeNDAP URL (中文(简体) ). 如果我们想到 进入本地的步骤 NetCDF 在“ xarray” 中,我们会采取以下步骤:
 
 - 通过指向文件的全部路径打开文件
 - 从第一步看坐标信息
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-所以带回家的讯息是,“xarray”对一个被网格化的数据很有用 ERDDAP™ 如果您通过到 Xr. open_dataset 服务器 ()  ' ERDDAP™ 没有文件类型和限制的 URL 。
+因此,回家的信息是,“xarray”对数据 在一个 ERDDAP™ 如果您通过到 Xr. open_dataset 服务器 ()  ' ERDDAP™ URL没有文件类型,也没有限制,或者使用erddapy引擎.
