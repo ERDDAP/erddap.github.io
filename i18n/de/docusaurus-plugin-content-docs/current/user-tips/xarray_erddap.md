@@ -1,12 +1,19 @@
 Dank Roy Mendelssohn für diese Aufzeichnung.
 
-Die Python Paket 'xarray' ist sehr beliebt für den Zugriff, Sub-Setting und Visualisierung von Rasterdaten in verschiedenen Formaten geworden. 'xarray' funktioniert gut mit ERDDAP™ sobald Sie verstehen, wie man es richtig verwendet. Ich möchte darauf hinweisen, daß Python Paket 'erddapy ' ( https://github.com/ioos/erddapy ) Zugriff auf Daten von ERDDAP™ Server, die sowohl 'griddap' als auch ' tabledap ' und 'erddapy' können die Daten für 'xarray' exportieren. Aber wenn Sie daran gewöhnt sind, 'xarray' zu verwenden und Workflows mit dem Paket zu haben, dann kann es wünschenswert sein, nur innerhalb des einzigen Pakets zu arbeiten. Im Folgenden ist ein Beispiel mit einem 'griddap'-Datensatz.
+Die Python Paket 'xarray' ist sehr beliebt für den Zugriff, Sub-Setting und Visualisierung von Rasterdaten in verschiedenen Formaten geworden. Beachten Sie, dass 'xarray' gut funktioniert mit ERDDAP™ 's OPen DAP Antwort auf beide tabledap und Gridap-Protokolle unter Verwendung von Xarrays OPen DAP Motoren wie netcdf4 oder pydap. Was ist ein OPeNDAP Antwort? Es ist alles ERDDAP URL ohne Slicing oder Filter, nur die datasetID . Bei Verwendung von Scheiben von Filtern jedoch, oder sogar OPeNDAP selbst, man kann die Erddapy verwenden ( https://github.com/ioos/erddapy ) als Röntgengerät. Das folgende Beispiel zeigt, wie man einen 'griddap'-Datensatz lädt.
 
-Einer meiner Lieblings-Datensätze ist die JPL MURv4.1 SST-Daten verfügbar unter https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Wenn ich eine Untermenge der Daten für sagen 28. Januar 2026 tun möchte, latitdues (20,50) und Längen (-140, -105) , und laden Sie eine netcdf-Datei, die ERDDAP™ URL dafür wäre https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00Z) ,[...][ (20) :1: (50) ,[...][ (- 140) :1: (-105) ] und es ist vernünftig, davon auszugehen, dass dies das ist, was Sie in 'xarray' verwenden würden. Aber in der Tat, wenn Sie das tun, erhalten Sie einen Fehler.
+Einer meiner Lieblings-Datensätze ist die JPL MURv4.1 SST-Daten verfügbar unter https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Wenn ich eine Untermenge der Daten für sagen 28. Januar 2026 tun möchte, latitdues (20,50) und Längen (-140, -105) , und laden Sie eine netcdf-Datei, die ERDDAP™ URL dafür wäre https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00Z) ,[...][ (20) :1: (50) ,[...][ (- 140) :1: (-105) &#33;
 
-Der Grund, warum dies einen Fehler verursacht, ist, dass 'xarray' verwendet wird OPeNDAP   ( https://www.opendap.org ) als Protokoll für den Fernzugriff und ERDDAP™ syntax basiert auf OPeNDAP Syntax und ERDDAP™ Server kann auch als OPeNDAP Server, es gibt Unterschiede, wie dies für die beiden Dienste getan wird. (Siehe zum Beispiel https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) . I ERDDAP URL ohne Slicing oder Filter, nur die datasetID , verhält sich wie ein OPeNDAP URL und wird mit Röntgenstrahlung kompatibel sein.
+```python
+import xarray as xr
 
-Wenn wir an die Schritte denken, auf eine lokale NetCDF Datei in 'xarray' würden wir die folgenden Schritte tun:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+Man kann das gleiche mit nur der OPeNDAP URL. Wenn wir an die Schritte denken, auf eine lokale NetCDF Datei in 'xarray' würden wir die folgenden Schritte tun:
 
 - Öffnen Sie die Datei, indem Sie auf den vollen Pfad zur Datei zeigen
 - Sehen Sie sich die Koordinateninformationen aus dem ersten Schritt an
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-So die Take-Home-Nachricht ist, dass 'xarray' funktioniert großartig für gerastete Daten auf einem ERDDAP™ Server, wenn Sie an 'xr.open_dataset übergeben () ' ERDDAP™ URL ohne Dateityp und ohne Einschränkungen.
+So die Take-Home-Nachricht ist, dass 'xarray' funktioniert groß für Daten auf einem ERDDAP™ Server, wenn Sie an 'xr.open_dataset übergeben () ' ERDDAP™ URL ohne Dateityp und ohne Einschränkungen, oder verwenden Sie den erddapy Motor.

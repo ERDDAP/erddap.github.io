@@ -1,12 +1,19 @@
 Graças a Roy Mendelssohn para escrever.
 
-O Python pacote 'xarray' tornou-se muito popular para acessar, subconfigurar e visualizar dados gradeados em uma variedade de formatos. "xarray" funciona bem com ERDDAP™ uma vez que você entende como usá-lo corretamente. Eu diria que o Python pacote 'erddapy ' ( https://github.com/ioos/erddapy ) pode acessar dados de ERDDAP™ servidores usando ambos 'griddap' e ' tabledap ', e 'erddapy' pode exportar os dados para 'xarray'. Mas se você está acostumado a usar "xarray" e ter fluxos de trabalho usando o pacote, então pode ser desejável apenas trabalhar dentro do único pacote. O abaixo é um exemplo com um conjunto de dados "griddap".
+O Python pacote 'xarray' tornou-se muito popular para acessar, subconfigurar e visualizar dados gradeados em uma variedade de formatos. Note que 'xarray' funciona bem com ERDDAP™ OPen DAP resposta para ambos tabledap e protocolos do griddap usando o OPen do xarray DAP motores como netcdf4 ou pydap. O que é um OPeNDAP resposta? É qualquer ERDDAP URL sem slicing ou filtros, apenas o datasetID . Ao usar fatias de filtros no entanto, ou mesmo OPeNDAP em si, pode-se usar o erddapy ( https://github.com/ioos/erddapy ) como um motor de raio-x. O exemplo abaixo mostra como carregar um conjunto de dados "griddap".
 
-Um dos meus conjuntos de dados favoritos é os dados JPL MURv4.1 SST disponíveis em https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Se eu quiser fazer um subconjunto dos dados para dizer 28 de janeiro de 2026, latitdues (20,50) e longitudes (-140, -105) , e baixar um arquivo netcdf, o ERDDAP™ URL para isso seria https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z :1: (2026-01-28T09:00Z) Não. (20.) :1: (50) Não. (- 140) :1: (- 105) ] e é razoável supor que este é o que você usaria em 'xarray'. Mas, na verdade, se o fizeres, tiveste um erro.
+Um dos meus conjuntos de dados favoritos é os dados JPL MURv4.1 SST disponíveis em https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Se eu quiser fazer um subconjunto dos dados para dizer 28 de janeiro de 2026, latitdues (20,50) e longitudes (-140, -105) , e baixar um arquivo netcdf, o ERDDAP™ URL para isso seria https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z :1: (2026-01-28T09:00Z) Não. (20.) :1: (50) Não. (- 140) :1: (- 105) ]
 
-A razão pela qual isso produz um erro é que "xarray" usa OPeNDAP   ( https://www.opendap.org ) como seu protocolo para acesso remoto, e enquanto o ERDDAP™ sintaxe é baseado em OPeNDAP sintaxe, e um ERDDAP™ servidor também pode agir como um OPeNDAP servidor, há diferenças em como isso é feito para os dois serviços. (Veja por exemplo https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) . Qualquer ERDDAP URL sem slicing ou filtros, apenas o datasetID comporta-se como um OPeNDAP URL e será compatível com xarray.
+```python
+import xarray as xr
 
-Se pensarmos nos passos para acessar um local NetCDF arquivo em 'xarray' nós faríamos os seguintes passos:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+Um pode alcançar o mesmo usando apenas o OPeNDAP URL. Se pensarmos nos passos para acessar um local NetCDF arquivo em 'xarray' nós faríamos os seguintes passos:
 
 - Abra o arquivo apontando para o caminho completo para o arquivo
 - Veja as informações de coordenadas do primeiro passo
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-Portanto, a mensagem de take home é que "xarray" funciona muito bem para dados gradeados em um ERDDAP™ servidor se você passar para 'xr.open_dataset () ' ERDDAP™ URL sem um tipo de arquivo e sem restrições.
+Então, a mensagem leva para casa é que "xarray" funciona muito bem para dados sobre um ERDDAP™ servidor se você passar para 'xr.open_dataset () ' ERDDAP™ URL sem um tipo de arquivo e sem restrições, ou usar o motor erddapy.

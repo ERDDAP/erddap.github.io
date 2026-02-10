@@ -1,12 +1,19 @@
 Grazie a Roy Mendelssohn per questo scrivi.
 
-The Python pacchetto 'xarray' è diventato molto popolare per l'accesso, la suddivisione e la visualizzazione dei dati grigliati in una varietà di formati. 'xarray' funziona bene con ERDDAP™ una volta che capisci come usarlo correttamente. Vorrei sottolineare che Python pacchetto 'erddapy ' ( https://github.com/ioos/erddapy ) può accedere ai dati da ERDDAP™ server che utilizzano sia 'griddap' che ' tabledap ', e 'erddapy' può esportare i dati per 'xarray'. Ma se si è abituati a utilizzare 'xarray' e hanno flussi di lavoro utilizzando il pacchetto, allora può essere desiderabile solo lavorare all'interno del singolo pacchetto. Di seguito è un esempio con un set di dati 'griddap'.
+The Python pacchetto 'xarray' è diventato molto popolare per l'accesso, la suddivisione e la visualizzazione dei dati grigliati in una varietà di formati. Si noti che 'xarray' funziona bene con ERDDAP™ 's OPen DAP risposta per entrambi tabledap e protocolli di grigliata utilizzando l'OPen di xarray DAP motori come netcdf4 o pidap. Che cosa è un OPeNDAP risposta? È tutto ERDDAP URL senza slicing o filtri, solo il datasetID . Quando si utilizzano fette di filtri tuttavia, o anche OPeNDAP se stesso, si può usare l'erddapy ( https://github.com/ioos/erddapy ) come motore xarray. L'esempio seguente mostra come caricare un set di dati 'griddap'.
 
-Uno dei miei dati preferiti è il JPL MURv4.1 SST dati disponibili al https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Se voglio fare un sottoinsieme dei dati per dire il 28 gennaio 2026, latitdues (20,50) e longitudini (-140, -105) , e scaricare un file netcdf, ERDDAP™ URL per questo sarebbe https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00:00:00:00Z) # (20) :1: (50) # (- 140) :1: (- No.) ] ed è ragionevole presumere che questo è ciò che si farebbe uso in 'xarray'. Ma in effetti, se lo fai, hai avuto un errore.
+Uno dei miei dati preferiti è il JPL MURv4.1 SST dati disponibili al https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Se voglio fare un sottoinsieme dei dati per dire il 28 gennaio 2026, latitdues (20,50) e longitudini (-140, -105) , e scaricare un file netcdf, ERDDAP™ URL per questo sarebbe https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00:00:00:00Z) # (20) :1: (50) # (- 140) :1: (- No.) ]
 
-Il motivo per cui questo produce un errore è che "xarray" usa OPeNDAP   ( https://www.opendap.org ) come protocollo per l'accesso remoto, e mentre il ERDDAP™ sintassi si basa su OPeNDAP sintassi, e una ERDDAP™ server può anche agire come OPeNDAP server, ci sono differenze nel modo in cui questo viene fatto per i due servizi. (Vedere per esempio https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) . Qualsiasi ERDDAP URL senza slicing o filtri, solo il datasetID , si comporta come un OPeNDAP URL e sarà compatibile con xarray.
+```python
+import xarray as xr
 
-Se pensiamo ai passi per accedere a un locale NetCDF file in 'xarray' faremo i seguenti passaggi:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+Si può raggiungere lo stesso utilizzando solo il OPeNDAP URL. Se pensiamo ai passi per accedere a un locale NetCDF file in 'xarray' faremo i seguenti passaggi:
 
 - Aprire il file indicando il percorso completo al file
 - Guarda le informazioni coordinate dal primo passo
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-Così il messaggio di casa di take è che 'xarray' funziona grande per i dati grigliati su un ERDDAP™ server se si passa a 'xr.open_dataset () ' ERDDAP™ URL senza un tipo di file e senza vincoli.
+Così il messaggio di casa di take è che 'xarray' funziona grande per i dati su un ERDDAP™ server se si passa a 'xr.open_dataset () ' ERDDAP™ URL senza un tipo di file e senza vincoli, o utilizzare il motore erddapy.

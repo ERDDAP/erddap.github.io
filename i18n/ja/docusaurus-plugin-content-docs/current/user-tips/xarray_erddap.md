@@ -1,12 +1,19 @@
 Roy Mendelssohn のおかげで、この書き込みのために.
 
-ザ・オブ・ザ・ Python パッケージ「xarray」は、さまざまなフォーマットでグリッドデータをアクセス、サブセッティング、視覚化するために非常に人気があります。 'xarray' は、 ERDDAP™ 正しく使う方法を理解したら。 と指摘します。 Python パッケージ 'erddapy お問い合わせ ( https://github.com/ioos/erddapy ) データをアクセスできる ERDDAP™ 'griddap' と ' の両方を使用してサーバー tabledap ', 'erddapy' は 'xarray' のデータをエクスポートできます。 しかし、'xarray' を使用して、パッケージを使用してワークフローを持っていることに慣れている場合は、単一のパッケージ内でのみ動作することが望ましいです。 以下は、'griddap' のデータセットを持つ例です。
+ザ・オブ・ザ・ Python パッケージ「xarray」は、さまざまなフォーマットでグリッドデータをアクセス、サブセッティング、視覚化するために非常に人気があります。 'xarray' がうまく機能することに注意してください。 ERDDAP™ オプン DAP 両方のための応答 tabledap xarray の OPen を使用して、および Griddap プロトコル DAP netcdf4 や pydap などのエンジン。 新着情報 OPeNDAP 応答? それはあります ERDDAP スライスまたはフィルタなしでURL、ちょうど datasetID お問い合わせ ただし、フィルタのスライスを使用する場合、 OPeNDAP それ自体、erddapyを使うことができます ( https://github.com/ioos/erddapy ) xarrayエンジンとして。 以下の例では、'griddap' のデータセットをロードする方法を示します。
 
-私のお気に入りのデータセットの1つは、JPL MURv4.1 SSTデータが利用可能 https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html お問い合わせ 2026年1月28日、データのサブセットをしたい場合、 (20,50) と経度 (-140, -105) ,netcdfファイルをダウンロード, ERDDAP™ このURLは https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00:00Z) 〔 〕 (2018年12月20日) :1: (50万円) 〔 〕 (・140) :1: (・105) 】これは「xarray」で使うものだと仮定するのは合理的です。 しかし、実際には、あなたがそうなら、あなたはエラーを取得しました。
+私のお気に入りのデータセットの1つは、JPL MURv4.1 SSTデータが利用可能 https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html お問い合わせ 2026年1月28日、データのサブセットをしたい場合、 (20,50) と経度 (-140, -105) ,netcdfファイルをダウンロード, ERDDAP™ このURLは https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00:00Z) 〔 〕 (2018年12月20日) :1: (50万円) 〔 〕 (・140) :1: (・105) . .
 
-エラーを生成する理由は、'xarray' が使用していることです。 OPeNDAP   ( https://www.opendap.org ) リモートアクセスのプロトコルとして、 ERDDAP™ 構文は、 OPeNDAP 構文と構文 ERDDAP™ サーバは、 OPeNDAP サーバは、2つのサービスで行われる方法の違いがあります。 (例えば https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) お問い合わせ その他 ERDDAP スライスまたはフィルタなしでURL、ちょうど datasetID , のように動作する OPeNDAP URL は xarray と互換性があります。
+```python
+import xarray as xr
 
-ローカルにアクセスする手順を考えると NetCDF 'xarray' のファイルでは、次の手順を実行します。
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+一つは、ちょうど使用して同じを達成することができます OPeNDAP サイトマップ ローカルにアクセスする手順を考えると NetCDF 'xarray' のファイルでは、次の手順を実行します。
 
 - ファイルへのフルパスを指すことでファイルを開く
 - 最初のステップから座標情報を見る
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-そのため、"xarray" は、グリッドされたデータに対して素晴らしい機能です。 ERDDAP™ 'xr.open_dataset に渡すとサーバ () お問い合わせ ERDDAP™ ファイルタイプなしのURLと制約なし
+そのため、"xarray" はデータに対して素晴らしい機能です。 ERDDAP™ 'xr.open_dataset に渡すとサーバ () お問い合わせ ERDDAP™ ファイルタイプなしのURL、制約なし、または erddapy エンジンを使用します。

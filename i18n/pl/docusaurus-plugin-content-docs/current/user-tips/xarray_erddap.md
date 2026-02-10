@@ -1,12 +1,19 @@
 Dzięki Royowi Mendelssohnowi za to napisanie.
 
-W Python pakiet 'xarray' stał się bardzo popularny w zakresie dostępu do danych, ich podstawiania i wizualizacji w różnych formatach. 'xarray' działa dobrze z ERDDAP™ po zrozumieniu, jak używać go prawidłowo. Chciałbym zauważyć, że Python opakowanie "erddapy ' ( https://github.com/ioos/erddapy ) może uzyskać dostęp do danych z ERDDAP™ serwery wykorzystujące zarówno 'griddap', jak i ' tabledap ', i' erddapy 'mogą eksportować dane dla' xarray '. Ale jeśli jesteś przyzwyczajony do używania' xarray 'i masz przepływ pracy za pomocą pakietu, to może być pożądane, aby po prostu pracować w ramach jednego pakietu. Poniżej znajduje się przykład z zbiorem danych' griddap '.
+W Python pakiet 'xarray' stał się bardzo popularny w zakresie dostępu do danych, ich podstawiania i wizualizacji w różnych formatach. Zauważ, że 'xarray' działa dobrze z ERDDAP™ Open DAP odpowiedź dla obu tabledap i protokoły griddap przy użyciu Open Xarray DAP silniki takie jak netcdf4 lub pydap. Co to jest OPeNDAP Odpowiedź? Jest ERDDAP URL bez krojenia lub filtrów, tylko datasetID . Przy użyciu plasterki filtrów lub nawet OPeNDAP sam, można użyć erddapy ( https://github.com/ioos/erddapy ) jako silnik xarray. Poniższy przykład pokazuje jak załadować zbiór danych 'griddap'.
 
-Jednym z moich ulubionych zbiorów danych jest JPL MURv4.1 SST dane dostępne na stronie https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Jeśli chcę zrobić podzbiór danych na powiedzmy 28 stycznia 2026, latitdues (20,50) i przemijające (- 140, - 105) , i pobrać plik netcdf, ERDDAP™ URL dla tego będzie https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ): 1 (2026-01-28T09: 00: 00Z) ] [ (20) 1: (50) ] [ (- 140) 1: (- 105) ] i rozsądnie jest zakładać, że tego użyjesz w 'xarray'. Ale jeśli to zrobisz, to będziesz miał błąd.
+Jednym z moich ulubionych zbiorów danych jest JPL MURv4.1 SST dane dostępne na stronie https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Jeśli chcę zrobić podzbiór danych na powiedzmy 28 stycznia 2026, latitdues (20,50) i przemijające (- 140, - 105) , i pobrać plik netcdf, ERDDAP™ URL dla tego będzie https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ): 1 (2026-01-28T09: 00: 00Z) ] [ (20) 1: (50) ] [ (- 140) 1: (- 105) ]
 
-Powodem tego błędu jest to, że 'xarray' używa OPeNDAP   ( https://www.opendap.org ) jako protokół zdalnego dostępu, a podczas gdy ERDDAP™ Składnia oparta jest na OPeNDAP składnia i ERDDAP™ serwer może również działać jako OPeNDAP Serwer, istnieją różnice w sposobie realizacji obu usług. (Patrz na przykład: https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) . Każdy ERDDAP URL bez krojenia lub filtrów, tylko datasetID , zachowuje się jak OPeNDAP URL i będzie kompatybilny z xarray.
+```python
+import xarray as xr
 
-Jeśli pomyślimy o krokach do dostępu do lokalnego NetCDF plik w 'xarray' wykonalibyśmy następujące kroki:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+Można osiągnąć to samo za pomocą tylko OPeNDAP URL. Jeśli pomyślimy o krokach do dostępu do lokalnego NetCDF plik w 'xarray' wykonalibyśmy następujące kroki:
 
 - Otwórz plik wskazując pełną ścieżkę do pliku
 - Spójrz na informacje o współrzędnych z pierwszego kroku
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-Tak więc wiadomość do domu jest taka, że 'xarray' działa świetnie dla danych w sieci ERDDAP™ server if you pass to 'xr.open _ dataset () " ERDDAP™ URL bez typu pliku i bez ograniczeń.
+Więc wiadomość do domu jest, że 'xarray' działa świetnie dla danych na ERDDAP™ server if you pass to 'xr.open _ dataset () " ERDDAP™ URL bez typu pliku i bez ograniczeń, lub użyć erddapy silnika.

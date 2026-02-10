@@ -1,12 +1,19 @@
 Mulţumită lui Roy Mendelssohn pentru asta.
 
-ă Python pachet "xarray" a devenit foarte popular pentru accesarea, subsetarea și vizualizarea datelor în rețea într-o varietate de formate. 'xarray' funcţionează bine cu ERDDAP™ Odată ce înţelegi cum să-l foloseşti cum trebuie. Aș sublinia că Python pachet 'erddapy ' ( https://github.com/ioos/erddapy ) poate accesa date din ERDDAP™ servere care utilizează atât "griddap" cât și " tabledap ' şi 'erddapy' poate exporta datele pentru 'xarray'. Dar dacă sunteți obișnuiți să utilizați 'xarray' și să aveți fluxuri de lucru folosind pachetul, atunci poate fi de dorit să lucrați doar în cadrul pachetului unic. De mai jos este un exemplu cu un set de date "griddap."
+ă Python pachet "xarray" a devenit foarte popular pentru accesarea, subsetarea și vizualizarea datelor în rețea într-o varietate de formate. Rețineți că "xarray" funcționează bine cu ERDDAP™ 's OPen DAP răspuns pentru ambele tabledap și protocoale de griddap folosind OPen-ul lui Xarray DAP motoare ca netcdf4 sau pydap. Ce este un OPeNDAP Răspuns? Este orice ERDDAP URL fără feliere sau filtre, doar datasetID . Atunci când se utilizează felii de filtre, cu toate acestea, sau chiar OPeNDAP Se poate folosi erddapy ( https://github.com/ioos/erddapy ) ca un motor Xarray. Exemplul de mai jos arată cum se încarcă un set de date "griddap."
 
-Unul dintre setările mele preferate este datele JPL MURv4.1 SST disponibile la https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Dacă vreau să fac un subset de date pentru a spune 28 ianuarie 2026, latitdues (20, 50) și longitudine (- 140, -105) , și descărca un fișier netcdf, ERDDAP™ URL pentru acest lucru ar fi https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09: 00: 00Z) [] (20) :1: (50) [] (- 140) :1: (-105) ] și este rezonabil să presupunem că acest lucru este ceea ce v-ar folosi în "xarray." Dar, de fapt, dacă faci acest lucru ai o eroare.
+Unul dintre setările mele preferate este datele JPL MURv4.1 SST disponibile la https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html . Dacă vreau să fac un subset de date pentru a spune 28 ianuarie 2026, latitdues (20, 50) și longitudine (- 140, -105) , și descărca un fișier netcdf, ERDDAP™ URL pentru acest lucru ar fi https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09: 00: 00Z) [] (20) :1: (50) [] (- 140) :1: (-105) ]
 
-Motivul pentru care acest lucru produce o eroare este că "xarray" folosește OPeNDAP   ( https://www.opendap.org ) ca protocol pentru accesul la distanță, și în timp ce ERDDAP™ sintaxa se bazează pe OPeNDAP sintaxă și ERDDAP™ serverul poate acționa și ca un OPeNDAP server, există diferențe în modul în care se face acest lucru pentru cele două servicii. (A se vedea de exemplu https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) . Orice ERDDAP URL fără feliere sau filtre, doar datasetID , se comportă ca un OPeNDAP URL și va fi compatibil cu xarray.
+```python
+import xarray as xr
 
-Dacă ne gândim la pașii de acces la un local NetCDF fișier în 'xarray' am face următorii pași:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+Se poate realiza la fel folosind doar OPeNDAP URL. Dacă ne gândim la pașii de acces la un local NetCDF fișier în 'xarray' am face următorii pași:
 
 - Deschide fișierul arătând calea completă către fișier
 - Uită-te la informațiile coordonate de la primul pas
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-Deci, mesajul de a lua acasă este că "xarray" funcționează foarte bine pentru datele în rețea pe o ERDDAP™ server dacă treci la 'xr.open_dataset () ' ERDDAP™ URL fără tip de fișier și fără constrângeri.
+Deci mesajul de a lua acasă este că "xarray" funcționează foarte bine pentru date pe un ERDDAP™ server dacă treci la 'xr.open_dataset () ' ERDDAP™ URL fără tip de fișier și fără constrângeri, sau utilizați motorul erddapy.

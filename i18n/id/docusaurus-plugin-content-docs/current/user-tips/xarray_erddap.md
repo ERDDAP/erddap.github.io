@@ -1,12 +1,19 @@
 Terima kasih kepada Roy Mendelssohn untuk menulis ini.
 
-Login Python paket 'xarray' telah menjadi sangat populer untuk mengakses, mengatur dan memvisualisasikan data gridded dalam berbagai format. 'xarray' bekerja dengan baik dengan ERDDAP™ sekali Anda memahami cara menggunakannya dengan benar. Meme it Aku akan menunjukkan bahwa Meme it Python paket 'erddapy Sitemap ( https://github.com/ioos/erddapy ) dapat mengakses data dari ERDDAP™ server menggunakan 'griddap' dan ' tabledap ', dan 'erddapy' dapat mengekspor data untuk 'xarray'. Tetapi jika Anda terbiasa menggunakan 'xarray' dan memiliki alur kerja menggunakan paket, maka dapat diinginkan hanya bekerja dalam paket tunggal. Berikut ini adalah contoh dengan dataset 'griddap'.
+Login Python paket 'xarray' telah menjadi sangat populer untuk mengakses, mengatur dan memvisualisasikan data gridded dalam berbagai format. Perhatikan bahwa 'xarray' bekerja dengan baik dengan ERDDAP™ Sitemap DAP respon baik tabledap dan protokol griddap menggunakan OPen xarray DAP mesin seperti netcdf4 atau pydap. Apa itu OPeNDAP Sitemap Sitemap ERDDAP URL tanpa lisensi atau filter, hanya datasetID Sitemap Saat menggunakan irisan filter namun, atau bahkan OPeNDAP sendiri, satu dapat menggunakan erddapy ( https://github.com/ioos/erddapy ) sebagai mesin xarray. Contoh di bawah ini menunjukkan bagaimana memuat dataset 'griddap'.
 
-Salah satu set data favorit saya adalah data JPL MURv4.1 SST yang tersedia di https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html Sitemap Jika saya ingin melakukan subset data untuk mengatakan Januari 28, 2026, latitdues (20 g) Login (-140, -105) , dan mengunduh file netcdf, ERDDAP™ URL https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00:00Z) Login (20 g) :1: (50 g) Login (-140) :1: (-105) ] dan wajar untuk berasumsi bahwa ini adalah apa yang akan Anda gunakan di 'xarray'. Tapi pada kenyataannya jika Anda melakukannya Anda mendapatkan kesalahan.
+Salah satu set data favorit saya adalah data JPL MURv4.1 SST yang tersedia di https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html Sitemap Jika saya ingin melakukan subset data untuk mengatakan Januari 28, 2026, latitdues (20 g) Login (-140, -105) , dan mengunduh file netcdf, ERDDAP™ URL https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z ):1: (2026-01-28T09:00:00Z) Login (20 g) :1: (50 g) Login (-140) :1: (-105) Sitemap
 
-Alasan ini menghasilkan kesalahan adalah penggunaan 'xarray' OPeNDAP   ( https://www.opendap.org ) sebagai protokol untuk akses jarak jauh, dan sementara ERDDAP™ sintaks didasarkan pada OPeNDAP sintaks, dan ERDDAP™ server juga dapat bertindak sebagai OPeNDAP server, ada perbedaan dalam bagaimana ini dilakukan untuk dua layanan. (Sitemap https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries ) Sitemap Sitemap ERDDAP URL tanpa lisensi atau filter, hanya datasetID , berperilaku seperti OPeNDAP URL dan akan kompatibel dengan xarray.
+```python
+import xarray as xr
 
-Jika kita memikirkan langkah-langkah untuk mengakses lokal NetCDF file di 'xarray' kita akan melakukan langkah-langkah berikut:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+Satu dapat mencapai penggunaan yang sama hanya Meme it OPeNDAP URL Jika kita memikirkan langkah-langkah untuk mengakses lokal NetCDF file di 'xarray' kita akan melakukan langkah-langkah berikut:
 
 - Buka file dengan menunjuk pada path penuh ke file
 - Lihat informasi koordinat dari langkah pertama
@@ -79,4 +86,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-Jadi pesan pulang adalah 'xarray' bekerja bagus untuk data gridded pada ERDDAP™ server jika Anda lulus ke 'xr.open_dataset () Sitemap ERDDAP™ URL tanpa jenis file dan tanpa batasan.
+Jadi pesan pulang adalah 'xarray' bekerja bagus untuk data pada ERDDAP™ server jika Anda lulus ke 'xr.open_dataset () Sitemap ERDDAP™ URL tanpa jenis file dan tanpa batasan, atau gunakan mesin erddapy.
