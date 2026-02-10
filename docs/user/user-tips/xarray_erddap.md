@@ -1,12 +1,19 @@
 Thanks to Roy Mendelssohn for this write up.
 
-The Python package 'xarray' has become very popular for accessing, subsetting and visualizing gridded data in a variety of formats.  'xarray' works fine with ERDDAP™ once you understand how to use it properly. I would point out that the Python package 'erddapy' (https://github.com/ioos/erddapy) can access data from ERDDAP™ servers using both 'griddap' and 'tabledap', and 'erddapy' can export the data for 'xarray'. But if you are accustomed to using 'xarray' and have workflows using the package, then it can be desirable to just work within the single package. The below is an example with a 'griddap' dataset. 
+The Python package 'xarray' has become very popular for accessing, subsetting and visualizing gridded data in a variety of formats. Note that 'xarray' works fine with ERDDAP™'s OPenDAP response for both tabledap and griddap protocols using xarray's OPenDAP engines like netcdf4 or pydap. What is an OPeNDAP response? It is any ERDDAP URL without slicing or filters, just the datasetID. When using slices of filters however, or even OPeNDAP itself, one can use the erddapy (https://github.com/ioos/erddapy) as an xarray engine. The example below shows how to load a 'griddap' dataset.
 
-One of my favorite datasets is the JPL MURv4.1 SST data available at https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html.  If I want to do a subset of the data for say January 28, 2026, latitdues (20,50)  and longitudes (-140, -105), and download a netcdf file,  the ERDDAP™ URL for this would be  https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)] and it is reasonable to assume that this is what you would use in 'xarray'.  But in fact if you do so you were get an error.
+One of my favorite datasets is the JPL MURv4.1 SST data available at https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.html.  If I want to do a subset of the data for say January 28, 2026, latitdues (20,50)  and longitudes (-140, -105), and download a netcdf file,  the ERDDAP™ URL for this would be  https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]
 
-The reason this produces an error is that 'xarray' uses OPeNDAP (https://www.opendap.org) as its protocol for remote access, and while the ERDDAP™ syntax is based on OPeNDAP syntax, and an ERDDAP™ server can also act as an OPeNDAP server, there are differences in how this is done for the two services.  (See for example https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#opendapLibraries). Any ERDDAP URL without slicing or filters, just the datasetID, behaves like an OPeNDAP URL and will be compatible with xarray.
+```python
+import xarray as xr
 
-If we think of the steps to access a local NetCDF file in 'xarray' we would do the following steps:
+
+url = "https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41.nc?analysed_sst[(2026-01-28T09:00:00Z):1:(2026-01-28T09:00:00Z)][(20):1:(50)][(-140):1:(-105)]"
+
+ds = xr.open_dataset(url, engine="erddapy")
+```
+
+One can achieve the same using just the OPeNDAP URL. If we think of the steps to access a local NetCDF file in 'xarray' we would do the following steps:
 
 - Open the file by pointing at the full path to the file
 - Look at the coordinate information from the first step
@@ -78,4 +85,4 @@ sub_sel = ds.sel(time=last2).sel(
 
 ```
 
-So the take home message is that 'xarray' works great for gridded data on an ERDDAP™ server if you pass to 'xr.open_dataset()' the ERDDAP™ URL without a file type and without constraints.
+So the take home message is that 'xarray' works great for data on an ERDDAP™ server if you pass to 'xr.open_dataset()' the ERDDAP™ URL without a file type and without constraints, or use the erddapy engine.
