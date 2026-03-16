@@ -188,6 +188,18 @@ Controls whether political boundaries can be drawn on maps.
 | **Long-term Goal** | true |
 | **History** | Added in 1.80 |
 
+### **forceSynchronousLoading**
+
+Description  
+Load datasets synchronous instead of deferred background loading.
+
+| Property | Details |
+| :---- | :---- |
+| **Lifecycle** | Stable |
+| **Current Default** | false |
+| **Long-term Goal** | false |
+| **History** | Added in 2.30 |
+
 ## **📂 Metadata & Standards**
 
 ### **fgdcActive**
