@@ -4,7 +4,7 @@ Esta página documenta las banderas de configuración disponibles en el sistema.
 
 ##  **Bandera Lifecycle Legend** 
 
-*  **Stable:** Intended como banderas a largo plazo para permitir que los administradores cambien la funcionalidad. Seguro para producción.
+*  **Estable:** Incluidos como banderas a largo plazo para permitir que los administradores cambien la funcionalidad. Seguro para la producción.
 *  **Pruebas:** Características que están listas para la prueba. Estos se graduarán a "Stable" o eventualmente se establecerán a su valor objetivo y eliminarán la bandera.
 *  **En construcción:** Actualmente codificado para falsear en el código, independientemente de la configuración. La característica todavía no está lista para su uso.
 
@@ -39,7 +39,7 @@ Permite la tarea de fondo que despeja los elementos caducados del caché.
 ###  **ncHeaderMakeFile** 
 
 Descripción
-Si es cierto, el servidor generará todo el archivo nc antes de crear el resultado ncheader. El nuevo (preferido) comportamiento cuando falso es generar directamente el resultado del ncheader.
+Si es cierto, el servidor generará todo el archivo nc antes de crear el resultado ncheader. El nuevo (preferido) comportamiento cuando falso es generar directamente el resultado de ncheader.
 
  | Propiedad | Detalles | 
  | --- | --- | 
@@ -75,7 +75,7 @@ Permite crear tablas de subconjuntos en hilos de fondo para mejorar el tiempo de
 ###  **useNcMetadataForFileTable** 
 
 Descripción
-Usos NetCDF metadatos para poblar la vista de la tabla de archivos. En particular, si un archivo nc incluye actual_range para cada variable, la carga de conjunto de datos puede saltar a leer todo el archivo.
+Usos NetCDF metadatos para poblar la vista de la tabla de archivos. En particular, si un archivo nc incluye actual_range para cada variable, la carga de conjunto de datos puede saltar a la lectura de todo el archivo.
 
  | Propiedad | Detalles | 
  | --- | --- | 
@@ -105,7 +105,7 @@ Esta bandera se calcula dinámicamente al iniciarse. No es falso a menos que tod
 ###  **showLoadErrorsOnStatusPage** 
 
 Descripción
-Determina si los errores detallados de carga de conjunto de datos se muestran públicamente en la página de estado.
+Determina si los errores de carga de conjunto de datos detallados se muestran públicamente en la página de estado.
 
  | Propiedad | Detalles | 
  | --- | --- | 
@@ -155,7 +155,7 @@ Permite procesar las datasets.xml archivo con un [StringSubstitutor](https://com
 ###  **useSaxParser** 
 
 Descripción
-Intercambia el motor de persing XML interno para utilizar un SAX (API simple para XML) en lugar del analizador DOM. Esto permite algunas nuevas características avanzadas como XInclude, y [atributos de pantalla personalizados](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
+Intercambia el motor de persing XML interno para utilizar un SAX (API simple para XML) parser en lugar del parser DOM. Esto permite algunas nuevas características avanzadas como XInclude, y [atributos de pantalla personalizados](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
 
  | Propiedad | Detalles | 
  | --- | --- | 
@@ -179,7 +179,7 @@ Determina si los conjuntos de datos privados (aquellos que requieren autenticaci
 ###  **políticosBoundariesActive** 
 
 Descripción
-Controla si se pueden dibujar límites políticos en mapas.
+Controla si los límites políticos pueden dibujarse en mapas.
 
  | Propiedad | Detalles | 
  | --- | --- | 
@@ -187,6 +187,18 @@ Controla si se pueden dibujar límites políticos en mapas.
  |   **Default actual**   | verdadero | 
  |   **Objetivo a largo plazo**   | verdadero | 
  |   **Historia**   | Añadido en 1.80 | 
+
+###  **forceSynchronousLoading** 
+
+Descripción
+Datasets de carga sincronizados en lugar de carga de fondo diferido.
+
+ | Propiedad | Detalles | 
+ | --- | --- | 
+ |   **Ciclo de vida**   | Stable | 
+ |   **Default actual**   | falso | 
+ |   **Objetivo a largo plazo**   | falso | 
+ |   **Historia**   | Añadido en 2.30 | 
 
 ##  **Metadatos &quot; Normas &quot;** 
 
@@ -277,7 +289,7 @@ Ejecute que las variables deben tener un atributo de categoría IOOS.
 ###  **incluidoNcCFSubsetVariables** 
 
 Descripción
-El comportamiento de Legacy fue generar variables de subconjunto sólo para los conjuntos de datos EDDTableDesdeNcCFFiles. Esto se agregó a predeterminar el comportamiento de EDDTableDesdeNcCFFiles para ser consistente con otros tipos de conjunto de datos. Si necesita el legado automático subsetVariables Puede habilitar esto. La mejor solución sería añadir subsetVariables a la definición de conjunto de datos.
+El comportamiento de Legacy era generar variables de subconjunto sólo para los conjuntos de datos EDDTableDesdeNcCFFiles. Esto se agregó a predeterminar el comportamiento de EDDTableDesdeNcCFFiles para ser consistente con otros tipos de conjunto de datos. Si necesita el legado automático subsetVariables Puede habilitar esto. La mejor solución sería añadir subsetVariables a la definición de conjunto de datos.
 
  | Propiedad | Detalles | 
  | --- | --- | 
@@ -286,7 +298,7 @@ El comportamiento de Legacy fue generar variables de subconjunto sólo para los 
  |   **Objetivo a largo plazo**   | falso | 
  |   **Historia**   | Añadido en 2.26 | 
 
-##  **🔔 Suscripciones y notificaciones** 
+##  **Suscripciones y notificaciones** 
 
 ###  **SuscríbaseSystemActive** 
 
@@ -315,7 +327,7 @@ Permite esto ERDDAP instancia para suscribirse a ERDDAP conjuntos de datos para 
 ###  **actualizaciónSubsRssOnFileChanges** 
 
 Descripción
-Triggers suscripción y RSS actualizaciones cuando los archivos subyacentes cambian. El comportamiento legado fue sólo para hacer actualizaciones en la recarga de conjuntos de datos (que algunos servidores tenían tan pocas veces como semanales) .
+Triggers suscripción y RSS actualizaciones cuando los archivos subyacentes cambian. El comportamiento legado fue sólo para hacer actualizaciones en la recarga de conjuntos de datos (que algunos servidores tenían tan poco frecuente como semanal) .
 
  | Propiedad | Detalles | 
  | --- | --- | 
@@ -327,7 +339,7 @@ Triggers suscripción y RSS actualizaciones cuando los archivos subyacentes camb
 ###  **habilitación MqttBroker** 
 
 Descripción
-Comienza un broker MQTT interno dentro de la aplicación para manejar la mensajería.
+Comienza un corredor interno de MQTT dentro de la aplicación para manejar la mensajería.
 
  | Propiedad | Detalles | 
  | --- | --- | 
@@ -336,7 +348,7 @@ Comienza un broker MQTT interno dentro de la aplicación para manejar la mensaje
  |   **Objetivo a largo plazo**   | conjunto como se desea | 
  |   **Historia**   | Añadido en 2.29.0 | 
 
-###  **publicarMqttNotif** 
+###  **publicarMqtNotif** 
 
 Descripción
 Permite la publicación de notificaciones (como cambios de conjunto de datos) al corredor de MQTT.
@@ -365,7 +377,7 @@ Permite utilizar encabezados HTTP para determinar los detalles de URL de solicit
 ###  **habilitación Cors** 
 
 Descripción
-Permite la distribución de recursos entre plataformas (CORS) encabeza las respuestas HTTP.
+Permitir la distribución de recursos entre plataformas (CORS) encabeza las respuestas HTTP.
 
  | Propiedad | Detalles | 
  | --- | --- | 

@@ -19,16 +19,16 @@ mvn verify
 mvn verify -P external
 mvn verify -P slowAWS
 ```
-* Använd TranslateMessages.translate () uppdatera översättningar om det behövs
+* Användning `python översättning/translate.py` uppdatera översättningar om det behövs.
 * EDStatic.java sätter utveckling Ändra versionsnumret och ange lanseringsdatumet.
-* Gör bygget
+* Gör bygget.
 ```
 mvn clean
 mvn compile
 mvn package
 ```
 ## Kanarieöarna
-Skicka krigsfilen för distribution på Coastwatch-servern eller någon annan server som använder de flesta datasettyperna och får mycket trafik.
+Skicka krigsfilen för distribution på Coastwatch-servern eller någon annan server som använder de flesta datasettyper och tar emot mycket trafik.
 Vi vill försöka hitta fel innan bredare distribution av byggnaden.
 
 Inkludera meddelande när du berättar om en ny release.
@@ -39,8 +39,8 @@ Standardförfarandet är:
   * Inom \\[ Tomcat \\] /bin/ :
 ./shutdown.sh //use "ps-fu tomcat" för att säkerställa att den har stoppats
   * Inom \\[ Tomcat \\] /webapps/ :
-RM -rf Erddap
-Rm erddap. krig
+Rm -rf Erddap
+Rm erddap. Krig krig
 cp ../innehåll/erddap/erddap2.22. Erddap.war //eller vad numret är
   * Inom \\[ Tomcat \\] /bin/ :
 Startup.sh
@@ -49,16 +49,17 @@ chgrp -R erddap erddap
 chmod -R g+rw erddap
 chmod -R o-rwx erddap
 
-## GitHub frigör
+## GitHub Släpp
 Draft GitHub release, inkluderar erddap.war och erddapContent .zip   (Inga versionsnummer) 
 
 title: The official v2.25 version
 beskriva: Se ändringslistan på
-      https://erddap.github.io/changes#version-225
+       https://erddap.github.io/changes#version-225
+ 
 
 ## Dokumentationsuppdatering
 * Uppdatera versionsnummer i docusaurus.config.ts-filen (i sidosektionen) .
-* Redigera dokumentationssidorna (deploy-install.md och deploy-update.md) .
+* Redigera dokumentationssidorna (Deploy-install.md och deploy-update.md) .
   * Sök efter \\[ Erddap.war \\]  
   * Kopiera befintlig information (Lite reformaterade) till listan över tidigare installationer 2.
   * Ändra den aktuella releaseinformationen för erddap. krig vid \\[ Erddap.war \\] 
@@ -75,12 +76,14 @@ Först meddela alla användare som begärde ändringar (eller vars buggar var fi
  ERDDAP version 2.25 är nu tillgänglig&#33;
 
 Du kan läsa om förändringarna på
-https://erddap.github.io/changes#version-225
+ https://erddap.github.io/changes#version-225
+ 
 
 Några av förändringarna är förändringar som du föreslog. Tack så mycket för dina förslag. Sök efter ditt namn i listan över ändringar för att se detaljerna. Det skulle vara bra om du kunde prova de nya funktionerna snart, innan jag tillkännager denna nya version till en bredare publik.
 
 Om du är en ERDDAP administratör, instruktionerna för uppgradering är på
-https://erddap.github.io/docs/server-admin/deploy-update
+ https://erddap.github.io/docs/server-admin/deploy-update
+ 
 
 Om du har några problem, frågor, förslag, vänligen maila mig.
 

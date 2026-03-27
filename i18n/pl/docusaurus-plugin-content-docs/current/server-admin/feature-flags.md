@@ -1,12 +1,12 @@
 # Flagi
 
-Ta strona dokumentuje flagi konfiguracyjne dostępne w systemie. Flagi te kontrolują różne funkcje, zdolności eksperymentalne i zachowania dziedziczne.
+Ta strona dokumentuje flagi konfiguracyjne dostępne w systemie. Flagi te kontrolują różne funkcje, możliwości eksperymentalne i zachowania dziedziczne.
 
 ##  **Flaga Lifecycle Legenda** 
 
-*  **Stabilny:** Przeznaczone jako długoterminowe flagi, aby umożliwić administratorom zmianę funkcjonalności. Bezpieczna do produkcji.
-*  **Badanie:** Funkcje, które są gotowe do testowania. Będą one albo ukończyć do "Stabilny" lub ostatecznie być ustawione do ich wartości docelowej i usunąć flagę.
-*  **W ramach budowy:** Obecnie zaszyfrowane do false w kodzie, niezależnie od konfiguracji. Funkcja nie jest jeszcze gotowa do użycia.
+*  **Stabilny:** Przeznaczone jako długoterminowe flagi umożliwiające administratorom zmianę funkcjonalności. Bezpieczna do produkcji.
+*  **Badanie:** Funkcje, które są gotowe do testowania. Będą one albo przejść do "Stabilny" lub ostatecznie ustawić się do ich docelowej wartości i mają usunięty flagę.
+*  **W trakcie budowy:** Obecnie zaszyfrowane do false w kodzie, niezależnie od konfiguracji. Funkcja nie jest jeszcze gotowa do użycia.
 
 ##  **Uzasadnienie Optymalizacja badań** 
 
@@ -36,7 +36,7 @@ Włącza zadanie tła, które usuwa wygasłe elementy z pamięci podręcznej.
  |   **Cel długoterminowy**   | prawda | 
  |   **Historia**   | Dodano w 2.27.0 | 
 
-###  **Plik ncHeaderMakeName** 
+###  **ncHeaderMakePlik** 
 
 Opis
 Jeśli to prawda, serwer wygeneruje cały plik nc przed utworzeniem ncheadera. Nowy (preferowane) zachowanie, gdy false jest bezpośrednio generować wynik ntaniej.
@@ -75,7 +75,7 @@ Pozwala na tworzenie tabel podzakreślonych w wątkach tła, aby poprawić czas 
 ###  **User NcMetadataForFileTable** 
 
 Opis
-Wykorzystanie NetCDF metadane do popularyzacji widoku tabeli plików. W szczególności jeśli plik nc zawiera rzeczywiste _ range dla każdej zmiennej, wczytanie zbioru danych może pominąć odczytanie całego pliku.
+Wykorzystanie NetCDF metadane do popularyzacji widoku tabeli plików. W szczególności jeśli plik nc zawiera rzeczywisty _ zakres dla każdej zmiennej, wczytanie zbioru danych może pominąć odczytanie całego pliku.
 
  | Własność | Szczegóły | 
  | : -- | : -- | 
@@ -86,7 +86,7 @@ Wykorzystanie NetCDF metadane do popularyzacji widoku tabeli plików. W szczegó
 
 ##  **System & zachowanie rdzenia** 
 
-###  **e-mail Isactive** 
+###  **e-mail IsActive** 
 
 Opis
 Kontroluje, czy system próbuje wysłać faktyczne wiadomości e-mail (np. dla aktualizacji subskrypcji lub raportów błędów) za pośrednictwem skonfigurowanego serwera SMTP.
@@ -95,7 +95,7 @@ Kontroluje, czy system próbuje wysłać faktyczne wiadomości e-mail (np. dla a
  | : -- | : -- | 
  |   **Cykl życia**   | Stabilny | 
  |   **Aktualny domyślny**   | false | 
- |   **Cel długoterminowy**   | prawda (Zależny od konfiguracji administratora)   | 
+ |   **Cel długoterminowy**   | prawda (Zależnie od konfiguracji administratora)   | 
  |   **Historia**   | Dziedzictwo | 
 
 ::: info Logika
@@ -105,7 +105,7 @@ Flaga ta jest obliczana dynamicznie przy starcie. Domyślnie false, chyba że ws
 ###  **showLoadErrorsOnStatusPage** 
 
 Opis
-Określa, czy szczegółowe błędy obciążenia zbioru danych są wyświetlane publicznie na stronie statusu.
+Określa, czy szczegółowe błędy obciążenia zbioru danych są publicznie wyświetlane na stronie statusu.
 
  | Własność | Szczegóły | 
  | : -- | : -- | 
@@ -131,7 +131,7 @@ Ustawia domyślne zachowanie dla tego, czy podstawowe pliki zbioru danych mogą 
 ###  **szybkie wznowienie** 
 
 Opis
-Jeśli jest to włączone, system stara się rozpocząć szybciej, pomijając niektóre głębokie kontrole walidacji zbiorów danych podczas inicjalizacji.
+Jeśli włączone, system próbuje uruchomić szybciej, pomijając niektóre głębokie kontrole walidacji zbiorów danych podczas inicjalizacji.
 
  | Własność | Szczegóły | 
  | : -- | : -- | 
@@ -167,7 +167,7 @@ Przełącza wewnętrzny silnik parsujący XML na SAX (Prosty API dla XML) Parser
 ###  **listPrivateDatasets** 
 
 Opis
-Określa, czy prywatne zbiory danych (osoby wymagające uwierzytelniania) pojawi się na liście głównych zbiorów danych.
+Określa, czy prywatne zbiory danych (osoby wymagające uwierzytelniania) pojawi się na liście głównych danych.
 
  | Własność | Szczegóły | 
  | : -- | : -- | 
@@ -188,12 +188,24 @@ Sprawdza, czy granice polityczne mogą być rysowane na mapach.
  |   **Cel długoterminowy**   | prawda | 
  |   **Historia**   | Dodano w 1.80 | 
 
+###  **forceSynchronousLoading** 
+
+Opis
+Zestawy danych o obciążeniu synchroniczne zamiast odroczonego wczytywania tła.
+
+ | Własność | Szczegóły | 
+ | : -- | : -- | 
+ |   **Cykl życia**   | Stabilny | 
+ |   **Aktualny domyślny**   | false | 
+ |   **Cel długoterminowy**   | false | 
+ |   **Historia**   | Dodano w 14.30 | 
+
 ##  **Metadane i normy** 
 
 ###  **fgdcActive** 
 
 Opis
-Generuje i obsługuje FGDC (Federalny Geograficzny Komitet ds. Danych) metadane.
+Generuje i obsługuje FGDC (Federal Geographic Komitet ds. Danych) metadane.
 
  | Własność | Szczegóły | 
  | : -- | : -- | 
@@ -217,7 +229,7 @@ Generuje i obsługuje metadane ISO 19115.
 ###  **UZYSISO19115** 
 
 Opis
-Wykorzystuje bibliotekę Apache SIS do generowania metadanych ISO 19115 zamiast istniejącego generatora. Jeśli to jest włączone i nie jest używane SisISO19139, domyślne metadane IOS 19115 będą w formacie ISO19115 _ 3 _ 2016. Jeśli jest to false, domyślny format będzie w zmienionym formacie ISO19115 _ 2.
+Wykorzystuje bibliotekę Apache SIS do generowania metadanych ISO 19115 zamiast istniejącego generatora. Jeśli to jest włączone i nie jest używane Sissiso19139, domyślne metadane IOS 19115 będą w formacie ISO19115 _ 3 _ 2016. Jeśli jest to false, domyślny format będzie w zmienionym formacie ISO19115 _ 2.
 
  | Własność | Szczegóły | 
  | : -- | : -- | 
@@ -226,7 +238,7 @@ Wykorzystuje bibliotekę Apache SIS do generowania metadanych ISO 19115 zamiast 
  |   **Cel długoterminowy**   | prawda | 
  |   **Historia**   | Dodano w 2.26 | 
 
-###  **UZYSISO19139** 
+###  **UZASADNIO19139** 
 
 Opis
 Wykorzystuje bibliotekę Apache SIS do generowania metadanych ISO19139 _ 2007.
@@ -277,7 +289,7 @@ Wymusza, że zmienne muszą mieć atrybut kategorii IOOS.
 ###  **includeNcCFSubsetZmienne** 
 
 Opis
-Zachowanie Legacy miało na celu generowanie zmiennych tylko dla zbiorów danych EDDTableFromNcCFFiles. Zostało to dodane do domyślnego zachowania EDDTableFromNcCFFiles, aby być spójne z innymi typami danych. Jeśli potrzebujesz dziedzicznego automatycznego subsetVariables Możesz to włączyć. Lepszym rozwiązaniem byłoby dodanie subsetVariables do definicji zbioru danych.
+Zachowanie Legacy miało na celu generowanie zmiennych tylko dla zbiorów danych EDDTableFromNcCFFiles. Zostało to dodane do domyślnego zachowania EDDTableFromNcCFFiles, aby być spójne z innymi typami zbioru danych. Jeśli potrzebujesz dziedzicznego automatycznego subsetVariables Możesz to włączyć. Lepszym rozwiązaniem byłoby dodanie subsetVariables do definicji zbioru danych.
 
  | Własność | Szczegóły | 
  | : -- | : -- | 
@@ -303,7 +315,7 @@ Włącza system subskrypcji e-mail dla aktualizacji zbioru danych.
 ###  **subscribeToRemoteErddapDataset** 
 
 Opis
-Umożliwia to ERDDAP instancja do subskrypcji zdalnego ERDDAP zbiory danych do aktualizacji.
+Pozwala to ERDDAP instancja do subskrypcji do zdalnego ERDDAP zbiory danych do aktualizacji.
 
  | Własność | Szczegóły | 
  | : -- | : -- | 
@@ -353,7 +365,7 @@ Umożliwia publikację powiadomień (jak zmiany zbioru danych) do pośrednika MQ
 ###  **dla Url** 
 
 Opis
-Umożliwia korzystanie z nagłówków HTTP w celu określenia szczegółów URL żądania (przydatne za proxy) .
+Umożliwia użycie nagłówków HTTP do określenia szczegółów URL żądania (przydatne za proxy) .
 
  | Własność | Szczegóły | 
  | : -- | : -- | 
@@ -365,7 +377,7 @@ Umożliwia korzystanie z nagłówków HTTP w celu określenia szczegółów URL 
 ###  **Włącz Kors** 
 
 Opis
-Umożliwia dzielenie się zasobami na krzyże-pochodzenie (CORS) nagłówki odpowiedzi HTTP.
+Włącza dzielenie się zasobami w zależności od pochodzenia (CORS) nagłówki odpowiedzi HTTP.
 
  | Własność | Szczegóły | 
  | : -- | : -- | 
@@ -376,7 +388,7 @@ Umożliwia dzielenie się zasobami na krzyże-pochodzenie (CORS) nagłówki odpo
 
 ##  **Znajdź** 
 
-###  **Use LucieneSearchEngine** 
+###  **Używanie LucieneSearchEngine** 
 
 Opis
 Przełącza wewnętrzną wyszukiwarkę, aby używać Apache Lucene.
@@ -417,7 +429,7 @@ Włącza narzędzia do konwersji w UI.
 ###  **slideSorterActive** 
 
 Opis
-Włącza Slide Sorter.
+Włącza procesor slajdów.
 
  | Własność | Szczegóły | 
  | : -- | : -- | 

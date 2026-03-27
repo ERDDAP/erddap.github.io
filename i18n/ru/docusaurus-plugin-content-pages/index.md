@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## последний ERDDAP™ версия{#latest-erddap-version} 
 
-2.29.0, см. [Изменения в документации](/changes#version-2290) и [скачать](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) .
+2.30.0 см. [Изменения в документации](/changes#version-2300) и [скачать](https://github.com/ERDDAP/erddap/releases/tag/v2.30.0) .
 
 ##  ERDDAP™ информация{#erddap-information} 
 
@@ -11,15 +11,15 @@ title: "ERDDAP™ Documentation"
 сетчатые и табличные научные наборы данных в общих форматах файлов и составляют графики и карты.
  ERDDAP™ является свободным и открытым исходным кодом (Apache и Apache-подобные)   Java Сервлет из NOAA   NMFS   SWFSC Отдел экологических исследований ( ERD ) .
 
-* Чтобы увидеть/использовать ERDDAP™ установка: [https://coastwatch.pfeg.noaa.gov/erddap/index.html](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 
+* Чтобы увидеть/использовать ERDDAP™ установка: [ https://coastwatch.pfeg.noaa.gov/erddap/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 
 * Чтобы начать с установки читать [Руководство по установке развертывания](/docs/server-admin/deploy-install) .
-* Чтобы внести код см. [путеводитель программиста](/docs/contributing/programmer-guide) .
+* Внести код см. [путеводитель программиста](/docs/contributing/programmer-guide) .
 
 
 Ниже вы найдете соответствующие ссылки для вопросов и как внести свой вклад.
-* Просмотреть беседы и задать вопросы на [https://groups.google.com/g/erddap](https://groups.google.com/g/erddap) или в [https://github.com/erddap/erddap/discussions](https://github.com/erddap/erddap/discussions) 
-* Рассмотрение и представление вопросов на [https://github.com/erddap/erddap/issues](https://github.com/erddap/erddap/issues) 
-* Чтобы предложить запросы на функции, следуйте этому руководству: [ ERDDAP Дискуссии #93 (комментарий) ](https://github.com/ERDDAP/erddap/discussions/93#discussion-4920427) 
+* Просмотреть беседы и задать вопросы на [ https://groups.google.com/g/erddap ](https://groups.google.com/g/erddap) или в [ https://github.com/erddap/erddap/discussions ](https://github.com/erddap/erddap/discussions) 
+* Рассмотрение и представление вопросов [ https://github.com/erddap/erddap/issues ](https://github.com/erddap/erddap/issues) 
+* Чтобы предложить запросы на функции, следуйте этому руководству: [ ERDDAP Обсуждение #93 (комментарий) ](https://github.com/ERDDAP/erddap/discussions/93#discussion-4920427) 
 
 
 ## Поиск многократный ERDDAP™ s
@@ -38,10 +38,10 @@ title: "ERDDAP™ Documentation"
 
 * Если у вас уже есть веб-сервис для распространения ваших данных,
 Вы можете настроить ERDDAP™ получить доступ к вашим данным через существующий сервис.
-Или вы можете установить ERDDAP™ Доступ к вашим данным напрямую из локальных файлов.
+Или вы можете установить ERDDAP™ получить доступ к вашим данным непосредственно из локальных файлов.
 * Для каждого набора данных вам нужно только написать небольшой фрагмент XML, чтобы сказать: ERDDAP™ Как получить доступ к набору данных.
 * Когда у тебя есть ERDDAP™ Обслуживая ваши данные, конечные пользователи могут:
-    * Запрашивать данные различными способами ( DAP , WMS и больше в будущем) .
+    * Запрос данных различными способами ( DAP , WMS и больше в будущем) .
     * Получите ответ данных в различных форматах файлов. (Это, наверное, самая большая причина&#33;) 
     * Делайте графики и карты. (Все любят красивые картинки.) 
     * Постройте другие полезные и интересные вещи поверх ERDDAP Веб-сервисы - смотрите [ Awesome ERDDAP ТМ](https://github.com/IrishMarineInstitute/awesome-erddap) Список удивительных ERDDAP - связанные проекты.
@@ -50,18 +50,18 @@ title: "ERDDAP™ Documentation"
 
 ## Является ли процедура установки сложной? Могу я это сделать?{#is-the-installation-procedure-hard-can-i-do-it} 
 
-Первоначальная установка занимает некоторое время, но это не очень сложно. Ты сможешь. Если вы застряли, напишите мне на erd dot data at noaa dot gov . Я помогу тебе.
+Первоначальная установка занимает некоторое время, но это не очень сложно. Ты можешь это сделать. Если вы застряли, напишите мне erd dot data at noaa dot gov . Я помогу тебе.
 Вы можете присоединиться к [ ERDDAP™ Google Group / Список рассылки](https://groups.google.com/g/erddap) Оставьте свой вопрос там.
 
 ## кто использует ERDDAP™  {#who-uses-erddap} 
 
  ERDDAP™ Его установили около 100 организаций по меньшей мере в 17 странах.
 
- (Австралия, Бельгия, Канада, Китай, Франция, Индия, Ирландия, Италия, Новая Зеландия, Россия, ЮАР, Испания, Шри-Ланка, Швеция, Таиланд, Великобритания, США) В том числе:
+ (Австралия, Бельгия, Канада, Китай, Франция, Индия, Ирландия, Италия, Новая Зеландия, Россия, Южная Африка, Испания, Шри-Ланка, Швеция, Таиланд, Великобритания, США) В том числе:
 
 *    [ПДРК](https://apdrc.soest.hawaii.edu/erddap/index.html)   (Азиатско-Тихоокеанский центр исследований данных, Международный Тихоокеанский исследовательский центр) в Гавайском университете (Ах)  
 *    [BCO-DMO в WHOI](https://erddap.bco-dmo.org/erddap/index.html)   (Биологическая и химическая океанография Управление данными в Woods Hole Oceanographic институт)  
-*    [Победитель ERDDAP™ ](https://canwinerddap.ad.umanitoba.ca/erddap/index.html)   (Канадская информационная сеть водоразделов) Центр науки о наблюдении Земли (генеральный директор) Университет Манитобы
+*    [Победитель ERDDAP™ ](https://canwinerddap.ad.umanitoba.ca/erddap/index.html)   (Канадская информационная сеть водоразделов) Центр наук о наблюдении Земли (генеральный директор) Университет Манитобы
 *    [CDIP](https://erddap.cdip.ucsd.edu/erddap/index.html)   (Прибрежная информационная программа UCSD)  
 *    [CNR-ISP](https://data.iadc.cnr.it/erddap/index.html)   (Национальный исследовательский совет Италии, Институт полярных наук)  
 * CSIRO и IMOS (Австралийская организация научных и промышленных исследований Содружества и интегрированная морская система наблюдения) 
@@ -85,19 +85,19 @@ LMI ECLAIRS (Лаборатория Mixte International «Etude du Climat en Afr
 * Компания Marine Instruments S.A. (Испания) 
 * NCI (Национальная вычислительная инфраструктура Австралии) 
 *    [ NOAA Береговая охрана](https://coastwatch.noaa.gov/erddap/index.html)   (центральный)  
-*    [ NOAA Береговая охрана CGOM](https://cwcgom.aoml.noaa.gov/erddap/index.html)   (Узел Карибы / Мексиканский залив)  
+*    [ NOAA Береговая охрана CGOM](https://cwcgom.aoml.noaa.gov/erddap/index.html)   (Узел Карибский бассейн/ Мексиканский залив)  
 *    [ NOAA Береговая охрана GLERL](https://coastwatch.glerl.noaa.gov/erddap/index.html)   (Узел Великих озер)  
-*    [ NOAA Береговая охрана West Coast](https://coastwatch.pfeg.noaa.gov/erddap/index.html) который находится вместе и работает с
+*    [ NOAA Береговая охрана West Coast](https://coastwatch.pfeg.noaa.gov/erddap/index.html) который находится совместно с и работает с
      [ NOAA   ERD ](https://coastwatch.pfeg.noaa.gov/erddap/index.html)   (Отдел экологических исследований SWFSC из NMFS ) 
 *    [ NOAA Датчики IOOS](https://erddap.sensors.ioos.us/erddap/index.html)   (Интегрированная система наблюдения за океаном)  
-*    [ NOAA IOOS Ce NCO ОСО](https://erddap.axiomdatascience.com/erddap/index.html)   (Система наблюдения за океаном Центральной и Северной Калифорнии, разработанная Axiom Data Science)  
-*    [ NOAA Атмосферные и океанографические данные IOOS GCOOS: система наблюдений](https://erddap.gcoos.org/erddap/index.html)   
+*    [ NOAA IOOS Ce NCO ОС](https://erddap.axiomdatascience.com/erddap/index.html)   (Система наблюдения за океаном Центральной и Северной Калифорнии, разработанная Axiom Data Science)  
+*    [ NOAA IOOS GCOOS Атмосферные и океанографические данные: система наблюдения](https://erddap.gcoos.org/erddap/index.html)   
      [ NOAA Атмосферные и океанографические данные IOOS GCOOS: исторические коллекции](https://gcoos5.geos.tamu.edu/erddap/index.html)   
      [ NOAA IOOS GCOOS Биология и социально-экономика](https://gcoos4.tamu.edu/erddap/index.html)   (Система наблюдения за океаном Мексиканского залива) 
-*    [ NOAA Иос Неракус](http://www.neracoos.org/erddap/index.html)   (Северо-восточная региональная ассоциация прибрежных и океанических наблюдательных систем)  
+*    [ NOAA Иос Неракус](http://www.neracoos.org/erddap/index.html)   (Северо-Восточная региональная ассоциация прибрежных и океанических систем наблюдения)  
 *    [ NOAA IOOS NGDAC](https://data.ioos.us/gliders/erddap/index.html)   (Национальный планер Центр сбора данных)  
 *    NOAA ИОС НАНООС (Северо-западная ассоциация сетевых систем наблюдения за океаном) 
-*    [ NOAA IOOS PacIOOS](https://pae-paha.pacioos.hawaii.edu/erddap/index.html)   (Тихоокеанские острова Система наблюдения за океаном) в Гавайском университете (Ах)  
+*    [ NOAA Иос Пациос](https://pae-paha.pacioos.hawaii.edu/erddap/index.html)   (Тихоокеанские острова Система наблюдения за океаном) в Гавайском университете (Ах)  
 *    NOAA ИОС СККУС (Система наблюдения за прибрежным океаном Южной Калифорнии) 
 *    [ NOAA Иосекура](https://erddap.secoora.org/erddap/index.html)   (Региональная ассоциация по наблюдению за юго-восточным побережьем океана)  
 *    [ NOAA НЦЭИ](https://www.ncei.noaa.gov/erddap/index.html)   (Национальные центры экологической информации)    
@@ -116,7 +116,7 @@ OOI / Некабельные данные
 * Принстон, Исследовательская группа по гидрометеорологии
 * R.Tech Engineering, Франция
 *    [Rutgers University, Департамент морских и прибрежных наук](https://tds.marine.rutgers.edu/erddap/index.html)   
-* Институт устья Сан-Франциско
+* San Francisco Estuary Institute
 *    [Институт океанографии Скриппса, Spray Underwater Gliders](https://spraydata.ucsd.edu/erddap/index.html)  
 *    [Умная Атлантика](https://www.smartatlantic.ca/erddap/index.html) Мемориальный университет Ньюфаундленда
 * Южноафриканская сеть экологических наблюдений
@@ -135,7 +135,7 @@ OOI / Некабельные данные
 ###  ERDDAP™ Рекомендуется в пределах NOAA и CNRS{#erddap-is-recommended-within-noaa-and-cnrs} 
  [ NOAA Процедурная директива о доступе к данным](https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendations#Software_implementations) включает ERDDAP™ в своем списке рекомендуемых серверов данных для использования группами внутри NOAA . ERDDAP™ Упоминается в разделе 4.2.3
 [Guide de bonnes pratiques sur la gestion des données de la recherche
- (Управление данными исследований Руководство по лучшим практикам) ] (https://mi-gt-donnees.pages.math.unistra.fr/guide/04-traiter.html#deposer-et-structurer-dans-des-plateformes-de-gestion-de-donnees-locales) Национальный научно-исследовательский центр de la Recherche (CNRS) во Франции.
+ (Управление данными исследований Руководство по лучшим практикам) ] ( https://mi-gt-donnees.pages.math.unistra.fr/guide/04-traiter.html#deposer-et-structurer-dans-des-plateformes-de-gestion-de-donnees-locales ) Национальный научно-исследовательский центр de la Recherche (CNRS) во Франции.
 
 ## Слайд-шоу{#slide-shows} 
 
@@ -161,7 +161,7 @@ OOI / Некабельные данные
 *    [EDM 2018: Распределенная система веб-сервисов (Быстрее, проще, дешевле)   (Почему я был счастлив 4 года назад) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/10P.04_Simons_DistributedWebServices2018.pptx) 
 *    [2018 EDM: ERDDAP™ в 2018 году](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/7A4_Simons_ErddapSession2018.pptx) 
 *    [2018 EDM: новые возможности ERDDAP™ для изображений, аудио и видео данных](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/4D4_Simons_ErddapMediaFiles2018.pptx) 
-*    [2018 EDM: UAF и EDM ERDDAP™ Решения для интеграции данных](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/3D3_Simons_DataIntegration2018.pptx) 
+*    [2018 EDM: UAF ERDDAP™ Решения для интеграции данных](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/3D3_Simons_DataIntegration2018.pptx) 
 *    [2017 EDM: краткое введение ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapIntro.pptx) 
 *    [2017 EDM и 2017 IOOS: новый или малоизвестный ERDDAP™ Особенности (для пользователей) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapUserFeatures2017.pptx) 
 *    [2017 EDM и 2017 IOOS: новый или малоизвестный ERDDAP™ Особенности (для администраторов) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapAdminFeatures2017.pptx) 
@@ -180,7 +180,7 @@ OOI / Некабельные данные
 
 Презентации других людей:
 
-*    [Инструмент FAIR для улучшения глобального обмена данными![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=kdBTgNEp5TA&ab_channel=GOOSIOC)   
+*    [Инструмент на основе FAIR для улучшения глобального обмена данными![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=kdBTgNEp5TA&ab_channel=GOOSIOC)   
 Кевин О'Брайен из Глобальной системы наблюдений за океаном (ГУС) Вебинар / Координационная группа наблюдения (ОКГ) Серия / 1 12 ноября 2020 года.
 *    [Создайте собственное приложение погоды NOAA Открытые данные и ноутбуки Jupyter![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=MF-WH01Qw0g)   
 Филипе Фернандес и Рич Сигнелл на SciPy 2018, 13 июля 2018 года.

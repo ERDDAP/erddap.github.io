@@ -3,34 +3,34 @@ title: "ERDDAP™ Documentation"
 ---
 ## 인기 있는 ERDDAP™ 이름 *{#latest-erddap-version} 
 
-2.29.0, 참조 [관련 문서](/changes#version-2290) 이름 * [다운로드](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) ·
+2.30.0, 참조 [관련 문서](/changes#version-2300) · [다운로드](https://github.com/ERDDAP/erddap/releases/tag/v2.30.0) ·
 
 ##  ERDDAP™ * 이름{#erddap-information} 
 
- ERDDAP™ 사용자에게 간단한 일관적인 방법을 제공하는 과학적인 자료 서버는 subsets를 다운로드하기 위하여 입니다
+ ERDDAP™ 사용자를 제공하는 과학 데이터 서버는 간단한, 일관적인 방법을 제공하여 하위 세트를 다운로드합니다.
 일반적인 파일 형식의 Gridded 및 tabular 과학 데이터 세트 및 그래프와지도를 만듭니다.
  ERDDAP™ 무료 및 오픈 소스 (아파치 및 Apache와 같은)   Java 서비스 약관 NOAA   NMFS   SWFSC 환경연구과 ( ERD ) ·
 
-* 참조/사용 ERDDAP™ 임명: [https://coastwatch.pfeg.noaa.gov/erddap/index.html](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 
-* 설치로 시작하려면 [배포 설치 가이드](/docs/server-admin/deploy-install) ·
+* 보고/사용 ERDDAP™ 임명: [ https://coastwatch.pfeg.noaa.gov/erddap/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 
+* 설치를 시작하기 [배포 설치 가이드](/docs/server-admin/deploy-install) ·
 * 코드에 기여하기 [프로그래머의 가이드](/docs/contributing/programmer-guide) ·
 
 
 아래에서 질문과 기여 방법에 대한 관련 링크가 있습니다.
-* 자주 묻는 질문 [https://groups.google.com/g/erddap](https://groups.google.com/g/erddap) 또는 [https://github.com/erddap/erddap/discussions](https://github.com/erddap/erddap/discussions) 
-* 자주 묻는 질문 [https://github.com/erddap/erddap/issues](https://github.com/erddap/erddap/issues) 
+* 자주 묻는 질문 [ https://groups.google.com/g/erddap ](https://groups.google.com/g/erddap) 또는 [ https://github.com/erddap/erddap/discussions ](https://github.com/erddap/erddap/discussions) 
+* 자주 묻는 질문 [ https://github.com/erddap/erddap/issues ](https://github.com/erddap/erddap/issues) 
 * 기능을 제안하려면이 지침을 따르십시오. [ ERDDAP 토론 #93 (이름 *) ](https://github.com/ERDDAP/erddap/discussions/93#discussion-4920427) 
 
 
 ## 검색 Multiple ERDDAP™ ₢ 킹
-여러 가지 방법이 있습니다. ERDDAP™ datasets를 위한 s: [검색 Multiple ERDDAP™ ₢ 킹](/SearchMultipleERDDAPs.html) 이름 * [ ERDDAP™ Dataset 디스커버리](http://erddap.com/) ·
+여러 가지 방법이 있습니다. ERDDAP™ datasets를 위한 s: [검색 Multiple ERDDAP™ ₢ 킹](/SearchMultipleERDDAPs.html) · [ ERDDAP™ Dataset 디스커버리](http://erddap.com/) ·
 
 
 ## 사용자 정의 ERDDAP™  {#set-up-your-own-erddap} 
 
- ERDDAP™ · [무료 및 오픈 소스](https://en.wikipedia.org/wiki/Free_and_open-source_software) , 모든- Java   (관련 상품) , 웹 애플리케이션 서버에서 실행하는 웹 응용 프로그램 (예를 들어, Tomcat ((주)) , 또는 제트 (그것은 작동하지만, 우리는 그것을 지원하지 않습니다) ) · 이 웹 페이지는 주로 사람들에게 (· ERDDAP™ 관리자) 스스로 설정하고 싶은 분 ERDDAP™ 자신의 웹 사이트에 설치.
+ ERDDAP™ 는 [무료 및 오픈 소스](https://en.wikipedia.org/wiki/Free_and_open-source_software) , 모든- Java   (관련 상품) , 웹 애플리케이션 서버에서 실행하는 웹 응용 프로그램 (예를 들어, Tomcat ((주)) , 또는 제트 (그것은 작동하지만, 우리는 그것을 지원하지 않습니다) ) · 이 웹 페이지는 주로 사람들에게 (· ERDDAP™ 관리자) 스스로 설정하고 싶은 분 ERDDAP™ 자신의 웹 사이트에 설치.
 
-설치로 시작하려면 [배포 설치 가이드](/docs/server-admin/deploy-install) ·
+설치를 시작하기 [배포 설치 가이드](/docs/server-admin/deploy-install) ·
 
 ### 왜 사용 ERDDAP™ 데이터 배포?{#why-use-erddap-to-distribute-your-data} 
 
@@ -44,16 +44,16 @@ title: "ERDDAP™ Documentation"
     * 다양한 방법으로 데이터 요청 ( DAP · WMS , 그리고 미래에 더) ·
     * 다양한 파일 형식의 데이터 응답을 가져옵니다. (그것은 아마도 가장 큰 이유입니다&#33;) 
     * 그래프와 맵을 만듭니다. (누구나 예쁜 사진을 좋아합니다.) 
-    * 다른 유용하고 흥미로운 것들을 상단에 ERDDAP 's web services -- 보기 [ Awesome ERDDAP 사이트맵](https://github.com/IrishMarineInstitute/awesome-erddap) 멋진 ERDDAP - 관련 프로젝트.
+    * 다른 유용하고 흥미로운 것들을 상단에 ERDDAP 's web services -- 보기 [ Awesome ERDDAP 사이트맵](https://github.com/IrishMarineInstitute/awesome-erddap) 멋진 목록 ERDDAP - 관련 프로젝트.
 
-당신은 할 수 [사용자 정의](/docs/server-admin/deploy-install#customize) 이름 * ERDDAP 's 외관 그래서 ERDDAP™ 당신의 조직을 반영하고 당신의 웹 사이트의 나머지와 적합.
+당신은 할 수 [사용자 정의](/docs/server-admin/deploy-install#customize) 내 계정 ERDDAP 's 외관 그래서 ERDDAP™ 당신의 조직을 반영하고 당신의 웹 사이트의 나머지와 적합.
 
 ## 설치 절차는 열심히? 나는 할 수 있습니까?{#is-the-installation-procedure-hard-can-i-do-it} 
 
 초기 설치는 몇 번 걸립니다, 하지만 그것은 매우 어렵지 않습니다. 할 수 있습니다. 당신이 붙어있는 경우, 나에게 이메일을 erd dot data at noaa dot gov · 나는 당신을 도울 것입니다.
 또는, 당신은 가입할 수 있습니다 [ ERDDAP™ Google 그룹 / 메일링 리스트](https://groups.google.com/g/erddap) 자주 묻는 질문
 
-## 이름 * ERDDAP™  {#who-uses-erddap} 
+## 누가 사용 ERDDAP™  {#who-uses-erddap} 
 
  ERDDAP™ 최소 17개국 약 100개 조직에 설치
 
@@ -61,7 +61,7 @@ title: "ERDDAP™ Documentation"
 
 *    [사이트맵](https://apdrc.soest.hawaii.edu/erddap/index.html)   (아시아 태평양 연구 센터(Asia-Pacific Data-Research Center)) 하와이 대학 (사이트맵)  
 *    [WHOI의 BCO-DMO](https://erddap.bco-dmo.org/erddap/index.html)   (생물학 및 화학 해양학 Woods Hole의 데이터 관리 사무실 Oceanographic 학회소개)  
-*    [칸 수 ERDDAP™ ](https://canwinerddap.ad.umanitoba.ca/erddap/index.html)   (Canadian Watershed 정보 네트워크) 지구 관측 과학 센터 (CEO인사말) , Manitoba 대학
+*    [수 있습니다. ERDDAP™ ](https://canwinerddap.ad.umanitoba.ca/erddap/index.html)   (Canadian Watershed 정보 네트워크) 지구 관측 과학 센터 (CEO인사말) , Manitoba 대학
 *    [사이트맵](https://erddap.cdip.ucsd.edu/erddap/index.html)   (UCSD의 해안 데이터 정보 프로그램)  
 *    [사이트맵](https://data.iadc.cnr.it/erddap/index.html)   (이탈리아 국립 연구위원회, 폴라 과학 연구소)  
 * CSIRO 및 IMOS (호주의 Commonwealth Scientific 및 Industrial Research Organisation 및 통합 해양 관찰 시스템) 
@@ -94,21 +94,21 @@ LMI 적능력 (Laboratoire Mixte 국제 «Etude du Climat en Afrique de l'Ouest 
 *    [ NOAA IOOS GCOOS 대기 및 Oceanographic 자료: 관측 체계](https://erddap.gcoos.org/erddap/index.html)   
      [ NOAA IOOS GCOOS 대기 및 Oceanographic 자료: 역사 수집](https://gcoos5.geos.tamu.edu/erddap/index.html)   
      [ NOAA IOOS GCOOS 생물학 및 Socioeconomics](https://gcoos4.tamu.edu/erddap/index.html)   (Gulf Coast Ocean 관측 시스템) 
-*    [ NOAA 아이코스](http://www.neracoos.org/erddap/index.html)   (북동부 지역 해안 및 해양 관찰 시스템 협회)  
+*    [ NOAA IOOS 네오코스](http://www.neracoos.org/erddap/index.html)   (북동부 지역 해안 및 해양 관찰 시스템 협회)  
 *    [ NOAA 아이코스 NGDAC](https://data.ioos.us/gliders/erddap/index.html)   (국가 Glider 데이터 조립 센터)  
 *    NOAA IOOS 나노 (Northwest Networked Ocean Observing 시스템 협회) 
 *    [ NOAA IOOS 소개](https://pae-paha.pacioos.hawaii.edu/erddap/index.html)   (태평양 제도 오션 전망 시스템) 하와이 대학 (사이트맵)  
 *    NOAA IOOS 네트워크 (남부 캘리포니아 해안 바다 전망 시스템) 
-*    [ NOAA IOOS 보안](https://erddap.secoora.org/erddap/index.html)   (동남 해안 바다 전망 지역 협회)  
+*    [ NOAA IOOS 보안](https://erddap.secoora.org/erddap/index.html)   (동남아 해안 바다 전망 지역 협회)  
 *    [ NOAA 한국어](https://www.ncei.noaa.gov/erddap/index.html)   (환경정보센터)    
 *    NOAA 사이트맵 (국가 Geophysical 데이터 센터, 태양 -- Terrestrial 물리학) 
-*    NOAA   NMFS 사이트맵 (동북 Fisheries 과학 센터) 
+*    NOAA   NMFS 사이트맵 (Northeast Fisheries 과학 센터) 
 *    [ NOAA NOS CO-OPS의 장점](https://opendap.co-ops.nos.noaa.gov/erddap/index.html)   (운영 Oceanographic 제품 및 서비스 센터)  
 *    [ NOAA 운영 체제](http://osmc.noaa.gov/erddap/index.html)   (모니터링 시스템)  
-*    [ NOAA 사이트맵](https://oceanwatch.pifsc.noaa.gov/erddap/index.html)   (태평양 제도 수산 과학 센터)  
+*    [ NOAA 사이트맵](https://oceanwatch.pifsc.noaa.gov/erddap/index.html)   (Pacific Islands 피셔리 과학 센터)  
 *    [ NOAA 주 메뉴](https://data.pmel.noaa.gov/pmel/erddap/index.html) 
 *    [ NOAA PolarWatch의 특징](https://polarwatch.noaa.gov/erddap/index.html) 
-*    [ NOAA UAF 정보](https://upwell.pfeg.noaa.gov/erddap/index.html)   (통합 Access Framework)  
+*    [ NOAA 사이트맵](https://upwell.pfeg.noaa.gov/erddap/index.html)   (통합 Access Framework)  
 *    [Ocean Networks 캐나다](http://dap.onc.uvic.ca/erddap/index.html)  
 *    [Ocean 추적 네트워크](https://members.oceantrack.org/erddap/index.html)  
 *    [OOI / 모든 데이터](https://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/index.html)   (Ocean Observatories 이니셔티브)   
@@ -121,7 +121,7 @@ OOI/Uncabled 자료
 *    [스마트 Atlantic](https://www.smartatlantic.ca/erddap/index.html) 뉴펀들랜드 주립대학교
 * South Africa 환경 관측 네트워크
 * Spyglass 기술
-* 스탠포드 대학, Hopkins Marine Station
+* 스탠포드 대학교, 홉킨스 해양역
 *    [유네스코 IODE](https://erddap.oa.iode.org/erddap/index.html)   (International Oceanographic 및 정보 데이터 교환)  
 *    [브리티시 컬럼비아 대학교, 지구, 해양 및 대기 과학부](https://salishsea.eos.ubc.ca/erddap/index.html)  
 *    [Davis 대학, Bodega 해양 실험실](http://bmlsc.ucdavis.edu:8080/erddap/index.html)  
@@ -133,15 +133,15 @@ OOI/Uncabled 자료
 이것은 일부 조직의 목록입니다. ERDDAP™ 몇몇 개인 또는 몇몇 그룹에 의해 설치되었습니다. 개인, 그룹, 또는 조직이 권고하거나 권고하는 것이 아닙니다. ERDDAP ·
 
 ###  ERDDAP™ 자주 묻는 질문 NOAA 및 CNRS{#erddap-is-recommended-within-noaa-and-cnrs} 
- [ NOAA 데이터 액세스 Procedural Directive](https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendations#Software_implementations) 기타 ERDDAP™ 그룹 내의 권장 데이터 서버 목록 NOAA · ERDDAP™ 섹션 4.2.3에서 유리하게 언급된다
+ [ NOAA 데이터 액세스 Procedural Directive](https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendations#Software_implementations) 기타 ERDDAP™ 그룹 내의 권장 데이터 서버 목록 NOAA · ERDDAP™ 섹션 4.2.3에서 유리하게 언급된다.
 [가이드 de bonnes pratiques sur la gestion des données de la recherche
- (연구 데이터 관리 모범 사례) · (https://mi-gt-donnees.pages.math.unistra.fr/guide/04-traiter.html#deposer-et-structurer-dans-des-plateformes-de-gestion-de-donnees-locales) 센터 국립 드 라 Recherche 과학 (사이트맵) 프랑스에서.
+ (연구 데이터 관리 모범 사례) · ( https://mi-gt-donnees.pages.math.unistra.fr/guide/04-traiter.html#deposer-et-structurer-dans-des-plateformes-de-gestion-de-donnees-locales ) 센터 국립 드 라 Recherche 과학 (사이트맵) 프랑스에서.
 
 ## 슬라이드 쇼{#slide-shows} 
 
 Bob Simons가 관련한 몇몇 PowerPoint 슬라이드 쇼 및 문서입니다. ERDDAP ·
 
- **면책 조항: 이 문서에서 표현된 내용 및 의견은 Bob Simons의 개인 의견이며 반드시 정부 또는 정부의 어떤 위치를 반영하지 않습니다. National Oceanic and Atmospheric Administration ·** 
+ **면책 조항: 이 문서에 명시된 내용과 의견은 Bob Simons의 개인 의견이며 반드시 정부 또는 정부의 어떤 위치를 반영하지 않습니다. National Oceanic and Atmospheric Administration ·** 
 
 4개의 주요 문서:
 
@@ -158,23 +158,23 @@ Bob Simons가 관련한 몇몇 PowerPoint 슬라이드 쇼 및 문서입니다. 
 *    [2019 IOOS DMAC : 새로운 기능 ERDDAP™ v2.0의](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/Erddapv2Features.pptx) 
 *    [2018년 여름 ESIP: 설정 ERDDAP™ ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsErddapSubset2018.pptx) 
 *    [2018년 Summer ESIP: JSON 지원 ERDDAP™ ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsErddapJson2018.pptx) 
-*    [2018 EDM : 웹 서비스 분산 시스템 (더 빠른, Easier, 덜 비싼)   (또는, 왜 나는 행복했다 4 년 전.) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/10P.04_Simons_DistributedWebServices2018.pptx) 
+*    [2018 EDM: 웹 서비스의 분산 시스템 (더 빠른, 더 적은 비싼 Easier)   (또는, 왜 나는 행복했다 4 년 전.) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/10P.04_Simons_DistributedWebServices2018.pptx) 
 *    [2018년 EDM: ERDDAP™ 2018년](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/7A4_Simons_ErddapSession2018.pptx) 
 *    [2018 EDM : 새로운 기능 ERDDAP™ 이미지, 오디오 및 비디오 데이터](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/4D4_Simons_ErddapMediaFiles2018.pptx) 
-*    [2018년 EDM: UAF와 ERDDAP™ Data Integration의 솔루션](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/3D3_Simons_DataIntegration2018.pptx) 
+*    [2018년 EDM: UAF 및 ERDDAP™ Data Integration 솔루션](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/3D3_Simons_DataIntegration2018.pptx) 
 *    [2017 EDM: 빠른 소개 ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapIntro.pptx) 
-*    [2017 EDM 및 2017 IOOS : 새로운 또는 Little Known ERDDAP™ 주요 특징 (사용자 정의) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapUserFeatures2017.pptx) 
-*    [2017 EDM 및 2017 IOOS : 새로운 또는 Little Known ERDDAP™ 주요 특징 (관리자) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapAdminFeatures2017.pptx) 
-*    [2017 EDM : EML, KNB 및 ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/eml_knb_erddap.pptx) 
+*    [2017 EDM 및 2017 IOOS : 새로운 또는 Little Known ERDDAP™ 제품 정보 (사용자 정의) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapUserFeatures2017.pptx) 
+*    [2017 EDM 및 2017 IOOS : 새로운 또는 Little Known ERDDAP™ 제품 정보 (관리자) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapAdminFeatures2017.pptx) 
+*    [2017년 EDM: EML, KNB 및 ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/eml_knb_erddap.pptx) 
 *    [2017년 EDM: 데이터는 소스에서 최종 사용자에게 어떻게 얻을 수 있습니까? 오래된 학교 versus 새로운 학교](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/OldSchoolNewSchool.pptx) 
 *    [2016년 여름 ESIP: 큰 그림: PARR, OPeNDAP · ERDDAP™ , 및 데이터 배포](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TheBigPicture.pptx) 
 *    [2016년 EDM: 하나와 끝난](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/OneAndDone.pptx) 
 *    [2016년 Gov API: 차세대 데이터 서버](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/NextGeneration.pptx) 
 *    [2015년 여름 ESIP: 금전](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TabularAggregation.pptx) 
-*    [2014년 EDM: 밥의 도의와 Tabular 자료를 위해 돈](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsDosDontsTabular.pptx) 
+*    [2014 EDM: 밥의 도의 및 Tabular 자료에 대 한 돈](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsDosDontsTabular.pptx) 
 *    [2014 EDM: 이상적인 사용자 공용영역](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TheIdealUserInterface.pptx) 
 *    [2014년 여름 ESIP: 탭 데이터](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TabularData.pptx) 
-*    [2013 : In-Situ 및 Tabular Data를 Gridded Data와 같이 취급하지 마십시오.](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TablesAndGrids.html) 
+*    [2013 : Gridded Data와 같은 In-Situ 및 Tabular Data를 치료하지 마십시오.](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TablesAndGrids.html) 
 *    [2013년 EDM: 더 적은을 가진](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/DoMoreWithLess.ppt) 
 *    [2012 EDM: Data Distribution Systems의 가이드라인](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/guidelines3.ppt) 
 
@@ -185,12 +185,12 @@ Kevin O'Brien의 글로벌 오션 관찰 시스템 (공지사항) 웹 세미나 
 *    [자신의 날씨 앱 구축 NOAA 데이터 및 Jupyter 노트북 열기![다운로드](/img/youtube.png)](https://www.youtube.com/watch?v=MF-WH01Qw0g)   
 에 의해서 Filipe Fernandes 과 Rich Signell 에 SciPy 2018, 7월 13, 2018.
 *    [OOI 사용 ERDDAP ![다운로드](/img/youtube.png)](https://www.youtube.com/watch?v=tj4M9hodTG0)   
-글쓴이: Rich Signell, 2018년 2월
+글쓴이: Rich Signell, 2018년 2월.
 *    [사이트맵 기술 다이브: " ERDDAP 번개 이야기"![다운로드](/img/youtube.png)](https://youtu.be/2-ydBByYB0M?t=160)   
-관심있는 것들에 대해 8 5 분 회담 ERDDAP Jenn Sevadjian, Jim Potemra, Conor Delaney, Kevin O'Brien, John Kerfoot, Stephanie Petillo, Charles Carleton 및 Eli Hunter가 2017년 8월 31일 ESIP Tech Dive로 발표되었습니다.
+관심있는 것들에 대해 8 5 분 회담은 다음과 같습니다. ERDDAP Jenn Sevadjian, Jim Potemra, Conor Delaney, Kevin O'Brien, John Kerfoot, Stephanie Petillo, Charles Carleton 및 Eli Hunter가 2017년 8월 31일 ESIP Tech Dive로 발표되었습니다.
 *    [사용 방법 ERDDAP™ 액세스 탭 데이터![다운로드](/img/youtube.png)](https://www.youtube.com/watch?v=_BwMHRh7CS8)   
 글쓴이: Rich Signell, 2015년 8월
 *    [사용 방법 ERDDAP™ Blue Carbon 데이터![다운로드](/img/youtube.png)](https://www.youtube.com/watch?v=TbOhElC_-qU)   
 글쓴이: Rich Signell, 2015년 8월
 *    [Data 사용 ERDDAP™ 내 계정 NOAA 이름 * GNOME 소프트웨어![다운로드](/img/youtube.png)](https://www.youtube.com/watch?v=18xZoXu1USM) ·
-이 비디오에서 Rich Signell은 바다의 현재 예측 데이터를 다운로드 ERDDAP™ 바다에서 독성 유출을 모델링 [ NOAA 이름 * GNOME 소프트웨어](https://response.restoration.noaa.gov/oil-and-chemical-spills/oil-spills/response-tools/gnome.html)   (5 분&#33;) · (비디오의 하나의 작은 오류 : datasets에 대한 검색 할 때, 검색 조건과 사용하지 마십시오. 그것은 implicit입니다.) By Rich Signell, 2011년 4월 8일
+이 비디오에서 Rich Signell은 바다의 현재 예측 데이터를 다운로드 ERDDAP™ 바다에서 독성 유출을 모델링 [ NOAA 이름 * GNOME 소프트웨어](https://response.restoration.noaa.gov/oil-and-chemical-spills/oil-spills/response-tools/gnome.html)   (5 분&#33;) · (비디오의 하나의 작은 오류 : datasets에 대한 검색 할 때, 검색 조건과 사용하지 마십시오. 그것은 implicit입니다.) 글쓴이: Rich Signell, 2011년 4월 8일

@@ -3,23 +3,23 @@ title: "ERDDAP™ Documentation"
 ---
 ## Τελευταία ERDDAP™ έκδοση{#latest-erddap-version} 
 
-2.29.0, βλ. [τεκμηρίωση αλλαγών](/changes#version-2290) και [Κατέβασέ το.](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) .
+2.30.0, βλ. [τεκμηρίωση αλλαγών](/changes#version-2300) και [Κατέβασέ το.](https://github.com/ERDDAP/erddap/releases/tag/v2.30.0) .
 
 ##  ERDDAP™ Πληροφορίες{#erddap-information} 
 
- ERDDAP™ είναι ένας επιστημονικός διακομιστής δεδομένων που δίνει στους χρήστες έναν απλό, συνεπή τρόπο για να κατεβάσετε υποσύνολα της
+ ERDDAP™ είναι ένας επιστημονικός διακομιστής δεδομένων που δίνει στους χρήστες έναν απλό, συνεπή τρόπο για να κατεβάσετε υποσύνολα του
 grided και πίνακα επιστημονικών δεδομένων σε κοινές μορφές αρχείων και να κάνει γραφήματα και χάρτες.
- ERDDAP™ είναι ένας Ελεύθερος και Ανοικτός Κώδικας (Απάτσι και Απάτσι)   Java Από το Servlet NOAA   NMFS   SWFSC Τμήμα Περιβαλλοντικής Έρευνας ( ERD ) .
+ ERDDAP™ είναι μια ελεύθερη και ανοιχτή πηγή (Απάτσι και Απάτσι.)   Java Σέρβλετ από NOAA   NMFS   SWFSC Τμήμα Περιβαλλοντικής Έρευνας ( ERD ) .
 
-* Για να δείτε/χρησιμοποιήσετε ένα ERDDAP™ εγκατάσταση: [https://coastwatch.pfeg.noaa.gov/erddap/index.html](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 
+* Για να δείτε/χρησιμοποιήσετε ένα ERDDAP™ εγκατάσταση: [ https://coastwatch.pfeg.noaa.gov/erddap/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 
 * Για να ξεκινήσετε με μια ανάγνωση εγκατάστασης [ο οδηγός εγκατάστασης ανάπτυξης](/docs/server-admin/deploy-install) .
-* Για να συμβάλει κώδικα δείτε το [Οδηγός προγραμματιστή](/docs/contributing/programmer-guide) .
+* Για να συνεισφέρετε κώδικα δείτε το [Οδηγός προγραμματιστή](/docs/contributing/programmer-guide) .
 
 
 Παρακάτω θα βρείτε σχετικούς συνδέσμους για ερωτήσεις και πώς να συνεισφέρετε.
-* Επανεξέτασε τις συζητήσεις και κάνε ερωτήσεις στο [https://groups.google.com/g/erddap](https://groups.google.com/g/erddap) ή στο [https://github.com/erddap/erddap/discussions](https://github.com/erddap/erddap/discussions) 
-* Ανασκόπηση και υποβολή θεμάτων [https://github.com/erddap/erddap/issues](https://github.com/erddap/erddap/issues) 
-* Για να προταθούν τα αιτήματα χαρακτηριστικού, ακολουθήστε αυτή την καθοδήγηση: [ ERDDAP Συζητήσεις #93 (σχόλιο) ](https://github.com/ERDDAP/erddap/discussions/93#discussion-4920427) 
+* Επανεξέτασε τις συζητήσεις και κάνε ερωτήσεις [ https://groups.google.com/g/erddap ](https://groups.google.com/g/erddap) ή [ https://github.com/erddap/erddap/discussions ](https://github.com/erddap/erddap/discussions) 
+* Ανασκόπηση και υποβολή θεμάτων [ https://github.com/erddap/erddap/issues ](https://github.com/erddap/erddap/issues) 
+* Για να προταθούν τα αιτήματα χαρακτηριστικών, ακολουθήστε αυτή την καθοδήγηση: [ ERDDAP Συζητήσεις #93 (σχόλιο) ](https://github.com/ERDDAP/erddap/discussions/93#discussion-4920427) 
 
 
 ## Αναζήτηση πολλαπλών ERDDAP™ α
@@ -28,25 +28,25 @@ grided και πίνακα επιστημονικών δεδομένων σε κ
 
 ## Ρυθμίστε το Δικό σας ERDDAP™  {#set-up-your-own-erddap} 
 
- ERDDAP™ α [Ελεύθερος και ανοιχτός κώδικας](https://en.wikipedia.org/wiki/Free_and_open-source_software) , όλα- Java   (σέρβις) , web εφαρμογή που τρέχει σε έναν εξυπηρετητή web εφαρμογή (για παράδειγμα, Tomcat (συνιστάται) , ή Jetty (λειτουργεί, αλλά δεν το υποστηρίζουμε.) ) . Αυτή η ιστοσελίδα είναι κυρίως για τους ανθρώπους (" ERDDAP™ διαχειριστές") που θέλουν να στήσουν το δικό τους ERDDAP™ εγκατάσταση στη δική τους ιστοσελίδα.
+ ERDDAP™ είναι α [Ελεύθερος και ανοιχτός κώδικας](https://en.wikipedia.org/wiki/Free_and_open-source_software) , όλα- Java   (σερβιλέ) , web εφαρμογή που τρέχει σε έναν εξυπηρετητή εφαρμογών web (για παράδειγμα, Tomcat (συνιστάται) , ή Jetty (λειτουργεί, αλλά δεν το υποστηρίζουμε.) ) . Αυτή η ιστοσελίδα είναι κυρίως για τους ανθρώπους (" ERDDAP™ διαχειριστές") που θέλουν να στήσουν το δικό τους ERDDAP™ εγκατάσταση στη δική τους ιστοσελίδα.
 
 Για να ξεκινήσετε με μια ανάγνωση εγκατάστασης [ο οδηγός εγκατάστασης ανάπτυξης](/docs/server-admin/deploy-install) .
 
 ### Χρήση ERDDAP™ να διανείμεις τα δεδομένα σου;{#why-use-erddap-to-distribute-your-data} 
 
-Επειδή η μικρή προσπάθεια για την ίδρυση ERDDAP™ φέρνει πολλά οφέλη.
+Επειδή η μικρή προσπάθεια για να δημιουργήσει ERDDAP™ φέρνει πολλά οφέλη.
 
 * Εάν έχετε ήδη μια υπηρεσία web για τη διανομή των δεδομένων σας,
-Μπορείτε να στήσετε ERDDAP™ να έχετε πρόσβαση στα δεδομένα σας μέσω της υπάρχουσας υπηρεσίας.
+Μπορείς να στήσεις ERDDAP™ να έχετε πρόσβαση στα δεδομένα σας μέσω της υπάρχουσας υπηρεσίας.
 Ή μπορείς να στήσεις ERDDAP™ να έχετε πρόσβαση στα δεδομένα σας απευθείας από τοπικά αρχεία.
-* Για κάθε σύνολο δεδομένων, πρέπει να γράψετε μόνο ένα μικρό κομμάτι XML για να πείτε ERDDAP™ Πώς να αποκτήσετε πρόσβαση στο σύνολο δεδομένων.
+* Για κάθε σύνολο δεδομένων, πρέπει μόνο να γράψετε ένα μικρό κομμάτι XML για να πείτε ERDDAP™ Πώς να αποκτήσετε πρόσβαση στο σύνολο δεδομένων.
 * Μόλις το κάνεις. ERDDAP™ εξυπηρετώντας τα δεδομένα σας, οι τελικοί χρήστες μπορούν:
     * Αίτηση των δεδομένων με διάφορους τρόπους ( DAP , WMS , και περισσότερο στο μέλλον) .
-    * Αποκτήστε την απάντηση δεδομένων σε διάφορες μορφές αρχείων. (Αυτός είναι πιθανώς ο μεγαλύτερος λόγος&#33;) 
+    * Αποκτήστε την απάντηση δεδομένων σε διάφορες μορφές αρχείων. (Αυτός είναι μάλλον ο μεγαλύτερος λόγος&#33;) 
     * Φτιάξε γραφήματα και χάρτες. (Σε όλους αρέσουν οι όμορφες φωτογραφίες.) 
     * Χτίστε άλλα χρήσιμα και ενδιαφέροντα πράγματα στην κορυφή της ERDDAP Υπηρεσίες ιστού - δείτε το [ Awesome ERDDAP ΤΜ](https://github.com/IrishMarineInstitute/awesome-erddap) λίστα των φοβερό ERDDAP -σχετικά έργα.
 
-Μπορείς. [προσαρμογή](/docs/server-admin/deploy-install#customize) ισχ ERDDAP Έτσι φαίνεται. ERDDAP™ αντανακλά την οργάνωσή σας και ταιριάζει με την υπόλοιπη ιστοσελίδα σας.
+Μπορείς. [προσαρμογή](/docs/server-admin/deploy-install#customize) ορ ERDDAP Έτσι φαίνεται. ERDDAP™ αντανακλά την οργάνωσή σας και ταιριάζει με την υπόλοιπη ιστοσελίδα σας.
 
 ## Είναι δύσκολη η διαδικασία εγκατάστασης; Μπορώ να το κάνω;{#is-the-installation-procedure-hard-can-i-do-it} 
 
@@ -60,49 +60,49 @@ grided και πίνακα επιστημονικών δεδομένων σε κ
  (Αυστραλία, Βέλγιο, Καναδάς, Κίνα, Γαλλία, Ινδία, Ιρλανδία, Ιταλία, Νέα Ζηλανδία, Ρωσία, Νότια Αφρική, Ισπανία, Σρι Λάνκα, Σουηδία, Ταϊλάνδη, Ηνωμένο Βασίλειο, ΗΠΑ) , συμπεριλαμβανομένων:
 
 *    [APDRC](https://apdrc.soest.hawaii.edu/erddap/index.html)   (Κέντρο Έρευνας Ασίας-Ειρηνικού, Διεθνές Κέντρο Ερευνών Ειρηνικού) στο Πανεπιστήμιο της Χαβάης (UH)  
-*    [BCO-DMO στο WHOI](https://erddap.bco-dmo.org/erddap/index.html)   (Βιολογική και Χημική Ωκεανογραφία Γραφείο Διαχείρισης Δεδομένων στο Woods Hole Oceanographic Όργανο)  
-*    [Κανγουίν ERDDAP™ ](https://canwinerddap.ad.umanitoba.ca/erddap/index.html)   (Καναδικό δίκτυο πληροφοριών Watershed) στο Κέντρο Επιστήμης Παρατήρησης της Γης (Διευθύνοντες Σύμβουλοι) , Πανεπιστήμιο της Μανιτόμπα
+*    [BCO-DMO στο WHOI](https://erddap.bco-dmo.org/erddap/index.html)   (Βιολογική και χημική ωκεανογραφία Γραφείο Διαχείρισης Δεδομένων στο Woods Hole Oceanographic Όργανο)  
+*    [ΚΕΡΔΗ ERDDAP™ ](https://canwinerddap.ad.umanitoba.ca/erddap/index.html)   (Καναδικό δίκτυο πληροφοριών Watershed) στο Κέντρο Επιστήμης Παρατήρησης της Γης (Διευθύνοντες Σύμβουλοι) , Πανεπιστήμιο της Μανιτόμπα
 *    [CDIP](https://erddap.cdip.ucsd.edu/erddap/index.html)   (Πρόγραμμα πληροφοριών παράκτιων δεδομένων στο UCSD)  
 *    [CNR-ISP](https://data.iadc.cnr.it/erddap/index.html)   (Εθνικό Συμβούλιο Ερευνών της Ιταλίας, Ινστιτούτο Πολικών Επιστημών)  
-* CSIRO και IMO (Οργανισμός Επιστημονικής και Βιομηχανικής Έρευνας της Αυστραλίας και Ολοκληρωμένο Θαλάσσιο Σύστημα Παρακολούθησης) 
+* CSIRO και IMO (Οργανισμός Επιστημονικής και Βιομηχανικής Έρευνας της Αυστραλίας και Ολοκληρωμένο Σύστημα Θαλάσσιας Παρακολούθησης) 
 *    [DIVER ( NOAA ORR) ](https://pub-data.diver.orr.noaa.gov/erddap/index.html)   ( NOAA Γραφείο Ανταπόκρισης και Αποκατάστασης)  
 *    [Φυσική EMODnet](https://erddap.emodnet-physics.eu/erddap/index.html)   (Το Ευρωπαϊκό Δίκτυο Θαλάσσιων Παρατηρήσεων και Δεδομένων -- Φυσική)  
-*    [ΓΟΜΡΙ](https://erddap.griidc.org/erddap/index.html)   (Πρωτοβουλία για την έρευνα στον Κόλπο του Μεξικού)  
+*    [Γκομρί](https://erddap.griidc.org/erddap/index.html)   (Πρωτοβουλία έρευνας του Κόλπου του Μεξικού)  
 *    [Ινστιτούτο Hakai](https://catalogue.hakai.org/erddap/index.html)   (Το Ινστιτούτο Hakai στην Κεντρική Ακτή της Βρετανικής Κολομβίας, Καναδάς) 
-*    [Υπηρεσίες Τεχνολογίας Λυκείου](https://myhsts.org) , η οποία προσφέρει κωδικοποίηση και τεχνολογική κατάρτιση για μαθητές και ενήλικες
+*    [Υπηρεσίες Τεχνολογίας Λυκείου](https://myhsts.org) , η οποία προσφέρει κωδικοποίηση και τεχνολογική κατάρτιση για τους μαθητές και τους ενήλικες
 *    [ΙΧΕΚ](https://erddap.ichec.ie/erddap/index.html)   (Ιρλανδικό Κέντρο Υπολογιστών Υψηλού Τέλους) 
 *    [I NCO ΙΣ](https://erddap.incois.gov.in/erddap/index.html)   (Εθνικό Κέντρο Πληροφοριών της Ινδίας για τον Ωκεανό)  
 * IRD (Institut de Recherche pour le Développement, Γαλλία)   
 CNRS (Κέντρο National de la Recherche Scientifique, Γαλλία)   
 UPMC (Πανεπιστημιούπολη Pierre et Marie CURIE, Παρίσι, Γαλλία)   
-UCAD (Université Cheikh Anta Diop de Dakar, Sénégal)   
-UGB (Université Gaston Berger -- Saint-Louis du Sénégal)   
+UCAD (Université Cheikh Anta Diop de Dakar, Σενεγάλ)   
+UGB (Université Gaston Berger -- Saint-Louis du Sénégal (στα Αγγλικά).)   
 UFHB (Πανεπιστημιούπολη Félix HOUPHOU)   
-IPSL (Ινστιτούτο Pierre Simon Laplace des sciences de l'environnement, Παρίσι, Γαλλία)   
+ΙΡΣΛ (Ινστιτούτο Pierre Simon Laplace des sciences de l'environnement, Παρίσι, Γαλλία)   
 LMI ECLAIRS (στα Αγγλικά) (Laboratoire Mixte Διεθνές «Etude du Climat en Afrique de l’Ouest et de ses Interactions avec l’Environnement Régional, et appui aux services climatiques» (στα αγγλικά).) 
 * ΚΚΕρ (Ευρωπαϊκή Επιτροπή - Κοινό Κέντρο Ερευνών, Ευρωπαϊκή Ένωση) 
 *    [Το Ινστιτούτο Πεζοναυτών](https://erddap.marine.ie/erddap/index.html)   (Ιρλανδία)  
 * Θαλάσσια Όργανα Α.Ε. (Ισπανία) 
-* ΝΚΜ (Εθνική Υπολογιστική Υποδομή της Αυστραλίας) 
+* NCI (Εθνική Υπολογιστική Υποδομή της Αυστραλίας) 
 *    [ NOAA Ακτοφυλακή](https://coastwatch.noaa.gov/erddap/index.html)   (κεντρική)  
-*    [ NOAA Ακτοφυλακή CGOM](https://cwcgom.aoml.noaa.gov/erddap/index.html)   (Καραϊβική/Κόμβος του Μεξικού)  
+*    [ NOAA Ακτοφυλακή CGOM](https://cwcgom.aoml.noaa.gov/erddap/index.html)   (Κόμβος Καραϊβικής/Κόλπου Μεξικού)  
 *    [ NOAA Ακτοφυλακή GLERL](https://coastwatch.glerl.noaa.gov/erddap/index.html)   (Κόμβος των Μεγάλων Λιμνών)  
-*    [ NOAA CoastWatch Δυτική Ακτή](https://coastwatch.pfeg.noaa.gov/erddap/index.html) με την οποία συνυπάρχει και συνεργάζεται με
+*    [ NOAA CoastWatch Δυτική Ακτή](https://coastwatch.pfeg.noaa.gov/erddap/index.html) η οποία είναι συντοπισμένη και συνεργάζεται με
      [ NOAA   ERD ](https://coastwatch.pfeg.noaa.gov/erddap/index.html)   (Τμήμα Περιβαλλοντικής Έρευνας SWFSC του NMFS ) 
 *    [ NOAA Αισθητήρες IOOS](https://erddap.sensors.ioos.us/erddap/index.html)   (Ολοκληρωμένο σύστημα παρατήρησης του ωκεανού)  
-*    [ NOAA ΙΩΣ ΓΕ NCO OS](https://erddap.axiomdatascience.com/erddap/index.html)   (Κεντρικό και Βόρειο Καλιφόρνια Ocean Observing System, που διοικείται από την Axiom Data Science)  
+*    [ NOAA ΙΟΙ NCO OS](https://erddap.axiomdatascience.com/erddap/index.html)   (Κεντρικό και Βόρειο Καλιφόρνια Ocean Observing System, που διοικείται από την Axiom Data Science)  
 *    [ NOAA IOOS GCOOS Ατμοσφαιρικά και Ωκεανογραφικά Δεδομένα: Σύστημα παρατήρησης](https://erddap.gcoos.org/erddap/index.html)   
-     [ NOAA IOOS GCOOS Ατμοσφαιρικά και Ωκεανογραφικά Στοιχεία: Ιστορικές συλλογές](https://gcoos5.geos.tamu.edu/erddap/index.html)   
-     [ NOAA IOOS GCOOS Βιολογική και κοινωνικοοικονομική](https://gcoos4.tamu.edu/erddap/index.html)   (Σύστημα παρατήρησης ακτής του Κόλπου) 
+     [ NOAA IOOS GCOOS Ατμοσφαιρικά και Ωκεανογραφικά Στοιχεία: Ιστορικές Συλλογές](https://gcoos5.geos.tamu.edu/erddap/index.html)   
+     [ NOAA IOOS GCOOS Βιολογική και κοινωνικοοικονομική](https://gcoos4.tamu.edu/erddap/index.html)   (Σύστημα παρατήρησης του ωκεανού της ακτής του Κόλπου) 
 *    [ NOAA ΙΩ ΝΕΡΑΚΟΣ](http://www.neracoos.org/erddap/index.html)   (Βορειοανατολική Περιφερειακή Ένωση Παράκτιων και Ωκεανικών Συστημάτων Παρατήρησης)  
-*    [ NOAA ΙΟΟΣ NGDAC](https://data.ioos.us/gliders/erddap/index.html)   (Εθνικό Glider Κέντρο Συνελεύσεων Δεδομένων)  
-*    NOAA ΙΟΙ ΝΑΝΟΥ (Βορειοδυτική Ένωση Δικτύων Συστημάτων Παρατήρησης Ωκεανού) 
-*    [ NOAA ΙΩΣ ΠΑΚΙΟΥ](https://pae-paha.pacioos.hawaii.edu/erddap/index.html)   (Ειρηνικός Νήσοι Ωκεανός σύστημα παρατήρησης) στο Πανεπιστήμιο της Χαβάης (UH)  
+*    [ NOAA ΝΓΚΔΑΚ](https://data.ioos.us/gliders/erddap/index.html)   (Εθνικό Glider Κέντρο Συνελεύσεων Δεδομένων)  
+*    NOAA ΙΟΙ ΝΑΝΟΥ (Βορειοδυτική Ένωση Δικτυακών Συστημάτων Παρατήρησης Ωκεανού) 
+*    [ NOAA ΙΟΙ ΠΑΚΙΟΥ](https://pae-paha.pacioos.hawaii.edu/erddap/index.html)   (Ειρηνικός Νήσοι Ωκεανό σύστημα παρατήρησης) στο Πανεπιστήμιο της Χαβάης (UH)  
 *    NOAA ΧΩΡΕΣ (Σύστημα παρατήρησης παράκτιου ωκεανού της Νότιας Καλιφόρνιας) 
-*    [ NOAA ΙΩΣ ΣΕΚΟΥΡΑ](https://erddap.secoora.org/erddap/index.html)   (Νοτιοανατολικός Παράκτιος Ωκεανός Παρατηρώντας την Περιφερειακή Ένωση)  
-*    [ NOAA NCEI](https://www.ncei.noaa.gov/erddap/index.html)   (Εθνικά Κέντρα Περιβαλλοντικής Ενημέρωσης)    
+*    [ NOAA ΙΩΣ ΣΕΚΟΥΡΑ](https://erddap.secoora.org/erddap/index.html)   (Νοτιοανατολικός Παράκτιος Ωκεανός)  
+*    [ NOAA NCEI](https://www.ncei.noaa.gov/erddap/index.html)   (Εθνικά Κέντρα Περιβαλλοντικής Πληροφόρησης)    
 *    NOAA STP NGDC (Εθνικό Γεωφυσικό Data Center, Solar -- Χερσαία Φυσική) 
-*    NOAA   NMFS ΝΕΦΣΚ (Κέντρο Επιστημών Αλιείας Βορειοανατολικής) 
+*    NOAA   NMFS ΝΕΦΣΚ (Κέντρο Επιστημών της Βορειοανατολικής Αλιείας) 
 *    [ NOAA ΣΥΛΛΟΓΕΣ](https://opendap.co-ops.nos.noaa.gov/erddap/index.html)   (Κέντρο Επιχειρησιακών Ωκεανογραφικών Προϊόντων και Υπηρεσιών)  
 *    [ NOAA OSMC](http://osmc.noaa.gov/erddap/index.html)   (Παρατηρώντας το Κέντρο Παρακολούθησης Συστήματος)  
 *    [ NOAA ΠΙΦΣΚ](https://oceanwatch.pifsc.noaa.gov/erddap/index.html)   (Επιστημονικό Κέντρο Αλιείας Νήσων Ειρηνικού)  
@@ -110,10 +110,10 @@ LMI ECLAIRS (στα Αγγλικά) (Laboratoire Mixte Διεθνές «Etude du
 *    [ NOAA Πολική Παρακολούθηση](https://polarwatch.noaa.gov/erddap/index.html) 
 *    [ NOAA UAF](https://upwell.pfeg.noaa.gov/erddap/index.html)   (Ενοποιημένο πλαίσιο πρόσβασης)  
 *    [Ωκεάνια Δίκτυα Καναδάς](http://dap.onc.uvic.ca/erddap/index.html)  
-*    [Δίκτυο εντοπισμού ωκεανού](https://members.oceantrack.org/erddap/index.html)  
+*    [Δίκτυο παρακολούθησης ωκεανού](https://members.oceantrack.org/erddap/index.html)  
 *    [OOI / Όλα τα δεδομένα](https://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/index.html)   (Πρωτοβουλία Παρατηρητηρίων Ωκεανού)   
 OOI / Μη προσαρμοσμένα δεδομένα
-* Princeton, Ομάδα Ερευνών Υδρομετεωρολογίας
+* Princeton, ομάδα έρευνας για την υδρομετεωρολογία
 * R.Tech Engineering, Γαλλία
 *    [Πανεπιστήμιο Rutgers, Τμήμα Θαλάσσιων και Παράκτιων Επιστημών](https://tds.marine.rutgers.edu/erddap/index.html)   
 * Ινστιτούτο Εκβολών του Σαν Φρανσίσκο
@@ -125,72 +125,72 @@ OOI / Μη προσαρμοσμένα δεδομένα
 *    [ΙΟΔΕ της UNESCO](https://erddap.oa.iode.org/erddap/index.html)   (Διεθνής Ωκεανογραφική και Ενημέρωση Ανταλλαγή δεδομένων)  
 *    [Πανεπιστήμιο της Βρετανικής Κολομβίας, Γη, Ωκεανός & Ατμοσφαιρική Τμήμα Επιστημών](https://salishsea.eos.ubc.ca/erddap/index.html)  
 *    [Πανεπιστήμιο της Καλιφόρνια στο Davis, Θαλάσσιο εργαστήριο Bodega](http://bmlsc.ucdavis.edu:8080/erddap/index.html)  
-*    [Πανεπιστήμιο του Ντέλαγουερ, δορυφορικός σταθμός λήψης](https://basin.ceoe.udel.edu/erddap/index.html)  
-* Πανεπιστήμιο της Ουάσινγκτον, Εργαστήριο Εφαρμοσμένης Φυσικής
-*    [ΣΥΑΑΑ](https://geoport.usgs.esipfed.org/erddap/index.html)   (Πρόγραμμα παράκτιας και θαλάσσιας γεωλογίας)  
+*    [Πανεπιστήμιο του Delaware, δορυφορικός σταθμός λήψης](https://basin.ceoe.udel.edu/erddap/index.html)  
+* Πανεπιστήμιο της Ουάσιγκτον, Εργαστήριο Εφαρμοσμένης Φυσικής
+*    [ΣΓΠ ΗΠΑ](https://geoport.usgs.esipfed.org/erddap/index.html)   (Πρόγραμμα παράκτιας και θαλάσσιας γεωλογίας)  
 *    [ΦΩΤΟΓΡΑΦΙΕΣ](https://erddap.observations.voiceoftheocean.org/erddap/index.html)   (Φωνή του Ωκεανού, Σουηδία)  
 
 Αυτή είναι μια λίστα με μόνο μερικές από τις οργανώσεις όπου ERDDAP™ έχει εγκατασταθεί από κάποιο άτομο ή κάποια ομάδα. Δεν υπονοεί ότι το άτομο, η ομάδα, ή η οργάνωση συνιστά ή υποστηρίζει ERDDAP .
 
 ###  ERDDAP™ συνιστάται εντός NOAA και CNRS{#erddap-is-recommended-within-noaa-and-cnrs} 
- [ NOAA Διαδικαστική οδηγία για την πρόσβαση στα δεδομένα](https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendations#Software_implementations) περιλαμβάνει ERDDAP™ στον κατάλογο των συνιστώμενων εξυπηρετητών δεδομένων για χρήση από ομάδες εντός NOAA . ERDDAP™ αναφέρεται ευνοϊκά στο σημείο 4.2.3 του
+ [ NOAA Διαδικαστική οδηγία για την πρόσβαση στα δεδομένα](https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendations#Software_implementations) περιλαμβάνει ERDDAP™ στη λίστα των συνιστώμενων διακομιστών δεδομένων για χρήση από ομάδες εντός NOAA . ERDDAP™ αναφέρεται ευνοϊκά στο σημείο 4.2.3 του
 [Guide de bonnes pratiques sur la gestion des données de la recherche
- (Διαχείριση δεδομένων έρευνας Οδηγός Βέλτιστων Πρακτικών) ] (https://mi-gt-donnees.pages.math.unistra.fr/guide/04-traiter.html#deposer-et-structurer-dans-des-plateformes-de-gestion-de-donnees-locales) του Κέντρου National de la Recherche Scientifique (CNRS) στη Γαλλία.
+ (Διαχείριση δεδομένων έρευνας Οδηγός Βέλτιστων Πρακτικών) ] ( https://mi-gt-donnees.pages.math.unistra.fr/guide/04-traiter.html#deposer-et-structurer-dans-des-plateformes-de-gestion-de-donnees-locales ) του Κέντρου National de la Recherche Scientifique (CNRS) στη Γαλλία.
 
 ## Εμφάνιση σλάιντ{#slide-shows} 
 
-Εδώ είναι μερικά PowerPoint slide δείχνει και τα έγγραφα που έχει δημιουργήσει Bob Simons που σχετίζονται με ERDDAP .
+Εδώ είναι μερικά PowerPoint slide δείχνει και έγγραφα που Bob Simons έχει δημιουργήσει σχετίζονται με ERDDAP .
 
  **Συζητήσεις του Ευρωπαϊκού Κοινοβουλίου National Oceanic and Atmospheric Administration .** 
 
 Τα τέσσερα κύρια έγγραφα:
 
 *    [Κύρια εισαγωγή ERDDAP™   (έκδοση 5) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/erddapTalk5.pptx) .
-Μπορείτε επίσης να [Δείτε αυτό το βίντεο του Μπομπ να μιλάει![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=H541G1XXZrU&t=4) .
+Μπορείς επίσης. [Δείτε αυτό το βίντεο του Μπομπ να μιλάει![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=H541G1XXZrU&t=4) .
 *    [Περιγραφή μιας σελίδας ERDDAP™   (.pdf) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ERDDAP_OnePage.pdf) 
-*    [ ERDDAP : Βαριά φορτία, πλέγματα, συστάδες, ομοσπονδίες, και υπολογιστικό σύννεφο](/docs/server-admin/scaling) 
+*    [ ERDDAP : Βαριά φορτία, πλέγματα, σμήνη, ομοσπονδίες, και υπολογιστικό σύννεφο](/docs/server-admin/scaling) 
 *    [Κατευθυντήριες γραμμές του Bob για τα συστήματα διανομής δεδομένων](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/erdData.html) 
 
 Άλλες παρουσιάσεις:
 
 *    [2020 EDM: Νέα χαρακτηριστικά ERDDAP™ v2.10](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapFeatures2.10.pptx) 
 *    [2020-05-19 DMIT: Λήψη δεδομένων](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapDataIngest.pptx)   (Ή [Δείτε αυτό το βίντεο του Μπομπ να μιλάει](https://www.youtube.com/watch?v=9ArYxgwON2k) .) 
-*    [2019 IOOS DMAC: Νέα χαρακτηριστικά στο ERDDAP™ v2.0](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/Erddapv2Features.pptx) 
+*    [2019 IOOS DMAC: Νέα χαρακτηριστικά γνωρίσματα σε ERDDAP™ v2.0](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/Erddapv2Features.pptx) 
 *    [2018 Καλοκαίρι ESIP: Subsetting in ERDDAP™ ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsErddapSubset2018.pptx) 
 *    [2018 Καλοκαίρι ESIP: Υποστήριξη JSON ERDDAP™ ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsErddapJson2018.pptx) 
-*    [2018 EDM: Διανεμημένο Σύστημα Υπηρεσιών Ιστού (Πιο γρήγορα, πιο εύκολα, λιγότερο ακριβά)   (Ή γιατί ήμουν ευτυχισμένη πριν 4 χρόνια.) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/10P.04_Simons_DistributedWebServices2018.pptx) 
-*    [EDM 2018: ERDDAP™ το 2018](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/7A4_Simons_ErddapSession2018.pptx) 
+*    [2018 EDM: Ένα Διανεμημένο Σύστημα Υπηρεσιών Ιστού (Πιο γρήγορα, πιο εύκολα, λιγότερο ακριβά)   (Ή γιατί ήμουν ευτυχισμένη πριν 4 χρόνια.) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/10P.04_Simons_DistributedWebServices2018.pptx) 
+*    [2018 EDM: ERDDAP™ το 2018](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/7A4_Simons_ErddapSession2018.pptx) 
 *    [2018 EDM: Νέα χαρακτηριστικά στο ERDDAP™ για τα δεδομένα εικόνας, ήχου και βίντεο](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/4D4_Simons_ErddapMediaFiles2018.pptx) 
-*    [2018 EDM: UAF και ERDDAP™ Λύσεις για την ενσωμάτωση δεδομένων](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/3D3_Simons_DataIntegration2018.pptx) 
-*    [2017 EDM: Μια γρήγορη εισαγωγή στο ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapIntro.pptx) 
+*    [2018 EDM: UAF και ERDDAP™ Λύσεις για Ενσωμάτωση Δεδομένων](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/3D3_Simons_DataIntegration2018.pptx) 
+*    [2017 EDM: Μια γρήγορη εισαγωγή ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapIntro.pptx) 
 *    [2017 EDM και 2017 IOOS: Νέα ή ελάχιστα γνωστά ERDDAP™ Χαρακτηριστικά (για χρήστες) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapUserFeatures2017.pptx) 
-*    [2017 EDM και 2017 IOOS: Νέα ή ελάχιστα γνωστά ERDDAP™ Χαρακτηριστικά (για τους διαχειριστές) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapAdminFeatures2017.pptx) 
+*    [2017 EDM και 2017 IOOS: Νέα ή ελάχιστα γνωστά ERDDAP™ Χαρακτηριστικά (για διαχειριστές) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapAdminFeatures2017.pptx) 
 *    [2017 EDM: EML, KNB και ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/eml_knb_erddap.pptx) 
-*    [2017 Εντάξει. Πώς μεταφέρονται τα δεδομένα από την πηγή στον τελικό χρήστη; Παλιά Σχολή εναντίον Νέας Σχολής](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/OldSchoolNewSchool.pptx) 
-*    [2016 Καλοκαίρι ΕΣΙΡ: Η μεγάλη εικόνα: ΠΑΡR, OPeNDAP , ERDDAP™ , και Διανομή δεδομένων](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TheBigPicture.pptx) 
+*    [2017 EDM: Πώς μεταφέρονται τα δεδομένα από την πηγή στον τελικό χρήστη; Παλιά Σχολή εναντίον Νέας Σχολής](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/OldSchoolNewSchool.pptx) 
+*    [2016 Καλοκαίρι ΕΣΙΡ: Η μεγάλη εικόνα: PARR, OPeNDAP , ERDDAP™ , και Διανομή δεδομένων](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TheBigPicture.pptx) 
 *    [2016 EDM: Ένα και έγινε](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/OneAndDone.pptx) 
 *    [2016 Gov API: Επόμενη γενιά Εξυπηρετητές δεδομένων](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/NextGeneration.pptx) 
 *    [2015 Καλοκαίρι ESIP: Πίνακας Συγκέντρωση](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TabularAggregation.pptx) 
 *    [2014 EDM: Bob's Do's και Don't για Tabular Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsDosDontsTabular.pptx) 
 *    [2014 EDM: Η ιδανική διεπαφή χρήστη](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TheIdealUserInterface.pptx) 
 *    [2014 Καλοκαίρι ESIP: Δεδομένα πίνακα](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TabularData.pptx) 
-*    [2013: Μην αντιμετωπίζετε In-Situ και Tabular δεδομένα όπως Gridded δεδομένων](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TablesAndGrids.html) 
+*    [2013: Μην αντιμετωπίζετε In-Situ και Tabular δεδομένα όπως Gridded δεδομένα](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TablesAndGrids.html) 
 *    [2013 EDM: Κάντε περισσότερα με λιγότερα](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/DoMoreWithLess.ppt) 
 *    [2012 EDM: Κατευθυντήριες γραμμές για τα συστήματα διανομής δεδομένων](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/guidelines3.ppt) 
 
 Παρουσιάσεις από άλλους ανθρώπους:
 
-*    [Ένα FAIR βασισμένο εργαλείο για τη βελτίωση της ανταλλαγής παγκόσμιων δεδομένων![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=kdBTgNEp5TA&ab_channel=GOOSIOC)   
-του Kevin O'Brien στο Παγκόσμιο Σύστημα Παρατήρησης του Ωκεανού (ΓΟΥΑ) Ομάδα συντονισμού Webinar/Παρατήρησης (ΟΣΓ) Σειρά / 1, 12 Νοεμβρίου 2020.
-*    [Χτίστε τη δική σας εφαρμογή καιρού NOAA Ανοικτά σημειωματάρια δεδομένων και Jupyter![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=MF-WH01Qw0g)   
+*    [Ένα FAIR βασισμένο εργαλείο για τη βελτίωση της παγκόσμιας ανταλλαγής δεδομένων![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=kdBTgNEp5TA&ab_channel=GOOSIOC)   
+του Kevin O'Brien στο Παγκόσμιο Σύστημα Παρατήρησης του Ωκεανού (ΧΟΙΡΕΣ) Ομάδα συντονισμού Webinar/Παρατήρησης (ΟΣΓ) Σειρά / 1, 12 Νοεμβρίου 2020.
+*    [Χτίζοντας τη δική σας εφαρμογή καιρού NOAA Ανοικτά σημειωματάρια δεδομένων και Jupyter![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=MF-WH01Qw0g)   
 από τους Filipe Fernandes και Rich Signell στο SciPy 2018, 13 Ιουλίου 2018.
 *    [Χρήση του OOI ERDDAP ![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=tj4M9hodTG0)   
 από τον Rich Signell, Φεβρουάριος 2018.
-*    [ΕΣΙΡ Τεχνική κατάδυση: " ERDDAP Αστραπιαία ομιλία"![YouTube](/img/youtube.png)](https://youtu.be/2-ydBByYB0M?t=160)   
-Οκτώ 5-λεπτές συζητήσεις για ενδιαφέροντα πράγματα που κάνουν οι άνθρωποι με ERDDAP από τους Jenn Sevadjian, Jim Potemra, Conor Delaney, Kevin O'Brien, John Kerfoot, Stephanie Petillo, Charles Carleton και Eli Hunter που παρουσιάστηκαν ως ESIP Tech Dive στις 31 Αυγούστου 2017.
+*    [ΕΣΙΡ Τεχνική κατάδυση: " ERDDAP Αστραπιαίες συνομιλίες"![YouTube](/img/youtube.png)](https://youtu.be/2-ydBByYB0M?t=160)   
+Οκτώ 5-λεπτές συζητήσεις για ενδιαφέροντα πράγματα που κάνουν οι άνθρωποι με ERDDAP από τους Jenn Sevadjian, Jim Potemra, Conor Delaney, Kevin O'Brien, John Kerfoot, Stephanie Petillo, Charles Carleton και Eli Hunter παρουσιάστηκαν ως μια ESIP Tech Dive στις 31 Αυγούστου 2017.
 *    [Χρήση ERDDAP™ σε δεδομένα πίνακα πρόσβασης![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=_BwMHRh7CS8)   
-από τον Rich Signell, Αύγουστος 2015.
+από Rich Signell, Αύγουστος 2015.
 *    [Δοκιμή χρήσης ERDDAP™ για μπλε δεδομένα άνθρακα![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=TbOhElC_-qU)   
-από τον Rich Signell, Αύγουστος 2015.
-*    [Χρήση δεδομένων από ERDDAP™ μέσα NOAA Σ GNOME Λογισμικό![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=18xZoXu1USM) .
-Σε αυτό το βίντεο, ο Rich Signell κατεβάζει τα δεδομένα πρόβλεψης ωκεανών ρευμάτων από ERDDAP™ για να διαμορφώσει μια τοξική διαρροή στον ωκεανό χρησιμοποιώντας [ NOAA Σ GNOME λογισμικό](https://response.restoration.noaa.gov/oil-and-chemical-spills/oil-spills/response-tools/gnome.html)   (Σε 5 λεπτά&#33;) . (Ένα μικρό λάθος στο βίντεο: όταν ψάχνετε για σύνολα δεδομένων, μην χρησιμοποιείτε ΚΑΙ μεταξύ των όρων αναζήτησης. Είναι υπονοούμενο.) Από τον Rich Signell, 8 Απριλίου 2011.
+από Rich Signell, Αύγουστος 2015.
+*    [Χρήση δεδομένων από ERDDAP™ μέσα NOAA \" GNOME Λογισμικό![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=18xZoXu1USM) .
+Σε αυτό το βίντεο, ο Rich Signell κατεβάζει τα δεδομένα πρόβλεψης των ωκεανών ρευμάτων από ERDDAP™ για να μοντελοποιήσει μια τοξική διαρροή στον ωκεανό χρησιμοποιώντας [ NOAA \" GNOME λογισμικό](https://response.restoration.noaa.gov/oil-and-chemical-spills/oil-spills/response-tools/gnome.html)   (Σε 5 λεπτά&#33;) . (Ένα μικρό λάθος στο βίντεο: όταν ψάχνετε για σύνολα δεδομένων, μην χρησιμοποιείτε ΚΑΙ μεταξύ των όρων αναζήτησης. Είναι υπονοούμενο.) Από τον Rich Signell, 8 Απριλίου 2011.

@@ -1,508 +1,520 @@
-# Feature zászlók
+# Jellemzők
 
-Ez az oldal dokumentálja a rendszerben elérhető konfigurációs zászlókat. Ezek a zászlók különböző funkciókat, kísérleti képességeket és örökös viselkedéseket irányítanak.
+Ez az oldal a rendszerben elérhető konfigurációs zászlókat dokumentálja. Ezek a zászlók ellenőrzik a különböző funkciók, kísérleti képességek, és örökölt viselkedés.
 
-##  **zászló életciklus legenda** 
+##  **Flag Lifeccle Legend** 
 
-*  **Stabil:** Olyan hosszú távú zászlókként fejlesztettek ki, amelyek lehetővé teszik az adminok számára a funkcionalitás megváltoztatását. Biztonságos a termeléshez.
-*  **Tesztelés:** Jellemzők, amelyek készen állnak a tesztelésre. Ezek vagy diplomások "Stabil" vagy végül beállítják a célértéket, és a zászló eltávolítása.
-*  **Építés alatt:** Jelenleg keményen kódolt hamis a kódban, függetlenül a konfigurációtól. A funkció még nem áll készen a használatra.
+*  **Stabil:** Hosszú távú zászlóknak szánták, hogy lehetővé tegyék az adminok számára a funkcionalitás megváltoztatását. Biztonságos.
+*  **Vizsgálat:** A tesztelésre kész jellemzők. Ezek vagy lediplomáznak a "Stabil" -re, vagy végül a célértékhez igazodnak, és eltávolítják a zászlót.
+*  **Építkezés alatt:** Jelenleg a kódban hamisra van kódolva, a konfigurációtól függetlenül. A funkció még nem készült fel a használatra.
 
-##  **Ó Optimalizálások tesztelés** 
+##  *** A vizsgálat optimalizálása** 
 
 Ezek a zászlók valószínűleg eltávolításra kerülnek a jövőben.
 
-###  **ThreadOnlyWhenItems** 
+###  **touchead Only Whentelek** 
 
 Leírás
-Optimalizációs zászló. Ha igaz, az érintő szál csak akkor fut, ha vannak elemek feldolgozására.
+Optimalizáló zászló. Ha igaz, az érintőszál csak akkor fut, ha vannak feldolgozandó elemek.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Tesztelés | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 2,29.0 | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Vizsgálat | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 2.29.0. | 
 
-###  **feladatCacheClear** 
+###  **Task CacheClear** 
 
 Leírás
-Lehetővé teszi a háttér feladatát, amely megtisztítja a lejáratott elemeket a csészéből.
+A gyorsítótárból letisztító háttérfeladat engedélyezése.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 2.27.0 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 2.27.0 | 
 
 ###  **ncHeaderMakeFile** 
 
 Leírás
-Ha igaz, a szerver generálja az egész nc fájlt, mielőtt létrehozza a ncheader eredményt. Az új (preferált) viselkedés, ha hamis, hogy közvetlenül generálja a ncheader eredményt.
+Ha igaz, a szerver generálja a teljes nc fájlt, mielőtt létrehozza a olcsóbb eredményt. Az új (előnyben részesített) viselkedés, amikor hamis, hogy közvetlenül generálja a olcsóbb eredményt.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Tesztelés | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Vizsgálat | 
  |   **Jelenlegi alapértelmezés**   | hamis | 
  |   **Hosszú távú cél**   | hamis | 
- |   **Történelem**   | Hozzáadva 2,29.0 | 
+ |   **Történelem**   | Hozzáadva: 2.29.0. | 
 
-###  **HasználataEddReflection** 
-
-Leírás
-Lehetővé teszi a használatát Java Az EDD azonnali ( ERDDAP Adatbázis) osztályok.
-
- | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Tesztelés | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Az alapértelmezettség 2,28,0-ban változott, 2,25-ben | 
-
-###  **háttérCreateSubsetTables** 
+###  **useEddReflection** 
 
 Leírás
-Lehetővé teszi az alkatrész táblák létrehozását a háttér szálakban, hogy javítsák az adatkészletek betöltési időt.
+Engedélyezi a Java Az instant EDD reflexiója ( ERDDAP Dataset) órák.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Tesztelés | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 2,29.0 | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Vizsgálat | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Alapértelmezés 2.28.0-ra módosítva, hozzáadva 2.25-höz | 
 
-###  **NcMetadataForFileTable** 
+###  **backgroundCreateSubsetTables** 
 
 Leírás
-Használatok NetCDF metadata, hogy populálja a fájl táblázat nézetét. Különösen, ha egy nc fájl tartalmazza a tényleges_range-t minden változóhoz, az adatkészlet-terhelést kihagyhatja az egész fájl olvasását.
+Lehetővé teszi, hogy a háttérszálakban létrehozandó altáblák javítsák az adatkészletek terhelési idejét.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Vizsgálat | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 2.29.0. | 
+
+###  **useNcMetadataForFileTable** 
+
+Leírás
+Felhasználások NetCDF metaadatok a fájltábla megtekintéséhez. Különösen, ha az nc file minden változóhoz valós _ range-ot tartalmaz, az adatkészlet betöltése kihagyhatja az egész fájl elolvasását.
+
+ | Tulajdonság | Részletek | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 2,29.0 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 2.29.0. | 
 
-##  **Rendszer és alapvető viselkedés** 
+##  **A rendszer és a mag viselkedése** 
 
-###  **e-mail cím IsActive** 
+###  **e-mail IsActive** 
 
 Leírás
-Ellenőrzi, hogy a rendszer megpróbál-e tényleges e-maileket küldeni (pl. előfizetési frissítésekre vagy hibajelentésekre) a konfigurált SMTP szerveren keresztül.
+Ellenőrzi, hogy a rendszer megpróbálja-e küldeni a tényleges e-maileket (például az előfizetés frissítéséhez vagy hibajelentéséhez) a beállított SMTP szerveren keresztül.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
  |   **Jelenlegi alapértelmezés**   | hamis | 
- |   **Hosszú távú cél**   | Igaz (Az admin konfigurációtól függően)   | 
- |   **Történelem**   | Legacy | 
+ |   **Hosszú távú cél**   | igaz (Admin config függő)   | 
+ |   **Történelem**   | Joghatóság | 
 
-::info logika
-Ezt a zászlót dinamikusan az induláskor számítják ki. Ez hamisnak bizonyul, hacsak nem minden szükséges SMTP hitelesítő (host, port, felhasználó, jelszó, öltözködő) szigorúan a setup.xml.
+::: info Logic
+Ezt a zászlót indításkor dinamikusan számítják ki. Hamis, kivéve, ha az összes szükséges SMTP hitelesítő (host, port, felhasználó, jelszó, a címről) szigorúan a setup.xml-ben biztosítják.
 :::
 
-###  **dalszöveg: LoadErrorsOnStatusPage** 
+###  **show LoadErrorsOnStatusPage** 
 
 Leírás
-Határozza meg, hogy a részletes adatkészlet-terhelési hibák nyilvánosan jelennek meg a status oldalon.
+Meghatározza, hogy a részletes adatbetöltési hibák megjelennek-e nyilvánosan az állapotoldalon.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | a kívánt | 
- |   **Történelem**   | Hozzáadva 2,25 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | beállítás a kívánt módon | 
+ |   **Történelem**   | Hozzáadva a 2.25-höz | 
 
-###  **DefaultAccessibleViaFiles** 
+###  **defaultAccessibleViaFiles** 
 
 Leírás
-Beállítja az alapértelmezett viselkedést annak érdekében, hogy egy adatkészlet mögöttes fájljai elérhetők-e a fájlok szolgáltatásában.
+Beállítja az alapértelmezett viselkedést, hogy egy adatkészlet alapfájljai elérhetők-e a fájlszolgáltatásban.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
  |   **Jelenlegi alapértelmezés**   | hamis | 
  |   **Hosszú távú cél**   | hamis | 
- |   **Történelem**   | Hozzáadva 2,10 | 
+ |   **Történelem**   | Hozzáadva: 2.10. | 
 
-##  **Adatkészletek** 
+##  **- Adatbázisok** 
 
-###  **GyorsRestart** 
+###  **quickRestart** 
 
 Leírás
-Ha engedélyezett, a rendszer gyorsabban próbálja kiindulni azáltal, hogy kihagy bizonyos mély validálási ellenőrzéseket az adatkészleteken az indulás során.
+Ha ez be van jelölve, a rendszer megkísérli felgyorsítani a folyamatot azáltal, hogy kihagy bizonyos mély validálási ellenőrzéseket az adatkészleteken az inicializáció során.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 1,38 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 1.38 | 
 
-###  **lehetővé teszi az EnvParsing** 
+###  **enableEnvParsing** 
 
 Leírás
-Lehetővé teszi a feldolgozást datasets.xml fájl egy [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) ... Ez sok felhasználással rendelkezik, beleértve a magánértékek beállítását (mint a jelszavak) környezeti változók használata.
+A datasets.xml fájl [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Ennek sok haszna van, beleértve a magánértékek meghatározását (mint a jelszavak) környezeti változók használata.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | a kívánt | 
- |   **Történelem**   | Hozzáadva 2,29.0 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | beállítás a kívánt módon | 
+ |   **Történelem**   | Hozzáadva: 2.29.0. | 
 
-###  **HasználataSaxParser** 
+###  **useSax Parser** 
 
 Leírás
-kapcsolja be a belső XML pótlómotort egy SAX használatára (Egyszerű API az XML számára) parser a DOM parser helyett. Ez lehetővé teszi néhány új fejlett funkciók, mint a XInclude, és [egyedi megjelenítési tulajdonságok](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) ...
+Kapcsolja a belső XML oldó motort SAX használatához (Egyszerű API XML-hez) a DOM-parser helyett. Ez lehetővé tesz néhány új fejlett funkciókat, mint például az XInverde, és [egyedi megjelenítő attribútumok](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Tesztelés | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Vizsgálat | 
  |   **Jelenlegi alapértelmezés**   | hamis | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 2,25 | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva a 2.25-höz | 
 
 ###  **ListPrivateDatasets** 
 
 Leírás
-Határozza meg a magánadatbázisokat (azok, amelyek hitelesítést igényelnek) megjelenik a fő adatkészlet listán.
+Meghatározza, ha privát adatkészletek (a hitelesítést igénylő személyek) megjelenik a fő adatkészlet listán.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
  |   **Jelenlegi alapértelmezés**   | hamis | 
  |   **Hosszú távú cél**   | hamis | 
- |   **Történelem**   | Hozzáadva 1,20 | 
+ |   **Történelem**   | Hozzáadva: 1.20 | 
 
-###  **Politikai határok** 
+###  **politikaiHatárokAktív** 
 
 Leírás
-Ellenőrzi, hogy a politikai határokat térképekre lehet-e rajzolni.
+Ellenőrzi, hogy a politikai határok rajzolhatók-e a térképeken.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 1,80 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 1.80 | 
 
-##  **Metadata és szabványok** 
+###  **forceSynchronousLoading** 
+
+Leírás
+A betöltési adatok szinkronizálódnak a késleltetett háttérterhelés helyett.
+
+ | Tulajdonság | Részletek | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Stabil | 
+ |   **Jelenlegi alapértelmezés**   | hamis | 
+ |   **Hosszú távú cél**   | hamis | 
+ |   **Történelem**   | Hozzáadva: 2.30. | 
+
+##  **- Method & Standards** 
 
 ###  **fgdcActive** 
 
 Leírás
-Generál és szolgálja az FGDC-t (Szövetségi Földrajz Adatbizottság) Metaadata.
+Az FGDC generálása és kiszolgálása (Szövetségi földrajzi Adatbizottság) metaadatok.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 1,38 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 1.38 | 
 
-###  **Iso19115 Aktív** 
+###  **izo19115 Aktív** 
 
 Leírás
-Generálja és szolgálja az ISO 19115 metaadatot.
+ISO 19115 metaadatokat generál és szolgál.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 1,38 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 1.38 | 
 
-###  **HasználataSisO19115** 
+###  **useSISO19115** 
 
 Leírás
-Használja az Apache SIS könyvtárat, hogy ISO 19115 metaadatot generáljon az örökség generátor helyett. Ha ez van, és használjaSisISO19139 nem működik, az alapértelmezett IOS 19115 metaadata lesz az ISO19115_3_2016 formátumban. Ha ez hamis, akkor az alapértelmezett formátum az ISO19115_2 örök módosított formátumban lesz.
+Az Apache SIS könyvtárát használja az ISO 19115 metaadatok előállítására az örökölt generátor helyett. Ha ez be van kapcsolva, és a SisISO19139 nincs bekapcsolva, az alapértelmezett IOS 19115 metaadatok ISO19115 _ 3 _ 2016 formátumban lesznek. Ha ez hamis, akkor az alapértelmezett formátum a módosított ISO19115 _ 2 formátumban lesz.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Tesztelés | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Vizsgálat | 
  |   **Jelenlegi alapértelmezés**   | hamis | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 2,26 | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 2.26. | 
 
-###  **HasználataSisO19139** 
-
-Leírás
-Használja az Apache SIS könyvtárat az ISO19139_2007 metaadat létrehozására.
-
- | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Tesztelés | 
- |   **Jelenlegi alapértelmezés**   | hamis | 
- |   **Hosszú távú cél**   | hamis | 
- |   **Történelem**   | Hozzáadva 2,29.0 | 
-
-###  **dalszöveg: JsonldActive** 
+###  **useSISO19139** 
 
 Leírás
-Generál és szolgálja a JSON-LD-t (Linked adatok) Metaadata.
+ISO19139 _ 2007 metaadatok előállítására használja az Apache SIS könyvtárat.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Legacy | 
-
-###  **CroissantSchema** 
-
-Leírás
-Generálja a "Croissant" metaadat schema, mint az alapértelmezett schema gépi tanulási készenlét.
-
- | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Tesztelés | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 2,28.0 | 
-
-###  **változókMustHaveIoosCategory** 
-
-Leírás
-Annak érdekében, hogy a változóknak IOOS-kategóriával kell rendelkezniük.
-
- | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | a kívánt | 
- |   **Történelem**   | Legacy | 
-
-###  **NcCFSubsetVariables** 
-
-Leírás
-A legacy magatartás az volt, hogy csak az EDDTableFromNcCFFiles adatkészleteket generáljon. Ezt hozzáadták az EDDTableFromNcCFFiles viselkedésének visszaállításához, hogy következetes legyen más adatkészlettípusokkal. Ha szüksége van a örökség automatikus subsetVariables Ezt lehetővé teheted. A jobb megoldás az lenne, ha hozzáadnánk subsetVariables az adatkészlet meghatározása.
-
- | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Tesztelés | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Vizsgálat | 
  |   **Jelenlegi alapértelmezés**   | hamis | 
  |   **Hosszú távú cél**   | hamis | 
- |   **Történelem**   | Hozzáadva 2,26 | 
+ |   **Történelem**   | Hozzáadva: 2.29.0. | 
 
-##  **Előfizetések és értesítések** 
-
-###  **ElőfizetésSystemActive** 
+###  **jsondActive** 
 
 Leírás
-Lehetővé teszi az e-mail előfizetési rendszert az adatkészlet-frissítésekhez.
+JSON- LD generál és szolgál (Kapcsolt adatok) metaadatok.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 1,14 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Joghatóság | 
 
-###  **SubscribeToRemoteErddapDataset** 
+###  **generateCroissantSchema** 
 
 Leírás
-Lehetővé teszi ezt ERDDAP Például, hogy feliratkozzon a távoli ERDDAP adatkészletek a frissítésekhez.
+A "Croissant" metaadatrendszert generálja a gépi tanulási készség alapértelmezett sémájaként.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Vizsgálat | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 2.28.0 | 
+
+###  **változók MustahaveIoosKategória** 
+
+Leírás
+A változóknak IOOS kategóriájú attribútummal kell rendelkezniük.
+
+ | Tulajdonság | Részletek | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 1,70 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | beállítás a kívánt módon | 
+ |   **Történelem**   | Joghatóság | 
 
-###  **frissítésSubsRssOnFileChanges** 
-
-Leírás
-Triggers előfizetés és RSS frissítések, amikor a mögöttes fájlok megváltoznak. Az örökség viselkedése csak az adatkészlet-visszatöltésre vonatkozó frissítések voltak (melyik szervernek volt olyan gyakran hetente) ...
-
- | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 2,26 | 
-
-###  **lehetővé teszi MqttBroker** 
+###  **ide tartoznak az NcCFSubsetVariables** 
 
 Leírás
-Indítsa el a belső MQTT brókert az alkalmazáson belül, hogy kezelje a üzeneteket.
+Legacy viselkedés volt generálni alset változók csak EDDTableFromNcCFFiles adatkészletek. Ez került hozzáadásra, hogy alapértelmezett viselkedést EDDTableFromNcCFFiles, hogy összhangban más adatkészlet típusok. Ha szükséged van a hagyaték automatikus subsetVariables Engedélyezheti. A jobb megoldás az lenne, ha hozzáadnánk subsetVariables az adatkészlet definíciójához.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Tesztelés | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Vizsgálat | 
  |   **Jelenlegi alapértelmezés**   | hamis | 
- |   **Hosszú távú cél**   | a kívánt | 
- |   **Történelem**   | Hozzáadva 2,29.0 | 
+ |   **Hosszú távú cél**   | hamis | 
+ |   **Történelem**   | Hozzáadva: 2.26. | 
 
-###  **dalszöveg: MqttNotif** 
+##  **Feliratkozások és bejelentések** 
 
-Leírás
-Lehetővé teszi az értesítések közzétételét (mint az adatkészlet változása) az MQTT brókerhez.
-
- | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Tesztelés | 
- |   **Jelenlegi alapértelmezés**   | hamis | 
- |   **Hosszú távú cél**   | a kívánt | 
- |   **Történelem**   | Hozzáadva 2,29.0 | 
-
-##  **Headers/konfiguráció** 
-
-###  **HasználatHeadersFor Url** 
+###  **előfizetés Rendszeraktív** 
 
 Leírás
-Lehetővé teszi a HTTP-fejlesztők használatát, hogy meghatározzák a kérés URL részleteit (hasznos proxis mögött) ...
+Lehetővé teszi az e-mail előfizetési rendszer adatkészlet frissítések.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Az alapértelmezettség 2,28,0-ban változott, 2,27,0-ban | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 1.14. | 
 
-###  **lehetővé teszi Súgó** 
+###  **előfizetés ToRemoteErddapDataset** 
 
 Leírás
-Lehetővé teszi a Cross-Origin erőforrás megosztását (CORS) HTTP válaszok vezetői.
+Lehetővé teszi ERDDAP a távoli előfizetés ERDDAP adatkészletek frissítéséhez.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Stabil | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 1.70 | 
+
+###  **frissítések** 
+
+Leírás
+Triggers előfizetés és RSS frissítések, ha a mögöttes fájlok változnak. Az örökletes viselkedés csak az adatkészlet újratöltése volt. (ami néhány szervernek olyan ritkán volt heti) .
+
+ | Tulajdonság | Részletek | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Stabil | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 2.26. | 
+
+###  **engedélyezése MqttBroker** 
+
+Leírás
+Elindít egy belső MQTT bróker az alkalmazás kezelni üzenetküldő.
+
+ | Tulajdonság | Részletek | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Vizsgálat | 
+ |   **Jelenlegi alapértelmezés**   | hamis | 
+ |   **Hosszú távú cél**   | beállítás a kívánt módon | 
+ |   **Történelem**   | Hozzáadva: 2.29.0. | 
+
+###  **publishMqttNotip** 
+
+Leírás
+A bejelentések közzététele (mint az adatkészlet változásai) az MQTT brókernek.
+
+ | Tulajdonság | Részletek | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Vizsgálat | 
+ |   **Jelenlegi alapértelmezés**   | hamis | 
+ |   **Hosszú távú cél**   | beállítás a kívánt módon | 
+ |   **Történelem**   | Hozzáadva: 2.29.0. | 
+
+##  **Web Headers / konfiguráció** 
+
+###  **Felhasználás HeadersFor Url** 
+
+Leírás
+Lehetővé teszi HTTP fejlécek segítségével a kérés URL részleteit (hasznos mögött proxies) .
+
+ | Tulajdonság | Részletek | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Stabil | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Alapértelmezés: 2.28.0, hozzáadva: 2.27.0 | 
+
+###  **engedélyezése Cors** 
+
+Leírás
+Lehetővé teszi az eredet-források megosztását (CORS) HTTP válaszok fejlécei.
+
+ | Tulajdonság | Részletek | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
  |   **Jelenlegi alapértelmezés**   | hamis | 
- |   **Hosszú távú cél**   | a kívánt | 
- |   **Történelem**   | Hozzáadva 2,26 | 
+ |   **Hosszú távú cél**   | beállítás a kívánt módon | 
+ |   **Történelem**   | Hozzáadva: 2.26. | 
 
-##  **Keresés** 
+##  **- Keresés** 
 
-###  **HasználataLuceneSearchEngine** 
+###  **useLuceneSearchEngine** 
 
 Leírás
-Váltja a belső keresőmotort az Apache Lucene használatára.
+Kapcsolja a belső keresőmotort az Apache Lucene használatához.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Tesztelés | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Vizsgálat | 
  |   **Jelenlegi alapértelmezés**   | hamis | 
  |   **Hosszú távú cél**   | ? | 
- |   **Történelem**   | Legacy | 
+ |   **Történelem**   | Joghatóság | 
 
-##  **Szolgáltatások és protokollok** 
+##  **- Szolgáltatások és jegyzőkönyvek** 
 
-###  **fájlokActive** 
-
-Leírás
-Lehetővé teszi a "Files" böngésző nézetét az általa támogatott adatkészletekre.
-
- | Tulajdonság | Részletek | 
- | ---- | ---- | 
- |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 1,58 | 
-
-###  **konverterekAktív** 
+###  **filesActive** 
 
 Leírás
-Lehetővé teszi a konverziós eszközöket az UI-ban.
+Engedélyezi a "Fájlok" böngésző nézetét az azt támogató adathalmazokhoz.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 1,44 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 1.58 | 
 
-###  **dalszöveg: SlideSorterActive** 
+###  **konvertersActive** 
 
 Leírás
-Lehetővé teszi a Slide Sorter.
+Konverziós eszközök engedélyezése az EU-ban.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 1,44 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 1.44 | 
 
-###  **DataProviderFormActive** 
+###  **slideSorterActive** 
 
 Leírás
-Lehetővé teszi az adatszolgáltatók számára a metaadat bevitelét.
+Engedélyezi a Slide Sortert.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Legacy | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 1.44 | 
 
-###  **OutOfDateDatasetsActive** 
+###  **dataProviderFormative** 
 
 Leírás
-Lehetővé teszi a naprakész adatkészletek bejelentését.
+Lehetővé teszi az adatszolgáltatók számára a bemeneti metaadatokat.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 1,82 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Joghatóság | 
+
+###  **OfDateDatasetActive** 
+
+Leírás
+Engedélyezi a dátumon kívüli adatok bejelentését.
+
+ | Tulajdonság | Részletek | 
+ | : -- | : -- | 
+ |   **Életciklus**   | Stabil | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 1.82 | 
 
 ###  **wmsActive** 
 
 Leírás
-Lehetővé teszi a Web Map szolgáltatást ( WMS ) interfész.
+A webtérképszolgáltatás engedélyezése ( WMS ) interfész.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Hozzáadva 1,44 | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Hozzáadva: 1.44 | 
 
-###  **wmsClientActive** 
+###  **wmsClienActive** 
 
 Leírás
-Lehetővé teszi a belső WMS ügyfél funkciók.
+A belső WMS ügyfélfunkciók.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Stabil | 
- |   **Jelenlegi alapértelmezés**   | Igaz | 
- |   **Hosszú távú cél**   | Igaz | 
- |   **Történelem**   | Legacy | 
+ |   **Jelenlegi alapértelmezés**   | igaz | 
+ |   **Hosszú távú cél**   | igaz | 
+ |   **Történelem**   | Joghatóság | 
 
 ###  **geoServicesRestActive** 
 
 Leírás
-Lehetővé teszi RESTful interfész a Geospatial Services számára. Nem teljesen megvalósított.
+A RESTful interfész a Geosteral Services számára. Nem teljes mértékben végrehajtott.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Építés alatt | 
- |   **Jelenlegi alapértelmezés**   | hamis (Hardcod)   | 
- |   **Hosszú távú cél**   | Igaz | 
+ |   **Jelenlegi alapértelmezés**   | hamis (Kódolva)   | 
+ |   **Hosszú távú cél**   | igaz | 
 
 ###  **wcsActive** 
 
 Leírás
-Lehetővé teszi a Web Coverage szolgáltatást ( WCS ) interfész. Nem teljesen megvalósított.
+Engedélyezi a webes lefedettségi szolgáltatást ( WCS ) interfész. Nem teljes mértékben végrehajtott.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Építés alatt | 
- |   **Jelenlegi alapértelmezés**   | hamis (Hardcod)   | 
- |   **Hosszú távú cél**   | Igaz | 
+ |   **Jelenlegi alapértelmezés**   | hamis (Kódolva)   | 
+ |   **Hosszú távú cél**   | igaz | 
 
-###  **dalszöveg** 
+###  **sosActive** 
 
 Leírás
-Lehetővé teszi az érzékelő megfigyelési szolgáltatást ( SOS ) interfész.
+Az érzékelő megfigyelési szolgáltatás engedélyezése ( SOS ) interfész.
 
  | Tulajdonság | Részletek | 
- | ---- | ---- | 
+ | : -- | : -- | 
  |   **Életciklus**   | Építés alatt | 
- |   **Jelenlegi alapértelmezés**   | hamis (Hardcod)   | 
- |   **Hosszú távú cél**   | Igaz | 
+ |   **Jelenlegi alapértelmezés**   | hamis (Kódolva)   | 
+ |   **Hosszú távú cél**   | igaz | 

@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## Últimas ERDDAP™ versión{#latest-erddap-version} 
 
-2.29.0, ver el [Cambios de documentación](/changes#version-2290) y [descargarlo](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) .
+2.30.0, vea el [Cambios de documentación](/changes#version-2300) y [descargarlo](https://github.com/ERDDAP/erddap/releases/tag/v2.30.0) .
 
 ##  ERDDAP™ información{#erddap-information} 
 
@@ -11,14 +11,14 @@ title: "ERDDAP™ Documentation"
 conjuntos de datos científicos redondeados y tabulares en formatos de archivo comunes y hacer gráficos y mapas.
  ERDDAP™ es una fuente libre y abierta (Apache y Apache)   Java Servlet de NOAA   NMFS   SWFSC Environmental Research Division ( ERD ) .
 
-* Para ver/utilizar un ERDDAP™ instalación: [https://coastwatch.pfeg.noaa.gov/erddap/index.html](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 
+* Para ver/utilizar un ERDDAP™ instalación: [ https://coastwatch.pfeg.noaa.gov/erddap/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 
 * Para empezar con una instalación leída [la guía de instalación de despliegue](/docs/server-admin/deploy-install) .
-* Para aportar código ver [guía del programador](/docs/contributing/programmer-guide) .
+* Para aportar código vea el [guía del programador](/docs/contributing/programmer-guide) .
 
 
 A continuación encontrará enlaces relevantes para hacer preguntas y cómo contribuir.
-* Revisar las conversaciones y hacer preguntas [https://groups.google.com/g/erddap](https://groups.google.com/g/erddap) o a [https://github.com/erddap/erddap/discussions](https://github.com/erddap/erddap/discussions) 
-* Examinar y presentar cuestiones [https://github.com/erddap/erddap/issues](https://github.com/erddap/erddap/issues) 
+* Revisar las conversaciones y hacer preguntas [ https://groups.google.com/g/erddap ](https://groups.google.com/g/erddap) o a [ https://github.com/erddap/erddap/discussions ](https://github.com/erddap/erddap/discussions) 
+* Examinar y presentar cuestiones [ https://github.com/erddap/erddap/issues ](https://github.com/erddap/erddap/issues) 
 * Para proponer solicitudes de características, siga esta orientación: [ ERDDAP Discusiones #93 (comentario) ](https://github.com/ERDDAP/erddap/discussions/93#discussion-4920427) 
 
 
@@ -60,12 +60,12 @@ O puedes unirte al [ ERDDAP™ Grupo de Google / Lista de correo](https://groups
  (Australia, Bélgica, Canadá, China, Francia, India, Irlanda, Italia, Nueva Zelanda, Rusia, Sudáfrica, España, Sri Lanka, Suecia, Tailandia, Reino Unido, USA) , incluyendo:
 
 *    [APDRC](https://apdrc.soest.hawaii.edu/erddap/index.html)   (Asia-Pacific Data-Research Center, International Pacific Research Center) en la Universidad de Hawaii (UH)  
-*    [BCO-DMO en la OMS](https://erddap.bco-dmo.org/erddap/index.html)   (Oceanografía Biológica y Química Oficina de Gestión de Datos en Woods Hole Oceanographic Institución)  
+*    [BCO DMO en la OMSI](https://erddap.bco-dmo.org/erddap/index.html)   (Oceanografía Biológica y Química Oficina de Gestión de Datos en Woods Hole Oceanographic Institución)  
 *    [CanWIN ERDDAP™ ](https://canwinerddap.ad.umanitoba.ca/erddap/index.html)   (Canadian Watershed Information Network) en el Centro de Ciencias de la Observación de la Tierra (CEOS) , Universidad de Manitoba
 *    [CDIP](https://erddap.cdip.ucsd.edu/erddap/index.html)   (Coastal Data Information Program at UCSD)  
 *    [CNR-ISP](https://data.iadc.cnr.it/erddap/index.html)   (National Research Council of Italy, Institute of Polar Sciences)  
 * CSIRO e IMOS (Organización de Investigación Científica e Industrial de Australia y el Sistema Integrado de Observación Marina) 
-*    [DIVER ( NOAA ORR) ](https://pub-data.diver.orr.noaa.gov/erddap/index.html)   ( NOAA Oficina de Respuesta y Restauración)  
+*    [DIVER ( NOAA ORR) ](https://pub-data.diver.orr.noaa.gov/erddap/index.html)   ( NOAA Office of Response and Restoration)  
 *    [EMODnet Física](https://erddap.emodnet-physics.eu/erddap/index.html)   (The European Marine Observation and Data Network - Physics)  
 *    [GoMRI](https://erddap.griidc.org/erddap/index.html)   (Gulf of Mexico Research Initiative)  
 *    [Hakai Institute](https://catalogue.hakai.org/erddap/index.html)   (The Hakai Institute on the Central Coast of British Columbia, Canada) 
@@ -114,7 +114,7 @@ LMI ECLAIRS (Laboratoire Mixte International «Etude du Climat en Afrique de l�
 *    [OOI / Todos los datos](https://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/index.html)   (Ocean Observatories Initiative)   
 OOI / Datos no cocidos
 * Princeton, Hydrometeorology Research Group
-* R.Tech Engineering, Francia
+* R.Tech Engineering, France
 *    [Rutgers University, Department of Marine and Coastal Sciences](https://tds.marine.rutgers.edu/erddap/index.html)   
 * San Francisco Estuary Institute
 *    [Scripps Institution of Oceanography, Spray Underwater Gliders](https://spraydata.ucsd.edu/erddap/index.html)  
@@ -133,13 +133,13 @@ OOI / Datos no cocidos
 Esta es una lista de algunas organizaciones donde ERDDAP™ ha sido instalado por algún individuo o algún grupo. No implica que el individuo, el grupo, o la organización recomienda o respalda ERDDAP .
 
 ###  ERDDAP™ se recomienda dentro NOAA y CNRS{#erddap-is-recommended-within-noaa-and-cnrs} 
- [ NOAA Directiva de acceso a datos](https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendations#Software_implementations) Incluye ERDDAP™ en su lista de servidores de datos recomendados para su uso por grupos dentro NOAA . ERDDAP™ se menciona favorablemente en la sección 4.2.3 del
+ [ NOAA Directiva de acceso a datos](https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendations#Software_implementations) Incluye ERDDAP™ en su lista de servidores de datos recomendados para uso por grupos dentro NOAA . ERDDAP™ se menciona favorablemente en la sección 4.2.3 del
 [Guide de bonnes pratiques sur la gestion des données de la recherche
- (Gestión de datos de investigación Guía de Buenas Prácticas) ] (https://mi-gt-donnees.pages.math.unistra.fr/guide/04-traiter.html#deposer-et-structurer-dans-des-plateformes-de-gestion-de-donnees-locales) del Centro Nacional de la Recherche Scientifique (CNRS) en Francia.
+ (Gestión de datos de investigación Guía de Buenas Prácticas) ] ( https://mi-gt-donnees.pages.math.unistra.fr/guide/04-traiter.html#deposer-et-structurer-dans-des-plateformes-de-gestion-de-donnees-locales ) del Centro Nacional de la Recherche Scientifique (CNRS) en Francia.
 
 ## Slide Shows{#slide-shows} 
 
-Aquí están algunos shows de diapositivas de PowerPoint y documentos que Bob Simons ha creado relacionados con ERDDAP .
+Aquí están algunos programas de diapositivas de PowerPoint y documentos que Bob Simons ha creado relacionados con ERDDAP .
 
  **DISCLAIMER: El contenido y las opiniones expresadas en estos documentos son las opiniones personales de Bob Simons y no reflejan necesariamente ninguna posición del Gobierno o del Gobierno National Oceanic and Atmospheric Administration .** 
 
@@ -158,7 +158,7 @@ Otras presentaciones:
 *    [2019 IOOS DMAC: Nuevas características ERDDAP™ v2.0](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/Erddapv2Features.pptx) 
 *    [2018 ESIP de verano: Subsetting In ERDDAP™ ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsErddapSubset2018.pptx) 
 *    [2018 Summer ESIP: JSON Support In ERDDAP™ ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsErddapJson2018.pptx) 
-*    [2018 EDM: Un sistema distribuido de servicios web (Más rápido, más fácil, menos caro)   (O por qué estaba feliz hace 4 años.) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/10P.04_Simons_DistributedWebServices2018.pptx) 
+*    [2018 EDM: Sistema Distribuido de Servicios Web (Más rápido, más fácil, menos caro)   (O por qué estaba feliz hace 4 años.) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/10P.04_Simons_DistributedWebServices2018.pptx) 
 *    [2018 EDM: ERDDAP™ en 2018](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/7A4_Simons_ErddapSession2018.pptx) 
 *    [2018 EDM: nuevas características ERDDAP™ para datos de imagen, audio y vídeo](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/4D4_Simons_ErddapMediaFiles2018.pptx) 
 *    [2018 EDM: UAF y ERDDAP™ Soluciones para la integración de datos](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/3D3_Simons_DataIntegration2018.pptx) 
@@ -178,17 +178,17 @@ Otras presentaciones:
 *    [2013 EDM: Hacer más con menos](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/DoMoreWithLess.ppt) 
 *    [2012 EDM: Directrices para los sistemas de distribución de datos](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/guidelines3.ppt) 
 
-Exposiciones de otras personas:
+Presentaciones de otras personas:
 
 *    [Una herramienta basada en FAIR para mejorar el intercambio global de datos![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=kdBTgNEp5TA&ab_channel=GOOSIOC)   
-por Kevin O'Brien en el Sistema Mundial de Observación de Océanos (GOOS) Webinar / Observation Coordination Group (OCG) Serie / 1, 12 de noviembre de 2020.
+por Kevin O'Brien en el Sistema Mundial de Observación de los Océanos (GOOS) Webinar / Observation Coordination Group (OCG) Serie / 1, 12 de noviembre de 2020.
 *    [Construyendo tu propia aplicación meteorológica NOAA Datos Abiertos y Cuadernos de Jupyter![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=MF-WH01Qw0g)   
 por Filipe Fernandes y Rich Signell en SciPy 2018, 13 de julio de 2018.
 *    [Usando el OOI ERDDAP ![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=tj4M9hodTG0)   
 por Rich Signell, febrero de 2018.
 *    [ESIP Tech Dive: " ERDDAP Lightning Talks"![YouTube](/img/youtube.png)](https://youtu.be/2-ydBByYB0M?t=160)   
 Ocho conversaciones de 5 minutos sobre cosas interesantes que la gente está haciendo con ERDDAP por Jenn Sevadjian, Jim Potemra, Conor Delaney, Kevin O'Brien, John Kerfoot, Stephanie Petillo, Charles Carleton y Eli Hunter presentaron como ESIP Tech Dive el 31 de agosto de 2017.
-*    [Uso ERDDAP™ Acceso a Datos Tabulares![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=_BwMHRh7CS8)   
+*    [Uso ERDDAP™ Acceso a datos tabulares![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=_BwMHRh7CS8)   
 por Rich Signell, agosto de 2015.
 *    [Prueba usando ERDDAP™ para datos de carbono azul![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=TbOhElC_-qU)   
 por Rich Signell, agosto de 2015.

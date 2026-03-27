@@ -5,7 +5,7 @@ Doiciméid an leathanach seo na bratacha chumraíocht ar fáil sa chóras. Tá n
 ##  **Bratach Saolré finscéal** 
 
 *  **Cábla:** Beartaithe mar bratacha fadtéarmacha a cheadú admins feidhmiúlacht a athrú. Sábháilte do tháirgeadh.
-*  **Tástáil:** Gnéithe atá réidh le haghaidh tástála. Beidh na céimí ceachtar go dtí "Stábla" nó ar deireadh thiar a shocrú chun a luach sprioc agus tá an bhratach a bhaint.
+*  **Tástáil:** Gnéithe atá réidh le haghaidh tástála. Beidh na céimí ceachtar chun "Stábla" nó ar deireadh thiar a shocrú chun a luach sprioc agus tá an bhratach a bhaint.
 *  **Foirgníocht:** Faoi láthair cruad a bréagach sa chód, beag beann ar chumraíocht. Níl an ghné réidh le húsáid go fóill.
 
 ##  **An tSraith Shinsearach Optamaithe i tástáil** 
@@ -39,7 +39,7 @@ Cumasaigh an tasc cúlra a imíonn míreanna in éag ón taisce.
 ###  **cliceáil grianghraf a mhéadú** 
 
 Cur síos ar an Táirge
-Má fíor beidh an freastalaí a ghiniúint an comhad nc ar fad roimh a chruthú ar an toradh nukeer. An nua (fearr leat) iompar nuair atá bréagach a ghiniúint go díreach ar an toradh nukeer.
+Má fíor beidh an freastalaí a ghiniúint an comhad nc ar fad roimh a chruthú ar an toradh naidí. An nua (fearr leat) iompar nuair atá bréagach a ghiniúint go díreach ar an toradh nukeer.
 
  | Díroghnaigh gach rud | Sonraí Teagmhála | 
  | :--- | :--- | 
@@ -86,7 +86,7 @@ Cur síos ar an Táirge
 
 ##  **Córas Iompair agus Iompair** 
 
-###  **duille dath: glas An bhfuil tú** 
+###  **r-phost Micrimhilseogra An bhfuil tú** 
 
 Cur síos ar an Táirge
 Rialuithe cibé an iarrachtaí an córas a sheoladh ríomhphoist iarbhír (e.g., le haghaidh nuashonruithe síntiús nó tuarascálacha earráide) tríd an bhfreastalaí SMTP cumraithe.
@@ -99,7 +99,7 @@ Rialuithe cibé an iarrachtaí an córas a sheoladh ríomhphoist iarbhír (e.g.,
  |   **Stair na Staire**   | Oidhreacht na hÉireann | 
 
 :: info Logic
-Tá an bhratach ríomh dinimiciúil ag tosaithe. Cóipeáil nasc leis an tweet Leabaigh an Tweet . (óstach, port, úsáideoir, focal faire, ó-address) ar fáil go docht i thus.xml.
+Tá an bhratach ríomh dinimiciúil ag tosaithe. mainneoidh sé a bheith bréagach mura rud é go léir is gá dintiúir SMTP (óstach, port, úsáideoir, focal faire, ó-address) ar fáil go docht i thus.xml.
 ::
 
 ###  **a thaispeáint LuchtaighOnStatusPage** 
@@ -176,7 +176,7 @@ Socraigh má tacair sonraí príobháideacha (iad siúd a éilíonn fíordheimhn
  |   **Sprioc fadtéarmach**   | foirm duille: oval | 
  |   **Stair na Staire**   | Curtha i 1.20 | 
 
-###  **European Union Agency for Fundamental Rights** 
+###  **An tAcht um Brústocaireacht a Rialáil 2015** 
 
 Cur síos ar an Táirge
 Rialuithe cibé acu is féidir teorainneacha polaitiúla a tharraingt ar léarscáileanna.
@@ -187,6 +187,18 @@ Rialuithe cibé acu is féidir teorainneacha polaitiúla a tharraingt ar léarsc
  |   **Réamhshocrú Reatha**   | fíor fíor | 
  |   **Sprioc fadtéarmach**   | fíor fíor | 
  |   **Stair na Staire**   | Curtha i 1.80 | 
+
+###  **soilse loingseoireachta E** 
+
+Cur síos ar an Táirge
+Socruithe Load synchronous ionad luchtú cúlra iarchurtha.
+
+ | Díroghnaigh gach rud | Sonraí Teagmhála | 
+ | :--- | :--- | 
+ |   **Saol na beatha**   | Stáblaí | 
+ |   **Réamhshocrú Reatha**   | foirm duille: oval | 
+ |   **Sprioc fadtéarmach**   | foirm duille: oval | 
+ |   **Stair na Staire**   | Curtha i 2.30 | 
 
 ##  **meiteashonraí agus Caighdeáin** 
 
@@ -217,7 +229,7 @@ Generates agus feidhmíonn sé meiteashonraí ISO 19115.
 ###  **cliceáil grianghraf a mhéadú** 
 
 Cur síos ar an Táirge
-Úsáideann an leabharlann Apache SIS a ghiniúint meiteashonraí ISO 19115 in ionad an gineadóir oidhreacht. Má tá sé seo ar aghaidh agus nach bhfuil úsáid SisISO19139 ar, beidh na meiteashonraí réamhshocraithe i bhformáid ISO19115_3_2016. Má tá sé seo bréagach beidh an fhormáid réamhshocraithe a bheith sa oidhreacht mhodhnú ISO19115_2 formáid.
+Úsáideann an leabharlann Apache SIS a ghiniúint meiteashonraí ISO 19115 in ionad an gineadóir oidhreacht. Má tá sé seo ar aghaidh agus nach bhfuil úsáid á baint as SisISO19139, beidh na meiteashonraí réamhshocraithe i bhformáid ISO19115_3_2016. Má tá sé seo bréagach beidh an fhormáid réamhshocraithe a bheith sa oidhreacht mhodhnú ISO19115_2 formáid.
 
  | Díroghnaigh gach rud | Sonraí Teagmhála | 
  | :--- | :--- | 
@@ -229,7 +241,7 @@ Cur síos ar an Táirge
 ###  **cliceáil grianghraf a mhéadú** 
 
 Cur síos ar an Táirge
-Úsáidí leabharlann SIS Apache a ghiniúint meiteashonraí ISO19139_2007.
+Úsáideann an leabharlann Apache SIS a ghiniúint meiteashonraí ISO19139_2007.
 
  | Díroghnaigh gach rud | Sonraí Teagmhála | 
  | :--- | :--- | 
@@ -477,7 +489,7 @@ Cumasaigh an inmheánach WMS gnéithe cliant.
 ###  **geoServicesRestActive** 
 
 Cur síos ar an Táirge
-Cumasaigh an RESTful comhéadan le haghaidh Seirbhísí Geospatial. Gan a chur i bhfeidhm go hiomlán.
+Cumasaigh an RESTful comhéadan do Sheirbhísí Geospatial. Gan a chur i bhfeidhm go hiomlán.
 
  | Díroghnaigh gach rud | Sonraí Teagmhála | 
  | :--- | :--- | 
@@ -499,7 +511,7 @@ Cumasaigh an tSeirbhís Clúdach Gréasáin ( WCS ) comhéadan. Gan a chur i bhf
 ###  **riachtanais uisce: measartha** 
 
 Cur síos ar an Táirge
-Cumasaigh an tSeirbhís Bhreathnóireachta Braiteoir ( SOS ) comhéadan.
+Cumasaigh an tSeirbhís Bhreathnóireachta Braiteora ( SOS ) comhéadan.
 
  | Díroghnaigh gach rud | Sonraí Teagmhála | 
  | :--- | :--- | 

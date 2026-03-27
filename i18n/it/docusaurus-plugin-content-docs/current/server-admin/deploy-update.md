@@ -4,15 +4,15 @@ sidebar_position: 2
 # Aggiornamento
 Come fare un aggiornamento di un esistente ERDDAP™ sul server
 
-## Cambiamenti{#changes} 
-1. Fare le modifiche elencate in [Cambiamenti](/changes) nella sezione intitolata "Pensi ERDDAP™ Gli amministratori devono sapere e fare" per tutti ERDDAP™ versioni dalla versione che stavi usando.
+## Variazioni{#changes} 
+1. Fare le modifiche elencate in [Variazioni](/changes) nella sezione intitolata "Pensi ERDDAP™ Gli amministratori devono sapere e fare" per tutti ERDDAP™ versioni dalla versione che stavi usando.
      
 ##  Java  {#java} 
 2. Se si sta aggiornando da ERDDAP™ versione 2.18 o sotto, è necessario passare a Java 25 (o nuovo) e il relativo Tomcat 10. Vedere il regolare ERDDAP™ istruzioni per l'installazione [ Java ](/docs/server-admin/deploy-install#java) e [Tomcat](/docs/server-admin/deploy-install#tomcat) . Dovrai anche copiare il tuo _tomcat_/content/erddap directory dalla tua vecchia installazione Tomcat alla tua nuova installazione Tomcat.
 
 ## Scarica{#download} 
-3. Scarica [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) in _tomcat_/webapps .
-     (versione 2.29.0, 706,788,135 byte, MD5=A5ED0DCC8D46CA27640FFEB8CE4A8560, datata 12-15-2025) 
+3. Scarica [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) in _tomcat_/webapps .
+     (versione 2.30.0, 706,939,121 byte, MD5=CDC4B3D82A20B33A6623B85312F6DC21, datata 2026-04-06) 
      
 ## messaggi.xml{#messagesxml} 
 4. 
@@ -28,7 +28,7 @@ I nuovi messaggi standard.xml verranno installati automaticamente (tra i file .c
 WEB-INF/classes/gov/noa/pfel/erddap/util/messages.xml dopo erddap.war è decompresso da Tomcat.
          
     * Rare: Se si mantiene un file di messaggi personalizzati.xml in _tomcat_/content/erddap /
-tu devi capire (Via diff) quali modifiche sono state apportate ai messaggi di default.xml (che sono nel nuovo erddap. la guerra
+tu devi capire (Via diff) quali modifiche sono state apportate ai messaggi di default.xml (che sono nel nuovo erddap. guerra
 WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml) e modifica il tuo file xml personalizzato.
          
 ## Installazione{#install} 
@@ -38,23 +38,23 @@ WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml) e modifica il tuo file x
      
 ### Linux e Mac{#linux-and-macs} 
 1. Stopdown Tomcat: Da una riga di comando, utilizzare: _tomcat_/bin/shutdown.sh
-E usare ps -ef | tomcat grep per vedere se / quando il processo è stato interrotto. (Potrebbe volerci un minuto o due.) 
+E usare ps -ef | per vedere se / quando il processo è stato interrotto. (Potrebbe volerci un minuto o due.) 
 2. Rimuovere i decompressi ERDDAP™ installazione: In _tomcat_/webapps, utilizzare
 rm -rf erddap
 3. Elimina il vecchio erddap. file di guerra: In _tomcat_/webapps, utilizzare rm erddap. guerra
-4. Ricevuto. file di guerra dalla directory temporanea a _tomcat_/webapps
+4. Copia il nuovo erddap. file di guerra dalla directory temporanea a _tomcat_/webapps
 5. Riavvia Tomcat e ERDDAP : uso _tomcat_/bin/startup.sh
-6. Vista ERDDAP™ nel tuo browser per verificare che il riavvio è riuscito.
+6. Vista ERDDAP™ nel tuo browser per verificare che il riavvio sia riuscito.
      (Spesso, devi provare alcune volte e aspettare un minuto prima di vedere ERDDAP™ .)   
              
 ### Windows{#windows} 
-1. Stopdown Tomcat: Da una riga di comando, usare: _tomcat_\\bin\\\ shutdown.bat 
+1. Stopdown Tomcat: Da una riga di comando, utilizzare: _tomcat_\\bin\\ shutdown.bat 
 2. Rimuovere i decompressi ERDDAP™ installazione: In _tomcat_/webapps, utilizzare
 del /S/Q erddap
 3. Elimina il vecchio erddap. file di guerra: In _tomcat_\\webapps, utilizzare il erddap. guerra
-4. Ricevuto. file di guerra dalla directory temporanea a _tomcat_\\webapps
+4. Copia il nuovo erddap. file di guerra dalla directory temporanea a _tomcat_\\webapps
 5. Riavvia Tomcat e ERDDAP : uso _tomcat_\\bin\\startup.bat
-6. Vista ERDDAP™ nel tuo browser per verificare che il riavvio è riuscito.
+6. Vista ERDDAP™ nel tuo browser per verificare che il riavvio sia riuscito.
      (Spesso, devi provare alcune volte e aspettare un minuto prima di vedere ERDDAP™ .) 
 
-Aggiornamento dei problemi ERDDAP ? Guarda la nostra [sezione per ottenere supporto aggiuntivo](/docs/intro#support) .
+Problemi di aggiornamento ERDDAP ? Guarda la nostra [sezione per ottenere supporto aggiuntivo](/docs/intro#support) .

@@ -2,8 +2,8 @@
 sidebar_position: 3
 ---
 #  ERDDAP™ irl - Library Service
-* Déan cinnte comhaid comparáid íomhá ar fáil (D'fhéadfadh sé seo i gceist ag rith `mvn fhíorú` , más mian leat chun dlús a chur suas a shrianadh go dtí díreach ar an ngrúpa ImageComparison cé faoi deara go n-éilíonn fós ag rith tástálacha Jetty) 
-* Nuashonraigh spleáchas
+* Déan cinnte comhaid comparáid íomhá ar fáil (d'fhéadfadh sé seo i gceist ag rith `mvn fhíorú` , más mian leat chun dlús a chur suas srian a chur ach an grúpa ImageComparison cé faoi deara go n-éilíonn fós tástálacha Scairdty ag rith) 
+* spleáchas cothrom le dáta
 ```
 mvn versions:display-dependency-updates   // (displays updates)
 mvn versions:use-latest-versions  // (updates dependencies, though sometimes we don’t want to do all of them)
@@ -19,9 +19,9 @@ mvn verify
 mvn verify -P external
 mvn verify -P slowAWS
 ```
-* Úsáid TranslateMessages.translate () aistriúcháin a thabhairt cothrom le dáta más gá
+* Úsáid Úsáid Úsáidte `aistriúchán python / translate.py` aistriúcháin a thabhairt cothrom le dáta más gá.
 * EDStatic.java leagan forbartha Mód go bréagach, athrú ar an uimhir leagan agus an dáta scaoilte a shonrú.
-* An bhfuil an tógáil
+* Déan an tógáil.
 ```
 mvn clean
 mvn compile
@@ -54,13 +54,14 @@ Dréacht an scaoileadh GitHub, san áireamh erddap.war agus erddapContent .zip  
 
 title: The official v2.25 version
 cur síos: Féach ar an liosta athruithe ar
-      https://erddap.github.io/changes#version-225
+       https://erddap.github.io/changes#version-225
+ 
 
 ## Nuashonraigh Doiciméid
-* Nuashonrú an uimhir leagan sa docusaurus.config.ts comhad (i alt footer) .
+* Nuashonrú an uimhir leagan sa docusaurus.config.ts comhad (sa rannóg footer) .
 * Cuir na leathanaigh doiciméadachta in eagar (imscaradh-install.md agus imscaradh-suasdate.md) .
   * Cuardaigh le haghaidh \\[ erddap.war \\]  
-  * Cóipeáil an t-eolas atá ann cheana (beagán reformatted) chuig an liosta de na suiteálacha roimhe seo 2. 2. 2.
+  * Cóipeáil an t-eolas atá ann cheana (beagán reformatted) leis an liosta de na suiteálacha roimhe seo 2. 2. 2.
   * Athraigh an t-eolas scaoileadh reatha le haghaidh erddap. cogadh ag \\[ erddap.war \\] 
 * Rith na haistriúcháin don suíomh doiciméadúcháin.
 * Déan iarratas tarraingt agus na hathruithe a chumasc.
@@ -75,12 +76,14 @@ An chéad fógra a thabhairt d'úsáideoirí a d'iarr athruithe (nó a raibh a b
  ERDDAP Tá leagan 2.25 ar fáil anois&#33;
 
 Is féidir leat léamh faoi na hathruithe ag
-https://erddap.github.io/changes#version-225
+ https://erddap.github.io/changes#version-225
+ 
 
 Tá cuid de na hathruithe athruithe a mhol tú. Go raibh míle maith agat go mór do do chuid moltaí. Cuardaigh le haghaidh d'ainm sa liosta na n-athruithe chun na sonraí a fheiceáil. Bheadh sé iontach má d'fhéadfaí tú iarracht a dhéanamh amach na gnéithe nua go luath, sula fhógairt mé an leagan nua do lucht féachana níos leithne.
 
 Má tá tú ERDDAP riarthóir, tá na treoracha le haghaidh uasghrádú ag
-https://erddap.github.io/docs/server-admin/deploy-update
+ https://erddap.github.io/docs/server-admin/deploy-update
+ 
 
 Má tá aon fhadhbanna, ceisteanna, moltaí, le do thoil ríomhphost chugam.
 

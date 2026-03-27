@@ -1,215 +1,229 @@
 ---
 title: "ERDDAP™ - Changes"
 ---
-#  ERDDAP™ Login
+#  ERDDAP™ Perubahan
 
- ERDDAP™ adalah contoh besar [Inovasi Pengguna](https://en.wikipedia.org/wiki/User_innovation) , di mana inovasi produk sering berasal dari konsumen ( ERDDAP™ Login) Tidak hanya produsen ( ERDDAP™ Login) Sitemap Selama bertahun-tahun, sebagian besar ide untuk fitur baru dan perubahan dalam ERDDAP™ datang dari pengguna. Pengguna yang dikreditkan di bawah ini untuk ide-ide hebat mereka. Sitemap Silahkan menyimpan saran-spesan besar yang datang&#33;
+ ERDDAP™ adalah contoh yang bagus [Pengguna-Driven Innovation](https://en.wikipedia.org/wiki/User_innovation) , di mana inovasi produk sering datang dari konsumen ( ERDDAP™ pengguna) , bukan hanya produser ( ERDDAP™ pengembang) . Selama bertahun-tahun, sebagian besar ide untuk fitur dan perubahan baru ERDDAP™ telah datang dari pengguna. Pengguna tersebut dikreditkan di bawah ini untuk ide-ide besar mereka. Terima kasih&#33; Harap tetap orang-orang saran besar datang&#33;
 
-Berikut adalah perubahan yang terkait dengan masing-masing ERDDAP™ Sitemap
+Berikut adalah perubahan yang terkait dengan masing-masing ERDDAP™ lepaskan.
 
+## Versi 2.30.0{#version-2300} 
+ (dirilis 2026-04-07) 
+
+Versi v2.30.0 sebagian besar berfokus pada perbaikan bug, pemutakhiran ketergantungan untuk stabilitas dan keamanan, dan pengujian perbaikan kinerja.
+
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+      * Enhanced [Croissant](https://mlcommons.org/working-groups/data/croissant/) kompatibilitas metadata dan dukungan manifest, termasuk [mlcroissant](https://pypi.org/project/mlcroissant/) Kompatibilitas.
+      * Dukungan diperbaharui untuk boolean parket.
+
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+      * Perkakas baris perintah yang tidak digunakan dan kode yang terkait dihapus dari codebase untuk mengurangi utang teknis. Lihat https://github.com/ERDDAP/erddap/pull/432.
+ 
+      * Flag fitur baru `Force Synchronousloading` telah ditambahkan untuk menimpa pendekatan pemuatan data yang tertunda secara baku. Hal ini harus jarang diperlukan, dan hanya digunakan dalam kasus di mana menunda pemuatan menyebabkan masalah. Lihat [halaman tanda fitur](/docs/server-admin/feature-flags#forcesynchronousloading) untuk rincian.
 
 ## Versi 2.29.0{#version-2290} 
- (dirilis 2025-12-15) 
+ (dirilis 2025- 12- 15) 
 
 Tindakan yang diperlukan.
 
- ERDDAP™ versi 2.29.0 membutuhkan jdk 25 atau kemudian. Silakan memperbarui versi jdk Anda. Jika itu masalah, Anda dapat membangun Meme it ERDDAP™ untuk jdk tua (kembali ke setidaknya 17) dengan mengubah file pom.xml. JDK 25 adalah rilis LTS dari Java dan mencakup banyak perbaikan, kinerja yang paling tidak dapat ditingkatkan.
+ ERDDAP™ versi 2.29.0 membutuhkan jdek 25 atau nanti. Tolong perbarui versi jkk anda. Jika itu adalah masalah, Anda dapat membangun ERDDAP™ untuk jdk yang lebih tua (kembali ke setidaknya 17) dengan mengubah berkas pom.xml. JDK 25 adalah rilis LTS Java dan termasuk banyak perbaikan, performa yang paling terkenal.
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * ISO 19115 versi: Lihat di bawah ini untuk info admin. Untuk pengguna, Anda sekarang dapat meminta versi spesifik dari metadata ISO 19115. Apakah ini dari griddap/ tabledap halaman untuk dataset dengan jenis file turun. Versi ini akan independen dari default server.
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * ISO 19115 versi: Lihat di bawah untuk info admin. Untuk pengguna, Anda sekarang dapat meminta versi spesifik ISO 19115 metadata. Lakukan ini dari griddap / tabledap halaman untuk suatu dataset dengan tipe berkas drop down. Versi ini akan independen dari server baku.
 
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Fitur baru, dukungan MQTT. Untuk detail saya merekomendasikan membaca [halaman baru tentang itu.](/docs/server-admin/mqtt-integration) Ini termasuk dapat membangun dataset dari pesan MQTT, dan menerbitkan pesan MQTT ketika perubahan dataset. Dimatikan secara default, jadi jika Anda ingin menggunakannya, Anda perlu mengaktifkannya.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Fitur baru, dukungan MQTT. Untuk rincian saya sarankan membaca [halaman baru tentang hal itu.](/docs/server-admin/mqtt-integration) Ini termasuk mampu membangun dataset dari pesan MQTT, dan menerbitkan pesan MQTT ketika suatu perubahan data. Ini mati secara default, jadi jika Anda ingin menggunakannya, Anda perlu mengaktifkannya.
 
-Terima kasih kepada Ayush Singh untuk bekerja di MQTT&#33;
+Berkat Ayush Singh untuk bekerja pada MQTT&#33;
 
-    * Peningkatan S3: Menambahkan dukungan untuk S3 URIs sebagai nilai cacheFromUrl. Ini akan memungkinkan ERDDAP WordPress.org Juga menjawab masalah kebocoran memori S3.
+    * S3 perbaikan: Menambah dukungan untuk URI S3 sebagai nilai kakaheFromUrl. Ini akan memungkinkan ERDDAP untuk mendukung ember pribadi diselenggarakan off amazonaws.com Juga ditangani masalah kebocoran memori S3.
 
-Terima kasih kepada @SethChampagneNRL untuk pekerjaan di S3&#33;
+Berkat @ SethChampagneNRL untuk pekerjaan di S3&#33;
 
-    * ISO 19115 versi: Sekarang dukungan untuk 3 versi yang berbeda dari metadata ISO 19115. Versi default dikendalikan oleh pengaturan di setup Anda.xml. Jika useSisISO19115 palsu, server akan secara default memberikan NOAA dimodifikasi ISO19115_2. Jika useSisISO19115 benar, maka server akan menggunakan versi yang berbeda tergantung pada nilai useSisISO19139. Jika useSisISO19139 benar, default akan ISO19139_2007, jika useSisISO19139 palsu default akan ISO19115_3_2016. Kami merekomendasikan menggunakan useSisISO19115=true dan useSisISO19139=false. Organisasi Anda mungkin memerlukan pengaturan yang berbeda.
+    * ISO 19115 versi: Sekarang ada dukungan untuk 3 versi berbeda dari ISO 19115 metadata. Versi baku dikendalikan oleh pengaturan dalam setup p.xml Anda. Jika useSisISO19115 salah, server secara baku akan menyediakan NOAA ISO19115-2 yang dimodifikasi. Jika useSisSISO19115 benar, maka server akan menggunakan versi yang berbeda tergantung pada nilai useSisiso19139. Jika useSisISO19139 benar, maka baku adalah ISO19139 _ 2007, jika useSisISO19139 salah maka default akan ISO19115 _ 3 _ 2016. Kami sarankan menggunakan use SisiSO19115 = true dan useSisISO19139 = false. Organisasi Anda mungkin memerlukan pengaturan yang berbeda.
 
-    * Migrasi ke java. perpustakaan waktu (daripada java.util. Login) Sitemap Ini harus memberikan peningkatan kinerja atas pertanyaan yang melibatkan kolom tanggal/waktu. Tidak ada dampak nyata untuk sebagian besar dataset. Kasus yang diketahui ini menyebabkan perubahan adalah jika dataset menggunakan `hari sejak 0000-01` atau serupa. Jika ini adalah masalah untuk variabel, Anda dapat menambahkan ` <att name="legacy_time_adjust"> Login </att> ` Login addAttributes bagian baik dataVariable Sitemap axisVariable Sitemap
+    * Migrated ke java. waktu perpustakaan (bukan Java.utill. Kalender GregorianName) . Hal ini seharusnya memberikan peningkatan kinerja pada kueri yang melibatkan kolom tanggal / waktu. Tidak boleh ada dampak yang terlihat bagi sebagian besar data. Satu kasus yang diketahui ini menyebabkan perubahan adalah jika dataset menggunakan `hari sejak 00- 01- 01` atau mirip. Jika ini adalah masalah untuk variabel, Anda dapat menambahkan ` <att name="legacy_time_adjust"> benar </att> ` ke addAttributes bagian dari baik dataVariable atau axisVariable .
     
-    *    datasets.xml sekarang diproses oleh [Login](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) Sitemap Ini memiliki banyak kegunaan termasuk menetapkan nilai pribadi (seperti kata sandi) menggunakan variabel lingkungan. Ini dapat dinonaktifkan dengan mengatur mengaktifkanEnvParsing untuk palsu dalam setup.xml.
+    *    datasets.xml sekarang diproses oleh [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Ini memiliki banyak penggunaan termasuk pengaturan nilai pribadi (seperti sandi) menggunakan variabel lingkungan. Ini dapat dinonaktifkan dengan menset enableEnvParsing ke false dalam setup p.xml.
 
-    * Sumbu Tekanan: Menambahkan kasus khusus untuk ketinggian yang ditentukan oleh tekanan. Ini terutama digunakan dalam data Meteorologi mendefinisikan ketinggian vertikal dalam tingkat isobaric. CATATAN: Nilai tekanan yang lebih kecil berarti ketinggian yang lebih tinggi, sehingga sumbu berjalan berlawanan ketinggian normal yang didefinisikan dalam meter atau kaki.
+    * Sumbu Tekanan: Menambahkan kasus khusus untuk ketinggian didefinisikan oleh tekanan. Hal ini terutama digunakan dalam dataset Meteorologi mendefinisikan ketinggian vertikal dalam tingkat isobarik. CATATAN: nilai tekanan lebih kecil berarti ketinggian yang lebih tinggi, sehingga sumbu berjalan berlawanan dengan ketinggian normal yang didefinisikan dalam meter atau kaki.
 
-Sitemap [Login](https://github.com/ERDDAP/erddap/pull/373) 
+Terima kasih [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
 
-    *    EDDGrid DariNcFiles dengan dimensi yang bervariasi: Sitemap (Login) dukungan untuk EDDGrid DariNFiles dataset untuk memiliki variabel yang tidak menggunakan set yang sama dari kapak. Silakan lakukan laporan kembali tentang bagaimana karya ini untuk Anda, atau jika perilaku tidak tampak cukup tepat.
+    *    EDDGrid FromNcFiles dengan dimensi bervariasi: Ada (eksperimental) dukungan untuk EDDGrid Data fromNcFiles untuk memiliki variabel yang tidak menggunakan set sumbu yang sama. Silakan melaporkan kembali bagaimana hal ini bekerja untuk Anda, atau jika perilaku tampaknya tidak benar.
 
-    * Ada koleksi optimasi yang harus aman, tetapi memiliki bendera untuk mengubah perilaku lama jika diperlukan. Jika Anda menemukan kebutuhan untuk mengatur semua bendera, silakan mengajukan bug. Jika kita mendengar tentang tidak ada masalah yang paling dari ini akan dihapus dengan perilaku baru default di masa depan. Ada [halaman baru tentang bendera fitur](/docs/server-admin/feature-flags) di mana Anda dapat membaca tentang bendera ini dan lainnya.
+    * Ada koleksi optimisasi yang seharusnya aman, tetapi memiliki bendera untuk kembali ke perilaku lama jika diperlukan. Jika Anda menemukan kebutuhan untuk mengatur salah satu bendera, silakan file bug. Jika kita mendengar dari tidak ada masalah Sebagian besar ini akan dihapus dengan perilaku baru default di masa depan. Ada [halaman baru tentang tanda fitur](/docs/server-admin/feature-flags) di mana Anda dapat membaca tentang ini dan bendera lainnya.
 
-      * Login Login Sitemap KetikaItems: Ini adalah perubahan sehingga touchThread hanya akan berjalan ketika ada item di antrian untuk menyentuh. Satu benang yang lebih sedikit berjalan adalah optimasi kecil tetapi masih berguna. Default untuk benar.
+      * sentuh Thread Hanya WhenItems: Ini adalah perubahan sehingga layar sentuh hanya akan berjalan ketika ada butir dalam antrian untuk menyentuh. Satu benang lebih sedikit berjalan adalah optimasi kecil tapi masih berguna. Default ke true.
 
-      * Login Sitemap Perubahan ini memungkinkan tabel file internal untuk menggunakan atribut nc, khususnya atribut aktual_range variabel untuk menghindari membaca seluruh file nc. Ini dapat secara drastis mempercepat pemuatan awal dataset berdasarkan file nc jika aktual_range untuk setiap variabel dalam setiap file disertakan sebagai atribut. Perhatikan bahwa ini mempercayai nilai, jadi jika salah, tabel file internal akan memiliki informasi yang salah. Default untuk benar.
+      * useNcMetadata ForFileTable: Perubahan ini memungkinkan tabel berkas internal untuk menggunakan atribut nc, khususnya atribut variabel actual _ range untuk menghindari membaca seluruh berkas nc. Ini dapat mempercepat pemuatan data awal berdasarkan berkas nc jika jangkauan aktual _ untuk setiap variabel di setiap berkas disertakan sebagai atribut. Perhatikan bahwa ini mempercayai nilai, jadi jika salah, tabel berkas internal akan memiliki informasi yang salah. Default ke true.
 
-      * Login Login: Perubahan ini memungkinkan file header nc untuk dihasilkan tanpa menghasilkan file nc perwakilan pertama. Ini adalah optimasi kecil untuk EDDTable, tetapi optimasi besar untuk banyak EDDGrid Sitemap Default untuk palsu (palsu adalah perilaku yang dioptimalkan dimaksudkan) Sitemap
+      * ncHeader MakeFile: Perubahan ini memungkinkan berkas header nc yang akan dihasilkan tanpa terlebih dahulu menghasilkan berkas perwakilan nc. Ini adalah optimasi kecil untuk EDTabel, tetapi optimasi besar bagi banyak EDDGrid permintaan. Baku ke false (seperti dalam salah adalah yang dimaksudkan perilaku optimisasi) .
 
-      * Login Login Tabel: Perubahan ini memindahkan beberapa pemrosesan awal dataset ke benang latar belakang. Ini harus meningkatkan waktu untuk memuat dataset. Secara spesifik bagian yang ditunda adalah tabel subset, yang juga dihasilkan bila diperlukan jika pemrosesan yang tertunda belum terjadi. Default untuk benar.
+      * latar belakang CreateSubset Tabel: Perubahan ini memindahkan beberapa pemrosesan data awal ke thread latar belakang. Ini harus meningkatkan waktu untuk memuat data. Terutama bagian yang tertunda adalah tabel subset, yang juga dihasilkan ketika dibutuhkan jika pemrosesan tertunda belum terjadi. Default ke true.
 
-    * Beberapa perubahan kecil, perbaikan bug (terima kasih Italo Borrelli untuk perbaikan untuk EDDTableDariAggregateRows, Sitemap @SethChampagneNRL untuk memungkinkan longitude lebih dari 360 in EDDGrid LonPM180, dan beberapa perbaikan bug lainnya) , dan optimasi.
+    * Beberapa perubahan kecil, perbaikan bug (Terima kasih Italo Borrelli untuk memperbaiki EDTableFromAggregates Rows, terima kasih @ SethChampagneNRL untuk mengaktifkan bujur lebih besar dari 360 dalam EDDGrid LonPM180, dan beberapa bug lainnya perbaikan) , dan optimasi.
 
-*    **Sitemap ERDDAP™ Pengembang:** 
-    * Optimasi tambahan, termasuk waktu uji pemotongan dalam waktu paruh.
+*    **Untuk ERDDAP™ Pengembang:** 
+    * Optimisasi tambahan, termasuk memotong waktu menjalankan tes menjadi dua.
 
-    * Profil tes baru untuk sangat flaky (Login) atau sangat lambat (Login) Sitemap
+    * Profil tes baru untuk sangat mencolok (eksternal) atau sangat lambat (slowAWAWS) tes.
 
 ## Versi 2.28.1{#version-2281} 
- (dirilis 2025-09-05) 
+ (dirilis 202509-05) 
 
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Dukungan ditambahkan untuk X-Forwarded-Prefix. Ini adalah kepentingan tertentu untuk admin menjalankan server di subpati. Silahkan baca dokumentasi terbaru kami untuk [Login](/docs/server-admin/deploy-install#apache) Login [Login](/docs/server-admin/deploy-install#nginx) Informasi lebih lanjut
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Dukungan ditambahkan untuk X- Forwarded- Prefix. Ini adalah kepentingan khusus untuk admin berjalan server pada subpath. Silakan baca dokumentasi terbaru kami untuk [Apache](/docs/server-admin/deploy-install#apache) dan [Nginx](/docs/server-admin/deploy-install#nginx) untuk informasi lebih lanjut.
 
-Sitemap [Login](https://github.com/srstsavage) 
+Terima kasih [@ srstabrush](https://github.com/srstsavage) 
 
-## Versi 2.28.0{#version-2280} 
- (dirilis 2025-08-29) 
+## Versi 2.28,0{#version-2280} 
+ (dirilis 2025- 08- 29) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    *    [Login](https://docs.mlcommons.org/croissant/docs/croissant-spec.html) sekarang tersedia. Admin dapat mengontrol apakah metadata default menggunakan Croissant, tetapi mulai dengan 2.28.0 Anda dapat meminta definisi Croissant untuk dengan jenis file ekspor baru ".croissant" (yang menyediakan file jsonld) Sitemap
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    *    [Skema Croissant](https://docs.mlcommons.org/croissant/docs/croissant-spec.html) sekarang tersedia. Admin dapat mengendalikan apakah metadata bawaan memakai Croissant, tapi dimulai dengan 2.28.0 Anda dapat meminta definisi Croissant untuk dengan tipe berkas ekspor baru. "croissant" (yang menyediakan sebuah berkas jsonld) .
 
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Docker Baru Gambar yang dibuat pada setiap permintaan tarik gabungan. Ini adalah build alfa, mereka tidak versi rilis. Mereka akan memiliki tag seperti "20250814T034025", yang menunjukkan ketika dibangun. Jika Anda ingin mencoba fitur terbaru yang dapat Anda gunakan ini. Jika Anda ingin menggunakan rilis kami dengan tag versi semantik (g. 2.28.0) Sitemap Kami selalu bertujuan untuk memiliki rilis alfa dapat digunakan, tetapi ada kurang pengujian bagi mereka dari rilis versi kami. Kami selalu merekomendasikan Anda menggunakan sesuatu setidaknya seperti rilis "latest" kami yang akan menjadi rilis versi semantik terbaru.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Docker Baru Gambar yang dibuat pada setiap permintaan tarik tergabung. Ini adalah alpha builds, mereka tidak versi rilis. Mereka akan memiliki tag seperti "20250814T034025", yang menunjukkan ketika itu dibangun. Jika Anda ingin mencoba fitur terbaru Anda dapat menggunakan ini. Jika Anda ingin sesuatu yang lebih stabil gunakan rilis kami dengan tag versi semantik (mis. 2.28.0) . Kami selalu bertujuan untuk memiliki rilis alpha dapat digunakan, tapi ada sedikit pengujian bagi mereka daripada rilis penuh kami. Kami selalu merekomendasikan Anda menggunakan sesuatu setidaknya sebagai baru sebagai "terbaru" rilis kami yang akan menjadi yang terbaru semantik rilis.
 
-    * Login Gambar sekarang tersedia [Login](https://github.com/ERDDAP/erddap/pkgs/container/erddap) selain [Login](https://hub.docker.com/r/erddap/erddap) Sitemap
+    * Docker Gambar kini tersedia pada [GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) sebagai tambahan [DockerHub](https://hub.docker.com/r/erddap/erddap) .
 
-Sitemap [Login](https://github.com/ocefpaf) Login [Login](https://github.com/abkfenris) Login [Login](https://github.com/srstsavage) Sitemap [Login](https://github.com/MathewBiddle) untuk kontribusi mereka di sekitar Docker Images. Ini termasuk kontribusi pertama dari mereka kecuali @ststsavage&#33;
+Terima kasih [@ ocefpaf](https://github.com/ocefpaf) , [@ abkfenris](https://github.com/abkfenris) , [@ srstabrush](https://github.com/srstsavage) , dan [MathewBiddle](https://github.com/MathewBiddle) untuk kontribusi mereka di sekitar Docker Images. Ini termasuk kontribusi pertama dari mereka semua kecuali @ ststaliar&#33;
     
-    * Sekarang dukungan untuk menghasilkan [Login](https://docs.mlcommons.org/croissant/docs/croissant-spec.html) Login Secara default. Anda dapat menonaktifkan skema Croissant di setup Anda.xml dengan (TIDAK MEMBUAT- Silahkan hubungi atau mengajukan masalah di GitHub jika Anda perlu melakukan ini) Sitemap
+    * Sekarang ada dukungan untuk menghasilkan [Skema Croissant](https://docs.mlcommons.org/croissant/docs/croissant-spec.html) file. Hal ini pada secara default. Anda dapat menonaktifkan skema Croissant di setuppxml Anda dengan (TIDAK PERINTAH - Mohon menjangkau atau mengajukan masalah di GitHub jika anda perlu melakukan ini) :
     ```
         <generateCroissantSchema>false</generateCroissantSchema>
     ```
 
-    * Beberapa pengaturan memiliki nilai default mereka berubah. useHeadersForUrl dan useEddReflection sekarang baik default untuk benar. Jika mereka menyebabkan masalah dan Anda perlu mengatur mereka untuk palsu, silakan buat masalah. Tujuannya adalah untuk menghapusnya dalam rilis masa depan.
+    * Beberapa pengaturan telah mengubah nilai baku mereka. Use HeadersForUrl and useEddReflection now both default to true. Jika mereka menyebabkan masalah dan Anda perlu untuk mengatur mereka untuk palsu, silahkan membuat masalah. Tujuannya adalah untuk menghapus mereka dalam rilis masa depan.
 
-    * Beberapa pengaturan telah dihapus. useSharedWatchService dan redirectDocumentation ToGitHubIo telah ditetapkan untuk benar secara default untuk beberapa rilis dan cukup baik diuji pada titik ini. Menghapus ini diperbolehkan untuk beberapa pembersihan kode.
+    * Beberapa pengaturan telah dihapus. Use Shared WatchService and redirectDokumentasi ToGitHublo telah diatur ke true secara baku untuk beberapa rilis dan telah diuji cukup baik pada saat ini. Menghapus ini diperbolehkan untuk pembersihan kode.
 
     * Beberapa perubahan kecil, perbaikan bug, dan optimasi.
 
-*    **Sitemap ERDDAP™ Pengembang:** 
+*    **Untuk ERDDAP™ Pengembang:** 
     * Banyak kode mati dihapus. Banyak peringatan tetap.
 
-## Versi 2.27.0{#version-2270} 
+## Versi 2.27,0{#version-2270} 
  (dirilis 2025-06-11) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * Data baru untuk converter warnabar pada server di /erddap/convert/color.html
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * Data baru ke converter batang warna di server pada / erddap / convert / color.html
 
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Perilaku default adalah bahwa cache sekarang akan dibersihkan independen tugas dataset beban utama. Ini akan memungkinkan untuk menghapus file cache yang lebih andal dan teratur. Ada pekerjaan tambahan untuk meningkatkan perilaku server ketika rendah di ruang disk (mengembalikan kesalahan untuk permintaan mungkin untuk membuat server keluar dari ruang, dan membersihkan cache lebih sering dalam keadaan disk rendah untuk mencoba untuk mencegah kesalahan) Sitemap Sitemap datasets.xml   (atau setup.xml) Anda dapat menambahkan / mengatur cache baru Jelaskan parameter untuk mengontrol seberapa sering server memeriksa untuk menghapus cache. Catatan, parameter cacheMinutes yang ada mengontrol usia file yang akan disimpan, cache baru ClearMinutes adalah untuk seberapa sering melakukan kekacauan.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Perilaku baku adalah bahwa cache sekarang akan dibersihkan independen dari tugas penanggalan data utama. Ini akan memungkinkan lebih handal dan reguler membersihkan berkas cache lama. Ada pekerjaan tambahan untuk meningkatkan perilaku server ketika rendah pada ruang disk (mengembalikan kesalahan untuk permintaan kemungkinan untuk membuat server kehabisan ruang, dan membersihkan cache lebih sering dalam keadaan disk rendah untuk mencoba untuk mencegah kesalahan) . Masuk datasets.xml   (atau setup.xml) anda dapat menambah / menata cache baru Parameter ClearMinutes untuk mengontrol seberapa sering pemeriksaan server untuk membersihkan cache. Catatan, parameter cacheMinutes yang ada mengontrol usia berkas yang akan disimpan, cache baru ClearMinutes adalah untuk seberapa sering melakukan chache jelas.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
-Anda dapat menonaktifkan cek yang jelas cache baru dengan mengatur tugasCacheClear untuk palsu dalam setup.xml, meskipun itu tidak dianjurkan.
-Login ClearMinutes juga di [Database](/docs/server-admin/datasets#cacheclearminutes) Sitemap
+Anda dapat menonaktifkan cache clear cek baru dengan menata taskCacheClear ke false dalam setuppxml, meskipun itu tidak disarankan.
+cache ClearMinutes juga di [dokumentasi dataset](/docs/server-admin/datasets#cacheclearminutes) .
     
-    * Dukungan metadata dataset lokal. Ini mendukung lokalisasi nilai dalam addAttributes Sitemap Cukup tambahkan atribut dengan tag xml tambahan: lang. Misalnya untuk menambahkan judul Prancis ke dataset Anda addAttributes bagian akan mencakup:
+    * Dukungan metadata terlokalisasi. Ini mendukung lokalisasi untuk nilai dalam addAttributes bagian. Cukup tambahkan atribut dengan xml tambahan: tag lang. Sebagai contoh untuk menambahkan judul Perancis ke sebuah dataset Anda addAttributes daerah akan termasuk:
     ```
         <att name="title">Data from a local source.</att>
         <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
     ```
-Rincian tambahan yang tersedia di [Metadata database](/docs/server-admin/localized-metadata) Sitemap
+Rincian tambahan tersedia di [dokumentasi metadata lokal](/docs/server-admin/localized-metadata) .
 
-    * Docker Baru Menentukan file dengan pilihan untuk SSL dan barebones Prometheus server. Berkat Shane St. Savage untuk SSL dan Jiahui Hu untuk Prometheus.
+    * Docker Baru Buat berkas dengan pilihan untuk SSL dan server Prometheus tanpa tulang. Berkat Shane St. Savage untuk SSL dan Jiahui Hu untuk Prometheus.
 
-    * Dukungan untuk menggunakan informasi di header untuk menentukan URL server alih-alih mengandalkan file konfigurasi. Ini akan memungkinkan server untuk diakses oleh beberapa nama dan dapat menyederhanakan konfigurasi tertentu. Harap aktifkan dan kirim umpan balik.
+    * Dukungan untuk memakai informasi dalam header untuk menentukan URL server daripada mengandalkan berkas konfigurasi. Ini akan memungkinkan server untuk diakses dengan beberapa nama dan dapat menyederhanakan konfigurasi tertentu. Tolong aktifkan dan kirim umpan balik.
     ```
         <useHeadersForUrl>true</useHeadersForUrl>
     ```
 
     * Beberapa perubahan kecil, perbaikan bug, dan optimasi.
 
-*    **Sitemap ERDDAP™ Pengembang:** 
-    * Refactor untuk bagaimana jenis file output didefinisikan dalam kode. Ini harus membuatnya sehingga jenis file dapat ditambahkan tanpa perlu menyentuh banyak tempat kode.
+*    **Untuk ERDDAP™ Pengembang:** 
+    * Refactor ke bagaimana tipe berkas keluaran didefinisikan dalam kode. Ini harus membuatnya sehingga tipe file dapat ditambahkan tanpa perlu menyentuh banyak tempat kode.
 
 ## Versi 2.26{#version-226} 
  (dirilis 2025-03-31) 
 
 *    **Untuk Semua:** 
-    * Pembaruan besar ke situs dokumentasi kami:https://erddap.github.io/
-Selain tampilan yang diperbarui ada navigasi yang lebih baik, pencarian, terjemahan, dan harus lebih mudah untuk menjaga ke depan&#33;
+    * Pemutakhiran besar ke situs dokumentasi kami: https://erddap.github.io/
+ 
+Selain penampilan terbaru ada peningkatan navigasi, pencarian, terjemahan, dan seharusnya lebih mudah untuk mempertahankan maju&#33;
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * Langganan dan RSS pembaruan harus terjadi lebih andal untuk dataset yang sering diperbarui dari perubahan file.
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * Berlangganan dan RSS pemutakhiran harus terjadi lebih berguna bagi dataset yang sering diperbarui dari perubahan berkas.
 
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Rilis default memerlukan / mendukung Java versi 21. Kembali dalam rilis ini dapat dengan mudah membuat Java 17 biner kompatibel.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Rilis baku memerlukan / dukungan Java versi 21 kembali rilis ini dapat dengan mudah membuat Java 17 biner yang cocok.
 
-    * Fitur baru untuk menyesuaikan informasi yang ditampilkan tentang set data di UI. Kami berharap ini sangat berguna untuk menambahkan hal-hal seperti eksitasi dataset. Untuk detail lebih lanjut, Anda dapat membaca [dokumentasi baru](/docs/server-admin/display-info) Sitemap Terima kasih kepada Ayush Singh untuk kontribusi&#33;
+    * Fitur baru untuk menyesuaikan informasi yang ditampilkan tentang dataset di UI. Kami mengharapkan ini akan sangat berguna untuk menambahkan hal-hal seperti kutipan dataset. Untuk rincian lebih lanjut Anda dapat membaca [dokumentasi baru](/docs/server-admin/display-info) . Berkat Ayush Singh untuk kontribusi&#33;
 
-    * metrik Prometheus tambahan. Yang terbesar adalah ` http _request_duration_detik` yang mencakup waktu respon permintaan rusak oleh: "request_type", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
-Format yang dapat dibaca mesin ini akan memungkinkan pengumpulan metrik yang lebih baik untuk memahami bagaimana pengguna menggunakan server.
+    * Tambahan metrik Prometheus. Yang terbesar adalah ` http _ Permintaan _ durasi detik` yang meliputi waktu balasan permintaan dipecah oleh: "request _ type", "dataset _ id", "dataset _ type", "file _ type", "lang _ code", "status _ code",
+Format dapat dibaca mesin ini akan memungkinkan koleksi metrik yang lebih baik untuk memahami bagaimana pengguna menggunakan server.
 
-    * Cara baru untuk menghasilkan file XML ISO19115. Menggunakan Apache SIS dan merupakan pilihan baru dalam rilis ini. Harap aktifkan dan kirim umpan balik.
+    * Cara baru untuk membuat berkas XML ISO19115. Menggunakan Apache SIS dan adalah pilihan baru dalam rilis ini. Tolong aktifkan dan kirim umpan balik.
     ```
         <useSisISO19115>true</useSisISO19115>
     ```
 
-    * UI sekarang akan membuat tautan individual untuk setiap url di bidang seperti infoUrl dan ringkasan.
+    * UI sekarang akan membuat link individu untuk setiap url dalam bidang seperti infoUrl dan ringkasan.
 
-    * Langganan dan RSS pembaruan harus terjadi lebih andal untuk dataset yang sering diperbarui dari perubahan file. Jika ini menyebabkan masalah, silakan hubungi GitHub dan menonaktifkan fungsi dengan menambahkan bendera di bawah ini ke setup Anda.xml.
-Sitemap
+    * Berlangganan dan RSS pemutakhiran harus terjadi lebih berguna bagi dataset yang sering diperbarui dari perubahan berkas. Jika hal ini menyebabkan masalah, mohon menjangkau GitHub dan menonaktifkan fungsionalitas dengan menambahkan bendera di bawah ini ke setup-xml Anda.
+TIDAK DIPERINTAH KEMBALI
     ```
         <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
     ```
 
-    * Subset variabel tidak akan lagi dihasilkan secara otomatis untuk jenis dataset EDDTableDariNcCFFiles. Jika Anda mengandalkan perilaku, Anda dapat baik Meme it (solusi yang lebih disukai) Login subsetVariables untuk definisi dataset Anda datasets.xml , atau tambahkan bendera di bawah ini ke setup.xml Anda. Jika Anda merasa perlu untuk mengubah ini, silakan hubungi GitHub sehingga kami dapat lebih baik mendukung kasus penggunaan Anda bergerak maju.
-Sitemap
+    * Variabel subset tidak akan lagi dihasilkan untuk tipe data EDTableFromNCFFIles. Jika Anda mengandalkan perilaku, Anda dapat baik (prefered solusi) tambahkan subsetVariables ke definisi data dalam anda datasets.xml , atau menambahkan bendera di bawah ke setup.xml Anda. Jika Anda merasa perlu untuk menghidupkan ini, silakan menjangkau GitHub sehingga kami dapat mendukung lebih baik kasus penggunaan Anda bergerak maju.
+TIDAK DIPERINTAH KEMBALI
     ```
     <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
     ```
 
-    * Server sekarang akan mengarahkan permintaan dokumentasi (di bawah download / yang merupakan dokumentasi yang telah dimigrasi) ke situs dokumentasi baru. Jika diperlukan Anda dapat menonaktifkan ini dengan bendera di setup.xml:
-Sitemap
+    * Server sekarang akan mengarahkan ulang permintaan dokumentasi (di bawah pengunduhan / yang merupakan dokumentasi yang telah dimigrasi) ke situs dokumentasi baru. Jika diperlukan Anda dapat menonaktifkannya dengan bendera di setuppxml:
+TIDAK DIPERINTAH KEMBALI
     ```
         <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
     ```
 
     * Beberapa perubahan kecil dan perbaikan bug.
 
-*    **Sitemap ERDDAP™ Pengembang:** 
-    * Peningkatan kualitas kode dan pembersihan kode mati. Ini termasuk optimasi kecil, penanganan sumber daya yang lebih baik, dan memigrasikan jauh dari jenis data usang panjang (seperti vektor) Sitemap
+*    **Untuk ERDDAP™ Pengembang:** 
+    * Lebih banyak peningkatan kualitas kode dan pembersihan kode mati. Ini termasuk optimasi kecil, penanganan yang lebih baik dari sumber daya yang dapat ditutup, dan bermigrasi jauh dari jenis data lama usang (seperti Vektor) .
 
-    * Refactoring besar untuk EDStatic untuk menarik sebagian besar konfigurasi, pesan, dan kode metrik. Ini juga lebih enkapsulatisasi dan penanganan jalur direktori (2 terakhir ini lebih harus dilakukan.) 
+    * Refactoring besar ke EDStatic untuk mengeluarkan sebagian besar konfigurasi, pesan, dan kode metrik. Ini juga lebih baik menkapsul inisialisasi dan penanganan dari path direktori (ini 2 terakhir memiliki lebih untuk dilakukan.) 
 
-    * Banyak kemajuan menuju Gambar Docker yang didukung secara resmi. Rencananya adalah untuk menyelesaikan dan melepaskan setelah ERDDAP™ 2.26 rilis tersedia.
+    * Banyak kemajuan menuju secara resmi didukung Docker Image. Rencananya adalah untuk menyelesaikan dan melepaskan setelah ERDDAP™ 2.26 rilis tersedia.
 
 ## Versi 2.25{#version-225} 
- (dirilis 2024-10-31) 
+ (dirilis 2024- 10-31) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * EDDTableDaris sekarang dapat mendukung pertanyaan dengan hanya output yang berasal (global, skrip jexl, atau variabel) Sitemap
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * EDTableFromFiles kini dapat mendukung kueri hanya dengan keluaran turunan (global, jexl script, atau variabel) .
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
     * Versi 2.25 membutuhkan Java 21 atau lebih baru. Ini adalah versi LTS dan telah tersedia selama lebih dari setahun.
          
-    * The SharedWatchService sekarang default. Jika Anda perlu menonaktifkannya, silakan hubungi chris. john di noaa.gov untuk membiarkan saya tahu, jadi saya dapat meningkatkannya dalam versi masa depan dan menambahkan:
-        &lt;Sitemap&lt;/useSharedWatchService&gt; untuk setup Anda.xml.
+    * The SharedWatchService sekarang default. Jika Anda perlu untuk menonaktifkannya, silakan hubungi chris. john di noa.gov untuk membiarkan saya tahu, jadi saya bisa meningkatkan dalam versi masa depan dan menambahkan:
+        &lt;Use Shared WatchService &gt; false&lt;/ Use Shared WatchService &gt; to your setuppxml.
          
-    * Login ERDDAP™ servlet sekarang akan mulai di server startup. Yang berarti dataset akan mulai memuat segera daripada menunggu sampai permintaan dibuat.
+    * The ERDDAP™ serlet sekarang akan mulai di server startup. Yang berarti dataset akan mulai memuat segera bukannya menunggu sampai permintaan dibuat.
          
-    * Parameter removeMVRows di EDDTableDariMultidimNcFiles sekarang akan memiliki efek. Menyiapkannya ke palsu mungkin secara signifikan mempercepat beberapa pertanyaan, tetapi ini mungkin tidak cocok untuk semua set data. Untuk informasi lebih lanjut [Deskripsi parameter](/docs/server-admin/datasets#removemvrows) Sitemap
+    * Parameter removeMVRows dalam EDDTableFromMultidimNcFiles sekarang akan memiliki efek. Setting ke salah dapat secara signifikan mempercepat beberapa kueri, tapi ini mungkin tidak cocok untuk semua tanggal. Untuk informasi lebih lanjut lihat [deskripsi parameter](/docs/server-admin/datasets#removemvrows) .
          
-    * Login (EDDTableDariNcFiles dan EDDGrid Login) menggunakan file zarr sekarang didukung. Mereka harus menyertakan "zarr" dalam fileNameRegex atau pathRegex. Sitemap [detik zarr dalam dokumentasi dataset](/docs/server-admin/datasets#zarr) untuk informasi lebih lanjut.
+    * Dataset (EDTableFromNcFiles dan EDDGrid FromNcFiles) memakai berkas zarr kini didukung. Mereka harus memasukkan "zarr" baik dalam fileNameRegex atau pathRegex. Lihat [Zarr secion dalam dokumentasi dataset](/docs/server-admin/datasets#zarr) untuk rincian lebih lanjut.
          
-    * Jenis dataset baru, EDDTableDariParquetFiles sekarang didukung. Sitemap [EDDTableDariParquetFiles secion dalam dokumentasi dataset](/docs/server-admin/datasets#eddtablefromparquetfiles) untuk informasi lebih lanjut.
+    * Tipe data baru, EDTableFromParquetFiles kini didukung. Lihat [EDTableFromParquetFiles secion dalam dokumentasi dataset](/docs/server-admin/datasets#eddtablefromparquetfiles) untuk rincian lebih lanjut.
          
-    *    [Prometheus metrik](https://prometheus.io/) sekarang tersedia di /erddap/metrik.
+    *    [Metrik Prometheus](https://prometheus.io/) sekarang tersedia di / erddap / metrik.
          
-    * Implementasi parser XML baru tersedia. Parser baru ini memungkinkan menggunakan XInclude in datasets.xml Sitemap Berkat Ayush Singh untuk fitur.
+    * Aplikasi pengurai XML baru tersedia. Parser baru ini memungkinkan memakai XInclude in datasets.xml . Berkat Ayush Singh untuk fitur.
          
-    * parameter baru dalam datasets.xml untuk mengontrol email aktivitas yang tidak biasa. Sitemap Kegagalan default untuk nilai lama 25%. Berkat Ayush Singh untuk fitur.
+    * Parameter baru dalam datasets.xml untuk mengontrol email aktivitas yang tidak biasa. unusualActivity Persent default ke nilai lama dari 25%. Berkat Ayush Singh untuk fitur.
          
-    * Parameter baru dalam setup.xml yang mengontrol jika kesalahan pemuatan dataset ditampilkan pada halaman status.html. Secara default untuk benar, untuk menonaktifkan kesalahan dataset pada halaman status, set showLoadErrorsOnStatusPage untuk palsu:&lt;showLoadErrorsOnStatusPage&gt;false&lt;/showLoadErrorsOnStatusPage&gt;
+    * Parameter baru dalam setup.xml yang mengontrol jika kesalahan pemuatan data ditampilkan pada halaman status. html. Baku untuk true, untuk mematikan kesalahan dataset pada halaman status, atur showLoadErrorsOnStatusPage ke false:&lt;showLoadErrorsOnStatusPage &gt; false&lt;/ showLoadErrorsOnStatusPage &gt;
          
     * Beberapa perubahan kecil dan perbaikan bug.
          
-*    **Sitemap ERDDAP™ Pengembang:** 
-    * Pengujian dipisahkan ke unit dan integrasi (Login) Sitemap Juga lebih banyak tes diaktifkan dan tes telah dibuat kurang flaky.
+*    **Untuk ERDDAP™ Pengembang:** 
+    * Testing dipisahkan ke unit dan integrasi (lambat) tes. Juga lebih banyak tes diaktifkan dan tes telah dibuat kurang flaky.
          
-    * Prone Kesalahan (beberapa cek masih dinonaktifkan) dan Spot Bugs terintegrasi melalui Maven.
+    * Prone Galat (beberapa pemeriksaan masih dinonaktifkan) dan Bugs Spot terintegrasi melalui Maven.
          
     * Basis kode penuh diformat untuk mencocokkan Panduan Gaya Google.
          
@@ -217,58 +231,59 @@ Sitemap
 ## Versi 2.24{#version-224} 
  (dirilis 2024-06-07) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * Palet warna baru EK80 untuk dataset akustik tersedia. Terima kasih kepada Rob Cermak untuk ini.
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * Palet warna baru EK80 untuk data akustik yang tersedia. Berkat Rob Cermak untuk ini.
          
-    * Memperbaiki masalah di mana EDDTableAggregateRows tidak menunjukkan kisaran yang tepat dari semua anak-anak. Berkat Marco Alba untuk laporan perbaikan dan bug.
+    * Fixen sebuah isu di mana EdDTableAggregates Rows tidak menunjukkan rentang yang tepat dari semua anak-anak. Berkat Marco Alba untuk memperbaiki dan laporan bug.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * TO DO: CHANGE SECURITAS: Google Authentication mungkin memerlukan perubahan pada CSP Anda.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * KEAMANAN PERUBAHAN: Otentikasi Google mungkin memerlukan perubahan bagi CSP Anda.
         
-Secara spesifik, Anda mungkin juga perlu menambahkanhttps://accounts.google.com/gsi/styleuntuk stlye-src danhttps://accounts.google.com/gsi/untuk menghubungkan-src. Untuk script-src Anda sekarang dapat menggunakanhttps://accounts.google.com/gsi/client.
+Secara khusus, Anda mungkin juga perlu menambahkan https://accounts.google.com/gsi/style untuk stlye- src dan https://accounts.google.com/gsi/ ke connect- src. Untuk script- src Anda sekarang dapat menggunakan https://accounts.google.com/gsi/client.
+ 
         
-Untuk informasi lebih lanjut, Anda dapat pergi ke [Sitemap](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid#content_security_policy) tentang konfigurasi CSP.
+Untuk informasi lebih lanjut Anda dapat pergi ke [Halaman Google](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid#content_security_policy) tentang konfigurasi CSP.
          
         
-    * Layanan Watch Bersama Baru. Ini adalah pilihan baru untuk menonton direktori untuk pembaruan. Ini memiliki satu benang untuk setiap sistem file bukan satu benang per dataset. Kemungkinan besar ini akan secara drastis mengurangi jumlah benang yang digunakan untuk melihat perubahan. Ini berarti semua dataset diperbarui bersama-sama daripada setiap dataset memiliki frekuensi pembaruan sendiri. Kemungkinan besar ini akan berarti lebih sering update untuk sebagian besar dataset.
+    * New Shared Watch Service. Ini adalah opsi baru untuk menonton direktori untuk pemutakhiran. Ia memiliki satu benang untuk setiap sistem berkas bukan satu thread per dataset. Kemungkinan besar ini akan mengurangi secara drastis jumlah benang yang digunakan untuk menonton perubahan. Ini berarti semua dataset dapat diperbarui bersama-sama bukannya masing-masing data memiliki frekuensi update sendiri. Kemungkinan besar ini akan berarti lebih sering update untuk sebagian besar tanggal.
         
-Untuk mengaktifkan add ini&lt;Sitemap&lt;/useSharedWatchService&gt; untuk setup Anda.xml.
+Untuk mengaktifkan penambahan ini&lt;Use Shared WatchService &gt; true&lt;/ Use Shared WatchService &gt; to your setuppxml.
         
           
-Silahkan coba ini dan laporan kembali bagaimana bekerja untuk Anda untuk chris. WordPress.org
+Silakan mencoba ini dan melaporkan kembali bagaimana ia bekerja bagi Anda untuk chris. john di noaa.gov
          
-    * Perbaiki nama var yang salah dalam log. Berkat Ayush Singh untuk perbaikan.
+    * Perbaiki nama var yang salah dalam log. Berkat Ayush Singh untuk memperbaiki.
          
     * Beberapa perubahan kecil dan perbaikan bug.
          
-*    **Peningkatan ERDDAP™ pengembang:** 
-    * Dukungan untuk pembangunan lokal menggunakan Docker. Terima kasih Matt Hopson dan Roje.
+*    **Improvices for ERDDAP™ pengembang:** 
+    * Dukungan bagi pengembangan lokal memakai Docker. Terima kasih Matt Hopson dan Roje.
          
-    * Dukungan untuk pengembangan lokal menggunakan perbaikan Jetty dan dokumentasi. Dan Wengren
+    * Dukungan bagi pengembangan lokal memakai perbaikan Jetty dan dokumentasi. Terima kasih Micah Wengren.
          
-    * Perubahan untuk menguji untuk mengurangi masalah lintas platform. Sitemap Mr. Victor Yang
+    * Perubahan pada tes untuk mengurangi masalah lintas platform. Terima kasih Shane St. Savage.
          
 
 ## Versi 2.23{#version-223} 
  (dirilis 2023-02-27) 
 
-Perhatikan bahwa rilis ini dilakukan oleh Bob Simons, sehingga menunjukkan bahwa dia masih sekitar dan aktif selama transisi ke Chris John, penerusnya. Bersantai dengan rilis ini, semua perubahan kode dilakukan oleh Chis John, kecuali ditentukan sebaliknya.
+Perhatikan bahwa rilis ini dilakukan oleh Bob Simons, sehingga menunjukkan bahwa ia masih ada dan aktif selama transisi ke Chris John, penggantinya. Stating dengan rilis ini, semua perubahan kode sedang dilakukan oleh Chis John, kecuali dinyatakan sebaliknya.
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    *    (Login)   
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    *    (Nihil)   
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * TO DO: CHANGE SECURITAS: Google Authentication sekarang dicapai melalui perpustakaan Layanan Identitas Google baru yang merupakan bagian dari "Sign In with Google". Dukungan Google untuk sistem "Google Sign In" lama akan dihentikan 2023-03-31. Jadi jika Anda menggunakan Google Authentication di Anda ERDDAP™ instalasi, Anda pembaruan MUST untuk ERDDAP™ v2.23+ sebelum itu. (Bob maaf untuk pemberitahuan singkat. Ini adalah kesalahan Bob.)   
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * KEAMANAN PERUBAHAN: Otentikasi Google kini dicapai melalui pustaka Layanan Identitas Google baru yang merupakan bagian dari "Sign In dengan Google". Dukungan Google bagi sistem lama "Google Sign In" akan dihentikan 2023-03-31. So if you use Google Authentication in your ERDDAP™ instalasi, Anda HARUS update ke ERDDAP™ V2.23 + sebelum itu. (Bob minta maaf untuk pemberitahuan singkat. Ini salah Bob.)   
          
-    * IMPROVED: NCCSV sekarang v1.2. Perubahan adalah bahwa file sekarang UTF-8-encoded (mereka adalah ASCII) dan sekarang dapat menyertakan karakter Unicode seperti, tanpa pengkodean sebagai \\ u_hhhh_, meskipun itu masih diperbolehkan.
-Saat menulis file NCCSV, ERDDAP™ sekarang menulis file v1.2.
-         ERDDAP™ masih akan membaca file NCCSV yang mengikuti spesifikasi v1.0 dan v1.1.
-Berkat Pauline-Chauvet, n-a-t-e, dan thogar-komputer untuk menyarankan ini dan melakukan tes untuk memastikan berbagai program spreadsheet dapat mengimpor file UTF-8. Berkat Bob Simons untuk perubahan kode ini.
+    * NCCSV sekarang v1.2. Perubahan adalah bahwa berkas sekarang UTF- 8- dikodekan berkas (Mereka adalah ASCII) dan sekarang dapat memasukkan karakter Unicode apapun seperti ini, tanpa pengkodean sebagai\\ u _ hhhh _, meskipun yang masih diperbolehkan.
+Ketika menulis berkas NCCSV, ERDDAP™ Sekarang tulis berkas v1.2.
+         ERDDAP™ akan masih membaca berkas NCCSV yang mengikuti spesifikasi v1.0 dan v1.1.
+Berkat Pauline- Chauvet, n-a-te, dan thogar- komputer untuk menyarankan ini dan melakukan tes untuk memastikan berbagai program spreadsheet dapat mengimpor berkas UTF-8. Berkat Bob Simons untuk perubahan kode ini.
          
-    * BARU: Halaman web status.html sekarang memiliki garis di dekat bagian atas yang menunjukkan bahwa loadDataset dataset saat ini memuat dan statistik terkait, atau tidak ada dataset sedang dimuat. Ini bisa sangat membantu ERDDAP™ administrator mencoba mencari tahu mengapa beban Dataset memakan waktu lama. Juga, nGridDatasets, nTableDatasets, dan nTotalDatasets dihitung di bawah ini yang sekarang sesaat (sebelumnya, mereka adalah sebagai akhir dari beban utama terakhir Login) Sitemap
+    * NEW: Halaman web status.html kini memiliki baris di dekat bagian atas yang mengindikasikan loadDataset data mana yang saat ini memuat dan terkait statistik, atau tak ada data yang dimuat. Ini bisa sangat membantu ERDDAP™ administrator mencoba untuk mencari tahu mengapa memuat Dataset sangat lama. Juga, jumlah nGridDatasets, nTableDatset, dan nTotalDatasets di bawah ini yang sekarang seketika (Sebelumnya, mereka sebagai akhir dari beban utama terakhir Dataset) .
 Perubahan ini untuk Roy Mendelssohn. Berkat Bob Simons untuk perubahan kode ini.
          
-    * IMPROVED: GenerateDataset Xml sekarang berubah menjadi CF-1.10 (adalah CF-1.6) dalam atribut "Conventions".
+    * TERLIBAT: GenerateDatasets Xml sekarang berubah ke CF-1.10 (adalah CF- 1.6) dalam atribut "Konvensi".
 Berkat Bob Simons untuk perubahan kode ini.
          
     * Beberapa perubahan kecil dan perbaikan bug.
@@ -277,19 +292,19 @@ Berkat Bob Simons untuk perubahan kode ini.
 ## Versi 2.22{#version-222} 
  (dirilis 2022-12-08) 
 
-Perhatikan bahwa rilis ini dilakukan oleh Bob Simons, sehingga menunjukkan bahwa dia masih sekitar dan aktif selama transisi ke penerusnya.
+Perhatikan bahwa rilis ini dilakukan oleh Bob Simons, sehingga menunjukkan bahwa ia masih ada dan aktif selama transisi untuk penggantinya.
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    *    (Login)   
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    *    (Nihil)   
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * DILAKUKAN: tidak ada.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * UNTUK LAKUKAN: apa-apa.
          
-    * SECURITAS BUG FIX: Ada bug terkait Scripting Cross Site dalam kode untuk pemilihan bahasa turun. Sitemap NOAA pemindaian keamanan untuk menangkap ini. Ini menunjukkan bahwa NOAA keamanan aktif dan secara rutin mencari kelemahan keamanan dalam ERDDAP Sitemap
+    * KEAMANAN BUG FIX: Ada bug Sirip Skriptin Cross yang terkait dalam kode untuk pemilihan bahasa drop down. Terima kasih NOAA Pemindai keamanan untuk menangkap ini. Ini menunjukkan bahwa NOAA keamanan aktif dan rutin mencari kelemahan keamanan dalam ERDDAP .
          
-    * SECURITAS FIX: Banyak perpustakaan yang digunakan oleh ERDDAP™ diperbarui, seperti biasa, sebagai bagian dari rilis ini. Kali ini, ini termasuk memperbarui driver PostgreSQL (yang memiliki bug keamanan) ke 42.5.1.
+    * FIX KEAMANAN: Banyak perpustakaan yang digunakan oleh ERDDAP™ yang diperbarui, seperti biasa, sebagai bagian dari rilis ini. Kali ini, ini termasuk memperbarui driver PostgreSQL (yang memiliki bug keamanan) ke 42.5.1.
          
-    * IMPROVED: Lebih banyak perubahan kecil untuk ERDDAP Sistem manajemen memori harus mengurangi kemungkinan permintaan yang diberikan gagal karena kurangnya memori yang tersedia.
+    * INTERROVED: Lebih kecil perubahan ke ERDDAP sistem manajemen memori seharusnya mengurangi kesempatan dari permintaan yang diberikan karena kekurangan memori yang tersedia.
          
     * Beberapa perubahan kecil dan perbaikan bug.
          
@@ -297,187 +312,187 @@ Perhatikan bahwa rilis ini dilakukan oleh Bob Simons, sehingga menunjukkan bahwa
 ## Versi 2.21{#version-221} 
  (dirilis 2022-10-09) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    *    (Login)   
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    *    (Nihil)   
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * TO DO: Untuk Java 17, Anda tidak boleh menggunakan \\-d64 di JAVA\\_OPTS dalam setenv.bat atau setenv.sh. Jadi jika ada, silakan hapus. Meme it Saya pikir mode 64 bit sekarang dipilih ketika Anda mengunduh versi 64 bit Java Sitemap Berkat Sam Woodman.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * UNTUK: Java 17, Anda tidak harus menggunakan\\ -d64 dalam JAVA\\ _ OPTS dalam setenv.bat atau setenv.sh.. Jadi jika ada, tolong lepaskan. Saya berpikir bahwa mode 64 bit sekarang dipilih ketika Anda mengunduh versi 64 bit dari Java . Berkat Sam Woodman.
          
-    * Login: Kadang-kadang, sistem email baru mencoba masuk terlalu sering, yang menyebabkan server Google Email untuk menolak semua log masa depan dalam upaya. Sekarang, sistem email menghindari masalah ini dan terkait.
+    * BUG FIX: Terkadang, sistem surel baru mencoba masuk terlalu sering, yang menyebabkan server Google Email menolak semua log masa depan dalam percobaan. Sekarang, sistem email menghindari masalah ini dan terkait.
          
 
 ## Versi 2.20{#version-220} 
  (dirilis 2022-09-30) 
 
-*    **Jangan gunakan v2.20. Ini sempurna.** Tapi administrator masih perlu melakukan barang-barang TO DO yang tercantum di bawah ini ketika upgrade ke v2.21+.
+*    **Jangan gunakan v2.20. Ini cacat.** Tapi administrator masih perlu melakukan item TO DO terdaftar di bawah ketika meningkatkan ke v2.21 +.
      
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    *    (Login)   
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    *    (Nihil)   
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * IMPROVED: Kami dapat kembali sistem manajemen memori lama (Math. & Trigonom.) dan memodifikasi sistem manajemen memori baru (Login) bekerja lebih baik dengan itu. Meme it Sitemap [Status Memori](/docs/server-admin/additional-information#memory-status) Sitemap
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Kami mengaktifkan sistem manajemen memori lama (Math2.ensurected MemoryReported) dan mengubah sistem manajemen memori baru (EDStatic.shedThisRequest) untuk bekerja lebih baik dengan itu. Lihat [Status Memori](/docs/server-admin/additional-information#memory-status) untuk rincian.
          
-    * CHANGED: default untuk&lt;Login Sitemap datasets.xml meningkat dari 7 sampai 15. Jelas bahwa beberapa sah Meme it WMS klien dapat menghasilkan lebih dari 7 permintaan simultan.
+    * PERUBAHAN: standar untuk&lt;ipAddressMaxRequests &gt; in datasets.xml meningkat dari 7 sampai 15. Jelas bahwa beberapa sah WMS Klien dapat menghasilkan lebih dari 7 permintaan bersamaan.
          
 
 ## Versi 2.19{#version-219} 
  (dirilis 2022-09-01) 
 
-*    **Jangan gunakan v2.19. Ini sempurna.** Tapi administrator masih perlu melakukan TO DO item yang tercantum di bawah ini ketika upgrade ke v2.20+.
+*    **Jangan gunakan v2.19. Ini cacat.** Tapi administrator masih perlu melakukan item TO DO terdaftar di bawah ketika meningkatkan ke v2.20 +.
      
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * BARU: Ada fungsi sisi server baru, orderBy Descending, yang bekerja seperti orderBy tapi menyortir urutan turun. Terima kasih kepada Adam Leadbetter.
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * Ada fungsi samping pelayan baru, orderBy Turun, yang bekerja seperti orderBy , tapi jenis dalam urutan menurun. Berkat Adam Leadbetter.
          
-    * IMPROVED: Sekarang, grafik (tapi tidak peta) akan memperluas untuk mengisi ruang yang tersedia di kanvas, yaitu, ruang tidak digunakan oleh legenda. Anda bisa mendapatkan grafik tinggi, grafik persegi, atau grafik lebar dengan menambahkan dan memanipulasi & ukuran=_lebar_ | Sitemap (di mana lebar dan tinggi menentukan ukuran kanvas, dalam piksel) URL permintaan. (Ini bukan pilihan di halaman web .graph. Anda harus menambahkannya ke URL secara manual.) Jika Anda tidak menentukan parameter & ukuran, permintaan untuk .smallPng, .png, .bigPng, .smallPdf, .pdf, dan .large.pdf memiliki ukuran kanvas yang telah ditentukan, sehingga grafik Anda akan memperluas untuk mengisi ruang yang tersedia, tetapi biasanya akan kira-kira persegi. Terima kasih kepada Bob Fleming.
+    * Sekarang, grafik (tapi bukan peta) akan memperluas untuk mengisi ruang yang tersedia pada kanvas, yaitu, ruang tidak digunakan oleh legenda. Anda dapat memperoleh grafik tinggi, grafik persegi, atau grafik lebar dengan menambahkan dan memanipulasi & .size = _ width _ | _ parameter tinggi (dimana lebar dan tinggi menyatakan ukuran kanvas, dalam piksel) pada URL permintaan. (Ini bukan pilihan pada halaman web .graph. Anda harus menambahkannya ke URL secara manual.) Jika Anda tidak menspesifikasikan parameter & .size, permintaan untuk .typePng, .png, .largePng, .foy Pdf, .pdf, dan .large.pdf memiliki ukuran kanvas predefined, jadi grafik Anda akan memperluas untuk mengisi ruang yang tersedia, tetapi biasanya menjadi hampir persegi. Berkat Bob Fleming.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Sitemap ERDDAP™ Sitemap Java 17 dan Tomcat terkait 10. Anda harus mengikuti ERDDAP™ instruksi instalasi (atau e.g yang setara, untuk Docker) untuk menginstal Java 17 dan Tomcat 10 dan salin Anda \\[ Login \\] /content direktori dari Tomcat 8 instalasi ke baru \\[ Login \\] Login Tidak ada perubahan lain yang perlu Anda buat ERDDAP instalasi yang berkaitan dengan perubahan ini. Dengan kata lain, ERDDAP™ bekerja seperti sebelumnya.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * TO DO: ERDDAP™ sekarang dibutuhkan Java 17 dan Tomcat 10. Anda harus mengikuti ERDDAP™ instruksi instalasi (atau ekuivalen mis, untuk Docker) untuk memasang Java 17 dan Tomcat 10 dan salin Anda \\[ tomcat \\] / direktori isi dari instalasi Tomcat 8 ke yang baru \\[ tomcat \\] direktori. Tidak ada perubahan lain yang perlu Anda buat untuk Anda ERDDAP instalasi terkait dengan perubahan ini. Dengan kata lain, ERDDAP™ Bekerja seperti sebelumnya.
         
-Jangan lupa untuk membuat Meme it ERDDAP - perubahan terkait ke server Tomcat.xml dan konteks.xml ketika Anda meningkatkan Tomcat. Sitemap ERDDAP Sitemap [Petunjuk instalasi Tomcat](/docs/server-admin/deploy-install#tomcat) Sitemap
+Jangan lupa untuk membuat ERDDAP -related perubahan ke Tomcat server.xml dan context.xml ketika Anda upgrade Tomcat. Lihat ERDDAP ' [Instruksi instalasi Tomcat](/docs/server-admin/deploy-install#tomcat) .
         
-Kesan saya Java 17 adalah bahwa lebih memilih daya pemrosesan dan memori untuk aplikasi yang panjang, lebih besar seperti ERDDAP™ sehingga bekerja sedikit lebih lambat daripada Meme it Java 8 dengan komputer daya rendah (e.g., 2 core dan RAM minimal) dan bekerja sedikit lebih cepat daripada Java 8 dengan komputer daya yang lebih tinggi (e.g., 4+ core dan RAM yang penuh kasih) Sitemap Jadi jika Anda melihat kinerja yang buruk, gunakan program seperti Linux [Login](https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/) untuk memeriksa penggunaan sumber daya dan mempertimbangkan memberikan ERDDAP™ lebih banyak sumber daya, cukup banyak memori. Memori murah&#33; Kebanyakan ponsel memiliki lebih banyak prosesor dan memori daripada server yang beberapa yang Anda gunakan untuk menjalankan ERDDAP Sitemap
-Terima kasih kepada Erin Turnbull.
+Kesan saya Java 17 adalah bahwa itu lebih suka memproses kekuatan dan memori untuk jangka panjang, aplikasi yang lebih besar seperti ERDDAP™ , sehingga bekerja sedikit lebih lambat dari Java 8 dengan komputer daya rendah (mis. 2 core dan minimal RAM) dan bekerja sedikit lebih cepat dari Java 8 dengan komputer daya yang lebih tinggi (mis. 4 + core dan RAM berlimpah) . Jadi jika Anda melihat kinerja buruk, gunakan program seperti Linux [atas](https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/) untuk memeriksa penggunaan sumber daya dan mempertimbangkan memberikan ERDDAP™ lebih banyak sumber daya, terutama lebih banyak memori. Ingatan itu murah&#33; Kebanyakan ponsel memiliki lebih banyak prosesor dan memori daripada server yang Anda gunakan untuk menjalankan ERDDAP &#33;
+Berkat Erin Turnbull.
          
         
-    * TO DO: Jika Anda menggunakan ERDDAP™ untuk mengakses Cassandra, untuk Cassandra, Anda perlu terus menggunakan versi Java yang Anda gunakan untuk menjalankan Cassandra. Cukup beralih ke Java 17 untuk menjalankan Tomcat+ ERDDAP Sitemap
+    * ♪ If you use ERDDAP™ untuk mengakses Cassandra, untuk Cassandra, kau harus terus menggunakan versi Java yang kau gunakan untuk menjalankan Cassandra. Hanya beralih ke Java 17 untuk menjalankan Tomcat + ERDDAP .
          
-    * TO DO: Direkomendasikan: Jika CPU server Anda memiliki 4+ core dan 8 + GB RAM, pertimbangkan perubahan pada pengaturan ini datasets.xml file:
+    * TO DO: Disarankan: Jika CPU server Anda memiliki 4 + core dan 8 + GB RAM, pertimbangkan perubahan ke pengaturan ini dalam Anda datasets.xml berkas:
 ```
           <nGridThreads>3</nGridThreads>  
           <nTableThreads>3</nTableThreads>  
 ```
 
-Jika server Anda memiliki sumber daya yang lebih sedikit, tempelkan ke "1" untuk pengaturan tersebut.
-Sistem nThreads untuk EDDGrid Dari File dan EDDTable Dari File secara signifikan ditingkatkan. Perubahan ini menyebabkan peningkatan kecepatan yang besar (e.g., kecepatan 2X ketika nThreads diatur ke 2 atau lebih) untuk permintaan yang paling menantang (ketika sejumlah besar file harus diproses untuk mengumpulkan hasilnya) Sitemap Beberapa perubahan terkait dari Chris John juga akan menyebabkan kecepatan umum sepanjang ERDDAP Sitemap Kode untuk perubahan ini berkontribusi oleh Chris John. Terima kasih, Login
+Jika server Anda memiliki sumber daya yang lebih sedikit, tetap pada "1" untuk kedua pengaturan tersebut.
+Sistem NThreads untuk EDDGrid FromFiles dan EDTabel FromFiles secara signifikan ditingkatkan. Perubahan ini menyebabkan peningkatan kecepatan besar (mis., kecepatan 2X ketika nThreads diset ke 2 atau lebih) untuk permintaan yang paling menantang (ketika sejumlah besar berkas harus diproses untuk mengumpulkan hasil) . Beberapa perubahan terkait dari Chris John juga akan menyebabkan cepat umum seluruh ERDDAP . Kode untuk perubahan ini berkontribusi oleh Chris John. Terima kasih, Chris&#33;
          
-    * PERINGATAN: hyphens dalam datasetID 's diuraikan dan tidak lagi didukung (meskipun teknis masih diperbolehkan) Sitemap Mereka mungkin akan diizinkan dalam rilis berikutnya. Jika Anda menggunakan hyphens, beralih ke core sekarang untuk menghindari masalah. Jika Anda membuat perubahan sekarang, itu pada kecepatan Anda sendiri. Jika Anda menunggu sampai rilis berikutnya, Anda akan berada di panik dan harus berurusan dengan itu hari itu.
+    * PERINGATAN: tanda hubung di datasetID 's kadaluarsa dan tidak lagi didukung (Meskipun secara teknis masih diperbolehkan) . Mereka mungkin akan dilarang dalam rilis berikutnya. Jika Anda menggunakan tanda hubung, beralih ke garis bawah sekarang untuk menghindari masalah. Jika Anda membuat perubahan sekarang, itu pada kecepatan Anda sendiri. Jika kau menunggu sampai rilis berikutnya, kau akan panik dan harus menghadapinya hari itu.
          
-    * BARU: Sekarang, untuk .htmlTable respon data, jika data dalam sel String mengandung data: gambar/png; base64, diikuti oleh gambar dasar64 yang dikodekan.png, ERDDAP™ akan menampilkan ikon (sehingga pengguna dapat melihat gambar jika mereka menggigit Meme it) dan tombol untuk menyimpan teks atau gambar ke clipboard. Terima kasih kepada Marco Alba (yang berkontribusi pada kode) dan Bob Simon (yang memodifikasinya sedikit) Sitemap
+    * Sekarang, .htmlTable data respons, jika data dalam sel String berisi data: image / png; base64, diikuti oleh base64 dikodekan .png gambar, ERDDAP™ akan menampilkan ikon (sehingga pengguna dapat melihat gambar jika mereka hover di atasnya) dan tombol untuk menyimpan teks atau gambar ke clipboard. Berkat Marco Alba (yang menyumbangkan kode) dan Bob Simons (yang mengubahnya sedikit) .
          
-    * BARU: -doNotAddStandardNames
-Jika Anda menyertakan \\-doNotAddStandardNames sebagai parameter baris perintah ketika Anda menjalankan menghasilkan Login Xml, menghasilkan Login Xml tidak akan menambah standard\\_name Login addAttributes untuk variabel apa pun selain variabel bernama latitude, longitude, ketinggian, kedalaman atau waktu (yang sudah jelas standard\\_name Login) Sitemap Ini dapat berguna jika Anda menggunakan output dari menghasilkan Login Login ERDDAP™ tanpa mengedit output, karena menghasilkan Login Xml sering menebak standard\\_name Sitemap (Perhatikan bahwa kita selalu merekomendasikan bahwa Anda mengedit output sebelum menggunakannya ERDDAP Sitemap) Menggunakan parameter ini akan memiliki efek terkait kecil lainnya karena ditebak standard\\_name sering digunakan untuk tujuan lain, misalnya, untuk membuat baru long\\_name , dan untuk membuat pengaturan warnaBar. Kevin O'Brien
+    * NEW: -doNotAddStandardnames
+Jika Anda menyertakan\\ -doNotAddStandardName sebagai parameter baris perintah ketika Anda jalankan hasilkan Dataset Xml, hasilkan Dataset Xml tidak akan ditambahkan standard\\_name ke addAttributes variabel apapun selain variabel bernama lintang, bujur, ketinggian, kedalaman atau waktu (yang telah jelas standard\\_name s) . Ini dapat berguna jika Anda memakai keluaran dari menghasilkan Dataset Xml langsung masuk ERDDAP™ tanpa menyunting keluaran, karena hasilkan Dataset Xml sering menebak standard\\_name s tidak benar. (Catat bahwa kami selalu merekomendasikan anda untuk menyunting keluaran sebelum menggunakannya ERDDAP .) Menggunakan parameter ini akan memiliki efek terkait minor lainnya karena menebak standard\\_name sering digunakan untuk tujuan lain, misalnya, untuk membuat baru long\\_name , dan untuk membuat pengaturan batang warna. Berkat Kevin O 'Brien.
          
-    * BARU: Sekarang Anda dapat menempatkan&lt;WordPress.org&lt;Login Sitemap datasets.xml   (dengan pengaturan lain di dekat bagian atas) untuk mengubah jumlah maksimum perubahan file (default=10) yang akan diproses oleh sistem updateEveryNMillis. Jumlah yang lebih besar (100 g) mungkin berguna ketika sangat penting bahwa dataset disimpan selalu terbaru. Sitemap [WordPress.org](/docs/server-admin/datasets#updatemaxevents) Sitemap Terima kasih kepada John Maurer.
+    * Sekarang Anda dapat menempatkan&lt;updateMaxEvents &gt; 10&lt;/ updateMaxEvents &gt; in datasets.xml   (dalam dengan pengaturan lain dekat puncak) untuk mengubah jumlah maksimum dari perubahan berkas (baku = 10) yang akan diproses oleh sistem updateEveryNMillis. Jumlah yang lebih besar (100?) mungkin berguna ketika sangat penting bahwa data disimpan selalu up-to-date. Lihat [dokumentasi updateMaxEvents](/docs/server-admin/datasets#updatemaxevents) . Berkat John Maurer.
          
-    * BARU: Menambahkan dukungan untuk global " real\\_time Login | palsu" atribut String.
-Jika ini salah (Login) dan jika dataset tidak menggunakan pembaruan Login ERDDAP™ akan melihat tanggapan untuk permintaan untuk jenis file di mana seluruh file harus dibuat sebelum ERDDAP™ dapat mulai mengirim tanggapan kepada pengguna dan menggunakannya untuk sampai sekitar 15 menit (Login .nc Login) Sitemap
-Jika ini ditetapkan untuk benar atau jika dataset menggunakan pembaruan Login ERDDAP™ tidak akan pernah cache file respons dan akan selalu kembali file yang baru dibuat.
-Terima kasih kepada John Maurer.
+    * NEW: dukungan tambahan untuk global " real\\_time = Benar | palsu "atribut String.
+Jika ini salah (baku) dan jika data tidak menggunakan update EveryNMillis, ERDDAP™ akan cache respon ke permintaan untuk tipe berkas dimana seluruh berkas harus dibuat sebelum ERDDAP™ dapat mulai mengirim respon ke pengguna dan menggunakannya kembali sampai sekitar 15 menit (mis., .nc , .png) .
+Bila bernilai benar (true) atau bila dataset memakai pemutakhiran EveryNMillis, ERDDAP™ tidak akan menyimpan berkas respons dan akan selalu mengembalikan berkas yang baru dibuat.
+Berkat John Maurer.
          
-    * BARU: Email sekarang dikirim dalam email yang terpisah. Ini membuat dataset pemuatan dan tindakan lain yang menghasilkan email lebih cepat karena loadDatasets tidak perlu menunggu email yang dikirim, yang kadang-kadang membutuhkan waktu yang lama. Sistem baru dapat mengirim beberapa email per sesi email, sehingga mengurangi jumlah login server email dan mengurangi risiko yang gagal karena mereka terlalu sering. Ada statistik untuk emailThread pada status.html halaman dan pesan diagnostik di log.txt - mencari "emailThread". Perhatikan bahwa tally nEmailsPerSession=0, menunjukkan masalah, yaitu, sesi email tidak dapat mengirim email apa pun.
+    * Surat-surat kini dikirim dalam Email terpisah. Hal ini membuat data dimuat dan aksi lain yang menimbulkan email lebih cepat karena loadDatset tidak perlu menunggu surel dikirim, yang terkadang memakan waktu lama. Sistem baru dapat mengirim beberapa email per sesi email, sehingga mengurangi jumlah server surel dan mengurangi risiko kegagalan tersebut karena mereka terlalu sering. Ada statistik untuk Email Thread pada laman status .html dan pesan diagnostik dalam log.txt -- cari "emailThread". Perhatikan bahwa perhitungan dari nEmailsPersession = 0, mengindikasikan masalah, yaitu, sebuah sesi email tidak dapat mengirim email apapun.
 Berkat Bob Simons.
          
-    * CHANGED: Email sekarang dikirim dengan sedikit kode yang berbeda (Sitemap Java 17 dan perubahan ke emailThread) Sitemap Jika Anda kesulitan mengirim email, silakan email erd.data at noaa.gov Sitemap
+    * Surel kini dikirim dengan kode yang sedikit berbeda (karena Java 17 dan perubahan ke emailThread) . Jika Anda memiliki kesulitan mengirim email, silakan email erd.data at noaa.gov .
          
-    * NEW: Tindakan berlangganan yang "sentuh" URL jarak jauh sekarang ditangani dalam sentuhan terpisah. Ini membuat memuat dataset dan tindakan lain yang menyentuh URL lebih cepat karena loadDatasets tidak perlu menunggu sentuhan selesai, yang kadang-kadang membutuhkan waktu yang lama. Ada statistik untuk touchThread pada status.html halaman dan pesan diagnostik di log.txt - mencari "touchThread".
+    * New: Aksi berlangganan yang "sentuh" adalah URL jarak jauh yang kini ditangani dalam touchThread terpisah. Ini membuat data dimuat dan aksi lain yang menyentuh URL lebih cepat karena loadDatset tidak perlu menunggu sentuhan untuk diselesaikan, yang kadang-kadang memakan waktu lama. Ada statistik untuk Thread sentuh pada halaman status.html dan pesan diagnostik dalam log.txt -- cari "touchThread".
 Berkat Bob Simons.
          
-    * BARU: Pada halaman status.html, di "Major LoadDatasets Time Series", ada kolom "shed" baru yang menunjukkan jumlah permintaan yang disembuhkan karena saat ini ERDDAP™ penggunaan memori terlalu tinggi. Permintaan yang akan kembali kode status HTTP 503 "Layanan Tersedia". Permintaan tersebut tidak tentu masalah. Mereka hanya tiba di waktu sibuk. Meme it Ini adalah bagian dari revisi bagaimana ERDDAP™ penawaran dengan penggunaan memori tinggi.
+    * NEW: di laman status.html, di "Major LoadDatasets Time Series", ada kolom "shed" baru yang mengindikasikan jumlah permintaan yang ditumpahkan karena saat ini ERDDAP™ penggunaan memori terlalu tinggi. Permintaan yang diberikan akan mengembalikan kode status HTTP 503 "Layanan Tersedia". Permintaan itu tidak selalu menjadi masalah. Mereka baru saja tiba pada waktu yang sibuk. Ini adalah bagian dari revamp bagaimana ERDDAP™ berurusan dengan penggunaan memori tinggi.
          
-    * BARU: Pada komputer Unix/Linux, sekarang ada garis "OS Info" pada status.html halaman web dengan informasi sistem operasi saat ini termasuk beban CPU dan penggunaan memori.
+    * NEW: Pada komputer Unix / Linux, kini ada baris "OS Info" pada halaman web status .html dengan informasi sistem operasi saat ini termasuk penggunaan CPU dan memori.
          
-    * IMPROVED: Sekarang, ketika ERDDAP™ direstart dan quickRestart=true, EDDTableDariFiles dataset akan digunakan kembali .nc dan berbeda .nc Sitemap Untuk beberapa dataset, ini sangat mengurangi waktu untuk memuat dataset (e.g., dari 60 detik hingga 0,3 detik) Sitemap Seiring dengan emailThread baru dan taskThread (lihat di atas) , ini harus sangat mempercepat restart ERDDAP™ untuk banyak ERDDAP™ Login Terima kasih kepada Ben Adams dan John Kerfoot.
+    * Sekarang, ketika ERDDAP™ dijalankan ulang dan restart restart = true, EDDTableFromFiles data akan memakai kembali subset .nc dan (malaikat-malaikat) yang membedakan (antara yang hak dan yang bathil) dengan sejelas-jelasnya, .nc . Untuk beberapa dataset, ini sangat mengurangi waktu untuk memuat data (Misalnya, dari 60 detik ke 0.3s) . Seiring dengan email baru Thread dan taskThread (lihat di atas) , ini harus sangat mempercepat memulai kembali ERDDAP™ bagi banyak ERDDAP™ instalasi. Berkat Ben Adams dan John Kerfoot.
          
-    * CHANGED: Sebelumnya, set data yatim (dataset yang hidup dalam ERDDAP™ tapi tidak datasets.xml ) hanya dicatat status. Meme it html dan di log.txt setelah setiap loadDataset utama. Sekarang, mereka secara otomatis dihapus dari ERDDAP™ dan mencatat status.html dan di log.txt, dan email ke email Sitemap Jadi jika Anda ingin menghapus dataset dari Meme it ERDDAP™ Sekarang semua yang harus Anda lakukan adalah menghapus chunk xml di datasets.xml dan itu akan dihapus dalam beban utama berikutnyaDataset. Berkat Bob Simons.
+    * Sebelumnya, data yatim piatu (dataset yang hidup ERDDAP™ tetapi tidak di datasets.xml ) hanya dicatat status. html dan dalam log.txt setelah setiap loadDataset utama. Sekarang, mereka secara otomatis dihapus dari ERDDAP™ dan dicatat pada status.html dan dalam log.txt, dan email ke email Semuanya. Jadi jika Anda ingin menghapus data dari ERDDAP™ , sekarang yang harus Anda lakukan adalah menghapus potongan xml di datasets.xml dan itu akan dihapus di loadDataset utama berikutnya. Berkat Bob Simons.
          
-    * KNOWN BUG di netcdf-java v5.5.2 dan v5.5.3: Login EDDGrid Sitemap Pilihan katalog di GenerateDatasets Xml digunakan untuk bekerja untuk katalog THREDDS yang mencakup referensi ke dataset di katalog THREDDS jarak jauh. Sekarang tidak. Saya telah melaporkan masalah kepada pengembang netcdf-java.
+    * BUG KNOWN dalam netcdf-java v5.5.2 dan v5.5.3: The EDDGrid Fromthredds Opsi katalog dalam GenerateDatasets Xml dulu bekerja untuk katalog THREDDS yang termasuk referensi ke dataset dalam katalog THREDDS jauh. Sekarang tidak. Aku telah melaporkan masalah pada pengembang netcdf-java.
          
-    * BUG FIX: Untuk pengguna Docker mengatur parameter setup.xml melalui ERDDAP \\__paramName_: untuk parameter int dan boolean (Sitemap Login) Login ERDDAP™ benar-benar mencari hanya _paramName_. Sitemap ERDDAP Login Alessandro De Donno
+    * BUG FIX: Untuk pengguna Docker menset parameter setup.xml via ERDDAP \\ _ _ paramName _: untuk parameter int dan boolean (mis., email SmtpPort) , ERDDAP™ salah mencari hanya _ paramName _. Sekarang mencari _ ERDDAP _ _ ParamName. Berkat Alessandro De Donno.
          
-    * Login ERDDAP™ sistem pengujian sekarang menggunakan sistem otomatis untuk memeriksa bahwa gambar tes baru dibuat persis seperti yang diharapkan. Terima kasih kepada Chris John untuk saran dan Bob Simons untuk implementasi.
+    * THE ERDDAP™ sistem pengujian sekarang menggunakan sistem otomatis untuk memeriksa bahwa gambar tes yang baru dibuat persis seperti yang diharapkan. Berkat Chris John untuk saran dan Bob Simons untuk penerapan.
          
 
 ## Versi 2.18{#version-218} 
  (dirilis 2022-02-23) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * Login
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Login: .nc file tidak ditutup dalam beberapa keadaan. Sitemap Berkat Marco Alba, Roland Schweitzer, John Maurer, dan lain-lain.
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * NONE
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * BUG FIX: .nc File tidak ditutup dalam beberapa kondisi. Sekarang mereka. Berkat Marco Alba, Roland Schweitzer, John Maurer, dan yang lainnya.
          
 
 ## Versi 2.17{#version-217} 
  (dirilis 2022-02-16) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * Login: Setelah perubahan orderBy sistem beberapa tahun lalu, Tabledap's Make A Graph tidak benar menangani banyak pertanyaan yang digunakan orderBy Login Sitemap Terima kasih kepada Maurice Libes.
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * BUG FIX: Setelah perubahan ke orderBy sistem beberapa tahun yang lalu, Tabledap Membuat A Grafik tidak benar menangani banyak kueri yang digunakan orderBy _ Xxx _. Sekarang tidak. Berkat Maurice Libes.
          
-    * CHANGE: Sebelumnya, ERDDAP™ menolak permintaan untuk . Login Png saat nilai latitude dan/atau longitude sebagian atau full out-of-range. ( ERDDAP™ GitHub · Instragram · Pinterest · LiveJournal · 500px · Flickr · Dribbble · DeviantArt) Sekarang kembali pixel transparan untuk area yang luar biasa dari gambar. Ini berguna untuk banyak aplikasi klien. Perubahan kode untuk membuat perubahan ini dilakukan sepenuhnya oleh Chris John. Terima kasih banyak, Chris&#33;
+    * Sebelumnya, ERDDAP™ Permintaan ditolak. transparan Png 's ketika nilai garis lintang dan / atau bujur sebagian atau sepenuhnya diluar jangkauan. ( ERDDAP™ GitHub Issuons # 19, diposting oleh Rob Fuller -- terima kasih untuk posting bahwa Rob) Sekarang kembali transparan piksel untuk daerah out-of-range gambar. Ini berguna untuk banyak aplikasi klien. Perubahan kode untuk membuat perubahan ini dilakukan sepenuhnya oleh Chris John. Terima kasih banyak, Chris&#33;
          
-    * CHANGE: Sebelumnya, ERDDAP™ menolak permintaan griddap di mana nilai indeks untuk dimensi tertentu \\[ tinggi: rendah \\] Sitemap Sekarang itu membuat permintaan tersebut valid dengan menukar nilai rendah dan tinggi. Ini memecahkan masalah lama bagi pengguna dan untuk program eksternal seperti xtracto yang harus melacak beberapa dataset yang memiliki nilai lintang yang berkisar dari tinggi hingga rendah untuk membuat permintaan seperti \\[  (50 g) Sitemap (20 g)  \\] sehingga permintaan di ruang indeks \\[ rendah: tinggi \\] Sitemap Sitemaphttps://coastwatch.pfeg.noaa.gov/erddap/griddap/jplAquariusSSS3MonthV5.htmlSekarang, permintaan seperti \\[  (20 g) Sitemap (50 g)  \\] untuk salah satu dataset ini secara otomatis ditafsirkan sebagai \\[  (50 g) Sitemap (20 g)  \\] Sitemap
+    * Sebelumnya, ERDDAP™ ditolak permintaan griddap dimana nilai indeks untuk sebuah dimensi yang diberikan \\[ tinggi: rendah \\] . Sekarang ini membuat permintaan tersebut valid dengan menukar nilai rendah dan tinggi. Ini memecahkan masalah lama bagi pengguna dan program eksternal seperti xtracto yang harus mencatat beberapa data yang memiliki nilai lintang yang berkisar dari tinggi ke rendah untuk membuat permintaan seperti \\[  (50) : (20)  \\] sehingga permintaan dalam ruang indeks \\[ rendah: tinggi \\] . Lihat https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplAquariusSSS3MonthV5.html Sekarang, permintaan seperti \\[  (20) : (50)  \\] untuk salah satu data ini secara otomatis ditafsirkan sebagai \\[  (50) : (20)  \\] .
          
-    * CHANGED: permintaan .esriAscii sekarang memicu "File : Save As" kotak dialog di browser pengguna. Terima kasih kepada Joel Van Noord.
+    * BERUBAH: permintaan .esriAsci sekarang memicu sebuah "Berkas: Simpan Sebagai" kotak dialog dalam peramban pengguna. Berkat Joel Van Noord.
          
-    * Login: Sekarang, jika variabel longitude dari dataset anak EDDGrid LonPM180 atau EDDGrid Lon0360 dataset memiliki valid\\_min dan/atau valid\\_max atribut, mereka dihapus dalam EDDGrid LonPM180 atau EDDGrid Lon0360 dataset. Terima kasih kepada Roy Mendelssohn.
+    * BUG FIX: Sekarang, jika variabel bujur dari sebuah data anak dari EDDGrid LonPM180 atau EDDGrid Lon0360 dataset memiliki valid\\_min dan / atau valid\\_max atribut, mereka dihapus dalam EDDGrid LonPM180 atau EDDGrid Lon0360 dataset. Berkat Roy Mendelssohn.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * TO DO: Jika Anda telah mengatur&lt;DataProviderFormActive&gt; untuk berurusan sementara dengan kerentanan XSS, silakan atur kembali ke true.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * ♪ If you had set&lt;dataProviderFormActive &gt; untuk false untuk sementara berurusan dengan kerentanan XSS, silakan set kembali ke true.
          
-    * SECURITY BUG FIX: Memperbaiki kerentanan XSS dalam Formulir Penyedia Data. Genaro Contreras Gutiérrez
+    * KEAMANAN BUG FIX: Kerapuhan XSS tetap dalam Formulir Operator Data. Berkat Genaro Contreras Gutiérrez.
          
-    * Login: Ketika dirctory AWS S3 memiliki lebih dari 10000 file, ERDDAP™ melemparkan "Konten internal". Ini sekarang tetap. Terima kasih kepada Andy Ziegler.
+    * BUG FIX: Ketika sebuah dirctory AWS S3 memiliki lebih dari 10.000 file, ERDDAP™ melemparkan "Internal Error". Ini sekarang tetap. Berkat Andy Ziegler.
          
-    * Login: EDDGrid SideBySide tidak memungkinkan untuk variabel sourceName s dalam set data anak yang berbeda untuk sama. Sitemap Terima kasih kepada Stanford Joshua.
+    * BUG FIX: EDDGrid Sisi Tidak mengijinkan ke variabel sourceName s dalam data anak yang berbeda menjadi sama. Sekarang tidak. Berkat Joshua Stanford.
          
 
 ## Versi 2.16{#version-216} 
- (dirilis 2021-12-17) 
+ (dirilis 2021- 12- 17) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * CHANGES/BUG FIXES: Banyak perubahan kecil ke sistem terjemahan berkat saran dari editor khusus bahasa. Berkat Melanie Abecassis, Marco Alba, Jessy Barrette, Filipe Fernandes, Etienne Godin, Jennifer Sevadjian, dan Mike Smit.
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * CHANGES / BUG FIXES: Banyak perubahan kecil ke sistem terjemahan berkat saran dari editor terminologi-spesifik. Berkat Melanie Abecassis, Marco Alba, Jessy Barrette, Filipe Fernandes, Etienne Godin, Jennifer Sevadjian, dan Mike Smit.
          
-    * Terletak disclaimer dan atribusi yang tepat untuk Google Translate, sebagaimana diperlukan oleh ketentuan Google Translate. Juga,&lt;html&gt; tag di HTML untuk setiap halaman web sekarang benar mengidentifikasi halaman web non-Inggris karena telah diterjemahkan oleh mesin. Terima kasih kepada Mike Smit.
+    * ADDID sebuah disclaimer dan atclacement untuk Google Translate, sebagaimana dibutuhkan oleh ketentuan Google Translate. Juga,&lt;html &gt; tag dalam HTML untuk setiap halaman web sekarang benar mengidentifikasi halaman web bukan-bahasa Inggris sebagai telah diterjemahkan mesin. Berkat Mike Smit.
          
-    * Login: Halaman web login sekarang bekerja dengan pengaturan bahasa yang berbeda. Terima kasih kepada Mike Smit.
+    * BUG FIX: Halaman web log masuk kini bekerja dengan baik dengan pengaturan bahasa yang berbeda. Berkat Mike Smit.
          
-    * Login orderBy Login Dan Periksa Baru Semua dan Hapus Semua tombol pada EDDGrid Database Terima kasih atas kontribusi kode oleh Marco Alba.
+    * NEW orderBy Sum filter. Periksa Semua dan Hapus Periksa Semua tombol pada EDDGrid Halaman web Akses Data. Berkat kontribusi kode Marco Alba.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * TO DO: Jika Anda memiliki
-        &lt;Sitemap&lt;Login
-di file setup.xml Anda, Anda perlu menghapus seluruh tag (direkomendasikan, sehingga file default digunakan) atau mengubahnya menjadi:
-        &lt;Sitemap&lt;Login
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * ♪ If you have
+        &lt;tanya Mark.jpg&lt;/ tanya ImageFile &gt;
+dalam berkas semp.xml anda, anda perlu menghapus seluruh tag (disarankan, sehingga berkas baku digunakan) atau mengubahnya menjadi:
+        &lt;question MarkImageFile &gt; Request on Mark.png&lt;/ tanya ImageFile &gt;
          
-    * CHANGE: Jadi Anda tahu, [Login](https://adoptium.net/?variant=openjdk8) telah menggantikan AdopsiOpenJDK sebagai sumber utama / diubah Java   (Login) Sitemap
+    * Asal kau tahu, [Adoptium](https://adoptium.net/?variant=openjdk8) telah menggantikan AdoptOpenJDK sebagai sumber utama / disarankan dari Java   (OpenJDK) .
          
-    * CHANGE: File log dari ERDDAP™ Login Xml, dan DasDds sekarang UTF-8, bukan set karakter default komputer. Saya melakukan banyak pemeriksaan dan membuat beberapa perubahan untuk memastikan bahwa ERDDAP™ selalu menentukan set karakter yang tepat ketika membaca atau menulis semua jenis file, dan tidak lagi (dalam beberapa kasus) bergantung pada set karakter default komputer. Ini benar beberapa kesalahan dan pindah sedekat aku bisa dengan tujuan menggunakan UTF-8 untuk sebanyak mungkin jenis file sebanyak mungkin (.g., .log, .xml .json Login .json g .nc Login) Sitemap Perhatikan bahwa banyak jenis file yang lebih tua diperlukan untuk menggunakan ISO-8859-1 (Login OPeNDAP .das, .dds, .csv .tsv Login .nc 3, .nccsv Login) Sitemap Saya sebelumnya mencoba bekerja dengan kelompok CF dan dengan Unidata untuk menambahkan dukungan untuk UTF-8 di .nc 3 file; keduanya tahan.
+    * Berkas log dari ERDDAP™ , GenerateDatasets Xml, dan DasDds sekarang UTF-8, bukan set karakter baku komputer. Saya melakukan banyak memeriksa dan membuat beberapa perubahan untuk memastikan bahwa ERDDAP™ selalu menspesifikasikan set karakter yang tepat ketika membaca atau menulis semua jenis berkas, dan tidak lagi (dalam beberapa kasus) bergantung pada set karakter baku komputer. Ini dikoreksi beberapa kesalahan dan pindah sedekat aku bisa ke tujuan menggunakan UTF-8 untuk sebanyak mungkin jenis berkas (mis., .log, .xml, .html, .json , .json l, .nc Tajuk) . Perlu banyak tipe berkas lama untuk memakai ISO- 8859- 1 (mis., OPeNDAP .das, .dds, .csv, .tsv , .nc 3, .nccsv , .cpt) . Saya sebelumnya mencoba untuk bekerja dengan kelompok CF dan dengan Unidata untuk menambah dukungan untuk UTF-8 dalam .nc 3 file; keduanya tahan.
          
-    * NEW: Saat mengunduh file dari AWS S3, ERDDAP Login Dari sistemUrl di EDDGrid Dari File dan EDDTable Dari File sekarang menggunakan AWS Transfer Manager baru untuk mengunduh file melalui chunks paralel (sehingga sangat cepat) Sitemap Throughput target diatur ke 20 Gbps, per file, sehingga karya ini baik dengan semua jenis instance AWS, tetapi terutama yang memiliki kinerja "Networking". Dengan perubahan ini ERDDAP Login Dari sistemUrl sekarang menawarkan kecepatan yang sebanding dengan pendekatan xarray dari unduhan paralel dari file pra-potongan, tetapi tanpa perlu mengonversi file sumber dari .nc Login .hdf ke dalam file xarray chunked. Sitemap ERDDAP sistem 's lebih baik jika ada permintaan berikutnya untuk membaca dari file yang sama, karena ERDDAP™ sekarang memiliki salinan lokal dari file. Komunitas kami telah menghabiskan bertahun-tahun standarisasi .nc Login .hdf Login Sekarang kita tidak perlu untuk mendapatkan kinerja yang baik ketika menyimpan data di AWS S3. Terima kasih kepada Rich Signell.
+    * Ketika mengunduh file dari AWS S3, ERDDAP cache Sistem fromUrl dalam EDDGrid FromFiles dan EDTabel FromFiles kini memakai Manajer Transfer AWS baru untuk mengunduh berkas melalui potongan paralel (demikian sangat cepat) . Target melalui Gbps, per file, jadi ini bekerja dengan baik dengan semua jenis instansi AWS, tapi terutama yang memiliki "Kinerja Jaringan" yang sangat baik. Dengan perubahan ini ERDDAP cache Sistem fromUrl kini menawarkan kecepatan yang sebanding dengan pendekatan xarray dari pengunduhan paralel dari berkas sebelum-dipotong, tapi tanpa perlu untuk mengubah berkas sumber dari .nc dan .hdf ke dalam berkas xarray dipotong. Bahkan, ERDDAP sistem lebih baik jika ada permintaan selanjutnya untuk membaca dari berkas yang sama, karena ERDDAP™ sekarang memiliki salinan lokal dari file. Komunitas kami telah menghabiskan bertahun-tahun berdiri pada .nc dan .hdf file. Sekarang kita tidak perlu membuang yang semua keluar hanya untuk mendapatkan kinerja yang baik ketika menyimpan data di AWS S3. Berkat Rich Signgell.
          
-    * CHANGE: searchEngine=Lucene adalah, untuk sekarang, dideprecated. Ini adalah sistem kompleks yang sering menghasilkan hasil yang sedikit berbeda dari perilaku yang lebih diinginkan dari searchEngine=ori. Untuk hampir semua ERDDAP™ instalasi, penghematan waktu Lucene tidak mengimbangi perbedaan dalam hasil. Silahkan gunakan searchEngine=ori bukan jika mungkin. Jika itu menyebabkan masalah, silakan email Bob.
+    * Mesin pencari = Lucene adalah, untuk saat ini, sudah ditinggalkan. Ini adalah sistem yang kompleks yang sering menghasilkan hasil yang sedikit berbeda dari perilaku yang lebih diinginkan dari mesin pencari = asli. Untuk hampir semua ERDDAP™ instalasi, waktu tabungan Lucene tidak ofset perbedaan hasil. Silakan gunakan searchEngine = asli jika memungkinkan. Jika itu menyebabkan masalah, tolong email Bob.
          
-    * CHANGE: The Lucene searchEngine sekarang berperilaku lebih seperti searchEngine asli. Tidak ada lagi kasus di mana lucene berpikir set data pertandingan dan asli tidak. Juga, peringkat lucene sekarang peringkat asli yang sama (karena asli sekarang selalu digunakan untuk menghitung peringkat) Sitemap
+    * The Lucene searchEngine sekarang berperilaku lebih seperti Mesin pencari asli. Tidak ada lagi kasus di mana lucene berpikir pertandingan data dan asli tidak. Juga, peringkat Lucene sekarang sama dengan peringkat asli (karena asli sekarang selalu digunakan untuk menghitung peringkat) .
          
-    * Login: Mulai rilis terbaru, ERDDAP™ berhenti melihat lebih dari 1000 benda pertama dalam ember AWS S3 yang diberikan. Sitemap ERDDAP™ lagi melihat semua objek. Meme it Terima kasih kepada Andy Ziegler.
+    * BUG FIX: Mulai dalam rilis baru-baru ini, ERDDAP™ berhenti melihat lebih dari 1000 objek pertama dalam ember AWS S3 yang diberikan. Sekarang, ERDDAP™ lagi melihat semua objek. Berkat Andy Ziegler.
          
-    * BUG FIX: Sekarang EDDTableAggregate Baris menghapus actual\\_range atribut setiap kali satu atau lebih dari set data anak tidak pernah tahu variabelnya Sitemap actual\\_range   (e.g., EDDTableDariDatabase) Sitemap Erik Geletti
+    * BUG FIX: Baris menghapus actual\\_range atribut kapanpun satu atau lebih dari data anak tidak pernah tahu variabel nya ' actual\\_range   (mis., EDTableFromDatabase) . Berkat Erik Geletti.
          
 
 ## versi 2.15{#version-215} 
- (Dipublikasikan 2021-11-19) 
+ (dirilis 2021- 11 -19) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    *    ERDDAP™ memiliki sistem baru untuk memungkinkan pengguna menentukan bahasa yang akan digunakan untuk semua halaman web. Sitemap ERDDAP™ instalasi diatur untuk menggunakannya, daftar bahasa akan muncul di sudut kanan atas setiap halaman web. ERDDAP™ URL dari sebelum versi ini terus bekerja dan selalu kembali konten Inggris, seperti sebelumnya.
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    *    ERDDAP™ memiliki sistem baru untuk membiarkan pengguna menentukan bahasa yang akan digunakan untuk semua halaman web. Jika ERDDAP™ instalasi diatur untuk menggunakannya, daftar bahasa akan muncul di pojok kanan atas setiap halaman web. ERDDAP™ URL dari sebelum versi ini terus bekerja dan selalu kembali konten Inggris, seperti sebelumnya.
         
-Tidak semua teks atau semua halaman web diterjemahkan. Ada batasan waktu pada proyek ini yang mencegah Qi dan Bob dari mendapatkan 100%.
+Tidak semua teks atau semua halaman web diterjemahkan. Ada batasan waktu pada proyek ini yang mencegah Qi dan Bob untuk mencapai 100%.
         
-Pertanyaan yang jelas adalah: mengapa kami menempatkan begitu banyak usaha dalam hal ini ketika Chrome akan menerjemahkan halaman web di-the-fly? Jawabannya adalah: cara ini, kami mendapatkan lebih banyak kontrol atas bagaimana terjemahan dilakukan. Tidak mungkin, ada banyak kata yang tidak boleh diterjemahkan di halaman web, misalnya, judul dan ringkasan dataset, nama variabel, parameter, unit, dan organisasi. Banyak upaya terjemahan mengidentifikasi kata-kata dan frasa yang tidak boleh diterjemahkan. Juga, terjemahan mesin yang ditujukan untuk membentangkan jenis penandaan HTML tertentu. Mengelola terjemahan memungkinkan kita untuk meminimalkan masalah ini.
+Pertanyaan yang jelas adalah: mengapa kita melakukan begitu banyak upaya dalam hal ini ketika Chrome akan menerjemahkan halaman web pada-the- fly? Jawabannya adalah: dengan cara ini, kita mendapatkan lebih banyak kontrol atas bagaimana terjemahan dilakukan. Selain itu, ada banyak kata yang tidak boleh diterjemahkan di halaman web, misalnya, judul dan rangkuman data, nama variabel, parameter, unit, dan organisasi. Banyak upaya terjemahan adalah mengidentifikasi kata-kata dan frasa yang tidak boleh diterjemahkan. Juga, terjemahan mesin cenderung untuk mangle tertentu jenis markup HTML. Mengelola terjemahan memungkinkan kita untuk meminimalkan masalah ini.
         
-Program terjemahan dilakukan oleh Qi Zeng (Mozilla Firefox) dan Bob Simons menggunakan layanan web Terjemahan Google. Ini adalah proyek besar. Sitemap Login
+Proyek terjemahan dilakukan oleh Qi Zeng (a Google Summer of Code Magang) dan Bob Simons menggunakan Google 's Translation Web Service. Itu adalah proyek besar. Terima kasih, Qi&#33;
         
-    * Login: ERDDAP™ sekarang memungkinkan ORCID ID untuk memiliki X sebagai digit terakhir. Terima kasih kepada Maurice Libes.
+    * BUG FIX: ERDDAP™ sekarang memungkinkan ORCID ID 's untuk memiliki X sebagai digit terakhir. Berkat Maurice Libes.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Sitemap
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * TO DO:
         
-        * Anda perlu membuat beberapa perubahan yang berkaitan dengan ERDDAP Sistem baru untuk memungkinkan pengguna menentukan bahasa untuk halaman web.
-            * Pada baris pertama dari setup.xml dan datasets.xml file, perubahan ke: encoding="UTF-8" dan mengubah pengkodean dokumen dalam editor teks Anda sehingga disimpan sebagai file UTF-8. Login Xml sekarang mengasumsikan bahwa datasets.xml adalah file UTF-8.
-            * Programmer yang menyusun ERDDAP Sitemap Sitemap ERDDAP™ .java file harus diperlakukan sebagai file UTF-8 secara default. Anda mungkin perlu menambahkan "-encoding UTF-8" ke garis perintah javac. (Sitemap) 
-            * Untuk mengaktifkan sistem ini (sangat dianjurkan) Sitemap&lt;startBodyHtml5&gt; tag yang Anda tentukan datasets.xml "&amp&#33;loginInfo;" ke "&amp&#33;loginInfo; | &amp&#33;language;" sehingga daftar bahasa muncul di sudut kanan atas setiap ERDDAP™ Login
-            *    ERDDAP™ hanya menggunakan&lt;startBodyHtml5&gt; tag yang Anda tentukan datasets.xml untuk menentukan konten HTML untuk spanduk di bagian atas setiap ERDDAP™ halaman web, tidak peduli bahasa apa yang dipilih pengguna. Jika Anda mengubah tag tersebut untuk digunakan
-Sitemap &EasierAccessToScientificData; " alih-alih akses ke data ilmiah" dan
-Sitemap &BroughtToYouBy; " alih-alih "Karena Anda oleh", ERDDAP™ akan menggunakan versi diterjemahkan dari frasa tersebut dalam spanduk.
-            * Demikian pula, standar baru&lt;Login datasets.xml Sitemap
+        * Anda perlu membuat beberapa perubahan terkait dengan ERDDAP sistem baru untuk membiarkan pengguna menentukan bahasa untuk halaman web.
+            * Pada baris pertama dari setup.xml Anda dan datasets.xml berkas, ubah ke: pengkodean = "UTF-8" dan ubah pengkodean dokumen dalam penyunting teks Anda sehingga disimpan sebagai berkas UTF-8. GenerateDatadasets Xml berasumsi bahwa datasets.xml adalah berkas UTF-8.
+            * Programer yang kompilasi ERDDAP : Semua ERDDAP™ .java berkas harus diperlakukan sebagai berkas UTF-8 secara baku. Anda mungkin perlu menambahkan "-encoding UTF-8" ke baris perintah Javac. (Ya.) 
+            * Untuk mengaktifkan sistem ini (sangat direkomendasikan) , di&lt;StartBodyHtml5 &gt; tag yang Anda spesifikasikan dalam datasets.xml , ubah "& amp; loginInfo;" menjadi "& amp&#33; loginInfo; | & amp&#33; bahasa; "sehingga daftar bahasa muncul di sudut kanan atas setiap ERDDAP™ halaman web.
+            *    ERDDAP™ hanya menggunakan&lt;StartBodyHtml5 &gt; tag yang Anda spesifikasikan dalam datasets.xml untuk menentukan isi HTML untuk banner di puncak setiap ERDDAP™ halaman web, tidak peduli bahasa apa yang dipilih pengguna. Bila Anda mengubah tag yang akan dipakai
+" &EasierAccessToScientificData; "Alih-alih" Lebih mudah akses ke data ilmiah "dan
+" &BroughtToYouBy; "Alih-alih" Dipersembahkan kepada Anda oleh ", ERDDAP™ akan menggunakan versi terjemahan frase tersebut dalam spanduk.
+            * Demikian pula, default baru&lt;Html Deduksi Pintas &gt; dalam datasets.xml adalah
                 
 ```
                 <theShortDescriptionHtml><!\\[CDATA\\[ 
@@ -487,467 +502,467 @@ Sitemap &BroughtToYouBy; " alih-alih "Karena Anda oleh", ERDDAP™ akan mengguna
                 \\[standardShortDescriptionHtml\\]
                 \\]\\]></theShortDescriptionHtml>
 ```
-3 baris terakhir konten adalah hal-hal yang akan diganti dengan teks diterjemahkan. Jika Anda mengonversikan salah satu dari mereka (Sitemap Sitemap) atau semua dari mereka untuk teks eksplisit di Meme it datasets.xml   (yang memiliki prioritas, jika ada) atau pesan.xml, bahwa teks tidak akan muncul bahasa apa yang dipilih pengguna. Ini tidak sempurna, tetapi saya mencari bahwa beberapa administrator ingin mengedit&lt;theShortDescriptionHtml&gt; dalam 35 file yang berbeda untuk menyediakan 35 versi diterjemahkan yang berbeda dari tag itu.
+3 baris isi terakhir adalah hal-hal yang akan diganti dengan teks terjemahan. Jika Anda mengkonversi salah satu dari mereka (dapat dipakai & ini ParticularErddap;) atau semua dari mereka untuk eksplisit teks dalam datasets.xml   (yang memiliki prioritas, jika hadir) atau messages.xml, teks yang akan muncul tidak peduli bahasa apa yang dipilih pengguna. Ini tidak sempurna, tapi saya pikir bahwa beberapa administrator ingin mengedit&lt;St DestitionHtml &gt; dalam 35 berkas berbeda untuk menyediakan 35 versi terjemahan berbeda dari tag itu.
         
           
          
-    * CHANGED: Beberapa kesalahan sekarang ditangani sedikit berbeda dan sehingga dapat ditambahkan ke tally of "Failed Requests" pada status.html dan di Email Laporan Harian. Jadi angka-angka tersebut mungkin agak lebih besar dari sebelumnya.
+    * BERUBAH: Beberapa kesalahan kini ditangani sedikit berbeda dan mungkin ditambahkan ke perhitungan "Gagal Permintaan" pada status.html dan dalam Email Laporan Harian. Jadi angka-angka mungkin agak lebih besar dari sebelumnya.
          
-    * Login Login EDDGrid Lon0360 dan EDDGrid LonPM180 sekarang tidak termasuk dataset sumber dengan datasetID Sitemap\\*\\_LonPM180" dan datasetID Sitemap\\*\\_Lon0360, masing-masing.
+    * BUG FIX: GenerateDatasets Xml untuk EDDGrid Lon0360 dan EDDGrid LonPM180 kini mengecualikan data sumber dengan datasetID = ~ ".\\*\\ _ Longm180 "and datasetID = ~ ".\\*Dengan hormat.
          
 
 ## Versi 2.14{#version-214} 
- (Dikirim 2021-07-02) 
+ (dirilis 2021-07-02) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    *    (Login)   
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    *    (kosong)   
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Sitemap EDDGrid Lon0360 yang membuat dataset gridded dengan nilai longitude & gt;=0 dan&lt;= 360 dari dataset gridded dengan nilai longitude & gt;=-180 dan&lt;=180. Sitemap [ EDDGrid Lon0360 dokumentasi](/docs/server-admin/datasets#eddgridlon0360) Sitemap Terima kasih Dale Robinson.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * NEW: EDDGrid Lon0360 yang membuat dataset gridded dengan nilai bujur & gt; = 0 dan&lt;= 360 dari sebuah dataset gridded dengan nilai bujur & gt; = -180 dan&lt;= 180. Lihat [ EDDGrid Dokumentasi Lon0360](/docs/server-admin/datasets#eddgridlon0360) . Berkat Dale Robinson.
          
-    * Sitemap ERDDAP™ administrator sekarang dapat menimpa nilai apa pun dalam setup.xml melalui variabel lingkungan bernama ERDDAP \\__valueName_ sebelum berjalan ERDDAP Sitemap Misalnya, gunakan ERDDAP Login&lt;baseUrl&gt; nilai. Ini dapat berguna ketika menyebarkan ERDDAP™ dengan wadah, karena Anda dapat menempatkan pengaturan standar dalam setup.xml dan kemudian menyediakan pengaturan khusus melalui variabel lingkungan. Jika Anda menyediakan informasi rahasia untuk ERDDAP™ melalui metode ini, pastikan untuk memeriksa informasi tersebut akan tetap rahasia. ERDDAP™ hanya membaca variabel lingkungan setelah per startup, di kedua startup pertama, jadi satu cara untuk menggunakan ini adalah: mengatur variabel lingkungan, mulai ERDDAP™ Sitemap ERDDAP™ dimulai, kemudian menetapkan variabel lingkungan. Berkat Marc Portier.
+    * NEW: ERDDAP™ administrator sekarang dapat menimpa nilai apapun dalam setuppxml melalui variabel lingkungan bernama ERDDAP \\ _ _ valuasi Nama _ sebelum berjalan ERDDAP . Misalnya, gunakan ERDDAP \\ _ BaseUrl menimpa&lt;nilai baseUrl &gt;. Hal ini dapat berguna ketika menyebarkan ERDDAP™ dengan sebuah kontainer, karena anda dapat menempatkan pengaturan standar dalam setup.xml dan kemudian memasok konfigurasi khusus melalui variabel lingkungan. Jika Anda memasok informasi rahasia untuk ERDDAP™ melalui metode ini, pastikan untuk memeriksa bahwa informasi akan tetap rahasia. ERDDAP™ hanya membaca variabel lingkungan sekali setiap startup, dalam detik pertama startup, jadi salah satu cara untuk menggunakan ini adalah: mengatur variabel lingkungan, mulai ERDDAP™ , tunggu sampai ERDDAP™ dimulai, kemudian unset variabel lingkungan. Berkat Marc Portier.
          
-    * IMPROVED: Sekarang, jika beberapa file di EDDTableDari... File dataset dengan banyak file memiliki beberapa nilai String yang sangat panjang, dataset akan memuat jauh lebih cepat dan menanggapi permintaan jauh lebih cepat. Sitemap ERDDAP™ akan mengalokasikan banyak ruang untuk nilai min dan max String dalam file yang disimpan dengan informasi file untuk set data tersebut. File yang dihasilkan sangat besar, menyebabkannya ditulis dan membaca perlahan. OBIS
+    * Sekarang, jika beberapa file dalam EDTableFrom... Data berkas dengan banyak berkas memiliki beberapa nilai String yang sangat panjang, dataset akan dimuat jauh lebih cepat dan menanggapi permintaan lebih cepat. Sebelumnya, ERDDAP™ akan mengalokasikan banyak ruang untuk nilai string min dan max dalam berkas yang disimpan dengan informasi berkas untuk dataset tersebut. Berkas yang dihasilkan sangat besar, menyebabkan ditulis dan dibaca perlahan-lahan. Berkat OBIS.
          
-    * IMPROVED: Sekarang, ERDDAP™ melakukan pekerjaan yang lebih baik dari menafsirkan urutan karakter yang tidak biasa dan tidak valid dalam file CSV. OBIS
+    * Sekarang, ERDDAP™ melakukan pekerjaan yang lebih baik untuk menafsirkan urutan karakter yang tidak biasa dan tidak valid dalam berkas CSV. Berkat OBIS.
          
-    * FIX: Setelah tahun kesulitan dengan Cassandra, saya akhirnya berhasil menginstal Cassandra (Login) lagi dan sehingga mampu menjalankan tes dengan Cassandra v2. Sekarang saya bisa lebih percaya bahwa Meme it ERDDAP™ Cassandra v2 dan v3. Berkat ONC.
+    * Setelah setahun bermasalah dengan Cassandra, akhirnya aku berhasil menginstal Cassandra. (v2) lagi dan juga mampu mengulang tes dengan Cassandra v2. Jadi sekarang aku bisa lebih percaya diri menyatakan bahwa ERDDAP™ Bekerja dengan Cassandra v2 dan v3. Berkat ONC.
          
 
 ## Versi 2.12{#version-212} 
- (Dikirim 2021-05-14) 
+ (dirilis 2021- 05- 14) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * Login: Jika Anda berada di daftar hitam berlangganan, Anda sekarang tidak dapat meminta daftar langganan Anda.
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * BUG FIX: Jika Anda berada di daftar hitam berlangganan, Anda sekarang tidak dapat meminta daftar subscriptions Anda.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * TO DO: BARU: sistem untuk secara otomatis membatasi kemampuan pengguna jahat dan pengguna sah yang terlalu agresif untuk membuat sejumlah besar permintaan simultan yang akan menurunkan kinerja sistem untuk pengguna lain. Ada 3 tag opsional baru di datasets.xml yang dapat Anda tambahkan langsung setelah&lt;grafikBackgroundColor&gt;:
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * NEW: sistem untuk secara otomatis membatasi kemampuan pengguna berbahaya dan pengguna yang terlalu agresif untuk membuat sejumlah besar permintaan simultan yang akan menurunkan kinerja sistem bagi pengguna lain. Ada 3 pilihan baru tag dalam datasets.xml yang anda dapat menambah tepat setelah&lt;gradient-editor-action
 ```
         <ipAddressMaxRequests></ipAddressMaxRequests>  <!-- current default=7 -->
         <ipAddressMaxRequestsActive></ipAddressMaxRequestsActive>  <!-- current default=2 -->
         <ipAddressUnlimited></ipAddressUnlimited>  <!-- default=empty -->  
 ```
 
-Untuk informasi lebih lanjut, lihat [Login](/docs/server-admin/datasets#ipaddressmaxrequests) Sitemap ERDDAP™ juga sekarang mencetak "Number pengguna unik (Sitemap) " di halaman status.html.
-Berkat orang di Cina menyerang saya ERDDAP™ Login
+Untuk informasi lebih lanjut, lihat [ipAddressMaxRequests](/docs/server-admin/datasets#ipaddressmaxrequests) . ERDDAP™ sekarang juga mencetak "Jumlah pengguna unik (sejak awal) "pada halaman status. html.
+Terima kasih kepada orang di Cina menyerang saya ERDDAP™ instalasi.
          
-    * CHANGE ke perilaku driver Postgresql: Ketika saya memperbarui driver Postgresql, nama kolom di daftar tabel yang dihasilkan oleh Postgresql dan GenerateDatasetsXml kembali semua huruf besar, bukan semua huruf kecil, seperti sebelumnya. Saya tidak tahu apakah itu akan mempengaruhi hal-hal lain karena database sering menganggap nama-nama tersebut menjadi tidak sensitif. Dataset tes saya masih bekerja dengan benar. Tetapi jika dataset Anda berhenti bekerja dengan ini ERDDAP™ update, ini adalah penyebab yang mungkin untuk mengejar pertama.
+    * PERUBAHAN untuk Postgresql perilaku driver: Ketika saya memperbarui driver Postgresql, nama kolom dalam daftar tabel yang dihasilkan oleh Postgresql dan GeneraDatesetsXml kembali semua huruf besar, bukan semua huruf kecil, seperti sebelumnya. Saya tidak tahu apakah itu akan mempengaruhi hal-hal lain sejak database sering mempertimbangkan nama-nama untuk menjadi kasus sensitif. Data tesku masih bekerja dengan benar. Tetapi jika data Anda berhenti bekerja dengan ini ERDDAP™ update, ini adalah kemungkinan penyebab untuk mengejar pertama.
          
-    * Login: ERDDAP™ sekarang juga menangani file AWS S3 pribadi dengan benar. Ada perbaikan terkait lainnya untuk penanganan file AWS S3. Terima kasih kepada Michael Gangl dan Dylan Pugh.
+    * BUG FIX: ERDDAP™ sekarang juga menangani berkas AWS S3 pribadi dengan benar. Ada perbaikan terkait lainnya untuk menangani berkas AWS S3. Berkat Michael Gangl dan Dylan Pugh.
          
-    * Sitemap EDDGrid Sitemap EDDGrid Login Unpacked sekarang dapat membaca data dari "struktur" di .nc 4 dan .hdf 4 file. Untuk mengidentifikasi variabel yang berasal dari struktur,&lt; sourceName Sitemap harus menggunakan format: _fullStructureName_ | _memberName_, misalnya kelompok1/myStruct | Login NRL
+    * NEW: EDDGrid FromNcFiles dan EDDGrid FromNcFiles Dibongkar sekarang dapat membaca data dari "struktur" di .nc 4 dan .hdf 4 file. Untuk mengidentifikasi variabel yang berasal dari struktur,&lt; sourceName &gt; harus menggunakan format: _ full StructureName _ | _ Nama keanggotaan, sebagai contoh kumpulan 1 / myStruct | Anggota saya. Berkat NRL.
          
-    * CHANGED: Sekarang, jika penggunaan memori saat ini ditambah permintaan ini bahkan sedikit tinggi, set griddap nThreads untuk permintaan ini untuk 1. Sitemap ERDDAP™ mengamati memori ketika memori langka. Berkat orang di Cina menyerang saya ERDDAP™ Login
+    * Sekarang, jika penggunaan memori saat ini ditambah permintaan ini bahkan sedikit tinggi, set griddap NThreads untuk permintaan ini ke 1. Dengan demikian, ERDDAP™ menyimpan memori ketika memori langka. Terima kasih kepada orang di Cina menyerang saya ERDDAP™ instalasi.
          
-    * Sistem baru untuk memantau jumlah file terbuka (yang mencakup soket dan beberapa hal lain, tidak hanya file) di Tomcat di komputer Linux. Jika beberapa file tidak pernah ditutup, jumlah file terbuka dapat meningkat sampai melebihi maksimum diperbolehkan dan banyak hal yang benar-benar buruk terjadi. Sekarang, di komputer Linux (informasi tidak tersedia untuk Windows) Sitemap
+    * Sistem baru untuk memonitor jumlah berkas yang dibuka (yang termasuk soket dan beberapa hal lain, bukan hanya berkas) di Tomcat di komputer Linux. Jika beberapa berkas secara salah tidak pernah ditutup, jumlah berkas terbuka dapat meningkat sampai itu melebihi maksimum diperbolehkan dan banyak hal-hal yang benar-benar buruk terjadi. Jadi sekarang, pada komputer Linux (informasi tidak tersedia untuk Windows) :
         
-        * Ada kolom "Open File" baru di sebelah kanan status.html halaman web menunjukkan persen dari file max terbuka. Di Windows, itu hanya menunjukkan "?".
-        * Sitemap ERDDAP™ menghasilkan informasi pada akhir setiap reload dataset utama, itu akan mencetak log. txt file:
-openFileCount=_current_max=_max_ %=_percent_
-        * Jika persentasenya adalah &gt;50%, email dikirim ke ERDDAP™ administrator dan email Sitemap Untuk alamat email.
+        * Ada kolom "Open Files" baru di sebelah kanan halaman web status.html yang menunjukkan persentase dari berkas maksimal yang terbuka. Pada Windows, itu hanya menunjukkan "?".
+        * Kapan ERDDAP™ menghasilkan informasi tersebut pada akhir dari setiap reload data utama, itu akan mencetak ke log. berkas txt:
+openFileCount = _ current _ of max = _ max _% = _ percent _
+        * Jika persentase &gt; 50%, email dikirim ke ERDDAP™ administrator dan email Semuanya Untuk alamat email.
         
-Untuk mengetahui lebih banyak, atau jika Anda melihat masalah ini pada Anda ERDDAP™ Sitemap [Too Banyak File Terbuka](/docs/server-admin/additional-information#too-many-open-files) Sitemap
-Berkat orang di Cina menyerang saya ERDDAP™ Login
+Untuk mengetahui lebih lanjut, atau jika Anda melihat masalah ini pada Anda ERDDAP™ , lihat [Terlalu Banyak Buka Berkas](/docs/server-admin/additional-information#too-many-open-files) .
+Terima kasih kepada orang di Cina menyerang saya ERDDAP™ instalasi.
          
-    * BARU: Saya menambahkan banyak pemeriksaan untuk dan penanganan "O banyak file terbuka", sehingga tugas hanya berhenti dan pengguna melihat pesan kesalahan. File data tidak akan lagi ditandai dengan buruk jika membacanya menghasilkan kesalahan "Too banyak file terbuka".
+    * NEW: Saya menambahkan banyak pengecekan dan penanganan dari "Terlalu banyak berkas terbuka", sehingga tugas berhenti dan pengguna melihat pesan kesalahan. Berkas data tidak akan lagi ditandai sebagai buruk jika membacanya menghasilkan kesalahan "Terlalu banyak berkas terbuka".
          
-    * Login \\[ Login \\] Catalog
-Jika Anda menempatkan file di direktori ini dengan datasetID sebagai nama file (konten file tidak masalah) Login ERDDAP™ akan menghapus file buruk .nc file untuk dataset (Sitemap) dan reload dataset ASAP. Penyebab ini ERDDAP™ untuk mencoba lagi untuk bekerja dengan file sebelumnya (Sitemap) ditandai sebagai buruk. Terima kasih kepada Marco Alba.
+    * NEW \\[ Larang Direktori \\] / badFilesFlag direktori:
+Bila Anda menaruh berkas di direktori ini dengan datasetID sebagai nama berkas (isi berkas tidak penting) , ERDDAP™ akan menghapus badFiles .nc berkas untuk data tersebut (jika ada) dan mengisi ulang data ASAP. Hal ini menyebabkan ERDDAP™ untuk mencoba lagi untuk bekerja dengan berkas sebelumnya (keliru?) ditandai sebagai buruk. Berkat Marco Alba.
          
-    * CHANGED: Pada startup, jika sebuah EDDGrid Dari...Files atau EDDTableDari... File dataset awalnya memiliki 0 file dalam daftar file valid yang diketahui (e.g., dataset baru) Sitemap ERDDAP™ defers memuat dan menetapkan bendera sehingga akan dimuat ASAP setelah loadDataset utama selesai. Ini mempercepat startup awal ketika ada set data baru.
+    * Di awal mula, jika EDDGrid Dari... berkas atau EDTableFrom... Data berkas awalnya memiliki 0 berkas dalam daftar berkas yang dikenal valid (Misalnya, ini adalah data baru) , maka ERDDAP™ Desers memuat dan menetapkan bendera sehingga akan dimuat ASAP setelah loadDataset utama selesai. Ini mempercepat awal mula ketika ada data baru.
          
-    * FileVisitorDNLS.testAWSS3 () dan FileVisitorSubdir.testAWSS3 () ; sekarang menggunakan AWS v2 (tidak v1) SDK. Sekarang Git ERDDAP™ distribusi sekarang termasuk semua file yang diperlukan dan Anda tidak perlu lagi untuk menambahkan file jar v1 AWS SDK besar.
+    * FileVisitorDNLS.testAWSS3 () dan FileVisitorSubdir.testAWSS3 () ; sekarang gunakan AWS v2 (bukan v1) SDK. Jadi sekarang Git ERDDAP™ distribusi sekarang termasuk semua berkas yang dibutuhkan dan Anda tidak lagi perlu menambahkan secara manual file v1 AWS SDK botol besar.
          
-    * CHANGED: Saya beralih menggunakan Maven untuk mendeteksi / mengurangi ketergantungan (file .jar di /lib) Sitemap Perubahan untuk v2 dari AWS SDK membutuhkan ini. Ini akan diperlukan untuk kode impor lainnya di masa depan. Terima kasih besar untuk Kyle Wilcox yang menyediakan pom.xml dia menciptakan dan menggunakan, yang memecahkan beberapa masalah untuk saya.
+    * Saya beralih untuk menggunakan Maven untuk mendeteksi / mengumpulkan ketergantungan (berkas .jar dalam / lib) . Perubahan v2 dari AWS SDK membutuhkan ini. Ini akan diperlukan untuk kode impor lain di masa depan. Sebuah berkat besar Kyle Wilcox yang menyediakan pom.xml yang ia ciptakan dan menggunakan, yang memecahkan beberapa masalah bagi saya.
          
-    * CHANGED: Parameter kelas (Login) digunakan dalam GenerateDatasetXml, DasDds dan program kecil lainnya yang datang dengan ERDDAP™ , dan dalam saran untuk programmer sekarang jauh lebih sederhana dan seharusnya tidak pernah berubah lagi karena mengacu pada direktori, bukan file individu:
-\\-cp kelas;C:\\program\\\_tomcat\\lib\\\servlet-api.jar;lib\\\\*
-         (atau ':' bukan ';' untuk Linux dan Mac) Sitemap
-         (Saya harus melakukan tahun-tahun ini yang lalu ketika menjadi pilihan.)   
+    * Parameter classpath (-cp) digunakan dalam GenerateDadasetXml, DasDds dan program-program kecil lainnya yang datang dengan ERDDAP™ , dan dalam saran untuk programmer sekarang jauh lebih sederhana dan seharusnya tidak pernah berubah lagi karena mengacu pada direktori, bukan file individu:
+\\ -cp kelas; C:\\ program\\\ _ tomcat\\ lib\\ serplet-api.jar; lib\\ *
+         (atau ':' daripada ';' untuk Linux dan Mac) .
+         (Aku seharusnya melakukan ini tahun lalu ketika itu menjadi pilihan.)   
          
-    * Sitemap Xml memiliki opsi utilitas baru: findDuplicateTime yang akan mencari melalui koleksi gridded .nc   (dan terkait) file untuk menemukan file dengan nilai waktu duplikat. Sitemap [Login Sitemap](/docs/server-admin/datasets#findduplicatetime)   
+    * Data Generasi Xml memiliki pilihan utilitas baru: FindDuplicateTime yang akan mencari melalui koleksi gridded .nc   (dan terkait) berkas untuk menemukan berkas dengan nilai duplikat waktu. Lihat [findDuplikat Waktu](/docs/server-admin/datasets#findduplicatetime)   
          
-    * Sitemap datasets.xml Sitemap&lt;palet&gt; tag yang menimpa&lt;palet&gt; nilai tag dari pesan.xml (atau mengubah pesan.xml nilai jika kosong) Sitemap Ini memungkinkan Anda mengubah daftar palet yang tersedia sementara Meme it ERDDAP™ berjalan. Juga, jika Anda memiliki subdirectory cptfiles di ERDDAP™ Catalog ERDDAP™ akan menyalin semua file \\ *.cpt di direktori itu ke \\[ Login \\] /webapps/erddap/WEB-INF/cptfiles direktori setiap kali ERDDAP™ Sitemap Bersama-sama, perubahan ini memungkinkan Anda menambahkan palet dan memiliki perubahan bertahan ketika Anda menginstal versi baru dari ERDDAP Sitemap Sitemap [Dokumentasi palet](/docs/server-admin/datasets#palettes)   
+    * NEW: datasets.xml sekarang bisa termasuk&lt;palet &gt; tag yang menimpa&lt;palet &gt; tag nilai dari messages.xml (atau kembali ke nilai messages.xml jika kosong) . Hal ini memungkinkan Anda mengubah daftar palet yang tersedia saat ERDDAP™ lari. Juga, jika Anda memiliki subdirektori cptfiles di ERDDAP™ direktori isi, ERDDAP™ akan menyalin semua berkas\\ * .cpt dalam direktori itu ke dalam \\[ tomcat \\] / webapps / erddap / WEB-INF / cptfiles direktori setiap waktu ERDDAP™ dimulai. Bersama-sama, perubahan ini memungkinkan Anda menambahkan palet dan memiliki perubahan bertahan ketika Anda menginstal versi baru ERDDAP . Lihat [palettes dokumentasi](/docs/server-admin/datasets#palettes)   
 Berkat Jennifer Sevadjian, Melanie Abecassis, dan mungkin orang CoastWatch lainnya.
          
-    * Login&lt;Login (/docs/server-admin/datasets#slowdowntroublemillis) sekarang digunakan untuk semua permintaan gagal, tidak hanya beberapa jenis.
+    * BERUBAH: [&lt;slowDownTroubleMillis &gt;] (/ docs / server-admin / datasets # slowdownbilliris) sekarang digunakan untuk semua permintaan yang gagal, bukan hanya beberapa tipe.
          
-    * CHANGED: RunLoadDatasets thread sekarang mengganggu benang LoadDatasets pada 3/4 LoadDatasets MaxMinutes sehingga ada lebih banyak waktu untuk LoadDatasets untuk melihat gangguan dan keluar anggun. Juga ada pesan diagnostik yang lebih baik untuk ini.
+    * Benang LoadDataset kini mengganggu benang LoadDataset pada 3 / 4 LoadDataset MaxMinutes sehingga ada lebih banyak waktu untuk LoadDataset untuk melihat gangguan dan keluar dengan anggun. Juga ada banyak pesan diagnostik yang lebih baik untuk ini.
          
-    * CHANGED dari versi lama Lucene untuk v8.7.0.
+    * BERUBAH dari versi lama Lucene ke v8.7,0.
          
-    * CHANGE: Email dikirim oleh ERDDAP™ sekarang muncul dengan font lebar tetap.
+    * Email dikirim oleh ERDDAP™ sekarang muncul dengan fonta lebar tetap.
          
-    * Login EDDGrid DariFiles sekarang mendapat nilai sumbu serta atribut dari FIRST | File LAST, sebagaimana ditentukan&lt;metadataDari&gt;. Sitemap (Login) to Ken Casey, et al.
+    * CHANGE: EDDGrid FromFiles kini mendapat nilai sumbu serta atribut dari First | Berkas terakhir, seperti yang dinyatakan dalam&lt;metadata Dari &gt;. Terima kasih (tidak) untuk Ken Casey, et al.
          
-    * Didukung dukungan untuk unit yang tidak valid "degree\\_North" dan "degree\\_East" yang erronely digunakan oleh file baru-baru ini (Juni 2019) dalam Versi AVHRR Pathfinder 5.3 L3-Collated (Login) SST dataset (maksimka215 sst d1day dan nceiPH53 sst Sitemap) Sitemap ERDDAP™ sekarang dapat menstandardisasi mereka ke unit yang valid. Sitemap (Login) to Ken Casey, et al.
+    * Dukungan ADDID bagi unit "derajat\\ _ North" dan "derajat\\ _ Timur" yang salah digunakan oleh berkas baru-baru ini (Sejak 2020- 10- 01) dalam Pathfinder AVHR Versi 5.3 L3-Collated (L3C) Set data SST (nceiph53 sst d1day dan nceiph53 sst n1day) . ERDDAP™ dapat sekarang standardize mereka untuk unit yang valid. Terima kasih (tidak) untuk Ken Casey, et al.
          
 
 ## Versi 2.11{#version-211} 
- (Oktober 2019) 
+ (dirilis 2020- 12- 04) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * BUG FIX: OrderByMean melemparkan NullPointerException jika variabel hanya memiliki salah satu \\_FillValue atau hilang\\_ Nilai yang ditentukan. Sekarang menangani situasi dengan benar. Terima kasih kepada Marco Alba.
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * BUG FIX: OrderByMean melemparkan Nulll PointerException jika sebuah variabel hanya memiliki satu dari\\ _ FillValue atau hilang\\ _ Nilai didefinisikan. Sekarang itu menangani situasi dengan benar. Berkat Marco Alba.
          
-    * Login: Ada masalah dengan file teks ODV yang dibuat oleh ERDDAP™ di v2.10. Masalah-masalah tersebut tetap. Terima kasih kepada Shaun Bell.
+    * BUG FIX: Ada masalah dengan berkas teks ODV yang dibuat oleh ERDDAP™ Dalam v2.10. Masalah-masalah yang tetap. Berkat Shaun Bell.
          
-    * Login: Sitemap ERDDAP™ v2.10: Jika batas lat lon ditentukan di URL, kotak yang terikat tidak ditarik di peta dunia. Sekarang lagi. Terima kasih kepada John Maurer.
+    * BUG FIX: Hanya di ERDDAP™ v2.10: Jika batas lat lon dispesifikasikan dalam URL, kotak batas tidak digambar di peta dunia. Sekarang lagi. Berkat John Maurer.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Login: Sitemap ERDDAP™ v2.10: File skrip untuk ArsipADataset, HasilDataset Xml dan DasDds tidak bekerja karena mereka tidak memiliki perubahan ke classpath yang ditambahkan dengan ERDDAP™ v2.10. Sekarang mereka lakukan. Terima kasih kepada Marco Alba.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * BUG FIX: Hanya di ERDDAP™ v2.10: Berkas skrip untuk Archiveadaset, Tata Data GenerateDisc Xml dan DasDds tidak bekerja karena mereka tidak memiliki perubahan ke classpath yang ditambahkan dengan ERDDAP™ Sekarang mereka lakukan. Berkat Marco Alba.
          
-    * Sitemap datasets.xml Anda sekarang dapat memiliki tag:
+    * Dalam datasets.xml , Anda mungkin sekarang memiliki tag:
 ```
         <emailDiagnosticsToErdData></emailDiagnosticsToErdData> <!-- true (the default) or false -->  
 ```
 
-Saat ini, jika benar (atau jika tag kosong, atau jika tag tidak dalam file) , ketika permintaan pengguna mengarah ke NullPointerException, ERDDAP™ akan mengirim email jejak stack ke erd.data at noaa.gov   (Login ERDDAP™ tim pengembangan) Sitemap Ini harus aman dan aman karena tidak ada informasi rahasia (Sitemap) disertakan dalam email. Ini harus memungkinkan untuk menangkap bug yang tidak jelas, benar-benar tak terduga yang menyebabkan NullPointerExceptions. Jika tidak, pengguna melihat pengecualian, tetapi ERDDAP™ pengembang tidak tahu ada masalah yang perlu diperbaiki.
+Saat ini, jika benar (atau jika tag kosong, atau jika tag tidak dalam berkas) , ketika permintaan pengguna mengarah ke NullPointerception, ERDDAP™ akan email jejak stack ke erd.data at noaa.gov   (yang ERDDAP™ tim pengembangan) . Ini harus aman dan aman karena tidak ada informasi rahasia (mis., permintaan.) disertakan dalam email. Hal ini harus memungkinkan untuk menangkap jelas, benar-benar tak terduga bug yang menyebabkan NullPointerceptions. Jika tidak, pengguna melihat pengecualian, tetapi ERDDAP™ Pengembang tidak, jadi kita tidak tahu ada masalah yang perlu diperbaiki.
         
-Mungkin bahwa tag ini akan menyebabkan informasi diagnostik lainnya yang serupa diemail erd.data at noaa.gov di masa depan. Konten email akan selalu minimal dan terkait bug, dan tidak, misalnya, penggunaan informasi. Terima kasih kepada Marco Alba.
+Hal ini dimungkinkan bahwa tag ini akan menyebabkan lain, sama diagnosis informasi yang diemail ke erd.data at noaa.gov di masa depan. Isi email akan selalu minimal dan terkait dengan bug, dan tidak, misalnya, penggunaan informasi. Berkat Marco Alba.
          
         
-    * CHANGED: Sekarang, jenis file terkompresi umum ( .bz2 Login .gz Login .gzip Login .tar Login .tgz Login .z Login .zip ) juga dilarang untuk permintaan rentang byte. Ini ditentukan melalui&lt;ekstensiNoRangeRequests&gt; dalam pesan.xml.
+    * BERUBAH: Sekarang, tipe berkas yang dikompresi umum ( .bz2 , .gz , .gzip , .tar , .tgz , .z , .zip ) juga dilarang untuk permintaan jangkauan byte. Ini ditentukan melalui&lt;extensionsNoRangeRequests &gt; dalam message.xml.
          
-    * KNOWN PROBLEM: Sitemap ERDDAP™ 2.10, .nc file gm yang mencoba mengubah atribut, tidak mengubah atribut. Ini adalah bug yang dikenal di netcdf-java yang saya telah melaporkan dan mereka mengatakan akan tetap dalam rilis berikutnya netcdf-java.
+    * MASALAH KENAL: Seperti dengan ERDDAP™ 2,10, .nc berkas ml yang mencoba mengubah atribut, jangan ubah atribut. Ini adalah bug dikenal dalam netcdf -java yang saya telah melaporkan dan mereka mengatakan akan tetap dalam rilis berikutnya netcdf -java.
          
 
 ## Versi 2.10{#version-210} 
- (Dipublikasikan 2020-11-05) 
+ (dirilis 2020- 11- 05) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * BARU: Baru [Login](https://coastwatch.pfeg.noaa.gov/erddap/convert/interpolate.html) converter efisien mencemari nilai dari nilai dataset gridded. Seperti itu, sangat berguna bagi para peneliti yang bekerja dengan data trek hewan. Konverter ini diperlukan dalam tabel dengan lintang, bujur, dan kolom waktu (dan mungkin kolom lain) dan mengembalikan tabel dengan kolom tambahan dengan nilai yang diserbuki. Jadi, ini mirip dengan yang populer [Login](https://coastwatch.pfeg.noaa.gov/xtracto) script awalnya diciptakan oleh Dave Foley, tetapi menawarkan keuntungan pemrosesan hingga 100 poin per permintaan. Terima kasih untuk Dave Foley dan Jordan Watson ( NMFS ) Sitemap
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * Yang baru [Interpolasi](https://coastwatch.pfeg.noaa.gov/erddap/convert/interpolate.html) konverter secara efisien menginterpolates nilai dari nilai dataset gridded. Dengan demikian, hal ini sangat berguna bagi peneliti yang bekerja dengan data jejak hewan. Konverter ini mengambil dalam tabel dengan garis lintang, bujur, dan kolom waktu (dan (malaikat-malaikat) yang mengatur urusan (dunia).) dan mengembalikan tabel dengan kolom tambahan dengan nilai interpolasi. Jadi, ini mirip dengan populer [Xtractomatic](https://coastwatch.pfeg.noaa.gov/xtracto) script awalnya diciptakan oleh Dave Foley, tetapi menawarkan keuntungan dalam memproses hingga 100 poin per permintaan. Berkat Dave Foley dan Jordan Watson ( NMFS ) .
          
-    * IMPROVED: Pencarian lanjutan sekarang ketat untuk permintaan non-.html. Sekarang akan membuang pengecualian untuk permintaan yang memiliki kesalahan permanen (e.g., permintaan di mana minLat &gt; maxLat) atau kesalahan sementara (e.g., permintaan untuk standard\\_name tidak ada) Sitemap Untuk permintaan .html, Pencarian Lanjutan tidak berubah: seperti dengan pencarian Google, itu melakukan yang terbaik dan diam-diam memperbaiki atau mengabaikan kesalahan. Terima kasih kepada Rich Signell.
+    * IMPROVED: Pencarian lanjutan kini ketat bagi permintaan bukan -.html. Sekarang akan membuang pengecualian untuk permintaan yang memiliki galat permanen (mis., permintaan dimana minlat &gt; maxLat) atau kesalahan sementara (mis., permintaan untuk standard\\_name yang tidak ada) . Untuk permintaan .html, Pencarian Lanjutan tidak berubah: seperti dengan pencarian Google, ia melakukan yang terbaik dan diam-diam memperbaiki atau mengabaikan kesalahan. Berkat Rich Signgell.
          
-    * IMPROVED: Peta di halaman Pencarian Lanjutan sekarang lebih besar (Anda masih harus merobek, tetapi kurang) dan lebih akurat (tapi masih tidak sempurna) Sitemap Terima kasih kepada John Maurer.
+    * INTERROVED: Peta di halaman Pencarian Lanjutan sekarang lebih besar (Anda masih harus menyipitkan mata, tapi kurang) dan secara signifikan lebih akurat (tapi masih tidak sempurna) . Berkat John Maurer.
          
-    * IMPROVED: The "Draw tanah masker" pengaturan pada Membuat halaman web Graph dan &.land=... pengaturan di URL yang meminta peta sekarang mendukung dua opsi lebih:
-"outline" hanya menarik garis besar topeng tanah, batas politik, danau dan sungai.
-"off" tidak menarik apa pun.
-Sitemap [&.land=... dokumentasi](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#GraphicsCommands) Sitemap
-Terima kasih kepada John Maurer.
+    * IMPROVED: Pengaturan "Draw land mask" pada Buat A Graph halaman web dan & .land =... pengaturan dalam URL yang meminta peta sekarang mendukung dua pilihan lagi:
+"Garis luar" hanya menarik garis luar landmask, batas politik, danau dan sungai.
+"off" tidak menarik apa-apa.
+Lihat [& .land =... dokumentasi](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#GraphicsCommands) .
+Berkat John Maurer.
          
-    * IMPROVED: Grafik dan peta yang dibuat oleh ERDDAP™ sekarang dapat menggunakan tiga jenis penanda baru: Borderless Filled Square, Borderless Filled Circle, Borderless Filled Up Triangle. Kode untuk ini berkontribusi oleh Marco Alba ETT / EMODnet Fisika. Terima kasih kepada Marco Alba.
+    * IMPROVED: Graphs dan peta dibuat oleh ERDDAP™ sekarang dapat menggunakan tiga tipe penanda baru: Borderless Filled Square, Borderless Filled Circle, Borderless Filled Up Triangle. Kode untuk ini dikontribusikan oleh Marco Alba dari ETT / Emodnet Fisika. Berkat Marco Alba.
          
-    * Sitemap "files" sistem sekarang mendukung polos respon tipe file (Login .htmlTable Login .itx Login .json Login .jsonlCSV1 Login .jsonlCSV Login .jsonlKVP Login .mat Login .nc Login .nccsv Login .tsv Sitemap .xhtml Sitemap) Sitemap [https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv](https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv) Sitemap
-Kyle Wilcox
+    * NEW: "files" sistem sekarang mendukung plain Respon tipe berkas (.csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , atau .xhtml .) , mis., [ https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv ](https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv) .
+Berkat Kyle Wilcox.
          
-    * IMPROVED: URL yang dihasilkan ketika pengguna menggunakan Formulir Akses Data (Login) Sitemap (Login) halaman web sekarang benar persen-mengkode karakter \\[ Login \\] Sitemap Ini membuat URL sedikit lebih sulit bagi manusia untuk membaca, tetapi lebih baik dari sudut pandang keamanan web. Administrator sekarang memiliki pilihan pengaturan santaiedQueryChars= Sitemap \\[  \\]  | ' di file Tomcat.xml (kurang aman) atau tidak (lebih aman) Sitemap
-Terima kasih kepada Antoine Queric, Dominika Fuller-Rowell, dan lainnya.
+    * IMPROVED: URL yang dihasilkan ketika seorang pengguna memakai Formulir Akses Data (.html) atau sebuah Make- A- Grafik (.graph) halaman web sekarang persentase -encode karakter yang benar \\[ dan \\] . Hal ini membuat URL sedikit sulit bagi manusia untuk dibaca, tetapi lebih baik dari sudut pandang web keamanan. Administrator kini memiliki pilihan untuk menata relaxedQueryChars = ' \\[  \\]  | 'Dalam berkas Tomcat server.xml (kurang aman) atau tidak (lebih aman) .
+Berkat Antoine Queric, Dominic Fuller- Rowell, dan lainnya.
          
-    * BARU: Jika permintaan pada dataset EDDTable termasuk & tambah Login Sitemap (Login Nama, atribut Login) Login ERDDAP™ akan menambahkan semua variabel yang memiliki _attribute Nama=attribute Nilai_ ke daftar variabel yang diminta.
-Sitemap [Login Login Di mana dokumentasi](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#addVariablesWhere) Sitemap Terima kasih kepada Aurelie Briand, et al.
+    * NEW: Jika permintaan ke suatu tata tanggal EDTabel termasuk & tambahkan Variabel Dimana (_ atribut Nama, atribut Nilai _) , ERDDAP™ akan menambahkan semua variabel yang memiliki _ atribut Nama = atribut _ Nilai ke daftar variabel yang diminta.
+Lihat [& tambah Variabel Dimana dokumentasi](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#addVariablesWhere) . Berkat Aurelie Briand, et al.
          
-    * Sitemap ERDDAP™ sekarang menolak permintaan rentang byte ke / file / .nc Sitemap .hdf Login Jangan mencoba untuk terhubung ke jarak jauh .nc Sitemap .hdf file seolah-olah file lokal. Ini tidak efisien dan sering menyebabkan masalah lain. Sitemap
-        * Sitemap(OPeN)DAPsoftware klien untuk terhubung ke ERDDAP Sitemap DAP Layanan untuk dataset ini (yang memiliki /griddap / atau / tabledap URL) Sitemap Itulah DAP Sitemap
-        * Gunakan formulir akses dataset untuk meminta subset data.
-        * Jika Anda membutuhkan seluruh file atau akses berulang selama jangka waktu yang lama, gunakan curl Login wget , atau browser Anda untuk mengunduh seluruh file, kemudian mengakses data dari salinan file lokal Anda.
+    * BERUBAH: ERDDAP™ sekarang menolak permintaan jangkauan byte ke / berkas / .nc atau .hdf file. Jangan coba menyambung ke remote .nc atau .hdf berkas seolah-olah mereka berkas lokal. Hal ini mengerikan tidak efisien dan sering menyebabkan masalah lain. Sebaliknya:
+        * Gunakan(OPeN)DAPperangkat lunak klien untuk menyambung ke ERDDAP ' DAP layanan untuk data ini (yang memiliki / griddap / atau / tabledap / di URL) . Itulah yang DAP adalah untuk.
+        * Gunakan Datacet 's Data Access Form untuk meminta subset data.
+        * Jika Anda membutuhkan seluruh berkas atau akses berulang selama jangka waktu yang lama, gunakan curl , wget , atau peramban Anda untuk mengunduh seluruh berkas, kemudian mengakses data dari salinan lokal Anda dari berkas.
              
-    * Login Opsi output Txt telah ditulis kembali untuk mendukung versi baru dari ODV .txt file dan untuk mendukung representasi yang tepat dari trajectory, timeseries, dan data profil.
+    * IMPROVED: yang .odv Opsi keluaran txt telah ditulis ulang untuk mendukung versi baru dari ODV .txt berkas dan untuk mendukung representasi yang tepat dari lintasan, waktu, dan data profil.
          
-    * IMPROVED: Sekarang, istilah pencarian dalam kutipan ganda ditafkan sebagai string json, sehingga mereka dapat memiliki \\ karakter yang dikodekan. Di antara lain, ini memungkinkan Anda mencari pertandingan yang tepat untuk atribut, misalnya, "lembaga= NOAA  \\n " tidak akan cocok dengan dataset dengan institusi= NOAA   NMFS Sitemap Dan Nowacki.
+    * Sekarang, istilah pencarian dalam kutipan ganda diinterpretasikan sebagai string json, sehingga mereka dapat memiliki karakter tersandi. Di antara hal-hal lain, ini memungkinkan Anda untuk mencari yang sama persis untuk sebuah atribut, misalnya, "institusi = NOAA  \\n "tidak akan cocok dengan sebuah data dengan institusi" NOAA   NMFS . Berkat Dan Nowakki.
          
-    * IMPROVED: Di tempat tambahan, nomor titik mengambang (terutama mengapung dikonversi ke dua kali lipat) sekarang muncul sebagai versi yang sedikit lebih bulat dari jumlah di tempat tambahan, misalnya float sebelumnya ditampilkan sebagai ganda seperti 32.27979296875, mungkin sekarang muncul sebagai 32.28. Kyle Wilcox
+    * DIMAINKAN: Di tempat tambahan, nomor titik pecahan (terutama mengapung dikonversi ke ganda) sekarang muncul sebagai versi sedikit lebih bulat dari nomor di tempat tambahan, misalnya float sebelumnya ditampilkan sebagai ganda seperti 32.279979296875, mungkin sekarang muncul sebagai 32.28. Berkat Kyle Wilcox.
          
-    * BUG FIX: unsigned file audio integer membaca sedikit salah. Sekarang mereka membaca dengan benar.
+    * BUG FIX: berkas audio integer tidak ditandatangani dibaca dengan benar. Sekarang mereka dibaca dengan benar.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * PERINGATAN: Pertama kali Anda menjalankan ERDDAP™ v2.10, beberapa dataset berdasarkan file data lokal akan memuat **Sitemap** Sitemap ERDDAP™ perlu membuat ulang database informasi file. Setelah beban awal lambat, mereka akan memuat dengan cepat, seperti sebelumnya. Promo
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * PERINGATAN: Pertama kali Anda menjalankan ERDDAP™ v2.10, beberapa dataset berdasarkan berkas data lokal akan dimuat **sangat** perlahan karena ERDDAP™ perlu membuat ulang database dari informasi berkas. Setelah reload awal yang lambat, mereka akan memuat cepat, seperti sebelumnya. Harap bersabar.
          
-    * MENINGGALKAN ANDA:
-        * Ketika Anda pertama menjalankan v2.10, beberapa set data mungkin tidak memuat karena ERDDAP™ sekarang lebih ketat tentang beberapa metadata. Seperti sebelumnya, ERDDAP™ akan mengirim email kepada Anda Laporan Harian ketika beban pertama naik. Itu akan mencakup pesan kesalahan untuk setiap set data yang tidak dimuat. Baca pesan kesalahan untuk mengetahui masalah. Dalam kebanyakan kasus, Anda hanya perlu membuat perubahan kecil ke metadata dataset untuk memecahkan masalah.
+    * Hal yang harus kau lakukan:
+        * Ketika Anda pertama kali menjalankan v2.10, beberapa dataset mungkin tidak dimuat karena ERDDAP™ sekarang stricter tentang beberapa metadata. Seperti sebelumnya, ERDDAP™ akan email Anda Laporan Harian ketika pertama kali dimuat. Itu akan termasuk pesan kesalahan untuk setiap dataset yang tidak dimuat. Baca pesan kesalahan untuk mencari tahu masalah. Dalam kebanyakan kasus, Anda hanya perlu membuat perubahan kecil ke metadata data untuk memecahkan masalah.
              
-        * Sitemap datasets.xml Login&lt; sourceName Login (Login '=' tanda, yang mengidentifikasi [nilai tetap sourceName ](/docs/server-admin/datasets#fixed-value-sourcenames) ) Sitemap Untuk sebagian besar ERDDAP™ setup, ini jarang. Jika ada nilai setelah '=' Sitemap (Sitemap) Anda MUST sekarang mencakup string dalam kutipan ganda. Sitemap
-Sitemap&lt; sourceName &gt;=KZ401&lt;Sitemap sourceName Sitemap
-Sitemap&lt; sourceName &gt;="KZ401"&lt;Sitemap sourceName Sitemap
+        * Masuk datasets.xml , cari&lt; sourceName & gt; = (catatan '=' tanda, yang mengidentifikasi [nilai-fixed- sourceName ](/docs/server-admin/datasets#fixed-value-sourcenames) ) . Bagi kebanyakan ERDDAP™ Setup, ini langka. Jika salah satu nilai setelah '=' adalah string (bukan angka) , Anda HARUS sekarang membungkus string dalam kutipan ganda. Misalnya,
+Sebelum:&lt; sourceName [KZ401]&lt;/ sourceName &gt;
+Setelah:&lt; sourceName [KZ401]&lt;/ sourceName &gt;
              
-        * NEW: Ada pengaturan opsional baru dalam setup.xml,&lt;defaultAccessibleViaFiles&gt;, yang menetapkan default&lt;Sitemap Default untuk tag baru ini palsu, yang meniru sebelumnya ERDDAP™ perilaku. Pengaturan tingkat bawah ini dapat dilalui oleh dataset yang diberikan&lt;Sitemap
+        * Ada pengaturan opsional baru dalam semp.xml,&lt;navaultAccessibleViaFiles &gt;, yang menset baku&lt;accessibleViaFiles &gt; untuk setiap dataset. Baku untuk tag baru ini adalah salah, yang meniru sebelumnya ERDDAP™ perilaku. Pengaturan tingkat bawah ini dapat ditolak oleh dataset yang diberikan&lt;accessibleViaFiles &gt; diset.
             
-Sitemap (karena ada pengguna yang ingin ini Meme it) Sitemap
-Jika Anda ingin membuat... Dari Files dataset dapat diakses melalui sistem file, kemudian
+RECOMMENDED (karena ada pengguna yang menginginkan ini) :
+Jika Anda ingin membuat semua EDD... Data fromFiles dapat diakses melalui sistem berkas, lalu
             
-            1. Tambahkan tag ini ke file setup.xml Anda:
+            1. Tambahkan tag ini ke berkas semp.xml Anda:
 ```
                 <defaultAccessibleViaFiles>true</defaultAccessibleViaFiles>
 ```
-            2.   (Sitemap) Hapus semua
+            2.   (Secara Opsional) Hapus semua
 ```
                 <accessibleViaFiles>true</accessibleViaFiles>
 ```
-Sitemap datasets.xml sejak default sekarang benar. Meme it
+in datasets.xml karena default sekarang benar.
                  
-        * Tambahkan \\_FillValue Attributes:
-             ERDDAP™ digunakan untuk memiliki default \\_FillValue untuk semua variabel integer: nilai maksimum dari jenis data (e.g., 127 untuk variabel byte) Sitemap Sekarang tidak. Untuk menghindari memiliki nilai-nilai ini ditampilkan sebagai nilai data (tidak hilang nilai) Anda perlu untuk secara eksplisit menyatakan ini melalui atribut \\_FillValue. Dari sekarang, setiap kali Anda mulai ERDDAP™ , itu akan mengirim administrator email dengan tabel .csv dengan daftar variabel sumber integer yang tidak memiliki \\_FillValue atau missing\\_value atribut, dan atribut \\_FillValue yang disarankan. Sitemap [Login Atribut Nilai](/docs/server-admin/datasets#add-_fillvalue-attributes) untuk informasi dan instruksi lebih lanjut.
+        * Tambah atribut\\ _ FillValue:
+             ERDDAP™ digunakan untuk memiliki sebuah default\\ _ FillValue untuk seluruh variabel integer: nilai maksimum dari tipe data (mis., 127 untuk variabel byte) . Sekarang tidak. Untuk menghindari nilai-nilai yang ditampilkan sebagai nilai data (tidak hilang nilai) , anda perlu secara eksplisit menyatakan ini melalui atribut\\ _ FillValue. Mulai sekarang, setiap kali Anda memulai ERDDAP™ , itu akan mengirim administrator sebuah email dengan tabel .csv dengan daftar dari variabel sumber integer yang tidak memiliki\\ _ FillValue atau missing\\_value atribut, dan disarankan atribut\\ _ FillValue baru. Lihat [Tambah\\ _ Isi Atribut Nilai](/docs/server-admin/datasets#add-_fillvalue-attributes) untuk informasi lebih lanjut dan instruksi.
              
-        * Sitemap ERDDAP™ , Anda perlu memodifikasi parameter classpath pada baris perintah javac untuk menambahkan referensi ke stoples baru ini: lib/commons-jexl.jar;lib/aws-java-sdk.jar; lib/jackson-annotations.jar; lib/jackson-core.jar;lib/jackson-databind.jar Sitemap
+        * Jika Anda menyusun ERDDAP™ , Anda perlu memodifikasi parameter classpath pada baris perintah javac untuk menambahkan referensi ke toples baru ini: lib / common -jexl.jar; lib / aws-javy.sdk.jar; lib / jackson-bottations.jar; lib / jackson-core.jar; lib / jackson-dabind.jar.
              
-    * CHANGED: Tomcat 9 sekarang versi Tomcat yang disarankan untuk ERDDAP Sitemap Versi terbaru Tomcat 8.5+ juga bagus untuk sekarang. Kami dibersihkan ERDDAP Sitemap [Petunjuk instalasi Tomcat](/docs/server-admin/deploy-install#tomcat) Sitemap
+    * Tomcat 9 sekarang versi yang disarankan dari Tomcat untuk ERDDAP . Versi terbaru Tomcat 8.5 + juga baik-baik saja untuk saat ini. Kami dibersihkan ERDDAP ' [Instruksi instalasi Tomcat](/docs/server-admin/deploy-install#tomcat) .
         
-Versi terbaru dari Java Sitemap (Login Java 10, 10, 11 ...) Sitemap [Login](https://adoptopenjdk.net/) tetap versi yang disarankan Java Sitemap ERDDAP Sitemap Java 8 memiliki Dukungan Jangka Panjang dari AdopsiOpenJDK sehingga tetap aman digunakan, tetapi ingat untuk mendapatkan versi terbaru dari secara berkala untuk alasan keamanan.
+Versi terbaru dari Java 8 (tidak Java 9, 10, 11,...) dari [AdoptOpenJDK](https://adoptopenjdk.net/) tetap versi yang disarankan dari Java untuk ERDDAP . Java 8 memiliki Dukungan JDK Jum Panjang dari AdoptOpentOpenJDK sehingga tetap aman untuk digunakan, tapi ingat untuk mendapatkan versi terbaru dari itu secara berkala untuk alasan keamanan.
         
-    * BARU: Script SourceNames / Derived Variabel di Tabular Dataset
-EDDTableDariFileNames, EDDTableDariDatabase, dan EDDTableDariFileNames dataset sekarang termasuk ekspresi dan skrip di sourceName Sitemap Ini memungkinkan Anda membuat variabel baru berdasarkan variabel yang ada dalam file sumber. Perhitungan untuk variabel baru yang diberikan dilakukan dalam satu baris hasil, berulang kali untuk semua baris. Misalnya, untuk membuat variabel longitude dengan nilai dalam kisaran -180 - 180 ° dari variabel dengan nilai dalam kisaran 0 - 360 °:
-        &lt; sourceName &gt;=Math2.anglePM180 (baris.columnDouble (Login) ) &lt;Sitemap sourceName Sitemap
-Untuk detail, lihat [Login](/docs/server-admin/datasets#script-sourcenamesderived-variables)   
-Berkat Bob Simons (yang merencanakan ini sebelum ERDDAP™ v1.0 dan akhirnya menemukan cara untuk mengimplementasikannya) , Kevin O'Brien, Roland Schweitzer, John Maurer, dan perpustakaan Apache JEXL untuk melakukan bagian yang sangat keras (dan melakukannya dengan baik Meme it) Sitemap
+    * NEW: Script SourceNames / Variabel Tertutup dalam Dataset Tabular
+EDTableFromFiles, EDTableFromDatbase. dan DDTableFromFileNameData dapat memuat ekspresi dan skrip dalam sourceName . Hal ini memungkinkan Anda membuat variabel baru berdasarkan variabel yang ada di berkas sumber. Perhitungan untuk variabel baru yang diberikan dilakukan dalam satu baris dari hasil, berulang kali untuk semua baris. Sebagai contoh, untuk membuat sebuah variabel bujur dengan nilai dalam jangkauan -180 - 180 ° dari sebuah variabel dengan nilai dalam jangkauan 0 - 360 °:
+        &lt; sourceName [Mathur 2.anglePM180] (row.columnDouble ("lon") ) &lt;/ sourceName &gt;
+Untuk rincian, lihat [Nama Sumber Skrip](/docs/server-admin/datasets#script-sourcenamesderived-variables)   
+Berkat Bob Simons (yang merencanakan ini sebelumnya ERDDAP™ v1.0 dan akhirnya menemukan cara untuk menerapkannya) , Kevin O 'Brien, Roland Schweitzer, John Maurer, dan Perpustakaan Apache JEXL untuk melakukan bagian yang sangat sulit (dan melakukannya dengan baik) .
          
-    * BARU: Unsigned jenis data integer (ubyte, ushort, uint, ulong) sekarang didukung. Perhatikan bahwa banyak jenis file (g., .das, .dds, .nc Sitemap) tidak mendukung semua jenis data baru ini. Sitemap [Login Dokumentasi](/docs/server-admin/datasets#data-types) untuk rincian tentang bagaimana ERDDAP™ penawaran dengan perbedaan ini. Tidak bisa, karena(OPeN)DAPTidak ada respons .dds, tidak mendukung ketepatan yang ditandatangani, panjang, atau ulongs, Anda mungkin ingin menggunakan ERDDAP 's representasi tabular dari .das dan .das seperti yang terlihat di http Login **Sitemap** Login datasetID Login (Sitemap [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  ) yang dapat Anda dapatkan di jenis file lain atau .nccsv Metadata (Sitemap [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata)  ) keduanya mendukung semua jenis data dalam semua situasi.
+    * NEW: Tipe data integer tidak ditandatangani (ubyte, ushort, uint, ulong) sekarang didukung. Perhatikan bahwa banyak tipe berkas (mis., .das, .dds, .nc 3) tidak mendukung semua jenis data baru ini. Lihat [Data Tipe dokumentasi](/docs/server-admin/datasets#data-types) untuk rincian tentang bagaimana ERDDAP™ Berurusan dengan perbedaan ini. Terutama, sejak(OPeN)DAP, terutama respon .dds, tidak mendukung signed bytes, longs, atau ulongs, anda mungkin ingin menggunakan ERDDAP 's representasi tabular dari .das dan .das seperti yang terlihat dalam http ... / erddap / **info** / _ datasetID _ .html halaman web (misalnya, [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  ) yang Anda juga dapat mendapatkan dalam tipe berkas lain atau .nccsv Respon metadata (misalnya, [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata)  ) , keduanya mendukung semua jenis data dalam semua situasi.
         
-PERINGATAN: Untuk dataset yang dipengaruhi oleh perubahan ini, dimungkinkan bahwa Anda akan melihat masalah dengan dataset karena data yang ERDDAP™ membaca dari sumber mungkin berbeda (misalnya, variabel yang sebelumnya dibaca sebagai integer yang ditandatangani sekarang dapat dibaca sebagai integer yang tidak ditugaskan) Sitemap Masalah yang dihasilkan termasuk: file baru tidak ditambahkan ke dataset, dan/atau kesalahan ketika Anda mencoba mengakses data. Jika dataset memiliki masalah, hal pertama yang harus dicoba adalah [set keras Login](/docs/server-admin/additional-information#hard-flag) dataset. Jika itu tidak menyelesaikan masalah, maka Anda harus melihat log. txt untuk melihat pesan kesalahan, menyelam ke dalam datasets.xml untuk dataset, dan/atau mungkin kembali menghasilkanDataset.xml untuk dataset.
-Netcdf-java 5.x (yang memaksa masalah) dan yang akan datang CF 1.9.
+PERINGATAN: Untuk dataset yang terpengaruh oleh perubahan ini, mungkin Anda akan melihat masalah dengan data karena data yang ERDDAP™ baca dari sumber mungkin berbeda (mis, variabel sebelumnya dibaca sebagai integer signed sekarang dapat dibaca sebagai integer unsigned) . Masalah yang dihasilkan termasuk: berkas baru tidak ditambahkan ke data, dan / atau kesalahan ketika Anda mencoba untuk mengakses data. Jika sebuah data memiliki masalah, hal pertama yang mencoba adalah [set a hard Flag](/docs/server-admin/additional-information#hard-flag) untuk data. Jika itu tidak menyelesaikan masalah, maka Anda harus melihat log. txt untuk melihat pesan kesalahan, delve ke datasets.xml untuk dataset, dan / atau mungkin rerun generateDatesets.xml untuk dataset.
+Berkat netcdf-java 5.x (yang memaksa isu) dan CF 1.9 mendatang.
         
-    * IMPROVED: Sekarang [dokumentasi / iklan yang lebih baik](/docs/server-admin/datasets#s3-buckets) untuk bagaimana membuat dataset dari file di ember AWS S3. Michal Wengren
+    * ADA SEKARANG [dokumentasi / saran yang lebih baik](/docs/server-admin/datasets#s3-buckets) untuk membuat sebuah data dari berkas dalam ember AWS S3. Berkat Micah Wengren.
          
-    * CHANGED: Ada beberapa perubahan yang berkaitan dengan "files" sistem.
-        * Kode untuk menangani ini ditulis ulang untuk dapat digunakan oleh lebih kelas.
+    * Ada beberapa perubahan yang berhubungan dengan "files" sistem.
+        * Kode untuk menangani ini ditulis ulang untuk dapat digunakan oleh lebih banyak kelas.
              
-        * BARU: Permintaan pengguna untuk daftar direktori sekarang dapat meminta tanggapan adalah salah satu jenis tabel standar biasa dengan menerapkan ekstensi file yang diinginkan: .csv, .htmlTable Login .itx Login .json Login .jsonlCSV1 Login .jsonlCSV Login .jsonlKVP Login .mat Login .nc Login .nccsv Login .tsv Sitemap .xhtml Sitemap Sitemap
-             [https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv](https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv)   
+        * NEW: Permintaan pengguna untuk daftar direktori kini dapat meminta bahwa respon adalah salah satu tipe tabel biasa standar dengan menambahkan ekstensi berkas yang diinginkan: .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , atau .xhtml ). Misalnya,
+             [ https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv ](https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv)   
 Berkat Kyle Wilcox dan Shane St Savage.
              
-        * IMPROVED: Sekarang, Hasil Login Xml tidak akan termasuk&lt;dapat diaksesVias&gt; tag dalam output. Asumsi adalah bahwa dataset akan mengandalkan nilai baru&lt;defaultAccessibleViaFiles&gt; WordPress.org Sitemap [Sitemap Login](/docs/server-admin/datasets#accessibleviafiles) Sitemap
+        * IMPROVED: Sekarang, Hasilkan Dataset Xml tidak akan menyertakan&lt;accessibleViaFiles &gt; tag di keluaran. Asumsi adalah bahwa data akan bergantung pada nilai baru&lt;navaultAccessibleViaFiles &gt; tag dalam setup-xml. Lihat [akses ViaFiles](/docs/server-admin/datasets#accessibleviafiles) .
              
-        * IMPROVED: Jenis dataset tambahan sekarang mendukung dapat diakses Login EDDGrid Login EDDGrid Sitemap EDDGrid DariErddap, EDDTableDariErddap, EDDGrid DariEDDTable, EDDTableDari EDDGrid Sitemap EDDGrid Login Untuk ini, file dari dataset jarak jauh / anak yang diberikan hanya akan dapat diakses jika orang tua dan dataset jarak jauh / anak dapat diakses ViaFiles set ke true (mungkin melalui&lt;defaultAccessibleViaFiles&gt;). Terima kasih kepada Damian Smyth dan Rob Fuller.
+        * IMPROVED: Tipe dataset tambahan kini mendukung akses ViaFiles: EDDGrid SideBySide, EDDGrid Aggregates ExistingDimension, EDDGrid FromErddap, EDDTableFromErddap, EDDGrid FromEDTAble, EDTableFrom EDDGrid , dan EDDGrid FromEtopo. Untuk ini, berkas dari data remote / child yang diberikan hanya akan dapat diakses bila induk dan data remote / child dapat diakses ViaFiles diatur ke true (mungkin via&lt;navaultAccessibleViaFiles &gt;). Berkat Damian Smyth dan Rob Fuller.
              
-        * TO DO / RECOMMENDASI: Kami merekomendasikan membuat semua dataset yang relevan dapat diakses melalui sistem file dengan mengatur&lt;defaultAccessibleViaFiles&gt; untuk benar dalam setup.xml karena ada sekelompok pengguna untuk siapa ini adalah cara yang disukai untuk mendapatkan data. Di antara alasan lain, "files" sistem memudahkan pengguna untuk melihat file mana yang tersedia dan ketika mereka diubah terakhir, sehingga memudahkan pengguna untuk mempertahankan salinan mereka sendiri dari seluruh dataset. Jika Anda umumnya tidak ingin membuat dataset dapat diakses melalui sistem file, set&lt;defaultAccessibleViaFiles&gt; untuk palsu. Dalam kasus baik, hanya gunakan&lt;dapat diaksesVias&gt; untuk beberapa dataset yang terkecuali pada kebijakan umum yang ditetapkan oleh&lt;defaultAccessibleViaFiles&gt; (misalnya, ketika penggunaan dataset .nc file g) Sitemap
+        * TODO / RECOMMENDATION: Kami merekomendasikan untuk membuat semua data relevan dapat diakses melalui sistem berkas dengan pengaturan&lt;navaultAccessibleViaFiles &gt; untuk benar dalam setup.xml karena ada sekelompok pengguna untuk siapa ini adalah cara yang disukai untuk mendapatkan data. Di antara alasan lain, "files" sistem membuatnya mudah bagi pengguna untuk melihat file mana yang tersedia dan ketika mereka terakhir berubah, sehingga membuat mudah bagi pengguna untuk mempertahankan salinan mereka sendiri dari seluruh dataset. Jika Anda umumnya tidak ingin membuat dataset diakses melalui sistem berkas, set&lt;navaultAccessibleViaFiles &gt; ke false. Dalam kedua kasus, hanya menggunakan&lt;accessibleViaFiles &gt; untuk beberapa dataset yang merupakan pengecualian ke kebijakan umum yang ditetapkan oleh&lt;navaultAccessibleViaFiles &gt; (misalnya, ketika data menggunakan .nc Berkas ml, yang tidak terlalu berguna bagi pengguna) .
              
-    * IMPROVED: Sekarang, jika dataset sumber memiliki grid CF\\_mapping informasi, menghasilkan Login Xml for gridded dataset akan menambahkan informasi ke global&lt;addAtts&gt;, dan informasi akan ditambahkan ke global&lt;sumberAtts&gt; setiap kali data dibaca dari file. Informasi akan muncul di atribut global dataset sebagai set atribut dengan grid awal \\_mapping\\_.
+    * IMPROVED: Sekarang, jika suatu sumber data memiliki CF grid\\ _ pemetaan informasi, hasilkan Dataset Xml untuk data yang disaring akan menambahkan informasi ke global&lt;addAtts &gt;, dan informasi akan ditambahkan ke global&lt;sourceAtts &gt; setiap kali data dibaca dari berkas. Informasi akan muncul dalam atribut global dataset sebagai set atribut dengan prefiks grid\\ _ pemetaan\\ _.
          
-    * IMPROVED: Dukungan untuk kelompok saat membaca .nc 4 Artikel (dan beberapa sejauh .hdf 5 g) Login Umumnya, ERDDAP™ dataset akan dibangun dari variabel dalam salah satu kelompok file. Juga, GenerateDataset Login EDDGrid Sitemap EDDGrid Login Unpacked sekarang meminta "kelompok" (e.g., "" untuk setiap kelompok, "someGroup", "someGroup /someSubGroup", atau " \\[ Login \\] "hanya kelompok akar) Sitemap Terima kasih kepada Charles Carleton dan Jessica Hausman.
+    * INTERROVED: Dukungan bagi grup ketika membaca .nc 4 (dan sampai batas tertentu dalam .hdf 5) file. Umumnya, sebuah ERDDAP™ dataset akan dibangun dari variabel dalam salah satu grup berkas. Juga, GenerateDatasets Xml untuk EDDGrid FromNcFiles dan EDDGrid FromNcFiles Dibongkar sekarang meminta "kelompok" (mis. "," untuk semua grup ", someGroup", "someGroup / someSubGroup", atau " \\[ root \\] "Untuk hanya kelompok root) . Berkat Charles Carleton dan Jessica Hausman.
          
-    * IMPROVED: GenerateDataset Login EDDGrid Sitemap EDDGrid Login Unpacked sekarang mendukung parameter "DimensisCSV" opsional yang memungkinkan Anda menentukan nama sumber dimensi yang ingin dataset ini digunakan. Gunakan "" untuk mendapatkan variabel yang menggunakan dimensi paling, seperti sebelumnya. Juga, bug kecil terkait yang terjadi dengan jenis file ini sekarang tetap. Sujal Manandhar
+    * TERLIBAT: GenerateDatasets Xml untuk EDDGrid FromNcFiles dan EDDGrid FromNcFiles Unpacked sekarang mendukung sebuah parameter opsional "DimensionsCSV" yang memungkinkan Anda menspesifikasikan nama sumber dari dimensi yang Anda ingin dataset ini untuk digunakan. Gunakan "" untuk mendapatkan variabel yang menggunakan paling dimensi, seperti sebelumnya. Juga, bug kecil terkait yang terjadi dengan jenis berkas sekarang tetap. Berkat Sujal Manandhar.
          
-    * Login Xml sekarang daftar yang benar "EDDTableDariJsonlCSVFiles" (tidak "EDDTableDariJsonlCSV") sebagai salah satu opsi EDDType. Terima kasih kepada Andy Ziegler.
+    * BUG FIX: GenerateDatasets Xml kini memuat daftar "EDDTableFromJsonlCSVFiles" (bukan "EDTableFromJsonlCSV") sebagai salah satu pilihan EDType. Berkat Andy Ziegler.
          
-    * Sitemap EDDGrid Login Unpacked sekarang menstandardisasi atribut "units" standar / "kanonical" (metode yang sama sebagai konverter Unit) Sitemap Sitemap "meter per second" Login "meters/second" Login "m.s^-1" Sitemap "m s-1" Sitemap "m s-1" Sitemap Terima kasih kepada Andy Ziegler.
+    * TERLIBAT: EDDGrid FromNcFiles Unpacked sekarang standardizes "unit" atribut standar / "canonical" udunit (metode yang sama seperti pengkonversi Unit) . Misalnya, "meter per second" , "meters/second" , "m.s^-1" , dan "m s-1" semua menjadi "m s-1" . Berkat Andy Ziegler.
         
-PERINGATAN: Mungkin ini akan menyebabkan masalah untuk beberapa set data yang ada (e.g., menyebabkan file baru dilabeli "buruk") Sitemap Sitemap [set keras Login](/docs/server-admin/additional-information#hard-flag) untuk dataset sehingga semua file sumber akan dibaca kembali dengan sistem baru.
+PERINGATAN: Mungkin ini akan menyebabkan masalah bagi beberapa data yang ada (mis., menyebabkan berkas baru diberi label "buruk") . Jika demikian, [set a hard Flag](/docs/server-admin/additional-information#hard-flag) untuk data sehingga semua berkas sumber akan dibaca ulang dengan sistem baru.
         
-    * IMPROVED: Sekarang, variabel&lt; sourceName &gt; dapat menentukan nilai tetap = NaN dan variabel dapat memiliki actual\\_range atribut yang menentukan kisaran terbatas. Ini kadang-kadang berguna sehingga dataset (tidak dapat di EDDTableDariFileNames dataset) dapat memiliki variabel dummy (Login)   (e.g., lintang, longitude, waktu) dengan nilai tetap NaN, tetapi dengan valid actual\\_range   (sebagaimana diatur oleh atribut) Sitemap Kemudian, dalam pencarian lanjutan pengguna dapat mencari dataset yang memiliki data dalam lintang tertentu, longitude, rentang waktu dan dataset ini akan dapat mengatakan itu tidak memiliki data yang relevan (meskipun semua baris data yang sebenarnya akan menunjukkan NaN) Sitemap Sitemap [Dokumentasi nilai tetap](/docs/server-admin/datasets#fixed-value-sourcenames) Sitemap
+    * Sekarang, variabel&lt; sourceName &gt; dapat menentukan sebuah nilai tetap dari = NaN dan variabel dapat memiliki actual\\_range atribut yang menspesifikasikan sebuah jangkauan terbatas. Hal ini kadang-kadang berguna sehingga tanggal (terutama sebuah data EDTableFromFilenamet) dapat memiliki variabel dummy (s)   (mis., lintang, bujur, waktu) dengan nilai tetap dari NaN, tetapi dengan valid actual\\_range   (sebagaimana diset oleh atribut) . Kemudian, dalam Pencarian Lanjutan pengguna dapat mencari data yang memiliki data dalam garis lintang tertentu, bujur, rentang waktu, dan data ini akan dapat mengatakan itu memiliki data yang relevan (meskipun semua baris data yang sebenarnya akan menunjukkan NaN) . Lihat [dokumentasi nilai tetap](/docs/server-admin/datasets#fixed-value-sourcenames) .
 Berkat Mathew Biddle.
          
-    * BARU: Sekarang, datasets.xml chunk untuk EDDTableDariAsciiFiles atau EDDTableDariColumnarAsciiFiles dataset dapat mencakup tag yang memberitahukan ERDDAP™ untuk mengabaikan semua garis di bagian atas file hingga dan termasuk garis yang sesuai dengan ekspresi reguler yang ditentukan. Sitemap
-        &lt;Login\\*Login\\*Login\\*Login\\*&lt;Login
-akan mengabaikan semua garis hingga dan termasuk garis yang dimulai dengan "\\*\\*Sitemap Sitemap&lt;WordPress.org (/docs/server-admin/dataset#skipheader) Sitemap
-Terima kasih kepada Eli Hunter
+    * Sekarang, datasets.xml potongan untuk sebuah data EDTableFromAsciiFiles atau EDTableFromColotors AsciiFiles dapat termasuk tag yang memberitahu ERDDAP™ untuk mengabaikan seluruh baris di atas berkas hingga dan termasuk baris yang cocok dengan ekspresi reguler yang dispesifikasikan. Misalnya,
+        &lt;skipHeaderToRegex &gt;\\\*\\\*\\\*AKHIR HEDER.\\*&lt;/ skipHeaderToRegex &gt;
+akan mengabaikan semua baris sampai dan termasuk baris yang dimulai dengan "\\*\\*AKHIR HEDER. Lihat [&lt;skipHeaderToRegex &gt; dokumentasi] (/ docs / server-admin / dataset # skiphedertoregex) .
+Berkat Eli Hunter
          
-    * BARU: Sekarang, datasets.xml chunk untuk EDDTableDariAsciiFiles atau EDDTableDariColumnarAsciiFilesdataset dapat mencakup tag yang memberitahukan ERDDAP™ untuk mengabaikan semua garis dalam file yang sesuai dengan ekspresi reguler yang ditentukan. Sitemap
+    * Sekarang, datasets.xml chunk untuk EDTableFromAsciiFiles atau EDTableFromColotorAsciiFilesdatet dapat memasukkan tag yang memberitahu ERDDAP™ mengabaikan seluruh baris dalam berkas yang cocok dengan ekspresi reguler yang dispesifikasikan. Misalnya,
 ```
         <skipLinesRegex>#.\\*</skipLinesRegex>  
 ```
 
-akan melewatkan semua garis yang dimulai dengan "#". Sitemap&lt;WordPress.org (/docs/server-admin/dataset#skiplinesregex) Sitemap
-Terima kasih kepada Eli Hunter.
+akan melewati semua baris yang dimulai dengan "#". Lihat [&lt;skipLinesRegex &gt; dokumentasi] (/ docs / server-admin / datasets # skiplenesregex) .
+Berkat Eli Hunter.
          
-    * Sitemap datasets.xml chunk untuk setiap dataset EDDTable sekarang termasuk & add Login Sitemap (Login) Sitemap Jika tidak, ERDDAP™ akan menambahkan widget untuk setiap atribut yang ditentukan Nama Formulir Akses Data yang ditetapkan (.html halaman web) untuk memudahkan pengguna untuk menambahkan & menambahkan Login Sitemap (Login Nama, atribut Login) atas permintaan.
-Sitemap [Login Login Di mana dokumentasi](/docs/server-admin/datasets#addvariableswhere) Sitemap
-Terima kasih kepada Aurelie Briand, et al.
+    * NEW: datasets.xml potongan untuk data EDTabel apapun sekarang mungkin termasuk & add Variabel Dimana (_ CopyNamesCSV _) . Jika tidak, ERDDAP™ akan menambahkan widget untuk setiap atribut yang ditentukan Nama ke Dataset 's Data Access Form (.html halaman web) untuk membuatnya mudah bagi pengguna untuk menambahkan & add Variabel Dimana (_ atribut Nama, atribut Nilai _) untuk permintaan.
+Lihat [& tambah Variabel Dimana dokumentasi](/docs/server-admin/datasets#addvariableswhere) .
+Berkat Aurelie Briand, et al.
          
-    * Login Alat Pihak Ketiga: ERDDAP Login
-         ERDDAP -lint adalah program dari Rob Fuller dan Adam Leadbetter dari Institut Laut Irlandia yang dapat Anda gunakan untuk meningkatkan metadata dari Anda ERDDAP™ Login ERDDAP -lint "mendapatkan aturan dan aplikasi web statis sederhana untuk menjalankan beberapa tes verifikasi terhadap Anda ERDDAP™ Login Semua tes berjalan di browser web." Sitemap [Unix/Linux lint tool](https://en.wikipedia.org/wiki/Lint_(software) ), Anda dapat mengedit aturan yang ada atau menambahkan aturan baru. Sitemap [ ERDDAP Login](https://github.com/IrishMarineInstitute/erddap-lint) Informasi lebih lanjut
+    * NEW Tiga puluh Alat Partai: ERDDAP -lint
+         ERDDAP -Lint adalah program dari Rob Fuller dan Adam Leadbetter dari Institut Marinir Irlandia yang dapat Anda gunakan untuk meningkatkan metadata Anda ERDDAP™ Dataset. ERDDAP -lint "berisi aturan dan sebuah aplikasi statis sederhana untuk menjalankan beberapa tes verifikasi terhadap anda ERDDAP™ server. Semua tes dijalankan di web browser ". Seperti [Alat unix / Linux lint](https://en.wikipedia.org/wiki/Lint_(software) ), anda dapat mengedit aturan yang ada atau menambahkan aturan baru. Lihat [ ERDDAP -lint](https://github.com/IrishMarineInstitute/erddap-lint) untuk informasi lebih lanjut.
         
-Alat ini sangat berguna untuk dataset yang Anda buat beberapa waktu yang lalu dan sekarang ingin membawa up-to-date dengan preferensi metadata saat ini. Contohnya, versi awal GenerateDatasets Xml tidak memberikan upaya untuk menciptakan global creator\\_name Login creator\\_email , pencipta\\_type, atau creator\\_url Login Anda bisa menggunakan ERDDAP -lint untuk mengidentifikasi dataset yang tidak memiliki atribut metadata.
+Alat ini sangat berguna bagi dataset yang Anda buat beberapa waktu lalu dan sekarang ingin membawa up-to-date dengan preferensi metadata Anda saat ini. Sebagai contoh, versi awal Data Generateset Xml tidak berusaha untuk menciptakan global creator\\_name , creator\\_email , pencipta\\ _ tipe, atau creator\\_url metadata. Anda bisa menggunakan ERDDAP -lint untuk mengidentifikasi dataset yang kurang metadata atribut.
         
-Berkat Rob dan Adam untuk membuat alat ini dan membuatnya tersedia untuk ERDDAP™ Sitemap
+Berkat Rob dan Adam untuk menciptakan alat ini dan membuatnya tersedia untuk ERDDAP™ komunitas.
         
-    * BARU: Sekarang oke jika beberapa file dalam EDDGrid Dari Files dataset tidak memiliki semua variabel dataset. File akan disertakan jika mereka memiliki variabel (dengan semua nilai yang hilang) Sitemap
-Terima kasih kepada Dale Robinson dan Doug Latornell.
+    * Sekarang tidak apa-apa jika beberapa file dalam EDDGrid Data FromFiles tidak memiliki semua variabel data. Berkas akan disertakan seolah-olah mereka memiliki variabel (dengan semua nilai yang hilang) .
+Berkat Dale Robinson dan Doug Latornell.
          
-    * BARU: Ada statistik penggunaan baru dalam file log dan Laporan Harian untuk membantu administrator mengidentifikasi pengguna yang menyebabkan masalah memori. Statistik dinamakan "OutOfMemory (Ukuran Array) Login (Login) ", dan "OutOfMemory (Cara Too Besar) Sitemap Mereka menunjukkan alamat IP pengguna yang membuat permintaan dalam kategori ini dan jumlah permintaan yang mereka buat. Jika tidak ada permintaan yang kesulitan, statistik ini tidak akan muncul. Login (Ukuran Array) "dan "OutOfMemory (Cara Too Besar) " permintaan biasanya bukan masalah karena permintaan begitu besar bahwa Meme it ERDDAP™ menangkap mereka dengan cepat dan mengembalikan pesan kesalahan. Login (Login) " permintaan lebih berbahaya karena ERDDAP™ membuat beberapa upaya sebelum menyadari tidak ada cukup memori saat ini tersedia untuk menangani permintaan (meskipun masalah mungkin permintaan lain tepat sebelum permintaan ini) Sitemap
+    * NEW: Ada statistik penggunaan baru dalam berkas log dan Daily Report untuk membantu administrator mengidentifikasi pengguna yang menyebabkan masalah memori. Statistik bernama "Memori Luar (Ukuran Larik) ", Kenangan Luar (Terlalu Besar) ", dan" OutOf Memory (Terlalu Besar) ". Mereka menunjukkan alamat IP dari pengguna yang membuat permintaan dalam kategori ini dan jumlah permintaan yang mereka buat. Jika tidak ada permintaan merepotkan, statistik ini tidak akan muncul." Memori Luar (Ukuran Larik) "dan" OutOf Memory (Terlalu Besar) "permintaan biasanya bukan masalah karena permintaan begitu besar sehingga ERDDAP™ menangkap mereka dengan cepat dan kembali pesan kesalahan. "Memori Luar" (Terlalu Besar) "Permintaan lebih berbahaya karena ERDDAP™ membuat beberapa usaha sebelum menyadari tidak cukup memori saat ini tersedia untuk menangani permintaan (meskipun masalah mungkin permintaan lain tepat sebelum permintaan ini) .
         
-Ada juga statistik baru bernama "Pertanyaan Besar, alamat IP" yang menunjukkan alamat IP pengguna yang membuat permintaan besar (Saat ini, gridded .nc Sitemap 1 g) Sitemap
+Ada juga statistik baru bernama "Large Request, IP address" yang menunjukkan alamat IP dari pengguna yang membuat permintaan besar (Saat ini, gridded .nc berkas &gt; 1GB) .
         
-Juga, tabel seri waktu di halaman status.html sekarang termasuk kolom "memFail" menunjukkan jumlah permintaan yang gagal dengan "OutOfMemory (Login) " kesalahan karena dataset Beban utama terakhir. Setiap nomor selain 0 di sini setidaknya beberapa penyebab untuk perhatian.
+Juga, tabel seri waktu di halaman status.html sekarang termasuk kolom "MemFail" menampilkan jumlah permintaan yang gagal dengan "OutOfment Memory (Terlalu Besar) "Kesalahan sejak memuat Data Utama terakhir. Setiap angka selain 0 di sini setidaknya beberapa alasan untuk keprihatinan.
 Berkat Bob Simons.
         
-    * BARU: Versi baru dari Hyrax menampilkan daftar direktori berbeda dari sebelumnya. ERDDAP™ sekarang dapat membaca daftar direktori lama dan baru.
+    * Versi baru dari Hyrax tampilkan daftar direktori berbeda dari sebelumnya. ERDDAP™ kini dapat membaca daftar direktori lama dan baru.
          
-    * BARU: Beban dataset dan respons pengguna yang mengambil &gt; 10 detik untuk menyelesaikan (berhasil atau tidak berhasil) ditandai dengan " (Sitemap) Sitemap Dengan demikian, Anda dapat mencari file log.txt untuk frasa ini untuk menemukan dataset yang lambat untuk memuat ulang atau jumlah permintaan yang lambat selesai. Anda kemudian dapat melihat lebih tinggi dalam file log.txt untuk melihat apa masalah dataset atau apa permintaan pengguna dan siapa itu dari. Ini lambat dataset beban dan permintaan pengguna kadang-kadang pajak pada ERDDAP Sitemap Jadi tahu lebih banyak tentang permintaan ini dapat membantu Anda mengidentifikasi dan memecahkan masalah.
-    * IMPROVED: Ketika memvalidasi dataset CF DSG, ERDDAP™ sekarang memastikan bahwa variabel dengan atribut cf\\_role berada di cdm yang sesuai\\_...\\_variables list dan tidak dalam cdm lain\\_...\\_variables list. Sebagai contoh, jika dataset Profil memiliki variabel "station\\_id" yang memiliki atribut cf\\_role=timeseries\\_id, maka "station\\_id" harus berada di cf\\_timeseries\\_variables list, tetapi tidak boleh berada dalam cf\\_profile\\_variables list.
-Michal Wengren
+    * NEW: Data mengisi ulang dan user respons yang mengambil &gt; 10 detik untuk menyelesaikan (sukses atau gagal) ditandai dengan " (&gt; 10s&#33;) ". Dengan demikian, Anda dapat mencari file log.txt untuk frasa ini untuk menemukan pasangan data yang lambat untuk reload atau jumlah permintaan permintaan yang lambat untuk selesai. Anda kemudian dapat melihat lebih tinggi dalam berkas log.txt untuk melihat apa masalah dataset itu atau apa permintaan pengguna dan dari siapa itu. Beban data lambat ini dan permintaan pengguna kadang-kadang berurut pada ERDDAP . Jadi mengetahui lebih lanjut tentang permintaan ini dapat membantu Anda mengidentifikasi dan memecahkan masalah.
+    * Ketika memvalidasi data CF DSG, ERDDAP™ sekarang pastikan bahwa variabel dengan atribut cf\\ _ role berada dalam cdm\\ _...\\ _ variabel daftar dan tidak dalam daftar cdm\\ _...\\ _ variabel lain. Sebagai contoh, jika data timeseriesProfile memiliki variabel "station\\ _ id" yang memiliki cf\\ _ role = timesery\\ _ id atribut, maka "station\\ _ id" harus berada dalam daftar cf\\ _ timeseries\\ _ variations, tetapi tidak boleh berada dalam cf\\ _ profile\\ _ variable.
+Berkat Micah Wengren.
          
-    * IMPROVED: 'Simplify' sekarang lebih cepat, menggunakan memori kurang, dan dapat mengembalikan LongArray. Sitemap Unidata Sitemap
+    * PENULIKAN: 'Simplify' sekarang lebih cepat, menggunakan lebih sedikit memori, dan mungkin kembali LongArray. Terima kasih Unidata .
          
-    * IMPROVED: quickRestart sekarang secara signifikan lebih cepat untuk EDDTableDari (Login) Login (kecuali EDDTableDariNcCFFiles dan EDDTableDariInvalidCRAFiles) Sitemap Sitemap (dan tempat lain) sekarang hanya membaca metadata file sampel bukan membaca semua data. Terima kasih kepada Jessica Austin.
+    * IMPROVED: fast-start sekarang secara signifikan lebih cepat untuk EDTableFrom (nc-related) Berkas (kecuali EDTableFromNCFFIes dan EDTableFromInvalidCRAFiles) karena membuat Diduga (dan tempat lain) Sekarang hanya membaca metadata contoh file daripada membaca semua data. Berkat Jessica Austin.
          
-    * IMPROVED: Sekarang ada dukungan untuk string waktu dengan presisi lebih besar daripada to-the-millisecond jika digit tambahan adalah semua 0's, misalnya, "2020-05-22T01:02:03.456000000Z". Yibo Jiang
+    * IMPROVED: Sekarang ada dukungan untuk string waktu dengan presisi lebih besar daripada -the- milidetik jika tambahan digit semua 0 's, misalnya, "2020-022T01: 02: 03.45600Z." Berkat Yibo Jiang.
          
-    * IMPROVED: GenerateDatasetsXml's EDD.suggestDestinationName digunakan untuk menghapus '(' dan segalanya setelah. Sekarang menghapus (.\\*) hanya jika itu akhir sourceName Sitemap Sekarang juga menghapus \\[ Sitemap\\* \\] hanya jika itu berakhir Meme it sourceName Sitemap Julien Paul
+    * IMPROVED: GenerateDatasetsXml 's EDDDISTSUSTDESIONationName digunakan untuk menghapus' ('dan semuanya setelahnya. Sekarang menghapus (.\\*) hanya jika itu adalah akhir sourceName . Sekarang juga menghapus \\[ .\\* \\] hanya jika itu adalah akhir dari sourceName . Berkat Julien Paul.
          
-    * IMPROVED: GenerateDataset Xml sekarang membuat variabel destinationName s unik dengan menambahkan \\_2, \\_3, ..., sesuai kebutuhan. Julien Paul
+    * TERLIBAT: GenerateDatasets Xml kini membuat variabel destinationName s unik dengan tambahan\\ _ 2,\\ _ 3,..., seperti yang dibutuhkan. Berkat Julien Paul.
          
-    * IMPROVED: Ketika Kalender2.parseDateTime parses dd, hh, atau HH, 'digit pertama sekarang bisa menjadi ruang.
-    * KNOWN PROBLEM: Sitemap ERDDAP™ 2.10, .nc file gm yang mencoba mengubah atribut, tidak mengubah atribut. Ini adalah bug yang dikenal di netcdf-java yang saya telah melaporkan dan mereka mengatakan akan tetap dalam rilis berikutnya netcdf-java.
+    * Ketika Calendar2.parseDateTime parses dd, hh, atau HH, 'digit' pertama mungkin sekarang menjadi ruang.
+    * MASALAH KENAL: Dimulai dengan ERDDAP™ 2,10, .nc berkas ml yang mencoba mengubah atribut, jangan ubah atribut. Ini adalah bug dikenal dalam netcdf -java yang saya telah melaporkan dan mereka mengatakan akan tetap dalam rilis berikutnya netcdf -java.
          
-    * Login Saya membuat sistem yang tepat untuk pengujian untuk tautan yang rusak di ERDDAP™ halaman web, jadi sekarang harus ada beberapa tautan yang rusak (setidaknya satu dari setiap tanggal rilis - baru link rusak muncul sering) Sitemap
+    * ROKEN LINKS FIX: Saya membuat sistem yang tepat untuk pengujian untuk link rusak di ERDDAP™ halaman web, jadi sekarang seharusnya ada sangat sedikit link yang rusak (paling tidak setiap tanggal rilis -- hubungan rusak baru sering muncul) .
          
-    * BUG FIX: EDDTableDariHttpGet gagal dengan jenis permintaan tertentu. Sekarang tidak. Terima kasih kepada Emma di BODC.
+    * BUG FIX: EDTableFromHttpGet gagal dengan jenis permintaan tertentu. Sekarang tidak. Berkat Emma di BODC.
          
-    * Login: Untuk menangani beberapa permintaan, EDDTable membuat file sementara untuk setiap variabel yang diminta, dengan nama file yang berakhir dalam nama variabel. Jika nama variabel juga merupakan jenis kompresi (Sitemap) Login ERDDAP Sitemap (dan gagal) untuk menghapus file sementara. Sekarang nama file sementara berakhir dalam ".temp". Berkat Mathew Biddle.
+    * BUG FIX: Untuk menangani beberapa permintaan, EDTabel membuat berkas sementara untuk setiap variabel yang diminta, dengan nama berkas berakhir dalam nama variabel. Jika nama variabel juga adalah tipe kompresi (mis., .Z) , ERDDAP akan mencoba (dan gagal) untuk mendekompresi berkas sementara. Sekarang nama berkas sementara berakhir masuk "temp". Berkat Mathew Biddle.
          
-    * Facebook Twitter Google Plus Pinterest Email Java Sitemap Format sekarang jauh lebih cenderung membuat perubahan yang salah ketika mencoba memperbaiki format waktu tanggal yang mungkin tidak valid. Tidak ada format tanggal yang disarankan secara otomatis akan dimodifikasi. Berkat Mathew Biddle.
+    * BUG FIX: GenerateDatasetsXml dan Calendar2.convertTo Java Tanggal Format kini lebih kecil kemungkinan untuk membuat perubahan yang salah ketika mencoba memperbaiki format tanggal waktu yang mungkin tidak valid. Secara khusus, tidak ada format dateTime yang disarankan otomatis akan diubah. Berkat Mathew Biddle.
          
-    * Login: Jika ada kesalahan saat mendapatkan konten dari URL jarak jauh, dan jika konten errorStream dikompresi, ERDDAP™ sekarang dengan benar menekan pesan kesalahan. Berkat Bob Simons.
+    * BUG FIX: Bila ada galat ketika memperoleh isi dari suatu URL jauh, dan bila isi errorStream dikompresi, ERDDAP™ sekarang dekompresi benar pesan kesalahan. Berkat Bob Simons.
          
-    * Login:&lt;berlanggananToRemoteErddapDataset&gt; tidak diterapkan ketika EDD ... Dari dataset Erddap adalah dataset anak. Sitemap Chris Romsos
+    * BUG FIX:&lt;subscribe ToRemoteErddapDatet &gt; tidak diterapkan ketika EDD... Dari data Erddap adalah data anak. Sekarang iya. Berkat Chris Romsos.
          
-    * Login Xml tidak lagi berpikir nama variabel sumber dimulai dengan "latin" mungkin lintang. Terima kasih kepada Vincent Luzzo
+    * BUG FIX: GenerateDatasets Xml tidak lagi berpikir sebuah nama variabel sumber yang dimulai dengan "latin" mungkin garis lintang. Berkat Vincent Luzzo.
          
-    * BUG FIX: Sekarang, OutOfMemoryError sambil membaca file data sambil memproses permintaan pengguna bukan alasan untuk menambahkan file ke daftar BadFiles. Berkat Bob Simons.
+    * BUG FIX: Sekarang, sebuah OutOf MemoryError ketika membaca sebuah berkas data ketika memproses permintaan pengguna bukan alasan untuk menambahkan sebuah berkas ke dalam daftar BadFiles. Berkat Bob Simons.
          
 
 ## Versi 2.02{#version-202} 
- (dirilis 2019-08-21) 
+ (dirilis 2019-08- 21) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * BARU: Sekarang ada dua cara untuk mencari dataset di beberapa ERDDAP Sitemap Mereka bekerja sedikit berbeda dan memiliki antarmuka dan opsi yang berbeda.
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * Sekarang ada dua cara untuk mencari data pada beberapa ERDDAP s. Mereka bekerja sedikit berbeda dan memiliki antarmuka yang berbeda dan pilihan.
         
-        *    [Sitemap ERDDAP Login](/SearchMultipleERDDAPs.html) dari Bob Simons / NOAA   NMFS   SWFSC   ERD Sitemap
-        *    [http://erddap.com](http://erddap.com) dari Rob Fuller / Institut Laut Irlandia.
+        *    [Pencarian ERDDAP s.html](/SearchMultipleERDDAPs.html) dari Bob Simons / NOAA   NMFS   SWFSC   ERD .
+        *    [ http://erddap.com ](http://erddap.com) dari Rob Fuller / The Marine Institute of Irlandia.
         
 Berkat Tylar Murray untuk permintaan asli.
          
-    * IMPROVED: permintaan untuk Meme it "files" sistem untuk men-download file yang sebenarnya di situs jarak jauh (e.g., AWS S3) sekarang mengarah ke pengalihan, sehingga pengguna akan benar-benar mengunduh data dari sumber, bukan menggunakan ERDDAP™ sebagai perantara. Terima kasih kepada Andy Ziegler dan NOAA Sitemap
+    * TERLIBAT: permintaan ke "files" sistem untuk mengunduh berkas yang sebenarnya berada di situs remote (mis., AWS S3) sekarang mengarah ke redirect, jadi pengguna sebenarnya akan mengunduh data dari sumber, daripada menggunakan ERDDAP™ sebagai perantara. Berkat Andy Ziegler dan NOAA .
          
-    * BARU: Sebagai contoh fitur yang berhubungan dengan AWS S3 baru, dan untuk memudahkan siapa pun untuk menelusuri dan mengunduh file dari ember AWS S3 publik, kami telah menciptakan
-         [~ 110 set data sampel](https://registry.opendata.aws/) yang memungkinkan siapa pun untuk menelusuri konten hampir semua Meme it
-         [AWS S3 Open Data ember](https://registry.opendata.aws/) Sitemap Jika Anda mengklik "files" tautan untuk setiap set data sampel tersebut, Anda dapat menjelajahi pohon direktori dan file di ember S3. Karena cara kerja set data ini, daftar direktori ini selalu diperbaharui dengan sempurna karena ERDDAP™ mendapatkan mereka on-the-fly. Meme it Jika Anda mengklik pohon direktori ke nama file yang sebenarnya dan klik pada nama file, ERDDAP™ akan mengarahkan permintaan Anda ke AWS S3 sehingga Anda dapat mengunduh file langsung dari AWS. ERDDAP™ administrator dapat
-         [baca petunjuk untuk cara melakukan ini untuk ember S3 lainnya](/docs/server-admin/datasets#working-with-aws-s3-files) Sitemap Terima kasih kepada Andy Ziegler dan NOAA Sitemap
+    * NEW: Sebagai contoh fitur terkait AWS S3- yang baru, dan untuk membuatnya lebih mudah bagi siapa pun untuk menelusuri dan mengunduh berkas dari ember AWS S3, kami telah membuat
+         [~ 110 contoh data](https://registry.opendata.aws/) yang memungkinkan siapa pun untuk menjelajahi isi hampir semua
+         [AWS S3 Buka Ember Data](https://registry.opendata.aws/) . Jika Anda mengklik "files" link untuk salah satu dari mereka sampel dataset, Anda dapat menjelajahi pohon direktori dan file dalam ember S3. Karena cara kerja dataset ini, daftar direktori ini selalu sempurna up-to-date karena ERDDAP™ mendapatkan mereka di-the- terbang. Jika Anda mengklik bawah pohon direktori ke nama berkas yang sebenarnya dan klik pada nama berkas, ERDDAP™ akan mengarahkan kembali permintaan Anda ke AWS S3 sehingga Anda dapat mengunduh file langsung dari AWS. ERDDAP™ administrator dapat
+         [membaca petunjuk untuk bagaimana melakukan ini untuk S3 ember lainnya](/docs/server-admin/datasets#working-with-aws-s3-files) . Berkat Andy Ziegler dan NOAA .
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * MENINGGALKAN ANDA MEMILIKI: tidak ada
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * HAL YANG ANDA PERLU LAKUKAN: TIDAK ADA
          
-    * Sitemap ERDDAP Metode menyimpan array string (Login) sekarang jauh lebih efisien memori. Login Array digunakan selama ERDDAP™ Tidak dapat membaca file data tabular ASCII. Juga, perubahan lain membuat membaca CSV / TSV / SSV ASCII, kolom ASCII, dan file data tabular jsonlCSV lebih cepat dan lebih efisien memori. Hasilnya adalah: untuk file uji data ASCII 764 MB (tetapi dikompresi ke 52MB .gz Login) dengan 3,503,266 baris dan 33 kolom, penggunaan memori maksimum turun dari 10GB ke 0,6GB (di puncak) Sitemap Waktu untuk membacanya dari ~ 7 menit (tapi bervariasi sangat dengan berapa banyak memori fisik di komputer) hingga ~ 36 detik (termasuk 10s untuk menyederhanakan () yang hanya digunakan oleh GenerateDatasets Login) Sitemap Banyak tempat lain di ERDDAP™ akan mendapat manfaat dari peningkatan efisiensi memori ini. Berkat Tylar Murray dan Mathew Biddle.
+    * TERLIBAT: ERDDAP metode menyimpan array string (StringArray) sekarang jauh lebih efisien memori. String Array digunakan di seluruh ERDDAP™ , terkenal ketika membaca berkas data tabular ASCII. Juga, perubahan lain membuat membaca berkas data CSV / TSV / SSV ASCII, kolumnar ASCII, dan jsonlCSV tabular file data lebih cepat dan jauh lebih efisien memori. Hasilnya adalah: untuk sebuah berkas tes data ASCII 764 MB (tetapi dikompresi ke 52MB .gz berkas) dengan 3.503,266 baris dan 33 kolom, penggunaan memori maksimum pergi dari 10GB ke 0.6GB (di puncak) . Waktu untuk membacanya dari ~ 7 menit (tetapi bervariasi besar dengan berapa banyak memori fisik di komputer) turun ke ~ 36 detik (termasuk 10s untuk menyederhanakan () yang hanya digunakan oleh GenerateDatasets Xml) . Banyak tempat lain di ERDDAP™ akan menguntungkan dari peningkatan efisiensi memori. Berkat Tylar Murray dan Mathew Biddle.
         
-Saya menjelajahi solusi yang berbeda (menyimpan string di StringArray sebagai array byte UTF-8-encoded) Sitemap Itu mengurangi penggunaan memori lain ~ 33%, tetapi pada biaya perlambatan ~ 33%. Dibandingkan dengan sistem yang sekarang sedang digunakan, yang tampak seperti perdagangan yang buruk. Lebih mudah memberikan memori komputer lebih (beli lebih banyak memori untuk ~ $ 200) daripada membuat lebih cepat (membeli seluruh komputer baru) Sitemap
+Aku menjelajahi solusi yang berbeda (menyimpan string dalam StringArray sebagai UTF- 8- terkode byte array) . Itu mengurangi penggunaan memori lain ~ 33%, tetapi dengan biaya ~ 33% melambat. Dibandingkan dengan sistem yang sekarang sedang digunakan, yang tampak seperti perdagangan yang buruk off. Lebih mudah untuk memberikan komputer lebih banyak memori (membeli lebih banyak memori untuk ~ $200) daripada membuatnya lebih cepat (membeli komputer baru) .
         
-Jika nyaman, itu masih selalu ide yang baik untuk membagi file data tabular besar menjadi beberapa file yang lebih kecil berdasarkan beberapa kriteria seperti stationID dan/atau waktu. ERDDAP™ seringkali hanya perlu membuka salah satu file kecil dalam menanggapi permintaan pengguna, dan dengan demikian dapat merespon lebih cepat.
+Jika nyaman, itu masih selalu ide yang baik untuk membagi besar file data tabular ke beberapa file kecil berdasarkan beberapa kriteria seperti stationID dan / atau waktu. ERDDAP™ akan sering hanya harus membuka salah satu berkas kecil dalam menanggapi permintaan pengguna, dan dengan demikian dapat menanggapi lebih cepat.
         
-    * IMPROVED: Sekarang [ ERDDAP™ AWS S3 Datasheet](/docs/server-admin/datasets#working-with-aws-s3-files) yang menggambarkan cara mendapatkan ERDDAP™ untuk bekerja dengan file data di ember AWS S3.
-Sitemap ERDDAP™ sekarang menggunakan fitur baru di AWS S3 Java API
-Sitemap ERDDAP™ sekarang memungkinkan AWS S3 URL untuk menyertakan karakter tambahan (periode, hyphen, underscore) dalam nama ember.
-Sitemap ERDDAP™ sekarang membutuhkan URL bucket AWS S3 diidentifikasi dengan cara tertentu:
-          https://_bucketName_.s3._aws-region._amazonaws.com/_prefix_/  
-di mana prefix adalah opsional.
-Terima kasih kepada Andy Ziegler dan NOAA Sitemap
+    * ADA SEKARANG [ ERDDAP™ Dokumentasi AWS S3](/docs/server-admin/datasets#working-with-aws-s3-files) , yang menjelaskan bagaimana untuk mendapatkan ERDDAP™ untuk bekerja dengan berkas data dalam ember AWS S3.
+Juga, ERDDAP™ sekarang menggunakan fitur baru dalam AWS S3 Java API.
+Juga, ERDDAP™ sekarang mengijinkan URL AWS S3 untuk memasukkan karakter tambahan (titik, tanda hubung, garis bawah) dalam nama ember.
+Juga, ERDDAP™ sekarang membutuhkan URL AWS S3 ember diidentifikasi dengan cara tertentu:
+           https://_bucketName_.s3._aws-region._amazonaws.com/_prefix_/   
+dimana prefiks adalah opsional.
+Berkat Andy Ziegler dan NOAA .
          
-    * IMPROVED: GenerateDataset Xml sekarang memperlakukan tambahan umum missing\\_value s stand-ins sebagai nilai yang hilang dan lebih mungkin untuk mengkonversi kolom ke jenis data numerik. Juga, PrimitiveArray.simplify () sekarang log yang nilai data tertentu yang disebabkan untuk mengobati kolom tertentu sebagai kolom string. Berkat Mathew Biddle.
+    * TERLIBAT: GenerateDatasets Xml sekarang memperlakukan kesamaan tambahan missing\\_value s standings sebagai nilai yang hilang dan jadi lebih mungkin untuk mengubah sebuah kolom ke sebuah numerik tipe data. Juga, PrimitiveArray.simple () sekarang log yang khusus nilai data menyebabkan untuk memperlakukan kolom yang diberikan sebagai kolom string. Berkat Mathew Biddle.
          
-    * Sitemap&lt;permintaanBlacklist&gt; sekarang mendukung.\\*Sitemap\\*  (Sitemap\\*Sitemap\\*untuk IPv6) di akhir alamat IP sehingga Anda dapat daftar hitam alamat IP yang lebih besar, misalnya, 110.52.\\*Sitemap\\*  (Cina Unicom Tianjin) Sitemap Lihat dokumentasi untuk [&lt;Login (/docs/server-admin/datasets#requestblacklist) Cina Unicom dan China Telecom.
+    * TERLIBAT:&lt;daftar hitam permintaan &gt; sekarang mendukung.\\*.\\*  (atau:\\*:\\*untuk IPv6) pada akhir alamat IP sehingga Anda dapat blacklist sepotong besar alamat IP, misalnya, 110.52.\\*.\\*  (Unicom Tianjin China) . Lihat dokumentasi untuk [&lt;compestBlacklist &gt;] (/ docs / server-admin / datasets # requestblacklist) Berkat Unicom Cina dan Telecom Cina.
          
-    * IMPROVED: Jika sumber dataset tidak menentukan "institution" atribut, GenerateDataset Xml dan loadDataset sekarang mendapatkannya dari atribut "creator\\_lembagaion" (Sitemap) Sitemap Michal Wengren
+    * IMPROVED: Jika sumber data tidak menyatakan sebuah "institution" atribut, GenerateDatasets Xml dan loadDataset kini mendapatkannya dari atribut "pencipta\\ _ institusi" (jika tersedia) . Berkat Micah Wengren.
          
-    * BUG FIX: standar Apa yang tidak selalu diterapkan pada file data ASCII.
-Juga, EDDTable tidak benar menangani batasan pada nilai waktu ketika sumber memiliki nilai waktu String dan standarisasi Apa yang digunakan.
-Terima kasih kepada Blaze de la Vallee.
+    * BUG FIX: standardize Yang tidak selalu diterapkan pada berkas data ASCII.
+Juga, EDTabel tidak benar menangani kendala pada nilai waktu ketika sumber memiliki nilai waktu String dan standardize Apa yang sedang digunakan.
+Berkat Paloma de la Valle.
         
-Saya tidak jelas menyatakan sebelum: Anda hanya harus menggunakan standarisasi Fitur apa ketika Anda benar-benar perlu mereka Meme it (misalnya, ketika file sumber yang berbeda menyimpan nilai waktu dengan cara yang berbeda) karena beberapa permintaan untuk dataset yang menggunakan standarisasi Apa yang akan diproses sedikit lebih lambat.
+Saya tidak jelas negara sebelumnya: Anda hanya harus menggunakan standardize Apa fitur ketika Anda benar-benar membutuhkannya (Misalnya, ketika nilai penyimpanan waktu berkas sumber berbeda dalam berbagai cara) , karena beberapa permintaan ke dataset yang menggunakan standardize Apa yang akan diproses sedikit lebih lambat.
         
-    * Login: Bug dalam kode yang digunakan oleh EDDGrid DariNcFiles menyebabkan gagal dengan .nc 4 dan .hdf 5 file yang memiliki "panjang" (dit64) variabel. Ini sekarang tetap. Berkat Friedemann Wobus.
+    * BUG FIX: Bug dalam kode yang dipakai EDDGrid FromNcFiles menyebabkan gagal dengan .nc 4 dan .hdf 5 file yang memiliki "long" (int64) variabel. Ini sekarang tetap. Terima kasih pada Friedeln Wobus.
          
-    * Login: Perubahan kecil ke ISO 19115 file untuk membuat validator yang berbeda senang. Terima kasih kepada Chris MacDermaid dan Anna Milan.
+    * BUG FIX: Perubahan kecil untuk ISO 19115 file untuk membuat validator yang berbeda bahagia. Berkat Chris MacDermaid dan Anna Milan.
          
 
 ## Versi 2.01{#version-201} 
- (Oktober 2019) 
+ (dirilis 2019-07-02) 
 
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap** 
-    * Login
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Login: Bug dalam kode yang menghasilkan Formulir Akses Data untuk tabledap dataset menyebabkan halaman web kosong untuk beberapa dataset. Juga, saya meningkatkan penanganan kesalahan tak terduga di semua halaman HTML sehingga mereka akan (Sitemap) menampilkan pesan kesalahan. Terima kasih kepada Marco Alba.
-    * IMPROVED: GenerateDataset Xml tidak lagi mencetak peringatan panjang di bagian atas output. Sebaliknya, lihat [Mengedit Hasil Login Keluaran Xml](/docs/server-admin/datasets#you-need-to-edit-the-output-from-generatedatasetsxml-to-make-it-better) Sitemap Nick Baum
-    * IMPROVED: GenerateDataset Xml sekarang membuat sedikit rekomendasi yang berbeda dalam situasi yang berbeda untuk&lt;updateEveryNMillis&gt; untuk EDD ...Dari...Files dataset. Juga, GenerateDataset Xml sekarang menyuguhkan sistem "ekstrak" asli untuk dataset EDDTableDariFiles.
+*    **Fitur dan Perubahan Baru (bagi pengguna) :** 
+    * Tidak ada.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * BUG FIX: Bug dalam kode yang menghasilkan Formulir Akses Data untuk tabledap dataset menyebabkan halaman web tersebut kosong bagi beberapa data. Juga, saya meningkatkan penanganan kesalahan tak terduga pada semua halaman HTML sehingga mereka akan (biasanya) tampilkan pesan galat. Berkat Marco Alba.
+    * TERLIBAT: GenerateDatasets Xml tidak lagi mencetak peringatan panjang di bagian atas keluaran. Sebaliknya, silakan lihat [Editing Hasilkan Dataset Keluaran Xml](/docs/server-admin/datasets#you-need-to-edit-the-output-from-generatedatasetsxml-to-make-it-better) . Berkat Steven Baum.
+    * TERLIBAT: GenerateDatasets Xml kini membuat rekomendasi yang sedikit berbeda dalam situasi yang berbeda untuk&lt;updateEveryNMillis &gt; untuk EDD... dari... Dataset Berkas. Juga, GenerateDatasets Xml kini mengecilkan sistem asli "extract" untuk data EDTableFromFiles.
 
 ## Versi 2.00{#version-200} 
- (Oktober 2019) 
+ (dirilis 2019-06-26) 
 
-*    ** ERDDAP™ v2.00 akhirnya di sini&#33; Login**   
+*    ** ERDDAP™ V2.00 akhirnya di sini&#33; Ya&#33;**   
      
-    * Kami meminta maaf atas penundaan panjang yang diperlukan untuk menyelesaikan versi ini.
+    * Kami minta maaf atas keterlambatan panjang yang diperlukan untuk menyelesaikan versi ini.
 Terima kasih atas kesabaran Anda.
          
-    * Kabar baik adalah bahwa waktu tambahan digunakan untuk menambahkan lebih banyak fitur yang telah diminta pengguna. Berita buruk adalah bahwa bahkan dengan penundaan, tidak semua fitur yang diminta ditambahkan. Kami maaf, tetapi tampaknya lebih penting untuk mendapatkan rilis ini daripada untuk menunda lebih (Sitemap) terus menambahkan fitur baru. Kami berjanji untuk kembali ke rilis yang lebih sering di masa depan.
+    * Kabar baiknya adalah waktu tambahan digunakan untuk menambahkan lebih banyak fitur yang diminta pengguna. Kabar buruknya adalah bahkan dengan penundaan, tidak semua fitur yang diminta ditambahkan. Kami minta maaf, tapi tampaknya lebih penting untuk melepaskan ini daripada menunda lebih (selamanya?) terus menambahkan fitur baru. Kami berjanji untuk kembali lebih sering rilis di masa depan.
          
-    * "Versi 2?&#33; Apakah ada perubahan besar dan ketidaksabaran?"
-Fitur baru besar? Login
-Kepuasan besar atau perubahan untuk administrator atau pengguna? Sitemap
-Kami melompat dari v1.82 untuk v2.00:
-        * sebagian untuk merayakan 10 tahun (sekarang 11) sejak rilis publik pertama ERDDAP™   (v1.00 pada 2008-05-06, yang luar biasa terlihat seperti v2.00) Sitemap Pada saat itu, ERDDAP™ telah pergi dari satu instalasi hingga hampir 100 instalasi setidaknya 12 negara (Australia, Belgia, Kanada, Prancis, India, Irlandia, Italia, Afrika Selatan, Spanyol, Thailand, Inggris, Amerika Serikat) Sitemap
-        * sebagian untuk menandai tambahan utama dalam arah yang sepenuhnya baru: ERDDAP™ sekarang memiliki sistem ingest data untuk pergi dengan layanan server data yang ada (Login [Login](#eddtablefromhttpget) ) Login
-        * dan sebagian karena itu bukan lompatan besar dari 1.82 ke 2,00 numerik, sehingga ini tampak seperti waktu yang tepat.
+    * "Versi 2? Apakah ada perubahan besar dan ketidakcocokan?"
+Fitur baru yang besar? Ya.
+Ketidakcocokan besar atau perubahan bagi administrator atau pengguna? Tidak.
+Kami melompat dari v1.82 ke v2.00:
+        * Sebagian untuk merayakan 10 tahun (Sekarang 11) sejak rilis publik pertama ERDDAP™   (V1.00 pada 2008-05-06, yang luar sangat tampak seperti v2.00) . Pada saat itu, ERDDAP™ telah berubah dari satu instalasi menjadi hampir 100 instalasi di setidaknya 12 negara (Australia, Belgia, Kanada, Perancis, India, Irlandia, Italia, Afrika Selatan, Spanyol, Thailand, Inggris, Amerika Serikat) .
+        * Sebagian untuk menandai tambahan besar dalam arah yang sama sekali baru: ERDDAP™ sekarang memiliki sebuah sistem data yang belum pernah dipakai untuk pergi dengan layanan server data yang sudah ada (lihat [EDTableFromHttpGet](#eddtablefromhttpget) ) ,
+        * dan sebagian karena itu bukan lompatan besar dari 1.82-2,00 numerik, jadi ini tampak seperti waktu yang tepat.
              
-    * Kabar baik lainnya adalah bahwa sekarang ada dua kelompok lain yang berkontribusi kode untuk ERDDAP™   (dalam versi ini dan dengan indikasi mereka akan terus) : Rob Fuller dan Adam Leadbetter dari Institut Laut Irlandia, dan Roland Schweitzer dari PMEL dan Weathertop Consulting. Terima kasih banyak. Ini benar bahwa mereka bekerja pada proyek memilih mereka sendiri, tetapi itu model pengembangan open-source klasik - kelompok berkontribusi kode untuk fitur yang paling ingin mereka lihat ditambahkan. Manfaat tambahan untuk kontributor: mereka mendapatkan untuk menggunakan fitur baru segera setelah mereka selesai; mereka tidak harus menunggu rilis berikutnya ERDDAP Sitemap Kelompok Anda dipersilahkan untuk berkontribusi, juga&#33; Sitemap [ ERDDAP™ Panduan Programmer](/docs/contributing/programmer-guide) Sitemap
+    * Kabar baik lainnya adalah sekarang ada dua kelompok lain yang memberikan kode ERDDAP™   (dalam versi ini dan dengan indikasi mereka akan terus) Rob Fuller dan Adam Leadbetter dari Institut Marinir Irlandia, dan Roland Schweitzer dari PMEL dan Konsultasi Weathertop. Terima kasih banyak. Memang benar bahwa mereka bekerja pada proyek-proyek pilihan mereka sendiri, tapi itulah model pengembangan sumber-klasik -- kelompok berkontribusi kode untuk fitur yang paling ingin mereka lihat ditambahkan. Manfaat tambahan bagi kontributor: mereka bisa menggunakan fitur baru segera setelah mereka selesai; mereka tidak perlu menunggu rilis berikutnya dari ERDDAP . Kelompok Anda dipersilakan untuk berkontribusi, juga&#33; Lihat [ ERDDAP™ Panduan Programmer](/docs/contributing/programmer-guide) .
          
-    * Kami berharap Anda suka ERDDAP™ v2.00. Kami berharap 10 tahun ke depan ERDDAP™ pembangunan dan semakin banyak digunakan di seluruh dunia.
+    * Kami harap Anda suka ERDDAP™ Kami berharap untuk 10 tahun ke depan ERDDAP™ Perkembangan dan lebih banyak digunakan di seluruh dunia.
          
-*    **Fitur dan Perubahan Baru (untuk pengguna) Sitemap**   
+*    **Fitur dan Perubahan Baru (bagi pengguna) :**   
      
-    * Sitemap orderByMean Login
-Sitemap tabledap dataset akan menghitung cara untuk kelompok yang ditentukan. Juga, semua Meme it orderBy pilihan sekarang mendukung cara tambahan kelompok mendefinisikan: _numerikVariable \\[ Login \\[ Sitemap \\]  \\[ Login \\]  \\] _, misalnya, waktu/1hari atau kedalaman/10:5. Sitemap stationID Sitemap orderByMean  (Sitemap stationID Sitemap) akan memilah hasil dengan stationID dan waktu, kemudian menghitung dan mengembalikan maksud airTemp untuk setiap stationID setiap hari. Ini sangat berguna dan fitur baru yang kuat. Kode baru untuk fitur ini dan perubahan kode lama berkontribusi oleh Rob Fuller dan Adam Leadbetter dari Institut Laut Irlandia dan diserahkan melalui Git. Terima kasih, Dan Adam&#33;
+    * NEW: orderByMean filter
+untuk tabledap dataset akan menghitung sarana untuk kelompok yang ditentukan. Juga, semua orderBy pilihan sekarang mendukung cara tambahan untuk mendefinisikan grup: _ numerik Variabel \\[ / nomor \\[ satuan waktu \\]  \\[ : ofset \\]  \\] _, misalnya, waktu / 1 hari atau kedalaman / 10: 5. Misalnya, stationID , waktu, temp air & orderByMean  (" stationID , waktu / 1 hari ") akan menyortir hasil oleh stationID dan waktu, kemudian menghitung dan kembali rata-rata air untuk masing-masing stationID untuk setiap hari. Ini adalah fitur baru yang sangat berguna dan kuat. Kode baru untuk fitur-fitur ini dan perubahan kode lama dikontribusikan oleh Rob Fuller dan Adam Leadbetter dari Institut Marinir Irlandia dan diajukan melalui Git. Terima kasih, Rob dan Adam&#33;
          
-    * BARU: output file jenis untuk tabular dataset: [.data Login](https://developers.google.com/chart/interactive/docs/reference#dataparam) Login
-file JSON diformat untuk digunakan dengan Google Visualization perpustakaan klien ( Google Charts ) Sitemap Kode untuk ini berkontribusi oleh Roland Schweitzer dan diserahkan melalui Git. Terima kasih, Login
+    * NEW: tipe berkas keluaran bagi data tabular: [.data Tabel](https://developers.google.com/chart/interactive/docs/reference#dataparam) ,
+sebuah berkas JSON format untuk digunakan dengan Google Visualization pustaka klien ( Google Charts ) . Kode untuk ini dikontribusikan oleh Roland Schweitzer dan dikirim melalui Git. Terima kasih, Roland&#33;
          
-    * BARU: output file jenis untuk tabular dataset: [ .jsonlCSV1 ](https://jsonlines.org/examples/) Login
-yang seperti yang ada .jsonlCSV opsi, tetapi dengan nama kolom di baris pertama. Selamat datang di Eugene Burger.
+    * NEW: tipe berkas keluaran bagi data tabular: [ .jsonlCSV1 ](https://jsonlines.org/examples/) ,
+Yang beredar dan yang berlindung saat terbenam bak kijang yang berlindung di persembunyiannya. .jsonlCSV pilihan, tetapi dengan nama kolom pada baris pertama. Berkat Eugene Burger.
          
-    * BARU: Jika administrator memungkinkan, pengguna sekarang dapat masuk dengan mereka Meme it [Login](https://orcid.org) Login
-Ini adalah sistem otentikasi OAuth 2.0, seperti otentikasi Google. ORCID banyak digunakan oleh peneliti untuk mengidentifikasi diri mereka sendiri. Akun ORCID gratis dan tidak memiliki masalah privasi yang dimiliki akun Google. Sitemap ERDDAP Sitemap [Orcid otentikasi instruksi](/docs/server-admin/additional-information#orcid) Sitemap BCO-DMO (Danie Kinkade) Sitemap
+    * NEW: Jika administrator memfungsikannya, pengguna sekarang dapat log masuk dengan mereka [ORCID](https://orcid.org) rekening.
+Ini adalah sistem otentikasi OAuth 2.0, seperti otentikasi Google. ORCID digunakan secara luas oleh peneliti untuk mengidentifikasi diri unik. Akun ORCID gratis dan tidak memiliki masalah privasi yang dimiliki akun Google. Lihat ERDDAP ' [Instruksi otentikasi orcid](/docs/server-admin/additional-information#orcid) . Berkat BCO-DMO (Adam Shepard, Danie Kinkade, dll.) .
          
-    * NEW: Konverter URL baru mengkonversi URL terbaru ke URL terbaru.
-Lihat .../erddap/convert/urls.html pada setiap ERDDAP™ instalasi, misalnya,
-         [link ini ke converter di ERD   ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/convert/urls.html) Sitemap Ini harus berguna untuk manajer data. Ini juga digunakan secara internal oleh GenerateDatasetsXml. Terima kasih kepada Bob Simons dan Sharon Mesick.
+    * NEW: Sebuah URL konverter baru mengkonversi out-of -date URL kedalam URL up- to-date.
+Lihat... / erddap / convert / urls.html pada sebarang ERDDAP™ instalasi, misalnya,
+         [link ini ke converter dalam ERD   ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/convert/urls.html) . Hal ini harus berguna bagi manajer data. Hal ini juga digunakan secara internal oleh GenerateDatasetsXml. Berkat Bob Simons dan Sharon Mesick.
          
-    * Sitemap [Konverter](https://coastwatch.pfeg.noaa.gov/erddap/convert/time.html) sekarang memiliki pilihan untuk mengkonversi waktu string umum ke waktu string ISO8601, atau mengubah UDUNITS -seperti unit waktu string menjadi yang tepat UDUNITS string unit waktu. Ini juga harus berguna untuk Meme it ERDDAP™ administrator yang perlu tahu format apa untuk menentukan atribut "units" untuk variabel waktu string. Ini juga digunakan secara internal oleh GenerateDatasetsXml dan standarisasi fitur apa dari EDDTableDariFiles. Berkat Bob Simons.
+    * ULROVED: [Pengkonversi Waktu](https://coastwatch.pfeg.noaa.gov/erddap/convert/time.html) sekarang memiliki pilihan untuk mengubah setiap waktu string umum menjadi sebuah waktu string ISO8601, atau mengubah UDUNITS -seperti waktu unit string menjadi tepat UDUNITS waktu unit string. Hal ini juga harus berguna untuk ERDDAP™ administrator yang perlu tahu apa format untuk menspesifikasikan untuk atribut "unit" untuk string time variabel. Hal ini juga digunakan secara internal oleh GenerateDatasetsXml dan fitur standardizeWhat dari EDTableFromFiles. Berkat Bob Simons.
          
-    * Sitemap [Konverter Unit](https://coastwatch.pfeg.noaa.gov/erddap/convert/time.html) memiliki opsi "Standardize UDUnits".
-Sebagai contoh, "deg\\_C/m" dan "degrees\\_C meter-1" keduanya dikonversi ke
-"url": "https://www.facebook.com/ Fitur ini juga digunakan oleh standarisasi fitur apa dari EDDTableDariFiles. Berkat Bob Simons.
+    * NEW: [Konverter Unit](https://coastwatch.pfeg.noaa.gov/erddap/convert/time.html) memiliki pilihan "Standardize UDUnits" yang baru.
+Misalnya, "deg\\ _ C / m" dan "derajat\\ _ C meters-1" keduanya dikonversi ke
+"derajat\\ _ C m-1". Fitur ini juga digunakan oleh fitur standardizeWhat dari EDTableFromFiles. Berkat Bob Simons.
          
-    * BARU: Untuk grafik (selain grafik permukaan) di griddap dan tabledap 's Membuat halaman web Graph, ketika sumbu x bukan sumbu waktu, jika hanya subset dari rentang variabel sumbu x terlihat, sekarang ada tombol di atas grafik untuk menggeser X Axis ke kiri atau kanan. Berkat Carrie Wall Bell / proyek hidrofon.
+    * Untuk grafik (selain grafik permukaan) pada griddap dan tabledap 'S Make A Grafik halaman web, ketika sumbu x bukan sumbu waktu, jika hanya subset dari variabel sumbu x terlihat, sekarang ada tombol di atas grafik untuk menggeser X Axis kiri atau kanan. Berkat Carrie Wall Bell / Proyek Hydrophone.
          
-    * NEW: Untuk grafik, sumbu X dan / atau Y sekarang dapat menggunakan skala Log.
-Pengguna dapat mengontrol Skala Axis Y melalui widget drop-down baru di griddap dan tabledap Membuat halaman web Graph. Sitemap [Sitemap Dokumentasi yRange](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#xRange) Sitemap Berkat Carrie Wall Bell / proyek hidrofon.
+    * Untuk grafik, sumbu X dan / atau Y sekarang dapat menggunakan skala Log.
+Pengguna dapat mengontrol Skala Sumbu Y melalui widget drop-down baru pada griddap dan tabledap Buat halaman web Grafik. Lihat [.xRange dan. dokumentasi yRange](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#xRange) . Berkat Carrie Wall Bell / Proyek Hydrophone.
          
-    * Sitemap ERDDAP™ sekarang menggunakan berbagai kode kesalahan HTTP dan sekarang kembali(OPeN)DAPv2.0-format pesan kesalahan payload. Sitemap [Sitemap](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#Errors) Sitemap Terima kasih kepada Antoine Queric dan Aurelie Briand.
+    * TERLIBAT: ERDDAP™ sekarang membuat penggunaan lebih baik dari berbagai kode error HTTP dan sekarang mengembalikan(OPeN)DAPv2.0- format muatan pesan kesalahan. Lihat [rincian](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#Errors) . Berkat Antoine Queric dan Aurelie Briand.
          
-    * IMPROVED: Jangan gunakan alat Netcdf-java/c atau perangkat lunak lainnya untuk terhubung ke .nc Sitemap .hdf file yang dilayani oleh ERDDAP 's /file/system seolah-olah file lokal. ERDDAP™ sekarang menolak permintaan ini. Ini tidak efisien dan sering menyebabkan masalah lain. Sitemap
+    * IMPROVED: Jangan gunakan Netcdf -java / c atau perangkat lunak lain untuk menyambung ke .nc atau .hdf berkas yang dilayani oleh ERDDAP 's / files / system seolah-olah mereka adalah file lokal. ERDDAP™ sekarang menolak permintaan ini. Hal ini mengerikan tidak efisien dan sering menyebabkan masalah lain. Sebaliknya:
         
-        * Sitemap(OPeN)DAPsoftware klien untuk terhubung ke ERDDAP Sitemap DAP Layanan untuk dataset (yang memiliki /griddap / atau / tabledap URL) Sitemap Itulah DAP dan baik. Meme it
-        * Atau, gunakan Formulir Akses Data yang ditetapkan untuk meminta subset data.
-        * Atau, jika Anda membutuhkan seluruh file atau akses berulang selama jangka waktu yang lama, gunakan curl Login wget , atau browser Anda untuk mengunduh seluruh file, kemudian mengakses data dari salinan file lokal Anda.
+        * Gunakan(OPeN)DAPperangkat lunak klien untuk menyambung ke ERDDAP ' DAP layanan untuk data (yang memiliki / griddap / atau / tabledap / di URL) . Itulah yang DAP adalah untuk dan melakukannya dengan baik.
+        * Atau, gunakan Dataset 's Data Access Form untuk meminta subset data.
+        * Atau, jika Anda membutuhkan seluruh file atau akses berulang selama jangka waktu yang panjang, gunakan curl , wget , atau peramban Anda untuk mengunduh seluruh berkas, kemudian mengakses data dari salinan lokal Anda dari berkas.
         
           
          
-    * IMPROVED: Di ERDDAP™ Halaman depan, Pencarian Teks Penuh sekarang di atas "Lihat Daftar Semua Dataset" karena merupakan titik awal terbaik bagi sebagian besar pengguna. Berkat Didier Mallarino dan Maurice Libes.
+    * Pada ERDDAP™ homepage, Pencarian Teks Penuh kini diatas "Lihat Daftar Semua Data" karena ini adalah titik awal terbaik bagi kebanyakan pengguna. Berkat Didier Mallarino dan Maurice Libes.
          
-    * IMPROVED: DataProviderForm3.html sekarang daftar dropdown umum standard\\_name Sitemap Berkat seseorang di pertemuan DMAC IOOS.
+    * IMPROVED: Di DataProviderForm3.html sekarang ada daftar dropdown dari umum standard\\_name s. Berkat seseorang di pertemuan IOOS DMAC.
          
-    * IMPROVED: Pada halaman /file/web, sekarang ada tautan ke "Apa yang bisa saya lakukan dengan file ini?" bagian dari /file/dokumentasi. Bagian itu menjelaskan berbagai jenis file dan memberikan saran untuk cara bekerja dengan mereka. Terima kasih kepada Maurice Libes.
+    * IMPROVED: Pada halaman / file / web, sekarang ada link ke baru "Apa yang bisa saya lakukan dengan berkas-berkas ini?" bagian dari berkas / berkas / dokumentasi. Bagian itu menggambarkan berbagai jenis berkas dan memberikan saran bagaimana bekerja dengan mereka. Berkat Maurice Libes.
          
     * IMPROVED: Hampir setiap permintaan untuk ERDDAP™ harus setidaknya sedikit lebih cepat, dan kadang-kadang jauh lebih cepat.
          
-    * Login: Dalam beberapa keadaan, ketika dataset yang tersimpan di beberapa jenis .nc file, atribut "id" global diatur ke nama yang disarankan file, yang mencakup hash untuk membuatnya unik untuk permintaan itu. Sekarang "id" benar tidak berubah (jika ditentukan) atau set ke dataset datasetID   (jika tidak ditentukan) Sitemap Terima kasih kepada John Maurer.
+    * BUG FIX: Dalam beberapa situasi, ketika suatu data EDTabel disimpan dalam beberapa jenis .nc berkas, atribut global "id" diset ke nama disarankan berkas, termasuk hash untuk membuatnya unik untuk permintaan tersebut. Sekarang "id" benar kiri tidak berubah (jika dispesifikasikan) atau diatur ke data datasetID   (jika tidak dispesifikasikan) . Berkat John Maurer.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   
      
-    * TO DO: Rilis ini akan memakan waktu dan bekerja dari Anda. Silakan bersabar dan merencanakan beberapa jam untuk melakukan perubahan yang diperlukan dan beberapa jam untuk bereksperimen dengan fitur baru.
+    * Pelepasan ini akan memakan waktu dan bekerja darimu. Harap bersabar dan berencana untuk mengambil beberapa jam untuk melakukan perubahan yang diperlukan dan beberapa jam lagi untuk bereksperimen dengan fitur-fitur baru.
          
-    * TO DO: Untuk keamanan, buat salinan cadangan dari setup Anda saat ini.xml dan datasets.xml file sehingga Anda dapat mengalihkan mereka dalam kasus yang tidak mungkin di mana Anda perlu untuk mengalihkan ERDDAP™ v1.82.
+    * Untuk keamanan, buat salinan cadangan dari semp.xml saat ini dan datasets.xml berkas sehingga Anda dapat kembali kepada mereka dalam kasus yang tidak mungkin di mana Anda perlu untuk kembali ke ERDDAP™ V1.82.
          
-    * TO DO: direkomendasikan Java OpenJDK Sitemap (Login) Sitemap
-Ini adalah varian sumber terbuka Java yang tidak memiliki pembatasan atas penggunaannya (Sitemap Oracle Sitemap Java Login) Sitemap Ini berasal dari Oracle Sitemap Java dengan cara yang sedang bepergian, dengan Oracle 's berkah. Untuk alasan keamanan, penting untuk menjaga Anda Java versi terbaru. Sitemap ERDDAP Sitemap [ Java instruksi instalasi](/docs/server-admin/deploy-install#java) Sitemap
+    * TO DO: Direkomendasikan Java Sekarang AdoptOpenJDK 's OpenJDK 8 (LTS) + HotSpot.
+Ini adalah varian open source dari Java (Yang tidak berhenti) buahnya. karena musim-musiman (dan tidak terlarang mengambilnya) artinya, ia boleh diambil tanpa harus membayarnya. (tidak seperti Oracle ' Java distribusi) . Hal ini berasal dari Oracle ' Java di satu jalan, dengan Oracle Berkat. Untuk alasan keamanan, penting untuk menjaga Anda Java versi up- to-date. Lihat ERDDAP ' [ Java instruksi instalasi](/docs/server-admin/deploy-install#java) .
          
-    * Facebook Twitter Google Plus Pinterest Email Java perlu tambahan kecil untuk instalasi Tomcat Anda: lihat [Instruksi Cache Sumber Daya](/docs/server-admin/deploy-install#contentxml) Sitemap Saya pikir ini adalah pengganti -XX: Pengaturan MaxPermSize, yang (Sitemap) BukaJDK tidak lagi mendukung.
+    * TO DO: AdoptOpenJDK 's Java membutuhkan tambahan kecil instalasi Tomcat Anda: lihat [Instruksi Cache Sumber Daya](/docs/server-admin/deploy-install#contentxml) . Saya rasa ini adalah pengganti dari -XX: pengaturan MaxPermSize, yang (Adopsi) OpenJDK tidak lagi mendukung.
          
-    * TO DO: Standar baru dan merekomendasikan&lt;fontFamily&gt; pengaturan di setup.xml adalah
-DejaVu Sans yang dibangun ke dalam AdopsiOpenJDK Java Sitemap Sitemap
-         [instruksi instalasi font yang direvisi](/docs/server-admin/deploy-install#fonts) Sitemap
+    * TO DO: Baku dan rekomendasi baru&lt;Keluarga fontFamily &gt; setting dalam setup.xml adalah
+DejaVu Sans yang dibangun dalam AdoptOpenJDK 's Java . Lihat
+         [instruksi instalasi fonta direvisi](/docs/server-admin/deploy-install#fonts) .
          
-    * TO DO: Banyak tag yang bergerak dari setup.xml ke datasets.xml Sitemap Keuntungannya adalah bahwa Anda dapat mengubah nilai-nilai mereka sementara Meme it ERDDAP™ berjalan, tanpa restart ERDDAP Sitemap Tidak mungkin, Anda dapat dengan mudah berubah&lt;startBodyHtml5&gt; untuk menampilkan pesan sementara di ERDDAP™ Login (e.g., "Periksa JPL MUR SST v4.1 dataset ..." atau "Ini ERDDAP™ akan offline untuk pemeliharaan 2019-05-08T17:00 PDT melalui 2019-05-08T20:00 PDT.") Sitemap Jika/ketika Anda mengubah tag ini datasets.xml , perubahan akan berpengaruh pada waktu berikutnya ERDDAP™ Login datasets.xml Sitemap
+    * TODO: Banyak tag bergerak dari setuppxml ke datasets.xml . Keuntungan adalah bahwa Anda dapat mengubah nilai-nilai mereka sementara ERDDAP™ berjalan, tanpa memulai ulang ERDDAP . Secara khusus, Anda dapat dengan mudah mengubah&lt;StartBodyHtml5 &gt; untuk menampilkan pesan sementara pada ERDDAP™ halaman rumah (mis., "Check out yang baru JPL MUR SST v4.1 dataset"... atau "This ERDDAP™ akan offline untuk pemeliharaan 2019-05-08T17: 00 PDT melalui 2019- 05-08T20: 00 PDT ".) . Bila / ketika anda mengubah tag ini datasets.xml , perubahan akan berpengaruh waktu berikutnya ERDDAP™ baca datasets.xml .
          
         
-        1. Salin konten ini ke dalam Anda datasets.xml file (mana di dekat awal file, setelah&lt;Login
+        1. Salin isi ini ke dalam Anda datasets.xml berkas (di dekat awal berkas, setelah&lt;erddoppasets &gt;):
 ```
             <!-- The tags below are described in setupDatasetsXml.html.
                  The defaults listed below are as of ERDDAP™ v2.00. -->
@@ -979,157 +994,157 @@ DejaVu Sans yang dibangun ke dalam AdopsiOpenJDK Java Sitemap Sitemap
             <standardPrivacyPolicy></standardPrivacyPolicy>
 ```
 
-        2. One-by-one, salin nilai (Sitemap) untuk setiap tag dari file setup.xml Anda ke tag baru yang Anda barukan (Sitemap) Sitemap datasets.xml Sitemap Misalnya, jika Anda telah menggunakan nilai 30 untuk&lt;Login di setup.xml, Anda harus menyalin nilai itu ke baru&lt;cacheMinutes&gt; tag di datasets.xml   (meskipun jika nilainya sama dengan nilai default baru, yang terbaik adalah meninggalkan tag di datasets.xml Login) Sitemap
+        2. Satu per satu, salin nilainya (jika ada) untuk masing-masing tag dari file setup.xml anda ke dalam tag baru yang baru anda tempelkan (di atas) in datasets.xml . Misalnya, jika Anda telah menggunakan nilai 30 untuk&lt;cacheMinutes &gt; dalam semp.xml, anda harus menyalin nilai tersebut ke dalam baru&lt;cacheMinutes &gt; tag in datasets.xml   (meskipun nilai sama dengan nilai baku baru, paling baik untuk hanya meninggalkan tag dalam datasets.xml kosong) .
             
-Jika nilai Anda berbeda dari default yang disarankan baru (lebih dari untuk&lt;Login&lt;theShortDescriptionHtml&gt;, yang berguna untuk menyesuaikan Anda ERDDAP™ instalasi), mempertimbangkan beralih ke nilai default baru. Ini sangat benar&lt;WordPress.org&lt;sebagianRequestMaxCells&gt;, di mana nilai default / disarankan telah berubah secara signifikan selama bertahun-tahun.
+Jika nilai Anda berbeda dari standar yang disarankan baru (selain untuk&lt;StartBodyHtml5 &gt; dan&lt;Singkatan pendek Html &gt;, yang berguna untuk menyesuaikan Anda ERDDAP™ instalasi), mohon pertimbangkan beralih ke nilai baku baru. Hal ini sangat benar&lt;Sebagian Permintaan MaxBytes &gt; dan&lt;Sebagian Permintaan MaxCells &gt;, dimana nilai default / disarankan telah berubah secara signifikan selama bertahun-tahun.
             
-Setelah Anda menyalin setiap nilai, menghapus tag dan deskripsinya dari setup.xml. Lebih baik memiliki tag ini dalam Meme it datasets.xml Sitemap Dan sekarang ada deskripsi yang lebih baik di Meme it [Login](/docs/server-admin/datasets#the-basic-structure-of-the-datasetsxml-file) Sitemap
+Setelah Anda menyalin setiap nilai, menghapus tag dan deskripsi dari setup-xml. Lebih baik memiliki tag ini datasets.xml . Dan sekarang ada deskripsi yang lebih baik dalam [setupDatasetsXml.html](/docs/server-admin/datasets#the-basic-structure-of-the-datasetsxml-file) .
             
         
-Kuis sistem baru adalah halaman web pertama ketika Anda mulai ERDDAP akan menjadi default ERDDAP™ Login Setiap halaman web berikutnya akan menggunakan konten ...Html yang Anda tentukan datasets.xml Sitemap
+Suatu unik dari sistem baru adalah bahwa halaman web pertama ketika Anda memulai ERDDAP akan menjadi default ERDDAP™ halaman web. Setiap halaman web berikutnya akan menggunakan... isi Html yang Anda spesifikasikan dalam datasets.xml .
         
-    * PERINGATAN: Pertama kali Anda menjalankan ERDDAP™ v2.0, dataset berdasarkan file data lokal akan memuat **Sitemap** Sitemap ERDDAP™ perlu membuat ulang database file dalam format yang sedikit berbeda. Setelah beban awal lambat, mereka akan memuat dengan cepat, seperti sebelumnya. Promo
+    * PERINGATAN: Pertama kali Anda menjalankan ERDDAP™ v2.0, dataset berdasarkan berkas data lokal akan dimuat **sangat** perlahan karena ERDDAP™ perlu membuat database dari berkas dalam format yang sedikit berbeda. Setelah reload awal yang lambat, mereka akan memuat cepat, seperti sebelumnya. Harap bersabar.
          
-#### Login{#eddtablefromhttpget} 
-    *    [FITUR BARU BIG: EDDTableDariHttpGet](#eddtablefromhttpget)   
-Sitemap ERDDAP™ hanya membaca data dan membuatnya tersedia untuk pengguna. Sitemap ERDDAP™ memiliki sistem yang sederhana dan efisien untuk ingesting data real time dari sensor. Di antara fitur lain, dataset ini menawarkan versi berbutir halus: itu ingat setiap perubahan yang dibuat pada dataset, ketika dibuat, dan oleh siapa. Biasanya, pengguna hanya akan menginginkan versi terbaru dari dataset, dengan semua perubahan yang diterapkan. Tapi ada opsi untuk pengguna untuk meminta data dari dataset seperti itu ada pada setiap saat. Ini memfasilitasi ilmu reproduksi. Dengan demikian, tidak seperti dataset waktu dekat lainnya, dataset ini memenuhi syarat untuk [ DOI Login](https://en.wikipedia.org/wiki/Digital_object_identifier) Sitemap karena mereka bertemu Meme it DOI persyaratan bahwa dataset tidak berubah, kecuali dengan agregasi. Sitemap [Login](/docs/server-admin/datasets#eddtablefromhttpget) Sitemap Terima kasih kepada OOI (dari lama yang lalu dan sekarang) untuk berbicara tentang kebutuhan ini dan Eugene Burger untuk pengingat tentang bekerja pada apa yang penting.
+#### EDTableFromHttpGet{#eddtablefromhttpget} 
+    *    [EDTableFromHttpDapatkan](#eddtablefromhttpget)   
+Sampai sekarang, ERDDAP™ hanya membaca data dan membuatnya tersedia untuk pengguna. Sekarang, ERDDAP™ memiliki sederhana, sistem efisien untuk menelan real time data dari sensor. Di antara fitur-fitur lainnya, data ini menawarkan versi yang lebih baik: ia mengingat setiap perubahan yang dibuat pada data, ketika dibuat, dan oleh siapa. Biasanya, pengguna hanya ingin versi terbaru dari data, dengan semua perubahan yang diterapkan. Tapi ada pilihan bagi pengguna untuk meminta data dari data seperti yang ada di setiap titik dalam waktu. Hal ini memfasilitasi ilmu reproduksi. Dengan demikian, tidak seperti yang lain dekat- real-time dataset, data ini memenuhi syarat untuk [ DOI s](https://en.wikipedia.org/wiki/Digital_object_identifier) . karena mereka bertemu DOI persyaratan bahwa data tidak berubah, kecuali oleh agregasi. Lihat [EDTableFromHttpGet](/docs/server-admin/datasets#eddtablefromhttpget) . Berkat OOI&#33; (dari dulu dan sekarang) untuk berbicara tentang kebutuhan untuk ini dan Eugene Burger untuk pengingat tentang bekerja pada apa yang penting.
          
-    * FITUR BARU BESAR: ERDDAP™ sekarang dapat melayani data langsung dari file data yang terkompresi secara eksternal, termasuk .tgz Login .tar  .gz Login .tar  .gzip Login .gz Login .gzip Login .zip Login .bz2 , atau .Z. Dataset dapat mencakup campuran file yang terkompresi secara eksternal (mungkin file data yang lebih tua?) dan non-externally-compressed file, dan Anda dapat mengompreskan/menekan file setiap saat.
+    * BIG NEW FEATURE: ERDDAP™ sekarang dapat melayani data langsung dari berkas data terkompresi luar, termasuk .tgz , .tar  .gz , .tar  .gzip , .gz , .gzip , .zip , .bz2 , atau .Z. Dataset mungkin menyertakan campuran dari berkas terkompresi eksternal (mungkin file data yang lebih tua?) dan bukan berkas terkompresi secara eksternaly-, dan Anda dapat mengkompres / mendekompresi berkas setiap saat.
         
-Ini bekerja hebat&#33;
-Dalam kebanyakan kasus, perlambatan yang terkait dengan menekan file kecil. Kami sangat mendorong Anda untuk mencoba ini, terutama untuk set data dan / atau file data yang jarang digunakan.
+Ini bekerja dengan baik&#33;
+Dalam kebanyakan kasus, perlambatan terkait dekompresi file adalah kecil. Kami sangat mendorong Anda untuk mencoba ini, terutama untuk data dan / atau berkas data yang jarang digunakan.
         
-Ini dapat menyimpan Anda $ 30.000 atau lebih&#33;
-Ini adalah salah satu dari beberapa ERDDAP™ fitur yang dapat menghemat banyak uang - jika Anda mengompres banyak file data, Anda akan membutuhkan lebih sedikit RAIDs / hard drive untuk menyimpan data, atau sebaliknya, Anda dapat melayani jauh lebih banyak data (hingga 10x) dengan RAID yang sudah Anda miliki. Meme it Jika fitur ini menyimpan Anda dari membeli RAID lain, maka telah menyelamatkan Anda sekitar $ 30.000.
+Ini mungkin menghemat $30.000 atau lebih&#33;
+Ini adalah salah satu dari sedikit ERDDAP™ fitur yang dapat menyimpan banyak uang Anda -- jika Anda memampatkan banyak berkas data, Anda akan membutuhkan jauh lebih sedikit RAID / hard drive untuk menyimpan data, atau sebaliknya, Anda dapat melayani jauh lebih banyak data (hingga 10x) Dengan RAID yang sudah kau miliki. Jika fitur ini menyelamatkan Anda dari membeli RAID lain, maka telah menyelamatkan Anda sekitar $30.000.
         
-Sitemap [Dokumentasi File Terkompresi secara eksternal](/docs/server-admin/datasets#externally-compressed-files) Sitemap Berkat Benoit Perrimond dan Blaze de la Vallee.
+Lihat [Dokumentasi Berkas Terkompresi Secara Eksternal](/docs/server-admin/datasets#externally-compressed-files) . Berkat Benoit Perrimond dan Paloma de la Valle.
         
-    * FITUR BARU BESAR: Sitemap EDDGrid DariFiles dan semua dataset EDDTableDariFiles mendukung&lt;cacheDariUrl&gt; tag dan&lt;cacheSizeGB&gt; tag. Jika cacheSizeGB tidak ditentukan, ini akan mengunduh dan memelihara salinan lengkap dari file dataset jarak jauh. Jika cacheSizeGB ditentukan dan adalah &gt; 0, ini akan mengunduh file dari dataset jarak jauh, sesuai kebutuhan, ke cache lokal dengan ukuran terbatas, yang berguna ketika bekerja dengan berbasis cloud (g., S3) file data. Sitemap [Login Sitemap](/docs/server-admin/datasets#cachefromurl) Sitemap Terima kasih kepada Bob Simons dan Roy Mendelssohn (yang selama bertahun-tahun telah menulis script untuk menangani membuat salinan lokal file dataset jarak jauh) , John Cotten (ketika dia di Amazon Web Services) Google Cloud Platform
+    * BIG NEW FEATURE: Semua EDDGrid FromFiles dan semua data EDDTableFromFiles mendukung&lt;cacheFromUrl &gt; tag dan sebuah&lt;cacheSizeGB &gt; tag. Jika cacheSizeGB tidak dispesifikasikan, ini akan men-download dan mempertahankan salinan lengkap dari sebuah berkas dataset remote. Jika cacheSizeGB dispesifikasikan dan &gt; 0, ini akan men-download berkas dari data jarak jauh, seperti yang diperlukan, ke dalam cache lokal dengan ukuran terbatas, yang berguna ketika bekerja dengan awan-berbasis (mis., S3) data file. Lihat [cache Dokumentasi fromUrl](/docs/server-admin/datasets#cachefromurl) untuk rincian. Berkat Bob Simons dan Roy Mendelssohn (yang selama bertahun-tahun telah menulis skrip untuk menangani membuat salinan lokal dari berkas dataset jauh) , Lloyd Cotten, Eugene Burger, Conor Delaney (ketika ia berada di Amazon Web Services) , dan Google Cloud Platform.
          
-    * BARU: EDDTable baruDariJsonlCSV kelas dapat membaca data tabular dari
-         [Login Garis file CSV](https://jsonlines.org/examples/)   ("Better dari CSV") Sitemap Berkat orang-orang di Marine Institute of Irlandia untuk memberitahu saya tentang format ini dan untuk Eugene Burger dan PMEL untuk meminta untuk mendukungnya sebagai jenis input.
+    * EDTableFromJsonlCSV yang baru kelas dapat membaca data tabular dari
+         [JSON Baris berkas CSV](https://jsonlines.org/examples/)   ("Lebih baik dari CSV") . Terima kasih kepada orang-orang di Institut Marinir Irlandia untuk memberitahu saya tentang format ini dan untuk Eugene Burger dan PMEL untuk permintaan untuk mendukung sebagai tipe masukan.
          
-    * Sitemap EDDGrid dan semua EDDTableDariFiles dataset mendukung&lt;nThreads&gt; pengaturan, yang memberi tahu ERDDAP™ berapa banyak benang untuk digunakan ketika menanggapi permintaan. Sitemap [nThreads dokumentasi](/docs/server-admin/datasets#nthreads) Sitemap Berkat Rob Bochenek Ilmu Data Axiom, Eugene Burger, Conor Delaney (ketika dia di Amazon Web Services) Google Cloud Platform
+    * Semua EDDGrid dan semua data EDTableFromFiles mendukung&lt;nThreads &gt; konfigurasi, yang memberitahu ERDDAP™ berapa benang yang digunakan ketika menanggapi permintaan. Lihat [Dokumentasi nThreads](/docs/server-admin/datasets#nthreads) untuk rincian. Berkat Rob Bochenek dari Axiom Data Science, Eugene Burger, Conor Delaney (ketika ia berada di Amazon Web Services) , dan Google Cloud Platform.
          
-    * Standar baru Apa untuk semua kelas EDDTableDariFiles -
-Sebelumnya, jika untuk variabel tertentu, nilai atribut penting (Login scale\\_factor Login add\\_offset Login missing\\_value , \\_FillValue, unit) tidak konsisten, EDDTableDariFiles akan memilih satu nilai untuk setiap atribut menjadi "valid" dan menandai file dengan nilai atribut lain sebagai "Bad Files". Sekarang, ada sistem untuk menstandardisasi file segera setelah EDDTableDariFiles membaca file. Sitemap [EDDTableDari standarisasi Sitemap](/docs/server-admin/datasets#standardizewhat) Sitemap Sitemap ERDDAP Tujuan utama adalah untuk membuat file data dan dataset dapat diakses dengan cara yang konsisten. Login Apa alat baru yang penting untuk membuat kenyataan. Terima kasih kepada Marco Alba, Margaret O'Brien (dan pengguna EML lainnya) , BCO-DMO, dan pengguna InPort.
+    * Wajar baru Apa untuk semua subkelas EDTableFromFiles -
+Sebelumnya, jika untuk variabel yang diberikan, nilai-nilai dari atribut penting (mis., scale\\_factor , add\\_offset , missing\\_value ,\\ _ FillValue, unit) tidak konsisten, EDDTableFromFiles akan memilih satu nilai untuk setiap atribut menjadi "valid" dan menandai berkas dengan nilai atribut lain sebagai "Bad Files". Sekarang, ada sistem untuk standardize file segera setelah EDTableFromFiles membaca file. Lihat [Standardisasi EDTableFromFile Apa](/docs/server-admin/datasets#standardizewhat) . Salah satu ERDDAP tujuan utama adalah untuk membuat file data dan dataset diakses dengan cara yang konsisten. standardize Apa alat baru yang penting untuk membuatnya menjadi kenyataan. Berkat Marco Alba, Margaret O 'Brien (dan pengguna EML lainnya) , BCO-DMO, dan pengguna Inport.
          
-    * NEW EDDTableDariInvalidCRAFiles memungkinkan Anda untuk membuat dataset dari koleksi NetCDF   (v3 atau v4)   .nc file yang menggunakan khusus, tidak valid, varian CF DSG Contiguous Ragged Array (Login) Login File sampel untuk jenis dataset ini dapat ditemukan dihttps://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 Server ini sekarang tidak tersedia \\] Sitemap Login ERDDAP™ mendukung jenis file ini, itu adalah jenis file yang tidak valid yang tidak ada yang harus mulai menggunakan. Kelompok yang saat ini menggunakan jenis file ini sangat didorong untuk digunakan ERDDAP™ untuk menghasilkan file CF DSG CRA yang valid dan berhenti menggunakan file ini. Terima kasih kepada Ajay Krishnan dan Tim Boyer.
+    * NEW EDTableFromInvalidCRAFiles memungkinkan Anda untuk membuat data dari koleksi NetCDF   (v3 atau v4)   .nc berkas yang menggunakan spesifik, tidak valid, varian CF DSG Contiguous Raging Array (CRA) file. Contoh berkas untuk tipe dataset ini dapat ditemukan di https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020- 10- 21 Server ini sekarang tidak tersedia \\] . Meskipun ERDDAP™ mendukung tipe berkas ini, ini adalah tipe berkas yang tidak valid yang tidak boleh dipakai siapapun. Grup yang saat ini menggunakan tipe berkas ini sangat dianjurkan untuk digunakan ERDDAP™ untuk membuat berkas CF DSG CRA yang valid dan berhenti memakai berkas ini. Berkat Ajay Krishnan dan Tim Boyer.
          
-    * EDDTableDariThreddsFiles dan EDDTableDari Hyrax File sekarang diuraikan. Silahkan beralih ke EDDTableDariNcFiles (atau varian) Sitemap&lt;Login Jika tidak bekerja untuk beberapa alasan, email erd.data at noaa.gov Sitemap Jika tidak ada keluhan sebelum 2020, jenis dataset ini dapat dihapus.
+    * EDTableFromThreddsFiles dan EDTableFrom Hyrax Berkas kini sudah ditinggalkan. Harap beralih ke EDTableFromNcFiles (atau varian) tambah&lt;cacheFromUrl &gt;. Jika itu tidak bekerja untuk beberapa alasan, email erd.data at noaa.gov . Jika tidak ada keluhan sebelum 2020, jenis dataset ini dapat dihapus.
          
-    * Login Sistem untuk secara otomatis mengkonversi non-ISO 8601 kali menjadi ISO 8601 kali (diperkenalkan dalam v1.82) telah sangat diperluas untuk menangani sejumlah besar format tambahan. Ini mempengaruhi GenerateDatasetXml dan ERDDAP 's penanganan metadata sumber.
+    * Terkesan - Sistem untuk secara otomatis mengkonversi bukan-ISO 8601 kali ke ISO 8601 kali (diperkenalkan dalam v1.82) telah sangat diperluas untuk menangani sejumlah besar format tambahan. Hal ini mempengaruhi GenerateDadasetsXml dan ERDDAP menangani metadata sumber.
          
-    * Login Dengan revisi utama ketiga dari sistem parsing waktu String (dan semoga yang terakhir) Login ERDDAP™ tidak lagi digunakan Java 's DateTimeFormatter karena bug yang kadang-kadang mempengaruhi waktu ekstrem (tahun&lt;Login ERDDAP™ sekarang menggunakan sistem sendiri untuk mengatur string waktu.
+    * Terkesan - Dengan revisi utama ketiga dari sistem penguraian waktu String (dan mudah-mudahan terakhir) , ERDDAP™ tidak lagi menggunakan Java DateTimeFormatter karena bug yang terkadang mempengaruhi waktu ekstrim (tahun&lt;= 0000). ERDDAP™ sekarang menggunakan sistem sendiri untuk parsing string waktu.
          
-    * PERINGATAN: Sistem parsing waktu String baru agak ketat. Jika salah satu dataset Anda tiba-tiba hanya memiliki nilai yang hilang untuk nilai waktu, penyebabnya hampir pasti bahwa string format waktu sedikit salah. Harus ada pesan kesalahan dalam log. txt terkait dengan nilai waktu yang tidak sesuai dengan format waktu -- yang harus membantu Anda memperbaiki string format waktu untuk dataset. Jika Anda memerlukan bantuan, gunakan opsi dalam ERDDAP 's Time Converter yang "Convert \\[ Login \\] setiap waktu string umum ke waktu string ISO 8601" -- itu menunjukkan format yang digunakan converter untuk membuat string sumber.
+    * PERINGATAN: String waktu parsing sistem agak stricter. Jika salah satu dataset Anda tiba-tiba hanya kehilangan nilai untuk nilai waktu, penyebabnya hampir pasti bahwa format waktu string sedikit salah. Seharusnya ada pesan kesalahan dalam log. txt terkait dengan nilai waktu yang tidak cocok dengan format waktu -- yang akan membantumu memperbaiki format waktu string untuk dataset tersebut. Jika Anda membutuhkan bantuan, gunakan pilihan dalam ERDDAP 's Time Converter which "Change \\[ s \\] setiap waktu string umum ke sebuah ISO 8601 string time "- itu mengindikasikan format yang converter digunakan untuk mengurai sumber string.
          
-    * RECOMMENDASI: Cara tercepat, termudah, dan termurah untuk mempercepat ERDDAP 's akses ke data tabel adalah untuk menempatkan file data pada Solid State Drive (Login) Sitemap Sebagian besar set data tabel relatif kecil, sehingga SSD 1 atau 2 TB mungkin cukup untuk menahan semua file data untuk semua set data tabel Anda. SSD akhirnya memakai apakah Anda menulis data ke sel, menghapusnya, dan menulis data baru ke sel itu terlalu banyak kali. Sebagai gantinya, saya sarankan (sebanyak mungkin) Anda hanya menggunakan SSD Anda untuk menulis data sekali dan membacanya banyak kali. Kemudian, bahkan SSD kelas konsumen harus bertahan lama, mungkin jauh lebih lama dari hard disk drive (Login) Sitemap SSD kelas konsumen sekarang murah (di 2018, ~ $ 200 untuk 1 TB atau ~ $ 400 untuk 2 TB) dan harga masih jatuh cepat. Sitemap ERDDAP™ mengakses file data, SSD menawarkan keduanya
+    * RECOMMEDASI: Cara tercepat, termudah, dan termurah untuk mempercepat ERDDAP akses ke data tabular adalah untuk menempatkan file data pada Solid State Drive (SSD) . Kebanyakan data tabular relatif kecil, jadi 1 atau 2 TB SSD mungkin cukup untuk menyimpan semua data bagi semua data tabular Anda. SSD akhirnya habis jika Anda menulis data ke sel, menghapusnya, dan menulis data baru ke sel itu terlalu banyak kali. Sebaliknya, saya merekomendasikan bahwa (sebanyak mungkin) Anda hanya menggunakan SSD Anda untuk menulis data sekali dan membacanya berkali-kali. Kemudian, bahkan konsumer - kelas SSD harus berlangsung sangat lama, mungkin jauh lebih lama dari Hard Disk Drive (HDD) . Konsumer-grade SSD sekarang murah (pada 2018, ~ $200 untuk 1 TB atau ~ $400 untuk 2 TB) dan harga masih jatuh cepat. Kapan ERDDAP™ mengakses sebuah berkas data, sebuah SSD menawarkan keduanya
         
-        * latensi lebih pendek (~0.1ms, versus ~ 3ms untuk HDD, versus ~ 10 (Sitemap) ms untuk RAID, versus ~ 55ms untuk Amazon S3) Sitemap
-        * throughput lebih tinggi (~ 500 MB / S, versus ~ 75 MB / s untuk HDD versus ~ 500 MB / s untuk RAID) Sitemap
+        * Latensi pendek (~ 0.1ms, versus ~ 3ms for an HDD, versus ~ 10 (?) ms untuk RAID, versus ~ 55ms untuk Amazon S3) , dan
+        * lebih tinggi melalui (~ 500 MB / S, versus ~ 75 MB / s untuk HDD versus ~ 500 MB / s untuk RAID) .
         
-Jadi Anda bisa mendapatkan peningkatan kinerja ~ 10X (Login) di $200&#33; Dibandingkan dengan sebagian besar perubahan yang mungkin untuk sistem Anda (server baru untuk $ 10.000? RAID baru untuk $ 35,000? switch jaringan baru untuk $ 5,000? Sitemap) , ini sejauh pengembalian investasi terbaik (Login) Sitemap Jika server Anda tidak dimuat dengan memori, memori tambahan untuk server Anda juga merupakan cara yang bagus dan relatif murah untuk mempercepat semua aspek ERDDAP Sitemap
-         \\[ SSD akan sangat bagus untuk data gridded, juga, tetapi kebanyakan dataset gridded jauh lebih besar, membuat SSD sangat mahal. \\]   
+Jadi Anda bisa mendapatkan hingga dorongan kinerja ~ 10X (vs a HDD) $200&#33; Dibandingkan dengan kemungkinan perubahan lain pada sistem Anda (server baru untuk $10.000? RAID baru seharga $35.000? switch jaringan baru untuk $5.000? dll.) , ini adalah Return On Investment yang terbaik (ROI) . Jika server Anda tidak dimuat dengan memori, memori tambahan untuk server Anda juga merupakan cara yang besar dan relatif murah untuk mempercepat semua aspek ERDDAP .
+         \\[ SSD akan bagus untuk data gridded, juga, tapi kebanyakan data gridded jauh lebih besar, membuat SSD sangat mahal. \\]   
          
-    * BARU: Semua orang yang masuk ke dalam mendapat peran = \\[ Login Sitemap \\] , bahkan jika tidak ada&lt;pengguna&gt; tag untuk mereka di Meme it datasets.xml Sitemap Jika Anda mengatur dataset&lt;Login \\[ Login Sitemap \\] , maka siapa pun yang masuk ke ERDDAP™   (e.g., melalui akun Gmail atau Orcid mereka) akan dilegalkan untuk mengakses dataset, bahkan jika Anda belum menentukan&lt;pengguna&gt; tag untuk mereka di Meme it datasets.xml Sitemap Terima kasih kepada Maurice Libes.
+    * NEW: setiap orang yang login mendapatkan peran = \\[ anyone Logged Masuk \\] , bahkan jika tidak ada&lt;pengguna &gt; tag bagi mereka dalam datasets.xml . Jika Anda menetapkan data&lt;accessibleTo &gt; ke \\[ anyone Logged Masuk \\] , maka siapa pun yang telah login ke ERDDAP™   (mis., melalui akun Gmail atau Orcid mereka) akan diijinkan untuk mengakses data, bahkan jika Anda belum menetapkan&lt;pengguna &gt; tag bagi mereka dalam datasets.xml . Berkat Maurice Libes.
          
-    * Sitemap UDUNITS Konverter unit UCUM secara luas ditingkatkan.
-Ini menangani string unit yang tidak valid lebih baik (dimulai dengan penekanan pada informasi pelestarian, bukan validitas yang memaksa) Sitemap Juga, hasilnya sekarang memiliki sintaks standar.
+    * ULROVED: UDUNITS / UUUM unit converter secara ekstensif ditingkatkan.
+Ini menangani unit string tidak valid lebih baik (dimulai dengan penekanan pada mempertahankan informasi, daripada menegakkan validitas) . Juga, hasilnya sekarang memiliki sintaks standar.
          
-    * Sitemap UDUNITS /UCUM unit converter memiliki opsi baru untuk menstandardisasikan UDUNITS Login
-Ini bekerja dengan baik untuk valid UDUNITS string dan cukup baik untuk non-standar / tidak valid UDUNITS Login Misalnya, misalnya, UDUNITS ="meter per detik", "meter / detik", "m.s^-1" Sitemap "m s-1" akan kembali "m.s-1". Ini diperlukan untuk standarisasi baru Sistem apa yang dijelaskan di atas. Terima kasih kepada Marco Alba, Margaret O'Brien (dan pengguna EML lainnya) , BCO-DMO, dan pengguna InPort.
+    * NEW: UDUNITS # UCUM unit converter has a new option to standardize a UDUNITS String.
+Ini bekerja dengan baik untuk valid UDUNITS string dan cukup baik untuk bukan-standar / tidak valid UDUNITS string. Misalnya, misalnya, UDUNITS = "meter per detik", "meter / detik", "m.s^-1" , dan "m s-1" semua akan kembali "m.s-1". Ini dibutuhkan untuk standardize baru Apa sistem dijelaskan di atas. Berkat Marco Alba, Margaret O 'Brien (dan pengguna EML lainnya) , BCO-DMO, dan pengguna Inport.
          
-    * BARU: EDDTableDari MultidimNcFiles sekarang memiliki [Login](/docs/server-admin/datasets#treatdimensionsas) opsi, yang memberitahukan ERDDAP™ untuk mengobati dimensi tertentu (Sitemap) seolah-olah mereka dimensi lain (Sitemap) Sitemap Ini berguna untuk beberapa file yang salah yang menggunakan dimensi yang berbeda untuk variabel yang berbeda ketika mereka harus menggunakan hanya satu dimensi (Sitemap) Sitemap Berkat Marco Alba dan Maurice Libes.
+    * EDTableFromMultidimNcFiles kini memiliki [TreatDimensionas](/docs/server-admin/datasets#treatdimensionsas) pilihan, yang memberitahu ERDDAP™ untuk mengobati dimensi tertentu (mis., LAT dan LON) seolah-olah mereka dimensi lain (mis., TIME) . Ini berguna bagi beberapa berkas yang salah yang menggunakan dimensi yang berbeda untuk variabel yang berbeda ketika mereka seharusnya hanya menggunakan satu dimensi (mis., TIME) . Berkat Marco Alba dan Maurice Libes.
          
-    * BARU: Sekarang, semua EDDGrid Dari...Files dataset mendukung sumbu khusus baru sourceName yang memberitahukan ERDDAP™ untuk mengekstrak informasi dari fileName (Login) dan gunakan nilai untuk **Login** nilai sumbu kiri yang ada. Format ini
-        \\*\\*\\*replaceDariFile,_dataType_,_extractRegex_,_captureGroupNumber_
-Sitemap [dokumentasi ini](/docs/server-admin/datasets#aggregation-via-file-names-or-global-metadata) Sitemap Sitemap NOAA Pathfinder Dataset agregasi Harian.
+    * Sekarang, semua EDDGrid Dari... Dataset Berkas mendukung sumbu khusus baru sourceName yang memberitahu ERDDAP™ untuk mengekstrak informasi dari berkas Nama (hanya filename.ext) dan menggunakan nilai untuk **ganti** nilai sumbu paling kiri yang ada. Format
+        \\*\\*\\ * pengganti FromFileName, _ dataType _, _ extratRegex _, _ captureGroupNumber _
+Lihat [dokumentasi ini](/docs/server-admin/datasets#aggregation-via-file-names-or-global-metadata) . Berkat NOAA Data penggabungan harian Pathfinder.
          
-    * BARU: Sekarang, semua EDDGrid Dari...Files dataset mendukung sumbu khusus baru sourceName yang memberitahukan ERDDAP™ untuk mengekstrak informasi dari pathName file (filename.ext)   
-        \\*\\*\\*pathName,_dataType_,_extractRegex_,_captureGroupNumber_
-Untuk ini, nama jalan selalu menggunakan '/' sebagai karakter pemisah direktori, tidak pernah '\'.
-Sitemap [dokumentasi ini](/docs/server-admin/datasets#aggregation-via-file-names-or-global-metadata) Sitemap Terima kasih kepada Blaze de la Vallee.
+    * Sekarang, semua EDDGrid Dari... Dataset Berkas mendukung sumbu khusus baru sourceName yang memberitahu ERDDAP™ untuk mengekstrak informasi dari nama jalur berkas (direktori + filename.ext)   
+        \\*\\*\\ * pathName, _ dataType _, _ extratRegex _, _ captureGroupNumber _
+Untuk ini, nama jalan selalu menggunakan '/' sebagai karakter pemisah direktori, tidak pernah '\\'.
+Lihat [dokumentasi ini](/docs/server-admin/datasets#aggregation-via-file-names-or-global-metadata) . Berkat Paloma de la Valle.
          
-    * BARU: Sekarang, semua EDDTableDari... File dataset mendukung variabel pseudo tambahan sourceName s yang mengekstrak informasi dari fileName file (Login)   (Login [\\*\\*Login](/docs/server-admin/datasets#filename-sourcenames) ) atau dari pathName penuh file (/dir1/dir2/filename.ext)   (Login [\\*\\*Login](/docs/server-admin/datasets#pathname-sourcenames) ) Sitemap Terima kasih kepada Blaze de la Vallee.
+    * Sekarang, semua EDTableFrom... Data berkas mendukung variabel pseudo tambahan sourceName s yang mengekstrak informasi dari fileName berkas (hanya filename.ext)   (lihat [\\*\\*\\ * FileName](/docs/server-admin/datasets#filename-sourcenames) ) atau dari full pathName berkas (/ dir1 / dir2 / filename.ext)   (lihat [\\*\\*\\ * pathName](/docs/server-admin/datasets#pathname-sourcenames) ) . Berkat Paloma de la Valle.
          
-    * Sitemap EDDGrid dataset memiliki satu atau lebih besar dimensi (misalnya, jutaan nilai) yang mengambil banyak memori, Anda dapat mengatur baru [&lt;dimensiNilaiInMemory&gt; (/docs/server-admin/datasets#dismensionvaluesinmemory) pengaturan untuk palsu (default benar) , yang menyebabkan dataset untuk menyimpan nilai pada disk dan mengambil mereka ketika diperlukan. Terima kasih kepada David Rodriguez dan Rich Signell (Sitemap EDDGrid Sitemap) Sitemap
+    * Jika EDDGrid dataset memiliki satu atau lebih sangat besar dimensi (mis., jutaan nilai) yang mengambil banyak memori, Anda dapat mengatur baru [&lt;Dimensi ValuesInMemory &gt;] (/ docs / server-admin / dataset # dimensionvaluesinmemory) konfigurasi ke false (baku adalah benar) , yang menyebabkan data untuk menyimpan nilai-nilai pada disk dan mengambilnya ketika dibutuhkan. Berkat David Rodriguez dan Rich Signgell (re: EDDGrid FromAudioFiles) .
          
-    * IMPROVED: Sebelumnya, jika Anda memesan ulang dataVariable s untuk dataset EDDTableDariFiles dan isi ulang dataset, EDDTableDariFiles akan membaca semua datafiles. Sekarang, itu dapat berurusan dengan reordering tanpa membaca semua file data. About Roland Schweitzer
+    * Sebelumnya, jika Anda memesan kembali dataVariable s untuk sebuah dataset EDTableFromFiles dan memuat ulang data tersebut, EDDTableFromFiles akan membaca ulang semua data. Sekarang, itu dapat menangani reinder tanpa membaca ulang semua file data. Berkat Roland Schweitzer.
          
-    * IMPROVED: Sekarang, ketika ERDDAP™ membaca ASCII, NCCSV, dan JSON Garis file data tabel CSV, jika menemukan kesalahan pada garis tertentu (e.g., jumlah item yang salah) , itu log pesan peringatan ("WARNING: Garis lompatan #" ... " jumlah item yang tidak terduga ...") Login [Login](/docs/server-admin/additional-information#log) dan kemudian terus membaca sisa file data. Dengan demikian, tanggung jawab Anda untuk melihat secara berkala (atau menulis script untuk melakukannya Meme it) untuk pesan itu di log. Meme it txt sehingga Anda dapat memperbaiki masalah dalam file data. ERDDAP™ mengatur cara ini sehingga pengguna dapat terus membaca semua data valid yang tersedia meskipun beberapa baris file memiliki kekurangan. Sitemap ERDDAP™ menandai file sebagai "buruk" dan menghapusnya dari dataset.
+    * Sekarang, ketika ERDDAP™ baca ASCII, NCCSV, dan JSON Lines CSV data file, jika menemukan kesalahan pada baris yang diberikan (mis., jumlah butir yang salah) , itu log pesan peringatan ("PERINGATAN: Melewati baris #"... jumlah item yang tak terduga "...) ke [berkas log.txt](/docs/server-admin/additional-information#log) dan kemudian terus membaca sisa file data. Jadi, itu adalah tanggung jawab Anda untuk terlihat secara berkala (atau menulis skrip untuk melakukannya) untuk pesan dalam log. txt sehingga Anda dapat memperbaiki masalah dalam file data. ERDDAP™ Diatur dengan cara ini sehingga pengguna dapat terus membaca semua data yang valid meskipun beberapa baris berkas memiliki kekurangan. Sebelumnya, ERDDAP™ menandai berkas sebagai "buruk" dan menghapusnya dari data.
          
-    * IMPROVED: Ketika waktu yang tepat (e.g.) disimpan di sumber sebagai "meninjak ..." (atau unit yang lebih besar) Login ERDDAP™ sekarang membaginya dengan mili detik terdekat saat membaca nilai menjadi ERDDAP Sitemap Jika tidak, nomor titik mengambang diarsipkan dan meminta data pada waktu tertentu (e.g.,&time=2018-06-15T01:30:00) akan gagal. Sebelumnya, dihitung mereka sesegera mungkin (dan masih jika unitnya e.g., "detik sejak ..." atau "ketiga sejak ...") Sitemap Ini terbaik untuk menghindari masalah ini dengan tidak menggunakan unit besar (Sitemap) untuk menyimpan nilai waktu yang tepat (e.g., mikrodetik) -- komputer melakukan pekerjaan yang buruk dari penanganan digit desimal. Terima kasih kepada Marco Alba.
+    * TERLIBAT: Ketika waktu yang tepat (Misalnya, ke detik atau milidetik terdekat) disimpan di sumber sebagai "menit sejak"... (atau unit yang lebih besar) , ERDDAP™ sekarang putaran mereka ke milidetik terdekat ketika membaca nilai ke ERDDAP . Jika tidak, angka titik pecahan memar dan permintaan untuk data pada waktu tertentu (mis., & waktu = 2018-06-15T01: 30: 00) akan gagal. Sebelumnya, itu menghitung mereka setepat mungkin (dan masih tidak jika unit adalah mis., "detik sejak"... atau "milidetik sejak"...) . Lebih baik untuk menghindari masalah ini dengan tidak menggunakan unit besar (mis., menit atau jam) untuk menyimpan nilai waktu yang tepat (mis., mikrodetik) -- komputer melakukan pekerjaan yang buruk untuk menangani angka desimal. Berkat Marco Alba.
          
-    * CHANGES untuk EDDTableDari EDDGrid yang membuatnya jauh lebih baik. Meme it Login EDDGrid memungkinkan pengguna query gridded dataset seolah-olah mereka tabular dataset ("query by nilai") Sitemap
+    * PERUBAHAN KE EDDTableFrom EDDGrid yang membuatnya jauh lebih baik. EDTableFrom EDDGrid membiarkan kuiri data yang disaring pengguna seolah-olah mereka adalah data tabular ("query by value") .
         
-        * Sekarang mendukung&lt;maxAxis0&gt; tag (default=10) yang menentukan jumlah sumbu maksimum \\[ Sitemap \\]   (Sitemap "time" ) nilai-nilai yang dapat ditanyakan sekaligus. Ini mencegah permintaan naif dari mendapatkan EDDTableDari EDDGrid untuk mencari melalui seluruh dataset gridded (yang akan gagal dengan kesalahan waktu) Sitemap
-        * Login Xml sekarang memiliki pilihan untuk menghasilkan EDDTableDari EDDGrid dataset untuk semua dataset gridded yang diberikan ERDDAP™ yang cocok dengan regex yang ditentukan (menggunakan .\\* untuk mencocokkan semua dataset) Sitemap Dataset yang menciptakan memiliki informasi tambahan dalam atribut ringkasan yang menunjukkan bahwa ini adalah versi tabel dari dataset gridded. Dan mereka datasetID Sitemap datasetID dataset gridded, ditambah "\\_AsATable".
-        * Ada kecepatan besar untuk setup yang paling umum: ketika dataset gridded adalah EDDGrid Dari dataset Erddap yang sama ERDDAP Sitemap
+        * Sekarang mendukung&lt;tag maxAxis0 &gt; (baku = 10) yang menentukan jumlah maksimal sumbu \\[ 0 \\]   (biasanya "time" ) nilai yang dapat kueri sekaligus. Hal ini mencegah permintaan naif dari mendapatkan EDTableFrom EDDGrid untuk mencari melalui seluruh data gridded ((Yang tidak berhenti) buahnya. karena musim-musiman (dan tidak terlarang mengambilnya) artinya, ia boleh diambil tanpa harus membayarnya.) .
+        * GenerateDatadasets Xml kini memiliki pilihan untuk membuat EDTableFrom EDDGrid dataset untuk semua data yang tergenggam dalam sebuah diberikan ERDDAP™ yang cocok dengan sebuah regex yang dispesifikasikan (gunakan.\\ * untuk mencocokkan semua dataset) . Data yang dihasilkannya memiliki informasi tambahan dalam atribut ringkasan yang menunjukkan bahwa ini adalah versi tabular dari data yang rusak. Dan mereka datasetID adalah datasetID dari dataset yang disaring, ditambah "\\ _ Asatable".
+        * Ada kecepatan besar untuk pengaturan yang paling umum: ketika dataset gridded adalah EDDGrid Tanggal Erddap yang sama ERDDAP .
         
-Terima kasih kepada James Gallagher dan Ed Armstrong.
+Berkat James Gallagher dan Ed Armstrong.
          
-    * BARU: menghasilkan Login Xml untuk semua jenis dataset sekarang jauh lebih mungkin untuk menambahkan \\_FillValue atau missing\\_value atribut ke variabel numerik addAttributes Sitemap Misalnya, ini terjadi ketika penanda nilai hilang string (g., "", ".", "?", "NA", "th", "NaN") untuk variabel itu dalam file sampel dikonversi ke ERDDAP Nilai hilang asli (127 di kolom byte, 32767 dalam kolom pendek, 2147483647 kolom int, 9223372036854775807 dalam kolom panjang, dan NaN dalam mengapung dan variabel ganda) Sitemap Hal ini juga terjadi untuk nilai NaN dalam mengapung dan variabel ganda. Juga, "th" ditambahkan ke daftar penanda nilai yang hilang umum di kolom data numerik yang ERDDAP™ harus mencari. Berkat Matt Biddle dari BCO-DMO.
+    * NEW: hasilkan Dataset Xml untuk semua jenis dataset sekarang lebih mungkin untuk menambahkan sebuah\\ _ FillValue atau missing\\_value atribut ke sebuah variabel numerik addAttributes . Misalnya, ini terjadi ketika string hilang nilai penanda (mis. ",", ".", "", "NA", "nd", "NaN") untuk variabel tersebut dalam berkas cuplikan dikonversi ke ERDDAP nilai asli hilang (127 dalam kolom byte, 32767 dalam kolom pendek, 2147483647 dalam kolom int, 922333203685475807 dalam kolom panjang, dan NaN dalam float dan variabel ganda) . Hal ini juga terjadi untuk nilai NaN dalam float dan variabel ganda. Juga, "nd" ditambahkan ke daftar penanda nilai umum yang hilang dalam kolom data numerik yang ERDDAP™ harus mencari. Berkat Matt Biddle dari BCO-DMO.
          
-    * IMPROVED: opsi ncdump dalam menghasilkan Login Xml sekarang lebih seperti ncdump (tapi masih menggunakan versi netcdf-java ncdump) Sitemap Sekarang, mencetak daftar opsi baru. Sitemap .nc file ml, mencetak output ncdump untuk hasil .nc perubahan file g .nc Sitemap .hdf Login
+    * IMPROVED: pilihan ncdump dalam menghasilkan Dataset Xml sekarang lebih seperti ncdump (tetapi masih menggunakan netcdf -java versi dari ncdump) . Sekarang, ia mencetak daftar baru pilihan. Sekarang, untuk .nc Berkas ml, ini menampilkan keluaran ncdump untuk hasil .nc perubahan berkas ml diterapkan ke yang mendasari .nc atau .hdf file.
          
-    * Login: Ada kebocoran pegangan file (akhirnya menyebabkan ERDDAP™ Sitemap) disebabkan ketika membuat beberapa jenis file output, misalnya, .geotif, tidak mungkin ketika kesalahan terjadi selama penciptaan. Saya pikir/hope ini sekarang semua tetap. Jika Anda masih melihat masalah, silakan beri tahu saya jenis dataset (grid atau tabel) dan jenis file yang menyebabkan masalah. Meme it Terima kasih kepada Steven Beale, Lynn DeWitt, Jibei Zhao, dan lainnya.
+    * BUG FIX: Ada kebocoran berkas handle (akhirnya menyebabkan ERDDAP™ untuk membeku) disebabkan ketika membuat beberapa jenis berkas keluaran, misalnya, .geotif, terutama ketika kesalahan terjadi selama pembuatan. Saya pikir / berharap ini sekarang semua tetap. Jika Anda masih melihat masalah, tolong beritahu saya jenis data (kisi atau tabel) dan jenis berkas yang menyebabkan masalah. Berkat Steven Beale, Lynn DeWitt, Jibei Zhao, dan lainnya.
          
-    * Login: Login WMS   Leaflet demo tidak sepenuhnya / tidak mengubah sumbu "depth" untuk "tinggi". Sekarang, itu tidak, dan permintaan legenda yang rusak tetap. Juga, semua opsi sumbu dalam daftar drop-down selalu dalam urutan yang diurutkan. Terima kasih kepada Antoine Queric dan Aurelie Briand.
+    * BUG FIX: The WMS   Leaflet demo tidak sepenuhnya / benar mengkonversi "kedalaman" sumbu ke "elevasi". Sekarang, itu benar, dan permintaan legenda yang rusak sudah ditetapkan. Juga, semua opsi sumbu dalam daftar drop-down selalu dalam urutan terurut meningkat. Berkat Antoine Queric dan Aurelie Briand.
          
-    * BUG FIX: EDDTableDariFiles sekarang mendukung batasan pada variabel String yang dibuat dari variabel char dalam file data. Terima kasih kepada Antoine Queric dan Aurelie Briand.
+    * BUG FIX: EDTableFromFiles kini benar mendukung batasan pada variabel String yang dibuat dari variabel char dalam berkas data. Berkat Antoine Queric dan Aurelie Briand.
          
-    * Login: Sekarang, ketika dataset menjadi tidak tersedia, dataset mencoba untuk memberitahukan (dengan pesan "Dataset ini saat ini tidak tersedia.") pelanggannya, tindakan yang terdaftar, rss, dan lonPM180 dataset yang mengandalkannya. Terima kasih kepada Roy Mendelssohn dan Bob Simons.
+    * BUG FIX: Sekarang, ketika suatu data menjadi tidak tersedia, dataset mencoba untuk memberitahu (dengan pesan "Dataset ini saat ini tidak tersedia".) pelanggan, aksi terdaftar, rss, dan data lonPM180 yang bergantung padanya. Berkat Roy Mendelssohn dan Bob Simons.
          
-    * Login: Dua bug yang berkaitan dengan EDDTableCopy. Sam McClatchie
+    * BUG FIX: Dua bug terkait dengan EDTableCopy. Berkat Sam McClatchie.
          
-    * IMPROVED: Jumlah permintaan gagal yang ditunjukkan pada status.html halaman akan meningkat karena lebih banyak hal dihitung sebagai kegagalan dari sebelumnya.
+    * IMPROVED: Jumlah permintaan yang gagal ditampilkan pada halaman status.html akan meningkat karena lebih banyak hal dihitung sebagai kegagalan daripada sebelumnya.
          
-    * Sitemap ERDDAP 's status.html sekarang menunjukkan "Permintaan (median kali di ms) " dalam seri waktu. Sebelumnya, itu menunjukkan waktu median yang ditimbulkan untuk menginteger detik.
+    * TERLIBAT: ERDDAP Status.html sekarang menampilkan "Permintaan (waktu dalam ms) "dalam deret waktu. Sebelumnya, itu menunjukkan Median kali dipotong menjadi integer detik.
          
-    * IMPROVED: Dalam output jsonld, jsonld "nama" sekarang berasal dari dataset "title" Sitemap ERDDAP , dan jsonld "headline" sekarang berasal dari "dataset" datasetID Sitemap ERDDAP Sitemap Sebelumnya, dibalik. Ini tampaknya salah bagi saya karena dalam penggunaan bahasa Inggris normal, "nama" biasanya singkat, (Sitemap) pengidentifikasi unik yang jarang/tidak pernah berubah (e.g., Robert nama Middle Simons) , bukan deskripsi yang tidak unik dan yang dapat dengan mudah dan sering berubah (e.g., "Seorang pria yang menulis perangkat lunak untuk NOAA " vs. "Seorang pria tinggi yang menulis perangkat lunak untuk NOAA Sitemap) Sitemap Gee, itu akan bagus jika definisi schema.org [Login](https://schema.org/name) , dalam konteks Dataset, lebih spesifik. Pengembang perangkat lunak harus dapat menulis implementasi spesifikasi berdasarkan spesifikasi saja, tanpa panduan dari ahli. Tapi saya defer untuk Google (annal Natasha Login) Login (Mr. Victor Yang) , dan Rob Fuller.
+    * IMPROVED: Dalam output jsonld, "nama" sekarang berasal dari data "title" in ERDDAP , dan jsonld "headline" sekarang berasal dari data tersebut " datasetID "... ERDDAP . Sebelumnya, itu terbalik. Ini terlihat salah bagi saya karena dalam penggunaan bahasa Inggris normal, "nama" biasanya pendek, (idealnya) identifier unik yang jarang / tidak pernah berubah (mis. Robert Middlename Simons) , bukan deskripsi yang tidak unik dan yang dapat dengan mudah dan sering berubah (Misalnya, "Seorang pria yang menulis software untuk NOAA "vs" Seorang pria tinggi yang menulis software untuk NOAA ") . Wah, itu akan menjadi besar jika definisi skema.org [Nama](https://schema.org/name) , dalam konteks Dataset, lebih spesifik. Pengembang perangkat lunak seharusnya bisa menulis implementasi spesifikasi berdasarkan spesifikasi saja, tanpa bimbingan dari para ahli. But I depend to Google (dapat dibilang Natasha Noy) , NCEI (dapat dikatakan John Repph) , dan Rob Fuller.
          
-    * IMPROVED: Dalam output jsonld, empat nilai "spatialCoverage GeoShape box" sekarang minLat minLon maxLat maxLon. Sebelumnya, posisi lat dan lon terbalik. Gee, itu akan bagus jika definisi schema.org [Login](https://schema.org/GeoShape) menentukan urutan yang benar. Pengembang perangkat lunak harus dapat menulis implementasi spesifikasi berdasarkan spesifikasi saja, tanpa panduan dari ahli. Terima kasih kepada Natasha Noy dan Rob Fuller.
+    * ULROVED: Dalam output jsonld, empat "pelindung spasial kotak GeoShape" nilai sekarang minLon maxLat maxLon. Sebelumnya, posisi lat dan lon terbalik. Wah, itu akan menjadi besar jika definisi skema.org [GeoShape](https://schema.org/GeoShape) tentukan urutan yang benar. Pengembang perangkat lunak seharusnya bisa menulis implementasi spesifikasi berdasarkan spesifikasi saja, tanpa bimbingan dari para ahli. Berkat Natasha Noy dan Rob Fuller.
 
 ## Versi 1.82{#version-182} 
- (Dikirim 2018-01-26) 
+ (dirilis 2018-01- 26) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap**   
+*    **Fitur Baru (bagi pengguna) :**   
      
-    * Perubahan halus numerik ke tampilan-dan-kaki ERDDAP™ halaman web.
-        * Sitemap ERDDAP™ sekarang menggunakan HTML 5 dan menggunakan CSS yang lebih baik.
-        * IMPROVED: Halaman web telah sedikit dimodifikasi untuk membuat mereka lebih bersih dan kurang "busy". (Mereka masih padat dan masih ada hal-hal yang bisa mengeluh, tetapi semoga jauh lebih sedikit daripada sebelumnya.) Berkat John Kerfoot untuk beberapa komentar.
-        * IMPROVED: Halaman web sekarang terlihat jauh lebih baik di ponsel dan perangkat kecil lainnya, terutama jika Anda menggunakannya dalam orientasi lansekap. Mereka juga terlihat lebih baik di jendela yang sangat kecil dan sangat besar di browser desktop.
-        * IMPROVED: Untuk meningkatkan keamanan dan alasan lain, penggunaan versi Openlayer yang terbaru untuk WMS halaman demonstrasi telah digantikan oleh Leaflet Sitemap
-        * BARU: dukungan untuk pratinjau gambar, audio, dan file video di "files" sistem (Sitemap [set data uji ini](https://coastwatch.pfeg.noaa.gov/erddap/files/testMediaFiles/ShouldWork/) ) dan .htmlTable respons ketika sel memiliki URL gambar, file audio atau video (Sitemap [permintaan ini](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/testMediaFiles.htmlTable?url%2Cname%2ClastModified%2Csize%2CfileType%26url=~%22.*ShouldWork.*%22) ) Sitemap Jika Anda menginjak ikon '?', Anda harus melihat gambar, audio, atau pratinjau file video. Anda juga dapat mengklik tautan file untuk melihat layar penuh file di browser Anda. Sitemap [Media Database](/docs/server-admin/datasets#media-files) Sitemap Perhatikan bahwa browser yang berbeda mendukung berbagai jenis file, sehingga contoh tidak dapat bekerja di browser Anda.
-Berkat orang / tautan ini untuk ide dan kode sampel untuk template alat gambar CSS-only (Sitemaphttps://codepen.io/electricalbah/pen/eJRLVd) dan pemuatan gambar yang rusak (Sitemaphttps://varvy.com/pagespeed/defer-images.html)   (meskipun kode dimodifikasi sebelum digunakan ERDDAP ) Sitemap
-Berkat Cara Wilson, Matthew Austin, dan Adam Shepherd / BCO-DMO untuk penawaran untuk dukungan gambar.
-Berkat Jim Potemra, Rich Signell, OOI, dan Carrie Wall Bell untuk meminta dukungan file audio/hidrophone.
-Berkat OOI untuk menunjukkan kebutuhan dukungan video.
-        * BARU: Subset data dari setiap ERDDAP™ Login (tetapi biasanya dataset dari file audio) sekarang dapat disimpan dalam file audio .wav. ( [Sitemap](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#wav) ) Berkat Jim Potemra, Rich Signell, OOI, dan Carrie Wall Bell untuk meminta dukungan file audio/hidrophone.
-        * IMPROVED: Format untuk Folder Web Accessible (Login)   (e.g., folder /file/) telah diperbarui untuk menggunakan tabel HTML. Format baru meniru versi terbaru dari daftar direktori halaman web yang dibuat oleh versi terbaru dari Apache. Manusia akan menemukan bahwa perubahan membuat informasi lebih mudah dibaca. Software yang membuat dokumen ini (e.g., software yang memanen dokumen ISO 19115 dari ERDDAP ) harus direvisi, tetapi format baru akan lebih mudah untuk membuat daripada format sebelumnya. (Perhatian, Anna Milan.) 
-        * Login outOfDateDatasets.html Sitemap ( [Sitemap](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) Halaman web ini menunjukkan tabel dengan semua dataset waktu dekat yang memiliki&lt; testOutOfDate Sitemap (Sitemap) , peringkat oleh bagaimana kedaluwarsa dataset. Dasbor ini harus berguna untuk ERDDAP™ administrator dan pengguna akhir ketika mereka ingin tahu bahwa dataset tidak terbaru. Untuk dataset kedaluwarsa, ada masalah dengan sumber data, sehingga ERDDAP™ tidak dapat melihat/mendapatkan data dari lebih banyak poin waktu.
-Administrator: Jika Anda tidak ingin halaman web Out-Of-Date Datasets, tambahkan ini ke setup Anda.xml:
-            &lt;Sitemap&lt;Login
-Sitemap testOutOfDate Sitemap Kolom OfDate di kolom allDatasets Login
-Berkat Bob Simons, yang telah menginginkan ini selama bertahun-tahun, dan kepada orang-orang yang cerdas dari Institut Laut Irlandia yang memberi saya inspirasi melalui Raspberry Pi dan monitor khusus mereka yang selalu menunjukkan layar seperti ini di kantor mereka.
-        * Sitemap .htmlTable Login .xhtml respon sekarang lebih baik diformat, lebih kompak, dan dengan demikian memuat lebih cepat. HTML5 & CSS
-    * Jenis file output baru untuk set data griddap: .time. Ini menunjukkan daftar kesenjangan dalam nilai waktu yang lebih besar dari kesenjangan media. ( [Sitemap](https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMHchla8day.timeGaps) ) Ini berguna untuk ERDDAP™ administrator dan pengguna akhir ketika mereka ingin tahu apakah ada kesenjangan yang tak terduga dalam nilai waktu untuk dataset yang diharapkan memiliki nilai waktu secara teratur. Berkat Bob Simons dan Roy Mendelssohn yang membutuhkan fitur ini.
-    * IMPROVED: Grafik default untuk allDatasets dataset sekarang peta dengan x=maxLon dan y=maxLat. Berkat John Kerfoot, Rich Signell, dan OOI-CI.
-    * Sitemap [Login](https://github.com/ioos/erddapy) Sitemap ERDDAP™ fitur, tetapi akan menarik bagi banyak orang ERDDAP™ pengguna. Login ( ERDDAP™ Sitemap Python ) Sitemap Python perpustakaan yang diciptakan oleh Filipe Fernandes bahwa "mendapatkan keuntungan dari ERDDAP Sitemap RESTful layanan web dan menciptakan layanan web ERDDAP™ URL untuk setiap permintaan seperti mencari dataset, memperoleh metadata, mengunduh data, dll. " Terima kasih kepada Filipe Fernandes.
-    * Saya harus disebutkan sebelumnya: Ada paket R pihak ketiga yang dirancang untuk memudahkan bekerja dengan ERDDAP™ dari dalam R: [Login](https://github.com/ropensci/rerddap#rerddap) Sitemap Sitemap [Login](https://ropensci.org/) Dan Mendelssohn.
+    * Banyak perubahan halus ke tampilan-dan-merasa ERDDAP™ halaman web.
+        * TERLIBAT: ERDDAP™ Sekarang gunakan HTML 5 dan gunakan CSS yang lebih baik.
+        * IMPROVED: Halaman web telah dimodifikasi sedikit untuk membuatnya bersih dan kurang "sibuk". (Mereka masih padat dan masih ada hal-hal yang seseorang bisa mengeluh tentang, tetapi mudah-mudahan jauh lebih sedikit dari sebelumnya.) Berkat John Kerfoot untuk beberapa komentar.
+        * IMPROVED: Halaman web sekarang terlihat jauh lebih baik pada ponsel dan perangkat kecil lainnya, terutama jika Anda menggunakannya dalam orientasi lanskap. Mereka juga terlihat lebih baik pada jendela yang sangat kecil dan sangat besar di browser desktop.
+        * IMPROVED: Untuk meningkatkan keamanan dan alasan lain, penggunaan dari versi Out- of-date Openlayer untuk WMS halaman demonstrasi telah digantikan oleh Leaflet .
+        * NEW: dukungan untuk pratilik gambar, audio, dan berkas video di "files" sistem (misalnya, [set data tes ini](https://coastwatch.pfeg.noaa.gov/erddap/files/testMediaFiles/ShouldWork/) ) dan masuk .htmlTable respon ketika sebuah sel memiliki URL dari sebuah berkas image, audio atau video (misalnya, [permintaan ini](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/testMediaFiles.htmlTable?url%2Cname%2ClastModified%2Csize%2CfileType%26url=~%22.*ShouldWork.*%22) ) . Jika Anda hover atas ikon '?', Anda harus melihat gambar, audio, atau pratinjau berkas video. Anda juga dapat mengklik taut berkas untuk melihat layar penuh berkas di peramban Anda. Lihat [Dokumentasi Berkas Media](/docs/server-admin/datasets#media-files) . Perhatikan bahwa browser berbeda mendukung tipe berkas yang berbeda, sehingga contoh mungkin tidak bekerja dalam peramban Anda.
+Berkat orang-orang ini / link untuk ide-ide dan contoh kode untuk CSS- hanya tooltip gambar (berada di https://codepen.io/electricalbah/pen/eJRLVd ) dan menunda pemuatan gambar (berada di https://varvy.com/pagespeed/defer-images.html )   (meskipun kode diubah sebelum digunakan masuk ERDDAP ) .
+Berkat Cara Wilson, Matthew Austin, dan Adam Shepherd / BCO-DMO atas permintaan dukungan gambar.
+Berkat Jim Potemra, Rich Signgell, Oui, dan Carrie Wall Bell untuk permintaan dukungan audio / Hydrophone.
+Berkat Oui untuk menunjukkan kebutuhan untuk dukungan video.
+        * Sebuah subset data dari setiap ERDDAP™ dataset (tapi biasanya sebuah data dari berkas audio) dapat disimpan dalam berkas audio .wav. ( [dokumentasi](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#wav) ) Berkat Jim Potemra, Rich Signgell, Oui, dan Carrie Wall Bell untuk permintaan dukungan audio / Hydrophone.
+        * INTERROVED: Format bagi Folder Akses Web (WAF)   (mis., berkas / folder) telah diperbarui untuk menggunakan tabel HTML. Format baru meniru versi yang lebih baru dari direktori daftar halaman web yang dibuat oleh versi baru-baru ini dari Apache. Manusia akan menemukan bahwa perubahan membuat informasi lebih mudah untuk dibaca. Perangkat lunak yang memisahkan dokumen ini (Misalnya, perangkat lunak yang panen ISO 19115 dokumen dari ERDDAP ) harus direvisi, tetapi format baru akan lebih mudah diurai dari format sebelumnya. (Perhatian, Anna Milan.) 
+        * NEW outOfDateDatasets.html halaman. ( [contoh](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) Halaman web ini menunjukkan sebuah tabel dengan semua data dekat-real-time yang memiliki&lt; testOutOfDate &gt; tag (lihat di bawah) , peringkat oleh bagaimana out-of-date tanggal tanggal yang ditetapkan. Dasbor ini harus berguna untuk ERDDAP™ administrator dan akhir pengguna ketika mereka ingin tahu yang dataset out-of-date. Untuk date-out-of-date, mungkin ada masalah dengan sumber data, sehingga ERDDAP™ tidak dapat melihat / mendapatkan data dari titik waktu yang lebih baru.
+Administrator: Jika Anda tidak ingin Halaman web Out- Date Datasets, tambahkan ini ke setuppxml Anda:
+            &lt;OUT DateDatasetsActive &gt; false&lt;/ OUT DateDateDatesetsActive &gt;
+Ada sekarang testOutOfDate dan keluar Kolom Tanggal di allDatasets Dataset.
+Berkat Bob Simons, yang telah menginginkan hal ini selama bertahun-tahun, dan bagi orang-orang pintar dari Institut Marinir Irlandia yang memberi saya inspirasi melalui mereka berdedikasi Raspberry Pi dan monitor yang selalu menunjukkan layar seperti ini di kantor mereka.
+        * TERLIBAT: .htmlTable dan .xhtml respon sekarang lebih baik format, lebih kompak, dan dengan demikian beban lebih cepat. Berkat HTML5 dan CSS.
+    * Jenis berkas keluaran baru bagi data griddap: .timeGaps. Ini menunjukkan daftar kesenjangan dalam nilai waktu yang lebih besar daripada kesenjangan median. ( [contoh](https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMHchla8day.timeGaps) ) Ini berguna untuk ERDDAP™ administrator dan pengguna akhir ketika mereka ingin tahu apakah ada kesenjangan tak terduga dalam nilai waktu untuk suatu tanggal yang diharapkan memiliki nilai waktu teratur spaced. Berkat Bob Simons dan Roy Mendelssohn yang membutuhkan fitur ini.
+    * TERLIBAT: Grafik baku bagi allDatasets dataset sekarang peta dengan x = maxLon dan y = maxLat. Berkat John Kerfoot, Rich Signgell, dan OOI- CI.
+    * NEW: [hapus](https://github.com/ioos/erddapy) -- bukan ERDDAP™ Fitur, tetapi akan menarik bagi banyak ERDDAP™ pengguna. Erddapy ( ERDDAP™ + Python ) adalah Python pustaka yang dibuat oleh Filipe Fernandes yang "mengambil keuntungan dari ERDDAP ' RESTful layanan web dan menciptakan ERDDAP™ URL untuk setiap permintaan seperti pencarian dataset, memperoleh metadata, mengunduh data, dll ". Berkat Filipe Fernandes.
+    * Aku seharusnya menyebutkan sebelumnya: Ada paket ketiga pihak R dirancang untuk membuatnya lebih mudah untuk bekerja dengan ERDDAP™ dari dalam R: [rerddap](https://github.com/ropensci/rerddap#rerddap) . Terima kasih [rOpenSci](https://ropensci.org/) dan Roy Mendelssohn.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   
      
-    * TO DO: Dalam setup.xml, tepat di bawah&lt;adminInstitution&gt;, tambahkan&lt;adminInstitutionUrl&gt; tag yang menentukan URL untuk institusi Anda (atau grup) Sitemap
-    * TO DO: 3 tag ini dalam setup.xml tidak lagi digunakan:
-        &lt;Sitemap Login&lt;Login&lt;Login Mereka digantikan oleh
-        &lt;Login&lt;Login&lt;endBodyHtml5&gt;, yang memiliki nilai default yang ditentukan dalam pesan.xml (dan ditampilkan di bawah ini) Sitemap
+    * Di setup.xml, tepat di bawah&lt;adminInstitution &gt;, tambahkan&lt;adminInstitutionUrl &gt; tag yang menspesifikasikan URL untuk institusi Anda (atau grup) .
+    * TODO: 3 tag ini tidak lagi digunakan:
+        &lt;awal HeadHtml &gt;,&lt;startBodyHtml &gt; dan&lt;endBodyHtml &gt;. Mereka diganti oleh
+        &lt;startHeadHtml5 &gt;,&lt;StartBodyHtml5 &gt; dan&lt;endBodyHtml5 &gt;, yang memiliki nilai baku dispesifikasikan dalam messages.xml (dan ditampilkan di bawah) .
         
-Kami merekomendasikan menggunakan default&lt;Login&lt;Login
-Kami merekomendasikan: Jika Anda melakukan perubahan pada aslinya&lt;startBodyHtml&gt; dan/atau ingin menyesuaikan Anda ERDDAP™ sekarang, silakan salin baru&lt;WordPress.org (Sitemap) ke dalam setup.xml Anda dan memodifikasinya untuk menyesuaikan Anda ERDDAP™ Sitemap ERDDAP Halaman web mencerminkan organisasi Anda, tidak NOAA   ERD Sitemap Tidak bisa, mohon ubah "Karena Anda" ke organisasi Anda (Login) Sitemap Jika Anda memerlukan bantuan, silakan email erd.data at noaa.gov Sitemap (Jika Anda tidak ingin menyesuaikan Anda ERDDAP™ sekarang, gunakan default&lt;Login
+Kami menyarankan menggunakan default&lt;startHeadHtml5 &gt; dan&lt;endBodyHtml5 &gt;.
+Kami sarankan: Jika Anda membuat perubahan ke asli&lt;startBodyHtml &gt; dan / atau ingin menyesuaikan Anda ERDDAP™ sekarang, tolong salin yang baru&lt;Tag startBodyHtml5 &gt; (dari bawah) ke dalam semp.xml Anda dan memodifikasinya untuk menyesuaikan Anda ERDDAP™ sehingga ERDDAP Halaman web mencerminkan organisasi Anda, bukan NOAA   ERD . Secara khusus, tolong ganti "Dipersembahkan kepada Anda" untuk organisasi Anda (s) . Jika Anda membutuhkan bantuan, silakan email erd.data at noaa.gov . (Jika Anda tidak ingin menyesuaikan Anda ERDDAP™ sekarang, gunakan default&lt;startBodyHtml5 &gt;.)
         
-Kemudian hapus tag lama 3 di setup.xml yang tidak lagi digunakan.
+Kemudian menghapus 3 tag lama dalam setup.xml Anda yang tidak lagi digunakan.
 
 ```
         <startBodyHtml5><!\\[CDATA\\[ 
@@ -1163,14 +1178,14 @@ Kemudian hapus tag lama 3 di setup.xml yang tidak lagi digunakan.
         \\]\\]></startBodyHtml5>
 ```
 
-Ada cara tambahan yang bisa Anda [Login ERDDAP™ ](/docs/server-admin/deploy-install#customize) Sitemap ERDDAP 's halaman web mencerminkan organisasi Anda daripada Meme it NOAA   ERD Sitemap
+Ada cara tambahan yang Anda bisa [disesuaikan ERDDAP™ ](/docs/server-admin/deploy-install#customize) jadi ERDDAP laman web mencerminkan organisasi Anda bukan NOAA   ERD .
         
-    * Sitemap&lt; EDDGrid ... Example & gt; tag (mulai dengan&lt; EDDGrid IdExample&gt;&lt;Login Contoh & gt; tag (mulai dengan&lt;EDDTableIdExample&gt;) dalam file setup.xml Anda digunakan untuk membuat contoh di griddap dan tabledap Sitemap html halaman web di Anda ERDDAP Sitemap
+    * TO DO:&lt; EDDGrid ... Contoh & gt; tag (dimulai dengan&lt; EDDGrid IdExsample & gt;) dan&lt;EDTabel... Contoh & gt; tag (dimulai dengan&lt;EDTableIdExample & gt;) dalam berkas setup.xml anda digunakan untuk membuat contoh dalam griddap dan tabledap dokumentasi. html halaman web dalam anda ERDDAP .
         
-Jika Anda tidak menyesuaikan tag tersebut, silakan hapus dari file setup.xml Anda. Sekarang mereka semua memiliki default dalam pesan.xml yang merujuk pada dataset di Bob ERDDAP™ Sitemaphttps://coastwatch.pfeg.noaa.gov/erddap/index.htmlSitemap Jadi Anda tidak perlu lagi memiliki dataset tertentu di Anda Meme it ERDDAP Sitemap Jika Anda ingin menimpa default, menyalin beberapa atau semua tag tersebut ke dalam setup Anda.xml dan mengubah nilai-nilai mereka.
+Jika Anda tidak menyesuaikan tag tersebut, silakan hapus dari berkas setup.xml Anda. Sekarang mereka semua memiliki default dalam messages.xml yang mengacu ke data di Bob 's ERDDAP™ di https://coastwatch.pfeg.noaa.gov/erddap/index.html . Jadi Anda tidak perlu lagi memiliki dataset spesifik di Anda ERDDAP . Jika Anda ingin menimpa default, salin beberapa atau semua tag ke dalam setuppxml dan ubah nilai-nilai mereka.
 Jika Anda ingin contoh untuk menunjuk ke Anda ERDDAP™ , metode termudah adalah:
         
-        1. Sertakan dua dataset ini di ERDDAP™ dengan menambahkan ini ke Anda datasets.xml Sitemap
+        1. Sertakan dua data ini pada Anda ERDDAP™ dengan menambahkan ini ke Anda datasets.xml :
 ```
             <dataset type="EDDGridFromErddap" datasetID="jplMURSST41" active="true">
                 <sourceUrl>https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41</sourceUrl>
@@ -1180,382 +1195,382 @@ Jika Anda ingin contoh untuk menunjuk ke Anda ERDDAP™ , metode termudah adalah
             </dataset>
 ```
 
-        2. Tambahkan tag ini ke setup Anda.xml, tetapi ubah URL ke Anda ERDDAP Sitemap ( https Sitemap) URL:
+        2. Tambahkan tag ini ke setup.xml Anda, tapi ubah URL ke Anda ERDDAP ' ( https ?) URL:
 ```
             <EDDGridErddapUrlExample>https://coastwatch.pfeg.noaa.gov/erddap/</EDDGridErddapUrlExample>
             <EDDTableErddapUrlExample>https://coastwatch.pfeg.noaa.gov/erddap/</EDDTableErddapUrlExample>
 ```
         
-Jika Anda menyesuaikan tag tersebut, biarkan mereka dan tambahkan 2 tag baru ini ke setup Anda.xml untuk menentukan ERDDAP™ URL untuk dataset ini, tetapi mengubah URL ke dataset Anda ERDDAP Sitemap ( https Sitemap) URL:
+Jika Anda menyesuaikan tag tersebut, biarkan seperti ini dan tambahkan 2 tag baru ini ke setuppxml Anda untuk menentukan ERDDAP™ URL bagi dataset ini, tapi ubah URL ke Anda ERDDAP ' ( https ?) URL:
 ```
         <EDDGridErddapUrlExample>https://coastwatch.pfeg.noaa.gov/erddap/</EDDGridErddapUrlExample>
         <EDDTableErddapUrlExample>https://coastwatch.pfeg.noaa.gov/erddap/</EDDTableErddapUrlExample>
 ```
 
-    * Sitemap ERDDAP™ sekarang menggunakan file css bernama erddap2.css. Jika Anda membuat perubahan \\[ Login \\] WordPress.org (di direktori yang sama) Sitemap
-    * Sitemap ERDDAP 's halaman web sekarang memiliki sejumlah besar tautan internal hampir tak terlihat (teks berwarna hitam dan tidak diuraikan) Sitemap Jika Anda menginjak lebih dari satu tautan ini (biasanya beberapa kata judul dan paragraf pertama) , kursor menjadi tangan. Jika Anda mengklik tautan, URL adalah tautan internal ke bagian dokumen tersebut. Ini memudahkan untuk merujuk pada bagian dokumentasi tertentu. Terima kasih kepada Bob Simons, yang telah menginginkan ini selama bertahun-tahun.
-    * Sitemap ERDDAP™ Sitemap [Rentang Byte / Accept-Ranges](https://en.wikipedia.org/wiki/Byte_serving) permintaan untuk bagian / file / file. Ini diperlukan untuk mendukung pemirsa audio dan video di browser.
-    * TO DO: Sekarang, untuk meningkatkan keamanan, jika Anda ditentukan&lt;WordPress.org (dan dengan demikian dukungan https ) , bendera yang disarankan url https URL dengan flagKey yang lebih aman. Jika demikian, setiap flagUrls/flagKeys sebelumnya akan menjadi tidak valid. Admin: Jika perubahan ini berlaku untuk Anda ERDDAP™ dan jika Anda Meme it ERDDAP™ Login EDDGrid DariErddap dan EDDTable DariErddap yang berlangganan jarak jauh ERDDAP s, kemudian, setelah Anda memperbarui ERDDAP Login ERDDAP™ akan secara otomatis mencoba berlangganan dengan flagUrl baru, sehingga Anda harus menghapus langganan lama dan memvalidasi langganan baru ketika Anda mendapatkan email validasi berlangganan baru.
-    * DILAKUKAN: Jika Anda ERDDAP™ Login EDDGrid Dari dataSet Erddap untuk dataset erdVH3 pada jam tangan pantai Bob ERDDAP™ , mohon gantinya untuk merujuk pada dataset erdVH2018 baru.
-    * TO DO: Jika Anda memasukkan data set sampel jplAquariusSSS di Anda ERDDAP™ , ubah "V4" di datasetID 's to "V5".
-    * Sitemap actual\\_range sekarang atribut standar CF (seperti CF-1.7) dan jelas mengatakan bahwa jika penggunaan variabel add\\_offset dan/atau scale\\_factor untuk mengemas nilai data, maka actual\\_range nilai-nilai yang harus menggunakan jenis data yang tidak terpaket dan nilai-nilai yang tidak terpaket. Sayangnya, konflik ini dengan saran kami sebelumnya. Login Xml sekarang unpacks dikemas actual\\_range nilai-nilai, tetapi tidak akan memperbaiki set data yang ada di Anda Meme it datasets.xml Login
+    * TO DO: ERDDAP™ sekarang menggunakan sebuah berkas css yang disebut erddap2.cs. Jika Anda membuat perubahan ke \\[ tomcat \\] / webapps / erddap / image / erddap.css, pertimbangkan membuat perubahan serupa ke erddap2.css (dalam direktori yang sama) .
+    * NEW: ERDDAP halaman web sekarang memiliki sejumlah besar link internal hampir tak terlihat (teks hitam dan tidak digaris bawah) . Jika Anda hover atas salah satu link (biasanya beberapa kata pertama dari heading dan paragraf) , kursor menjadi tangan. Jika Anda mengklik link, URL adalah link internal ke bagian tersebut dari dokumen. Hal ini membuat mudah untuk merujuk ke bagian spesifik dari dokumentasi. Berkat Bob Simons, yang telah menginginkan ini selama bertahun-tahun.
+    * NEW: ERDDAP™ sekarang dukung [Jangkauan Bita / Diterima-Batas](https://en.wikipedia.org/wiki/Byte_serving) permintaan untuk bagian dari / berkas / berkas. Hal ini diperlukan untuk mendukung pemirsa audio dan video pada browser.
+    * Sekarang, untuk meningkatkan keamanan, jika Anda tentukan&lt;baseHttpsUrl &gt; dalam setup.xml ((Dan demi rombongan yang menggiring dengan sebenar-benarnya) demi para malaikat yang menggiring atau mengarak awan. https ) , tanda yang disarankan Url adalah https URL dengan kunci bendera yang lebih aman. Jika demikian, apapun sebelumnya flagUrls / flagKeys akan menjadi tidak valid. Admin: If these changes apply to your ERDDAP™ dan jika Anda ERDDAP™ memiliki EDDGrid FromErddap dan EDTabel FromErddap yang berlangganan ke remote ERDDAP s, kemudian, setelah Anda update ERDDAP , Anda ERDDAP™ akan otomatis mencoba untuk berlangganan dengan baru flagUrl, sehingga Anda harus menghapus subscriptions lama dan memvalidasi subscriptions baru ketika Anda mendapatkan surat validasi langganan baru.
+    * ♪ If your ERDDAP™ memiliki EDDGrid FromErddap dataset untuk data erdVH3 di pantai Bob ERDDAP™ , tolong ubah untuk merujuk ke data erdVH2018 yang baru.
+    * TODO: Jika Anda menyertakan salah satu dari data contoh jpAquariusSSS dalam Anda ERDDAP™ , tolong ubah "V4" di datasetID 's to "V5".
+    * TO DO: actual\\_range sekarang sebuah atribut standar CF (dalam CF-1.7) dan jelas mengatakan bahwa jika variabel menggunakan add\\_offset dan / atau scale\\_factor untuk mengemas nilai data, lalu actual\\_range nilai harus menggunakan tipe data yang belum dikemas dan nilai yang akan dibuka. Sayangnya, ini bertentangan dengan saran kita sebelumnya. GenerateDatadasets Xml sekarang sudah dikemas actual\\_range nilai, tapi itu tidak akan memperbaiki data yang ada di anda datasets.xml file.
         
-Jadi, silakan periksa dataset Anda: jika nilai variabel dikemas dan jika actual\\_range ditentukan sebagai nilai data yang dikemas, tambahkan&lt; addAttributes Sitemap actual\\_range nilai untuk menentukan nilai yang tidak dipaketkan. Jika tidak, dataset tidak akan dimuat ERDDAP Sitemap Cara sederhana dan hampir sempurna untuk melakukan ini adalah untuk mencari Anda datasets.xml untuk sumber Atribut yang memiliki
+Jadi, silakan periksa data Anda: jika nilai variabel dikemas dan jika actual\\_range ditentukan sebagai nilai data yang dikemas, mohon tambahkan&lt; addAttributes &gt; actual\\_range nilai untuk menspesifikasikan nilai yang belum dikemas. Jika tidak, data tidak akan dimuat ERDDAP . Sebuah cara sederhana dan hampir sempurna untuk melakukan hal ini adalah untuk mencari Anda datasets.xml untuk sumber Atribut yang memiliki
 ```
         <att name="actual\\_range" type="shortList">  
         or <att name="actual\\_range" type="intList">  
 ```
-dan scale\\_factor selain 1.0. Mereka adalah Meme it actual\\_range atribut yang mungkin harus Anda perbaiki.
+dan scale\\_factor selain 1.0. Mereka adalah actual\\_range atribut bahwa Anda mungkin harus memperbaiki.
         
-Untuk variabel sumbu dalam EDDGrid Login ERDDAP™ selalu menetapkan actual\\_range atribut untuk menjadi kisaran nilai yang sebenarnya karena mengetahui nilai-nilai tersebut.
+Untuk variabel sumbu dalam EDDGrid dataset, ERDDAP™ selalu mengatur actual\\_range atribut untuk menjadi jangkauan aktual dari nilai karena dia tahu nilai-nilai tersebut.
         
-Untuk variabel sumbu dengan nilai turun (e.g., beberapa variabel lintang) Login ERDDAP™ Login actual\\_range Login \\[ Sitemap \\] Login \\[ Sitemap \\] nilai, yang tinggi ... rendah. Sekarang selalu menggunakan nilai-nilai tinggi untuk membuat definisi CF baru.
+Untuk variabel sumbu dengan nilai yang menurun (Misalnya, beberapa variabel lintang) , ERDDAP™ dibuat actual\\_range dengan \\[ 0 \\] ... \\[ terakhir \\] nilai, yang tinggi... rendah. Sekarang selalu menggunakan nilai tinggi rendah untuk membuat definisi CF baru.
         
-Perbaiki actual\\_range nilai-nilai sangat penting untuk dataset EDDTable, karena ERDDAP™ akan dengan cepat menolak permintaan pengguna untuk nilai data yang kurang dari actual\\_range nilai minimum atau yang lebih besar dari actual\\_range Nilai maksimum.
+Kebenaran actual\\_range nilai sangat penting untuk data EDTabel, karena ERDDAP™ akan dengan cepat menolak permintaan pengguna untuk nilai data yang kurang dari actual\\_range nilai minimum atau yang lebih besar dari actual\\_range nilai maksimum.
         
-Terkait: sebenarnya \\_min, aktual\\_max, data\\_min Login data\\_max atribut sekarang diuraikan. Silakan konversi dataset Anda untuk digunakan actual\\_range Sitemap
+Terkait: aktual\\ _ min, actual\\ _ max, data\\_min dan data\\_max atribut sekarang sudah ditinggalkan. Silakan ubah dataset yang hendak dipakai actual\\_range sebagai gantinya.
         
-    * Sitemap (opsional, tetapi dianjurkan) Sitemap Untuk setiap dataset dekat waktu dan perkiraan di Anda ERDDAP™ Promo&lt; testOutOfDate Sitemap (/docs/server-admin/datasets#testoutofdate) tag dengan nilai dalam bentuk now- Sitemap now- Sitemap Jika nilai waktu maksimum untuk dataset lebih tua dari nilai itu, dataset dianggap kedaluwarsa dan akan ditandai seperti pada [ outOfDateDatasets.html ](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) Login Ini memberikan cara mudah bagi Anda untuk melihat ketika sesuatu yang salah dengan sumber dataset.
-    *    [BARU: Penandaan Semantik Dataset dengan json-ld (Login Database) ](/docs/server-admin/additional-information#json-ld)   
-         ERDDAP™ Sitemap [Login (Login Database) ](https://json-ld.org) untuk membuat katalog data dan bagian dataset Anda [web semantik](https://en.wikipedia.org/wiki/Semantic_Web) , yang merupakan ide Tim Berners-Lee untuk membuat konten web lebih mudah dibaca dan mesin "tertahan". mesin pencari ( [Google khususnya](https://developers.google.com/search/docs/data-types/datasets) ) dan alat semantik lainnya dapat menggunakan markup terstruktur ini untuk memudahkan penemuan dan mengindeks. Penandaan terstruktur json-ld muncul sebagai tak terlihat-ke-humans&lt;Login kode padahttp://.../erddap/info/index.htmlSitemap (yang merupakan web semantik [Catalog](https://schema.org/DataCatalog) ) dan masing-masinghttp://.../erddap/info/_datasetID_/index.htmlSitemap (yang merupakan web semantik [Login](https://schema.org/Dataset) ) Sitemap (Terima kasih khusus kepada Adam Leadbetter dan Rob Fuller dari Marine Institute di Irlandia untuk melakukan bagian keras dari pekerjaan untuk membuat bagian ini dari ERDDAP Sitemap) 
-    * BARU: Ada jenis dataset baru yang dapat membaca data dari file audio:
-         [ EDDGrid Sitemap](/docs/server-admin/datasets#eddfromaudiofiles) , yang memperlakukan data audio sebagai data gridded.
-         [Datasheet](/docs/server-admin/datasets#eddfromaudiofiles) , yang memperlakukan data audio sebagai data tabel. Berkat Jim Potemra, Rich Signell, OOI, dan Carrie Wall Bell untuk meminta dukungan file audio/hidrophone.
-    * Perubahan Hasil Dataset Login (dan perubahan terkait) Sitemap
-        * Sitemap ERDDAP™ sekarang memiliki sistem untuk secara otomatis [memperbarui URL terbaru](/docs/server-admin/additional-information#out-of-date-urls) di GenerateDataset Xml dan ketika memuat dataset. Jika Anda memiliki saran untuk URL tambahan yang harus ditangkap dan diperbarui, atau jika Anda berpikir ini harus berubah menjadi layanan (seperti Konverter) Sitemap erd.data at noaa.gov Sitemap
-        * BARU: Sekarang, jika GenerateDatasets Xml melihat CF standard\\_name   (yang harus semua huruf kecil) dengan karakter huruf besar, menambahkan semua versi huruf kecil untuk&lt; addAttributes Sitemap Juga, ketika beban dataset, jika ERDDAP™ melihat CF standard\\_name dengan karakter huruf besar, ia diam-diam mengubahnya ke standard\\_name Sitemap Terima kasih kepada Rich Signell.
-        * BARU: Sekarang, jika GenerateDatasets Xml melihat atribut dengan waktu yang tidak dalam format ISO 8601, itu menambahkan waktu format ISO 8601 ke&lt; addAttributes Sitemap Sitemap ERDDAP™ tidak mengenali format, itu meninggalkan nilai waktu yang tidak berubah. Jika Anda melihat format yang Meme it ERDDAP™ tidak mengenali dan memperbaiki, silakan email ke erd.data at noaa.gov Sitemap
-        * IMPROVED: Kode tingkat rendah untuk EDDGrid Sitemap Catalog Xml sekarang bergantung pada Unidata netcdf-java katalog kode crawler (Login Katalog) sehingga dapat menangani semua katalog THREDDS (yang bisa sangat kompleks) Sitemap Berkat Roland Schweitzer untuk menyarankan perubahan ini dan terima kasih untuk Unidata untuk kode.
-        * Sitemap Login EDDGrid DariDap sekarang menambahkan ", startYear-EndYear" untuk mengakhiri judul berdasarkan nilai sumbu waktu sebenarnya. EndYear="present" jika data ada dalam 150 hari terakhir.
-        * Sitemap Login EDDGrid DariDap sekarang menambahkan ", \\[ Sitemap \\] °" ke judul jika dataset bahkan disampingkan dan sama untuk lat dan lon.
-        * IMPROVED: Konverter waktu sekarang memiliki fitur tambahan, terutama kemampuan untuk mengubah waktu string dalam berbagai format umum ke dalam string ISO 8601 atau menjadi nomor yang kompatibel UDUnits. Semua fitur yang didukung sebelumnya terus bekerja, tidak berubah.
-        * Login Xml dan Konverter Kata kunci sekarang termasuk "Bina Sains &gt; " pada awal Kata-kunci Ilmu GCMD. Ketika dataset dimuat ERDDAP™ Login ERDDAP™ sekarang memperbaiki kata kunci GCMD dalam atribut kata kunci yang tidak dimulai dengan "Barang Bumi &gt; " atau yang menggunakan apa pun selain kasus judul (di mana huruf pertama setiap kata dimodalkan) Sitemap
-        * IMPROVED: Ketika menyarankan&lt; destinationName Sitemap Xml untuk EDDTableDariAsciiFiles hanya digunakan ujung ekor sourceName Sitemap '/'   (beberapa nama file-seperti) Sitemap Sekarang menggunakan seluruh sourceName (misalnya, "blahblahblah (m/s)". Perubahan ini akan baik untuk beberapa set data dan tidak untuk orang lain, tetapi perilaku yang lebih aman. Terima kasih kepada Maurice Libes.
-        * Login Xml dan konstruktor dataset sekarang memastikan tidak ada nama kolom duplikat. Terima kasih kepada Maurice Libes.
-        * Login Xml untuk EDDTableDariAsciiFiles tidak menulis&lt;kolomSeparator&gt; ke output. Sitemap Terima kasih kepada Maurice Libes.
-    * BARU: Alat DasDds sekarang mencetak informasi gap waktu (Login [Info](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#timeGaps) ) jika dataset adalah dataset gridded.
-    * BARU: Lanjutan Cari sekarang menerima "sekarang_\\-nUnits_" nilai waktu. Terima kasih kepada Rich Signell.
-    * IMPROVED: Untuk meningkatkan keamanan, ketika alamat email dalam metadata dataset atau data ditulis ke halaman web html, "@" diganti dengan " di ". Ini hanya menangkap alamat email yang merupakan seluruh metadata atau nilai data, bukan alamat email yang tertanam dalam nilai lebih lama.
-    * IMPROVED: Untuk meningkatkan keamanan, RSS informasi untuk dataset pribadi sekarang hanya tersedia untuk pengguna (Login RSS Login) yang masuk dan berwenang untuk menggunakan dataset.
-    * BARU: Sekarang, ketika dataset dimuat, jika date\\_created Login date\\_issued Login date\\_modified , atau tanggal\\_metadata\\_informasi atribut memiliki nilai waktu yang tidak dalam format ISO 8601, ERDDAP™ mengubahnya ke waktu berformat ISO 8601. Sitemap ERDDAP™ tidak mengenali format, itu meninggalkan nilai waktu yang tidak berubah. Jika Anda melihat format yang Meme it ERDDAP™ tidak mengenali dan memperbaiki, silakan email ke erd.data at noaa.gov Sitemap
-    * IMPROVED: .dods tanggapan dari EDDGrid dataset sekarang harus secara signifikan lebih cepat. Terima kasih kepada Rich Signell.
-    * Perubahan terkait ERDDAP Pembuatan dokumen ISO 19115:
-        * BUG FIX: saat membuat dokumen ISO 19115, dataVariable Unit tidak dikodekan HTML Attribute dan dikodekan persen. Sitemap Berkat validator ISO 19115 NGDC.
-        * BUG FIX: saat membuat dokumen ISO 19115, date\\_created digunakan sebagai, jadi sering adalah format yang salah. Sekarang dikonversi ke string ISO 8601 Z. Berkat validator ISO 19115 NGDC.
-        * BUG FIX: saat membuat dokumen ISO 19115, ERDDAP™ sekarang lagi menulis tanggal dengan tahun=0000 (as with climatology dataset) , karena skema ISO 19115 tidak memungkinkan tanggal dengan tahun=0000. Berkat validator ISO 19115 NGDC.
-    * BARU: Seperti sebelum permintaan untuk http .../erddap/version akan kembali hanya jumlah versi (Sitemap) g. ERDDAP \\_versi=1.82.
-Sekarang, permintaan http .../erddap/version\\_string akan mengembalikan jumlah dan suffix opsional dari '\\_' plus teks ASCII (tidak ada ruang atau karakter kontrol) g. ERDDAP \\_version\\_string=1.82\\_JohnsFork. Orang yang melakukan garpu akan menentukan ini dengan mengubah EDStatic.erddapVersion. Cara ini tidak menyebabkan masalah versi versi sebelumnya ERDDAP Sitemap Terima kasih kepada Axiom (tidak dapat, Kyle Wilcox) dan Institut Laut Irlandia (tidak dapat, Rob Penuh) Sitemap
-    * Login: Untuk versi wms=1.3.0, permintaan= GetMap , crs=EPSG:4326 (tidak CRS:84) permintaan: pesanan bbox harus minLat, minLon, maxLat, maxLon. Untuk CRS: 84 permintaan, seperti sebelumnya, pesanan bbox harus minLon, minLat, maxLon, maxLat. Ini dapat memperbaiki menggunakan ERDDAP Sitemap WMS 1.3.0 layanan di ArcGIS   (terima kasih kepada Paola Arce) Sitemap Sitemap (Login) Login OGC untuk membuat ini sangat rumit. Meme it Sitemap Leaflet untuk menangani ini dengan benar dan untuk memberi saya cara untuk menguji ini.
-    * IMPROVED: Sebelumnya, link yang disarankan untuk RSS dan berlangganan email memiliki Meme it http URL ERDDAP Sitemap Sekarang https URL, jika aktif.
-    * Sitemap EDDGrid Copy sekarang mendukung tag opsional&lt;hanyaSince&gt;_someValue_&lt;/onlySince&gt;, di mana nilainya adalah waktu berformat ISO-8601 tertentu atau now- Login (Login now- 2 tahun) Sitemap Sitemap [Sitemap Sitemap](/docs/server-admin/datasets#onlysince) Sitemap Terima kasih kepada Drew P.
-    * IMPROVED: Jika tersedia, ERDDAP™ akan menunjukkan https URL&lt;baseHttpsUrl&gt;, jika tersedia) bukan http URL ketika memberitahu pengguna URL untuk menambahkan/validate/remove/list berlangganan.
-    * Login: ERDDAP™ sekarang memungkinkan tindakan berlangganan untuk memulai dengan "https://"Sitemap (Bob tumpang tindih kepalanya.) Thanks to Jennifer Sevadjian.
-    * Login: .jsonlKVP sekarang menggunakan ':' antara setiap kunci dan nilai, bukan '=' Sitemap (Bob tumpang tindih kepalanya.) Berkat Alexander Barth.
-    * Login: Sebelumnya, jika Anda restart ERDDAP™ dengan cepatRestart=true, dan jika, sebelum dataset diisi ulang biasanya, Anda membuat panggilan ke dataset EDDTableDariFiles yang digunakan pembaruanEveryNMillis, dan jika file data baru saja diubah, permintaan akan gagal dengan kesalahan pointer null. Sekarang permintaan akan berhasil. Terima kasih kepada John Kerfoot.
-    * BARU: Ketika dataset dimuat dalam ERDDAP™ , kata kunci sekarang diatur ke urutan yang diurutkan dan karakter garis baru dihapus.
-    * IMPROVED: Sekarang, jika .geoJson, .json Sitemap .nc permintaan oJson memiliki .json parameter p, jenis mime respons adalah aplikasi / javascript. Login .json p tidak didukung .jsonlCSV Sitemap .jsonlKVP , karena tidak akan bekerja. Meme it Terima kasih kepada Rob Fuller.
-    * IMPROVED: Jenis mime untuk json baris fileType options sekarang "application/x-jsonlines". Ini adalah aplikasi / jsonl. Saat ini, tidak ada pilihan yang benar definitif.
-    * IMPROVED: Jumlah permintaan gagal yang ditunjukkan pada status.html halaman akan meningkat karena lebih banyak hal dihitung sebagai kegagalan dari sebelumnya, misalnya, KlienAbortException.
-    * IMPROVED: Sekarang, jika respons dari ERDDAP™ tidak terkompresi, maka header respon akan mencakup "Content-Encoding"="identitas".
-    * IMPROVED: atribut "license" tidak diperlukan. Sekarang, jika tidak ditentukan, standarLicense dari pesan.xml (atau dari setup.xml jika ada) digunakan sebagai default.
-    * BARU: Sekarang ada pilihan [fileAccessSuffix atribut](/docs/server-admin/datasets#fileaccessbaseurl) . yang dapat digunakan dengan yang ada [API Reference](/docs/server-admin/datasets#fileaccessbaseurl) Sitemap
-    * IMPROVED: Untuk meningkatkan keamanan, versi ini dikompilasi dengan terbaru Java JDK v8u162.
-    * BARU: Untuk meningkatkan keamanan, beberapa domain umum yang menawarkan alamat email sementara (www.mailinator.com) sekarang pada daftar hitam email permanen untuk sistem berlangganan.
-    * BARU: Untuk meningkatkan keamanan, semakin tinggi dalam Laporan Harian sekarang termasuk:
-Login Alamat IP Bendera Gagal (sejak laporan harian terakhir)   
-Login Alamat IP Bendera Gagal (Sitemap)   
-Login Alamat IP Bendera Diserang (sejak laporan harian terakhir)   
-Login Alamat IP Bendera Diserang (Sitemap)   
-Tinggi "Failed" memungkinkan Anda melihat siapa (peretas?) mencoba mengatur bendera, tetapi gagal.
-    * IMPROVED: Untuk meningkatkan keamanan, alamat email di&lt;berlanggananEmailBlacklist&gt; di Anda datasets.xml sekarang dianggap sensitif terhadap kasus. Meme it
+    * TO DO (opsional, tetapi disarankan) : Untuk setiap dekat-real-waktu dan perkiraan tanggal dalam Anda ERDDAP™ , tolong tambahkan sebuah [&lt; testOutOfDate &gt;] (/ docs / server-admin / datasets # testoutofdate) tandai dengan sebuah nilai dalam bentuk now- _ nUnit, misalnya, now- 2 hari. Jika nilai waktu maksimum untuk dataset lebih tua dari nilai itu, dataset dipertimbangkan diluar -of-date dan akan ditandai seperti itu pada [ outOfDateDatasets.html ](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) halaman web. Ini memberikan cara mudah bagi Anda untuk melihat ketika ada sesuatu yang salah dengan sumber data.
+    *    [Markup Semantik Dataset dengan json-ld (JSON Data Terkait) ](/docs/server-admin/additional-information#json-ld)   
+         ERDDAP™ sekarang menggunakan [json-ld (JSON Data Terkait) ](https://json-ld.org) untuk membuat katalog data dan dataset bagian dari [web semantik](https://en.wikipedia.org/wiki/Semantic_Web) , yang merupakan ide Tim Berners-Lee untuk membuat konten web lebih mudah dibaca dan mesin "dimengerti". Mesin pencari ( [Google khususnya](https://developers.google.com/search/docs/data-types/datasets) ) dan alat semantik lainnya dapat menggunakan markup terstruktur ini untuk memfasilitasi penemuan dan pengindeksan. The json-ld markup terstruktur muncul sebagai terlihat - to-manusia&lt;skrip &gt; kode pada http://.../erddap/info/index.html halaman web (yang merupakan web semantik [DataCatalog](https://schema.org/DataCatalog) ) dan di setiap http://.../erddap/info/_datasetID_/index.html halaman web (yang merupakan web semantik [Dataset](https://schema.org/Dataset) ) . (Terima kasih khusus kepada Adam Leadbetter dan Rob Fuller dari Institut Marinir di Irlandia untuk melakukan bagian-bagian sulit dari pekerjaan untuk membuat bagian ini dari ERDDAP .) 
+    * NEW: Ada tipe dataset baru yang dapat membaca data dari berkas audio:
+         [ EDDGrid FromAudioFiles](/docs/server-admin/datasets#eddfromaudiofiles) , yang memperlakukan data audio sebagai data gridded.
+         [EDTableFromAudioFiles](/docs/server-admin/datasets#eddfromaudiofiles) , yang memperlakukan data audio sebagai data tabular. Berkat Jim Potemra, Rich Signgell, Oui, dan Carrie Wall Bell untuk permintaan dukungan audio / Hydrophone.
+    * Perubahan ke Tata Data GenerateComment Xml (dan perubahan terkait) :
+        * NEW: ERDDAP™ sekarang memiliki sistem untuk otomatis [perbarui URL out-of -date](/docs/server-admin/additional-information#out-of-date-urls) baik di GenerateDatasets Xml dan ketika memuat data. Jika Anda memiliki saran untuk URL tambahan yang harus ditangkap dan diperbarui, atau jika Anda berpikir ini harus diubah menjadi layanan (like the Converters) , silakan email erd.data at noaa.gov .
+        * Sekarang, jika GenerateDatasets Xml melihat sebuah CF standard\\_name   (yang harus semua huruf kecil) dengan karakter huruf besar, itu menambahkan semua versi huruf kecil ke&lt; addAttributes &gt;. Juga, ketika sebuah data dimuat, jika ERDDAP™ Melihat CF standard\\_name dengan karakter huruf besar, secara diam-diam mengubahnya ke standard\\_name . Berkat Rich Signgell.
+        * Sekarang, jika GenerateDatasets Xml melihat sebuah atribut dengan waktu yang tidak dalam format ISO 8601, itu menambahkan ISO 8601 format waktu ke&lt; addAttributes &gt;. Jika ERDDAP™ tidak mengenali format, itu meninggalkan nilai waktu tidak berubah. Jika Anda melihat format yang ERDDAP™ tidak mengenali dan memperbaiki, silakan email ke erd.data at noaa.gov .
+        * ULROVED: Kode level rendah untuk EDDGrid Fromthredds Opsi katalog dalam GenerateDatasets Xml sekarang bergantung pada Unidata catalog netcdf-java crawler kode (Tiga. kelas katalog) sehingga dapat menangani semua katalog THREDDS (yang dapat mengejutkan kompleks) . Berkat Roland Schweitzer untuk menyarankan perubahan ini dan berkat Unidata untuk kode.
+        * Data Generasi Xml untuk EDDGrid FromDap kini menambahkan, "startyear- EndYear" untuk mengakhiri judul berdasarkan nilai sumbu waktu yang sebenarnya. EndYear = "present" jika data ada dalam 150 hari terakhir.
+        * Data Generasi Xml untuk EDDGrid FromDap sekarang menambahkan, " \\[ resolusi \\] ° "ke judul jika dataset secara merata spasi dan sama untuk lat dan lon.
+        * IMPROVED: Konverter waktu kini memiliki fitur tambahan, terutama kemampuan untuk mengubah waktu string dalam berbagai format umum ke string ISO 8601 atau ke dalam nomor yang kompatibel UDUnits-. Semua fitur yang didukung sebelumnya terus bekerja, tidak berubah.
+        * BUG FIX: GenerateDatasets Xml dan pengubah kata kunci sekarang termasuk "Ilmu Bumi &gt;" pada awal kata kunci GCMD Sains. Ketika suatu data dimuat ERDDAP™ , ERDDAP™ sekarang perbaiki setiap kata kunci GCMD dalam atribut kata kunci yang tidak dimulai dengan "Ilmu Bumi &gt;" atau yang menggunakan apa pun selain case judul (dimana huruf pertama dari setiap kata dikapitalisasi) .
+        * DIMAINKAN: Ketika menyarankan&lt; destinationName &gt; 's, GenerateDatasets Xml untuk EDTableFromAsciFiles baru saja menggunakan ujung ekor sourceName s dengan '/'   (beberapa adalah filenasa- seperti) . Sekarang menggunakan seluruh sourceName (mis., "blahblahblah (m / s)". Perubahan ini akan baik untuk beberapa tanggal dan bukan untuk orang lain, tetapi perilaku yang lebih aman. Berkat Maurice Libes.
+        * BUG FIX: GenerateDatasets Xml dan konstruksi data sekarang memastikan tidak ada nama kolom duplikat. Berkat Maurice Libes.
+        * BUG FIX: GenerateDatasets Xml untuk EDTableFromAsciFiles tidak menulis&lt;Pemisahan kolumn &gt; ke keluaran. Sekarang tidak. Berkat Maurice Libes.
+    * Alat DASDD sekarang menampilkan informasi kesenjangan waktu (yang [informasi .timeGaps](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#timeGaps) ) jika dataset adalah sebuah datet gridded.
+    * NEW: Pencarian Lanjutan sekarang menerima nilai waktu "now _\\ -nUnits _". Berkat Rich Signgell.
+    * IMPROVED: Untuk meningkatkan keamanan, ketika alamat email dalam metadata atau data dataset ditulis ke halaman web html, "@" digantikan dengan "at". Ini hanya menangkap alamat email yang merupakan seluruh metadata atau nilai data, bukan alamat email yang tertanam dalam nilai yang lebih panjang.
+    * Untuk meningkatkan keamanan, RSS informasi bagi data privat kini hanya tersedia bagi pengguna (dan RSS pembaca) yang login dan berwenang untuk menggunakan data tersebut.
+    * Sekarang, ketika sebuah data dimuat, jika date\\_created , date\\_issued , date\\_modified , atau tanggal\\ _ metadata\\ _ dimodifikasi atribut memiliki nilai waktu yang tidak dalam format ISO 8601, ERDDAP™ ubah ke ISO 8601 format waktu. Jika ERDDAP™ tidak mengenali format, itu meninggalkan nilai waktu tidak berubah. Jika Anda melihat format yang ERDDAP™ tidak mengenali dan memperbaiki, silakan email ke erd.data at noaa.gov .
+    * IMPROVED: .dods respon dari EDDGrid Dataset sekarang harus secara signifikan lebih cepat. Berkat Rich Signgell.
+    * Perubahan berhubungan dengan ERDDAP penciptaan ISO 19115 dokumen:
+        * BUG FIX: ketika membuat dokumen ISO 19115, dataVariable unit tidak HTML Atrite dikodekan dan persen dikodekan. Sekarang mereka. Berkat ISO NGDC 19115 validator.
+        * BUG FIX: ketika membuat dokumen ISO 19115, date\\_created digunakan sebagai, begitu sering adalah format yang salah. Sekarang dikonversi ke string ISO 8601 Z. Berkat ISO NGDC 19115 validator.
+        * BUG FIX: ketika membuat dokumen ISO 19115, ERDDAP™ sekarang lebih lama menulis tanggal dengan tahun = 0000 (seperti dengan data klimatologi) , karena ISO 19115 skema tidak memungkinkan tanggal dengan tahun = 0000. Berkat ISO NGDC 19115 validator.
+    * Seperti permintaan sebelumnya http ... / erddap / versi akan kembali hanya nomor versi (sebagai teks) , mis. ", ERDDAP \\ _ versi = 1.82 ".
+Sekarang, permintaan untuk http ... / erddap / versi\\ _ string akan mengembalikan sebuah angka dan sebuah akhiran opsional dari '\\ _' ditambah teks ASCII (tidak ada karakter spasi atau kendali) , mis. ", ERDDAP \\ _ version\\ _ string = 1.82\\ _ JohnsFork ". Orang-orang yang mengerjakan garpu akan menentukan hal ini dengan mengubah EDStatic.erdtapVersion. dengan mengubah EDStatic.erddapVersion. Cara melakukannya tidak menyebabkan masalah pada versi sebelumnya ERDDAP . Berkat Axiom (Boleh dikatakan, Kyle Wilcox) dan Institut Marinir Irlandia (boleh dibilang, Rob Fuller) .
+    * BUG FIX: Untuk versi wms = 1.3.0, permintaan = GetMap , crs = EPSG: 4326 (bukan CRS: 84) permintaan: urutan bbox harus berupa minLat, minLon, maxLat, maxLon. Untuk CRS: 84 permintaan, seperti sebelumnya, urutan bbox harus berupa minLon, minLat, maxLon, maxLat. Ini mungkin memperbaiki menggunakan ERDDAP ' WMS 1.3.0 layanan dalam ArcGIS   (berkat Paola Arce) . Terima kasih (tidak) ke OGC untuk membuat ini begitu rumit. Terima kasih Leaflet untuk menangani ini dengan benar dan untuk memberi saya cara untuk menguji ini.
+    * IMPROVED: Sebelumnya, link yang disarankan untuk RSS dan langganan email memiliki http URL untuk Anda ERDDAP . Sekarang adalah https URL, jika itu aktif.
+    * NEW: EDDGrid Salin kini mendukung suatu tag opsional&lt;onlysince &gt; _ someValue _&lt;/ onlySince &gt;, dimana nilai adalah sebuah ISO-8601 spesifik waktu atau now- nUnit (mis., now- 2years) waktu. Lihat [hanya Sejak dokumentasi](/docs/server-admin/datasets#onlysince) . Berkat Drew P.
+    * Jika tersedia, ERDDAP™ akan menunjukkan https URL (dari&lt;baseHttpsUrl &gt;, jika tersedia) daripada http URL ketika memberitahu pengguna URL untuk menambah / validate / remove / list sebuah langganan.
+    * BUG FIX: ERDDAP™ sekarang memungkinkan tindakan berlangganan untuk dimulai dengan " https://" . (Bob menampar dahinya.) Berkat Jennifer Sevadjian.
+    * BUG FIX: .jsonlKVP sekarang menggunakan ':' antara setiap kunci dan nilai, bukan '=' . (Bob menampar dahinya.) Berkat Alexander Barth.
+    * BUG FIX: Sebelumnya, jika kau memulai kembali ERDDAP™ dengan quickRestart = true, dan jika, sebelum data dimuat ulang secara normal, permintaan akan gagal dengan sebuah kesalahan penunjuk kosong. Sekarang permintaan akan berhasil. Berkat John Kerfoot.
+    * Ketika sebuah data dimuat ERDDAP™ , kata kunci sekarang diatur ulang ke urutan terurut dan setiap karakter baru dihapus.
+    * Sekarang, jika .geoJson, .json atau .nc permintaan oJson telah .json p parameter, tipe mime respon adalah aplikasi / javasclypt. Perhatikan bahwa .json p tidak didukung untuk .jsonlCSV atau .jsonlKVP , karena itu tidak akan bekerja. Berkat Rob Fuller.
+    * IMPROVED: Tipe mime untuk pilihan fileType baris json sekarang "aplikasi / x-jsonlines". Itu aplikasi / jsonl. Saat ini, tidak ada pilihan yang benar.
+    * IMPROVED: Jumlah permintaan yang gagal ditampilkan pada halaman status .html akan meningkat karena lebih banyak hal dihitung sebagai kegagalan daripada sebelumnya, misalnya, ClientAbortException.
+    * Sekarang, jika jawaban dari ERDDAP™ tidak dikompresi, maka kepala dari respons akan termasuk "Kontent- Encoding" = "identitas".
+    * ULROVED: atribut "lisensi" tidak diperlukan. Sekarang, jika tidak dispesifikasikan, standardLicense dari messages.xml (atau dari setuppxml jika ada) digunakan sebagai default.
+    * Sekarang ada pilihan [atribut fileAccessSuffix](/docs/server-admin/datasets#fileaccessbaseurl) . yang dapat digunakan dengan yang ada [atribut fileAccessBaseUrl](/docs/server-admin/datasets#fileaccessbaseurl) .
+    * IMPROVED: Untuk meningkatkan keamanan, versi ini dikompilasi dengan yang terbaru Java JDK v8u162.
+    * NEW: Untuk meningkatkan keamanan, beberapa domain umum yang menawarkan alamat surel sementara (mis. @ mailinator.com) sekarang dalam daftar hitam surel permanen untuk sistem subscription.
+    * Untuk meningkatkan keamanan, talis dalam Laporan Harian sekarang termasuk:
+SetDataset Alamat IP Flag Gagal (sejak laporan harian terakhir)   
+SetDataset Alamat IP Flag Gagal (sejak awal)   
+SetDataset Alamat IP Flag Berhasil (sejak laporan harian terakhir)   
+SetDataset Alamat IP Flag Berhasil (sejak awal)   
+Tallies "Gagal" membiarkan Anda melihat siapa (hacker?) mencoba untuk mengatur bendera, tapi gagal.
+    * IMPROVED: Untuk meningkatkan keamanan, alamat email di&lt;subscription EmailBlacklist &gt; dalam anda datasets.xml sekarang dianggap sebagai - sensitif.
          
 
 ## Versi 1.80{#version-180} 
- (Dipublikasikan 2017-08-04) 
+ (dirilis 2017-08-04) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap**   
+*    **Fitur Baru (bagi pengguna) :**   
      
-    * Login orderByCount  () filter memungkinkan Anda menentukan bagaimana tabel hasil akan diurutkan (atau tidak) dan hanya mengembalikan satu baris untuk setiap kelompok penyortiran, dengan jumlah nilai non-pembantaian untuk setiap variabel.
-Sitemap orderByCount  (Sitemap stationID Sitemap) Sitemap stationID dan kembali satu baris untuk setiap stationID , dengan jumlah nilai non-missing untuk setiap variabel.
-Jika Anda hanya menentukan orderByCount  (Sitemap) respon hanya akan satu baris dengan jumlah nilai non-pembeban untuk setiap variabel data.
-Sitemap [ orderBy ... dokumentasi](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#orderBy) Berkat Ben Adams.
-    * Login .nc oJson file Pilihan tipe untuk dataset gridded dan tabular. Pilihan ini membuat NCO lvl=2 "pedantic" JSON file dengan semua informasi biasanya ditemukan dalam .nc Login Sitemap [http://nco.sourceforge.net/nco.html#json](https://nco.sourceforge.net/nco.html#json) Terima kasih kepada Charlie Zender.
-    * Login: Login orderBy Login () opsi pada halaman web Make A Graph sekarang ditangani dengan benar.
-    * BUG FIX: output .geoJson sekarang tidak mencetak baris di mana nilai lat atau lon hilang. Juga, nilai ketinggian (Sitemap) sekarang termasuk dalam koordinat, bukan sebagai nilai data. Terima kasih kepada Jonathan Wilkins.
+    * NEW orderByCount  () filter memungkinkan Anda menentukan bagaimana tabel hasil akan diurutkan (atau tidak) dan hanya mengembalikan satu baris untuk setiap grup, dengan jumlah dari nilai bukan-hilang-untuk setiap variabel.
+Misalnya, orderByCount  (" stationID ") akan mengurutkan oleh stationID dan kembali satu baris untuk setiap stationID , dengan jumlah dari nilai bukan-hilang-nilai untuk setiap variabel.
+Jika Anda hanya menyatakan orderByCount  ("") , respon akan hanya satu baris dengan jumlah bukan-hilang-nilai untuk setiap variabel data.
+Lihat [ orderBy ... dokumentasi](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#orderBy) Berkat Ben Adams.
+    * NEW .nc berkas oJson Jenis pilihan untuk data yang disaring dan tabular. Pilihan ini membuat NCO lvl = 2 "pedantic" JSON file dengan semua informasi biasanya ditemukan dalam .nc file. Lihat [ http://nco.sourceforge.net/nco.html#json ](https://nco.sourceforge.net/nco.html#json) Berkat Charlie Zender.
+    * BUG FIX: The orderBy ... () opsi pada laman web Buat A Graph kini ditangani dengan benar.
+    * BUG FIX: .geoJson keluaran sekarang tidak mencetak baris dimana nilai lat atau lon hilang. Juga, nilai ketinggian (jika tersedia) sekarang termasuk dalam koordinat, bukan sebagai nilai data. Berkat Jonathan Wilkins.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   
      
-    * SECURITAS ISSUE: pustaka protokol.js digunakan untuk OpenLayers demo di WMS Sitemap ERDDAP™ kedaluwarsa dan memiliki bug yang berpotensi memungkinkannya untuk disalahgunakan. (Sayangnya, memperbarui OpenLayers dan protokol. js tidak mudah.) Itu membuka kemungkinan bahwa perpustakaan dapat diatur untuk memungkinkan kerentanan lintas tempat. Namun, sejak ERDDAP™ hanya menggunakan OpenLayers dengan cara pra-set-up tertentu dan hanya dengan spesifik ERDDAP - sumber data berbasis, kami percaya tidak ada kerentanan lintas tempat di ERDDAP Sitemap OpenLayers dan protokol.js. Namun, jika Anda tidak percaya ini, Anda sekarang dapat menonaktifkan penggunaan OpenLayers demo di WMS halaman Anda ERDDAP™ dengan menambahkan
+    * KEAMANAN ISSUE: Perpustakaan protokols.js digunakan untuk OpenLayers demo pada WMS halaman dalam ERDDAP™ adalah out- of-date dan memiliki bug yang berpotensi memungkinkan untuk disalahgunakan. (Sayangnya, memperbarui OpenLayers dan protokol. Js tidak mudah.) Yang membuka kemungkinan bahwa perpustakaan bisa diatur untuk memungkinkan kerentanan situs crosssite. Namun, sejak ERDDAP™ hanya menggunakan OpenLayers dalam spesifik pre-set-up cara dan hanya dengan spesifik ERDDAP -berbasis sumber data, kami percaya tidak ada titik titik kerentanan dalam ERDDAP 's use of OpenLayers Namun, jika Anda tidak percaya ini, Anda sekarang dapat menonaktifkan penggunaan OpenLayers demo pada WMS halaman Anda ERDDAP™ dengan menambahkan
 ```
         <openLayersActive>false</openLayersActive>  
 ```
-ke file setup.xml Anda. default adalah "true". Berkat Charles Carleton dan NCEI.
-    * SECURITY CHANGES: Unused .jar file dan duplikat .jar file (karena mereka juga di netcdfAll.jar) telah dihapus dari Meme it ERDDAP™ Login Out-of-date .jar file telah diperbarui. Berkat Charles Carleton dan NCEI.
-    * PERUBAHAN SECURITAS: NetcdfAll.jar file didistribusikan dengan ERDDAP™ adalah versi terbaru (saat ini 4.6.10) , tetapi masih mengandung jackson internal .jar file yang diketahui kedaluwarsa dan memiliki kerentanan keamanan, terutama perpustakaan Jackson yang hanya digunakan ketika mengakses sumber data Amazon S3. Jika Anda tidak mengakses data melalui Amazon S3 (Anda akan tahu apakah Anda Meme it) kerentanan ini tidak relevan.
+ke file setuppxml-mu. Baku adalah "benar". Berkat Charles Carleton dan NCEI.
+    * PERUBAHAN KEAMANAN: Berkas .jar tidak digunakan dan duplikasi berkas .jar (karena mereka juga dalam netcdfAll.jar) telah dihapus dari ERDDAP™ distribusi. Berkas .jar kencan telah diperbarui. Berkat Charles Carleton dan NCEI.
+    * KEAMANAN BERUBAH: Berkas netcdfAll.jar yang didistribusikan dengan ERDDAP™ adalah versi terbaru (saat ini 4.6.10) , tetapi masih berisi internal jackson .jar file yang dikenal keluar -of-date dan memiliki kerentanan keamanan, terutama perpustakaan Jackson yang hanya digunakan ketika mengakses Amazon S3 sumber data. Jika Anda tidak mengakses data melalui Amazon S3 (Anda akan tahu jika Anda) , kelemahan ini tidak relevan.
         
-Pengembang netcdf-java mempertahankan kerentanan ini tidak relevan karena cara kode netcdf menggunakan perpustakaan ini dan dalam kasus apa pun hanya akan relevan ketika mengakses Amazon S3. Sitemap [https://github.com/Unidata/thredds/issues/866](https://github.com/Unidata/thredds/issues/866) Sitemap Saya percaya mereka. Jika Anda masih memiliki kekhawatiran tentang ini, silakan hubungi pengembang netcdf-java. (Perhatikan bahwa jika Anda tidak percaya pengembang netcdf-java dan tidak menggunakan ERDDAP™ karena ini, Anda tidak boleh menggunakan THREDDS baik, karena THREDDS menggunakan netcdf-java lebih mendasar dan lebih luas daripada ERDDAP Sitemap) 
+Pengembang netcdf-java mempertahankan bahwa kerentanan ini tidak relevan karena cara netcdf kode menggunakan perpustakaan ini dan dalam hal apapun hanya akan relevan ketika mengakses Amazon S3. Lihat [ https://github.com/Unidata/thredds/issues/866 ](https://github.com/Unidata/thredds/issues/866) . Aku percaya mereka. Jika Anda masih memiliki kekhawatiran tentang hal ini, silakan hubungi para pengembang netcdf -java. (Perhatikan bahwa jika Anda tidak percaya developers netcdf -java dan merenungkan tidak menggunakan ERDDAP™ karena ini, anda seharusnya tidak menggunakan THREDDS baik, karena THREDDS menggunakan netcdf-java lebih mendasar dan lebih ekstensif daripada ERDDAP .) 
         
-Sitemap Masalah kode dan peringatan kerentanan adalah:
-netcdfAll-latest.jar/META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml
-Sitemaphttps://nvd.nist.gov/vuln/detail/CVE-2016-7051Login Sitemap
-netcdfAll-latest.jar/META-INF/maven/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/pom.xml
-Sitemaphttps://nvd.nist.gov/vuln/detail/CVE-2016-7051Login Sitemap
-netcdfAll-latest.jar/META-INF/maven/com.fasterxml.jackson.core/jackson-annotations/pom.xml
-Sitemaphttps://nvd.nist.gov/vuln/detail/CVE-2016-7051Login Sitemap
-Sitemaphttps://nvd.nist.gov/vuln/detail/CVE-2016-3720Sitemap
-netcdfAll-latest.jar/META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.xml
-Sitemaphttps://nvd.nist.gov/vuln/detail/CVE-2016-7051Login Sitemap
-Sitemaphttps://nvd.nist.gov/vuln/detail/CVE-2016-3720Sitemap
-"Untuk versi 4.6.10, aws-java-sdk-core menarik dalam versi 2.6.6 dari jackson-\\* artefak." (email dari netcdf-java orang) Sitemap
+Rincian: Kode yang merepotkan dan peringatan kerentanan adalah:
+netcdfAll-latest.jar / META-INF / maven / com.fasterxml.jackson.core / jackson-databind / pom.xml
+Lihat https://nvd.nist.gov/vuln/detail/CVE-2016-7051 -- Tinggi
+netcdfAll-latest.jar / META-INF / maven / com.fasterxml.jackson.datson- format data -cbor / pom.xml
+Lihat https://nvd.nist.gov/vuln/detail/CVE-2016-7051 -- Tinggi
+netcdfAll-latest.jar / META-INF / maven / com.fasterxml.jackson.core / jackson-anocations / pom.xml
+Lihat https://nvd.nist.gov/vuln/detail/CVE-2016-7051 -- Tinggi
+Lihat https://nvd.nist.gov/vuln/detail/CVE-2016-3720 -- Kritis
+netcdfAll-latest.jar / META-INF / maven / com.fasterxml.jackson.core / jackson-core / pom.xml
+Lihat https://nvd.nist.gov/vuln/detail/CVE-2016-7051 -- Tinggi
+Lihat https://nvd.nist.gov/vuln/detail/CVE-2016-3720 -- Kritis
+"Untuk versi 4.6.10, aws-java-sdk-core menarik versi 2.6.6 dari jackson-\\ * artefak". (email dari netcdf -java orang) .
 Berkat Charles Carleton dan NCEI.
         
-    * PERUBAHAN KOMILER: Sitemap ERDDAP™ Catatan bahwa parameter kelas -cp diperlukan untuk baris perintah sekarang jauh lebih pendek daripada sebelumnya. Lihat pengaturan baru -cp di [dokumentasi ini](/docs/contributing/programmer-guide#development-environment) Sitemap Berkat Charles Carleton dan NCEI.
-    * OPTION BARU di GenerateDataset Xml: EDDTableDariBcodmo, yang hanya untuk penggunaan internal di BCO-DMO.
-Terima kasih kepada Adam Shepherd dan BCODMO.
-    * NEW ATTRIBUTE dan FITUR: Jika kolom EDDTable memiliki nama file yang dapat diakses web (e.g., gambar, video, atau file audio) Anda dapat menambahkan
+    * COMPILER BERUBAH: Jika Anda menyusun ulang ERDDAP™ , perhatikan bahwa parameter -cp classpath dibutuhkan untuk baris perintah sekarang jauh lebih pendek dari sebelumnya. Lihat pengaturan -cp baru di [dokumentasi ini](/docs/contributing/programmer-guide#development-environment) . Berkat Charles Carleton dan NCEI.
+    * PILIHAN BARU dalam GenerateDatasets Xml: EDDTableFromBcodmo, yang hanya untuk penggunaan internal di BCO-DMO.
+Berkat Adam Shepherd dan BCODMO.
+    * ATRIBUTE BARU DAN FEATTURE: Bila kolom EDTabel memiliki nama berkas dari berkas yang dapat diakses web (mis., image, video, atau berkas audio) , Anda dapat menambahkan
 ```
         <att name="fileAccessBaseUrl">_someBaseURL_</a>  
 ```
-untuk menentukan URL dasar (berakhir dengan /) diperlukan untuk membuat nama file menjadi URL lengkap. Sitemap .htmlTable Sitemap ERDDAP™ akan menunjukkan nama file sebagai link ke URL gabungan (dasar url) Sitemap
-Jika Anda ingin ERDDAP™ untuk melayani file terkait, membuat dataset EDDTableFromFileNames terpisah untuk file-file tersebut (dataset pribadi) Sitemap
-Terima kasih kepada Adam Shepherd dan BCODMO.
-    * RECOMMENDASI ATTRIBUTE BARU: Jika kolom EDDTable memiliki nama file dari file web yang dapat diakses (e.g., gambar, video, atau file audio) yang dapat diakses melalui arsip (Login .zip Login) dapat diakses melalui URL, gunakan
+untuk menspesifikasikan URL dasar (berakhir dengan /) dibutuhkan untuk membuat nama berkas menjadi URL lengkap. Kemudian untuk .htmlTable Respon, ERDDAP™ akan menampilkan nama berkas sebagai sebuah link ke URL gabungan (dasar Url plus nama berkas) .
+Jika Anda ingin ERDDAP™ untuk melayani berkas terkait, membuat data EDTableFromFileNameset bagi berkas tersebut (mungkin sebuah data pribadi) .
+Berkat Adam Shepherd dan BCODMO.
+    * RECOMMENDASI ATRIBUT BARU: Bila kolom EDTabel memiliki nama berkas dari berkas yang dapat diakses web (mis., image, video, atau berkas audio) yang dapat diakses melalui sebuah archive (mis., .zip berkas) akses melalui URL, gunakan
 ```
         <att name="fileAccessArchiveUrl">_theURL_</att>  
 ```
-untuk menentukan URL untuk arsip.
-Jika Anda ingin ERDDAP™ untuk melayani file arsip, membuat dataset EDDTableFromFileNames terpisah untuk file itu (dataset pribadi) Sitemap
-Terima kasih kepada Adam Shepherd dan BCODMO.
-    * IMPROVEMENT Xml untuk menghilangkan penyebab tidak valid / buruk&lt; subsetVariables &gt; saran dan duplikat/bad menyarankan nama variabel, dll. Terima kasih kepada Rich Signell, Adam Shepherd, dan BCO-DMO.
-    * OPTION BARU: Informasi batas politik yang didistribusikan dengan ERDDAP adalah dari pihak ketiga dan agak kedaluwarsa. Juga, ada batas perselisihan di beberapa tempat di dunia, di mana orang yang berbeda akan memiliki ide yang berbeda tentang apa yang benar. KAMI MEMILIKI KETENTUAN DATA BOUNDARY CORRECTNESS YANG KOMESISI DENGAN ERDDAP Sitemap Jika Anda tidak menyukai informasi batas politik yang hadir ERDDAP™ Anda sekarang dapat memberitahukan ERDDAP™ tidak pernah menarik batas politik dengan menambahkan
+untuk menentukan URL untuk archive.
+Jika Anda ingin ERDDAP™ untuk melayani berkas archive, membuat data EDTableFromFileNameset untuk berkas tersebut (mungkin sebuah data pribadi) .
+Berkat Adam Shepherd dan BCODMO.
+    * IMPROVEMENTS ke GenerateDatasets Xml untuk menghapus penyebab dari tidak valid / buruk&lt; subsetVariables &gt; saran dan duplikasi / buruk disarankan nama variabel, dll. Berkat Rich Signgell, Adam Shepherd, dan BCO- DMO.
+    * PILIHAN BARU: Informasi batas politik yang didistribusikan dengan ERDDAP adalah dari pihak ketiga dan agak out- of- tanggal. Juga, ada batasan yang diperdebatkan di beberapa tempat di dunia, di mana orang-orang yang berbeda akan memiliki ide yang berbeda tentang apa yang benar. KAMI MEMBUAT NO KOREK TENTANG KEPOLISIAN BANYAK DATA YANG DATANG DENGAN ERDDAP . Jika Anda tidak suka informasi batas politik yang datang dengan ERDDAP™ , Anda sekarang dapat memberitahu ERDDAP™ tidak pernah menggambar batasan politik dengan menambahkan
 ```
         <politicalBoundariesActive>false</politicalBoundariesActive>  
 ```
-ke file setup.xml Anda. default adalah "true". Berkat Raju Devender.
-    * NEW METADATA TAG: Sitemap datasets.xml untuk dataset, Anda sekarang dapat menentukan jumlah default warna Bar bagian untuk dataVariable di grafik dan peta dengan
+ke file setuppxml-mu. Baku adalah "benar". Berkat Raju Devender.
+    * NEW METADA TAG: Dalam datasets.xml bagi suatu dataset, kini anda dapat menspesifikasikan jumlah baku dari warna Bagian batang untuk dataVariable pada grafik dan peta dengan
 ```
         <att name="colorBarNSections">_anInteger_</att>  
 ```
-         (default=-1, yang mengatakan untuk membiarkan Meme it ERDDAP™ Login) Sitemap Sitemap [Login Pengaturan Bar](/docs/server-admin/datasets#color-bar-attributes) Sitemap
-    * IMPROVED: warna batas negara pada peta ungu (Deep Purple untuk Anda Baby Boomers) Sitemap Sekarang abu-abu (di antara abu-abu batas nasional dan abu-abu tanah) Sitemap
-    * Login:&lt;iso19File115&gt; dan&lt;fgFiledc&gt; di datasets.xml tidak selalu ditangani dengan benar. Meme it Sitemap BCO-DMO
+         (baku = -1, yang mengatakan untuk membiarkan ERDDAP™ memutuskan) . Lihat [warna Pengaturan batang](/docs/server-admin/datasets#color-bar-attributes) .
+    * INTERROVED: warna batas negara pada peta adalah ungu (Deep Purple untuk Anda Baby Boomers) . Sekarang abu-abu (di antara batas nasional abu-abu dan tanah abu-abu) .
+    * BUG FIX:&lt;iso191115File &gt; dan&lt;fgdcFile &gt; dalam datasets.xml tidak selalu ditangani dengan benar. Sekarang mereka. Berkat BCO-DMO.
 
 ## Versi 1.78{#version-178} 
- (Dipublikasikan 2017-05-27) 
+ (dirilis 2017-05-27) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap**   
+*    **Fitur Baru (bagi pengguna) :**   
      
-    *    (Login)   
+    *    (kosong)   
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   
      
-    * IMPROVED: urutan garis dalam "Major LoadDatasets Time Series" pada status.html halaman sekarang terbaru di atas ke tertua di bagian bawah.
-    * Login: ERDDAP™ Sitemap .nccsv file dengan variabel waktu actual\\_range sebagai waktu String ISO-8601. Itu memperbaiki bug dengan info parsing EDDTableDariErddap dari dataset jarak jauh dan dari file QuickRestart untuk semua dataset EDDTableDari...Files. (Sitemap actual\\_range akan salah satu waktu pertama beban dataset di v1.78 tetapi benar setelah dimuat kembali, misalnya, jika Anda menandai dataset.) 
+    * IMPROVED: Urutan baris dalam "Major LoadDatasets Time Series" pada status. html sekarang terbaru di atas ke tertua di bagian bawah.
+    * BUG FIX: ERDDAP™ sekarang tulis .nccsv berkas dengan variabel waktu actual\\_range sebagai waktu String ISO- 8601. Itu memperbaiki bug dengan EDDTableFromErddap parsing info dari suatu data jauh dan dari berkas restart cepat untuk semua data EDDTableFrom... Berkas. (Waktu actual\\_range akan salah saat pertama kali beban dataset dalam v1.78 tapi benar setelah itu dimuat ulang, misalnya, jika Anda menandai dataset.) 
 
 ## Versi 1.76{#version-176} 
- (Dipublikasikan 2017-05-12) 
+ (dirilis 2017-05-12) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap**   
+*    **Fitur Baru (bagi pengguna) :**   
      
-    * Login: Untuk permintaan ERDDAP™ datang dari perangkat lunak selain browser web (Login curl , R, Matlab Login Python Login Java ) Sitemap
-Seperti perubahan sebelumnya dalam versi Tomcat (perangkat lunak tingkat bawah yang berjalan ERDDAP ) sejak awal 2016, semakin banyak karakter di bagian query dari URL permintaan harus [ **Sitemap** ](/docs/server-admin/datasets#infourl) untuk alasan keamanan. Browser mengurus pengkodean persen untuk Anda. sehingga menggunakan ERDDAP™ di browser tidak terpengaruh kecuali permintaan akan diarahkan ke yang lain ERDDAP Sitemap
-    * IMPROVED: Sebelumnya, ERDDAP™ Login **variabel char** lebih seperti bilangan bulat pendek dari karakter. Sekarang memperlakukan mereka lebih seperti 1-character-long UCS-2 (Login) Login Sitemap [Dokumentasi char](/docs/server-admin/datasets#char) Sitemap Berkat proyek Robinie Briand dan Argo.
-    * IMPROVED: Sebelumnya, ERDDAP™ dukungan kecil yang ditawarkan untuk **Unicode karakter** karakter di atas #255 dalam Strings. Sekarang, internal, ERDDAP™ dukungan penuh 2byte UCS-2 chars (karakter nomor 0 melalui 65535) di Strings. Ketika String data ditulis ke berbagai jenis file, ERDDAP™ Apakah yang terbaik dapat mendukung amal 2-byte. Contoh lain adalah file .csv yang ERDDAP™ menulis dengan aset ISO-8859-1 (a 1-byte charset) Sitemap ERDDAP™ menulis karakter di atas #255 dengan JSON-like \\u_hhhhh_ sintaks. Sitemap [String data](/docs/server-admin/datasets#string) Sitemap
-    * Sitemap .nc file yang ditulis oleh ERDDAP™ , variabel char untuk ditafsirkan sebagai String akan memiliki atribut
-         **\\_Encoding=ISO-8859-1**   
-Sitemap .nc file dibaca oleh ERDDAP™ variabel char dengan "\\_Encoding" akan ditafsirkan sebagai String dengan charset yang ditentukan.
-    * Login: ERDDAP™ Login **JSON-seperti backslash-encoding** karakter khusus ketika Anda menentukan batasan variabel char dan String. Dengan demikian Anda dapat meminta sesuatu seperti &myString="\\u20ac" ketika Anda ingin baris data di mana myString=€ sejak 20ac adalah versi heksadesimal dari titik kode untuk simbol Euro. Beberapa sumber di web menunjukkan nomor titik kode untuk simbol Unicode, misalnya, [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) Sitemap
-    * IMPROVED: Sebelumnya, ERDDAP™ dukungan terbatas yang ditawarkan untuk **integer panjang** variabel. Sitemap ERDDAP™ mendukung panjang secara internal dan melakukan yang terbaik ketika menulis data panjang ke berbagai jenis file. Sitemap [dokumentasi panjang](/docs/server-admin/datasets#long) Sitemap Berkat Institut Laut Irlandia, Craig Risien, Rich Signell, Christopher Wingard dan OOI.
-    * BARU: jenis file output untuk griddap dan tabledap Sitemap ** .nccsv ** , yang membuat NetCDF -seperti, ASCII, file CSV yang juga mengandung semua metadata yang akan sebanding .nc Login Sitemap [Login Sitemap](/docs/user/nccsv-1.00) Sitemap Steve Hankin
-    * Sitemap ** orderByClosest Login** memungkinkan Anda menentukan bagaimana tabel hasil akan diurutkan dan interval (g., 2 jam) Sitemap Dalam setiap kelompok penyortiran, hanya baris yang paling dekat dengan interval akan disimpan. Sitemap orderByClosest  (Sitemap stationID waktu, 2 jam") Sitemap stationID dan waktu, tetapi hanya mengembalikan baris untuk setiap Meme it stationID di mana orderBy Login (Sitemap) paling dekat dengan interval 2 jam. Ini adalah hal paling dekat dalam Meme it tabledap untuk meningkatkan nilai dalam permintaan griddap. Pilihan ini dapat ditentukan melalui tabledap halaman web .html dataset, halaman web .graph, dan melalui URL yang Anda buat sendiri. Berkat Institut Laut Irlandia dan Jaringan Laut Kanada.
-    * Sitemap ** orderByLimit Login** memungkinkan Anda menentukan bagaimana tabel hasil akan diurutkan dan nomor batas (g., 100) Sitemap Dalam setiap kelompok penyortiran, hanya baris 'limit' pertama akan disimpan. Sitemap orderByMax  (Sitemap stationID 100 g) Sitemap stationID tapi hanya mengembalikan 100 baris pertama untuk setiap stationID Sitemap Ini mirip dengan klausul LIMIT SQL. Pilihan ini dapat ditentukan melalui tabledap halaman web .html dataset, halaman web .graph, dan melalui URL yang Anda buat sendiri. Berkat Institut Laut Irlandia dan Jaringan Laut Kanada.
-    * BARU: Dua jenis file respons baru, ** .jsonlCSV Login .jsonlKVP ** tersedia untuk permintaan untuk dataset gridded, dataset tabular dan banyak tempat lain ERDDAP   (e.g., permintaan informasi tentang dataset) Sitemap File adalah file JSON Lines ( [https://jsonlines.org/](https://jsonlines.org/) ) di mana setiap garis memiliki objek JSON yang terpisah. .jsonlCSV hanya memiliki nilai dalam format CSV. .jsonlKVP memiliki Kunci: Nilai pasangan. Setiap garis berdiri sendiri. Garis tidak tertutup dalam array atau objek JSON yang lebih besar. Sebagai contoh, lihat [permintaan sampel ini](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/pmelTaoDySst.jsonlKVP?longitude%2Clatitude%2Ctime%2Cstation%2Cwmo_platform_code%2CT_25%26time%3E=2015-05-23T12:00:00Z%26time%3C=2015-05-31T12:00:00Z) Sitemap Berkat Damian Smyth, Rob Fuller, Adam Leadbetter, dan Institut Laut Irlandia.
-    * BARU: Ada dokumentasi baru yang menggambarkan [ **Cara Mengakses Dataset Pribadi di ERDDAP™ Login** ](/docs/user/AccessToPrivateDatasets) Sitemap Terima kasih kepada Lynn DeWitt.
-    * IMPROVED: Sejauh minimum ** OpenLayers ** peta adalah 2 derajat dan sekarang 4 piksel data. Terima kasih kepada Rusty Holleman.
-    * IMPROVED: Dalam beberapa kasus umum, permintaan yang mencakup **ekspresi reguler** kendala akan diproses lebih cepat.
+    * PERUBAHAN di Tomcat: Untuk permintaan ke ERDDAP™ berasal dari perangkat lunak selain web browsers (mis., curl R, Matlab , Python , Java ) :
+Seperti dengan perubahan sebelumnya dalam versi Tomcat (software tingkat rendah yang berjalan ERDDAP ) sejak awal 2016, lebih dan lebih karakter dalam bagian query dari URL permintaan harus [ **Percent Enkode** ](/docs/server-admin/datasets#infourl) Untuk alasan keamanan. Peramban mengurus persentase pengkodean untuk Anda. begitu menggunakan ERDDAP™ dalam peramban tidak terpengaruh kecuali permintaan akan dialihkan ke yang lain ERDDAP .
+    * Sebelumnya, ERDDAP™ diobati **variabel char** lebih seperti unsigned integer pendek dari karakter. Sekarang mereka memperlakukan lebih seperti karakter 1-panjang UCS-2 (Unicode) String. Lihat [dokumentasi char](/docs/server-admin/datasets#char) . Berkat Aurelie Briand dan proyek Argo.
+    * Sebelumnya, ERDDAP™ menawarkan sedikit dukungan untuk **Karakter Unicode** di atas karakter # 255 di Strings. Sekarang, secara internal, ERDDAP™ full support 2-byte karakter UCS-2 (karakter bernomor 0 sampai 65535) di String. Ketika data String ditulis ke berbagai tipe berkas, ERDDAP™ melakukan yang terbaik untuk mendukung 2-byte chars. Contoh lain adalah berkas .csv yang ERDDAP™ tulis dengan set karakter ISO-859- 1 (sebuah set karakter 1-byte) , jadi ERDDAP™ menulis karakter apapun di atas karakter # 255 dengan JSON- seperti\\ u _ hhhh _ syntax. Lihat [Data string](/docs/server-admin/datasets#string) .
+    * Masuk .nc berkas yang ditulis oleh ERDDAP™ , char variabel yang akan ditafsirkan sebagai String akan memiliki atribut
+         **\\ _ Encoding = ISO-8859-1**   
+Masuk .nc berkas dibaca oleh ERDDAP™ , char variabel dengan "\\ _ Encoding" akan ditafsirkan sebagai String dengan charset yang dispesifikasikan.
+    * REMINDER: ERDDAP™ dukungan **JSON- seperti backslash- encoding** karakter khusus ketika Anda menspesifikasikan batasan dari karakter dan variabel String. Sehingga Anda dapat meminta sesuatu seperti & myString = "\\ u20ac" ketika Anda ingin baris data mana myString = €20ac adalah versi hexadesimal dari kode titik untuk simbol Euro. Beberapa sumber pada web menunjukkan nomor titik kode untuk simbol Unicode, misalnya, [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) .
+    * Sebelumnya, ERDDAP™ ditawarkan dukungan terbatas untuk **integer panjang** variabel. Sekarang ERDDAP™ sepenuhnya mendukung longs internal dan melakukan yang terbaik ketika menulis data panjang ke berbagai tipe berkas. Lihat [dokumentasi panjang](/docs/server-admin/datasets#long) . Berkat Institut Marinir Irlandia, Craig Risien, Rich Signgell, Christopher Wingard dan OOI.
+    * NEW: tipe berkas keluaran untuk griddap dan tabledap : ** .nccsv ** , yang membuat NetCDF -seperti, ASCII, berkas CSV yang juga berisi semua metadata yang akan sebanding .nc file. Lihat [NCCSV Spesifikasi](/docs/user/nccsv-1.00) . Berkat Steve Hankin.
+    * NEW: ** orderByClosest filter** memungkinkan Anda menentukan bagaimana tabel hasil akan diurutkan dan interval (Misalnya, 2 jam) . Dalam setiap kelompok, hanya baris terdekat dengan interval yang akan disimpan. Misalnya, orderByClosest  (" stationID , waktu, 2 jam ") akan mengurutkan oleh stationID dan waktu, tetapi hanya kembali baris untuk masing-masing stationID dimana terakhir orderBy kolom (waktu) terdekat dengan interval 2 jam. Ini adalah hal yang paling dekat tabledap untuk langkah nilai dalam permintaan griddap. Opsi ini dapat dispesifikasikan melalui apapun tabledap laman web .html data, .graph halaman web, dan dengan URL apapun yang Anda hasilkan sendiri. Berkat Institut Marinir Irlandia dan Ocean Networks Kanada.
+    * NEW: ** orderByLimit filter** memungkinkan Anda menentukan bagaimana tabel hasil akan diurutkan dan sebuah jumlah batas (Misalnya, 100) . Dalam setiap kelompok, baris 'batas' pertama akan disimpan. Misalnya, orderByMax  (" stationID , 100 ") akan mengurutkan oleh stationID , tetapi hanya kembali 100 baris pertama untuk masing-masing stationID . Ini mirip dengan klausul LIMIT SQL. Opsi ini dapat dispesifikasikan melalui apapun tabledap laman web .html data, .graph halaman web, dan dengan URL apapun yang Anda hasilkan sendiri. Berkat Institut Marinir Irlandia dan Ocean Networks Kanada.
+    * Dua tipe berkas respon baru, ** .jsonlCSV dan .jsonlKVP ** tersedia bagi permintaan untuk gridded dataset, tabular dataset dan banyak tempat lain di ERDDAP   (mis., permintaan untuk informasi tentang dataset) . Berkas tersebut adalah berkas JSON Lines ( [ https://jsonlines.org/ ](https://jsonlines.org/) ) dimana setiap baris memiliki objek JSON terpisah. .jsonlCSV hanya memiliki nilai dalam format CSV. .jsonlKVP memiliki Kunci: Pasangan nilai. Setiap garis berdiri pada sendiri. Baris tidak tertutup dalam array JSON yang lebih besar atau objek. Sebagai contoh, lihat [permintaan sampel ini](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/pmelTaoDySst.jsonlKVP?longitude%2Clatitude%2Ctime%2Cstation%2Cwmo_platform_code%2CT_25%26time%3E=2015-05-23T12:00:00Z%26time%3C=2015-05-31T12:00:00Z) . Berkat Damian Smyth, Rob Fuller, Adam Leadbetter, dan Institut Marinir Irlandia.
+    * Ada dokumentasi baru yang menjelaskan [ **Cara mengakses Dataset Pribadi ERDDAP™ via Skrip** ](/docs/user/AccessToPrivateDatasets) . Berkat Lynn DeWitt.
+    * IMPROVED: Tingkat minimum dari ** OpenLayers ** peta adalah 2 derajat dan sekarang 4 data piksel. Berkat Rusty Holleman.
+    * IMPROVED: Dalam beberapa kasus umum, permintaan yang termasuk **ekspresi reguler** batasan akan diproses lebih cepat.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   
      
-    *    **SLOW FIRST STARTUP:** Pertama kali Anda memulai versi baru ini, akan memakan waktu lama untuk ERDDAP™ untuk memuat semua dataset karena perlu dibaca kembali semua datafile sumber (meskipun hanya header untuk file data gridded) Sitemap Jika Anda melihat log Anda mungkin melihat pesan kesalahan mengatakan "old/unsupported EnhancedVersion" dari beberapa file internal -- itu oke -- ERDDAP™ akan membuat versi baru dari file internal. Promo
-    * Login ERDDAP™ sekarang menggunakan baru **Login** Sitemap (juga dikenal sebagai JSR 310) bukan Joda untuk parse String kali ke zaman numerik. Catatan:
-        * Sitemap ERDDAP™ tiba-tiba memiliki masalah parsing String kali untuk dataset tertentu dan dengan demikian hanya mengkonversi sebagian besar atau semua kali ke NaN (nilai hilang) masalah hampir selalu dengan tanggal Format waktu string yang Anda tentukan sebagai "unit" variabel. Sistem baru kadang-kadang membutuhkan string format tanggal yang sedikit berbeda.
-        * Jika bulan numerik dan hari-hari dalam string dateTime tidak 0-padded (g., "3/7/2016") memastikan format hanya memiliki M tunggal dan d (g., "M/d/yy", tidak "MM/dd/yyyy") Sitemap
-        * Mengubah spesifikasi detik fraksional yang menggunakan huruf kecil (Sitemap yyyy-MM-dd 'T'HH:mm:s.sss) modal Sitemap (Login yyyy-MM-dd 'T'HH:mm:ss.SSS) Sitemap
-        *    ERDDAP™ tidak lagi mendukung tanggal string Format waktu dengan dua digit tahun (Login) dengan abad tersirat (g., 1900 atau 2000) Sitemap Bisnis menghabiskan miliaran dolar memperbaiki masalah ini pada akhir 1990. Para ilmuwan tidak boleh menggunakan dua digit tahun. Silahkan memperbaiki file sumber (Login) dengan mengkonversi ke 4-digit tahun, lalu gunakan yyyy di tanggal Format waktu.
-        * Anda dapat menggunakan yyyy atau YYYYYY (Sitemap ERDDAP™ uuuu) untuk parse 4 digit tahun, termasuk tahun-tahun negatif, misalnya, -4712 (4713 SM) Sitemap Terima kasih kepada SeaDataNet, Thomas Gardner, dan BODC.
-        * Silahkan terus menggunakan Z dalam format dateTime untuk mendapatkan ERDDAP untuk membuat offset waktu (g., Z, +0200, -08, -0800, -08:30) Sitemap
-        *    **Pastikan Anda menggunakan Java versi 1.8.0\\_21 atau lebih tinggi.** 
-        * Login Login Jika Anda menulis Java program yang menjalankan ERDDAP™ Kode, Anda perlu menghapus referensi ke joda-time. top SiteMap LocalNav MainNav
-    * Sitemap ERDDAP Sitemap [Login Alat dataset](/docs/server-admin/additional-information#archiveadataset) sekarang membuat [ **File Folder** ](https://en.wikipedia.org/wiki/BagIt) Sitemap NCEI dapat menstandardisasi format ini. Berkat Scott Cross dan John Relph.
-    * IMPROVED: Tautan untuk mengunduh erddap. perang pada ERDDAP™ halaman web sekarang menunjuk ke **Login** Sitemap (Mereka adalah tautan publik, sehingga Anda tidak perlu bergabung dengan GitHub.) Ini berarti banyak unduhan lebih cepat (hingga 12Mb/s versus 1Mb/s) dan beberapa masalah dengan unduhan. Berkat Damian Smyth, Rob Fuller, Adam Leadbetter, Conor Delaney, dan Institut Laut Irlandia.
-    * Sitemap **status.html halaman dan email Laporan Status harian** sekarang termasuk bagian "Major LoadDatasets Time Series" yang menunjukkan statistik tentang ERDDAP™ sebagai akhir dari setiap beban utamaDataset untuk 100 terakhir besar loadDatasets. Terima kasih kepada kami kesulitan RAID.
-    * BARU: baru, opsional (tapi disarankan) parameter untuk EDDTableDariCassandra dataset: [ ** &lt;Login ** Sitemap (/docs/server-admin/dataset#partitionkeycsv) Sitemap Berkat Ocean Networks Kanada.
-    * BARU: EDDTableDariAsciiFiles sekarang mendukung ** &lt;Sitemap ** parameter. Jika null atau "", kelas akan menebak, seperti sebelumnya, Jika tidak, karakter pertama akan digunakan sebagai pemisah kolom ketika membaca file. Terima kasih kepada Sky Bristol dan Abigail Benson.
-    * Baru: jenis dataset baru, [ **Login** ](/docs/server-admin/datasets#eddtablefromnccsvfiles) , dapat membuat dataset dengan agregasi [.csv file](/docs/user/nccsv-1.00) Sitemap Steve Hankin
-    * Sitemap **Login** Sitemap .nccsv untuk mendapatkan informasi dari jarak jauh ERDDAP s dan untuk arsip lokal info metadata itu. Ini memungkinkan dukungan penuh untuk jenis data char dan panjang, dan untuk Unicode (Login) charset untuk chars dan string. Berkat Rob Fuller dan Institut Laut Irlandia.
-    * IMPROVED: EDDTableDariErddap dan EDDGrid Mulai sekarang dukungan ** &lt;Login&lt;Login ** yang memberitahukan ERDDAP™ tidak pernah mengarahkan permintaan ke remote ERDDAP Sitemap default benar. Ini berguna ketika remote ERDDAP™ adalah pribadi ERDDAP Sitemap Berkat Damian Smyth, Rob Fuller, dan Institut Laut Irlandia.
-    * Sitemap ERDDAP™ Sitemap **Permintaan pengguna dibatalkan** Sitemap Dan ERDDAP™ sekarang ditutup lebih cepat karena benang tingkat rendah ditutup lebih cepat. Terima kasih kepada kami kesulitan RAID.
-    *    **Login Login** 
-        * BARU: EDDType "ncdump" baru mencetak [Login](https://linux.die.net/man/1/ncdump) \\-seperti printout dari header dari .nc Login Anda juga dapat mencetak nilai data untuk variabel yang ditentukan (atau masukkan "tidak ada" untuk tidak mencetak nilai data apa pun) Sitemap Ini berguna karena, tanpa ncdump itu sulit untuk mengetahui apa yang ada dalam file dan dengan demikian EDDType yang harus Anda tentukan untuk GenerateDatasetsXml. Terima kasih kepada Craig Risien, Rich Signell, Christopher Wingard dan OOI.
-        * BARU: Untuk SeaData Data bersih:
-Ketika tepat, GenerateDataset Xml sekarang melakukan konversi semantik tertentu menggunakan query SPARQL jarak jauh: jika metadata sumber variabel termasuk sdn\\_parameter\\_urn, misalnya, sdn\\_parameter\\_urn = "SDN: P01::PSLTZZ01", GenerateDatasets Xml akan menambahkan atribut P02 yang sesuai, misalnya, sdn\\_P02\\_urn = "SDN:P02::PSAL". Jika Anda memiliki dataset yang menggunakan atribut ini, dan jika Anda ERDDAP Sitemap&lt; categoryAttributes &gt; di setup.xml termasuk sdn\\_parameter\\_urn dan sdn\\_P02\\_urn, pengguna akan dapat menggunakan ERDDAP™ Kategori sistem pencarian untuk mencari dataset dengan nilai-nilai tertentu dari atribut ini. Terima kasih kepada BODC dan Alexandra Kokkinaki.
-        * IMPROVED: GenerateDataset Xml sekarang berubah banyak http:// referensi dalam metadata untuk https:// Sitemap
-        * IMPROVED: GenerateDataset Xml sekarang mencoba untuk menebak pembuat\\_type dan penerbit\\_type.
-        * IMPROVED: DataTypes variabel yang disarankan oleh GenerateDatasets Xml sekarang akan sedikit lebih baik. Berkat Margaret O'Brien, LTER, dan EML.
-        * IMPROVED: GenerateDataset Xml lebih baik dalam menentukan&lt;cdm\\_data\\_type&gt;, dan menambahkan atribut terkait, diperlukan (misalnya,&lt;cdm\\_timeseries\\_variables&gt;), sehingga Anda dapat menyediakan informasi tersebut. Terima kasih kepada Rich Signell.
-        * IMPROVED: Di GenerateDataset Xml, untuk dataset EDDTable, saran untuk&lt; subsetVariables &gt; sekarang lebih konservatif. Terima kasih kepada John Kerfoot.
-        * Sitemap datasets.xml untuk dataset menentukan featureType tapi tidak cdm\\_data\\_type, featureType akan digunakan sebagai cdm\\_data\\_type. Terima kasih kepada Rich Signell.
-        * BUG FIX Login Xml sekarang menyarankan yang benar&lt;dataType&gt; untuk variabel data yang memiliki scale\\_factor Login add\\_offset dan / atau \\_Unsigned atribut.
-    * IMPROVED: Saat ERDDAP™ membuka .nc file yang **Login** daripada seharusnya (e.g., tidak mendapatkan sepenuhnya disalin ke tempat) Login ERDDAP™ sekarang memperlakukan file sebagai buruk. Sitemap ERDDAP™ kembali nilai hilang untuk bagian file yang hilang karena perilaku default untuk netcdf-java. ERDDAP™ ucar .nc 2.iosp.netcdf3.N3header.disallowFileTruncation = benar; Terima kasih kepada kami kesulitan RAID dan Kristen Ward-Garrison.
-    * IMPROVED: penulis ISO 19115 sekarang menggunakan **Login** Sitemap
-    * Sitemap ERDDAP™ sekarang menggunakan jarf-java v4.6.9 terbaru yang dapat membaca jenis tambahan **netcdf-4 file** Sitemap Terima kasih kepada Craig Risien, Rich Signell, Christopher Wingard dan OOI.
-    * BUG FIX: hindari masalah jika file sumber yang berbeda memiliki jenis data yang berbeda untuk variabel yang diberikan. Terima kasih kepada Roy Mendelssohn dan Eugene Burger.
-    * Login: **Konversi format waktu** sekarang lebih terlindungi dengan nilai waktu yang buruk. Berkat NDBC.
-    * Login: EDDGrid Login Unpacked sekarang menangani nilai waktu dengan **"bulan sejak ..." dan "tahun sejak ..."** Sitemap (dengan meningkatkan bulan atau tahun, bukan dengan menambahkan e.g., 30days berulang kali) Sitemap Terima kasih kepada Soda3.3.1.
-    * BUG FIX: hanya dalam v1.74, **Login** diperlukan tindakan (Login http:// Login) dan harus opsional.
-    * Login: EDDGrid Login () tidak menambahkan atribut global. Sitemap
+    *    **SLOW PERTAMA STARTUP:** Pertama kali Anda memulai versi baru ini, itu akan memakan waktu lama untuk ERDDAP™ untuk memuat semua data karena perlu membaca kembali semua berkas data sumber (meskipun hanya header untuk file data gridded) . Jika Anda melihat log Anda mungkin melihat pesan kesalahan yang mengatakan "Old / unsupporcedversion" dari beberapa berkas internal -- tidak apa-apa -- ERDDAP™ akan membuat versi baru dari berkas internal. Harap bersabar.
+    * AKSI: ERDDAP™ sekarang menggunakan yang baru **java.time** kelas (juga dikenal sebagai JSR 310) bukan Joda untuk mengurai kali String ke dalam numerik kali. Catatan:
+        * Jika ERDDAP™ tiba-tiba memiliki masalah parsing String kali untuk data yang diberikan dan dengan demikian hanya mengubah paling atau semua kali untuk NaN 's (hilang nilai) , masalahnya adalah hampir selalu dengan tanggal Format waktu string yang Anda tentukan sebagai "unit" dari variabel. Sistem baru kadang-kadang membutuhkan format string dateTime yang sedikit berbeda.
+        * Jika numerik bulan dan hari dalam dateTime string tidak 0-padded (mis. 3 / 7 / 2016) , pastikan format hanya memiliki satu M dan d (mis., "M / d / yyyy", bukan "MM / dd / yyyy") .
+        * Ubah setiap spesifikasi pecahan detik yang menggunakan huruf kecil s (mis., yang .sss dalam yyyy-MM-dd Tidak.) , ke ibukota S, (mis., yyyy-MM-dd SS.SS) .
+        *    ERDDAP™ tidak lagi mendukung tanggal string Format waktu dengan dua digit tahun (y) dengan abad tersirat (Misalnya, 1900 atau 2000) . Bisnis menghabiskan miliaran dolar memperbaiki masalah ini di akhir 1990-an. Ilmuwan tidak boleh menggunakan dua digit tahun. Silakan perbaiki berkas sumber (s) dengan mengubah ke 4-digit tahun, kemudian menggunakan yyyy dalam tanggal Format waktu.
+        * Anda dapat menggunakan yyyy atau YYYY (yang ERDDAP™ mengubah ke uuuu) untuk mengurai 4 digit tahun, termasuk tahun negatif, misalnya, -4712 (yang mana 4713 SM) . Terima kasih pada SeaDataNet, Thomas Gardner, dan BODC.
+        * Silakan lanjutkan untuk menggunakan Z dalam format dateTime untuk mendapatkan ERDDAP untuk mengurai ofset waktu (mis., Z, + 0200, -08, -0800, -08: 30) .
+        *    **Pastikan Anda menggunakan Java versi 1.8,0\\ _ 21 atau lebih tinggi.** 
+        * Programer -- Jika Anda menulis Java program yang dijalankan ERDDAP™ kode, Anda perlu untuk menghapus referensi ke pekerjaan-waktu. jar dalam parameter jalur kelas.
+    * NEW: ERDDAP ' [ArchiveA Alat Dataset](/docs/server-admin/additional-information#archiveadataset) sekarang dapat membuat [ **Berkas BagIt** ](https://en.wikipedia.org/wiki/BagIt) . NCEI mungkin standardize pada format ini. Terima kasih kepada Scott Cross dan John Reph.
+    * IMPROVED: Link untuk mengunduh erddap. perang pada ERDDAP™ halaman web sekarang menunjuk ke **GitHub** . (Mereka adalah link publik, sehingga Anda tidak harus bergabung GitHub.) Ini berarti jauh lebih cepat unduhan (hingga 12Mb / s versus 1Mb / s) dan beberapa masalah dengan pengunduhan. Berkat Damian Smyth, Rob Fuller, Adam Leadbetter, Conor Delaney, dan Institut Marinir Irlandia.
+    * ULROVED: **status. html halaman dan harian Status Laporkan email** sekarang termasuk bagian "Major LoadDatasets Time Series" yang menunjukkan statistik tentang ERDDAP™ sebagai akhir dari setiap loadDataset utama untuk 100 terakhir loadDataset utama. Terima kasih kepada RAID kami yang merepotkan.
+    * NEW: baru, opsional (tapi disarankan) parameter untuk data EDTableFromCassandra: [ ** &lt;partitionKeyCSV &gt; ** ] (/ docs / server-admin / datasets # partitionkeycsv) . Berkat Ocean Networks Kanada.
+    * NEW: EDTableFromAscifiles kini mendukung ** &lt;Pemisah kolumnDeciator &gt; ** parameter. Jika null atau ", kelas akan menebak, seperti sebelumnya, jika tidak, karakter pertama akan digunakan sebagai pemisah kolom ketika membaca berkas. Berkat Sky Bristol dan Abigail Benson.
+    * Baru: jenis data baru, [ **EDTableFromNcsvFiles** ](/docs/server-admin/datasets#eddtablefromnccsvfiles) , dapat membuat dataset dengan mengumpulkan [Berkas .csv NCCSV](/docs/user/nccsv-1.00) . Berkat Steve Hankin.
+    * TERLIBAT: **EDTableFromErddap** sekarang menggunakan .nccsv untuk mendapatkan informasi dari remote ERDDAP s dan untuk arsip lokal dari informasi metadata tersebut. Hal ini memungkinkan dukungan penuh bagi jenis data char dan panjang, dan untuk Unicode (UCS-2) Charset untuk chars dan String. Berkat Rob Fuller dan Institut Marinir Irlandia.
+    * EDTableFromErddap dan EDDGrid FromErddap sekarang mendukung ** &lt;redirect &gt; false&lt;/ redirect &gt; ** yang memberitahu ERDDAP™ tidak pernah mengarahkan permintaan ke remote ERDDAP . Default itu benar. Ini berguna ketika remote ERDDAP™ adalah pribadi ERDDAP . Berkat Damian Smyth, Rob Fuller, dan Institut Marinir Irlandia.
+    * TERLIBAT: ERDDAP™ sekarang menangkap **membatalkan permintaan pengguna** Cepat. Dan ERDDAP™ sekarang mematikan lebih cepat karena tingkat rendah benang mematikan lebih cepat. Terima kasih kepada RAID kami yang merepotkan.
+    *    **GenerateDatadasets Xml:** 
+        * NEW: cetakan EDType "ncdump" yang baru [ncdump](https://linux.die.net/man/1/ncdump) \\ -like printout dari header dari .nc file. Anda juga dapat mencetak nilai data untuk variabel yang dispesifikasikan (atau masukkan "nothing" untuk tidak mencetak nilai data apapun) . Ini berguna karena, tanpa ncdump sulit untuk mengetahui apa yang ada di sebuah berkas dan dengan demikian dimana EDType Anda harus menspesifikasikan untuk GenerateDatasetsXml. Berkat Craig Risien, Rich Signgell, Christopher Wingard dan OOI.
+        * Untuk SeaData Data bersih:
+Ketika sesuai, GenerateDatasets Xml kini melakukan konversi semantik khusus memakai permintaan SPARQL jauh: jika metadata sumber variabel termasuk sdn\\ _ parameter\\ _ urm, misalnya, sdn\\ _ parameter\\ _ urn = "SDN: P01:: PSLTZZ01", GeneraDaset Xml akan menambahkan atribut P02 yang sesuai, misalnya, sdn\\ _ P02\\ _ um = "SDN: P02:: PSAL". Jika Anda memiliki dataset yang menggunakan atribut ini, dan jika Anda ERDDAP '&lt; categoryAttributes &gt; dalam setup.xml termasuk sdn\\ _ parameter\\ _ um dan sdn\\ _ P02\\ _ um, pengguna akan dapat menggunakan ERDDAP™ Sistem pencarian Kategori untuk mencari dataset dengan nilai spesifik dari atribut ini. Berkat BODC dan Alexandra Kokkinaki.
+        * TERLIBAT: GenerateDatasets Xml sekarang berubah banyak http:// referensi dalam metadata ke https:// ketika tepat.
+        * TERLIBAT: GenerateDatasets Xml kini mencoba menebak pencipta\\ _ type dan penerbit\\ _ type.
+        * IMPROVED: Data variabel yang disarankan oleh GenerateDataset Xml sekarang akan sedikit lebih baik. Terima kasih kepada Margaret O 'Brien, LTER, dan EML.
+        * TERLIBAT: GenerateDatasets Xml lebih baik dalam menetapkan&lt;cdm\\ _ data\\ _ type & gt;, dan menambahkan atribut yang terkait, dibutuhkan (misalnya,&lt;cdm\\ _ timeseries\\ _ variables & gt;), so you can supply that information. Berkat Rich Signgell.
+        * INTERROVED: Dalam Dataset GenerateDataset Xml, untuk data EDTabel, saran untuk&lt; subsetVariables &gt; sekarang jauh lebih konservatif. Berkat John Kerfoot.
+        * IMPROVED: Jika datasets.xml untuk sebuah dataset menspesifikasikan featureType tetapi bukan cdm\\ _ data\\ _ type, featureType akan digunakan sebagai cdm\\ _ data\\ _ type. Berkat Rich Signgell.
+        * BUG FIX: hasilkan Dataset Xml menunjukkan benar&lt;dataType &gt; untuk variabel data yang memiliki scale\\_factor , add\\_offset dan / atau atribut\\ _ Unsigned.
+    * KETIKA ERDDAP™ membuka .nc berkas yang **pendek** daripada seharusnya (Misalnya, itu tidak mendapatkan sepenuhnya disalin ke tempatnya) , ERDDAP™ sekarang memperlakukan file sebagai buruk. Sebelumnya, ERDDAP™ mengembalikan nilai yang hilang untuk bagian berkas yang hilang karena itu adalah perilaku baku untuk netcdf -java. ERDDAP™ sekarang menggunakan ucar .nc 2,iosp.netcdf3.N3header.disalllowFileTruncation = true; Terima kasih kepada RAID dan Christian Ward- Garrison.
+    * IMPROVED: penulis ISO 19115 sekarang menggunakan **Pembuat\\ _ tipe** , jika hadir.
+    * TERLIBAT: ERDDAP™ sekarang menggunakan netcdf -java v4.6.9 terbaru yang dapat membaca tipe tambahan dari **berkas netcdf -4** . Berkat Craig Risien, Rich Signgell, Christopher Wingard dan OOI.
+    * BUG FIX: hindari masalah jika berkas sumber berbeda memiliki tipe data yang berbeda untuk variabel yang diberikan. Berkat Roy Mendelssohn dan Eugene Burger.
+    * BUG FIX: **Format waktu konversi** sekarang lebih baik dilindungi dari nilai waktu yang buruk. Berkat NDBC.
+    * BUG FIX: EDDGrid FromNcFiles Dibongkar sekarang menangani nilai waktu dengan **"bulan sejak"... dan "tahun sejak"...** benar (dengan meningkatkan bulan atau tahun, bukan dengan secara kasar menambahkan mis, 30 hari berulang-ulang) . Berkat Soda3.3.1.
+    * BUG FIX: hanya di v1.74, **berlangganan** dibutuhkan sebuah aksi (mis., http:// ...) , yang dan harus opsional.
+    * BUG FIX: EDDGrid FromMergeIRFies.lowGetSourceMetadata () tidak menambahkan atribut global. Sekarang tidak.
          
 
 ## Versi 1.74{#version-174} 
- (Oktober 2016) 
+ (dirilis 2016-10-07) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap**   
+*    **Fitur Baru (bagi pengguna) :**   
      
-    * Sekarang, ketika Daftar Dataset (Semua, atau dari pencarian) ditampilkan pada halaman web, judul panjang ditampilkan pada beberapa baris. Sebelumnya, tengah-tengah judul panjang diganti oleh " ... ". Berkat Margaret O'Brien, LTER, dan EML.
+    * Sekarang, ketika Daftar Dataset (Semua, atau dari pencarian) ditampilkan di halaman web, judul panjang ditampilkan pada beberapa baris. Sebelumnya, pertengahan judul panjang digantikan oleh "...". Terima kasih kepada Margaret O 'Brien, LTER, dan EML.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   
      
-    * TO DO: Di komputer Linux, mengubah pengaturan waktu Apache sehingga permintaan pengguna yang memakan waktu tidak (dengan apa yang sering muncul sebagai kesalahan "Proxy" atau "Bad Gateway") Sitemap Sebagai pengguna akar:
+    * TODO: Pada komputer Linux, ubah pengaturan waktu habis Apache sehingga permintaan pengguna tidak habis waktu (dengan apa yang sering muncul sebagai kesalahan "Proxy" atau "Bad Gateway") . Sebagai pengguna root:
         
-        1. Modifikasi Apache http d.conf file (biasanya dalam / dll / http Sitemap) Sitemap
-Mengubah yang ada&lt;Sitemap (atau tambahkan satu di akhir file) ke 3600 (Sitemap) , bukan default 60 atau 120 detik.
-Mengubah yang ada&lt;Login Login (atau tambahkan satu di akhir file) ke 3600 (Sitemap) , bukan default 60 atau 120 detik.
-        2. Restart Apache: /usr/sbin/apachectl Login (tetapi kadang-kadang dalam direktori yang berbeda) Sitemap
+        1. Ubah Apache http berkas d.conf (biasanya di / etc / http d / conf /) :
+Mengubah yang ada&lt;Tenggat &gt; pengaturan (atau tambahkan satu di akhir berkas) ke 3600 (detik) , daripada baku 60 atau 120 detik.
+Mengubah yang ada&lt;ProxyTimeout &gt; pengaturan (atau tambahkan satu di akhir berkas) ke 3600 (detik) , daripada baku 60 atau 120 detik.
+        2. Mulai ulang Apache: / usr / sbin / apachectl -k anggun (tetapi kadang-kadang dalam direktori yang berbeda) .
         
-Terima kasih kepada Thomas Oliver.
+Berkat Thomas Oliver.
          
-    * Sitemap \\[ Login Katalog
-Ini bekerja seperti direktori bendera, tetapi versi hardFlag juga menghapus semua informasi dataset yang tersimpan. Tidak ada URL untuk mengatur hardFlag. Ini hanya dapat digunakan dengan menempatkan file di direktori itu.
-Login Bendera sangat berguna ketika Anda melakukan sesuatu yang menyebabkan perubahan dalam bagaimana ERDDAP™ membaca dan menafsirkan data sumber, misalnya, ketika Anda menginstal versi baru dari ERDDAP™ atau ketika Anda telah membuat jenis perubahan tertentu untuk definisi dataset dalam datasets.xml Sitemap Sitemap [dokumentasi ini](/docs/server-admin/additional-information#hard-flag) Sitemap Berkat John Kerfoot dan semua kelompok Argo.
+    * NEW: \\[ Larang / keras Direktori tanda
+Ini bekerja seperti direktori flag, tapi versi hardFlag juga menghapus semua informasi data cache. Tidak ada URL untuk mengatur sebuah hardFlag. Ini hanya dapat digunakan dengan menempatkan berkas di direktori itu.
+keras Flag sangat berguna ketika Anda melakukan sesuatu yang menyebabkan perubahan dalam bagaimana ERDDAP™ membaca dan menafsirkan data sumber, sebagai contoh, ketika anda memasang versi baru dari ERDDAP™ atau ketika Anda telah membuat tipe tertentu perubahan ke sebuah definisi dataset dalam datasets.xml . Lihat [dokumentasi ini](/docs/server-admin/additional-information#hard-flag) . Berkat John Kerfoot dan semua kelompok Argo.
          
-    * Sitemap Xml sekarang memiliki opsi EDDTableFromEML
-yang membaca deskripsi dataset dalam Bahasa Metadata Ekologi (Login) file, mengunduh file data terkait, dan menghasilkan potongan datasets.xml sehingga dataset dapat ditambahkan ke ERDDAP Sitemap Ada juga EDDTableDariEMLBatch yang melakukan hal yang sama untuk semua file EML di direktori. Ini bekerja dengan sangat baik karena EML melakukan pekerjaan yang sangat baik untuk menggambarkan dataset dan karena KNB dan LTER membuat file data yang sebenarnya tersedia.
-Login ERDDAP™ bisa menjadi kombinasi yang bagus, karena ERDDAP™ dapat memberikan akses langsung kepada kekayaan data KNB dan LTER dan membantu proyek-proyek tersebut memenuhi pemerintah AS [Akses Umum untuk Hasil Penelitian (Login) Sitemap](https://nosc.noaa.gov/EDMC/PD.DSP.php) dengan membuat data yang tersedia melalui layanan web.
-Sitemap [dokumentasi ini](/docs/server-admin/EDDTableFromEML) Sitemap Berkat Margaret O'Brien, LTER, dan EML.
+    * Data Generasi Xml kini memiliki opsi EDDTableFromEML
+yang membaca deskripsi data dalam Bahasa Metadata Ekologi (EML) berkas, mengunduh berkas data yang terkait, dan menghasilkan sepotong dari datasets.xml sehingga data dapat ditambahkan ke ERDDAP . Ada juga EDTableFromEMLBatch yang melakukan hal yang sama untuk semua berkas EML dalam direktori. Hal ini bekerja sangat baik karena EML melakukan pekerjaan yang sangat baik untuk menjelaskan data dan karena KNB dan LTER membuat berkas data aktual tersedia.
+EML tambah ERDDAP™ bisa menjadi kombinasi besar, karena ERDDAP™ dapat memberikan pengguna akses langsung ke kekayaan data KNB dan LTER dan membantu proyek-proyek tersebut memenuhi pemerintah AS [Akses Publik ke Hasil Riset (PARR) persyaratan](https://nosc.noaa.gov/EDMC/PD.DSP.php) dengan membuat data yang tersedia melalui layanan web.
+Lihat [dokumentasi ini](/docs/server-admin/EDDTableFromEML) . Terima kasih kepada Margaret O 'Brien, LTER, dan EML.
          
-    * Sitemap Xml sekarang memiliki opsi EDDTableFromInPort
-yang membaca deskripsi dataset dalam file InPort XML dan mencoba menghasilkan potongan datasets.xml sehingga dataset dapat ditambahkan ke ERDDAP Sitemap Ini jarang membuat chunk siap pakai XML untuk datasets.xml tapi itu akan membuat draft kasar yang baik yang merupakan titik awal yang baik untuk mengedit oleh manusia.
-Ini akan sangat bagus jika orang menggunakan InPort untuk mendokumentasikan dataset mereka juga akan digunakan ERDDAP™ untuk membuat data aktual yang tersedia melalui ERDDAP Layanan web dan dengan demikian bertemu pemerintah AS dan Meme it NOAA Sitemap [Akses Umum untuk Hasil Penelitian (Login) Sitemap](https://www.whitehouse.gov/blog/2013/02/22/expanding-public-access-results-federally-funded-research) dengan membuat data yang tersedia melalui layanan web. Ini adalah solusi yang bisa digunakan sekarang. ( erd.data at noaa.gov senang membantu.)   
-Sitemap [dokumentasi ini](/docs/server-admin/datasets#eddtablefrominport) Sitemap Terima kasih kepada Evan Howell dan Melanie Abecassis.
+    * Data Generasi Xml kini memiliki opsi EDDTableFromInPort
+yang membaca deskripsi data dalam berkas XML InPort dan mencoba untuk membuat potongan datasets.xml sehingga data dapat ditambahkan ke ERDDAP . Ini jarang membuat sepotong XML yang siap digunakan untuk datasets.xml , tapi itu akan membuat konsep kasar yang baik yang merupakan titik awal yang baik untuk mengedit oleh manusia.
+Akan bagus jika orang-orang menggunakan InPort untuk mendokumentasikan data mereka juga akan menggunakan ERDDAP™ untuk membuat data aktual tersedia melalui ERDDAP layanan web dan dengan demikian memenuhi pemerintah AS dan NOAA ' [Akses Publik ke Hasil Riset (PARR) persyaratan](https://www.whitehouse.gov/blog/2013/02/22/expanding-public-access-results-federally-funded-research) dengan membuat data yang tersedia melalui layanan web. Ini adalah solusi yang bisa digunakan sekarang. ( erd.data at noaa.gov adalah senang untuk membantu.)   
+Lihat [dokumentasi ini](/docs/server-admin/datasets#eddtablefrominport) . Berkat Evan Howell dan Melanie Abecassis.
          
-    * Sitemap ERDDAP™ sekarang menggunakan netcdf-java 4.6.6.
-Dengan versi sebelumnya, netcdf-java membaca beberapa nilai pengisian (mungkin, hanya dalam file netcdf-4) g Sekarang membaca beberapa dari mereka sebagai nilai pengisian standar netcdf: -127 untuk byte, -32767 untuk celana pendek, -2147483647 untuk ints. Unidata mengatakan perilaku baru adalah perilaku yang tepat. Jika variabel dalam dataset mulai menunjukkan salah satu nilai-nilai ini di mana mereka digunakan untuk menunjukkan 0, Anda dapat menambahkan, misalnya,
+    * TERLIBAT: ERDDAP™ sekarang menggunakan netcdf -java 4.6.6.
+Dengan versi sebelumnya, netcdf -java membaca beberapa nilai pengisi (mungkin, hanya dalam berkas netcdf -4) sebagai 0. Sekarang ia membaca beberapa dari mereka sebagai nilai isi standar netcdf: -127 untuk bytes, -32767 untuk celana pendek, -2147483647 untuk ints. Unidata Mengatakan perilaku baru adalah perilaku yang tepat. Bila sebuah variabel dalam suatu dataset mulai menampilkan salah satu nilai ini di mana mereka digunakan untuk menampilkan 0, Anda dapat menambahkan, misalnya,
 ```
         <att name="\\_FillValue" type="short">-32767</att>  
 ```
-ke variabel addAttributes Sitemap ERDDAP™ untuk mengobati nilai itu sebagai missing\\_value Login Nilai. Namun, dalam banyak kasus, itu tidak akan menghasilkan hasil yang diinginkan: 0's. Jika demikian, pertimbangkan memodifikasi file dengan NCO atau menulis ulang file. Login Sitemap Unidata Sitemap
+ke variabel addAttributes untuk memberitahu ERDDAP™ untuk memperlakukan nilai itu sebagai missing\\_value /\\ _ Isi Nilai. Namun, dalam banyak kasus, yang tidak akan menghasilkan hasil yang diinginkan: 0. Jika demikian, pertimbangkan untuk memodifikasi berkas dengan NCO atau menulis ulang file. Keluhan? Silahkan hubungi Unidata -)
          
-    * TO DO: Palet Topografi Baru
-Saya mendorong Anda untuk beralih semua dataset yang menggunakan palet OceanDepth untuk menggunakan palet TopografiDepth baru, yang seperti Topografi kecuali dengan warna yang dibalik, sehingga cocok untuk nilai kedalaman (positif=down) , bukan nilai ketinggian (Sitemap) Sitemap Pengaturan yang disarankan untuk palet ini adalah:
+    * TODO: palet Topografi Baru
+Saya mendorong Anda untuk menukar semua data yang menggunakan palet OceanDepth untuk menggunakan palet TopigraphDepth yang baru, yang seperti Topiography kecuali dengan warna yang terbalik, sehingga cocok untuk nilai kedalaman (positif = turun) , bukan nilai ketinggian (positif = up) . Pengaturan yang disarankan bagi palet ini adalah:
 ```
             <att name="colorBarMaximum" type="double">8000.0</att>
             <att name="colorBarMinimum" type="double">-8000.0</att>
             <att name="colorBarPalette">TopographyDepth</att> 
 ```
 
-    * FITUR BARU: Login missing\\_value dan/atau \\_FillValue
-Jika variabel String mendefinisikan missing\\_value dan/atau \\_FillValue, ERDDAP™ sekarang akan menghapus nilai-nilai dari data dan menggantinya dengan string kosong, sehingga nilai-nilai yang hilang muncul sebagai string kosong, seperti dengan set data lainnya ERDDAP Sitemap Berkat Margaret O'Brien, LTER, dan EML.
+    * FEATURE BARU: String missing\\_value dan / or\\ _ FillValue
+Jika sebuah variabel String mendefinisikan sebuah missing\\_value dan / atau\\ _ FillValue, ERDDAP™ Sekarang akan menghapus nilai-nilai dari data dan menggantinya dengan string kosong, sehingga nilai yang hilang muncul sebagai string kosong, seperti dengan dataset lain ERDDAP . Terima kasih kepada Margaret O 'Brien, LTER, dan EML.
          
-    * FITUR BARU: Dukungan untuk Waktu Lokal
-variabel kalitamp dengan data sumber dari String sekarang dapat menentukan zona waktu melalui " time\\_zone " atribut yang mengarah ERDDAP™ untuk mengubah waktu-waktu sumber zona lokal (beberapa dalam Waktu Standar, beberapa dalam Waktu Hemat Daylight) Login Zulu Sitemap Daftar nama zona waktu yang valid mungkin identik dengan daftar di kolom TZ di [tabel ini](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) Sitemap default adalah " Zulu Sitemap Zona waktu AS umum adalah: US / Hawaii, US / Alaska, US / US / US / Mountain, US / Arizona, AS / Tengah, AS / Timur. Untuk variabel kalitamp dengan data sumber numerik, Anda dapat menentukan " time\\_zone " atribut, tetapi nilai harus " Zulu " atau "UTC". Berkat Margaret O'Brien, LTER, dan EML.
+    * FEATURE BARU: Dukungan bagi Lokal Times
+variabel penanda waktu dengan sumber data dari String sekarang dapat menentukan zona waktu melalui " time\\_zone "atribut yang mengarah ERDDAP™ untuk mengubah waktu lokal -waktu -waktu sumber kali (Beberapa dalam waktu Standar, beberapa di Daylight Menyimpan waktu) ke Zulu kali. Daftar nama zona waktu yang valid mungkin identik dengan daftar dalam kolom TZ di [tabel ini](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Baku adalah " Zulu ". Zona waktu umum AS adalah: US / Hawaii, US / Alaska, US / Pacific, US / Mountain, US / Arizona, US / Central, US / Eastern. Untuk variabel timestamp dengan sumber data numerik, Anda dapat menentukan" time\\_zone "atribut, tetapi nilai harus" Zulu "atau" UTC ". Terima kasih kepada Margaret O 'Brien, LTER, dan EML.
          
-    * FITUR BARU: EDDTableDariAsciiFiles sekarang mendukung file semicolon-separated
-dan lebih cerdas tentang mencari pemisah. Berkat Margaret O'Brien, LTER, dan EML.
+    * FEATURE BARU: EDTableFromAsciiFiles kini mendukung berkas yang dipisahkan semicolon
+dan lebih cerdas tentang mencari tahu pemisah. Terima kasih kepada Margaret O 'Brien, LTER, dan EML.
          
-    * FITUR BARU: Jika ada kesalahan yang signifikan dalam loadDataset (besar atau kecil, misalnya, hilang atau tidak valid datasets.xml Sitemap) Login ERDDAP™ sekarang akan menunjukkannya dalam status.html, tepat di bawah "n Datasets Gagal Untuk Beban" sebagai ERROR: sementara pemrosesan datasets.xml : lihat log.txt untuk rincian.
+    * FEATURE BARU: Jika ada kesalahan signifikan dalam loadDataset (besar atau kecil, misalnya, hilang atau tidak valid datasets.xml dokumen) , ERDDAP™ sekarang akan mengindikasikan dalam status.html, tepat di bawah "n Datasets Gagal Untuk Muat" sebagai ERROR: ketika memproses datasets.xml : lihat log.txt untuk rincian.
          
-    * FITUR BARU: ERDDAP™ mencari anak yatim.
-Sitemap ERDDAP™ Apakah beban utama Dataset, sekarang terlihat untuk set data yatim (dataset yang ada di ERDDAP™ tapi tidak datasets.xml ) Sitemap Jika ditemukan, mereka terdaftar dalam status.html, tepat di bawah "n Dataset Gagal Untuk Beban" sebagai ERROR: n Orphan Datasets (dataset ERDDAP™ tapi tidak datasets.xml ) Login
-Jika Anda ingin menghapus (Login) anak yatim dari ERDDAP™ Anda perlu menambahkan
-        &lt;dataset type="_anyValidType_" datasetID ="_theDatasetID_" aktif="false" /&gt;
-Login datasets.xml sampai dataset dibongkar selama loadDataset utama berikutnya.
+    * FEATURE BARU: ERDDAP™ mencari anak yatim.
+Kapan ERDDAP™ melakukan beban utama Dataset, sekarang mencari data yatim piatu (dataset yang ada di ERDDAP™ tapi tidak di datasets.xml ) . Jika ditemukan, mereka terdaftar dalam status.html, tepat di bawah "n Datasets Gagal Untuk Muat" sebagai ERROR: n Dataset Orphan (dataset dalam ERDDAP™ tapi tidak di datasets.xml ) =....
+Bila Anda ingin menghapus (membongkar) (Kepada anak yatim yang ada hubungan kerabat) atau famili. ERDDAP™ , Anda perlu menambahkan
+        &lt;tipe data = "_ anyValidType _" datasetID = "Data-data ID _" aktif = "false" / &gt;
+ke datasets.xml sampai data dibongkar selama loadDataset utama berikutnya.
          
-    * Login: Jika dataset memiliki variabel timestamp numerik dengan unit selain "seconds since 1970-01-01T00:00:00Z" dan dengan&lt;updateEveryNMillis&gt; sistem aktif, rentang variabel timestamp diatur secara tidak benar ketika dataset diperbarui. Terima kasih kepada John Kerfoot.
+    * BUG FIX: Bila suatu data memiliki variabel penanda waktu numerik dengan satuan selain dari "seconds since 1970-01-01T00:00:00Z" dan dengan&lt;updateEveryNMillis &gt; sistem aktif, jangkauan timestamp variabel ini ditetapkan tidak benar ketika dataset diperbarui. Berkat John Kerfoot.
          
-    * BUG FIX&lt;QuickRestart&gt; benar dalam setup.xml dan Anda meminta data dari EDDTableDari... File dataset yang digunakan&lt;updateEveryNMillis&gt;, permintaan pertama ke dataset akan gagal, tetapi permintaan berikutnya akan berhasil. Sekarang permintaan pertama tidak akan gagal. Terima kasih kepada John Kerfoot.
+    * BUG FIX: Jika&lt;quickRestart &gt; benar dalam setup.xml dan Anda meminta data dari EDDTableFrom... Data berkas yang dipakai&lt;updateEveryNMillis &gt;, permintaan pertama ke dataset akan gagal, tetapi permintaan berikutnya akan berhasil. Sekarang permintaan pertama tidak akan gagal. Berkat John Kerfoot.
          
-    * BUG FIX: GenerateDatasetsXml.sh dan .bat tidak bekerja dengan parameter &gt; 9 pada baris perintah. Sekarang mereka lakukan. Terima kasih kepada John Kerfoot.
+    * BUG FIX: The GenerateDatasetsXml.sh dan .bat tidak bekerja dengan &gt; 9 parameter pada baris perintah. Sekarang mereka lakukan. Berkat John Kerfoot.
          
-    * Login: EDDTable baruDari MultidimNcFiles tidak secara konsisten menghapus ruang trailing dari string. Sitemap Tidak mungkin, file ARGO yang terkena ini. Kevin O'Brien dan Roland Schweitzer.
+    * BUG FIX: Baru EDTableFromMultidimNcFiles tidak konsisten menghapus jejak spasi dari string. Sekarang tidak. Khususnya, ini file ARGO yang terpengaruh. Berkat Kevin O 'Brien dan Roland Schweitzer.
          
-    * Login: Semua akses remote DAP Layanan sekarang diprakarsai oleh kode yang lebih modern. Ini memperbaiki kesalahan "koneksi tertutup" ketika mengakses beberapa dataset EDDTableDariErddap. Kevin O'Brien
+    * BUG FIX: Semua akses remote DAP layanan sekarang dimulai dengan lebih kode modern. Ini memperbaiki kesalahan "koneksi tertutup" ketika mengakses beberapa data EDDTableFromErddap. Berkat Kevin O 'Brien.
          
-    * Login: Penanganan orderBy Login () dan berbeda () sekarang kembali ke jalan mereka sebelum perubahan terbaru: permintaan yang diberikan mungkin memiliki beberapa orderBy Login () dan/atau yang berbeda () filter; ERDDAP™ akan menangani mereka dalam urutan mereka ditentukan. Meme it David Karuga
+    * BUG FIX: Penanganan orderBy ... () dan (malaikat-malaikat) yang membedakan (antara yang hak dan yang bathil) dengan sejelas-jelasnya, () sekarang kembali ke cara mereka sebelum perubahan baru-baru ini: permintaan yang diberikan mungkin memiliki banyak orderBy ... () dan / atau berbeda () filter; ERDDAP™ akan menangani mereka dalam urutan yang ditentukan. Berkat David Karuga.
          
-    * Login: Jika dataset adalah EDDTableDariDatabase dan query memiliki [WordPress.org](/docs/server-admin/datasets#sourcecanorderby) dan/atau [Login](/docs/server-admin/datasets#sourcecandodistinct) Database (tergantung pada pengaturan datasets.xml ) sebagian atau benar-benar menangani **hanya yang pertama**   orderBy Sitemap () atau berbeda () Sitemap David Karuga
+    * BUG FIX: Jika data tersebut adalah EDTableFromDatbase dan suatu permintaan telah [sourceCanOrderBy](/docs/server-admin/datasets#sourcecanorderby) dan / atau [sourceCanDoDistinct](/docs/server-admin/datasets#sourcecandodistinct) , maka database dapat (tergantung pada pengaturan dalam datasets.xml ) Sebagian atau sepenuhnya menangani **hanya yang pertama**   orderBy .. () atau berbeda () . Berkat David Karuga.
          
-    * Login: Pengkodean ekstra persen terbaru yang disebabkan masalah dengan beberapa pertanyaan untuk .nc file CF, e.g., "HTTP Status 500 - Kesalahan Query: variabel=station tercantum dua kali dalam daftar variabel hasil. Kevin O'Brien
+    * BUG FIX: Pengkodean ekstra baru-baru ini menyebabkan masalah dengan beberapa kueri untuk .nc Berkas CF, misalnya, "Status HTTP 500 - Query error: stasiun variabel = terdaftar dua kali dalam hasil daftar variabel". Berkat Kevin O 'Brien.
          
-    * BUG FIX: EDDTableDariFiles memiliki kesulitan mengisi ulang dataset ketika salah satu kolom adalah kolom char sejati. About Roland Schweitzer
+    * BUG FIX: EDTableFromFiles mengalami kesulitan memuat ulang suatu data ketika salah satu kolom adalah kolom char sejati. Berkat Roland Schweitzer.
          
-    * Login: EDDGrid Login Tidak dikemas sekarang juga mengkonversi missing\\_value dan \\_FillValue untuk nilai standar sehingga file dengan nilai yang berbeda dapat digregat. Karena perubahan ini, setelah Anda menginstal versi baru ini ERDDAP™ Sitemap [Login Login](/docs/server-admin/additional-information#hard-flag) untuk setiap EDDGrid Login Unpacked dataset di Anda ERDDAP Sitemap
+    * BUG FIX: EDDGrid FromNcFiles Dibongkar sekarang juga mengkonversi missing\\_value dan\\ _ FillValue ke nilai standar sehingga berkas dengan nilai berbeda dapat dikumpulkan. Karena perubahan ini, setelah Anda menginstal versi baru ini ERDDAP™ , silakan set [keras Flag](/docs/server-admin/additional-information#hard-flag) untuk masing-masing EDDGrid FromNcFiles Membongkar data di Anda ERDDAP .
          
-    * IMPROVED: EDDTableDariNcCFFiles sekarang dapat menangani file yang memiliki beberapa sampel\\_dimension. Dataset yang diberikan hanya boleh menggunakan variabel yang menggunakan salah satu contoh\\_dimensions. Ajay Krishnan
+    * IMPROVED: EDTableFromNCFFIles kini dapat menangani berkas yang memiliki beberapa contoh\\ _ dimensi. Suatu dataset yang diberikan hanya harus menggunakan variabel yang menggunakan salah satu contoh\\ _ dimensi. Berkat Ajay Krishnan.
          
-    * IMPROVED: Untuk EDDTableDari...Files,&lt;sortFilesBySourceNames&gt; Sitemap (Sitemap) atau daftar terpisah dari nama sumber variabel. Dalam kasus, nama variabel individu dapat dikelilingi oleh kutipan ganda, misalnya, jika nama memiliki ruang internal.
+    * Untuk EDTableFrom... berkas,&lt;sortFiesBySourceName &gt; sekarang mengijinkan koma dipisahkan (disarankan) atau ruang dipisahkan daftar dari nama sumber variabel. Dalam kedua kasus, nama variabel individu mungkin dikelilingi oleh kutipan ganda, misalnya, jika nama memiliki ruang internal.
 
 ## Versi 1.72{#version-172} 
- (Juli 2016-05-12) 
+ (dirilis 2016-05-12) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap** Login
+*    **Fitur Baru (bagi pengguna) :** Tidak ada.
      
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * NEW EDDTableDariMultidimNcFiles [Sitemap](/docs/server-admin/datasets#eddtablefrommultidimncfiles) adalah alternatif baru untuk EDDTableDariNcFiles. Ini dirancang untuk menangani kelompok file dengan beberapa variabel dengan dimensi bersama, misalnya, var1 \\[ Sitemap \\]  \\[ Login \\] Login \\[ Sitemap \\] Login \\[ Login \\] Sitemap Terima kasih kepada Proyek Argo, Aurélie Briand, dan Roland Schweitzer.
-    * Login: ERDDAP™   (melalui kelas FileVisitorDNLS dan FileVistorSubdir) sekarang mengikuti tautan simbolik di Linux. ERDDAP™ masih tidak mengikuti .lnk pada Windows.
-    * BUG FIX bug diperkenalkan pada 1.70: berbeda + orderBy tidak diperbolehkan dalam satu permintaan. Sekarang mereka lagi. Mereka tidak saling eksklusif / redundansi. David Karuga
-    * Login datasets.xml daftar hitam alamat IP:
-Alamat IP v4 muncul ERDDAP™ sebagai 4 nomor hex yang dipisahkan periode.
-Saya pikir alamat IP v6 muncul sebagai 8 nomor hex usus besar.
-Login ERDDAP™ sekarang mendukung koloni di alamat IP dalam daftar dan :\\* pada akhir daftar untuk memblokir berbagai alamat.
-    * Sitemap ERDDAP™ sekarang menggunakan NetcdfWFileriter untuk menulis .nc file bukan NetcdfFileWriteable. Tidak ada perubahan yang dapat disengaja pada file yang dihasilkan. Ini membuka kemungkinan membuat besar .nc file yang menggunakan .nc 3 64bit ekstensi. Jika Anda ingin/mendapatkan itu, silakan kirim permintaan untuk erd.data at noaa.gov Sitemap
-    * IMPROVED: Banyak tautan ke situs web jarak jauh yang terbaru. Sekarang mereka up-to-date dan digunakan https: Sitemap http : setiap saat.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * NEW EDTableFromMultidimNcFiles [EDTableFromMultidimNcFiles](/docs/server-admin/datasets#eddtablefrommultidimncfiles) adalah alternatif baru untuk EDTableFromNcFiles. Ini dirancang untuk menangani kelompok berkas dengan beberapa variabel dengan dimensi terbagi, mis, var1 \\[ a \\]  \\[ b \\] , Var2 \\[ a \\] , Var3 \\[ b \\] , scalarVar. Berkat Proyek Argo, Aureélie Briand, dan Roland Schweitzer.
+    * BUG FIX: ERDDAP™   (melalui kelas FileVisitorDNLS dan FileVistorSubdir) sekarang mengikuti link simbolik pada Linux. ERDDAP™ masih tidak mengikuti .lnk di Windows.
+    * FIX BUG dari bug diperkenalkan dalam 1.70: berbeda + orderBy tidak diperbolehkan bersama dalam satu permintaan. Sekarang mereka lagi. Mereka tidak saling eksklusif / berlebihan. Berkat David Karuga.
+    * Ubah ke datasets.xml daftar hitam alamat IP:
+Alamat IP v4 muncul ke ERDDAP™ sebagai 4 period- dipisahkan nomor hex.
+Saya pikir IP v6 alamat muncul sebagai 8 kolon- dipisahkan nomor hex.
+Jadi ERDDAP™ sekarang mendukung colons dalam alamat IP dalam daftar itu dan:\\ * di akhir daftar untuk memblokir kisaran alamat.
+    * TERLIBAT: ERDDAP™ sekarang menggunakan NetcdfFileWriter untuk menulis .nc berkas daripada NetcdfFileWriteable yang sudah ditinggalkan. Tidak boleh ada perubahan yang dapat dilihat ke berkas yang dihasilkan. Ini membuka kemungkinan membuat besar .nc berkas yang menggunakan .nc 3 64bit ekstensi. Jika Anda ingin / membutuhkannya, tolong kirimkan permintaan ke erd.data at noaa.gov .
+    * IMPROVED: Banyak link ke situs web jauh yang ketinggalan jaman. Sekarang mereka up-to-date dan gunakan https: bukan http : kapanpun mungkin.
     * Banyak perubahan kecil.
 
 ## Versi 1.70{#version-170} 
  (dirilis 2016-04-15) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap** Login
+*    **Fitur Baru (bagi pengguna) :** Tidak ada.
      
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** Di bawah ini, ada beberapa perubahan yang disarankan untuk dokumentasi dalam file setup.xml Anda.
-Silahkan lakukan perubahan ini sekarang.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** Di bawah ini, ada beberapa perubahan yang direkomendasikan ke dokumentasi dalam berkas setuppxml Anda.
+Tolong buat perubahan ini sekarang.
 30 menit kerja sekarang dapat menghemat jam kebingungan di masa depan.
-    * Perbaikan bug: Masalahnya adalah bahwa permintaan yang diarahkan ke remote ERDDAP gagal dengan karakter yang tidak valid ' | Sitemap Ini hanya terjadi dengan versi terbaru dari Tomcat. Terima kasih kepada Rusty Holleman, Conor Delaney, dan Roy Mendelssohn.
-    * Perbaikan bug: ERDDAP™ sekarang menggunakan versi up-to-date netcdf-java (cerita panjang) yang mencakup dukungan terbaru untuk NcML, yang memperbaiki masalah dengan NcML LogicalReduce tidak bekerja seperti yang diharapkan. Ada beberapa perubahan kecil pada metadata yang Meme it ERDDAP™ netcdf-java .nc Login .hdf .grib, dan file .bufr. Favio Medrano
-    * Login [Login](/docs/server-admin/datasets#eddtableaggregaterows) memungkinkan Anda untuk membuat dataset EDDTable yang digabungkan dari dua atau lebih dataset EDDTable yang memiliki variabel data yang sama menggunakan unit yang sama. Berkat Kevin O'Brien.
-    * Opsi baru untuk EDDTableDariDatabase ( [WordPress.org](/docs/server-admin/datasets#sourcecanorderby) Login [Login](/docs/server-admin/datasets#sourcecandodistinct) ) Pastikan Anda menentukan apakah Meme it ERDDAP™ , database, atau keduanya, menangani berbeda dan orderBy   (dan semua varian) Login David Karuga
-    * Anda sekarang dapat membuat grafik dataset pribadi dan metadata yang tersedia untuk publik melalui yang baru [&lt;GrafikAccessibleTo&lt;Login (/docs/server-admin/dataset#graphsaccessibleto) Login Berkat Emanuele Lombardi.
-    * Sekarang, jika string dilewatkan ke GenerateDataset Xml atau DasDds dikelilingi oleh kutipan ganda, tidak dikutip (seolah-olah itu adalah string JSON) Sitemap Terima kasih kepada John Kerfoot dan Melanie Abecassis.
-    * Login Xml sekarang mendukung "default" untuk mendapatkan default dan "tidak ada" untuk mendapatkan string kosong (mereka bekerja dengan atau tanpa kutipan) Sitemap Ini memecahkan beberapa masalah yang berkaitan dengan melewati string kosong.
-    * Sekarang, di GenerateDataset Login EDDGrid Dari File dan EDDTable DariFiles dataset, jika sampel FileName Anda menentukan "" (string kosong) , itu akan menggunakan fileName pencocokan terakhir dari direktori + regex + recursive=true.
-    * Diperbarui: The displayInBrowser code yang digunakan untuk menampilkan hasil GenerateDatasetsXml dan DasDds pada komputer Linux adalah out-of-date dan memberikan pesan aneh tentang Netscape. Sekarang, ini menggunakan alat Linux modern: xdg-open. Berkat Melanie Abecassis.
-    * Login allDatasets dataset sekarang memiliki "files" kolom, yang menunjukkan URL dasar link /file (jika ada satu) dataset.
-    * Meningkatkan keamanan umum Anda ERDDAP™ dengan mengubah izin yang terkait dengan direktori tomcat dan huruf besar:
-         (Perintah aktual di bawah ini adalah untuk Linux. Untuk OS lain, lakukan perubahan analog.) 
-        * Mengubah "kelompok" menjadi tomcat, nama pengguna Anda, atau nama kelompok kecil yang mencakup tomcat dan semua administrator Tomcat/ ERDDAP Sitemap
-Facebook Twitter Google Plus Pinterest Email
-Login Facebook Twitter Google Plus Pinterest Email
-        * Mengubah izin sehingga tomcat dan kelompok telah membaca, menulis, melaksanakan hak istimewa, misalnya,.
-chmod -R ug+rwx apache-tomcat-_8.0.23_
-Facebook Twitter Google Plus Pinterest Email
-        * Hapus izin pengguna "lain" untuk membaca, menulis, atau melaksanakan:
-chmod -R o-rwx apache-tomcat-_8.0.23_
-Facebook Twitter Google Plus Pinterest Email
-Hal ini penting, karena mencegah pengguna lain dari membaca mungkin informasi sensitif dalam ERDDAP™ file setup, file log, dan file dengan informasi tentang dataset pribadi.
-    * Sistem otentikasi/login direvisi. Berkat Thomas Gardner, Emanuele Lombardi, dan baru pemerintah AS [HTTPS-Only Standar](https://home.dotgov.gov/management/preloading/dotgovhttps/) Sitemap
-        * Otentikasi = opsi terbuka dihapus. Sudah kedaluwarsa.
-        * Baru, direkomendasikan, [otentikasi=google](/docs/server-admin/additional-information#google) opsi menggunakan Google Login (di OAuth 2.0) untuk memungkinkan siapa pun dengan akun email Google (Sitemap Akun yang dikelola Google seperti @noaa.gov ) login
-        * Login [otentikasi=email](/docs/server-admin/additional-information#email) opsi adalah cadangan untuk otentikasi=google. Ini memungkinkan pengguna dengan&lt;pengguna&gt; tag di datasets.xml untuk masuk dengan mengirimkan email dengan tautan khusus.
-        * Di setup.xml Anda, mohon ubah deskripsi untuk&lt;otentikasi&gt;
+    * Perbaikan kutu: Masalahnya adalah permintaan yang diarahkan ke remote ERDDAP gagal dengan karakter ' | 'pesan kesalahan. Ini hanya terjadi dengan versi baru-baru ini Tomcat. Berkat Rusty Holleman, Conor Delaney, dan Roy Mendelssohn.
+    * Perbaikan kutu: ERDDAP™ sekarang menggunakan sebuah up- to-date versi dari netcdf -java (ceritanya panjang) yang termasuk dukungan up- to-date untuk NcML, yang memperbaiki masalah dengan NcML LogicalReduce tidak bekerja seperti yang diharapkan. Mungkin ada beberapa perubahan kecil ke metadata yang ERDDAP™ baca via netcdf -java dari .nc , .hdf , .grib, dan berkas .bufr. Berkat Favio Medrano.
+    * Yang baru [EDTableAggregates Rows](/docs/server-admin/datasets#eddtableaggregaterows) memungkinkan Anda untuk membuat sebuah data Eddable yang digabung dari dua atau lebih data EDTabel yang memiliki variabel data yang sama menggunakan unit yang sama. Terima kasih kepada Kevin O 'Brien.
+    * Pilihan baru untuk basis data EDTableFromData ( [sourceCanOrderBy](/docs/server-admin/datasets#sourcecanorderby) dan [sourceCanDoDistinct](/docs/server-admin/datasets#sourcecandodistinct) ) membiarkan Anda menentukan apakah ERDDAP™ , basis data, atau keduanya, menangani berbeda dan orderBy   (dan semua varian) batasan. Berkat David Karuga.
+    * Anda sekarang dapat membuat grafik data pribadi dan metadata yang tersedia untuk publik melalui [yang baru&lt;graphsAccessibleTo &gt; publik&lt;/ graphsAccessibleTo &gt;] (/ docs / server-admin / datasets # graphsacesibleto) Tandai. Berkat Emanuele Lombardi.
+    * Sekarang, jika string diteruskan ke Dataset GenerateComment Xml atau DasDds dikelilingi oleh kutipan ganda, itu tidak dikutip (seolah-olah itu adalah string JSON) . Berkat John Kerfoot dan Melanie Abecassis.
+    * GenerateDatadasets Xml kini mendukung "default" untuk mendapatkan default dan "nothing" untuk memperoleh string kosong (mereka bekerja dengan atau tanpa kutipan) . Ini memecahkan beberapa masalah yang berhubungan dengan melewati string kosong.
+    * Sekarang, di GenerateDatasets Xml, untuk semua EDDGrid FromFiles dan EDTabel Data fromFiles, jika sampel Nama berkas yang Anda nyatakan adalah "" (string kosong) , ini akan menggunakan berkas yang cocok terakhir dari direktori + regex + rekursif = true.
+    * Diperbarui: Kode display InBrowser yang dipakai untuk menampilkan hasil dari GenerateDatasetsXml dan DasDds pada komputer Linux adalah out-of-date dan memberikan pesan aneh tentang Netscape. Sekarang, ini menggunakan alat Linux modern: xdg-open. Berkat Melanie Abecassis.
+    * The allDatasets dataset sekarang memiliki "files" kolom, yang mengindikasikan URL dasar dari taut berkas (jika ada satu) untuk data.
+    * Meningkatkan keamanan umum Anda ERDDAP™ dengan mengubah izin yang terkait dengan direktori tomcat dan Big ParentDirectory:
+         (Perintah sebenarnya di bawah ini adalah untuk Linux. Untuk OS lain, membuat perubahan analog.) 
+        * Ubah "kelompok" menjadi tomcat, nama pengguna Anda, atau nama kelompok kecil yang termasuk tomcat dan semua administrator Tomcat / ERDDAP , mis.,
+chgrp -R _ your UserName _ apache -to cat- _ 8.0.23 _
+chgrp -R _ your _ Direktori Bijak Nama Pengguna
+        * Ubah perizinan sehingga tomcat dan grup telah membaca, menulis, mengeksekusi hak, e.g,.
+chmod -R ug + rwx apache- to cat- _ 8.0.23 _
+chmod -R ug + rwx _ bigly ParentDirectory _
+        * Hapus izin "lain" untuk membaca, menulis, atau mengeksekusi:
+chmod -R o- rwx apache- to cat- _ 8.0.23 _
+chmod -R o- rwx _ bigly ParentDirectory _
+Hal ini penting, karena mencegah pengguna lain membaca informasi yang mungkin sensitif dalam ERDDAP™ setup berkas, berkas log, dan berkas dengan informasi tentang dataset privat.
+    * Sistem otentikasi / login telah diubah. Berkat Thomas Gardner, Emanuele Lombardi, dan pemerintah AS baru [Hanya Standar HTTP](https://home.dotgov.gov/management/preloading/dotgovhttps/) .
+        * Otentikasi = pilihan openid telah dihapus. Itu keluar dari kencan.
+        * Baru, direkomendasikan, [otentikasi = google](/docs/server-admin/additional-information#google) pilihan menggunakan Google Signable (berbasis OAuth 2.0) untuk mengijinkan siapapun dengan akun surel Google (termasuk Google dikelola akun seperti @noaa.gov ) untuk log in.
+        * Yang baru, [otentikasi = email](/docs/server-admin/additional-information#email) pilihan adalah sebuah backup untuk otentikasi = Google. Ini memungkinkan pengguna dengan&lt;pengguna &gt; tag dalam datasets.xml untuk log in dengan mengirim mereka email dengan link khusus.
+        * Dalam semp.xml anda, tolong ubah deskripsi untuk&lt;otentikasi &gt; untuk menjadi
 ```
             <!-- If you want to restrict access to some datasets, 
             you need to specify the method used for logging on (authentication).
@@ -1567,7 +1582,7 @@ Hal ini penting, karena mencegah pengguna lain dari membaca mungkin informasi se
             -->
 ```
 
-        * Di setup.xml Anda, tambahkan hak ini di bawah&lt;Sitemap Login
+        * Dalam semp.xml Anda, silakan tambahkan ini tepat di bawah&lt;otentikasi &gt; tag
 ```
             <!-- If authentication=google, you must supply your Google Client ID. 
             See
@@ -1583,10 +1598,10 @@ Hal ini penting, karena mencegah pengguna lain dari membaca mungkin informasi se
             <googleClientID></googleClientID>
 ```
 
-        * Sekarang, pengguna yang tidak masuk dapat digunakan http Sitemap https URL (jika Anda telah mengatur&lt;baseHttpsUrl&gt; di setup Anda.xml). Terima kasih kepada baru pemerintah AS [HTTPS-Only Standar](https://https.cio.gov/) Sitemap
-        * Sekarang, Anda dapat mendorong semua pengguna untuk menggunakan https   (Login http ) Sitemap&lt;Login https URL Untuk memaksa pengguna untuk menggunakan hanya https Anda juga harus melakukan perubahan pada pengaturan Apache/Tomcat Anda untuk memblokir non- https Login Terima kasih kepada baru pemerintah AS [HTTPS-Only Standar](https://https.cio.gov/) Sitemap
+        * Sekarang, pengguna yang tidak login dapat menggunakan http atau https URL (jika Anda telah menyiapkan&lt;baseHttpsUrl &gt; dalam setuppxml Anda). Berkat pemerintah AS yang baru [Hanya Standar HTTP](https://https.cio.gov/) .
+        * Sekarang, Anda dapat mendorong semua pengguna untuk menggunakan https   (tidak http ) menurut pengaturan&lt;baseUrl &gt; untuk menjadi https URL. Untuk memaksa pengguna hanya menggunakan https , Anda juga harus membuat perubahan untuk Anda Apache / Tomcat setup untuk memblokir non- https Akses. Berkat pemerintah AS yang baru [Hanya Standar HTTP](https://https.cio.gov/) .
             
-Di setup.xml Anda, mohon ubah deskripsi untuk&lt;Login
+Dalam semp.xml anda, tolong ubah deskripsi untuk&lt;baseUrl &gt; untuk menjadi
 ```
             <!-- baseUrl is the start of the public URL, to which "/erddap" 
             is appended. For example:
@@ -1602,7 +1617,7 @@ Di setup.xml Anda, mohon ubah deskripsi untuk&lt;Login
             -->
 ```
 
-        * Pilihan&lt;Sitemap Login Di setup.xml Anda, mohon ubah deskripsi untuk&lt;passwordEncoding&gt; untuk menjadi
+        * Opsi&lt;kode sandi &gt; berubah. Dalam semp.xml anda, tolong ubah deskripsi untuk&lt;passswordEncoding &gt; menjadi
 ```
             <!-- For "custom" authentication, this specifies how you have 
             stored passwords in the roles tags in datasets.xml.
@@ -1618,7 +1633,7 @@ Di setup.xml Anda, mohon ubah deskripsi untuk&lt;Login
             --> 
 ```
 
-        * Di setup.xml Anda, mohon ubah deskripsi untuk&lt;Login
+        * Dalam semp.xml anda, tolong ubah deskripsi untuk&lt;baseHttpsUrl &gt; menjadi
 ```
             <!-- This is a variant of <baseUrl> which is used when 
             authentication is active and the user is logged in.
@@ -1639,9 +1654,9 @@ Di setup.xml Anda, mohon ubah deskripsi untuk&lt;Login
             --> 
 ```
 
-        * Sekarang, jika listPrivateDatasets=true dalam setup.xml, bahkan kurang informasi akan ditampilkan tentang dataset bahwa pengguna tidak memiliki akses ke.
-    * Sekarang, terutama untuk ketika Anda awalnya mengatur Anda Meme it ERDDAP Anda sekarang dapat memberitahukan ERDDAP™ tidak mencoba berlangganan jarak jauh ERDDAP™ Login Filipina Rocha Freire
-Di setup Anda.xml, tepat sebelum&lt;fontFamily&gt;, silakan tambahkan
+        * Sekarang, jika listPrivateDatasets = true dalam setup.xml, bahkan sedikit informasi akan ditampilkan tentang dataset yang seorang pengguna tidak memiliki akses ke.
+    * Sekarang, terutama ketika Anda awalnya menyiapkan Anda ERDDAP , Anda sekarang dapat memberitahu ERDDAP™ bukan mencoba untuk berlangganan ke remote ERDDAP™ Dataset. Berkat Filipe Rocha Freire.
+Dalam semp.xml Anda, tepat sebelum&lt;Keluarga &gt;, tolong tambahkan
 ```
         <!-- Normally, if you have a EDDGridFromErddap or EDDTableFromErddap 
         dataset in your datasets.xml, it will try to subscribe to the remote 
@@ -1659,468 +1674,468 @@ Di setup Anda.xml, tepat sebelum&lt;fontFamily&gt;, silakan tambahkan
         <subscribeToRemoteErddapDataset>true</subscribeToRemoteErddapDataset>
 ```
 
-    * Dalam setup.xml Anda, dalam instruksi di atas&lt;emailDariAddress&gt;, masukkan:
-Jika memungkinkan, atur ini untuk menggunakan koneksi yang aman (SSL / TLS) ke server email.
-Jika pengaturan Anda tidak menggunakan koneksi yang aman ke server email, silakan lakukan perubahan untuk membuatnya begitu.
-    * Sitemap datasets.xml , tambahkan garis ini ke deskripsi&lt;berlanggananEmailBlacklist&gt; di Anda datasets.xml Sitemap
-Anda dapat menggunakan nama "\\*" untuk daftar hitam seluruh domain, misalnya,\\*Sitemap
-    * Karena perubahan sistem penebangan dalam v1.66, file log tidak pernah terbaru. Selalu ada pesan atau bagian pesan yang menunggu untuk ditulis ke file log. Sekarang, Anda dapat membuatnya terbaru (Sitemap) dengan melihat ERDDAP 's status halaman web dihttp://_your.domain.org_/erddap/status.htmlSitemap
-    * Login
-    * Perubahan kecil (ke String2.canonical) yang harus membantu menjaga hal-hal bergerak cepat ketika Meme it ERDDAP™ sangat sibuk dan juga kesepakatan yang lebih baik dengan sejumlah besar dataset.
-    * Sitemap Disarankan: berhenti menggunakan&lt;Login Sitemap datasets.xml untuk mengkonversi nomor IP dalam dataset&lt; sourceUrl Sitemap (Loginhttp://192.168.#.#/) nama domain (Login http :my.domain.org/) Sitemap Mulai sekarang, berlangganan baru hinggahttp://localhostLoginhttp://127.0.0.1Sitemaphttp://192.168.#.#URL tidak akan diperbolehkan untuk alasan keamanan. Jadi, selalu menggunakan nama domain publik di Meme it&lt; sourceUrl Sitemap (jika diperlukan karena masalah DNS) Anda dapat menggunakan [/etc/hosts tabel di server Anda](https://linux.die.net/man/5/hosts) untuk memecahkan masalah dengan mengkonversi nama domain lokal ke nomor IP tanpa menggunakan server DNS. Anda dapat menguji apakah nama domain tertentu diselesaikan dengan benar dengan menggunakan
-ping _some.domain.name_
-    * Dalam menghasilkanDataset.xml, untuk dataset jarak jauh (Web server) , dihasilkan secara otomatis datasetID s tidak berubah untuk sebagian besar domain. Untuk beberapa domain, bagian pertama (i.e., nama) secara otomatis dihasilkan datasetID akan sedikit berbeda. Meme it Tidak mungkin, nama yang memiliki satu bagian sekarang lebih cenderung memiliki dua bagian. Sebagai contoh, dataset darihttp://oos.soest.hawaii.edusebelumnya menyebabkan datasetID s yang dimulai dengan hawaii\\_, tapi sekarang mengarah ke datasetID hawaii\\_soest\\_ Jika ini menyebabkan masalah bagi Anda, silakan email saya. Mungkin ada pekerjaan.
-    * Driver Cassandra diperbarui untuk cassandra-driver-core-3.0.0.jar dan dengan demikian untuk Cassandra v3. EDDTableDariCassandra tidak mengambil keuntungan dari fitur baru di Cassandra Sitemap Indeks di Cassandra sekarang bisa lebih kompleks, tetapi ERDDAP™ masih menggunakan model indeks Cassandra v2, yang mengasumsikan bahwa kolom yang diindeks dapat langsung ditanyakan dengan '=' Login Login Xml untuk EDDTableDariCassandra tidak lagi mendeteksi kolom dengan indeks; jika indeks sederhana, Anda perlu menentukannya dalam datasets.xml Sitemap Jika Anda memerlukan dukungan untuk indeks yang lebih kompleks atau fitur baru lainnya, silakan email erd.data at noaa.gov Sitemap
-Login Jika Anda masih menggunakan Cassandra 2.x, silakan terus menggunakan ERDDAP™ v1.68 sampai Anda upgrade untuk menggunakan Cassandra 3.x.
-    * Jars dan Classpath - Hampir semua file .jar pihak ketiga yang disertakan diperbarui ke versi terbaru mereka.
-        * slf4j.jar ditambahkan ke /lib dan kelas.
-        * Login jar dan tsik. jar dihapus dari /lib dan kelas.
-        * Jika Anda mendapatkan pesan kesalahan tentang kelas tidak ditemukan ketika Anda mengkompilasi atau menjalankan ERDDAP™ atau salah satu alatnya, bandingkan kelas baris perintah Anda untuk Meme it ERDDAP Sitemap [kelas saat ini](/docs/contributing/programmer-guide#development-environment) untuk mengetahui mana .jars hilang dari kelas Anda.
+    * Dalam semp.xml Anda, dalam instruksi di atas&lt;emailFromaddress &gt;, silakan masukkan:
+Jika mungkin, atur ini untuk menggunakan koneksi aman (SSL / TLS) ke server email.
+Bila setup Anda tak memakai koneksi aman ke server surel, silakan buat perubahan untuk membuatnya begitu.
+    * Dalam Anda datasets.xml , tolong tambahkan baris ini ke deskripsi&lt;subscription EmailBlacklist &gt; dalam anda datasets.xml :
+Anda dapat menggunakan nama "\\*"ke blacklist seluruh domain, misalnya,\\*@ example.com.
+    * Sejak perubahan ke sistem log dalam v1.66, berkas log tidak pernah up- to-date. Selalu ada pesan atau bagian dari pesan yang menunggu untuk ditulis ke berkas log. Sekarang, Anda dapat membuatnya up- to-date (untuk sesaat) Sedang kalangan yang berharta dan berkedudukan, kamu sudi menemui mereka. Keinginanmu sangat besar untuk dapat menyampaikan misi dakwahmu pada mereka. ERDDAP status halaman web di http://_your.domain.org_/erddap/status.html .
+    * HashDigest.......
+    * Sebuah perubahan kecil (Untuk String2.canonical) yang akan membantu menjaga hal-hal bergerak cepat ketika ERDDAP™ sangat sibuk dan juga lebih baik berurusan dengan sejumlah besar data.
+    * Strongly Disarankan: berhenti memakai&lt;convertToPublicSourceUrl &gt; in datasets.xml untuk mengkonversi sebuah nomor IP dalam sebuah dataset 's&lt; sourceUrl &gt; (mis., http://192.168.#.#/ ) kedalam nama domain (mis., http : my.domain.org /) . Mulai sekarang, langganan baru untuk http://localhost , http://127.0.0.1 , dan http://192.168.#.# URLS tidak akan diizinkan untuk alasan keamanan. Jadi silakan selalu menggunakan nama domain publik dalam&lt; sourceUrl &gt; tag (jika dibutuhkan karena masalah DNS) , Anda dapat menggunakan [/ etc / hosts tabel di server Anda](https://linux.die.net/man/5/hosts) untuk memecahkan masalah dengan mengubah nama domain lokal ke nomor IP tanpa menggunakan server DNS. Anda dapat menguji apakah nama domain diberikan akan benar diselesaikan dengan menggunakan
+ping _ some.domain.name _
+    * Dalam generateDatasets.xml, untuk dataset remote (mis., dari server THREDDS) , yang secara otomatis dihasilkan datasetID s tidak berubah untuk sebagian besar domain. Untuk beberapa domain, bagian pertama (yaitu, nama) dari hasil otomatis datasetID Akan sedikit berbeda. Terutama, nama yang memiliki satu bagian sekarang lebih mungkin memiliki dua bagian. Sebagai contoh, data dari http://oos.soest.hawaii.edu Sebelumnya dituntun ke datasetID s yang dimulai dengan hawaii\\ _, tapi sekarang menyebabkan datasetID s yang dimulai dengan hawaii\\ _ soest\\ _. Jika ini menyebabkan masalah bagi Anda, silakan email saya. Mungkin ada solusi.
+    * Sopir Cassandra diperbarui menjadi supir taksi dan pengemudi-koret-3.0.0.0.jar dan dengan demikian untuk Cassandra v3. V3. Indeks di Cassandra sekarang bisa lebih kompleks, tapi ERDDAP™ masih menggunakan model indeks Cassandra v2, yang mengasumsikan bahwa kolom indeks dapat secara langsung diquery dengan '=' batasan. GenerateDatadasets Xml untuk EDTableFromCassandra tidak lagi mendeteksi kolom dengan indeks; jika indeks sederhana, Anda perlu menspesifikasinya datasets.xml dengan tangan. Bila Anda memerlukan dukungan untuk indeks yang lebih kompleks atau fitur baru lainnya, silakan surel erd.data at noaa.gov .
+&#33;&#33; Jika Anda masih menggunakan Cassandra 2.x, silakan terus menggunakan ERDDAP™ V1.68 sampai kau meng-upgrade penggunaan Cassandra 3.xx.
+    * Jars dan Classpith -- Hampir semua berkas .jar pihak yang disertakan ke versi terbaru mereka.
+        * slf4j.jar ditambahkan ke / lib dan classpath tersebut.
+        * Joid. jar dan tsik. jar dihapus dari / lib dan classpath tersebut.
+        * Bila Anda mendapat pesan galat tentang kelas yang tak ditemukan ketika Anda mengkompilasi atau berjalan ERDDAP™ atau salah satu alat, membandingkan classpath baris perintah Anda ke ERDDAP ' [classpath saat ini](/docs/contributing/programmer-guide#development-environment) untuk mencari tahu mana .toples yang hilang dari kelas Anda.
 
 ## Versi 1.68{#version-168} 
- (FacebookTwitterGoogle+) 
+ (dirilis 2016-02-08) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap** Login
+*    **Fitur Baru (bagi pengguna) :** Tidak ada.
      
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    *    [ EDDGrid DariFiles Aggregation melalui Nama File atau Metadata Global](/docs/server-admin/datasets#aggregation-via-file-names-or-global-metadata) Login
-Semua variasi EDDGrid Dari File sekarang dapat mengumpulkan sekelompok file dengan menambahkan dimensi paling kiri baru, biasanya waktu, berdasarkan nilai yang berasal dari setiap nama file atau dari nilai atribut global yang ada di setiap file.
-    * IMPROVED: Kami sebelumnya menyarankan bahwa Anda mungkin ingin membuat EDDGrid Dari dataSet Erddap di Anda datasets.xml jplMU RSS T dataset di kami ERDDAP Sitemap Karena sekarang ada versi yang lebih baru dari dataset itu, dataset sekarang dideprecated. Jadi jika Anda memiliki dataset di Anda Meme it ERDDAP™ mohon tambahkan dataset baru ini
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    *    [ EDDGrid Agregasi FromFiles melalui Nama Berkas atau Global Metadata](/docs/server-admin/datasets#aggregation-via-file-names-or-global-metadata) --
+Semua variasi EDDGrid FromFiles kini dapat mengumpulkan sekelompok berkas dengan menambahkan dimensi paling kiri yang baru, biasanya waktu, berdasarkan nilai yang berasal dari setiap nama berkas atau dari nilai atribut global yang ada di setiap berkas.
+    * Kami sebelumnya menyarankan bahwa Anda mungkin ingin membuat EDDGrid FromErddap dataset dalam Anda datasets.xml yang direferensikan dan re-dilayani jpLMU RSS T dataset di kami ERDDAP . Karena sekarang ada versi baru dari data tersebut, data tersebut tidak berlaku lagi. Jadi jika Anda memiliki data yang di Anda ERDDAP™ , tolong tambahkan data baru ini
 ```
         <dataset type="EDDGridFromErddap" datasetID="jplMURSST41" active="true">  
           <!-- Multi-scale Ultra-high Resolution (MUR) SST analysis fv04.1, Global, 0.011 Degree, Daily -->  
           <sourceUrl>https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41</sourceUrl>  
         </dataset>  
 ```
-Jika Anda ingin menghapus jplMU lama RSS T dataset dari Anda ERDDAP™   (itu pilihan Anda) mengubah pengaturan aktif dari "true" menjadi "false".
-    * Perbaikan bug: Silakan periksa bigParentDirectory yang Anda tentukan dalam setup Anda.xml. Jika Anda tidak menaruh bulu mata pada akhir&lt;bigParentDirectory&gt; nama, kemudian ERDDAP™ akan membuat beberapa direktori dengan menerapkan kata-kata langsung ke nama yang Anda tentukan, bukan membuat subdirectories. Mulai dengan versi 1.68, ERDDAP™ menambahkan bulu mata pada akhir nama direktori jika Anda tidak menentukan satu. Jadi jika Anda sebelumnya tidak menentukan bulu mata di akhir, maka ketika Anda menginstal ERDDAP™ v1.68 Anda perlu memindahkan dan mengganti nama direktori tersebut **Sitemap** Anda mematikan lama Meme it ERDDAP™ Login **Sitemap** Anda memulai ERDDAP Sitemap Sebagai contoh, jika Anda benar-benar menentukan besarParentDirectory sebagai /home/erddapBPD (tidak ada garis bulu mata) Login ERDDAP™ telah membuat direktori seperti Meme it
-Facebook Twitter Google Plus Pinterest Email
-/home/erddapBPDcopy
-Facebook Twitter Google Plus Pinterest Email
-/home/erddapBPDflag
-Login
-/home/erddapBPDlucene
-dan file bernama /home/erddapBPDsubscriptionsV1.txt,
-maka Anda perlu memindahkan dan mengganti nama mereka untuk menjadi Meme it
-WordPress.org
-/home/erddapBPD/copy
-Facebook Twitter Google Plus Pinterest Email
-/home/erddapBPD/flag
-/home/erddapBPD/log
-/home/erddapBPD/lucene
-dan /home/erddapBPD/subscriptionsV1.txt
-    * Perbaikan bug: Ada bug di EDDGrid LonPM180 di ERDDAP™ v1.66 yang terjadi ketika dataset anak adalah EDDGrid Login
-    * Perbaikan bug: Ada bug di EDDGrid Dari File dan EDDTable DariFiles di ERDDAP™ v1.66 yang disebabkan&lt;updateEveryNMillis&gt; untuk mengabaikan pertama kalinya dataset dimuat setelah restart.
-    * Perbaikan bug / Fitur Baru: Jika dataset anak dalam EDDGrid Sitemap EDDGrid Fotokopi EDDGrid Sitemap EDDGrid LonPM180, EDDGrid SideBySide, EDDTableCopy, atau EDDTableDari EDDGrid adalah dataset ...DariErddap, bahwa dataset induk sekarang berlangganan ke bawah ERDDAP™ Login Sitemap ERDDAP™ dataset adalah dalam yang sama ERDDAP™ berlangganan dan validasinya dilakukan secara langsung; Anda tidak akan mendapatkan email meminta Anda untuk memvalidasi berlangganan. Jika sistem berlangganan untuk Anda ERDDAP™ dimatikan, set&lt;reloadEveryNMinutes&gt; pengaturan dataset induk ke nomor kecil (60?) sehingga tetap terbaru. Meme it
-    * Perbaikan bug / Fitur Baru: Jika dataset anak dalam EDDGrid Sitemap EDDGrid Fotokopi EDDGrid Sitemap EDDGrid LonPM180, EDDGrid SideBySide, EDDTableCopy, atau EDDTableDari EDDGrid memiliki aktif="false", bahwa dataset anak sekarang skipped.
+Jika Anda ingin menghapus jpLMU lama RSS T datet dari Anda ERDDAP™   (itu pilihan Anda) , ubah konfigurasi aktif dari "true" menjadi "false".
+    * Perbaikan kutu: Harap periksa Big ParentDirectory yang anda spesifikasikan dalam sebup.xml anda. Jika Anda tidak meletakkan garis miring di akhir&lt;nama BigParentDirectory &gt;, maka ERDDAP™ akan membuat beberapa direktori dengan menambahkan kata-kata langsung ke nama yang Anda tentukan, daripada membuat subdirektori. Dimulai dengan versi 1.68, ERDDAP™ menambahkan garis miring ke akhir nama direktori jika anda tidak menspesifikasikan satu. Jadi jika Anda sebelumnya tidak menentukan slash di akhir, maka ketika Anda memasang ERDDAP™ v1.68 anda perlu untuk memindahkan dan mengganti nama direktori tersebut **sesudah** Anda mematikan yang lama ERDDAP™ dan **sebelum** Anda memulai baru ERDDAP . Misalnya, jika Anda salah menspesifikasikan bigParentDirectory sebagai / home / erdlapBPD (tidak ada akhiran slash) dan ERDDAP™ telah salah membuat direktori seperti
+/ rumah / erddapBPDcache
+/ rumah / erddafBPDcopy
+/ rumah / erddapBPDdatet
+/ rumah / erddafBPDflag
+/ rumah / erddapBPDlogs
+/ rumah / erddapBPDlucene
+dan sebuah berkas bernama / home / erdlapBPDsubscritionsV1.txt,
+maka Anda perlu bergerak dan mengubah nama mereka menjadi
+/ rumah / erddapBPD / cache
+/ home / erddafBPD / copy
+/ home / erddapBPD / dataset
+/ home / erddafBPD / flag
+/ rumah / erddasBPD / log
+/ home / erddapBPD / lucene
+dan / home / erddapBPD / subscription V1.txt
+    * Perbaikan kutu: Ada bug di EDDGrid LonPM180 in ERDDAP™ v1.66 yang terjadi ketika data anak adalah EDDGrid FromErddap.
+    * Perbaikan kutu: Ada bug di EDDGrid FromFiles dan EDTabel FromFiles in ERDDAP™ v1.66 yang menyebabkan&lt;updateEveryNMillis &gt; diabaikan pertama kali data dimuat setelah restart.
+    * Perbaikan bug / Fitur Baru: Jika data anak dalam EDDGrid Aggregates ExistingDimension, EDDGrid Salin, EDDGrid FromEDTable, EDDGrid LonPM180, EDDGrid Sisi Sisi, EDDTableCopy, atau EDTableFrom EDDGrid adalah... fromErddap dataseet, yang induk data sekarang subsator ke yang mendasarinya ERDDAP™ Dataset. Jika mendasari ERDDAP™ dataset dalam sama ERDDAP™ , langganan dan validasi dilakukan secara langsung, Anda tidak akan mendapatkan email meminta Anda untuk memvalidasi langganan. Jika tidak, jika sistem langganan untuk Anda ERDDAP™ dimatikan, set&lt;reloadEveryNMinutes &gt; konfigurasi untuk dataset induk ke sebuah nomor smallish (60?) sehingga tetap up-to-date.
+    * Perbaikan bug / Fitur Baru: Jika data anak dalam EDDGrid Aggregates ExistingDimension, EDDGrid Salin, EDDGrid FromEDTable, EDDGrid LonPM180, EDDGrid Sisi Sisi, EDDTableCopy, atau EDTableFrom EDDGrid memiliki aktif = "false", bahwa data anak sekarang dilewati.
 
 ## Versi 1.66{#version-166} 
- (dirilis 2016-01-19) 
+ (dirilis 2016-01- 19) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap** 
-    * Login (Sitemap) sekarang memiliki nilai turun pada kapak. Meme it Untuk mendapatkan ini ketika menggunakan halaman web Make A Graph, mengubah sumbu Y baru: pengaturan akhir (Login) turun. Atau, dalam URL yang meminta grafik, gunakan 3rd opsional baru ' | Parameter [Login Sitemap yRange switch](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#GraphicsCommands) , yang tidak bisa (Login) , benar, atau t untuk mendapatkan nilai akhir, atau menggunakan palsu atau f untuk mendapatkan nilai turun. Sitemap | nilai-nilai palsu tidak sensitif. Berkat Chris Fullilove, John Kerfoot, Lukas Campbell, dan Cara Wilson.
-    * Pengguna sekarang dapat menentukan warna latar belakang untuk grafik dengan menambahkan &.bgColor=0x_ AARRGGBB_ beralih ke URL yang meminta grafik. Lihat .bgColor di bagian Perintah Grafik [Login](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#GraphicsCommands) Login [ tabledap ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#GraphicsCommands) Sitemap Terima kasih kepada John Kerfoot dan Lukas Campbell.
-    * Untuk set data tabel, batasan sekarang dapat merujuk ke min (_someVariableName_) atau maks (_someVariableName_) Sitemap Sitemap [Login () dan maks () ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#min) Sitemap Terima kasih kepada John Kerfoot.
-    * Untuk set data tabel, batasan waktu yang digunakan [Sitemap](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#now) sekarang dapat menentukan unit waktu mili detik atau milis.
-    * Permintaan untuk gambar dataset tabular sekarang membuat peta (bukan grafik) jika variabel x dan y longitude-like dan variabel seperti latitude (unit yang kompatibel) Sitemap Terima kasih kepada Rich Signell.
-    * Perbaikan bug: Label dan kutu sumbu waktu kadang-kadang memiliki penyimpangan aneh ketika meminta beberapa grafik secara bersamaan (e.g., di halaman web) Sitemap Masalahnya adalah bug di perpustakaan grafis SGT yang ERDDAP™ Login (satu variabel adalah "statis" yang seharusnya tidak) Sitemap Terima kasih kepada Bradford Butman.
+*    **Fitur Baru (bagi pengguna) :** 
+    * Grafik (bukan peta) sekarang dapat menurunkan nilai pada sumbu. Untuk mendapatkan ini ketika memakai laman web Buat A Graph, ubah sumbu Y baru: seting naik (baku) Untuk turun. Atau, dalam URL yang meminta suatu grafik, gunakan opsional baru 3rd ' | 'parameter untuk [& .x Jarak dan / atau &. switch yRange](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#GraphicsCommands) , yang dapat apa-apa (baku) , benar, atau t untuk mendapatkan nilai naik, atau menggunakan salah atau f untuk mendapatkan nilai menurun. Benar | nilai palsu tidak sensitif. Berkat Chris Fullilove, John Kerfoot, Luke Campbell, dan Cara Wilson.
+    * Pengguna kini dapat menentukan warna latar belakang grafik dengan menambahkan & .bgColor = 0x _ AARRGGBB _ switch ke URL yang meminta grafik. Lihat .bgColor di bagian Graphics Commands dari [griddap](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#GraphicsCommands) dan [ tabledap ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#GraphicsCommands) dokumentasi. Berkat John Kerfoot dan Luke Campbell.
+    * Untuk dataset tabular, batasan sekarang dapat merujuk ke min (_ Beberapa VariableName _) atau maksimal (_ Beberapa VariableName _) . Lihat [min () dan max () ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#min) . Berkat John Kerfoot.
+    * Untuk dataset tabular, batasan waktu yang digunakan [sekarang](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#now) sekarang dapat menentukan satuan waktu milidetik atau millis.
+    * Permintaan gambar dari suatu data tabular kini membuat sebuah peta (bukan grafik) jika variabel x dan y longitude-seperti dan latitude-seperti variabel (satuan kompatibel) . Berkat Rich Signgell.
+    * Bug fix: Waktu sumbu label dan kutu kadang-kadang memiliki penyimpangan aneh ketika meminta multiple grafik secara bersamaan (mis., pada halaman web) . Masalahnya adalah bug dalam perpustakaan grafis SGT yang ERDDAP™ gunakan (satu variabel adalah "statis" yang seharusnya tidak) . Berkat Bradford Butman.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Ini adalah risiko keamanan untuk menempatkan kata sandi email Anda dalam file teks biasa seperti setup.xml. Untuk mengurangi masalah itu, kami sangat menyarankan Anda:
-        1. Mengatur akun email hanya untuk ERDDAP 's use, misalnya, erddap@yourInstitution.org . Itu memiliki manfaat lain juga; sangat baik, lebih dari satu ERDDAP™ administrator kemudian dapat diberikan akses ke akun email itu.
-        2. Membuat izin dari file setup.xml rw (Login) untuk pengguna yang akan menjalankan Tomcat dan ERDDAP™   (user=tomcat?) dan tidak ada izin (tidak membaca atau menulis) untuk kelompok dan pengguna lain. Filipina Rocha Freire
-    * Login [Login](/docs/server-admin/additional-information#archiveadataset) alat menyederhanakan membuat .tar  .gz arsip dengan subset dataset dalam format yang cocok untuk pengarsipan (Sitemap NOAA Login) Sitemap Ini harus berguna untuk banyak ERDDAP™ administrator dalam banyak situasi, tetapi terutama untuk kelompok dalam NOAA Sitemap
-    * Jenis dataset baru [ EDDGrid DariNcFilesUnpacked](/docs/server-admin/datasets#eddgridfromncfilesunpacked) adalah varian EDDGrid Login Perbedaannya adalah bahwa kelas ini membongkar setiap file data sebelum EDDGrid DariFiles melihat file:
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Ini adalah resiko keamanan untuk menempatkan sandi email Anda dalam berkas teks biasa seperti setup p.xml. Untuk mengurangi masalah itu, kami sangat merekomendasikan anda:
+        1. Mengatur akun email hanya untuk ERDDAP 's use, mis. erddap @ yourInstitution.org. (Yang demikian itu) hal yang telah disebutkan itu (adalah karunia) kesenangan (yang lain). ERDDAP™ Administrator kemudian dapat diberikan akses ke akun email tersebut.
+        2. Membuat izin dari berkas setup.xml rw (baca + tulis) untuk pengguna yang akan menjalankan Tomcat dan ERDDAP™   (pengguna = tomcat?) dan tidak ada izin (tidak membaca atau menulis) untuk grup dan pengguna lainnya. Berkat Filipe Rocha Freire.
+    * Yang baru [Archiveadataset](/docs/server-admin/additional-information#archiveadataset) alat menyederhanakan membuat .tar  .gz archive dengan sebuah subset dari sebuah dataset dalam format yang cocok untuk archive (bisa dibilang, di NOAA NCEI) . Ini harus berguna bagi banyak orang ERDDAP™ administrator dalam banyak situasi, tetapi terutama untuk kelompok dalam NOAA .
+    * Jenis data baru [ EDDGrid FromNcFilesUnpacked](/docs/server-admin/datasets#eddgridfromncfilesunpacked) adalah varian EDDGrid FromNcFiles. Perbedaannya adalah bahwa kelas ini membongkar setiap file data sebelum EDDGrid FromFiles melihat berkas:
         
-        * Ini membongkar variabel dikemas yang digunakan scale\\_factor dan/atau add\\_offset Sitemap
-        * Ini mempromosikan variabel integer yang memiliki atribut \\_Unsigned=true ke jenis data integer yang lebih besar sehingga nilai-nilai muncul sebagai nilai yang belum ditentukan. Misalnya, \\_Unsigned=true byte (8 g) variabel menjadi pendek yang ditandatangani (16 g) variabel.
-        * Ini mengkonversi \\_FillValue dan missing\\_value nilai menjadi NaN (atau MAX\\_VALUE untuk jenis data integer) Sitemap
+        * Ini membongkar paket variabel yang digunakan scale\\_factor dan / atau add\\_offset .
+        * Ini mempromosikan variabel integer yang memiliki\\ _ Unsigned = atribut true ke sebuah integer yang lebih besar tipe sehingga nilai muncul sebagai nilai unsigned. Sebagai contoh, sebuah\\ _ Unsigned = true byte (8 bit) variabel menjadi sebuah signed pendek (16 bit) variabel.
+        * Ini mengubah\\ _ FillValue dan missing\\_value nilai menjadi NaN 's (atau MAX\\ _ NILAI untuk tipe data integer) .
         
-Keuntungan besar dari kelas ini adalah bahwa ia memberikan cara untuk berurusan dengan nilai yang berbeda scale\\_factor Login add\\_offset , \\_FillValue, atau missing\\_value dalam file yang berbeda dalam koleksi. Jika tidak, Anda harus menggunakan alat seperti Meme it [Login](/docs/server-admin/datasets#ncml-files) Sitemap [ NCO ](/docs/server-admin/datasets#netcdf-operators-nco) untuk memodifikasi setiap file untuk menghapus perbedaan sehingga file dapat ditangani oleh EDDGrid Login Untuk kelas ini untuk bekerja dengan benar, file harus mengikuti standar CF untuk atribut terkait. Terima kasih kepada Philippe Makowski.
-    * Jenis dataset baru [ EDDGrid LonPM180](/docs/server-admin/datasets#eddgridlonpm180) memungkinkan Anda mengubah dataset yang memiliki beberapa nilai longitude lebih dari 180 (e.g., kisaran 0 hingga 360) ke dalam dataset dengan nilai longitude dalam kisaran -180 hingga 180 (Longitude Plus atau Minus 180, maka nama) Sitemap Keuntungan besar untuk menawarkan set data dengan nilai longitude dalam kisaran -180 hingga 180 adalah bahwa OGC Sitemap (Login WMS ) membutuhkan nilai longitude dalam kisaran ini. Terima kasih kepada Lynne Tablewski, Fabien Guichard, Philippe Makowski, dan Martin Spel.
-2016-01-26 Update: Eeek&#33; Ini memiliki bug yang terjadi ketika dataset anak adalah EDDGrid DariErddap yang merujuk pada dataset yang sama ERDDAP Sitemap Bug ini tetap ERDDAP™ v1.68.
-    * Sitemap [Login](/docs/server-admin/datasets#generatedatasetsxml) , jenis dataset khusus baru, EDDGrid LonPM180DariErddapKatalog, memungkinkan Anda menghasilkan datasets.xml Sitemap EDDGrid LonPM180 dataset dari semua EDDGrid dataset dalam sebuah ERDDAP yang memiliki nilai longitude lebih dari 180.
-    * Untuk semua EDDGrid Login datasets.xml Anda sekarang dapat menggunakan opsional
-Sitemap&lt;Sitemap Login WMS Sitemap | Login&lt;Sitemap Login WMS Sitemap (/docs/server-admin/dataset#accessibleviawms)   (default=true) Sitemap Menyiapkan ini untuk palsu menonaktifkan Meme it WMS Layanan untuk dataset ini. Jika benar, dataset masih tidak dapat diakses melalui WMS untuk alasan lain (e.g., tidak ada lat atau lon axes) Sitemap Ini sangat berguna untuk dataset yang ada pada mereka sendiri dan dibungkus dengan EDDGrid LonPM180, sehingga hanya versi LonPM180 dapat diakses melalui WMS Sitemap
-    * Dalam setup.xml, Anda dapat menentukan warna default yang berbeda untuk latar belakang grafik. Warna ditentukan sebagai nilai heksadecimal 8 digit dalam bentuk 0x_AARRGGBB_, di mana AA, RR, GG, dan BB adalah opacity, komponen merah, hijau dan biru, masing-masing, ditentukan sebagai nomor heksadecimal 2-digit. Perhatikan bahwa kanvas selalu putih buram, jadi (Login Login) transparan grafik latar belakang warna campuran ke kanvas putih. default adalah biru muda:
+Keuntungan besar dari kelas ini adalah bahwa itu menyediakan cara untuk menangani dengan nilai-nilai yang berbeda scale\\_factor , add\\_offset ,\\ _ FillValue, atau missing\\_value dalam file yang berbeda dalam koleksi. Jika tidak, Anda harus menggunakan alat seperti [NcML](/docs/server-admin/datasets#ncml-files) atau [ NCO ](/docs/server-admin/datasets#netcdf-operators-nco) untuk memodifikasi setiap berkas untuk menghapus perbedaan sehingga berkas dapat ditangani EDDGrid FromNcFiles. Untuk kelas ini untuk bekerja dengan baik, file harus mengikuti standar CF untuk atribut terkait. Berkat Philippe Makowski.
+    * Jenis data baru [ EDDGrid LonPM180](/docs/server-admin/datasets#eddgridlonpm180) memungkinkan Anda mengubah dataset yang memiliki beberapa nilai bujur lebih besar dari 180 (mis., jangkauan 0 ke 360) ke dataset dengan nilai bujur dalam jangkauan -180-180 (Longitude Plus atau Minus 180, maka nama) . Keuntungan besar untuk menawarkan dataset dengan nilai-nilai bujur dalam kisaran -180 sampai 180 adalah bahwa OGC layanan (mis., WMS ) membutuhkan nilai bujur dalam kisaran ini. Berkat Lynne Tabasski, Fabien Guichard, Philippe Makowski, dan Martin Spel.
+2016-01- 26 Eek&#33; Ini memiliki bug yang terjadi ketika data anak adalah EDDGrid FromErddap yang mereferensikan sebuah dataset dalam sama ERDDAP . Bug ini tetap di ERDDAP™ V1.68.
+    * Masuk [GenerateDatasetsXml](/docs/server-admin/datasets#generatedatasetsxml) , jenis data khusus baru, EDDGrid LonPM180FromErddapCatalog, memungkinkan Anda menghasilkan datasets.xml untuk EDDGrid Data LonPM180 dari semua EDDGrid dataset dalam ERDDAP yang memiliki nilai bujur lebih dari 180.
+    * Untuk semua EDDGrid dataset, in datasets.xml Anda sekarang dapat menggunakan opsional
+[&lt;akses Via WMS &gt; true | salah&lt;/ akses Via WMS &gt;] (/ docs / server-admin / datasets # accessiblacems)   (baku = true) . Menata ini ke false secara paksa menonaktifkan WMS layanan untuk data ini. Jika bernilai benar (true), data mungkin masih tidak dapat diakses melalui WMS untuk alasan lain (mis., tidak ada lat atau lon sumbu) . Hal ini sangat berguna untuk data yang ada sendiri dan dibungkus oleh EDDGrid LongPM180, sehingga hanya versi LonPM180 yang dapat diakses melalui WMS .
+    * Dalam sem.xml, Anda dapat menentukan warna baku yang berbeda untuk latar belakang grafik. Warna ini dinyatakan sebagai nilai 8digit heksadesimal dalam bentuk 0x _ AARRGGBB _, dimana AA, RR, GG, dan BB adalah opasitas, merah, hijau dan biru komponen, secara hormat, dinyatakan sebagai angka 2- digit heksadesimal. Perhatikan bahwa kanvas selalu buram putih, jadi (semi -) Warna latar belakang grafik transparan menyatu ke kanvas putih. Baku adalah biru muda:
 ```
         <graphBackgroundColor>0xffccccff</graphBackgroundColor>  
 ```
-Terima kasih kepada John Kerfoot dan Lukas Campbell.
-    * Dalam setup.xml, Anda sekarang dapat menentukan ukuran maksimum untuk [Login](/docs/server-admin/additional-information#log)   (ketika berganti nama menjadi log. Meme it Login sebelumnya dan log baru. txt dibuat) MegaBytes Minimal diperbolehkan adalah 1. Maksimum diperbolehkan adalah 2000. default adalah 20 (Login) Sitemap Contoh:
+Berkat John Kerfoot dan Luke Campbell.
+    * Dalam semp.xml, Anda sekarang dapat menentukan ukuran maksimum untuk [berkas log](/docs/server-admin/additional-information#log)   (ketika diganti nama ke log. txt. sebelumnya dan sebuah log baru. txt dibuat) , di MegaBytes. Minimal diperbolehkan adalah 1. Maksimum diperbolehkan adalah 2000. Baku adalah 20 (MB) . Misalnya:
 ```
         <logMaxSizeMB>20</logMaxSizeMB>
 ```
-    * Sitemap datasets.xml Sitemap&lt;Login (/docs/server-admin/datasets#fgdcfile) Sitemap&lt;iso19File115&gt;] (/docs/server-admin/datasets#iso19115file) sekarang file lokal (Sitemap) URL (yang akan diunduh sehingga terdapat salinan lokal) Sitemap Sitemap ERDDAP™ tidak bisa mengunduh file, pemuatan dataset akan terus tetapi dataset tidak akan memiliki file fgdc atau iso19115.
-    *    EDDGrid Dari File dan EDDTable Dari Files dataset sekarang dapat melakukan QuickRestart (sistem yang ERDDAP™ mencoba untuk menggunakan ketika dataset pertama dimuat ketika ERDDAP™ direstart) Sitemap Ini mempercepat restart ERDDAP Sitemap
-2016-01-26 Update: Eeek&#33; Ini memiliki bug yang menyebabkan&lt;updateEveryNMillis&gt; untuk mengabaikan pertama kalinya dataset dimuat setelah restart. Bug ini tetap ERDDAP™ v1.68.
-    * Peningkatan umum pada sistem QuickRestart memungkinkan ERDDAP™ untuk memuat dataset lebih cepat ketika ERDDAP™ direstart.
-    * Sitemap EDDGrid Dari File dan EDDTable Dari Files subclasses sekarang menerima baru&lt;pathRegex&gt; tag, biasanya ditentukan tepat di bawah ini&lt;Sitemap Jika berulang adalah "true", hanya jalur subdirectory penuh yang sesuai dengan pathRegex (default=".\\*") Sitemap Demikian pula,&lt; sourceUrl s&gt; tag dalam sebuah EDDGrid AggregateExistingDimensi sekarang termasuk atribut pathRegex (default=".\\*") Sitemap
-    * Login&lt;sebagianRequestMaxBytes&gt; dalam setup.xml sekarang 490000000 (490 g) Sitemap Ini menghindari beberapa masalah / waktu yang berkaitan dengan mendapatkan data dari server data THREDDS. Terima kasih kepada Leslie Thorne.
-    * Perubahan kecil pada sistem log harus memungkinkan ERDDAP™ menjadi lebih responsif ketika sangat, sangat sibuk. Informasi sekarang ditulis ke file log di drive disk di chunks yang cukup besar. Keuntungannya adalah bahwa ini sangat efisien -- ERDDAP™ tidak akan pernah memblokir menunggu informasi yang akan ditulis ke file log. Kerugian adalah bahwa log akan hampir selalu berakhir dengan pesan parsial, yang tidak akan selesai sampai chunk berikutnya ditulis.
-    * Perbaikan bug yang berkaitan dengan inotify dan [&lt;Login (/docs/server-admin/dataset#updateeverynmillis) sistem untuk EDDGrid Dari File dan EDDTable DariFiles dataset: Tidak perlu lagi untuk menentukan besar fs.inotify.max\\_user\\_watches atau fs.inotify.max\\_user\\_instances. Ada bug di Java yang menyebabkan beberapa bagian Java Sistem inotify/WatchDirectory untuk tidak sampah yang dikumpulkan ketika mereka selesai; akhirnya, jumlah jam tangan atau kasus zombie akan melebihi jumlah maksimum yang ditentukan. ERDDAP™ sekarang bekerja di sekitar ini Java Login
-Juga, jumlah benang inotify tercantum pada halaman web status.html, sehingga Anda dapat mengawasi penggunaannya. Biasanya, ada 1 inotify benang per EDDGrid Dari File dan EDDTable DariFiles dataset.
-    * Perbaikan bug: di banyak tempat, bukan kesalahan yang dihadapi kembali, kesalahan baru dihasilkan yang hanya menyertakan versi singkat dari pesan kesalahan asli dan tanpa jejak tumpukan. Sekarang, ketika kesalahan baru dihasilkan, itu benar termasuk seluruh e.g terkecuali asli, lempar pengecualian baru ("beberapa pesan baru", e) Sitemap
-Terima kasih kepada Susan Perkins.
-    * Perbaikan bug: sampai baru-baru ini (v1.64?) Sitemap datasetID URL diminta, ERDDAP™ akan menambahkan .html ke URL. Dalam v1.64, ini gagal (URL format yang salah dihasilkan dan kemudian gagal) Sitemap Sekarang ini bekerja lagi. Terima kasih kepada Chris Fullilove.
+    * Masuk datasets.xml [&lt;fgdcFile &gt;] (/ docs / server-admin / datasets # fgdcfile) atau [&lt;iso191115File &gt;] (/ docs / server-admin / datasets # iso191115file) kini dapat menjadi berkas lokal (seperti sebelumnya) atau URL (yang akan diunduh sehingga ada salinan lokal) . Jika ERDDAP™ tidak dapat mengunduh berkas, pemuatan data akan dilanjutkan tetapi data tidak akan memiliki berkas fgdc atau iso19115.
+    *    EDDGrid FromFiles dan EDTabel Data fromFiles kini dapat melakukan a quickRestart (sistem yang ERDDAP™ mencoba menggunakan ketika dataset pertama kali dimuat ketika ERDDAP™ dijalankan ulang) . Ini mempercepat memulai kembali ERDDAP .
+2016-01- 26 Eek&#33; Ini memiliki bug yang menyebabkan&lt;updateEveryNMillis &gt; diabaikan saat pertama kali data dimuat setelah restart. Bug ini tetap di ERDDAP™ V1.68.
+    * Peningkatan umum pada sistem restart cepat memungkinkan ERDDAP™ untuk memuat data lebih cepat ketika ERDDAP™ dimulai kembali.
+    * Semua EDDGrid FromFiles dan EDTabel FromFiles subclasss now accept a new&lt;pathRegex &gt; tag, biasanya dispesifikasikan tepat di bawah&lt;rekursif &gt;. Bila rekursif adalah "true", hanya jalur subdirektori penuh yang cocok dengan pathRegex (default =. "\\ *") akan diterima. Demikian pula,&lt; sourceUrl s &gt; tag dalam sebuah EDDGrid Agregates ExistingDimension kini dapat menyertakan atribut pathRegex (default =. "\\ *") .
+    * Baku untuk&lt;Sebagian Permintaan MaxBytes &gt; dalam setup.xml sekarang 490000000 (~ 490 MB) . Hal ini menghindari beberapa masalah / waktu terkait dengan mendapatkan data dari server data THREDDS. Berkat Leslie Thorne.
+    * Perubahan kecil ke sistem log seharusnya memungkinkan ERDDAP™ menjadi lebih responsif ketika sangat, sangat sibuk. Informasi sekarang ditulis ke berkas log pada disk drive dalam potongan cukup besar. Keuntungan adalah bahwa ini sangat efisien - ERDDAP™ tidak akan pernah memblokir menunggu informasi yang akan ditulis ke berkas log. Kerugian adalah bahwa log hampir selalu akan berakhir dengan pesan parsial, yang tidak akan selesai sampai potongan berikutnya ditulis.
+    * Perbaikan kutu terkait inotify dan [&lt;updateEveryNMillis &gt;] (/ docs / server-admin / datasets # updateeverynmillis) sistem untuk EDDGrid FromFiles dan EDTabel Data fromFiles: Tidak perlu lagi untuk menspesifikasikan sebuah besar dari fs.inotify.max\\ _ user\\ _ watches atau fs.inotify.max\\ _ user\\ _ instance. Ada bug di Java yang menyebabkan beberapa bagian dari Java 's inotify / WatchDirectory sistem untuk menjadi tidak sampah dikumpulkan ketika mereka diselesaikan; akhirnya, jumlah dari menonton zombie inotify atau instance akan melebihi jumlah maksimum dispesifikasikan. ERDDAP™ sekarang bekerja di sekitar ini Java Bug.
+Juga, jumlah thread inotify terdaftar pada status .html halaman web, sehingga Anda dapat mengawasi penggunaan tersebut. Biasanya, ada 1 benang inotify per EDDGrid FromFiles dan EDTabel Data FromFiles.
+    * Bug fix: di banyak tempat, bukan sebuah kesalahan yang ditolak, sebuah kesalahan baru dihasilkan yang hanya termasuk versi pendek dari pesan error asli dan tanpa jejak stack. Sekarang, ketika kesalahan baru dihasilkan, itu benar termasuk seluruh eksepsi asli misalnya, membuang Eksepsi baru ("Beberapa pesan baru", e) ;
+Berkat Susan Perkins.
+    * Perbaikan kutu: sampai saat ini (V1.64?) , jika a... / datasetID URL diminta, ERDDAP™ akan menambahkan .html ke URL. Dalam v1.64, ini gagal (sebuah URL format tidak benar dihasilkan dan kemudian gagal) . Sekarang ini bekerja lagi. Berkat Chris Fullilove.
 
 ## Versi 1.64{#version-164} 
- (dirilis 2015-08-19) 
+ (dirilis 2015-08- 19) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap** 
-    * Sekarang ada panduan untuk mengakses pribadi yang dilindungi kata sandi ERDDAP™ Login ( https:// ) Sitemap curl Login Python Sitemap Sitemap [ curl ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#curl) Login [ Python ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#Python) Login
-Berkat Walikota Emilio NANOOS dan Paul Janecek dari Spyglass Technologies.
+*    **Fitur Baru (bagi pengguna) :** 
+    * Sekarang ada bimbingan untuk mengakses pedang-sandi dilindungi pribadi ERDDAP™ dataset ( https:// ) via curl dan Python . Lihat [ curl ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#curl) dan [ Python ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#Python) instruksi.
+Berkat Emilio Mayorga dari Nanoos dan Paul Janecek dari Spyglass Technologies.
          
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    *    ERDDAP™ Sitemap Java 1 Artikel
-         Java 1.7 mencapai [akhir kehidupan](https://www.oracle.com/technetwork/java/eol-135779.html)   (tidak ada lagi pembaruan keamanan) di April 2015. Versi ini ERDDAP™ tidak akan bekerja dengan versi Java di bawah 1.8. Jika Anda memperbarui Java Login (Sitemap) Anda juga harus memperbarui Tomcat. Sitemap [ ERDDAP™ Mengatur Instruksi](/docs/server-admin/deploy-install) untuk mengunduh tautan dan saran.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    *    ERDDAP™ sekarang dibutuhkan Java 1,8 +.
+         Java 1,7 dicapai nya [akhir dari kehidupan](https://www.oracle.com/technetwork/java/eol-135779.html)   (tidak ada lagi pemutakhiran keamanan) Pada April 2015. Versi ini ERDDAP™ tidak akan bekerja dengan versi Java di bawah 1,8. Jika Anda memperbarui dari Java 1.7x (atau sebelumnya) , Anda juga harus memperbarui Tomcat. Lihat [ ERDDAP™ Atur Instruksi](/docs/server-admin/deploy-install) untuk mengunduh link dan saran.
     * Formulir Penyedia Data Baru.
-Ketika penyedia data datang ke Anda berharap untuk menambahkan beberapa data ke Anda ERDDAP™ dapat sulit dan memakan waktu untuk mengumpulkan semua metadata yang diperlukan untuk menambahkan dataset ke dalam ERDDAP Sitemap Banyak sumber data (misalnya, file .csv, File Excel, database) tidak memiliki metadata internal, sehingga ERDDAP™ memiliki Formulir Penyedia Data baru yang mengumpulkan metadata dari penyedia data dan memberikan penyedia data beberapa panduan lain, termasuk panduan yang luas untuk Data In Database. Informasi yang diajukan diubah menjadi datasets.xml format dan kemudian diemail ke ERDDAP™ Login (Login) dan tulisan (Sitemap) to bigParentDirectory/logs/dataProviderForm.log . Dengan demikian, bentuk semi-otomatis proses mendapatkan dataset menjadi ERDDAP™ tapi ERDDAP™ administrator masih harus menyelesaikan datasets.xml chunk dan kesepakatan dengan mendapatkan file data (Login) dari penyedia atau menghubungkan ke database. Untuk informasi lebih lanjut, lihat [Database Deskripsi bentuk](/docs/server-admin/datasets#data-provider-form) Sitemap
-    * Login&lt;Login
-dapat digunakan oleh EDDGrid Login (dan dengan demikian dariNcFiles dan dariMergeIRFiles) Login EDDGrid Sitemap EDDGrid Fotokopi EDDGrid Dataset SideBySide untuk menentukan seberapa tepat nilai sumbu dalam file yang berbeda harus (berapa banyak digit) : 0=tidak memeriksa (jangan gunakan ini&#33;) 1-18 untuk meningkatkan presisi, atau 20 (Login) untuk kualitas yang tepat. Untuk n=1-18, ERDDAP™ memastikan bahwa angka pertama nilai ganda (Sitemap (Sitemap) div 2 untuk nilai float) sama.
-        &lt;Sitemap&lt;memastikanAxisValuesAreEqual&gt;, yang sekarang diuraikan. Nilai 'true' akan dikonversi menjadi matchAxisNDigits=20. Nilai 'false' (tidak melakukan ini&#33;) akan dikonversi ke pertandingan Login
-    *    EDDGrid Dari File dan EDDTable DariFiles akan memuat sangat lambat kali pertama Anda menggunakan versi ini ERDDAP Sitemap
-         ERDDAP™ sekarang menyimpan informasi file internal sedikit berbeda, sehingga tabel file internal untuk setiap set data ini harus dibangun kembali. Jadi jangan khawatir. Tidak ada yang salah. Ini adalah satu kali hal. Meme it
-    * Database
-         EDDGrid DariNcFiles, EDDTableDariNcFiles, EDDTableDariNcCFFiles sekarang memungkinkan file untuk menjadi file jarak jauh di direktori yang dapat diakses oleh http://   (dan mungkin https:// dan ftp://, tapi mereka tidak teruji) jika server remote mendukung [Sitemap](https://en.wikipedia.org/wiki/Byte_serving) di header permintaan. THREDDS dan Amazon S3 dukungan Rentang Permintaan, Hyrax tidak. Sistem ini memungkinkan Anda untuk mengakses data dalam file jarak jauh tanpa mengunduh file (yang membantu jika file jarak jauh terlalu voluminous) tetapi akses ke file ini akan jauh lebih lambat daripada akses ke file lokal atau bahkan ke remote OPeNDAP Login
-Ini termasuk "files" di ember Amazon S3 karena dapat diakses melalui http:// Sitemap Jika nama objek S3 seperti nama file (dengan internal / seperti pohon direktori Linux) Login ERDDAP™ juga dapat membuat file yang dapat diakses melalui ERDDAP Sitemap "files" sistem. Untuk ini untuk bekerja, kredensial S3 Anda harus berada di ~ /.aws/credentials (di Linux, OS X, atau Unix) , atau C:\\Users\\USERNAME\\.aws\\credentials (di Windows) di server dengan ERDDAP Sitemap Sitemap [Amazon SDK](https://docs.aws.amazon.com/sdk-for-java/?id=docs_gateway#aws-sdk-for-java,-version-1) Sitemap
-    * Login Xml memiliki opsi baru yang tidak biasa: EDDsFromFiles.
-Ini akan melalui sistem file (bahkan sistem jarak jauh seperti Amazon S3 jika objek memiliki nama seperti file) dan menciptakan datasets.xml chunks untuk serangkaian dataset. Mileage Anda dapat bervariasi. Ini bekerja dengan baik jika file diatur sehingga semua file data dalam direktori tertentu (dan subdirectories) cocok untuk satu dataset (e.g., semua komposit 1 hari SST) Sitemap Sitemap (e.g., jika sebuah direktori berisi beberapa file SST dan beberapa file Chlorophyll-a) ini bekerja dengan buruk tetapi mungkin masih berguna.
-    * Programmer: file baru / lib .jar.
-Sitemap ERDDAP™ , harap perhatikan file .jar baru dalam parameter classpath -cp yang tercantum dalam ERDDAP™   [Panduan Programmer](/docs/contributing/programmer-guide) Sitemap
-    * laut\\_water\\_practical\\_salinity
-Jika Anda menggunakan nama standar CF laut\\_water\\_salinity untuk variabel apa pun, saya mendorong Anda untuk beralih ke laut\\_water\\_practical\\_salinity yang tersedia dalam [versi 29 dari Tabel Nama Standar CF](https://cfconventions.org/Data/cf-standard-names/29/build/cf-standard-name-table.html)   (dan beberapa versi sebelumnya -- Saya tidak tahu bahwa Meme it) Sitemap Nama ini menunjukkan bahwa ini memang nilai praktis menggunakan Practical Salinity Units   ( PSU ) , bertentangan dengan nilai g / kg yang lebih tua. Unit kanonik berbeda, tetapi masih sangat tidak membantu: 1 Artikel (sangat menyiratkan PSU /PSS-78) , bertentangan dengan 1e-3 (g/kg) untuk laut\\_water\\_salinity. \\[ Login Unidata dan CF: Kami mengidentifikasi nilai-nilai yang menggunakan skala lain, misalnya Fahrenheit atau Celcius, melalui string unit yang merupakan nama skala atau beberapa variasi. Mengapa kita tidak dapat mengidentifikasi unit salinitas melalui skala mereka, misalnya, PSS-78? Saya tahu: nilai PSS-78 adalah "satu", tetapi ada skala yang tidak tersirat, tidak ada? Jika saya menemukan skala salinitas praktis baru di mana nilainya adalah 0,875 kali nilai PSS-78, harus unit kanal masih "1"? Bagaimana pengguna bisa memberitahu mereka terpisah? Unit 1e-3 dan 1 tidak deskriptif atau membantu pengguna yang mencoba untuk mengetahui apa angka yang ditunjukkan. \\] 
+Ketika penyedia data datang kepada Anda berharap untuk menambahkan beberapa data ke Anda ERDDAP™ , dapat sulit dan waktu mengkonsumsi untuk mengumpulkan semua metadata diperlukan untuk menambahkan data ke ERDDAP . Banyak sumber data (misalnya, berkas .csv, Berkas excel, basis data) tidak memiliki metadata internal, jadi ERDDAP™ memiliki Formulir Data Provider baru yang mengumpulkan metadata dari penyedia data dan memberikan data penyedia beberapa bimbingan lain, termasuk panduan ekstensif untuk Data In Database. Informasi yang diajukan dikonversi ke dalam datasets.xml format dan kemudian email ke ERDDAP™ administrator (Anda) dan ditulis (ditambahkan) ke BigParentDirektori / log / dataProviderForm.log. Dengan demikian, bentuk semi- otomatis proses mendapatkan sebuah data ke ERDDAP™ , tapi ERDDAP™ administrator masih harus menyelesaikan datasets.xml chunk dan berurusan dengan mendapatkan berkas data (s) dari penyedia atau menyambung ke basis data. Untuk informasi lebih lanjut, melihat [Penyedia Data Deskripsi formulir](/docs/server-admin/datasets#data-provider-form) .
+    * Baru&lt;matchAxisNDigit &gt;
+dapat digunakan oleh EDDGrid Berkas FromFiles (dan dengan demikian dari NcFiles dan dari MergeIRFiles) , EDDGrid Aggregates ExistingDimension, EDDGrid Salin, dan EDDGrid Data Sisi BySide untuk menentukan seberapa tepat sama dengan nilai sumbu dalam berkas yang berbeda harus berupa (berapa digit) : 0 = tidak ada pemeriksaan (Jangan gunakan ini&#33;) , 1-18 untuk meningkatkan presisi, atau 20 (baku) untuk kesetaraan yang tepat. Untuk n = 1-18, ERDDAP™ memastikan bahwa n digit pertama dari nilai ganda (atau (n + 1) div 2 untuk nilai float) sama.
+        &lt;matchAxisNDigit &gt; menggantikan&lt;acsure AxisValuesAreEqual &gt;, yang sekarang sudah ditinggalkan. Nilai dari 'true' akan dikonversi ke matchAxisNDigit = 20. Nilai dari 'Iffin' (Jangan lakukan ini&#33;) akan dikonversi menjadi cocok AxisNDigit = 0.
+    *    EDDGrid FromFiles dan EDTabel FromFiles akan dimuat secara perlahan saat pertama kali Anda menggunakan versi ini ERDDAP .
+         ERDDAP™ sekarang menyimpan informasi file internal sedikit berbeda, jadi tabel file internal untuk setiap data ini harus dibangun kembali. Jadi jangan khawatir. Tidak ada yang salah. Ini adalah satu hal.
+    * Berkas Sumber Jauh
+         EDDGrid FromNcFiles, EDTableFromNcFiles, EDDTableFromNCFFIles kini mengijinkan berkas-berkas remote dalam direktori yang diakses oleh http://   (dan mungkin https:// dan ftp: / /, tetapi mereka belum diuji) jika server remote mendukung [Permintaan Jarak](https://en.wikipedia.org/wiki/Byte_serving) dalam header permintaan. THREDDS dan Amazon S3 dukungan Range Permintaan, Hyrax Tidak. Sistem ini memungkinkan Anda untuk mengakses data dalam berkas jauh tanpa mengunduh berkas (yang membantu jika berkas remote terlalu voluminous) , tapi akses ke berkas-berkas ini akan jauh lebih lambat daripada akses ke berkas lokal atau bahkan ke remote OPeNDAP sumber.
+Ini termasuk "files" dalam ember Amazon S3 karena mereka diakses melalui http:// . Jika nama objek S3 seperti nama berkas (dengan internal / 's seperti pohon direktori Linux) , ERDDAP™ juga dapat membuat berkas dapat diakses melalui ERDDAP ' "files" sistem. Untuk ini untuk bekerja, kredensial S3 Anda harus dalam ~ / .aws / kredensial (pada Linux, OS X, atau Unix) , atau C:\\ Pengguna\\ USERNAME\\ .aws\\ credensial (di Windows) di server dengan ERDDAP . Lihat [Dokumentasi Amazon SDK](https://docs.aws.amazon.com/sdk-for-java/?id=docs_gateway#aws-sdk-for-java,-version-1) .
+    * GenerateDatadasets Xml memiliki pilihan baru yang tidak biasa: EDsFromFiles.
+Ini akan melalui sistem berkas (bahkan sebuah sistem remote seperti Amazon S3 jika objek memiliki berkas-seperti nama) dan menciptakan datasets.xml potongan untuk serangkaian dataset. Jarak tempuh Anda mungkin bervariasi. Ini bekerja dengan baik jika berkas terorganisir sehingga semua berkas data dalam direktori yang diberikan (dan subdirektori nya) cocok untuk satu data (mis., semua SST 1-hari komposit) . Jika tidak (mis, jika sebuah direktori berisi beberapa berkas SST dan beberapa Chlorophyl-a berkas) , ini bekerja buruk tapi mungkin masih berguna.
+    * Programer: berkas .jar baru / lib.
+Jika Anda menyusun ERDDAP™ , mohon dicatat berkas .jar baru dalam parameter classpath -cp terdaftar dalam ERDDAP™   [Panduan Programmer](/docs/contributing/programmer-guide) .
+    * lautan\\ _ water\\ _ praktis\\ _ salinitas
+Jika Anda menggunakan CF standar nama laut\\ _ water\\ _ salinitas untuk variabel apapun, saya mendorong Anda untuk beralih ke laut\\ _ water\\ _ praktis\\ _ salinitas yang tersedia di [versi 29 dari Tabel Nama Standar CF](https://cfconventions.org/Data/cf-standard-names/29/build/cf-standard-name-table.html)   (dan beberapa versi sebelumnya - Aku tidak tahu bahwa) . Nama ini menunjukkan bahwa ini memang nilai Salinitas Praktis menggunakan Practical Salinity Units   ( PSU ) , sebagai lawan dari nilai g / kg yang lebih tua. Unit kanonikal berbeda, tapi masih sangat tidak membantu: 1 (mungkin menyiratkan PSU / PSS-78) , sebagai lawan dari 1e- 3 (mungkin menyiratkan g / kg) untuk laut\\ _ water\\ _ salinitas. \\[ Hei, Unidata dan CF: Kami mengidentifikasi nilai yang menggunakan skala lain, misalnya Fahrenheit atau Celsius, melalui string unit yang merupakan nama skala atau beberapa variasi. Mengapa kita tidak bisa mengidentifikasi unit salinitas melalui skala mereka, misalnya, PSS-78? Aku tahu: nilai PSS-78 adalah "unitless", tapi ada skala tersirat, bukan? Jika saya menemukan skala salinitas praktis baru dimana nilainya 0.875 dikali PSS-78, apakah unit kanonikal masih "1"? Bagaimana bisa pengguna membedakan mereka? Satuan dari 1e- 3 dan 1 tidak deskriptif atau membantu pengguna yang mencoba untuk mencari tahu apa angka menunjukkan. \\] 
 
 ## Versi 1.62{#version-162} 
  (dirilis 2015-06-08) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap** 
-    * Sitemap EDDGrid set data, pengguna sekarang dapat membuat Jenis Graf: Grafik permukaan dengan kombinasi kapak numerik, tidak hanya longitude versus latitude. Ini memungkinkan Anda membuat x versus y (Sitemap) grafik dan berbagai [Hovmöller Diagram](https://en.wikipedia.org/wiki/Hovm%C3%B6ller_diagram) misalnya, merangkak longitude versus kedalaman, atau waktu versus kedalaman. \\[ Catatan: jika kedalaman berada di Axis Y, mungkin akan dibalik dari apa yang Anda inginkan. Maaf, un-flipping itu belum pilihan. \\] Terima kasih kepada Cara Wilson dan Lynn DeWitt.
-    * Sitemap [Oceanic / Amosfir Konverter](https://coastwatch.pfeg.noaa.gov/erddap/convert/oceanicAtmosphericAcronyms.html) yang memungkinkan Anda mengonversi akronim laut / atmosfir umum ke / dari nama penuh.
-    * Sitemap [Oceanic/Amos Konverter Nama Variabel](https://coastwatch.pfeg.noaa.gov/erddap/convert/oceanicAtmosphericVariableNames.html) yang memungkinkan Anda mengonversikan nama variabel laut / atmosfer umum ke / dari nama penuh.
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    *    Java Sitemap
-         Oracle tidak lagi mendukung (menyediakan perbaikan bug keamanan untuk)   Java Sitemap ERDDAP™ tetap mendukung Java 7, tapi silahkan pindah ke Java 8. Rilis berikutnya ERDDAP™ mungkin diperlukan Meme it Java Sitemap
-    *    valid\\_min Login
-Sebelumnya dan sekarang, jika dataVariable Login scale\\_factor Login add\\_offset metadata ERDDAP™ membongkar nilai data dan menghapus metadata. Sitemap ERDDAP™ tidak memodifikasi / membongkar valid\\_range Login valid\\_min Login valid\\_max Login (yang biasanya / harus mengandung nilai dikemas) Sitemap scale\\_factor Login add\\_offset Sitemap Sitemap Cari ERDDAP™ untuk "valid\\_" dan pastikan bahwa semua variabel yang memiliki valid\\_range Login valid\\_min Sitemap valid\\_max memiliki nilai yang benar ketika dataset muncul dalam versi baru dari ERDDAP Sitemap Sitemap [ valid\\_range Login](/docs/server-admin/datasets#valid_range) Sitemap
-    * Login
-Sitemap ERDDAP™   (Sitemap Login) digunakan/meningkatkan asli (Login) versi [ NetCDF Konvensi Menarik untuk Penemuan Dataset](https://wiki.esipfed.org/ArchivalCopyOfVersion1) yang disebut sebagai " Unidata Dataset Discovery v1.0" dalam Konvensi global dan Metadata\\_Conventions Sitemap Sitemap [Versi ACDD 1.3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) yang dikukur pada awal 2015 dan disebut sebagai "ACDD-1.3". Untungnya, ACDD-1.3 sangat kompatibel dengan versi 1.0. Kami RECOMMEND bahwa Anda Meme it [beralih ke ACDD-1.3](/docs/server-admin/datasets#switch-to-acdd-13) Sitemap Tidak sulit.
-    * Login Login
-Ada sejumlah besar perubahan untuk meningkatkan&lt; addAttributes &gt; nilai yang disarankan oleh GenerateDatasets Xml untuk Konvensi global, creator\\_name /email/url, kata kunci, ringkasan, dan atribut judul dan untuk variabel long\\_name Login Beberapa perubahan terkait dengan penggunaan baru ACDD-1.3.
-    * Login SOS Login
-Dengan penambahan sesekali dari jenis baru SOS server dan perubahan pada server lama, semakin sulit untuk ERDDAP™ untuk secara otomatis mendeteksi jenis server dari respons server. Penggunaan [&lt;Login (/docs/server-admin/dataset#eddtablefromsos-skeleton-xml)   (IOOS\\_NDBC, IOOS\\_NOS, OOSTethys Sitemap) sekarang STRONGLY RECOMMENDED. Jika ada dataset dari jenis ini memiliki masalah dalam versi baru dari ERDDAP GenerateDatasets Xml untuk SOS server untuk menghasilkan chunk baru datasets.xml dataset. Login Xml akan membiarkan Anda mencoba yang berbeda&lt;sosServerType&gt; pilihan sampai Anda menemukan yang tepat untuk server yang diberikan. Jika Anda masih memiliki masalah, silakan beri tahu masalah yang Anda lihat dan URL server dan saya akan mencoba untuk membantu.
-    * EDDTableDariNames dataset
-Beberapa atribut yang dianjurkan addAttributes Sitemap Anda mungkin tidak perlu mengubah apa pun untuk set data yang ada di Anda datasets.xml Sitemap
-    * Perbaikan bug terkait dengan permintaan tertentu untuk dataset EDDTableDariNcCFFiles.
-Saya juga menambahkan sejumlah besar tes unit ke sejumlah besar tes unit dari metode yang mendasari (ada 100 skenario) Sitemap Terima kasih kepada Eli Hunter.
-    * Perbaikan bug / perubahan kecil untuk EDDGrid Login
-Terima kasih kepada Jonathan Lafite dan Philippe Makowski
-    * Perbaikan bug: EDDGrid DariErddap sekarang bekerja bahkan jika dataset jarak jauh tidak memiliki ioos\\_category atribut variabel.
-Kevin O'Brien
-    * Perbaikan bug di halaman web .graph untuk EDDGrid dataset ketika hanya ada satu variabel sumbu dengan lebih dari satu nilai.
-Terima kasih kepada Charles Carleton.
+*    **Fitur Baru (bagi pengguna) :** 
+    * Untuk EDDGrid dataset, pengguna sekarang dapat membuat Grafik Tipe: grafik permukaan dengan kombinasi apapun dari sumbu numerik, bukan hanya bujur melawan lintang. Ini memungkinkan Anda membuat x versus y (diproyeksikan) grafik dan berbagai [Diagram Hovmöller](https://en.wikipedia.org/wiki/Hovm%C3%B6ller_diagram) , misalnya, merencanakan bujur melawan kedalaman, atau waktu melawan kedalaman. \\[ Catatan: jika kedalaman pada Axis Y, mungkin akan membalik dari apa yang Anda inginkan. Maaf, tidak - membalik itu belum pilihan. \\] Berkat Cara Wilson dan Lynn DeWitt.
+    * Ada yang baru [Oceanic / Atmospheric Acronym Converter](https://coastwatch.pfeg.noaa.gov/erddap/convert/oceanicAtmosphericAcronyms.html) yang memungkinkan Anda mengubah umum kelautan / atmosfer akronim untuk / dari nama lengkap.
+    * Ada yang baru [Oceanic / Atmospheric Variabel Nama Pengpercakapan](https://coastwatch.pfeg.noaa.gov/erddap/convert/oceanicAtmosphericVariableNames.html) yang memungkinkan Anda mengubah umum nama variabel lautan / atmosfer ke / dari nama lengkap.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    *    Java 7 / 8
+         Oracle tak lagi mendukung (menyediakan perbaikan bug keamanan untuk)   Java 7. ERDDAP™ masih mendukung Java 7, tapi tolong pindah ke Java Pelepasan berikutnya ERDDAP™ mungkin memerlukan Java 8.
+    *    valid\\_min / max / range
+Sebelumnya dan sekarang, jika dataVariable telah scale\\_factor dan add\\_offset metadata, ERDDAP™ unpacking nilai data dan hapus metadata tersebut. Sebelumnya, ERDDAP™ tidak memodifikasi / membongkar apapun valid\\_range , valid\\_min , valid\\_max metadata (yang biasanya berisi nilai terkemas) oleh scale\\_factor dan add\\_offset . Sekarang tidak. Silahkan cari ERDDAP™ untuk "valid\\ _" dan pastikan bahwa semua variabel yang memiliki valid\\_range , valid\\_min , atau valid\\_max memiliki nilai yang benar ketika dataset muncul dalam versi baru dari ERDDAP . Lihat [ valid\\_range / min / max dokumentasi](/docs/server-admin/datasets#valid_range) .
+    * ACD-1.3
+Sebelumnya, ERDDAP™   (secara terurut tata waktu Xml) digunakan / direkomendasikan yang asli (1.0) versi [ NetCDF Konvensi Atribut untuk Discovery Dataset](https://wiki.esipfed.org/ArchivalCopyOfVersion1) yang disebut sebagai " Unidata Dataset Discovery v1.0 "dalam Konvensi global dan Metadata\\_Conventions atribut. Sekarang, kami merekomendasikan [ACDD versi 1.3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) yang disahkan pada awal 2015 dan disebut sebagai "ACDD-1.3". Untungnya, ACDD-1.3 sangat mundur kompatibel dengan versi 1.0. Kami PERINTAH bahwa Anda [ganti ke ACDD-1.3](/docs/server-admin/datasets#switch-to-acdd-13) . Ini tidak sulit.
+    * GenerateDatadasets Atribut Xml
+Ada sejumlah besar perubahan untuk meningkatkan&lt; addAttributes &gt; nilai yang disarankan oleh GenerateDatasets Xml untuk Konvensi Dunia, creator\\_name / email / url, kata kunci, ringkasan, dan atribut judul dan untuk variabel long\\_name atribut. Beberapa perubahan berhubungan dengan penggunaan baru ACDD-1.3.
+    * EDTableFrom SOS dataset
+Dengan tambahan sesekali jenis baru SOS server dan perubahan ke server lama, semakin sulit untuk ERDDAP™ untuk secara otomatis mendeteksi tipe server dari respon server. Penggunaan [&lt;sosServerType &gt;] (/ docs / server-admin / dataset # eddtablefmsos- kerangka -xml)   (dengan nilai IOOS\\ _ NDBC, IOOS\\ _ NOS, OOSTethys , atau wHOI&#33;) sekarang sangat kuat. Jika salah satu data Anda dari jenis ini memiliki masalah dalam versi baru ERDDAP , coba re- berjalan GenerateDatasets Xml untuk SOS server untuk membuat potongan baru dari datasets.xml untuk data itu. GenerateDatadasets Xml akan membiarkanmu mencoba yang berbeda.&lt;pilihan sosServerType &gt; sampai Anda menemukan yang benar untuk server yang diberikan. Jika Anda masih memiliki masalah, tolong beritahu saya masalah yang Anda lihat dan URL dari server dan saya akan mencoba untuk membantu.
+    * Data EDTableFromFileNames
+Beberapa atribut yang direkomendasikan addAttributes sekarang sumber Atribut. Anda mungkin tidak perlu mengubah apa pun untuk data yang ada di Anda datasets.xml .
+    * Perbaikan kutu terkait dengan permintaan tertentu terhadap data EDTableFromNcCFFiles.
+Saya juga menambahkan sejumlah besar unit tes ke jumlah besar yang ada unit tes dari metode yang mendasari (Ada 100 's skenario) . Berkat Eli Hunter.
+    * Perbaikan bug / perubahan kecil ke EDDGrid FromMergeIR.
+Berkat Jonathan Lafite dan Philippe Makowski
+    * Perbaikan kutu: EDDGrid FromErddap kini bekerja bahkan jika suatu dataset remote tidak memiliki ioos\\_category atribut variabel.
+Berkat Kevin O 'Brien.
+    * Perbaikan kutu dalam halaman web .graph untuk EDDGrid dataset ketika hanya ada satu variabel sumbu dengan lebih dari satu nilai.
+Berkat Charles Carleton.
     * Ada perbaikan kecil lainnya, perubahan, dan perbaikan bug.
 
 ## Versi 1.60{#version-160} 
  (dirilis 2015-03-12) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap** Login
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * STRONGLY RECOMMENDED: Memperbarui server Anda [WordPress.org](/docs/server-admin/additional-information#robotstxt) file untuk menyertakan:
-Login WordPress.org
-    * Mengintip Masalah dan Solusi:
-Di komputer Linux, jika Anda menggunakan&lt;WordPress.org dengan set data dengan tipe= EDDGrid DariFiles, EDDTableDariFiles, EDDGrid Copy, EDDTableCopy, atau subklas mereka, Anda dapat melihat masalah di mana dataset gagal untuk memuat (sesekali atau konsisten) dengan pesan kesalahan: "IOException: Batas pengguna dari inotify instance mencapai atau terlalu banyak file terbuka". Jika demikian, Anda dapat memperbaiki masalah ini dengan memanggil (sebagai akar) Sitemap
-gs.inotify.max\\_user\\_watches=65536 | tee -a /etc/sysctl.conf
-echo fs.inotify.max\\_user\\_instances=1024 | tee -a /etc/sysctl.conf
-Login
-Atau, gunakan angka yang lebih tinggi jika masalah berlanjut. Default untuk jam tangan adalah 8192. default untuk instance adalah 128. \\[ UPDATE: Ada bug dalam Java yang menyebabkan inotify instances untuk tidak mengumpulkan sampah. Masalah ini dihindari ERDDAP™ v1.66 dan lebih tinggi. Jadi solusi yang lebih baik adalah beralih ke versi terbaru dari ERDDAP Sitemap \\] 
-    * Login Perbaikan bug:
-Ada bug yang bisa menyebabkan dataset tipe= EDDGrid DariFiles, EDDTableDariFiles, EDDGrid Copy, EDDTableCopy, atau subklas mereka untuk tidak memuat sesekali dengan kesalahan "NoSuchFileException: _someFileName_". bug terkait dengan penggunaan FileVisitor dan diperkenalkan di ERDDAP™ v1.56. Masalahnya langka dan kemungkinan besar mempengaruhi dataset dengan sejumlah besar file data yang sering berubah.
+*    **Fitur Baru (bagi pengguna) :** kosong
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * RECOMMENDED STONGLY: Perbarui server Anda [bots.txt](/docs/server-admin/additional-information#robotstxt) berkas untuk dimasukan:
+Tidak Baik: / erddap / berkas /
+    * Beritahu Masalah dan Solusi:
+Pada komputer Linux, jika Anda menggunakan&lt;updateEveryNMillis &gt; dengan dataset dengan tipe = EDDGrid FromFiles, EDTableFromFiles, EDDGrid Salin, EDTableCopy, atau subkelas mereka, Anda mungkin melihat masalah dimana suatu data gagal dimuat (kadang-kadang atau konsisten) dengan pesan kesalahan: "IOException: Batas pengguna dari instansi inotify dicapai atau terlalu banyak berkas terbuka". Jika demikian, Anda dapat memperbaiki masalah ini dengan menelepon (sebagai root) :
+echo fs.inotify.max\\ _ user\\ _ watches = 65536 | tee -a / etc / sysctl.conf
+echo fs.inotify.max\\ _ user\\ _ instances = 1024 | tee -a / etc / sysctl.conf
+sysctl -p
+Atau, gunakan angka yang lebih tinggi jika masalah berlanjut. Baku untuk jam tangan adalah 8192. Baku untuk kejadian adalah 128. \\[ Ada bug dalam Java yang menyebabkan inotify instance tidak menjadi sampah dikumpulkan. Masalah ini dihindari di ERDDAP™ V1.66 dan lebih tinggi. Jadi solusi yang lebih baik adalah untuk beralih ke versi terbaru dari ERDDAP . \\] 
+    * NoSuchFileException Bug Fix:
+Ada bug yang dapat menyebabkan dataset tipe = EDDGrid FromFiles, EDTableFromFiles, EDDGrid Salin, EDTableCopy, atau subkelas mereka untuk tidak memuat sesekali dengan kesalahan "NoSuchFileException: _ someFileName _". Bug berhubungan dengan penggunaan FileVisitor dan diperkenalkan di ERDDAP™ V1.56. Masalahnya jarang dan kemungkinan besar akan mempengaruhi dataset dengan sejumlah besar sering mengubah berkas data.
     * Ada beberapa perbaikan kecil, perubahan, dan perbaikan bug.
 
 ## Versi 1.58{#version-158} 
  (dirilis 2015-02-25) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap** 
-    * Login [ "files" ](https://coastwatch.pfeg.noaa.gov/erddap/files/documentation.html) sistem memungkinkan Anda menelusuri sistem file virtual dan mengunduh file data sumber dari banyak ERDDAP™ Login Login "files" sistem aktif secara default, tetapi ERDDAP™ administrator dapat menonaktifkannya dengan menempatkan Meme it
+*    **Fitur Baru (bagi pengguna) :** 
+    * Yang baru [ "files" ](https://coastwatch.pfeg.noaa.gov/erddap/files/documentation.html) sistem memungkinkan Anda menjelajahi sistem berkas virtual dan mengunduh berkas data sumber dari banyak ERDDAP™ Dataset. The "files" sistem aktif secara baku, tetapi ERDDAP™ administrator dapat menonaktifkannya dengan meletakkan
 ```
         <filesActive>false</filesActive>  
 ```
-Sitemap ERDDAP™ setup.xml file. Terima kasih khusus kepada Philippe Makowski, yang bertahan ketika saya lambat untuk menghargai keindahan ide ini.
-    * tujuan waktu Login Sebelumnya, variabel waktu dataset EDDTable dengan data real time dekat memiliki tujuanMax of NaN, yang menyiratkan bahwa nilai waktu maksimum untuk dataset baru-baru ini, tetapi tidak tepat diketahui dan berubah sering. Sekarang, tujuanMax memiliki nilai nyata, menunjukkan waktu terakhir yang terkenal saat ini. Banyak dataset telah terus diperbarui data. ERDDAP™ mendukung mengakses data terbaru, bahkan jika setelah waktu terakhir yang terkenal saat ini. Catatan bahwa yang baru [&lt;Login (/docs/server-admin/dataset#updateeverynmillis) dukungan EDDGrid Dari File dan EDDTable DariFiles dataset memperbarui waktu variabel tujuanMax. Kekurangan lain dari perubahan ini adalah bahwa datasetID Sitemap allDatasets dataset sekarang termasuk waktu terakhir yang terkenal di kolom maxTime. Terima kasih kepada John Kerfoot.
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * STRONGLY RECOMMENDED: Memperbarui server Anda [WordPress.org](/docs/server-admin/additional-information#robotstxt) file untuk menyertakan:
-Login Login
-Login WordPress.org
-    * Sitemap datasets.xml Login Tahun lalu, kami merekomendasikan beberapa set data yang sangat baik di jam tangan pantai ERDDAP™ Anda dapat menambahkan ke Anda Meme it ERDDAP™ hanya dengan menambahkan beberapa baris ke Anda Meme it datasets.xml Sitemap Jika Anda menambahkan dataset erdVH, silakan beralih ke dataset erdVH2 yang lebih baru:
-        * Membuat salinan semua dataset erdVH dan mengubah data yang disalin datasetID 's dari erdVH ... untuk erdVH2 ... dan mengubah referensi sourceUrl dari erdVH ... untuk erdVH2....
-        * Mengatur erdVH ... data set ke aktif="false".
-    * Sitemap EDDGrid Dari File dan EDDTable Dari Files subclasses sekarang mendukung [&lt;Login (/docs/server-admin/dataset#accessibleviafiles) untuk membuat file data sumber dapat diakses melalui "files" sistem. Secara default, sistem ini dimatikan untuk setiap dataset. Anda perlu menambahkan tag untuk mengaktifkannya. Terima kasih kepada Philippe Makowski.
-    * Sitemap EDDGrid Dari File dan EDDTable Dari Files subclasses sekarang mendukung [&lt;Login (/docs/server-admin/dataset#updateeverynmillis) Sitemap Secara default, sistem ini dimatikan untuk setiap dataset. Anda perlu menambahkan tag untuk mengaktifkannya. Terima kasih kepada Dominika Fuller-Rowell dan NGDC.
-    * Login [Login](/docs/server-admin/datasets#eddtablefromfilenames) membuat dataset dari informasi tentang sekelompok file dalam sistem file server, tetapi tidak melayani data dari dalam file. Misalnya, ini berguna untuk mendistribusikan koleksi file gambar, file audio, file video, file proses kata, dan file spreadsheet. Ini bekerja dengan tangan dengan yang baru [ "files" ](https://coastwatch.pfeg.noaa.gov/erddap/files/documentation.html) sistem, sehingga pengguna dapat mengunduh file. Terima kasih khusus kepada Philippe Makowski, yang bertahan ketika saya lambat untuk menghargai keindahan ide ini.
-    * Login [ EDDGrid Sitemap](/docs/server-admin/datasets#eddgridfromeddtable) memungkinkan Anda mengonversikan dataset tabular ke dataset gridded. Berkat Ocean Networks Kanada.
-    * Login [ EDDGrid Login](/docs/server-admin/datasets#eddgridfrommergeirfiles) agregat data dari kelompok MergeIR lokal .gz Login EDDGrid DariMergeIRFiles memiliki perbedaan menjadi chunk pertama kode berkontribusi untuk ERDDAP Sitemap Hal ini dilakukan sepenuhnya tanpa bantuan kami. Tiga cheers dan terima kasih khusus untuk Jonathan Lafite dan Philippe Makowski of R.Tech Engineering.
-    * Ada yang baru, opsional setup.xml tag,&lt;unitTestDataDir&gt;, yang menentukan direktori dengan file data uji unit yang tersedia melalui repositori GitHub baru: [https://github.com/ERDDAP/erddapTest](https://github.com/ERDDAP/erddapTest) Sitemap Contoh:
+di ERDDAP™ berkas sebup.xml. Khusus terima kasih kepada Philippe Makowski, yang bertahan ketika aku lambat untuk menghargai keindahan ide ini.
+    * tujuan waktu Max -- Sebelumnya, variabel waktu dari dataset EDTabel dengan hampir real time data memiliki destinationMax dari NaN, yang menyiratkan bahwa nilai waktu maksimum untuk dataset baru-baru ini, tetapi tidak tepat diketahui dan berubah sering. Sekarang, yang destinationals Max memiliki nilai nyata, menunjukkan mata uang tunai yang diketahui terakhir kali. Banyak data memiliki data yang terus diperbarui. ERDDAP™ mendukung mengakses data terbaru, bahkan jika itu setelah bukti yang diketahui secara tunai terakhir kali. Perhatikan bahwa [baru&lt;updateEveryNMillis &gt;] (/ docs / server-admin / datasets # updateeverynmillis) dukungan dalam EDDGrid FromFiles dan EDTabel Data fromFiles memutakhirkan destinationMax variabel waktu. Konsekuensi lain perubahan ini adalah bahwa datasetID = allDatasets dataset sekarang termasuk saat-saat yang diketahui terakhir kali dalam kolom maxTime. Berkat John Kerfoot.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * RECOMMENDED STONGLY: Perbarui server Anda [bots.txt](/docs/server-admin/additional-information#robotstxt) berkas untuk dimasukan:
+Tidak Baik: / berkas /
+Tidak Baik: / erddap / berkas /
+    * Contoh datasets.xml -- Tahun lalu, kami merekomendasikan beberapa data yang sangat baik di pantai ERDDAP™ bahwa Anda bisa menambahkan Anda ERDDAP™ hanya dengan menambahkan beberapa baris ke Anda datasets.xml . Jika Anda menambahkan data erdVH, silakan ganti ke data erdH2 yang lebih baru:
+        * Buat salinan semua data erdVH dan ubah salinan datasetID dari erdVH... untuk erdVH2... dan mengubah referensi sourceUrl dari erdVH... untuk erdVH2....
+        * Tata data erdVH... ke aktif = "false".
+    * Semua EDDGrid FromFiles dan EDTabel Subkelas FromFiles sekarang mendukung [&lt;accessibleViaFiles &gt;] (/ docs / server-admin / datasets # accessiblavisafiles) untuk membuat berkas data sumber diakses melalui "files" sistem. Secara baku, sistem ini tidak aktif untuk setiap data. Anda perlu menambahkan tag untuk mengaktifkannya. Berkat Philippe Makowski.
+    * Semua EDDGrid FromFiles dan EDTabel Subkelas FromFiles sekarang mendukung [&lt;updateEveryNMillis &gt;] (/ docs / server-admin / datasets # updateeverynmillis) . Secara baku, sistem ini tidak aktif untuk setiap data. Anda perlu menambahkan tag untuk mengaktifkannya. Berkat Dominic Fuller- Rowell dan NGDC.
+    * Yang baru [EDTableFromFilenames](/docs/server-admin/datasets#eddtablefromfilenames) Membuat suatu data dari informasi tentang sekelompok berkas dalam sistem berkas server, tetapi tidak melayani data dari dalam berkas. Sebagai contoh, ini berguna untuk mendistribusikan koleksi berkas gambar, berkas audio, berkas video, berkas pemrosesan kata, dan berkas spreadsheet. Ini bekerja tangan-in-tangan dengan baru [ "files" ](https://coastwatch.pfeg.noaa.gov/erddap/files/documentation.html) sistem, sehingga pengguna dapat mengunduh berkas. Khusus terima kasih kepada Philippe Makowski, yang bertahan ketika aku lambat untuk menghargai keindahan ide ini.
+    * Yang baru [ EDDGrid FromEDTable](/docs/server-admin/datasets#eddgridfromeddtable) memungkinkan Anda mengkonversi data tabular menjadi sebuah datet gridded. Berkat Ocean Networks Kanada.
+    * Yang baru [ EDDGrid FromMergeIRFiles](/docs/server-admin/datasets#eddgridfrommergeirfiles) kumpulkan data dari grup MergeIR lokal .gz file. EDDGrid FromMergeIRFiles memiliki perbedaan menjadi potongan pertama kode yang berkontribusi ERDDAP . Itu dilakukan sepenuhnya tanpa bantuan kami. Tiga sorakan dan terima kasih khusus Jonathan Lafite dan Philippe Makowski dari R.Tech Engineering.
+    * Ada yang baru, pilihan setup.xml tag,&lt;unitTetaDir &gt;, yang menspesifikasikan direktori dengan satuan test berkas data yang tersedia melalui suatu repositori GitHub baru: [ https://github.com/ERDDAP/erddapTest ](https://github.com/ERDDAP/erddapTest) . Misalnya:
 ```
         <unitTestDataDir>/erddapTest/</unitTestDataDir>  
 ```
-Ini tidak berguna namun, tetapi merupakan bagian dari bergerak menuju membuat banyak tes unit yang dapat dijalankan oleh orang lain mungkin. Terima kasih kepada Terry Rankine.
+Ini belum berguna, tetapi adalah bagian dari bergerak ke arah membuat sebanyak unit tes dapat dijalankan oleh orang lain mungkin. Berkat Terry Rankine.
     * Ada banyak perbaikan kecil, perubahan, dan perbaikan bug.
 
 ## Versi 1.56{#version-156} 
- (Dipublikasikan 2014-12-16) 
+ (dirilis 2014- 12- 16) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap**   (Login) 
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Anda mungkin sudah tahu tentang Meme it [ EDDGrid Login](/docs/server-admin/datasets#eddfromerddap) Login [Login](/docs/server-admin/datasets#eddfromerddap) yang memungkinkan Anda menghubungkan ke dataset di lain Meme it ERDDAP dan telah mereka muncul di Anda Meme it ERDDAP Sitemap Permintaan pengguna untuk data aktual dari dataset ini mendapatkan rute secara tidak dapat dikunjungi ke sumber ERDDAP™ sehingga data tidak mengalir melalui sistem atau menggunakan bandwidth Anda. Sekarang ada daftar besar dataset yang disarankan dalam sampel datasets.xml Sitemap .zip Sitemap Untuk memasukkan mereka di Anda ERDDAP™ , semua yang harus Anda lakukan adalah menyalin dan menempelkan yang Anda inginkan datasets.xml Sitemap Terima kasih kepada Conor Delaney.
-    * Sitemap ERDDAP™ Anda perlu menambahkan beberapa baru. Meme it file jar untuk Anda [phpBB SEO](/docs/contributing/programmer-guide#development-environment) untuk javac dan java.
-    * Login [Login](/docs/server-admin/datasets#eddtablefromcassandra) menangani mendapatkan data dari [Login](https://cassandra.apache.org/) Sitemap Berkat Ocean Networks Kanada.
-    * Login [Sitemap](/docs/server-admin/datasets#eddtablefromcolumnarasciifiles) menangani mendapatkan data dari file data ASCII dengan kolom tetap lebar. Terima kasih kepada Philippe Makowski.
-    * Sitemap EDDGrid Dari File dan EDDTable Dari Files subclasses sekarang menggunakan metode baru, FileVisitor (Sitemap Java di 1,7) untuk mengumpulkan informasi tentang file. Ini mungkin tidak memiliki manfaat untuk pertemuan pertama informasi file untuk dataset tertentu tetapi tampaknya memiliki manfaat besar untuk pertemuan berikutnya jika dilakukan segera, sementara OS masih memiliki informasi yang tersimpan. Berkat NGDC.
+*    **Fitur Baru (bagi pengguna) :**   (Nihil) 
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Anda mungkin sudah tahu tentang [ EDDGrid FromErddap](/docs/server-admin/datasets#eddfromerddap) dan [EDTableFromErddap](/docs/server-admin/datasets#eddfromerddap) yang memungkinkan Anda menghubungkan ke dataset di lain ERDDAP s dan memiliki mereka muncul di Anda ERDDAP . Permintaan pengguna untuk data sebenarnya dari dataset ini dapat dialihkan secara tak terlihat ke sumber ERDDAP™ , sehingga data tidak mengalir melalui sistem Anda atau menggunakan bandwidth Anda. Kini ada daftar besar dataset yang direkomendasikan dalam sampel datasets.xml dalam rddlapContent .zip . Untuk memasukkan mereka dalam Anda ERDDAP™ , semua yang harus Anda lakukan adalah menyalin dan tempel yang Anda inginkan ke Anda datasets.xml . Berkat Conor Delaney.
+    * Jika Anda menyusun ERDDAP™ , Anda perlu menambahkan beberapa baru. berkas jar ke Anda [classpath -cp switch](/docs/contributing/programmer-guide#development-environment) untuk javac dan java.
+    * Yang baru [EDTableFromCassandra](/docs/server-admin/datasets#eddtablefromcassandra) menangani mendapatkan data dari [Cassandra](https://cassandra.apache.org/) . Berkat Ocean Networks Kanada.
+    * Yang baru [EDTableFromColonnarAsciFiles](/docs/server-admin/datasets#eddtablefromcolumnarasciifiles) menangani mendapatkan data dari berkas data ASCII dengan kolom fixed- lebar. Berkat Philippe Makowski.
+    * Semua EDDGrid FromFiles dan EDTabel Subkelas FromFiles kini memakai metode baru, FileVisitor (ditambahkan ke Java dalam 1.7) untuk mengumpulkan informasi tentang file. Hal ini mungkin tidak memiliki keuntungan untuk pengumpulan informasi file pertama untuk data yang diberikan tetapi tampaknya memiliki manfaat besar untuk pertemuan berikutnya jika dilakukan segera, sementara OS masih memiliki informasi cache. Berkat NGDC.
         
-Kami masih merekomendasikan: Jika dataset memiliki sejumlah besar file (g., &gt; 1,000) , sistem operasi (dan EDDGrid DariFiles dan EDDTableDariFiles) akan beroperasi lebih efisien jika Anda menyimpan file dalam serangkaian subdirectories (satu per tahun, atau satu per bulan untuk dataset dengan file yang sangat sering) , sehingga tidak pernah ada sejumlah besar file dalam direktori tertentu.
+Kami masih merekomendasikan: Bila suatu data memiliki sejumlah besar berkas (mis., &gt; 1.000) , sistem operasi (demikian EDDGrid FromFiles dan EDTableFromFiles) akan beroperasi jauh lebih efisien jika Anda menyimpan berkas dalam seri subdirektori (satu per tahun, atau satu per bulan untuk dataset dengan berkas yang sangat sering) , sehingga tidak pernah ada sejumlah besar file dalam direktori yang diberikan.
         
-    * Beberapa perbaikan kecil untuk EDDTableDariAsciiFiles.
-    * Beberapa perbaikan untuk EDDTableDariAsciiServiceNOS, tidak dapat mendapatkan beberapa kolom tambahan informasi dari sumber. Terima kasih kepada Lynn DeWitt.
-    * Beberapa perbaikan bug kecil yang berkaitan dengan ISO 19115 yang ERDDAP™ Sitemap Terima kasih kepada Anna Milan.
+    * Beberapa perbaikan kecil untuk EDTableFromAscifiles.
+    * Beberapa perbaikan untuk EDTableFromAsciServiceNOS, terutama untuk mendapatkan beberapa kolom tambahan informasi dari sumber. Berkat Lynn DeWitt.
+    * Beberapa perbaikan bug kecil terkait dengan ISO 19115 yang ERDDAP™ Menghasilkan. Berkat Anna Milan.
 
 ## Versi 1.54{#version-154} 
  (dirilis 2014-10-24) 
 
-*    **Fitur Baru (untuk pengguna) Sitemap** 
-    * Beberapa variabel sekarang bekerja dengan waktu pada ketepatan mili detik, misalnya, 2014-10-24T16:41:22.485Z. Terima kasih kepada Dominika Fuller-Rowell.
+*    **Fitur Baru (bagi pengguna) :** 
+    * Beberapa variabel sekarang bekerja dengan waktu pada presisi milidetik, misalnya, 2014-10-24T16: 41: 22.485Z. jadi apa yang terjadi? Berkat Dominic Fuller- Rowell.
 *    **Perubahan kecil / Perbaikan Bug:** 
-    * Perbaikan bug: dengan kombinasi keadaan tertentu, EDDGrid DariNFile dataset kembali data pada pengurangan presisi (e.g., mengapung bukan ganda) Sitemap Ini hanya dapat mempengaruhi nilai data dengan &gt; 8 angka signifikan. apologi saya. (Dan itu adalah bug pemrograman komputer klasik: satu karakter yang salah.) Terima kasih kepada Dominika Fuller-Rowell.
+    * Bug fix: dengan kombinasi tertentu dari keadaan, EDDGrid Data yang dikembalikan oleh fromNcFile dengan presisi rendah (mis., float daripada ganda) . Ini hanya dapat mempengaruhi nilai data dengan &gt; 8 angka signifikan. Maafkan aku. (Dan itu adalah bug pemrograman komputer klasik: satu karakter yang salah.) Berkat Dominic Fuller- Rowell.
     * Banyak perubahan kecil.
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Dataset griddap sekarang mendukung variabel sumbu kalitamp dan variabel data (i.e., variabel dengan nilai waktu, tetapi destinationName Sitemap "time" ) Sitemap Terima kasih kepada Dominika Fuller-Rowell.
-    *    ERDDAP™ sekarang benar mendukung mili detik time\\_precision "1970-01-01T00:00:00.000Z". Satu kuis niat: ketika menulis kali ke file berorientasi manusia (Sitemap .tsv Login .json Login .xhtml ) Login ERDDAP™ menggunakan yang ditentukan time\\_precision jika termasuk detik dan / atau detik desimal; jika tidak, menggunakan detik time\\_precision "1970-01-01T00:00:00Z" (untuk konsistensi dan mundur kompatibilitas) Sitemap Terima kasih kepada Dominika Fuller-Rowell.
-    *    EDDGrid DariNcFiles sekarang mendukung membaca String dataVariable Sitemap
-    *    .nc file yang ditulis oleh griddap sekarang dapat memiliki String dataVariable Sitemap
-    * Login Xml sekarang termasuk lebih banyak flush () panggilan untuk menghindari masalah informasi tidak ditulis ke file. Terima kasih kepada Thierry Valero.
-    * Dokumentasi untuk GenerateDatasetsXml ditingkatkan, tidak dapat menunjukkan bahwa switch -i hanya bekerja jika Anda menentukan semua jawaban pada baris perintah (e.g., modus script) Sitemap Dan mode skrip dijelaskan. Terima kasih kepada Thierry Valero.
-    *    ERDDAP™ tidak lagi memungkinkan dua variabel dalam dataset untuk memiliki sama sourceName Sitemap (Jika seseorang melakukannya sebelum, mungkin menyebabkan pesan kesalahan.) Seperti sebelumnya, ERDDAP™ tidak memungkinkan dua variabel dalam dataset untuk memiliki sama destinationName Sitemap
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Dataset Griddap kini mendukung sumbu penanda waktu variabel dan variabel data (yaitu, variabel dengan nilai waktu, tetapi destinationName selain dari "time" ) . Berkat Dominic Fuller- Rowell.
+    *    ERDDAP™ sekarang benar mendukung milidetik time\\_precision "1970-01- 01T00: 00: 00.000Z." Satu kebiasaan yang disengaja: ketika menulis ke berkas berorientasi pada manusia (mis., .csv, .tsv , .json , .xhtml ) , ERDDAP™ gunakan yang dispesifikasikan time\\_precision jika termasuk detik dan / atau desimal detik; sebaliknya, ia menggunakan detik time\\_precision "1970-01- 01T00: 00: 00Z" (untuk konsistensi dan kompabilitas mundur) . Berkat Dominic Fuller- Rowell.
+    *    EDDGrid FromNcFiles kini mendukung membaca String dataVariable s.
+    *    .nc berkas yang ditulis oleh griddap kini dapat memiliki String dataVariable s.
+    * GenerateDatadasets Xml kini memuat lebih banyak flush () panggilan untuk menghindari masalah informasi tidak ditulis ke file. Berkat Thierry Valero.
+    * Dokumentasi untuk GenerateDatasetsXml telah ditingkatkan, terutama untuk menunjukkan bahwa pilihan -i hanya bekerja jika anda menentukan semua jawaban pada baris perintah (mis., mode skrip) . Dan modus skrip dijelaskan. Berkat Thierry Valero.
+    *    ERDDAP™ tidak lagi memungkinkan dua variabel dalam sebuah dataset untuk memiliki sama sourceName . (Jika seseorang melakukannya sebelumnya, mungkin menyebabkan pesan kesalahan.) Seperti sebelumnya, ERDDAP™ tidak memungkinkan dua variabel dalam sebuah dataset untuk memiliki sama destinationName .
 
 ## Versi 1.52{#version-152} 
  (dirilis 2014-10-03) 
 
-*    **Fitur Baru:**   (Login) 
+*    **Fitur Baru:**   (kosong) 
 *    **Perubahan kecil / Perbaikan Bug:** 
-    * Sitemap (Login) perubahan untuk membuat ERDDAP™ Sitemap
-    * Peningkatan ISO 19115 file yang dihasilkan oleh ERDDAP Sitemap&lt;gmd:protocol & gt; nilai (informasi, pencarian, OPeNDAP Sitemap OPeNDAP Login ERDDAP Login ERDDAP Sitemap tabledap ) Sitemap&lt;gmd:CI\\_OnlineResource&gt;. Berkat Derrick Snowden dan John Maurer.
+    * Lainnya (kecil) perubahan untuk membuat ERDDAP™ lebih cepat.
+    * Improvement ke ISO 19115 berkas yang dihasilkan oleh ERDDAP : ditambahkan baru direkomendasikan&lt;gmd: nilai protokol & gt; (Informasi, pencarian, OPeNDAP : OPeNDAP , ERDDAP : griddap, dan ERDDAP : tabledap ) dalam&lt;gmd: CI\\ _ OnlineResource & gt;. Berkat Derrick Snowden dan John Maurer.
     * Banyak perubahan kecil.
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Perbaikan bug: GenerateDatasetsXml.sh dan DasDds.sh tidak dalam erddap.war untuk 1.48 dan 1.50. Sitemap Terima kasih kepada Thierry Valero.
-    * Perubahan kecil untuk beberapa tes kecepatan di TestAll untuk membuat mereka kurang rentan untuk kesempatan. Terima kasih kepada Terry Rankine.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Bug fix: GenerateDatasetsXml.sh dan DasDds.sh tidak berada dalam erdap.war untuk 1.48 dan 1.50. Sekarang mereka. Berkat Thierry Valero.
+    * Perubahan kecil untuk beberapa tes kecepatan di TestAll untuk membuat mereka kurang rentan terhadap kesempatan. Berkat Terry Rankine.
 
 ## Versi 1.50{#version-150} 
  (dirilis 2014-09-06) 
 
-*    **Fitur Baru:**   (Login) 
+*    **Fitur Baru:**   (kosong) 
 *    **Perubahan kecil / Perbaikan Bug:** 
-    * Sitemap ERDDAP™ harus jauh lebih cepat daripada versi terbaru. Meme it
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   (Sitemap) 
+    * Ini ERDDAP™ harus jauh lebih cepat dari versi terbaru.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:**   (tidak ada) 
 
 ## Versi 1.48{#version-148} 
  (dirilis 2014-09-04) 
 
 *    **Fitur Baru:** 
-    *    ERDDAP™ sekarang selalu membuat dataset tabular, datasetID Sitemap allDatasets yang memiliki tabel informasi tentang semua dataset dalam hal ini ERDDAP Sitemap Bisa dikuasai seperti dataset tabular lainnya. Ini adalah alternatif yang berguna untuk sistem saat ini untuk mendapatkan informasi tentang program dataset.
-    * Ada dua jenis file output baru untuk EDDTable dan EDDGrid .csv0 dan .tsv Sitemap Mereka adalah comma- dan tab-separated-value file yang tidak memiliki garis dengan nama kolom atau unit. Data dimulai pada baris pertama. Mereka sangat berguna untuk skrip yang hanya ingin satu bagian informasi dari ERDDAP Sitemap
+    *    ERDDAP™ sekarang selalu menciptakan data tabular, datasetID = allDatasets , yang memiliki tabel informasi tentang semua data di sini ERDDAP . Hal ini dapat dikueri seperti data tabular lainnya. Ini adalah alternatif yang berguna bagi sistem saat ini untuk mendapatkan informasi tentang program data.
+    * Ada dua tipe berkas keluaran baru untuk EDTabel dan EDDGrid , .csv0 dan .tsv 0. Mereka comma- dan tabel-dipisahkan-nilai berkas yang tidak memiliki baris dengan nama kolom atau unit. Data dimulai pada baris pertama. Mereka sangat berguna untuk script yang hanya ingin satu bagian informasi dari ERDDAP .
 *    **Perubahan kecil / Perbaikan Bug:** 
-    * Peta sekarang dapat dibuat untuk longitudes dalam kisaran -720 ke 720.
-    * Login .nc Jenis File respons galat tersedia untuk semua EDDGrid Login Ini mengembalikan [Login](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/ncml_overview.html) \\-format deskripsi dataset (mirip dengan gabungan .dds + .das) Sitemap
-    * Perbaikan bug: Menyimpan data tabular ke .nc file terbatas pada nilai 100.000 per variabel. Sekarang hanya terbatas pada ukuran file total 2 GB. Kevin O'Brien
-    * Perbaikan bug: saveAs Matlab metode sekarang memastikan bahwa datasetID s dikonversi ke aman Matlab nama variabel. Tapi saya masih sangat merekomendasikan bahwa Anda membuat Meme it datasetID s yang nama variabel yang valid: dimulai dengan surat dan kemudian hanya menggunakan A-Z, a-z, 0-9, dan \\_. Sitemap [ datasetID ](/docs/server-admin/datasets#datasetid) Sitemap Lukas Campbell.
-    * Perbaikan bug di EDDTableDariDatabase: Dengan beberapa jenis database, NO\\_ respon data dari database yang dipimpin ke penundaan 30 detik tanpa titik ERDDAP Sitemap Salam Williams
-    * Perbaikan bug: EDDGrid Membuat Grafik dengan Jenis Graf = garis (atau penanda atau penanda dan garis) variabel sumbu x dipaksa untuk menjadi waktu. Sekarang bisa menjadi sumbu. Terima kasih kepada Lynn DeWitt.
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * STRONGLY RECOMMENDED: Update Java   
-Versi ini ERDDAP™ Login Java 7 atau lebih tinggi, tetapi Java 7 akan mencapai akhir-of-life di April 2015 (Sitemap) , jadi sekarang adalah waktu yang baik untuk beralih ke Java 8. Jadi Java 8 adalah RECOMMENDED STRONGLY. Sitemap Java 8. Perhatikan bahwa Java 6 mencapai akhir-of-life pada Februari 2013 (tidak ada lagi perbaikan bug keamanan&#33;) Sitemap
-    * STRONGLY RECOMMENDED: Memperbarui Tomcat
-Jika Anda menggunakan Tomcat, silakan beralih ke versi terbaru Tomcat. Tomcat 8 dirancang untuk bekerja dengan Java Sitemap
-    * Sitemap ERDDAP " tidak lagi akronim. Meme it Sekarang hanya nama. Saya tidak ingin nama untuk menyoroti ERD Sitemap Login ERDDAP™ untuk menyoroti institusi Anda dan data Anda.
-    * Login [menyesuaikan penampilan Anda ERDDAP™ instalasi untuk menyoroti institusi Anda dan data Anda](/docs/server-admin/deploy-install#customize) Sitemap Dengan pekerjaan jam, Anda dapat membuat perbaikan yang bagus yang akan bertahan selamanya.
-    * Di setup.xml,&lt;displayDiagnosticInfo&gt; pilihan sekarang selalu diabaikan dan diperlakukan seolah-olah nilainya palsu.
-RECOMMENDED: Hapus&lt;displayDiagnosticInfo&gt; tag dan info terkait dari setup Anda.xml.
-    * Dalam setup.xml, default untuk&lt; drawLandMask &gt; "lebih", tetapi sekarang "di bawah", yang merupakan standar umum yang lebih baik (bekerja dengan baik dengan semua dataset) Sitemap
-    * GenerateDatasetsXml.sh dan DadDds.sh Linux scripts sekarang menggunakan bash bukan csh, dan memiliki ekstensi .sh. Terima kasih kepada Emilio Mayorga
-    * Login Xml dan DasDds sekarang membuat file log mereka sendiri (WordPress.org) dan file output (GenerateDatasetXml.out dan DadDds.out) di _bigParentDirectory_/logs/, dan tidak pernah menempatkan hasil mereka di clipboard.
-    * Login Xml sekarang mendukung parameter baris perintah -i yang memasukkan output ke file yang ditentukan di tempat yang ditentukan. Sitemap [Sitemap](/docs/server-admin/datasets#generatedatasetsxml) Sitemap Terima kasih kepada Terry Rankine.
-    * EDDTableDariDatabase sekarang mendukung&lt;Sitemap&lt;/columnNameQuotes&gt;, dengan nilai yang valid " (Login) , ', atau tidak ada. Karakter (Sitemap) akan digunakan sebelum dan sesudah nama kolom di pertanyaan SQL. Berbagai jenis database, mengatur dengan cara yang berbeda, akan membutuhkan tanda kutip nama kolom yang berbeda.
-    * Tabular latitude dan variabel longitude sekarang dapat disesuaikan long\\_name 's, e.g., Profil depo. Sebelumnya, mereka hanya bisa menjadi Depo dan Longitude.
-    * Mulai sekarang, tentukan "defaultDataQuery" dan "defaultGraphQuery" sebagai atribut dalam metadata global dataset (yaitu,&lt;addAtts&gt;), tidak terpisah&lt;Login&lt;defaultGraphQuery&gt; tag. (Meskipun, jika Anda masih menentukannya melalui tag, ERDDAP™ akan secara otomatis menciptakan atribut global dengan informasi.) 
+    * Peta sekarang dapat dibuat untuk garis bujur dalam kisaran -720-720.
+    * Yang baru .nc Tipe Berkas respon ml tersedia untuk semua EDDGrid Dataset. Ini kembali [NCML](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/ncml_overview.html) \\ -format deskripsi dari dataset (mirip dengan gabungan .dds + .das) .
+    * Perbaikan bug: Menyimpan data tabular ke .nc berkas dibatasi ke 100.000 nilai per variabel. Sekarang hanya terbatas ke 2 GB ukuran berkas total. Berkat Kevin O 'Brien.
+    * Perbaikan bug: saveAs Matlab metode sekarang memastikan bahwa datasetID s dikonversi ke aman Matlab nama variabel. Tapi aku masih sangat merekomendasikan bahwa Anda membuat datasetID s yang valid nama variabel: dimulai dengan sebuah surat dan kemudian hanya menggunakan A-Z, a-z, 0-9, dan\\ _. Lihat [ datasetID ](/docs/server-admin/datasets#datasetid) . Berkat Luke Campbell.
+    * Perbaikan kutu di EDTableFromData: Dengan beberapa jenis basis data, NO\\ _ Respon DATA dari basis data menyebabkan penundaan 30 detik sia-sia dalam ERDDAP . Berkat Greg Williams.
+    * Perbaikan kutu: EDDGrid Buat Sebuah Grafik dengan Baris Grafik Tipe = (atau penanda atau penanda dan baris) memaksa variabel sumbu x untuk waktu. Sekarang bisa sumbu apapun. Berkat Lynn DeWitt.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * PERINTAH KEMBALI: Perbarui Java   
+Versi ini ERDDAP™ membutuhkan Java 7 atau lebih tinggi, tapi Java 7 akan mencapai akhir hidupnya pada April 2015 (Segera&#33;) , jadi sekarang adalah waktu yang baik untuk beralih ke Java Jadi... Java 8 adalah tegas recomcenden. Saya menguji dengan Java 8, perhatikan itu. Java 6 mencapai akhir hidupnya pada Februari 2013 (Tidak ada lagi perbaikan bug keamanan&#33;) .
+    * RECOMMENDED STONGLY: Update Tomcat
+Jika Anda menggunakan Tomcat, silakan beralih ke versi terbaru dari Tomcat. Tomcat 8 dirancang untuk bekerja dengan Java 8.
+    * " ERDDAP "bukan lagi singkatan. Sekarang hanya sebuah nama. Saya tidak ingin nama untuk menyorot ERD . Aku ingin ERDDAP™ untuk menyoroti institusi dan datamu.
+    * SILAKAN [menyesuaikan penampilan Anda ERDDAP™ instalasi untuk menyoroti institusi dan data Anda](/docs/server-admin/deploy-install#customize) . Dengan satu jam kerja, Anda dapat membuat perbaikan yang bagus yang akan berlangsung selamanya.
+    * Dalam semp.xml, yang&lt;pilihan display DiagnosticInfo &gt; sekarang selalu diabaikan dan diperlakukan seolah-olah nilainya salah.
+RECOMMENDED: Hapus&lt;display DiagnosticInfo &gt; tag dan info terkait dari setup-xml anda.
+    * Dalam semp.xml, baku untuk&lt; drawLandMask &gt; adalah "lebih", tapi sekarang "di bawah", yang merupakan standar umum yang lebih baik (bekerja dengan baik dengan semua dataset) .
+    * GenerateDateDatassetsXml.sh dan dDds.sh Linux script sekarang menggunakan bash daripada csh, dan memiliki ekstensi .sh. y Berkat Emilio Mayorga
+    * GenerateDatadasets Xml dan DasDds kini membuat berkas log mereka sendiri (GenerateDatassetsXml.log dan DasDds.log) dan berkas keluaran (GenerateDatassetsXml.out dan DadDs.out) in _ bigger ParentDirektori _ / log /, dan tidak pernah menempatkan hasil mereka pada clipboard.
+    * GenerateDatadasets Xml kini mendukung parameter baris perintah -i yang memasukkan keluaran ke dalam berkas yang dispesifikasikan pada tempat yang ditentukan. Lihat [dokumentasi](/docs/server-admin/datasets#generatedatasetsxml) . Berkat Terry Rankine.
+    * EDTableFromDatabase sekarang mendukung&lt;ColumnNameQuotes &gt;&lt;/ columnNameQuotes &gt;, dengan nilai yang valid " (baku) , ', atau tidak sama sekali. Karakter ini (jika ada) akan digunakan sebelum dan sesudah nama kolom dalam kueri SQL. Jenis basis data yang berbeda, diatur dengan cara yang berbeda, perlu tanda kutip nama kolom yang berbeda.
+    * Lintang Tabular dan variabel bujur kini dapat disesuaikan long\\_name 's, mis. Profile Latitude. Sebelumnya, mereka hanya bisa Latitude dan Longitude.
+    * Mulai sekarang, nyatakan "faultDatuquery" dan "faultGraphQuery" sebagai atribut dalam metadata global data (yaitu,&lt;addAtts &gt;), tidak terpisah&lt;navaultDataQuery &gt; dan&lt;navoultGraphQuery &gt; tag. (Meskipun, jika Anda masih menentukan mereka melalui tag, ERDDAP™ akan secara otomatis membuat atribut global dengan informasi.) 
 
 ## Versi 1.46{#version-146} 
- (Dikirim 2013-07-09) 
+ (dirilis 2013-07-09) 
 
 *    **Fitur Baru:** 
-    *    (Login) 
+    *    (Nihil) 
 *    **Perubahan kecil / Perbaikan Bug:** 
-    * Perbaikan bug: Di EDDTableDariDatabase, dalam versi 1.44 hanya, ERDDAP™ tidak benar-benar mengutip nama tabel database dalam pernyataan SQL. Sekarang tetap. Kevin O'Brien
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    *    ** Jika Anda tidak memodifikasi pesan standar dalam pesan.xml,
-Login \\[ Login \\] WordPress.org **   
-File default.xml sekarang ada di erddap. file perang, tidak erddapContent .zip Sitemap Jadi, Anda tidak perlu lagi untuk memperbarui pesan secara manual.xml .
-    * Jika Anda mengubah pesan dalam pesan.xml, dari saat ini, setiap kali Anda memperbarui ERDDAP™ Sitemap
-        * Membuat perubahan yang sama yang Anda buat sebelum baru
-             \\[ Login \\] /webapps/erddap/WEB-INF/classes/gov/noa/pfel/erddap/util/messages.xml.
-Dan satu kali ini: menghapus \\[ Login \\] WordPress.org
-        * Atau, cari tahu apa yang telah berubah dalam pesan baru.xml (Sitemap) dan memodifikasi Anda
-             \\[ Login \\] /content/erddap/messages.xml file sesuai.
+    * Perbaikan Bug: Di EDDTableFromDatbase, hanya versi 1.44, ERDDAP™ tidak benar dikutip nama tabel basis data dalam pernyataan SQL. Yang sekarang tetap. Berkat Kevin O 'Brien.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    *    ** Jika Anda tidak memodifikasi pesan standar pada messages.xml,
+hapus \\[ tomcat \\] / isi / erddap / messages.xml. **   
+Berkas baku messages.xml sekarang dalam erddap. berkas perang, bukan erddapContent .zip . Jadi, Anda tidak perlu lagi memperbarui messages.xml secara manual.
+    * Jika Anda mengubah pesan dalam messages.xml, mulai sekarang, setiap kali Anda memutakhirkan ERDDAP™ , baik:
+        * Membuat perubahan yang sama yang Anda buat sebelum ke yang baru
+             \\[ tomcat \\] / webapps / erddap / WEB-INF / classes / gov / noaa / pfel / erddap / util / messages.xml.
+Dan kali ini: hapus \\[ tomcat \\] / isi / erddap / messages.xml.
+        * Atau, mencari tahu apa yang telah berubah dalam messages.xml baru (via diff) , dan memodifikasi Anda
+             \\[ tomcat \\] / isi / erddap / messages.xml berkas sesuai.
 
 ## Versi 1.44{#version-144} 
  (dirilis 2013-05-30) 
 
 *    **Fitur Baru:** 
-    * Kueri ke dataset EDDTable sekarang mendukung & orderBy Login (Login) Sitemap orderByMinMax  (Login)   (yang mengembalikan dua baris di setiap kelompok, dengan minimum dan maksimum terakhir orderBy Login) Sitemap Terima kasih kepada Lynn DeWitt.
-    * Ada dua baru tabledap jenis file: .nc Login .nc Login (yang mengembalikan header mirip ncdump sesuai .nc Login .nc Jenis file CFMA) Sitemap Steve Hankin
+    * Kueri ke data EDTabel sekarang dukung & orderBy Min (...) dan & orderByMinMax  (...)   (yang mengembalikan dua baris dalam setiap grup, dengan minimum dan maksimum dari yang terakhir orderBy nilai) . Berkat Lynn DeWitt.
+    * Ada dua yang baru tabledap tipe berkas: .nc CFHeader dan .nc CFMAHeader (yang mengembalikan header ncdump-like yang berhubungan .nc CF dan .nc Tipe berkas CFMA) . Berkat Steve Hankin.
 *    **Perubahan kecil / Perbaikan Bug:** 
-    * Perbaikan bug: memuat halaman web .graph dan .html untuk dataset dengan banyak nilai waktu lambat karena ERDDAP™ lambat ketika menghasilkan opsi slider waktu. Sekarang selalu cepat. Terima kasih kepada Michael Barry, OOICI, dan Kristian Sebastian Blalid.
-    * Perbaikan bug: Dalam beberapa jenis dataset EDDTable, batasan waktu tidak selalu ditangani dengan benar. Sitemap Terima kasih kepada John Maurer dan Kevin O'Brien.
-    * Perbaikan bug: dataset tidak akan dimuat ketika semua subsetVariables adalah variabel nilai tetap. Sekarang mereka akan. Terima kasih kepada Lynn DeWitt dan John Peterson.
-    * IMPROVED: sekarang, semua pertanyaan hanya variabel subset bertindak seolah-olah &distinct () adalah bagian dari query.
-    * IMPROVED: sekarang, untuk pertanyaan yang mencakup & .json p=_functionName_, _fungsi Name_ MUST sekarang menjadi serangkaian 1 atau lebih (Sitemap) kata. Setiap kata harus dimulai dengan surat ISO 8859 atau "\\_" dan diikuti oleh 0 atau lebih ISO 8859 huruf, digit, atau "\\_". Ya, ini lebih membatasi daripada Meme it Java Persyaratan script untuk nama fungsi.
-    * Sumbu waktu pada grafik sekarang bekerja dengan baik untuk rentang waktu yang lebih lama (80 - 10000 tahun) dan rentang waktu yang lebih pendek (0.003 - 180 detik) Sitemap
-    *    ERDDAP™ sekarang lebih banyak membuktikan ketika melakukan variasi data waktu ISO-8601-format.
-    * Ada banyak perubahan kecil dan perbaikan bug lainnya.
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    *    **Anda MUST memperbarui ke versi terbaru untuk aman.**   
-         ERDDAP™ Memahami audit keamanan. Ada beberapa bug dan kelemahan. Versi 1.44 termasuk beberapa perbaikan bug keamanan penting dan beberapa perubahan untuk meningkatkan keamanan dan aksesibilitas (e.g., untuk pengguna yang terganggu penglihatan) Sitemap Versi 1.44 telah lulus audit keamanan tindak lanjut. Berkat semua orang yang baik di USGS dan Acunetix yang memungkinkan ini. (Sitemap NOAA melakukan ini?) 
-    * Login [Login WFS Login](/docs/server-admin/datasets#eddtablefromwfsfiles) membuat salinan lokal dari semua data dari ArcGIS Login WFS server dan data kemudian dapat diakses kembali dengan cepat ERDDAP™ pengguna. Berkat Christy Caudill.
-    * Login [Login EDDGrid ](/docs/server-admin/datasets#eddtablefromeddgrid) memungkinkan Anda membuat dataset EDDTable dari EDDGrid Login Beberapa alasan umum untuk melakukan ini adalah:
-        * Ini memungkinkan dataset untuk ditanyakan dengan Meme it OPeNDAP kontratraints pemilihan (mana pengguna mungkin diminta Meme it) Sitemap
-        * Dataset melekat pada dataset tabular. Berkat OOICI, Jim Potemra, Roy Mendelssohn.
-    * Nama variabel "depth" sekarang merupakan alternatif khusus untuk "altitude". Unit harus beberapa varian "meter". Nilai data harus positif = mundur. ERDDAP™ sekarang sepenuhnya menyadari makna "depth" dan mendukungnya di mana pun ketinggian didukung (e.g., sebagai komponen CDm CF DSG\\_data\\_type=profile dataset) Sitemap Dataset tidak harus memiliki variabel "depth" dan "altitude".
-    * Sitemap datasets.xml Untuk menghapus penggunaan apa pun&lt;Nama att="cdm\\_altitude\\_proxy"&gt;depth&lt;/att&gt; sejak kedalaman sekarang merupakan alternatif khusus untuk ketinggian dan tidak perlu diidentifikasi secara khusus.
-    * Sitemap datasets.xml Untuk menghapus penggunaan apa pun&lt;altitudeMetersPerSourceUnit&gt;, kecuali untuk EDDTable Sitemap SOS Sitemap
-Ketika nilainya adalah 1, cukup hapus. Meme it
-Ketika nilai -1, pertimbangkan mengubah nama variabel menjadi kedalaman.
-Untuk nilai lain, tambahkan&lt; addAttributes &gt;, misalnya,:
+    * Bug fix: memuat .graph dan .html halaman web untuk dataset dengan banyak nilai waktu lambat karena ERDDAP™ adalah lambat ketika menghasilkan pilihan slider waktu. Sekarang selalu cepat. Berkat Michael Barry, OOICI, dan Kristian Sebastian Blalid.
+    * Perbaikan kutu: Dalam beberapa jenis dataset EDTabel, batasan waktu tidak selalu ditangani dengan benar. Sekarang mereka. Berkat John Maurer dan Kevin O 'Brien.
+    * Bug fix: dataset tidak akan dimuat ketika semua subsetVariables adalah variabel nilai tetap. Sekarang mereka akan. Berkat Lynn DeWitt dan John Peterson.
+    * IMPROVED: sekarang, semua query untuk hanya subset variabel bertindak seolah-olah & berbeda () adalah bagian dari query.
+    * TERLIBAT: sekarang, untuk query yang termasuk & .json p = _ functionName _, _ function Nama _ Harus sekarang menjadi seri dari 1 atau lebih (period- dipisahkan) kata-kata. Setiap kata harus dimulai dengan huruf ISO 8859 atau "\\ _" dan diikuti oleh 0 atau lebih ISO 8859 huruf, digit, atau "\\ _". Ya, ini lebih ketat daripada Java Kebutuhan skrip untuk nama fungsi.
+    * Sumbu waktu pada grafik sekarang bekerja dengan baik untuk rentang waktu yang lebih lama (80 - 10.000 tahun) dan waktu yang lebih pendek berkisar (0.003 - 180 detik) .
+    *    ERDDAP™ sekarang lebih pemaaf ketika parsing variasi ISO- 8601 format waktu data.
+    * Ada banyak perubahan kecil lainnya dan perbaikan bug.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    *    **Anda HARUS memperbarui ke versi terbaru yang aman.**   
+         ERDDAP™ Melakukan audit keamanan. Ada beberapa bug dan kelemahan. Versi 1.44 termasuk beberapa perbaikan bug keamanan penting dan beberapa perubahan untuk meningkatkan keamanan dan aksesibilitas (mis., untuk pengguna gangguan penglihatan) . Versi 1.44 telah melewati pemeriksaan keamanan. Terima kasih kepada semua orang baik di USGS dan Akunetix yang membuat ini mungkin. (Seharusnya tidak. NOAA akan melakukan ini?) 
+    * Yang baru [EDTableFrom WFS Berkas](/docs/server-admin/datasets#eddtablefromwfsfiles) membuat salinan lokal dari semua data dari ArcGIS MapServer WFS server dan sehingga data kemudian dapat direserved dengan cepat untuk ERDDAP™ pengguna. Berkat Christy Caudill.
+    * Yang baru [EDTableFrom EDDGrid ](/docs/server-admin/datasets#eddtablefromeddgrid) memungkinkan Anda membuat data EDTabel dari EDDGrid Dataset. Beberapa alasan umum untuk melakukan ini adalah:
+        * Hal ini memungkinkan data yang akan diqueried dengan OPeNDAP batasan pilihan (yang mungkin diminta pengguna) .
+        * Dataset inheren data tabular. Berkat OOICI, Jim Potemra, Roy Mendelssohn.
+    * Nama variabel "kedalaman" sekarang alternatif khusus untuk "ketinggian". Unit harus beberapa varian "meter". Nilai data harus positif = turun. ERDDAP™ sekarang sepenuhnya menyadari arti "kedalaman" dan mendukungnya dimanapun ketinggian didukung (mis., sebagai komponen dari CF DSG cdm\\ _ data\\ _ type = profile datet) . Sebuah data tidak boleh memiliki variabel "kedalaman" dan "ketinggian".
+    * Dalam Anda datasets.xml , silakan hapus penggunaan apapun dari&lt;nama att = "cdm\\ _ velocity\\ _ proxy" &gt; kedalaman&lt;/ attt &gt; sejak kedalaman sekarang alternatif khusus untuk ketinggian dan jadi tidak perlu secara khusus diidentifikasi.
+    * Dalam Anda datasets.xml , silakan hapus penggunaan apapun dari&lt;Always MetersPerSourceUnit &gt;, kecuali untuk EDTabel Dari SOS .
+Ketika nilainya 1, hapus saja.
+Ketika nilai adalah -1, pertimbangkan mengubah nama variabel ke kedalaman.
+Untuk nilai lain, tambahkan ke&lt; addAttributes &gt;, misalnya,:
 ```
         <att name="scale\\_factor" type="float">-1</att>
 ```
 
     * Semua dataset sekarang mendukung
         
-        *   &lt;defaultDataQuery&gt; yang digunakan jika .html diminta tanpa pertanyaan.
-            * Anda mungkin jarang perlu menggunakan ini. Meme it
-            * Untuk dataset griddap, penggunaan umum ini adalah untuk menentukan nilai dimensi kedalaman atau ketinggian yang berbeda (Login \\[ Sitemap \\] Sitemap \\[ Sitemap \\] ) Sitemap
-Dalam hal apapun, Anda harus selalu mencantumkan semua variabel, selalu menggunakan nilai dimensi yang sama untuk semua variabel, dan hampir selalu menggunakan \\[ Sitemap \\] Login \\[ Sitemap \\] Sitemap \\[ 0: terakhir \\] untuk nilai dimensi.
-Contoh:
+        *   &lt;navaultDataQuery &gt; yang digunakan jika .html diminta tanpa permintaan.
+            * Kau mungkin jarang menggunakan ini.
+            * Untuk data griddap, penggunaan umum dari ini adalah untuk menspesifikasikan kedalaman baku yang berbeda atau nilai dimensi ketinggian (mis., \\[ 0 \\] bukan \\[ terakhir \\] ) .
+Dalam hal apapun, Anda harus selalu daftar semua variabel, selalu menggunakan nilai dimensi yang sama untuk semua variabel, dan hampir selalu menggunakan \\[ 0 \\] , \\[ terakhir \\] , atau \\[ 0: terakhir \\] untuk nilai dimensi.
+Misalnya:
 ```
                 <defaultDataQuery>u\\[last\\]\\[0\\]\\[0:last\\]\\[0:last\\],v\\[last\\]\\[0\\]\\[0:last\\]\\[0:last\\]</defaultDataQuery>
 ```
 
-            * Sitemap tabledap dataset, penggunaan yang paling umum dari ini adalah untuk menentukan rentang waktu default yang berbeda (relatif sekarang, misalnya, & waktu & gt;= now- Sitemap) Sitemap
-Ingat bahwa meminta tidak ada variabel data sama dengan menentukan semua variabel data, jadi biasanya Anda hanya dapat menentukan batasan waktu baru.
-Contoh:
+            * Untuk tabledap dataset, penggunaan paling umum dari ini adalah untuk menspesifikasikan jangkauan waktu baku yang berbeda (relatif ke sekarang, mis. & waktu & gt; = now- 1 hari) .
+Ingat bahwa permintaan tidak ada variabel data sama seperti menspesifikasikan semua variabel data, jadi biasanya Anda hanya dapat menspesifikasikan batasan waktu baru.
+Misalnya:
 ```
                 <defaultDataQuery>&amp;time&gt;=now-1day</defaultDataQuery>
 ```
 
-        *   &lt;defaultGraphQuery&gt; yang digunakan jika .graph diminta tanpa pertanyaan.
-            * Anda mungkin jarang perlu menggunakan ini. Meme it
-            * Untuk dataset griddap, penggunaan yang paling umum dari ini adalah untuk menentukan nilai dimensi kedalaman atau ketinggian yang berbeda (Login \\[ Sitemap \\] Sitemap \\[ Sitemap \\] ) dan/atau untuk menentukan bahwa variabel tertentu di graphed.
-Dalam kasus apapun, Anda akan hampir selalu menggunakan \\[ Sitemap \\] Login \\[ Sitemap \\] Sitemap \\[ 0: terakhir \\] untuk nilai dimensi.
-Contoh:
+        *   &lt;navaultGraphQuery &gt; yang digunakan jika .graph diminta tanpa permintaan.
+            * Kau mungkin jarang menggunakan ini.
+            * Untuk data griddap, penggunaan paling umum dari ini adalah menspesifikasikan kedalaman baku yang berbeda atau nilai dimensi ketinggian (mis., \\[ 0 \\] bukan \\[ terakhir \\] ) dan / atau untuk menspesifikasikan bahwa sebuah variabel spesifik akan ditandai.
+Dalam hal apapun, Anda akan hampir selalu menggunakan \\[ 0 \\] , \\[ terakhir \\] , atau \\[ 0: terakhir \\] untuk nilai dimensi.
+Misalnya:
 ```
                 <defaultGraphQuery>temp\\[last\\]\\[0\\]\\[0:last\\]\\[0:last\\]&amp;.draw=surface&amp;.vars=longitude|latitude|temp</defaultGraphQuery>
 ```
 
-            * Sitemap tabledap dataset, penggunaan yang paling umum dari ini adalah untuk menentukan variabel yang berbeda untuk digraf, rentang waktu default yang berbeda (relatif sekarang, misalnya, & waktu & gt;= now- Sitemap) dan / atau pengaturan grafis default yang berbeda (e.g., tipe penanda) Sitemap
-Contoh:
+            * Untuk tabledap dataset, penggunaan yang paling umum dari ini adalah untuk menspesifikasikan variabel yang berbeda yang akan ditandai, sebuah jangkauan waktu baku yang berbeda (relatif ke sekarang, mis. & waktu & gt; = now- 1 hari) dan / atau tatanan grafis baku yang berbeda (mis., tipe penanda) .
+Misalnya:
 ```
                 <defaultGraphQuery>longitude,latitude,seaTemperature&amp;time&gt;=now-1day&amp;.marker=1|5</defaultGraphQuery>
 ```
 
-Ingat bahwa Anda perlu untuk XML-encode atau persen-encode (baik satu, tapi tidak baik Meme it) Pertanyaan default karena mereka dalam dokumen XML. Misalnya, & menjadi &amp; sampel;,&lt;menjadi &amp;lt;, dan &gt; menjadi &amp; gt; .
-Dan silakan periksa pekerjaan Anda. Sangat mudah untuk membuat kesalahan dan tidak mendapatkan apa yang Anda inginkan.
-Berkat Charles Carleton, Kevin O'Brien, Lukas Campbell, dan lain-lain.
-    *    EDDGrid Login EDDGrid DariErddap, dan EDDTableDari EDDGrid memiliki sistem baru untuk menangani dataset yang sering berubah (sering kira-kira setiap 0,5 s) Sitemap Sitemap ERDDAP 'Sistem reguler, proaktif untuk sepenuhnya mengisi ulang setiap dataset, sistem tambahan opsional ini reaktif (dipicu oleh permintaan pengguna) dan inkremental (memperbarui informasi yang perlu diperbarui) Sitemap Misalnya, jika permintaan EDDGrid DariDap dataset terjadi lebih dari jumlah mili detik yang ditentukan sejak pembaruan terakhir, ERDDAP™ akan melihat apakah ada nilai baru untuk kiri (Sitemap "time" ) dimensi dan, jika demikian, cukup unduh nilai baru sebelum menangani permintaan pengguna. Sistem ini sangat baik dalam menjaga dataset up-to-date dengan tuntutan minimal pada sumber data, tetapi dengan biaya sedikit memperlambat pemrosesan beberapa permintaan pengguna. Sitemap&lt;Login (/docs/server-admin/dataset#updateeverynmillis)   
-Terima kasih kepada Michael Barry dan OOICI.
-    *    EDDGrid DariNcFiles, EDDTableDariNcFiles, dan EDDTableDariNcCFFiles sekarang mendukung [Login .nc Login](/docs/server-admin/datasets#ncml-files) file sumber di tempat .nc Login Terima kasih kepada Jose B Rodriguez Rueda.
-    * Sitemap EDDGrid Sitemap ERDDAP™ mendukung opsi serverType="dodsindex" baru untuk atribut serverType dari&lt; sourceUrl s&gt; tag. Ini bekerja dengan halaman web yang memiliki daftar file dalam&lt;Sitemap&lt;/pre&gt; dan sering di bawah OPeNDAP logo. Contohnya [https://opendap.jpl.nasa.gov/opendap/GeodeticsGravity/tellus/L3/mascon/RL06/JPL/v02/CRI/netcdf/contents.html](https://opendap.jpl.nasa.gov/opendap/GeodeticsGravity/tellus/L3/mascon/RL06/JPL/v02/CRI/netcdf/contents.html) Sitemap
-    * Sitemap SOS sekarang mendukung tag opsional
+Ingat bahwa Anda perlu XML-encode atau persent-encode (baik satu, tapi tidak keduanya) Kueri bawaan karena mereka ada dalam dokumen XML. Sebagai contoh, & amp; amp;&lt;menjadi & amp; lt;, dan &gt; menjadi & amp; gt;.
+Dan tolong periksa pekerjaanmu. Sangat mudah untuk membuat kesalahan dan tidak mendapatkan apa yang Anda inginkan.
+Berkat Charles Carleton, Kevin O 'Brien, Luke Campbell, dan lainnya.
+    *    EDDGrid FromDap, EDDGrid FromErddap, dan EDTableFrom EDDGrid memiliki sistem baru untuk menangani dataset yang sering berubah (Seringkali setiap 0,5 s) . Tidak seperti ERDDAP sistem reguler, proaktif untuk memuat ulang semua data, sistem tambahan opsional ini reaktif (dipicu oleh permintaan pengguna) dan secara bertahap (hanya memperbarui informasi yang perlu diperbarui) . Misalnya, jika permintaan untuk EDDGrid Data FromDap terjadi lebih dari jumlah milidetik yang dinyatakan sejak pemutakhiran terakhir, ERDDAP™ akan melihat apakah ada nilai-nilai baru untuk yang paling kiri (biasanya "time" ) dimensi dan, jika demikian, hanya download nilai-nilai baru sebelum menangani permintaan pengguna. Sistem ini sangat baik dalam menjaga perubahan data up- to-date dengan permintaan minimal pada sumber data, tetapi dengan biaya sedikit memperlambat proses beberapa permintaan pengguna. Lihat [&lt;updateEveryNMillis &gt;] (/ docs / server-admin / datasets # updateeverynmillis)   
+Berkat Michael Barry dan OOICI.
+    *    EDDGrid FromNcFiles, EDTableFromNcFiles, dan EDDTableFrommCFFIles kini mendukung [NcML .nc ml](/docs/server-admin/datasets#ncml-files) berkas sumber di tempat .nc file. Berkat Jose B Rodriguez Rueda.
+    * Untuk EDDGrid Aggregates ExistingDimension, ERDDAP™ mendukung sebuah pilihan serverType baru = "dodsindex" untuk atribut serverType dari&lt; sourceUrl s &gt; tag. Ini bekerja dengan halaman web yang memiliki daftar berkas di dalamnya&lt;pre &gt;&lt;/ pre &gt; dan sering di bawah OPeNDAP logo. Contoh adalah [ https://opendap.jpl.nasa.gov/opendap/GeodeticsGravity/tellus/L3/mascon/RL06/JPL/v02/CRI/netcdf/contents.html ](https://opendap.jpl.nasa.gov/opendap/GeodeticsGravity/tellus/L3/mascon/RL06/JPL/v02/CRI/netcdf/contents.html) .
+    * Untuk EDTableFrom SOS sekarang mendukung sebuah pilihan tag
 ```  
         <sosServerType>_serverType_</sosServerType>  
 ```
-sehingga Anda dapat menentukan jenis SOS Login (Sitemap ERDDAP™ tidak perlu mencarinya Meme it) Sitemap Nilai valid&lt;_serverType_\\&gt; adalah IOOS\\_NDBC, IOOS\\_NOS, OOSTethys Sitemap (server baru didukung Login) Sitemap Sitemap [Login SOS ](/docs/server-admin/datasets#eddtablefromsos) Sitemap Derrick Snowden dan Janet Fredericks.
-    * Sitemap EDDGrid Dari...Files, EDDTableDari...Files, EDDGrid Fotokopi, dan EDDTable Copy sekarang mendukung tag opsional
+sehingga Anda dapat menspesifikasikan tipe SOS server (jadi ERDDAP™ tidak perlu mencari tahu) . Nilai yang valid dari&lt;_ serverType _\\ & gt; are IOOS\\ _ NDBC, IOOS\\ _ NOS, OOSTethys , dan wHOI&#33; (server yang baru didukung Tipe) . Lihat [EDTableFrom SOS ](/docs/server-admin/datasets#eddtablefromsos) . Berkat Derrick Snowden dan Janet Fredericks.
+    * Semua EDDGrid Dari... berkas, EDTableFrom... berkas, EDDGrid Salin, dan EDTabel Salin sekarang mendukung sebuah tag opsional
 ```
         <fileTableInMemory>true</fileTableInMemory> (The default is false.)  
 ```
-yang dapat memberitahukan ERDDAP™ menyimpan file Login (dengan informasi tentang setiap file data sumber) dalam memori bukan hanya pada disk (Login) Sitemap Menyimpan fileTable dalam kecepatan memori atas permintaan untuk data (terutama jika ada &gt; 1000 file data sumber) tetapi menggunakan lebih banyak memori. Jika Anda mengatur ini untuk benar untuk setiap dataset, simpan mata di Memori: saat ini menggunakan garis di _yourDomain_ /erddap/status.html untuk memastikan bahwa ERDDAP™ masih memiliki banyak memori gratis. Fredrik Stray
-    * EDDTableDariASCIIFiles sekarang mendukung&lt;Login Dua charset paling umum (kasus sensitif&#33;) ISO-8859-1 Datasheet (Login) dan UTF-8.
-    * Direkomendasikan: dalam setup.xml, dalam&lt;Login&lt;Login Login
-        &lt;html lang="en-US"&gt; (atau berbeda [kode bahasa](https://www.w3schools.com/tags/ref_language_codes.asp) jika Anda telah diterjemahkan pesan.xml) Sitemap
-    * setup.xml memiliki tag opsional baru untuk bagian menonaktifkan ERDDAP Sitemap
-        *   &lt;konverterActive&gt;false&lt;Login&lt;&#33;-- default benar --&gt;
-        *   &lt;slideSorterActive&gt;false&lt;Login&lt;&#33;-- default benar --&gt;
-        *   &lt;Login&lt;Login&lt;&#33;-- default benar --&gt; Secara umum, kami merekomendasikan untuk mengatur salah satu dari ini untuk palsu.
-    * Login Xml sekarang menulis hasilnya ke _bigParentDirectory_/logs/generateDatasetsXmlLog.txt, tidak log.txt. Terima kasih kepada Kristian Sebastian Blalid.
-    * Login Xml sekarang membuat saran yang baik untuk&lt;Login Login Sitemap NOAA Proyek UAF.
-    * Banyak perbaikan kecil untuk GenerateDatasetsXml. Sitemap NOAA Proyek UAF.
+yang dapat memberitahu ERDDAP™ untuk menyimpan berkas Tabel (dengan informasi tentang setiap berkas data sumber) dalam memori bukan hanya di disk (baku) . Menjaga Tabel berkas dalam kecepatan memori meminta data (terutama jika ada &gt; 1000 berkas sumber data) , tetapi menggunakan lebih banyak memori. Jika Anda menyetel ini ke true untuk semua data, tetap awasi Memori: saat ini memakai baris di _ Your Domain _ /erddap/status.html untuk memastikan bahwa ERDDAP™ masih memiliki banyak memori gratis. Berkat Fredrik Stray.
+    * EDTableFromASCIIFiles kini mendukung&lt;charset &gt;. Dua charset yang paling umum (kasus sensitif&#33;) adalah ISO- 8859- 1 (baku) dan UTF-8.
+    * Disarankan: dalam setup.xml, dalam&lt;startHeadHtml &gt;, silakan ubah&lt;html &gt; ke
+        &lt;html lang = "en-US" &gt; (atau berbeda [kode bahasa](https://www.w3schools.com/tags/ref_language_codes.asp) jika anda telah menerjemahkan messages.xml) .
+    * setup.xml memiliki tag opsional baru untuk menonaktifkan bagian dari ERDDAP :
+        *   &lt;konversi &gt; false&lt;/ convertersActive &gt;&lt;&#33; -- the default is true -- &gt;
+        *   &lt;slideSorterActive &gt; false&lt;/ slideSorterActive &gt;&lt;&#33; -- the default is true -- &gt;
+        *   &lt;wmsActive &gt; false&lt;/ wmsActive &gt;&lt;&#33; -- the default is true -- &gt; In general, we rekomendasikan terhadap setting any of these to false.
+    * GenerateDatadasets Xml kini menulis hasil ke _ bigParentDirectory _ / log / generateDategasetsXmlLog.txt, bukan log.txt. Berkat Kristian Sebastian Blalid.
+    * GenerateDatadasets Xml sekarang membuat saran yang baik untuk&lt;reload Setiap menit &gt;. Berkat NOAA Proyek UAF.
+    * Banyak perbaikan kecil untuk GenerateDatasetsXml. Berkat NOAA Proyek UAF.
 
 ## Versi 1.42{#version-142} 
  (dirilis 2012-11-26) 
 
 *    **Fitur Baru:** 
-    *    (Tidak ada fitur baru utama.) 
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Apabila Anda mengupgrade dari ERDDAP™ 1.38 atau 1.40, tidak ada perubahan yang mengharuskan Anda untuk membuat perubahan pada file konfigurasi Anda (tapi Anda harus menggunakan pesan baru.xml file) Sitemap
-    *    ERDDAP™ sekali lagi bisa berjalan dengan Java 1.6. ( ERDDAP™ v1.40 diperlukan Java 1 Artikel) Kami masih sangat merekomendasikan menggunakan versi terbaru dari Java 1 Artikel
-    * Jenis dataset baru, [Login Login](/docs/server-admin/datasets#eddtablefromawsxmlfiles) , dapat membaca data dari satu set Stasiun Cuaca Otomatis (Login) XML API Terima kasih kepada Lynn Dewitt dan Exploratorium.
+    *    (Tidak ada fitur baru.) 
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Jika Anda meningkatkan dari ERDDAP™ 1.38 atau 1.40, tidak ada perubahan yang mengharuskan Anda untuk membuat perubahan pada berkas konfigurasi Anda (tetapi Anda harus menggunakan berkas messages.xml baru) .
+    *    ERDDAP™ sekali lagi dapat berjalan dengan Java 1.6. ( ERDDAP™ dibutuhkan v1.40 Java 1.7.) Kami masih sangat merekomendasikan menggunakan versi terbaru dari Java 1.7.
+    * Sebuah jenis data baru, [EDTableFrom AwsXmlFiles](/docs/server-admin/datasets#eddtablefromawsxmlfiles) , dapat membaca data dari satu set dari Stasiun Cuaca Otomatis (AWS) Berkas data XML. Berkat Lynn Dewitt dan Exploratorium.
 *    **Perubahan kecil / Perbaikan Bug:** 
-    * Menyesuaikan perubahan NDBC SOS server data sumber.
-    * Menyesuaikan perubahan layanan NOS COOPS ASCII.
-    * Dibuat beberapa perubahan kecil dan perbaikan bug.
+    * Disesuaikan ke perubahan ke NDBC SOS server data sumber.
+    * Disesuaikan untuk mengubah layanan NOS COOPS ASCII.
+    * Membuat beberapa perubahan kecil dan perbaikan bug.
 
 ## Versi 1.40{#version-140} 
  (dirilis 2012-10-25) 
 
 *    **Fitur Baru:** 
-    * Ada format file output baru untuk tabledap Sitemap .nc CFMA, yang menyimpan data yang diminta dalam .nc file yang sesuai dengan CF [Sitemap](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Pilihan Array Multidimensional, dan yang oleh karena itu sesuai dengan templat NODC \\[ 2020: sekarang [Template NCEI](https://www.ncei.noaa.gov/netcdf-templates)  \\] untuk menyimpan data jenis ini. Berkat NODC.
-    *    tabledap permintaan sekarang dapat mencakup batasan waktu seperti & waktu&gt; now- Sitemap Sitemap [Sitemap](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#now) Sitemap Terima kasih kepada James Gosling.
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Apabila Anda mengupgrade dari ERDDAP™ 1.38, tidak ada perubahan yang mengharuskan Anda untuk membuat perubahan pada file konfigurasi Anda (tapi Anda harus menggunakan pesan baru.xml file) Sitemap
-    *    ERDDAP™ rilis publik dan tonggak internal tersedia melalui [ ERDDAP™ di GitHub](https://github.com/ERDDAP) Sitemap Untuk informasi lebih lanjut, lihat [Login](https://github.com/ERDDAP/erddap/wiki) Sitemap ERDDAP™ proyek serta lebih umum [ ERDDAP™ Panduan Programmer](/docs/contributing/programmer-guide) Sitemap (Ini diumumkan secara terpisah beberapa minggu setelah ERDDAP™ 1.38 rilis.) 
-    * Login Xml telah ditingkatkan.
-        * Script direvisi sehingga harus bekerja dengan benar di semua komputer Linux (tidak hanya beberapa) Sitemap
-        * Sekarang tambahkan creator\\_name Login creator\\_email Sitemap creator\\_url kapan saja.
+    * Ada format berkas keluaran baru untuk tabledap dataset: .nc CFMA, yang menyimpan data yang diminta dalam .nc berkas yang konform ke CF [Geometri Sampling Discrete](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Pilihan Multidimensional Array, dan karena itu sesuai dengan contoh NODC \\[ 2021: sekarang [Templat NCEI](https://www.ncei.noaa.gov/netcdf-templates)  \\] untuk menyimpan data semacam ini. Berkat NODC.
+    *    tabledap permintaan sekarang dapat termasuk batasan waktu seperti & waktu &gt; now- 5 hari. Lihat [dokumentasi](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#now) . Berkat James Gosling.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Jika Anda meningkatkan dari ERDDAP™ 1.38, tidak ada perubahan yang mengharuskan Anda untuk membuat perubahan pada berkas konfigurasi Anda (tetapi Anda harus menggunakan berkas messages.xml baru) .
+    *    ERDDAP™ rilis publik dan tonggak internal tersedia melalui [ ERDDAP™ di GitHub](https://github.com/ERDDAP) . Untuk informasi lebih lanjut, melihat [Wiki](https://github.com/ERDDAP/erddap/wiki) untuk ERDDAP™ proyek serta lebih umum [ ERDDAP™ Panduan Programmer](/docs/contributing/programmer-guide) . (Hal ini diumumkan secara terpisah beberapa minggu setelah ERDDAP™ 1,38 rilis.) 
+    * GenerateDatadasets Xml telah ditingkatkan.
+        * Skrip direvisi sehingga seharusnya bekerja dengan benar pada semua komputer Linux (bukan hanya beberapa) .
+        * Sekarang menambahkan creator\\_name , creator\\_email , dan creator\\_url kapanpun mungkin.
         * Banyak perbaikan kecil lainnya.
-    * Mencermin bagaimana ERDDAP™ penawaran dengan waktu.
-        * Sitemap ERDDAP™ sekarang menangani waktu pada ketepatan mili detik (Sitemap) Sitemap
-        * Sekarang Anda dapat menentukan presisi waktu untuk dataset tertentu, lihat [ time\\_precision ](/docs/server-admin/datasets#time_precision) Sitemap Misalnya, Anda mungkin mengatur dataset untuk menampilkan nilai waktu dengan presisi tanggal (g., 1970-01-01) Sitemap
-        * Dataset Anda saat ini akan menggunakan pengaturan default, sehingga mereka tidak terpengaruh oleh perubahan ini dan akan terus menampilkan waktu dengan presisi detik. Terima kasih kepada Servet Cizmeli dan Philip Goldstein.
-    *    [Sitemap](/docs/server-admin/datasets#eddtablefromnccffiles) adalah jenis dataset baru yang dapat Anda gunakan di Anda datasets.xml Login Ini dapat membaca data dari berbagai format file yang didefinisikan oleh [Login Sitemap](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) konvensi. Berkat NODC dan terima kasih khusus untuk Kyle Wilcox untuk membuat file sampel untuk sejumlah besar format file DSG yang valid dan untuk membuat mereka tersedia secara publik.
+    * Didenda bagaimana ERDDAP™ berurusan dengan waktu.
+        * Secara internal, ERDDAP™ sekarang menangani waktu pada presisi milidetik (bukan detik) .
+        * Anda sekarang dapat menentukan ketepatan waktu bagi suatu data yang diberikan, lihat [ time\\_precision ](/docs/server-admin/datasets#time_precision) . Sebagai contoh, Anda mungkin mengatur suatu data untuk menampilkan nilai waktu dengan presisi tanggal (mis., 1970-01- 01) .
+        * Data Anda saat ini akan memakai pengaturan bawaan, sehingga mereka tidak terpengaruh oleh perubahan ini dan akan terus menampilkan waktu dengan presisi detik. Berkat Servet Cizmeli dan Philip Goldstein.
+    *    [EDTableFromNCFFiles](/docs/server-admin/datasets#eddtablefromnccffiles) adalah sebuah tipe data baru yang dapat anda gunakan pada datasets.xml file. Ini dapat membaca data dari sejumlah format berkas yang didefinisikan oleh [CF Geometri Sampling Discrete](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Pertemuan. Terima kasih kepada NODC dan khusus terima kasih kepada Kyle Wilcox untuk membuat file sampel untuk jumlah besar format file DSG yang valid dan untuk membuat mereka tersedia secara terbuka.
 *    **Perubahan kecil / Perbaikan Bug:** 
-    * Diperlukan [Login](#quick-restart) sistem untuk semua relevan EDDGrid dan kelas EDDTable.
-    * Dokumentasi yang ditingkatkan, terutama terkait dengan cara menggunakan [Login](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#fileType) Login [ tabledap ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#fileType) dari berbagai perangkat lunak klien.
-    * Mengubah pencarian lanjutan untuk mendukung minTime dan/atau maxTime dinyatakan sebagai epochSeconds. Terima kasih kepada Lynn Dewitt.
-    * Login .htmlTable output untuk menampilkan url dan alamat email sebagai tautan.
-    * Ditambahkan "rel=" dan "rev=" untuk relevan&lt;a href&gt; tag. Terima kasih kepada Pat Cappelaere dari OGC   REST Sitemap
-    * Peningkatan perlindungan terhadap permintaan data besar yang tidak realistis, terutama dalam tabledap , di mana itu adalah masalah yang lebih sulit.
-    * Menyiapkan lebih banyak pesan ke pesan.xml.
-    * Peningkatan kecepatan yang dibuat.
-    * Login EDDGrid DariFiles untuk memungkinkan turunan berurutan. Maricel Etchegaray
-    * Dihapus referensi ke iGoogle karena akan dihentikan.
-    * Dibuat beberapa perubahan kecil dan perbaikan bug.
+    * Memperluas [restart cepat](#quick-restart) sistem ke semua relevan EDDGrid dan subkelas EDTabel.
+    * Menimbulkan dokumentasi, terutama terkait dengan bagaimana menggunakan [griddap](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#fileType) dan [ tabledap ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#fileType) dari berbagai perangkat lunak klien.
+    * Berubah pencarian canggih untuk mendukung MinTime dan / atau maxTime diekspresikan sebagai epochSeconds. Berkat Lynn Dewitt.
+    * Berubah .htmlTable keluaran untuk menampilkan urls dan alamat email sebagai link.
+    * Ditambahkan "rel =" dan "rev =" ke relevan&lt;a href &gt; tag. Terima kasih untuk Pat Cappellaere dari OGC   REST proyek.
+    * Peningkatan perlindungan terhadap permintaan data yang tidak realistis besar, terutama dalam tabledap , dimana itu adalah masalah yang lebih sulit.
+    * Pindah lebih banyak pesan ke messages.xml.
+    * Membuat perbaikan kecepatan.
+    * Tetap EDDGrid FromFiles untuk memungkinkan menurunkan sumbu terurut. Berkat Maricel Etchegaray.
+    * Referensi ke iGoogle karena akan dihentikan.
+    * Membuat beberapa perubahan kecil dan perbaikan bug.
 
 ## Versi 1.38{#version-138} 
  (dirilis 2012-04-21) 
 
 *    **Fitur Baru:** 
-    * ISO 19115 dan FGDC -- ERDDAP™ dapat secara otomatis menghasilkan file metadata ISO 19115 dan FGDC XML untuk setiap dataset. Tautan ke file terlihat pada setiap daftar dataset (e.g., dari Pencarian Teks Penuh) dan juga di Web folder yang dapat diakses (Login)   (Login [FGDC WAF](https://coastwatch.pfeg.noaa.gov/erddap/metadata/fgdc/xml/) Login [ISO 19115 WAF](https://coastwatch.pfeg.noaa.gov/erddap/metadata/iso19115/xml/) ) Sitemap Terima kasih kepada Ted Habermann, Dave Neufeld, dan banyak lainnya.
-    * Pencarian Teks Penuh untuk Dataset sekarang mendukung \\-_ excludedWord _ dan \\- "_ tidak termasuk frasa_" . Terima kasih kepada Rich Signell.
-    * Cari dataset sekarang kembali menghasilkan halaman pada waktu. Default menggunakan string parameter: halaman=1&itemsPerPage=1000, tetapi Anda dapat mengubah nilai dalam URL permintaan Anda. Terima kasih kepada Steve Hankin dan proyek UAF.
-    *    OpenSearch Login ERDDAP™ sekarang mendukung [ OpenSearch Login](https://coastwatch.pfeg.noaa.gov/erddap/opensearch1.1/index.html) standar untuk mencari dataset. Di antara lain, ini memungkinkan situs-situs agregasi katalog untuk melakukan pencarian terdistribusi (melewati permintaan pencarian untuk setiap katalog yang tahu tentang Meme it) Sitemap
-    * Comma Terpisah Login (Login) Login ERDDAP™ sekarang menghasilkan file CSV dengan hanya koma antara nilai (mana Excel lebih suka) , bukan komma + ruang. Terima kasih kepada Jeff deLaBeaujardiere.
-    * Dataset -- Beberapa perubahan dilakukan untuk mendukung ERDDAP memiliki sejumlah besar dataset, mungkin bahkan satu juta. Terima kasih kepada Steve Hankin dan proyek UAF.
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-#### Restart cepat{#quick-restart} 
-*    [Login](#quick-restart) sistem restart cepat memungkinkan ERDDAP™ untuk restart jauh lebih cepat.
-     **Silahkan tambahkan ini ke file setup.xml Anda** Sitemap&lt;Login
+    * ISO 19115 dan FGDC -- ERDDAP™ dapat secara otomatis menghasilkan berkas metadata ISO 19115 dan FGDC XML untuk setiap data. Taut ke berkas terlihat pada setiap daftar data (mis., dari Pencarian Teks Penuh) dan juga dalam Folder Akses Web (WAF)   (lihat [FGDC WAF](https://coastwatch.pfeg.noaa.gov/erddap/metadata/fgdc/xml/) dan [ISO 19115 WAF](https://coastwatch.pfeg.noaa.gov/erddap/metadata/iso19115/xml/) ) . Berkat Ted Habermann, Dave Neufeld, dan banyak lagi.
+    * Pencarian Teks Penuh bagi Tata Data kini mendukung\\ - _ excludedWord _ dan\\ - "_ excluted frase _". Berkat Rich Signgell.
+    * Pencarian dataset sekarang kembali menghasilkan satu halaman pada suatu waktu. Baku menggunakan string parameter: halaman = 1 & itemsPerPage = 1000, tetapi Anda dapat mengubah nilai dalam URL permintaan Anda. Berkat Steve Hankin dan proyek UAF.
+    *    OpenSearch -- ERDDAP™ sekarang mendukung [ OpenSearch 1.1](https://coastwatch.pfeg.noaa.gov/erddap/opensearch1.1/index.html) standar untuk mencari data. Di antara hal-hal lain, ini memungkinkan situs gabungan katalog untuk melakukan pencarian terdistribusi (melewatkan permintaan pencarian ke setiap katalog bahwa ia tahu tentang) .
+    * Dipisah dengan koma Nilai (CSV) Berkas -- ERDDAP™ sekarang menghasilkan berkas CSV dengan hanya koma antara nilai (excel mana yang lebih suka) , daripada koma + ruang. Berkat Jeff DeLaBeaujardiere.
+    * Jutaan Dataset -- Beberapa perubahan dibuat untuk mendukung ERDDAP s memiliki sejumlah besar dataset, mungkin bahkan satu juta. Berkat Steve Hankin dan proyek UAF.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+#### Restart Cepat{#quick-restart} 
+*    [A](#quick-restart) sistem restart cepat memungkinkan ERDDAP™ untuk memulai kembali lebih cepat.
+     **Harap tambahkan ini ke berkas setup.xml Anda** tepat setelah&lt;/ datasetsRegex &gt;:
 ```
               <!-- If true, when you start up ERDDAP™, some types of datasets (e.g., 
               EDDGridFromDap) will used cached information (.dds, .das, etc.) to reload
@@ -2131,8 +2146,8 @@ yang dapat memberitahukan ERDDAP™ menyimpan file Login (dengan informasi tenta
               <quickRestart>true</quickRestart>
 ```
 
-    * Pencarian teks penuh untuk set data sekarang dapat dilakukan dengan mesin pencari Lucene (meskipun kami merekomendasikan mesin pencari asli jika Anda memiliki lebih dari 10.000 set data) atau sistem pencarian asli.
-         **Silahkan tambahkan ini ke file setup.xml Anda** Sitemap&lt;/displayDiagnosticInfo&gt;:
+    * Pencarian teks lengkap bagi dataset kini dapat dilakukan dengan mesin pencari Lucene (meskipun kami merekomendasikan mesin pencari asli jika Anda memiliki kurang dari 10.000 data) atau sistem pencarian asli.
+         **Harap tambahkan ini ke berkas setup.xml Anda** tepat setelah&lt;/ display DiagnosticInfo &gt;:
 ```
               <!-- ERDDAP™ lets you choose between two search engines for full text searches:
               \\* original (the default) -- is the best choice if your ERDDAP™ has fewer 
@@ -2149,73 +2164,73 @@ yang dapat memberitahukan ERDDAP™ menyimpan file Login (dengan informasi tenta
               <searchEngine>original</searchEngine>
 ```
 
-    * Dalam setup.xml, Anda dapat/menuntut sekarang menambahkan dua kategori baru ke daftar koma-separated&lt; categoryAttributes Sitemap
-        * global:katalog (menambahkannya tepat setelah global: lembaga) - kasus khusus baru yang membuat daftar kata kunci yang dipisahkan dari kata kunci global atribut untuk membuat entri terpisah untuk setiap kata kunci.
-        * Login Login (tambahkan di akhir) - kasus khusus baru yang mengkategorikan masing-masing dataVariable   destinationName Sitemap
-    * Dalam setup.xml, Anda dapat (tapi mengapa?) Sitemap ERDDAP™ tidak menawarkan FGDC dan / atau metadata ISO 19115 untuk setiap dataset dengan termasuk
+    * Dalam semp.xml, anda dapat / seharusnya sekarang menambahkan dua kategori baru ke daftar koma-dipisahkan dari&lt; categoryAttributes &gt;:
+        * global: kata kunci (tambahkan setelah global: institusi) -- sebuah kasus khusus baru yang memisahkan senarai kata kunci dari atribut kata kunci global untuk membuat entri terpisah untuk setiap kata kunci.
+        * variabel Nama (tambahkan di akhir) -- kasus khusus baru yang mengkategorikan masing-masing dataVariable   destinationName s.
+    * Dalam semp.xml, Anda dapat (tapi kenapa?) beritahu ERDDAP™ bukan untuk menawarkan FGDC dan / atau ISO 19115 metadata untuk data apapun dengan termasuk
 ```
         <fgdcActive>false</fgdcActive>  
         <iso19115Active>false</iso19115Active>
 ```
 
-Nilai default untuk pengaturan ini benar.
-    * Sitemap datasets.xml mohon mempertimbangkan meningkatkan metadata untuk dataset Anda. ERDDAP™ sekarang secara otomatis menghasilkan file metadata ISO 19115 dan FGDC XML untuk setiap dataset berdasarkan metadata dataset.
-Sitemap **metadata dataset yang baik mengarah ke baik ERDDAP -generasi ISO 19115 dan metadata FGDC.**   
-         **Lihat dokumentasi baru untuk banyak RECOMMENDED [Atribut global](/docs/server-admin/datasets#global-attributes) Sitemap** 
-    * Sitemap datasets.xml jika Anda ingin memberitahukan ERDDAP™ untuk menggunakan file FGDC dan/atau ISO 19115 yang dibuat di suatu tempat pada sistem file server, bukan memiliki ERDDAP™ menghasilkan file ini, gunakan:
+Nilai baku bagi pengaturan ini adalah true.
+    * Masuk datasets.xml , mohon pertimbangkan meningkatkan metadata untuk data Anda. ERDDAP™ Sekarang otomatis menghasilkan berkas metadata ISO 19115 dan FGDC XML untuk setiap data berdasarkan metadata data.
+Jadi, **metadata data baik mengarah ke baik ERDDAP -dihasilkan ISO 19115 dan FGDC metadata.**   
+         **Lihat dokumentasi baru untuk banyak RECOMPERDED baru [Atribut Global](/docs/server-admin/datasets#global-attributes) .** 
+    * Masuk datasets.xml , jika Anda ingin memberitahu ERDDAP™ untuk menggunakan berkas pre-made FGDC dan / atau ISO 19115 yang ada di suatu tempat pada sistem berkas server daripada memiliki ERDDAP™ buat berkas ini, gunakan:
 ```
         <fgdcFile>_fullFileName_</fgdcFile>  
         <iso19115File>_fullFileName_</iso19115File>
 ```
-Jika _FilefullName_\\="" atau file tidak ditemukan, dataset tidak akan memiliki FGDC dan / atau metadata ISO 19115. Jadi ini juga berguna jika Anda ingin menekan FGDC dan/atau metadata ISO 19115 untuk dataset tertentu.
-    * Sitemap datasets.xml , untuk semua EDDGrid Sitemap EDDGrid AggregateExistingDimensi dataset, membuat dataset anak memiliki berbeda datasetID Dari dataset induk mereka dan dari anak-anak lain. (Misalnya, Anda bisa mengikuti sistem sederhana George Foreman untuk mencerahkan anak-anaknya.) Jika ada nama dalam keluarga persis sama, dataset akan gagal dimuat (dengan pesan kesalahan yang nilai-nilai sumbu agregat tidak diurutkan) Sitemap
-    * Sitemap datasets.xml Ada beberapa perubahan pada daftar valid ioos\\_category nilai metadata:
+Jika nama berkas _ penuh _\\ = "" atau berkas tidak ditemukan, data akan tidak memiliki FGDC dan / atau ISO 19115 metadata. Jadi ini juga berguna jika Anda ingin menekan FGDC dan / atau ISO 19115 metadata untuk data tertentu.
+    * Masuk datasets.xml , untuk semua EDDGrid Sisi Sisi dan EDDGrid Agregates ExistingDimension dataset, pastikan bahwa data anak memiliki berbeda datasetID s daripada orang tua mereka tanggal dan dari anak-anak lain. (Sebagai contoh, Anda bisa mengikuti George Foreman sederhana tapi efektif sistem untuk penamaan anak-anaknya.) Jika nama dalam keluarga persis sama, data akan gagal dimuat (dengan pesan kesalahan bahwa nilai dari sumbu yang dikompilasi tidak dalam urutan terurut) .
+    * Masuk datasets.xml , ada beberapa perubahan ke daftar valid ioos\\_category nilai metadata:
         * "pCO2" diubah menjadi "CO2".
-        * "Physical Oceanography" ditambahkan.
-        * "Soils" ditambahkan.
-    * Sitemap datasets.xml Login ERDDAP™ tidak lagi memungkinkan '.' dalam Meme it datasetID Sitemap Hal ini diperbolehkan tetapi tidak teratur. (Login) 
-    * Sitemap datasets.xml , setup untuk EDDTableDariThreddsFiles dan EDDTableDari Hyrax File telah berubah sedikit karena kedua kelas hanya ditulis kembali menjadi lebih efisien (kedua kelas sekarang selalu membuat salinan lokal dari semua file data jarak jauh) Sitemap Lihat dokumentasi untuk mengatur kelas ini: [Login Hyrax Login](/docs/server-admin/datasets#eddtablefromhyraxfiles) Login [Sitemap](/docs/server-admin/datasets#eddtablefromthreddsfiles) Sitemap Secara khusus, lihat komentar yang direvisi tentang&lt;Login (Sitemap) Login&lt; sourceUrl Sitemap (sekarang penting) Sitemap Juga, Anda tidak boleh membungkus kelas ini di EDDTableCopy untuk efisiensi.
-    * Sitemap datasets.xml , jika Anda menggunakan EDDTableDariDatabase dengan Oracle database, Anda harus menyertakan koneksi Properti seperti
+        * "Fisik Oceanografi" ditambahkan.
+        * "Tanah" ditambahkan.
+    * Masuk datasets.xml , ERDDAP™ tidak lagi mengijinkan '.' dalam sebuah datasetID . Itu diperbolehkan tapi berkecil hati. (Maaf) 
+    * Masuk datasets.xml , setup untuk EDTableFromDisFiles dan EDTableFrom Hyrax Berkas telah berubah sedikit karena kedua kelas hanya ditulis ulang menjadi lebih efisien (kedua kelas sekarang selalu membuat salinan lokal dari semua berkas data remote) . Lihat dokumentasi untuk pengaturan kelas ini: [EDTableFrom Hyrax Berkas](/docs/server-admin/datasets#eddtablefromhyraxfiles) dan [EDTableFromThreddsFiles](/docs/server-admin/datasets#eddtablefromthreddsfiles) . Secara khusus, lihat revisi komentar tentang&lt;fileDir &gt; (sekarang tidak relevan) dan&lt; sourceUrl &gt; (sekarang penting) . Juga, Anda tidak harus membungkus kelas ini di EDTableCopy untuk efisiensi.
+    * Masuk datasets.xml , jika Anda menggunakan EDTableFromDatabase dengan Oracle basis data, Anda harus menyertakan koneksi Properti seperti
 ```
         <connectionProperty name="defaultRowPrefetch">4096</connectionProperty>  
 ```
-untuk menentukan berapa banyak baris data untuk mengambil pada satu waktu karena default adalah 10, yang sangat tidak efisien. Sitemap [ Oracle Sitemap](https://docs.oracle.com/cd/B10501_01/java.920/a96654/basic.htm) Sitemap MySql dan PostgreSQL tampaknya memiliki standar yang lebih baik untuk pengaturan ini. Kevin O'Brien
-    * Jika Anda menggunakan EDDTableDariDatabase, lihat peningkatan [Dokumentasi "Speed"](/docs/server-admin/datasets#eddtablefromdatabase) untuk saran tambahan untuk meningkatkan kinerja. Kevin O'Brien
-    * Sitemap datasets.xml , untuk semua EDDTable... dataset, dalam Konvensi dan Metadata\\_Conventions atribut global, silakan lihat CF-1.6 (tidak CF-1.0, 1.1, 1.2, 1.3, 1.4, atau 1.5) Karena CF-1.6 adalah versi pertama untuk menyertakan perubahan yang terkait dengan Geometry Sampling Diskrit.
-    * Programmer yang menyusun ERDDAP™ kode perlu menambahkan lib/lucene-core.jar ke daftar file jar di jalur baris perintah javac dan java mereka.
-    *    ERDDAP™ Sitemap [layanan baru](https://coastwatch.pfeg.noaa.gov/erddap/convert/keywords.html) untuk mengkonversi Nama Standar CF ke / dari Kata kunci Ilmu GCMD. Anda dapat menemukan ini berguna ketika menghasilkan metadata kata kunci global untuk dataset di Anda ERDDAP Sitemap
-    * Berurusan dengan Bots -- Silahkan baca saran ini untuk [mencegah bot dari merangkak Anda ERDDAP™ dengan cara yang sangat baik](/docs/server-admin/additional-information#robotstxt) Sitemap
-    * Sitemap Teks di ERDDAP 's halaman web sekarang sebagian besar dalam pesan.xml dan sangat cocok untuk terjemahan ke bahasa yang berbeda (e.g., Jerman, Prancis) Sitemap Pesan sekarang sering menggunakan MessageFormat untuk format, juga untuk membantu dalam membuat terjemahan. Jika Anda tertarik untuk melakukan terjemahan, silakan email erd dot data at noaa dot gov Sitemap
-    * Sitemap datasets.xml Login Ada beberapa kesalahan kecil tetapi signifikan dalam sampel datasets.xml Sitemap Jika Anda menggunakan dataset, silakan dapatkan versi yang lebih baru dari sampel baru datasets.xml di erddapContent baru .zip Login Berkat James Wilkinson.
-    * Login Saya akan mencoba keras untuk membuat Meme it ERDDAP™ proyek GitHub ASAP setelah rilis ini.
+untuk menentukan berapa banyak baris data yang diambil pada satu waktu karena baku adalah 10, yang mengerikan tidak efisien. Lihat [ Oracle dokumentasi](https://docs.oracle.com/cd/B10501_01/java.920/a96654/basic.htm) . MySql dan PostgreSQL tampaknya memiliki default yang lebih baik untuk pengaturan ini. Berkat Kevin O 'Brien.
+    * Jika Anda memakai EDDTableFromData, lihat peningkatan [Dokumentasi "Speed"](/docs/server-admin/datasets#eddtablefromdatabase) untuk saran tambahan untuk meningkatkan kinerja. Berkat Kevin O 'Brien.
+    * Masuk datasets.xml , untuk semua EDTabel... tanggal, dalam Konvensi dan Metadata\\_Conventions atribut global, mohon merujuk ke CF- 1.6 (bukan CF-1.0, 1.1, 1.2, 1.3, 1.4, atau 1.5) , karena CF-1.6 adalah versi pertama untuk menyertakan perubahan yang berhubungan dengan Sampling Geometri Discrete.
+    * Programer yang menyusun ERDDAP™ kode perlu menambahkan lib / plurene- core.jar ke daftar berkas jar dalam jalur baris perintah java mereka.
+    *    ERDDAP™ memiliki [layanan baru](https://coastwatch.pfeg.noaa.gov/erddap/convert/keywords.html) untuk mengubah CF Standard Name ke / dari GCMD Science Keyword. Anda mungkin menemukan ini berguna ketika menghasilkan metadata kunci global bagi data di Anda ERDDAP .
+    * Berurusan dengan Boss - Tolong bacakan saran ini untuk [mencegah robot merangkak Anda ERDDAP™ dengan cara yang bodoh](/docs/server-admin/additional-information#robotstxt) .
+    * Terjemahan - Teks pada ERDDAP halaman web sekarang sebagian besar dalam messages.xml dan sangat cocok untuk terjemahan ke bahasa yang berbeda (mis., Jerman, Perancis) . Pesan sekarang sering menggunakan MessageFormat untuk pemformatan, juga untuk membantu membuat terjemahan. Jika Anda tertarik untuk melakukan terjemahan, silakan email erd dot data at noaa dot gov .
+    * Contoh datasets.xml -- Ada beberapa kecil tapi signifikan kesalahan dalam sampel datasets.xml . Bila Anda memakai dataset tersebut, silakan ambil versi baru dari sampel baru datasets.xml dalam content erddapContent baru .zip file. Berkat James Wilkinson.
+    * Git -- Aku akan berusaha keras untuk membuat ERDDAP™ sebuah proyek GitHub segera setelah rilis ini.
 *    **Perubahan kecil / Perbaikan Bug:** 
-    * Palet baru, OceanDepth, berguna untuk nilai kedalaman (positif) g., 0 (Login) untuk 8000 (Login) Sitemap
-    * Login .kml output dari tabledap menggunakan ikon penanda yang lebih baik (itu tidak fuzzy) Sitemap Dan melaju lebih penanda sekarang membuatnya lebih besar.
-    * Login Dalam peningkatan terakhir, perpustakaan netcdf-java baru memiliki pembatasan yang lebih ketat untuk nama variabel .nc Login Itu menyebabkan masalah untuk EDDTableDariFiles jika variabel sourceName memiliki karakter tanda baca tertentu. EDDTableDaris sekarang dimodifikasi untuk menghindari masalah itu. Terima kasih kepada Thomas Holcomb.
-    * Halaman .subset sekarang mendukung 0/10/100/1000/10000/100000 bukan kotak cek untuk Data Terkait. Tooltip memperingatkan bahwa 100000 dapat menyebabkan browser Anda crash. Terima kasih kepada Annette DesRochers, Richard (Login) Batuk, dan Proyek Biologi IOOS.
-    * Facebook Twitter Google Plus Pinterest Email datasetID _/index.html halaman web sekarang menunjukkan url dan alamat email sebagai link yang dapat diklik. Terima kasih kepada Richard (Login) Batuk dan Proyek Biologi IOOS.
-    * Perbaikan bug: Dalam tabledap dataset dengan ketinggian Sitemap&lt;0, pertanyaan dengan batasan ketinggian ditangani dengan benar. Kyle Wilcox
-    * Perbaikan bug: EDDGrid AggregateDariExistingDimensi sekarang mendukung URL TDS yang lebih beragam. Terima kasih?
+    * Palet baru, OceanKedalaman, berguna untuk nilai-nilai kedalaman (positif turun) , mis., 0 (dangkal) 8000 (dalam) .
+    * The .kml keluaran dari tabledap memakai ikon penanda yang lebih baik (tidak fuzzy) . Dan melayang di atas penanda sekarang membuatnya lebih besar.
+    * EDTableFromFiles -- Dalam upgrade terakhir, netcdf -java baru perpustakaan memiliki pembatasan yang lebih ketat untuk nama variabel dalam .nc file. Yang menyebabkan masalah untuk EDTableFromFiles jika sebuah variabel 's sourceName memiliki karakter tanda baca tertentu. EDTableFromFiles sekarang dimodifikasi untuk menghindari masalah itu. Berkat Thomas Holcomb.
+    * Halaman .subset kini mendukung 0 / 10 / 100 / 1000 / 10.000 / 100000 bukan kotak cek untuk Data Terkait. Tooltip memperingatkan bahwa 100000 dapat menyebabkan peramban Anda untuk crash. Berkat Annette Desrothers, Richard (Abe) Coughlin, dan Proyek Biologi Gila.
+    * ... / erddap / info / _ datasetID _ / index.html halaman web sekarang menampilkan urls dan alamat email sebagai link yang dapat diklik. Berkat Richard (Abe) Coughlin dan Proyek Biologi Gila.
+    * Perbaikan kutu: Masuk tabledap , untuk dataset dengan ketinggian MetersPerSourceUnit&lt;0, kueri dengan batasan ketinggian ditangani dengan benar. Berkat Kyle Wilcox.
+    * Perbaikan kutu: EDDGrid Aggregates FromExistingDimension kini mendukung URL TDS yang lebih beragam. Berkat?
 
 ## Versi 1.36{#version-136} 
  (dirilis 2011-08-01) 
 
 *    **Fitur Baru:** 
     * Tidak ada perubahan signifikan dari sudut pandang pengguna.
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Dataset amelTao yang sering digunakan sebagai dataset sampel untuk tabledap   
-dokumentasi tidak lagi tersedia. ERDDAP™ administrator MUST membuat perubahan ini:
-        * Sitemap datasets.xml jika Anda memiliki datasetID ="pmelTao" dataset, tambahkan
-aktif="false" tepat sebelum "&gt;" di akhir garis itu.
-        * Di setup.xml Anda, jika Anda&lt;Login adalah amelTao, kemudian:
-            * Sitemap datasets.xml tidak memiliki dataset dengan Meme it datasetID ="erdGlobecBottle", tambahkan
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Data PmelTao yang sering digunakan sebagai data contoh bagi tabledap   
+dokumentasi tidak lagi tersedia. ERDDAP™ administrator HARUS membuat perubahan ini:
+        * Dalam Anda datasets.xml , jika Anda memiliki datasetID = "pmelTao" dataset, tambah
+aktif = "false" tepat sebelum "&gt;" di akhir baris itu.
+        * Dalam sepp.xml Anda, jika Anda&lt;EDTableIdExample &gt; Adalah PmelTao, maka:
+            * Jika Anda datasets.xml tidak memiliki data dengan datasetID = "erdGlobecBottle", tambah
 ```
                 <dataset type="EDDTableFromErddap" datasetID="erdGlobecBottle" active="true">  
                   <sourceUrl>https://coastwatch.pfeg.noaa.gov/erddap/tabledap/erdGlobecBottle</sourceUrl>  
                 </dataset>
 ```
-            * Di setup Anda.xml, ganti semua tag dari&lt;Login Sitemap
-                &lt;Login Matlab Login Login
+            * Dalam semp.xml Anda, mengganti semua tag dari&lt;EDTableIdExample &gt; melalui
+                &lt;EDTabel Matlab PlotExample &gt; dengan
 ```
                 <!-- Tabledap Examples
                 This group of settings is used to make examples for the tabledap documentation 
@@ -2260,14 +2275,14 @@ aktif="false" tepat sebelum "&gt;" di akhir garis itu.
                 <EDDTableMatlabPlotExample>plot(erdGlobecBottle.bottle\\_posn, erdGlobecBottle.temperature1)</EDDTableMatlabPlotExample>
 ```
                 
-    * Untuk dataset di mana jenis adalah subkelas EDDTableDariFiles, Anda sekarang dapat membuat data dari metadata.
-Secara spesifik, Anda sekarang dapat membuat variabel dari nilai atribut dari salah satu variabel asli.
-Sebagai contoh, dalam datasets.xml Sitemap&lt; dataVariable &gt; Tag, jika Anda menggunakan
+    * Untuk dataset dimana tipe ini adalah subclass dari EDDTableFromFiles, Anda sekarang dapat membuat data dari metadata.
+Secara khusus, Anda sekarang dapat membuat variabel dari nilai dari atribut dari salah satu variabel asli.
+Misalnya, di datasets.xml , dalam&lt; dataVariable &gt; tag, jika Anda menggunakan
 ```
         <sourceName>variable:cruise:PI</sourceName>  
 ```
-         ERDDAP™ akan membuat variabel dengan nilai atribut PI dari variabel pesiar.
-Terima kasih kepada WOD.
+         ERDDAP™ akan membuat sebuah variabel dengan nilai dari atribut PI dari variabel pelayaran.
+Berkat WOD.
 *    **Perubahan:** 
     * Perubahan kecil
 
@@ -2275,53 +2290,53 @@ Terima kasih kepada WOD.
  (dirilis 2011-06-15) 
 
 *    **Perubahan:** 
-    * Perbaikan bug: Memperbaiki kebocoran memori yang terjadi pada beberapa 64-bit Java Login
-    * Perbaikan bug: ERDDAP™ sekarang benar mengatur atribut global ini ketika nilai dimensi latitude berkisar dari tinggi ke rendah: geospatial\\_lat\\_min, geospatial\\_lat\\_max, Southernmost\\_Northing, Northmost\\_Northing.
+    * Perbaikan kutu: Tetap kebocoran memori yang terjadi pada beberapa 64- bit Java instalasi.
+    * Perbaikan kutu: ERDDAP™ sekarang benar mengatur atribut global ketika nilai dimensi lintang berkisar dari tinggi ke rendah: geospatial\\ _ lat\\ _ min, geospasial\\ _ lat\\ _ max, Southernmost\\ _ Northing, Northernmost\\ _ Northing.
         
-Login actual\\_range tidak berubah: mungkin memiliki nilai rendah, tinggi atau nilai rendah, karena dimaksudkan untuk menunjukkan kisaran dan urutan penyimpanan.
+Perhatikan bahwa actual\\_range tidak berubah: mungkin memiliki nilai rendah, tinggi atau tinggi, nilai yang rendah, karena dimaksudkan untuk menunjukkan jangkauan dan urutan penyimpanan.
         
     * Perubahan kecil.
-    *    ERDDAP™ administrator tidak perlu melakukan perubahan pada setup mereka.xml atau datasets.xml Sitemap
+    *    ERDDAP™ administrator tidak perlu membuat perubahan apapun ke setup.xml mereka atau datasets.xml .
 
 ## Versi 1.32{#version-132} 
  (dirilis 2011-05-20) 
 
 *    **Perubahan:** 
-    * Dukungan untuk geometris Sampling yang baru dipulihkan, CF Discrete Sampling (yang sayangnya belum tersedia secara online) , yang menggantikan Konvensi Observasi Titik CF yang diusulkan.
-         ERDDAP™ pengguna akan melihat bahwa cdm\\_feature\\_type=Station diganti oleh TimeSeries dan ada perubahan kecil pada file yang dibuat untuk .nc Jenis file CF (flat\\_dimension sekarang disebut sampel\\_dimension) Sitemap
-         ERDDAP™ administrator harus membuat perubahan ini dalam Meme it datasets.xml Sitemap
-        * cdm\\_data\\_type=Station harus diubah ke cdm\\_data\\_type=TimeSeries.
-        * cdm\\_data\\_type=StationProfile harus diubah ke cdm\\_data\\_type=TimeSeriesProfile.
-        * cdm\\_station\\_variables harus diubah ke cdm\\_timeseries\\_variables.
-        * cf\\_role=station\\_id harus diubah ke cf\\_role=timeseries\\_id.
-    * Login ioos\\_category opsi: "Colored Dissolved Organic Matter", "pCO2", "Stream Flow", "Total Suspended Matter".
-    * Solusi yang mungkin kebocoran memori pada 64-bit Java Sitemap \\[ Tidak berfungsi. \\] 
+    * Dukungan untuk yang baru disahkan, CF Discrete Sampling Geometri (yang sayangnya belum tersedia online) , yang menggantikan Konvensi CF Point Observasi.
+         ERDDAP™ pengguna akan melihat bahwa cdm\\ _ feature\\ _ type = Stasiun digantikan oleh TimeSeries dan ada perubahan kecil ke berkas yang dibuat untuk .nc Jenis berkas CF (flat\\ _ dimensi sekarang disebut contoh\\ _ dimensi) .
+         ERDDAP™ administrator perlu membuat perubahan ini datasets.xml :
+        * cdm\\ _ data\\ _ type = Stasiun harus diubah ke cdm\\ _ data\\ _ type = TimeSeries.
+        * cdm\\ _ data\\ _ type = StationProfile seharusnya diubah ke cdm\\ _ data\\ _ type = TimeSeriesProfile.
+        * cdm\\ _ station\\ _ variables seharusnya diubah ke cdm\\ _ timesery\\ _ varies.
+        * cf\\ _ role = stasiun\\ _ id harus diubah ke cf\\ _ role = timeseries\\ _ id.
+    * Baru ioos\\_category pilihan: "Terwarna Terputus Organik Matter", "pCO2", "Stream Flow", "Total Suspended Matter".
+    * Kemungkinan solusi untuk kemungkinan kebocoran memori pada 64- bit Java . \\[ Tidak berhasil. \\] 
     * Perubahan kecil.
 
 ## Versi 1.30{#version-130} 
- (Dikirim 2011-04-29) 
+ (dirilis 2011-04-29) 
 
 *    **Fitur Baru:** 
-    * Dukungan untuk 64-bit Java Sitemap Ketika digunakan dengan 64 bit Java Login ERDDAP™ sekarang dapat menggunakan lebih banyak heap memori dan menangani banyak permintaan simultan.
-    * Sitemap .nc permintaan file hingga 2GB (bahkan tanpa 64-bit Java ) melalui penggunaan yang lebih baik ERDDAP 's penanganan data di chunks.
-    * Banyak peningkatan kecepatan 2X dalam kode dan kecepatan 2X dari Java 1.6 membuat ERDDAP™ 2X ke 4X lebih cepat dari sebelumnya.
-    * Peningkatan penghematan memori secara signifikan lebih rendah ERDDAP Penggunaan memori dasar.
-    * Untuk set data tabel, ERDDAP™ sekarang sepenuhnya menyadari cdm dataset\\_data\\_type, dan bagaimana peta data ke tipe CDM. Sitemap [Login Mengikat spesifikasi geometris](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Sitemap Mungkin beberapa hari segera, file Word akan dikonversi ke .html dan mengganti informasi "OBSOLETE" saat ini di halaman web itu. Sitemap NOAA Proyek UAF.
-    * Untuk dataset yang paling EDDTable, opsi jenis file output baru, .nc CF, menciptakan Array yang terus-menerus .nc file yang sesuai dengan versi terbaru dari [Login Mengikat Konvensi Geometris](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Sitemap File-file ini terstruktur untuk mencerminkan jenis data CDM dari dataset. Karena Konvensi yang diusulkan hanya berubah, seperti tulisan ini, perpustakaan netcdf-java belum mendukung membaca format file yang dibuat oleh ERDDAP dan menafsirkan mereka sebagai file data CDM. Mungkin akan segera. Sitemap NOAA Proyek UAF.
-    * Tampilan : Opsi Data Distinct di halaman web .subset sekarang daftar drop-down yang memungkinkan pengguna menentukan jumlah baris maksimum data yang berbeda untuk dilihat (standar = 1000) Sitemap Perubahan ini, dan lain-lain, memungkinkan ERDDAP™ untuk bekerja dengan dataset yang memiliki sejumlah besar baris data yang berbeda. (Jumlah nilai unik untuk setiap variabel tunggal masih menjadi masalah, tetapi dapat cukup tinggi (20,000?) sebelum .subset dan halaman web lain memuat benar-benar perlahan.) Sitemap NOAA Proyek UAF.
-    * .subset halaman web memiliki opsi baru: Lihat Counts Data Distinct. Berkat proyek GTOPP.
-    * Untuk membantu pengguna, nilai yang berbeda (e.g., nama stasiun) sekarang ditunjukkan pada Formulir Make-A-Graph dan Data Access. Sitemap NOAA Proyek UAF.
-    * Login Permintaan Png sekarang mendukung semua jenis grafik dan representasi data. Ini menarik hanya data - tidak ada kapak, legenda, masker tanah, atau apa pun. Ini memungkinkan untuk membuat gambar sebagai lapisan transparanPngs. Sitemap | _height_ ditentukan dalam pertanyaan (Sitemap) , itu dihormati. default adalah 360x360 piksel. Satu-satunya pengecualian adalah EDDGrid &.draw=surface, di mana default (Sitemap) adalah gambar dengan ~ 1 / piksel per titik data (hingga 3000 x dan y piksel) Sitemap Terima kasih kepada Fred Hochstaedter.
-    * Login WMS halaman web sekarang menunjukkan bilah warna untuk variabel dataset (Login) Sitemap Berkat Walikota Emilio dan lain-lain.
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Rilis ini melibatkan banyak perubahan. Mereka semua penting. Meme it Silahkan menjadi pasien dan bekerja melalui semua perubahan yang tercantum di bawah ini.
-    * Versi ini didorong sebelumnya daripada dimaksudkan untuk berurusan dengan beberapa Java bug keamanan. Sayangnya, beberapa fitur / perbaikan dimaksudkan untuk ini ERDDAP™ versi tidak dalam versi ini. Login Mudah-mudahan, versi berikutnya akan relatif segera (dan lebih mudah untuk meningkatkan) Sitemap
-    * Untuk menghindari beberapa bug keamanan Java 6 update 23 dan di bawah ini, unduh dan instal versi terbaru dari Java   ( Java 6 update 24 atau lebih tinggi) Sitemap Jika Anda memiliki sistem operasi 64-bit, silakan mendapatkan versi 64-bit dari Java Sitemap
-    * Jika Anda menggunakan Tomcat 5, Anda MUST upgrade ke Tomcat 6 atau 7 (Login) Sitemap Jika Anda menggunakan Tomcat 6, pertimbangkan upgrade ke versi Tomcat 7.
-    * Silakan ikuti semua instruksi untuk [pengaturan baru ERDDAP™ ](/docs/server-admin/deploy-install) tetapi di mana relevan, Anda akan menyalin file dari instalasi lama Anda ke instalasi baru, terutama \\[ Login \\] /content/erddap direktori dan file. Sebagai bagian dari itu, perhatikan [rekomendasi pengaturan Tomcat baru](/docs/server-admin/deploy-install#tomcat) Sitemap
-    * erddap.css default sekarang termasuk dalam file erddap.war.
-        * Untuk menggunakan erddap.css default, **Login** lama \\[ Login \\] /content/erddap/images/erddap.css
-        * Jika Anda dimodifikasi \\[ Login \\] /content/erddap/images/erddap.css, dan ingin terus menggunakannya: hanya meninggalkannya di tempat dan mengganti&lt;input&gt; bagian dengan:
+    * Dukungan untuk 64-bit Java . Ketika digunakan dengan 64 bit Java , ERDDAP™ sekarang dapat menggunakan lebih banyak tumpukan memori dan menangani lebih banyak permintaan simultan.
+    * Dukungan bagi .nc berkas permintaan hingga 2GB (bahkan tanpa 64-bit Java ) via better use of ERDDAP menangani data dalam potongan.
+    * Banyak peningkatan kecepatan 2X dalam kode dan kecepatan 2X naik dari Java 1,6 make ERDDAP™ 2X ke 4X lebih cepat dari sebelumnya.
+    * Peningkatan penyimpanan memori secara signifikan lebih rendah ERDDAP 's basis penggunaan memori.
+    * Untuk data tabular, ERDDAP™ sekarang sepenuhnya sadar dari cdm\\ _ data\\ _ type, dan bagaimana peta data ke tipe CDM. Lihat [CF Spesifikasi Sampling Discrete Geometri](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) . Mungkin suatu hari nanti, berkas Word itu akan diubah menjadi .html dan menggantikan informasi "OBSOLETE" saat ini di halaman web itu. Berkat NOAA Proyek UAF.
+    * Untuk kebanyakan dataset EDTabel, sebuah opsi tipe berkas keluaran baru, .nc CF, menciptakan Array Ragu .nc berkas yang konform ke versi terbaru dari [CF Konvensi Sampling Geometri Discrete](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) . Berkas-berkas ini disusun untuk mencerminkan jenis data CDM dari data tersebut. Sejak konvensi yang diusulkan baru saja berubah, seperti tulisan ini, pustaka netcdf -java belum mendukung membaca format berkas yang dibuat oleh ERDDAP dan menafsirkannya sebagai berkas data CDM. Mungkin akan segera. Berkat NOAA Proyek UAF.
+    * Tampilan: Opsi data berbeda pada halaman web .subset sekarang adalah daftar drop-down yang memungkinkan pengguna menentukan jumlah maksimum baris dari data yang berbeda untuk dilihat (baku = 1000) . Perubahan ini, dan lainnya, memungkinkan ERDDAP™ untuk bekerja dengan dataset yang memiliki jumlah baris yang sangat besar dari data yang berbeda. (Jumlah nilai unik untuk variabel tunggal masih menjadi masalah, tetapi dapat cukup tinggi (20.000?) sebelum .subset dan halaman web lainnya dimuat dengan sangat lambat.) Berkat NOAA Proyek UAF.
+    * .subset halaman web memiliki pilihan baru: Lihat Distinct Data Counts. Berkat proyek GTOPP.
+    * Untuk membantu pengguna, nilai yang berbeda (mis., nama stasiun) Sekarang ditampilkan pada Bentuk Make- A- Grafik dan Akses Data. Berkat NOAA Proyek UAF.
+    * .transparan Png meminta dukungan sekarang semua jenis grafik dan perwakilan data. Ini hanya menarik data - tidak ada kapak, legenda, landmask, atau apa pun. Hal ini memungkinkan untuk membuat gambar sebagai lapisan Pngs Singapura. Jika & .size = _ width _ | _ Tinggi yang ditentukan dalam query (disarankan) , sangat terhormat. Baku adalah 360x360 piksel. Satu-satunya pengecualian adalah EDDGrid & .draw = permukaan, dimana baku (seperti sebelumnya) adalah sebuah gambar dengan ~ 1 / pixel per titik data (hingga 3000 x dan y piksel) . Berkat Fred Hochstaedter.
+    * The WMS halaman web sekarang menampilkan batang warna untuk variabel dataset (s) . Berkat Emilio Mayorga dan yang lainnya.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Pelepasan ini melibatkan banyak perubahan. Mereka semua penting. Harap bersabar dan bekerja melalui semua perubahan yang tercantum di bawah ini.
+    * Versi ini sedang didorong keluar lebih awal daripada dimaksudkan untuk berurusan dengan beberapa Java bug keamanan. Sayangnya, beberapa fitur / perbaikan dimaksudkan untuk ini ERDDAP™ versi tidak dalam versi ini. Maaf. Mudah-mudahan, versi berikutnya akan relatif segera (dan jauh lebih mudah untuk upgrade ke) .
+    * Untuk menghindari beberapa bug keamanan di Java 6 update 23 dan di bawah, unduh dan instal versi terbaru dari Java   ( Java 6 update 24 atau lebih tinggi) . Jika Anda memiliki sistem operasi 64- bit, silakan ambil versi 64- bit dari Java .
+    * Jika Anda menggunakan Tomcat 5, Anda HARUS upgrade ke Tomcat 6 atau 7 (disukai) . Jika Anda menggunakan Tomcat 6, pertimbangkan meningkatkan ke Tomcat versi 7.
+    * Silahkan ikuti semua instruksi untuk [menyiapkan baru ERDDAP™ ](/docs/server-admin/deploy-install) , tapi di mana relevan, Anda akan menyalin file dari instalasi lama Anda ke instalasi baru, terutama \\[ tomcat \\] / isi / erddap direktori dan berkas. Sebagai bagian dari itu, perhatikan [rekomendasi baru Tomcat setup](/docs/server-admin/deploy-install#tomcat) .
+    * Akdap.css bawaan sekarang disertakan dalam berkas erdtap.war.
+        * Untuk menggunakan erddap.css baku, **hapus** Anda tua \\[ tomcat \\] / isi / erddap / gambar / erddap.css.
+        * Jika Anda dimodifikasi \\[ tomcat \\] / isi / erddap / image / erddap.css, dan ingin tetap menggunakannya: tinggalkan saja di tempatnya dan ganti&lt;masukan &gt; bagian dengan:
 ```
             /\\* Small input items let more be shown on one screen  
             (esp. Chrome and Safari). Google Chrome and Safari have  
@@ -2337,8 +2352,8 @@ Login actual\\_range tidak berubah: mungkin memiliki nilai rendah, tinggi atau n
             input.skinny {padding:0px 1px; }
 ```
 
-    * Sitemap \\[ Login \\] WordPress.org
-        * Ganti komentar dan tag terkait&lt;WordPress.org&lt;WordPress.org Login
+    * Dalam Anda \\[ tomcat \\] / isi / erddap / setup.xml:
+        * Ganti komentar dan tag yang terkait&lt;Sebagian Permintaan MaxBytes &gt; dan&lt;Sebagian Permintaan MaxCells &gt; dengan
 ```
             <!-- When possible (and it isn't always possible),  
             ERDDAP™ breaks source data requests into chunks to  
@@ -2351,7 +2366,7 @@ Login actual\\_range tidak berubah: mungkin memiliki nilai rendah, tinggi atau n
              <partialRequestMaxCells>100000</partialRequestMaxCells>  
             \\-->
 ```
-        * Ganti komentar terkait&lt; categoryAttributes &gt; dan mempertimbangkan memodifikasi nilai tag:
+        * Ganti komentar yang terkait dengan&lt; categoryAttributes &gt; dan pertimbangkan mengubah nilai tag:
 ```
             <!-- This is the comma-separated list (recommended:  
             in alphabetical order) of the global attribute and  
@@ -2366,75 +2381,75 @@ Login actual\\_range tidak berubah: mungkin memiliki nilai rendah, tinggi atau n
             long\\_name, standard\\_name</categoryAttributes>  
 ```
 
-Sitemap&lt; categoryAttributes Atribut global sekarang MUST diidentifikasi melalui awal global: (e.g., global: lembaga) Sitemap Atribut lain diasumsikan menjadi atribut variabel (Login standard\\_name ) Sitemap Juga, nilai institusi (satu-satunya) ditinggalkan dalam kasus asli. Sekarang semua nilai kategori dikonversi menjadi lebih rendah.
-    * Sitemap \\[ Login \\] Login datasets.xml Sitemap
-        * TERBAIK besar: ERDDAP™ memiliki persyaratan baru yang berkaitan dengan cdm tabular dataset\\_data\\_type. Tidak mungkin, setiap dataset MUST memiliki metadata dan variabel yang benar yang berkaitan dengan cdm\\_data\\_type. Jika tidak, dataset tidak akan memuat dan akan membuang kesalahan. Lihat dokumentasi untuk [cdm\\_data\\_type](/docs/server-admin/datasets#cdm_data_type) Sitemap
-        * FYI: Ada jenis dataset baru: EDDTableDariAsciiServiceNOS.
-        * FYI: Ada tiga yang baru diizinkan ioos\\_category opsi: Hidrologi, Kualitas (e.g., untuk bendera kualitas) Statistik (Sitemap) Sitemap
-        * Untuk EDDTableDari... File dataset, menghapus&lt;nDimensis&gt; tag. Mereka tidak lagi diperlukan atau digunakan.
-        * Untuk variabel dengan destinationName = ketinggian, ERDDAP™ tidak lagi memaksa Meme it long\\_name menjadi Altitude. Sitemap datasets.xml dan pencarian berulang untuk&lt; destinationName &gt; ketinggian dan tambahkan ke variabel yang&lt; addAttributes Sitemap
+Individual&lt; categoryAttributes &gt; yang merupakan atribut global sekarang HARUS diidentifikasi melalui prefiks global: (mis., global: institusi) . Atribut lain diasumsikan menjadi atribut variabel (mis., standard\\_name ) . Juga, nilai institusi (satu-satunya) yang tersisa dalam kasus asli. Sekarang semua nilai kategori dikonversi ke huruf kecil.
+    * Dalam Anda \\[ tomcat \\] / isi / erddap / datasets.xml :
+        * Big improved: ERDDAP™ memiliki persyaratan baru yang berhubungan dengan sebuah data tabular 's cdm\\ _ data\\ _ type. Terutama, setiap data MUST memiliki metadata dan variabel yang benar yang berhubungan dengan cdm\\ _ data\\ _ type. Jika tidak, data tidak akan dimuat dan akan membuat kesalahan. Lihat dokumentasi untuk [cdm\\ _ data\\ _ type](/docs/server-admin/datasets#cdm_data_type) .
+        * Ada jenis data baru: EDTableFromAsciiServiceNOS.
+        * FYI: ada tiga yang baru diizinkan ioos\\_category pilihan: Hidroologi, Kualitas (mis., untuk tanda kualitas) dan Statistik (mis., mean) .
+        * Untuk EDTableFrom... Tata data berkas, hapus sebarang&lt;nDimensions &gt; tag. Mereka tidak lagi diperlukan atau digunakan.
+        * Untuk variabel dengan destinationName = Ketinggian, ERDDAP™ tidak lagi memaksa long\\_name untuk menjadi Ketinggian. Silakan pergi melalui Anda datasets.xml dan berulang kali mencari&lt; destinationName &gt; ketinggiannya dan tambahkan ke variabel itu&lt; addAttributes &gt;:
 ```
               <att name="long\\_name">Altitude</att>  
 ```
-             (atau sedikit berbeda long\\_name dalam kasus khusus) Sitemap
-        * Opsional: Semua EDDTableDariFiles subclasses mendukung variabel [ sourceName Login](/docs/server-admin/datasets#global-sourcenames) untuk mengubah metadata global dari setiap file menjadi variabel data. Terima kasih kepada Lynn DeWitt.
-    * EDDTableDariDatabase pengguna -- ERDDAP™ datang dengan driver JDBC 4 baru untuk Postgres. Untuk database lain, periksa web untuk file JDBC .jar terbaru untuk database Anda. Sitemap ERDDAP™ Sitemap Java 1.6+, JDBC 4 (tidak 3) mungkin dianjurkan.
-    * Login
-        *    EDDGrid Dari...Files dan EDDTable Sitemap File dataset sekarang menyimpan informasi fileTable di
-             \\[ Login \\] Login Sitemap \\[  datasetID  \\] Login .nc Login
-Juga, dataset EDDTable sekarang menyimpan informasi subset di
-             \\[ Login \\] Login Sitemap \\[  datasetID  \\] Login .nc Login File ini digunakan untuk
-             \\[ Login \\] Login Sitemap \\[  datasetID  \\] Login .json Login
-File lama akan dihapus secara otomatis ketika Meme it ERDDAP™ Sitemap Atau, Anda dapat menghapus semua file (tapi meninggalkan subdirectories kosong) Sitemap \\[ Login \\] Login
-        * Saya bekerja pada EDDTableDariNcCFFiles baru yang akan membaca data dari file lokal dan jarak jauh menggunakan Konvensi Observasi Titik CF baru. Tapi itu tidak dalam rilis ini. Meme it Ada masalah di perpustakaan netcdf-java yang berkaitan dengan beberapa metode untuk membaca file ini. Dan ada beberapa perubahan terbaru ke Konvensi Observasi Titik CF yang diusulkan. Ketika perpustakaan netcdf-java tetap dan diperbarui ke proposal terbaru, saya akan melanjutkan bekerja pada ini.
-        * Login ERDDAP™ di Windows mungkin memiliki masalah: tidak dapat, Anda dapat melihat di Meme it \\[ bigParentDirectory/logs/log.txt file yang ERDDAP™ kadang-kadang tidak bisa menghapus dan/atau mengubah nama file dengan cepat. Ini karena perangkat lunak antivirus (e.g., dari McAfee dan Norton) yang memeriksa file untuk virus. Jika Anda menjalankan masalah ini (yang dapat dilihat oleh pesan kesalahan dalam file log.txt seperti "Tidak dapat dihapus ...") mengubah pengaturan perangkat lunak antivirus mungkin sebagian mengurangi masalah.
-Sitemap ERDDAP™ di Windows hanya tes yang berjalan di desktop Anda, ini hanya gangguan.
-Sitemap ERDDAP™ di Windows adalah publik Anda ERDDAP™ , pertimbangkan beralih ke server Linux.
-    * Sitemap Pertama kali Anda menjalankan ERDDAP™ setelah upgrade, ERDDAP™ mungkin lambat untuk memuat dataset. Cara ERDDAP™ menyimpan informasi tentang file agregat telah berubah, sehingga ERDDAP™ harus membaca kembali beberapa info dari semua file tersebut. Itu akan memakan waktu. Meme it
-    * Kesalahan pada Startup -- Mengingat perubahan yang terkait dengan cdm\\_data\\_type, kemungkinan bahwa beberapa dataset Anda tidak akan memuat dan akan membuang kesalahan. Silakan baca email Laporan Harian yang ERDDAP™ mengirim Anda kapan ERDDAP™ selesai dimulai. Ini akan memiliki daftar dataset yang tidak dimuat (di atas) dan alasan mereka tidak memuat Meme it (dekat bagian bawah) Sitemap
-    * Jika Anda terjebak atau memiliki pertanyaan lain, email rincian kepada saya: erd.data at noaa.gov Sitemap
-    * Login Login Jika Anda menulis Java program yang menjalankan ERDDAP™ kode, Anda perlu mengubah beberapa referensi parameter baris perintah:
-        * Ubah joda-time-1.6.2.jar untuk joda-time. Login
+             (atau sedikit berbeda long\\_name dalam kasus khusus) .
+        * Opsional: Semua variabel dukungan subkelas EDTableFromFiles [ sourceName = global:...](/docs/server-admin/datasets#global-sourcenames) untuk mengubah metadata global dari setiap berkas menjadi sebuah variabel data. Berkat Lynn DeWitt.
+    * Pengguna EDTableFromDatabase -- ERDDAP™ Datang dengan sopir JDBC 4 baru untuk Postgres. Untuk basis data lain, periksa web untuk berkas .jar JDBC terbaru untuk basis data Anda. Sejak ERDDAP™ sekarang menggunakan Java 1,6 +, JDBC 4 (bukan 3) mungkin direkomendasikan.
+    * FYI
+        *    EDDGrid Dari... berkas dan EDTabel Dari... Tata tanggal berkas kini menyimpan informasi berkas pada
+             \\[ Larang Direktori \\] / dataset Info / \\[  datasetID  \\] /\\ * .nc file.
+Juga, data EDTabel kini menyimpan informasi subset di
+             \\[ Larang Direktori \\] / dataset Info / \\[  datasetID  \\] /\\ * .nc file. Berkas-berkas ini dulu
+             \\[ Larang Direktori \\] / dataset Info / \\[  datasetID  \\] .\\ * .json file.
+Berkas lama akan dihapus secara otomatis ketika ERDDAP™ dimulai. Atau, Anda dapat menghapus semua berkas (tetapi meninggalkan subdirektori kosong) in \\[ Larang Direktori \\] / datasetInfo /.
+        * Saya bekerja pada EDDTableFromNCFFiles baru yang akan membaca data dari berkas lokal dan remote menggunakan Konvensi Observasi CF Point yang baru. Tapi tidak dalam rilis ini. Ada masalah dalam pustaka netcdf -java yang berhubungan dengan beberapa metode untuk membaca berkas ini. Dan ada beberapa perubahan baru-baru ini untuk CF Point Konvensi Observasi. Ketika netcdf-java perpustakaan tetap dan diperbarui untuk proposal terbaru, saya akan melanjutkan pekerjaan ini.
+        * Berjalan ERDDAP™ pada Windows mungkin memiliki masalah: terutama, Anda dapat melihat dalam \\[ berkas BigParentDirektori / log / log.txt yang ERDDAP™ terkadang tidak dapat menghapus dan / atau mengubah nama berkas dengan cepat. Ini karena perangkat lunak antivirus (mis., dari McAfee dan Norton) yang memeriksa file untuk virus. Jika Anda mengalami masalah ini (yang dapat dilihat oleh pesan kesalahan dalam berkas log.txt seperti "Tidak dapat menghapus"...) , mengubah pengaturan perangkat lunak antivirus mungkin sebagian meringankan masalah.
+Jika ERDDAP™ di Windows hanya sebuah tes berjalan di desktop Anda, ini hanya sebuah gangguan.
+Jika ERDDAP™ dalam Windows adalah publik Anda ERDDAP™ , pertimbangkan beralih ke server Linux.
+    * Slow First Startup -- Pertama kali kau lari ERDDAP™ setelah meningkatkan, ERDDAP™ mungkin lambat untuk memuat data. Jalan ERDDAP™ menyimpan informasi tentang kumpulan berkas telah berubah, jadi ERDDAP™ perlu membaca ulang beberapa info dari semua file tersebut. Itu akan memakan waktu.
+    * Galat saat Startup -- Mengingat perubahan yang terkait dengan cdm\\ _ data\\ _ type, kemungkinan bahwa beberapa dari data Anda tidak akan dimuat dan akan membuang kesalahan. Hati-hati membaca Daily Report email yang ERDDAP™ Mengirimmu ketika ERDDAP™ sudah selesai. Ini akan memiliki daftar dataset yang tidak dimuat (di atas) dan alasan mereka tidak memuat (didekat dasar) .
+    * Jika Anda terjebak atau memiliki pertanyaan lain, email rincian kepada saya: erd.data at noaa.gov .
+    * Programer -- Jika Anda menulis Java program yang dijalankan ERDDAP™ kode, anda perlu mengubah beberapa referensi parameter baris perintah:
+        * Ubah pekerjaan-waktu -1.6.2.jar ke pekerjaan-waktu. jar
         * Ubah referensi Postgres JDBC .jar ke postgresql.jdbc.jar
 *    **Perubahan Kecil dan Perbaikan Bug:** 
     
-    * Penanganan koneksi yang ditingkatkan untuk menghindari benang lapar.
-    * Peningkatan praktek-praktek concurrency untuk menangani hampir permintaan identik simultan lebih efisien.
-    *    ERDDAP™ sekarang menggunakan netcdfAll-4.2.jar (berganti nama menjadi netcdfAll-latest. Login) Sitemap Switch ini membutuhkan beberapa perubahan internal dan menyebabkan beberapa perubahan eksternal kecil, misalnya, perubahan bagaimana file grib dibaca dan perubahan kecil ke perubahan .nc Output header.
-    * Fitur baru: \\[ Login \\] /convert/fipscounty.html konversi FIPS kode daerah ke/dari nama daerah.
-    * Pada peta, batas-batas negara sekarang gelap ungu, sehingga mereka menonjol lebih baik pada semua warna latar belakang.
-    * Login .kml output lagi menggunakan ikon melingkar untuk menandai poin (bukan ikon pesawat Google baru beralih ke) Sitemap
-    * Dataset erdCalcofi diatur ulang dan sekarang dilayani dari file lokal (Sitemap) Sitemap
-    * Login Login Login Katalog sekarang membuat file hasil:
-         \\[ Login \\] /webapps/erddap/WEB-INF/temp/ EDDGrid WordPress.org Kevin O'Brien
-    * Login Login Login Katalog sekarang mencoba untuk menghapus nomor port yang tidak perlu dari URL sumber (e.g., : 8080 dan : 8081 kadang-kadang bisa dihapus) Sitemap Sitemap NOAA tim keamanan pusat.
-    * Untuk halaman web .subset, Peta Data Distinct sekarang memiliki rentang lat variabel.
-    * Beberapa daftar dalam ERDDAP™   (misalnya, tabel yang menunjukkan semua dataset) diurutkan sehingga A.Z diurutkan sebelum a. .z Sitemap Sekarang mereka menyortir dengan cara yang tidak sensitif.
-    * Perubahan kecil ke halaman web .subset, termasuk: unit sekarang ditunjukkan.
-    * Login Xml dan DasDds tidak lagi membuang pengecualian jika tidak dapat menempatkan hasil pada clipboard sistem atau displayInBrowser. Terima kasih kepada Eric Bridger dan Greg Williams.
-    * Perbaikan bug: Ketika dataset dimuat, ERDDAP™ sekarang menghapus atau menyesuaikan atribut global geospasial. Terima kasih kepada Charles Carleton.
-    * Perbaikan bug: String2.getClassPath () sekarang benar persen-decode kelas Login (tidak dapat, di Windows, ruang dalam nama file muncul sebagai %20) Sitemap Ini dipengaruhi ERDDAP™ Email: info@ids-imaging.com () dan menemukan konten / erddap. Berkat Abe Coughlin.
-    * Perbaikan bug: di EDDTableDariFiles terkait untuk mendapatkanDataForDapQuery penanganan yang berbeda () Sitemap Berkat Eric Bridger.
-    * Perbaikan bug: tabledap permintaan tidak benar menangani hambatan ketinggian ketika ketinggian dataset MeterPerSourceUnit -1. Berkat Eric Bridger.
-    * Perbaikan bug: EDDTableDari... File dataset sekarang benar menangani permintaan yang meliputi = NaN dan &#33;=NaN.
+    * Peningkatan penanganan sambungan untuk menghindari benang gantung.
+    * Peningkatan praktek konmata untuk menangani permintaan hampir identik simultan lebih efisien.
+    *    ERDDAP™ sekarang menggunakan netcdfAll-4.2.jar (ganti nama ke netcdf -terbaru. jar) . Switch ini memerlukan beberapa perubahan internal dan menyebabkan beberapa perubahan eksternal kecil, misalnya, perubahan bagaimana berkas grib dibaca dan perubahan kecil ke .nc Keluaran header.
+    * Fitur baru: \\[ erddap \\] / convert / fipconstanty.html konversi FIPS kode county ke / dari nama county.
+    * Pada peta, batas negara sekarang violet gelap, sehingga mereka menonjol lebih baik pada semua warna latar belakang.
+    * Tabular .kml keluaran lagi menggunakan ikon melingkar untuk menandai titik (bukan ikon pesawat Google baru-baru ini beralih ke) .
+    * Dataset erdCalcopi telah diatur ulang dan sekarang dilayani dari berkas lokal (lebih cepat) .
+    * GenerateDatadasets Xml dari Thredds Katalog kini membuat berkas hasil:
+         \\[ tomcat \\] / webapps / erddap / WEB-INF / temp / EDDGrid FromThreddsCatalog.xml. Berkat Kevin O 'Brien.
+    * GenerateDatadasets Xml dari Thredds Catalog kini mencoba menghapus nomor port yang tidak perlu dari URL sumber (mis.,: 8080 dan: 8081 kadang-kadang dapat dihapus) . Terima kasih NOAA Tim keamanan pusat.
+    * Untuk halaman web .subset, Peta Data Distinct sekarang memiliki jangkauan variabel lat lon.
+    * Beberapa daftar dalam ERDDAP™   (mis, tabel yang menampilkan semua data) diurutkan sehingga A.. Z diurutkan sebelum a. .z . Sekarang mereka menyortir dengan cara yang sensitif.
+    * Perubahan kecil ke halaman web .subset, termasuk: unit sekarang diindikasikan.
+    * GenerateDatadasets Xml dan DasDds tidak lagi membuang pengecualian bila tidak dapat meletakkan hasil pada papan klip sistem atau display InBrowser. Berkat Eric Bridger dan Greg Williams.
+    * Perbaikan kutu: Ketika dataset dimuat, ERDDAP™ Sekarang menghapus atau menyesuaikan atribut global geospasial. Berkat Charles Carleton.
+    * Bug fix: String2.getClassPath () sekarang persentase yang benar -decode kelas Path (terutama, pada Windows, spasi dalam nama berkas muncul sebagai% 20) . Ini terpengaruh ERDDAP™ EDStatic memanggil SSR.getText Direktori () dan menemukan isi / erddap. Berkat Abe Coughlin.
+    * Bug fix: di EDTableFromFiles terkait dengan penanganan getDadaForDapQuery berbeda () permintaan. Berkat Eric Bridger.
+    * Perbaikan kutu: tabledap permintaan tidak benar menangani batasan ketinggian ketika ketinggian dataset MetersPerSourceUnit adalah -1. Berkat Eric Bridger.
+    * Perbaikan kutu: EDTableFrom... Data berkas kini tertangani dengan benar permintaan yang meliputi = NaN dan&#33; = NaN.
     
 ## Versi 1.28{#version-128} 
- (dirilis 2010-08-27) 
+ (dirilis 2010- 08- 27) 
 
-*    **Fitur Baru:** Sitemap
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** Sitemap
-*    **Perbaikan bug:** Memperbaiki kesalahan pemrograman (hanya dalam ver 1.26) yang dibuat ERDDAP™ sangat lambat.
+*    **Fitur Baru:** Tidak ada.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** Tidak ada.
+*    **Bug Fix:** Perbaiki kesalahan pemrograman (hanya dalam ver 1.26) yang membuat ERDDAP™ sangat lambat.
      
 
 ## Versi 1.26{#version-126} 
- (dirilis 2010-08-25) 
+ (dirilis 2010.08- 25) 
 
-*    **Fitur Baru:** Sitemap
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
-    * Dari Anda \\[ Login \\] WordPress.org
-        * Sitemap&lt;legal&gt;, pada baris baru di bawah ini \\[ Sitemap Login \\] Login \\[ Login \\] Sitemap \\[ Login \\] Login&lt;adminEmail&gt; ditentukan lebih tinggi di setup.xml.
-        * Login&lt;tabelCommonBGColor&gt; dan&lt;tabelHighlightBGColor&gt;.
-        * Sitemap Login&lt;Login
+*    **Fitur Baru:** Tidak ada.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** 
+    * Dari Anda \\[ tomcat \\] / isi / erddap / setupp.xml,
+        * Masuk&lt;legal &gt;, pada baris baru di bawah \\[ standar DataLicenses \\] , masukan \\[ standardContact \\] . \\[ standardContact \\] mengacu ke&lt;adminEmail &gt; dispesifikasikan lebih tinggi dalam setup.xml.
+        * Hapus&lt;tableCommonBGColor &gt; dan&lt;tableHighlightBGColor &gt;.
+        * Disarankan: Ubah&lt;endBodyHtml &gt; ke
 ```
             <endBodyHtml><!\\[CDATA\\[  
             <br>&nbsp;  
@@ -2447,55 +2462,55 @@ Sitemap ERDDAP™ di Windows adalah publik Anda ERDDAP™ , pertimbangkan berali
             \\]\\]></endBodyHtml>
 ```
 
-    * Sitemap Login \\[ Login \\] /content/erddap/images/erddap.css dan erddapAlt.css, tambahkan di bagian bawah:
+    * Perlu: To your \\[ tomcat \\] / isi / erddap / image / erddap.css dan erddapAlt.css, tambahkan di bawah:
 ```
         /\\* This is used on the /info/\\[datasetID\\]/index.html pages to highlight a row or cell. \\*/  
         tr.highlightBGColor {background-color:#cceecc; }  
         td.highlightBGColor {background-color:#cceecc; }
 ```
-*    **Perbaikan Bug dan Perubahan Kecil:** 
+*    **Bug Fixes dan Perubahan Kecil:** 
     
-    * Perbaikan bug: dalam beberapa situasi, bentuk tidak bekerja dalam beberapa versi Internet Explorer. Terima kasih banyak untuk Greg Williams.
-    * Perbaikan bug: Membuat tombol Graph tidak bekerja jika dataset dari jarak jauh ERDDAP Sitemap
-    * Perbaikan bug: WMS kadang-kadang tidak bekerja jika dataset dari jarak jauh ERDDAP Sitemap
+    * Bug fix: dalam beberapa situasi, formulir tidak bekerja dalam beberapa versi Internet Explorer. Terima kasih banyak untuk Greg Williams.
+    * Perbaikan kutu: Tombol Membuat A Grafik tidak bekerja jika data tersebut berasal dari remote ERDDAP .
+    * Perbaikan kutu: WMS kadang-kadang tidak bekerja jika data itu dari remote ERDDAP .
     * Banyak perubahan kecil dan perbaikan bug.
     
 
-## Versi 1.24{#version-124} 
+## Versi 1,24{#version-124} 
  (dirilis 2010-08-06) 
 
 *    **Fitur Baru:** 
-    * Login [Sitemap](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/index.html) menggunakan pencarian yang dihadapi untuk memilih subset dataset tabel. Terima kasih kepada POST.
-    * Login [Pencarian Lanjutan](https://coastwatch.pfeg.noaa.gov/erddap/search/advanced.html) menggabungkan semua pilihan pencarian lainnya dan menambahkan garis bujur, lintang, dan kotak waktu yang terikat. Berkat Ellyn Montgomery. (Maaf untuk penundaan.) 
-    * Login [Mengkonversi Waktu](https://coastwatch.pfeg.noaa.gov/erddap/convert/time.html) halaman web dan layanan memungkinkan Anda mengonversikan waktu numerik ke / dari waktu string ISO.
-    * Login [Mengkonversi Unit](https://coastwatch.pfeg.noaa.gov/erddap/convert/units.html) halaman web dan layanan memungkinkan Anda mengkonversi UDUNITS ke/dari unit UCUM. Sitemap NOAA Login SOS Sitemap
-    * Sitemap tabledap permintaan termasuk & unit ("UCUM") nama unit akan dikonversi dari nama asli (Sitemap UDUNITS ) Login [Login](https://unitsofmeasure.org/ucum.html) nama unit. Ini hanya mempengaruhi unit\\*Sitemap\\*Tidak ada nilai data. Sitemap NOAA Login SOS Sitemap
-    * Perbaikan untuk Membuat halaman web Graph dan grafik dan peta:
-        * Jika grafik adalah peta, ada tombol Make A Graph baru untuk memperbesar in/out dan opsi baru untuk klik untuk mengubah titik pusat peta. Terima kasih kepada POST.
-        * Pengaturan filter ditambahkan di bawah. Salam Williams
-        * Dibangun dalam file data garis pantai diperbarui ke GSHHS v2.0. Terima kasih kepada POST.
-        * Peta sekarang termasuk danau dan sungai. Terima kasih kepada POST. (Maaf, Delta Sungai Sacramento hilang karena data garis pantai atau danau/river penawaran dataset dengan itu.) 
-        * Dibangun di file negara/negara yang telah ditentukan oleh pscoast. Terima kasih kepada POST.
-        * Topografi.cpt dimodifikasi sedikit. (Maaf jika ini mempengaruhi Anda. Meme it) Terima kasih kepada POST.
-        * Dalam griddap Membuat Grafik, jika pengguna mengubah variabel, bentuknya secara otomatis disubsuran sehingga axisVariable s' showStartAndStop selalu mencerminkan variabel grafik. Berkat Joaquin Trinanes.
+    * Baru [Halaman web subset](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/index.html) gunakan pencarian faceted untuk memilih subset dari data tabular. Berkat POST.
+    * Baru [Pencarian Lanjut](https://coastwatch.pfeg.noaa.gov/erddap/search/advanced.html) Menggabungkan semua pilihan pencarian lainnya dan menambahkan garis bujur, garis lintang, dan waktu kotak memantul. Berkat Ellyn Montgomery. (Maaf atas keterlambatannya.) 
+    * Baru [Ubah Waktu](https://coastwatch.pfeg.noaa.gov/erddap/convert/time.html) halaman web dan layanan memungkinkan Anda mengubah numerik waktu ke / dari ISO string times.
+    * Baru [undo-type](https://coastwatch.pfeg.noaa.gov/erddap/convert/units.html) halaman web dan layanan memungkinkan Anda mengkonversi UDUNITS untuk / dari UUUM unit. Terima kasih NOAA LOOS SOS .
+    * Jika tabledap permintaan termasuk & unit ("UCUM") , nama unit akan dikonversi dari nama asli (biasanya UDUNITS ) ke [UUUM](https://unitsofmeasure.org/ucum.html) unit nama. Ini hanya mempengaruhi unit\\*nama\\*, bukan nilai data. Terima kasih NOAA LOOS SOS .
+    * Improvisasi untuk Membuat halaman web Grafik dan peta:
+        * Jika grafik adalah peta, ada tombol Buat A Grafik baru untuk memperbesar / mengeluarkan dan opsi baru untuk mengklik untuk mengubah titik pusat peta. Berkat POST.
+        * Pengaturan filter ditambahkan di dekat bawah. Berkat Greg Williams.
+        * Berkas data yang dibangun di pesisir pantai telah diperbarui ke GSHHS v2.0. Berkat POST.
+        * Peta sekarang termasuk danau dan sungai. Berkat POST. (Maaf, Delta Sungai Sacramento hilang karena baik data pantai maupun data danau / sungai berurusan dengan itu.) 
+        * Dibangun di pscoaster-turunan berkas negara / negara telah diperbarui. Berkat POST.
+        * Totopgraphy.cpt dimodifikasi sedikit. (Maaf jika ini tidak mempengaruhimu.) Berkat POST.
+        * Dalam griddap 's Make A Grafik, jika pengguna mengubah sebuah variabel, formulir secara otomatis dimasukkan ulang sehingga axisVariable s 'showStartAndStop selalu mencerminkan variabel grafik. Berkat Joaquin Trinanes.
         * Untuk URL gambar png dan pdf:
-            * New &.land=_value_, di mana _value_ bisa "di bawah" (Tampilkan topografi) atau "lebih" (hanya menunjukkan bathymetri) Sitemap Jika tidak ditentukan, default ditetapkan oleh [ drawLandMask ](/docs/server-admin/datasets#global-drawlandmask) Sitemap datasets.xml atau setup.xml. Terima kasih kepada POST.
-            * Baru: garis-garis di legenda yang terlalu panjang secara otomatis rusak ke beberapa garis. Terima kasih kepada POST.
+            * New & .land = _ value _, where _ value _ can be "under" (tampilkan topografi) atau "ganti" (hanya menunjukkan bathmetry) . Bila tak dinyatakan, baku ditata oleh [ drawLandMask ](/docs/server-admin/datasets#global-drawlandmask) in datasets.xml atau setuppxml. Berkat POST.
+            * Baru: baris dalam legenda yang terlalu panjang secara otomatis terbagi menjadi beberapa baris. Berkat POST.
         * Untuk URL gambar png:
-            * New &.legend=_value_, di mana _value_ bisa "Bottom" (Login) "Menawarkan" atau "Hanya". Ini memungkinkan Anda memasukkan legenda, termasuk legenda, atau hanya mendapatkan legenda. Cara Wilson
-            * Sitemap Pixels_ meninggalkan perbatasan nPixel (g., 10) di bagian bawah gambar. Ini diterapkan setelah .legend=Off. Cara Wilson
-            * Facebook Twitter Google Plus Pinterest Email | _height_ memungkinkan Anda menentukan lebar dan tinggi untuk gambar, dalam piksel.
-    * Format file output baru:
-        * Sitemap .tsv p -- seperti .csv dan .tsv tapi dengan " (Sitemap) "ditandai nama kolom di baris pertama.
-        * .odvTxt -- membuat file .txt yang menyederhanakan mendapatkan data ke [data laut Login (Login) ](https://odv.awi.de/) Sitemap
-        * .esriCsv -- membuat file .csv cocok untuk impor di ESRI ArcGIS Sitemap (tabular dataset hanya) Terima kasih kepada Jan Mason, Jeff de La Beaujardiere, dan NOAA Login SOS Sitemap
-    * Peningkatan GUI ke [Login](https://coastwatch.pfeg.noaa.gov/erddap/categorize/index.html) halaman web. Juga, nilai kategori (selain institusi) sekarang semua huruf kecil. permintaan non-lowercase diterima (Sitemap) untuk kompatibilitas mundur. Terima kasih kepada Roy Mendelssohn.
-    * Pesan kesalahan sekarang bahkan lebih pendek dan lebih berorientasi kepada pengguna. Salam Williams
-    * Perubahan internal yang sangat mengurangi ERDDAP Penggunaan memori dasar.
-    * Banyak fitur baru yang hanya relevan dengan proyek POST.
-*    **Sitemap ERDDAP™ Administrator Perlu Tahu dan Lakukan:** Ada banyak perubahan. Login Tapi setiap satu membawa beberapa manfaat bagus.
-    * Perubahan besar untuk GenerateDatasetXml -- sekarang sering mengajukan lebih banyak pertanyaan (lihat relevan [Login Login](/docs/server-admin/datasets#detailed-descriptions-of-dataset-types) Sitemap) dan sekarang selalu menghasilkan konten siap pakai yang sangat penting untuk datasets.xml Sitemap Anda masih bertanggung jawab atas penyiapan, sehingga Anda masih harus meninjau datasets.xml konten sebelum menggunakannya. Menempatkan upaya manusia ke dalam proyek akan selalu lebih baik daripada program komputer. Berkat proyek UAF.
-    * REQUIRED: Dalam setup.xml, Anda harus merevisi WMS Sitemap Sekarang harus menyertakan tag ini (tetapi jangan ragu untuk mengubah nilai) Sitemap
+            * New & .legend = _ value _, where _ value _ can be "Bottom" (baku) , "Off" atau "Only". Hal ini memungkinkan Anda memasukkan legenda, mengecualikan legenda, atau hanya mendapatkan legenda. Berkat Cara Wilson.
+            * Baru & .trim = _ n Pixel _ daun batas nPixel (mis., 10) di bagian bawah gambar. Ini diterapkan setelah .legend = Off. Berkat Cara Wilson.
+            * New & .size = _ width _ | _ Tinggi memungkinkan Anda menentukan lebar dan tinggi bagi gambar, dalam piksel.
+    * Format berkas keluaran baru:
+        * .csvp dan .tsv p - seperti .csv dan .tsv , tapi dengan " (_ Unit) "ditambahkan ke nama kolom pada baris pertama.
+        * .odvTxt -- membuat sebuah berkas .txt yang menyederhanakan memperoleh data kedalam [Data Samudera Tilik (ODV) ](https://odv.awi.de/) .
+        * .esriCsv -- membuat sebuah berkas .csv cocok untuk impor dalam ESRI ArcGIS . (hanya data tabular) Berkat Jan Mason, Jeff de La Beaujardiere, dan NOAA LOOS SOS proyek.
+    * GUI perbaikan ke [Kategori](https://coastwatch.pfeg.noaa.gov/erddap/categorize/index.html) halaman web. Juga, nilai kategorikan (selain institusi) sekarang semua huruf kecil. Permintaan huruf kecil tidak diterima (dialihkan) untuk kompabilitas terbalik. Berkat Roy Mendelssohn.
+    * Pesan galat kini lebih pendek dan lebih berorientasi pada pengguna. Berkat Greg Williams.
+    * Perubahan internal yang sangat mengurangi ERDDAP 's basis penggunaan memori.
+    * Banyak fitur baru yang hanya relevan dengan projek POST.
+*    **Hal ERDDAP™ Administrator Perlu Tahu dan Lakukan:** Ada banyak perubahan. Maaf. Tapi masing-masing membawa beberapa keuntungan bagus.
+    * Perubahan besar ke GenerateDadasetXml -- sekarang sering kali menanyakan lebih banyak pertanyaan (lihat yang relevan [dataset Jenis](/docs/server-admin/datasets#detailed-descriptions-of-dataset-types) informasi) dan sekarang selalu menghasilkan pada dasarnya siap-ke-gunakan isi untuk datasets.xml . Anda masih bertanggung jawab untuk setup, sehingga Anda masih harus meninjau datasets.xml isi sebelum menggunakannya. Seorang manusia berusaha untuk proyek akan selalu melakukan lebih baik daripada program komputer. Berkat proyek UAF.
+    * Dalam setup.xml, Anda harus merevisi WMS bagian. Ini harus sekarang termasuk tag ini (tetapi merasa bebas untuk mengubah nilai) :
 ```
         <!-- These default accessConstraints, fees, and keywords are used 
         by the SOS, WCS, and WMS services.
@@ -2542,7 +2557,7 @@ Sitemap ERDDAP™ di Windows adalah publik Anda ERDDAP™ , pertimbangkan berali
         <wmsSampleBBox>0,-75,360,75</wmsSampleBBox>
 ```
 
-    * REQUIRED: Dalam setup.xml, menyalin dan menempel yang baru ini disarankan&lt;startHeadHtml&gt; untuk mengganti versi lama Anda. Tapi jangan ragu untuk membuat perubahan untuk preferensi Anda.
+    * REQUIRED: Dalam setuppxml, salin dan tempel ini disarankan&lt;startHeadHtml &gt; untuk menggantikan versi lama Anda. Tapi jangan ragu untuk membuat perubahan untuk preferensi Anda.
 ```
         <!-- startHeadHtml has the start of the HTML document and the 
         'head' tags (starting at "<!DOCTYPE>", but not including 
@@ -2602,9 +2617,9 @@ Sitemap ERDDAP™ di Windows adalah publik Anda ERDDAP™ , pertimbangkan berali
         <tableHighlightBGColor>#cceecc</tableHighlightBGColor>
 ```
 
-Terima kasih kepada POST, Hans Vedo, dan Rick Blair.
-    * REQUIRED: Dalam setup.xml, dalam&lt;Login&lt;tubuh&gt; tag untuk hanya Meme it&lt;erddap.css
-    * REQUIRED: Dalam setup.xml, perubahan ini&lt;Login (tetapi mengubah alamat email ke alamat email Anda dan merasa bebas untuk membuat perubahan lain) Sitemap
+Berkat POST, Hans Vedo, dan Rick Blair.
+    * Dalam semp.xml, di&lt;startBodyHtml &gt;, ubah&lt;body &gt; tag to be just&lt;body &gt;, karena gaya sekarang diset oleh erddap.cs.
+    * REQUIRED: Dalam semp.xml, ubah ini&lt;endBodyHtml &gt; (tetapi mengubah alamat email ke alamat email Anda dan merasa bebas untuk membuat perubahan lain) :
 ```
         <!-- The end of the body of the HTML code for all HTML web pages
           (with "</body>" at the end). 
@@ -2634,7 +2649,7 @@ Terima kasih kepada POST, Hans Vedo, dan Rick Blair.
         \\]\\]></endBodyHtml>
 ```
 
-    * TINGGI RECOMMENDED: Dalam setup.xml, direkomendasikan&lt;Sitemap
+    * RECOMMENDED TINGGI: Di setup.xml, yang disarankan&lt;Html Deduksi Pintas &gt; sekarang
 ```
         <theShortDescriptionHtml><!\\[CDATA\\[ 
         <h1>ERDDAP</h1>
@@ -2649,30 +2664,30 @@ Terima kasih kepada POST, Hans Vedo, dan Rick Blair.
         \\]\\]></theShortDescriptionHtml>
 ```
 
-Jangan ragu untuk mengubah kalimat ini, terutama kalimat terakhir dalam paragraf pertama.
-    * In setup.xml, emailEverythingTo dan emailDailyReport Untuk sekarang dapat menjadi daftar alamat email yang terpisah. Sitemap Untuk khusus, misalnya, berlangganan EDDXxxxDariErddap dataset menggunakan alamat email itu. Terima kasih kepada John Maurer.
-    * Kesalahan Email sekarang masuk ke \\[ Login \\] /logs/emailLogYY-MM-DD.txt file.
-    * Dalam setup.xml, ada parameter baru, opsional untuk mengatur properti akun email (biasanya tepat setelah&lt;Login
+Jangan ragu untuk mengubah ini, khususnya kalimat terakhir dalam paragraf pertama.
+    * Dalam semp.xml, email Everything To dan email DailyReport Untuk sekarang dapat comma- dipisahkan daftar alamat email. Email pertama Semuanya Untuk khusus, misalnya, langganan ke data EDXxxxFromErddap menggunakan alamat surel itu. Berkat John Maurer.
+    * Galat surel kini log masuk ke \\[ Larang Direktori \\] / log / e-mail LogYYYYY-Mm- DTxt file.
+    * Dalam sem.xml, ada parameter opsional baru untuk mengatur properti akun surel (biasanya tepat setelah&lt;e-mail Sandi &gt;):
 ```
           <emailProperties>_propertyName1_|_propertyValue1_|_propertyName2_| _propertyValue2_|...</emailProperties>  
         For example, gmail accounts need  
           <emailProperties>mail.smtp.starttls.enable|true</emailProperties>  
 ```
 
-default tidak ada. Terima kasih kepada Rich Signell.
-    * REQUIRED: Jika Anda menggunakan EDDTableCopy atau EDDGrid Copy, Anda harus DELETE semua \\[ Login \\] /copy / direktori dan file yang mengandung "xh" di direktori atau nama file setelah menghentikan lama ERDDAP™ dan sebelum memulai yang baru ERDDAP™ sehingga file-file tersebut akan dibatalkan kembali. Meme it Saya sangat maaf, tetapi penting untuk membuat perubahan dan semoga mempengaruhi beberapa admin dan beberapa file.
-Di Linux, Anda dapat menemukan file ini dengan, cd \\[ Login \\] Login
-Sitemap\\*Login\\*  
-Di Windows, Anda dapat menemukan file ini dengan, Mulai | Login
+Yang default adalah apa-apa. Berkat Rich Signgell.
+    * REQUIRED: Jika Anda memakai EDTableCopy atau EDDGrid Salin, Anda harus DELETE semua \\[ Larang Direktori \\] / salin / direktori dan berkas yang memuat "xh" dalam direktori atau nama berkas setelah menghentikan lama ERDDAP™ dan sebelum memulai yang baru ERDDAP™ Jadi file-file itu akan disalin ulang. Saya sangat menyesal, tapi itu penting untuk membuat perubahan dan mudah-mudahan mempengaruhi beberapa admin dan beberapa file.
+Dalam Linux, Anda dapat menemukan berkas-berkas ini dengan, cd \\[ Larang Direktori \\] / salin
+menemukan.\\*xh\\*  
+Di Windows, Anda dapat menemukan berkas-berkas ini dengan, Mulai | Cari
 Apa yang ingin Anda cari: Dokumen
-Semua atau bagian dari nama file: xh
-Lihat di: Jelajahi -&gt; \\[ Login \\] Login
-Klik pada 'Pilihan'
-^A untuk memilih mereka semua
-Del untuk menghapus mereka semua
-    * PERSYARATAN: Dalam datasets.xml , untuk dataset EDDTableDariDatabase, untuk variabel tanggal dan timestamp, mengubah data Jenis untuk ganda dan unit untuk detik sejak 1970-01T00:00Z. Kami MEMBUTUHKAN bahwa Anda menyimpan data timestamp di database\\*Login\\*zona waktu. Tanpa informasi zona waktu, pertanyaan yang Meme it ERDDAP™ mengirim ke database dan hasil yang Meme it ERDDAP™ mendapatkan dari database melalui JDBC adalah ambiguous dan kemungkinan akan salah. Kami mencoba, tetapi tidak menemukan cara yang andal untuk menangani data "timestamp tanpa timezone". Kami pikir ini adalah praktik yang baik pula. Setelah semua, data "timestamp tanpa zona waktu" memiliki zona waktu yang tidak tersirat. Meskipun sangat bagus bahwa zona waktu jelas ke admin database, masuk akal untuk menentukannya secara eksplisit sehingga perangkat lunak lain dapat berinteraksi dengan database Anda. Terima kasih/sorry Michael Urzen.
-    * RECOMMENDED TINGGI: Dalam datasets.xml Untuk mengaktifkan halaman web .subset untuk mencari dataset tabel Anda, Anda perlu menambahkan [&lt; subsetVariables Sitemap (/docs/server-admin/datasets#subsetvariables) untuk atribut global dataset.
-    * Sitemap datasets.xml jika Anda memiliki dataset dengan Meme it datasetID ="pmelGtsppp", mohon gantinya
+Semua atau bagian dari nama berkas: xh
+Lihat di: Ramban - &gt; \\[ Larang Direktori \\] / salin
+Klik pada 'Search'
+^ A untuk memilih mereka semua
+Del untuk menghapus semuanya
+    * Masuk datasets.xml , untuk data EDTableFromDatabase, untuk variabel tanggal dan timestamp, ubah data Ketik untuk ganda dan unit untuk detik sejak 1970-01- 01T00: 00: 00Z. Kami REQUIRE bahwa Anda menyimpan data timestamp dalam database\\*dengan\\*zona waktu. Tanpa informasi zona waktu, kueri yang ERDDAP™ kirim ke basis data dan hasil yang ERDDAP™ mendapat dari database via JDBC ambigu dan cenderung salah. Kami mencoba, tapi tidak menemukan cara yang dapat diandalkan untuk menangani "timestamp tanpa zona waktu" data. Kami pikir ini adalah praktek yang baik pula. Lagi pula, data "timestamp tanpa zona waktu" memiliki zona waktu yang tersirat. Sementara itu besar bahwa zona waktu jelas untuk basis data admin, masuk akal untuk menspesifikasikan secara eksplisit sehingga perangkat lunak lain dapat berinteraksi dengan baik dengan database Anda. Terima kasih / maaf Michael Urzen.
+    * Dalam datasets.xml , untuk mengaktifkan halaman web .subset untuk pencarian basis data tabular anda, anda perlu menambahkan [&lt; subsetVariables &gt;] (/ docs / server-admin / datasets # subsetvariables) ke atribut global data.
+    * Dalam datasets.xml , jika Anda memiliki data dengan datasetID = "pmelGtsppp", tolong ubah menjadi
 ```
           <dataset type="EDDTableFromDapSequence" datasetID="pmelGtsppp" active="false">  
         Whether or not you had that dataset, feel free to add this new GTSPP dataset:  
@@ -2680,45 +2695,45 @@ Del untuk menghapus mereka semua
             <sourceUrl>https://coastwatch.pfeg.noaa.gov/erddap/tabledap/erdGtsppBest</sourceUrl>  
           </dataset>
 ```
-    * Sitemap datasets.xml , ada opsi valid baru untuk [&lt;cdm\\_data\\_type&gt;] (/docs/server-admin/datasets#cdm_data_type) atribut global, jadi Anda harus meninjau/ mengubah nilai untuk dataset Anda.
-    * Sitemap datasets.xml Sitemap&lt;sumberNeedsExpandedFP\\_EQ&gt;] (/docs/server-admin/datasets#internet) membantu jika server sumber tidak ditangani secara konsisten &_variable_\\=_value_ menguji dengan benar (karena [kesulitan umum pengujian kualitas nomor titik mengambang](https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/) ) Sitemap WordPress.org diatur untuk benar secara default (pengaturan paling aman) Anda tidak perlu melakukan perubahan.
-    * Login [Login](/docs/server-admin/datasets#eddtablefromasciifiles) Sitemap Terima kasih kepada Jerry Yun Pan.
-    * Login [Sitemap](/docs/server-admin/datasets#eddtablefromthreddsfiles) Sitemap Terima kasih kepada Roy Mendelssohn.
-    * Perubahan [Login](/docs/server-admin/datasets#eddtablefromncfiles) biarkan digunakan dengan berbagai file yang lebih luas.
-    * EDDTableDariBMDE telah dinonaktifkan. Tidak ada lagi sumber data aktif, tepat,.
-    * Di GenerateDatasetXml, yang baru EDDGrid Sitemap Katalog memanen seluruh katalog THREDDS (atau subset) dan menghasilkan datasets.xml Login Berkat proyek UAF.
-    * Login Xml dan DasDds sekarang juga menempatkan hasil mereka dalam \\[ Login \\] Login Berkat Rich Signell dan Charles Carleton.
-    * Banyak perbaikan ke sistem login. Terima kasih kepada POST.
-*    **Sitemap ERDDAP™ Login Perlu Tahu dan Lakukan:** 
-    * Ada perubahan di direktori /WEB-INF/lib/. Silakan ubah pengaturan javac dan java classpath Anda sesuai.
-    * Sitemap \\[ Login Sitemap \\] Layanan /erddap/versi untuk menentukan versi dari ERDDAP Sitemap Jawabannya adalah teks, misalnya, ERDDAP \\_versi=1.24 Jika Anda mendapatkan pesan kesalahan HTTP 404 Not-Found, memperlakukan ERDDAP™ sebagai versi 1.22 atau lebih rendah. Terima kasih kepada POST.
+    * Dalam datasets.xml , ada pilihan valid baru untuk [&lt;cdm\\ _ data\\ _ type & gt;] (/ docs / server-admin / datasets # cdm _ data _ type) atribut global, jadi anda harus mengulas / mengubah nilai untuk data anda.
+    * Masuk datasets.xml , yang baru [&lt;SourceNeedsExpandedFP\\ _ EQ & gt;] (/ docs / server-admin / datasets # sourcenedsexpandedfp _ eq) membantu jika server sumber tidak secara konsisten menangani & _ variable _\\ = _ value _ tests dengan benar (karena [umum kesulitan pengujian kesetaraan nomor titik pecahan](https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/) ) . sourceNeedsExpandedFP\\ _ EQ diset ke true secara baku (pengaturan paling aman) , sehingga Anda tidak perlu untuk membuat perubahan.
+    * Baru [EDTableFromAsciFiles](/docs/server-admin/datasets#eddtablefromasciifiles) . Berkat Jerry Yun Pan.
+    * Baru [EDTableFromThreddsFiles](/docs/server-admin/datasets#eddtablefromthreddsfiles) . Berkat Roy Mendelssohn.
+    * Perubahan ke [EDTableFromNcFiles](/docs/server-admin/datasets#eddtablefromncfiles) memungkinkan digunakan dengan jangkauan yang lebih luas dari file.
+    * EDTableFromBMDE telah dinonaktifkan. Tidak ada lagi sumber data yang aktif dan sesuai.
+    * Di GenerateDatasetXml, yang baru EDDGrid Fromthredds Catalog mengumpulkan seluruh katalog THREDDS (atau subset) dan menghasilkan datasets.xml isi. Berkat proyek UAF.
+    * GenerateDatadasets Xml dan DasDds sekarang juga menempatkan hasil mereka dalam \\[ Larang Direktori \\] / log / log.txt. Berkat Rich Signgell dan Charles Carleton.
+    * Banyak peningkatan ke sistem login. Berkat POST.
+*    **Hal ERDDAP™ Programer Perlu Tahu dan Lakukan:** 
+    * Ada perubahan dalam direktori / WEB-INF / lib. Harap ubah pengaturan javac dan java classpath sesuai.
+    * Ada yang baru \\[ Anda Url \\] / erddap / layanan versi untuk menentukan versi dari sebuah ERDDAP . Respon adalah teks, misalnya, ERDDAP \\ _ versi = 1.24 Bila Anda mendapat pesan galat HTTP 404, perlakukan ERDDAP™ sebagai versi 1.22 atau lebih rendah. Berkat POST.
 *    **Perubahan Kecil dan Perbaikan Bug:** 
     
-    * Login Jadi perubahan:
-        * dukungan Dropped untuk membaca IOOS SOS Login
-        * Dukungan tambahan untuk membaca IOOS SOS Sitemap (Sitemap SOS server saat ini tidak didukung.) 
-        * Banyak perubahan yang berkaitan dengan IOOS SOS Login
-        * Dukungan tambahan untuk pertanyaan BBOX untuk IOOS SOS Login OOSTethys   SOS server. Perubahan ini menghasilkan kecepatan besar untuk permintaan data yang relevan. Terima kasih IOOS SOS Sitemap
-    * Teks .mat file data tabel sekarang disimpan dengan benar. Terima kasih kepada Roy Mendelssohn.
+    * EDTableFrom Sos berubah:
+        * Dukungan turun untuk membaca IOOS SOS Respon XML.
+        * Tambah dukungan untuk membaca IOOS SOS teks / csv. (Jadi NOS SOS server saat ini tidak didukung.) 
+        * Membuat banyak perubahan terkait dengan IOOS SOS rincian server.
+        * Ditambah dukungan untuk permintaan BBOX untuk LOOS SOS dan OOSTethys   SOS server. Perubahan ini menghasilkan kecepatan besar untuk permintaan data yang relevan. Terima kasih banyak. SOS .
+    * Teks masuk .mat berkas data tabular kini disimpan dengan benar. Berkat Roy Mendelssohn.
     *    WMS 
-        *    OpenLayers sekarang dibundel dengan ERDDAP™ untuk digunakan pada WMS halaman web. Ini memperbaiki masalah yang disebabkan ketika OpenLayers mengubah beberapa bulan yang lalu dan mencegah masalah masa depan.
-        * Sitemap WMS   GetCapabilities respon,&lt;Sitemap URL WMS Sitemap Charlton Galvarino
-        * Legenda ditampilkan di WMS halaman web untuk menunjukkan bilah warna. Berkat Walikota Emilio.
-    *    EDDGrid Konstruktor AggregateExistingDimensi memiliki masalah jika sumber sumbu Nilai tidak sama dengan tujuan mereka Nilai, misalnya, jika waktu sumber adalah sesuatu selain "seconds since 1970-01-01" Sitemap Sitemap Todd Login
-    * Di TableWriterGeoJson, kelebihan ',' setelah bbox \\[ Login \\] telah dihapus. Salam Williams
+        *    OpenLayers sekarang bundled dengan ERDDAP™ untuk digunakan pada WMS halaman web. Hal ini memperbaiki masalah yang disebabkan ketika OpenLayers berubah beberapa bulan yang lalu dan mencegah masalah di masa depan.
+        * Dalam WMS   GetCapabilities respon,&lt;OnlineResource &gt; nilai sekarang adalah URL dari WMS Layanan. Berkat Charlton Galvarino.
+        * Sebuah legenda ditampilkan di WMS halaman web untuk menunjukkan batang warna. Berkat Emilio Mayorga.
+    *    EDDGrid Konstruktor Dimensi Agregates memiliki masalah jika sumber sumbu 'Nilai tidak sama dengan tujuan mereka Nilai, misalnya, jika sumber waktu adalah sesuatu selain "seconds since 1970-01-01" . Terima kasih Todd Spindler.
+    * Dalam TableWriterGeoJson, kelebihan ',' setelah bbox \\[ ... \\] telah dihapus. Berkat Greg Williams.
     * Banyak perubahan kecil dan perbaikan bug.
     
 ## Versi 1.22{#version-122} 
  (dirilis 2009-07-05) 
 
-* Bug SlideSorter diperkenalkan pada tahun 1.20 tetap.
-* bug OBIS diperkenalkan di 1.20 tetap.
-* Referensi ke Jasonset data pada gambar/gadgets/GoogleGadgets halaman dihapus.
+* Bug SlideSorter diperkenalkan dalam 1.20 adalah tetap.
+* Bug OBIS diperkenalkan dalam 1.20 adalah tetap.
+* Referensi ke data Jason pada gambar / gadget / GoogleGadgets halaman dihapus.
      
 ## Versi 1.20{#version-120} 
  (dirilis 2009-07-02) 
 
-*    ERDDAP™ administrator, tambahkan ini ke file setup.xml Anda:
+*    ERDDAP™ administrator, tolong tambahkan ini ke berkas setuppxml anda:
 ```
     <!-- If you want to restrict access to some datasets, you need to 
     specify the method used for logging on (authentication). See the info 
@@ -2760,75 +2775,75 @@ Del untuk menghapus mereka semua
     <unusualActivity>10000</unusualActivity>
 ```
 
-* Jenis dataset baru [ EDDGrid Login](/docs/server-admin/datasets#eddgridcopy) Login [Login](/docs/server-admin/datasets#eddtablecopy) membuat dan memelihara salinan lokal lain EDDGrid atau dataset EDDTable dan melayani data dari salinan lokal. Ini sangat mudah digunakan dan sangat efektif **solusi untuk beberapa masalah terbesar dengan melayani data dari sumber data jarak jauh:** 
+* Tipe data baru [ EDDGrid Salin](/docs/server-admin/datasets#eddgridcopy) dan [Salinan EDTableCopy](/docs/server-admin/datasets#eddtablecopy) buat dan pertahankan salinan lokal dari yang lain EDDGrid atau data EDTabel dan melayani data dari salinan lokal. Ini sangat mudah digunakan dan efektif **solusi untuk beberapa masalah terbesar dengan melayani data dari sumber data jauh:** 
     
-    * Mengakses data dari sumber data jarak jauh dapat lambat (untuk berbagai alasan) Sitemap
-    * Dataset jarak jauh kadang-kadang tidak tersedia (lagi, untuk berbagai alasan) Sitemap
-    * Mengandalkan satu sumber untuk data tidak skala dengan baik (e.g., ketika banyak pengguna dan banyak ERDDAP memanfaatkannya) Sitemap
+    * Mengakses data dari sumber data remote dapat lambat (untuk berbagai alasan) .
+    * Data jauh terkadang tidak tersedia (lagi, untuk berbagai alasan) .
+    * Mengandalkan satu sumber untuk data tidak skala baik (mis., ketika banyak pengguna dan banyak ERDDAP s menggunakannya) .
     
-Plus, salinan lokal adalah cadangan asli, yang berguna dalam hal sesuatu terjadi pada aslinya.
+Plus, salinan lokal adalah cadangan asli, yang berguna dalam kasus sesuatu terjadi pada yang asli.
     
-Tidak ada yang baru tentang membuat salinan lokal dataset. Apa yang baru di sini adalah bahwa kelas-kelas ini membuatnya Meme it\\*Sitemap\\*untuk membuat dan\\*Login\\*salinan lokal data dari\\*Login\\*jenis sumber data jarak jauh dan\\*metadata\\*sementara menyalin data.
+Tidak ada yang baru tentang membuat salinan lokal dari sebuah data. Apa yang baru di sini adalah bahwa kelas ini membuatnya\\*mudah\\*untuk membuat dan\\*pertahankan\\*salinan lokal data dari\\*variasi\\*dari tipe sumber data jauh dan\\*tambah metadata\\*ketika menyalin data.
     
-Jenis dataset ini adalah bagian dari serangkaian fitur lengkap yang menyederhanakan penciptaan [grids/clusters/federasi ERDDAP Login](/docs/server-admin/scaling) untuk menangani beban yang sangat berat (e.g., di pusat data) Sitemap
+Jenis data ini adalah bagian dari set lengkap dari fitur yang menyederhanakan penciptaan [grid / cluster / federation dari ERDDAP s](/docs/server-admin/scaling) untuk menangani beban sangat berat (mis., di pusat data) .
     
-* Jenis dataset baru [Login](/docs/server-admin/datasets#eddtablefromdatabase) mendapatkan data dari tabel database lokal atau jarak jauh.
-*    ERDDAP™ Sitemap [Login](/docs/server-admin/additional-information#security) sistem yang mendukung otentikasi (membiarkan pengguna masuk) dan otorisasi (memberikan akses ke dataset pribadi tertentu) Sitemap
-* Sitemap [dua, baru, alat baris perintah](/docs/server-admin/datasets#tools) Sitemap ERDDAP™ administrator menghasilkan XML untuk dataset baru dalam datasets.xml Sitemap
-    * Login Xml dapat menghasilkan draft kasar dari XML dataset untuk hampir semua jenis dataset.
-    * DasDds membantu Anda mengulangi tes dan memperbaiki XML untuk dataset. ERDDAP Sitemap Halaman web Xml telah dihapus. Untuk alasan keamanan, mereka hanya mendukung beberapa jenis dataset. Alat baris perintah baru adalah solusi yang lebih baik.
-* Login [halaman status](/docs/server-admin/additional-information#status-page) memungkinkan siapa pun (tetapi administrator yang tidak mungkin) melihat status ERDDAP™ dari setiap browser dengan pergi ke Meme it \\[ Login \\]  /erddap/status.html Sitemap
-* Tabledap sekarang mendukung [fungsi server-side](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#functions) Sitemap
-    * Login () menghapus baris duplikat dari meja respons,
-    * Login orderBy  (Login) memungkinkan Anda menentukan bagaimana tabel respons harus diurutkan,
-    * Login orderByMax  (Login) memungkinkan Anda menentukan bagaimana tabel respons harus diurutkan dan menghapus semua baris kecuali untuk baris dengan nilai maksimum dalam kolom tertentu terakhir. Ini dapat digunakan, misalnya, untuk mendapatkan data yang tersedia terakhir untuk setiap stasiun.
-* Tabular dataset sekarang dapat mencakup variabel tanggal waktu tambahan yang tidak dinamakan "time" Sitemap Variabel ini diakui oleh metadata "units" mereka, yang harus mengandung " since "   (untuk tanggal numerik Login) atau "yy" atau "YY" (untuk diformat String dateTimes) Sitemap Tapi jangan gunakan destinationName   "time" untuk tanggal utama variabel waktu.
-*    ERDDAP™ sekarang menghasilkan [Login](/docs/server-admin/additional-information#sitemapxml) file, yang memberitahukan mesin pencari yang Anda ERDDAP hanya perlu merangkak setiap bulan. ERDDAP™ administrator, ikuti [petunjuk ini](/docs/server-admin/additional-information#sitemapxml) untuk memberitahukan mesin pencari tentang file sitemap.xml baru.
-*    ERDDAP Pesan kesalahan sekarang jauh lebih pendek dan diarahkan kepada klien (Login) Sitemap Salam Williams
-* Sitemap&lt;Login (/docs/server-admin/datasets#requestblacklist) sekarang juga mendukung alamat IP di mana nomor terakhir telah diganti dengan \\ *.
-* Permintaan .json dan file .geoJson sekarang dapat mencakup opsional [Login](https://niryariv.wordpress.com/2009/05/05/jsonp-quickly/) permintaan dengan menambahkan "& .json p=_functionName_" untuk akhir query. Pada dasarnya, ini hanya memberitahu Meme it ERDDAP™ untuk menambahkan "_functionName_ (" untuk awal respons dan ") " untuk akhir respons. Jika awalnya tidak ada query, meninggalkan "&" di pertanyaan Anda. Salam Williams
-* Banyak statistik baru ditambahkan ke [Laporan harian](/docs/server-admin/additional-information#daily-report) Sitemap
-* Di halaman web dengan daftar dataset, institusi, dan id sekarang di sebelah kanan. Ini bergerak berlangganan dan kolom lain yang lebih berguna untuk melihat pada layar komputer sempit.
-* Di semua halaman web, judul halaman (berdasarkan halaman&lt;judul&gt; di&lt;startHeadHtml&gt; yang Anda tentukan dalam setup.xml) dimodifikasi untuk menyertakan deskripsi yang lebih baik dari halaman web (misalnya, dengan menyertakan judul dan institusi dataset saat ini) Sitemap
-* Informasi Xmx sekarang disertakan dengan informasi memori yang dicetak dalam log.txt, Laporan Harian, dan status.html. Berkat Ellyn Montgomery.
-*    ERDDAP™ memiliki perlindungan tujuan umum terhadap semua kesalahan (Login) Sitemap Terima kasih kepada Charles Carleton.
-* Peningkatan penanganan kesalahan jika respons telah dilakukan.
-* IMPROVED: EDDTableDariFiles dan EDDGrid DariFiles sekarang hanya memungkinkan&lt;metadataDari&gt; pertama atau terakhir. tidak lagi didukung. Dan pertama dan terakhir sekarang didasarkan pada terakhirModifiedTime file.
-* Perbaikan bug: di EDDTableDari SOS Informasi yang tidak valid untuk satu stasiun melemparkan pengecualian dan menyebabkan seluruh dataset ditolak. Sekarang, stasiun tersebut hanya diabaikan (dan pesan kesalahan masuk ke log.txt) Sitemap Terima kasih kepada Rick Blair.
+* Tipe data baru [Basis Data EDTableFromComment](/docs/server-admin/datasets#eddtablefromdatabase) mendapat data dari tabel basis data lokal atau remote.
+*    ERDDAP™ sekarang memiliki [keamanan](/docs/server-admin/additional-information#security) sistem yang mendukung otentikasi (membiarkan log masuk pengguna) dan otorisasi (Memberikan mereka akses ke beberapa data pribadi) .
+* Ada [dua, baru, commander -line alat](/docs/server-admin/datasets#tools) untuk membantu ERDDAP™ administrator menghasilkan XML untuk suatu data baru di datasets.xml :
+    * GenerateDatadasets Xml dapat menghasilkan draft kasar dari XML dataset untuk hampir semua jenis data.
+    * DasDds membantu Anda berkali-kali menguji dan memperbaiki XML untuk suatu data. ERDDAP GenerateDatasets Halaman web Xml telah dihapus. Untuk alasan keamanan, mereka hanya mendukung beberapa jenis dataset. Alat baris perintah yang baru adalah solusi yang lebih baik.
+* Yang baru [halaman status](/docs/server-admin/additional-information#status-page) memungkinkan siapa pun (tetapi administrator yang utama) lihat status dari ERDDAP™ dari browser manapun dengan pergi ke \\[ baseUrl \\]  /erddap/status.html .
+* Tabledap kini mendukung [fungsi server- sisi](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#functions) :
+    * & berbeda () hapus baris duplikat dari tabel respon,
+    * & orderBy  (...) memungkinkan Anda menentukan bagaimana tabel respon harus diurutkan,
+    * & orderByMax  (...) memungkinkan Anda menentukan bagaimana tabel respon harus diurutkan dan menghapus semua baris kecuali untuk baris dengan nilai maksimum dalam kolom terakhir yang dispesifikasikan. Ini dapat digunakan, misalnya, untuk mendapatkan data terakhir yang tersedia untuk setiap stasiun.
+* Dataset Tabular kini dapat memuat variabel dateTime tambahan yang tidak bernama "time" . Variabel ini dikenali oleh metadata "unit" mereka, yang harus berisi " since "   (untuk tanggal numerik Waktu) atau "yy" atau "YY" (untuk format String dateTimes) . Tapi tolong masih menggunakan destinationName   "time" untuk tanggal utama Waktu variabel.
+*    ERDDAP™ sekarang menghasilkan [sitemap.xml](/docs/server-admin/additional-information#sitemapxml) berkas, yang memberitahu mesin pencarian bahwa Anda ERDDAP hanya perlu merangkak setiap bulan. ERDDAP™ administrator, silakan ikuti [instruksi ini](/docs/server-admin/additional-information#sitemapxml) untuk memberitahu mesin pencari tentang berkas sitemap.xml baru.
+*    ERDDAP pesan kesalahan sekarang jauh lebih pendek dan diarahkan ke klien (bukan programmer) . Berkat Greg Williams.
+* [&lt;compestBlacklist &gt;] (/ docs / server-admin / datasets # requestblacklist) sekarang juga mendukung alamat IP dimana nomor terakhir telah diganti oleh\\ *.
+* Permintaan untuk .json dan .geoJson berkas sekarang mungkin termasuk sebuah opsional [jsonp](https://niryariv.wordpress.com/2009/05/05/jsonp-quickly/) permintaan dengan menambahkan "& .json p = _ functionName _ "sampai akhir permintaan. Pada dasarnya, ini hanya memberitahu ERDDAP™ untuk menambahkan "_ functionName _ ("ke awal respon dan") "sampai akhir dari respons. Jika awalnya tidak ada permintaan, tinggalkan" & "dalam permintaan Anda. Berkat Greg Williams.
+* Banyak statistik baru ditambahkan ke [Laporan Harian](/docs/server-admin/additional-information#daily-report) .
+* Pada halaman web dengan daftar dataset, institusi dan id kini berada di ujung kanan. Ini bergerak berlangganan dan kolom lebih berguna lainnya ke tampilan pada layar komputer sempit.
+* Pada semua halaman web, judul halaman (berdasar pada&lt;judul &gt; dalam&lt;startheadHtml &gt; yang anda definisikan dalam setup.xml) dimodifikasi untuk menyertakan deskripsi web yang lebih baik (Misalnya, dengan memasukkan judul dan institusi data saat ini) .
+* Informasi Xmx sekarang disertakan dengan informasi memori yang dicetak dalam log.txt, Laporan Harian, dan pada status. html. Berkat Ellyn Montgomery.
+*    ERDDAP™ memiliki tambahan, tujuan-umum proteksi terhadap semua error (mis., OutOf MemoryError) . Berkat Charles Carleton.
+* Improvices to error handle if the response has been committed.
+* TERINTASI: EDTableFromFiles dan EDDGrid FromFiles now just allow&lt;metadata Dari &gt; pertama atau terakhir. penimakhir tidak lagi didukung. Dan pertama dan terakhir sekarang didasarkan pada file 'lastModifiedTime.
+* Perbaikan kutu: dalam EDTableFrom SOS , info tidak valid untuk satu stasiun melemparkan pengecualian dan menyebabkan seluruh data ditolak. Sekarang, stasiun-stasiun hanya diabaikan (dan pesan galat log ke log.txt) . Berkat Rick Blair.
      
 
 ## Versi 1.18{#version-118} 
  (dirilis 2009-04-08) 
 
-* Perbaikan bug: Mulai dari 1.14, Formulir Akses Data EDDTable dan Membuat halaman web Graph tidak benar menangani batasan yang dikutip.
-* Perbaikan bug: Mulai dari 1.14, EDDTableDariDapSequence tidak menangani batasan waktu dengan benar jika unit waktu sumber tidak "detik sejak 1970-01T00:00".
+* Bug fix: Dimulai dari 1.14, EDTabel Data Access Form dan Membuat Halaman Web Grafik tidak benar berurusan dengan batasan kutipan.
+* Bug fix: Dimulai pada 1.14, EDDTableFromDapSequence tidak menangani keterbatasan waktu dengan benar bila unit waktu sumber tidak "detik sejak 19701-01T00: 00".
      
 
 ## Versi 1.16{#version-116} 
- (dirilis 2009-03-26) 
+ (dirilis 2009-03- 26) 
 
 *    ERDDAP™ administrator:
-    * Ini adalah rilis penting karena memperbaiki bug yang meninggalkan ERDDAP™ thread berjalan jika Anda menggunakan Tomcat Manager untuk Stop/Start atau Reload ERDDAP Sitemap Jadi ketika Anda menginstal 1.16, jangan hanya menggunakan manajer Tomcat untuk menganggur lama ERDDAP™ dan menyebarkan baru ERDDAP Sitemap Sitemap **undeploy tua ERDDAP™ , restart Tomcat (atau server) , kemudian menyebarkan baru ERDDAP Sitemap** Ini selalu ide yang baik untuk melakukannya ketika menginstal versi baru.
-    * Promo&lt;Login&lt;Login (/docs/server-admin/datasets#requestblacklist) Anda datasets.xml Sitemap Ini dapat digunakan untuk menentukan daftar alamat IP klien untuk diblokir (e.g., untuk mengeluarkan Denial serangan Layanan atau robot web yang terlalu zealous) Sitemap
-* Sitemap \\[ Login \\] /log direktori untuk memegang ERDDAP™ Login Ketika Anda mulai ERDDAP™ , itu membuat salinan arsip log.txt dan log. txt.previous file dengan cap waktu. Jika ada masalah sebelum restart, mungkin berguna untuk menganalisis file ini.
-*    ERD Sitemap ERDDAP™ sekarang memiliki sistem berlangganan menyala.
-*    ERDDAP™ sekali lagi memungkinkan (tapi masih tidak merekomendasikan Meme it) "%26" pengkodean "&" di URL permintaan (Login [perubahan v1.14 terkait](#percent26) ) Sitemap
-* Beberapa tambahan baru ke bagian Tally [Laporan harian](/docs/server-admin/additional-information#daily-report) Sitemap
-* Perbaikan bug kecil dalam menghasilkanDatasetXml.
+    * Ini adalah rilis penting karena perbaikan bug yang meninggalkan ERDDAP™ thread running jika anda menggunakan Manajer Tomcat untuk Menghentikan / Mulai atau Muat Ulang ERDDAP . Jadi, ketika Anda memasang 1.16, jangan hanya menggunakan Tomcat manajer untuk membongkar yang lama ERDDAP™ dan menyebarkan baru ERDDAP . Sebaliknya: **lepaskan yang lama ERDDAP™ , Restart Tomcat (atau server) , kemudian menyebarkan baru ERDDAP .** Selalu ide yang baik untuk melakukannya ketika menginstal versi baru.
+    * Harap tambahkan [&lt;daftar hitam permintaan &gt;&lt;/ Daftar Hitam permintaan &gt;] (/ docs / server-admin / datasets # requestblacklist) ke Anda datasets.xml . Ini dapat dipakai untuk menyatakan daftar alamat IP klien yang akan diblokir (Misalnya, untuk menangkis serangan Penyangkalan atau robot web yang terlalu bersemangat) .
+* Sekarang ada \\[ Larang Direktori \\] / direktori log untuk dipegang ERDDAP™ berkas log. When you start ERDDAP™ , ini membuat salinan archive dari log.txt dan log. txt.previous files with a time stamp. Jika ada masalah sebelum restart, mungkin berguna untuk menganalisis berkas-berkas ini.
+*    ERD ' ERDDAP™ sekarang sistem langganan diaktifkan.
+*    ERDDAP™ sekali lagi memungkinkan (tetapi masih tidak merekomendasikan) pengkodean "% 26" dari "&" dalam URL permintaan (lihat [perubahan v1.14 terkait](#percent26) ) .
+* Beberapa tambahan baru ke bagian Tally dari [Laporan Harian](/docs/server-admin/additional-information#daily-report) .
+* Bug kecil perbaikan dalam generateDatasetsXml.
 * Beberapa perbaikan bug kecil.
      
 
 ## Versi 1.14{#version-114} 
- (dirilis 2009-03-17) 
+ (dirilis 2009-03- 17) 
 
-* Perubahan untuk pengguna:
-    * Dalam permintaan data grid, ERDDAP™ dukungan sekarang: [Login](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#last) di mana n adalah bilangan integer indeks dan [ (Sitemap) ](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#lastInParentheses) di mana d adalah nilai numerik (untuk waktu, dalam beberapa detik) Sitemap
-    * Dalam permintaan data tabel, kontratraints String sekarang memerlukan [kutipan ganda](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#QuoteStrings) di sekitar nilai, misalnya, &id="NDBC40121" Ini diperlukan oleh Meme it DAP protokol.
-    * Dalam permintaan data tabel, ERDDAP™ sekarang membutuhkan Meme it [semua kendala menjadi benar persen dikodekan](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#PercentEncode) Sitemap Browser melakukan ini secara otomatis, sehingga sebagian besar mempengaruhi program komputer/script yang mengakses ERDDAP Sitemap
-#### Persentase26{#percent26} 
-*    [Sitemap](#percent26) Login [Sitemap](https://coastwatch.pfeg.noaa.gov/erddap/images/embed.html) dan [ ERDDAP™ Google Login](https://coastwatch.pfeg.noaa.gov/erddap/images/gadgets/GoogleGadgets.html) mengatakan untuk menggantikan "&" di URL gambar dengan "% 26". Dari saat ini, Anda harus mengganti "&" di URL gambar dengan "&amp;". Jadi Anda perlu mengganti "% 26" di halaman web yang ada dan Google Gadgets dengan "&amp;". (Login) 
-*    ERDDAP™ administrator, silahkan:
-    * Tambahkan berikut ke Anda [WordPress.org](/docs/server-admin/deploy-install#setupxml) Login (dan mengubah bendera Nilai KeyKey) Sitemap
+* Perubahan bagi pengguna:
+    * Dalam permintaan data grid, ERDDAP™ sekarang mendukung: [terakhir -n](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#last) dimana n adalah sebuah bilangan integer dari indices dan [ (last- d) ](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#lastInParentheses) dimana d adalah sebuah nilai numerik (untuk waktu, dalam hitungan detik) .
+    * Dalam permintaan data tabular, batasan String sekarang memerlukan [tanda kutip ganda](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#QuoteStrings) sekitar nilai, sebagai contoh, & id = "NDBC40121" Hal ini diperlukan oleh DAP protokol.
+    * Dalam permintaan data tabular, ERDDAP™ sekarang membutuhkan [semua batasan harus dikodekan dengan benar persen](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#PercentEncode) . Peramban melakukan ini secara otomatis, jadi ini sebagian besar mempengaruhi program / skrip komputer yang mengakses ERDDAP .
+#### Percent26{#percent26} 
+*    [Sebelumnya,](#percent26) yang [embed sebuah halaman web grafik](https://coastwatch.pfeg.noaa.gov/erddap/images/embed.html) dan [ ERDDAP™ Google Gadget Web page](https://coastwatch.pfeg.noaa.gov/erddap/images/gadgets/GoogleGadgets.html) berkata untuk mengganti "&" dalam URL gambar dengan "% 26". Mulai sekarang, Anda harus mengganti "&" di URL gambar dengan "& amp;". Jadi Anda perlu mengganti "% 26" di halaman web yang ada dan Google Gadget dengan "& amp;". (Maaf) 
+*    ERDDAP™ Administrator, silakan:
+    * Tambahkan berikut ke Anda [setup.xml](/docs/server-admin/deploy-install#setupxml) berkas (dan mengubah bendera Nilai Kunci Kunci) :
 ```
         <!-- ERDDAP™ has a service that lets remote users set a flag
         to notify ERDDAP™ to try to reload a dataset.
@@ -2858,12 +2873,12 @@ Jenis dataset ini adalah bagian dari serangkaian fitur lengkap yang menyederhana
         <subscriptionSystemActive>true</subscriptionSystemActive>  
 ```
 
-    * Di garis setelah&lt;Login [WordPress.org](/docs/server-admin/deploy-install#setupxml) file, tambahkan
+    * On the line after&lt;emailUserName &gt; dalam anda [setup.xml](/docs/server-admin/deploy-install#setupxml) berkas, tambahkan
 ```
         <emailPassword>_myPassword_</emailPassword> <!-- optional; if absent, emails can't be sent to non-local addresses -->  
 ```
-dan masukkan kata sandi Anda.
-    * Anda dapat mengubah&lt;wmsSampleBBox [WordPress.org](/docs/server-admin/deploy-install#setupxml) file untuk menyertakan nilai longitude hingga 360, misalnya,
+dan masukkan kata sandi asli Anda.
+    * Anda dapat mengubah&lt;wmsSampleBBox &gt; di Anda [setup.xml](/docs/server-admin/deploy-install#setupxml) berkas untuk termasuk nilai bujur hingga 360, misalnya,
 ```
         <!-- The bounding box values are 
            minLongitude,minLatitude,maxLongitude,maxLatitude.
@@ -2871,89 +2886,89 @@ dan masukkan kata sandi Anda.
         <wmsSampleBBox>0,-75,360,75</wmsSampleBBox>  
 ```
 
-    * Sitemap datasets.xml file, nama ulang jenis dataset EDDTableDariNc4DFiles ke EDDTableDariNcFiles (yang sekarang mendukung file dengan sejumlah dimensi) Sitemap Jika Anda memiliki dataset EDDTableDariNc4DFiles:
+    * Dalam Anda datasets.xml berkas, ubah nama tipe data EDTableFromNc4DFiles ke EDTableFromNcFiles (yang sekarang mendukung berkas dengan sejumlah dimensi) . Jika Anda memiliki data EDTableFromNc4DFiles:
         
-        1. Anda HARUS berubah menjadi tipe="EDDTableDariNcFiles" di dataset Anda. XML API
-        2. Anda MUST menambahkan&lt;Sitemap 4 Artikel&lt;/nDimensi&gt; tag ke XML dataset.
-        3. Anda dapat menambahkan yang baru&lt;sortFilesBySourceNames&gt; tag untuk menentukan urutan internal untuk file, yang menentukan urutan keseluruhan data yang dikembalikan.
+        1. Anda HARUS berubah menjadi tipe = "EDTableFromNcFiles" dalam data Anda. Berkas XML.
+        2. Anda HARUS menambahkan&lt;nDimensi &gt; 4&lt;/ nDimensi &gt; tandai ke XML data.
+        3. Anda dapat menambahkan yang baru&lt;sortFilesBySourcenames &gt; tag untuk menspesifikasikan urutan internal bagi berkas, yang menentukan urutan keseluruhan dari data dikembalikan.
         
-Untuk detail, lihat [Login](/docs/server-admin/datasets#eddtablefromfiles) Sitemap
-    * Di masa lalu, untuk EDDTableDariDapSequence, untuk OPeNDAP Server DRDS, di datasets.xml , kami digunakan&lt;sourceCanConstrainStringsRegex&gt; ~=&lt;Login Tapi kita sekarang melihat bahwa dukungan regex DRDS lebih terbatas daripada ERDDAP 's, jadi kami merekomendasikan&lt;Login&lt;/sourceCanConstrainStringRegex&gt; sehingga kendala regex tidak dilewati ke sumber, tetapi bukan ditangani oleh ERDDAP Sitemap
-    * Revamped penanganan sumberCanConstrain ... Sitemap datasets.xml Sitemap [Login](/docs/server-admin/datasets#eddtablefromdapsequence) Login (Sitemap) semua jenis dataset EDDTable. Sistem baru lebih sederhana dan lebih mencerminkan variabilitas sumber data yang berbeda. Anda mungkin perlu memodifikasi XML untuk set data Anda datasets.xml Sitemap
-* Ada beberapa fitur baru yang berguna oleh diri mereka sendiri, tetapi ketika dikombinasikan, juga memfasilitasi penciptaan [grids/clusters/federasi ERDDAP Login](/docs/server-admin/additional-information#grids-clusters-and-federations) Sitemap
-    * Jenis dataset baru:
-        *    [ EDDGrid Login](/docs/server-admin/datasets#eddfromerddap) Login [Login](/docs/server-admin/datasets#eddfromerddap) yang memungkinkan seseorang Meme it ERDDAP™ menyertakan dataset dari yang lain ERDDAP™ dengan cara yang sangat sederhana dan sangat efisien.
-        *    [ EDDGrid Login](/docs/server-admin/datasets#eddgridfromfiles)   (dan kelasnya, [ EDDGrid Login](/docs/server-admin/datasets#eddgridfromncfiles) yang dapat dibaca NetCDF   .nc GRIB .grb, dan HDF   .hdf Login) Sitemap
-        *    [Login](/docs/server-admin/datasets#eddtablefromncfiles) yang dapat dibaca NetCDF   .nc yang memiliki struktur seperti meja.
-    * RunLoadDataset dan LoadDatasets direvisi sehingga ERDDAP™ sangat responsif untuk memuat ulang dataset berdasarkan file di [Login](/docs/server-admin/additional-information#flag) Login&lt;5 detik jika loadDataset utama saat ini dilakukan).
-    * Layanan baru untuk memungkinkan [URL untuk membuat file bendera](/docs/server-admin/additional-information#set-dataset-flag) untuk dataset tertentu, misalnya,
+Untuk rincian, lihat [EDTableFromFiles](/docs/server-admin/datasets#eddtablefromfiles) .
+    * Di masa lalu, untuk EDTableFromDapSequence, untuk OPeNDAP Server DRDS, di datasets.xml , kita gunakan&lt;sourceCanconstrainStringSRegex &gt; ~ =&lt;/ sourceCanConstrainStringRegex &gt;. Tapi kita sekarang melihat bahwa dukungan DRDS regex lebih terbatas daripada ERDDAP 's, jadi kami merekomendasikan&lt;sourceCanconstrainStringsRegex &gt;&lt;/ sourceCanconstrainStringRegex &gt; sehingga batasan regex tidak dilewatkan ke sumber, tetapi ditangani oleh ERDDAP .
+    * Mencabut penanganan sourceCanstrain... in datasets.xml oleh [EDTableFromDapSequence](/docs/server-admin/datasets#eddtablefromdapsequence) dan (internal) semua jenis dataset EDTabel. Sistem baru lebih sederhana dan lebih baik mencerminkan keragaman dari berbagai sumber data. Anda mungkin perlu memodifikasi XML untuk data Anda di datasets.xml .
+* Ada beberapa fitur baru yang berguna sendiri, tetapi ketika dikombinasikan, juga memfasilitasi penciptaan [grid / cluster / federation dari ERDDAP s](/docs/server-admin/additional-information#grids-clusters-and-federations) .
+    * Tipe data baru:
+        *    [ EDDGrid FromErddap](/docs/server-admin/datasets#eddfromerddap) dan [EDTableFromErddap](/docs/server-admin/datasets#eddfromerddap) yang membiarkan satu ERDDAP™ sertakan suatu data dari data lain ERDDAP™ dengan cara yang sangat sederhana dan efisien.
+        *    [ EDDGrid Berkas FromFiles](/docs/server-admin/datasets#eddgridfromfiles)   (dan subclass nya, [ EDDGrid FromNcFiles](/docs/server-admin/datasets#eddgridfromncfiles) yang dapat membaca NetCDF   .nc , GRIB .grb, dan HDF   .hdf berkas) .
+        *    [EDTableFromNcFiles](/docs/server-admin/datasets#eddtablefromncfiles) yang dapat membaca NetCDF   .nc yang memiliki tabel-seperti struktur.
+    * RunLoadDatasets dan LoadDalasets telah diubah sehingga ERDDAP™ sangat responsif untuk memuat ulang data berdasarkan berkas di [tanda](/docs/server-admin/additional-information#flag) direktori (sering&lt;5 detik jika loadDatasets utama saat ini dilakukan).
+    * Layanan baru diijinkan [suatu URL untuk membuat sebuah berkas flag](/docs/server-admin/additional-information#set-dataset-flag) untuk data yang diberikan, misalnya,
     ```
         https://coastwatch.pfeg.noaa.gov/erddap/setDatasetFlag.txt?datasetID=rPmelTao&flagKey=123456789  
     ```
-membuat file bendera di direktori bendera untuk rPmelTao (meskipun bendera Kunci di sini salah) Sitemap
-    * Login [Login](https://coastwatch.pfeg.noaa.gov/erddap/subscriptions) layanan sehingga setiap klien dapat menentukan tindakan yang akan dilakukan ketika dataset tertentu dibuat (Sitemap ERDDAP™ direstart) dan setiap kali perubahan dataset dengan cara apapun. Sistem ini dapat dinonaktifkan melalui&lt;berlanggananSystemActive&gt; di Anda [WordPress.org](/docs/server-admin/deploy-install#setupxml) Login Login ERDDAP™   [Laporan harian](/docs/server-admin/additional-information#daily-report) sekarang daftar semua langganan dan termasuk URL yang diperlukan untuk membatalkan setiap satu, jika Anda merasa sistem disalahgunakan. Sitemap datasets.xml , ada yang baru, opsional [&lt;Login Login (/docs/server-admin/datasets#subscriptionemailblacklist) tag sehingga administrator dapat menentukan daftar alamat email yang dipisahkan comma yang segera didaftarkan dari sistem berlangganan.
-    * Sitemap&lt;Login (/docs/server-admin/dataset#onchange) atribut datasets.xml Sitemap ERDDAP™ administrator menentukan tindakan yang akan dilakukan ketika dataset tertentu diciptakan (Sitemap ERDDAP™ direstart) dan setiap kali perubahan dataset dengan cara apapun.
-    * Peningkatan pencarian teks penuh: menyimpan string pencarian untuk setiap dataset sekarang menggunakan 1/2 memori. Algoritme pencarian (Boyer-Moore-seperti) sekarang 3X lebih cepat.
-    * Sitemap ERDDAP™ sekarang selalu menunda subjek dan konten dengan Meme it \\[ Login Sitemap \\] sehingga akan jelas yang Meme it ERDDAP™ ini datang dari (jika Anda memberikan beberapa ERDDAP Login) Sitemap
-    * Pengambilan statistik yang lebih luas untuk [Laporan harian](/docs/server-admin/additional-information#daily-report) Sitemap
-    * Login \\[ Login \\] /emailLogYEAR-MM-DD.txt log semua email yang dikirim oleh ERDDAP™ setiap hari. Ini sangat berguna jika server Anda tidak dapat benar-benar mengirim email -- Anda setidaknya dapat membacanya di log.
-    *    ERDDAP™ Sitemap \\[ Login \\] Login ( datasetID ) direktori untuk setiap dataset karena mungkin ada banyak file yang tersimpan.
-* Login [ RSS 1 Artikel](https://coastwatch.pfeg.noaa.gov/erddap/information.html#subscriptions) feed untuk setiap dataset (cari oranye RSS ikon pada daftar dataset, Formulir Akses Data, dan Buat halaman web Graph) Sitemap
-*    EDDGrid   .kml respon sekarang menggunakan gambar ubin ("superoverlays" - gambar quadtree yang dihasilkan secara dinamis) Sitemap Gambar awal memuat ke GoogleEarth jauh lebih cepat daripada sebelumnya. Resolusi peta meningkat saat Anda memperbesar, hingga resolusi penuh dataset. Rekomendasi: pengguna harus meminta .kml untuk satu titik waktu, tetapi seluruh dataset, rentang ketinggian. Sayangnya, dukungan untuk rentang waktu dihapus (Saya berharap itu akan kembali Meme it) Sitemap
-*    ERDDAP™ Sitemap [Kedaluwarsa dan header max-age Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) untuk semua file yang diminta dari direktori / gambar. Ini sangat mengurangi jumlah permintaan file statis yang dikirim ke ERDDAP dan dengan demikian sangat mempercepat ERDDAP™ Sitemap Juga, banyak Java Referensi file Script pindah ke bagian bawah halaman HTML mereka, yang juga mempercepat banyak ERDDAP™ Sitemap Berkat buku "High Performance Web Sites" oleh Steve Souders dan ySlow tambahan untuk FireBug plugin di FireFox.
-*    ERDDAP™ beralih dari netcdf-java 2.2.22 ke netcdf-java 4.0. Di antara lain, ini memungkinkan EDDGrid DariNcFiles untuk membaca HDF   .hdf GRIB .grb dan NetCDF   .nc Login
-*    EDDGrid Sitemap EDDGrid DariNcFiles sekarang juga mendukung DArray (serta DGrid)   dataVariable Sitemap Jika dimensi tidak memiliki variabel koordinat yang sesuai, ERDDAP™ menciptakan variabel sumbu dengan nilai indeks (g., 0, 1, 2, ..., 311, 312) Sitemap Jadi semua aspek lain EDDGrid tetap sama:
-Sitemap Ini masih melayani semua set data sebagai Grid, dengan variabel sumbu untuk setiap dimensi.
-Sitemap Kueri masih dapat meminta nilai dari variabel sumbu.
-Terima kasih kepada Charles Carleton, Thomas Im, Dorian Raymer, dan lainnya.
-* Login WMS   OpenLayers halaman sekarang memiliki garis bujur default, rentang ketinggian yang sedikit lebih besar daripada rentang dataset (tidak rentang yang tepat, sehingga konteks set data kecil lebih jelas) Sitemap Kisaran default mungkin sekarang juga 0 sampai 360, yang memungkinkan berbagai macam dataset untuk ditampilkan sekarang. Sitemap Todd Login
-* Slider baru pada beberapa Formulir Akses Data dan Membuat halaman web Graph. Mereka menyederhanakan (Login) spesifikasi data yang diinginkan dan menawarkan umpan balik visual yang baik.
-* Pilihan baru untuk&lt;Login Sitemap datasets.xml Sitemap [aktif="false"](/docs/server-admin/datasets#active) Sitemap
-* Indeks ERD Sitemap ERDDAP™ JPG PNG BMP GIF 3 MB (masih bekerja melalui proxy) ke wallwatch.pfeg (Login) Sitemap
-* Dukungan baru untuk [ data\\_min Login data\\_max ](/docs/server-admin/datasets#data_min-and-data_max) atribut metadata variabel.
-* Solusi parsial untuk [WaitThenTryAgain / Pengecualian Hasil Partial](/docs/server-admin/additional-information#waitthentryagain-exception) Sitemap Sekarang, beberapa permintaan yang sebelumnya gagal ketika perubahan sumber data terdeteksi akan berhasil karena ERDDAP™ akan mengisi ulang dataset dan mengubah data secara otomatis, semua dalam konteks permintaan asli.
-* Perbaikan bug: menghasilkan Login Xml dinonaktifkan dalam ERDDAP™ versi 1.12. Berkat Ellyn Montgomery untuk menunjukkan ini.
-* Perubahan kecil untuk penanganan kesalahan.
-* Banyak perbaikan untuk menghindari/deal dengan kondisi ras yang mungkin (i.e., kemungkinan masalah yang timbul dari sifat bertingkat multi ERDDAP ) yang menyebabkan masalah kecil, jarang terjadi.
-* Sekarang, jika pesan kesalahan ditulis pada gambar, gambar hanya akan tinggal di cache untuk ~ 5-10 menit (tidak 60) Sitemap Cara Wilson
-* Pesan standar ketika tidak ada data sekarang "kuis Anda diproduksi tidak ada hasil yang cocok.", yang lebih pendek, lebih akurat, dan cocok OPeNDAP server.
+membuat berkas flag dalam direktori flag untuk rPmelTao (meskipun bendera Kunci di sini salah) .
+    * Baru [berlangganan](https://coastwatch.pfeg.noaa.gov/erddap/subscriptions) layanan sehingga setiap klien dapat menspesifikasikan suatu aksi yang akan dilakukan ketika sebuah dataset spesifik dibuat (ketika ERDDAP™ dijalankan ulang) dan setiap kali data berubah dengan cara apapun. Sistem ini dapat dinonaktifkan melalui&lt;subscription SystemActive &gt; dalam anda [setup.xml](/docs/server-admin/deploy-install#setupxml) file. The ERDDAP™   [Laporan Harian](/docs/server-admin/additional-information#daily-report) sekarang daftar semua subscriptions dan termasuk URL yang diperlukan untuk membatalkan masing-masing, dalam kasus Anda merasa sistem sedang disalahgunakan. Masuk datasets.xml , ada pilihan baru [&lt;berlangganan EmailBlacklist &gt;] (/ docs / server-admin / datasets # subscriptionemailblacklist) tag sehingga administrator dapat menspesifikasikan daftar comma- dipisahkan dari alamat email yang segera diblacklist dari sistem berlangganan.
+    * Baru [&lt;onChange &gt;] (/ docs / server-admin / datasets # onchange) atribut dalam datasets.xml biarkan ERDDAP™ administrator menspesifikasikan suatu aksi yang akan dilakukan ketika sebuah data spesifik dibuat (ketika ERDDAP™ dijalankan ulang) dan setiap kali data berubah dengan cara apapun.
+    * Improvisasi untuk pencarian teks penuh: menyimpan string pencarian untuk setiap data sekarang menggunakan 1 / 2 memori. Algoritma pencarian (Pacar-Moore- seperti) sekarang 3X lebih cepat.
+    * Email dari ERDDAP™ sekarang selalu mendukung subjek dan isi dengan \\[ erddap Url \\] (Untuk kemenangan serupa ini hendaklah jelas) nyata lagi jelas dan gamblang. ERDDAP™ ini berasal dari (dalam kasus Anda mengelola beberapa ERDDAP s) .
+    * Statistik lebih luas berkumpul untuk [Laporan Harian](/docs/server-admin/additional-information#daily-report) email.
+    * Berkas log baru \\[ Larang Direktori \\] / e-mail Logyear- Mm- DD.txt log semua email dikirim oleh ERDDAP™ Setiap hari. Ini sangat berguna jika server Anda tidak dapat mengirim email -- setidaknya Anda dapat membacanya di catatan.
+    *    ERDDAP™ sekarang membuat \\[ Larang Direktori \\] / cache / ( datasetID ) direktori untuk setiap dataset karena mungkin ada banyak berkas cache.
+* Baru [ RSS 2,01](https://coastwatch.pfeg.noaa.gov/erddap/information.html#subscriptions) feed untuk setiap data (cari jeruk RSS ikon pada daftar tatanan data, Bentuk Akses Data, dan Buat Halaman Web Grafik) .
+*    EDDGrid   .kml tanggapan sekarang menggunakan gambar tiled ("superoverlay" -- gambar pohon kuadrat yang dihasilkan secara dinamis) . Gambar awal dimuat ke dalam GoogleEarth jauh lebih cepat dari sebelumnya. Resolusi peta meningkat saat Anda memperbesar, sampai dengan resolusi penuh dari dataset. Disarankan: pengguna harus meminta .kml untuk satu titik waktu, tapi seluruh data bujur, garis lintang. Sayangnya, dukungan untuk rentang waktu dihapus (Saya berharap itu akan datang kembali) .
+*    ERDDAP™ sekarang menambahkan [Expires dan Cache- Kontrol max-age headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) ke semua berkas yang diminta dari direktori / image. Ini sangat mengurangi jumlah permintaan berkas statis yang dikirim ke ERDDAP dan dengan demikian sangat mempercepat sebagian besar ERDDAP™ halaman penuh. Juga, banyak Java Referensi berkas skrip pindah ke bagian bawah halaman HTML mereka, yang juga mempercepat banyak ERDDAP™ halaman penuh. Berkat buku "High Performance Web Sites" oleh Steve Souders dan tambahan ySlow ke plugin FireBug di FireFox.
+*    ERDDAP™ beralih dari netcdf -java 2.2.22 ke netcdf -java 4.0. Antara lain, ini memungkinkan EDDGrid FromNcFiles yang akan dibaca HDF   .hdf , serta GRIB .grb dan NetCDF   .nc file.
+*    EDDGrid FromDap dan EDDGrid FromNcFiles kini juga mendukung DArray (dan juga DGrid)   dataVariable s. Jika dimensi tidak memiliki variabel koordinat yang sesuai, ERDDAP™ Membuat variabel sumbu dengan nilai indeks (mis. 0, 1, 2,... 311, 312) . Jadi semua aspek lainnya EDDGrid tetap sama:
+\\ * Ini masih berfungsi semua tanggal sebagai Grids, dengan variabel sumbu untuk setiap dimensi.
+\\ * Kueri masih dapat meminta nilai dari variabel sumbu.
+Berkat Charles Carleton, Thomas Im, Dorian Raymer, dan yang lainnya.
+* The WMS   OpenLayers halaman sekarang memiliki bujur baku, jangkauan lintang yang sedikit lebih besar dari jangkauan dataset (bukan jangkauan yang tepat, sehingga konteks dari dataset kecil lebih jelas) . Jangkauan baku kini mungkin 0 sampai 360, yang memungkinkan jangkauan penuh dari banyak data yang akan ditampilkan sekarang. Terima kasih Todd Spindler.
+* Slider baru pada beberapa Format Akses Data dan Membuat Halaman Web Grafik. Mereka menyederhanakan (mentah) spesifikasi data yang diinginkan dan menawarkan umpan balik visual yang baik.
+* Pilihan baru untuk&lt;dataset &gt; tag dalam datasets.xml : [aktif = "false"](/docs/server-admin/datasets#active) .
+* Referensi ke ERD ' ERDDAP™ berubah dari penjaga pantai. (masih bekerja melalui proxy) ke pantai watch.pfeg (disukai) .
+* Dukungan baru bagi [ data\\_min dan data\\_max ](/docs/server-admin/datasets#data_min-and-data_max) atribut metadata variabel.
+* Sebuah solusi parsial ke [Tunggu ThenTryAgain / Bagian Hasil Eksep](/docs/server-admin/additional-information#waitthentryagain-exception) : Sekarang, beberapa permintaan yang sebelumnya gagal ketika perubahan sumber data terdeteksi akan berhasil karena ERDDAP™ akan memuat ulang data dan permintaan ulang data secara otomatis, semua dalam konteks permintaan asli.
+* Perbaikan kutu: menghasilkan Dataset Xml dinonaktifkan ERDDAP™ versi 1.12. Berkat Ellyn Montgomery untuk menunjukkan hal ini.
+* Perubahan kecil pada penanganan kesalahan.
+* Banyak perbaikan untuk menghindari / menangani kondisi kemungkinan balapan (yaitu, kemungkinan masalah timbul dari sifat multi- threaded ERDDAP ) yang menyebabkan masalah kecil yang jarang terjadi.
+* Sekarang, jika pesan kesalahan ditulis pada gambar, gambar hanya akan tinggal dalam cache untuk ~ 5-10 menit (bukan 60) . Berkat Cara Wilson.
+* Pesan standar ketika tidak ada data sekarang "Query Anda dihasilkan tidak ada hasil yang cocok.", yang lebih pendek, lebih akurat, dan cocok OPeNDAP server.
 *    EDDGrid tidak lagi memungkinkan nilai sumbu terikat.
-* Perubahan kecil untuk permintaan .ver dan .help.
+* Perubahan kecil ke permintaan .ver dan .help.
 * Banyak perubahan kecil dan perbaikan bug.
      
 
 ## Versi 1.12{#version-112} 
- (dirilis 2008-10-31) 
+ (dirilis 2008- 10- 31) 
 
-* Login SOS sekali lagi bekerja dengan NDBC SOS dan bekerja dengan NOS baru SOS Sitemap
-* EDDTableDariBMDE sekarang membutuhkan ERDDAP™ admin untuk menentukan dataVariable Sitemap
-*    EDDGrid tidak lagi membutuhkan lat dan lon secara merata untuk . Login Login .kml Sitemap Sitemap Todd Login
+* EDTableFrom SOS sekali lagi bekerja dengan NDBC SOS dan bekerja dengan NOS baru SOS .
+* EDTableFromBMDE sekarang membutuhkan ERDDAP™ admin untuk menspesifikasikan dataVariable s.
+*    EDDGrid tidak lagi membutuhkan lat dan lon yang merata spasi untuk. transparan Png atau .kml . Terima kasih Todd Spindler.
 * Beberapa perubahan kecil.
      
 
 ## Versi 1.10{#version-110} 
- (dirilis 2008-10-14) 
+ (dirilis 2008- 10- 14) 
 
-* metadata "colorBar" baru untuk variabel data dalam datasets.xml mendefinisikan pengaturan bar warna default untuk grafik dan peta. Sitemap [Sitemap](/docs/server-admin/datasets#color-bar-attributes) Sitemap Hal ini penting karena sangat meningkatkan penampilan grafik dan peta default yang diproduksi oleh Membuat Grafik dan karena grafik dan peta default sekarang memiliki bar warna yang konsisten bahkan ketika klien mengubah waktu yang diminta atau rentang geografis. Juga, ini diperlukan untuk Meme it WMS Sitemap
-*    ERDDAP™ sekarang melayani sebagian besar data grid melalui WMS Sitemap Hal ini penting karena menunjukkan bahwa, selain mendapatkan data dari banyak jenis server data, ERDDAP™ dapat mendistribusikan data melalui protokol yang berbeda ( DAP Login WMS ... lebih di masa depan) Sitemap Sitemap [Dokumentasi klien](https://coastwatch.pfeg.noaa.gov/erddap/wms/documentation.html) Sitemap Sitemap [dokumentasi untuk administrator](/docs/server-admin/datasets#wms) Sitemap Sitemap [coba](https://coastwatch.pfeg.noaa.gov/erddap/wms/index.html) Sitemap
-* Dukungan baru untuk nilai longitude &gt; 180 in .kml Login
-* New cdm\\_data\\_type: .
-*    ERDDAP™ sekarang mendukung "boolean" sumber dataType. Sitemap [Sitemap](/docs/server-admin/datasets#boolean-data) Ini akan menjadi berguna untuk EDDTableDariDatabase masa depan.
-* New EDDTableDariBMDE mendukung sumber data DiGIR/BMDE.
-* EDVGridAxis sekarang memungkinkan turun nilai yang diurutkan. Dataset pmelOscar diperlukan ini.
-*    ERDDAP™ sekarang kembali kesalahan HTTP (e.g., "404 untuk sumber daya / halaman tidak ditemukan") dalam situasi lebih, bukan halaman HTML dengan pesan kesalahan.
-* Banyak perubahan/tunjuk ke ERDDAP™ Sitemap
+* Metadata "colorBar" baru untuk variabel data dalam datasets.xml mendefinisikan pengaturan batang warna baku untuk grafik dan peta. Lihat [informasi lebih lanjut](/docs/server-admin/datasets#color-bar-attributes) . Hal ini penting karena sangat meningkatkan penampilan grafik baku dan peta yang dihasilkan oleh Make A Grafik dan karena grafik baku dan peta sekarang memiliki batang warna yang konsisten bahkan ketika klien mengubah jangkauan waktu atau geografis yang diminta. Juga, ini diperlukan untuk WMS .
+*    ERDDAP™ sekarang melayani sebagian besar data grid melalui WMS Layanan. Hal ini penting karena menunjukkan bahwa, selain mendapatkan data dari berbagai jenis server data, ERDDAP™ dapat mendistribusikan data melalui protokol yang berbeda ( DAP , WMS ,... lebih di masa depan) . Lihat [dokumentasi klien](https://coastwatch.pfeg.noaa.gov/erddap/wms/documentation.html) . Atau [dokumentasi bagi administrator](/docs/server-admin/datasets#wms) . Atau [cobalah](https://coastwatch.pfeg.noaa.gov/erddap/wms/index.html) .
+* Dukungan baru bagi nilai bujur &gt; 180 dalam .kml file.
+* cdm\\ _ data\\ _ type baru: Lainnya.
+*    ERDDAP™ sekarang mendukung "boolean" source dataType. Lihat [informasi lebih lanjut](/docs/server-admin/datasets#boolean-data) Ini akan berguna untuk basis data EDDTableFromData masa depan.
+* EDTableFromBMDE baru mendukung sumber data DiGIR / BMDE.
+* EDVGridAxis kini mengizinkan menurunkan nilai terurut. Data PmelOscar membutuhkan ini.
+*    ERDDAP™ sekarang mengembalikan kesalahan HTTP (mis., "404 untuk sumberdaya / halaman tidak ditemukan") dalam situasi lebih lanjut, daripada halaman HTML dengan pesan kesalahan.
+* Banyak perubahan / tambahan ke ERDDAP™ dokumentasi.
 * Banyak perubahan kecil.
 * Beberapa perbaikan bug.
-*    **Sitemap ERDDAP™ administrator harus melakukan upgrade ke versi ini:** 
-    * Sitemap datasets.xml , untuk setiap EDDTableDari SOS dataset, perubahan "observedProperty" metadata ke "sourceObservedProperty".
-    * Aturan untuk aturan axisVariable Sitemap dataVariable Sitemap destinationName Sitemap [Login](/docs/server-admin/datasets#datavariable-addattributes) Sitemap Anda perlu memeriksa nama variabel Anda valid. Baik memeriksa mereka dengan tangan, atau menjalankan Meme it ERDDAP™ dan melihat pesan kesalahan dalam laporan yang dikirimkan ke administrator.
-    * Sitemap datasets.xml Jika Anda ingin variabel data grid dapat diakses melalui WMS , Anda perlu menambahkan metadata warnaBar. setidaknya, misalnya,&lt;nama att=" colorBarMinimum "tik="double"&gt;0&lt;Login
+*    **Hal ERDDAP™ administrator harus melakukan upgrade ke versi ini:** 
+    * Masuk datasets.xml , Untuk setiap EDTableFrom SOS dataset, ubah "observedProperty" metadata ke "sourceObservedProperty".
+    * Aturan untuk axisVariable atau dataVariable ' destinationName sekarang [stricter](/docs/server-admin/datasets#datavariable-addattributes) . Anda perlu memeriksa apakah nama variabel Anda valid. Entah memeriksa mereka dengan tangan, atau lari ERDDAP™ dan lihat pesan kesalahan dalam laporan yang diemail ke administrator.
+    * Masuk datasets.xml , jika anda ingin sebuah variabel data grid dapat diakses melalui WMS , Anda perlu menambahkan metadata colorBar. Setidaknya, misalnya,&lt;nama att = " colorBarMinimum "type =" double "&gt; 0&lt;/ attt &gt;
 ```
           <att name="colorBarMaximum" type="double">32</att>  
 ```
-Sitemap [Sitemap](/docs/server-admin/datasets#wms) Sitemap
-    * Tambahkan berikut ke Anda [WordPress.org](/docs/server-admin/deploy-install#setupxml) Login (tetapi menyesuaikannya dengan informasi Anda) Sitemap
+Lihat [informasi lebih lanjut](/docs/server-admin/datasets#wms) .
+    * Tambahkan berikut ke Anda [setup.xml](/docs/server-admin/deploy-install#setupxml) berkas (tetapi disesuaikan dengan informasi Anda) :
 
 ```
         <!-- drawLand specifies the default Make A Graph setting for 
@@ -3015,49 +3030,49 @@ Sitemap [Sitemap](/docs/server-admin/datasets#wms) Sitemap
 ```
 
 ## Versi 1.08{#version-108} 
- (dirilis 2008-07-13) 
+ (dirilis 2008-07- 13) 
 
-* Layanan web baru di ERDDAP™ Sitemap Login Xml, bantuan ERDDAP™ administrator dengan membuat draft kasar dari XML yang diperlukan untuk menggambarkan dataset dalam datasets.xml 
-* Beberapa perubahan/bug perbaikan yang terkait dengan memungkinkan griddap untuk dilihat oleh netcdf-java sebagai server opendap, termasuk: metadata global sekarang label "NC\\_GLOBAL" (bukan "GLOBAL") Sitemap
-* Login EDDGrid dan Formulir Akses Data EDDTable sekarang menggunakan informasi query di URL. Jadi, misalnya, jika pengguna pergi dari bentuk Make A Graph ke Formulir Akses Data, batasan sekarang ditransfer dengan benar.
-*    tabledap 's Membuat Grafik sekarang memungkinkan batasan pada variabel String.
-* EDDTable's Membuat Sebuah Grafik sekarang memungkinkan kontratraint NaN. Steve Hankin
-* Perbaikan bug: Hemat EDDTable AsImage tidak benar mengenali nilai .colorbar min dan maks. Terima kasih kepada Steve Hankin
-* Banyak perbaikan untuk setupDatasetsXml. Berkat Ellyn Montgomery.
-* Permintaan griddap sekarang memungkinkan () - gaya meminta sedikit di luar rentang sumbu yang sebenarnya. Hal ini tepat karena () - nilai dibulatkan pada nilai aktual terdekat. Terima kasih kepada Cindy Bessey
-* Saya membuat tes FloatArray dan DoubleArray lebih canggih. Ini akan selalu sempurna (karena pengujian harus disesuaikan untuk setiap dataset) tapi harus lebih baik. Meme it Berkat Ellyn Montgomery.
-* Saya pindah setup.html dan setupDatasets Xml.html erddap's / download direktori dan hard coded semua link ke mereka. Sekarang, saya dapat melakukan perubahan dan memperbarui informasi pengaturan segera.
+* Layanan web baru di ERDDAP™ , hasilkan Dataset Xml, assists ERDDAP™ administrator dengan membuat draf kasar XML diperlukan untuk menjelaskan suatu data di datasets.xml 
+* Beberapa perubahan / perbaikan bug terkait dengan memungkinkan griddap dilihat oleh netcdf -java sebagai server opendap, termasuk: metadata global sekarang berlabel "NC\\ _ GLOBAL" (bukan "GLOBAL") .
+* The EDDGrid dan Bentuk Akses Data EDTabel kini menggunakan informasi query dalam URL. Jadi, misalnya, jika pengguna pergi dari bentuk Membuat A Grafik ke Formulir Akses Data, kendala sekarang benar ditransfer.
+*    tabledap 'S Make A Graph sekarang memungkinkan batasan pada variabel String.
+* EDTabel Membuat Grafik sekarang memungkinkan batasan NaN. Berkat Steve Hankin.
+* Bug fix: EDTabel save AsImage tidak benar mengenali nilai min .colorbar dan max. Berkat Steve Hankin
+* Banyak perbaikan untuk setupDadasetsXml. Berkat Ellyn Montgomery.
+* Permintaan Griddap kini mengijinkan () -gaya permintaan sedikit diluar dari jangkauan sumbu aktual. Hal ini sesuai sejak () -values dibulatkan ke nilai aktual terdekat. Berkat Cindy Bessey
+* Aku membuat tes FloatArray dan DoubleArray dari ruang angkasa yang lebih canggih. Ini akan selalu menjadi tidak sempurna (karena tes perlu disesuaikan untuk setiap tanggal) , tapi seharusnya lebih baik. Berkat Ellyn Montgomery.
+* Aku memindahkan semp.html dan setupDatasets Xml.html 's / download direktori dan kode keras semua link ke mereka. Sekarang, aku bisa membuat perubahan dan memperbarui informasi setup segera.
 * Banyak perubahan kecil. Beberapa perbaikan bug kecil.
-*    **Sitemap ERDDAP™ administrator harus melakukan upgrade ke versi ini:** 
-    * Login&lt;Login Html&gt; dari pesan Anda.xml ke Anda [WordPress.org](/docs/server-admin/deploy-install#setupxml) Login Ini menentukan teks yang muncul di tengah sisi kiri ERDDAP™ Login Juga, tambahkan&lt;h1&gt; ERDDAP &lt;/h1&gt; (atau judul lain) ke bagian atasnya. Meme it **Sitemap** Login&lt;theShortDescriptionHtml [WordPress.org](/docs/server-admin/deploy-install#setupxml) Login (dari erddapContent baru .zip ) ke setup Anda.xml.
+*    **Hal ERDDAP™ administrator harus melakukan upgrade ke versi ini:** 
+    * Pindah&lt;Keterangan Singkat Html &gt; dari messages.xml ke anda [setup.xml](/docs/server-admin/deploy-install#setupxml) file. Ini menentukan teks yang muncul di tengah-tengah sisi kiri dari ERDDAP™ halaman rumah. Juga, tambahkan&lt;h1 &gt; ERDDAP &lt;/ h1 &gt; (atau beberapa judul lainnya) sampai ke puncak. **Atau,** salin&lt;Html Deskripsikan Pintas &gt; di baru [setup.xml](/docs/server-admin/deploy-install#setupxml) berkas (dari content yang baru .zip ) ke dalam semp.xml Anda.
          
 
 ## Versi 1.06{#version-106} 
  (dirilis 2008-06-20) 
 
-* Dukungan baru untuk IOOS DIF SOS sumber data.
+* Dukungan baru bagi IOOS DIF SOS sumber data.
 * Banyak perubahan kecil. Beberapa perbaikan bug kecil.
      
 
 ## Versi 1.04{#version-104} 
  (dirilis 2008-06-10) 
 
-* Fitur Slide Sorter baru.
-* Halaman dan contoh Google Gadgets baru.
-* Perbaikan bug dalam EDDGrid .saveAsNc untuk variabel dengan skala dan addOffset.
+* Fitur Slide Sorter Baru.
+* New Google Gadgets page and examples.
+* Bug fix in EDDGrid .saveAsNc untuk variabel dengan skala dan addOffset.
      
 
 ## Versi 1.02{#version-102} 
- (dirilis 2008-05-26) 
+ (dirilis 2008-05- 26) 
 
-* Login EDDGrid SideBySide memungkinkan untuk berbeda axisVariable Login \\[ Sitemap \\] Login Nilai.
-* Semua arus dan angin dataset digabungkan ke EDDGrid Dataset SideBySide.
-* Gambar dari permintaan gambar sekarang disimpan selama 1 jam.
+* Baru EDDGrid Sisi Sisi memungkinkan untuk berbeda axisVariable s \\[ 0 \\] sumber Nilai.
+* Semua data arus dan angin bergabung ke EDDGrid Data Sisi Sisi.
+* Gambar dari permintaan gambar sekarang cache selama 1 jam.
      
 
 ## Versi 1.00{#version-100} 
  (dirilis 2008-05-06) 
 
-* Membuat halaman web Graph dan perintah grafis di URL.
-* Dukungan untuk file bendera untuk memaksa reloading dataset.
-* Jenis dataset baru: EDDTableDari4DFiles (subclass pertama EDDTableDariFiles) Sitemap
+* Buat sebuah halaman web dan perintah grafis dalam URL.
+* Dukungan bagi berkas flag untuk memaksa memuat ulang suatu data.
+* Tipe data baru: EDTableFrom4DFiles (subclass pertama dari EDTableFromFiles) .

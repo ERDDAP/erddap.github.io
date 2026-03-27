@@ -1,508 +1,520 @@
-# Vlajky funkcí
+# Značky funkcí
 
-Tato stránka dokumentuje konfigurační vlajky dostupné v systému. Tyto vlajky ovládají různé funkce, experimentální schopnosti a chování.
+Tato stránka dokumentuje konfigurační vlajky dostupné v systému. Tyto vlajky ovládají různé funkce, experimentální schopnosti a dědičné chování.
 
 ##  **Legenda o životním cyklu vlajky** 
 
-*  **Stabilní:** Plánované jako dlouhodobé vlajky, které umožňují administrátorům měnit funkčnost. V bezpečí pro výrobu.
-*  **Testování:** Funkce, které jsou připraveny k testování. Tyto budou buď absolventem "Stáj," nebo budou nakonec nastaveny na cílovou hodnotu a budou odstraněny vlajky.
-*  **Ve výstavbě:** V současné době hardkódován k false v kódu, bez ohledu na konfiguraci. Funkce ještě není připravena k použití.
+*  **Stabilní:** Určeno jako dlouhodobé vlajky umožňující administrátorům měnit funkčnost. Bezpečné pro výrobu.
+*  **Zkouška:** Funkce, které jsou připraveny k testování. Tyto budou buď odmaturovat na "stabilní", nebo nakonec budou nastaveny na jejich cílovou hodnotu a bude vlajka odstraněna.
+*  **Ve stavebnictví:** V současné době zakódován na false v kódu, bez ohledu na konfiguraci. Funkce ještě není připravena k použití.
 
-##  **? Optimalizace při testování** 
+##  **Př Optimalizace testování** 
 
-To jsou vlajky, které budou pravděpodobně v budoucnu odstraněny.
+To jsou vlajky, které budou pravděpodobně v budoucnosti odstraněny.
 
-###  **touchThreadOnlyWhenItems** 
+###  **touchThreadOnlyWhenObjects** 
 
-Popis zboží
-Optimalizační vlajka. Pokud je to pravda, dotykové vlákno běží pouze tehdy, když jsou věci k zpracování.
+Popis
+Optimalizační vlajka. Pokud je to pravda, dotyková nit běží pouze tehdy, když jsou položky k zpracování.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Testování | 
- |   **Současná výchozí**   | pravda | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Zkouška | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
- |   **Historie**   | Přidáno 2.29.0 | 
+ |   **Historie**   | Přidáno v 2.29.0 | 
 
-###  **úkolCacheClear** 
+###  **taskCacheClear** 
 
-Popis zboží
-Povolí úkol pozadí, který odstraní prošlé položky z cache.
+Popis
+Umožňuje úkol pozadí, který vymaže prošlé položky z cache.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
- |   **Historie**   | Přidáno 2.27.0 | 
+ |   **Historie**   | Přidáno v 2.27.0 | 
 
 ###  **ncHeaderMakeFile** 
 
-Popis zboží
-Pokud je to pravda, server před vytvořením výsledku ncheader vytvoří celý soubor nc. Nový (preferovaný) chování, když je falešné je přímo generovat výsledek ncheader.
+Popis
+Pokud je to pravda, server vygeneruje celý soubor nc před vytvořením výsledku ncheader. Nový (preferované) chování, když false je přímo generovat ncheader výsledek.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Testování | 
- |   **Současná výchozí**   | false | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Zkouška | 
+ |   **Aktuální výchozí**   | false | 
  |   **Dlouhodobý cíl**   | false | 
- |   **Historie**   | Přidáno 2.29.0 | 
+ |   **Historie**   | Přidáno v 2.29.0 | 
 
-###  **použítEddReflekce** 
+###  **USEEddReflection** 
 
-Popis zboží
-Povoluje použití Java Odraz k instantizaci EDD ( ERDDAP Soubor dat) třídy.
+Popis
+Umožňuje použití Java Odraz na instanci EDD ( ERDDAP Dataset) třídy.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Testování | 
- |   **Současná výchozí**   | pravda | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Zkouška | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
- |   **Historie**   | Výchozí změna na true v 2.28.0, přidáno v 2.25 | 
+ |   **Historie**   | Výchozí změna na true v 2.28.0, přidána v 2.25 | 
 
-###  **pozadíVytvořitSubsetTables** 
+###  **Background CreateSubsetTables** 
 
-Popis zboží
-Umožňuje vytvoření podmnožinových tabulek v podkladových vláknech pro zlepšení doby načítání souborů.
+Popis
+Umožňuje vytvořit podmnožinu tabulek v pozadí pro zlepšení času načítání souborů dat.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Testování | 
- |   **Současná výchozí**   | pravda | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Zkouška | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
- |   **Historie**   | Přidáno 2.29.0 | 
+ |   **Historie**   | Přidáno v 2.29.0 | 
 
-###  **použítNcMetadataForFileTable** 
+###  **useNcMetadataForFileTable** 
 
-Popis zboží
-Použití NetCDF Metadata pro zalidnění zobrazení tabulky souborů. Zejména pokud nc soubor obsahuje aktuální_range pro každou proměnnou, načítání souborů může přeskočit čtení celého souboru.
+Popis
+Použití NetCDF metadata pro zobrazení tabulky souborů. Zejména pokud soubor nc obsahuje skutečný _ range pro každou proměnnou, načítání datového souboru může přeskočit čtení celého souboru.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
- |   **Historie**   | Přidáno 2.29.0 | 
+ |   **Historie**   | Přidáno v 2.29.0 | 
 
-##  **Systém a hlavní chování** 
+##  **& Základní chování** 
 
-###  **e-mail IsActive** 
+###  **e-mail Isactive** 
 
-Popis zboží
-Kontroluje, zda se systém pokouší odeslat skutečné e-maily (např. pro aktualizace předplatného nebo hlášení chyb) přes nakonfigurovaný SMTP server.
+Popis
+Kontroluje, zda se systém snaží odeslat skutečné e-maily (např. pro aktualizace předplatného nebo chybové zprávy) přes nakonfigurovaný SMTP server.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | false | 
- |   **Dlouhodobý cíl**   | pravda (Závisí na admin config)   | 
+ |   **Aktuální výchozí**   | false | 
+ |   **Dlouhodobý cíl**   | pravda (Závislý na admin config)   | 
  |   **Historie**   | Odkaz | 
 
-:::info Logic
-Tato vlajka je při startu dynamicky vypočtena. It defaults to false pokud všechny požadované SMTP pověření (hostitel, port, uživatel, heslo, z adresy) jsou přísně poskytovány v setup.xml.
+:: Informace Logika
+Tato vlajka se při startu počítá dynamicky. Chyby na false, pokud všechny požadované SMTP pověření (hostitel, port, uživatel, heslo, z- adresa) jsou přísně poskytovány v setup.xml.
 ::
 
 ###  **showLoadErrorsOnStatusPage** 
 
-Popis zboží
-Určuje, zda jsou na stránce stavu veřejně zobrazeny detailní chyby zatížení souborů.
+Popis
+Určuje, zda jsou na stavové stránce veřejně zobrazeny podrobné chyby při ukládání dat.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
- |   **Dlouhodobý cíl**   | nastavit podle potřeby | 
+ |   **Aktuální výchozí**   | pravda | 
+ |   **Dlouhodobý cíl**   | nastavit dle potřeby | 
  |   **Historie**   | Přidáno v 2.25 | 
 
-###  **výchozíDostupnéViaFiles** 
+###  **defaultAccessibleViaFiles** 
 
-Popis zboží
-Nastaví výchozí chování pro to, zda lze v souborové službě přistupovat k základním souborům datového souboru.
+Popis
+Nastaví výchozí chování pro to, zda lze mít přístup k podkladovým souborům souboru.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | false | 
+ |   **Aktuální výchozí**   | false | 
  |   **Dlouhodobý cíl**   | false | 
- |   **Historie**   | Přidáno 2.10 | 
+ |   **Historie**   | Přidáno v 2.10 | 
 
-##  **Datasety** 
+##  **Name** 
 
-###  **rychleRestartovat** 
+###  **quickRestart** 
 
-Popis zboží
-Pokud je to povoleno, systém se snaží spustit rychleji přeskočením některých hlubokých kontrol validace dat během inicializace.
+Popis
+Pokud je zapnuto, systém se pokusí začít rychleji tím, že během inicializace přeskočí některé hluboké kontroly validace souborů dat.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 1.38 | 
 
-###  **enableEnvParsing** 
+###  **enable EnvParsing** 
 
-Popis zboží
-Povoluje zpracování datasets.xml soubor s [Stringsubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . To má mnoho využití včetně nastavení soukromých hodnot (jako hesla) pomocí proměnných prostředí.
+Popis
+Umožňuje zpracování datasets.xml soubor s [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . To má mnoho použití včetně nastavení soukromých hodnot (jako hesla) používání proměnných prostředí.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
- |   **Dlouhodobý cíl**   | nastavit podle potřeby | 
- |   **Historie**   | Přidáno 2.29.0 | 
+ |   **Aktuální výchozí**   | pravda | 
+ |   **Dlouhodobý cíl**   | nastavit dle potřeby | 
+ |   **Historie**   | Přidáno v 2.29.0 | 
 
-###  **použijte SaxParser** 
+###  **useSaxParser** 
 
-Popis zboží
-Přepne interní XML parsingový motor pro použití SAX (Jednoduché API pro XML) Parser místo parseru DOM. To umožňuje některé nové pokročilé funkce, jako je XInclude, a [vlastní atributy zobrazení](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
+Popis
+Přepne interní XML parsing motor pro použití SAX (Jednoduchý API pro XML) Parser místo Boomparser. To umožňuje některé nové pokročilé funkce jako XInclude, a [atributy vlastního zobrazení](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Testování | 
- |   **Současná výchozí**   | false | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Zkouška | 
+ |   **Aktuální výchozí**   | false | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 2.25 | 
 
-###  **seznamPrivateDatasets** 
+###  **listPrivateDatasets** 
 
-Popis zboží
-Určuje, zda soukromé soubory údajů (kteří vyžadují ověření) se objeví v hlavním seznamu souborů údajů.
+Popis
+Určuje, zda soukromé soubory údajů (osoby vyžadující ověření) jsou uvedeny v hlavním seznamu datových souborů.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | false | 
+ |   **Aktuální výchozí**   | false | 
  |   **Dlouhodobý cíl**   | false | 
  |   **Historie**   | Přidáno v 1.20 | 
 
-###  **Političtí BoundariesActive** 
+###  **PoliticalBoundariesActive** 
 
-Popis zboží
-Kontroluje, zda lze politické hranice vykreslit na mapách.
+Popis
+Kontroluje, zda lze politické hranice vytyčit na mapách.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 1.80 | 
 
-##  **Metadata a standardy** 
+###  **siceSynchronousLoading** 
+
+Popis
+Nahrát soubory dat synchronně namísto odloženého načítání pozadí.
+
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Stabilní | 
+ |   **Aktuální výchozí**   | false | 
+ |   **Dlouhodobý cíl**   | false | 
+ |   **Historie**   | Přidáno v 2.30 | 
+
+##  **Metadata a normy** 
 
 ###  **fgdcActive** 
 
-Popis zboží
-Generuje a slouží FGDC (Spolkový geograf Výbor pro údaje) metadata.
+Popis
+Vytváří a slouží FGDC (Federální geografické Výbor pro údaje) metadata.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 1.38 | 
 
 ###  **iso19115 Aktivní** 
 
-Popis zboží
-Generuje a slouží ISO 19115 metadata.
+Popis
+Vytváří a slouží metadatům ISO19115.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 1.38 | 
 
-###  **použitíSisISO19115** 
+###  **USESiSO19115** 
 
-Popis zboží
-Používá knihovnu Apache SIS k generování ISO 19115 metadat namísto původního generátoru. Pokud toto není zapnuto a použitoSisISO19139, výchozí IOS 19115 metadata budou ve formátu ISO19115_3_2016. Pokud je to false, bude výchozí formát ve starém upraveném formátu ISO19115_2.
+Popis
+Používá knihovnu Apache SIS k generování metadat ISO19115 namísto generátoru odkazu. Pokud je zapnuto a není zapnuto USISISO19139, výchozí metadata IOS19115 budou ve formátu ISO19115 _3 _2016. Je-li toto false, bude výchozí formát ve formátu modifikovaném v odkazu ISO19115 _2.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Testování | 
- |   **Současná výchozí**   | false | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Zkouška | 
+ |   **Aktuální výchozí**   | false | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 2.26 | 
 
-###  **použitíSisISO19139** 
+###  **USESiSO19139** 
 
-Popis zboží
-Používá knihovnu Apache SIS pro generování metadat ISO19139_2007.
+Popis
+Používá knihovnu Apache SIS k generování metadat ISO19139 _2007.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Testování | 
- |   **Současná výchozí**   | false | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Zkouška | 
+ |   **Aktuální výchozí**   | false | 
  |   **Dlouhodobý cíl**   | false | 
- |   **Historie**   | Přidáno 2.29.0 | 
+ |   **Historie**   | Přidáno v 2.29.0 | 
 
-###  **JsonldActive** 
+###  **jsonldActive** 
 
-Popis zboží
-Generuje a slouží JSON-LD (Propojené údaje) metadata.
+Popis
+Vytváří a slouží JSON-LD (Propojená data) metadata.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Odkaz | 
 
-###  **generovatCroissantSchema** 
+###  **generateCroissantSchema** 
 
-Popis zboží
-Generuje "Croissant" metadata schema jako výchozí schéma pro připravenost strojového učení.
+Popis
+Vytváří schéma metadat "Croissant" jako výchozí schéma pro připravenost strojového učení.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Testování | 
- |   **Současná výchozí**   | pravda | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Zkouška | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 2.28.0 | 
 
-###  **proměnnéMusímmítIoosKategorie** 
+###  **VariablesMustHaveloosCategory** 
 
-Popis zboží
-Vymáhá, aby proměnné měly atribut kategorie IOOS.
+Popis
+Zdůrazňuje, že proměnné musí mít atribut kategorie IOOS.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
- |   **Dlouhodobý cíl**   | nastavit podle potřeby | 
+ |   **Aktuální výchozí**   | pravda | 
+ |   **Dlouhodobý cíl**   | nastavit dle potřeby | 
  |   **Historie**   | Odkaz | 
 
-###  **zahrnujíNcCFSubsetVariables** 
+###  **includeNcCFSubsetProměnné** 
 
-Popis zboží
-Chování Legacy bylo generování podmnožinových proměnných pouze pro datové soubory EDDTableFromNcCFFiles. To bylo přidáno do výchozího stavu chování pro EDDTableFromNcCFFiles, aby bylo v souladu s jinými typy souborů dat. Pokud potřebujete odkaz automatické subsetVariables Můžete to povolit. Lepší řešení by bylo přidat subsetVariables k definici datového souboru.
+Popis
+Chování legality bylo generovat podmnožiny proměnných pouze pro soubory EDDTableFromNcCFFiles. To bylo přidáno k výchozímu chování EDDTableFromNcCFFiles být v souladu s ostatními typy datových souborů. Pokud potřebujete odkaz automaticky subsetVariables Můžete to povolit. Lepší by bylo přidat subsetVariables k definici souboru údajů.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Testování | 
- |   **Současná výchozí**   | false | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Zkouška | 
+ |   **Aktuální výchozí**   | false | 
  |   **Dlouhodobý cíl**   | false | 
  |   **Historie**   | Přidáno v 2.26 | 
 
 ##  **Předplatné a oznámení** 
 
-###  **předplatnéSystemActive** 
+###  **NAME OF TRANSLATORS** 
 
-Popis zboží
-Umožňuje systém předplatného e-mailu pro aktualizace souborů dat.
+Popis
+Umožňuje předplatné e-mailu pro aktualizace datových souborů.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 1.14 | 
 
-###  **upsatDoRemoteErddapDataset** 
+###  **předplatné ToRemoteErdapDataset** 
 
-Popis zboží
-Umožňuje ERDDAP instance pro přihlášení ke vzdálenému ERDDAP Data pro aktualizace.
+Popis
+Umožňuje to ERDDAP instance pro přihlášení na vzdálený ERDDAP soubory dat pro aktualizace.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 1.70 | 
 
-###  **updateSubsRssOnFileChangs** 
+###  **updateSubsRssOnFileChanges** 
 
-Popis zboží
-Spouštěcí předplatné a RSS aktualizace při změně základních souborů. Dědictví chování bylo pouze dělat aktualizace na soubor data reload (které některé servery měly jako často týdně) .
+Popis
+Závodníci předplatné a RSS aktualizace, pokud se základní soubory změní. Dědičné chování bylo pouze pro aktualizaci datového souboru (které některé servery měly tak zřídka jako týdenní) .
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 2.26 | 
 
-###  **povolit MqttBroker** 
+###  **Povolit MqttBroker** 
 
-Popis zboží
-Spustí vnitřní MQTT broker v rámci aplikace pro zpracování zpráv.
+Popis
+Spustí interní zprostředkovatel MQTT v rámci aplikace pro zpracování zpráv.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Testování | 
- |   **Současná výchozí**   | false | 
- |   **Dlouhodobý cíl**   | nastavit podle potřeby | 
- |   **Historie**   | Přidáno 2.29.0 | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Zkouška | 
+ |   **Aktuální výchozí**   | false | 
+ |   **Dlouhodobý cíl**   | nastavit dle potřeby | 
+ |   **Historie**   | Přidáno v 2.29.0 | 
 
-###  **publikovatMqttNotif** 
+###  **publishMqttNotif** 
 
-Popis zboží
-Povoluje zveřejňování oznámení (jako změny datového souboru) MQTT makléři.
+Popis
+Umožňuje zveřejňování oznámení (jako změny datového souboru) k makléři MQTT.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Testování | 
- |   **Současná výchozí**   | false | 
- |   **Dlouhodobý cíl**   | nastavit podle potřeby | 
- |   **Historie**   | Přidáno 2.29.0 | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Zkouška | 
+ |   **Aktuální výchozí**   | false | 
+ |   **Dlouhodobý cíl**   | nastavit dle potřeby | 
+ |   **Historie**   | Přidáno v 2.29.0 | 
 
-##  **Webové hlavičky/konfigurace** 
+##  **Comment** 
 
-###  **UseHeadersPro Url** 
+###  **USEHeadersFor Url** 
 
-Popis zboží
-Umožňuje pomocí hlaviček HTTP určit detaily URL požadavku (užitečné za proxy) .
+Popis
+Umožňuje použití HTTP hlaviček pro určení údajů URL požadavku (užitečné za proxy) .
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
- |   **Historie**   | Výchozí změna na true v 2.28.0, Přidáno v 2.27.0 | 
+ |   **Historie**   | Výchozí změna platí v 2.28.0, přidána v 2.27.0 | 
 
-###  **povolit Cors** 
+###  **Povolit Cors** 
 
-Popis zboží
-Povoluje sdílení zdrojů přes zdroj (KORS) hlavičky HTTP odpovědí.
+Popis
+Umožňuje cross- Origin sdílení zdrojů (CORS) hlavičky HTTP odpovědí.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | false | 
- |   **Dlouhodobý cíl**   | nastavit podle potřeby | 
+ |   **Aktuální výchozí**   | false | 
+ |   **Dlouhodobý cíl**   | nastavit dle potřeby | 
  |   **Historie**   | Přidáno v 2.26 | 
 
-##  **Hledat** 
+##  **Name** 
 
-###  **použítLuceneSearchEngine** 
+###  **USELuceneSearchEngine** 
 
-Popis zboží
+Popis
 Přepne vnitřní vyhledávač pro použití Apache Lucene.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Testování | 
- |   **Současná výchozí**   | false | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Zkouška | 
+ |   **Aktuální výchozí**   | false | 
  |   **Dlouhodobý cíl**   | ? | 
  |   **Historie**   | Odkaz | 
 
 ##  **Služby a protokoly** 
 
-###  **souboryActive** 
+###  **filesActive** 
 
-Popis zboží
-Umožňuje zobrazení prohlížeče "Files" pro soubory, které jej podporují.
+Popis
+Umožňuje zobrazení prohlížeče "Soubory" pro soubory dat, které jej podporují.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 1.58 | 
 
-###  **měničeActive** 
+###  **convertersActive** 
 
-Popis zboží
-Povoluje konvertační nástroje v UI.
+Popis
+Umožňuje konverzi nástrojů v UI.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 1.44 | 
 
 ###  **slideSorterActive** 
 
-Popis zboží
-Povoluje Slide Sorter.
+Popis
+Umožňuje Slide Sorter.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 1.44 | 
 
 ###  **dataProviderFormActive** 
 
-Popis zboží
-Umožňuje formulář umožňující poskytovatelům dat vstupní metadata.
+Popis
+Umožňuje zadávat metadata poskytovatelům dat.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Odkaz | 
 
-###  **OutOfDateDatasetsActive** 
+###  **outOfDateDatasetsActive** 
 
-Popis zboží
-Povoluje hlášení zastaralých souborů dat.
+Popis
+Umožňuje vykazování souborů údajů o externím datu.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
- |   **Historie**   | Přidáno 1.82 | 
+ |   **Historie**   | Přidáno v 1.82 | 
 
 ###  **wmsActive** 
 
-Popis zboží
-Povolí službu Web Map ( WMS ) rozhraní.
+Popis
+Umožňuje službu Web Map ( WMS ) rozhraní.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Přidáno v 1.44 | 
 
 ###  **wmsClientActive** 
 
-Popis zboží
-Povolí vnitřní WMS Klientské rysy.
+Popis
+Umožňuje vnitřní WMS funkce klienta.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
  |   **Životní cyklus**   | Stabilní | 
- |   **Současná výchozí**   | pravda | 
+ |   **Aktuální výchozí**   | pravda | 
  |   **Dlouhodobý cíl**   | pravda | 
  |   **Historie**   | Odkaz | 
 
-###  **geoSlužbyRestActive** 
+###  **geoServiceRestartActive** 
 
-Popis zboží
-Povolí RESTful rozhraní pro geoprostorové služby. Není plně realizován.
+Popis
+Umožňuje RESTful rozhraní pro geoprostorové služby. Není plně provedena.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Ve výstavbě | 
- |   **Současná výchozí**   | false (Hardcoded)   | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Pod stavbou | 
+ |   **Aktuální výchozí**   | false (Hardcode)   | 
  |   **Dlouhodobý cíl**   | pravda | 
 
 ###  **wcsActive** 
 
-Popis zboží
-Povolí Webovou službu pokrytí ( WCS ) rozhraní. Není plně realizován.
+Popis
+Umožňuje službu pokrytí webu ( WCS ) rozhraní. Není plně provedena.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Ve výstavbě | 
- |   **Současná výchozí**   | false (Hardcoded)   | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Pod stavbou | 
+ |   **Aktuální výchozí**   | false (Hardcode)   | 
  |   **Dlouhodobý cíl**   | pravda | 
 
 ###  **sosActive** 
 
-Popis zboží
-Umožňuje službu pozorování senzorů ( SOS ) rozhraní.
+Popis
+Umožňuje službu sledování senzorů ( SOS ) rozhraní.
 
- | Majetek | Podrobnosti | 
- | :--- | :--- | 
- |   **Životní cyklus**   | Ve výstavbě | 
- |   **Současná výchozí**   | false (Hardcoded)   | 
+ | Vlastnost | Podrobnosti | 
+ | : -- -- | : -- -- | 
+ |   **Životní cyklus**   | Pod stavbou | 
+ |   **Aktuální výchozí**   | false (Hardcode)   | 
  |   **Dlouhodobý cíl**   | pravda | 

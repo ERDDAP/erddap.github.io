@@ -19,9 +19,9 @@ mvn verify
 mvn verify -P external
 mvn verify -P slowAWS
 ```
-* Use TranslateMessages.translate() to update translations if needed
+* Use `python translation/translate.py` to update translations if needed.
 * EDStatic.java set developmentMode to false, change the version number and specify the release date.
-* Do the build
+* Do the build.
 ```
 mvn clean
 mvn compile

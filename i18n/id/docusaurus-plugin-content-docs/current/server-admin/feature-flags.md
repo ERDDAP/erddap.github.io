@@ -1,508 +1,520 @@
-# Bendera Fitur
+# Flag Fitur
 
-Halaman ini dokumen bendera konfigurasi yang tersedia dalam sistem. Bendera ini mengontrol berbagai fitur, kemampuan eksperimental, dan perilaku legacy.
+Halaman ini mendokumentasikan tanda konfigurasi yang tersedia di sistem. Bendera ini mengendalikan berbagai fitur, kemampuan eksperimental, dan perilaku warisan.
 
-##  **Bendera siklus hidup Legenda** 
+##  **Legenda Lifecycle Flag** 
 
-*  **Stabil:** Berlaku sebagai bendera jangka panjang untuk memungkinkan admin untuk mengubah fungsi. Aman untuk produksi.
-*  **Pengujian:** Fitur yang siap untuk pengujian. Ini akan lulusan ke "Stable" atau akhirnya ditetapkan ke nilai target mereka dan memiliki bendera dihapus.
-*  **Di bawah Konstruksi:** Saat ini sulit dikodekan ke palsu dalam kode, terlepas dari konfigurasi. Fitur belum siap digunakan.
+*  **Stabil:** Dijadikan sebagai bendera jangka panjang untuk memungkinkan admin untuk mengubah fungsionalitas. Aman untuk produksi.
+*  **Pengujian:** Fitur yang siap untuk pengujian. Ini akan baik lulus ke "Stabil" atau akhirnya ditetapkan ke nilai target mereka dan memiliki bendera dihapus.
+*  **Di bawah Konstruksi:** Saat ini dikodekan untuk false dalam kode, terlepas dari konfigurasi. Fitur belum siap digunakan.
 
-##  **Login Optimasi dalam pengujian** 
+##  **♫ Optimisasi dalam pengujian** 
 
-Ini adalah bendera yang cenderung dihapus di masa depan.
+Ini adalah bendera kemungkinan akan dihapus di masa depan.
 
-###  **WordPress.org** 
+###  **toucheThreadlyWhenItems** 
 
-Sitemap
-Bendera Optimisasi. Jika benar, benang sentuh hanya berjalan ketika ada item untuk memproses.
+Deskripsi
+Bendera optimisasi. Jika bernilai benar (true), benang sentuh hanya berjalan ketika ada item untuk diproses.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Sitemap | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan di 2.29.0 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Pengujian | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 2.29.0 | 
 
-###  **Login** 
+###  **taskCacheClear** 
 
-Sitemap
-Aktifkan tugas latar belakang yang membersihkan barang-barang yang kedaluwarsa dari cache.
+Deskripsi
+Aktifkan tugas latar belakang yang membersihkan butir kadaluarsa dari cache.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan di 2.27.0 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 2.27,0 | 
 
-###  **Login** 
+###  **NcHeaderMakeFile** 
 
-Sitemap
-Jika benar server akan menghasilkan seluruh file nc sebelum membuat hasil ncheader. Login (Login) perilaku ketika palsu adalah untuk langsung menghasilkan hasil ncheader.
+Deskripsi
+Bila true server akan menghasilkan seluruh berkas nc sebelum membuat hasil ncheader. Yang baru (disukai) perilaku ketika salah adalah untuk secara langsung menghasilkan hasil ndeader.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Sitemap | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan di 2.29.0 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Pengujian | 
+ |   **Baku Kini**   | salah | 
+ |   **Tujuan jangka panjang**   | salah | 
+ |   **Riwayat**   | Ditambahkan dalam 2.29.0 | 
 
-###  **Login** 
+###  **Use EddReflection** 
 
-Sitemap
-Aktifkan penggunaan Java Refleksi untuk mengulangi EDD ( ERDDAP Login) kelas.
+Deskripsi
+Mengaktifkan penggunaan Java Refleksi untuk segera EDD ( ERDDAP Dataset) kelas.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Sitemap | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | JPG PNG BMP GIF 3 MB | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Pengujian | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Default berubah menjadi benar dalam 2.28.0, ditambahkan dalam 2.25 | 
 
-###  **latar belakangCreateSubsetTables** 
+###  **backgroundCreateSubsettables** 
 
-Sitemap
-Memungkinkan tabel subset untuk dibuat dalam benang latar belakang untuk meningkatkan waktu pemuatan dataset.
+Deskripsi
+Memungkinkan tabel subset dibuat dalam thread latar belakang untuk meningkatkan waktu pemuatan data.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Sitemap | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan di 2.29.0 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Pengujian | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 2.29.0 | 
 
-###  **Sitemap** 
+###  **Use Metadata ForFileTable** 
 
-Sitemap
-Sitemap NetCDF metadata untuk mengisi tampilan tabel file. Secara khusus jika file nc mencakup rentang aktual untuk setiap variabel, pemuatan dataset dapat melewatkan membaca seluruh file.
+Deskripsi
+Uses NetCDF metadata untuk populasi tampilan tabel berkas. Secara khusus jika sebuah berkas nc termasuk aktual _ range untuk setiap variabel, pemuatan data dapat melewatkan membaca seluruh berkas.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan di 2.29.0 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 2.29.0 | 
 
-##  **Email: info@ids-imaging.com** 
+##  **Sistem & Perilaku Inti** 
 
-###  **Sitemap Login** 
+###  **surel Aktif** 
 
-Sitemap
-Kontrol apakah sistem mencoba mengirim email aktual (e.g., untuk pembaruan berlangganan atau laporan kesalahan) melalui server SMTP yang dikonfigurasi.
+Deskripsi
+Mengendalikan apakah sistem mencoba untuk mengirim email aktual (Misalnya, untuk update atau laporan kesalahan subscription) melalui server SMTP yang dikonfigurasi.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login (WordPress.org)   | 
- |   **Sitemap**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | salah | 
+ |   **Tujuan jangka panjang**   | benar (Dependent pada config admin)   | 
+ |   **Riwayat**   | Warisan | 
 
-:::info Logika
-Bendera ini dihitung secara dinamis pada startup. Ini default untuk palsu kecuali semua diperlukan kredensial SMTP (host, port, pengguna, password, dari-address) disediakan secara ketat dalam setup.xml.
-Sitemap
+::: info Logika
+Bendera ini dihitung secara dinamis pada startup. Baku ke false kecuali semua kredensial SMTP yang diperlukan (host, port, user, password, dari -address) disediakan secara ketat di setuppxml.
+:::
 
-###  **Sitemap** 
+###  **show LoadErrorsOnStatusPage** 
 
-Sitemap
-Tentukan jika kesalahan dataset rinci ditampilkan secara publik di halaman status.
+Deskripsi
+Menentukan apakah kesalahan beban dataset rinci ditampilkan di halaman status.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
  |   **Tujuan jangka panjang**   | set sesuai keinginan | 
- |   **Sitemap**   | Ditambahkan dalam 2.25 | 
+ |   **Riwayat**   | Ditambahkan dalam 2.25 | 
 
-###  **Login** 
+###  **navaultAccessibleViaFiles** 
 
-Sitemap
-Mengatur perilaku default untuk apakah file dataset yang mendasari dapat diakses dalam layanan file.
+Deskripsi
+Tata perilaku baku untuk apakah berkas data yang mendasari dapat diakses dalam layanan berkas.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 2.10 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | salah | 
+ |   **Tujuan jangka panjang**   | salah | 
+ |   **Riwayat**   | Ditambahkan dalam 2.10 | 
 
-##  **Login** 
+##  **Datasets:** 
 
-###  **Login** 
+###  **restart cepat** 
 
-Sitemap
-Jika diaktifkan, sistem mencoba untuk memulai lebih cepat dengan melewatkan pemeriksaan validasi mendalam tertentu pada dataset selama awalisasi.
+Deskripsi
+Jika diaktifkan, sistem mencoba untuk memulai lebih cepat dengan melewatkan pemeriksaan validasi tertentu pada dataset selama inisialisasi.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 1.38 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 1.38 | 
 
-###  **Login** 
+###  **enableEnvParsing** 
 
-Sitemap
-Dapat memproses datasets.xml file dengan [Login](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) Sitemap Ini memiliki banyak kegunaan termasuk menetapkan nilai pribadi (seperti kata sandi) menggunakan variabel lingkungan.
+Deskripsi
+Aktifkan pemrosesan datasets.xml berkas dengan [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Ini memiliki banyak penggunaan termasuk pengaturan nilai pribadi (seperti sandi) menggunakan variabel lingkungan.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
  |   **Tujuan jangka panjang**   | set sesuai keinginan | 
- |   **Sitemap**   | Ditambahkan di 2.29.0 | 
+ |   **Riwayat**   | Ditambahkan dalam 2.29.0 | 
 
-###  **Login** 
+###  **usuaxParser** 
 
-Sitemap
-Saklar mesin parsing XML internal untuk menggunakan SAX (API sederhana untuk XML) parser bukan parser DOM. Ini memungkinkan beberapa fitur canggih baru seperti XInclude, dan [atribut tampilan kustom](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) Sitemap
+Deskripsi
+Tukar mesin parsing XML internal untuk menggunakan SAX (API sederhana bagi XML) parser daripada parser DOM. Hal ini memungkinkan beberapa fitur lanjutan baru seperti XInclude, dan [atribut tampilan gubahan](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Sitemap | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 2.25 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Pengujian | 
+ |   **Baku Kini**   | salah | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 2.25 | 
 
-###  **Login** 
+###  **listPrivateDatasets** 
 
-Sitemap
-Menentukan apakah dataset pribadi (mereka yang membutuhkan otentikasi) muncul dalam daftar dataset utama.
+Deskripsi
+Menentukan apakah dataset privat (yang membutuhkan otentikasi) muncul dalam daftar data utama.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan di 1.20 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | salah | 
+ |   **Tujuan jangka panjang**   | salah | 
+ |   **Riwayat**   | Ditambahkan dalam 1.20 | 
 
-###  **Politik** 
+###  **PosicalBoundariesActive** 
 
-Sitemap
-Kontrol apakah batas politik dapat ditarik pada peta.
+Deskripsi
+Mengendalikan apakah batas politik dapat ditarik pada peta.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 1.80 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 1.80 | 
 
-##  **📂 Metadata & Standar** 
+###  **Force Synchronousloading** 
 
-###  **Login** 
+Deskripsi
+Muat data secara sinkron daripada menunda pemuatan latar belakang.
 
-Sitemap
-Hasil dan melayani FGDC (Geografi Federal Database) Login
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | salah | 
+ |   **Tujuan jangka panjang**   | salah | 
+ |   **Riwayat**   | Ditambahkan dalam 2.30 | 
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 1.38 | 
+##  **Metadata & Standar** 
 
-###  **iso19115 Sitemap** 
+###  **fgdcActive** 
 
-Sitemap
-Hasilkan dan melayani metadata ISO 19115.
+Deskripsi
+Generasi dan melayani FGDC (Geographic Federal Komite Data) metadata.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 1.38 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 1.38 | 
 
-###  **maksimka215** 
+###  **iso19115 Aktif** 
 
-Sitemap
-Menggunakan perpustakaan SIS Apache untuk menghasilkan metadata ISO 19115 bukan generator legacy. Jika ini ada di dan menggunakanSisISO19139 tidak ada, metadata IOS 19115 default akan berada dalam format ISO19115_3_2016. Jika ini palsu format default akan dalam format ISO19115_2 yang dimodifikasi.
+Deskripsi
+Generasi dan melayani ISO 19115 metadata.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Sitemap | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 2.26 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 1.38 | 
 
-###  **maksimka215** 
+###  **useSisISO19115** 
 
-Sitemap
-Menggunakan perpustakaan Apache SIS untuk menghasilkan metadata ISO19139_2007.
+Deskripsi
+Menggunakan pustaka SIS Apache untuk menghasilkan ISO 19115 metadata bukan generator warisan. Jika ini aktif dan useSisISO19139 tidak aktif, IOS baku 19115 metadata akan dalam format ISO19115 _ 3 _ 2016. Jika ini salah, format baku akan berada dalam format ISO19115 _ 2 yang dimodifikasi oleh warisan.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Sitemap | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan di 2.29.0 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Pengujian | 
+ |   **Baku Kini**   | salah | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 2.26 | 
 
-###  **Login** 
+###  **useSisISO19139** 
 
-Sitemap
-Hasil dan melayani JSON-LD (Database) Login
+Deskripsi
+Menggunakan pustaka SIS Apache untuk menghasilkan metadata ISO19139 _ 2007.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Pengujian | 
+ |   **Baku Kini**   | salah | 
+ |   **Tujuan jangka panjang**   | salah | 
+ |   **Riwayat**   | Ditambahkan dalam 2.29.0 | 
 
-###  **Login** 
+###  **jsondActive** 
 
-Sitemap
-Hasilkan "Croissant" metadata schema sebagai skema default untuk kesiapan pembelajaran mesin.
+Deskripsi
+Generasi dan melayani JSON- LD (Data Terkait) metadata.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Sitemap | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 2.28.0 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Warisan | 
 
-###  **variabelHaveIoosCategory** 
+###  **GenerateCroissantSkema** 
 
-Sitemap
-Memperkuat bahwa variabel harus memiliki atribut kategori IOOS.
+Deskripsi
+Menghasilkan skema metadata "Croissant" sebagai skema baku untuk kesiapan pembelajaran mesin.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Pengujian | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 2.28,0 | 
+
+###  **variablesHARUS HaveIoosKategori** 
+
+Deskripsi
+Paksa variabel yang harus memiliki atribut kategori IOOS.
+
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
  |   **Tujuan jangka panjang**   | set sesuai keinginan | 
- |   **Sitemap**   | Login | 
+ |   **Riwayat**   | Warisan | 
 
-###  **Login** 
+###  **AdcludeNcFSubsetVariabel** 
 
-Sitemap
-Perilaku warisan adalah untuk menghasilkan variabel subset hanya untuk dataset EDDTableDariNcCFFiles. Ini ditambahkan ke default perilaku untuk EDDTableDariNcCFFiles untuk konsisten dengan jenis dataset lainnya. Jika Anda membutuhkan legacy otomatis subsetVariables Anda dapat mengaktifkan ini. Solusi yang lebih baik akan ditambahkan subsetVariables untuk definisi dataset.
+Deskripsi
+Perilaku Legacy adalah untuk menghasilkan variabel subset hanya untuk data data EDDTableFromNCFFIles. Ini ditambahkan ke perilaku baku untuk EDDTableFromNCFFIles agar konsisten dengan tipe data lain. Jika Anda membutuhkan warisan otomatis subsetVariables Anda dapat mengaktifkan ini. Solusi yang lebih baik akan menambahkan subsetVariables ke definisi data.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Sitemap | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 2.26 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Pengujian | 
+ |   **Baku Kini**   | salah | 
+ |   **Tujuan jangka panjang**   | salah | 
+ |   **Riwayat**   | Ditambahkan dalam 2.26 | 
 
-##  **Sitemap** 
+##  **Keterangan dan Pemberitahuan** 
 
-###  **Login** 
+###  **subscription SystemActive** 
 
-Sitemap
-Aktifkan sistem berlangganan email untuk pembaruan dataset.
+Deskripsi
+Aktifkan sistem langganan surel bagi pemutakhiran dataset.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 1.14 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 1.14 | 
 
-###  **Login** 
+###  **subscribe ToRemoteErddapDatet** 
 
-Sitemap
-Memungkinkan ini ERDDAP Contoh untuk berlangganan jarak jauh ERDDAP dataset untuk pembaruan.
+Deskripsi
+Memungkinkan ini ERDDAP contoh untuk berlangganan ke remote ERDDAP dataset untuk pembaruan.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 1.70 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 1.70 | 
 
-###  **Sitemap** 
+###  **updateSubsRssOnFilechanges** 
 
-Sitemap
-Pemicu berlangganan dan RSS update ketika mendasari perubahan file. Perilaku legacy hanya untuk melakukan pembaruan pada reload dataset (yang memiliki beberapa server selama mingguan) Sitemap
+Deskripsi
+Triggers berlangganan dan RSS pemutakhiran ketika mendasari perubahan berkas. Perilaku warisan hanya untuk melakukan pemutakhiran pada reload data (yang beberapa server memiliki sebagai jarang sebagai mingguan) .
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 2.26 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 2.26 | 
 
-###  **Sitemap Login** 
+###  **aktifkan MqttBroker** 
 
-Sitemap
+Deskripsi
 Memulai broker MQTT internal dalam aplikasi untuk menangani pesan.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Sitemap | 
- |   **Sitemap**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Pengujian | 
+ |   **Baku Kini**   | salah | 
  |   **Tujuan jangka panjang**   | set sesuai keinginan | 
- |   **Sitemap**   | Ditambahkan di 2.29.0 | 
+ |   **Riwayat**   | Ditambahkan dalam 2.29.0 | 
 
-###  **Login** 
+###  **publishMqttNoaf** 
 
-Sitemap
-Aktifkan penerbitan pemberitahuan (seperti perubahan dataset) ke broker MQTT.
+Deskripsi
+Aktifkan penerbitan pemberitahuan (seperti perubahan data) ke broker MQTT.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Sitemap | 
- |   **Sitemap**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Pengujian | 
+ |   **Baku Kini**   | salah | 
  |   **Tujuan jangka panjang**   | set sesuai keinginan | 
- |   **Sitemap**   | Ditambahkan di 2.29.0 | 
+ |   **Riwayat**   | Ditambahkan dalam 2.29.0 | 
 
-##  **Web Header** 
+##  **Tajuk Web / Konfigurasi** 
 
-###  **Login Sitemap** 
+###  **useHeader For Url** 
 
-Sitemap
-Memungkinkan menggunakan header HTTP untuk menentukan rincian URL permintaan (berguna di balik proxy) Sitemap
+Deskripsi
+Memungkinkan memakai header HTTP untuk menentukan rincian URL permintaan (berguna dibelakang proksi) .
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | JPG PNG BMP GIF 3 MB | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Baku berubah menjadi benar dalam 2.28,0, ditambahkan dalam 2.27,0 | 
 
-###  **Sitemap Login** 
+###  **aktifkan Cors** 
 
-Sitemap
-Aktifkan Berbagi Sumber Daya Lintas-Origin (Login) header pada respon HTTP.
+Deskripsi
+Mengaktifkan Cross- Origin Resource Sharing (CORS) tajuk pada respon HTTP.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | salah | 
  |   **Tujuan jangka panjang**   | set sesuai keinginan | 
- |   **Sitemap**   | Ditambahkan dalam 2.26 | 
+ |   **Riwayat**   | Ditambahkan dalam 2.26 | 
 
-##  **Sitemap** 
+##  **Pencarian** 
 
-###  **Login** 
+###  **Use LuceneSearchEngine** 
 
-Sitemap
-Saklar mesin pencari internal untuk menggunakan Apache Lucene.
+Deskripsi
+Mengubah mesin pencari internal menggunakan Apache Lucene.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Sitemap | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Sitemap | 
- |   **Sitemap**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Pengujian | 
+ |   **Baku Kini**   | salah | 
+ |   **Tujuan jangka panjang**   | ? | 
+ |   **Riwayat**   | Warisan | 
 
-##  **Sitemap** 
+##  **Layanan & Protokol** 
 
-###  **Login** 
+###  **fileAktif** 
 
-Sitemap
-Aktifkan tampilan browser "Files" untuk set data yang mendukungnya.
+Deskripsi
+Aktifkan tampilan peramban "Files" untuk tata data yang mendukungnya.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 1,58 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 1.58 | 
 
-###  **konverterActive** 
+###  **konversi Aktif** 
 
-Sitemap
-Memungkinkan alat konversi di UI.
+Deskripsi
+Aktifkan alat konversi di UI.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 1.44 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 1.44 | 
 
-###  **Sitemap** 
+###  **slideSorterActive** 
 
-Sitemap
+Deskripsi
 Aktifkan Slide Sorter.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 1.44 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 1.44 | 
 
 ###  **dataProviderFormActive** 
 
-Sitemap
-Aktifkan formulir yang memungkinkan penyedia data untuk memasukkan metadata.
+Deskripsi
+Mengaktifkan formulir yang memungkinkan penyedia data ke metadata masukan.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Warisan | 
 
-###  **Sitemap** 
+###  **OUT DateDatasetsActive** 
 
-Sitemap
-Aktifkan pelaporan dataset yang terbaru.
+Deskripsi
+Aktifkan pelaporan dari data-of-date.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 1.82 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 1.82 | 
 
-###  **Login** 
+###  **wmsActive** 
 
-Sitemap
-Aktifkan Layanan Peta Web ( WMS ) Login
+Deskripsi
+Aktifkan Layanan Peta Web ( WMS ) antarmuka.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Ditambahkan dalam 1.44 | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Ditambahkan dalam 1.44 | 
 
-###  **Login** 
+###  **wmsClientActive** 
 
-Sitemap
-Aktifkan internal WMS fitur klien.
+Deskripsi
+Mengaktifkan internal WMS fitur klien.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Login | 
- |   **Sitemap**   | Login | 
- |   **Tujuan jangka panjang**   | Login | 
- |   **Sitemap**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Stabil | 
+ |   **Baku Kini**   | benar | 
+ |   **Tujuan jangka panjang**   | benar | 
+ |   **Riwayat**   | Warisan | 
 
-###  **geoServicesRestAktif** 
+###  **geoServivesReactive** 
 
-Sitemap
-Aktifkan RESTful antarmuka untuk Layanan Geospatial. Tidak sepenuhnya diimplementasikan.
+Deskripsi
+Mengaktifkan RESTful antarmuka untuk Layanan Geospasial. Tidak sepenuhnya diimplementasikan.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Di bawah Konstruksi | 
- |   **Sitemap**   | Login (Login)   | 
- |   **Tujuan jangka panjang**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Di bawah Konstruksi | 
+ |   **Baku Kini**   | salah (Hardcode)   | 
+ |   **Tujuan jangka panjang**   | benar | 
 
-###  **Login** 
+###  **wcsActive** 
 
-Sitemap
-Aktifkan Layanan Web Cakupan ( WCS ) Login Tidak sepenuhnya diimplementasikan.
+Deskripsi
+Mengaktifkan Layanan Coverage Web ( WCS ) antarmuka. Tidak sepenuhnya diimplementasikan.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Di bawah Konstruksi | 
- |   **Sitemap**   | Login (Login)   | 
- |   **Tujuan jangka panjang**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Di bawah Konstruksi | 
+ |   **Baku Kini**   | salah (Hardcode)   | 
+ |   **Tujuan jangka panjang**   | benar | 
 
-###  **Login** 
+###  **sosactive** 
 
-Sitemap
-Aktifkan Layanan Observasi Sensor ( SOS ) Login
+Deskripsi
+Mengaktifkan Layanan Pengamatan Sensor ( SOS ) antarmuka.
 
- | Login | Sitemap | 
- | Login | Login | 
- |   **Login**   | Di bawah Konstruksi | 
- |   **Sitemap**   | Login (Login)   | 
- |   **Tujuan jangka panjang**   | Login | 
+ | Properti | Rincian | 
+ | : ---- | : ---- | 
+ |   **Lifecycle**   | Di bawah Konstruksi | 
+ |   **Baku Kini**   | salah (Hardcode)   | 
+ |   **Tujuan jangka panjang**   | benar | 

@@ -4,13 +4,13 @@ Diese Seite dokumentiert die im System verfügbaren Konfigurations-Flags. Diese 
 
 ##  **Flagge Lifecycle Legend** 
 
-*  **Stabil:** Beabsichtigt als langfristige Fahnen, um Admins die Funktionalität zu ändern. Sicher für die Produktion.
+*  **Stabil:** Beabsichtigt als langfristige Fahnen, um Administratoren zu ermöglichen, die Funktionalität zu ändern. Sicher für die Produktion.
 *  **Prüfung:** Eigenschaften, die zum Testen bereit sind. Diese werden entweder auf "Stable" absolvieren oder schließlich auf ihren Zielwert gesetzt und die Flagge entfernt.
-*  **Unterbau:** Derzeit hartcodiert, um im Code, unabhängig von der Konfiguration. Die Funktion ist noch nicht gebrauchsfertig.
+*  **Unterbau:** Derzeit hartcodiert, um falsch im Code, unabhängig von der Konfiguration. Das Feature ist noch nicht gebrauchsfertig.
 
 ##  **🚀 Optimierungen im Test** 
 
-Dies sind Fahnen, die in der Zukunft entfernt werden können.
+Das sind Flaggen, die in Zukunft entfernt werden können.
 
 ###  **TouchThreadOnlyWhenItems** 
 
@@ -39,7 +39,7 @@ Ermöglicht die Hintergrundaufgabe, die abgelaufene Elemente aus dem Cache gelö
 ###  **NcHeaderMakeFile** 
 
 Warenbezeichnung
-Wenn zutreffend, wird der Server die gesamte nc-Datei erzeugen, bevor Sie das ncheader-Ergebnis erstellen. Der neue (bevorzugt) Verhalten, wenn falsch ist, das ncheader-Ergebnis direkt zu erzeugen.
+Wenn wahr, wird der Server die gesamte nc-Datei erzeugen, bevor das ncheader-Ergebnis erzeugt wird. Der neue (bevorzugt) Verhalten, wenn falsch ist, das ncheader-Ergebnis direkt zu erzeugen.
 
  | Eigentum | Details | 
  | ---- | ---- | 
@@ -75,7 +75,7 @@ Ermöglicht die Erstellung von Subset-Tabellen in Hintergrundfäden, um die Lade
 ###  **NcMetadataForFileTable** 
 
 Warenbezeichnung
-Verwendung NetCDF Metadaten, um die Dateitabellenansicht zu bevölkern. Insbesondere, wenn eine nc-Datei die Ist_range für jede Variable enthält, kann die Datensatz-Beladung die gesamte Datei ablesen.
+Verwendung NetCDF Metadaten, um die Dateitabellenansicht zu bevölkern. Insbesondere, wenn eine nc-Datei für jede Variablen Ist_range enthält, kann der Datensatz geladen die gesamte Datei lesen.
 
  | Eigentum | Details | 
  | ---- | ---- | 
@@ -131,7 +131,7 @@ Stellt das Standardverhalten fest, ob die zugrunde liegenden Dateien eines Daten
 ###  **schnell starten** 
 
 Warenbezeichnung
-Wenn aktiviert, versucht das System schneller zu starten, indem bestimmte tiefe Validierungsprüfungen bei Datensätzen während der Initialisierung übersprungen werden.
+Wenn aktiviert, versucht das System schneller zu starten, indem bestimmte tiefe Validierungsprüfungen an Datensätzen während der Initialisierung übersprungen werden.
 
  | Eigentum | Details | 
  | ---- | ---- | 
@@ -187,6 +187,18 @@ Kontrolliert, ob politische Grenzen auf Karten gezogen werden können.
  |   **Aktueller Fehler**   | wahr | 
  |   **Langfristiges Ziel**   | wahr | 
  |   **Geschichte**   | Hinzugefügt in 1.80 | 
+
+###  **KraftSynchronousLoading** 
+
+Warenbezeichnung
+Laden Sie Datensets synchron anstelle der abgeleiteten Hintergrundbelastung.
+
+ | Eigentum | Details | 
+ | ---- | ---- | 
+ |   **Lebenszyklus**   | stabil | 
+ |   **Aktueller Fehler**   | falsch | 
+ |   **Langfristiges Ziel**   | falsch | 
+ |   **Geschichte**   | Hinzugefügt in 2.30 | 
 
 ##  **Metadaten und Standards** 
 

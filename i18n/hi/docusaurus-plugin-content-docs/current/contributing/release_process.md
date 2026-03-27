@@ -19,9 +19,9 @@ mvn verify
 mvn verify -P external
 mvn verify -P slowAWS
 ```
-* ट्रांसलेट करें () यदि आवश्यक हो तो अनुवाद अद्यतन करने के लिए
+* उपयोग `Python अनुवाद/translate.py` यदि आवश्यक हो तो अनुवाद अद्यतन करने के लिए।
 * EDStatic.java सेट विकास मोड झूठी करने के लिए, संस्करण संख्या बदलने और रिलीज की तारीख निर्दिष्ट करने के लिए।
-* निर्माण करना
+* निर्माण करें।
 ```
 mvn clean
 mvn compile
@@ -34,7 +34,7 @@ mvn package
 एक नई रिलीज के बारे में बताते समय संदेश शामिल करें।
 
 मानक प्रक्रिया है:
-* अपलोड करने के लिए .war फ़ाइल करने के लिए coastwatch \\[ tomcat \\] /content/erddap/
+* अपलोड करने के लिए .war फ़ाइल को coastwatch \\[ tomcat \\] /content/erddap/
 * उपयोगकर्ता के रूप में
   * में \\[ tomcat \\] /bin/:
 / shutdown.sh // उपयोग "ps -fu tomcat" यह सुनिश्चित करने के लिए कि यह रोक दिया गया है
@@ -44,7 +44,7 @@ rm erddap। युद्ध
 सीपी ../content/erddap/erddap2.22.war erddap.war // या जो भी नंबर है
   * में \\[ tomcat \\] /bin/:
 / startup.sh
-  * के बाद ERDDAP एक वेब पेज लौट आया है, \\[ tomcat \\] / webapps/ :
+  * बाद में ERDDAP एक वेब पेज लौट आया है, \\[ tomcat \\] / webapps/ :
 chgrp -R erddap erddap
 chmod -R g+rw erddap
 chmod -R o-rwx erddap
@@ -54,7 +54,8 @@ GitHub रिलीज का प्रारूप, erddap.war और erddapCon
 
 title: The official v2.25 version
 वर्णन: में परिवर्तन सूची देखें
-      https://erddap.github.io/changes#version-225
+       https://erddap.github.io/changes#version-225
+ 
 
 ## दस्तावेज़ीकरण अद्यतन
 * docusaurus.config.ts फ़ाइल में संस्करण संख्या अद्यतन करें (पाद लेख अनुभाग में) ।
@@ -75,16 +76,18 @@ title: The official v2.25 version
  ERDDAP संस्करण 2.25 अब उपलब्ध है&#33;
 
 आप बदलाव के बारे में पढ़ सकते हैं
-https://erddap.github.io/changes#version-225
+ https://erddap.github.io/changes#version-225
+ 
 
 कुछ बदलाव आपको सुझाव देते हैं। आपके सुझाव के लिए बहुत धन्यवाद। विवरण देखने के लिए परिवर्तन की सूची में अपने नाम के लिए खोजें। यदि आप इस नए संस्करण को व्यापक दर्शकों के लिए घोषित करने से पहले जल्द ही नई सुविधाओं की कोशिश कर सकते हैं तो यह बहुत अच्छा होगा।
 
 यदि आप एक हैं ERDDAP व्यवस्थापक, उन्नयन के लिए निर्देश पर हैं
-https://erddap.github.io/docs/server-admin/deploy-update
+ https://erddap.github.io/docs/server-admin/deploy-update
+ 
 
 यदि आपके पास कोई समस्या है, तो प्रश्न, सुझाव, कृपया मुझे ईमेल करें।
 
 धन्यवाद ERDDAP ।
 
 ### घोषणा
-घोषणा मेलिंग सूची को एक घोषणा भेजें।
+घोषणापत्र मेलिंग सूची को एक घोषणा भेजें।

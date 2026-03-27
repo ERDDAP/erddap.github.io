@@ -2,8 +2,8 @@
 sidebar_position: 3
 ---
 #  ERDDAP™ Proceso de liberación
-* Asegúrese de que los archivos de comparación de imágenes están disponibles (esto podría significar correr `mvn verificar` , si desea acelerar que hasta restringir a sólo el grupo ImageComparison aunque tenga en cuenta que todavía requiere realizar pruebas Jetty) 
-* Dependencias de actualización
+* Asegúrese de que los archivos de comparación de imagen están disponibles (esto podría significar correr `mvn verificar` , si desea acelerar que hasta restringir a sólo el grupo ImageComparison aunque tenga en cuenta que todavía requiere realizar pruebas Jetty) 
+* Actualizar las dependencias
 ```
 mvn versions:display-dependency-updates   // (displays updates)
 mvn versions:use-latest-versions  // (updates dependencies, though sometimes we don’t want to do all of them)
@@ -13,15 +13,15 @@ mvn versions:update-properties // (updates versions in the property block)
 ```
 mvn versions:display-plugin-updates // (displays updates, need to manually update)
 ```
-* Ejecute pruebas para asegurarse de que las actualizaciones de dependencia no rompieran nada para todas las configuraciones principales (datasets parsing in particular, though any other significant settings as well) . Tenga en cuenta que la suite de prueba externa puede ser muy floja. La suite de pruebas lentaAWS puede tardar mucho tiempo.
+* Realizar pruebas para asegurarse de que las actualizaciones de dependencia no rompieran nada para todas las configuraciones principales (datasets parsing in particular, though any other significant settings as well) . Tenga en cuenta que la suite de prueba externa puede ser muy floja. La suite de pruebas lentaAWS puede tardar mucho tiempo.
 ```
 mvn verify
 mvn verify -P external
 mvn verify -P slowAWS
 ```
-* Use TranslateMessages.translate () para actualizar las traducciones si es necesario
+* Uso `python traducción/translate.py` actualizar las traducciones si es necesario.
 * EDStatic.java estableció el desarrollo Mode to false, change the version number and specify the release date.
-* Haga la construcción
+* Haz la construcción.
 ```
 mvn clean
 mvn compile
@@ -54,12 +54,13 @@ Draft the GitHub release, include erddap.war and erddapContent .zip   (no númer
 
 title: The official v2.25 version
 describir: Ver la lista de cambios
-      https://erddap.github.io/changes#version-225
+       https://erddap.github.io/changes#version-225
+ 
 
-## Actualización de documentación
+## Documentación Actualización
 * Actualizar el número de versión en el archivo docusaurus.config.ts (en la sección de pie) .
 * Editar las páginas de documentación (deployment-install.md y deployment-update.md) .
-  * Búsqueda \\[ Erddap.war \\]  
+  * Buscar \\[ Erddap.war \\]  
   * Copiar la información existente (ligeramente reformado) a la lista de instalaciones anteriores 2.
   * Cambia la información de liberación actual para erddap. guerra contra \\[ Erddap.war \\] 
 * Ejecute las traducciones para el sitio de documentación.
@@ -75,12 +76,14 @@ Primero notificar a cualquier usuario que solicite cambios (o cuyos errores fuer
  ERDDAP versión 2.25 está disponible ahora&#33;
 
 Usted puede leer sobre los cambios en
-https://erddap.github.io/changes#version-225
+ https://erddap.github.io/changes#version-225
+ 
 
 Algunos de los cambios son cambios que usted sugirió. Muchas gracias por sus sugerencias. Busque su nombre en la lista de cambios para ver los detalles. Sería genial si pudieras probar las nuevas características pronto, antes de anunciar esta nueva versión a un público más amplio.
 
 Si eres un ERDDAP administrador, las instrucciones para actualizar están en
-https://erddap.github.io/docs/server-admin/deploy-update
+ https://erddap.github.io/docs/server-admin/deploy-update
+ 
 
 Si tiene algún problema, preguntas, sugerencias, por favor envíeme un correo electrónico.
 
