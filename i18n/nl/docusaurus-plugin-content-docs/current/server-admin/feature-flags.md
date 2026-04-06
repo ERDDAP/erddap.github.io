@@ -1,18 +1,18 @@
 # Functievlaggen
 
-Deze pagina documenteert de configuratievlaggen die beschikbaar zijn in het systeem. Deze vlaggen controleren verschillende functies, experimentele mogelijkheden, en legacy gedrag.
+Deze pagina documenteert de configuratievlaggen die beschikbaar zijn in het systeem. Deze vlaggen controleren verschillende functies, experimentele mogelijkheden, en legaat gedrag.
 
 ##  **Vlag Lifecycle Legend** 
 
 *  **Stabiel:** Beoogd als lange termijn vlaggen om beheerders om functionaliteit te veranderen. Veilig voor productie.
-*  **Test:** Kenmerken die klaar zijn voor testen. Deze zullen ofwel afstuderen naar "Stabiel" of uiteindelijk worden ingesteld op hun streefwaarde en laat de vlag verwijderd.
-*  **In aanbouw:** Momenteel hardcoded tot vals in de code, ongeacht de configuratie. De functie is nog niet klaar voor gebruik.
+*  **Testen:** Kenmerken die klaar zijn voor testen. Deze zullen ofwel afstuderen naar "Stabiel" of uiteindelijk worden ingesteld op hun streefwaarde en laat de vlag verwijderd.
+*  **In aanbouw:** Momenteel is de code foutief gecodeerd, ongeacht de configuratie. De functie is nog niet klaar voor gebruik.
 
-##  **Wat? Optimalisaties bij het testen** 
+##  **Wat? Optimalisaties bij testen** 
 
 Dit zijn waarschijnlijk vlaggen die in de toekomst verwijderd zullen worden.
 
-###  **alleen aanrakenAlsitems** 
+###  **touchThreadOnlyWanneeritems** 
 
 Omschrijving
 Optimalisatievlag. Indien waar, de touch thread draait alleen als er items te verwerken zijn.
@@ -22,7 +22,7 @@ Optimalisatievlag. Indien waar, de touch thread draait alleen als er items te ve
  |   **Levenscyclus**   | Testen | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2.29.0 | 
+ |   **Historie**   | Toegevoegd in 2.29.0 | 
 
 ###  **taskCacheClear** 
 
@@ -34,7 +34,7 @@ Schakel de achtergrondtaak in die verlopen items uit de cache verwijdert.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2.27.0 | 
+ |   **Historie**   | Toegevoegd in 2.27.0 | 
 
 ###  **ncHeaderMakeFile** 
 
@@ -46,7 +46,7 @@ Indien ingeschakeld zal de server het volledige nc bestand genereren voordat het
  |   **Levenscyclus**   | Testen | 
  |   **Huidige standaard**   | onwaar | 
  |   **Langetermijndoelstelling**   | onwaar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2.29.0 | 
+ |   **Historie**   | Toegevoegd in 2.29.0 | 
 
 ###  **gebruikEddReflection** 
 
@@ -58,31 +58,31 @@ Inschakelt het gebruik van Java Reflectie om EDD te instantiseren ( ERDDAP Datas
  |   **Levenscyclus**   | Testen | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Standaard veranderd in true in 2.28.0, toegevoegd in 2.25 | 
+ |   **Historie**   | Standaard gewijzigd in true in 2.28.0, toegevoegd in 2.25 | 
 
 ###  **achtergrondSubsettabellen aanmaken** 
 
 Omschrijving
-Hiermee kunnen deelverzamelingen worden gemaakt in achtergrondthreads om datasets laadtijd te verbeteren.
+Maakt het mogelijk deeltabellen aan te maken in achtergrondthreads om datasets laadtijd te verbeteren.
 
  | Eigenschap | Gegevens | 
  | :---- | :---- | 
  |   **Levenscyclus**   | Testen | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2.29.0 | 
+ |   **Historie**   | Toegevoegd in 2.29.0 | 
 
 ###  **useNcMetadataForFileTable** 
 
 Omschrijving
-Gebruik NetCDF Metadata om de bestandstabelweergave te vullen. In het bijzonder als een nc-bestand actual_range voor elke variabele bevat, kan het laden van de dataset het hele bestand overslaan.
+Gebruik NetCDF metadata om de bestandstabelweergave te vullen. In het bijzonder als een nc-bestand actual_range voor elke variabele bevat, kan het laden van de dataset het hele bestand overslaan.
 
  | Eigenschap | Gegevens | 
  | :---- | :---- | 
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2.29.0 | 
+ |   **Historie**   | Toegevoegd in 2.29.0 | 
 
 ##  **Systeem- en kerngedrag** 
 
@@ -95,8 +95,8 @@ Bepaalt of het systeem probeert om echte e-mails te versturen (b.v. voor abonnem
  | :---- | :---- | 
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | onwaar | 
- |   **Langetermijndoelstelling**   | waar (Afhankelijk van admin configuratie)   | 
- |   **Voorgeschiedenis**   | Legacy | 
+ |   **Langetermijndoelstelling**   | waar (Afhankelijk van de configuratie van de beheerder)   | 
+ |   **Historie**   | Legacy | 
 
 :::info Logic
 Deze vlag wordt dynamisch berekend bij het opstarten. Het defaults to false, tenzij alle vereiste SMTP-gegevens (host, poort, gebruiker, wachtwoord, van-adres) zijn strikt voorzien in setup.xml.
@@ -112,19 +112,19 @@ Bepaalt of gedetailleerde datasetbelastingsfouten publiekelijk op de statuspagin
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | ingesteld naar wens | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2,25 | 
+ |   **Historie**   | Toegevoegd in 2,25 | 
 
 ###  **standaardAccessibleViaFiles** 
 
 Omschrijving
-Stelt het standaardgedrag in voor de vraag of de onderliggende bestanden van een dataset kunnen worden benaderd in de bestandsservice.
+Stelt het standaardgedrag in voor de vraag of de onderliggende bestanden van een dataset kunnen worden geraadpleegd in de bestandsservice.
 
  | Eigenschap | Gegevens | 
  | :---- | :---- | 
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | onwaar | 
  |   **Langetermijndoelstelling**   | onwaar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2.10 | 
+ |   **Historie**   | Toegevoegd in 2.10 | 
 
 ##  **Datasets** 
 
@@ -138,43 +138,43 @@ Indien ingeschakeld probeert het systeem sneller op te starten door bepaalde die
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 1.38 | 
+ |   **Historie**   | Toegevoegd in 1.38 | 
 
 ###  **EnvParsing inschakelen** 
 
 Omschrijving
-Schakel verwerking van de datasets.xml bestand met een [Tekenreeksondernemer](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Dit heeft vele toepassingen, waaronder het instellen van private waarden (zoals wachtwoorden) gebruik van omgevingsvariabelen.
+Schakel verwerking van de datasets.xml bestand met een [Stringsubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Dit heeft vele toepassingen, waaronder het instellen van private waarden (zoals wachtwoorden) gebruik van omgevingsvariabelen.
 
  | Eigenschap | Gegevens | 
  | :---- | :---- | 
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | ingesteld naar wens | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2.29.0 | 
+ |   **Historie**   | Toegevoegd in 2.29.0 | 
 
 ###  **gebruikSaxParser** 
 
 Omschrijving
-Schakelt de interne XML-ontleedmotor om een SAX te gebruiken (Eenvoudige API voor XML) parser in plaats van de DOM parser. Dit maakt een aantal nieuwe geavanceerde functies zoals XInclude, en [aangepaste weergave-attributen](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
+Schakelt de interne XML-parsing-engine om een SAX te gebruiken (Eenvoudige API voor XML) parser in plaats van de DOM parser. Dit maakt een aantal nieuwe geavanceerde functies, zoals XInclude, en [aangepaste weergaveattributen](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
 
  | Eigenschap | Gegevens | 
  | :---- | :---- | 
  |   **Levenscyclus**   | Testen | 
  |   **Huidige standaard**   | onwaar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2,25 | 
+ |   **Historie**   | Toegevoegd in 2,25 | 
 
 ###  **listPrivateDatasets** 
 
 Omschrijving
-Bepaalt of particuliere datasets (degenen die authenticatie vereisen) verschijnen in de hoofddatasetlijst.
+Bepaalt of particuliere datasets (degenen die authenticatie vereisen) worden weergegeven in de hoofddatasetlijst.
 
  | Eigenschap | Gegevens | 
  | :---- | :---- | 
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | onwaar | 
  |   **Langetermijndoelstelling**   | onwaar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 1.20 | 
+ |   **Historie**   | Toegevoegd in 1.20 | 
 
 ###  **Politieke grenzenActief** 
 
@@ -186,7 +186,19 @@ Controleert of politieke grenzen kunnen worden getrokken op kaarten.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 1.80 | 
+ |   **Historie**   | Toegevoegd in 1.80 | 
+
+###  **forceSynchronousLoading** 
+
+Omschrijving
+Laad datasets synchroon in plaats van uitgestelde achtergrond laden.
+
+ | Eigenschap | Gegevens | 
+ | :---- | :---- | 
+ |   **Levenscyclus**   | Stabiel | 
+ |   **Huidige standaard**   | onwaar | 
+ |   **Langetermijndoelstelling**   | onwaar | 
+ |   **Historie**   | Toegevoegd in 2.30 | 
 
 ##  **Metadata en standaarden** 
 
@@ -200,7 +212,7 @@ Genereert en bedient FGDC (Federal Geographic Gegevenscomité) Metadata.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 1.38 | 
+ |   **Historie**   | Toegevoegd in 1.38 | 
 
 ###  **iso19115 Actief** 
 
@@ -212,19 +224,19 @@ Genereert en serveert ISO 19115 metadata.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 1.38 | 
+ |   **Historie**   | Toegevoegd in 1.38 | 
 
 ###  **gebruikSisISO19115** 
 
 Omschrijving
-Gebruikt de Apache SIS bibliotheek om ISO 19115 metadata te genereren in plaats van de legacy generator. Als dit aan en gebruikSisISO19139 is niet aan, de standaard IOS 19115 metadata zal in ISO19115_3_2016 formaat. Als dit onjuist is, zal het standaardformaat in het verouderde gewijzigde ISO19115_2-formaat staan.
+Gebruikt de Apache SIS-bibliotheek om ISO 19115 metadata te genereren in plaats van de oude generator. Als dit aan en gebruikSisISO19139 is niet ingeschakeld, de standaard IOS 19115 metadata zal in ISO19115_3_2016 formaat. Als dit fout is zal het standaardformaat in het verouderde gewijzigde ISO19115_2-formaat staan.
 
  | Eigenschap | Gegevens | 
  | :---- | :---- | 
  |   **Levenscyclus**   | Testen | 
  |   **Huidige standaard**   | onwaar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2,26 | 
+ |   **Historie**   | Toegevoegd in 2,26 | 
 
 ###  **gebruikSisISO19139** 
 
@@ -236,7 +248,7 @@ Gebruikt de Apache SIS-bibliotheek om ISO19139_2007 metadata te genereren.
  |   **Levenscyclus**   | Testen | 
  |   **Huidige standaard**   | onwaar | 
  |   **Langetermijndoelstelling**   | onwaar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2.29.0 | 
+ |   **Historie**   | Toegevoegd in 2.29.0 | 
 
 ###  **jsolldActive** 
 
@@ -248,7 +260,7 @@ Genereert en bedient JSON-LD (Gekoppelde gegevens) Metadata.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Legacy | 
+ |   **Historie**   | Legacy | 
 
 ###  **genererenCroissantSchema** 
 
@@ -260,9 +272,9 @@ Genereert "Croissant" metadata schema als de standaard schema voor machine learn
  |   **Levenscyclus**   | Testen | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2.28.0 | 
+ |   **Historie**   | Toegevoegd in 2.28.0 | 
 
-###  **variabelenMustHaveIoosCategory** 
+###  **variabelenMustHaveIoosCategorie** 
 
 Omschrijving
 Dwingt dat variabelen een IOOS categorie attribuut moeten hebben.
@@ -272,19 +284,19 @@ Dwingt dat variabelen een IOOS categorie attribuut moeten hebben.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | ingesteld naar wens | 
- |   **Voorgeschiedenis**   | Legacy | 
+ |   **Historie**   | Legacy | 
 
 ###  **omvattenNcCFSubsetVariables** 
 
 Omschrijving
-Legacy gedrag was om subset variabelen te genereren alleen voor EDDTableFromNcCFFiles datasets. Dit werd toegevoegd aan standaard het gedrag voor EDDTableFromNcCFFiles om consistent te zijn met andere dataset types. Als u de legacy automatic nodig hebt subsetVariables U kunt dit inschakelen. De beste oplossing zou zijn om subsetVariables de definitie van de gegevensverzameling.
+Legacy gedrag was om subset variabelen te genereren alleen voor EDDTableFromNcCFFiles datasets. Dit werd toegevoegd aan standaard het gedrag voor EDDTableFromNcCFFiles om consistent te zijn met andere datasets. Als u de legacy automatisch nodig hebt subsetVariables U kunt dit inschakelen. De beste oplossing zou zijn om subsetVariables de definitie van de gegevensverzameling.
 
  | Eigenschap | Gegevens | 
  | :---- | :---- | 
  |   **Levenscyclus**   | Testen | 
  |   **Huidige standaard**   | onwaar | 
  |   **Langetermijndoelstelling**   | onwaar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2,26 | 
+ |   **Historie**   | Toegevoegd in 2,26 | 
 
 ##  **Abonnementen en kennisgevingen** 
 
@@ -298,7 +310,7 @@ Schakel het e-mailabonnementssysteem in voor dataset-updates.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 1.14 | 
+ |   **Historie**   | Toegevoegd in 1.14 | 
 
 ###  **abonnerenToRemoteErdapDataset** 
 
@@ -310,7 +322,7 @@ Staat dit toe ERDDAP instantie om op afstand te abonneren ERDDAP datasets voor u
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 1.70 | 
+ |   **Historie**   | Toegevoegd in 1.70 | 
 
 ###  **updateSubsRssOnFileChanges** 
 
@@ -322,7 +334,7 @@ Triggers abonnement en RSS updates wanneer onderliggende bestanden veranderen. H
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2,26 | 
+ |   **Historie**   | Toegevoegd in 2,26 | 
 
 ###  **inschakelen MqttBroker** 
 
@@ -334,7 +346,7 @@ Start een interne MQTT-makelaar binnen de toepassing om berichten te verwerken.
  |   **Levenscyclus**   | Testen | 
  |   **Huidige standaard**   | onwaar | 
  |   **Langetermijndoelstelling**   | ingesteld naar wens | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2.29.0 | 
+ |   **Historie**   | Toegevoegd in 2.29.0 | 
 
 ###  **publicerenMqttNotif** 
 
@@ -346,7 +358,7 @@ Maakt het publiceren van kennisgevingen mogelijk (zoals datasetwijzigingen) aan 
  |   **Levenscyclus**   | Testen | 
  |   **Huidige standaard**   | onwaar | 
  |   **Langetermijndoelstelling**   | ingesteld naar wens | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2.29.0 | 
+ |   **Historie**   | Toegevoegd in 2.29.0 | 
 
 ##  **Webheaders/configuratie** 
 
@@ -360,7 +372,7 @@ Hiermee kunt u HTTP-headers gebruiken om de verzoek-URL-gegevens te bepalen (nut
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Standaard veranderd in waar in 2.28.0, toegevoegd in 2.27.0 | 
+ |   **Historie**   | Standaard veranderd in true in 2.28.0, toegevoegd in 2.27.0 | 
 
 ###  **inschakelen Cors** 
 
@@ -372,7 +384,7 @@ Schakel Cross-Origin Resource Sharing in (CORS) headers op HTTP antwoorden.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | onwaar | 
  |   **Langetermijndoelstelling**   | ingesteld naar wens | 
- |   **Voorgeschiedenis**   | Toegevoegd in 2,26 | 
+ |   **Historie**   | Toegevoegd in 2,26 | 
 
 ##  **Zoeken** 
 
@@ -386,21 +398,21 @@ Schakelt de interne zoekmachine om Apache Lucene te gebruiken.
  |   **Levenscyclus**   | Testen | 
  |   **Huidige standaard**   | onwaar | 
  |   **Langetermijndoelstelling**   | ? | 
- |   **Voorgeschiedenis**   | Legacy | 
+ |   **Historie**   | Legacy | 
 
 ##  **Diensten en protocollen** 
 
 ###  **bestandenActive** 
 
 Omschrijving
-Schakel de "Files" browserweergave in voor datasets die het ondersteunen.
+Inschakelt de "Files" browserweergave voor datasets die het ondersteunen.
 
  | Eigenschap | Gegevens | 
  | :---- | :---- | 
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 1.58 | 
+ |   **Historie**   | Toegevoegd in 1.58 | 
 
 ###  **convertersActive** 
 
@@ -412,19 +424,19 @@ Schakel conversiegereedschappen in de UI in.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 1.44 | 
+ |   **Historie**   | Toegevoegd in 1.44 | 
 
 ###  **diaSorterActive** 
 
 Omschrijving
-Inschakelt de Slide Sorter.
+Activeert de Slide Sorter.
 
  | Eigenschap | Gegevens | 
  | :---- | :---- | 
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 1.44 | 
+ |   **Historie**   | Toegevoegd in 1.44 | 
 
 ###  **dataProviderFormActive** 
 
@@ -436,7 +448,7 @@ Hiermee kunnen dataproviders metadata invoeren.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Legacy | 
+ |   **Historie**   | Legacy | 
 
 ###  **OutOfDateDatasetsActive** 
 
@@ -448,7 +460,7 @@ Activeert de rapportage van verouderde datasets.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 1.82 | 
+ |   **Historie**   | Toegevoegd in 1.82 | 
 
 ###  **wmsActive** 
 
@@ -460,7 +472,7 @@ Activeert de Web Map Service ( WMS ) interface.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Toegevoegd in 1.44 | 
+ |   **Historie**   | Toegevoegd in 1.44 | 
 
 ###  **wmsClientActive** 
 
@@ -472,7 +484,7 @@ Schakel de interne WMS klantkenmerken.
  |   **Levenscyclus**   | Stabiel | 
  |   **Huidige standaard**   | waar | 
  |   **Langetermijndoelstelling**   | waar | 
- |   **Voorgeschiedenis**   | Legacy | 
+ |   **Historie**   | Legacy | 
 
 ###  **geoDienstenRestActive** 
 
@@ -485,10 +497,10 @@ Inschakelt de RESTful interface voor Geospatial Services. Niet volledig geïmple
  |   **Huidige standaard**   | onwaar (Hardgecodeerd)   | 
  |   **Langetermijndoelstelling**   | waar | 
 
-###  **wcsActive** 
+###  **wsActive** 
 
 Omschrijving
-Schakel de Web Coverage Service in ( WCS ) interface. Niet volledig geïmplementeerd.
+Activeert de Web Coverage Service ( WCS ) interface. Niet volledig geïmplementeerd.
 
  | Eigenschap | Gegevens | 
  | :---- | :---- | 

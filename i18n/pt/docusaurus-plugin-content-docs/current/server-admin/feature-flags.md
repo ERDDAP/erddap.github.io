@@ -1,508 +1,520 @@
 # Bandeiras de Característica
 
-Esta página documenta as bandeiras de configuração disponíveis no sistema. Essas bandeiras controlam vários recursos, capacidades experimentais e comportamentos legados.
+Esta página documenta as opções de configuração disponíveis no sistema. Essas bandeiras controlam várias características, capacidades experimentais e comportamentos legados.
 
-##  **Bandeira Lifecycle Legenda** 
+##  **Legenda do ciclo de vida da bandeira** 
 
-*  **Estável:** Destinado como bandeiras de longo prazo para permitir que os administradores alterem a funcionalidade. Seguro para a produção.
-*  **Teste:** Características que estão prontas para testes. Estes vão se formar para "Stable" ou eventualmente ser definido para o seu valor alvo e ter a bandeira removida.
-*  **Em construção:** Atualmente hardcoded para false no código, independentemente da configuração. O recurso ainda não está pronto para uso.
+*  **Estável:** Destinado como sinalizadores de longo prazo para permitir que os administradores alterem a funcionalidade. Seguro para a produção.
+*  **Teste:** Características que estão prontas para testes. Estes serão graduados em "Stable" ou eventualmente serão definidos para o seu valor alvo e ter a bandeira removida.
+*  **Em Construção:** Atualmente é codificado para false no código, independentemente da configuração. O recurso ainda não está pronto para uso.
 
-##  **🚀 Otimizações em testes** 
+##  **□ Otimizações nos testes** 
 
-Estas são bandeiras susceptíveis de ser removidas no futuro.
+Estas são bandeiras susceptíveis de serem removidas no futuro.
 
-###  **toque Só quando aparece** 
+###  **Toque somente no tópicoQuando o item** 
 
-Descrição
-Bandeira de otimização. Se for verdade, o thread touch só é executado quando há itens para processar.
+Designação das mercadorias
+Sinal de otimização. Se true, o tópico de toque só é executado quando existem itens para processar.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Testes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Teste | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 2.29.0 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 2.29.0 | 
 
 ###  **tarefaCacheClear** 
 
-Descrição
-Permite a tarefa de fundo que limpa itens expirados do cache.
+Designação das mercadorias
+Activa a tarefa de fundo que limpa os itens expirados da 'cache'.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 2.27.0 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 2.27.0 | 
 
 ###  **ncHeaderMakeFile** 
 
-Descrição
-Se for verdade, o servidor irá gerar todo o arquivo nc antes de criar o resultado ncheader. O novo (preferido) comportamento quando false é gerar diretamente o resultado do ncheader.
+Designação das mercadorias
+Se true o servidor irá gerar o arquivo nc inteiro antes de criar o resultado ncheader. A nova (preferido) comportamento quando false é gerar diretamente o resultado ncheader.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Testes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Teste | 
  |   **Padrão atual**   | falso | 
- |   **Objetivo de longo prazo**   | falso | 
- |   **História**   | Adicionado em 2.29.0 | 
+ |   **Objectivo a longo prazo**   | falso | 
+ |   **Histórico**   | Adicionado em 2.29.0 | 
 
-###  **useReflexão Edd** 
+###  **useEddReflexão** 
 
-Descrição
-Permite o uso de Java Reflexão para instantâneo EDD ( ERDDAP Conjunto de dados) aulas.
+Designação das mercadorias
+Permite o uso de Java Reflexão para instanciar o EDD ( ERDDAP Conjunto de dados) aulas.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Testes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Teste | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | O padrão mudou para true em 2.28.0, adicionado em 2.25 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Padrão alterado para verdadeiro em 2.28.0, adicionado em 2.25 | 
 
-###  **backgroundCreateSubsetTables** 
+###  **fundoCriarSubsetTables** 
 
-Descrição
-Permite que as tabelas subdefinidas sejam criadas em threads de fundo para melhorar o tempo de carregamento dos conjuntos de dados.
+Designação das mercadorias
+Permite que tabelas de subconjuntos sejam criadas em threads de fundo para melhorar o tempo de carregamento dos conjuntos de dados.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Testes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Teste | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 2.29.0 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 2.29.0 | 
 
-###  **useMetadata para tabela de arquivos** 
+###  **useNcMetadataForFileTable** 
 
-Descrição
-Usos NetCDF metadados para preencher a exibição da tabela de arquivos. Em particular, se um arquivo nc inclui real_range para cada variável, o carregamento do conjunto de dados pode pular a leitura de todo o arquivo.
+Designação das mercadorias
+Usos NetCDF metadados para povoar a visão da tabela de arquivos. Em particular, se um arquivo nc inclui real_range para cada variável, o carregamento do conjunto de dados pode pular a leitura do arquivo inteiro.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 2.29.0 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 2.29.0 | 
 
-##  **r Comportamento de Sistema e Núcleo** 
+##  **Comportamento do Sistema & Núcleo** 
 
-###  **e-mail Ativar** 
+###  **e- mail IsActive** 
 
-Descrição
-Controla se o sistema tenta enviar e-mails reais (por exemplo, para atualizações de assinatura ou relatórios de erro) através do servidor SMTP configurado.
+Designação das mercadorias
+Controla se o sistema tenta enviar e-mails reais (Por exemplo, para atualizações de assinatura ou relatórios de erro) através do servidor SMTP configurado.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | falso | 
- |   **Objetivo de longo prazo**   | verdadeiro (Dependente da configuração de admin)   | 
- |   **História**   | Legado | 
+ |   **Objectivo a longo prazo**   | verdadeiro (Dependendo da configuração do administrador)   | 
+ |   **Histórico**   | Legado | 
 
 :::info Lógica
-Esta bandeira é calculada dinamicamente na inicialização. Ele padrão para false a menos que todas as credenciais SMTP necessárias (host, porta, usuário, senha, de endereço) são estritamente fornecidos em setup.xml.
-:
+Esta bandeira é calculada dinamicamente na inicialização. O padrão é false a menos que todas as credenciais SMTP necessárias (máquina, porta, usuário, senha, endereço) são estritamente fornecidos em setup.xml.
+:::
 
-###  **mostrarLoadErrorsOnStatusPage** 
+###  **showLoadErrorsOnStatusPage** 
 
-Descrição
-Determina se os erros de carga de conjunto de dados detalhados são exibidos publicamente na página de status.
+Designação das mercadorias
+Determina se erros de carga detalhados são exibidos publicamente na página de status.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | definido como desejado | 
- |   **História**   | Adicionado em 2.25 | 
+ |   **Objectivo a longo prazo**   | definir como desejado | 
+ |   **Histórico**   | Adicionado em 2.25 | 
 
-###  **defaultAccessibleViaFiles** 
+###  **por omissãoAcessívelViaFiles** 
 
-Descrição
+Designação das mercadorias
 Define o comportamento padrão para se os arquivos subjacentes de um conjunto de dados podem ser acessados no serviço de arquivos.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | falso | 
- |   **Objetivo de longo prazo**   | falso | 
- |   **História**   | Adicionado em 2.10 | 
+ |   **Objectivo a longo prazo**   | falso | 
+ |   **Histórico**   | Adicionado em 2.10 | 
 
-##  **s Datasets** 
+##  **Datasets** 
 
-###  **O que é isso?** 
+###  **start rápido** 
 
-Descrição
-Se ativado, o sistema tenta começar mais rápido pulando algumas verificações profundas de validação em conjuntos de dados durante a inicialização.
+Designação das mercadorias
+Se habilitado, o sistema tenta iniciar mais rápido pulando certas verificações profundas de validação de conjuntos de dados durante a inicialização.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 1.38 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 1.38 | 
 
-###  **habilitar a participação** 
+###  **enableEnvParsing** 
 
-Descrição
-Permite o processamento datasets.xml arquivo com um [Segmento Substituto](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Isso tem muitos usos, incluindo definir valores privados (como senhas) usando variáveis de ambiente.
+Designação das mercadorias
+Activa o processamento da datasets.xml arquivo com um [Substitutor de Textos](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Isto tem muitos usos, incluindo definir valores privados (como senhas) utilizando variáveis de ambiente.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | definido como desejado | 
- |   **História**   | Adicionado em 2.29.0 | 
+ |   **Objectivo a longo prazo**   | definir como desejado | 
+ |   **Histórico**   | Adicionado em 2.29.0 | 
 
-###  **uso deParser** 
+###  **useSaxParser** 
 
-Descrição
-Troca o motor de análise XML interno para usar um SAX (API simples para XML) parser em vez do parser DOM. Isso permite que algumas novas funcionalidades avançadas como o XInclude, e [atributos de exibição personalizados](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
+Designação das mercadorias
+Muda o motor interno de análise XML para usar um SAX (API simples para XML) analisador em vez do analisador DOM. Isto permite algumas novas funcionalidades avançadas como o XInclude, e [atributos de exibição personalizados](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Testes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Teste | 
  |   **Padrão atual**   | falso | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 2.25 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 2.25 | 
 
 ###  **listPrivateDatasets** 
 
-Descrição
-Determina se conjuntos de dados privados (aqueles que requerem autenticação) aparecer na lista principal de conjuntos de dados.
+Designação das mercadorias
+Determina se conjuntos de dados privados (os que requerem autenticação) aparecer na lista de dados principal.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | falso | 
- |   **Objetivo de longo prazo**   | falso | 
- |   **História**   | Adicionado em 1.20 | 
+ |   **Objectivo a longo prazo**   | falso | 
+ |   **Histórico**   | Adicionado em 1.20 | 
 
-###  **políticaBoundaries Ação** 
+###  **Limites políticosActive** 
 
-Descrição
-Controles se as fronteiras políticas podem ser traçadas nos mapas.
-
- | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Estável | 
- |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 1.80 | 
-
-##  **s Metadata & Standards** 
-
-###  **fgdc Ação** 
-
-Descrição
-Gera e serve FGDC (Geografia Federal Comissão de dados) metadados.
+Designação das mercadorias
+Controla se os limites políticos podem ser traçados em mapas.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 1.38 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 1.80 | 
 
-###  **INSTITUIÇÕES Activo** 
+###  **forceSyncronousLoading** 
 
-Descrição
+Designação das mercadorias
+Carregar conjuntos de dados síncronos em vez de carga de fundo diferida.
+
+ | Propriedade | Detalhes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Estável | 
+ |   **Padrão atual**   | falso | 
+ |   **Objectivo a longo prazo**   | falso | 
+ |   **Histórico**   | Adicionado em 2.30 | 
+
+##  **Metadados & Normas** 
+
+###  **fgdcActive** 
+
+Designação das mercadorias
+Gera e serve FGDC (Geográfica Federal Comité de dados) metadados.
+
+ | Propriedade | Detalhes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Estável | 
+ |   **Padrão atual**   | verdadeiro | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 1.38 | 
+
+###  **iso19115 Activo** 
+
+Designação das mercadorias
 Gera e serve metadados ISO 19115.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 1.38 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 1.38 | 
 
-###  **useSisISO19115** 
+###  **usarSisISO19115** 
 
-Descrição
-Usa a biblioteca Apache SIS para gerar metadados ISO 19115 em vez do gerador legado. Se isso estiver ligado e usar o SisISO19139 não estiver ligado, os metadados IOS 19115 padrão estarão no formato ISO19115_3_2016. Se este for false, o formato padrão estará no formato ISO19115_2 modificado legado.
+Designação das mercadorias
+Usa a biblioteca Apache SIS para gerar metadados ISO 19115 em vez do gerador legado. Se isso estiver ligado e o usoSisISO19139 não estiver ligado, os metadados padrão do IOS 19115 estarão no formato ISO19115_3_2016. Se isso for falso, o formato padrão estará no formato ISO19115_2.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Testes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Teste | 
  |   **Padrão atual**   | falso | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 2.26 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 2.26 | 
 
-###  **useSisISO19139** 
+###  **usoSisISO19139** 
 
-Descrição
+Designação das mercadorias
 Usa a biblioteca Apache SIS para gerar metadados ISO19139_2007.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Testes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Teste | 
  |   **Padrão atual**   | falso | 
- |   **Objetivo de longo prazo**   | falso | 
- |   **História**   | Adicionado em 2.29.0 | 
+ |   **Objectivo a longo prazo**   | falso | 
+ |   **Histórico**   | Adicionado em 2.29.0 | 
 
 ###  **jsonldActive** 
 
-Descrição
-Gera e serve JSON-LD (Dados ligados) metadados.
+Designação das mercadorias
+Gera e serve JSON-LD (Dados Ligados) metadados.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Legado | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Legado | 
 
-###  **Gerenciador de arquivos** 
+###  **gerarCroissantSchema** 
 
-Descrição
+Designação das mercadorias
 Gera o esquema de metadados "Croissant" como o esquema padrão para a prontidão de aprendizado de máquina.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Testes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Teste | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 2.28.0 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 2.28.0 | 
 
-###  **variáveisMustHaveIoosCategoria** 
+###  **Variáveis devem terIoosCategoria** 
 
-Descrição
-Fortalece que as variáveis devem ter um atributo de categoria IOOS.
+Designação das mercadorias
+Força que as variáveis devem ter um atributo categoria IOOS.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | definido como desejado | 
- |   **História**   | Legado | 
+ |   **Objectivo a longo prazo**   | definir como desejado | 
+ |   **Histórico**   | Legado | 
 
-###  **incluir NcCF SubsetVariables** 
+###  **includeNcCFSubsetVariables** 
 
-Descrição
-O comportamento de legado foi gerar variáveis subconjuntas apenas para conjuntos de dados EDDTableFromNcCFFiles. Isso foi adicionado para padrão o comportamento para EDDTableFromNcCFFiles para ser consistente com outros tipos de conjuntos de dados. Se você precisar do legado automático subsetVariables você pode ativar isso. A melhor solução seria adicionar subsetVariables para a definição de conjunto de dados.
+Designação das mercadorias
+O comportamento legado foi gerar variáveis de subconjunto apenas para os conjuntos de dados EDDTableFromNcCFFiles. Isto foi adicionado para padrão o comportamento para EDDTableFromNcCFFiles para ser consistente com outros tipos de conjunto de dados. Se você precisar do legado automático subsetVariables Você pode habilitar isso. A melhor solução seria adicionar subsetVariables à definição do conjunto de dados.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Testes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Teste | 
  |   **Padrão atual**   | falso | 
- |   **Objetivo de longo prazo**   | falso | 
- |   **História**   | Adicionado em 2.26 | 
+ |   **Objectivo a longo prazo**   | falso | 
+ |   **Histórico**   | Adicionado em 2.26 | 
 
-##  **s Subscrições e Notificações** 
+##  **Assinaturas e Notificações** 
 
-###  **subscrição Sistema Ativo** 
+###  **subscriptionSystemActive** 
 
-Descrição
-Permite o sistema de assinatura por e-mail para atualizações de conjuntos de dados.
-
- | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Estável | 
- |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 1.14 | 
-
-###  **Assinatura de dados** 
-
-Descrição
-Permite isso ERDDAP exemplo para se inscrever no remoto ERDDAP datasets para atualizações.
+Designação das mercadorias
+Activa o sistema de subscrição de e- mail para actualizações de conjuntos de dados.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 1.70 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 1.14 | 
 
-###  **updateSubsRssOnFileChanges** 
+###  **subscreverParaRemoteErddapDataset** 
 
-Descrição
-Assinatura de acionadores e RSS atualizações quando os arquivos subjacentes mudam. O comportamento legado era apenas fazer atualizações sobre a recarga de conjuntos de dados (que alguns servidores tinham tão pouco como semanalmente) .
+Designação das mercadorias
+Permite isto ERDDAP instância para subscrever o remoto ERDDAP conjuntos de dados para atualizações.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 2.26 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 1.70 | 
 
-###  **habilitar MqtttBroker** 
+###  **atualizarSubsRssOnFileChanges** 
 
-Descrição
+Designação das mercadorias
+Inscrição de gatilhos e RSS atualizações quando os arquivos subjacentes mudam. O comportamento legado foi apenas para fazer atualizações no reload de dataset (que alguns servidores tinham tão raramente como semanalmente) .
+
+ | Propriedade | Detalhes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Estável | 
+ |   **Padrão atual**   | verdadeiro | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 2.26 | 
+
+###  **activar MqttBroker** 
+
+Designação das mercadorias
 Inicia um corretor MQTT interno dentro do aplicativo para lidar com mensagens.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Testes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Teste | 
  |   **Padrão atual**   | falso | 
- |   **Objetivo de longo prazo**   | definido como desejado | 
- |   **História**   | Adicionado em 2.29.0 | 
+ |   **Objectivo a longo prazo**   | definir como desejado | 
+ |   **Histórico**   | Adicionado em 2.29.0 | 
 
-###  **Anúncio grátis para sua empresa** 
+###  **publicarMqttNotif** 
 
-Descrição
-Permite a publicação de notificações (como alterações de dataset) para a corretora MQTT.
+Designação das mercadorias
+Permite a publicação de notificações (como alterações no conjunto de dados) ao corretor da MQTT.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Testes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Teste | 
  |   **Padrão atual**   | falso | 
- |   **Objetivo de longo prazo**   | definido como desejado | 
- |   **História**   | Adicionado em 2.29.0 | 
+ |   **Objectivo a longo prazo**   | definir como desejado | 
+ |   **Histórico**   | Adicionado em 2.29.0 | 
 
-##  **tion Cabeçalhos da Web / configuração** 
+##  **Cabeçalhos/Configuração Web** 
 
-###  **Usar Headers para Url.** 
+###  **Use o HeadersFor Url** 
 
-Descrição
-Permite usar cabeçalhos HTTP para determinar os detalhes do URL de solicitação (útil atrás de proxies) .
+Designação das mercadorias
+Permite usar cabeçalhos HTTP para determinar os detalhes do URL da solicitação (útil atrás de proxies) .
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Default mudou para true em 2.28.0, adicionado em 2.27.0 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Padrão alterado para verdadeiro em 2.28.0, Adicionado em 2.27.0 | 
 
-###  **habilitar Cors** 
+###  **activar Cors** 
 
-Descrição
-Permite a partilha de recursos Cross-Origin (CORSÃO) cabeçalhos em respostas HTTP.
+Designação das mercadorias
+Activa a Partilha de Recursos de Origem Cruzada (CORS) cabeçalhos nas respostas HTTP.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | falso | 
- |   **Objetivo de longo prazo**   | definido como desejado | 
- |   **História**   | Adicionado em 2.26 | 
+ |   **Objectivo a longo prazo**   | definir como desejado | 
+ |   **Histórico**   | Adicionado em 2.26 | 
 
-##  **  Pesquisa** 
+##  **Pesquisar** 
 
-###  **usar LuceneSearchEngine** 
+###  **UseLucineSearch Engine** 
 
-Descrição
-Alterna o motor de busca interno para usar o Apache Lucene.
+Designação das mercadorias
+Muda o motor de busca interno para usar o Apache Lucene.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Testes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Teste | 
  |   **Padrão atual**   | falso | 
- |   **Objetivo de longo prazo**   | ? | 
- |   **História**   | Legado | 
+ |   **Objectivo a longo prazo**   | ? | 
+ |   **Histórico**   | Legado | 
 
-##  **s Serviços e Protocolos** 
+##  **Serviços & Protocolos** 
 
-###  **arquivos Ativar** 
+###  **ficheirosActive** 
 
-Descrição
-Permite a visualização do navegador "Files" para conjuntos de dados que o suportam.
-
- | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Estável | 
- |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 1.58 | 
-
-###  **conversoresAtiva** 
-
-Descrição
-Permite ferramentas de conversão na interface do usuário.
+Designação das mercadorias
+Activa a vista do navegador "Arquivos" para conjuntos de dados que o suportam.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 1.44 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 1.58 | 
+
+###  **conversoresActive** 
+
+Designação das mercadorias
+Activa as ferramentas de conversão na UI.
+
+ | Propriedade | Detalhes | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Estável | 
+ |   **Padrão atual**   | verdadeiro | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 1.44 | 
 
 ###  **slideSorterActive** 
 
-Descrição
-Permite o Slide Sorter.
+Designação das mercadorias
+Activa a Ordenação de Slides.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 1.44 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 1.44 | 
 
 ###  **dataProviderFormActive** 
 
-Descrição
-Permite que o formulário permita que os provedores de dados insiram metadados.
+Designação das mercadorias
+Activa o formulário que permite aos fornecedores de dados introduzir metadados.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Legado | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Legado | 
 
-###  **outOfDateDatasetsActive** 
+###  **OutOfDateDatasetsActive** 
 
-Descrição
-Permite o relato de conjuntos de dados desatualizados.
+Designação das mercadorias
+Permite o relatório de conjuntos de dados desatualizados.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 1.82 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 1.82 | 
 
 ###  **wmsActive** 
 
-Descrição
-Permite o serviço Web Map ( WMS ) interface.
+Designação das mercadorias
+Activa o Serviço de Mapa Web ( WMS ) interface.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Adicionado em 1.44 | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Adicionado em 1.44 | 
 
 ###  **wmsClientActive** 
 
-Descrição
-Permite o interno WMS características do cliente.
+Designação das mercadorias
+Activa o interior WMS Características do cliente.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
+ | ...---- | ...---- | 
  |   **Ciclo de vida**   | Estável | 
  |   **Padrão atual**   | verdadeiro | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
- |   **História**   | Legado | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
+ |   **Histórico**   | Legado | 
 
 ###  **geoServicesRestActive** 
 
-Descrição
-Permite o RESTful interface para Geospatial Services. Não totalmente implementado.
+Designação das mercadorias
+Activar a RESTful interface para Serviços Geoespaciais. Não totalmente implementado.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Construção | 
- |   **Padrão atual**   | falso (Códigos rígidos)   | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Em Construção | 
+ |   **Padrão atual**   | falso (Codificado)   | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
 
-###  **Ativação** 
+###  **wcsActive** 
 
-Descrição
-Permite o Serviço de Cobertura da Web ( WCS ) interface. Não totalmente implementado.
+Designação das mercadorias
+Activa o Serviço de Cobertura Web ( WCS ) interface. Não totalmente implementado.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Construção | 
- |   **Padrão atual**   | falso (Códigos rígidos)   | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Em Construção | 
+ |   **Padrão atual**   | falso (Codificado)   | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 
 
 ###  **sosActive** 
 
-Descrição
-Permite o Serviço de Observação do Sensor ( SOS ) interface.
+Designação das mercadorias
+Activa o Serviço de Observação do Sensor ( SOS ) interface.
 
  | Propriedade | Detalhes | 
- | Eu... | Eu... | 
- |   **Ciclo de vida**   | Construção | 
- |   **Padrão atual**   | falso (Códigos rígidos)   | 
- |   **Objetivo de longo prazo**   | verdadeiro | 
+ | ...---- | ...---- | 
+ |   **Ciclo de vida**   | Em Construção | 
+ |   **Padrão atual**   | falso (Codificado)   | 
+ |   **Objectivo a longo prazo**   | verdadeiro | 

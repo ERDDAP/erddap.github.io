@@ -2,8 +2,8 @@
 sidebar_position: 3
 ---
 #  ERDDAP™ Proces uvolňování
-* Ujistěte se, že jsou k dispozici soubory srovnání obrázků (To by mohlo znamenat útěk. `mvn ověřit` , pokud chcete urychlit, že až omezení pouze ImageComparison skupiny ačkoli poznámka, která stále vyžaduje spustit Jetty testy) 
-* Aktualizace závislostí
+* Ujistěte se, že jsou k dispozici soubory pro porovnání obrázků (Tohle může znamenat běh. `mvn ověření` Pokud to chcete urychlit, omezte to na skupinu ImageComparison, i když poznámka, která stále vyžaduje provedení testů Jetty) 
+* Aktualizovat závislost
 ```
 mvn versions:display-dependency-updates   // (displays updates)
 mvn versions:use-latest-versions  // (updates dependencies, though sometimes we don’t want to do all of them)
@@ -13,78 +13,81 @@ mvn versions:update-properties // (updates versions in the property block)
 ```
 mvn versions:display-plugin-updates // (displays updates, need to manually update)
 ```
-* Spusťte testy, aby se ujistili, že aktualizace závislosti nezlomí cokoliv pro všechny hlavní konfigurace (Zejména analýza dat, i když i jiná významná nastavení) . Všimněte si, že vnější zkušební apartmá může být velmi neprůstřelné. Testovací apartmá SlowAWS může trvat velmi dlouho.
+* Spustit testy, aby se ujistil, že aktualizace závislosti nezlomily nic pro všechny hlavní konfigurace (soubory údajů, které se zejména zpracovávají, i když i jiná významná nastavení) . Všimněte si, že externí zkušební souprava může být velmi ochromující. Pomalé testovací apartmá může trvat velmi dlouho.
 ```
 mvn verify
 mvn verify -P external
 mvn verify -P slowAWS
 ```
-* Použít TranslateMessages.translate () v případě potřeby aktualizovat překlady
-* Vývoj ED Static.java Režim false, změňte číslo verze a zadejte datum vydání.
-* Do the build
+* Použití `python translation / translate.py` aktualizovat překlady v případě potřeby.
+* EDStatic.java vývoj Režim na false, změna čísla verze a datum vydání.
+* Stavět.
 ```
 mvn clean
 mvn compile
 mvn package
 ```
-## Kanárské ostrovy
-Poslat válečný soubor pro distribuci na serveru Coastwatch nebo na jiném serveru, který využívá většinu typů souborů dat a přijímá hodně provozu.
-Chceme hledat chyby před širším rozdělením stavby.
+## Kanárské
+Poslat válečný soubor pro distribuci na Coastwatch serveru nebo některé jiné server, který používá většinu typů datových souborů a přijímá spoustu provozu.
+Chceme se pokusit najít chyby před širším rozdělením budovy.
 
-Včetně zprávy při vyprávění o novém vydání.
+Zahrnout zprávu při vyprávění o novém vydání.
 
 Standardní postup je:
-* Nahrát soubor .válka na pobřežní hlídku \\[ tomcat \\] / content/ erddap/
-* Jako uživatel=tomcat:
-  * In \\[ tomcat \\] / bin/ :
-./shutdown.sh/use "ps -fu tomcat" pro zajištění toho, aby se zastavila
-  * In \\[ tomcat \\] /webapps/ :
-rm -rf erddap
-Rm erddap. válka
-cp ../content/erddap/erddap2.22.war erddap.war / nebo jakékoliv číslo
-  * In \\[ tomcat \\] / bin/ :
-./startup.sh
-  * Po ERDDAP vrátil webovou stránku, v \\[ tomcat \\] /webapps/ :
-chgrp - R erddap erddap
-chmod -R g+rw erddap
-chmod -R o-rwx erddap
+* Nahrát .war soubor na pobřeží hodinky \\[ tomcat \\] / obsah / erddap /
+* Jako uživatel = tomcat:
+  * V \\[ tomcat \\] / bin /:
+. / shutdow.sh / / použít "ps -fu tomcat", aby se ujistil, že se zastavil
+  * V \\[ tomcat \\] / webové aplikace /:
+rm-rf erddap
+rm erddap. válka
+cp.. / obsah / erddap / erddap2.22.war erddap.war / / nebo jaké číslo je
+  * V \\[ tomcat \\] / bin /:
+/ startup.sh
+  * Po ERDDAP vrátil webové stránky, v \\[ tomcat \\] / webové aplikace /:
+chgrp-R erddap erddap
+chmod - R g + rw erddap
+chmod-R o-rwx erddap
 
-## GitHub verze
-Návrh GitHub vydání, včetně erddap.war a erddapContent .zip   (žádná čísla verzí) 
+## Vydání GitHub
+Návrh vydání GitHub, včetně erddap.war a erddapContent .zip   (žádná čísla verzí) 
 
 title: The official v2.25 version
 popis: Viz seznam změn
-      https://erddap.github.io/changes#version-225
+       https://erddap.github.io/changes#version-225
+ 
 
 ## Aktualizace dokumentace
-* Aktualizovat číslo verze v souboru docusaurus.config.ts (v části zápatí) .
-* Upravit stránky dokumentace (nasadit-install.md a nasadit-update.md) .
+* Aktualizovat číslo verze v souboru docusaurus.consult.ts (v sekci patky) .
+* Upravit stránky dokumentace (deploy- instal.md a deploy- update.md) .
   * Hledat \\[ erddap.war \\]  
-  * Kopírovat existující informace (mírně reformované) na seznam předchozích zařízení 2.
-  * Změnit aktuální informace o vydání pro erddap. válka \\[ erddap.war \\] 
-* Spusťte překlady na místo dokumentace.
-* Vytáhni žádost a spojte změny.
-* Nasadit místo dokumentace (viz readme) .
+  * Kopírovat stávající informace (lehce reformovaný) seznam předchozích zařízení2.
+  * Změnit aktuální informace o uvolnění pro erddap. válka v \\[ erddap.war \\] 
+* Spustit překlady pro dokumentaci stránky.
+* Požádat o tahání a sloučit změny.
+* Nastavit místo dokumentace (viz readme) .
 
 ## Zajistit, aby ostatní repo obchody byly aktuální podle potřeby
-To znamená především ErddapContent a ErddapTest, ale měly by být během vývojových změn aktualizovány.
+Především to znamená ErdapContent a ErdapTest, ale měly by být aktualizovány během změn vývoje.
 
-## Informujte uživatele
-Nejprve informujte všechny uživatele, kteří požadovali změny (nebo čí brouci byli opraveni) . Dejte jim čas na ověření změn a/nebo vydání otázek.
+## Upozornit uživatele
+První oznámení všem uživatelům, kteří požadovali změny (nebo jejichž chyby byly opraveny) . Dejte jim čas na ověření změn a / nebo řešení problémů.
 
  ERDDAP verze 2.25 je nyní k dispozici&#33;
 
-Můžete si přečíst o změnách na
-https://erddap.github.io/changes#version-225
+O změnách si můžete přečíst v
+ https://erddap.github.io/changes#version-225
+ 
 
-Některé změny jsou změny, které jste navrhl. Děkuji vám za vaše návrhy. Hledat své jméno v seznamu změn vidět podrobnosti. Bylo by skvělé, kdybyste mohli vyzkoušet nové funkce brzy, než oznámím tuto novou verzi širšímu publiku.
+Některé změny jsou změny, které jste navrhl. Děkuji vám za vaše návrhy. Hledejte své jméno v seznamu změn, abyste viděli podrobnosti. Bylo by skvělé, kdybyste mohli vyzkoušet nové funkce brzy, než ohlásím tuto novou verzi širšímu publiku.
 
-Pokud jste ERDDAP Správce, pokyny pro modernizaci jsou na
-https://erddap.github.io/docs/server-admin/deploy-update
+Pokud jste ERDDAP administrátor, pokyny pro modernizaci jsou uvedeny v
+ https://erddap.github.io/docs/server-admin/deploy-update
+ 
 
 Pokud máte nějaké problémy, otázky, návrhy, prosím, pošlete mi e-mail.
 
-Děkujeme, že používáte ERDDAP .
+Díky za použití ERDDAP .
 
-### Vydání oznámení
-Pošlete oznámení na seznam oznámení.
+### Oznámit vydání
+Pošlete oznámení na seznam hlášení.

@@ -2,89 +2,92 @@
 sidebar_position: 3
 ---
 #  ERDDAP™ Udgivelsesproces
-* Sørg for, at billed sammenligningsfiler er tilgængelige (Dette kan betyde at løbe `osv.` , hvis du ønsker at fremskynde, at du begrænser til kun gruppen ImageComparison, selvom det stadig kræver at køre Jetty tests) 
-* Opdater afhængigheder
+* Sørg for billede sammenligning filer er tilgængelige (det kan betyde at køre `mvn- verificering` , hvis du ønsker at fremskynde det op begrænse til blot ImageComparison gruppe, selvom note, der stadig kræver kører Jetty tests) 
+* Opdatér afhængigheder
 ```
 mvn versions:display-dependency-updates   // (displays updates)
 mvn versions:use-latest-versions  // (updates dependencies, though sometimes we don’t want to do all of them)
 mvn versions:update-properties // (updates versions in the property block)
 ```
-* Opdater plugins
+* Opdatér plugins
 ```
 mvn versions:display-plugin-updates // (displays updates, need to manually update)
 ```
-* Kør tests for at sikre, at afhængighed opdateringer ikke bryde noget for alle større konfigurationer (datasæt parsing især, selvom andre væsentlige indstillinger samt) . Bemærk, at den eksterne test suite kan være meget flaky. Den langsomme AWS test suite kan tage meget lang tid.
+* Kør tests for at sikre afhængighed opdateringer ikke bryde noget for alle store konfigurationer (datasæt fortolker især, selv om andre væsentlige indstillinger så godt) . Bemærk, at den eksterne test suite kan være meget flaky. Den langsomme AWS test suite kan tage meget lang tid.
 ```
 mvn verify
 mvn verify -P external
 mvn verify -P slowAWS
 ```
-* Brug OversætMessages.translate () at opdatere oversættelser, hvis det er nødvendigt
-* EDStatic.java sætter udvikling Ret til falsk, ændre versionsnummeret og angive udgivelsesdatoen.
-* Gør byggepladsen
+* Anvendelse `python oversættelse / translate.py` om nødvendigt at opdatere oversættelser.
+* EDStatic.java sæt udvikling Tilstand til false, ændre versionsnummeret og angive udgivelsesdato.
+* Byg.
 ```
 mvn clean
 mvn compile
 mvn package
 ```
-## Kanariske Kanariske
-Send krigsfilen til distribution på Coastwatch-serveren eller en anden server, der bruger de fleste datasættyper og modtager en masse trafik.
-Vi ønsker at forsøge at finde fejl før bredere distribution af bygningen.
+## Kanariefrø
+Send krigsfilen til distribution på Coastwatch server eller en anden server, der bruger de fleste af datatyperne og modtager en masse trafik.
+Vi ønsker at forsøge at finde fejl før en bredere fordeling af bygningen.
 
-Medtag besked, når du fortæller om en ny udgivelse.
+Inkludér besked når du fortæller om en ny udgivelse.
 
-Standardsproceduren er:
-* Upload .war-filen til kystwatch \\[ Tomcat \\] /indhold / indhold /
-* Som bruger=tomcat:
-  * I nærheden af In In In In In In In In In In In In In In \\[ Tomcat \\] /bin / :
-./shutdown.sh //use "ps -fu tomcat" for at sikre, at den er stoppet
-  * I nærheden af In In In In In In In In In In In In In In \\[ Tomcat \\] /webapps/:
--rf erddap
-rm erddap. krig krig
-cp ./content/erddap/erddap2.22.war Erddap.war //eller hvad nummeret er
-  * I nærheden af In In In In In In In In In In In In In In \\[ Tomcat \\] /bin / :
-./startup.sh
-  * Efter ERDDAP har returneret en webside, i \\[ Tomcat \\] /webapps/:
-chgrp -R erddap erddap
-chmod -R g+rw erddap
-chmod -R o-rwx erddap
+Standardproceduren er:
+* Upload .war-filen til kysturet \\[ tomcat \\] / indhold / erddap /
+* Som bruger = tomcat:
+  * I \\[ tomcat \\] / bin /:
+. / shutdown.sh / / use "ps -fu tomcat" for at sikre, at det er stoppet
+  * I \\[ tomcat \\] / webapps /:
+rm - rf erddap
+rm erddap. krig
+cp.. / content / erddap / erddap2.22.war erddap.war / / eller hvad end nummeret er
+  * I \\[ tomcat \\] / bin /:
+. / startup.sh
+  * Efter ERDDAP er returneret en webside, i \\[ tomcat \\] / webapps /:
+chgrp - R erddap erddap
+chmod - R g + rw erddap
+chmod -R o- rwx erddap
 
 ## GitHub Release
-Udkast GitHub release, omfatter erddap.war og erddapContent .zip   (Ingen versionsnumre) 
+Udkast til GitHub udgivelse, omfatter erddap.war og erddapContent .zip   (ingen versionsnumre) 
 
 title: The official v2.25 version
-beskrive: Se listen med ændringer
-      https://erddap.github.io/changes#version-225
+beskrivelse: Se ændringslisten på
+       https://erddap.github.io/changes#version-225
+ 
 
-## Dokumentation Opdatering
-* Opdater versionsnummeret i docusaurus.config.ts-filen (i sidefoden) .
-* Rediger dokumentationssiderne (udrulning.md og udrulning.md) .
-  * Søg efter \\[ Erddap.war \\]  
-  * Kopier de eksisterende oplysninger (lidt omformateret) til listen over tidligere installationer 2.
-  * Ændre de aktuelle udgivelsesoplysninger for erddap. krig på \\[ Erddap.war \\] 
-* Kør oversættelserne til dokumentationswebstedet.
-* Foretag en trækkeanmodning og flette ændringerne.
-* Aktiver dokumentationsstedet (Se læseme) .
+## Dokumentationsopdatering
+* Opdatér versionsnummeret i docusarus.config.ts-filen (i fodgængersektionen) .
+* Redigér dokumentationssider (deploy- install.md og deploy- update.md) .
+  * Søg efter \\[ erddap.war \\]  
+  * Kopiér de eksisterende oplysninger (lidt omformateret) til listen over tidligere anlæg 2.
+  * Ændr den aktuelle udgivelsesinformation for erddap. krig \\[ erddap.war \\] 
+* Kør oversættelser til dokumentation site.
+* Lav en pull anmodning og flette ændringerne.
+* Udarbejd dokumentationsstedet (se readme) .
 
-## Sørg for, at andre repos er opdateret efter behov
-Det betyder hovedsageligt ErddapContent og ErddapTest, men de skal holdes opdateret under udvikling ændringer.
+## Sørg for, at andre genkøbsforretninger opdateres efter behov
+Dette betyder primært ErddapContent og ErddapTest, men de bør holdes ajour under udviklingen ændringer.
 
-## Advisér brugere
-Meddelelse om brugere, der anmodede ændringer (eller hvis fejl blev rettet) . Giv dem tid til at kontrollere ændringer og/eller hæve problemer.
+## Underret brugere
+Først underrette alle brugere, der anmodede om ændringer (eller hvis fejl blev rettet) . Giv dem tid til at verificere ændringer og / eller rejse spørgsmål.
 
  ERDDAP version 2.25 er nu tilgængelig&#33;
 
 Du kan læse om ændringerne på
-https://erddap.github.io/changes#version-225
+ https://erddap.github.io/changes#version-225
+ 
 
-Nogle af ændringerne er ændringer, som du foreslog. Tak, fordi du indsendte en redigering. Søg efter dit navn på listen over ændringer for at se detaljerne. Det ville være fantastisk, hvis du kunne prøve de nye funktioner snart, før jeg meddeler denne nye version til et bredere publikum.
+Nogle af ændringerne er ændringer, som du foreslog. Mange tak for Deres forslag. Søg efter dit navn i listen over ændringer for at se detaljerne. Det ville være godt, hvis du kunne prøve de nye funktioner snart, før jeg annoncerer denne nye version til et bredere publikum.
 
-Hvis du er en ERDDAP Administrator, instruktionerne for opgradering er på
-https://erddap.github.io/docs/server-admin/deploy-update
+Hvis De er en ERDDAP administrator, instruktionerne for opgradering er på
+ https://erddap.github.io/docs/server-admin/deploy-update
+ 
 
-Hvis du har problemer, spørgsmål, forslag, bedes du kontakte mig.
+Hvis du har nogen problemer, spørgsmål, forslag, venligst e-mail mig.
 
-Tak, fordi du bruger ERDDAP .
+Tak fordi du brugte ERDDAP .
 
-### Reklamation
-Send en meddelelse til listen Meddelelser.
+### Annoncer frigivelse
+Send en meddelelse til postlisten.

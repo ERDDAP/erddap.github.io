@@ -3,22 +3,22 @@ title: "ERDDAP™ Documentation"
 ---
 ## Letzter Beitrag ERDDAP™ Version{#latest-erddap-version} 
 
-2.29.0, siehe die [Änderungen der Dokumentation](/changes#version-2290) und [Sie können](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) .
+2.30.0, siehe [Änderungen der Dokumentation](/changes#version-2300) und [es ist](https://github.com/ERDDAP/erddap/releases/tag/v2.30.0) .
 
 ##  ERDDAP™ Informationen{#erddap-information} 
 
- ERDDAP™ ist ein wissenschaftlicher Datenserver, der den Benutzern eine einfache, konsequente Möglichkeit gibt, Untergruppen von
-gegitterte und tabellarische wissenschaftliche Datensätze in gemeinsamen Dateiformaten und Grafiken und Karten.
+ ERDDAP™ ist ein wissenschaftlicher Datenserver, der den Benutzern eine einfache, konsequente Möglichkeit gibt, Subsets von
+netzgebundene und tabellarische wissenschaftliche Datensätze in gemeinsamen Dateiformaten und Grafiken und Karten.
  ERDDAP™ ist eine freie und offene Quelle (Apache und Apache)   Java Servlet von NOAA   NMFS   SWFSC Abteilung Umweltforschung ( ERD ) .
 
-* Zu sehen/verwenden ERDDAP™ Installation: [https://coastwatch.pfeg.noaa.gov/erddap/index.html](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 
-* Mit einer Installation starten [die Installationsanleitung bereitstellen](/docs/server-admin/deploy-install) .
+* Zu sehen/verwenden ERDDAP™ Installation: [ https://coastwatch.pfeg.noaa.gov/erddap/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 
+* Zum Starten mit einer Installation lesen [die Installationsanleitung bereitstellen](/docs/server-admin/deploy-install) .
 * Um Code beizutragen, siehe [Leitfaden für Programmierer](/docs/contributing/programmer-guide) .
 
 
-Im Folgenden finden Sie relevante Links für Fragen und wie Sie beitragen können.
-* Gesprächsrunden überprüfen und Fragen stellen [https://groups.google.com/g/erddap](https://groups.google.com/g/erddap) oder [https://github.com/erddap/erddap/discussions](https://github.com/erddap/erddap/discussions) 
-* Überprüfung und Einreichung von Fragen [https://github.com/erddap/erddap/issues](https://github.com/erddap/erddap/issues) 
+Hier finden Sie relevante Links für Fragen und wie Sie beitragen können.
+* Besprechung von Gesprächen und Fragen bei [ https://groups.google.com/g/erddap ](https://groups.google.com/g/erddap) oder [ https://github.com/erddap/erddap/discussions ](https://github.com/erddap/erddap/discussions) 
+* Überprüfung und Einreichung von Fragen [ https://github.com/erddap/erddap/issues ](https://github.com/erddap/erddap/issues) 
 * Um Feature-Anfragen vorzuschlagen, folgen Sie dieser Anleitung: [ ERDDAP Diskussionen #93 (Kommentare) ](https://github.com/ERDDAP/erddap/discussions/93#discussion-4920427) 
 
 
@@ -28,9 +28,9 @@ Es gibt zwei Möglichkeiten, mehrere zu suchen ERDDAP™ s für Datensätze: [Su
 
 ## Stellen Sie Ihre eigenen ERDDAP™  {#set-up-your-own-erddap} 
 
- ERDDAP™ ein [Freie und offene Quelle](https://en.wikipedia.org/wiki/Free_and_open-source_software) Alles... Java   (servlet) , Web-Anwendung, die in einem Web-Anwendungsserver läuft (zum Beispiel Tomcat (empfohlen) , oder Jetty (es funktioniert, aber wir unterstützen es nicht) ) . Diese Seite ist meist für Menschen (" ERDDAP™ Administratoren") die sich selbst einrichten wollen ERDDAP™ Installation auf ihrer eigenen Website.
+ ERDDAP™ ein [Freie und Open Source](https://en.wikipedia.org/wiki/Free_and_open-source_software) Alles... Java   (servlet) , Web-Anwendung, die in einem Web-Anwendungsserver läuft (zum Beispiel Tomcat (empfohlen) , oder Jetty (es funktioniert, aber wir unterstützen es nicht) ) . Diese Seite ist meist für Menschen (" ERDDAP™ Administratoren") die sich selbst einrichten wollen ERDDAP™ Installation auf ihrer eigenen Website.
 
-Mit einer Installation starten [die Installationsanleitung bereitstellen](/docs/server-admin/deploy-install) .
+Zum Starten mit einer Installation lesen [die Installationsanleitung bereitstellen](/docs/server-admin/deploy-install) .
 
 ### Warum verwenden ERDDAP™ Ihre Daten zu verbreiten?{#why-use-erddap-to-distribute-your-data} 
 
@@ -41,16 +41,16 @@ du kannst einrichten ERDDAP™ Zugriff auf Ihre Daten über den vorhandenen Serv
 Oder Sie können einrichten ERDDAP™ Zugriff auf Ihre Daten direkt von lokalen Dateien.
 * Für jeden Datensatz müssen Sie nur einen kleinen Teil von XML schreiben, um zu sagen ERDDAP™ Zugriff auf den Datensatz.
 * Sobald Sie ERDDAP™ Ihre Daten bedienen, können Endbenutzer:
-    * Fordern Sie die Daten auf verschiedene Weise an ( DAP , WMS , und mehr in Zukunft) .
+    * Die Daten auf verschiedene Weise anfordern ( DAP , WMS , und mehr in Zukunft) .
     * Erhalten Sie die Datenantwort in verschiedenen Dateiformaten. (Das ist wahrscheinlich der größte Grund&#33;) 
     * Grafiken und Karten erstellen. (Jeder mag schöne Bilder.) 
     * Erstellen Sie andere nützliche und interessante Dinge oben auf ERDDAP Webdienste -- siehe die [ Awesome ERDDAP TM](https://github.com/IrishMarineInstitute/awesome-erddap) Liste der großartigen ERDDAP -bezogene Projekte.
 
-Sie können [Anpassung](/docs/server-admin/deploy-install#customize) Ihr ERDDAP 's Aussehen so ERDDAP™ reflektiert Ihre Organisation und passt in den Rest Ihrer Website.
+Du kannst [Anpassung](/docs/server-admin/deploy-install#customize) Ihr ERDDAP 's Aussehen so ERDDAP™ reflektiert Ihre Organisation und passt in den Rest Ihrer Website.
 
-## Ist das Installationsverfahren hart? Kann ich das tun?{#is-the-installation-procedure-hard-can-i-do-it} 
+## Ist die Installation schwierig? Kann ich das tun?{#is-the-installation-procedure-hard-can-i-do-it} 
 
-Die erste Installation dauert einige Zeit, aber es ist nicht sehr schwer. Du kannst es tun. Wenn du feststeckst, melde mich an erd dot data at noaa dot gov . Ich werde dir helfen.
+Die erste Installation dauert etwas Zeit, aber es ist nicht sehr schwer. Du kannst es tun. Wenn du feststeckst, melde mich an erd dot data at noaa dot gov . Ich werde dir helfen.
 Oder du kannst mitmachen [ ERDDAP™ Google Group / Mailingliste](https://groups.google.com/g/erddap) und posten Sie Ihre Frage dort.
 
 ## Wer benutzt ERDDAP™  {#who-uses-erddap} 
@@ -63,14 +63,14 @@ Oder du kannst mitmachen [ ERDDAP™ Google Group / Mailingliste](https://groups
 *    [BCO-DMO bei WHOI](https://erddap.bco-dmo.org/erddap/index.html)   (Biologische und chemische Ozeanographie Datenverwaltung bei Woods Hole Oceanographic Institution)  
 *    [Kaninchen ERDDAP™ ](https://canwinerddap.ad.umanitoba.ca/erddap/index.html)   (Canadian Watershed Information Network) im Zentrum für Erdbeobachtung Wissenschaft (CEOS) , Universität Manitoba
 *    [CDIP](https://erddap.cdip.ucsd.edu/erddap/index.html)   (Coastal Data Information Program bei UCSD)  
-*    [CNR-ISP](https://data.iadc.cnr.it/erddap/index.html)   (Nationaler Forschungsrat von Italien, Institut für Polarwissenschaften)  
+*    [CNR-ISP](https://data.iadc.cnr.it/erddap/index.html)   (National Research Council of Italy, Institut für Polarwissenschaften)  
 * CSIRO und IMOS (Australiens Organisation für wissenschaftliche und industrielle Forschung und das integrierte Meeresbeobachtungssystem) 
 *    [DIVER ( NOAA ODER) ](https://pub-data.diver.orr.noaa.gov/erddap/index.html)   ( NOAA Büro für Antwort und Wiederherstellung)  
 *    [EMODnet Physik](https://erddap.emodnet-physics.eu/erddap/index.html)   (Das Europäische Meeresbeobachtungs- und Datennetz -- Physik)  
 *    [GoMRI](https://erddap.griidc.org/erddap/index.html)   (Golf von Mexiko Forschungsinitiative)  
 *    [Hakai Institut](https://catalogue.hakai.org/erddap/index.html)   (Das Hakai Institut an der Zentralküste von British Columbia, Kanada) 
 *    [High School Technology Services](https://myhsts.org) , die Codierung und Technologie-Ausbildung für Studenten und Erwachsene bietet
-*    [ICHE](https://erddap.ichec.ie/erddap/index.html)   (Irisches Zentrum für High-End Computing) 
+*    [ICHEC](https://erddap.ichec.ie/erddap/index.html)   (Irisches Zentrum für High-End Computing) 
 *    [I NCO IS](https://erddap.incois.gov.in/erddap/index.html)   (Indian National Centre for Ocean Information Services)  
 * IRD (Institut de Recherche pour le Développement, Frankreich)   
 KN-Code (Centre National de la Recherche Scientifique, Frankreich)   
@@ -87,7 +87,7 @@ LMI ECLAIRS (Laboratoire Mixing International «Etude du Climat en Afrique de l�
 *    [ NOAA Küstenwache](https://coastwatch.noaa.gov/erddap/index.html)   (Zentral)  
 *    [ NOAA Küstenwache CGOM](https://cwcgom.aoml.noaa.gov/erddap/index.html)   (Karibik/ Golf von Mexiko Node)  
 *    [ NOAA Côte-Watch GLERL](https://coastwatch.glerl.noaa.gov/erddap/index.html)   (Große Seen Node)  
-*    [ NOAA KüsteWatch Westküste](https://coastwatch.pfeg.noaa.gov/erddap/index.html) die mit und mit
+*    [ NOAA Küstenwache Westküste](https://coastwatch.pfeg.noaa.gov/erddap/index.html) die mit und mit
      [ NOAA   ERD ](https://coastwatch.pfeg.noaa.gov/erddap/index.html)   (Abteilung Umweltforschung SWFSC von NMFS ) 
 *    [ NOAA IOOS Sensoren](https://erddap.sensors.ioos.us/erddap/index.html)   (Integriertes Ozeanbeobachtungssystem)  
 *    [ NOAA IOOS Ce NCO Sicherheit](https://erddap.axiomdatascience.com/erddap/index.html)   (Zentral- und Nordkalifornien Ozeanbeobachtungssystem, betrieben von Axiom Data Science)  
@@ -97,11 +97,11 @@ LMI ECLAIRS (Laboratoire Mixing International «Etude du Climat en Afrique de l�
 *    [ NOAA IOOS NERACOOS](http://www.neracoos.org/erddap/index.html)   (Northeastern Regional Association of Coastal and Ocean Observing Systems)  
 *    [ NOAA IOOS NGDAC](https://data.ioos.us/gliders/erddap/index.html)   (National Glider Rechenzentrum)  
 *    NOAA IOOS NANOOS (Northwest Association of Networked Ocean Observing Systems) 
-*    [ NOAA IOOS PacIOOS](https://pae-paha.pacioos.hawaii.edu/erddap/index.html)   (Pazifische Inseln Ozean Beobachtungssystem) an der Universität Hawaii (UH)  
+*    [ NOAA IOOS PacIOOS](https://pae-paha.pacioos.hawaii.edu/erddap/index.html)   (Ozeanbeobachtungssystem der Pazifikinseln) an der Universität Hawaii (UH)  
 *    NOAA IOOS SCCOOS (Southern California Coastal Ocean Observing System) 
 *    [ NOAA IOOS SECOORA](https://erddap.secoora.org/erddap/index.html)   (Südostküsten-Ozean mit regionaler Assoziation)  
 *    [ NOAA NZEI](https://www.ncei.noaa.gov/erddap/index.html)   (Nationale Zentren für Umweltinformationen)    
-*    NOAA NGDC STP (National Geophysikalisch Datenzentrum, Solar -- Terrestrische Physik) 
+*    NOAA NGDC STP (National Geophysikalisch Data Center, Solar -- Terrestrische Physik) 
 *    NOAA   NMFS NEFSC (Forschungszentrum für Fischerei im Nordosten) 
 *    [ NOAA NOS CO-OPS](https://opendap.co-ops.nos.noaa.gov/erddap/index.html)   (Zentrum für Operationelle ozeanographische Produkte und Dienstleistungen)  
 *    [ NOAA OSMC](http://osmc.noaa.gov/erddap/index.html)   (Beobachtungssystem Monitoring Center)  
@@ -111,7 +111,7 @@ LMI ECLAIRS (Laboratoire Mixing International «Etude du Climat en Afrique de l�
 *    [ NOAA UAF](https://upwell.pfeg.noaa.gov/erddap/index.html)   (Einheitlicher Zugriffsrahmen)  
 *    [Ocean Networks Kanada](http://dap.onc.uvic.ca/erddap/index.html)  
 *    [Ocean Tracking Network](https://members.oceantrack.org/erddap/index.html)  
-*    [OOI / Alle Daten](https://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/index.html)   (Ocean Observatories Initiative)   
+*    [OOI / Alle Daten](https://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/index.html)   (Initiative der Ocean Observatories)   
 OOI / Unfähige Daten
 * Princeton, Hydrometeorologie Forschungsgruppe
 * R.Tech Engineering, Frankreich
@@ -135,7 +135,7 @@ Dies ist eine Liste von nur einigen der Organisationen, wo ERDDAP™ wurde von e
 ###  ERDDAP™ wird empfohlen NOAA und CNRS{#erddap-is-recommended-within-noaa-and-cnrs} 
  [ NOAA Datenschutzrichtlinie](https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendations#Software_implementations) einschließlich ERDDAP™ in seiner Liste der empfohlenen Datenserver für die Nutzung durch Gruppen innerhalb NOAA . ERDDAP™ in Abschnitt 4.2.3 der
 [Guide de bonnes pratiques sur la gestion des données de la recherche
- (Forschungsdatenmanagement Best Practices Guide) &#33; (https://mi-gt-donnees.pages.math.unistra.fr/guide/04-traiter.html#deposer-et-structurer-dans-des-plateformes-de-gestion-de-donnees-locales) vom Centre National de la Recherche Scientifique (KN-Code) in Frankreich.
+ (Forschungsdatenmanagement Best Practices Guide) &#33; ( https://mi-gt-donnees.pages.math.unistra.fr/guide/04-traiter.html#deposer-et-structurer-dans-des-plateformes-de-gestion-de-donnees-locales ) des Centre National de la Recherche Scientifique (KN-Code) in Frankreich.
 
 ## Slide Shows{#slide-shows} 
 
@@ -174,14 +174,14 @@ Weitere Präsentationen:
 *    [2014 EDM: Bob's Do's and Don't for Tabular Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsDosDontsTabular.pptx) 
 *    [2014 EDM: Die ideale Benutzeroberfläche](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TheIdealUserInterface.pptx) 
 *    [2014 Sommer ESIP: Tabellendaten](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TabularData.pptx) 
-*    [2013: Behandeln Sie nicht In-Situ und Tabular-Daten wie Gridded Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TablesAndGrids.html) 
+*    [2013: Behandeln Sie nicht In-Situ und Tabulardaten wie Gridded Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TablesAndGrids.html) 
 *    [2013 EDM: Mehr mit weniger tun](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/DoMoreWithLess.ppt) 
 *    [2012 EDM: Richtlinien für Datenverteilungssysteme](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/guidelines3.ppt) 
 
 Präsentationen von anderen Menschen:
 
 *    [Ein FAIR-basiertes Tool zur Verbesserung des globalen Datenaustauschs![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=kdBTgNEp5TA&ab_channel=GOOSIOC)   
-von Kevin O'Brien im globalen Ozeanbeobachtungssystem (ZUSAMMENFASSUNG) Webinar / Koordinationsgruppe Beobachtung (OCG) Serie / 1, 12. November 2020.
+von Kevin O'Brien im globalen Ozeanbeobachtungssystem (ZUSAMMENFASSUNG) Webinar / Beobachtungs-Koordinationsgruppe (OCG) Serie / 1. November 12, 2020.
 *    [Erstellen Sie Ihre eigene Weather App NOAA Open Data und Jupyter Notebooks![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=MF-WH01Qw0g)   
 von Filipe Fernandes und Rich Signell auf der SciPy 2018, 13. Juli 2018.
 *    [Verwendung des OOI ERDDAP ![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=tj4M9hodTG0)   
@@ -193,4 +193,4 @@ von Rich Signell, August 2015.
 *    [Test mit ERDDAP™ für Blue Carbon Daten![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=TbOhElC_-qU)   
 von Rich Signell, August 2015.
 *    [Verwendung von Daten aus ERDDAP™ in NOAA ' GNOME Software![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=18xZoXu1USM) .
-In diesem Video, Rich Signell Downloads Ozeanströme Prognosedaten von ERDDAP™ eine toxische Verschüttung im Ozean mit [ NOAA ' GNOME Software](https://response.restoration.noaa.gov/oil-and-chemical-spills/oil-spills/response-tools/gnome.html)   (in 5 Minuten&#33;) . (Ein winziger Fehler im Video: bei der Suche nach Datensätzen verwenden Sie nicht UND zwischen Suchbegriffen. Es ist implizit.) Von Rich Signell, 8. April 2011.
+In diesem Video, Rich Signell Downloads Ozeanströme Prognosedaten von ERDDAP™ eine toxische Verschüttung im Ozean mit [ NOAA ' GNOME Software](https://response.restoration.noaa.gov/oil-and-chemical-spills/oil-spills/response-tools/gnome.html)   (in 5 Minuten&#33;) . (Ein winziger Fehler im Video: bei der Suche nach Datensätzen, nicht verwenden UND zwischen Suchbegriffen. Es ist implizit.) Von Rich Signell, 8. April 2011.

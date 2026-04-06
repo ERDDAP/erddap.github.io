@@ -1,90 +1,93 @@
 ---
 sidebar_position: 3
 ---
-#  ERDDAP™ Proses Rilis
-* Pastikan file perbandingan gambar tersedia (ini mungkin berarti berjalan `Login` Jika Anda ingin mempercepat pembatasan untuk hanya kelompok ImageComparison meskipun mencatat bahwa masih memerlukan tes Jetty yang berjalan) 
-* Ketergantungan pembaruan
+#  ERDDAP™ Rilis Proses
+* Pastikan berkas perbandingan gambar tersedia (ini mungkin berarti berjalan `mvn verify` , jika Anda ingin mempercepat bahwa sampai membatasi hanya kelompok Imageoparison meskipun catatan yang masih membutuhkan menjalankan tes Jetty) 
+* Mutakhirkan ketergantungan
 ```
 mvn versions:display-dependency-updates   // (displays updates)
 mvn versions:use-latest-versions  // (updates dependencies, though sometimes we don’t want to do all of them)
 mvn versions:update-properties // (updates versions in the property block)
 ```
-* Update plugin
+* Mutakhirkan plugin
 ```
 mvn versions:display-plugin-updates // (displays updates, need to manually update)
 ```
-* Menjalankan tes untuk memastikan pembaruan ketergantungan tidak melanggar apa pun untuk semua konfigurasi utama (dataset parsing khususnya, meskipun pengaturan lain yang signifikan serta) Sitemap Perhatikan bahwa suite tes eksternal bisa sangat flaky. Suite uji lambatAWS dapat memakan waktu yang sangat lama.
+* Jalankan tes untuk memastikan pembaruan ketergantungan tidak melanggar apa pun untuk semua konfigurasi utama (dataset parsing khususnya, meskipun ada konfigurasi signifikan lainnya juga) . Perhatikan bahwa suite tes eksternal bisa sangat mencolok. Tes suite yang lambat bisa memakan waktu yang sangat lama.
 ```
 mvn verify
 mvn verify -P external
 mvn verify -P slowAWS
 ```
-* Menggunakan TranslateMessages.translate () untuk memperbarui terjemahan jika diperlukan
-* EDStatic.java set pembangunan Mode untuk palsu, mengubah nomor versi dan menentukan tanggal rilis.
-* Sitemap
+* Gunakan `python terjemahan / translate.py` untuk memperbarui terjemahan jika diperlukan.
+* EDStatic.java mengatur pengembangan Mode ke false, ubah nomor versi dan tentukan tanggal rilis.
+* Lakukan membangun.
 ```
 mvn clean
 mvn compile
 mvn package
 ```
-## Login
-Kirim file perang untuk distribusi pada server Coastwatch atau beberapa server lain yang menggunakan sebagian besar jenis dataset dan menerima banyak lalu lintas.
-Kami ingin mencoba untuk menemukan kesalahan sebelum distribusi yang lebih luas dari build.
+## Canary
+Kirim berkas perang untuk distribusi pada server Coastwatch atau beberapa server lain yang menggunakan sebagian besar jenis data dan menerima banyak lalu lintas.
+Kami ingin mencoba untuk menemukan kesalahan sebelum distribusi lebih lebar dari pembangunan.
 
-Sertakan pesan ketika memberitahu tentang rilis baru.
+Sertakan pesan ketika menceritakan rilis baru.
 
 Prosedur standar adalah:
-* Unggah file .war ke jam tangan pantai \\[ Login \\] Login
-* Sebagai pengguna=tomcat:
-  * Sitemap \\[ Login \\] Login
-./shutdown.sh //use "ps -fu tomcat" untuk memastikan ia telah berhenti
-  * Sitemap \\[ Login \\] Login
+* Unggah berkas .war ke penjaga pantai \\[ tomcat \\] / isi / erddap /
+* Sebagai pengguna = tomcat:
+  * Masuk \\[ tomcat \\] / bin /:
+. / shutdown.sh / / gunakan "ps -fu tomcat" untuk memastikan itu telah berhenti
+  * Masuk \\[ tomcat \\] / webapps /:
 rm -rf erddap
-Login Login
-Login ../content/erddap/erddap2.22.war erddap.war //atau berapa pun jumlahnya
-  * Sitemap \\[ Login \\] Login
-./startup.sh
-  * Sitemap ERDDAP telah kembali halaman web, di \\[ Login \\] Login
-Login
-Login
-Login
+Aku erddap. perang
+cp.. / isi / erddap / erddap2.22.war erddap.war / / atau apapun nomornya
+  * Masuk \\[ tomcat \\] / bin /:
+. / startup.sh
+  * Setelah ERDDAP telah mengembalikan halaman web, dalam \\[ tomcat \\] / webapps /:
+chgrp -R erddap erddap
+chmod -R g + rw erddap
+chmod -R o- rwx erddap
 
 ## Rilis GitHub
-Draft rilis GitHub, termasuk erddap.war dan erddapContent .zip   (tidak ada nomor versi) 
+Draft the GitHub release, including erdtap.war and erdlapContent .zip   (tidak ada nomor versi) 
 
 title: The official v2.25 version
-Sitemap Lihat daftar perubahan di
-      https://erddap.github.io/changes#version-225
+deskripsi: Lihat daftar perubahan pada
+       https://erddap.github.io/changes#version-225
+ 
 
-## Database
-* Memperbarui nomor versi dalam file docusaurus.config.ts (di bagian footer) Sitemap
-* Edit halaman dokumentasi (use-install.md dan deploy-update.md) Sitemap
-  * Sitemap \\[ Login \\]  
-  * Salin informasi yang ada (sedikit diformat) ke daftar instalasi sebelumnya 2. di
-  * Mengubah informasi rilis saat ini untuk erddap. perang \\[ Login \\] 
+## Pemutakhiran Dokumentasi
+* Mutakhirkan nomor versi dalam berkas docusaurus.config.ts (di bagian kaki) .
+* Sunting halaman dokumentasi (Ganti-install.md dan Depaly- update.md) .
+  * Cari \\[ erddap.war \\]  
+  * Salin informasi yang telah ada (sedikit diformat ulang) ke daftar instalasi sebelumnya 2.
+  * Ubah informasi rilis saat ini untuk erddap. perang di \\[ erddap.war \\] 
 * Jalankan terjemahan untuk situs dokumentasi.
-* Membuat pull request dan menggabungkan perubahan.
-* Menyebarkan situs dokumentasi (Login) Sitemap
+* Buat permintaan tarik dan gabungkan perubahan.
+* Sebarkan situs dokumentasi (lihat baca) .
 
-## Pastikan repos lain hingga tanggal sesuai kebutuhan
-Terutama ini berarti ErddapContent dan ErddapTest, tetapi mereka harus disimpan hingga tanggal selama perubahan pembangunan.
+## Pastikan repos lain up to date seperti yang dibutuhkan
+Terutama ini berarti ErddapContent dan ErddapTest, tetapi mereka harus tetap up to date selama perubahan pembangunan.
 
-## Berita
-Pertama memberitahukan setiap pengguna yang meminta perubahan (atau bug yang tetap) Sitemap Memberikan waktu untuk memverifikasi perubahan dan/atau meningkatkan masalah.
+## Beritahu Pengguna
+Pertama beritahu setiap pengguna yang meminta perubahan (atau yang bug diperbaiki) . Beri mereka waktu untuk memverifikasi perubahan dan / atau meningkatkan masalah.
 
  ERDDAP versi 2.25 sekarang tersedia&#33;
 
-Anda dapat membaca perubahan
-https://erddap.github.io/changes#version-225
+Anda dapat membaca tentang perubahan di
+ https://erddap.github.io/changes#version-225
+ 
 
-Beberapa perubahan yang Anda rekomendasikan. Terima kasih banyak atas saran Anda. Cari nama Anda dalam daftar perubahan untuk melihat rincian. Ini akan bagus jika Anda bisa mencoba fitur baru segera, sebelum saya mengumumkan versi baru ini ke audiens yang lebih luas.
+Beberapa perubahan adalah perubahan yang Anda sarankan. Terima kasih banyak atas saran Anda. Cari nama Anda dalam daftar perubahan untuk melihat rincian. Ini akan menjadi besar jika Anda bisa mencoba fitur baru segera, sebelum saya mengumumkan versi baru ini ke audiens yang lebih luas.
 
-Jika Anda adalah ERDDAP administrator, instruksi untuk peningkatan adalah
-https://erddap.github.io/docs/server-admin/deploy-update
+Jika Anda adalah ERDDAP administrator, instruksi untuk peningkatan berada di
+ https://erddap.github.io/docs/server-admin/deploy-update
+ 
 
 Jika Anda memiliki masalah, pertanyaan, saran, silakan email saya.
 
-Terima kasih untuk menggunakan ERDDAP Sitemap
+Terima kasih telah menggunakan ERDDAP .
 
-### Sitemap
-Kirim pengumuman ke daftar Mailing Pengumuman.
+### Umumkan rilis
+Kirim pengumuman ke daftar Pengumuman.

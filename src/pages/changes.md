@@ -7,6 +7,18 @@ ERDDAP™ is a great example of [User-Driven Innovation](https://en.wikipedia.or
 
 Here are the changes associated with each ERDDAP™ release.
 
+## Version 2.30.0 {#version-2300}
+(released 2026-04-07)
+
+Version v2.30.0 largely focuses on bug fixes, dependency updates for stability and security, and testing performance improvements.
+
+*   **New Features and Changes (for users):**
+      * Enhanced [Croissant](https://mlcommons.org/working-groups/data/croissant/) metadata compatibility and manifest support, including [mlcroissant](https://pypi.org/project/mlcroissant/) compatibility.
+      * Improved support for parquet booleans.
+
+*   **Things ERDDAP™ Administrators Need to Know and Do:**
+      * Unused command line tools and associated code were removed from the codebase to reduce technical debt. See https://github.com/ERDDAP/erddap/pull/432.
+      * A new feature flag `forceSynchronousLoading` has been added to override the default deferred dataset loading approach. This should rarely be needed, and only used in cases where deferred loading is causing issues. See the [feature flag page](/docs/server-admin/feature-flags#forcesynchronousloading) for details.
 
 ## Version 2.29.0 {#version-2290}
 (released 2025-12-15)

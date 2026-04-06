@@ -1,483 +1,498 @@
 ---
 title: "ERDDAP™ - Changes"
 ---
-#  ERDDAP™ Muutoksia
+#  ERDDAP™ Muutokset
 
- ERDDAP™ Hyvä esimerkki [Käyttäjälähtöinen innovaatio](https://en.wikipedia.org/wiki/User_innovation) Tuoteinnovaatiot tulevat usein kuluttajilta ( ERDDAP™ Käyttäjät) Ei pelkästään tuottajat ( ERDDAP™ Kehittäjät) . Vuosien saatossa suurin osa uusista ominaisuuksista ja muutoksista ERDDAP™ ovat tulleet käyttäjiltä. Nämä käyttäjät on hyvitetty alla hyvistä ideoistaan. Kiitos&#33; Pitäkää hyvät ehdotukset tulossa&#33;
+ ERDDAP™ on hyvä esimerkki [Käyttäjä-driven-innovaatio](https://en.wikipedia.org/wiki/User_innovation) , jossa tuoteinnovaatiot tulevat usein kuluttajilta ( ERDDAP™ käyttäjät) , ei vain tuottajat ( ERDDAP™ kehittäjät) . Vuosien mittaan suurin osa ideoista uusia ominaisuuksia ja muutoksia ERDDAP™ ovat tulleet käyttäjiltä. Nämä käyttäjät ovat hyvitetään alla heidän hyviä ideoita. Kiitos&#33; Pitäkää ne hyvät ehdotukset tulossa&#33;
 
-Tässä ovat muutokset, jotka liittyvät jokaiseen ERDDAP™ Vapautuminen.
+Tässä ovat kuhunkin liittyvät muutokset ERDDAP™ Vapauta.
 
+## Versio 2.10.0{#version-2300} 
+ (julkaistu 2026-04-07) 
 
-## Versio 2.29.0{#version-2290} 
- (2025-12-15) 
+Versio v2.30,0 keskittyy pitkälti vikakorjauksiin, huoltopäivityksiin vakauden ja turvallisuuden kannalta sekä suorituskyvyn parantamiseen.
 
-tarvittavaa toimintaa.
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+      * Parannettu [Kroissantti](https://mlcommons.org/working-groups/data/croissant/) metatietojen yhteensopivuus ja ilmeinen tuki, mukaan lukien [mlkroissantti](https://pypi.org/project/mlcroissant/) yhteensopivuus.
+      * Parannettu tuki parketille.
 
- ERDDAP™ versio 2.29.0 edellyttää jdk 25 tai uudempaa. Päivitä jdk-versiosi. Jos tämä on ongelma, voit rakentaa ERDDAP™ Vanhempi jdk (Ainakin 17) Muuttamalla pom.xml-tiedostoa. JDK 25 on LTS-versio Java Se sisältää paljon parannuksia, erityisesti parannettua suorituskykyä.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+      * Käyttämättömät komentorivityökalut ja niihin liittyvät koodit poistettiin koodiluettelosta teknisen velan vähentämiseksi. Katso https://github.com/ERDDAP/erddap/pull/432.
+ 
+      * Uusi ominaisuuslippu `VoimaSynchronousLoading` on lisätty, jotta voidaan ohittaa oletuslyhennetyn tietoaineiston lastaamisen lähestymistapa. Tätä pitäisi harvoin tarvita, ja sitä tulisi käyttää vain tapauksissa, joissa lykkäys aiheuttaa ongelmia. Katso [ominaisuus lippu sivu](/docs/server-admin/feature-flags#forcesynchronousloading) yksityiskohtaisesti.
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * ISO 19115 -versiot: Alla on admin info. Käyttäjille voit hakea erityisversioita ISO 19115 -metadatasta. Tehdään tämä Griddap/ tabledap Sivut, joilla tiedostotyyppi laskee. Nämä versiot ovat riippumattomia palvelimen oletusarvosta.
+## Versio 2.2.9.0{#version-2290} 
+ (julkaistu 2025-12-15) 
 
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Uutta, MQTT-tukea. Yksityiskohtia suosittelen lukemaan [Uusi sivu aiheesta.](/docs/server-admin/mqtt-integration) Tämä sisältää tietoaineistojen rakentamisen MQTT-viesteistä ja MQTT-viestien julkaisemisen, kun tietoaineisto muuttuu. Se on pois oletusarvoisesti, joten jos haluat käyttää sitä, sinun on otettava se käyttöön.
+Toimintaa tarvitaan.
 
-Kiitos Ayush Singhille MQTT:stä&#33;
+ ERDDAP™ versio 2.29.0 edellyttää jdk 25 tai uudempi. Päivitä jdk-versiosi. Jos se on ongelma, voit rakentaa ERDDAP™ vanhemmalle jdk:lle (takaisin vähintään 17:ään) muuttamalla pom.xml-tiedostoa. JDK 25 on LTS julkaisu Java ja sisältää monia parannuksia, erityisesti parannettua suorituskykyä.
 
-    * S3-parannukset: Lisätään S3 URI: n tuki kacheFromUrlin arvoksi. Tämä mahdollistaa ERDDAP Amazonaws.comin isännöimien yksityisten bucketien tukeminen Käsiteltiin myös S3-muistivuotokysymystä.
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * ISO 19115 -versiot: Katso alla admin info. Käyttäjille voit nyt pyytää tiettyjä versioita ISO 19115 metadatasta. Tee tämä ruudukosta / tabledap sivut tiedostolle, jonka tiedostotyyppi pudottaa alas. Nämä versiot ovat riippumattomia palvelimen oletuksesta.
+
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Uusi ominaisuus, MQTT tuki. Lisätietoja suosittelen lukea [Uusi sivu siitä.](/docs/server-admin/mqtt-integration) Tähän sisältyy mahdollisuus rakentaa MQTT-viestejä ja julkaista MQTT-viestejä, kun tietokokonaisuus muuttuu. Se on oletuksena pois päältä, joten jos haluat käyttää sitä, sinun täytyy ottaa se käyttöön.
+
+Kiitos Ayush Singh työtä MQTT&#33;
+
+    * S3:n parannukset: S3-URIen tuen lisääminen välimuistiksiUrl-arvosta. Tämä mahdollistaa ERDDAP tukea yksityisiä kauhoja isännöi pois amazonaws.com Käsitteli myös S3-muistivuotoa.
 
 Kiitos @SethChampagneNRL työstä S3&#33;
 
-    * ISO 19115 -versiot: ISO 19115 -metadatasta löytyy nyt kolme eri versiota. Oletusversiota ohjataan asetuksella.xml. Jos SISO19115 on virheellinen, palvelin antaa oletusarvoisesti NOAA Muutettu ISO19115_2. Jos SISISO19115 on totta, palvelin käyttää eri versiota sen mukaan, kuinka paljon se on. Jos SISO19139 on totta, oletusarvo on ISO19139_2007, jos se on väärä, oletusarvo on ISO19115_3_2016. Suosittelemme käyttämään SISISO19115=true ja käyttää SISO19139=false. Organisaatio voi vaatia erilaisia asetuksia.
+    * ISO 19115 -versiot: ISO 19115 -metatiedot tukevat nyt kolmea eri versiota. Oletusversiota ohjataan asetuksellasi.xml. Jos käyttöSisISO19115 on väärä, palvelin oletusarvoisesti antaa NOAA muutettu ISO19115_2. Jos käyttöSisISO19115 on totta, silloin palvelin käyttää erilaista versiota käytön arvosta riippuenSisISO19139. Jos käyttöSisISO19139 on totta, oletus on ISO19139_2007, jos käyttöSisISO19139 on virheellinen oletus on ISO19115_3_2016. Suosittelemme käyttämäänSisISO19115=true ja useSisISO19139=false. Organisaatiosi voi vaatia erilaisia asetuksia.
 
-    * Siirtyi Javaan. Aikakirjasto (Java.utilin sijaan. Gregoriaaninen kalenteri) . Tämä antaa suorituskyvyn parannuksia kyselyihin, joihin sisältyy päivämäärä / aika sarakkeet. Suurimmalle osalle aineistoista ei saisi olla havaittavia vaikutuksia. Yksi tiedossa oleva tapaus aiheuttaa muutoksen, jos tietoaineistoa käytetään `Vuodet 20000-01-01` tai vastaava. Jos ongelma on muuttuja, voit lisätä ` <att name="legacy_time_adjust"> Todellista </att> ` ja addAttributes Joko osa A dataVariable tai tai axisVariable .
+    * Siirretty javalle. aikakirjasto (Java.utilin sijasta. GregorianCalendar) . Tämän pitäisi parantaa suorituskykyä kyselyissä, joihin liittyy päivä-/aikasarakkeita. Suurimmalla osalla aineistoista ei pitäisi olla merkittäviä vaikutuksia. Yksi tunnettu tapaus, joka aiheuttaa muutoksen, on, jos tietokokonaisuus käyttää `päivää alkaen 0000-01-01` tai vastaavaa. Jos tämä on ongelma muuttuja, voit lisätä ` <att name="legacy_time_adjust"> tosi </att> ` ja addAttributes joko dataVariable tai axisVariable .
     
-    *    datasets.xml on nyt käsitelty a [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Sillä on monia käyttötarkoituksia, kuten yksityisten arvojen asettaminen. (kuin salasanat) ympäristömuuttujat. Tämä voidaan poistaa asettamalla EnvParsing väärennös asennus.xml.
+    *    datasets.xml on nyt käsitelty [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Tällä on monia käyttötarkoituksia, kuten yksityisten arvojen asettaminen (kuten salasanat) ympäristömuuttujien käyttö. Tämä voidaan kytkeä pois päältä asettamalla EnvParsing-toiminto vääräksi setup.xml:ssä.
 
-    * Paineakseli: Lisätään erityistapaus paineen määrittämiin korkeuksiin. Tätä käytetään pääasiassa meteorologian aineistoissa, joissa määritellään vertikaaliset korkeudet isobarisella tasolla. HUOMAUTUS: Pienemmät painearvot merkitsevät korkeampia korkeuksia, joten akseli kulkee metreissä tai jaloissa määritettyjen normaaleiden korkeuksien vastaisesti.
+    * Paineakseli: Lisää erityistapaus nousut määritelty paine. Tätä käytetään pääasiassa meteorologisissa aineistoissa, joissa määritetään isobaaristen tasojen pystysuorat nousut. HUOMAUTUS: Pienemmät painearvot tarkoittavat korkeampia nousuja, joten akseli kulkee metreinä tai jaloissa määriteltyä normaalia nousua vastapäätä.
 
 Kiitos [SethChampagneNRL](https://github.com/ERDDAP/erddap/pull/373) 
 
-    *    EDDGrid FromNcFiles, jossa on erilaisia ulottuvuuksia: On olemassa (Kokeellinen kokeilu) Tukea EDDGrid FromNcFiles-tietokoneissa on muuttujia, jotka eivät käytä samoja akseleita. Kerro, miten tämä toimii sinulle tai jos käytös ei näytä oikealta.
+    *    EDDGrid FromNcFiles: On. (kokeellinen) tuki EDDGrid FromNcFiles-aineistoissa on muuttujia, jotka eivät käytä samoja akseleita. Kertokaa, miten tämä toimii tai jos käytös ei tunnu aivan oikealta.
 
-    * On olemassa kokoelma optimointia, joiden pitäisi olla turvallisia, mutta on lippuja palata vanhaan käytökseen tarvittaessa. Jos löydät tarvetta asettaa jokin lippu, ilmoita vika. Jos kuulemme näistä ongelmista, suurin osa poistetaan tulevaisuudessa. Siellä on A [Uusi sivu ominaisuuslipuista](/docs/server-admin/feature-flags) Voit lukea näistä ja muista lipuista.
+    * On kokoelma optimointia, joka pitäisi olla turvallinen, mutta lippuja palata vanha käyttäytyminen tarvittaessa. Jos haluat asettaa lippuja, kirjoita vika. Jos emme kuule mitään kysymyksiä useimmat näistä poistetaan uuden käyttäytymisen oletuksen tulevaisuudessa. Siinä on... [uusi sivu ominaisuus liput](/docs/server-admin/feature-flags) jossa voit lukea näistä ja muista lippuja.
 
-      * kosketa kosketus Threads Vain vain vain vain Kun kohteet: Tämä on muutos, jotta touchThread toimii vain, kun kosketusjonossa on kohteita. Vähemmän lankaa on pieni optimointi, mutta silti hyödyllinen. Oletus on totta.
+      * kosketus Kierre Ainoastaan WhenItems: Tämä on muutos niin, että touchThreead on käynnissä vain, kun on kohteita jonossa koskettaa. Yksi vähemmän lankajuoksu on pieni optimointi, mutta silti hyödyllinen. Oletukset ovat totta.
 
-      * Käytännöllinen ForFiletable: Tämä muutos mahdollistaa sisäisen tiedostotaulukon käyttää nc-ominaisuuksia, erityisesti muuttuvaa todellista_range-ominaisuutta, jotta vältetään koko nc-tiedoston lukeminen. Tämä voi jyrkästi nopeuttaa nc-tiedostoihin perustuvien tietoaineistojen alkuperäistä lataamista, jos kunkin tiedoston muuttujan todellinen_range sisältyy attribuuttiin. Huomaa, että tämä luottaa arvoon, joten jos se on väärä, sisäinen tiedostotaulukko sisältää virheellisiä tietoja. Oletus on totta.
+      * useNcMetadata Tiedosto: Tämä muutos antaa sisäiselle tiedostotaulukolle mahdollisuuden käyttää nc-attribuutteja, erityisesti muuttuvaa aktuaalista_range-attribuuttia välttääkseen lukemasta koko nc-tiedostoa. Tämä voi nopeuttaa merkittävästi tiedostojen alkulataamista nc-tiedostojen perusteella, jos kunkin tiedoston kunkin muuttujan aktuaalinen_alue sisältyy määritteenä. Huomaa, että tämä luottaa arvoon, joten jos se on väärin, sisäisellä tiedostotaulukolla on vääriä tietoja. Oletukset ovat totta.
 
-      * ncheader Makefilia: Tämä muutos mahdollistaa nc-otsikkotiedostojen luomisen ilman edustavan nc-tiedoston ensimmäistä luomista. Tämä on pieni optimointi EDDTable, mutta suuri optimointi monille. EDDGrid pyyntöjä. Epäonnistuminen valheeseen (Väärin on suunniteltu optimoitu käyttäytyminen) .
+      * ncHeader MakeFile: Tämä muutos mahdollistaa nc otsikkotiedostojen tuottamisen luomatta ensin edustava nc-tiedostoa. Tämä on pieni optimointi EDDTable, mutta valtava optimointi monille EDDGrid pyynnöt. Oletukset väärälle (kuten väärä on tarkoitettu optimoitu käytös) .
 
-      * taustalla taustalla CreateSubset Pöytät: Tämä muutos siirtää osan tietoaineistojen alkuperäisestä käsittelystä taustasäikeeseen. Tämä parantaa tietojen lataamisen aikaa. Erityisesti viivästynyt osa on subset-taulukoita, jotka syntyvät tarvittaessa myös, jos viivästynyt käsittely ei ole vielä tapahtunut. Oletus on totta.
+      * Tausta Luo subset Taulukot: Tämä muutos siirtää osan tietojen alustavasta käsittelystä taustaksi. Tämän pitäisi parantaa tietoaineistojen lastausaikaa. Erityisesti viivästynyt osa on subset taulukoita, jotka ovat myös syntyy tarvittaessa, jos viivästynyt käsittely ei ole tapahtunut vielä. Oletukset ovat totta.
 
-    * Muutamia pieniä muutoksia, vikoja (Kiitos Italo Borrelli EDDTableFromAggregateRowsin korjauksesta, Kiitos @SethChampagneNRL, joka mahdollistaa yli 360 pituudet EDDGrid LonPM180 ja useita muita vikoja) ja optimointi.
+    * Joitakin pieniä muutoksia, korjauksia (Kiitos Italo Borrellille EDDTableFromAggregateRowsista, Kiitos. @SethChampagneNRL mahdollistaa pituuspiirien yli 360 EDDGrid LonPM180 ja useita muita korjauksia) , ja optimointia.
 
-*    **For For ERDDAP™ Kehittäjät:** 
-    * Lisäoptimoinnit, mukaan lukien testiaika puoleen.
+*    **-Ei. ERDDAP™ Kehittäjät:** 
+    * Lisäoptimointi, mukaan lukien leikkaus testi ajoaika puoli.
 
-    * Uusia testiprofiileja erittäin flaky (Ulkoinen ulkoinen ulkoinen ulkoinen ulkoinen ulkoinen ulkoinen ulkoinen ulko ulkoinen ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko ulko) Erittäin hidasta (hitaasti) testejä.
+    * Uusi testiprofiileja hyvin hiutaleita (ulkoinen) tai erittäin hitaasti (hidas AWS) testit.
 
-## versio 2.28.1{#version-2281} 
- (Lähde: 2025-09-05) 
+## Versio 2.28.1{#version-2281} 
+ (julkaistu 2025-09-05) 
 
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Lisätty X-Forwarded-Prefix. Tämä on erityisen kiinnostavaa hallinnoida palvelimia alipaatilla. Lue päivitetyt dokumentit [Apasseja](/docs/server-admin/deploy-install#apache) ja [Nginx](/docs/server-admin/deploy-install#nginx) Lisätietoa.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Lisätty tuki X-Forwarded-Prefixille. Tämä on erityisen mielenkiintoista ylläpitäjille, jotka käyttävät palvelimia subpath. Lue päivitetyt dokumentaatiomme [Apassi](/docs/server-admin/deploy-install#apache) sekä [Nginx](/docs/server-admin/deploy-install#nginx) Lisätietoja.
 
 Kiitos [@srstsavage](https://github.com/srstsavage) 
 
 ## Versio 2.28.0{#version-2280} 
- (Lähde: 2025-08-29) 
+ (julkaistu 2025-08-29) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    *    [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html) on nyt saatavilla. Admins voi hallita, käyttääkö oletusmetadata Croissant, mutta alkaen 2.28.0 voit pyytää Croissant-määritelmän uudella vientitiedostotyypillä ".croissant" (Mikä on jsonld-tiedosto) .
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    *    [Kroissanttiskeema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html) on nyt käytettävissä. Admins voi valvoa, käyttääkö oletusmetadata Croissant, mutta alkaen 2.28.0 voit pyytää Croissant määritelmä uuden vientitiedoston tyyppi ".croissant" (joka tarjoaa jsonld-tiedoston) .
 
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Uusi Docker Kuva jokaisesta yhdistyneestä vetopyynnöstä. Nämä ovat alfa-rakentamista, niitä ei ole versioitu. Niissä on merkintä "20250814T034025", joka osoittaa, milloin se on rakennettu. Jos haluat kokeilla uusimpia ominaisuuksia, voit käyttää niitä. Jos haluat jotain vakaampaa, käytä julkaisujamme semanttisella versiotunnuksella (2.28.0) . Tavoitteenamme on, että alfa-julkaisut ovat käyttökelpoisia, mutta niille on vähemmän testausta kuin versioituja julkaisujamme. Suosittelemme, että käytät jotain vähintään yhtä uutta kuin viimeisin julkaisu, joka on uusin versioversio.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Uusi koira Kuva luotiin jokaiseen yhdistettyyn nostopyyntöön. Nämä ovat alfarakennelmia, ne eivät ole versioituja julkaisuja. Heillä on merkintä kuten "20250814T034025," joka osoittaa, milloin se on rakennettu. Jos haluat kokeilla uusimmat ominaisuudet voit käyttää näitä. Jos haluat jotain vakaampaa käyttää julkaisuja semanttinen versio tag (esim. 2.28.0) . Pyrimme aina siihen, että alfaversiot ovat käyttökelpoisia, mutta niitä testataan vähemmän kuin versioitamme. Suosittelemme aina, että käytät jotain vähintään yhtä uutta kuin "viimeinen" julkaisu, joka on viimeisin semanttinen versio.
 
-    * Docker Kuvat nyt saatavilla [GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) lisäksi [DockerHub](https://hub.docker.com/r/erddap/erddap) .
+    * Docker Kuvat nyt saatavilla [GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) Lisäksi [DockerHub](https://hub.docker.com/r/erddap/erddap) .
 
-Kiitos [@ocefpaf](https://github.com/ocefpaf) , [@abkfenris](https://github.com/abkfenris) , [@srstsavage](https://github.com/srstsavage) ja [Matematiikka](https://github.com/MathewBiddle) heidän panoksestaan Dockerin kuvien ympärillä. Tähän sisältyi ensimmäiset panokset kaikista paitsi @stssavage&#33;
+Kiitos [@ ocefpaf](https://github.com/ocefpaf) , [@abkfenris](https://github.com/abkfenris) , [@srstsavage](https://github.com/srstsavage) ja [Mathew Biddle](https://github.com/MathewBiddle) Heidän panoksensa Docker Images. Tähän sisältyivät ensimmäiset panokset kaikilta paitsi @stststavage&#33;
     
-    * Tukea on nyt luotu [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html) tiedostoja. Se on oletusarvoisesti päällä. Voit poistaa Croissant-rakenteen asennuksessa.xml (EI VÄLTÄ: Ole hyvä ja ota yhteys GitHubiin, jos sinun on tehtävä tämä.) :
+    * Nyt tuetaan tuotantoa [Kroissanttiskeema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html) tiedostot. Se on oletusarvoisesti päällä. Voit poistaa Croissant skeema sinun setup.xml (EI SUOSITELTU - Ota yhteyttä tai arkistoi kysymys GitHub jos tarvitset tätä) :
     ```
         <generateCroissantSchema>false</generateCroissantSchema>
     ```
 
-    * Joissakin tilanteissa oletusarvot ovat muuttuneet. Käytä HeadersForUrlia ja käytä EddReflectionia nyt molemmat oletusarvoisesti. Jos ne aiheuttavat ongelman ja sinun on asetettava ne väärään, luo ongelma. Tarkoituksena on poistaa ne tulevaisuudessa.
+    * Joidenkin asetusten oletusarvoja on muutettu. useHeadersForUrl and useEdddReflection now both default to true. Jos ne aiheuttavat ongelmia ja sinun täytyy asettaa ne vääriksi, luo ongelma. Tarkoituksena on poistaa ne tulevaisuudessa.
 
-    * Joitakin asetuksia on poistettu. SharedWatchService and redirectDocumentation Näytä tarkat tiedot ToGitHubIo oli asetettu todeksi oletusarvoisesti useista julkaisuista ja testattu melko hyvin tässä vaiheessa. Niiden poistaminen on sallittua koodin puhdistukseen.
+    * Jotkut asetukset on poistettu. useSharedWatchService and removalDocumentation ToGitHubIo oli asetettu todeksi oletuksena useita julkaisuja ja melko hyvin testattu tässä vaiheessa. Näiden poistaminen salli koodin puhdistamisen.
 
-    * Pieniä muutoksia, vikoja ja optimointia.
+    * Joitakin pieniä muutoksia, korjauksia ja optimointia.
 
-*    **For For ERDDAP™ Kehittäjät:** 
-    * Paljon kuollutta koodia poistettu. Paljon varoituksia on korjattu.
+*    **-Ei. ERDDAP™ Kehittäjät:** 
+    * Paljon kuollutta koodia poistettu. Monet varoitukset on korjattu.
 
 ## Versio 2.27.0{#version-2270} 
- (2025-06-11) 
+ (julkaistu 2025-6-11) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * Uusia tietoja väripalkkien muuntimeen palvelimilla osoitteessa /erddap/convert/color.html
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * Uudet tiedot väripalkin muunnin palvelimet at /erddap/convert/color.html
 
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Oletuskäyttäytyminen on, että välimuisti on nyt puhdistettu riippumattomaksi tärkeimmästä kuorma-aineistotehtävästä. Tämä mahdollistaa vanhojen välimuistitiedostojen luotettavamman ja säännöllisemmän puhdistuksen. Lisätyötä palvelimen käyttäytymisen parantamiseksi, kun levytila on alhainen (palauttaa virheen pyyntöihin, jotka saattavat saada palvelimen loppumaan avaruudesta, ja puhdistaa välimuistia useammin matalissa levytilanteissa, jotta virheet voidaan estää.) . Sisällä datasets.xml   (Asennus.xml) Voit lisätä / asettaa uuden välimuistin ClearMinutes-parametri valvoo, kuinka usein palvelin tarkistaa välimuistin puhdistamiseksi. Huomautus: olemassa oleva kacheMinutes-parametri ohjaa säilytettävien tiedostojen ikää, uutta välimuistia ClearMinutes on sitä, kuinka usein selkeitä on.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Oletuskäyttäytyminen on, että välimuisti on nyt tyhjennetty riippumatta tärkeimmistä kuormitustiedostoista. Tämä mahdollistaa luotettavamman ja säännöllisemmän vanhojen välimuistitiedostojen tyhjentämisen. Lisätyötä palvelimen käyttäytymisen parantamiseksi, kun levytilaa on vähän (palauttaa virhe pyyntöjä todennäköisesti saada palvelimen loppuu tilaa, ja tyhjentää välimuisti useammin pienissä levyolosuhteissa yrittää estää virheitä) . Sisään datasets.xml   (tai setup.xml) Voit lisätä tai asettaa uuden välimuistin ClearMinutes-parametrin avulla ohjataan, kuinka usein palvelin tarkistaa tyhjentää välimuistin. Huomaa, nykyinen välimuistiMinute parametri ohjaa ikä säilytettävät tiedostot, uusi välimuisti ClearMinutes on niin usein tehdä chache selkeä.
     ```
         <cacheClearMinutes>15</cacheClearMinutes>
     ```
-Voit poistaa uuden välimuistin selkeitä tarkastuksia asettamalla tehtäväCacheClear väärään asennus.xml, vaikka sitä ei suositella.
-Cash ClearMinutes on myös [Datan dokumentointi](/docs/server-admin/datasets#cacheclearminutes) .
+Voit poistaa uuden välimuistin selkeät tarkastukset asettamalla tehtävänCacheClear false in setup.xml, vaikka sitä ei suositella.
+välimuisti ClearMinutes on myös [tietoaineistoasiakirjat](/docs/server-admin/datasets#cacheclearminutes) .
     
-    * Paikallistettu metadatatuki. Se tukee arvojen lokalisointia addAttributes osasto. Yksinkertaisesti lisätä attribuutti ylimääräinen xml:lang tunniste. Voit esimerkiksi lisätä ranskankielisen otsikon aineistoon addAttributes Osasto sisältää:
+    * Paikallinen datadatatuki. Se tukee lokalisointia arvojen addAttributes kohta. Yksinkertaisesti lisätä ominaisuus kanssa ylimääräinen xml:lang tag. Esimerkiksi lisätä ranskalainen otsikko tiedoston addAttributes kohta sisältää:
     ```
         <att name="title">Data from a local source.</att>
         <att name="title" xml:lang="fr">Donn&#xE9;es provenant d'une source locale.</att>
     ```
-Lisätietoja saatavilla [Paikalliset metatiedot](/docs/server-admin/localized-metadata) .
+Lisätietoja: [paikallinen metatietodokumentaatio](/docs/server-admin/localized-metadata) .
 
-    * Uusi Docker Yhdistä tiedosto, jossa on vaihtoehtoja SSL: lle ja barebones Prometheus -palvelimelle. Kiitos Shane St. Savage SSL ja Jiahui Hu Prometheus.
+    * Uusi koira Kokoa tiedosto SSL:n ja Prometheus-palvelimen valinnoilla. Kiitos Shane St. Savage SSL ja Jiahui Hu Prometheus.
 
-    * Tuki tietojen käyttämiseen otsikoissa palvelimen URL-osoitteen määrittämiseksi konfigurttitiedoston sijasta. Näin palvelimeen pääsee useilla nimillä ja se voi yksinkertaistaa tiettyjä kokoonpanoja. Ole hyvä ja lähetä palautetta.
+    * Tuki tiedon käytölle otsikoissa palvelimen URL-osoitteen määrittämiseksi sen sijaan, että käytettäisiin konfig-tiedostoa. Näin palvelimeen pääsee useilla nimillä ja se voi yksinkertaistaa tiettyjä konfiguraatioita. Ota se käyttöön ja lähetä palautetta.
     ```
         <useHeadersForUrl>true</useHeadersForUrl>
     ```
 
-    * Pieniä muutoksia, vikoja ja optimointia.
+    * Joitakin pieniä muutoksia, korjauksia ja optimointia.
 
-*    **For For ERDDAP™ Kehittäjät:** 
-    * Refactor to how output tiedostotyypit määritellään koodissa. Tämä pitäisi tehdä, jotta tiedostotyypit voidaan lisätä ilman tarvetta koskettaa monia koodipaikkoja.
+*    **-Ei. ERDDAP™ Kehittäjät:** 
+    * Refaktori siihen, miten tulostiedostotyypit on määritelty koodissa. Tämän pitäisi tehdä siitä niin tiedostotyypit voidaan lisätä ilman koskettaa monia koodi paikkoja.
 
 ## Versio 2.26{#version-226} 
- (Lähde: 2025-03-31) 
+ (vapautettu 2025-03-31) 
 
-*    **Kaikille:** 
-    * Suuri päivitys dokumenttisivuillemme:https://erddap.github.io/
-Päivitetyn ulkonäön lisäksi on parannettu navigointia, hakua, käännöstä, ja sen pitäisi olla helpompi jatkaa eteenpäin.
+*    **Kaikki:** 
+    * Suuri päivitys dokumentaatioon: https://erddap.github.io/
+ 
+Päivitetyn ulkoasun lisäksi on parannettu navigointia, hakua, kääntämistä, ja sen pitäisi olla helpompaa jatkaa eteenpäin&#33;
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * Tilaukset ja RSS Päivitykset pitäisi tapahtua luotettavammin tietoaineistoissa, joita päivitetään usein tiedostojen muutoksista.
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * Tilaukset ja RSS Päivitykset tulisi tapahtua luotettavammin tiedostoissa, jotka päivitetään usein tiedostojen muutoksista.
 
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Epäonnistuminen vaatii / tukee Java 21. Takaisin tähän julkaisuun on helppo tehdä Java 17 Yhteensopiva binääri.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Oletusjulkaisu vaatii/tukea Java versio 21. Takaisin tässä julkaisussa pystyy helposti tekemään Java 17 yhteensopiva binääri.
 
-    * Uusi ominaisuus muokata tietoja, jotka on esitetty UI: n tietoaineistoista. Odotamme, että tämä on erityisen hyödyllistä, jotta voidaan lisätä esimerkiksi tietoaineistoa. Lisätietoja voit lukea [Uusia dokumentteja](/docs/server-admin/display-info) . Kiitos Ayush Singhille&#33;
+    * Uusi ominaisuus muokata tietoja näytetään datakokonaisuuksia käyttöliittymässä. Odotamme tämän olevan erityisen hyödyllistä lisätä asioita, kuten tietoaineistoviittauksia. Lisätietoja voit lukea [uudet asiakirjat](/docs/server-admin/display-info) . Kiitos Ayush Singh lahjoituksesta&#33;
 
-    * Lisätietoja Prometheus Metrics Suurin on ` http _request_duration_seconds Näytä tarkat tiedot` jotka sisältävät pyynnön vastausajat, jotka on jaettu: "pyyntö_tyyppi", "dataset_id", "dataset_type", "file_type", "lang_code", "status_code"
-Tämä kone luettava muoto mahdollistaa paremman kokoelman mittareita ymmärtää, miten käyttäjät käyttävät palvelinta.
+    * Muut Prometheus-mittarit. Suurin on ` http _Pyydän_kesto_sekuntia` joka sisältää pyyntövastausajat eriteltyinä seuraavasti: "request_type," "dataset_id," "dataset_type," "file_type," "lang_code," "status_code"
+Tämä koneen luettavissa muodossa mahdollistaa paremman kokoelman metrit ymmärtää, miten käyttäjät käyttävät palvelimen.
 
-    * Uusi tapa luoda ISO19115 XML -tiedostoja Se käyttää Apache SIS ja on uusi vaihtoehto tässä julkaisussa. Ole hyvä ja lähetä palautetta.
+    * Uusi tapa tuottaa ISO19115 XML-tiedostoja. Se käyttää Apache SIS ja on uusi vaihtoehto tässä julkaisussa. Ota se käyttöön ja lähetä palautetta.
     ```
         <useSisISO19115>true</useSisISO19115>
     ```
 
-    * UI luo nyt yksittäisiä linkkejä jokaiseen URL-osoitteeseen, kuten infoUrl Yhteenveto.
+    * Käyttöliittymä nyt luoda yksittäisiä linkkejä kunkin url aloilla kuten infoUrl ja yhteenveto.
 
-    * Tilaukset ja RSS Päivitykset pitäisi tapahtua luotettavammin tietoaineistoissa, joita päivitetään usein tiedostojen muutoksista. Jos tämä aiheuttaa ongelmia, ota yhteyttä GitHubiin ja poista toiminnallisuus lisäämällä alla oleva lippu asentoon.
-Ei sovittu
+    * Tilaukset ja RSS Päivitykset tulisi tapahtua luotettavammin tiedostoissa, jotka päivitetään usein tiedostojen muutoksista. Jos tämä aiheuttaa ongelmia, ota yhteyttä GitHubiin ja poista toiminnallisuus lisäämällä alla oleva lippu setup.xml:iin.
+EI SUOSITELLUT
     ```
         <updateSubsRssOnFileChanges>false</updateSubsRssOnFileChanges>
     ```
 
-    * Subset-muuttujat eivät enää tuota automaattisesti EDDTableFromNcCFiles-tiedostotyyppiä. Jos luotat käytökseen, voit myös (Mieluiten ratkaisu) Lisätään subsetVariables Tietojen määrittely omassa datasets.xml tai lisää alla oleva lippu asetukseen.xml. Jos tunnet tarvetta kääntää tämä, ota yhteyttä GitHubiin, jotta voimme tukea käyttötapaustasi eteenpäin.
-Ei sovittu
+    * Subset-muuttujia ei enää synny automaattisesti tiedostotyypille EDDtableFromNcCFFiles. Jos luotit käytökseen, voit joko (Suosittu liuos) Lisää subsetVariables tietokokonaisuuden määritelmään datasets.xml , tai lisätä alla lippuun setup.xml. Jos tunnet tarvetta käynnistää tämä, ota yhteyttä GitHub, jotta voimme paremmin tukea käyttö tapauksessa eteenpäin.
+EI SUOSITELLUT
     ```
     <includeNcCFSubsetVariables>true</includeNcCFSubsetVariables>
     ```
 
-    * Palvelin ohjaa dokumentaatiopyynnöt uudelleen (lataukset / mikä on dokumentaatio, joka on siirretty) uuteen dokumentointisivustoon. Tarvittaessa voit poistaa lipun asennus.xml:
-Ei sovittu
+    * Palvelin ohjaa dokumentointipyynnöt uudelleen (alle lataukset / joka on asiakirjat, jotka on siirretty) uuteen dokumentaatioon. Tarvittaessa voit poistaa tämän lipun setup.xml:
+EI SUOSITELLUT
     ```
         <redirectDocumentationToGitHubIo>false</redirectDocumentationToGitHubIo>
     ```
 
-    * Pieniä muutoksia ja vikoja.
+    * Joitakin pieniä muutoksia ja korjauksia.
 
-*    **For For ERDDAP™ Kehittäjät:** 
-    * Lisää koodin laatua ja koodin puhdistusta. Tämä sisältää pieniä optimointeja, suljettavien resurssien parempaa käsittelyä ja siirtymistä pois pitkistä vanhentuneista tietotyypeistä. (kuin vektori) .
+*    **-Ei. ERDDAP™ Kehittäjät:** 
+    * Lisää koodin laadun parannuksia ja kuollut koodi puhdistus. Tähän kuuluvat pienet optimoinnit, tukossa olevien resurssien parempi käsittely ja siirtyminen pois vanhentuneista tietotyypeistä (Kuten vektori) .
 
-    * Suuri refactoring EDStatic poistaa suurimman osan konfigurista, viestistä ja metrinen koodi. Se myös parantaa hakemistojen aloittamista ja käsittelyä. (Näitä kahta viimeistä on vielä tehtävä.) 
+    * Suuri refaktori ED Staattinen poistaa suurimman osan config, viesti, ja metrinen koodi. Se myös paremmin tiivistää alustus ja käsittely hakemistopolkuja (Näillä kahdella viimeisellä on vielä tehtävää.) 
 
-    * Virallisesti tuettu Docker Image. Suunnitelman tarkoituksena on viimeistellä ja vapauttaa ERDDAP™ 2.26 Käytettävissä.
+    * Paljon edistystä kohti virallisesti tuettu Docker Image. Suunnitelma on viimeistellä ja vapauttaa jälkeen ERDDAP™ 2.26 Julkaisu on saatavilla.
 
 ## Versio 2.25{#version-225} 
- (Lähde: 2024-10-31) 
+ (julkaistu 2024-10-31) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * EDDTableFromFiles voi nyt tukea kyselyjä vain johdetuilla tuotteilla. (Globaalit, jexl-skriptit tai muuttujat) .
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * EDDTableFromFromFiles voi nyt tukea kyselyjä vain johdettu lähtö (Globals, Jexl script, tai muuttujat) .
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Versio 2.25 edellyttää Java 21 tai uudempi. Tämä on LTS-versio ja se on ollut saatavilla yli vuoden.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Versio 2.25 vaatii Java 21 tai uudempi. Tämä on LTS-versio, joka on ollut saatavilla yli vuoden.
          
-    * Jaettu huolto on nyt oletus. Jos haluat poistaa sen, ota yhteyttä jouluun. John at noaa.gov, jotta voin parantaa sitä tulevissa versioissa ja lisätä:
-        &lt;Käyttöjärjestelmä: ShareedWatchService&gt; False&lt;/useSharedWatchService &gt; asennus.xml.
+    * Jaettu katselupalvelu on nyt oletus. Jos haluat poistaa sen käytöstä, ota yhteyttä Chrisiin. John at Noaa.gov kertoa minulle, jotta voin parantaa sitä tulevissa versioissa ja lisätä:
+        &lt;useSharedWatchService&gt;false&lt;/useSharedWatchService&gt; asetukset.xml.
          
-    * The ERDDAP™ Servlet alkaa nyt palvelimen käynnistyksestä. Tämä tarkoittaa, että tietoaineistot alkavat ladata välittömästi sen sijaan, että odottaisivat pyyntöä.
+    * • ERDDAP™ servlet alkaa nyt palvelimen käynnistymisestä. Eli tietoaineistot alkavat lastata välittömästi sen sijaan, että odottaisivat pyynnön esittämistä.
          
-    * EDDTableFromMultidimNcFilesin poistoMVRows-parametri vaikuttaa nyt. Väärin asettaminen voi merkittävästi nopeuttaa joitakin kyselyjä, mutta tämä ei välttämättä sovellu kaikille tietoaineistoille. Lisätiedot näkevät [Parametrin kuvaus](/docs/server-admin/datasets#removemvrows) .
+    * Poista MVRows parametri EDDTableFromMultidimNcFiles on nyt vaikutus. Sen asettaminen vääräksi voi nopeuttaa merkittävästi joitakin kyselyitä, mutta tämä ei välttämättä sovellu kaikkiin tietokokonaisuuksiin. Lisätietoja: [parametrin kuvaus](/docs/server-admin/datasets#removemvrows) .
          
-    * Dataa (EDDTableFromNcFiles ja EDDGrid Lähde: NCFiles) Nyt tuetaan zarr-tiedostoja. Niiden on sisällettävä joko tiedoston NameRegex tai PathRegex. Nähdään [zarr secion aineistojen dokumentaatiossa](/docs/server-admin/datasets#zarr) Lisää yksityiskohtia.
+    * Dataset (EDDTableFromNcFiles ja EDDGrid FromNcFiles) Zarr-tiedostojen käyttäminen on nyt tuettu. Niiden on sisällettävä "Star" joko tiedostonNameRegex tai polkuRegex. Katso [Zarr secion tietoaineistoissa](/docs/server-admin/datasets#zarr) Lisätietoja.
          
-    * EDDTableFromParquetFiles on nyt tuettu. Nähdään [EDDTableFromParquetFiles secion aineistojen dokumentaatiossa](/docs/server-admin/datasets#eddtablefromparquetfiles) Lisää yksityiskohtia.
+    * Uusi tiedostotyyppi, EDDtableF fromParquetFiles on nyt tuettu. Katso [EDDTableFromParquetFiles secion in the datas documentation](/docs/server-admin/datasets#eddtablefromparquetfiles) Lisätietoja.
          
-    *    [Prometheus metriikka](https://prometheus.io/) Saatavilla osoitteessa /erddap/metrics.
+    *    [Prometheus-mittarit](https://prometheus.io/) ovat nyt saatavilla osoitteessa /erddap/metrics.
          
-    * Saatavilla on uusi XML-sovellus. Tämä uusi pakkaus mahdollistaa Xincluden käytön datasets.xml . Kiitos Ayush Singhille.
+    * Saatavilla on uusi XML:n jäsennin. Tämä uusi jäsennin mahdollistaa XInclude- datasets.xml . Kiitos Ayush Singh ominaisuus.
          
-    * Uusi parametri datasets.xml Epätavallisten sähköpostien hallinta. Epätavallista toimintaa Epäonnistuneita oletusarvoja 25%. Kiitos Ayush Singhille.
+    * Uusi parametri datasets.xml hallita epätavallisia toimintasähköposteja. epätavallinen toiminta EpäonnistuiEnnen 25 prosentin arvoa. Kiitos Ayush Singh ominaisuus.
          
-    * Uusi parametri asennuksessa.xml, joka valvoo, jos tietoaineiston latausvirheet näkyvät status.html-sivulla. Se laiminlyö totta, poistaa tietoaineistovirheet status-sivulla, määrittää showLoadErrorsOnStatusPage vääräksi:&lt;ShowLoadErrorsOnStatusPage &gt; Väärä&lt;/showLoadErrorsOnStatusPage
+    * Uusi parametri setup.xml, joka ohjaa, jos tiedoston latausvirheet näkyvät tila.html-sivulla. Se oletetaan todeksi, poistaaksesi tiedostovirheet tilasivulta, set showLoadErrorsOnStatusPage to false:&lt;näytäLoadErrorsOnStatusPage&gt;false&lt;/showLoadErrorsOnStatusPage&gt;
          
-    * Pieniä muutoksia ja vikoja.
+    * Joitakin pieniä muutoksia ja korjauksia.
          
-*    **For For ERDDAP™ Kehittäjät:** 
-    * Yksikköön ja integraatioon erillinen testi (hitaasti hidas hitaasti) testejä. Testit on otettu käyttöön ja testejä on tehty vähemmän.
+*    **-Ei. ERDDAP™ Kehittäjät:** 
+    * Testaus erotettuna yksikköön ja integrointiin (hidas) testit. Myös enemmän testejä käytössä ja testejä on tehty vähemmän hiutaleita.
          
-    * Error Prone (Joitakin tarkastuksia on edelleen poistettu käytöstä) Spot Bugs on integroitu Mavenin kautta.
+    * Virhe Prone (joitakin tarkastuksia edelleen pois käytöstä) ja Spot Bugs integroitu Maven.
          
-    * Täyden koodin pohja on muotoiltu Google Style Guiden mukaan.
+    * Täysi koodipohja muotoiltu vastaamaan Google Style Guide.
          
 
 ## Versio 2.24{#version-224} 
- (Lähde: 2024-06-07) 
+ (julkaistu 2024/06-07) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * Uusi väripaletti EK80 akustisille aineistoille. Kiitos Rob Cermakille tästä.
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * Uusi väripaletti EK80 akustisille aineistoille. Kiitos Rob Cermakin.
          
-    * Korjataan ongelma, jossa EDDTableAggregateRows ei ollut oikea valikoima kaikista lapsista. Kiitos Marco Alban korjaus- ja bug-raportista.
+    * Korjaa kysymys, jossa EDDtableAggregateRows ei näytä asianmukaista vaihteluväliä kaikista lapsista. Kiitos Marco Alba korjaus ja vikaraportti.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Tehtävä: Turvallisuus muuttuu: Googlen todentaminen saattaa vaatia muutoksia CSP:hen.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * TOIMIA: TURVALLISUUSMUUTOS: Google Authentication saattaa vaatia muutoksia CSP.
         
-Erityisesti sinun täytyy myös lisätähttps://accounts.google.com/gsi/stylestlye-src jahttps://accounts.google.com/gsi/Yhteys src. Käsikirjoitusta varten voit käyttäähttps://accounts.google.com/gsi/client.
+Erityisesti voit myös lisätä https://accounts.google.com/gsi/style stlye-src ja https://accounts.google.com/gsi/ Connect-src. Skripti-src voit nyt käyttää https://accounts.google.com/gsi/client.
+ 
         
-Lisätietoja voit mennä [Google-sivut](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid#content_security_policy) CSP:n kokoonpano.
+Lisätietoja saat osoitteesta [Googlen sivu](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid#content_security_policy) CSP-asetuksista.
          
         
-    * Uusi jaettu kellopalvelu. Tämä on uusi vaihtoehto päivitysten hakemistojen katseluun. Siinä on yksi lanka jokaiselle tiedostojärjestelmälle yhden langan sijaan. Todennäköisesti tämä vähentää huomattavasti muutosten seurannassa käytettävien lankojen määrää. Se tarkoittaa, että kaikki tietoaineistot päivittyvät yhteen sen sijaan, että jokainen tietoaineisto on oma päivitystaajuus. Tämä tarkoittaa useammin päivityksiä useimpiin tietoihin.
+    * Uusi yhteinen kellopalvelu. Tämä on uusi vaihtoehto katsella kansioita päivityksiä. Siinä on yksi lanka kutakin tiedostojärjestelmää kohti yhden säikeen sijaan. Todennäköisesti tämä vähentää huomattavasti säikeitä käytetään seurata muutoksia. Se tarkoittaa, että kaikki tietokokonaisuudet saatetaan ajan tasalle sen sijaan, että kullakin aineistolla olisi oma päivitystaajuus. Todennäköisesti tämä tarkoittaa useammin päivityksiä useimmissa tietokannoissa.
         
-Tämän lisäyksen mahdollistaminen&lt;ShareedWatchService &gt; True&lt;/useSharedWatchService &gt; asennus.xml.
+Tämän lisäyksen mahdollistamiseksi&lt;useSharedWatchService &gt;true&lt;/useSharedWatchService&gt; asetukset.xml.
         
           
-Kokeile tätä ja kerro, miten se toimii sinulle. Johanneksessa Noaa.gov.
+Kokeile tätä ja raportoi miten se toimii sinulle Chris. John Noaa.govissa.
          
-    * Korjaa virheelliset vaihtelevat nimet lokeissa. Kiitos Ayush Singh korjauksesta.
+    * Korjaa virheelliset var nimet lokeihin. Kiitos Ayush Singhille.
          
-    * Pieniä muutoksia ja vikoja.
+    * Joitakin pieniä muutoksia ja korjauksia.
          
-*    **Parannuksia ERDDAP™ Kehittäjät:** 
-    * Tukea paikalliseen kehitykseen Dockerin avulla. Kiitos Matt Hopson ja Roje.
+*    **Parannukset ERDDAP™ kehittäjät:** 
+    * Tuetaan paikallista kehitystä Dockerin avulla. Kiitos, Matt Hopson ja Roje.
          
-    * Tukee paikallista kehitystä Jettyn ja dokumentointien avulla. Kiitos Micah Wengren.
+    * Tuki paikalliselle kehitykselle Jettyn ja dokumentaation parannusten avulla. Kiitos, Micah Wengren.
          
-    * Muutokset testeihin, joilla pyritään vähentämään ongelmia yli alustan. Kiitos Shane St. Savage.
+    * Muutoksia testeissä ongelmien vähentämiseksi eri foorumeilla. Kiitos. Shane St. Savage.
          
 
 ## Versio 2.23{#version-223} 
- (Lähde: 2023-02-27) 
+ (julkaistu 2023-02-27) 
 
-Huomaa, että Bob Simons teki tämän julkaisun ja osoitti, että hän on edelleen lähellä ja aktiivinen siirtyessään Chris Johniin. Tämän julkaisun jälkeen kaikki koodimuutokset tehdään Chis Johnin toimesta, ellei toisin mainita.
+Huomaa, että tämän julkaisun teki Bob Simons, mikä osoittaa, että hän on edelleen läsnä ja aktiivinen siirtymisen aikana Chris John, hänen seuraajansa. Chis John tekee kaikki koodimuutokset, ellei toisin mainita.
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    *    (Ei kukaan)   
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    *    (Ei ole)   
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Tehtävä: Turvallisuus muuttuu: Google Authentication on nyt saatu aikaan uuden Google Identity Services -kirjaston kautta, joka on osa kirjautumista Googleen. Googlen tuki vanhaan Google Sign -järjestelmään lopetetaan 2023-03-31. Jos käytät Google Authenticationia ERDDAP™ Asennus, sinun on päivitettävä ERDDAP™ 23+ ennen sitä. (Bob pahoittelee lyhyttä varoitusta. Se on Bobin vika.)   
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * TOIMIA: TURVALLISUUSMUUTOS: Google Authentication toteutetaan nyt uuden Google Identity Services -kirjaston kautta, joka on osa "Sign In with Google" -ohjelmaa. Googlen tuki vanhalle "Google Sign In" -järjestelmälle lopetetaan 2023-03-31. Joten jos käytät Google Authenticationia ERDDAP™ asennus, sinun täytyy päivittää ERDDAP™ v2,23+ ennen sitä. (Bob on pahoillaan lyhyellä varoitusajalla. Se on Bobin syytä.)   
          
-    * NCCSV on nyt v1.2. Muutos on, että tiedostot ovat nyt UTF-8-kooditiedostoja. (He olivat ASCII) Ja niin voi nyt sisältää mitä tahansa Unicode-hahmoa sellaisena kuin se on, koodaamatta kuin #u_hhhhh.
-Kun kirjoitat NCCSV-tiedostoja, ERDDAP™ V1.2-tiedostot.
-         ERDDAP™ Lue NCCSV-tiedostoja, jotka seuraavat v1.0- ja v1.1-määritystä.
-Kiitos Pauline-Chauvet, n-a-t-e ja thogar-tietokone ehdottaa tätä ja tehdä testejä varmistaa erilaisia laskentataulukko-ohjelmia voi tuoda UTF-8 tiedostoja. Kiitos Bob Simonsille koodin muutoksista.
+    * NCCSV on nyt v1.2. Muutos on, että tiedostot ovat nyt UTF-8 koodatut tiedostot (Ne olivat ASCII) ja niin voi nyt sisällyttää mikä tahansa Unicode merkki on, ilman koodausta kuin\\u_hhh_, vaikka se on edelleen sallittua.
+NCCSV-tiedostoja kirjoitettaessa ERDDAP™ Nyt kirjoittaa v1.2 tiedostoja.
+         ERDDAP™ lukee edelleen NCCSV-tiedostoja, jotka seuraavat v1.0 ja v1.1 erittelyä.
+Kiitos Pauline-Chauvet, n-a-t-e, ja thogar-tietokone ehdottaa tätä ja tekee testejä varmistaa eri laskentataulukko ohjelmia voi tuoda UTF-8 tiedostoja. Kiitos Bob Simonsin tämän koodinmuutoksen.
          
-    * NEW: Tila.html-verkkosivulla on nyt linkki yläreunaan, joka osoittaa, mitä aineiston latauslaitteita tällä hetkellä lataa ja niihin liittyviä tilastoja tai ei mitään, jos tietoja ei ladata. Tämä voi olla erittäin hyödyllistä ERDDAP™ Järjestäjät yrittävät selvittää, miksi lataus Datat kestävät niin kauan. Myös nGridDatasets, nTableDatasets ja nTotalDatasets lasketaan alla, jotka ovat nyt välittömiä. (Aiemmin ne olivat viimeisen suuren kuorman päässä. Dataa) .
-Muutos koskee Roy Mendelssohnia. Kiitos Bob Simonsille koodin muutoksista.
+    * UUTTA: The status.html web-sivulla on nyt rivi lähellä top, joka osoittaa, mitä datadatakuormaaDatasets on tällä hetkellä ladattavissa ja siihen liittyvät tilastot, tai ei mitään, jos tiedostoa ei ole ladattu. Tämä voi olla erittäin hyödyllistä ERDDAP™ hallinnoijat yrittävät selvittää, miksi kuorma Dataseteilla kestää niin kauan. Myös nGridDatasets, nTableDatasets, ja nTotalDatasets laskea alla, että ovat nyt välittömiä (aiemmin, ne olivat lopussa viimeisen suuren kuorman Dataset) .
+Tämä muutos on Roy Mendelssohnille. Kiitos Bob Simonsin tämän koodinmuutoksen.
          
-    * Lähde: GenerateDatasets Xml muuttuu CF-1.10:ksi (CF-1,6) "Konventiot" -ominaisuudet.
-Kiitos Bob Simonsille koodin muutoksista.
+    * PARANTAA: Luoda datasettejä Xml muutokset nyt CF-1.10 (oli CF-1,6) yleissopimukset -attribuutit.
+Kiitos Bob Simonsin tämän koodinmuutoksen.
          
-    * Pieniä muutoksia ja vikoja.
+    * Joitakin pieniä muutoksia ja korjauksia.
          
 
 ## Versio 2.22{#version-222} 
- (Lähde: 2022-12-08) 
+ (julkaistu 2022-12-08) 
 
-Huomaa, että Bob Simons teki tämän julkaisun ja osoitti, että hän on edelleen läsnä ja aktiivinen siirtyessään seuraajaansa.
+Huomaa, että tämän julkaisun teki Bob Simons, mikä osoittaa, että hän on edelleen noin ja aktiivinen siirryttäessä seuraajaansa.
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    *    (Ei kukaan)   
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    *    (Ei ole)   
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Tee: ei mitään.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Ei mitään.
          
-    * Omistaja FIX: Koodissa oli Cross Site Scriptingiin liittyvä vika kielen valintaan. Kiitos NOAA Turvallisuusskannaukset tämän saamiseksi. Tämä osoittaa, että NOAA Turvallisuus on aktiivista ja rutiininomaisesti etsimässä turvan heikkouksia. ERDDAP .
+    * CURBUBUG FIX: Cross Site Scripting -virhe oli koodin kielivalinta pudota alas. Kiitos NOAA Turvaskannaukset tästä. Tämä osoittaa, että NOAA turvallisuus etsii aktiivisesti ja rutiininomaisesti turvallisuuspuutteita ERDDAP .
          
-    * Etusivu 5: Monet kirjastot, joita käytetään ERDDAP™ päivitettiin, kuten yleensä, osana tätä julkaisua. Tällä kertaa päivitettiin PostgreSQL-kuljettaja. (jolla oli turvavirhe) 42.5.1.
+    * TURVALLISUUS: Monet kirjastot käyttävät ERDDAP™ päivitetty, kuten tavallista, osana tätä julkaisua. Tällä kertaa tähän sisältyi PostgreSQL-ajurin päivittäminen (jossa oli turva vika) 42.5.1.
          
-    * Pienemmät muutokset ERDDAP "Muistinhallintajärjestelmän olisi vähennettävä tietyn pyynnön mahdollisuutta, joka ei johdu käytettävissä olevasta muistista.
+    * PARANTAA: Lisää pieniä muutoksia ERDDAP 's muistinhallintajärjestelmän pitäisi vähentää mahdollisuutta, että tietty pyyntö epäonnistuu, koska käytettävissä oleva muisti puuttuu.
          
-    * Pieniä muutoksia ja vikoja.
+    * Joitakin pieniä muutoksia ja korjauksia.
          
 
 ## Versio 2.21{#version-221} 
- (Lähde: 2022-10-09) 
+ (julkaistu 2022-10-09) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    *    (Ei kukaan)   
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    *    (Ei ole)   
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Tehtävä: For Java 17, sinun ei pitäisi käyttää \\-d64 JAVA OPTS setenv.bat tai setenv.sh. Jos se on siellä, poista se. 64-bittinen tila on nyt valittu, kun lataat 64-bittisen version Java . Kiitos Sam Woodmanille.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Tehdään: Java 17, sinun ei pitäisi käyttää \\- d64 JAVA\\_OPTS setenv.bat tai setenv.sh. Jos se on siellä, poista se. Mielestäni 64 bittitila on nyt valittu, kun lataat 64 bitin version Java . Kiitos Sam Woodmanin.
          
-    * Viisikymppinen: Joskus uusi sähköpostijärjestelmä yritti kirjautua sisään liian usein, mikä johti siihen, että Googlen sähköpostipalvelimet hylkäsivät kaikki tulevat kirjautumisyritykset. Sähköpostijärjestelmä välttää tämän ja siihen liittyvät ongelmat.
+    * BUG FIX: Joskus uusi sähköpostijärjestelmä yritti kirjautua sisään liian usein, mikä sai Google Email -palvelimet hylkäämään kaikki tulevat lokiyritykset. Sähköpostijärjestelmä välttelee tätä ja siihen liittyviä ongelmia.
          
 
 ## Versio 2.20{#version-220} 
- (Lähde: 2022-09-30) 
+ (julkaistu 2022-09-30) 
 
-*    **Älä käytä v2.20 Se on virheellinen.** Järjestelmänvalvojien on kuitenkin tehtävä alla luetellut TO DO -tuotteet päivitettynä v2.21+:een.
+*    **Älä käytä V2.20. Se on virheellinen.** Mutta ylläpitäjien on vielä tehtävä TO tehdä kohteita alla päivitettäessä v2.21+.
      
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    *    (Ei kukaan)   
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    *    (Ei ole)   
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * IMPROVED: Vanha muistinhallintajärjestelmä (Math2.ensureMemory käytettävissä) Uuden muistinhallintajärjestelmän muuttaminen (EDSTAtic.shedTässä) työskennellä paremmin sen kanssa. Näytä [Muistitila](/docs/server-admin/additional-information#memory-status) yksityiskohtiin.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Otimme vanhan muistinhallintajärjestelmän käyttöön. (Math2.varmistetaanMuistiSaatavilla) ja muokattu uusi muistinhallintajärjestelmä (ED Staattinen.) Jotta se toimisi paremmin. Katso [Muistitila](/docs/server-admin/additional-information#memory-status) yksityiskohtaisesti.
          
-    * Muutos: Oletus&lt;ipAddressMaxRequests Sisällä datasets.xml Se kasvoi 7-15. On selvää, että jotkut lailliset WMS Asiakkaat voivat tehdä yli 7 samanaikaista pyyntöä.
+    * MUUTETTU: Oletus&lt;ipAddressMaxRequests&gt; in datasets.xml Nousi 7:stä 15:een. On selvää, että joku laillinen WMS asiakkaat voivat tuottaa yli 7 samanaikaista pyyntöä.
          
 
 ## Versio 2.19{#version-219} 
- (Lähde: 2022-09-01) 
+ (julkaistu 2022-09-01) 
 
-*    **Älä käytä v2.19. Se on virheellinen.** Järjestelmänvalvojien on kuitenkin tehtävä alla luetellut TO DO -kohteet päivitettäessä v2.20+.
+*    **Älä käytä v2.19:ää. Se on virheellinen.** Mutta hallinnoijien on vielä tehtävä TO DO kohteita alla päivitettäessä v2.20+.
      
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * NEW: Uusi palvelinpuoleinen toiminto orderBy Poistuminen, joka toimii kuten orderBy , mutta tavallaan laskevassa järjestyksessä. Kiitos Adam Leadbetterille.
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * UUTTA: On uusi palvelimen puolella toiminto, orderBy Laskeutuminen, joka toimii orderBy , mutta se on laskevassa järjestyksessä. Kiitos Adam Leadbetterille.
          
-    * IMPROVED: Nyt, grafiikka (Ei karttoja) Laajennetaan täyttämään käytettävissä oleva tila kankaalle eli tilaa, jota legenda ei käytä. Voit saada korkeita grafiikoita, neliön kaavioita tai laajoja kaavioita lisäämällä ja manipuloimalla &.sizewidth. | Parametri _korkeus_ (missä leveys ja korkeus määrittävät kankaan koon pikseleissä) pyynnöstä URL. (Tämä ei ole vaihtoehto .graph-sivulla. Sinun on lisättävä URL-osoite manuaalisesti.) Jos et määritä &.size-parametria, .smallPng-, .png-, .largePng-, .smallPdf-, .pdf- ja .large.pdf-pyynnöt ovat ennalta määritettyjä kangaskokoja, joten kaavio laajenee täyttämään käytettävissä olevan tilan, mutta yleensä neliö. Kiitos Bob Flemingistä.
+    * Nyt kaaviot (mutta ei karttoja) laajenee täyttämään käytettävissä olevan tilan kankaalla, eli tilaa, jota legenda ei käytä. Voit saada pitkiä kaavioita, neliöitä tai laajoja kaavioita lisäämällä ja manipuloimalla &.size=_widged_ | _korkeus_ parametri (jossa leveys ja korkeus määrittelevät kankaan koon pikseleinä) pyynnöstä URL. (Tämä ei ole vaihtoehto .graph verkkosivuilla. Sinun täytyy lisätä se URL käsin.) Jos et määrittele &.koon parametria, pyyntöjä .smallPng, .png, .largePng, .smallPdf, .pdf ja .large.pdf ovat ennalta määritellyt kankaan koot, joten graafinen laajentaa täyttämään käytettävissä olevan tilan, mutta on yleensä suunnilleen neliön. Kiitos Bob Flemingin.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Tee: ERDDAP™ Nyt tarvitaan Java 17 ja siihen liittyvä Tomcat 10. Sinun täytyy seurata ERDDAP™ Asennusohjeet (Esimerkkinä Docker) asentaminen Java 17 ja Tomcat 10 ja kopioi \\[ Tom \\] Sisältöhakemisto Tomcat 8 -asennuksesta uuteen \\[ Tom \\] Hakemisto. Ei ole muita muutoksia, joita sinun täytyy tehdä ERDDAP tähän muutokseen liittyvä asennus. Toisin sanoen, ERDDAP™ toimii kuten ennenkin.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * TEHDÄ: ERDDAP™ Nyt vaatii Java 17 ja siihen liittyvä Tomcat 10. Sinun täytyy seurata ERDDAP™ asennusohjeet (tai vastaava esim. Docker) asentaa Java 17 ja Tomcat 10 ja kopioida \\[ tomcat \\] /sisältöhakemisto Tomcat 8 -asennuksesta uuteen \\[ tomcat \\] hakemisto. Sinun ei tarvitse tehdä muita muutoksia ERDDAP tähän muutokseen liittyvä asennus. Toisin sanoen ERDDAP™ Toimii kuten ennenkin.
         
-Älä unohda tehdä ERDDAP - liittyvät muutokset Tomcatin palvelin.xml ja konteksti.xml, kun päivität Tomcatia. Näytä ERDDAP &gt; [Tomcatin asennusohjeet](/docs/server-admin/deploy-install#tomcat) .
+Älä unohda tehdä ERDDAP - liittyvät muutokset Tomcat n palvelimeen.xml ja asiayhteys.xml kun päivität Tomcat. Katso ERDDAP S [Tomcat asennusohjeet](/docs/server-admin/deploy-install#tomcat) .
         
-vaikutelmani Java 17 on se, että se suosii enemmän prosessointitehoa ja muistia pitkällä aikavälillä, suurempia sovelluksia, kuten ERDDAP™ Se toimii hieman hitaammin kuin Java 8 matalalla teholla (2 ydintä ja minimaalinen RAM) toimii hieman nopeammin kuin Java 8 korkeammat tietokoneet (4+ ytimet ja runsaasti RAM) . Jos näet huonon suorituskyvyn, käytä Linuxin kaltaisia ohjelmia [Top top](https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/) Tarkista resurssien käyttö ja harkitse ERDDAP™ enemmän resursseja, erityisesti enemmän muistia. Muisti on halpaa&#33; Useimmissa puhelimissa on enemmän prosessoreita ja muistia kuin palvelimilla, joita jotkut teistä käyttävät. ERDDAP &#33;&#33;
-Kiitos Erin Turnbullille.
+Minun vaikutelmani... Java 17 on, että se suosii enemmän käsittelytehoa ja muistia pitkän aikavälin, suurempia sovelluksia kuten ERDDAP™ , joten se toimii hieman hitaammin kuin Java 8 matalatehoisilla tietokoneilla (esim. 2 ydintä ja minimaalinen RAM) ja toimii hieman nopeammin kuin Java 8 suurempitehoisilla tietokoneilla (esim., 4+ ydintä ja runsaasti RAM) . Joten jos näet huono suorituskyky, käytä ohjelmia kuten Linux's [ylin](https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/) tarkistaa resurssien käyttöä ja harkita antaa ERDDAP™ enemmän resursseja, erityisesti enemmän muistia. Muisti on halpaa&#33; Useimmissa puhelimissa on enemmän prosessoria ja muistia kuin palvelimissa, joita jotkut teistä käyttävät ERDDAP &#33;
+Erin Turnbullin ansiosta.
          
         
-    * TO DO: Jos käytät ERDDAP™ Jos haluat käyttää Cassandraa, Cassandraa, sinun on pidettävä käytössäsi Java Olet käyttänyt Cassandraa. Vaihda vain Java Tomcat + 17 pistettä ERDDAP .
+    * TEHTÄVÄ: jos käytät ERDDAP™ käyttää Cassandra, varten Cassandra, sinun täytyy käyttää versio Java Käytit sitä Cassandran johtamiseen. Vaihda vain Java 17 Tomcat+-ajoon ERDDAP .
          
-    * Tehtävä: Suositellaan: Jos palvelimen CPU: ssa on 4+ ydintä ja 8+ Gt RAM-muistia, harkitse näiden asetusten muuttamista. datasets.xml tiedosto:
+    * Suositellaan: Jos palvelimen suorittimessa on 4+ ydintä ja 8+ GB RAM-muistia, harkitse näiden asetusten muuttamista datasets.xml tiedosto:
 ```
           <nGridThreads>3</nGridThreads>  
           <nTableThreads>3</nTableThreads>  
 ```
 
-Jos palvelimellasi on vähemmän resursseja, säilytä "1" molemmissa asetuksissa.
-NThreads-järjestelmät EDDGrid Files ja EDDTable Filejä on parannettu huomattavasti. Muutokset johtivat suureen nopeuteen (2X nopeus, kun nThreads on 2 tai enemmän) haastavimpiin pyyntöihin (kun suuri määrä tiedostoja on käsiteltävä tulosten keräämiseksi) . Chris Johnin tekemät muutokset johtavat myös yleiseen nopeuteen ERDDAP . Näihin muutoksiin osallistui Chris John. Kiitos, Chris&#33;
+Jos palvelimellasi on vähemmän resursseja, pysy "1" molemmissa asetuksissa.
+NThreads järjestelmät EDDGrid Kansiosta ja EDDTablesta Fileistä tuli huomattavasti parempia. Nämä muutokset johtivat valtavaan nopeuden paranemiseen (Esim., 2X nopeus ylös, kun nSäikeet on asetettu 2 tai enemmän) haastavimpiin pyyntöihin (kun suuri määrä tiedostoja on käsiteltävä kerätä tuloksia) . Jotkut asiaan liittyvät muutokset Chris John johtaa myös yleistä nopeutta koko ERDDAP . Näiden muutosten koodin antoi Chris John. Kiitos. Chris&#33;
          
-    * Varoitus: hypenit datasetID "Siitä ei enää tueta eikä (teknisesti sallittua) . Ne todennäköisesti hylätään seuraavassa julkaisussa. Jos käytät hypeniä, vaihda koristeet nyt välttääksesi ongelmia. Jos teet muutoksen nyt, se on omalla nopeudellasi. Jos odotat seuraavaa julkaisua, olet paniikissa ja joudut käsittelemään sitä sinä päivänä.
+    * VAROITUS: väliviivat datasetID ' s ovat deprecated eikä enää tuettu (Vaikka teknisesti edelleen sallittu) . Heidät luultavasti hylätään seuraavassa julkaisussa. Jos käytät väliviivat, vaihda korostaa nyt välttää ongelmia. Jos teet muutoksen nyt, se tapahtuu omalla nopeudellasi. Jos odotat seuraavaan julkaisuun, olet paniikissa ja joudut käsittelemään sitä sinä päivänä.
          
-    * Uusi: Nyt, .htmlTable tietovastaukset, jos String-solun tiedot sisältävät tietoja: kuva/png;base64, jota seuraa perus64 koodattu .png-kuva, ERDDAP™ Näytä ikoni (Käyttäjä voi nähdä kuvan, jos sen yli) ja painikkeet tekstin tai kuvan tallentamiseksi levylle. Kiitos Marco Alba (Kuka on antanut koodin) Kirjoittanut Bob Simons (jotka muuttivat sitä hieman) .
+    * Nyt .htmlTable tietovasteet, jos String-solun tiedot sisältävät tietoa:kuva/png;base64, jota seuraa base64 koodattu .png-kuva, ERDDAP™ näyttää kuvakkeen (jotta käyttäjä voi nähdä kuvan, jos he leijailevat sen päällä) ja painikkeet tekstin tai kuvan tallentamiseksi leikepöydälle. Kiitos Marco Alba (joka antoi koodin) ja Bob Simons (joka muutti sitä hieman) .
          
-    * Alkuperäinen nimi: DoNotAddstandardNames
-Jos \\-doNotAddStandardNames on komentoriviparametri, kun juokset Dataa XML, tuottaminen Dataa XML ei lisää standard\\_name ja addAttributes muuttujat kuin leveys, pituus, korkeus, syvyys tai aika (jotka ovat ilmeisiä standard\\_name s) . Tämä voi olla hyödyllistä, jos käytät tuotetta Dataa XML suoraan ERDDAP™ ilman tulostusta, koska Dataa XML usein arvaa standard\\_name Väärin. (Huomaa, että suosittelemme aina muokkaamaan tulosta ennen sen käyttöä. ERDDAP .) Tällä parametrilla on muita vähäisiä vaikutuksia, koska standard\\_name käytetään usein muihin tarkoituksiin, esimerkiksi uuden luomiseen. long\\_name ja luoda värikarttoja. Kiitos Kevin O'Brien.
+    * UUTTA: -do notAddStandardNames
+Jos sisällytät \\- doNotLisääStandardNames komentoriviparametrina, kun suoritat luontia Dataset Xml, luo Dataset Xml ei lisää standard\\_name ja addAttributes muut muuttujat kuin leveys-, pituus-, korkeus-, syvyys- tai aikani (joiden standard\\_name tilu) . Tämä voi olla hyödyllistä, jos käytät tulosta Dataset Xml suoraan sisään ERDDAP™ muokkaamatta tulostetta, koska luo Dataset Xml usein arvaa standard\\_name s väärin. (Huomaa, että suosittelemme aina, että muokkaat tulostetta ennen sen käyttöä ERDDAP .) Käyttämällä tätä parametria on muita vähäisiä liittyviä vaikutuksia, koska arvattu standard\\_name käytetään usein muihin tarkoituksiin, esim. long\\_name , ja luoda väriBar asetukset. Kiitos Kevin O'Brienin.
          
-    * UUTUS: Nyt voit laittaa&lt;Päivitys &gt; 10&lt;UpdateMaxEvents » Sisällä datasets.xml   (Muiden asetusten lähellä yläosaa) tiedostojen enimmäismäärän muuttaminen (Oletusarvo = 10) Päivitys EveryNMillis -järjestelmä. suurempi määrä (100?) Voi olla hyödyllistä, kun on erittäin tärkeää, että aineisto säilyy aina ajan tasalla. Nähdään [PäivitysMaxEvents dokumentointi](/docs/server-admin/datasets#updatemaxevents) . Kiitos John Maurerille.
+    * Voit nyt laittaa&lt;updateMaxEvents&gt;10&lt;/updateMaxEvents&gt; in datasets.xml   (muiden asetusten kanssa lähellä yläosaa) muuttaa tiedostomuutosten enimmäismäärää (oletus=10) joka käsitellään päivitysEveryNMillis-järjestelmässä. Suurempi määrä (100?) saattaa olla hyödyllistä, kun on erittäin tärkeää pitää tietokokonaisuus aina ajan tasalla. Katso [updateMaxEvents-dokumentaatio](/docs/server-admin/datasets#updatemaxevents) . John Maurerin ansiosta.
          
-    * NEW: Lisätty tuki maailmanlaajuiselle real\\_time = totta | Väärän » String Attribute
-Jos tämä on väärää (Oletusarvo) Jos aineisto ei käytä päivitystä Kaikki ns. ERDDAP™ välimuistivastaukset tiedostotyyppeihin, joissa koko tiedosto on luotava ennen ERDDAP™ Voit lähettää vastauksen käyttäjälle ja käyttää niitä uudelleen enintään 15 minuuttia. (esim. .nc .png) .
-Jos tämä on totta tai jos aineisto käyttää päivitystä Kaikki ns. ERDDAP™ Älä koskaan välitä vastaustiedostoja ja palauttaa aina äskettäin luotuja tiedostoja.
-Kiitos John Maurerille.
+    * UUTTA: Lisätty tuki globaalille " real\\_time = tosi | false" String ominaisuus.
+Jos tämä on väärin (oletus) ja jos tietokokonaisuus ei käytä päivitystä -EveryNMillis. ERDDAP™ tulee välimuistin vastauspyyntöihin tiedostotyypeille, joissa koko tiedosto on luotava ennen ERDDAP™ voi alkaa lähettää vastauksen käyttäjälle ja käyttää sitä uudelleen noin 15 minuuttia (esim. .nc , .png) .
+Jos tämä on totta tai jos tietokokonaisuus käyttää päivitystä -EveryNMillis. ERDDAP™ ei koskaan välitä vastaustiedostoja ja aina palauttaa uusia tiedostoja.
+John Maurerin ansiosta.
          
-    * NEW: Sähköpostit lähetetään erilliseen sähköpostitse. Tämä tekee tietoaineistojen lataamisesta ja muista toimista, jotka tuottavat sähköposteja nopeammin, koska loadDatasets ei tarvitse odottaa, että sähköposti lähetetään, joka joskus kestää kauan. Uusi järjestelmä voi lähettää useita sähköpostiviestejä sähköpostiistuntoa kohden, mikä vähentää sähköpostipalvelimien kirjautumista ja vähentää niiden riskiä, jotka eivät ole liian usein. Tila.html-sivulla on tilastoja ja log.txt-diagnostiikkaviestejä - etsi "sähköpostiviestiä". Huomaa, että suuri nEmailsPerSession = 0, osoittaa ongelmia, eli sähköpostiistunto ei pystynyt lähettämään sähköpostia.
-Kiitos Bob Simonsista.
+    * UUTTA: Sähköpostit lähetetään nyt erillisellä sähköpostilla. Tämä tekee latausaineistoja ja muita toimia, jotka tuottavat sähköpostit nopeammin, koska latausDatasets ei tarvitse odottaa sähköpostin lähettämistä, mikä joskus kestää kauan. Uusi järjestelmä voi lähettää useita sähköposteja per sähköposti istunto, mikä vähentää sähköpostipalvelimen kirjautumisia ja vähentää riskiä, että ne epäonnistuvat, koska ne ovat liian usein. EmailThreead on the status.html sivu ja diagnostiset viestit log.txt -- etsi "emailThreead." Huomaa, että täsmällinen nEmailsPerSession=0, osoittaa ongelmia, ts., sähköposti istunto ei voinut lähettää mitään sähköposteja.
+Kiitos Bob Simonsin.
          
-    * Sähköpostit lähetetään nyt hieman eri koodilla (Koska Java 17. Muutos sähköpostiin) . Jos sinulla on vaikeuksia lähettää sähköposteja, pyydämme sähköpostia. erd.data at noaa.gov .
+    * MUUTETTU: Sähköpostit lähetetään nyt hieman eri koodi (koska Java 17 ja muutos sähköpostiinThreead) . Jos sähköpostien lähettäminen on vaikeaa, lähetä sähköpostia erd.data at noaa.gov .
          
-    * UUTUS: Tilaustoimet, jotka "koskettavat" kauko-URL-osoitetta, käsitellään nyt erillisessä touchThreadissa. Tämä tekee URL-osoitteita koskettavista lataustiedoista ja muista toimista nopeampia, koska loadDatasets ei tarvitse odottaa, että kosketus on valmis, joka joskus kestää kauan. Status.html-sivulla on tilastoja ja log.txt-diagnostiikkaviestejä - etsi "touchThread".
-Kiitos Bob Simonsista.
+    * UUTTA: Tilaustoiminnot, jotka "koskettavat" etäällä olevaa verkko- osoitetta, käsitellään nyt erillisessä kosketuksessa. Tämä tekee latausaineistot ja muut toiminnot, jotka koskevat URL-osoitteita nopeammin, koska loadDatasets ei tarvitse odottaa kosketus on valmis, joka joskus kestää kauan. On tilastoja touchThreead tila.html sivu ja diagnostiset viestit log.txt -- etsi "touchThreead."
+Kiitos Bob Simonsin.
          
-    * NEW: Tila.html-sivulla, "Major LoadDatasets Time Series" on uusi "kiinteä" sarake, joka ilmaisee pyyntöjen määrän, jotka on vuodatettu, koska nykyinen ERDDAP™ Muistin käyttö oli liian korkea. HTTP:n tilakoodi 503 ”Palvelun saatavuus”. Nämä pyynnöt eivät välttämättä olleet ongelma. He vain saapuivat kiireiseen aikaan. Tämä oli osa uudistusta siitä, miten ERDDAP™ käsittelee korkeaa muistin käyttöä.
+    * UUTTA: status.html-sivulla, "Major LoadDatasets Time Series" on uusi "shed"-sarake, joka osoittaa niiden pyyntöjen määrän, jotka poistettiin koska nykyinen ERDDAP™ Muistinkäyttö oli liian korkealla. Pyynnöt, jotka poistetaan palautetaan HTTP tilakoodi 503 "Palvelu saatavilla." Ne pyynnöt eivät välttämättä olleet ongelma. He saapuivat kiireiseen aikaan. Tämä oli osa uudistusta miten ERDDAP™ käsittelee korkean muistin käyttöä.
          
-    * Unix/Linux-tietokoneissa on nyt "OS Info" -linja status.html-verkkosivulla, jossa on nykyiset käyttöjärjestelmätiedot, mukaan lukien CPU-kuorma ja muistin käyttö.
+    * UUTTA: Unix/Linux-tietokoneilla on nyt "OS Info" -rivi status.html-sivulla on käyttöjärjestelmän nykyiset tiedot, kuten CPU:n kuormitus ja muistin käyttö.
          
-    * Improvisoitu: nyt, kun ERDDAP™ uudelleenkäynnistetään ja uudelleenkäynnistetään ja todetaan, EDDTableFromFiles-aineistot uudelleenkäynnistetään .nc ja erottuva .nc . Joillekin aineistoille tämä vähentää huomattavasti tietojen lataamisen aikaa. (esimerkiksi 60 sekunnista 0,3) . Uuden sähköpostiviestin ja tehtäväThreadin lisäksi (ylhäällä) Tämän pitäisi nopeuttaa uudelleenkäynnistymistä ERDDAP™ Monille ERDDAP™ asennuksia. Kiitos Ben Adams ja John Kerfoot.
+    * Nyt, kun ERDDAP™ on uudelleenkäynnistetty ja nopeaRestart=true, EDDTableFromFromFiles tietoaineistot uudelleen .nc ja erillinen .nc . Joidenkin tietoaineistojen osalta tämä vähentää huomattavasti aikaa ladata tietokokonaisuus (esim. 60 sekunnista 0,3:een) . Yhdessä uuden sähköpostinThread ja tehtäväTheread (ks. edellä) , Tämän pitäisi suuresti nopeuttaa uudelleenkäynnistystä ERDDAP™ monille ERDDAP™ laitokset. Ben Adamsin ja John Kerfootin ansiosta.
          
-    * Aiemmin orpojen tietoaineistot (aineistot, jotka elävät ERDDAP™ mutta eivät ole mukana datasets.xml ) yksinkertaisesti mainittiin status. html ja log.txt jokaisen suuren latauksen jälkeen. Ne poistetaan automaattisesti ERDDAP™ ja merkitty status.html ja log.txt, ja sähköpostitse kaikkea. Jos haluat poistaa tietoaineiston ERDDAP™ Nyt kaikki mitä sinun tarvitsee tehdä, on poistaa sen xml-liuku. datasets.xml Se poistetaan seuraavassa suuressa kuorma-autossa. Kiitos Bob Simonsista.
+    * MUUTETTU: Aiemmin orpojen tietoaineistot (tietoaineistot, jotka elävät ERDDAP™ mutta eivät ole datasets.xml ) Yksinkertaisesti ottaen huomioon tilanteen. html ja log.txt kunkin suuren kuorman jälkeenDatasets. Nyt ne poistetaan automaattisesti ERDDAP™ ja merkitty tila.html ja log.txt, ja sähköpostitse Kaikkeen. Joten jos haluat poistaa tiedoston ERDDAP™ , Nyt sinun tarvitsee vain poistaa sen pala xml datasets.xml ja se poistetaan seuraavan suuren kuormanDatasets. Kiitos Bob Simonsin.
          
-    * KNOWN BUG netcdf-java v5.5.2 ja v5.5.3: The EDDGrid FromThredds Kataloginen vaihtoehto GenerateDatasets Xml työskenteli THREDDS-luetteloissa, jotka sisältävät viittauksia THREDDS-luetteloihin. Nyt se ei. Ilmoitin ongelman Netcdf-java-kehittäjille.
+    * TUNTEMATON BUG netcdf-jaava v5.5.2 ja v5.5.3: • EDDGrid From Thredds Catalog-valitsin generoiDataseteissa Xml on toiminut THREDDS-katalogeissa, jotka sisältävät viittauksia tiedostoihin etä THREDDS-katalogeissa. Nyt ei. Olen raportoinut ongelmasta netcdf-java kehittäjille.
          
-    * BUG FIX: Docker-käyttäjille asetus.xml-parametrit ERDDAP paramName : for int and boolean parameters Näytä tarkat tiedot (Esim. sähköposti SmtpPort) , ERDDAP™ Etsimme väärin vain _paramName_. Nyt etsitään _ ERDDAP _ _ _ _ Kiitos Alessandro de Donno.
+    * BUG FIX: Docker käyttäjille setup.xml parametreja kautta ERDDAP \\__paramName_: int- ja boolean-parametreille (esim., sähköposti SmtpPort) , ERDDAP™ oli virheellisesti etsimässä vain _paramName_. Nyt se etsii _ ERDDAP \\_paramName_. Kiitos Alessandro De Donnon.
          
-    * Muutos: The ERDDAP™ Testausjärjestelmä käyttää nyt automaattista järjestelmää tarkistaakseen, että äskettäin luodut testikuvat ovat juuri odotettavissa. Kiitos Chris Bob Simons ja Bob Simons toteutetaan.
+    * MUUTOS: ERDDAP™ Testausjärjestelmä käyttää nyt automaattista järjestelmää tarkistaakseen, että uudet testikuvat ovat juuri odotetun mukaisia. Kiitos Chrisin. John ja Bob Simons.
          
 
 ## Versio 2.18{#version-218} 
- (Lähde: 2022-02-23) 
+ (julkaistu 2022-02-23) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * Ei
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Vinkki: .nc Tiedostot eivät olleet joissain olosuhteissa kiinni. Nyt ne ovat. Kiitos Marco Alba, Roland Schweitzer, John Maurer ja muut.
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * EI
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * BUG FIX: .nc Tiedostoja ei suljettu joissakin olosuhteissa. Nyt he ovat. Kiitos Marco Alba, Roland Schweitzer, John Maurer, ja muut.
          
 
 ## Versio 2.17{#version-217} 
- (2022-02-16) 
+ (julkaistu 2022-02-16) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * Vinkki: Muutosten jälkeen orderBy Muutama vuosi sitten Tabledap's Make A Graph ei käsitellyt paljon kyselyjä, joita käytettiin. orderBy _xxx_. Nyt se tekee. Kiitos Maurice Libesille.
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * BUG FIX: Muutosten jälkeen orderBy järjestelmä muutama vuosi sitten, Tabledap's Make A Graph ei kunnolla käsitellä monia kyselyjä, jotka käytetään orderBy _Xxx_. Nyt on. Maurice Libesin ansiosta.
          
-    * Muutos: aiemmin, ERDDAP™ hylättyjä pyyntöjä. Läpinäkyvä Kun leveys- ja/tai pituusarvot olivat osittain tai kokonaan pois päältä. ( ERDDAP™ GitHub Issues #19, jonka on julkaissut Rob Fuller.) Nyt se palauttaa läpinäkyviä pikseleitä kuvan ulkopuolisille alueille. Tämä on hyödyllistä monille sovelluksille. Muutokset tähän muutokseen teki Chris John. Kiitos paljon, Chris&#33;
+    * Muutos: Aiemmin tapahtunutta: ERDDAP™ Hylätyt pyynnöt . läpinäkyvä Png on silloin, kun leveys- ja/tai pituusasteet olivat osittain tai kokonaan etäisyyksiä. ( ERDDAP™ GitHub Issues #19, lähettänyt Rob Fuller -- kiitos lähettämistä että Rob) Nyt se palauttaa läpinäkyvät pikselit kuvan muille alueille. Tämä on hyödyllistä monille asiakassovelluksille. Koodin muutokset tehdä tämän muutoksen teki kokonaan Chris John. Kiitos, Chris&#33;
          
-    * Muutos: aiemmin, ERDDAP™ hylkätyt verkon pyynnöt, joissa indeksin arvot tietylle ulottuvuudelle olivat \\[ Korkeus: Alhainen \\] . Nyt nämä pyynnöt ovat päteviä vaihtamalla alhaiset ja korkeat arvot. Tämä ratkaisee pitkäaikaisen ongelman käyttäjille ja ulkoisille ohjelmille, kuten Xtractolle, jotka piti seurata niitä harvoja tietoaineistoja, joilla on leveysarvoja, jotka vaihtelevat korkeista mataliin pyyntöihin. \\[  (50) : (20 20)  \\] niin, että pyyntö indeksissä oli \\[ Alhainen: Korkea \\] . Näytähttps://coastwatch.pfeg.noaa.gov/erddap/griddap/jplAquariusSSS3MonthV5.htmlpyyntö, kuten \\[  (20 20) : (50)  \\] Yhden näistä aineistoista tulkitaan automaattisesti \\[  (50) : (20 20)  \\] .
+    * Muutos: Aiemmin tapahtunutta: ERDDAP™ hylätyt griddap-pyynnöt, joissa tietyn muuttujan indeksiarvot olivat \\[ korkea: alhainen \\] . Nyt se tekee näistä pyynnöistä päteviä vaihtamalla alhaisia ja korkeita arvoja. Tämä ratkaisee pitkäaikaisen ongelman käyttäjille ja ulkoisille ohjelmille, kuten xtractolle, jonka täytyi seurata muutamia tietoja, joilla on leveysasteet, jotka vaihtelevat korkeasta alhaiseen, jotta voidaan esittää esimerkiksi \\[  (50) : (20)  \\] niin, että pyyntö indeksiavaruudessa oli \\[ matala: korkea \\] . Katso https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplAquariusSSS3MonthV5.html Nyt, pyyntö kuten \\[  (20) : (50)  \\] jos jokin näistä tiedoista tulkitaan automaattisesti \\[  (50) : (20)  \\] .
          
-    * .esriAscii pyytää nyt käynnistää "File : Save As" -valintaikkunan käyttäjän selaimessa. Kiitos Joel Van Noordille.
+    * MUUTTUNUT: .esriAscii pyynnöt nyt käynnistää "Tiedosto: Tallenna nimellä" -ikkunan käyttäjän selaimessa. Joel Van Noordin ansiosta.
          
-    * Viisikymppinen: Nyt, jos lapsen tietoaineiston pituusmuuttuja EDDGrid 180 tai EDDGrid Lon0360-tietokanta sisältää valid\\_min ja/tai valid\\_max attribuutti, ne poistetaan EDDGrid 180 tai EDDGrid Lon0360-aineisto. Kiitos Roy Mendelssohnille.
+    * BUG FIX: Nyt, jos pituusmuuttuja lapsi aineisto EDDGrid LonPM180 tai EDDGrid Lon0360-aineistossa on valid\\_min ja/tai valid\\_max ominaisuus, ne poistetaan EDDGrid LonPM180 tai EDDGrid Lon0360-aineisto. Kiitos Roy Mendelssohnin.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Tehtävä: Jos olisit asettanut&lt;DataProviderFormActive&gt; valheelliseen XSS-haavoittuvuuden tilapäiseen käsittelyyn, ole hyvä ja palauta se.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * TEHDÄ: Jos olisit asettanut&lt;dataProviderFormActive&gt; vääräksi tilapäisesti XSS haavoittuvuuden suhteen, ole hyvä ja aseta se todeksi.
          
-    * SECURITY BUG FIX: Kiinteä XSS-haavoittuvuus tietojen toimittajamuodossa Kirjoittanut Genaro Contreras Gutiérrez
+    * Currency BUG FIX: Kiinteä XSS haavoittuvuus tietojen tarjoaja muodossa. Genaro Contreras Gutiérrezin ansiosta.
          
-    * Viisikymppinen: Kun AWS S3 -likalla oli yli 10 000 tiedostoa, ERDDAP™ Heitti "sisäisen virheen". Tämä on nyt korjattu. Kiitos Andy Zieglerille.
+    * BUG FIX: Kun AWS S3:lla oli yli 10000 tiedostoa, ERDDAP™ Heitti "sisäisen virheen." Tämä on nyt korjattu. Kiitos Andy Zieglerin.
          
-    * Vinkki: EDDGrid SideBySide ei sallinut muuttujien sourceName eri lasten aineistoissa on sama. Nyt se tekee. Kiitos Joshua Stanfordin.
+    * BUG FIX: EDDGrid SideBySide ei sallinut muuttujan sourceName s eri lapsiaineistoissa ollakseen samanlaisia. Nyt on. Joshua Stanfordin ansiosta.
          
 
 ## Versio 2.16{#version-216} 
- (Julkaistu 2021-12-17) 
+ (julkaistu 2021-12-17) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * Muutokset/BUG FIXES: Käännösjärjestelmään on tehty lukuisia pieniä muutoksia kielispesifisten editorien avulla. Kiitos Melanie Abecassis, Marco Alba, Jessy Barrette, Filipe Fernandes, Etienne Godin, Jennifer Sevadjian ja Mike Smit.
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * MUUTOKSET/PALKKON KUSTANNUKSET: Lukuisat pienet muutokset käännösjärjestelmän ansiosta ehdotuksia kielikohtaiset toimittajat. Kiitos Melanie Abecassis, Marco Alba, Jessy Barrette, Filipe Fernandes, Etienne Godin, Jennifer Sevadjian, ja Mike Smit.
          
-    * Hyväksytty Google Translaten asianmukainen vastuuvapauslauseke ja tunnustus Google Translaten ehtojen mukaisesti. myös,&lt;html&gt;-tunniste HTML:ssä jokaisella verkkosivustolla, joka tunnistaa nyt asianmukaisesti ei-englanninkieliset verkkosivut koneen kääntämisenä. Kiitos Mike Smit.
+    * LISÄTTY Google Translaten asianmukainen vastuuvapauslauseke ja määrittely Google Translaten ehtojen mukaisesti. Lisäksi&lt;html&gt; tag HTML jokaiselle sivulle nyt asianmukaisesti tunnistaa ei-englantilainen web-sivut konekäännetty. Kiitos Mike Smitin.
          
-    * Viisikymppinen: Kirjautumissivut toimivat nyt kunnolla eri kieliasetuksilla. Kiitos Mike Smit.
+    * BUG FIX: Kirjautumissivut toimivat nyt oikein eri kieliasetuksissa. Kiitos Mike Smitin.
          
-    * Uusia orderBy Suodatin. Katso kaikki ja Uncheck Kaikki -painikkeet EDDGrid Data Access form verkkosivuilla. Kiitos Marco Alban koodista.
+    * UUSI orderBy Summasuodatin. Ja uusi Tarkista kaikki ja poista kaikki painikkeet EDDGrid Tiedonhakulomakkeen verkkosivu. Kiitos Marco Alban.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Tee: jos sinulla on
-        &lt;MarkImageFile: QuestionMark.jpg&lt;MarkImageFile &gt;
-asennus.xml-tiedostossa, sinun on joko poistettava koko tunniste (Suositellaan, joten oletustiedostoa käytetään) Tai muuttaa sitä:
-        &lt;Pääartikkeli: QuestionMark.png&lt;MarkImageFile &gt;
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Jos sinulla on
+        &lt;kysymysMarkImageFile&gt;kysymysMark.jpg&lt;/questionMarkImageFile&gt;
+setup.xml tiedosto, sinun täytyy joko poistaa koko tag (suositellaan, joten oletustiedostoa käytetään) tai muuttaa se seuraavasti:
+        &lt;kysymysMarkImageFile&gt;kysymysMark.png&lt;/questionMarkImageFile&gt;
          
-    * Muutos: Niin tiedät, [Adoptium](https://adoptium.net/?variant=openjdk8) AdoptOpenJDK:n korvaaminen tärkeimpänä/suositeltuna lähteenä Java   (OpenJD) .
+    * Ihan vain tiedoksi: [Adoptium](https://adoptium.net/?variant=openjdk8) on korvannut OpenJDK:n tärkeimmäksi/suositelluksi lähteeksi Java   (OpenJDK) .
          
-    * Muutos: Lokitiedostot ERDDAP™ GenerateDatasets Xml ja DasDds ovat nyt UTF-8, ei tietokoneen oletushahmo. Tein paljon tarkistuksia ja tein muutamia muutoksia varmistaakseni, että ERDDAP™ määrittää aina oikean merkin, kun luet tai kirjoitat kaikenlaisia tiedostoja, eikä enää (Useissa tapauksissa) perustuu tietokoneen oletushahmoon. Tämä korjasi muutamia virheitä ja siirtyi niin lähelle kuin pystyin käyttämään UTF-8:a mahdollisimman monelle tiedostotyypille. (.log, .xml, .html .json , .json l, .nc Pääjohtaja) . Huomaa, että monet vanhemmat tiedostotyypit tarvitsevat ISO-8859-1 -standardia. (esim. OPeNDAP .das, .dds, .csv .tsv , .nc 3, .nccsv .cpt) . Yritin tehdä yhteistyötä CF:n kanssa ja Unidata UTF-8:n tukeminen .nc 3 tiedostoa, molemmat ovat kestäviä.
+    * MUUTOS: Lokitiedostot ERDDAP™ , LuodaDatasets Xml, ja DasDds ovat nyt UTF-8, ei tietokoneen oletusmerkki asetettu. Tarkistin paljon ja tein muutamia muutoksia varmistaakseni, että ERDDAP™ aina määrittää oikea merkki asetettu lukemalla tai kirjoittamalla kaikenlaisia tiedostoja, eikä enää (useissa tapauksissa) luottaa tietokoneen oletusmerkkiin. Tämä korjasi muutaman virheen ja siirtyi niin lähelle kuin pystyin tavoite käyttää UTF-8 mahdollisimman monta tiedostotyyppiä (esim., .log, .xml, .html, .json , .json I .nc Otsikko) . Huomaa, että monet vanhemmat tiedostotyypit ovat tarpeen käyttää ISO-8859-1 (esim. OPeNDAP .das, .dds, .csv, .tsv , .nc 3 .nccsv , .cpt) . Olen aiemmin yrittänyt työskennellä CF ryhmä ja Unidata lisätä tukea UTF-8 in .nc Kolme tiedostoa; molemmat olivat vastustuskykyisiä.
          
-    * NEW: Kun lataat tiedostoja AWS S3:sta ERDDAP Kätköt Url-järjestelmässä EDDGrid Files ja EDDTable FromFiles käyttää nyt uutta AWS Transfer Manageria ladatakseen tiedostoja rinnakkaistuolin kautta. (Näin nopeasti) . Tavoite on 20 Gbps per tiedosto, joten tämä toimii hyvin kaikkien AWS-tyyppien kanssa, mutta erityisesti niillä, joilla on erinomainen "Networking Performance". Tällä muutoksella ERDDAP Kätköt FromUrl-järjestelmä tarjoaa nyt vertailukelpoisia nopeuksia röntgenkuvan lähestymistavan rinnakkaistettujen tiedostojen latausten kanssa, mutta ilman tarvetta muuntaa lähdetiedostoja. .nc ja .hdf Chunked Xarray -tiedostoja. Itse asiassa, ERDDAP Järjestelmä on parempi, jos samasta tiedostosta on myöhempää luettavaa, koska ERDDAP™ Nyt on paikallinen kopio tiedostosta. Yhteisömme on vuosien mittaan standardoinut .nc ja .hdf tiedostoja. Nyt meidän ei tarvitse heittää kaikkea ulos saadakseen hyvän suorituskyvyn tallennettaessa tietoja AWS S3:ssa. Kiitos Rich Signell.
+    * UUTTA: Kun ladataan tiedostoja AWS S3, ERDDAP Välimuisti FromUrl-järjestelmä EDDGrid Kansiosta ja EDDTablesta FromFiles käyttää nyt uutta AWS Transfer Manager ladata tiedostoja rinnakkaisia paloja (Näin ollen hyvin nopeasti) . Kohde läpisyöttö on asetettu 20 Gbps, per tiedosto, joten tämä toimii hyvin kaikki AWS instant tyypit, mutta erityisesti ne, joilla on erinomainen "Verkkosuoritus." Tämän muutoksen ERDDAP Välimuisti FromUrl-järjestelmä tarjoaa nyt vertailukelpoisia nopeuksia xarray lähestymistapa rinnakkaiset lataukset valmiiksi murskattuja tiedostoja, mutta ilman tarvetta muuntaa lähdetiedostoja .nc sekä .hdf Röntgentiedostoihin. Itse asiassa ERDDAP 's järjestelmä on parempi, jos on myöhempi pyyntö lukea samasta tiedostosta, koska ERDDAP™ Nyt on paikallinen kopio tiedostosta. Yhteisömme on viettänyt vuosia standardoinnin .nc sekä .hdf tiedostot. Nyt meidän ei tarvitse heittää sitä pois vain saada hyvä suorituskyky, kun tallentaa tietoja AWS S3. Kiitos Rich Signellin.
          
-    * HUOMAUTUS: Engine=Lucene on toistaiseksi poistettu. Se on monimutkainen järjestelmä, joka tuottaa usein tuloksia, jotka eroavat hieman hakuEngine=alkuperäinen. Lähes kaikki ERDDAP™ Asennukset, aikasäästöt Lucene eivät kompensoi eroja tuloksia. Käytä hakukone=alkuperäinen, jos mahdollista. Jos tämä aiheuttaa ongelmia, pyydämme sähköpostia.
+    * MUUTOS: searchEngine=Lucene on toistaiseksi vanhentunut. Se on monimutkainen järjestelmä, joka usein tuottaa tuloksia, jotka ovat hieman erilaisia kuin toivottavaa käyttäytymistä searchEngine=alkuperäinen. Melkein kaikki ERDDAP™ asennukset, Lucenen ajansäästöt eivät korvaa tulosten eroja. Käytä searchEngine = original sen sijaan, jos mahdollista. Jos se aiheuttaa ongelmia, lähetä sähköpostia Bobille.
          
-    * CHANGE: The Lucene searchEngine toimii nyt enemmän kuin alkuperäinen etsintä. Ei ole enää tapauksia, joissa lucene ajattelee, että aineisto vastaa ja alkuperäinen ei. Lucene's rankings on nyt sama kuin alkuperäinen (Koska alkuperäinen on aina tottunut laskemaan) .
+    * MUUTOS: Lucene searchEngine käyttäytyy nyt enemmän kuin alkuperäinen hakuEngine. Ei ole enää tapauksia, joissa Lucene luulee tiedoston täsmää ja alkuperäinen ei. Myös Lucene rankingissa nyt yhtä alkuperäinen rankingissa (koska alkuperäinen käytetään nyt aina laskea rankingissa) .
          
-    * Vinkki: äskettäin julkaistussa julkaisussa, ERDDAP™ Enemmän kuin ensimmäiset 1000 esinettä AWS S3:ssa. Nyt, ERDDAP™ Näemme jälleen kaikki esineet. Kiitos Andy Zieglerille.
+    * BUG FIX: Alkaen äskettäisestä julkaisusta ERDDAP™ Lakkasi näkemästä enemmän kuin ensimmäiset 1000 esinettä tietyssä AWS S3 kauha. Nyt. ERDDAP™ jälleen näkee kaikki esineet. Kiitos Andy Zieglerin.
          
-    * BUG FIX: Nyt EDDTableAggregate Rows poistaa actual\\_range attribuutio aina, kun yksi tai useampi lapsitietokanta ei koskaan tiedä sen muuttujia """ actual\\_range   (EDDTableFromDatabase) . Kiitos Erik Gelettille.
+    * Nyt EDDTableAggregate Rivit poistaa actual\\_range attribuutti, kun yksi tai useampi lapsiaineistoista ei koskaan tiedä sen muuttujia ' actual\\_range   (esim., EDDtableFromDatabase) . Kiitos Erik Gelettin.
          
 
 ## versio 2.15{#version-215} 
- (Julkaistu 2021-11-19) 
+ (julkaistu 2021-11-19) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    *    ERDDAP™ Käyttäjällä on uusi järjestelmä, jonka avulla käyttäjä voi määrittää kielen, jota käytetään kaikilla verkkosivuilla. Jos ERDDAP™ Asennus on perustettu käytettäväksi, luettelo kielistä näkyy jokaisen sivun oikeassa yläkulmassa. ERDDAP™ URL-osoite ennen tätä versiota toimii ja palauttaa aina englanninkielisen sisällön, kuten ennenkin.
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    *    ERDDAP™ on uusi järjestelmä antaa käyttäjän määrittää kieli käytetään kaikilla verkkosivuilla. Jos ERDDAP™ asennus on perustettu käyttää sitä, luettelo kielistä näkyy oikeassa yläkulmassa jokaisen sivun. ERDDAP™ URL: n ennen tätä versiota jatkaa toimintaansa ja aina palauttaa Englanti sisältöä, kuten ennen.
         
-Kaikkia tekstiviestejä tai sivuja ei käännetty. Projektissa oli aikarajoituksia, jotka estivät Qin ja Bobin pääsyn 100 prosenttiin.
+Kaikkia tekstejä tai verkkosivuja ei käännetty. Tähän hankkeeseen liittyi aikarajoituksia, jotka estivät Qin ja Bobin pääsemästä 100 prosenttiin.
         
-Ilmeinen kysymys on, miksi olemme panostaneet tähän niin paljon, kun Chrome kääntää sivuja lennolla? Vastaus: Näin saamme paljon enemmän kontrollia käännöksen tekemiseen. On paljon sanoja, joita ei pitäisi kääntää verkkosivuilla, esimerkiksi otsikot ja tiivistelmät tietoaineistoista, nimitykset muuttujien, parametrit, yksiköt ja organisaatiot. Suuri osa käännöksestä oli sellaisten sanojen ja lauseiden tunnistamista, joita ei pitäisi kääntää. Myös koneen käännökset taipuivat mangle tietyntyyppisiä HTML-merkintöjä. Käännöksen hallinta mahdollistaa ongelman minimoinnin.
+Ilmeinen kysymys kuuluu: miksi olemme tehneet niin paljon työtä, kun Chrome kääntää web-sivuja lento? Vastaus on: näin saamme paljon enemmän kontrollia siitä, miten käännös tehdään. Erityisesti on paljon sanoja, joita ei pitäisi kääntää web-sivuille, kuten tietokokonaisuuksien otsikot ja tiivistelmät, muuttujien nimet, parametrit, yksiköt ja organisaatiot. Suuri osa käännös vaivaa oli tunnistaa sanoja ja lauseita, joita ei pitäisi kääntää. Myös koneen käännöksiä taipumus sekoittaa tiettyjä HTML markup. Käännöksen hallinta mahdollisti tämän ongelman minimoinnin.
         
-Käännösprojektin on tehnyt Qi Zeng. (Google Summer of Code Intern Näytä tarkat tiedot) Bob Simons käyttää Googlen käännöspalvelua. Se oli valtava projekti. Kiitos, Qi&#33;
+Käännösprojektin teki Qi Zeng (Google Summer of Code -harjoittelija) ja Bob Simons käyttäen Googlen käännös-verkkopalvelua. Se oli valtava projekti. Kiitos. Qi&#33;
         
-    * Vinkki: ERDDAP™ Nyt ORCID-tunnus saa X:n viimeisenä numerona. Kiitos Maurice Libesille.
+    * BUG FIX: ERDDAP™ ORCID-tunnisteissa on X viimeisenä. Maurice Libesin ansiosta.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Tee:
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * TEHDÄ:
         
-        * Sinun on tehtävä muutamia muutoksia, jotka liittyvät ERDDAP Uusi järjestelmä, jonka avulla käyttäjät voivat määrittää verkkosivujen kielen.
-            * Asennuksen ensimmäisessä vaiheessa.xml ja datasets.xml tiedostot, vaihda: koodaus = "UTF-8" ja vaihda dokumentin koodaus tekstieditoriin, jotta se tallennetaan UTF-8-tiedostoksi. GenerateDatasets XML:n mukaan datasets.xml UTF-8-tiedosto.
-            * Ohjelmoijat, jotka ERDDAP : Kaikki ERDDAP™ .java-tiedostoja on käsiteltävä oletusarvoisesti UTF-8-tiedostoina. Saatat joutua lisäämään UTF-8:n javac-komentolinjaan. (Minä tein.) 
-            * Tämän järjestelmän mahdollistaminen (vahvasti suositeltu) Sisällä&lt;StarBodyHtml5&gt;-tunniste, jonka määrität datasets.xml Vaihda "&amp&#33;loginInfo;" &amp&#33;loginInfo | &amp&#33;-kieli, niin että kieliluettelo näkyy jokaisen yläkulmassa. ERDDAP™ verkkosivuilla.
-            *    ERDDAP™ Käytä vain&lt;StarBodyHtml5&gt;-tunniste, jonka määrität datasets.xml määrittää HTML-sisältö jokaisen lipun yläosassa ERDDAP™ WEB riippumatta siitä, mitä kieltä käyttäjä valitsee. Jos vaihdat tätä tunnistetta käyttääksesi
-""" &EasierAccessToScientificData; "Tieteellisen tiedon helpompi saatavuus"
-""" &BroughtToYouBy; "Sen sijaan, että olisit tullut luoksesi, ERDDAP™ Käytä käännettyjä versioita näistä lauseista lipussa.
-            * Samoin uusi oletus&lt;ShortDescriptionHtml datasets.xml on
+        * Sinun täytyy tehdä joitakin muutoksia liittyvät ERDDAP Uusi järjestelmä antaa käyttäjien määritellä kieli web-sivuja.
+            * Ensimmäisellä rivillä sinun setup.xml ja datasets.xml tiedostot, vaihda muotoon: koodaus="UTF-8" ja muuta asiakirjan koodaus tekstieditorissasi, joten se tallennetaan UTF-8 -tiedostona. Luo tiedostoja Xml nyt olettaa, että datasets.xml on UTF-8-tiedosto.
+            * Ohjelmoijat ERDDAP : Kaikki ERDDAP™ .java-tiedostoja tulisi käsitellä oletuksena UTF-8 -tiedostoina. Saatat joutua lisäämään "-koodaus UTF-8" javac komentoriville. (Minä.) 
+            * Järjestelmän mahdollistaminen (suositellaan) ,&lt;StartBodyHtml5&gt; tag että määrittelet datasets.xml , muuttaa "&amp&#33;loginInfo;" osaksi "&amp&#33;loginInfo; | &amp&#33;kieli; " niin, että luettelo kielistä näkyy oikeassa yläkulmassa jokaisen ERDDAP™ Verkkosivu.
+            *    ERDDAP™ käyttää ainoastaan&lt;StartBodyHtml5&gt; tag että määrittelet datasets.xml määrittää HTML-sisältö banner alkuun jokaisen ERDDAP™ Sivu, riippumatta siitä, minkä kielen käyttäjä valitsee. Jos vaihdat tunnisteen
+" &EasierAccessToScientificData; "tieteellisen tiedon helpomman saatavuuden sijaan" ja
+" &BroughtToYouBy; Sen sijaan, että olisin tuonut sinulle - ERDDAP™ käyttää käännetty versioita näistä lauseista banneri.
+            * Samoin uusi oletusarvo&lt;PikakuvausHtml&gt; datasets.xml on
                 
 ```
                 <theShortDescriptionHtml><!\\[CDATA\\[ 
@@ -487,467 +502,467 @@ Käännösprojektin on tehnyt Qi Zeng. (Google Summer of Code Intern Näytä tar
                 \\[standardShortDescriptionHtml\\]
                 \\]\\]></theShortDescriptionHtml>
 ```
-Viimeiset kolme sisältöä ovat asioita, jotka korvataan käännetyllä tekstillä. Jos käännät jonkun (Erityisesti & Etenkin.) tai kaikki tekstit esiin datasets.xml   (jolla on prioriteetti, jos) Tämä teksti näkyy riippumatta siitä, minkä kielen käyttäjä valitsee. Tämä ei ole täydellinen, mutta ajattelin, että vain harvat yrittäjät haluavat editoida.&lt;ShortDescriptionHtml &gt; 35 eri tiedostossa, jotka tarjoavat 35 eri käännettyä versiota kyseisestä tunnisteesta.
+Viimeiset 3 riviä sisältöä ovat asioita, jotka korvataan käännetty teksti. Jos käännytät jonkun heistä (erityisesti tämä ErityinenErddap) tai kaikki niistä nimenomaisesti tekstiä datasets.xml   (joka on etusijalla, jos) tai viestit.xml, että teksti näkyy riippumatta siitä, minkä kielen käyttäjä valitsee. Tämä ei ole täydellinen, mutta ajattelin, että harvat hallinnot haluaisivat muokata&lt;ShortDescriptionHtml&gt; 35 eri tiedostoja tarjota 35 eri käännetty versioita että tag.
         
           
          
-    * Muutamia virheitä käsitellään nyt hieman eri tavalla, joten ne voidaan lisätä tila.html ja Daily Report -sähköposti. Numerot voivat olla hieman suurempia kuin ennen.
+    * MUUTTUNUT: Joitakin virheitä käsitellään nyt hieman eri tavalla, joten ne voidaan lisätä status.html:n ja Daily Report Email:n "Failed Requests":iin. Joten nuo luvut voivat olla hieman suurempia kuin ennen.
          
-    * Alkuperäinen nimi: GenerateDatasets XML EDDGrid Lon0360 ja EDDGrid LonPM180 sulkee pois lähdeaineistot datasetID &gt; &gt; &gt;\\*LONPM180 ja datasetID &gt; &gt; &gt;\\*0360, vastaavasti.
+    * BUG FIX: Generator Datasets Xml EDDGrid Lon0360 ja EDDGrid LonPM180:ään eivät enää sisälly lähdeaineistot, datasetID =~"\\*\\_LonPM180" ja datasetID =~"\\*\\_Lon0360."
          
 
 ## Versio 2.14{#version-214} 
- (Lähde: 2021-07-02) 
+ (julkaistu 2021-07-02) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    *    (Ei kukaan)   
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    *    (ei mitään)   
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Uusi: EDDGrid Lon0360, joka tekee verkkotietokannan, jonka pituusarvot &gt; = 0 ja&lt;= 360 verkkotietokantaan, jonka pituusarvot &gt; =-180 ja&lt;180. Nähdään [ EDDGrid Lon0360 dokumentointi](/docs/server-admin/datasets#eddgridlon0360) . Kiitos Dale Robinsonille.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * UUTTA: EDDGrid Lon0360, joka tekee ruudukosta aineiston, jonka pituus-arvot ovat &gt;=0, ja&lt;= 360 ruudukosta, jonka pituus on &gt;=-180 ja&lt;=180. Katso [ EDDGrid Lon0360-asiakirjat](/docs/server-admin/datasets#eddgridlon0360) . Kiitos Dale Robinsonin.
          
-    * Uusi: ERDDAP™ Järjestelmänvalvojat voivat nyt ylittää asennus.xml-arvon ympäristömuuttujan kautta. ERDDAP Arvonlisävero - ennen juoksua ERDDAP . Esimerkiksi käyttö ERDDAP BaseUrl ylittää&lt;BaseUrl &gt; arvoa. Tämä voi olla kätevää, kun käytät ERDDAP™ säiliöllä, koska voit asettaa vakioasetukset asennus.xml ja sitten toimittaa erityisasetuksia ympäristömuuttujan kautta. Jos toimitat salaisia tietoja ERDDAP™ Tämän menetelmän avulla varmista, että tiedot pysyvät salaisina. ERDDAP™ Ympäristömuuttujat luetaan vain kerran käynnistysvaiheessa, käynnistyksen ensimmäisessä sekunnissa, joten yksi tapa käyttää tätä: aseta ympäristömuuttujat, aloita. ERDDAP™ Odota kunnes ERDDAP™ Se on aloitettu ja sitten ympäristömuuttujia. Kiitos Marc Portierille.
+    * UUTTA: ERDDAP™ hallinnoijat voivat nyt ohittaa minkä tahansa arvon setup.xml kautta ympäristömuuttuja nimeltä ERDDAP \\__ arvoName_ ennen kuin suoritat ERDDAP . Käyttö ERDDAP \\_baseUrl ohittaa&lt;baseUrl &gt; arvo. Tämä voi olla kätevää käytettäessä ERDDAP™ säiliöllä, koska voit laittaa vakioasetukset setup.xml ja toimittaa sitten erityisasetukset ympäristömuuttujia. Jos annat salaisia tietoja ERDDAP™ Tällä menetelmällä varmista, että tiedot pysyvät salassa. ERDDAP™ Lue ympäristömuuttujia vain kerran per startup, ensimmäisen sekunnin startup, joten yksi tapa käyttää tätä on: asettaa ympäristömuuttujat, aloittaa ERDDAP™ , odota kunnes ERDDAP™ Aloitetaan ja poistetaan ympäristömuuttujat. Kiitos Marc Portierin.
          
-    * IMPROVED: Nyt, jos tiedostoja EDDTableFrom... Tiedostotiedot, joissa on paljon tiedostoja, ovat hyvin pitkiä String-arvoja, tietoaineisto lataa paljon nopeammin ja vastaa pyyntöihin paljon nopeammin. aikaisemmin, ERDDAP™ Varaisi paljon tilaa min ja max String arvot tiedostoja, jotka tallennetaan tiedostoja tietoja tällaisia aineistoja. Tuloksena oleva tiedosto oli valtava, mikä sai sen kirjoittamaan ja lukemaan hitaasti. Kiitos Obikselle.
+    * Nyt, jos joitakin tiedostoja EDDTableF alkaen... Tiedostot aineisto paljon tiedostoja on joitakin erittäin pitkiä String arvoja, aineisto lataa paljon nopeammin ja vastaa pyyntöihin paljon nopeammin. Aiemmin tapahtunutta: ERDDAP™ jakaisi paljon tilaa min- ja max merkkijonon arvoille tiedostoissa, jotka tallennetaan tiedostotietoihin tällaisia tietokokonaisuuksia varten. Tuloksena tiedosto oli valtava, joten se kirjoitetaan ja luetaan hitaasti. Kiitos OBIS:n.
          
-    * Huomautus: Nyt, ERDDAP™ tekee paremman työn tulkita epätavallisia ja mitättömiä hahmoja CSV-tiedostoissa. Kiitos Obikselle.
+    * Nyt, ERDDAP™ tekee paremman tulkinnan epätavallinen ja virheellinen merkkisekvenssit CSV-tiedostoja. Kiitos OBIS:n.
          
-    * FIX: Vuoden Cassandra-ongelmien jälkeen asensin Cassandraa. (V2) Testit on tehty uudelleen Cassandra v2:lla. Nyt voin luottavaisemmin sanoa, että ERDDAP™ Cassandra v2 ja v3. Kiitos ONC:lle.
+    * Kun vuoden ongelmia Cassandra, olen vihdoin asentanut Cassandra (v2) uudelleen ja niin pystyi tekemään testit uudelleen Cassandra v2. Joten nyt voin varmemmin todeta, että ERDDAP™ toimii Cassandra v2 ja v3 kanssa. Kiitos ONC:n.
          
 
-## versio 2.12{#version-212} 
- (2021-05-14 julkaistu) 
+## Versio 2.12{#version-212} 
+ (julkaistu 2021-05-14) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * Viisikymppinen: Jos olet tilauksen mustalla listalla, et voi nyt pyytää listaa tilauksistasi.
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * BUG FIX: Jos olet tilaus mustalla listalla, et voi nyt pyytää listaa tilauksistasi.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * TO DO: NEW: Järjestelmä, jolla rajoitetaan automaattisesti haitallisten käyttäjien ja liian aggressiivisten laillisten käyttäjien kykyä tehdä suuri määrä samanaikaisia pyyntöjä, jotka heikentävät järjestelmän suorituskykyä muille käyttäjille. Uusia valinnaisia tunnisteita on kolme datasets.xml jonka voit/pitäisi lisätä heti&lt;grafiikka BackgroundColor &gt;
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * TOT: UUSI: järjestelmä, jolla rajoitetaan automaattisesti pahansuopien käyttäjien ja liian aggressiivisten laillisten käyttäjien mahdollisuuksia esittää useita samanaikaisia pyyntöjä, jotka heikentäisivät järjestelmän suorituskykyä muiden käyttäjien kannalta. On 3 uutta valinnaista tunnistetta datasets.xml jonka voit / pitäisi lisätä heti sen jälkeen&lt;KaavioTaustaväri&gt; :
 ```
         <ipAddressMaxRequests></ipAddressMaxRequests>  <!-- current default=7 -->
         <ipAddressMaxRequestsActive></ipAddressMaxRequestsActive>  <!-- current default=2 -->
         <ipAddressUnlimited></ipAddressUnlimited>  <!-- default=empty -->  
 ```
 
-Lisätietoja, katso [ipAddressMaxRequests](/docs/server-admin/datasets#ipaddressmaxrequests) . ERDDAP™ Lue myös ”Ainutlaatuisten käyttäjien lukumäärä” (käynnistyksen jälkeen) Tila.html-sivulla.
-Kiitos Kiinan hyökkääjälle ERDDAP™ asennus.
+Lisätietoja: [ipAddressMaxRequests](/docs/server-admin/datasets#ipaddressmaxrequests) . ERDDAP™ myös nyt tulostaa "Number of unique users (Käynnistyksen jälkeen) " status.html sivulla.
+Kiitos henkilön Kiinassa hyökkäävät minun ERDDAP™ asennus.
          
-    * Postgresql-kuljettajan käyttäytyminen: Kun päivitin Postgresql-kuljettajan, Postgresqlin ja GenerateDatasetsXmlin tuottaman taulukkolistan sarakkeiden nimet tulivat takaisin kaikkiin ylärajoihin, kaikkien alennusten sijaan. En tiedä, vaikuttaako se muihin asioihin, koska tietokanta usein pitää näitä nimiä herkkänä. Testitietoni toimivat edelleen oikein. Jos aineistosi lakkaa toimimasta tämän kanssa ERDDAP™ Päivitys, tämä on yksi syy aloittaa.
+    * MUUTOS Postgresql ajuri käyttäytyminen: Kun päivitin Postgresql-ajurin, Postgresql:n ja GenerateDatasetsXml:n luoman taulukon sarakkeen nimet tulivat takaisin kaikki isot kirjaimet sen sijaan, että ne olisivat pienempiä, kuten aiemmin. En tiedä, vaikuttaako se muihin asioihin, koska tietokannat pitävät nimiä usein tunteettomina. Testitietoni toimii yhä oikein. Mutta jos tietoaineistosi lakkaa toimimasta tämän kanssa ERDDAP™ update, tämä on mahdollinen syy jatkaa ensin.
          
-    * Vinkki: ERDDAP™ Lisäksi AWS S3 -tiedostot käsitellään oikein. AWS S3 -tiedostojen käsittelyyn on tehty muitakin parannuksia. Kiitos Michael Gangl ja Dylan Pugh.
+    * BUG FIX: ERDDAP™ nyt myös käsittelee yksityisiä AWS S3 tiedostoja oikein. AWS S3-tiedostojen käsittelyyn liittyi myös muita parannuksia. Michael Ganglin ja Dylan Pughin ansiosta.
          
-    * Uusi: EDDGrid NCFiles ja EDDGrid Lähde: NCFiles Pakkaamattomat voivat nyt lukea tietoja "rakenteista" .nc 4 ja .hdf 4 tiedostoa. Jotta voidaan tunnistaa muuttuja, joka on peräisin rakenteesta,&lt; sourceName &gt; _fullStructureName_ | _memberName_, esim. ryhmä1/myStruct | MyMember. Kiitos NRL:stä.
+    * UUTTA: EDDGrid FromNcFiles ja EDDGrid FromNcFiles Unpackage voi nyt lukea tietoja "rakenteet" .nc 4 ja .hdf 4 tiedostoa. Määrittää muuttuja, joka on peräisin rakenteesta,&lt; sourceName &gt; on käytettävä muotoa: _täydellinen StructureName_ | _memberName_, esimerkiksi ryhmä1/myStruct | Jäseneni. NRL:n ansiosta.
          
-    * Nyt, jos nykyinen muistin käyttö ja tämä pyyntö on vielä hieman korkea, griddap nThreads tälle pyynnölle 1 Näin, ERDDAP™ Säästää muistia, kun muistia on vähän. Kiitos Kiinan hyökkääjälle ERDDAP™ asennus.
+    * MUUTTUNUT: Nyt, jos nykyinen muistin käyttö plus tämä pyyntö on jopa hieman korkea, ruudustot nLähetys tämän pyynnön 1. Näin ollen ERDDAP™ Säästää muistia, kun muisti on niukka. Kiitos henkilön Kiinassa hyökkäävät minun ERDDAP™ asennus.
          
-    * Uusi järjestelmä avoimien tiedostojen lukumäärän seuraamiseksi (joka sisältää sukkia ja muita asioita, ei vain tiedostoja) Tomcatissa Linux-tietokoneissa. Jos jotkut tiedostot virheellisesti eivät koskaan sulje, avointen tiedostojen määrä voi kasvaa, kunnes se ylittää sallitun enimmäismäärän ja paljon todella huonoja asioita tapahtuu. Linux-tietokoneissa (Tietoja ei ole saatavilla Windowsille) :
+    * UUSI järjestelmä, jolla seurataan avointen tiedostojen määrää (joka sisältää pistorasiat ja joitakin muita asioita, ei vain tiedostoja) Tomcatissa Linuxin tietokoneilla. Jos joitakin tiedostoja ei vahingossa koskaan suljeta, avointen tiedostojen määrä voi kasvaa, kunnes se ylittää suurimman sallitun ja lukuisia todella pahoja asioita tapahtuu. Nyt Linuxin tietokoneilla. (tietoja ei ole saatavilla Windows) :
         
-        * On olemassa uusi "Open Files" sarake äärioikeistossa status.html verkkosivun näyttää prosenttiosuus max tiedostot auki. Windowsissa se vain näyttää.”
-        * Milloin ERDDAP™ tuottaa nämä tiedot jokaisen merkittävän tietoaineiston latauksen lopussa, se tulostaa lokiin. Txt-tiedosto:
-OpenFileCount_current_ max_max_% Percent_
-        * Jos prosenttiosuus on &gt; 50 %, sähköposti lähetetään ERDDAP™ Järjestäjä ja sähköposti Kaikki kaikessa sähköpostiosoitteisiin.
+        * On uusi "Avaa tiedostoja" sarake kaukana oikealla status.html web-sivu näyttää prosenttiosuuden max tiedostoja auki. Windowsissa se vain näyttää "?"
+        * Milloin ERDDAP™ tuottaa nämä tiedot kunkin suuren tiedoston lopussa uudelleen ladata, se tulostaa lokiin. txt-tiedosto:
+openFileCount=_current_ of max=_max_ %=_percent_
+        * Jos prosenttiosuus on &gt;50%, sähköposti lähetetään osoitteeseen ERDDAP™ hallinnoija ja sähköposti Kaikki Sähköpostiosoitteet.
         
-Lue lisää tai jos näet tämän ongelman ERDDAP™ nähtävä [Liikaa avoimia tiedostoja](/docs/server-admin/additional-information#too-many-open-files) .
-Kiitos Kiinan hyökkääjälle ERDDAP™ asennus.
+Saadaksesi lisätietoja tai jos näet tämän ongelman ERDDAP™ , katso [Liian monta avointa tiedostoa](/docs/server-admin/additional-information#too-many-open-files) .
+Kiitos henkilön Kiinassa hyökkäävät minun ERDDAP™ asennus.
          
-    * Lisäsin paljon "liian monta avointa tiedostoa", joten tehtävä pysähtyy ja käyttäjä näkee virheviestin. Datatiedostoja ei enää merkitä huonoksi, jos niiden lukeminen johtaa "liian moniin avoimiin tiedostoihin" -virheeseen.
+    * UUTTA: Lisäsin paljon tarkkailua ja käsittelyä "Liian monet avoimet tiedostot," joten tehtävä vain pysähtyy ja käyttäjä näkee virheviestin. Datatiedostoja ei enää merkitä huonoiksi, jos niiden lukeminen aiheuttaa "Liian monta avointa tiedostoa" - virheen.
          
-    * Uusia \\[ isovanhemmat \\] BadFilesFlag-hakemisto:
-Jos laitat tiedoston tähän hakemistoon datasetID tiedoston nimi (tiedostojen sisällöllä ei ole väliä) , ERDDAP™ Poistaa huonot fiilikset .nc Tiedosto tästä datasta (Jos) Lataa ASAP-tiedot uudelleen. Tämä aiheuttaa ERDDAP™ Yritä uudelleen työskennellä tiedostojen kanssa aiemmin (virheellisesti?) merkitty huonoksi. Kiitos Marco Alballe.
+    * UUSI \\[ bigPentDirectory \\] /adFilesFlag-hakemisto:
+Jos laitat tiedoston tähän kansioon datasetID tiedoston nimellä (tiedoston sisällöllä ei ole merkitystä) , ERDDAP™ poistaa huonot tiedostot .nc tiedosto (jos) ja lataa tietokokonaisuus uudelleen ASAP. Tämä aiheuttaa ERDDAP™ yrittää uudelleen työskennellä tiedostoja aiemmin (Virheellisesti?) merkitty huonoksi. Kiitos Marco Alban.
          
-    * Vaihtoehto: Aloitus, jos EDDGrid Files or EDDTableFrom... Tiedostoaineistossa on alun perin 0 tiedostoa tunnetuista kelvollisista tiedostoista. (mm. uusi tietoaineisto) sitten ERDDAP™ Lataa se ja aseta lippu, jotta se ladataan ASAP, kun suuri kuorma Tatasets on valmis. Tämä nopeuttaa alustavaa käynnistystä, kun uusia aineistoja on.
+    * Muuttunut: Käynnistyksen aikana, jos EDDGrid Kansiosta tai EDDTablesta... Tiedostoaineistossa on aluksi 0 tiedostoa tunnettujen validien tiedostojen luettelossa (Esimerkiksi, se on uusi tietokokonaisuus) , sitten ERDDAP™ lykkää sen lataamista ja asettaa lipun siten, että se ladataan mahdollisimman pian suuren kuorman jälkeenDatasets on valmis. Tämä nopeuttaa aloitusta, kun on uusia aineistoja.
          
-    * Lähde: FileVisitorDNLS.testAWS3 () Lähde: FileVisitorSubdir.testAWSS3 () Käytä AWS v2:ta (Ei v1) SDK. Nyt Git ERDDAP™ Jakelu sisältää kaikki tarvittavat tiedostot, eikä sinun tarvitse enää lisätä manuaalisesti massiivista V1 AWS SDK -jar-tiedostoa.
+    * MUUTETTU: TiedostoVisitorDNLS.testeWSS3 () ja FileVisitorSubdir.testesAWSS3 () ; käytä nyt AWS v2 (ei v1) SDK. Joten nyt Git ERDDAP™ jakelu sisältää nyt kaikki tarvittavat tiedostot ja sinun ei enää tarvitse lisätä manuaalisesti massiivinen v1 AWS SDK-purkkitiedosto.
          
-    * Vaihdoin Mavenin avulla havaita/keräillä riippuvuuksia (.jar-tiedostot /lib) . AWS SDK:n muutokset vaativat tätä. Tarvitaan myös muita tuontikoodia tulevaisuudessa. Kiitokset Kyle Wilcoxille, joka antoi hänelle luomansa ja käyttämänsä pom.xmlin, joka ratkaisi minulle useita ongelmia.
+    * MUUTTUNUT: Vaihdoin Mavenin käytön riippuvuuden havaitsemiseen/keräämiseen (.jar-tiedostot /lib) . AWS SDK:n muuttaminen v2:ksi edellytti tätä. Sitä tarvitaan tulevaisuudessa muun tuontikoodin osalta. Suuri kiitos Kyle Wilcox joka tarjosi pom.xml hän loi ja käyttää, mikä ratkaisi useita ongelmia minulle.
          
-    * Alkuperäinen nimi: The classpath parameter (cp) GenerateDatasetXml, DasDds ja muut pienet ohjelmat ERDDAP™ , ja ohjelmoijien on nyt paljon yksinkertaisempi ja ei pitäisi koskaan muuttua uudelleen, koska se viittaa hakemistoon, ei yksittäisiä tiedostoja:
-\\-cp-luokat;C: \\programs\tomcat \\lib \\servlet-api.jar;lib
+    * MUUTOS: luokkapolkuparametri (- cp) käytetään GenerateDatasetXml, DasDds ja muita pieniä ohjelmia, jotka tulevat ERDDAP™ , ja neuvoja ohjelmoijille on nyt paljon yksinkertaisempi eikä pitäisi koskaan muuttaa uudelleen, koska se viittaa hakemistoon, ei yksittäisiä tiedostoja:
+\\-cp-luokat;C:\\\\_tomcat\\lib\\servlet-api.jar;lib\\\\*
          (tai ":" eikä ";" Linux ja Macs) .
-         (Olisi pitänyt tehdä tämä vuosi sitten, kun siitä tuli vaihtoehto.)   
+         (Tämä olisi pitänyt tehdä vuosia sitten, kun siitä tuli vaihtoehto.)   
          
-    * Alkuperäinen nimi: GenerateDatasets Xml: llä on uusi käyttövaihtoehto: löydäDuplicateTime, joka etsii verkkokokoelman kautta. .nc   (ja liittyvät) tiedostoja, joilla on kaksinkertaiset aika-arvot. Näytä [Löydetty Aika-aika](/docs/server-admin/datasets#findduplicatetime)   
+    * UUTTA: Luo datasettejä Xml on uusi apuohjelma vaihtoehto: findDuplicateTime, joka etsii kautta kokoelman gridded .nc   (ja siihen liittyvät) tiedostot, jotka löytävät tiedostoja, joissa on kaksoisajat. Katso [findDuplicate Aika](/docs/server-admin/datasets#findduplicatetime)   
          
-    * Uusi: datasets.xml Voidaan nyt sisällyttää&lt;Tag, joka ylittää&lt;Tag value from viestejä.xml (tai palauttaa viestit.xml-arvoon, jos se on tyhjä) . Näin voit muuttaa käytettävissä olevien palettien luetteloa ERDDAP™ Juoksen. Lisäksi, jos sinulla on Cptfiles-aliohjaus ERDDAP™ Sisältöhakemisto, ERDDAP™ kopioi kaikki \\*.cpt-tiedostot kyseisessä hakemistossa \\[ Tom \\] /webapps/erddap/WEB-INF/cptfiles-hakemisto ERDDAP™ Aloita. Yhdessä näiden muutosten avulla voit lisätä palettia ja muutokset jatkuvat, kun asennat uuden version ERDDAP . Nähdään [Palettien dokumentointi](/docs/server-admin/datasets#palettes)   
-Kiitos Jennifer Sevadjian, Melanie Abecassis ja ehkä muut rannikkovartiostot.
+    * UUTTA: datasets.xml voi nyt sisältää&lt;palettes&gt; tag, joka ohittaa&lt;palettes&gt; tag value from messages.xml (tai palaa viesteihin.xml-arvo, jos se on tyhjä) . Tämän avulla voit muuttaa luetteloa saatavilla palettes kun ERDDAP™ Hän pakenee. Myös, jos sinulla on cptfiles alihakemistoon ERDDAP™ sisältöhakemisto, ERDDAP™ kopioi kaikki \\*.cpt-tiedostot kyseiseen kansioon \\[ tomcat \\] /webapps/erddap/WEB-INF/cptfiles-hakemisto joka kerta ERDDAP™ Aloitetaan. Yhdessä näiden muutosten avulla voit lisätä paletit ja muutokset jatkuvat, kun asennat uuden version ERDDAP . Katso [paletit](/docs/server-admin/datasets#palettes)   
+Jennifer Sevadjianin, Melanie Abecassiksen ja ehkä muidenkin CoastWatch-ihmisten ansiosta.
          
-    * Muutos: [&lt;Hidas DownTroubleMillis » (Docs/server-admin/datasets#slowdowntroublemillis) Nyt niitä käytetään kaikkiin epäonnistuneisiin pyyntöihin, ei vain muutamiin.
+    * MUUTETTU: [&lt;HidasDownTroubleMillis&gt;] (/docs/server-admin/datasets#slowdowntroblemis) käytetään nyt kaikkiin epäonnistuneita pyyntöjä, ei vain muutamia tyyppejä.
          
-    * RANGED: The RunLoadDatasets -lanka keskeyttää LoadDatasets-langan 3/4 LoadDatasets -laitteella MaxMinutes, joten LoadDatasetsilla on enemmän aikaa havaita keskeytys ja poistuminen armollisesti. On myös enemmän ja parempia diagnoosiviestejä.
+    * MUUTTUNUT: RunLoadDatasets-lanka keskeyttää nyt LoadDatasets-langan 3/4 LoadDatasetsissa MaxMinutes niin on enemmän aikaa LoadDatasets huomata keskeytys ja poistua hienovaraisesti. Tähän liittyy myös enemmän ja parempia diagnostisia viestejä.
          
-    * Muutettu vanhasta versiosta Lucene v8.7.0.
+    * Muuttunut vanhasta versio Lucene v8.7.0.
          
-    * Muutos: Sähköpostit, jotka lähetetään ERDDAP™ Nyt näkyy kiinteä leveysfontti.
+    * MUUTOS: Sähköpostit ERDDAP™ Nyt näkyvät kiinteällä fontilla.
          
-    * Muutos: EDDGrid FromFiles saa nyt akseliarvoja ja ominaisuuksia FIRST | Viimeisin tiedosto, kuten on määritelty&lt;Metadata &gt; Kiitos (Ei ei ei) Ken Casey, et al.
+    * MUUTOS: EDDGrid FromFiles saa nyt akseliarvot sekä ominaisuudet FIRST | LAST-tiedosto, sellaisena kuin se on määritelty&lt;metadataFrom&gt;. Kiitos. (ei) to Ken Casey, et al.
          
-    * ADDED-tuki mitättömille yksiköille "degree \'North" ja "degree_East", joita viimeaikaiset tiedostot käyttävät virheellisesti. (Vuodesta 2020-10-01) AVHRR Pathfinder versio 5.3 L3-Collated (L3C) SST-aineistot (ENIPH53 sst d1 päivää ja nceiPH53 sst n1 päivää) . ERDDAP™ Nyt ne voidaan standardoida kelvollisiksi yksiköiksi. Kiitos (Ei ei ei) Ken Casey, et al.
+    * ADDED tuki epäkelpoille yksiköille "celo\\_North" ja "celo\\_East," joita käytetään virheellisesti viimeaikaisissa tiedostoissa (Vuodesta 2020-10-01) AVHRR Pathfinder Versio 5.3 L3-Kolated (L3C) SST-aineistot (nceiPH53 sst d1day ja nceiPH53 sst n1day) . ERDDAP™ voi nyt standardoida ne voimassa oleviin yksiköihin. Kiitos. (ei) to Ken Casey, et al.
          
 
-## versio 2.11{#version-211} 
- (Lähde: 2020-12-04) 
+## Versio 2.11{#version-211} 
+ (julkaistu 2020-12-04) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * BUG FIX: OrderByMean heitti NullPointerE-poikkeuksen, jos muuttujalla oli vain yksi ±FillValue tai kadonnut. Arvo määritellään. Nyt se hoitaa tilanteen oikein. Kiitos Marco Alballe.
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * BUG FIX: OrderByMean heitti NullPointerPointPoikkeuksen, jos muuttujassa oli vain yksi\\_FillValue tai puuttuu\\__ Määritelty arvo. Nyt se hoitaa tilanteen oikein. Kiitos Marco Alban.
          
-    * Viisikymppinen: ODV-tekstitiedostojen luomisessa oli ongelmia ERDDAP™ V2.10. Nämä ongelmat on korjattu. Kiitos Shaun Bellille.
+    * BUG FIX: Oli ongelmia ODV tekstitiedostoja luotu ERDDAP™ V2.10. Ongelmat ovat kunnossa. Kiitos Shaun Bellin.
          
-    * Vinkki: Vain sisään ERDDAP™ V2.10 Jos URL-osoitteessa määritellään lat lon -rajoitukset, ei vedetty maailmankartalle. Nyt se on taas. Kiitos John Maurerille.
+    * BUG FIX: Juuri sisään. ERDDAP™ v2.10: Jos lat lon rajaukset oli määritelty URL, rajauslaatikko ei piirretään maailman kartta. Nyt se on taas. John Maurerin ansiosta.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Vinkki: Vain sisään ERDDAP™ V2.10: Käsikirjoitustiedostot ArchiveADataset, GenerateDatasets Xml ja DasDds eivät toimineet, koska heillä ei ollut muutoksia luokkapolkuun. ERDDAP™ 10.10 Nyt he tekevät. Kiitos Marco Alballe.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * BUG FIX: Juuri sisään. ERDDAP™ v2.10: Skriptitiedostot ArchiveADataset, LuodaDatasets Xml ja DasDds eivät toimineet, koska heillä ei ollut muutoksia luokkapolku, joka lisättiin ERDDAP™ V2.10. Kiitos Marco Alban.
          
-    * Uusi: In datasets.xml Nyt sinulla voi olla tagi:
+    * UUTTA: datasets.xml , sinulla voi olla nyt merkki:
 ```
         <emailDiagnosticsToErdData></emailDiagnosticsToErdData> <!-- true (the default) or false -->  
 ```
 
-Tällä hetkellä, jos totta (tai jos tagi on tyhjä tai jos se ei ole tiedostossa) kun käyttäjän pyyntö johtaa NullPointerE-poikkeukseen, ERDDAP™ Sähköposti Pino jäljet erd.data at noaa.gov   (The ERDDAP™ Kehitysryhmä) . Tämä on turvallista ja turvallista, koska ei ole luottamuksellista tietoa. (Esim. pyyntö) sisältyy sähköpostiin. Tämä mahdollistaa mahdollisten epäselvien, täysin odottamattomien vikojen, jotka johtavat NullPointerE-poikkeuksiin. Käyttäjä näkee poikkeukset, mutta ERDDAP™ Kehittäjät eivät, joten emme tiedä, että ongelma on korjattava.
+Tällä hetkellä, jos totta (tai jos tunniste on tyhjä, tai jos tunniste ei ole tiedostossa) , kun käyttäjän pyyntö johtaa NullPointer poikkeus, ERDDAP™ lähettää pinon jäljityksen sähköpostiin erd.data at noaa.gov   (a ERDDAP™ kehitysryhmä) . Tämän pitäisi olla turvallista, koska luottamuksellisia tietoja ei ole (Esim. pyyntö) sisältyy sähköpostiin. Näin pitäisi olla mahdollista napata mitään hämäriä, täysin odottamattomia bugeja, jotka johtavat NullPointer-poikkeuksiin. Muuten käyttäjä näkee poikkeuksia, mutta ERDDAP™ Kehittäjät eivät, joten emme tiedä onko ongelmia korjattava.
         
-On mahdollista, että tämä tagi johtaa muihin samankaltaisiin diagnostisiin tietoihin, joita lähetetään erd.data at noaa.gov tulevaisuudessa. Sähköpostin sisältö on aina vähäinen ja liittyy vikoja, eikä esimerkiksi käyttötietoja. Kiitos Marco Alballe.
+On mahdollista, että tämä tag johtaa muita, samanlaisia diagnostisia tietoja sähköpostitse erd.data at noaa.gov Tulevaisuudessa. Sähköpostin sisältö on aina minimaalinen ja liittyy vikoihin eikä esimerkiksi käyttötietoihin. Kiitos Marco Alban.
          
         
-    * Muokattu: Nyt, yleisiä pakattuja tiedostotyyppejä ( .bz2 , .gz , .gzip , .tar , .tgz , .z , .zip ) Kielletään myös tavun pyynnöt. Tämä on määritelty kautta&lt;ExtensionsNoRangeRequests &gt; Viestit.xml.
+    * MUUTTUNUT: Nyt yhteiset pakattu tiedostotyypit ( .bz2 , .gz , .gzip , .tar , .tgz , .z , .zip ) ovat kiellettyjä myös tavu kantama pyynnöt. Tämä täsmennetään&lt;laajennuksetNorRangeRequests&gt; in messages.xml.
          
-    * Tietoinen käytäntö: Kuten ERDDAP™ 2.10, .nc ml-tiedostot, jotka yrittävät muuttaa ominaisuutta, eivät muuta attribuuttia. Tämä on tiedossa oleva vika netcdf-javassa, jonka olen ilmoittanut, ja he sanovat, että se on kiinnitetty seuraavaan netcdf-javan vapautukseen.
+    * -Tiedän. Kuten ERDDAP™ 2.10 .nc ml tiedostoja, jotka yrittävät muuttaa ominaisuutta, älä muuta ominaisuutta. Tämä on tunnettu bug netcdf-jaava, jonka olen raportoinut ja he sanovat korjataan seuraavassa julkaisussa netcdf-java.
          
 
 ## Versio 2.10{#version-210} 
- (Lähde: 2020-11-05) 
+ (julkaistu 2020-11-05) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * Uusi: Uusi [Interpoliittinen](https://coastwatch.pfeg.noaa.gov/erddap/convert/interpolate.html) Muuntaja välittää tehokkaasti arvoja verkkotietoaineiston arvoista. Se on erityisen hyödyllinen tutkijoille, jotka työskentelevät eläinradan kanssa. Tämä muuntaja ottaa pöydän leveys, pituus ja aika sarakkeet (Ehkä muita sarakkeita) ja palauttaa taulukon, jossa on muita sarakkeita, joilla on interpoloituja arvoja. Tämä on samanlainen kuin suosittu [röntgenkuva](https://coastwatch.pfeg.noaa.gov/xtracto) Dave Foleyn luoma käsikirjoitus tarjoaa etulyöntiaseman jopa 100 pistettä per pyyntö. Dave Foley ja Jordan Watson ( NMFS ) .
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * UUTTA: Uusi [Interpolaatti](https://coastwatch.pfeg.noaa.gov/erddap/convert/interpolate.html) muunnin tehokkaasti interpoloi arvot ruudukoitetun aineiston arvoista. Näin ollen se on erityisen hyödyllinen eläinradan tietojen parissa työskenteleville tutkijoille. Tämä muunnin ottaa taulukon leveys-, pituus- ja aika sarakkeet (ja ehkä muita sarakkeita) ja palauttaa taulukon, jossa on muita sarakkeita ja interpoloituja arvoja. Näin ollen tämä on samanlainen kuin suosittu [Xtractomatic](https://coastwatch.pfeg.noaa.gov/xtracto) Script alun perin luotu Dave Foley, mutta tarjoaa edun käsittelyn jopa 100 pistettä per pyyntö. Kiitos Dave Foleyn ja Jordan Watsonin ( NMFS ) .
          
-    * Advanced Search on nyt tiukka ei-.html-pyyntöihin. Poikkeuslupaukset pyyntöihin, joilla on pysyviä virheitä (esim. pyynnöt, joissa minLat &gt; maxLat) Väliaikaiset virheet (esim. pyynnöt a standard\\_name Sitä ei ole olemassa) . .html-pyyntöihin Advanced Search on muuttumaton: kuten Googlen hakuihin, se korjaa parhaansa ja vaistomaisesti tai jättää virheet huomiotta. Kiitos Rich Signell.
+    * PARANTAA: Tarkennettu haku on nyt tiukka non-.html pyyntöjä. Nyt se esittää poikkeuksia pyynnöille, joissa on pysyviä virheitä (Esim. pyynnöt, joissa minLat &gt; maxLat) tai tilapäisiä virheitä (esim. standard\\_name Sitä ei ole olemassa.) . For .html pyynnöt, Tarkennettu haku on muuttumaton: kuten Google hakuja, se tekee parhaan ja äänettömästi korjata tai sivuuttaa virheitä. Kiitos Rich Signellin.
          
-    * IMPROVED: Advanced Search -sivun kartta on nyt suurempi (Joudut vielä vääntämään, mutta vähemmän) huomattavasti tarkemmin (Mutta ei siltikään täydellinen) . Kiitos John Maurerille.
+    * IMPROVED: Tarkennetun hakusivun kartta on nyt suurempi (Sinun täytyy vielä siristää, mutta vähemmän) ja huomattavasti tarkempi (mutta ei silti täydellinen) . John Maurerin ansiosta.
          
-    * IMPROVED: "Draw land mask" -asetus Make A Graph -sivuilla ja & land = ... asettamalla URL-osoitteisiin, jotka pyytävät karttaa, tukee nyt kahta muuta vaihtoehtoa:
-"outline" piirtää vain maiseman ääriviivat, poliittiset rajat, järvet ja joet.
-"Off" ei piirrä mitään.
-Nähdään [&.maa = dokumentointi](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#GraphicsCommands) .
-Kiitos John Maurerille.
+    * IMPROVED: "Draw land maski" asetus Make A Graph web-sivut ja &.land=... asetus URL-osoitteet, jotka pyytävät kartta nyt tukee kahta muuta vaihtoehtoa:
+"Ulkolinja" piirtää vain maamastoa, poliittisia rajoja, järviä ja jokia.
+Se ei vedä mitään puoleensa.
+Katso [& Maa =... dokumentaatio](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#GraphicsCommands) .
+John Maurerin ansiosta.
          
-    * IMPROVED: Grafiikka ja kartat, jotka ovat luoneet ERDDAP™ Voit käyttää nyt kolmea uutta merkkiä: Borderless Filled Square, Borderless Filled Circle, rajaton täytetty kolmio. Tämän koodin on tuottanut ETT:n Marco Alba. Kiitos Marco Alballe.
+    * IMPROVED: Kaaviot ja kartat luotu ERDDAP™ voi nyt käyttää kolmea uutta merkkityyppiä: Rajaton Täytetty Square, Rajaton Täytetty Circle, Rajaton Täytetty Kolmio. Tämän koodin antoi Marco Alba ETT / EMODnet Physics. Kiitos Marco Alban.
          
-    * Uusi: "files" Järjestelmä tukee nyt yksinkertaista Tiedostotyyppien vastaukset (.csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv tai .xhtml .) esim. [https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv](https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv) .
-Kiitos Kyle Wilcoxille.
+    * UUTTA: "files" järjestelmä tukee nyt tavallinen Tiedostotyypin vastaukset (.csv .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , tai .xhtml .) , esimerkiksi [ https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv ](https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv) .
+Kiitos Kyle Wilcoxin.
          
-    * IMPROVED: URL-osoitteet, jotka syntyvät, kun käyttäjä käyttää Data Access -lomaketta (.html) Make-A-Graph (.grafiikka) Web-sivut ovat nyt oikeassa prosenttiluvussa \\[ ja \\] . Tämä tekee URL-osoitteista hieman vaikeampia lukea, mutta se on parempi verkkoturvallisuuden näkökulmasta. Hallinnolla on nyt mahdollisuus rentoutua """ \\[  \\]  | Tomcat-palvelin.xml-tiedosto (Vähemmän turvallista) tai ei (Turvallisempi) .
-Kiitos Antoine Queric, Dominic Fuller-Rowell ja muut.
+    * IMPROVED: URL-osoitteet luodaan, kun käyttäjä käyttää Data Access Form (.html) tai merkki-A-kuvio (. graph) web-sivun nyt oikein prosentti-koodata merkkiä \\[ sekä \\] . Tämä tekee URL-osoitteista hieman vaikeampi ihmisille lukea, mutta on parempi web-turvallisuuden näkökulmasta. Hallintovirkamiehillä on nyt mahdollisuus asettaa rento QueryChars= ' \\[  \\]  | ' on Tomcat palvelimen.xml tiedosto (vähemmän turvallinen) tai ei (turvallisempi) .
+Kiitos Antoine Quericin, Dominic Fuller-Rowellin ja muiden.
          
-    * NEW: Jos EDDTable-tietokantojen pyyntöön sisältyy &add Muuttujia Missä missä (_attribuutti Nimi, attribuutti Arvoa) , ERDDAP™ Lisää kaikki muuttujat, joilla on _attribuutti Nimi = attribuutti Value_ on luettelo pyydetyistä muuttujista.
-Nähdään [&add Muuttujia Missä dokumentit](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#addVariablesWhere) . Kiitos Aurelie Briand, et al.
+    * UUTTA: Jos pyyntö EDDTable-aineisto sisältää & lisää Muuttujat Missä (_attribuutti Nimi, ominaisuus Arvo) , ERDDAP™ lisää kaikki muuttujat, jotka ovat _attribuutti Nimi=attribuutti Arvo_ pyydettyjen muuttujien luetteloon.
+Katso [& Lisää Muuttujat Jos asiakirjat](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#addVariablesWhere) . Kiitos Aurelie Briand, et al.
          
-    * Muutos: ERDDAP™ kieltäytyy sivun pyynnöistä / tiedostoja / .nc tai tai .hdf tiedostoja. Älä yritä yhdistää kaukaiseen .nc tai tai .hdf Aivan kuin ne olisivat paikallisia tiedostoja. Se on erittäin tehoton ja aiheuttaa usein muita ongelmia. Sen sijaan:
-        * Käytä(OPeN)DAPAsiakasohjelmisto yhdistää ERDDAP &gt; DAP Palvelut tälle aineistolle (joka on/griddap/ tabledap URL:ssä) . Se on mitä DAP on for.
-        * Käytä tietoaineiston Access-lomaketta pyytääksesi tietojen alijoukkoa.
-        * Jos tarvitset koko tiedoston tai toistuvan pääsyn pitkän ajan, käytä curl , wget , tai selaimesi ladata koko tiedoston, sitten käyttää tietoja paikallisesta tiedoston kopiosta.
+    * MUUTETTU: ERDDAP™ Nyt kieltäytyy tavualue pyynnöt /files / .nc tai .hdf tiedostot. Älä yritä muodostaa yhteyttä etään .nc tai .hdf Aivan kuin ne olisivat paikallisia tiedostoja. Se on hirvittävän tehoton ja aiheuttaa usein muita ongelmia. Sen sijaan:
+        * Käyttö(OPeN)DAPasiakasohjelmisto, johon yhteys ERDDAP S DAP Tämän tietokokonaisuuden palvelut (joilla on /griddap/ tai / tabledap / URL) . Niin. DAP Se on sitä varten.
+        * Käytä tietokokonaisuuden tietojen saatavuutta koskevaa lomaketta pyytääksesi osajoukkoa tietoja.
+        * Jos tarvitset koko tiedoston tai toistuvan pääsyn pitkään, käytä curl , wget , tai selain ladata koko tiedoston, sitten käyttää tietoja paikallisesta kopiosta tiedoston.
              
-    * Alkuperäinen nimi: The.odv Txt-tulostus on uusittu tukemaan uutta versiota ODV .txt tiedostot ja tukevat trajectory-, aikaseries- ja profiilitietojen asianmukaista esittämistä.
+    * PARANNETTU: Txt-tulosteen vaihtoehto on kirjoitettu uudelleen tukemaan uutta versiota ODV .txt tiedostoja ja tukea asianmukaista edustusta lentoradan, aikasarjat, ja profiilin tietoja.
          
-    * IMPROVED: Nyt kaksoislainojen hakutermejä tulkitaan json-johdona, jotta niillä voi olla koodattuja hahmoja. Tämän avulla voit etsiä tarkan ottelun attribuutista, esim. ”Institution=institution=” NOAA  \\n ”Ei sovi yhteen instituution kanssa” NOAA   NMFS . Kiitos Dan Nowackille.
+    * PARANTAA: Nyt, hakutermejä kaksinkertainen lainausmerkeissä tulkitaan json merkkijono, jotta ne voivat olla\\ koodattuja merkkejä. Muun muassa tämän avulla voit etsiä tarkka vastaavuus attribuutti, esim., "institution = NOAA  \\n " ei vastaa aineistoa laitoksen = NOAA   NMFS . Dan Nowackin ansiosta.
          
-    * IMPROVED: Lisäpaikoissa kelluvat pistenumerot (Erityisesti kelluvat kaksinkertaisiksi) Nyt se on hieman pyöristetty versio numerosta lisäpaikoissa, esim. kelluva, joka on aiemmin esitetty kaksoiskappaleena, kuten 32.27998779296875, saattaa nyt olla 32.28. Kiitos Kyle Wilcoxille.
+    * PARANTAA: Lisäpaikoissa liukulukuja (erityisesti kaksoiskappaleiksi muunnetut kellukkeet) Nyt näyttää hieman pyöreämpi versio määrä lisäpaikkoja, esim. float aiemmin esitetty kaksinkertainen 32.27998779296875, saattaa nyt näyttää 32.28. Kiitos Kyle Wilcoxin.
          
-    * BUG FIX: Allekirjoittamattomia kokonaislukutiedostoja luettiin hieman väärin. Nyt ne luetaan oikein.
+    * BUG FIX: unsigned integer audio tiedostoja luki hieman väärin. Nyt ne luetaan oikein.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Varoitus: ensimmäinen kerta, kun juokset ERDDAP™ V2.10 Jotkin paikalliseen datatiedostoon perustuvat tietoaineistot latautuvat **erittäin** hitaasti, koska ERDDAP™ On luotava tietokanta tiedostojen tiedoista. Alkuvaiheen jälkeen ne kuormitetaan nopeasti, kuten ennenkin. Ole kärsivällinen.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * VAROITUS: Ensimmäinen kerta kun juokset ERDDAP™ v2.10, jotkut tiedot perustuvat paikallisiin tiedostoihin ladata **hyvin** hitaasti koska ERDDAP™ on luotava uudelleen tiedostojen tietokanta. Kun hidas alkuperäinen lataus, ne latautuvat nopeasti, kuten ennenkin. Ole kärsivällinen.
          
-    * Asiat, jotka sinun on tehtävä:
-        * Kun käytät v2.10:tä, osa aineistoista ei välttämättä lataudu, koska ERDDAP™ Se on nyt tiukempi metatietojen suhteen. Kuten ennenkin, ERDDAP™ Lähetämme sinulle päivittäisen raportin, kun se latautuu ensin. Tämä sisältää virheviestit jokaiselle aineistolle, joka ei ladannut. Lue virheilmoitukset ongelmien selvittämiseksi. Useimmissa tapauksissa sinun tarvitsee vain tehdä pieni muutos tietoaineiston metatietoihin ongelman ratkaisemiseksi.
+    * Sinun täytyy tehdä jotain:
+        * Kun ensimmäinen ajaa v2.10, jotkut tiedot eivät ehkä ladata, koska ERDDAP™ on nyt tiukempi joidenkin metatietojen osalta. Kuten ennenkin. ERDDAP™ lähettää sinulle Daily Report, kun se latautuu. Siihen sisältyvät virheviestit jokaiselle tiedostolle, joka ei ladannut. Lue virheviestit ongelmien selvittämiseksi. Useimmissa tapauksissa sinun tarvitsee vain tehdä pieni muutos datan metatietoihin ongelman ratkaisemiseksi.
              
-        * Sisällä datasets.xml Etsiminen&lt; sourceName &gt; (Huomaa, että '=' merkki, joka tunnistaa [Kiinteä arvo sourceName ](/docs/server-admin/datasets#fixed-value-sourcenames) ) . Useimmille ERDDAP™ Asetukset, nämä ovat harvinaisia. Jos jokin arvoista on '=' ovat strings (Ei numeroita) Sinun täytyy nyt liittää merkkijono kaksoislainoihin. Esimerkiksi,
-Ennen:&lt; sourceName =KZ401&lt;// sourceName &gt;
-Jälkeen:&lt; sourceName = "KZ401"&lt;// sourceName &gt;
+        * Sisään datasets.xml , etsi&lt; sourceName &gt;= (Huomaa '=' merkki, joka tunnistaa [kiinteä arvo sourceName ](/docs/server-admin/datasets#fixed-value-sourcenames) ) . Useimmille ERDDAP™ Nämä ovat harvinaisia. Jos jokin arvoista jälkeen '=' ovat merkkijonoja (ei numeroita) , sinun täytyy nyt liittää merkkijono kaksinkertainen lainausmerkkejä. Esimerkiksi
+Ennen:&lt; sourceName &gt;=KZ401&lt;/ sourceName &gt;
+jälkeen:&lt; sourceName &gt;="KZ401"&lt;/ sourceName &gt;
              
-        * NEW: Asennuksessa on uusi valinnainen asetus.xml,&lt;defaultAccessibleViaFiles&gt;, joka asettaa oletusarvon&lt;KäytettävissäViaFiles &gt; jokaisesta tietoaineistosta. Tämän uuden tagin oletus on väärä, joka jäljittelee edellistä ERDDAP™ käyttäytymistä. Tämä alemman tason asetus voidaan ylittää tietyn tietoaineiston avulla.&lt;Käytettävissä ViaFiles&gt; -asetukset.
+        * UUTTA: On uusi valinnainen asetus setup.xml,&lt;OletusAccessibleViaFiles&gt;, joka asettaa oletusarvon&lt;EsteetönViaFiles&gt; kunkin tietokokonaisuuden osalta. Oletus tälle uudelle tunnisteelle on virheellinen, mikä jäljittelee edellistä ERDDAP™ Käytöstä. Tämä alemman tason asetus voidaan kumota tietyn aineiston&lt;EsteetönViaFiles&gt; -asetus.
             
-Valmistettu (Käyttäjiä, jotka haluavat tämän) :
-Jos haluat tehdä EDD:n... Files-tiedostot, jotka ovat saatavilla tiedostojärjestelmän kautta, ja
+SUOSITTELEE (Koska on käyttäjiä, jotka haluavat tätä) :
+Jos haluat tehdä kaiken... FromFiles tietokokonaisuuksia saatavilla tiedostojen järjestelmän, sitten
             
-            1. Lisää tämä tunniste asennus.xml-tiedostoosi:
+            1. Lisää tämä tagi setup.xml-tiedostoosi:
 ```
                 <defaultAccessibleViaFiles>true</defaultAccessibleViaFiles>
 ```
-            2.   (Optionaalisesti) Poista kaikki
+            2.   (Valinnaisesti) Poista kaikki
 ```
                 <accessibleViaFiles>true</accessibleViaFiles>
 ```
-Sisällä datasets.xml Koska oletus on nyt totta.
+in datasets.xml koska oletus on nyt totta.
                  
-        * Lisäys \\ \\ \\ \\ n arvon ominaisuudet:
-             ERDDAP™ Käytetty oletusarvo \\ FillValue kaikille kokonaismuuttujille: tietotyypin suurin arvo (127 tavumuuttujaa) . Nyt se ei. Näiden arvojen välttämiseksi näkyy data-arvoina (Ei puuttuvia arvoja) Sinun täytyy nimenomaisesti ilmoittaa nämä kautta \\-FillValue attribuutit. Joka kerta kun aloitat ERDDAP™ se lähettää ylläpitäjälle sähköpostin, jossa on .csv-taulukko, jossa on luettelo kokonaislähteen vaihteluista, joilla ei ole \\FillValue tai missing\\_value attribuutit ja ehdotetut uudet arvot. Näytä [Lisää | Fill Arvon ominaisuudet](/docs/server-admin/datasets#add-_fillvalue-attributes) Lisätietoja ja ohjeita.
+        * Lisää\\_FillValue-attribuutit:
+             ERDDAP™ käytetään oletukseen \\_FillValue kaikille kokonaislukumuuttujille: tietotyypin enimmäisarvo (esim. 127 tavumuuttujien osalta) . Nyt ei. Jotta näitä arvoja ei osoitettaisi tietoarvoina (ei puuttuvia arvoja) , sinun täytyy nimenomaisesti ilmoittaa nämä \\_ FillValue- ominaisuuksien kautta. Tästä lähtien, joka kerta kun aloitat ERDDAP™ , se lähettää ylläpitäjälle sähköpostin, jossa on .csv taulukko, jossa on luettelo kokonaislukulähdemuuttujista, joilla ei ole \\_FillValue tai missing\\_value attribuutit ja ehdotetut uudet\\_FillValue-attribuutit. Katso [Lisää\\_täydennys Arvon ominaisuudet](/docs/server-admin/datasets#add-_fillvalue-attributes) Lisätietoja ja ohjeita.
              
-        * Jos kokoat ERDDAP™ , sinun on muokattava javac-komentorivillä olevaa luokkaparametria viitataksesi näihin uusiin purkkeihin: lib/commons-jexl.jar;lib/aws-java-sdk.jar;lib/jackson-annotations.jar;lib/jackson-core.jar;lib/jackson-databind.jar .
+        * Jos kokoat ERDDAP™ , sinun täytyy muuttaa luokkapolku parametri javac komentorivit lisätä viittaus näihin uusiin jar's: lib/commons-jexl.jar;lib/aws-java-sdk.jar;lib/jackson-anotations.jar;lib/jackson-core.jar;lib/jackson-databind.jar .
              
-    * Tomcat 9 on nyt suositeltu versio Tomcatista ERDDAP . Tomcat 8.5+:n uusin versio on hyvä. Siivosimme ERDDAP &gt; [Tomcatin asennusohjeet](/docs/server-admin/deploy-install#tomcat) .
+    * MUUTOS: Tomcat 9 on nyt suositeltu versio Tomcat ERDDAP . Tomcat 8.5+:n uusin versio sopii myös toistaiseksi. Siivosimme. ERDDAP S [Tomcat asennusohjeet](/docs/server-admin/deploy-install#tomcat) .
         
-Viimeisin versio Java 8 8 8 (Ei ei ei Java 9, 10, 11, ...) From [Adoptoija](https://adoptopenjdk.net/) edelleen suositeltu versio Java for ERDDAP . Java AdoptOpenJDK:n Long Term Support -tuki on turvallinen, mutta muista saada uusin versio siitä säännöllisesti turvallisuussyistä.
+Uusin versio Java 8 (ei Java 9, 10, 11, ...) alkaen [AdoptOpenJDK](https://adoptopenjdk.net/) on edelleen suositeltu versio Java B. ERDDAP . Java 8 on pitkäaikainen tuki AdoptOpenJDK joten se on edelleen turvallinen käyttää, mutta muista saada uusin versio siitä määräajoin turvallisuussyistä.
         
-    * NEW: Script SourceNames/Drived Variables in Tabular Datasets Näytä tarkat tiedot
-EDDTableFromFiles, EDDTableFromDatabase ja EDDTableFromFileNames -tietoaineistot voivat nyt sisältää ilmaisuja ja käsikirjoituksia. sourceName . Näin voit tehdä uusia muuttujat perustuen olemassa oleviin muuttujiin lähdetiedostoissa. Tietyn uuden muuttujan laskenta suoritetaan yhden tuloksen rivissä toistuvasti kaikkien rivien osalta. Esimerkiksi tehdä pituusmuuttuja, jonka arvot vaihtelevat välillä -180 - 180 ° muuttujasta, jonka arvot ovat 0 - 360°:
-        &lt; sourceName Math2.anglePM180 (Rivi.columnDouble ("Lon") ) &lt;// sourceName &gt;
-yksityiskohtiin, katso [Lähde: SourceNames](/docs/server-admin/datasets#script-sourcenamesderived-variables)   
-Kiitos Bob Simons (jotka suunnittelivat tätä ennen ERDDAP™ V1.0 ja viimein löytyi keino) Kevin O'Brien, Roland Schweitzer, John Maurer ja Apache JEXL -kirjasto tekevät kovaa työtä (ja tehdä sen hyvin) .
+    * UUTTA: Script SourceNames / Johdetut muuttujat taulukkomuodossa
+EDDTableFromFromFromFromDatabase, ja EDDTableFromFileNames dataset voivat nyt sisältää ilmauksia ja skriptejä sourceName . Näin voit tehdä uusia muuttujia nykyisten muuttujien lähdetiedostoja. Tietyn uuden muuttujan laskenta tehdään yhden rivin sisällä tuloksista, toistuvasti kaikille riveille. Esimerkiksi pituuspiirin muuttujan, jonka arvot ovat välillä -180-180°, tekeminen muuttujasta, jonka arvot ovat välillä 0-360°:
+        &lt; sourceName &gt;=Math2.anglePM180 (rivi.sarake Kaksinkertainen ('lon') ) &lt;/ sourceName &gt;
+Lisätietoja: [Script SourceNames](/docs/server-admin/datasets#script-sourcenamesderived-variables)   
+Kiitos Bob Simonsin. (Kuka suunnitteli tämän aiemmin? ERDDAP™ v1.0 ja lopulta löysi keinon toteuttaa se) , Kevin O'Brien, Roland Schweitzer, John Maurer, ja Apache JEXL kirjaston tekemästä todella vaikea osa (Ja tehdä sen hyvin) .
          
-    * NEW: Unsigned Integer -tietotyypit (ubyte, uint, ulong) Nyt niitä tuetaan. Huomaa, että monet tiedostot (esim. .das, .dds, .nc 3 3) Älä tue kaikkia uusia tietotyyppejä. Nähdään [Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Data Tyypin dokumentointi](/docs/server-admin/datasets#data-types) yksityiskohtia siitä, miten ERDDAP™ käsittelee näitä eroja. Erityisesti, koska(OPeN)DAP.dds-vastaus, ei tue allekirjoitettuja tavuja, pitkiä tai ulongeja, saatat haluta käyttää ERDDAP .dasin ja .dasin tabulaariesitys, sellaisena kuin se näkyy http Erddap/ **Info** /_ datasetID _.html verkkosivut (esimerkiksi [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  ) jota voit käyttää myös muissa tiedostotyypeissä tai .nccsv Metadata vastaus (esimerkiksi [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata)  ) Molemmat tukevat kaikkia tietotyyppejä kaikissa tilanteissa.
+    * UUTTA: Allekirjoittamattomat kokonaislukutietotyypit (ubyte, ushort, uint, ulong) tukea nyt. Huomaa, että monet tiedostotyypit (esim., das, dds, .nc 3) Älä tue kaikkia näitä uusia tietotyyppejä. Katso [Tiedot Tyyppiasiakirjat](/docs/server-admin/datasets#data-types) Lisätietoja siitä, miten ERDDAP™ käsittelee näitä eroja. Erityisesti, koska(OPeN)DAP, erityisesti .dds vastaus, ei tue allekirjoitettu tavuja, pitkiä, tai unongs, saatat haluta käyttää ERDDAP 's taulukko edustus .das ja .das kuten nähdään http .../vääristymä **info** / datasetID _.html-sivusto (esimerkiksi [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  ) jonka voit myös saada muita tiedostotyyppejä tai .nccsv Metatietojen vaste (esimerkiksi [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata)  ) , jotka molemmat tukevat kaikkia tietotyyppejä kaikissa tilanteissa.
         
-VAROITUS: Tässä muutoksessa vaikuttaville tietoaineistoille on mahdollista, että näet ongelmat tietoaineiston kanssa, koska tiedot, jotka ERDDAP™ Lähteen lukeminen voi olla erilaista (Esimerkiksi muuttujia, jotka on aiemmin luettu allekirjoitettuina kokonaislukuina, voidaan nyt lukea allekirjoittamattomina kokonaislukuina.) . Tuloksena on ongelmia: uusia tiedostoja, joita ei ole lisätty tietoaineistoon, ja / tai virheitä, kun yrität käyttää tietoja. Jos aineistolla on ongelmia, ensimmäinen asia, jota voi yrittää, on [Aseta kova Lippu](/docs/server-admin/additional-information#hard-flag) aineiston osalta. Jos tämä ei ratkaise ongelmaa, sinun on katsottava logiikkaa. txt nähdäksesi virheviestit, mene sisään datasets.xml aineiston osalta ja/tai ehkä uudelleenkäynnistys tuottaa Datasets.xml.
-Netcdf-java 5.x:n ansiosta (joka pakotti kysymyksen) Seuraava CF 1.9.
+VAROITUS: Tietoaineistoista, joihin muutos vaikuttaa, on mahdollista, että näet ongelmia aineistossa, koska tiedot ERDDAP™ lukee lähteestä voi olla erilainen (Esimerkiksi, muuttujat aiemmin lukea allekirjoitettu kokonaislukuja voidaan nyt lukea allekirjoittamattomia kokonaislukuja) . Ongelmia ovat: uusia tiedostoja ei lisätä tiedostoon, ja/tai virheitä, kun yrität käyttää tietoja. Jos aineisto on ongelmia, ensimmäinen asia on yrittää [asettaa Lippu](/docs/server-admin/additional-information#hard-flag) tietoaineistosta. Jos se ei ratkaise ongelmaa, katso lokia. txt nähdäksesi virheviestit, kaivaa datasets.xml tietokokonaisuuden osalta ja/tai kenties uudelleenkäyttö tuottaaDatasets.xml tietokokonaisuudelle.
+Kiitos netcdf-java 5.x (joka pakotti kysymyksen) ja tuleva CF1.9.
         
-    * Improve: Nyt on [Parempi dokumentointi/neuvonta](/docs/server-admin/datasets#s3-buckets) Kuinka luoda tietoaineisto tiedostoista AWS S3 -pakettiin Kiitos Micah Wengrenille.
+    * Nyt on. [parempaa dokumentointia tai neuvontaa](/docs/server-admin/datasets#s3-buckets) kuinka luoda tiedostoja tiedostoista AWS S3 kauhoissa. Kiitos Micah Wengrenin.
          
-    * Muutos: Muutoksia liittyy "files" järjestelmä.
-        * Tämän käsittelyn koodi on kirjoitettu uudelleen käytettäviksi useammalla luokalla.
+    * MUUTTUA: On olemassa useita muutoksia liittyvät "files" Järjestelmä.
+        * Tämän käsittelykoodi kirjoitettiin uudelleen, jotta sitä voitaisiin käyttää useammissa luokissa.
              
-        * NEW: Käyttäjän hakemistopyynnöt voivat nyt pyytää, että vastaus on yksi tavallisen taulukon tyypeistä liittämällä halutun tiedostolaajennuksen: .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv tai .xhtml ). Esimerkiksi,
-             [https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv](https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv)   
-Kiitos Kyle Wilcox ja Shane St Savage.
+        * UUTTA: Käyttäjän pyynnöt kansioluetteloita voi nyt pyytää, että vastaus on yksi vakio tavallinen taulukkotyypit liittämällä haluttu tiedostotunniste: .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , tai .xhtml ) Esimerkiksi
+             [ https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv ](https://coastwatch.pfeg.noaa.gov/erddap/files/jplMURSST41/.csv)   
+Kiitos Kyle Wilcoxin ja Shane St Savagen.
              
-        * Alkuperäinen nimi: Now, Generate Dataa XML ei sisällä&lt;KäytettävissäViaFiles&gt;-tunniste ulostulossa. Oletus on, että tietoaineisto luottaa uuden arvoon.&lt;Epäonnistumiskykyinen &gt; Tag in setup.xml. Näytä [Saatavuus Viafiilit](/docs/server-admin/datasets#accessibleviafiles) .
+        * Nyt, luo Dataset Xml ei sisällä&lt;EsteetönViaFiles&gt; tag lähtö. Oletuksena on, että aineisto perustuu uuden&lt;OletusAccessibleViaFiles&gt; tag setup.xml. Katso [Esteetön ViaFiles](/docs/server-admin/datasets#accessibleviafiles) .
              
-        * IMPROVED: Lisätiedot tukevat nyt saavutettavuutta Viafiilit: EDDGrid SideBySide, EDDGrid Aggregateexistingdimension, EDDGrid FromErdddap, EDDTableFromErddap EDDGrid Lähde: EDDTableFrom EDDGrid ja EDDGrid Lähde: Etopo. Näiden osalta tietyn etä-/lapsitietoaineiston tiedostot ovat käytettävissä vain, jos sekä vanhempi että etä-/lapsitiedot ovat käytettävissä. Viafiilit totta (ehkä&lt;Epäonnistumiskykyinen &gt;). Kiitos Damian Smyth ja Rob Fuller.
+        * PARANTAA: Muut tietoaineistotyypit tukevat nyt saatavilla olevia tietoja Viestit: EDDGrid SideBySide EDDGrid Aggregaatti EDDGrid Erddapista Edddapista. EDDGrid EDDTabletista alkaen EDDGrid ja EDDGrid -Etoposta. Näistä tietyn etä-/lapsitiedoston tiedostot ovat saatavilla vain, jos sekä emolla että etä-/lapsi-aineistolla on pääsy ViaFiles asetettu totta (ehkä kautta&lt;OletusAccessibleViaFiles &gt;). Damian Smythin ja Rob Fullerin ansiosta.
              
-        * TO DO / RECOMMENDATION: Suosittelemme, että kaikki tiedostojärjestelmän kautta saatavilla olevat tietoaineistot asetetaan&lt;Oletusasetukset KäytettävissäViaFiles &gt; totta asennus.xml, koska on olemassa joukko käyttäjiä, joille tämä on paras tapa saada tiedot. Muiden syiden lisäksi "files" Järjestelmän avulla käyttäjät voivat helposti nähdä, mitkä tiedostot ovat saatavilla ja milloin ne ovat viimeksi muuttuneet, jolloin käyttäjän on helppo säilyttää oma kopio koko tietoaineistosta. Jos et yleensä halua tehdä tietoaineistoja tiedostojärjestelmän kautta, aseta&lt;DefaultAccessibleViaFiles &gt; Väärä. Kummassakin tapauksessa käytä&lt;Käytettävissä olevaViaFiles &gt; niissä harvoissa tietoaineistoissa, jotka ovat poikkeuksia yleiseen politiikkaan&lt;Epäonnistumiskykyinen &gt; (esimerkiksi silloin, kun aineisto käyttää .nc ml-tiedostot, jotka eivät ole hyödyllisiä käyttäjille) .
+        * TO DO / SUOSITUS: Suosittelemme, että kaikki asiaankuuluvat tiedot ovat saatavilla tiedostojärjestelmän kautta asettamalla&lt;OletusAccessibleViaFiles&gt; to true in setup.xml koska on olemassa ryhmä käyttäjiä, joille tämä on ensisijainen tapa saada tiedot. Muut syyt "files" Järjestelmän avulla käyttäjien on helpompi nähdä, mitkä tiedostot ovat saatavilla ja milloin ne ovat viimeksi muuttuneet, jolloin käyttäjän on helpompi ylläpitää omaa kopiotaan koko aineistosta. Jos et yleensä halua tehdä tiedostoja saataville tiedostojärjestelmän kautta, aseta&lt;OletusAccessibleViaFiles&gt; to false. Kummassakin tapauksessa vain käyttää&lt;EsteetönViaFiles&gt; niistä harvoista aineistoista, jotka ovat poikkeuksia yleisestä politiikasta, joka on määritelty&lt;OletusAccessibleViaFiles&gt; (esimerkiksi, kun tietokokonaisuus käyttää .nc ml tiedostoja, jotka eivät ole kovin hyödyllisiä käyttäjille) .
              
-    * IMPROVED: Nyt, jos lähdeaineistossa on CF grid -tietojen kartoitustietoja, se tuottaa Dataa Xml verkottuneiden tietoaineistojen lisäämiseksi maailmanlaajuisesti&lt;Lisätiedot &gt; ja tiedot lisätään maailmanlaajuisesti&lt;Lähteet &gt; Joka kerta tiedot luetaan tiedostosta. Tiedot näkyvät tietoaineiston globaaleissa ominaisuuksissa joukona attribuutteja, joissa on prefix grid -kartta.
+    * PARANTAA: Jos lähdeaineistossa on CF-ruudukko\\_kartoitustietoja, luo Dataset Xml ruudukoille lisää tietoa maailmanlaajuisesti&lt;addAtts&gt; ja tiedot lisätään maailmanlaajuisesti&lt;sourceAtts&gt; joka kerta tiedot luetaan tiedostosta. Tiedot näkyvät tietokokonaisuuden maailmanlaajuisissa attribuuteissa attribuutteina, joissa on etuliitteen ruudukko\\_mapping\\_ .
          
-    * Tuki ryhmille lukemisen yhteydessä .nc 4 4 (jossain määrin .hdf 5 5) tiedostoja. Yleensä yksi ERDDAP™ Tietoaineisto rakennetaan muuttujasta yhdessä tiedoston ryhmistä. GenerateDatasets XML EDDGrid NCFiles ja EDDGrid Lähde: NCFiles Pakkaus vaatii nyt ”ryhmää” (esim. ""kaikkiin ryhmiin, "someGroup", "someGroup/someSubGroup" tai ". \\[ juuret \\] "Juuriryhmän puolesta) . Kiitos Charles Carleton ja Jessica Hausman.
+    * PARANTAA: Tuki ryhmille käsittelyssä .nc 4 (ja jossain määrin .hdf 5) tiedostot. Yleensä ERDDAP™ tietokokonaisuus laaditaan jonkin tiedoston ryhmän muuttujista. Myös, Luo tiedostoja Xml EDDGrid FromNcFiles ja EDDGrid FromNcFiles Pura nyt pyytää "ryhmä" (Esim. ""mille tahansa/kaikille ryhmille, "jollekin ryhmälle," "jollekin ryhmälle/joukolle" tai " \\[ juuri \\] " vain juuriryhmä) . Charles Carletonin ja Jessica Hausmanin ansiosta.
          
-    * Lähde: GenerateDatasets XML EDDGrid NCFiles ja EDDGrid Lähde: NCFiles Pakkaamattomat tukevat nyt valinnaista "DimensionsCSV"-parametria, jonka avulla voit määrittää niiden ulottuvuuksien lähdenimet, joita haluat käyttää. Käytä "" saada muuttujia, jotka käyttävät eniten mittoja, kuten ennen. Myös tähän tyyppiin liittyvä pieni vika on nyt korjattu. Kiitos Sujal Manandharille.
+    * PARANTAA: Luoda datasettejä Xml EDDGrid FromNcFiles ja EDDGrid FromNcFiles Pura nyt tukea valinnaista "DimensionsCSV" -parametria, jonka avulla voit määrittää niiden mittojen lähdenimet, joita haluat käyttää. Käytä "" saada muuttujat, jotka käyttävät eniten mittoja, kuten ennen. Myös tähän liittyvä pieni vika, joka tapahtui tämän tyyppisen tiedoston on nyt korjattu. Kiitos Sujal Manandharin.
          
-    * Alkuperäinen nimi: GenerateDatasets Xml listaa nyt asianmukaisesti "EDDTableFromJsonlCSVFiles" (Ei "EDDTableFromJsonlCSV") Yksi EDDType-vaihtoehdoista. Kiitos Andy Zieglerille.
+    * BUG FIX: Generator Datasets Xml luettelot "EDDTableFromJsonlCSVFiles" (ei 'EDDtableFromJsonlCSV') yhtenä EDDType-vaihtoehdoista. Kiitos Andy Zieglerin.
          
-    * Improvisoitu: EDDGrid Lähde: NCFiles Pakkaamattomat standardisoivat nyt "yksiköt" -ominaisuudet vakio-/"kanoniittisille" (Sama menetelmä kuin yksikkömuunnin) . Esimerkiksi, "meter per second" , "meters/second" , "m.s^-1" ja "m s-1" Kaikki muuttuu "m s-1" . Kiitos Andy Zieglerille.
+    * PARANTAA: EDDGrid FromNcFiles Unpackage nyt standardoi "yksiköt" ominaisuudet standardi / "kanoniset" utareja (Sama menetelmä kuin yksikkömuunnin) . Esimerkiksi "meter per second" , "meters/second" , "m.s^-1" ja "m s-1" kaikki "m s-1" . Kiitos Andy Zieglerin.
         
-VAROITUS: Tämä voi aiheuttaa ongelmia jo olemassa oleville tietoaineistoille. (Esimerkiksi uusien tiedostojen merkitseminen huonoiksi) . Jos näin on, [Aseta kova Lippu](/docs/server-admin/additional-information#hard-flag) aineistoon, jotta kaikki lähdetiedostot luetaan uudelleen uudella järjestelmällä.
+VAROITUS: On mahdollista, että tämä aiheuttaa ongelmia joidenkin olemassa olevien tietokantojen (Esimerkiksi, aiheuttaa uusia tiedostoja merkitään "huono") . Jos on, [asettaa Lippu](/docs/server-admin/additional-information#hard-flag) tietoaineistosta siten, että kaikki lähdetiedostot luetaan uudelleen uudella järjestelmällä.
         
-    * IMPROVED: Nyt muuttujien&lt; sourceName &gt; voi määrittää kiinteän arvon = NaN ja muuttujilla voi olla actual\\_range Nimitys, joka määrittää rajallisen valikoiman. Tämä on joskus hyödyllistä, jotta datan (EDDTableFromFileNames-aineisto) Dummy-muuttuja (s)   (Leveys, pituus, aika) NaN:n kiinteät arvot, mutta pätevä actual\\_range   (Asetelma attribuutista) . Sitten Advanced Searchissa käyttäjä voi etsiä tietoja, joilla on tietoja tietyllä leveysasteella, pituus, aikaväli ja tämä tietoaineisto voi sanoa, että sillä on asiaankuuluvia tietoja. (Vaikka kaikki tiedot osoittavat NaN:ää) . Nähdään [kiinteän arvon dokumentointi](/docs/server-admin/datasets#fixed-value-sourcenames) .
-Kiitos Mathew Biddlestä.
+    * Nyt, muuttujan&lt; sourceName &gt; voi määritellä kiinteän arvon = NaN ja muuttuja voi olla actual\\_range attribuutti, joka määrittelee rajallisen vaihteluvälin. Tämä on joskus hyödyllistä niin, että aineisto (erityisesti EDDtableFromFileNames -tietokanta) voi olla nuken muuttuja (tilu)   (esim., leveyspiiri, pituuspiiri, aika) kiinteä NaN-arvo, mutta kelvollinen actual\\_range   (määritteen mukaan) . Sitten, Tarkennettu Etsi käyttäjä voi etsiä aineistoja, joilla on tietoja tietty leveys-, pituus-, aika- ja tämä tieto voi sanoa, että sillä on merkityksellisiä tietoja (vaikka kaikki todelliset tietorivit osoittavat Nan) . Katso [Kiinteän arvon asiakirjat](/docs/server-admin/datasets#fixed-value-sourcenames) .
+Kiitos Mathew Biddlen.
          
-    * Uusi: Nyt, datasets.xml Chunk EDDTableFromAsciiFiles tai EDDTableFromColumnarAsciiFiles -tietokantaan voi sisältyä tunniste, joka kertoo ERDDAP™ jättää huomiotta kaikki tiedoston yläreunassa olevat linjat, mukaan lukien linja, joka vastaa määritettyä säännöllistä ilmaisua. Esimerkiksi,
-        &lt;skipHeaderToRegex · Katso lisää »\\*&gt;\\*&gt;\\*Headerin loppu.\\*&lt;/skipHeaderToRegex &gt;
-Älä unohda kaikkia linjoja ylös ja mukaan lukien linja, joka alkaa "\\*\\*"Haderin loppu" Näe [&lt;skipHeaderToRegex &gt; dokumentointi (Docs/server-admin/datasets#skipheadertoregex) .
-Kiitos Eli Hunter
+    * Nyt datasets.xml chunk for a EDDTableFromAsciiFiles tai EDDTableFromColumnarAsciiFiles dataset voi sisältää tag, joka kertoo ERDDAP™ jättää huomiotta kaikki tiedoston yläreunassa olevat rivit, mukaan lukien rivi, joka vastaa määriteltyä säännöllistä ilmaisua. Esimerkiksi
+        &lt;ohita otsikkoToRegex&gt;\\\*\\\\\*\\\\\*Päättäjä.\\*&lt;/skipHeaderToRegex&gt;
+jättää huomiotta kaikki rivit jopa ja myös rivi, joka alkaa "\\*\\*Päättäjän loppu. Ks. [&lt;skipHeaderToRegex&gt; dokumentaatio] (/docs/server-admin/datasets#skipheadertoregex) .
+Kiitos Eli Hunterin.
          
-    * Uusi: Nyt, datasets.xml EDDTableFromAsciiFiles tai EDDTableFromColumnarAsciiFilesdataset voi sisältää tunnisteen, joka kertoo ERDDAP™ jättää huomiotta kaikki tiedoston viivat, jotka vastaavat määritettyä säännöllistä ilmaisua. Esimerkiksi,
+    * Nyt datasets.xml chunk for a EDDTableFromAsciiFromAsciiFromColumnarAsciiFilesdataset voi sisältää tunnisteen, joka kertoo ERDDAP™ jättää huomiotta kaikki tiedoston rivit, jotka vastaavat määriteltyä säännöllistä ilmaisua. Esimerkiksi
 ```
         <skipLinesRegex>#.\\*</skipLinesRegex>  
 ```
 
-Kaikki linjat, jotka alkavat # Näe [&lt;skipLinesRegex &gt; dokumentointi (Docs/server-admin/datasets#skiplinesregex) .
-Kiitos Eli Hunterille.
+ohittaa kaikki rivit, jotka alkavat "#." Ks. [&lt;ChipLinesRegex&gt; dokumentaatio] (/docs/server-admin/datasets#skiplinesregex) .
+Eli Hunterin ansiosta.
          
-    * Uusi: The datasets.xml Chunk for any EDDTable dataset Näytä tarkat tiedot Muuttujia Missä missä (_attributeNamesCSV_) . Jos se tekee, ERDDAP™ Lisää widget jokaiseen määritettyyn ominaisuuteen Tietoaineiston tiedonsaantilomake (.html verkkosivut) Käyttäjien on helppo lisätä ja lisätä Muuttujia Missä missä (_attribuutti Nimi, attribuutti Arvoa) pyyntöön.
-Nähdään [&add Muuttujia Missä dokumentit](/docs/server-admin/datasets#addvariableswhere) .
+    * UUTTA: datasets.xml chunk mihin tahansa EDDTable-tiedostoon voi nyt sisältyä & lisää Muuttujat Missä (_attributeNamesCSV_) . Jos tulee, ERDDAP™ Lisää widget kunkin määritellyn ominaisuuden Tietokannan tiedonsiirtolomakkeen nimet (.html-verkkosivu) jotta käyttäjien on helppo lisätä & lisää Muuttujat Missä (_attribuutti Nimi, ominaisuus Arvo) pyyntöön.
+Katso [& Lisää Muuttujat Jos asiakirjat](/docs/server-admin/datasets#addvariableswhere) .
 Kiitos Aurelie Briand, et al.
          
-    * Uusia Kolmannen osapuolen työkalu: ERDDAP Linkki
-         ERDDAP Linkki on Rob Fullerin ja Irlannin Marine-instituutin Adam Leadbetterin ohjelma, jonka avulla voit parantaa metatietojasi. ERDDAP™ Dataa. ERDDAP Linkki sisältää sääntöjä ja yksinkertaisen staattisen verkkosovelluksen, jolla suoritetaan joitakin todentamistestejä ERDDAP™ palvelin. Kaikki testit suoritetaan selaimessa.” kuin [Unix/Linux-linkki](https://en.wikipedia.org/wiki/Lint_(software) Voit muokata voimassa olevia sääntöjä tai lisätä uusia sääntöjä. Näytä [ ERDDAP Linkki](https://github.com/IrishMarineInstitute/erddap-lint) Lisätietoa.
+    * UUSI Kolmannen osapuolen työkalu: ERDDAP - Lint
+         ERDDAP -Lint on ohjelma Rob Fuller ja Adam Leadbetter Irish Marine Institute että voit parantaa metatietoja ERDDAP™ tiedot. ERDDAP -lint "sisältää sääntöjä ja yksinkertainen staattinen web-sovellus suorittaa joitakin todentamistestejä vastaan ERDDAP™ Palvelin. Kaikki testit suoritetaan selaimessa." Kuten [Unix/Linux Lint -työkalu](https://en.wikipedia.org/wiki/Lint_(software) ), voit muokata nykyisiä sääntöjä tai lisätä uusia sääntöjä. Katso [ ERDDAP - Lint](https://github.com/IrishMarineInstitute/erddap-lint) Lisätietoja.
         
-Tämä työkalu on erityisen hyödyllinen tietoaineistoille, jotka olet luonut jo jonkin aikaa sitten, ja nyt haluat tuoda ajan tasalle nykyisten metatietojen mieltymykset. GenerateDatasetsin varhaiset versiot XML ei ole pyrkinyt luomaan maailmaa creator\\_name , creator\\_email creator-tyypin tai creator\\_url metadataa. Voit käyttää ERDDAP Linkki tunnistaa tietoaineistot, jotka puuttuvat näistä metadata-ominaisuuksista.
+Tämä työkalu on erityisen hyödyllinen tietoaineistoissa, jotka olet luonut jokin aika sitten ja nyt haluat saattaa ajan tasalle nykyisten metatietoasetustesi kanssa. Esimerkiksi varhaiset versiot GenerateDatasets Xml ei panostanut globaalin luomiseen creator\\_name , creator\\_email , luoja\\_tyyppi, tai creator\\_url metadata. Voit käyttää ERDDAP - Lint tunnistaa tiedot, joissa ei ole metatietoja.
         
-Kiitos Robille ja Adamille tämän työkalun luomisesta. ERDDAP™ yhteisö.
+Kiitos Rob ja Adam luoda tämän työkalun ja antaa sen käyttöön ERDDAP™ Yhteisö.
         
-    * NEW: Nyt on hyvä, jos osa tiedostoista on ok. EDDGrid FromFiles-aineistossa ei ole kaikkia tietoaineiston muuttujia. Tiedostot sisältyvät ikään kuin ne olisivat muuttujat. (Kaikki puuttuvat arvot) .
-Kiitos Dale Robinsonille ja Doug Latornellille.
+    * UUTTA: Nyt on okei, jos osa tiedostoista EDDGrid FromFilesin aineistossa ei ole kaikkia tiedoston muuttujia. Tiedostot sisällytetään ikään kuin niillä olisi muuttujat (kaikki puuttuvat arvot) .
+Kiitos Dale Robinsonin ja Doug Latornellin.
          
-    * NEW: Lokitiedostossa on uusia käyttötilastoja ja Daily Report auttaa ylläpitäjiä tunnistamaan muistiongelmia aiheuttavat käyttäjät. Tilastot ovat nimeltään ”OutOfMemory”. (Array Size) "OutOfMemory" (Liian suuri) ”OutOfMemory” (Liian iso tapa) ". Niissä esitetään käyttäjien IP-osoitteet, jotka ovat esittäneet pyyntöjä näissä kategorioissa ja pyyntöjen määrä. Jos pyyntöjä ei ole, näitä tilastoja ei esiinny. ”OutOfMemory” (Array Size) "OutOfMemory" (Liian iso tapa) "Kysymykset eivät yleensä ole ongelma, koska pyynnöt olivat niin suuria, että ERDDAP™ Hän otti ne nopeasti kiinni ja palautti virheilmoituksen. "OutOfMemory" (Liian suuri) "Kysymykset ovat vaarallisempia, koska ERDDAP™ Jotain ponnistelua ennen kuin tajusi, että pyyntöä ei ole riittävästi muistia. (ongelma voi olla muita pyyntöjä ennen näitä pyyntöjä.) .
+    * UUTTA: Lokitiedostossa ja Päivittäisraportissa on uusia käyttötilastoja, joiden avulla ylläpitäjät tunnistavat muistiongelmia aiheuttavat käyttäjät. Tilaston nimi on "OutOfMemory (Ruudun koko) ""OutOf Memory (Liian iso) " ja "OutOf Memory (Liian iso) " Niissä esitetään näihin ryhmiin kuuluvien pyyntöjen esittäjien IP-osoitteet ja pyyntöjen lukumäärä. Jos ei ollut ongelmia pyyntöjä, nämä tilastot eivät ilmesty. "OutOf Memory (Ruudun koko) " ja "OutOf Memory (Liian iso) "pyynnöt eivät yleensä ole ongelma, koska pyynnöt olivat niin suuria, että ERDDAP™ nappasi heidät nopeasti ja palautti virheviestin. "Muistin ulkopuolella" (Liian iso) "pyynnöt ovat vaarallisempia, koska ERDDAP™ tehnyt hieman vaivaa ennen kuin se tajusi, että ei ole tarpeeksi muistia tällä hetkellä käytettävissä käsitellä pyynnön (vaikka ongelma voi olla muita pyyntöjä juuri ennen näitä pyyntöjä) .
         
-On myös uusia tilastoja, joita kutsutaan nimellä "Large Request, IP-osoite", jotka osoittavat suurten pyyntöjen esittäneiden käyttäjien IP-osoitteet. (Tällä hetkellä verhottu .nc tiedostot &gt; 1GB) .
+On myös uusia tilastoja nimeltä "Large Request, IP-osoite," jotka osoittavat IP-osoitteet käyttäjille, jotka esittivät suuria pyyntöjä (ruudukko .nc tiedostot &gt; 1GB) .
         
-Myös status.html-sivulla oleva aikasarjataulukko sisältää nyt "memFail" -sarakkeen, jossa näkyy pyyntöjen lukumäärä, joka ei ollut "OutOfMemory" -sivulla. (Liian suuri) "Virheitä viimeisistä suurista tiedoista. Mikä tahansa numero, joka on 0, on ainakin yksi syy huoleen.
-Kiitos Bob Simonsista.
+Myös aikasarja taulukko tila.html sivu sisältää nyt "memFail"-sarakkeen, jossa esitetään pyyntöjen määrä, joka epäonnistui "OutOfMemory (Liian iso) " virheet viimeisen suuren load Dataset. Mikä tahansa muu kuin 0 tässä on ainakin huolestuttavaa.
+Kiitos Bob Simonsin.
         
-    * Uusi versio: Uusi versio Hyrax Näytä hakemistot eri tavalla kuin ennen. ERDDAP™ Nyt voi lukea vanhat ja uudet hakemistot.
+    * UUTTA: Uusi versio Hyrax näyttää kansioluettelot eri tavalla kuin aiemmin. ERDDAP™ voi nyt lukea vanhat ja uudet luettelot.
          
-    * NEW: Datasetin lataukset ja käyttäjävasteet, jotka kestävät &gt; 10 sekuntia (onnistuneesti tai epäonnistuneesti) on merkitty " (&gt; 10.) ". Näin voit etsiä tämän lauseen log.txt-tiedoston löytääksesi tietoaineistot, jotka olivat hitaita ladattavaksi tai pyynnön numeron, joka oli hidas loppuun. Voit sitten katsoa korkeammalle log.txt-tiedostossa nähdäksesi, mikä tietoaineiston ongelma oli tai mitä käyttäjän pyyntö oli ja kuka se oli. Nämä hidas dataset-kuormat ja käyttäjän pyynnöt verotetaan joskus ERDDAP . Lisätietoa näistä hakemuksista voi auttaa tunnistamaan ja ratkaisemaan ongelmia.
-    * IMPROVED: CF DSG -tietoaineiston validoinnissa ERDDAP™ Nyt varmistat, että muuttujat, joilla on cf ́role-attribuutit, ovat vastaavassa cdm \\ \\variables -luettelossa eivätkä ole muissa cdm-listoissa. Esimerkiksi, jos aikaseriesProfile-tietoaineistossa on "tila"-muuttuja, jolla on cf \role = Timeseries = Timeseries \\ id -tunnus, niin "station \\id" on oltava cf \\ Timeseries \\variables -luettelossa, mutta ei saa olla cf profiilissa.
-Kiitos Micah Wengrenille.
+    * UUTTA: Dataset uudelleenlataukset ja käyttäjien vastaukset, jotka kestävät yli 10 sekuntia loppuun (onnistuneesti tai epäonnistuneesti) joissa on merkintä " (-Kymmenen.) " Näin voit etsiä log.txt-tiedoston tätä lausetta varten löytääksesi tiedostot, jotka olivat hitaita ladata uudelleen, tai pyyntöjen määrän, jotka olivat hitaita. Voit sitten katsoa korkeammalle log.txt-tiedoston nähdäksesi, mikä tiedoston ongelma oli tai mikä käyttäjän pyyntö oli ja keneltä se oli. Nämä hitaat tietoaineistojen kuormitukset ja käyttäjien pyynnöt ovat joskus verottaa ERDDAP . Joten tietää enemmän näistä pyynnöistä voi auttaa tunnistamaan ja ratkaisemaan ongelmia.
+    * PARANTAA: validoitaessa CF DSG -tietokantaa, ERDDAP™ nyt varmistaa, että muuttujat cf\\_role-attribuuteilla ovat vastaavassa cdm\\_...\\_variables-luettelossa eikä niitä ole muissa cdm\\_...\\_variables-luetteloissa. Jos esimerkiksi timeseriesProfile-aineistossa on muuttuja "station\\_id," jolla on cf\\_role=timeseries\\_id-attribuutti, niin "station\\_id" on oltava cf\\_timeseries\\_variables-luettelossa, mutta ei cf\\_profile\\__variables-luettelossa.
+Kiitos Micah Wengrenin.
          
-    * "Simplify" on nyt nopeampi, käyttää vähemmän muistia ja voi palauttaa LongArrayn. Kiitos Unidata .
+    * PARANTAA: "Yksinkertaistaa" on nyt nopeampi, käyttää vähemmän muistia, ja voi palauttaa LongArray. Kiitos Unidata .
          
-    * IMPROVED: EDDTableFrom on nyt huomattavasti nopeampi (nc liittyvät) Tiedostot (EDDTableFromNcCFiles ja EDDTableFromInvalidCRAFiles) Koska Odotettu (Toinen paikka) Nyt vain lukee näytetiedoston metatietoja sen sijaan, että olisi lukenut kaikki tiedot. Kiitos Jessica Austinille.
+    * PARANTAA: nopeaRestart on nyt huomattavasti nopeampi EDDTableFrom (nc) Tiedostot (Paitsi EDDTableFromNcCFFiles ja EDDTableFromInvalidCRAFiles) koska make Odotettu (ja toiseen paikkaan) Nyt vain lukea näytetiedoston metadatan sijaan lukea kaikki tiedot. Jessica Austinin ansiosta.
          
-    * IMPROVED: On nyt tukea aikajonoja, joiden tarkkuus on suurempi kuin to-the-millisecond, jos lisänumerot ovat kaikki 0, esim. 2020-05-22T01:02:03.456000Z. Kiitos Yibo Jiangille.
+    * PARANTAA: Nyt on olemassa tukea aikajonoille, joiden tarkkuus on suurempi kuin millisekunti, jos lisänumerot ovat kaikki 0:n, esim., "2020-05-22T01:02:03.456000000Z." Kiitos Yibo Jiangin.
          
-    * GenerateDatasetsXml:n EDD.suggestDestinationName, jota käytetään poistamaan () ja kaiken sen jälkeen. Nyt se poistuu (\\*Vain jos se on loppu sourceName . Nyt se myös poistaa \\[ .\\* \\] Vain jos se on loppu sourceName . Kiitos Julien Paulille.
+    * IMPROVED: GenerateDatasetsXml: n EDD.suggestDestinationName käytetään poistamaan "(" ja kaiken jälkeen. Nyt se poistaa (.\\*) ainoastaan, jos se on loppu sourceName . Nyt se myös poistaa \\[ .\\* \\] Vain jos se on loppu sourceName . Kiitos Julien Paulin.
          
-    * Lähde: GenerateDatasets XML tekee muuttujista destinationName Ainutlaatuinen lisätty +2, +3, tarpeen mukaan. Kiitos Julien Paulille.
+    * PARANTAA: Luoda datasettejä Xml tekee nyt muuttujan destinationName s ainutlaatuinen lisäämällä\\_2, \\_3, ..., tarvittaessa. Kiitos Julien Paulin.
          
-    * Kun Calendar2.parseDateTime parses dd, hh tai HH, ensimmäinen "digit" voi nyt olla tila.
-    * Tietoinen käytäntö: Aloitetaan ERDDAP™ 2.10, .nc ml-tiedostot, jotka yrittävät muuttaa ominaisuutta, eivät muuta attribuuttia. Tämä on tiedossa oleva vika netcdf-javassa, jonka olen ilmoittanut, ja he sanovat, että se on kiinnitetty seuraavaan netcdf-javan vapautukseen.
+    * PARANTAA: Kun Kalenteri2.parseDateTime parses dd, hh, tai HH, ensimmäinen "numero" voi nyt olla tila.
+    * -Tiedän. alkaen ERDDAP™ 2.10 .nc ml tiedostoja, jotka yrittävät muuttaa ominaisuutta, älä muuta ominaisuutta. Tämä on tunnettu bug netcdf-jaava, jonka olen raportoinut ja he sanovat korjataan seuraavassa julkaisussa netcdf-java.
          
-    * Linkkejä FIX: Tein oikean järjestelmän testata rikkinäisiä linkkejä ERDDAP™ Web-sivut, joten rikkinäisiä linkkejä pitäisi olla vähän. (Ainakin kunkin julkaisupäivän aikana syntyy uusia rikkinäisiä linkkejä.) .
+    * -Ei. Tein asianmukaisen järjestelmän rikki linkit testaus ERDDAP™ web-sivut, joten nyt pitäisi olla hyvin vähän rikki linkkejä (ainakin kunkin julkaisupäivän jälkeen - uusia rikkoutuneita linkkejä syntyy usein) .
          
-    * EDDTableFromHttpGet epäonnistui tietyntyyppisissä pyynnöissä. Nyt se ei. Kiitos Emmalle BODC:ssä.
+    * BUG FIX: EDDTableFromHtpGet epäonnistui tietyntyyppisten pyyntöjen. Nyt ei. Kiitos Emman BODC:
          
-    * Viisikymppinen: Joidenkin pyyntöjen käsittelemiseksi EDDTable teki tilapäisen tiedoston jokaisesta pyydetystä muuttujasta, ja tiedoston nimi päättyi muuttujan nimeen. Jos muuttujan nimi oli myös jonkinlainen puristus (esim. .Z) , ERDDAP yrittäisi (Epäonnistuminen) poistaa väliaikaisen tiedoston. Nyt tilapäiset tiedoston nimet päättyvät .temp. Kiitos Mathew Biddlestä.
+    * BUG FIX: Joidenkin pyyntöjen käsittelyä varten EDDTable teki tilapäisen tiedoston kustakin pyydetystä muuttujasta, jonka tiedostonimi päättyy muuttujan nimeen. Jos muuttujan nimi oli myös tyyppi pakkaus (esim. Z) , ERDDAP Yrittäisi (ja epäonnistuu) -Ei. Nyt väliaikaiset tiedostonimet päättyvät ".temppiin." Kiitos Mathew Biddlen.
          
-    * BUG FIX: GenerateDatasetsXml ja Calendar2.convertTo Java Päivämäärä Formaatti on nyt paljon vähemmän todennäköistä tehdä virheellinen muutos, kun yrittää korjata mahdollisen mitättömän päivämäärän. Automaattista aikataulua ei muuteta. Kiitos Mathew Biddlestä.
+    * BUG FIX: LuodaDatasetsXml ja Kalenteri2. Java Päivämäärä Muoto ovat nyt paljon vähemmän todennäköisesti tehdä virheellinen muutos, kun yrittää korjata mahdollisesti virheellinen päivämäärän aikamuoto. Erityisesti, ei auto- ehdotettu päivämääräAikamuotoa muutetaan. Kiitos Mathew Biddlen.
          
-    * Viisikymppinen: Jos on virhe, kun saat sisältöä kauko-URL-osoitteesta ja jos virheStream-sisältö on pakattu, ERDDAP™ Nyt virheilmoitus on oikein masentunut. Kiitos Bob Simonsista.
+    * BUG FIX: Jos oli virhe, kun sait sisältöä etä URL, ja jos virheStream sisältö on pakattu, ERDDAP™ Nyt kunnolla purkaa virheviestin. Kiitos Bob Simonsin.
          
-    * Vinkki:&lt;EDD:tä ei sovellettu, kun EDD:tä ... FromErddap-tietokanta oli lasten tietoaineisto. Nyt se on. Kiitos Chris Romsos.
+    * BUG FIX:&lt;TilaaToRemoteErddapDataset&gt; ei ollut käytössä, kun EDD... FromErddap-aineisto oli lapsiaineisto. Nyt on. Kiitos Chris Romson.
          
-    * Alkuperäinen nimi: GenerateDatasets Xml ei enää ajattele lähdemuuttujan nimeä, joka alkaa "latinalla" saattaa olla leveys. Kiitos Vincent Luzzo.
+    * BUG FIX: Generator Datasets Xml ei enää usko lähdemuuttujan nimi alkaa "latin" voi olla leveysaste. Kiitos Vincent Luzzon.
          
-    * BUG FIX: Nyt, OutOfMemoryError, kun lukee tiedostoa käyttäjän pyynnöstä, ei ole syy lisätä tiedostoa BadFiles-listalle. Kiitos Bob Simonsista.
+    * BUG FIX: Nyt OutOfMemoryError kun lukee tiedostoa samalla kun käsitellään käyttäjän pyyntöä ei ole syy lisätä tiedostoa BadFiles listalle. Kiitos Bob Simonsin.
          
 
-## versio 2.02{#version-202} 
- (Lähde: 2019-08-21) 
+## Versio 2.02{#version-202} 
+ (julkaistu 2019-08-21) 
 
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
-    * NEW: Nyt on kaksi tapaa etsiä tietoaineistoa useista ERDDAP s. Ne toimivat hieman eri tavalla ja niillä on erilaiset rajapinnat ja vaihtoehdot.
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * UUTTA: Nyt on kaksi tapaa etsiä tiedostoja useita ERDDAP S. Ne toimivat hieman eri tavalla ja niillä on erilaiset rajapinnat ja vaihtoehdot.
         
-        *    [Etsiminen ERDDAP html](/SearchMultipleERDDAPs.html) Lähde: Bob Simons NOAA   NMFS   SWFSC   ERD .
-        *    [http://erddap.com](http://erddap.com) Rob Fuller, Irlannin meriinstituutti.
+        *    [Etsi useita ERDDAP s.html](/SearchMultipleERDDAPs.html) Bob Simonsilta / NOAA   NMFS   SWFSC   ERD .
+        *    [ http://erddap.com ](http://erddap.com) Rob Fuller / The Marine Institute of Ireland.
         
-Kiitos Tylar Murraylle alkuperäisestä hakemuksesta.
+Kiitos Tylar Murray alkuperäisen pyynnön.
          
-    * IMPROVED: Pyyntö "files" Järjestelmä ladata tiedosto, joka on todella etäsivustolla (AWS S3) johtaa nyt uudelleenohjaukseen, joten käyttäjä lataa tiedot lähteestä sen sijaan, että käyttäisit niitä. ERDDAP™ välittäjänä. Kiitos Andy Zieglerille ja NOAA .
+    * PARANTAA: pyyntö "files" järjestelmä ladata tiedosto, joka on todella etäsivustolla (esim. AWS S3) nyt johtaa uudelleenohjaus, joten käyttäjä todella ladata tiedot lähde, sijaan käyttää ERDDAP™ välikätenä. Andy Zieglerin ansiosta. NOAA .
          
-    * NEW: Esimerkkinä uusista AWS S3:een liittyvistä ominaisuuksista ja helpottaa kaikkien selaamista ja lataamista julkisista AWS S3 -paketeista.
-         [110 näytetietoa](https://registry.opendata.aws/) Näin kuka tahansa voi selata lähes kaiken sisällön
-         [AWS S3 Open Data Buckets Näytä tarkat tiedot](https://registry.opendata.aws/) . Jos klikkaat "files" linkki johonkin näistä näytteen tietoaineistoista, voit selata hakemistopuuta ja tiedostoja kyseisessä S3-laastarissa. Näiden aineistojen toimivuuden vuoksi nämä hakemistot ovat aina ajan tasalla, koska ERDDAP™ Ota ne lennolle. Jos napsautat hakemistopuuta oikeaan tiedostonimeen ja klikkaat tiedoston nimeä, ERDDAP™ Ohjaa pyyntösi uudelleen AWS S3:een, jotta voit ladata tiedoston suoraan AWS:ltä. ERDDAP™ Järjestäjät voivat
-         [Lue ohjeita, miten voit tehdä tämän muille S3-malleille](/docs/server-admin/datasets#working-with-aws-s3-files) . Kiitos Andy Zieglerille ja NOAA .
+    * UUTTA: Esimerkkinä uusista AWS S3-ominaisuuksista, ja jotta kenen tahansa olisi helpompi selata ja ladata tiedostoja julkisista AWS S3-ämpäreistä, olemme luoneet
+         [~110 näytetietokantaa](https://registry.opendata.aws/) että kukaan voi selata sisältöä lähes kaikki
+         [AWS S3 Open Data kauhat](https://registry.opendata.aws/) . Jos napsautat "files" linkki tahansa näistä näytetiedostoja, voit selata hakemistopuun ja tiedostoja että S3 kauha. Koska nämä tiedot toimivat, nämä luettelot ovat aina täysin ajan tasalla, koska ERDDAP™ Se saa heidät lentämään. Jos klikkaat hakemistopuuta alas todelliseen tiedostonimeen ja klikkaat tiedoston nimeä, ERDDAP™ ohjaa pyyntösi AWS S3: lle, jotta voit ladata tiedoston suoraan AWS: ltä. ERDDAP™ hallinnoijat voivat
+         [Lue ohjeet miten tämä tehdään muille S3-ämpäreille](/docs/server-admin/datasets#working-with-aws-s3-files) . Andy Zieglerin ansiosta. NOAA .
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Asiat, joita sinun tarvitsee tehdä: ei ketään
-         
-    * Improvisoitu: ERDDAP menetelmä, jolla tallennetaan joukko merkkijonoja (Stringarray) Se on nyt paljon tehokkaampi muisti. String Järjestelmiä käytetään kaikkialla ERDDAP™ Erityisesti kun luet tabulaarisia ASCII-tiedostoja. Muut muutokset tekevät CSV/TSV/SSV ASCII:n, sarake ASCII:n ja jsonlCSV-tabulaaritiedostojen lukemisesta nopeampia ja paljon tehokkaampia. Tuloksena on: 764 MB ASCII -datatiedostolle (Pakkaus 52MB .gz tiedostotiedosto) 3 503 266 riviä ja 33 saraketta, maksimimuistin käyttö 10 Gt alas 0,6 Gt (Peak) . Lukemisen aika meni ~7 minuuttia (vaihtelee huomattavasti sen mukaan, kuinka paljon fyysistä muistia tietokoneessa on.) ~36 sekuntia (10 Yksinkertaistaminen () jota käytetään vain GenerateDatasetsissa XM) . Monissa muissa paikoissa ERDDAP™ Tämä parantaa muistin tehokkuutta. Kiitos Tylar Murray ja Mathew Biddle.
-        
-Tutkin erilaista ratkaisua (StringArrayn varustaminen UTF-8-koodattuina tavujoukkoina) . Tämä vähentää muistin käyttöä ~33%, mutta hidastaa ~33%. Verrattuna nykyiseen järjestelmään, joka tuntui huonolta kaupalta. On helpompi antaa tietokoneelle enemmän muistia (Lisää muistia ~ 200) kuin tehdä siitä nopeampaa (Osta kokonaan uusi tietokone) .
-        
-Jos se on kätevä, se on aina hyvä idea jakaa valtavia tabulaaritiedostoja useisiin pienempiin tiedostoihin, kuten kriteereihin. stationID ja/tai aikaa. ERDDAP™ Usein on avattava yksi pienistä tiedostoista vastauksena käyttäjän pyyntöön, ja näin voidaan reagoida paljon nopeammin.
-        
-    * Improve: Nyt on [ ERDDAP™ AWS S3 -dokumentti](/docs/server-admin/datasets#working-with-aws-s3-files) joka kuvaa, miten päästä ERDDAP™ Työskentele tiedostojen kanssa AWS S3:ssa.
-myös, ERDDAP™ Käytä uusia ominaisuuksia AWS S3:ssa Java API.
-myös, ERDDAP™ AWS S3 -URL-osoitteet voivat nyt sisältää lisämerkkejä (Ajanjakso, hyphen, Underscore) bucket-nimillä.
-myös, ERDDAP™ Nyt vaaditaan, että AWS S3:n bucket-URL-osoitteet tunnistetaan tietyllä tavalla:
-          https://_bucketName_.s3._aws-region._amazonaws.com/_prefix_/  
-jossa prefix on valinnainen.
-Kiitos Andy Zieglerille ja NOAA .
-         
-    * Lähde: GenerateDatasets XML kohtelee nyt yleistä missing\\_value s stand-ins puuttuvina arvoina, joten se muuntaa sarakkeen todennäköisemmin numeeriseksi tietotyypiksi. Alkuperäinen nimi: Primitive Array.simplify () Nyt lokit, joiden tietojen arvo aiheutti sen käsittelemään tiettyä saraketta merkkijonojen sarakkeena. Kiitos Mathew Biddlestä.
-         
-    * Improvisoitu:&lt;Pyydä mustavalkoista" tukee nyt.\\*.\\*  (Tai:\\*:\\*IPv6) IP-osoitteiden lopussa, jotta voit mustalle listalle suuremman IP-osoitteen, esim. 110.52.\\*.\\*  (Kiina Unicom Tianjin) . Katso dokumentit [...]&lt;Pyydä musta lista » (Docs/server-admin/datasets#requestblacklist Näytä tarkat tiedot) Kiitos China Unicom ja China Telecom.
-         
-    * IMPROVED: Jos tietoaineiston lähde ei määritä "institution" Alkuperäinen nimi: GenerateDatasets Xml ja loadDataset saavat sen nyt "Creator"-ominaisuudesta. (jos saatavilla) . Kiitos Micah Wengrenille.
-         
-    * BUG FIX: Standardisointi Mitä ei aina sovellettu ASCII-tiedostoihin.
-EDDTable ei myöskään käsitellyt ajoissa olevia rajoituksia, kun lähteellä oli String-aika-arvot ja standardointi. mitä käytettiin.
-Kiitos Paloma de la Vallee.
-        
-En ole aiemmin todennut, että sinun pitäisi käyttää standardointia. Mitä ominaisuuksia tarvitset, kun todella tarvitset niitä (Esimerkiksi, kun eri lähdetiedostot tallentavat aika-arvoja eri tavoin.) Jotkin pyynnöt tietoaineistoille, jotka käyttävät standardointia Mitä käsitellään hitaammin.
-        
-    * Vinkki: vika koodissa, jota käytetään EDDGrid NCFiles sai sen epäonnistumaan .nc 4 ja .hdf 5 tiedostoa, joissa on "pitkä" (64) muuttujia. Tämä on nyt korjattu. Kiitos Friedemann Wobus.
-         
-    * Viisikymppinen: Pienet muutokset ISO 19115 -tiedostoihin, jotka tekevät toisesta validaattorista onnellisen. Kiitos Chris MacDermaid ja Anna Milan.
-         
-
-## Versio 2.01{#version-201} 
- (Lähde: 2019-07-02) 
-
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :** 
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
     * Ei mitään.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Viisikymppinen: Vika koodissa, joka tuottaa Data Access -muodon tabledap Tiedot aiheuttivat, että sivu oli tyhjä tietyille tietoaineistoille. Olen myös parantanut odottamattomien virheiden käsittelyä kaikilla HTML-sivuilla. (Yleensä yleensä) Näytä virheilmoitus. Kiitos Marco Alballe.
-    * Lähde: GenerateDatasets Xml ei enää paina pitkää varoitusta tuotannossa. Sen sijaan, katsokaa [Sukupolven editointi Dataa XML-tuotanto](/docs/server-admin/datasets#you-need-to-edit-the-output-from-generatedatasetsxml-to-make-it-better) . Kiitos Steven Baumille.
-    * Lähde: GenerateDatasets Xml antaa hieman erilaisia suosituksia eri tilanteissa.&lt;Päivitä EveryNMillis&gt; for EDD...Files datasets. GenerateDatasets Xml lannistaa nyt alkuperäisen EDDTableFromFiles-tietokantojen ”extract” -järjestelmän.
+         
+    * PARANTAA: ERDDAP 's menetelmä tallennuksen jouset (StringArray) on nyt paljon muistitehokkaampi. Merkkijono Kaaremia käytetään kaikkialla ERDDAP™ , erityisesti luettaessa taulukko ASCII-tiedostoja. Myös muut muutokset tekevät lukemisesta CSV/TSV/SSV ASCII:n, kolumnaari ASCII:n ja jsonlCSV:n taulukkotiedostot nopeampia ja paljon muistitehokkaampia. Tuloksena on 764 MB ASCII-tietotestitiedosto (mutta pakattu 52MB:ään .gz tiedosto) 3,503,266 riviä ja 33 saraketta, suurin muistin käyttö meni 10GB alas 0,6GB (huipulla) . Aika lukea se meni ~ 7 minuuttia (mutta vaihtelee suuresti, kuinka paljon fyysinen muisti on tietokone) ~36 sekuntia (mukaan lukien kymmenen yksinkertaistamiseen () jota käytetään vain generoinnissa Xml) . Monissa muissa paikoissa ERDDAP™ hyötyisi tästä muistitehokkuuden parantumisesta. Kiitos Tylar Murrayn ja Mathew Biddlen.
+        
+Tutkin eri ratkaisua. (tallenna jouset StringArray kuten UTF-8-koodatut tavurakenteet) . Se vähentää muistin käyttöä toiset ~33 prosenttia, mutta hintaan ~33 prosenttia hidastuminen. Nyt käytössä olevaan järjestelmään verrattuna se tuntui huonolta vaihtokaupalta. On helpompaa antaa tietokoneelle enemmän muistia (ostaa lisää muistia ~200 dollarilla) kuin tehdä se nopeammin (osta kokonaan uusi tietokone) .
+        
+Jos se on kätevä, se on edelleen hyvä idea jakaa valtavat taulukkotiedostot useisiin pienempiin tiedostoihin perustuu joitakin kriteerejä, kuten stationID ja/tai aika. ERDDAP™ Usein on vain avattava yksi pienistä tiedostoista vastauksena käyttäjän pyyntöön ja siten pystyä vastaamaan paljon nopeammin.
+        
+    * Nyt on. [ ERDDAP™ AWS S3-asiakirjat](/docs/server-admin/datasets#working-with-aws-s3-files) , joka kuvaa miten saada ERDDAP™ työskennellä tiedostojen AWS S3 kauhoissa.
+Ja... ERDDAP™ nyt käyttää uusia ominaisuuksia AWS S3 Java API.
+Ja... ERDDAP™ nyt AWS S3- URL-osoitteiden avulla voit lisätä lisämerkkejä (piste, väliviiva, alleviiva) Ämpärinimillä.
+Ja... ERDDAP™ nyt edellyttää, että AWS S3 kauha URL-osoitteita on yksilöity tietyllä tavalla:
+           https://_bucketName_.s3._aws-region._amazonaws.com/_prefix_/   
+jossa etuliite on valinnainen.
+Andy Zieglerin ansiosta. NOAA .
+         
+    * PARANTAA: Luoda datasettejä Xml hoitaa nyt muita yleisiä missing\\_value s stand-ins kuin puuttuvat arvot ja niin on todennäköisemmin muuntaa sarake numeeristen tietojen tyyppi. Myös, PrimitiveArray.yksinkertaista () nyt lokit, jotka erityisesti data-arvo aiheutti sen kohdella tietyn sarakkeen kuin sarakkeen jouset. Kiitos Mathew Biddlen.
+         
+    * PARANTAA:&lt;pyyntöMusta lista&gt; tukee nyt .\\*.\\*  (tai:\\*:\\*IPv6) IP-osoitteiden lopussa, jotta voit listata isomman osan IP-osoitteista, esim. 110.52.\\*.\\*  (Kiina Unicom Tianjin) . Ks. asiakirjat [&lt;pyyntöMusta lista&gt;] (/docs/server-admin/datasets#requestblacklist) Kiitos China Unicom ja China Telecom.
+         
+    * PARANTAA: Jos tietokokonaisuuden lähde ei määritä "institution" attribuutti, generator Datasets Xml ja lataaDataset nyt saada sen "luoja\\_institution" ominaisuus (jos saatavilla) . Kiitos Micah Wengrenin.
+         
+    * BUG FIX: standardisoi Mitä ei aina sovellettu ASCII-tiedostoihin.
+EDDTable ei myöskään käsitellyt asianmukaisesti aika-arvoja koskevia rajoituksia, kun lähde oli String aika-arvot ja standardoida Mitä käytettiin?
+Kiitos Paloma de la Valleen.
+        
+En ole selvästi todennut aiemmin: Sinun pitäisi vain käyttää standardization Mitä ominaisuuksia kun todella tarvitset niitä (esim. kun eri lähdetiedostot tallentavat aikaarvoja eri tavoin) , koska jotkut pyynnöt tietokokonaisuuksia, jotka käyttävät standardization Mitä käsitellään hieman hitaammin.
+        
+    * BUG FIX: Virhe koodissa, jota käytetään EDDGrid FromNcFiles aiheutti sen epäonnistumisen .nc 4 ja .hdf 5 tiedostoa, joissa on "pitkä" (int64) muuttujat. Tämä on nyt korjattu. Kiitos Friedemann Wobusin.
+         
+    * BUG FIX: Pienet muutokset ISO 19115 -tiedostoihin, jotta eri validaattori olisi tyytyväinen. Kiitos Chris MacDeroidin ja Anna Milanin.
+         
+
+## Version 2.01{#version-201} 
+ (julkaistu 2019-07-02) 
+
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :** 
+    * Ei
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * BUG FIX: Koodissa oleva vika, joka tuottaa tiedonkäyttölomakkeen tabledap Tiedostot aiheuttivat sen, että verkkosivu oli joidenkin tietokokonaisuuksien osalta tyhjä. Lisäksi olen parantanut käsittelyä odottamattomia virheitä kaikilla HTML-sivuilla, joten ne (yleensä) Näytä virheviesti. Kiitos Marco Alban.
+    * PARANTAA: Luoda datasettejä Xml ei enää tulosta pitkä varoitus päällä lähtö. Sen sijaan, katso [Muokkausgeneraattori Dataset Xml- tuloste](/docs/server-admin/datasets#you-need-to-edit-the-output-from-generatedatasetsxml-to-make-it-better) . Steven Baumin ansiosta.
+    * PARANTAA: Luoda datasettejä Xml tekee nyt hieman erilaisia suosituksia eri tilanteissa&lt;updateEveryNMillis&gt; varten EDD ... From ... Files tiedostoja. Myös, Luo tiedostoja Xml estää nyt alkuperäisen "uutteen" järjestelmän EDDtableF FromFromFiles tietoja.
 
 ## Versio 2.00{#version-200} 
- (Lähde: 2019-06-26) 
+ (julkaistu 2019-06-26) 
 
-*    ** ERDDAP™ V2.00 on vihdoin täällä&#33; Kyllä&#33;**   
+*    ** ERDDAP™ V2.00 on vihdoin täällä&#33; Jee&#33;**   
      
-    * Pyydämme anteeksi pitkää viivettä, joka tarvitaan tämän version loppuun saattamiseen.
-Kiitos kärsivällisyydestäsi.
+    * Pahoittelemme pitkä viive tarvitaan loppuun tämän version.
+Kiitos kärsivällisyydestänne.
          
-    * Hyvä uutinen on, että lisäaikaa on käytetty lisäämään käyttäjien pyytämiä ominaisuuksia. Huono uutinen on se, että jopa viivästymisen myötä ei lisätty kaikkia pyydettyjä ominaisuuksia. Pahoittelut, mutta tuntui tärkeämmältä päästä eroon kuin viivästyttää enemmän. (ikuisesti?) lisätä jatkuvasti uusia ominaisuuksia. Lupaamme palata useammin julkistuksiin tulevaisuudessa.
+    * Hyvä uutinen on, että lisäaikaa käytettiin lisäämään enemmän ominaisuuksia, joita käyttäjät olivat pyytäneet. Huono uutinen on, että vaikka viive, kaikki pyydetyt ominaisuudet ei lisätty. Olemme pahoillamme, mutta tuntui tärkeämpää saada tämä julkaisu ulos kuin viivyttää enemmän (Ikuisesti?) jatkuvasti lisäämällä uusia ominaisuuksia. Lupaamme palata useammin julkaisuihin tulevaisuudessa.
          
-    * "Version 2" Onko suuria muutoksia ja ristiriitoja?"
+    * "Varaus 2? Onko suuria muutoksia ja yhteensopimattomuutta?"
 Isoja uusia ominaisuuksia? Kyllä.
-Suuret ristiriidat tai muutokset ylläpitäjille tai käyttäjille? Ei.
-Hyppäsimme v1.82 - v2.00:
-        * Osittain juhlitaan 10 vuotta (Nyt 11) Ensimmäisen julkisen vapautuksen jälkeen ERDDAP™   (v1.00 2008-05-06, joka ulkoisesti näytti merkittävästi v2.00) . siihen aikaan, ERDDAP™ asennuksesta lähes 100 asennustilaan vähintään 12 maassa (Australia, Belgia, Kanada, Ranska, Irlanti, Italia, Etelä-Afrikka, Espanja, Thaimaa, Yhdistynyt kuningaskunta, Yhdysvallat) .
-        * Lisäys täysin uuteen suuntaan: ERDDAP™ Nyt käytössä on datanhallintajärjestelmä, jonka avulla voidaan hyödyntää olemassa olevia palvelinpalveluita. (Katso nähkää [EdDTableFromHttpGet](#eddtablefromhttpget) ) ,
-        * Ja osittain, koska se ei ollut suuri hyppy 1,82-2,00 numeerisesti, joten tämä tuntui oikealta ajalta.
+Suuri yhteensopimattomuus tai muutokset ylläpitäjille tai käyttäjille? Ei.
+Hyppäsimme v1.82 v2.00:
+        * osittain juhlia 10 vuotta (Nyt 11) sen jälkeen, kun ERDDAP™   (v1.00 2008-05-06, joka ulospäin näytti huomattavan v2.00) . Sinä aikana ERDDAP™ on siirtynyt yhdestä laitoksesta lähes 100 laitokseen vähintään 12 maassa (Australia, Belgia, Kanada, Ranska, Intia, Irlanti, Italia, Etelä-Afrikka, Espanja, Thaimaa, Yhdistynyt kuningaskunta, Yhdysvallat) .
+        * osittain merkittävä lisäys täysin uuteen suuntaan: ERDDAP™ Nyt on dataa syövin järjestelmä mennä nykyisten data palvelinpalvelut (Katso [EDDTableFromHttpGet](#eddtablefromhttpget) ) ,
+        * ja osittain koska se ei ollut suuri hyppy 1.82-2.00 numeerisesti, joten tämä tuntui oikea aika.
              
-    * Toinen hyvä uutinen on, että on olemassa kaksi muuta ryhmää, jotka tukevat koodia. ERDDAP™   (Tässä versiossa ja merkinnöillä ne jatkuvat) Rob Fuller ja Adam Leadbetter Irlannin Marine Institutesta sekä Roland Schweitzer PMEL:stä ja Weathertop Consultingista. Kiitos paljon. On totta, että he työskentelevät oman valintansa projekteissa, mutta se on klassinen avoimen lähdekoodin kehitysmalli - ryhmät antavat koodin ominaisuuksille, joita he haluaisivat eniten nähdä. Lisähyöty osallistujille: he saavat käyttää uusia ominaisuuksia heti, kun ne ovat valmiita; heidän ei tarvitse odottaa seuraavaa julkaisua. ERDDAP . Ryhmä on myös tervetullut osallistumaan&#33; Nähdään [ ERDDAP™ Ohjelmoijan opas](/docs/contributing/programmer-guide) .
+    * Toinen hyvä uutinen on, että nyt on olemassa kaksi muuta ryhmää, jotka osallistuvat koodi ERDDAP™   (tässä versiossa ja viitteitä ne jatkavat) : Rob Fuller ja Adam Leadbetter Irlannin Marine Institutesta ja Roland Schweitzer PMEListä ja Weathertop Consultingista. Kiitos paljon. On totta, että he työstävät omia projektejaan, mutta se on klassinen avoimen lähdekoodin kehittämismalli -- ryhmät antavat koodin niille ominaisuuksille, joita he eniten haluaisivat lisätä. Lisähyöty vastaajille: he saavat käyttää uusia ominaisuuksia heti, kun ne ovat valmiita; heidän ei tarvitse odottaa seuraavaa julkaisua ERDDAP . Myös teidän ryhmänne on tervetullut osallistumaan&#33; Katso [ ERDDAP™ Ohjelmoijan opas](/docs/contributing/programmer-guide) .
          
-    * Toivomme, että pidät ERDDAP™ Odotamme innolla seuraavaa 10 vuotta ERDDAP™ kehitystä ja yhä enemmän käyttöä ympäri maailmaa.
+    * Toivottavasti pidät ERDDAP™ v2.00. Odotamme seuraavat 10 vuotta ERDDAP™ kehitys ja yhä enemmän käyttöä ympäri maailmaa.
          
-*    **Uudet ominaisuudet ja muutokset (Käyttäjille) :**   
+*    **Uudet ominaisuudet ja muutokset (käyttäjille) :**   
      
-    * Uusi: orderByMean filter
-for tabledap Tiedot laskevat määritettyjen ryhmien keinot. Kaikki, kaikki orderBy vaihtoehdot tukevat nyt ylimääräistä tapaa määritellä ryhmiä: _numericVariable \\[ Lukumäärä \\[ Ajankäyttö \\]  \\[ :offset \\]  \\] Esimerkiksi päivä/päivä tai syvyys/10:5. Esimerkiksi, stationID Pääartikkeli: WaterTemp & orderByMean  (""" stationID Aika/päivä”) Järjestäisivät tulokset stationID ja aika lasketaan ja palautetaan vesiputken keskiarvo kullekin stationID joka päivä. Nämä ovat erittäin hyödyllisiä ja tehokkaita uusia ominaisuuksia. Näiden ominaisuuksien ja vanhan koodin muutosten taustalla olivat Rob Fuller ja Irlannin Marine Instituten Adam Leadbetter. Kiitos, Rob ja Adam&#33;
+    * UUTTA: orderByMean suodatin
+B. tabledap Tiedostoissa lasketaan määriteltyjen ryhmien keinot. Lisäksi orderBy vaihtoehdot tukevat nyt uutta tapaa määritellä ryhmiä: _numericVariable \\[ / numero \\[ aikayksiköt \\]  \\[ :offset \\]  \\] _, esim. aika/1 päivä tai syvyys/10:5. Esimerkiksi stationID , aika, vesialue orderByMean  (" stationID , aika/1 päivä") lajitella tuloksia stationID ja aika, sitten laskea ja palauttaa keskiarvo waterTemp kunkin stationID Kunkin päivän osalta. Nämä ovat huomattavan hyödyllisiä ja tehokkaita uusia ominaisuuksia. Rob Fuller ja Adam Leadbetter toimittivat uuden koodin näille ominaisuuksille ja vanhan koodin muutoksille Gitin kautta. Kiitos. Rob ja Adam&#33;
          
-    * NEW: tulostiedostotyyppi tabulaaritietokannoille: [.data Pöytä](https://developers.google.com/chart/interactive/docs/reference#dataparam) ,
-JSON-tiedosto, joka on muotoiltu käytettäväksi Google Visualization Asiakaskirjasto ( Google Charts ) . Tämän koodin antoi Roland Schweitzer ja se toimitettiin Gitin kautta. Kiitos, Roland&#33;
+    * UUTTA: taulukkotiedostojen tulostiedostotyyppi: [. Taulukko](https://developers.google.com/chart/interactive/docs/reference#dataparam) ,
+JSON-tiedosto muotoiltu käytettäväksi Google Visualization asiakaskirjasto ( Google Charts ) . Tämän koodin antoi Roland Schweitzer ja se toimitettiin Gitin kautta. Kiitos. Roland&#33;
          
-    * NEW: tulostiedostotyyppi tabulaaritietokannoille: [ .jsonlCSV1 ](https://jsonlines.org/examples/) ,
-joka on kuin olemassa oleva .jsonlCSV Vaihtoehto, mutta sarakkeiden nimillä ensimmäisellä rivillä. Kiitos Eugene Burgerille.
+    * UUTTA: taulukkotiedostojen tulostiedostotyyppi: [ .jsonlCSV1 ](https://jsonlines.org/examples/) ,
+joka on kuin nykyinen .jsonlCSV vaihtoehto, mutta sarake nimet ensimmäisellä rivillä. Kiitos Eugene Burgerin.
          
-    * NEW: Jos järjestelmänvalvoja mahdollistaa sen, käyttäjät voivat kirjautua sisään. [Orcid](https://orcid.org) Tili.
-Se on OAuth 2.0 -todennusjärjestelmä, kuten Googlen todentaminen. ORCIDia käytetään laajalti tutkijoiden tunnistamiseen. ORCID-tilit ovat ilmaisia ja niillä ei ole Google-tilien tietosuojaongelmia. Näytä ERDDAP &gt; [Orcid Authentication -ohjeet](/docs/server-admin/additional-information#orcid) . Kiitos BCO-DMO (Adam Shepard, Danie Kinkade jne.) .
+    * UUSI: Jos ylläpitäjä mahdollistaa sen, käyttäjät voivat nyt kirjautua sisään heidän [ORCID](https://orcid.org) Tili.
+Se on OAuth 2.0 -tunnistusjärjestelmä, kuten Googlen tunnistautuminen. Tutkijat käyttävät ORCID:tä laajasti tunnistaakseen itsensä. ORCID-tilit ovat ilmaisia eikä niillä ole Google-tilien tietosuojaan liittyviä ongelmia. Katso ERDDAP S [Öljyiset tunnistusohjeet](/docs/server-admin/additional-information#orcid) . Kiitos BCO-DMO (Adam Shepard, Danie Kinkade jne.) .
          
-    * Uusi URL-muunnin muuntaa ajantasaiset URL-osoitteet ajantasaisiksi URL-osoitteiksi.
-Katso.../erddap/convert/urls.html ERDDAP™ asennus, esim.
-         [Tämä linkki muuntajaan ERD   ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/convert/urls.html) . Tästä pitäisi olla hyötyä tietojohtajille. Sitä käyttää myös GenerateDatasetsXml. Kiitos Bob Simons ja Sharon Mesick.
+    * UUSI: Uusi URL-muunnin muuntaa vanhan URL-osoitteet ajan tasalle URL.
+Ks. .../eddap/convert/urls.html ERDDAP™ asennus, esim.
+         [Tämä linkki muuntimen ERD   ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/convert/urls.html) . Tämän pitäisi olla hyödyllistä tiedon hallinnoijille. Tätä käytetään myös sisäisesti GenerateDatasetsXml. Kiitos Bob Simonsin ja Sharon Mesickin.
          
-    * Lähde: The [Aika muuntaa](https://coastwatch.pfeg.noaa.gov/erddap/convert/time.html) Nyt on mahdollisuus muuntaa mikä tahansa yhteinen merkkijonoaika ISO8601-jousitukseksi tai muuntaa merkkijono. UDUNITS kuin aikayksiköt, jotka törmäävät oikeaan UDUNITS aikayksikköjä. Tämän pitäisi olla myös hyödyllistä ERDDAP™ Hallinnoijat, joiden on tiedettävä, mitä muotoa määrittää "yksiköt" ominaisuus merkkijonon aika muuttujia. Tätä käyttävät myös GenerateDatasetsXml ja EDDTableFromFiles. Kiitos Bob Simonsista.
+    * PARANTAA: [Ajanmuunnin](https://coastwatch.pfeg.noaa.gov/erddap/convert/time.html) nyt on vaihtoehtoja muuntaa mikä tahansa yhteinen merkkijono aika ISO8601 merkkijonoaikaa, tai muuntaa UDUNITS - Kuten aikayksiköt muodostavat oikean UDUNITS Aikayksiköiden merkkijono. Tämän pitäisi olla hyödyllistä myös ERDDAP™ hallinnoijat, joiden on tiedettävä, missä muodossa määrittää "yksiköt" ominaisuus merkkijonoaika muuttujia. Tätä käytetään myös sisäisesti GenerateDatasetsXml ja standardizeMikä ominaisuus EDDtableFromFromFles. Kiitos Bob Simonsin.
          
-    * Uusi: The [Konvertteriyksikkö](https://coastwatch.pfeg.noaa.gov/erddap/convert/time.html) Uusi "Standardize UDUnits" -vaihtoehto.
-Esimerkiksi "deg \\ c/m" ja "degrees \\c meters-1" muutetaan molemmiksi.
-"Kohde m-1" Tätä ominaisuutta käytetään myös standardisoimalla EDDTableFromFiles. Kiitos Bob Simonsista.
+    * UUTTA: [Yksikkömuunnin](https://coastwatch.pfeg.noaa.gov/erddap/convert/time.html) on uusi "Standardize UDUnits" vaihtoehto.
+Esimerkiksi "deg\\_C/m" ja " astetta\\_C metriä-1" muutetaan
+"aste\\_C m-1." Tätä ominaisuutta käytetään myös standardizeMikä ominaisuus EDDtableFromFromFles. Kiitos Bob Simonsin.
          
-    * Lähde: For grafiikka (Muut kuin pintakuvia) Griddapin ja tabledap Kun x-akseli ei ole aika-akseli, jos vain x-akselin vaihteluvälin osa on näkyvissä, on nyt graafin yläpuolella painikkeita, jotka siirtävät X-akselin vasemmalle tai oikealle. Kiitos Carrie Wall Bell -hankkeesta.
+    * UUTTA: Kaaviot (muut kuin pintakuviot) ruudukossa ja tabledap 's Make A Graph web-sivut, kun x-akseli ei ole aikaakseli, jos vain osajoukko x-akselin muuttujan alueesta on näkyvissä, on nyt painikkeita kaavion yläpuolella siirtää X Axis vasemmalle tai oikealle. Kiitos Carrie Wall Bell / Hydrophone projekti.
          
-    * NEW: Kuvakaavioissa X- ja/tai Y-akselit voivat nyt käyttää Log-asteikkoa.
-Käyttäjät voivat kontrolloida Y Axis -asteikkoa uudella pudotuslevyllä verkkoon ja tabledap Tee graafiset sivut. Nähdään [.xRange ja YRANG-dokumentointi](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#xRange) . Kiitos Carrie Wall Bell -hankkeesta.
+    * UUTTA: Kaavioihin X- ja/tai Y-akseli voi nyt käyttää lokiasteikkoa.
+Käyttäjät voivat hallita Y Axis Scale kautta uusi pudotus-down widget ruudulla ja tabledap Tee kaavion verkkosivut. Katso [.xRange ja . yRange-dokumentaatio](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#xRange) . Kiitos Carrie Wall Bell / Hydrophone projekti.
          
-    * Improvisoitu: ERDDAP™ Hyödynnä useita HTTP-virhekoodeja ja palauta nyt(OPeN)DAPV2.0-muotoinen virheilmoitus. Näytä [yksityiskohdat](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#Errors) . Kiitos Antoine Queric ja Aurelie Briand.
+    * PARANTAA: ERDDAP™ nyt hyödyntää paremmin erilaisia HTTP virhekoodeja ja nyt palauttaa(OPeN)DAPv2.0-muotoinen virhesanoman hyötykuorma. Katso [yksityiskohtaiset tiedot](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#Errors) . Kiitos Antoine Quericin ja Aurelie Briandin.
          
-    * IMPROVED: Älä käytä Netcdf-java/c- tai muita ohjelmistotyökaluja yhteyden muodostamiseen .nc tai tai .hdf tiedostot, joita palvelee ERDDAP tiedostot / järjestelmä kuin ne olisivat paikallisia tiedostoja. ERDDAP™ Nyt nämä pyynnöt hylätään. Se on erittäin tehoton ja aiheuttaa usein muita ongelmia. Sen sijaan:
+    * IMPROVED: Älä käytä Netcdf-java/c tai muita ohjelmistotyökaluja yhteyden saamiseksi .nc tai .hdf tiedostot, joita hallinnoivat ERDDAP /tiedostot/ järjestelmä kuin ne olisivat paikallisia tiedostoja. ERDDAP™ Nyt kieltäydymme näistä pyynnöistä. Se on hirvittävän tehoton ja aiheuttaa usein muita ongelmia. Sen sijaan:
         
-        * Käytä(OPeN)DAPAsiakasohjelmisto yhdistää ERDDAP &gt; DAP Datan palvelut (joka on/griddap/ tabledap URL:ssä) . Se on mitä DAP Se on ja tekee niin hyvin.
-        * Tai käytä tietoaineiston Data Access -lomaketta pyytääksesi tietojen alijoukkoa.
-        * Jos tarvitset koko tiedoston tai toistuvan pääsyn pitkiin aikoihin, curl , wget , tai selaimesi ladata koko tiedoston, sitten käyttää tietoja paikallisesta tiedoston kopiosta.
+        * Käyttö(OPeN)DAPasiakasohjelmisto, johon yhteys ERDDAP S DAP tietokokonaisuuden palvelut (joilla on /griddap/ tai / tabledap / URL) . Niin. DAP on ja tekee niin hyvin.
+        * Tai, käytä tietokokonaisuuden Data Access Form pyytää osajoukko tietoja.
+        * Tai jos tarvitset koko tiedoston tai toistuvan käytön pitkän ajan, käytä curl , wget , tai selain ladata koko tiedoston, sitten käyttää tietoja paikallisesta kopiosta tiedoston.
         
           
          
-    * Huomautus: On the ERDDAP™ Full Text Search on nyt enemmän kuin "View a List of All Datasets", koska se on paras lähtökohta useimmille käyttäjille. Kiitos Didier Mallarino ja Maurice Libes.
+    * PARANTAA: ERDDAP™ kotisivu, Full Text Haku on nyt yläpuolella "Näytä luettelo kaikista Dataseteista," koska se on paras lähtökohta useimmille käyttäjille. Kiitos Didier Mallarinon ja Maurice Libesin.
          
-    * Lähde: DataProviderForm3.html Luettelot yleisistä standard\\_name s. Kiitos IOOS DMAC -kokouksesta.
+    * PARANTAA: DataProviderForm3.html on nyt pudotuslistat yhteisiä standard\\_name S. Kiitos jonkun IOOS DMAC:n kokouksessa.
          
-    * IMPROVED: /files / web-sivuilla on nyt linkki uuteen "Mitä voin tehdä näillä tiedostoilla?" -osiossa /tiedostot / dokumentaatio. Tässä osassa kuvataan erilaisia tiedostotyyppejä ja annetaan ehdotuksia, miten työskennellä niiden kanssa. Kiitos Maurice Libesille.
+    * IMPROVED: /files/ web- sivuilla on nyt linkki uuteen "Mitä voin tehdä näiden tiedostojen kanssa?" osioon /tiedostot/ dokumentaatio. Tässä osiossa kuvataan erilaisia tiedostotyyppejä ja annetaan ehdotuksia niiden kanssa työskentelystä. Maurice Libesin ansiosta.
          
-    * IMPROVED: Lähes kaikki pyynnöt ERDDAP™ Pitäisi olla hieman nopeampi ja joskus paljon nopeampi.
+    * PARANTAA: Lähes jokainen pyyntö ERDDAP™ pitäisi olla ainakin hieman nopeampi ja joskus paljon nopeampi.
          
-    * Viisikymppinen: Joissakin tilanteissa, kun EDDTable-tietoaineisto tallentaa tietoja tietyntyyppisissä .nc tiedostot, maailmanlaajuinen "id" attribuutti asetettiin tiedoston ehdotettuun nimeen, johon sisältyy hash, joka tekee siitä ainutlaatuisen pyynnön. Nyt "id" jää muuttumattomaksi (jos määritellään) tai asetettu aineiston datasetID   (Jos ei ole määritelty) . Kiitos John Maurerille.
+    * BUG FIX: Joissakin olosuhteissa, kun EDDTablen aineisto tallensi tietoja tietyntyyppisissä .nc tiedostot, maailmanlaajuinen "id" ominaisuus oli asetettu tiedoston ehdotettu nimi, joka sisältää hash tehdä siitä ainutlaatuinen kyseiseen pyyntöön. Nyt "id" jätetään asianmukaisesti ennalleen (jos määritelty) tai asetettu tietokokonaisuuden datasetID   (jos ei määritelty) . John Maurerin ansiosta.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:**   
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:**   
      
-    * TO DO: Vapautuminen vie aikaa ja työtä sinulta. Ole kärsivällinen ja suunnittele muutaman tunnin aikaa tarvittavien muutosten tekemiseen ja muutaman tunnin kokeilemiseen.
+    * TO: Tämä julkaisu vie aikaa ja työtä sinulta. Ole kärsivällinen ja suunnittele muutaman tunnin tehdä tarvittavat muutokset ja muutaman tunnin kokeilla uusia ominaisuuksia.
          
-    * TO DO: Turvallisuuden vuoksi tee varmuuskopio nykyisestä asennuksesta.xml ja datasets.xml tiedostot, jotta voit palauttaa ne epätodennäköisessä tapauksessa, jossa sinun on palattava ERDDAP™ v1.82.
+    * TOTDO: Turvallisuuden vuoksi tee varmuuskopio nykyisestä setup.xml ja datasets.xml tiedostot, jotta voit palata niihin epätodennäköisessä tapauksessa, jossa sinun täytyy palata ERDDAP™ v1.82.
          
-    * Tehtävä: Suositeltu Java AdoptOpenJDK:n OpenJDK 8 8 8 (LTS) + HotSpot.
-Tämä on avoimen lähdekoodin variantti Java Sillä ei ole rajoituksia sen käyttöön. (Toisin kuin Oracle &gt; Java Jakelu jakautuu) . Se on peräisin Oracle &gt; Java jatkuvalla tavalla, Oracle siunausta. Turvallisuussyistä on tärkeää pitää Java Päivitetty versio. Näytä ERDDAP &gt; [ Java Asennusohjeet](/docs/server-admin/deploy-install#java) .
+    * TEHTÄVÄ: Suositeltu Java on nyt hyväksyäOpenJDK:n OpenJDK 8 (LTS) + HotSpot.
+Tämä on avoimen lähdekoodin variantti Java jolla ei ole rajoituksia sen käytölle (toisin Oracle S Java jakelu) . Se on peräisin Oracle S Java jatkuvalla tavalla, Oracle Se on siunaus. Turvallisuussyistä on tärkeää pitää Java versio ajan tasalla. Katso ERDDAP S [ Java asennusohjeet](/docs/server-admin/deploy-install#java) .
          
-    * Pääartikkeli: AdoptOpenJDK Java Tarvitset pienen lisäyksen Tomcat-asennukseen: [Resursseja kätkön ohjeita](/docs/server-admin/deploy-install#contentxml) . Tämä on korvaava versio -XX: MaxPermSize-asetuksesta. (Adoptoi) OpenJDK ei enää tue.
+    * TEHDÄ: hyväksyä OpenJDK:n Java tarvitsee pienen lisäyksen Tomcat-asennukseesi: katso [Resurssivälimuistin ohjeet](/docs/server-admin/deploy-install#contentxml) . Mielestäni tämä on korvaaja -XX: MaxPermSize asetus, joka (Hyväksy) OpenJDK ei enää tue.
          
-    * TO DO: Uusi oletus ja suosittele&lt;FontFamily&gt; asennus.xml
-DejaVu Sans, joka on rakennettu AdoptOpenJDK Java . Nähdään
-         [Tarkistetut fontin asennusohjeet](/docs/server-admin/deploy-install#fonts) .
+    * TODO: Uusi oletus ja suositus&lt;fontFamily&gt; asetus setup.xml on
+DejaVu Sans, jotka on rakennettu AdoptOpenJDK:n Java . Katso
+         [tarkistetut kirjasimen asennusohjeet](/docs/server-admin/deploy-install#fonts) .
          
-    * TO DO: Monet merkit siirtyvät asennuksesta.xml datasets.xml . Etu on, että voit muuttaa arvojasi ERDDAP™ juokseminen, aloittamatta ERDDAP . Voit helposti muuttaa&lt;StarBodyHtml5&gt; tilapäisen viestin näyttäminen ERDDAP™ Kotisivu (Esim. ”Tutki JPL MUR SST v4.1 -tietoaineistoa” tai ”Tämä” ERDDAP™ tulee olemaan offline kunnossapidon 2019-05-08T17:00 PDT kautta 2019-05-08T20:00 PDT.) . Jos/kun vaihdat näitä sivuja datasets.xml Muutokset tulevat voimaan seuraavalla kerralla ERDDAP™ Lukeminen datasets.xml .
+    * TO: Monet tagit ovat siirtymässä setup.xml datasets.xml . Etuna on, että voit muuttaa niiden arvoja kun taas ERDDAP™ on käynnissä, ilman uudelleenkäynnistystä ERDDAP . Voit helposti muuttua.&lt;KäynnistäBodyHtml5&gt; näyttää väliaikainen viesti ERDDAP™ kotisivu (esim. "Tarkista uusi JPL MUR SST v4.1 tietokokonaisuus" tai "This ERDDAP™ on offline huolto 2019-05-08T17:00:00 PDT kautta 2019-05-08T20:00:00 PDT.") . Jos/kun vaihdat nämä tunnisteet datasets.xml , muutokset tulevat voimaan seuraavalla kerralla ERDDAP™ lukee datasets.xml .
          
         
-        1. Kopioi tämä sisältö omaksi datasets.xml tiedosto (jossakin lähellä tiedoston alkua)&lt;erdapdatasets &gt;
+        1. Kopioi tämä sisältö omaan datasets.xml tiedosto (missä tahansa tiedoston alussa, sen jälkeen&lt;ErddapDatasetit&gt;:
 ```
             <!-- The tags below are described in setupDatasetsXml.html.
                  The defaults listed below are as of ERDDAP™ v2.00. -->
@@ -979,157 +994,157 @@ DejaVu Sans, joka on rakennettu AdoptOpenJDK Java . Nähdään
             <standardPrivacyPolicy></standardPrivacyPolicy>
 ```
 
-        2. Yksi kerrallaan, kopioi arvo (Jos) kunkin näistä tunnisteista setup.xml-tiedostosta uuteen tunnisteeseen, jonka olet juuri liittänyt (yläpuolella) Sisällä datasets.xml . Jos olet esimerkiksi käyttänyt 30-arvoa&lt;Cacheminutes » asennus.xml, sinun pitäisi kopioida tämä arvo uuteen&lt;CacheMinutes &gt; Tag in datasets.xml   (Vaikka arvo on sama kuin uusi oletusarvo, on parasta jättää merkintä datasets.xml Blank) .
+        2. Yksi kerrallaan, kopioi arvo (jos) jokaiselle näistä tageista setup.xml tiedoston uuteen tagiin, jonka juuri liitit (yllä) in datasets.xml . Esimerkiksi jos olisit käyttänyt arvoa 30&lt;välimuistiMinuutit&gt; in setup.xml, sinun pitäisi kopioida tämä arvo uuteen&lt;välimuistit&gt; tag in datasets.xml   (vaikka arvo on sama kuin uusi oletusarvo, se on parasta vain jättää tag datasets.xml tyhjä) .
             
-Jos arvosi on erilainen kuin uusi ehdotettu oletus (muut kuin&lt;StarBodyHtml5&gt; ja&lt;ShortDescriptionHtml, joka on hyödyllinen mukauttamaan ERDDAP™ Ole hyvä ja harkitse siirtymistä uusiin oletusarvoihin. Tämä koskee erityisesti&lt;osittaispyynnöt &gt; ja&lt;osittainen RequestMaxCells &gt;, jossa oletusarvo on muuttunut merkittävästi vuosien varrella.
+Jos arvosi on erilainen kuin uusi ehdotettu oletus (muu kuin&lt;KäynnistäBodyHtml5&gt; ja&lt;ShortDescriptionHtml&gt;, jotka ovat hyödyllisiä muokata ERDDAP™ asennus), harkitse siirtymistä uusiin oletusarvoihin. Tämä koskee erityisesti&lt;osittainen pyyntöMaxBytes&gt; ja&lt;OsittainenPyyntiMaxCells&gt;, jossa oletusarvo / ehdotettu arvo on muuttunut merkittävästi vuosien mittaan.
             
-Kun kopioit jokaisen arvon, poista tag ja sen kuvaus asennus.xml. On parempi, että nämä tagit ovat datasets.xml . Nyt on parempia kuvauksia [Asennukset: DatasetsXml.html](/docs/server-admin/datasets#the-basic-structure-of-the-datasetsxml-file) .
+Kun olet kopioinut jokaisen arvon, poista tagi ja sen kuvaus setup.xml. On parempi saada nämä tunnisteet datasets.xml . Ja nyt on parempia kuvauksia [setupDatasetsXml.html](/docs/server-admin/datasets#the-basic-structure-of-the-datasetsxml-file) .
             
         
-Uuden järjestelmän omituisuus on se, että ensimmäinen sivu, kun aloitat ERDDAP Tulee olemaan oletus ERDDAP™ Web-sivu. Jokaisella myöhemmällä verkkosivustolla käytetään ...Html-sisältöä, jonka määrität datasets.xml .
+Outo uuden järjestelmän on, että ensimmäinen web-sivu, kun aloitat ERDDAP on oletus ERDDAP™ Verkkosivu. Jokainen seuraava verkkosivu käyttää ...Html sisältöä määrittelet datasets.xml .
         
-    * Varoitus: ensimmäinen kerta, kun juokset ERDDAP™ V2.0, paikalliseen datatiedostoon perustuvat tietoaineistot latautuvat **erittäin** hitaasti, koska ERDDAP™ Tiedostojen tietokanta on luotava uudelleen hieman eri muodossa. Alkuvaiheen jälkeen ne kuormitetaan nopeasti, kuten ennenkin. Ole kärsivällinen.
+    * VAROITUS: Ensimmäinen kerta kun juokset ERDDAP™ v2.0, paikallisiin tiedostoihin perustuvat tiedot ladataan **hyvin** hitaasti koska ERDDAP™ on luotava tiedostotietokantansa uudelleen hieman eri muodossa. Kun hidas alkuperäinen lataus, ne latautuvat nopeasti, kuten ennenkin. Ole kärsivällinen.
          
-#### EdDTableFromHttpGet{#eddtablefromhttpget} 
-    *    [EddtableFromHttpGet: EDDTable](#eddtablefromhttpget)   
-tähän asti, ERDDAP™ Lue vain tietoja ja aseta ne käyttäjille. Nyt, ERDDAP™ on yksinkertainen ja tehokas järjestelmä reaaliaikaisen datan hyödyntämiseen. Muiden ominaisuuksien joukossa tämä tietoaineisto tarjoaa hienosäädetyn version: se muistaa kaikki tietoaineistoon tehdyt muutokset, kun se on tehty ja kenen kautta. Yleensä käyttäjät haluavat vain uusimman version tietoaineistosta, kaikki muutokset. Käyttäjien on kuitenkin mahdollista pyytää tietoja tietoaineistosta koska tahansa. Tämä helpottaa lisääntyvää tiedettä. Toisin kuin useimmat muut lähes reaaliaikaiset tietoaineistot, nämä aineistot ovat oikeutettuja [ DOI s](https://en.wikipedia.org/wiki/Digital_object_identifier) . Koska he tapaavat DOI vaatimus siitä, että tietoaineisto on muuttumaton, paitsi aggregointi. Näytä [EdDTableFromHttpGet](/docs/server-admin/datasets#eddtablefromhttpget) . Kiitos OI (kauan sitten ja nyt) Eugene Burgerin ja Eugene Burgerin on kerrottava, mikä on tärkeää.
+#### EDDTableFromHttpGet{#eddtablefromhttpget} 
+    *    [BIG UUTTA: EDDTableFromHttpGet](#eddtablefromhttpget)   
+Tähän asti ERDDAP™ vain lukea tietoja ja antaa ne käyttäjien käyttöön. Nyt. ERDDAP™ Siinä on yksinkertainen ja tehokas järjestelmä reaaliaikaisen tiedon syömiseksi sensoreista. Muun muassa tämä aineisto tarjoaa hienosti muotoiltua versiota: se muistaa jokaisen aineistoon tehdyn muutoksen, kun se on tehty, ja kenen toimesta. Yleensä käyttäjät haluavat vain tiedoston uusimman version, jossa on kaikki muutokset. Käyttäjillä on kuitenkin mahdollisuus pyytää tietoja aineistosta kuten milloin tahansa. Tämä helpottaa toistettavissa olevaa tiedettä. Toisin kuin useimmat muut lähes reaaliaikaiset tietoaineistot, nämä tiedot ovat tukikelpoisia [ DOI tilu](https://en.wikipedia.org/wiki/Digital_object_identifier) . Koska he tapaavat DOI vaatimus siitä, että tietokokonaisuus on muuttumaton, paitsi yhdistämällä. Katso [EDDTableFromHttpGet](/docs/server-admin/datasets#eddtablefromhttpget) . Kiitos OOI:n (Kauan sitten ja nyt) Tästä ja Eugene Burgerista puhuminen on tärkeää.
          
-    * Uudet taidot: ERDDAP™ voi nyt palvella tietoja suoraan ulkopuolisista tietotiedostoista, mukaan lukien .tgz , .tar  .gz , .tar  .gzip , .gz , .gzip , .zip , .bz2 .Z. Datasetit voivat sisältää sekoitus ulkoisesti pakattuja tiedostoja. (Ehkä vanhemmat tiedostot?) ja ulkoisesti painamattomat tiedostot, ja voit pakata / purkaa tiedoston milloin tahansa.
+    * Suuri uusi ominaisuus: ERDDAP™ voi nyt palvella tietoja suoraan ulkoisesti pakatuista tiedostoista, mukaan lukien .tgz , .tar  .gz , .tar  .gzip , .gz , .gzip , .zip , .bz2 , tai .Z. Datasetteihin voi sisältyä yhdistelmä ulkoisesti pakattuja tiedostoja (Ehkä vanhemmat tiedostot?) ja ei-ulkoisesti pakattuja tiedostoja, ja voit pakata / purkaa tiedoston milloin tahansa.
         
-Tämä toimii loistavasti&#33;
-Useimmissa tapauksissa tiedostojen purkamiseen liittyvä hidastuminen on vähäistä. Kehotamme sinua kokeilemaan tätä, erityisesti tietoaineistojen ja/tai tietotiedostojen osalta, joita käytetään harvoin.
+Tämä toimii hienosti&#33;
+Useimmissa tapauksissa tiedostojen purkamiseen liittyvä hidastuminen on vähäistä. Kannustamme sinua kokeilemaan tätä, erityisesti tiedostojen ja/tai tiedostojen osalta, joita käytetään harvoin.
         
-Tämä voi säästää 30 000 tai enemmän&#33;
-Tämä on yksi harvoista ERDDAP™ ominaisuuksia, jotka voivat tallentaa paljon rahaa - jos pakkaat paljon datatiedostoja, tarvitset paljon vähemmän RAID-/kovia asemia tietojen tallentamiseen tai päinvastoin, voit palvella paljon enemmän tietoja. (enintään 10x) RAIDS, joita sinulla jo on. Jos tämä ominaisuus pelastaa sinut ostamasta uutta RAIDia, se on säästänyt sinut noin 30 000 dollaria.
+Tämä voi säästää 30000 dollaria tai enemmän&#33;
+Tämä on yksi harvoista ERDDAP™ ominaisuudet, jotka voivat säästää paljon rahaa -- jos pakata paljon tiedostoja, tarvitset paljon vähemmän RAID/kova asemat tallentaa tiedot, tai päinvastoin, voit palvella paljon enemmän tietoa (enintään 10x) -Ei. Jos tämä ominaisuus säästää sinua ostamasta toisen RAID, niin se on säästänyt noin 30000 dollaria.
         
-Nähdään [Ulkoisesti painetut tiedostot](/docs/server-admin/datasets#externally-compressed-files) . Kiitos Benoit Perrimond ja Paloma de la Vallee.
+Katso [Ulkoisesti pakattujen tiedostojen dokumentointi](/docs/server-admin/datasets#externally-compressed-files) . Benoit Perrimondin ja Paloma de la Valleen ansiosta.
         
-    * Uudet taidot: Kaikki Kaikki Kaikki Kaikki EDDGrid Files ja kaikki EDDTableFromFiles-tietoaineistot tukevat&lt;CacheFromUrl &gt; tagi ja&lt;CacheSizeGB&gt; Tag. Jos CacheSizeGB ei ole määritelty, tämä lataa ja ylläpitää täydellistä kopiota etätietoaineiston tiedostoista. Jos cacheSizeGB on määritelty ja on &gt; 0, tämä lataa tiedostoja etätietoaineistosta tarvittaessa paikalliseen välimuistiin, jossa on rajoitettu koko, joka on hyödyllinen pilvipohjaisen tiedon kanssa. (Esimerkkinä S3) tiedostoja. Nähdään [Cash Url dokumentointi](/docs/server-admin/datasets#cachefromurl) yksityiskohtiin. Kirjoittanut Bob Simons ja Roy Mendelsohn (jotka ovat vuosia kirjoittaneet käsikirjoituksia käsittelemään paikallisia kopioita etätiedostoista) Lloyd Cotten, Eugene Burger, Conor Delaney (Hän oli Amazon Web Servicesissä.) Google Cloud Platform.
+    * Suuri uusi ominaisuus: Kaikki EDDGrid From Files and all EDDtableF from Files datasies support a&lt;cacheFromUrl &gt; tag ja a&lt;välimuistiSizeGB&gt; tag. Jos välimuistia ei ole määritelty, tämä lataa ja ylläpitää täydellisen kopion etätiedostoista. Jos välimuistiSizeGB on määritelty ja on &gt;0, tämä lataa tiedostoja etätiedostosta tarpeen mukaan paikalliseen välimuistiin, jonka koko on rajoitettu, mikä on hyödyllistä, kun työskennellään pilvipohjaisen (esim. S3) datatiedostot. Katso [välimuisti EURL-asiakirjat](/docs/server-admin/datasets#cachefromurl) yksityiskohtaisesti. Kiitos Bob Simonsin ja Roy Mendelssohnin. (joka on vuosien ajan kirjoittanut käsikirjoituksia, joiden avulla tehdään paikallisia kopioita etätiedostoista) Lloyd Cotten, Eugene Burger, Conor Delaney (kun hän oli Amazon Web Services) Ja Google Cloud Platform.
          
-    * Uusi EDDTableFromJsonlCSV Luokka voi lukea tabulaarista dataa
-         [JSON CSV-tiedostot](https://jsonlines.org/examples/)   ("Parempi kuin CSV") . Kiitos Irlannin meriinstituutin asukkaille siitä, että kerron tästä ja Eugene Burgerille ja PMEL:lle pyynnöstä tukea sitä syöttötyyppinä.
+    * UUTTA: JsonlCSV:n uusi EDDtable luokka voi lukea taulukon tiedot alkaen
+         [JSON Rivit CSV-tiedostot](https://jsonlines.org/examples/)   ("Parempi kuin CSV") . Kiitos Irlannin Marine Instituten ihmisille siitä, että he kertoivat minulle tästä muodosta sekä Eugene Burgerille ja PMELille pyynnöstä tukea sitä panostyyppinä.
          
-    * Uusi: Kaikki EDDGrid Kaikki EDDTableFromFiles-tiedot tukevat&lt;nThreads&gt; asetelma, joka kertoo ERDDAP™ kuinka monta lankaa käytetään, kun vastaat pyyntöön. Nähdään [nThreads dokumentointi](/docs/server-admin/datasets#nthreads) yksityiskohtiin. Kiitos Rob Bochenek Axiom Data Science, Eugene Burger, Conor Delaney (Hän oli Amazon Web Servicesissä.) Google Cloud Platform.
+    * UUTTA: Kaikki EDDGrid ja kaikki EDDtableFromFiles tietoaineistot tukevat&lt;nSäikeet&gt; asetus, joka kertoo ERDDAP™ kuinka monta lankaa käytetään vastauksena pyyntöön. Katso [nSäikeen dokumentointi](/docs/server-admin/datasets#nthreads) yksityiskohtaisesti. Kiitos Rob Bochenek Axiom Data Science, Eugene Burger, Conor Delaney (kun hän oli Amazon Web Services) ja Google Cloud Platform.
          
-    * Uusi standardointi Mikä on EDDTableFromFiles-aliluokka -
-Aiemmin, jos tietylle muuttujalle, tärkeiden ominaisuuksien arvot (esim. scale\\_factor , add\\_offset , missing\\_value , \\ \\ \\ \\ n arvo, yksiköt) ei ollut johdonmukainen, EDDTableFromFiles valitsi yhden arvon kullekin attribuutille "kelvolliseksi" ja merkitsi tiedostoja muilla attribuuttiarvoilla "Bad Files". Nyt on olemassa järjestelmä, joka standardoi tiedostot heti, kun EDDTableFromFiles lukee tiedostoja. Näytä [EDDTableFromFilen standardointi Mitä](/docs/server-admin/datasets#standardizewhat) . Yksi ERDDAP Päätavoitteena on tehdä datatiedostoista ja tietoaineistoista johdonmukaisia. Standardisointi Mikä on uusi työkalu, joka tekee tästä todellisuuden? Kirjoittanut Marco Alba, Margaret O'Brien (Muut EML-käyttäjät) BCO-DMO ja InPort-käyttäjät.
+    * Uusi standardisoi Mitä varten kaikki EDDtableF alkaen kansiot alaluokkia -
+Aiemmin, jos tietty muuttuja, arvot tärkeitä ominaisuuksia (esim. scale\\_factor , add\\_offset , missing\\_value , \\_ FillValue, yksiköt) eivät olleet johdonmukaisia, DDDtableFromFromFles valitsisi yhden arvon kunkin ominaisuuden olla "valid" ja merkitä tiedostoja muiden määritteiden arvot "Bad Files." Nyt on olemassa järjestelmä standardoida tiedostot heti kun EDDtableF fromFiles lukee tiedostoja. Katso [EDDtableFromFile's standardize Mitä?](/docs/server-admin/datasets#standardizewhat) . Yksi ERDDAP "Tavoitteena on saada datatiedostot ja -aineistot yhdenmukaisiksi. standardoi Mikä on tärkeä uusi väline sen toteuttamiseksi? Kiitos Marco Alba, Margaret O'Brien (ja muut EML-käyttäjät) , BCO-DMO, ja InPort käyttäjät.
          
-    * NEW EDDTableFromInvalidCRAFiles mahdollistaa tietoaineiston keräämisen NetCDF   (V3 tai v4)   .nc tiedostot, jotka käyttävät CF DSG Contiguous Ragged Array -versiota (CRA) tiedostoja. Näytetiedostot tälle tietoaineistotyypille löytyväthttps://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 Tämä palvelin ei ole nyt luotettava \\] . Vaikka vaikka ERDDAP™ tukee tätä tiedostotyyppiä, se on mitätön tiedostotyyppi, jota kenenkään ei pitäisi aloittaa. Ryhmiä, jotka käyttävät tätä tiedostotyyppiä, kannustetaan voimakkaasti käyttämään ERDDAP™ luoda kelvollisia CF DSG CRA -tiedostoja ja lopettaa näiden tiedostojen käyttö. Kiitos Ajay Krishnan ja Tim Boyer.
+    * UUSI EDDTableFromInvalid CRAFIles avulla voit tehdä aineiston kokoelma NetCDF   (v3 tai v4)   .nc tiedostot, joissa käytetään erityistä, virheellinen, muunnelma CF DSG Contigative Ragged Array (CRA) tiedostot. Tämän tiedostotyypin näytetiedostot löytyvät osoitteesta https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020-10-21 Tämä palvelin ei ole nyt luotettavasti saatavilla \\] . Vaikka ERDDAP™ tukee tätä tiedostotyyppiä, se on virheellinen tiedostotyyppi, jota kenenkään ei pitäisi aloittaa. Ryhmiä, jotka käyttävät tätä tiedostotyyppiä, kannustetaan voimakkaasti käyttämään ERDDAP™ luoda kelvollisia CF DSG CRA -tiedostoja ja lopettaa näiden tiedostojen käytön. Ajay Krishnanin ja Tim Boyerin ansiosta.
          
-    * EDDTableFromThreddsFiles ja EDDTableFrom Hyrax Tiedostot on nyt poistettu. Siirry EDDTableFromNcFilesiin (tai variantti) plus&lt;CacheFromUrl. Jos tämä ei toimi jostain syystä, sähköposti erd.data at noaa.gov . Jos valituksia ei ole ennen vuotta 2020, nämä tiedot voidaan poistaa.
+    * EDDTableFrom Threeredds Files and EDDTableFrom Hyrax Tiedostot on nyt poistettu. Vaihda EDDTableFromNcFilesiin (tai variantti) +&lt;cacheFromUrl&gt;. Jos se ei jostain syystä toimi, sähköpostia erd.data at noaa.gov . Jos valituksia ei tehdä ennen vuotta 2020, nämä tietotyypit voidaan poistaa.
          
-    * Improvisoitu - Järjestelmä, joka muuntaa ei-ISO 8601 -ajat automaattisesti ISO 8601 -ajoiksi (Käytössä v1.82) Sitä on laajennettu suureksi määräksi lisäformaatteja. Tämä koskee GenerateDatasetsXml ja ERDDAP Lähteen metatietojen käsittely.
+    * PARANTAA... Järjestelmä muuntaa automaattisesti non-ISO 8601 kertaa ISO 8601 kertaa (V1.82) on huomattavasti laajennettu käsittelemään useita muita formaatteja. Tämä vaikuttaa GenerateDatasetsXml ja ERDDAP Lähdemetadatan käsittely.
          
-    * Improvisoitu - Kolmannella merkittävällä tarkistuksella String Time -järjestelmästä (Toivottavasti viimeinen) , ERDDAP™ Ei enää käytä Java DateTimeFormatter, koska vikoja, jotka joskus vaikuttavat äärimmäisiin aikoihin&lt;=00). ERDDAP™ Nyt hän käyttää omaa järjestelmäänsä aikajonojen puhdistamiseen.
+    * PARANTAA... Kolmas merkittävä tarkistus String aika jäsentäminen järjestelmä (ja toivottavasti viimeinen) , ERDDAP™ ei enää käyttöä Java 's DateTimeFormatter koska vikoja, jotka joskus vaikuttavat äärimmäisiä aikoja (vuotta&lt;= 0000). ERDDAP™ nyt käyttää omaa järjestelmää jäsentämään aikajonoja.
          
-    * VAROITUS: Uusi String-aikapyrsytysjärjestelmä on hieman tiukempi. Jos jollakin aineistostasi on yhtäkkiä puuttuvia arvoja aika-arvoihin, syynä on lähes varmasti se, että aikamuoto on hieman väärä. Virheviestejä pitäisi olla lokissa. txt, joka liittyy aika-arvoihin, jotka eivät vastanneet aikamuotoa - joiden avulla voit korjata kyseisen tietoaineiston aikamuodon. Jos tarvitset apua, käytä vaihtoehtoa ERDDAP Time Converter, joka ”Muokkaa” \\[ s \\] mikä tahansa yhteinen merkkijonoaika ISO 8601 -merkkijonoaikaan, se ilmaisee muotoa, jota muuntaja käytti lähdejonon pakkaamiseen.
+    * VAROITUS: Uusi String ajan jäsennysjärjestelmä on hieman tiukempi. Jos jokin tietoaineistoistasi yhtäkkiä puuttuu vain aika-arvojen arvoja, syy on lähes varmasti se, että aikamuoto on hieman väärä. Lokissa pitäisi olla virheviestejä. txt liittyvät aika-arvot, jotka eivät vastaa aikamuotoa - jonka pitäisi auttaa sinua korjaamaan aikamuoto merkkijono että tietokokonaisuus. Jos tarvitset apua, käytä vaihtoehtoa ERDDAP 's Time Converter joka "Convert \\[ tilu \\] mikä tahansa yhteinen merkkijono aika osaksi ISO 8601 merkkijono aika" -- se osoittaa muodossa, että muunnin käytetään jäsentämään lähde merkkijono.
          
-    * Nopein, helpoin ja halvin tapa nopeuttaa ERDDAP "Tabular-tietojen käyttö on tietotiedostojen laittaminen Solid State Driveen" (SSD) . Useimmat tabulaariset tietoaineistot ovat suhteellisen pieniä, joten 1 tai 2 TB SSD on todennäköisesti riittävä pitämään kaikki tietotiedostot kaikkien tabulaaritietojen. SSD:n käyttö loppujen lopuksi kuluu, jos kirjoitat tietoja soluun, poistat sen ja kirjoitat uusia tietoja soluun liian monta kertaa. Sen sijaan suosittelen, että (mahdollisimman paljon) Käytät SSD-tiedostoa vain kerran ja luet sen monta kertaa. Kuluttajatason SSD:n pitäisi kestää pitkään, todennäköisesti paljon pidempään kuin minkään Hard Disk Driven. (HDD) . Kuluttajan SSD on nyt halpa (Vuonna 2018 ~ 200 1 TB tai ~ 400 2 TB) Hinnat laskevat edelleen nopeasti. Milloin ERDDAP™ tiedoston käyttö, SSD tarjoaa molemmat
+    * SUOSITUS: nopein, helpoin ja halvin tapa nopeuttaa ERDDAP 's pääsy taulukon tietoja on laittaa tiedostot Solid State Drive (SSD) . Useimmat taulukkotiedostot ovat suhteellisen pieniä, joten 1 tai 2 TB SSD on luultavasti riittävä pitämään kaikki tiedostot kaikki taulukkotiedostot. SSD:n käyttö loppuu, jos kirjoitat tietoja soluun, poistat ne ja kirjoitat uusia tietoja soluun liian monta kertaa. Sen sijaan suosittelen, että (mahdollisimman paljon) Voit vain käyttää SSD kirjoittaa tiedot kerran ja lukea sen monta kertaa. Sitten jopa kuluttajien SSD pitäisi kestää hyvin kauan, luultavasti paljon kauemmin kuin mikään Hard Disk Drive (HDD) . Kuluttajien SSD ovat nyt halpoja (vuonna 2018, ~200 dollaria 1 TB tai ~400 dollaria 2 TB) hinnat laskevat edelleen nopeasti. Milloin ERDDAP™ käyttää tiedostoa, SSD tarjoaa molemmat
         
-        * Lyhyempi latenssi (~0,1ms, versus ~3ms HDD, vs. ~10 (??) ms for a RAID, versus ~55ms for Amazon S3) ja
-        * korkeampi läpimeno (~500 MB/S, versus ~75 MB/s HDD versus ~500 MB/s RAID) .
+        * lyhyempi viive (~0,1m, vs ~3m kiintolevylle, vs ~10 (?) Ms RAID, vs ~55ms Amazon S3) ja
+        * Korkeampi suoritus (~500 MB/S, ~75 MB/s kiintolevylle ja ~500 MB/s RAIDille) .
         
-Näin voit nousta ~10X-suorituskykyyn (vs. HDD) 200€&#33; Verrattuna muihin mahdollisiin muutoksiin järjestelmässäsi (Uusi palvelin 10 000 eurolla? Uusi RAID 35 000 eurolla? Uusi verkko vaihtuu 5000 euroon? jne.) Tämä on ehdottomasti paras palautus sijoituksille. (ROI) . Jos palvelintasi ei ladata muistilla, palvelimesi lisämuisti on myös erinomainen ja suhteellisen edullinen tapa nopeuttaa kaikkia näkökohtia. ERDDAP .
-         \\[ SSD olisi hyvä myös verkkotietojen, mutta useimmat verkottunut tietoaineistot ovat paljon suurempia, mikä tekee SSD erittäin kallista. \\]   
+Joten voit päästä jopa ~10X suorituskykyä boost (vs kiintolevy) 200 dollarista&#33; Verrattuna useimpiin muihin järjestelmän muutoksiin (Uusi palvelin 10 000 dollarilla? Uusi RAID 35 000 dollarilla? Uusi verkkokytkin 5 000 dollarilla? jne.) , tämä on ylivoimaisesti paras tuotto investointien (ROI) . Jos palvelin ei ole ladattu muistia, ylimääräinen muisti palvelimellesi on myös suuri ja suhteellisen edullinen tapa nopeuttaa kaikkia näkökohtia ERDDAP .
+         \\[ SSD:t sopisivat myös ruudukkodataan, mutta useimmat ruudukot ovat paljon suurempia, mikä tekee SSD:stä erittäin kalliin. \\]   
          
-    * Uusi: Jokainen, joka on kirjautunut sisään, saa roolin \\[ Kuka tahansa Sisällä \\] vaikka ei olisikaan&lt;Käyttäjä &gt; Tag for them in datasets.xml . Jos määrität tietoaineiston&lt;Käytettävyys &gt; \\[ Kuka tahansa Sisällä \\] Kuka tahansa, joka on kirjautunut sisään ERDDAP™   (esimerkiksi Gmailin tai Orcid-tilin kautta) valtuutetaan käyttämään tietoaineistoa, vaikka et ole määrittänyt a&lt;Käyttäjä &gt; Tag for them in datasets.xml . Kiitos Maurice Libesille.
+    * UUTTA: Jokainen sisäänkirjautunut saa roolin \\[ Kaikki kirjautuneet Sisään \\] , vaikka ei ole&lt;käyttäjä&gt; tunniste heille datasets.xml . Jos asetat tietokokonaisuuden&lt;saatavilla \\[ Kaikki kirjautuneet Sisään \\] , sitten jokainen, joka on kirjautunut sisään ERDDAP™   (esim. Gmail- tai Orcid-tilin kautta) on valtuudet käyttää tiedostoa, vaikka et ole määritellyt&lt;käyttäjä&gt; tunniste heille datasets.xml . Maurice Libesin ansiosta.
          
-    * Lähde: The UDUNITS UCUM-yksiköiden konvertointia parannettiin huomattavasti.
-Se käsittelee kyvyttömiä yksiköitä paremmin (Tietojen säilyttämistä painotetaan sen sijaan, että pätevyys pannaan täytäntöön) . Tuloksilla on nyt standardoitu syntaksi.
+    * PARANTAA: UDUNITS /UCUM-yksiköiden muunninta parannettiin huomattavasti.
+Se käsittelee virheellinen yksiköiden merkkijonot paremmin (Aloitetaan korostamalla tietojen säilyttämistä sen sijaan, että sovellettaisiin pätevyyttä) . Myös tulokset ovat nyt standardoitu syntaksi.
          
-    * Uusi: The UDUNITS UCUM-yksikön muuntimella on uusi mahdollisuus standardoida UDUNITS string.
-Tämä toimii hyvin pätevästi UDUNITS merkkijonot ja kohtuullisen hyvin epänormaalille / mitättömälle UDUNITS strings. Esimerkiksi esimerkiksi UDUNITS = "mittarit sekunnissa", "mittari" "m.s^-1" ja "m s-1" Kaikki palaavat "m.s-1". Tätä tarvitaan uuteen standardointiin Mitä edellä kuvattua järjestelmää. Kirjoittanut Marco Alba, Margaret O'Brien (Muut EML-käyttäjät) BCO-DMO ja InPort-käyttäjät.
+    * UUTTA: UDUNITS /UCUM-yksiköt muunnin on uusi vaihtoehto standardoida UDUNITS Naru.
+Tämä toimii hyvin UDUNITS jouset ja kohtuullisen hyvin epätavanomaisen / virheellinen UDUNITS Naruja. Esimerkiksi UDUNITS = "metriä sekunnissa," "metriä sekunnissa," "m.s^-1" ja "m s-1" Kaikki palaavat "M.s.-1." Tämä oli tarpeen uuden standardin Mitä järjestelmää edellä kuvataan. Kiitos Marco Alba, Margaret O'Brien (ja muut EML-käyttäjät) , BCO-DMO, ja InPort käyttäjät.
          
-    * EDDTableFromMultidimNcFilesillä on nyt [ulottuvuuksia](/docs/server-admin/datasets#treatdimensionsas) Vaihtoehto, joka kertoo ERDDAP™ tietyt ulottuvuudet (Esimerkki: LAT ja LON) Ikään kuin ne olisivat muita ulottuvuuksia. (Esim. aika) . Tämä on hyödyllistä joissakin väärissä tiedostoissa, jotka käyttävät eri ulottuvuuksia eri muuttujat, kun niiden olisi pitänyt käyttää vain yhtä ulottuvuutta. (Esim. aika) . Kiitos Marco Alba ja Maurice Libes.
+    * UUTTA: EDDTableFromMultidimNcFiles on nyt [HoitoMittauksetAina](/docs/server-admin/datasets#treatdimensionsas) vaihtoehto, joka kertoo ERDDAP™ tiettyjen mittojen hoito (esim. LAT ja LON) Kuin ne olisivat muita ulottuvuuksia (esim.) . Tämä on hyödyllistä joissakin virheellisissä tiedostoissa, jotka käyttävät eri mittoja eri muuttujille, kun niiden olisi pitänyt käyttää vain yhtä ulottuvuutta (esim.) . Kiitos Marco Alballe ja Maurice Libesille.
          
-    * Uusi: Nyt kaikki EDDGrid Files-aineistot tukevat uutta akselia sourceName joka kertoo ERDDAP™ Tietojen ottaminen tiedoston nimestä (tiedostonimi.ext) käyttää arvoa **korvaa korvaava** vasemman akselin arvo. Formaatti on
-        \\*\\** korvaaFromFileName,_dataType_,_extractRegex_,_captureGroupNumber_.
-Näytä [Tämä dokumentti](/docs/server-admin/datasets#aggregation-via-file-names-or-global-metadata) . Kiitos tästä NOAA Pathfinder Daily Aggregation -tietokanta.
+    * Nyt kaikki EDDGrid Files-aineistot tukevat uutta erityistä akselia sourceName joka kertoo ERDDAP™ poimia tietoja tiedostostaName (vain tiedostonimi.ext) ja käyttää arvoa **korvataan** olemassa oleva vasemman akselin arvo. Muoto on
+        \\*\\*\\* korvataanFromFileName,_dataType_,_extractRegex_,_captureGroupNumber_
+Katso [nämä asiakirjat](/docs/server-admin/datasets#aggregation-via-file-names-or-global-metadata) . Kiitos NOAA Pathfinder Daily aggregaatin tietokokonaisuus.
          
-    * Uusi: Nyt kaikki EDDGrid Files-aineistot tukevat uutta akselia sourceName joka kertoo ERDDAP™ Tietojen ottaminen tiedoston nimellä (Hakemistot + tiedostonimi.ext)   
-        \\*\\*PathName,_dataType_,_extractRegex_,_captureGroupNumber_
-Tämä tarkoittaa sitä, että tien nimi käyttää aina '/' Hakemiston erottaja, ei koskaan ".
-Näytä [Tämä dokumentti](/docs/server-admin/datasets#aggregation-via-file-names-or-global-metadata) . Kiitos Paloma de la Vallee.
+    * Nyt kaikki EDDGrid Files-aineistot tukevat uutta erityistä akselia sourceName joka kertoo ERDDAP™ poimia tiedot tiedoston polkuName (kansiot + tiedostonimi.ext)   
+        \\*\\*\\*pathName,_dataType_,_extractRegex_,_captureGroupNumber_
+Tätä varten polun nimi käyttää aina '/' hakemiston erotinmerkkinä, älä koskaan '\\'.
+Katso [nämä asiakirjat](/docs/server-admin/datasets#aggregation-via-file-names-or-global-metadata) . Kiitos Paloma de la Valleen.
          
-    * NEW: Nyt kaikki EDDTableFrom Tiedostot tukevat pseudo-muuttujaa sourceName s, joka poistaa tiedot tiedoston tiedoston nimi (tiedostonimi.ext)   (Katso nähkää [\\*\\**filename](/docs/server-admin/datasets#filename-sourcenames) ) tai koko tiedoston nimi (dir1/dir2/filename.ext)   (Katso nähkää [\\*\\*PathName](/docs/server-admin/datasets#pathname-sourcenames) ) . Kiitos Paloma de la Vallee.
+    * Nyt kaikki DDDtable... Tiedostot tukevat lisäpseudomuuttujaa sourceName s joka poimii tiedot tiedoston tiedostostaName (vain tiedostonimi.ext)   (Katso [\\*\\*\\* tiedostoName](/docs/server-admin/datasets#filename-sourcenames) ) tai tiedoston täydestä polustaName (/dir1/dir2/filename.ext)   (Katso [\\*\\*\\*pathName](/docs/server-admin/datasets#pathname-sourcenames) ) . Kiitos Paloma de la Valleen.
          
-    * Uusi: Jos EDDGrid aineistolla on yksi tai useampi suuri ulottuvuus (Esimerkiksi miljoonat arvot) joka ottaa paljon muistia, voit luoda uuden.&lt;ArvotMemory » (Docs/server-admin/datasets#dimensionvaluesinmemory) Asetukset väärään (Oletus on totta) , joka aiheuttaa aineiston tallentaa arvot levylle ja hakea ne tarvittaessa. David Rodriguez ja Rich Signell (Re: EDDGrid Audiofiilejä) .
+    * UUTTA: jos EDDGrid tietoaineistolla on yksi tai useampi erittäin suuri ulottuvuus (esim. miljoonia arvoja) jotka vievät paljon muistia, voit asettaa uuden [&lt;dimensionValuesInMemory&gt;] (/docs/server-admin/datasets#mittojen arvomuistissa) Aseta vääräksi (oletus on totta) , joka aiheuttaa aineiston tallentaa arvot levylle ja hakea ne tarvittaessa. Kiitos David Rodriguezin ja Rich Signellin. (re: EDDGrid FromAudioFiles) .
          
-    * Aiemmin, jos tilasit dataVariable s EDDTableFromFiles-tietokantaan ja latasi tietoaineiston uudelleen, EDDTableFromFiles lukee kaikki tietotiedostot uudelleen. Nyt se voi käsitellä tilauksen lukematta kaikkia tiedostoja. Kiitos Roland Schweitzerille.
+    * Aiemmin tapahtunutta: dataVariable EDDTableF-tiedostosta ja tiedoston latauksesta EDDTableF fromFiles lukisi kaikki tiedostot uudelleen. Se voi hoitaa uudelleenjärjestämisen lukematta kaikkia tiedostoja. Kiitos Roland Schweitzerin.
          
-    * Improvisoitu: nyt, kun ERDDAP™ Lue ASCII, NCCSV ja JSON Lines CSV -tabulaaritiedostot, jos se löytää virheen tietyllä linjalla. (esimerkiksi virheellinen määrä) Se viestittää varoitusviestin ("Varoitus: Skipping line #" odottamaton määrä esineitä.) ja [log.txt-tiedosto](/docs/server-admin/additional-information#log) Jatka lukemista loput tiedostosta. Siksi sinun vastuullasi on katsoa säännöllisesti. (Kirjoita käsikirjoitus tehdäksesi niin) tuota viestiä logissa. txt, jotta voit korjata ongelmat tiedostoissa. ERDDAP™ Näin käyttäjät voivat jatkaa kaikkien saatavilla olevien pätevien tietojen lukemista, vaikka joissakin tiedostojen riveissä on virheitä. aikaisemmin, ERDDAP™ merkitsi tiedoston "huonoksi" ja poisti sen aineistosta.
+    * Nyt, kun ERDDAP™ lukee ASCII, NCCSV, ja JSON Lines CSV taulukkotiedostot, jos se löytää virheen tietyllä rivillä (Esim. tavaroiden virheellinen määrä) , se kirjaa varoitusviestin ("Varoitus: ohitusviiva #" "odottamaton määrä esineitä...") ja [log.txt-tiedosto](/docs/server-admin/additional-information#log) ja sitten jatkaa lukemista loput tiedoston. Siksi sinun vastuullasi on tarkastella säännöllisesti (tai kirjoittaa käsikirjoituksen tehdä niin) Tuosta viestistä lokissa. txt, jotta voit korjata tiedostojen ongelmat. ERDDAP™ on perustettu siten, että käyttäjät voivat edelleen lukea kaikki saatavilla olevat kelvolliset tiedot, vaikka joissakin tiedoston viivoissa on puutteita. Aiemmin tapahtunutta: ERDDAP™ Merkitse tiedosto "huonoksi" ja poista se tiedostosta.
          
-    * HUOMAUTUS: Kun tarkat ajat (lähimpään toiseen tai millisekuntiin) Lähteessä on varastoitu ”minuutteja siitä lähtien” (suuremmat yksiköt) , ERDDAP™ Nyt ne pyöristetään lähimpään millisekuntiin lukemassa arvoja. ERDDAP . Muussa tapauksessa kelluvan pisteen numerot ovat mustelmia ja pyynnöt tiedoista tiettyinä aikoina. (esim. &time=2018-06-15T01:30:00) epäonnistuu. Aiemmin ne laskettiin mahdollisimman tarkasti. (Ja silti tekee, jos yksiköt ovat esim. "toiset sitten ..." tai "millisekunnit sitten ...") . On parasta välttää tätä ongelmaa käyttämällä isoja yksiköitä. (esimerkiksi minuutit tai tunnit) Tarkkojen aika-arvojen tallentaminen (Esimerkiksi mikrosekunnit) Tietokoneet tekevät huonoa työtä desimaalien käsittelyssä. Kiitos Marco Alballe.
+    * PARANTAA: kun tarkkoja aikoja (esim. lähimmän sekunnin tai millisekunnin) säilytetään lähteessä "minuutteina siitä lähtien ..." (tai suurempia yksiköitä) , ERDDAP™ Nyt pyöristää ne lähimpään millisekunti kun lukee arvot ERDDAP . Muussa tapauksessa liukuluku on mustelmilla ja tietopyynnöt tiettyinä aikoina (esim., &time=2018-06-15T01:30:00) Epäonnistumme. Aiemmin se laski ne mahdollisimman tarkasti. (ja tekee edelleen, jos yksiköt ovat esimerkiksi, "sekuntia ..." tai "millisekuntia ...") . On parasta välttää tämä ongelma käyttämällä suuria yksiköitä (esim. minuuttia tai tuntia) tallentaa tarkat aika-arvot (esim. mikrosekuntia) - Tietokoneet eivät käsittele desimaalilukuja. Kiitos Marco Alban.
          
-    * Muutoksia EDDTableFrom EDDGrid joka tekee siitä paljon paremman. EDDTableFrom EDDGrid Käyttäjät voivat kysellä verkkotietoaineistoja ikään kuin ne olisivat tabulaarisia tietoaineistoja. ("Kysymys arvosta") .
+    * MUUTOKSET EDDtaulukkoon EDDGrid Mikä tekee siitä paljon paremman. EDDTableFrom EDDGrid antaa käyttäjien tiedustella ruudukoituja tietoaineistoja ikään kuin ne olisivat taulukkotiedostoja ('arvolla') .
         
-        * Nyt se tukee a&lt;MaxAxis0 &gt; Tag (Oletusarvo = 10) joka määrittää akselin enimmäismäärän \\[ 0 \\]   (Yleensä yleensä "time" ) arvoja, joita voi kysellä heti. Tämä estää naiivit pyynnöt saada EDDTableFrom EDDGrid haku koko verkkotietoaineiston kautta (joka epäonnistuisi aikalisävirheellä) .
-        * GenerateDatasets XML:llä on nyt mahdollisuus luoda EDDTableFrom EDDGrid Tiedot kaikista verkkotietokannoista tietyssä ERDDAP™ jotka vastaavat tiettyä regexiä (käyttää .* vastaamaan kaikkia tietoaineistoja) . Sen luomilla tietoaineistoilla on lisätietoja tiivistelmän ominaisuuksista, jotka osoittavat, että tämä on tabulaarinen versio verkkotietokannasta. ja heidän datasetID on datasetID verkostoitunut tietoaineisto, plus "AsATable".
-        * Yleisimmän asennuksen nopeus on suuri: kun verkkotietokanta on EDDGrid Tietokanta, joka on samassa ERDDAP .
+        * Se tukee nyt&lt;MaxAxis0&gt; tag (oletus=10) joka määrittelee akselin enimmäismäärän \\[ 0 \\]   (yleensä "time" ) arvot, jotka voidaan kysyä heti. Tämä estää naiivit pyynnöt saada EDDTableF alkaen EDDGrid etsiä kokonaisen ruudukon läpi (joka epäonnistuisi aikakatkaisuvirheellä) .
+        * Luo tiedostoja Xml on nyt mahdollisuus tuottaa EDDtableFrom EDDGrid Tiedostot kaikista ruudukoista ERDDAP™ jotka vastaavat määriteltyä regexiä (käyttää .\\* vastaamaan kaikkia tietoaineistoja) . Sen luomissa aineistoissa on yhteenvedon attribuutissa lisätietoja, jotka osoittavat, että kyseessä on taulukkoversio ruudutetusta aineistosta. Ja heidän datasetID on datasetID ruudukossa olevan aineiston lisäksi "\\_Asatable."
+        * Tavallisimmille järjestelmille on suuri vauhti: kun ruudukko on EDDGrid FromErddap aineisto, joka on samassa ERDDAP .
         
-Kiitos James Gallagher ja Ed Armstrong.
+James Gallagherin ja Ed Armstrongin ansiosta.
          
-    * UUTUS: Tuote Dataa Xml kaikentyyppisille aineistoille on nyt paljon todennäköisempää lisätä tiedostoarvo tai missing\\_value Numeerinen muuttuja addAttributes . Tämä tapahtuu esimerkiksi silloin, kun merkkijono puuttuu (Esim. "", ", "?", "NA", "nd", "NaN") tiedoston muuttuja muunnetaan ERDDAP "Kadonneet arvot (127 sivusarakkeessa, 32767 lyhyissä sarakkeissa, 2147483647 int sarakkeet, 9223372036854775807 pitkissä sarakkeissa ja NaN kelluvissa ja kaksoismuuttujassa) . Se esiintyy myös NaN-arvoissa kelluvissa ja kaksoismuuttujassa. Lisäksi "nd" lisättiin luetteloon yhteisistä puuttuvista arvomerkeistä numeerisissa sarakkeissa. ERDDAP™ Pitäisi etsiä. Kiitos Matt Biddle of BCO-DMO:sta.
+    * UUTTA: tuottaa Dataset Xml kaikentyyppisille aineistoille on nyt paljon todennäköisempää lisätä \\_ FillValue tai missing\\_value attribuutti numeromuuttujan addAttributes . Esimerkiksi näin tapahtuu, kun merkkijono puuttuu arvo markkereita (esim. "," "," "," "NA," "nd," "Nan") näytetiedostossa oleva muuttuja muunnetaan ERDDAP 's natiivi puuttuvat arvot (127 tavusarakkeissa, 32767 lyhyissä sarakkeissa, 2147483647 int sarakkeet 9223372036854775807 pitkissä sarakkeissa ja NaN kelluvissa ja kaksoismuuttujissa) . Se esiintyy myös NaN arvot kelluva ja kaksinkertainen muuttujat. Lisäksi "nd" lisättiin yhteisten puuttuvien arvojen merkkiaineiden luetteloon numerotietosarakkeissa, jotka ERDDAP™ Pitäisi etsiä. Kiitos Matt Biddlen BCO-DMO:sta.
          
-    * IMPROVED: Ncdump-vaihtoehto Dataa Xml on enemmän kuin Ncdump (ncdumpin netcdf-java-versio) . Nyt se julkaisee uuden listan vaihtoehtoja. Nyt, .nc ml-tiedostot, se tulostaa ncdump-tulostuksen tulosta .nc ml-tiedostojen muutokset, joita sovelletaan taustalla olevaan .nc tai tai .hdf tiedosto.
+    * PARANTAA: ncdump-vaihtoehto tuottaa Dataset Xml on nyt enemmän kuin ncdump (mutta silti käyttää netcdf-jaava versio ncdump) . Nyt se tulostaa uuden listan vaihtoehdoista. Nyt .nc ml tiedostoja, se tulostaa ncdump tulostus tuloksen .nc ml tiedostomuutokset kohde-etuutena .nc tai .hdf Tiedosto.
          
-    * Viisikymppinen: Siellä oli tiedoston kahvavuoto (lopulta aiheuttaa ERDDAP™ Jäädytä) .geotif syntyi, kun luotiin tietyntyyppisiä lähtötiedostoja, esimerkiksi .geotif, erityisesti silloin, kun virheitä esiintyi luomisen aikana. Uskon/toivottavasti tämä kaikki on nyt korjattu. Jos näet ongelmia, kerro minulle, minkä tyyppisiä tietoja (Verkko tai pöytä) tiedostotyyppi, joka aiheuttaa ongelman. Kiitos Steven Beale, Lynn DeWitt, Jibei Zhao ja muut.
+    * BUG FIX: Siellä oli tiedoston kahvan vuoto (aiheuttaa ERDDAP™ jäädyttää) aiheuttaa luotaessa tietyntyyppisiä tulostustiedostoja, esim., .geotif, erityisesti kun virheitä tapahtui luomisen aikana. Toivottavasti kaikki on nyt kunnossa. Jos näet yhä ongelmia, kerro minulle tietokokonaisuuden tyyppi (ruudukko tai taulukko) ja tiedoston tyyppi, joka aiheuttaa ongelman. Steven Beale, Lynn DeWitt, Jibei Zhao ja muut.
          
-    * Vinkki: The WMS   Leaflet Demo ei muuttanut "syvyyttä" akselia täysin tai oikein "parannukseksi". Näin on, ja rikkoutuneet legendat ovat valmiita. Myös kaikki akselivaihtoehdot pudotus-listalla ovat aina ylöspäin lajiteltuja. Kiitos Antoine Queric ja Aurelie Briand.
+    * BUG FIX: • WMS   Leaflet demo ei täysin/asianmukaisesti muuntanut "syvä" akselia "korkeus." Nyt on, ja särkyneet legendapyynnöt on korjattu. Myös kaikki pudotuslistan akselivalinnat ovat aina nousevassa järjestyksessä. Kiitos Antoine Quericin ja Aurelie Briandin.
          
-    * BUG FIX: EDDTableFromFiles tukee nyt oikein String-muuttujat, jotka on luotu hyväntekeväisyydestä tietotiedostoissa. Kiitos Antoine Queric ja Aurelie Briand.
+    * BUG FIX: EDDTableFromFiles tukee nyt oikein rajoitteita String muuttujat, jotka on luotu char muuttujat tiedostot. Kiitos Antoine Quericin ja Aurelie Briandin.
          
-    * Viisikymppinen: Kun tietoaineistoa ei ole saatavilla, tietoaineisto yrittää ilmoittaa siitä. (Viestin otsikko: ”Tätä dataa ei tällä hetkellä ole saatavilla.”) sen tilaajat, listatut toimet, rss ja lonPM180 tietoaineistot, jotka luottavat siihen. Kiitos Roy Mendelssohnille ja Bob Simonsille.
+    * BUG FIX: Kun tietoaineisto ei ole saatavilla, tietokokonaisuus yrittää ilmoittaa (ja viestillä "Tämä tietokokonaisuus ei ole tällä hetkellä saatavilla.") Sen tilaajat, listattu toimia, rss, ja lonPM180 aineistoja, jotka luottavat siihen. Kiitos Roy Mendelssohnin ja Bob Simonsin.
          
-    * Viisikymppinen: Kaksi vikaa liittyy EDDTableCopy. Kiitos Sam McClatchie.
+    * BUG FIX: Kaksi ötökkää liittyvät EDDTableCopy. Kiitos Sam McClatchien.
          
-    * IMPROVED: Tila.html-sivulla esitettyjen epäonnistuneiden pyyntöjen määrä kasvaa, koska enemmän asioita lasketaan epäonnistumisiksi kuin aiemmin.
+    * PARANTAA: Epäonnistuneiden pyyntöjen määrä näkyy status.html sivu kasvaa, koska enemmän asioita lasketaan epäonnistumisia kuin aiemmin.
          
-    * Improvisoitu: ERDDAP Tila.html näyttää nyt pyynnöt (Median aika ms) "Aikasarjassa. Aiemmin se osoitti mediaani-aikoja, jotka olivat täynnä sekuntia.
+    * PARANTAA: ERDDAP 's status.html nyt näyttää "Requests (mediaaniajat ms) " aikasarjassa. Aiemmin, se näytti mediaani kertaa kutistunut kokonaisluku sekuntia.
          
-    * IMPROVED: Jsonld-tuotannossa jsonld-nimi tulee nyt tietoaineistosta. "title" Sisällä ERDDAP jsonld "headline" on nyt peräisin aineiston " datasetID &gt; Sisällä ERDDAP . Aiemmin se on käännetty. Tämä tuntuu väärältä, koska tavallisessa englannin kielessä nimi on yleensä lyhyt. (Ihanteellinen) Ainutlaatuinen tunniste, joka harvoin muuttuu (Kirjoittanut Robert Middlename Simons) Ei kuvaus, joka ei ole ainutlaatuinen ja joka voi helposti ja usein muuttua. (Esimerkki: "Mies, joka kirjoittaa ohjelmistoja NOAA Vs. ”Hyvä mies, joka kirjoittaa ohjelmistoja NOAA """) . Olisi hienoa, jos schema.org määritettäisiin. [Nimen nimi](https://schema.org/name) Tietoaineiston yhteydessä oli tarkempi. Ohjelmistokehittäjien olisi voitava kirjoittaa eritelmän toteuttaminen, joka perustuu pelkästään spesifikaatioon, ilman asiantuntijoiden ohjeita. Minä jätän Googlen (Erityisesti Natasha No) NCEI (John Relph) Rob Fuller.
+    * IMPROVED: Jsonld-tuotoksessa jsonld-nimi tulee nyt tietokokonaisuuden "title" in ERDDAP , ja Jsonld "headline" on nyt peräisin tietokokonaisuuden " datasetID " ERDDAP . Aiemmin tapahtunutta: Tämä tuntuu minusta väärältä, koska normaalissa englanninkielisessä käytössä "nimi" on yleensä lyhyt, (ihannetapauksessa) yksilöllinen tunniste, joka harvoin/ei koskaan muutu (esim. Robert Middlename Simons) , ei kuvaus, joka ei ole ainutlaatuinen ja joka voi helposti ja usein muuttua (Esimerkiksi: NOAA "vs. "Pitkä kaveri, joka kirjoittaa ohjelmistoja NOAA ") . Olisi hienoa, jos schema.org määritelmä [Nimi](https://schema.org/name) , yhteydessä Dataset, olivat tarkempia. Ohjelmistokehittäjien olisi kyettävä kirjoittamaan pelkästään eritelmään perustuva eritelmä ilman asiantuntijoiden ohjeita. Mutta lykkään Google (erityisesti Natasha Ei) , NCEI (erityisesti John Relph) Ja Rob Fullerin.
          
-    * IMPROVED: Jsonld-tuloksessa neljä "SpatialCoverage GeoShape -laatikkoa" ovat nyt minLat minLon maxLon. Aiemmin lat- ja lon-asennot käännettiin. Olisi hienoa, jos schema.org määritettäisiin. [GeoShape](https://schema.org/GeoShape) määrittää oikean järjestyksen. Ohjelmistokehittäjien olisi voitava kirjoittaa eritelmän toteuttaminen, joka perustuu pelkästään spesifikaatioon, ilman asiantuntijoiden ohjeita. Kiitos Natasha Noy ja Rob Fuller.
+    * IMPROVED: Jsonld lähtö, neljä "spatialCoverage GeoShape box" arvot ovat nyt minLat minLon maxLat maxLon. Aiemmin lat ja lon asemat muuttuivat. Olisi hienoa, jos schema.org määritelmä [GeoShape](https://schema.org/GeoShape) Määrittele oikea järjestys. Ohjelmistokehittäjien olisi kyettävä kirjoittamaan pelkästään eritelmään perustuva eritelmä ilman asiantuntijoiden ohjeita. Kiitos Natasha Noyn ja Rob Fullerin.
 
 ## Versio 1.82{#version-182} 
- (2018-01-26) 
+ (julkaistu 2018-01-26) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :**   
+*    **Uudet ominaisuudet (käyttäjille) :**   
      
-    * Lukuisia hienovaraisia muutoksia ulkonäköön ja tunnelmaan ERDDAP™ verkkosivut.
-        * Improvisoitu: ERDDAP™ Käytä HTML 5:tä ja käytä CSS:ää paremmin.
-        * IMPROVED: Verkkosivuja on hieman muutettu, jotta ne olisivat puhtaampia ja vähemmän kiireisiä. (Ne ovat edelleen tiheitä ja on vielä asioita, joista voi valittaa, mutta toivottavasti vähemmän kuin ennen.) Kiitos John Kerfootille kommenteista.
-        * Verkkosivut näyttävät nyt paljon paremmilta matkapuhelimissa ja muissa pienissä laitteissa, varsinkin jos niitä käytetään maisemaohjauksessa. Ne näyttävät myös paremmilta hyvin pienissä ja hyvin suurissa ikkunoissa työpöydän selaimissa.
-        * IMPROVED: Turvallisuuden ja muiden syiden parantamiseksi päivittäisten Openlayers-versioiden käyttö WMS Mielenosoitukset on korvattu Leaflet .
-        * NEW: Tuki kuva-, ääni- ja videotiedostojen esikatseluihin "files" Järjestelmäjärjestelmä (esimerkiksi [Tämä testiaineisto](https://coastwatch.pfeg.noaa.gov/erddap/files/testMediaFiles/ShouldWork/) ) ja sisällä .htmlTable vastaukset, kun solussa on kuvan, ääni- tai videotiedoston URL (esimerkiksi [Tämä pyyntö](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/testMediaFiles.htmlTable?url%2Cname%2ClastModified%2Csize%2CfileType%26url=~%22.*ShouldWork.*%22) ) . Jos hyppäät "? ikonin yli, sinun pitäisi nähdä kuva, ääni tai videotiedoston esikatselu. Voit myös napsauttaa tiedostolinkkiä nähdäksesi koko tiedoston selaimessasi. Nähdään [Mediatiedostojen dokumentointi](/docs/server-admin/datasets#media-files) . Huomaa, että eri selaimet tukevat erilaisia tiedostotyyppejä, joten esimerkit eivät välttämättä toimi selaimessasi.
-Näiden henkilöiden/linkkien ansiosta ideoita ja näytekoodia vain CSS-kuvatyökaluille (olihttps://codepen.io/electricalbah/pen/eJRLVd) lykätty kuvan lataus (olihttps://varvy.com/pagespeed/defer-images.html)   (koodia on muutettu ennen käyttöä ERDDAP ) .
-Kiitos Cara Wilsonille, Matthew Austinille ja Adam Shepherdille / BCO-DMO:lle kuvien tueksi.
-Jim Potemran, Rich Signellin, OOI:n ja Carrie Wall Bellin ansiosta ääni- ja hydrofonitiedostojen tukipyyntöihin.
-Kiitos OOI:lle videon tuen tarpeesta.
-        * UUSI: Tietojen alijoukko mistä tahansa ERDDAP™ Data (Yleensä audiotiedostojen aineisto) Voidaan tallentaa .wav-äänitiedostoon. ( [dokumentointi](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#wav) ) Jim Potemran, Rich Signellin, OOI:n ja Carrie Wall Bellin ansiosta ääni- ja hydrofonitiedostojen tukipyyntöihin.
-        * IMPROVED: Web Accessible -kansioiden muoto (Vauva)   (Esimerkkejä / Files / Folders) on päivitetty käyttämään HTML-taulukkoa. Uusi formaatti jäljittelee hakemistoluettelosivujen uusimman version Apachesta. Ihminen huomaa, että muutokset helpottavat tiedon lukemista. Ohjelmistot, jotka täydentävät näitä dokumentteja (Ohjelmisto, joka korjaa ISO 19115 -dokumentteja ERDDAP ) Tarkistetaan, mutta uusi muoto on helpompi laatia kuin aiempi. (Huomio, Anna Milan.) 
-        * Uusia outOfDateDatasets.html Sivu. ( [esimerkki esimerkki esimerkki esimerkki](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) Tämä sivusto näyttää taulukon, jossa on kaikki lähes reaaliaikaiset tietoaineistot, joilla on&lt; testOutOfDate &gt; Tag (Katso alapuolelta) luokitellaan, miten ajantasaiset tietoaineistot ovat. Tämä kojelauta on hyödyllinen ERDDAP™ Järjestäjät ja loppukäyttäjät, kun he haluavat tietää, mitkä tietoaineistot ovat vanhentuneita. Out-of-Date-tietoaineistoissa on oletettavasti ongelma tietolähteen kanssa, jotta ERDDAP™ Tietoja ei voi havaita viimeaikaisista ajankohdista.
-Hallinnoitsijat: Jos et halua Out-Of-Date Datasets -sivustoa, lisää se asetukseen.xml:
-            &lt;OutDateDatasetsActive&gt; Väärä&lt;/OfDateDatasetsActive
-Nyt on testOutOfDate ja ulos Päivän kolumnit sisällä allDatasets Dataa.
-Kiitos Bob Simonsille, joka on halunnut tätä jo vuosia, sekä Irlannin Marine Instituten älykkäille ihmisille, jotka antoivat minulle inspiraation heidän omistautuneen Raspberry Pi -näyttönsä kautta, joka näyttää aina samanlaisen näytön toimistossaan.
-        * Improvisoitu: .htmlTable ja .xhtml Vastaus on nyt paremmin muotoiltu, kompaktimpi ja kuormitettu nopeammin. Kiitos HTML5 ja CSS.
-    * NEW-lähtötiedostotyypin verkkotietoaineistoihin: .timeGaps. Siinä on luettelo aika-arvoista, jotka ovat suurempia kuin mediaanivaje. ( [esimerkki esimerkki esimerkki esimerkki](https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMHchla8day.timeGaps) ) Tästä on hyötyä ERDDAP™ Hallinnoitsijat ja loppukäyttäjät, kun he haluavat tietää, ovatko odottamattomat aukot tietoaineiston aika-arvoissa, joiden odotetaan olevan säännöllisesti ajanarvoja. Kiitos Bob Simons ja Roy Mendelssohn, jotka tarvitsivat tätä ominaisuutta.
-    * IMPROVED: Oletuskuva allDatasets Dataset on nyt kartta, jossa on x=maxLon ja y=maxLat. Kiitos John Kerfoot, Rich Signell ja OOI-CI.
-    * Uusi: [Erddapy](https://github.com/ioos/erddapy) - ei ole mikään ERDDAP™ Ominaisuus, mutta kiinnostaa monia ERDDAP™ käyttäjiä. Erddapy ( ERDDAP™ + Python ) on A Python Philipe Fernandesin kirjoittama kirjasto: "Ottaa hyödyn ERDDAP &gt; RESTful Verkkopalvelut ja luo ERDDAP™ URL-osoite kaikista pyynnöistä, kuten tietojen etsimisestä, metatietojen hankkimisesta, tietojen lataamisesta jne. Kiitos Filipe Fernandes.
-    * Olisi pitänyt mainita aiemmin: Kolmannen osapuolen R-paketti on suunniteltu helpottamaan työskentelyä. ERDDAP™ Sisältä R: [Rerdap](https://github.com/ropensci/rerddap#rerddap) . Kiitos [ROpenski](https://ropensci.org/) Kirjoittanut Roy Mendelssohn
+    * Lukuisat hienovaraiset muutokset ulkonäkö ja tunne ERDDAP™ verkkosivut.
+        * PARANTAA: ERDDAP™ nyt käyttää HTML 5 ja hyödyntää paremmin CSS.
+        * PARANTAA: Verkkosivuja on hieman muutettu, jotta ne olisivat puhtaampia ja vähemmän "kiireisiä." (Ne ovat yhä tiheitä ja on vielä asioita, joista voisi valittaa, mutta toivottavasti paljon vähemmän kuin ennen.) Kiitos John Kerfoot joitakin kommentteja.
+        * PARANTAA: Verkkosivut näyttävät nyt paljon paremmalta matkapuhelimissa ja muissa pienissä laitteissa, erityisesti jos käytät niitä maisemasuuntautuneisuudessa. Ne näyttävät myös paremmalta hyvin pienissä ja erittäin suurissa selaimissa.
+        * PARANTAA: Turvallisuuden ja muiden syiden parantamiseksi käytetään vanhentunutta Openlayers-versiota WMS esittelysivut on korvattu Leaflet .
+        * UUTTA: tuki kuva-, ääni- ja videotiedostojen esikatseluille "files" järjestelmä (esimerkiksi [Tämä testiaineisto](https://coastwatch.pfeg.noaa.gov/erddap/files/testMediaFiles/ShouldWork/) ) ja .htmlTable vastaukset, kun solulla on kuvan, äänen tai videon URL (esimerkiksi [pyyntö](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/testMediaFiles.htmlTable?url%2Cname%2ClastModified%2Csize%2CfileType%26url=~%22.*ShouldWork.*%22) ) . Jos leijailet yli '?" kuvaketta, sinun pitäisi nähdä kuva, ääni tai videotiedoston esikatselu. Voit myös napsauttaa tiedostolinkkiä nähdäksesi tiedoston koko näytön selaimessasi. Katso [Mediatiedostojen dokumentointi](/docs/server-admin/datasets#media-files) . Huomaa, että eri selaimet tukevat eri tiedostotyyppejä, joten esimerkit eivät välttämättä toimi selaimessasi.
+Kiitos näiden ihmisten / linkkien ideoita ja näytekoodi CSS-vain kuva työkaluvihjeitä (oli https://codepen.io/electricalbah/pen/eJRLVd ) ja lykätty kuvan lataus (oli https://varvy.com/pagespeed/defer-images.html )   (Vaikka koodia muutettiin ennen käyttöä ERDDAP ) .
+Kiitos Cara Wilsonille, Matthew Austinille ja Adam Shepherd/BCO-DMO:lle kuvien tukipyynnöistä.
+Kiitos Jim Potemra, Rich Signell, OOI, ja Carrie Wall Bell pyytää audio / hydrophone tiedostotukea.
+Kiitos OOI osoittaa tarvetta videotuen.
+        * UUTTA: Osajoukko tietoja mistä tahansa ERDDAP™ Tietokokonaisuus (mutta yleensä aineisto äänitiedostoja) voidaan nyt tallentaa .wav äänitiedosto. ( [asiakirjat](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#wav) ) Kiitos Jim Potemra, Rich Signell, OOI, ja Carrie Wall Bell pyytää audio / hydrophone tiedostotukea.
+        * PARANTAA: muoto Web Accessible kansiot (WAF)   (Esim. tiedostot/ kansiot) on päivitetty käyttämään HTML- taulukkoa. Uusi muoto jäljittelee uudempaa versiota hakemiston listaus web-sivuja luotu uudempia versioita Apache. Ihmiset huomaavat, että muutokset helpottavat tietojen lukemista. Ohjelmisto, joka jäsentää nämä asiakirjat (esim. ohjelmisto, joka kerää ISO 19115 asiakirjoja ERDDAP ) on tarkistettava, mutta uusi muoto on helpompi jäsentää kuin edellinen muoto. (Huomio, Anna Milan.) 
+        * UUSI outOfDateDatasets.html sivu. ( [esimerkki](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) Tällä sivulla on taulukko, jossa on kaikki lähes reaaliaikaiset tiedot, joilla on&lt; testOutOfDate &gt; tag (ks. jäljempänä) , rankattu sen mukaan, kuinka vanhentunut tiedot ovat. Tämä kojelauta pitäisi olla hyödyllinen ERDDAP™ hallinnoijat ja loppukäyttäjät, kun he haluavat tietää, mitkä aineistot ovat vanhentuneita. Vanhojen tietoaineistojen osalta tietolähteessä on oletettavasti ongelma, joten ERDDAP™ ei pysty näkemään/saamaan tietoja tuoreimmista aikapisteistä.
+Hallinnoijat: Jos et halua Out-Of-Date Datasets-sivun, lisää tämä setup.xml:
+            &lt;outDateDatasetsActive&gt;false&lt;/outDateDatasetsActive&gt;
+Nyt on. testOutOfDate ja ulos OfDate-sarakkeet allDatasets tietokokonaisuus.
+Kiitos Bob Simonsille, joka on halunnut tätä jo vuosia, ja Irlannin Marine Instituten fiksuille ihmisille, jotka antoivat minulle inspiraation omistautuneen Vadelma Pi:n kautta ja monitorin, joka aina näyttää tällaisen näytön toimistossaan.
+        * PARANTAA: .htmlTable sekä .xhtml vastaus on nyt paremmin muotoiltu, kompaktimpi, ja siten ladata nopeammin. Kiitos HTML5 ja CSS.
+    * UUSI tulostetiedostotyyppi ruudukkotiedostoille: .timeGaps. Siinä on luettelo aika-arvojen aukoista, jotka ovat suurempia kuin mediaaniväli. ( [esimerkki](https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMHchla8day.timeGaps) ) Tämä on hyödyllistä ERDDAP™ ylläpitäjät ja loppukäyttäjät, kun he haluavat tietää, onko aineistossa odottamattomia aukkoja aika-arvoissa, joiden odotetaan olevan säännöllisesti porrastettuja. Kiitos Bob Simonsin ja Roy Mendelssohnin, jotka tarvitsivat tätä ominaisuutta.
+    * IMPROVED: Oletuskaavio allDatasets Tiedosto on nyt kartta x=maxLon ja y=maxLat. John Kerfootin, Rich Signellin ja OOI-CI:n ansiosta.
+    * UUTTA: [erddapy](https://github.com/ioos/erddapy) -- ei ole ERDDAP™ ominaisuus, mutta kiinnostaa monia ERDDAP™ käyttäjät. Erddapy ( ERDDAP™ + Python ) a Python Kirjasto luotu Filipe Fernandes, joka "käyttää hyväkseen ERDDAP S RESTful verkkopalvelut ja luo ERDDAP™ URL-osoite mistä tahansa pyynnöstä, kuten tietojen etsimisestä, metatiedon hankkimisesta, tietojen lataamisesta jne." Kiitos Filipe Fernandesin.
+    * Olisi pitänyt mainita aiemmin: On olemassa kolmannen osapuolen R-paketti, jonka tarkoituksena on helpottaa työskentelyä ERDDAP™ R:stä alkaen: [rerddap](https://github.com/ropensci/rerddap#rerddap) . Kiitos [rOpenSci](https://ropensci.org/) Ja Roy Mendelssohn.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:**   
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:**   
      
-    * TO DO: In setup.xml, aivan alapuolella&lt;Lisätiedot &gt; Lisätään&lt;adminInstitutionUrl&gt;-tunnisteet, jotka määrittävät URL-osoitteen laitoksellesi (tai ryhmä) .
-    * TO DO: Näitä 3-tunnisteita ei enää käytetä:
-        &lt;Aloita alusta HeadHtml,&lt;BodyHtml &gt; ja&lt;endbodyhtml &gt; Ne korvataan
-        &lt;HeadHtml5&gt;,&lt;StarBodyHtml5&gt; ja&lt;endBodyHtml5&gt;, jolla on viestien oletusarvot.xml (Näytetään alla) .
+    * TOIMIA: Setup.xml, aivan alla&lt;adminInstitution&gt;, lisää a&lt;adminInstitutionUrl&gt; tag, joka määrittää laitoksen verkko- osoitteen (tai ryhmä) .
+    * TO: Nämä 3 tags in setup.xml ei enää käytetä:
+        &lt;Käynnistä HeadHtml&gt;&lt;startBodyHtml&gt; ja&lt;endBodyHtml&gt;. Ne korvataan
+        &lt;KäynnistäHtml5&gt;,&lt;KäynnistäBodyHtml5&gt; ja&lt;endBodyHtml5&gt;, joilla on oletusarvoja määritelty viestit.xml (ja esitetään alla) .
         
-Suosittelemme käyttämään oletusarvoa&lt;HeadHtml5&gt; ja&lt;endbodyHtml5&gt;
-Suosittelemme: jos teet muutoksia alkuperäiseen&lt;StarBodyHtml ja/tai haluat muokata ERDDAP™ Kopioi nyt uusi&lt;StarBodyHtml5&gt; Tag (alhaalta) asennukseen.xml ja muokata sitä ERDDAP™ niin että ERDDAP "Verkkosivut heijastavat organisaatiotasi, eivät NOAA   ERD . Ole hyvä ja vaihda organisaatiosi "Brought to You" (s) . Jos tarvitset apua, lähetä sähköpostia erd.data at noaa.gov . (Jos et halua muokata ERDDAP™ Käytä nyt oletusarvoa&lt;Alkuperäinen nimi: BodyHtml5&gt;.)
+Suosittelemme käyttämään oletusta&lt;KäynnistäHtml5&gt; ja&lt;endBodyHtml5&gt;
+Suosittelemme: Jos teit muutoksia alkuperäiseen&lt;KäynnistäBodyHtml&gt; ja/tai haluat muokata ERDDAP™ Nyt, kopioi uusi&lt;StartBodyHtml5&gt; tag (alhaalta) osaksi setup.xml ja muokata sitä muokata ERDDAP™ Niin, että ERDDAP 's web-sivut heijastavat organisaation, ei NOAA   ERD . Vaihda "tuotu sinulle" organisaatioosi. (tilu) . Jos tarvitset apua, lähetä sähköpostia erd.data at noaa.gov . (Jos et halua muokata ERDDAP™ nyt, käytä oletus&lt;KäynnistysBodyHtml5&gt;)
         
-Poista sitten 3 vanhaa tunnistetta asennuksessa.xml, jota ei enää käytetä.
+Poista sitten 3 vanhat tagit setup.xml, joita ei enää käytetä.
 
 ```
         <startBodyHtml5><!\\[CDATA\\[ 
@@ -1163,14 +1178,14 @@ Poista sitten 3 vanhaa tunnistetta asennuksessa.xml, jota ei enää käytetä.
         \\]\\]></startBodyHtml5>
 ```
 
-On olemassa muita tapoja, joilla voit [Mukautettu ERDDAP™ ](/docs/server-admin/deploy-install#customize) niin ERDDAP Verkkosivut heijastavat organisaatiotasi sen sijaan, että NOAA   ERD .
+On muitakin tapoja voit [muokkaa ERDDAP™ ](/docs/server-admin/deploy-install#customize) Joten ERDDAP web-sivut heijastavat organisaation sijasta NOAA   ERD .
         
-    * Lähde: The&lt; EDDGrid Esimerkki & tagit (alkuperällä)&lt; EDDGrid Esimerkki & amp;) ja&lt;Eddtable... Esimerkki & tagit (alkuperä)&lt;EDDTableIdExample &gt;) asennuksessa.xml-tiedostoa käytetään luomaan esimerkkejä verkosta ja tabledap dokumentointi. html-sivut omassa ERDDAP .
+    * TEHDÄÄN:&lt; EDDGrid ...Example&gt; tags (alkaa&lt; EDDGrid IdExample&gt;) ja&lt;EDDTable... Esimerkki &gt; tagit (alkaa&lt;EDDtableIdExample&gt;) asetukset.xml-tiedosto käytetään luomaan esimerkkejä ruudukko ja tabledap asiakirjat. html web-sivut ERDDAP .
         
-Jos et mukauta näitä tunnisteita, poista ne asennus.xml-tiedostosta. Nyt kaikilla on oletusarvoja viestissä.xml, joka viittaa Bobin tietoaineistoihin. ERDDAP™ at athttps://coastwatch.pfeg.noaa.gov/erddap/index.html. Joten sinun ei tarvitse enää saada erityisiä tietoja ERDDAP . Jos haluat ohittaa oletusarvot, kopioi joitain tai kaikkia näitä tunnisteita asetukseen.xml ja vaihda niiden arvoja.
-Jos haluat, että esimerkit osoittavat ERDDAP™ Helpoin tapa on:
+Jos et muokannut näitä tageja, poista ne setup.xml-tiedostostasi. Nyt heillä kaikilla on oletusarvoja viestejä.xml, jotka viittaavat tietoihin Bob's ERDDAP™ klo https://coastwatch.pfeg.noaa.gov/erddap/index.html . Joten sinulla ei enää tarvitse olla tiettyjä tietoja ERDDAP . Jos haluat ohittaa oletukset, kopioi joitakin tai kaikki nämä tagit asetukset.xml ja muuttaa niiden arvoja.
+Jos haluat esimerkkejä osoittaa oman ERDDAP™ , helpoin menetelmä on:
         
-        1. Sisältää nämä kaksi aineistoa omassa ERDDAP™ Lisäämällä tämä sinun datasets.xml :
+        1. Sisällytä nämä kaksi aineistoa ERDDAP™ lisäämällä tämän datasets.xml :
 ```
             <dataset type="EDDGridFromErddap" datasetID="jplMURSST41" active="true">
                 <sourceUrl>https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41</sourceUrl>
@@ -1180,382 +1195,382 @@ Jos haluat, että esimerkit osoittavat ERDDAP™ Helpoin tapa on:
             </dataset>
 ```
 
-        2. Lisää tämä tunniste asennukseen.xml, mutta vaihda URL-osoite ERDDAP &gt; ( https ??) URL:
+        2. Lisää tämä tagi setup.xml, mutta muuta URL ERDDAP S ( https ?) URL:
 ```
             <EDDGridErddapUrlExample>https://coastwatch.pfeg.noaa.gov/erddap/</EDDGridErddapUrlExample>
             <EDDTableErddapUrlExample>https://coastwatch.pfeg.noaa.gov/erddap/</EDDTableErddapUrlExample>
 ```
         
-Jos olet räätälöinyt nämä merkit, jätä ne sellaisenaan ja lisää nämä 2 uutta tunnistetta asetukseen.xml määrittääksesi ne. ERDDAP™ URL-osoite näille tietoaineistoille, mutta vaihda URL-osoite ERDDAP &gt; ( https ??) URL:
+Jos et muokata näitä tageja, jätä ne sellaisenaan ja lisää nämä 2 uutta tagia asetukset.xml määrittää ERDDAP™ URL näiden tietokokonaisuuksien, mutta muuttaa URL sinun ERDDAP S ( https ?) URL:
 ```
         <EDDGridErddapUrlExample>https://coastwatch.pfeg.noaa.gov/erddap/</EDDGridErddapUrlExample>
         <EDDTableErddapUrlExample>https://coastwatch.pfeg.noaa.gov/erddap/</EDDTableErddapUrlExample>
 ```
 
-    * Tee: ERDDAP™ Käytä Css-tiedostoa nimeltä erdap2.css. Jos teet muutoksia \\[ Tom \\] /webapps/erddap/images/erddap.css, harkitse samankaltaisia muutoksia kuin erddap2.css (Samassa hakemistossa) .
-    * Uusi: ERDDAP Verkkosivuilla on nyt paljon näkymättömiä sisäisiä linkkejä. (Teksti on musta, ei korostettu.) . Jos ylität yhden näistä linkeistä (Yleensä otsikoiden ja kappaleiden ensimmäiset sanat) Kurittajasta tulee käsi. Jos napsautat linkkiä, URL on asiakirjan sisäinen linkki. Tämä helpottaa dokumentaation tiettyjä osia. Kiitos Bob Simonsille, joka on halunnut tämän jo vuosia.
-    * Uusi: ERDDAP™ Nyt tukee [Byte Range / Accept-Ranges (käytetty)](https://en.wikipedia.org/wiki/Byte_serving) tiedostojen/tiedostojen osia koskevat pyynnöt. Tätä tarvitaan tukemaan ääni- ja videokatsojia selaimissa.
-    * TO DO: Parantaaksesi turvallisuutta, jos määrität&lt;BaseHttpsUrl&gt; in setup.xml (Näin tukea https ) Suositeltu lippu Url on yksi https URL-osoite turvallisemmalla lipulla. Mikäli näin on, kaikki aiemmat lippulaivat tai lippulaivat ovat mitättömiä. Admins: Jos nämä muutokset koskevat ERDDAP™ ja jos sinun ERDDAP™ on EDDGrid FromErddap ja EDDTable Erddap:n etäisyydet ERDDAP Sitten, kun päivität ERDDAP sinun ERDDAP™ Yrität automaattisesti tilata uuden lipun, joten sinun on poistettava vanhat tilaukset ja validoitava uudet tilaukset, kun saat uudet tilauksen validointisähköpostit.
-    * Tehtävä: Jos ERDDAP™ on EDDGrid FromErddap-datavarat erdVH3-tietokannoille Bobin rannikolla ERDDAP™ Muuta niitä viitataksesi uusiin erdVH2018-aineistoihin.
-    * TO DO: Jos sisällytät jplaquariusSS-näytetietoaineiston osioon ERDDAP™ Ole hyvä ja vaihda "V4" datasetID "V5"
-    * Tee: actual\\_range CF-standardin määritelmä (CF-1,7) Sanotaan, että jos muuttuja käyttää add\\_offset ja/tai scale\\_factor Tietojen arvojen pakkaaminen, sitten actual\\_range Arvojen on käytettävä pakkaamatonta tietotyyppiä ja oltava pakkaamattomia arvoja. Tämä on ristiriidassa aiempien neuvojemme kanssa. GenerateDatasets Xml on nyt pakattu actual\\_range arvot, mutta se ei korjaa olemassa olevia tietoaineistoja datasets.xml tiedosto.
+    * TEHDÄ: ERDDAP™ Nyt käyttää CSS-tiedostoa nimeltä erddap2.css. Jos olet tehnyt muutoksia \\[ tomcat \\] /webapps/erddap/images/erddap.css, harkitse tehdä samanlaisia muutoksia erddap2.css (samassa hakemistossa) .
+    * UUTTA: ERDDAP 's web-sivuilla on nyt suuri määrä lähes näkymättömiä sisäisiä linkkejä (teksti on musta eikä alleviivattu) . Jos leijut yhden näistä linkeistä (yleensä otsikkojen ja kohtien ensimmäiset sanat) , kursorista tulee käsi. Jos klikkaat linkkiä, URL on sisäinen linkki siihen osaan asiakirjan. Näin on helppo viitata asiakirjoihin. Kiitos Bob Simonsin, joka on halunnut tätä jo vuosia.
+    * UUTTA: ERDDAP™ nyt tukee [Byte Range / Accept-Ranges](https://en.wikipedia.org/wiki/Byte_serving) pyyntö osa / tiedostot / tiedostot. Tätä tarvittiin selainten ääni- ja videokatsojien tukemiseen.
+    * Nyt parantaa turvallisuutta, jos olet määritellyt&lt;baseHtpsUrl&gt; in setup.xml (ja siten tukea https ) , suositeltu lippu Url on https URL on turvallisempi lippuavain. Jos näin on, jokin aiempi lippuUrls/lippuKeys mitätöidään. Hallinto: Jos nämä muutokset koskevat ERDDAP™ ja jos ERDDAP™ on EDDGrid Erddapista ja EDDTablesta FromErddap tilata etä ERDDAP s, kun olet päivittänyt ERDDAP , sinun ERDDAP™ yrittää automaattisesti tilata uuden lipunUrl, joten sinun pitäisi poistaa vanhat tilaukset ja validoida uudet tilaukset, kun saat uudet tilaus validointisähköpostit.
+    * Jos ERDDAP™ on EDDGrid FromErddap aineistot erdVH3 tietokokonaisuuksia Bobin rannikkovartiosto ERDDAP™ , vaihda ne viitata uusiin erdVH2018 tietoaineistot.
+    * TO: Jos lisäät jonkin jplAquariusSSS-näyteaineistoista ERDDAP™ , ole hyvä ja muuta "V4" datasetID V5:een.
+    * TEHDÄ: actual\\_range on nyt CF standardi attribuutti (CF-1,7) ja selvästi sanoo, että jos muuttuja käyttää add\\_offset ja/tai scale\\_factor pack data-arvot, sitten actual\\_range Arvojen on käytettävä pakkaamattomien tietojen tyyppiä ja oltava pakkaamattomia. Valitettavasti tämä on ristiriidassa aiemman neuvomme kanssa. Luo tiedostoja Xml purkaa nyt pakkaukset actual\\_range arvot, mutta se ei korjaa olemassa olevia tiedostoja datasets.xml Tiedosto.
         
-Tarkista tietosi: jos muuttujan arvot on pakattu ja jos actual\\_range on määritelty pakatuiksi tietoarvoiksi, lisätkää&lt; addAttributes &gt; actual\\_range arvojen määrittelyyn. Muussa tapauksessa aineisto ei kuormita ERDDAP . Yksinkertainen ja lähes täydellinen tapa tehdä tämä on etsiä datasets.xml Lähde ominaisuuksia, joilla on
+Tarkista tietoaineistosi: jos muuttujan arvot on pakattu ja jos actual\\_range on määritelty pakattujen tietojen arvot, lisää a&lt; addAttributes &gt; actual\\_range pakkaamattomien arvojen määrittely. Muussa tapauksessa aineisto ei lataudu ERDDAP . Yksinkertainen ja lähes täydellinen tapa tehdä tämä on tutkia datasets.xml lähde Ominaisuudet, joilla on
 ```
         <att name="actual\\_range" type="shortList">  
         or <att name="actual\\_range" type="intList">  
 ```
-ja a scale\\_factor Muuta kuin 1.0. Nämä ovat niitä actual\\_range ominaisuuksia, jotka sinun täytyy ehkä korjata.
+ja a scale\\_factor muut kuin 1.0. Nämä ovat actual\\_range Ominaisuudet, jotka sinun täytyy korjata.
         
-Akselimuuttujat EDDGrid aineistot, ERDDAP™ Aseta aina actual\\_range Se on arvojen todellinen ulottuvuus, koska se tuntee nämä arvot.
+Akselimuuttujat EDDGrid tietoaineistot, ERDDAP™ asettaa aina actual\\_range ominaisuus, joka on arvojen todellinen vaihteluväli, koska se tuntee nämä arvot.
         
-Akselimuuttujat, joilla on laskevia arvoja (esimerkiksi leveysmuuttujat) , ERDDAP™ luotu actual\\_range kanssa \\[ 0 \\] ............ \\[ Viimeinen viimeinen \\] Arvot, jotka olivat korkealla, alhaalla. Nyt se käyttää aina matala-arvoja uuden CF-määritelmän tekemiseen.
+Akselimuuttujille, joiden arvot alenevat (Esimerkiksi joitakin leveysastemuuttujia) , ERDDAP™ luotu actual\\_range ja \\[ 0 \\] ... \\[ viimeinen \\] arvot, jotka olivat korkeat... Matala. Nyt se käyttää aina alhaisia... korkeita arvoja tehdä uuden CF määritelmä.
         
-Oikeudenmukaisuus actual\\_range EDDTable-tietoaineistot ovat erityisen tärkeitä, koska ERDDAP™ kieltäytyy käyttäjien pyynnöistä, jotka ovat vähemmän kuin actual\\_range vähimmäisarvo tai suurempi kuin actual\\_range maksimiarvo.
+Euroopan actual\\_range arvot ovat erityisen tärkeitä EDDtable-aineistoille, koska ERDDAP™ Hylätään nopeasti käyttäjien pyynnöt tietoarvoista, jotka ovat pienempiä kuin actual\\_range vähimmäisarvo tai jotka ovat suurempia kuin actual\\_range suurin arvo.
         
-Aiheeseen liittyvä: Todellinen \\ min, todellinen _max data\\_min ja data\\_max attribuutit ovat nyt vähentyneet. Muunna tietosi käytettäväksi actual\\_range Sen sijaan.
+Liittyvät: todellinen\\_min, todellinen\\_max, data\\_min sekä data\\_max attribuutit on nyt poistettu. Muunna tiedostoja käyttää actual\\_range Sen sijaan.
         
-    * tehdä (valinnainen, mutta suositeltu) : Jokaisesta lähes reaaliajasta ja ennustetietoaineistosta ERDDAP™ Ole hyvä ja lisää [&lt; testOutOfDate &gt; (Docs/server-admin/datasets#testoutofdate) Tag, jolla on arvo muodossa now- _NUnits_, esim. now- 2 päivää. Jos aineiston enimmäisaika-arvo on tätä arvoa vanhempi, aineistoa pidetään vanhentuneena ja se merkitään sellaiseksi. [ outOfDateDatasets.html ](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) Web-sivu. Tämä on helppo tapa nähdä, milloin jokin on vialla tietoaineiston lähteessä.
-    *    [Semantic Markup of Datasets with json-ld Näytä tarkat tiedot (JSON Liittyvät tiedot) ](/docs/server-admin/additional-information#json-ld)   
-         ERDDAP™ Nyt käytetään [json-ld (JSON Liittyvät tiedot) ](https://json-ld.org) tehdä tietoluettelon ja tietoaineistot osaksi [Semanttinen web](https://en.wikipedia.org/wiki/Semantic_Web) Tim Berners-Lee:n idea on tehdä verkkosisällöstä koneellista luettavampaa ja kone ”ymmärrettävää”. Hakukoneet ( [Google erityisesti](https://developers.google.com/search/docs/data-types/datasets) ) ja muut semanttiset työkalut voivat käyttää tätä rakenteellista merkintää helpottamaan löytöä ja indeksointia. json-ld-rakenteinen merkintä näyttää näkymättömältä ihmiselle&lt;Käsikirjoitus &gt; Koodi onhttp://.../erddap/info/index.htmlWEB WEB WEB WEB WEB (Semanttinen verkko [Dataa](https://schema.org/DataCatalog) ) ja jokaisellahttp://.../erddap/info/_datasetID_/index.htmlWEB WEB WEB WEB WEB (Semanttinen verkko [Dataa](https://schema.org/Dataset) ) . (Erityiskiitokset Adam Leadbetterille ja Rob Fullerille Irlannin Marine-instituutista, jotka ovat tehneet kovaa työtä tämän osan saavuttamiseksi. ERDDAP .) 
-    * NEW: On olemassa uusia tiedostotyyppejä, jotka voivat lukea audiotiedostojen tietoja:
-         [ EDDGrid Audiofiilejä](/docs/server-admin/datasets#eddfromaudiofiles) , joka käsittelee audiotietoja verkkotietoina.
-         [EDDTableFromAudiofiilit](/docs/server-admin/datasets#eddfromaudiofiles) joka käsittelee audiotietoja tabulaaritietoina. Jim Potemran, Rich Signellin, OOI:n ja Carrie Wall Bellin ansiosta ääni- ja hydrofonitiedostojen tukipyyntöihin.
-    * Muutoksia GenerateDatasets XM (liittyvät muutokset) :
-        * Uusi: ERDDAP™ Järjestelmä on nyt automaattisesti [Päivitä URL-osoitteet](/docs/server-admin/additional-information#out-of-date-urls) Molemmat GenerateDatasets Xml ja lataustiedot. Jos sinulla on ehdotuksia lisäURL-osoitteisiin, jotka on kiinnitettävä ja päivitettävä, tai jos luulet, että tämä pitäisi muuttaa palveluksi. (Kuin konvertterit) Ole hyvä, sähköposti erd.data at noaa.gov .
-        * Lähde: If GenerateDatasets XML näkee CF:n standard\\_name   (Kaikkien pitäisi olla matalampia) Yläosassa, se lisää kaikki alempaa versiota&lt; addAttributes &gt; myös silloin, kun aineisto latautuu, jos ERDDAP™ Katso CF standard\\_name ylemmällä hahmolla se hiljaa muuttaa sen standard\\_name . Kiitos Rich Signell.
-        * Lähde: If GenerateDatasets Xml näkee ominaisuuden, joka ei ole ISO 8601 -muodossa, se lisää ISO 8601 -muotoisen ajan.&lt; addAttributes &gt; Jos ERDDAP™ ei tunnista muotoa, se jättää ajan arvon muuttumattomaksi. Jos näet muodon, joka ERDDAP™ ei tunnista ja korjaa, pyydän sähköpostia erd.data at noaa.gov .
-        * IMPROVED: Alhainen koodi EDDGrid FromThredds Kataloginen vaihtoehto GenerateDatasets XML luottaa Unidata Netcdf-java-kataloginen crawler-koodi (Kynttilät. Katalogiset luokat) jotta kaikki 3DS-luettelot voidaan käsitellä (joka voi olla yllättävän monimutkainen) . Kiitos Roland Schweitzerille tästä muutoksesta ja Unidata koodista.
-        * Alkuperäinen nimi: GenerateDatasets XML EDDGrid FromDap nyt lisää ", startYear-EndYear" otsikon loppuun, joka perustuu todellisiin aika-akselin arvoihin. Endyear = "läsnäolo", jos tietoja on olemassa viimeisten 150 päivän aikana.
-        * Alkuperäinen nimi: GenerateDatasets XML EDDGrid "Adap lisää" \\[ Päätös \\] Otsikko, jos tietoaineisto on tasaisesti sijoitettu ja sama lat ja lon.
-        * IMPROVED: Aikamuunnin on nyt lisäominaisuuksia, erityisesti kyky muuntaa jousiaikoja monissa yhteisissä formaateissa ISO 8601 -merkkijonoksi tai UDUnits-yhteensopivaksi numeroksi. Kaikki aiemmin tuetut ominaisuudet toimivat, muuttumattomina.
-        * Alkuperäinen nimi: GenerateDatasets Xml ja avainsanojen muuntimet ovat nyt "Maan tiede" alussa GCMD Science Keywords. Kun aineisto on ladattu ERDDAP™ , ERDDAP™ Korjaa kaikki GCMD-avainsanat avainsanojen attribuutissa, jotka eivät aloita "Maatiede" tai jotka käyttävät muuta kuin otsikkotapausta. (Kunkin sanan ensimmäinen kirjain on pääomitettu) .
-        * IMPROVED: Kun ehdotat&lt; destinationName &gt; GenerateDatasets EDDTableFromAsciiFiles Xml käytti juuri EDDTableFilesin päätä sourceName s '/'   (Jotkut olivat tiedostonimiä) . Nyt se käyttää koko sourceName (esim. Blahblahblah (m/s) Muutos on hyvä joillekin aineistoille, ei muille, mutta se on turvallisempi. Kiitos Maurice Libesille.
-        * Alkuperäinen nimi: GenerateDatasets Xml ja aineistonrakentajat varmistavat, ettei sarakkeita ole olemassa. Kiitos Maurice Libesille.
-        * Alkuperäinen nimi: GenerateDatasets EDDTableFromAsciiFiles ei kirjoittanut&lt;ColumnSeparator &gt; tuotokseen. Nyt se tekee. Kiitos Maurice Libesille.
-    * NEW: The DasDds -työkalu tulostaa aikavajetiedot (The [.timegap-tiedot](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#timeGaps) ) jos tietokanta on verkkotietokanta.
-    * NEW: Advanced Search hyväksyy nyt "now-nUnits" -aika-arvot. Kiitos Rich Signell.
-    * IMPROVED: Turvallisuuden parantamiseksi, kun tietoaineiston metatietojen tai tietojen sähköpostiosoite on kirjoitettu html-verkkosivulle, "@" korvataan sanalla ". Tämä saa vain sähköpostiosoitteita, jotka ovat koko metatietoja tai data-arvoa, ei sähköpostiosoitteita, jotka on upotettu pidemmille arvoille.
-    * IMPROVED: Turvallisuuden lisäämiseksi RSS Yksityisten tietoaineistojen tiedot ovat nyt vain käyttäjien saatavilla. (ja RSS Lukijat) jotka ovat kirjautuneet sisään ja valtuuttaneet käyttämään näitä tietoja.
-    * NEW: Nyt, kun aineisto on ladattu, jos date\\_created , date\\_issued , date\\_modified , tai päivämäärä \'tadata \'modified attribute on aika-arvo, joka ei ole ISO 8601 -muodossa; ERDDAP™ Muutetaan ISO 8601 -muotoinen aika. Jos ERDDAP™ ei tunnista muotoa, se jättää ajan arvon muuttumattomaksi. Jos näet muodon, joka ERDDAP™ ei tunnista ja korjaa, pyydän sähköpostia erd.data at noaa.gov .
-    * .dods-vastaukset EDDGrid Datan pitäisi nyt olla huomattavasti nopeampaa. Kiitos Rich Signell.
-    * Muutokset liittyvät ERDDAP ISO 19115 -asiakirjat:
-        * BUG FIX: Kun luodaan ISO 19115 -dokumentteja dataVariable Yksiköt eivät olleet HTML:n attribuutteja ja prosenttiosuus koodattuja. Nyt ne ovat. NGDC:n ISO 19115 -vahvistimen ansiosta.
-        * BUG FIX: Kun luodaan ISO 19115 -dokumentteja date\\_created Sitä on käytetty, niin usein se on väärä. Se on muunnettu ISO 8601 Z -merkkijonoksi. NGDC:n ISO 19115 -vahvistimen ansiosta.
-        * BUG FIX: Kun luodaan ISO 19115 -dokumentteja ERDDAP™ Pidemmät päivämäärät vuosi = 0000 (Klimatologian tietoaineistot) ISO 19115 ei salli päivämääriä vuoden = 0000. NGDC:n ISO 19115 -vahvistimen ansiosta.
-    * NEW: Ennen pyyntöä http ********** ****************************************************************************************************************************************************************************************************************************************************** (kuin teksti) Esim. " ERDDAP = 1,82 §:ää
-Nyt pyyntö http .../erddap/version | | palauttaa numeron ja valinnaisen riittävyyden sekä ASCII-tekstin (Ei tiloja tai kontrollihahmoja) Esim. " ERDDAP | | muokkaaminen = 1,82 | JohnsFork » Ihmiset, jotka tekevät haarukka määrittää tämän muuttamalla EDStatic.erdapVersion. Tämä tapa tehdä se ei aiheuta ongelmia aiempien versioiden ERDDAP . Kiitos Axiom (Kyle Wilcox) Irlannin meriinstituutti (Pääosat Rob Fuller) .
-    * Viisikymppinen: Wms-versio=1.3.0, pyyntö= GetMap EPSG:4326 (Ei CRS:84) pyynnöt: Bbox-järjestyksen on oltava minLat,minLon,maxLat,maxLon. CRS:84-pyynnöt, kuten ennen, bbox-järjestyksen on oltava minLon,minLat,maxLon,maxLat. Tämä voi korjata käyttämällä ERDDAP &gt; WMS 1.3.0 Palvelut ArcGIS   (Kiitos Paola Arce) . Kiitos (Ei ei ei) että OGC tehdä siitä niin monimutkaista. Kiitos Leaflet kunnioittaa tätä oikein ja antaa minulle tapa testata tätä.
-    * Edellinen, ehdotettu linkki RSS Sähköpostiliittymillä on http URL sinun ERDDAP . Nyt se on https URL, jos se on aktiivinen.
-    * Uusi: EDDGrid Kopio tukee nyt valinnaista tunnistetta&lt;Alkuperäinen nimi: Since&lt;/onlySince&gt;, jossa arvo on erityinen ISO-8601-muotoinen aika tai now- NUnits (esim. now- 2 vuotta) Aikaa. Nähdään [Vain vain vain dokumenteista lähtien](/docs/server-admin/datasets#onlysince) . Kiitos Drew P:lle.
-    * HUOMAUTUS: Jos saatavilla, ERDDAP™ Näytetään https URL (käytetty)&lt;BaseHttpsUrl, jos saatavilla) http URL-osoite, kun se antaa käyttäjille URL-osoitteen lisätä/validate/poistaa/listata tilaus.
-    * Vinkki: ERDDAP™ Nyt tilaustoimet voidaan aloittaa "https://". (Bob riisuu otsaansa.) Kiitos Jennifer Sevadjianista.
-    * Vinkki: .jsonlKVP ”Käytä” jokaisen avaimen ja arvon välillä '=' . (Bob riisuu otsaansa.) Kiitos Alexander Barthille.
-    * Viisikymppinen: Aiemmin, jos aloitat uudelleen ERDDAP™ Jos ennen tietojen lataamista normaalisti, soit EDDTableFromFiles-tietokantaan, joka käytti päivitystä EveryNMillis, ja jos tietotiedostoa on juuri muutettu, pyyntö epäonnistuisi nollapistevirheellä. Nyt pyyntö onnistuu. Kiitos John Kerfootille.
-    * UUTUS: Kun tietokanta ladataan ERDDAP™ Avainsanat on nyt järjestetty lajiteltuun järjestykseen ja kaikki uudet hahmot poistetaan.
-    * IMPROVED: Jos .geoJson .json tai tai .nc OJsonin pyyntö .json p-parametri, vastausmime-tyyppi on sovellus/javascript. Huomaa, että .json P ei tueta .jsonlCSV tai tai .jsonlKVP Koska se ei toimisi. Kiitos Rob Fuller.
-    * IMPROVED: Json-linjojen mime-tyyppi on nyt "sovellus/x-jsonlines". Se oli sovellus/jsonl. Tällä hetkellä ei ole lopullista oikeaa vaihtoehtoa.
-    * IMPROVED: Tila.html-sivulla esitettyjen epäonnistuneiden pyyntöjen määrä kasvaa, koska enemmän asioita lasketaan epäonnistumisiksi kuin ennen, esim. ClientAbortException.
-    * HUOMAUTUS: Nyt, jos vastaus ERDDAP™ ei ole pakattu, sitten vastauksen otsikko sisältää "sisältökoodi" = "identiteetti".
-    * IMPROVED: "Lisenssi" ei tarvittu. Jos sitä ei ole määritetty, tavallinen lisenssi viestistä.xml (asennus.xml jos läsnä) Sitä käytetään oletusarvona.
-    * Uusi: Nyt on valinnainen [tiedostoAccessSuffix attribuutti](/docs/server-admin/datasets#fileaccessbaseurl) jota voidaan käyttää olemassa olevan [tiedostoAccessBaseUrl attribuutti](/docs/server-admin/datasets#fileaccessbaseurl) .
-    * IMPROVED: Turvallisuuden lisäämiseksi tämä versio on koottu uusimpaan versioon. Java JDK v8u162.
-    * NEW: Turvallisuuden lisäämiseksi useita yleisiä verkkotunnuksia, jotka tarjoavat tilapäisiä sähköpostiosoitteita (@mailinator.com) Ne ovat nyt pysyvällä sähköpostilistalla tilausjärjestelmään.
-    * NEW: Turvallisuuden lisäämiseksi päivittäisen raportin korkeudet sisältävät:
-SetData IP-osoite epäonnistui (Viimeinen päivittäinen raportti)   
-SetData IP-osoite epäonnistui (käynnistyksen jälkeen)   
-SetData IP-osoite onnistui (Viimeinen päivittäinen raportti)   
-SetData IP-osoite onnistui (käynnistyksen jälkeen)   
-"Epäonnistuneet" korkeudet antavat sinun nähdä kuka (Hakkeri?) Hän yrittää luoda lipun, mutta epäonnistuu.
-    * IMPROVED: Turvallisuuden lisäämiseksi sähköpostiosoitteet&lt;PostBlacklist &gt; In Your datasets.xml Niitä pidetään nyt tapausherkkinä.
+    * TOIMIA (valinnainen, mutta suositeltava) : Jokaisesta lähes reaaliaikaisesta ja ennustetietokokonaisuudesta ERDDAP™ , lisätkää [&lt; testOutOfDate &gt;] (/docs/server-admin/datasets#testoutofdate) tunniste, jonka arvo on muodossa now- _nUnits_, esim. now- Kaksi päivää. Jos tietokokonaisuuden enimmäisaika on tätä arvoa vanhempi, tietokokonaisuus katsotaan vanhentuneeksi ja merkitään sellaisena [ outOfDateDatasets.html ](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) Verkkosivu. Tämä tarjoaa sinulle helpon tavan nähdä, jos jokin on vialla aineiston lähde.
+    *    [UUTTA: Semanttinen merkintä Datasets kanssa json-ld (JSON Linkit) ](/docs/server-admin/additional-information#json-ld)   
+         ERDDAP™ Nyt käyttää [json-ld (JSON Linkit) ](https://json-ld.org) tehdä tietoluettelo ja tietoaineistot osaksi [semanttinen verkko](https://en.wikipedia.org/wiki/Semantic_Web) , joka on Tim Berners-Lee idea tehdä web-sisällön koneellisesti luettava ja kone "ymmärrettävä." Hakukoneet ( [Erityisesti Google](https://developers.google.com/search/docs/data-types/datasets) ) ja muut semanttiset työkalut voivat käyttää tätä jäsenneltyä korotusta helpottaakseen löytämistä ja indeksointia. Json-ld strukturoitu merkintä näyttää näkymättömiä ihmisiä&lt;Käsikirjoitus&gt; koodi http://.../erddap/info/index.html verkkosivu (joka on semanttinen verkko [Data Catalog](https://schema.org/DataCatalog) ) ja kussakin http://.../erddap/info/_datasetID_/index.html verkkosivu (joka on semanttinen verkko [Dataset](https://schema.org/Dataset) ) . (Erityiskiitos Adam Leadbetterille ja Rob Fullerille Irlannin Marine Institutesta. ERDDAP .) 
+    * UUTTA: On olemassa uusia tietoaineistotyyppejä, jotka voivat lukea tietoja äänitiedostoista:
+         [ EDDGrid FromAudioFiles](/docs/server-admin/datasets#eddfromaudiofiles) , joka käsittelee audiodataa verkkodatana.
+         [EDDTableFromAudioFiles](/docs/server-admin/datasets#eddfromaudiofiles) , joka kohtelee audiodataa taulukkotietona. Kiitos Jim Potemra, Rich Signell, OOI, ja Carrie Wall Bell pyytää audio / hydrophone tiedostotukea.
+    * Muutokset luontiinDatasetteja Xml (ja siihen liittyvät muutokset) :
+        * UUTTA: ERDDAP™ nyt on järjestelmä automaattisesti [päivittää vanhentuneita URL-osoittimia](/docs/server-admin/additional-information#out-of-date-urls) sekä generaattoridataseteissa Xml ja lastattaessa tietoaineistoja. Jos sinulla on ehdotuksia muista URL-osoitteista, jotka olisi otettava kiinni ja päivitettävä, tai jos tämä pitäisi mielestäsi muuttaa palveluksi (Kuten muuntajat) , lähetä sähköpostia erd.data at noaa.gov .
+        * UUTTA: Nyt, jos luot datasettejä Xml näkee CF: n standard\\_name   (jonka pitäisi olla kaikki pienet) isolla merkillä, se lisää kaikki pienet versiot&lt; addAttributes &gt; Myös silloin, kun tietokokonaisuus kuormittaa, jos ERDDAP™ CF standard\\_name Suurella hahmolla, se hiljaa muuttaa sen standard\\_name . Kiitos Rich Signellin.
+        * UUTTA: Nyt, jos luot datasettejä Xml näkee attribuutin aika, joka ei ole ISO 8601-muodossa, se lisää ISO 8601-muotoon&lt; addAttributes &gt; Jos ERDDAP™ ei tunnista muotoa, se jättää aika-arvon ennallaan. Jos näet muodossa, että ERDDAP™ ei tunnista ja korjata, lähetä sähköpostilla erd.data at noaa.gov .
+        * PARANTAA: Matalan tason koodi EDDGrid From Thredds Catalog-valitsin generoiDataseteissa Xml on nyt riippuvainen Unidata netcdf-java luettelo ryömintäkoodi (Thredds. luetteloluokat) jotta se voi käsitellä kaikki THREDDS luettelot (jotka voivat olla yllättävän monimutkaisia) . Kiitos Roland Schweitzer ehdotti tätä muutosta ja kiitos Unidata Koodia varten.
+        * UUTTA: Luo datasettejä Xml EDDGrid FromDap lisää nyt ", StartYear-EndYear" otsikon loppuun perustuu todellinen aika-akseli arvoja. EndYear="present" jos tietoja on saatavilla viimeisten 150 päivän aikana.
+        * UUTTA: Luo datasettejä Xml EDDGrid FromDap lisää nyt ", \\[ Päätöslauselma \\] °" otsikkoon, jos tietokokonaisuus on tasaisesti välitetty ja sama latille ja ie
+        * IMPROVED: Aikamuuntimella on nyt lisäominaisuuksia, erityisesti kyky muuntaa merkkijonoajat monissa erilaisissa yleisissä muodoissa ISO 8601 -langoiksi tai UDUnits-yhteensopivaksi numeroksi. Kaikki aiemmin tuetut ominaisuudet toimivat ennallaan.
+        * BUG FIX: Generator Datasets Xml ja avainsanat muunnin nyt sisältävät "Maan tiede &gt; " alussa GCMD Science Keywords. Kun tietokokonaisuus on ladattu ERDDAP™ , ERDDAP™ nyt korjata kaikki GCMD avainsanoja avainsanoja attribuutti, jotka eivät aloita "Maantiede &gt; " tai jotka käyttävät mitään muuta kuin otsikko tapauksessa (jossa jokaisen sanan ensimmäinen kirjain aktivoidaan) .
+        * PARANTAA: Ehdotettaessa&lt; destinationName &gt;s, generoiDatasetit Xml EDDTableFromAsciiFiles juuri käyttänyt häntäpää sourceName s '/'   (Jotkut olivat tiedostonimeä muistuttavia) . Nyt se käyttää koko sourceName (esim. "blahblahblah (m/s) ." Tämä muutos on hyväksi joillekin aineistoille eikä muille, mutta se on turvallisempaa käyttäytymistä. Maurice Libesin ansiosta.
+        * BUG FIX: Generator Datasets Xml ja tietokokonaisuuden rakentajat varmistavat nyt, ettei kaksoisnimeä ole. Maurice Libesin ansiosta.
+        * BUG FIX: Generator Datasets Xml EDDTableFromAsciiFiles ei kirjoittanut&lt;sarakeSeparaattori&gt; tuotokseen. Nyt on. Maurice Libesin ansiosta.
+    * UUTTA: DasDds-työkalu tulostaa nyt aikavälitiedot (a [.timeGapsin tiedot](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#timeGaps) ) jos tietokokonaisuus on ruudutettu tietokokonaisuus.
+    * UUTTA: Tarkennettu haku hyväksyy nyt "now_\\-nUnits_" aika-arvot. Kiitos Rich Signellin.
+    * PARANTAA: Parantaakseen tietoturvaa, kun aineiston metadatassa tai tiedoissa oleva sähköpostiosoite on kirjoitettu html-sivulle, korvataan "@" sanalla " at ". Tämä saa vain sähköpostiosoitteita, jotka ovat koko metadatan tai datan arvo, ei sähköpostiosoitteita upotettu pidempiä arvoja.
+    * PARANTAAkseen turvallisuutta, RSS yksityisten tietoaineistojen tiedot ovat nyt vain käyttäjien saatavilla (sekä RSS lukijat) jotka ovat kirjautuneet sisään ja joilla on lupa käyttää tätä aineistoa.
+    * Kun data on ladattu, date\\_created , date\\_issued , date\\_modified , tai päivämäärä\\_metadata\\_muutetulla ominaisuudella on aika-arvo, joka ei ole ISO 8601 -muodossa, ERDDAP™ muuttaa sen ISO 8601 -muotoon. Jos ERDDAP™ ei tunnista muotoa, se jättää aika-arvon ennallaan. Jos näet muodossa, että ERDDAP™ ei tunnista ja korjata, lähetä sähköpostilla erd.data at noaa.gov .
+    * PARANTAA: .ddd vastaa EDDGrid Tiedostojen pitäisi nyt olla huomattavasti nopeampia. Kiitos Rich Signellin.
+    * Muutokset, jotka liittyvät ERDDAP 's luominen ISO 19115 asiakirjat:
+        * BUG FIX: Luotaessa ISO 19115 -asiakirjoja dataVariable HTML-attribuuttia ei koodattu. Nyt he ovat. NGDC:n ISO 19115 validaattorin ansiosta.
+        * BUG FIX: Luotaessa ISO 19115 -asiakirjoja date\\_created käytetään kuten on, niin usein oli väärä muoto. Nyt se on muunnettu ISO 8601 Z merkkijono. NGDC:n ISO 19115 validaattorin ansiosta.
+        * BUG FIX: Luotaessa ISO 19115 -asiakirjoja ERDDAP™ nyt pidempään kirjoittaa päivämäärät vuonna = 0000 (Kuten klimatologiatietoaineistoissa) , koska ISO 19115 skeema ei salli päivämäärät vuonna = 0000. NGDC:n ISO 19115 validaattorin ansiosta.
+    * UUTTA: Kuten ennen pyyntöä http .../eddap/versio palaa vain versionumero (tekstiksi) , esim.," ERDDAP \\_version=1.82."
+Nyt pyyntö http .../erddap/version\\_string palauttaa numeron ja valinnaisen loppuliitteen "\\_" sekä ASCII tekstin (ei välilyöntejä tai ohjausmerkkejä) , esim.," ERDDAP \\_version\\_string=1.82\\_JohnsFork." Ihmiset tekevät haarukka määrittää tämän muuttamalla ED Staattinen.erddapVersion. Tämä tapa tehdä se ei aiheuta ongelmia aiempien versioiden ERDDAP . Kiitos Axiomin. (Erityisesti Kyle Wilcox) ja Irlannin Marine Institute (erityisesti Rob Fuller) .
+    * BUG FIX: Wms-versiolle=1.3.0, pyyntö= GetMap , crs=EPSG:4326 (ei TPJ:84) Pyynnöt: Bbox tilauksen on oltava minLat,minLon,maxLat,maxLon. CRS:84:n pyyntöjen, kuten aiemminkin, bbox-tilauksen on oltava minLon,minLat,maxLon,maxLat. Tämä voi korjata käyttämällä ERDDAP S WMS 1.3.0 palvelu ArcGIS   (Paola Arcen ansiosta) . Kiitos. (ei) - OGC Teit tästä niin monimutkaista. Kiitos Leaflet -En tiedä.
+    * PARANTAA: Edellinen, ehdotettu linkki RSS ja sähköpostitilaukset on http URL-osoite ERDDAP . Nyt se on https URL, jos se on aktiivinen.
+    * UUTTA: EDDGrid Kopioi nyt tukee valinnaista tunnistetta&lt;vain &gt;_someValue_&lt;/vainKoska&gt;, jos arvo on tietty ISO-8601-muotoinen aika tai now- nUnits (esim. now- 2 vuotta) Aika. Katso [Ainoastaan Asiakirja-aineistosta alkaen](/docs/server-admin/datasets#onlysince) . Kiitos Drew P:n.
+    * PARANNETTU: jos saatavilla, ERDDAP™ näyttää https URL (alkaen&lt;baseHtpsUrl &gt;, jos saatavilla) http URL kun se kertoo käyttäjille URL lisätä / validoida / poistaa / lista tilata.
+    * BUG FIX: ERDDAP™ nyt mahdollistaa tilauksen toiminnan alkaa " https://" . (Bob läimäyttää otsaansa.) Jennifer Sevadjianin ansiosta.
+    * BUG FIX: .jsonlKVP Nyt käyttää ":" välillä kunkin avaimen ja arvon sijaan '=' . (Bob läimäyttää otsaansa.) Kiitos Alexander Barthin.
+    * BUG FIX: Aiemmin tapahtunutta: ERDDAP™ quickRestart = true, ja jos, ennen kuin tiedosto ladattiin uudelleen normaalisti, soitat EDDTableF fromFles -tiedostoon, joka käytti päivitystäEveryNMillis, ja jos tiedostoa olisi juuri muutettu, pyyntö epäonnistuisi nollapistevirheellä. Nyt pyyntö onnistuu. John Kerfootin ansiosta.
+    * UUTTA: Kun tiedosto on ladattu ERDDAP™ , avainsanat ovat nyt uudelleen järjestetty järjestyksessä ja kaikki uudet merkit poistetaan.
+    * Nyt, jos GeoJson, .json tai .nc oJson-pyyntö on .json p-parametri, vastemiimityyppi on sovellus/javascript. Huomaa, että .json p ei ole tuettu .jsonlCSV tai .jsonlKVP Koska se ei toimisi. Kiitos Rob Fullerin.
+    * IMPROVED: Mime-tyyppi json rivit fileType vaihtoehtoja on nyt "sovellus/x-jsonlines." Se oli sovellus/jsonl. Tällä hetkellä ei ole lopullista oikeaa valintaa.
+    * PARANTAA: Epäonnistuneiden pyyntöjen määrä näkyy status.html-sivulla kasvaa, koska enemmän asioita lasketaan epäonnistumisiksi kuin aiemmin, esim., ClientAbortPoikkeus.
+    * Nyt, jos vastaus ERDDAP™ ei ole pakattu, jolloin vasteen otsikkoon kuuluu "Content-Encoding"="identiteetti."
+    * PARANTAA: "Lupa" ominaisuus ei ollut tarpeen. Nyt, jos se ei ole määritelty, standardiLicense viestit.xml (tai setup.xml:stä, jos sellainen on) käytetään oletuksena.
+    * UUTTA: Nyt on valinnainen [tiedostoAccessSuffix-attribuutti](/docs/server-admin/datasets#fileaccessbaseurl) . joita voidaan käyttää nykyisten [fileAccessBaseUrl-attribuutti](/docs/server-admin/datasets#fileaccessbaseurl) .
+    * PARANTAA: Voit lisätä turvallisuutta, tämä versio on koottu uusimman Java JDK v8u162.
+    * UUTTA: Turvallisuuden lisäämiseksi useat yhteiset verkkotunnukset, jotka tarjoavat väliaikaisia sähköpostiosoitteita (esim., @mailinator.com) ovat nyt pysyvällä sähköpostilla mustalla listalla tilausjärjestelmä.
+    * UUTTA: Turvallisuuden lisäämiseksi Daily Report -lehden tiedot sisältävät:
+SetDataset Lippu IP- osoite epäonnistui (edellisen päivittäisen raportin jälkeen)   
+SetDataset Lippu IP- osoite epäonnistui (Käynnistyksen jälkeen)   
+SetDataset Lippu IP-osoite (edellisen päivittäisen raportin jälkeen)   
+SetDataset Lippu IP-osoite (Käynnistyksen jälkeen)   
+"Epäonnistuneet" näyttivät kuka (Hakkeri?) Yrittää asettaa lipun, mutta epäonnistuu.
+    * PARANTAA: Varmuuden lisäämiseksi sähköpostiosoitteet&lt;tilausSähköpostiMusta lista&gt; datasets.xml Niitä pidetään nyt tapauksettomina.
          
 
 ## Versio 1.80{#version-180} 
- (2017-08-04) 
+ (julkaistu 2017-08-04) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :**   
+*    **Uudet ominaisuudet (käyttäjille) :**   
      
-    * Uusia orderByCount  () suodattimen avulla voit määrittää, miten tulostaulukko lajitellaan. (tai ei) ja palauttaa vain yhden rivin jokaiselle ryhmälle, jossa lasketaan puuttumattomien arvojen määrä kullekin muuttujalle.
-Esimerkiksi, orderByCount  (""" stationID """) lajittelee stationID Palauta yksi rivi jokaiselle stationID lasketaan kunkin muuttujan ei-vähennysarvojen määrä.
-Jos vain määrität orderByCount  (""") Vastaus on vain yksi rivi, jonka puuttumattomien arvojen määrä kullekin tietomuuttujalle.
-Nähdään [ orderBy ... dokumentointi](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#orderBy) Kiitos Ben Adamsille.
-    * Uusia .nc Jyväskylän tiedosto Tyyppivaihtoehto verkko- ja tabulaaritietoihin. Tämä vaihtoehto tekee NCO lvl=2 "pedanttinen" JSON-tiedosto, jossa on kaikki tiedot, jotka tavallisesti löytyvät .nc tiedosto. Näytä [http://nco.sourceforge.net/nco.html#json](https://nco.sourceforge.net/nco.html#json) Kiitos Charlie Zenderille.
-    * Vinkki: The orderBy ............ () Make A Graph -sivuston vaihtoehdot käsitellään nyt oikein.
-    * BUG FIX: .geoJson-tulos ei nyt paina rivejä, joissa lat- tai lon-arvot puuttuvat. Myös korkeusarvot (jos saatavilla) Koordinaatit ovat nyt mukana, ei data-arvoina. Kiitos Jonathan Wilkins.
+    * UUSI orderByCount  () suodattimen avulla voit määrittää, miten tulostaulukko lajitellaan (tai ei) ja vain palauttaa yhden rivin kunkin lajiryhmän, jossa lasketaan määrä ei-puuttuva-arvot kunkin muuttujan.
+Esimerkiksi orderByCount  (" stationID ") järjestää stationID ja palauttaa yksi rivi kutakin stationID , jossa lasketaan niiden arvojen lukumäärä, jotka eivät jää pois kunkin muuttujan osalta.
+Jos vain määrität orderByCount  ("") , vastaus on vain yksi rivi, jossa on määrä ei-puuttuva-arvo kunkin muuttujan.
+Katso [ orderBy ... asiakirjat](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#orderBy) Ben Adamsin ansiosta.
+    * UUSI .nc oJson-tiedosto Ruudutettujen ja taulukkotiedostojen tyyppivaihtoehto. Tässä vaihtoehdossa NCO lvl=2 "pedanttinen" JSON-tiedosto, jossa on kaikki tavallisesti .nc Tiedosto. Katso [ http://nco.sourceforge.net/nco.html#json ](https://nco.sourceforge.net/nco.html#json) Kiitos Charlie Zenderin.
+    * BUG FIX: • orderBy ... () Make A Graph -sivun vaihtoehtoja käsitellään nyt oikein.
+    * BUG FIX: .geoJson tulostus nyt ei tulosta riviä, jossa lat tai en arvot puuttuvat. Myös korkeusarvot (jos saatavilla) ne sisältyvät nyt koordinaatteihin, eivät tietoarvoina. Jonathan Wilkinsin ansiosta.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:**   
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:**   
      
-    * Turvallisuus on: Protokollat.js-kirjasto, jota käytetään OpenLayers demo on WMS Sivut sisään ERDDAP™ on vanhentunut ja sillä on vika, joka mahdollistaa sen väärinkäytön. (Valitettavasti päivitys OpenLayers protokollat. Js ei ole helppo.) Tämä avaa mahdollisuuden siihen, että kirjasto voidaan perustaa, jotta se voi olla haavoittuvainen. Kuitenkin, koska ERDDAP™ Vain käyttää OpenLayers tietyllä tavalla ja vain tietyllä ERDDAP - tietolähteet, uskomme, ettei paikan päällä ole haavoittuvuutta ERDDAP &gt; käyttää OpenLayers Mutta jos et usko tätä, voit nyt poistaa käytöstä OpenLayers demo on WMS Sivut sinun ERDDAP™ Lisäämällä
+    * TURVALLISUUSASIAKIRJA: Protokollat.js kirjasto käytetään OpenLayers demo WMS sivuja ERDDAP™ on vanhentunut ja siinä on vika, joka mahdollisesti mahdollistaa sen väärinkäytön. (Valitettavasti päivitys OpenLayers ja protokollia. Js ei ole helppoa.) Se avaa mahdollisuuden, että kirjasto voidaan perustaa niin, että haavoittuvuus on mahdollista. Kuitenkin, koska ERDDAP™ Ainoastaan käyttö OpenLayers erityisellä ennalta käyttöönotolla ja ainoastaan erityisellä ERDDAP - perustuvat tietolähteet, uskomme, että ei ole alueidenvälistä haavoittuvuutta ERDDAP n käyttö OpenLayers ja protokollia.js. Kuitenkin, jos et usko tätä, voit nyt poistaa käytöstä käytön OpenLayers demo WMS sivuja ERDDAP™ lisäämällä
 ```
         <openLayersActive>false</openLayersActive>  
 ```
-asennus.xml-tiedosto. Oletusarvo on "todellinen". Kiitos Charles Carletonille ja NCEI:lle.
-    * Muutokset: Käyttämättömät .jar-tiedostot ja päällekkäiset .jar-tiedostot (koska ne ovat myös netcdfAll.jar.) on poistettu sieltä ERDDAP™ Jakelu. Out-of-Date .jar-tiedostoja on päivitetty. Kiitos Charles Carletonille ja NCEI:lle.
-    * Turvallisuus muuttuu: NetcdfAll.jar-tiedosto jaettuna ERDDAP™ Viimeisin versio (Tällä hetkellä 4.6.10) .jar-tiedostoja, joiden tiedetään olevan vanhentuneita ja joilla on turvallisuushaavoittuvuuksia, erityisesti Jacksonin kirjastoja, joita käytetään vain Amazon S3 -tietolähteissä. Jos et käytä tietoja Amazon S3:n kautta (tietäisit, jos olisit) Nämä haavoittuvuudet eivät ole tärkeitä.
+sinun setup.xml tiedosto. Oletus on "true." Charles Carletonin ja NCEI:n ansiosta.
+    * TURVALLISUUSMUUTOKSET: Käyttämätön .purkki tiedostoja ja kopioida .jar tiedostoja (koska ne ovat myös netcdfAll.jar) on poistettu ERDDAP™ jakelu. Ajantasainen .jar tiedostot on päivitetty. Charles Carletonin ja NCEI:n ansiosta.
+    * TURVALLISUUSMUUTOKSET: NetcdfAll.jar tiedosto jaettu ERDDAP™ on viimeisin versio (Tällä hetkellä 4,6.10) , mutta se sisältää edelleen sisäisiä Jackson. jar tiedostoja, joiden tiedetään olevan vanhentuneita ja joilla on tietoturvan haavoittuvuuksia, erityisesti Jackson kirjastot, joita käytetään vain käytettäessä Amazon S3-tietolähteitä. Jos et käytä tietoja Amazon S3 (Jos olisit) , nämä haavoittuvuudet eivät ole merkityksellisiä.
         
-Netcdf-java-kehittäjät väittävät, että nämä haavoittuvuudet eivät ole merkityksellisiä, koska netcdf-koodi käyttää näitä kirjastoja ja joka tapauksessa se olisi merkityksellistä vain, kun käytät Amazon S3:a. Näytä [https://github.com/Unidata/thredds/issues/866](https://github.com/Unidata/thredds/issues/866) . Minä uskon heitä. Jos olet edelleen huolissasi tästä, ota yhteyttä verkko-java-kehittäjiin. (Huomaa, että jos et usko verkko-java-kehittäjiä ja harkitse, että et käytä ERDDAP™ Tästä johtuen sinun ei pitäisi myöskään käyttää THREDS-laitteita, koska THREDDS käyttää netcdf-javaa perusteellisesti ja laajemmin kuin ERDDAP .) 
+Netcdf-java-kehittäjät väittävät, että nämä haavoittuvuudet eivät ole merkityksellisiä sen vuoksi, että netcdf-koodi käyttää näitä kirjastoja ja että ne olisivat merkityksellisiä vain käytettäessä Amazon S3:a. Katso [ https://github.com/Unidata/thredds/issues/866 ](https://github.com/Unidata/thredds/issues/866) . Uskon heitä. Jos sinulla on vielä huolia tästä, ota yhteyttä netcdf-jaava kehittäjät. (Huomaa, että jos et usko netcdf-jaava kehittäjät ja harkitsevat ei käytä ERDDAP™ Tämän takia sinunkaan ei pitäisi käyttää THREDDS, koska THREDDS käyttää netcdf-java enemmän ja laajemmin kuin ERDDAP .) 
         
-Yksityiskohdat: Huono koodi ja haavoittuvuusvaroitukset ovat:
-NetcdfAll-latest.jar/META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml
-Näytähttps://nvd.nist.gov/vuln/detail/CVE-2016-7051----- Korkea korkea
-NetcdfAll-latest.jar/META-INF/maven/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/pom.xml
-Näytähttps://nvd.nist.gov/vuln/detail/CVE-2016-7051----- Korkea korkea
-NetcdfAll-latest.jar/META-INF/maven/com.fasterxml.jackson.core/jackson-annot/pom.xml
-Näytähttps://nvd.nist.gov/vuln/detail/CVE-2016-7051----- Korkea korkea
-Näytähttps://nvd.nist.gov/vuln/detail/CVE-2016-3720Kriittinen
-NetcdfAll-latest.jar/META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.xml
-Näytähttps://nvd.nist.gov/vuln/detail/CVE-2016-7051----- Korkea korkea
-Näytähttps://nvd.nist.gov/vuln/detail/CVE-2016-3720Kriittinen
-versioon 4.6.10, aws-java-sdk-ydin vetää versioon 2.6.6 jackson-\\* esineitä. (Sähköposti Netcdf-java -henkilöiltä) .
-Kiitos Charles Carletonille ja NCEI:lle.
+Yksityiskohdat: Vaikea koodi ja haavoittuvuusvaroitukset ovat:
+netcdfKaikki-viimeisimmät.jar/META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml
+Katso https://nvd.nist.gov/vuln/detail/CVE-2016-7051 -- Korkea
+netcdfAll-last.jar/META-INF/maven/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/pom.xml
+Katso https://nvd.nist.gov/vuln/detail/CVE-2016-7051 -- Korkea
+netcdfKaikki-viimeisimmät.jar/META-INF/maven/com.fasterxml.jackson.core/jackson-anotations/pom.xml
+Katso https://nvd.nist.gov/vuln/detail/CVE-2016-7051 -- Korkea
+Katso https://nvd.nist.gov/vuln/detail/CVE-2016-3720 -- kriittinen
+netcdfKaikki-viimeisimmät.jar/META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.xml
+Katso https://nvd.nist.gov/vuln/detail/CVE-2016-7051 -- Korkea
+Katso https://nvd.nist.gov/vuln/detail/CVE-2016-3720 -- kriittinen
+"Nolle 4.6.10, aws-java-sdk-core vetää versio 2.6.6 jackson-\\* artefaktit." (sähköposti netcdf-java-ihmisiltä) .
+Charles Carletonin ja NCEI:n ansiosta.
         
-    * Muutokset: Jos toistat ERDDAP™ Huomaa, että komentolinjalle tarvittava luokan parametri on nyt paljon lyhyempi kuin ennen. Katso uusi CP-asetus [Tämä dokumentti](/docs/contributing/programmer-guide#development-environment) . Kiitos Charles Carletonille ja NCEI:lle.
-    * GenerateDatasetsissa uudet Xml: EDDTableFromBcodmo, joka on tarkoitettu vain sisäiseen käyttöön BCO-DMO: ssa.
-Kiitos Adam Shepherdille ja BCODMOlle.
-    * Uutta trendiä ja tunnelmaa: Jos EDDTable-sarakkeessa on tiedostonimiä web-käytettävistä tiedostoista (esim. kuva, video tai äänitiedostot) Voit lisätä
+    * -Ei. Jos olet rekompakti ERDDAP™ , Huomaa, että -cp luokan parametri tarvitaan komentorivi on nyt paljon lyhyempi kuin ennen. Katso uusi -cp asetus [nämä asiakirjat](/docs/contributing/programmer-guide#development-environment) . Charles Carletonin ja NCEI:n ansiosta.
+    * NEW OPtions in GenerateDatasets Xml: EDDTableFromBcodmo, joka on vain sisäiseen käyttöön BCO-DMO.
+Kiitos Adam Shepherdin ja BCODMOn.
+    * UUDEN LIITTEEN JA PIIRTEET: Jos EDDTable-sarakkeessa on tiedostonimiä web-tiedostoista (esim. kuva-, video- tai äänitiedostot) , Voit lisätä
 ```
         <att name="fileAccessBaseUrl">_someBaseURL_</a>  
 ```
-URL-osoitteen määrittäminen (Loppuun /) Jotta tiedostonimet olisivat täydellisiä URL-osoitteita. Sitten .htmlTable Vastaukset, ERDDAP™ Näytä tiedostonimi yhdistettyyn URL-osoitteeseen (Perusta Url plus tiedoston nimi) .
-Jos haluat ERDDAP™ palvellakseen niihin liittyviä tiedostoja, tehdä erillinen EDDTableFromFileNames-tietokanta näille tiedostoille (Se voi olla yksityistä tietoa) .
-Kiitos Adam Shepherdille ja BCODMOlle.
-    * NEW ATTRIBUTE RECOMMENDATION: Jos EDDTable-sarakkeella on tiedostonimiä web-käytettävistä tiedostoista (esim. kuva, video tai äänitiedostot) jotka ovat saatavilla arkiston kautta (esim. .zip tiedostotiedosto) URL-osoitteen kautta, käytä
+Määrittele perus URL (päättyy /) tarvitaan tehdä tiedostonimet täydellinen URL. Sitten .htmlTable vastaukset ERDDAP™ näyttää tiedoston nimen linkkinä yhdistettyyn URL-osoitteeseen (tukikohta Url plus tiedostonimi) .
+Jos haluat ERDDAP™ palvelemaan asiaan liittyviä tiedostoja, tehdä erillinen EDDTableFromFromFileNames aineisto näistä tiedostoista (se voi olla yksityinen aineisto) .
+Kiitos Adam Shepherdin ja BCODMOn.
+    * UUSI LIITTEELLINEN SUOSITUS: Jos EDDTable-sarakkeessa on tiedostonimiä web-tiedostoista (esim. kuva-, video- tai äänitiedostot) jotka ovat saatavilla arkiston kautta (esim. .zip tiedosto) saatavilla URL-osoitteen kautta, käyttö
 ```
         <att name="fileAccessArchiveUrl">_theURL_</att>  
 ```
-määrittää URL-osoite arkistolle.
-Jos haluat ERDDAP™ arkistisen tiedoston palvelemiseksi tee erillinen EDDTableFromFileNames-tietoaineisto kyseiselle tiedostolle. (Se voi olla yksityistä tietoa) .
-Kiitos Adam Shepherdille ja BCODMOlle.
-    * Improvements to GenerateDatasets Xml poistaa syyt pätemättömyys / paha&lt; subsetVariables &gt; ehdotuksia ja päällekkäisiä/huonoja nimiä jne. Kiitos Rich Signell, Adam Shepherd ja BCO-DMO.
-    * Uudet vaihtoehdot: Poliittinen rajatieto jaettiin ERDDAP Se on kolmannelta osapuolelta ja hieman vanhentunut. Maailmassa on riitaisia rajoja, joissa eri ihmisillä on erilaisia ideoita siitä, mikä on oikein. Me emme tee riitaa POLITICAL BOUNDARY ́in korrektiiveista, jotka tulevat ERDDAP . Jos et pidä poliittisista rajatiedoista, jotka ERDDAP™ Nyt voit kertoa ERDDAP™ poliittisia rajoja ei saa koskaan lisäämällä
+Määrittele arkiston URL.
+Jos haluat ERDDAP™ palvella arkistotiedoston, tehdä erillinen EDDtableFromFromFileNames-tiedoston (se voi olla yksityinen aineisto) .
+Kiitos Adam Shepherdin ja BCODMOn.
+    * PARANNUKSET tietojen tuottamiseen Xml poistaa syyt virheellinen / huono&lt; subsetVariables &gt; ehdotukset ja kaksoiskappale/huono ehdotus vaihtelevista nimistä jne. Kiitos Rich Signellin, Adam Shepherdin ja BCO-DMO:n.
+    * UUSI VAIHTOEHTO: Poliittiset rajat ERDDAP on kolmannen osapuolen ja hieman vanhentunut. Maailmassa on myös kiistanalaisia rajoja, joissa eri ihmisillä on erilaisia ajatuksia siitä, mikä on oikein. Emme väitä, että poliittiset perustiedot ovat oikeita. ERDDAP . Jos et pidä poliittisista rajatiedoista, jotka tulevat ERDDAP™ , voit nyt kertoa ERDDAP™ ei koskaan piirtää poliittisia rajoja lisäämällä
 ```
         <politicalBoundariesActive>false</politicalBoundariesActive>  
 ```
-asennus.xml-tiedosto. Oletusarvo on "todellinen". Kiitos Raju Devenderille.
-    * Uusi metadata: Sisällä datasets.xml aineiston osalta voit nyt määrittää värin oletusarvon. Bar-osat a dataVariable grafiikoilla ja kartoilla
+sinun setup.xml tiedosto. Oletus on "true." Kiitos Raju Devenderin.
+    * METAATA TAG: Vuonna datasets.xml tiedostolle, voit nyt määrittää oletusmäärä väri A-luokan palkkien osat dataVariable kaavioista ja kartoista,
 ```
         <att name="colorBarNSections">_anInteger_</att>  
 ```
-         (Oletusarvo = 1, joka sanoo ERDDAP™ Päätä päättää) . Nähdään [Väri väri väri väri Bar-asetukset](/docs/server-admin/datasets#color-bar-attributes) .
-    * IMPROVED: Valtion raja-arvo kartoilla oli violetti. (Deep Purple, tunnetuin esittäjä Baby Boomers) . Nyt se on harmaa (kansallisen rajaharmaan ja maaharmaan välissä) .
-    * Vinkki:&lt;Iso19115 File[muokkaa]&lt;Fgdcfile » datasets.xml Aina ei ole käsitelty oikein. Nyt ne ovat. Kiitos BCO-DMO.
+         (oletus=-1, joka sanoo ERDDAP™ päättää) . Katso [väri Palkin asetukset](/docs/server-admin/datasets#color-bar-attributes) .
+    * PARANTAA: valtion rajan väri kartoissa oli violetti (Syvä violetti sinulle Baby Boomers) . Nyt se on harmaa (harmaan ja harmaan maan välillä) .
+    * BUG FIX:&lt;iso19115File&gt; ja&lt;fgdcFile&gt; in datasets.xml niitä ei ole aina käsitelty oikein. Nyt he ovat. Kiitos BCO-DMO:n.
 
 ## Versio 1.78{#version-178} 
- (Lähde: 2017-05-27) 
+ (julkaistu 2017-05-27) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :**   
+*    **Uudet ominaisuudet (käyttäjille) :**   
      
-    *    (Ei kukaan)   
+    *    (ei mitään)   
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:**   
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:**   
      
-    * IMPROVED: Major LoadDatasets Time Series -linjojen järjestys status.html-sivulla on nyt uusin yläreunassa vanhimpaan.
-    * Vinkki: ERDDAP™ Nyt kirjoittaa .nccsv tiedostoja aikamuuttujan kanssa actual\\_range ISO-8601 String -aika. Tämä korjaa virheen EDDTableFromErddap-parsing-infolla etätietoaineistosta ja pikakäynnistystiedostosta kaikille EDDTableFrom...Files-tietokoneille. (Aikaa actual\\_range Väärä on ensimmäinen kerta, kun aineisto latautuu v1.78, mutta oikein sen lataamisen jälkeen, esim. jos liputat tietoaineiston.) 
+    * IMPROVED: Tilan "Major LoadDatasets Time Series" rivien järjestys.html sivu on nyt uusin pohjalla vanhimpaan.
+    * BUG FIX: ERDDAP™ nyt kirjoittaa .nccsv aikamuuttujan tiedostot actual\\_range ISO-8601 String -aikana. Tämä korjaa vikaa EDDTableFromErddap jäsennystiedot etätiedostosta ja quickRestart-tiedoston kaikille DDDTableFrom...Files dataset. (Aika actual\\_range on väärässä ensimmäisen kerran tiedoston kuormia v1.78 mutta oikein sen jälkeen, kun se on ladattu, esim., jos kirjaat tiedoston.) 
 
 ## Versio 1.76{#version-176} 
- (2017-05-12) 
+ (julkaistu 2017-05-12) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :**   
+*    **Uudet ominaisuudet (käyttäjille) :**   
      
-    * Muutos Tomcatissa: pyyntöihin ERDDAP™ Ohjelmistot muut kuin verkkoselaimet (esim. curl R, Matlab , Python , Java ) :
-Aiemmat muutokset Tomcatin versioissa (alemman tason ohjelmisto, joka toimii ERDDAP ) Vuoden 2016 alusta lähtien URL-osoitteen kyselyosassa on oltava yhä enemmän [ **% koodattu** ](/docs/server-admin/datasets#infourl) turvallisuussyistä. Selaimet huolehtivat prosentista koodauksesta. Käyttämällä ERDDAP™ selaimessa ei vaikuta, ellei pyyntö ohjata toiseen. ERDDAP .
-    * Improvisoitu: aiemmin, ERDDAP™ Käsitelty **Hyvät muuttujat** Enemmän kuin allekirjoittamattomat lyhyet kokonaisluvut. Nyt se kohtelee heitä enemmän kuin 1-hahmo-pitkä UCS-2 (Unicode) Lakkoja. Nähdään [Char-dokumentaatio](/docs/server-admin/datasets#char) . Aurelie Briandin ja Argo-projektin ansiosta.
-    * Improvisoitu: aiemmin, ERDDAP™ Pientä tukea tarjotaan **Unicode-hahmot** Alkuperäinen nimi #255 in Strings Sisäisesti, ERDDAP™ 2-tavuiset UCS-2-ketjut (Hahmot 0–65535) Stringsissä. Kun tallennustiedot on kirjoitettu eri tiedostotyyppeihin, ERDDAP™ Kaikkein parhainta on tukea 2-tavuisia ketjuja. Toinen esimerkki on .csv-tiedostot, jotka ERDDAP™ Kirjoita ISO-8859-1 Charset (1-tavuinen kartta) Niin ERDDAP™ Kirjoittaa kaikki hahmot yläpuolella #255 JSON-like \\hh_ syntax. Näytä [String dataa](/docs/server-admin/datasets#string) .
-    * Lähde: In .nc tiedostot kirjoittaneet ERDDAP™ char-muuttujat, joita tulkitaan, koska Stringsillä on ominaisuus
-         **ISO-8859-1**   
-Sisällä .nc tiedostojen lukeminen ERDDAP™ , char-muuttujat, joissa on "Encoding", tulkitaan Stringsiksi määritellyllä kartalla.
-    * Järjestäjä: ERDDAP™ Tukea **JSONin kaltainen backslash-koodi** erikoismerkkejä, kun määrität char- ja String-muuttujat. Näin voit pyytää jotain, kuten &myString="u20ac", kun haluat rivejä tietoja, joissa myString on 20ac on heksadecimal versio koodipisteen Euro-symboli. Verkossa on useita lähteitä, jotka osoittavat Unicode-symbolien koodipistenumerot, esimerkiksi [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) .
-    * Improvisoitu: aiemmin, ERDDAP™ Rajoitettu tuki **Pitkä kokonaisuus** muuttujia. Nyt nyt ERDDAP™ täysin tukee sisäisesti ja tekee parhaansa kirjoittaessaan pitkiä tietoja eri tiedostotyypeille. Nähdään [Pitkä dokumentointi](/docs/server-admin/datasets#long) . Kiitos Irlannin Marine Institute, Craig Risien, Rich Signell, Christopher Wingard ja OOI.
-    * UUTUS: Tuotantotiedostotyyppi griddap ja tabledap : ** .nccsv ** joka tekee NetCDF ASCII, CSV-tiedosto, joka sisältää myös kaikki metatiedot, jotka olisivat vertailukelpoisia. .nc tiedosto. Nähdään [NCCSV Määritelmä](/docs/user/nccsv-1.00) . Kiitos Steve Hankinille.
-    * Uusi: ** orderByClosest filter** Voit määrittää, miten tulostaulukko lajitellaan ja väliaika (esim. 2 tuntia) . Jokaisessa ryhmässä pidetään vain rivit lähimpänä väliaikaa. Esimerkiksi, orderByClosest  (""" stationID Aika, 2 tuntia ») lajittelee stationID aika, mutta palauta vain rivit stationID Missä viimeinen orderBy Kolumni (Aika-aika) Lähin 2 tunnin välein. Tämä on lähin asia tabledap arvojen siirtäminen verkkoon. Tämä vaihtoehto voidaan määritellä minkä tahansa tabledap Datasetin .html-verkkosivu, .graph-verkkosivu ja kaikki URL-osoitteet, joita luot itse. Kiitos Irlannin meri-instituutista ja Ocean Networks Canadasta.
-    * Uusi: ** orderByLimit filter** Voit määrittää, miten tulostaulukko määritetään ja rajanumero (esim. 100) . Jokaisessa ryhmässä pidetään vain ensimmäiset "rajoitukset". Esimerkiksi, orderByMax  (""" stationID 100") lajittelee stationID Palauta vain 100 ensimmäistä riviä jokaiselle stationID . Tämä on samanlainen kuin SQL:n LIMIT-lauseke. Tämä vaihtoehto voidaan määritellä minkä tahansa tabledap Datasetin .html-verkkosivu, .graph-verkkosivu ja kaikki URL-osoitteet, joita luot itse. Kiitos Irlannin meri-instituutista ja Ocean Networks Canadasta.
-    * NEW: Kaksi uutta tiedostotyyppiä ** .jsonlCSV ja .jsonlKVP ** ovat saatavissa pyynnöistä verkkotietoihin, tabulaaritietoaineistoihin ja moniin muihin paikkoihin ERDDAP   (esim. tietoaineistoja koskevat pyynnöt) . Tiedostot ovat JSON Lines -tiedostoja ( [https://jsonlines.org/](https://jsonlines.org/) ) jossa jokaisella viivalla on erillinen JSON-objekti. .jsonlCSV Vain arvot ovat CSV-muodossa. .jsonlKVP Avain: Arvoparit. Jokainen linja seisoo yksin. Rajoja ei ole suljettu suurempaan JSON-sarjaan tai esineeseen. Esimerkiksi, katso [Tämä näytepyyntö](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/pmelTaoDySst.jsonlKVP?longitude%2Clatitude%2Ctime%2Cstation%2Cwmo_platform_code%2CT_25%26time%3E=2015-05-23T12:00:00Z%26time%3C=2015-05-31T12:00:00Z) . Kiitos Damian Smyth, Rob Fuller, Adam Leadbetter ja Irlannin Marine Institute.
-    * NEW: Uusia dokumentteja kuvataan [ **Miten päästä yksityisiin tietoihin ERDDAP™ Kirjoitusten kautta** ](/docs/user/AccessToPrivateDatasets) . Kiitos Lynn DeWitt.
-    * Vähimmäismäärä: Minimi laajuus ** OpenLayers ** Kartta oli kaksi astetta ja nyt neljä pikseliä. Kiitos Rusty Hollemanille.
-    * IMPROVED: Joissakin yleisissä tapauksissa pyynnöt, jotka sisältävät **Säännöllinen ilmaisu** Rajoitukset käsitellään paljon nopeammin.
+    * MUUTOS Tomcatissa: Pyynnöt ERDDAP™ tulevat muista ohjelmista kuin selaimista (esim. curl , R Matlab , Python , Java ) :
+Kuten aiemmissa Tomcat-versioissa (käytössä oleva alatason ohjelmisto ERDDAP ) vuodesta 2016 alkaen enemmän ja enemmän merkkejä kyselyn osa pyynnön URL on oltava [ **% Koodattu** ](/docs/server-admin/datasets#infourl) turvallisuussyistä. Selaimet huolehtivat sinulle koodauksesta. niin käyttää ERDDAP™ selaimessa ei vaikuta, ellei pyyntö ohjataan toiseen ERDDAP .
+    * Aiemmin tapahtunutta: ERDDAP™ hoidettu **char-muuttujat** enemmän kuin signeeraamaton lyhyt kokonaislukuja kuin merkkejä. Nyt se kohtelee heitä enemmän kuin 1-merkkisiä UCS-2 (Unicode) Strings. Katso [char-asiakirjat](/docs/server-admin/datasets#char) . Kiitos Aurelie Briandin ja Argo-projektin.
+    * Aiemmin tapahtunutta: ERDDAP™ tarjota vähän tukea **Unicode- merkit** edellä merkki #255 vuonna Strings. Nyt, sisäisesti, ERDDAP™ tukee täysin 2-tavuista UCS-2:ta (merkit numeroitu 0-65535) Stringsissä. Kun merkkijonon tiedot on kirjoitettu eri tiedostotyypeille, ERDDAP™ tekee parhaansa tukea 2-tavuisia chars. Toinen esimerkki on .csv tiedostoja, jotka ERDDAP™ kirjoittaa ISO-8859-1 -charsetilla (1 tavuinen charset) , joten ERDDAP™ kirjoittaa kaikki merkkien yläpuolella olevat merkit #255 JSON-tyyppisellä \\u_hhh_ syntaksilla. Katso [Merkkijonotiedot](/docs/server-admin/datasets#string) .
+    * PARANTAA: .nc tiedostoja kirjoittanut ERDDAP™ , char muuttujat tulkita Strings on ominaisuus
+         **\\_koodaus=ISO-8859-1**   
+Sisään .nc tiedostot, jotka lukevat ERDDAP™ , char muuttujat, joissa on "\\_Encoding" tulkitaan merkkijonot kanssa määritelty charset.
+    * -Ei. ERDDAP™ tuet **JSONin tapainen backslash-koodaus** erikoismerkkejä, kun määrität rajoitteita hila ja merkkijono muuttujia. Näin voit pyytää jotain, kuten &myString="\\u20ac" kun haluat rivejä tietoja, joissa myString = € koska 20ac on heksadesimaalinen versio koodipisteen Eurosymboli. Useat lähteet verkosta osoittavat Unicode-symbolien koodipisteen numerot, esim. [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) .
+    * Aiemmin tapahtunutta: ERDDAP™ tarjosi rajoitettua tukea **pitkä kokonaisluku** muuttujat. Nyt ERDDAP™ täysin tukee pitkiä sisäisesti ja tekee parhaansa kirjoittaessaan pitkiä tietoja eri tiedostotyypeille. . Katso [pitkä dokumentaatio](/docs/server-admin/datasets#long) . Kiitos Irlannin Marine Institute, Craig Risien, Rich Signell, Christopher Wingard ja OOI.
+    * UUTTA: tulostiedoston tyyppi griddap ja tabledap : ** .nccsv ** , joka tekee NetCDF -kuten ASCII, CSV-tiedosto, joka sisältää myös kaikki metatiedot, jotka olisivat vertailukelpoisia .nc Tiedosto. Katso [NCCSV Eritelmä](/docs/user/nccsv-1.00) . Steve Hankinin ansiosta.
+    * UUTTA: ** orderByClosest suodatin** voit määrittää, miten tulostaulukko lajitellaan ja väliaika (esim. 2 tuntia) . Kunkin lajiryhmän sisällä pidetään vain väliä lähimpänä olevat rivit. Esimerkiksi orderByClosest  (" stationID , aika, 2 tuntia") järjestää stationID ja aika, mutta vain palauttaa rivit kunkin stationID jossa viimeisin orderBy sarake (aika) on lähellä 2 tunnin välein. Tämä on lähin asia. tabledap askelarvot ruudukkoa koskevassa pyynnössä. Tämä vaihtoehto voidaan määritellä millä tahansa tabledap tietokokonaisuuden .html web-sivu, .graph-sivu, ja tahansa URL että luot itse. Kiitos Irlannin Marine Institute ja Ocean Networks Kanada.
+    * UUTTA: ** orderByLimit suodatin** voit määrittää, miten tulostaulukko lajitellaan ja raja-numero (esim., 100) . Kunkin ryhmän sisällä säilytetään vain ensimmäiset "rajarivit." Esimerkiksi orderByMax  (" stationID , 100") järjestää stationID , mutta vain palauttaa ensimmäiset 100 riviä kunkin stationID . Tämä on samanlainen kuin SQL:n rajoituslauseke. Tämä vaihtoehto voidaan määritellä millä tahansa tabledap tietokokonaisuuden .html web-sivu, .graph-sivu, ja tahansa URL että luot itse. Kiitos Irlannin Marine Institute ja Ocean Networks Kanada.
+    * UUTTA: Kaksi uutta vastaustiedostotyyppiä, ** .jsonlCSV sekä .jsonlKVP ** ovat saatavilla pyyntöjä ruudutettuja tietoaineistoja, taulukkotiedostoja ja monia muita paikkoja ERDDAP   (Esimerkiksi tietokokonaisuuksia koskevat tietopyynnöt) . Tiedostot ovat JSON Lines -tiedostoja ( [ https://jsonlines.org/ ](https://jsonlines.org/) ) Jossa jokaisella rivillä on erillinen JSON-objekti. .jsonlCSV vain on arvot CSV-muodossa. .jsonlKVP on avain: Arvoparit. Jokainen linja on omillaan. Viivoja ei ole suljettu suurempaan JSON-järjestelmään tai -objektiin. Esimerkiksi: [tämä otantapyyntö](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/pmelTaoDySst.jsonlKVP?longitude%2Clatitude%2Ctime%2Cstation%2Cwmo_platform_code%2CT_25%26time%3E=2015-05-23T12:00:00Z%26time%3C=2015-05-31T12:00:00Z) . Damian Smythin, Rob Fullerin, Adam Leadbetterin ja Irlannin meriinstituutin ansiosta.
+    * UUSI: Uusia asiakirjoja kuvataan [ **Miten käyttää yksityisiä tietoja ERDDAP™ Skriptien kautta** ](/docs/user/AccessToPrivateDatasets) . Kiitos Lynn DeWittin.
+    * PARANTAA: ** OpenLayers ** kartta oli 2 astetta ja on nyt 4 data pikseliä. Kiitos Rusty Hollemanin.
+    * PARANTAA: Joissakin tavallisissa tapauksissa, joissa **säännöllinen lauseke** Rajoitus käsitellään paljon nopeammin.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:**   
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:**   
      
-    *    **SLOW FIRST STARTUP:** Ensimmäistä kertaa kun aloitat uuden version, se kestää kauan. ERDDAP™ ladata kaikki tietoaineistot, koska sen on uudelleenluettava kaikki lähdetiedot (vaikka vain otsikko verkkoon tallennetuille tiedostoille) . Jos katsot lokeja, saatat nähdä virheviestejä, joissa sanotaan "vanha / tukematon parannettu versio" joidenkin sisäisten tiedostojen - se on ok- ERDDAP™ Tekee sisäisten tiedostojen uudet versiot. Ole kärsivällinen.
-    * Toiminta: ERDDAP™ Käytä nyt uutta **Java** Luokat (JSR 310 tunnetaan) Sen sijaan, että Joda ojentaisi aikoja numeeriseen aikaan. Huomautuksia:
-        * Jos ERDDAP™ Yhtäkkiä on ongelmia, jotka häiritsevät String-aikoja tietylle tietoaineistolle ja siten vain muuntaa useimmat tai kaikki ajat NaN: lle. (puuttuvat arvot) Ongelma on lähes aina päivämäärän kanssa. Aikamuodon merkkijono, joka on määritelty "yksiköt" muuttujan. Uudessa järjestelmässä tarvitaan joskus hieman erilainen päivämäärä.
-        * Jos numeeriset kuukaudet ja päivämäärät eivät ole 0-paddoituja (esim. ”3/7/2016”) Varmista, että formaatissa on vain yksi M ja D (Esimerkkinä "M/d/yyyy" ei "MM/dd/yyyy") .
-        * Muuta murto-osan spesifikaatiota, joka käyttää alennuksia (Esimerkkinä .ss in yyyy-MM-dd T'HHH: mm:ss) pääkaupunkiin S, (esim. yyyy-MM-dd T'Hh:mm:ss.SSS) .
-        *    ERDDAP™ Ei enää tue merkkijonoa Aikataulut, joissa on kaksinumeroinen vuosi (Y) implisiittisen vuosisadan (1900 tai 2000) . Yritykset käyttivät miljardeja dollareita ongelman korjaamiseen 1990-luvun lopulla. Tutkijat eivät saa käyttää kahta lukuvuotta. Korjaa lähdetiedosto (s) muuntamalla 4-numeroiseksi vuodeksi, sitten käyttää yyyy. Aikamuoto.
-        * Voit käyttää yyy tai YYY (jonka ERDDAP™ käänny uuuu) 4 numerovuotta, mukaan lukien negatiiviset vuodet, esim. -4712 (4713 BC) . Kiitos SeaDataNet, Thomas Gardner ja BODC.
-        * Ole hyvä ja jatka Z: n käyttöä päivämäärän kuluessa, jotta saat ERDDAP Aikaa offset (esim. Z, +0200, -08, -0800, -08:30) .
-        *    **Varmista, että käytät Java 1.8.021 tai uudempi.** 
-        * Ohjelmoijat ----- Jos kirjoitat Java Ohjelmat, jotka juoksevat ERDDAP™ Koodi, sinun täytyy poistaa viittaus Joda-aika. luokkareitin parametri.
-    * Uusi: ERDDAP &gt; [Archive Datan työkalu](/docs/server-admin/additional-information#archiveadataset) Nyt voi luoda [ **BagIt-tiedostot** ](https://en.wikipedia.org/wiki/BagIt) . NCEI voi olla standardoitu tässä muodossa. Kiitos Scott Crossille ja John Relphille.
-    * IMPROVED: Linkit erddapin lataamiseen. Sotaa vastaan ERDDAP™ Verkkosivut viittaavat nyt **GitHub** . (Ne ovat julkisia linkkejä, joten sinun ei tarvitse liittyä GitHubiin.) Tämä tarkoittaa paljon nopeampia latauksia (enintään 12 Mb/s verrattuna 1Mb/s) Ja vähän ongelmia latausten kanssa. Kiitos Damian Smyth, Rob Fuller, Adam Leadbetter, Conor Delaney ja Irlannin Marine Institute.
-    * Lähde: The **Tila.html-sivu ja päivittäinen tilaraportti** Lue lisää "Major LoadDatasets Time Series" -osiosta, joka kertoo tilastoista. ERDDAP™ kunkin merkittävän taakan päättymisestä viimeisen 100 suurimman taakan osalta. Kiitos ongelmallisesta RAIDistamme.
-    * Uusi, valinnainen (Mutta suositellaan) EDDTableFromCassandra-tietokannan parametrit: [ ** &lt;Esittelyssä KeyCSV&gt; ** ) (Docs/server-admin/datasets#partitionkeycsvs) . Kiitos Ocean Networks.
-    * EDDTableFromAsciiFiles tukee nyt ** &lt;ColumnSeparator &gt; ** parametri. Jos null tai ", luokka arvaa, kuten ennen, muuten, ensimmäinen merkki käytetään sarakkeen erotin, kun luet tiedostoja. Kiitos Sky Bristol ja Abigail Benson.
-    * Uudet tiedot: uusi tietotyyppi, [ **EDDTableFromNccsvfiilit** ](/docs/server-admin/datasets#eddtablefromnccsvfiles) Voit tehdä tietoaineiston yhdistämällä [NCCSV .csv-tiedostot](/docs/user/nccsv-1.00) . Kiitos Steve Hankinille.
-    * Improvisoitu: **EdDTableFromDap** Nyt käytetään .nccsv Saada tietoa etäältä ERDDAP Paikallinen arkisto tuosta metadata-infosta. Tämä mahdollistaa täyden tuen kaaviolle ja pitkille tietotyypeille sekä Unicodelle. (UCS-2) Lahjoja jaloille ja sormille. Kiitos Rob Fuller ja Irlannin Marine Institute.
-    * EDDTableFromErddap ja EDDGrid Suomi tukee nyt ** &lt;Ohjaus &gt; Väärä&lt;/ Redirect&gt; ** joka kertoo ERDDAP™ Älä koskaan ohjaa pyyntöä kauko-ohjaukseen ERDDAP . Oletusarvo on totta. Tämä on hyödyllistä, kun etäisyys ERDDAP™ Yksityinen on ERDDAP . Kiitos Damian Smyth, Rob Fuller ja Irlannin Marine Institute.
-    * Improvisoitu: ERDDAP™ Nyt saalis **Peruutetut käyttäjäpyynnöt** Ennemmin. Ja ERDDAP™ Nyt suljetaan nopeammin, koska alhainen taso suljetaan nopeammin. Kiitos ongelmallisesta RAIDistamme.
-    *    **GenerateDatasets Xml:** 
-        * Uusi EDDType "ncdump" painaa [ncdump](https://linux.die.net/man/1/ncdump) Kuin erään otsikon tulostus .nc tiedosto. Voit myös tulostaa tiettyjen muuttujien tietoarvot. (tai syöttää "ei mitään" ei tulosta mitään data-arvoja) . Tämä on hyödyllistä, koska ilman ncdump on vaikea tietää, mikä on tiedostossa ja mikä EDDType sinun pitäisi määrittää GenerateDatasetsXml. Craig Risienin, Rich Signellin, Christopher Wingardin ja OI:n ansiosta.
-        * Lähde: SeaData Nettitiedot:
-Tarvittaessa GenerateDatasets Xml tekee nyt erityistä semanttista konversiota etäisellä SPARQL-kyselyllä: jos muuttujan lähdemetadataan sisältyy sd \\parameter \\urn, esim. sd \\parameter \\ t = "SDN:P01:PSLTZ01", GenerateDatasets Xml lisää vastaavan P02-ominaisuuden, esim. sdn \\p02 \\ n = "SDN:P02: PSAL". Jos sinulla on tietoja, jotka käyttävät näitä ominaisuuksia, ja jos ERDDAP &gt;&lt; categoryAttributes &gt; asennuksessa.xml sisältää sd_parameterurnin ja sdn_P02urnin, käyttäjät voivat käyttää ERDDAP™ Luokan hakujärjestelmä tietojen etsimiseksi näiden ominaisuuksien erityisarvoilla. Kiitos BODC ja Alexandra Kokkinaki.
-        * Lähde: GenerateDatasets XML muuttaa monia http:// viittaukset metatietoihin https:// tarvittaessa.
-        * Lähde: GenerateDatasets Xml yrittää nyt arvata Creator -tyypin ja julkaisijan.
-        * IMPROVED: Muuttujien tietotyypit, joita GenerateDatasets ehdottaa XML on nyt vähän parempi. Kiitos Margaret O'Brien, LTER ja EML.
-        * Lähde: GenerateDatasets XML on parempi määritellä&lt;cdm \\da \\ \\ \\ t; ja lisäämällä siihen liittyviä, vaadittuja ominaisuuksia (esim.&lt;cdm \\ \\ \\ \\ t;), jotta voit toimittaa nämä tiedot. Kiitos Rich Signell.
-        * Lähde: In GenerateDatasets Xml, EDDTable Datasets, ehdotus&lt; subsetVariables &gt; on nyt paljon konservatiivisempaa. Kiitos John Kerfootille.
-        * Huomautus: jos datasets.xml Tiedot määrittävät featureType mutta ei cd:tä, featureType Käytetään cd &#123;\\displaystyle \\ \\ \\ \\ \\ \\ \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t t \\ t \\ t t \\ t t t \\ t t t t t t. Kiitos Rich Signell.
-        * FIX: Tuote Dataa XML ehdottaa oikeaa&lt;DataType &gt; Tietomuuttujat, joilla on scale\\_factor , add\\_offset ja/tai allekirjoitetut ominaisuudet.
-    * Huomautus: Milloin ERDDAP™ Avaa A .nc tiedosto, joka on **Lyhyempi** kuin sen pitäisi olla (Esim. se ei ollut täysin kopioitu.) , ERDDAP™ Nyt tiedostoa käsitellään huonosti. aikaisemmin, ERDDAP™ palautti puuttuvat arvot tiedoston puuttuvalle osalle, koska se on oletuskäyttäytyminen netcdf-javalle. ERDDAP™ Käytän nyt ucaria .nc 2.iosp.netcdf3.N3header.disallowFileTruncation = totta; Kiitos häiritsevästä RAIDista ja Christian Ward-Garrisonista.
-    * ISO 19115 -kirjailija käyttää nyt **Kehittäjä: The Type** Jos läsnä.
-    * Improvisoitu: ERDDAP™ käyttää nyt uusinta netcdf-java v4.6.9 -verkkoa, joka voi lukea lisätyyppejä **Netcdf-4-tiedostot** . Craig Risienin, Rich Signellin, Christopher Wingardin ja OI:n ansiosta.
-    * BUG FIX: Vältä ongelmia, jos eri lähdetiedostoilla on erilaiset tietotyypit tietylle muuttujalle. Kiitos Roy Mendelssohn ja Eugene Burger.
-    * Vinkki: **Aikamuotojen muuntaminen** Nyt on parempi suojautua huonoilta aika-arvoilta. Kiitos NDBC:lle.
-    * Vinkki: EDDGrid Lähde: NCFiles Pakkaamaton käsittelee nyt aika-arvoja **"Kuukausia sitten ..." ja "vuosien jälkeen"** oikein (lisäämällä kuukautta tai vuotta, ei lisäämällä esimerkiksi 30 päivää toistuvasti.) . Kiitos Soda3.3.1.
-    * FIX: V1,74, **allekirjoitukset** Tarvitaan toimenpiteitä (esim. http:// ............) Se oli ja pitäisi olla valinnainen.
-    * Vinkki: EDDGrid Lähde: MergeIRFiles.lowGetSourceMetadata () Ei lisätty globaaleja ominaisuuksia. Nyt se tekee.
+    *    **Hidas alku:** Ensimmäinen kerta kun käynnistät tämän uuden version, se kestää kauan ERDDAP™ ladata kaikki tiedostot, koska sen täytyy lukea uudelleen kaikki lähdetiedostot (vaikkakin vain ruudutettujen tiedostojen otsikko) . Jos katsot lokeja, saatat nähdä virheviestejä, joissa lukee "vanha/kannattamaton parannettu versio" joistakin sisäisistä tiedostoista -- se on okei -- ERDDAP™ tekee uudet versiot sisäisistä tiedostoista. Ole kärsivällinen.
+    * TOIMI: ERDDAP™ Nyt käyttää uutta **Java. aika** luokat (Tunnetaan myös nimellä JSR 310) Sen sijaan Joda tulkita String kertaa numeroita kertaa. Huomautukset:
+        * Jos ERDDAP™ Yhtäkkiä on ongelmia jäsentämällä String kertaa tietyn aineiston ja siten vain muuntaa suurimman osan tai kaikki kertaa Nan: n (puuttuvat arvot) , ongelma on lähes aina päivämäärä Aikamuoto merkkijono, jonka määritit muuttujan "yksiköiksi." Uusi järjestelmä tarvitsee joskus hieman erilaista päiväysaikamuotoa.
+        * Jos numeerinen kuukausia ja päiviä päivämäärä Aikajonoja ei ole 0-pehmustettu (esim. "3/7/2016") , Varmista, että muodossa on vain yksi M ja d (esim. "M/d/vvvv," ei "MM/pp/vvvv") .
+        * Muuta kaikki murto-osan sekuntia erittely, joka käyttää pienimuotoista s (esim. yyyy-MM-dd "T'H:mm:ss.ss.") , pääomaksi S:t. (esim. yyyy-MM-dd SSS) .
+        *    ERDDAP™ ei enää tue merkkijonopäivää Aikamuodot, joissa kaksinumeroiset vuodet (Yy) jossa (esim. 1900 tai 2000) . Yritykset käyttivät miljardeja dollareita korjatakseen ongelman 1990-luvun lopulla. Tutkijoiden ei pitäisi käyttää kahta lukuvuotta. Korjaa lähdekooditiedosto (tilu) muuntamalla 4-numeroisiksi vuosiksi, sitten käyttämällä yy päivää Aikamuoto.
+        * Voit käyttää vvvv tai VVVV (joka ERDDAP™ muuntaa uuu) 4-numeroisten vuosien, mukaan lukien negatiiviset vuodet, esim. -4712 (joka on 4713 eKr.) . SeaDataNet, Thomas Gardner ja BODC.
+        * Jatka Z:n käyttöä päivämäärän sisälläTime-muodossa saadaksesi ERDDAP tulkitaksesi aikaeron (esim. Z, +0200, -08, -0800, -08:30) .
+        *    **Varmista, että käytät Java versio 1.8.0\\_21 tai uudempi.** 
+        * Ohjelmoijat -- Jos kirjoitat Java Suorittavat ohjelmat ERDDAP™ Koodi, sinun täytyy poistaa viittaus joda-aika. Purkki luokan polkuparametrissa.
+    * UUTTA: ERDDAP S [ArchiveA Dataset-työkalu](/docs/server-admin/additional-information#archiveadataset) voi nyt luoda [ **BagIt-tiedostot** ](https://en.wikipedia.org/wiki/BagIt) . NCEI voi standardoida tässä muodossa. Kiitos Scott Crossin ja John Relfin.
+    * PARANTAA: Linkit ladata erddap. sota ERDDAP™ www-sivut osoittavat nyt **GitHub** . (Ne ovat julkisia linkkejä, joten sinun ei tarvitse liittyä GitHubiin.) Tämä tarkoittaa paljon nopeampia latauksia (enintään 12Mb/s vs. 1Mb/s) ja muutamia ongelmia lataukset. Damian Smyth, Rob Fuller, Adam Leadbeter, Conor Delaney ja Irlannin Marine Institute.
+    * PARANTAA: **status.html sivu ja päivittäisen tilan raportin sähköposti** nyt sisältää "Major LoadDatasets Time Series" osion, jossa esitetään tilastoja noin ERDDAP™ Kunkin suuren kuorman lopustaDatasetit viimeisestä 100 suuresta kuormastaDataset. Kiitos hankalan ratsuväen.
+    * UUSI: uusi, valinnainen (mutta) EDDtableFromCassandra-aineistojen parametri: [ ** &lt;osioKeyCSV&gt; ** ] (/docs/server-admin/datasets#partitionkeysv) . Kiitos Ocean Networks Canada.
+    * UUTTA: EDDTableFromAsciiFiles tukee nyt ** &lt;sarakeSeparaattori&gt; ** parametri. Jos nolla tai "," luokka arvaa, kuten ennen, Muussa tapauksessa ensimmäinen merkki käytetään sarakkeen erotin lukiessaan tiedostoja. Kiitos Sky Bristolin ja Abigail Bensonin.
+    * Uusi: uuden tietokokonaisuuden tyyppi [ **EDDTableTarkista** ](/docs/server-admin/datasets#eddtablefromnccsvfiles) , voi tehdä aineiston yhdistämällä [NCCSV.csv-tiedostot](/docs/user/nccsv-1.00) . Steve Hankinin ansiosta.
+    * PARANTAA: **EDDTableFromErddap** Nyt käyttää .nccsv saada tietoja etäältä ERDDAP s ja paikallisen arkiston että metatiedot. Tämä mahdollistaa täyden tuen char ja pitkät tietotyypit, ja Unicode (UCS-2) Charset for Charers and Strings. Kiitos Rob Fullerin ja Irlannin meriinstituutin.
+    * PARANTAA: EDDTableFromErddap ja EDDGrid FromErddap nyt tukea ** &lt;uudelleenohjaus&gt;virhe&lt;/uudelleenohjaus&gt; ** joka kertoo ERDDAP™ ei koskaan ohjata pyyntöä kaukosäätimeen ERDDAP . Oletus on totta. Tämä on hyödyllistä, kun kaukosäädin ERDDAP™ on yksityinen ERDDAP . Damian Smyth, Rob Fuller ja Irlannin Marine Institute.
+    * PARANTAA: ERDDAP™ nyt saaliit **peruutetut käyttäjäpyynnöt** Mitä nopeammin. Ja ERDDAP™ Nyt sammuu nopeammin, koska matalat langat sulkeutuvat nopeammin. Kiitos hankalan ratsuväen.
+    *    **Luo tiedostoja Xml:** 
+        * UUSI: Uusi erityinen EDDType "ncdump" tulostaa [ncdump](https://linux.die.net/man/1/ncdump) \\-kuin tuloste otsikon .nc Tiedosto. Voit myös tulostaa tietoarvot tietyille muuttujille (tai kirjoita "ei mitään" tulostettavaksi) . Tämä on hyödyllistä, koska ilman ncdump on vaikea tietää, mitä on tiedostossa ja siten mitä EDDType sinun pitäisi määritellä GenerateDatasetsXml. Kiitos Craig Risienin, Rich Signellin, Christopher Wingardin ja OOI:n.
+        * UUSI: SeaData Nettotiedot:
+Luo tarvittaessa tiedostoja Xml tekee nyt tietyn semanttisen muunnuksen käyttäen etäällä SPARQL-kysely: jos muuttujan lähdemetatiedot sisältävät sdn\\_parameter\\_urn, esim., sdn\\_parameter\\_urn = "SDN:P01::PSLTZZ01," generateDatasetit Xml lisää vastaavan P02-attribuutin, esim. sdn\\_P02\\_urn = "SDN:P02::PSAL." Jos sinulla on tietoja, jotka käyttävät näitä ominaisuuksia, ja jos ERDDAP S&lt; categoryAttributes &gt; setup.xml sisältää sdn\\_parameter\\_urn ja sdn\\_P02\\_urn, käyttäjät voivat käyttää ERDDAP™ Kategoriahakujärjestelmä sellaisten tietoaineistojen etsimiseksi, joissa on näiden ominaisuuksien erityisarvoja. Kiitos BODC:n ja Alexandra Kokkinakin.
+        * PARANTAA: Luoda datasettejä Xml muuttaa nyt monia http:// viitetiedot metatiedoissa, joihin https:// tarvittaessa.
+        * PARANTAA: Luoda datasettejä Xml yrittää nyt arvata luoja\\_tyyppi ja julkaisija\\_tyyppi.
+        * IMPROVED: Muuttujan datatyypit ehdotti GenerateDatasets Xml on nyt hieman parempi. Kiitos Margaret O'Brienin, LTERin ja EML:n.
+        * PARANTAA: Luoda datasettejä Xml on parempi täsmentää&lt;cdm\\_data\\_type&gt; ja lisäämällä siihen liittyvät, vaaditut ominaisuudet (esim.&lt;cdm\\_timeseries\\_variables&gt;), joten voit toimittaa nämä tiedot. Kiitos Rich Signellin.
+        * PARANTAA: Tuottaa tiedot Xml, EDDTable-aineistojen osalta ehdotus&lt; subsetVariables &gt; on nyt paljon konservatiivisempi. John Kerfootin ansiosta.
+        * PARANNETTU: datasets.xml tietokokonaisuuksille featureType mutta ei cdm\\_data\\_tyyppi, featureType käytetään cdm\\_data\\_tyypinä. Kiitos Rich Signellin.
+        * BUG FIX: tuottaa Dataset Xml nyt ehdottaa oikea&lt;datatyyppi&gt; sellaisten tietomuuttujien osalta, joilla on scale\\_factor , add\\_offset ja/tai \\_allekirjoittamattomat ominaisuudet.
+    * PARANTAA: Milloin ERDDAP™ avaa a .nc tiedosto, joka on **lyhyempi** kuin sen pitäisi olla (esim. sitä ei kopioitu kokonaan paikalleen) , ERDDAP™ Hän kohtelee kansiota huonosti. Aiemmin tapahtunutta: ERDDAP™ palautti puuttuvat arvot tahansa puuttuva osa tiedoston, koska se on oletus käyttäytyminen netcdf-java. ERDDAP™ Nyt käyttää ucar .nc 2.iosp.netcdf3.N3header.disallowFileTruncation = true; Kiitos hankalan ratsuväen ja Christian Ward-Garrisonin.
+    * PARANTAA: ISO 19115 kirjailija käyttää nyt **luoja\\_tyyppi** , jos se on läsnä.
+    * PARANTAA: ERDDAP™ nyt käyttää uusinta netcdf-java v4.6.9, joka voi lukea muita tyyppejä **netcdf-4 tiedostoa** . Kiitos Craig Risienin, Rich Signellin, Christopher Wingardin ja OOI:n.
+    * BUG FIX: Vältä ongelmia, jos eri lähdetiedostot ovat eri tietotyyppejä tietyn muuttujan. Roy Mendelssohnin ja Eugene Burgerin ansiosta.
+    * BUG FIX: **Aikamuotomuunnokset** Nyt ne on paremmin suojattu huonoilta aika-arvoilta. Kiitos NDBC:n.
+    * BUG FIX: EDDGrid FromNcFiles Avaa nyt käsittelee aika-arvot **"Kuukausia sen jälkeen ja vuosia sen jälkeen."** oikein (lisäämällä kuukauden tai vuoden, ei raa'asti lisäämällä esimerkiksi, 30 päivää toistuvasti) . Kiitos Soda3.3.1.
+    * Vain v1.74. **tilaukset** vaaditaan toimenpidettä (esim. http:// ...) , joka oli ja pitäisi olla vapaaehtoinen.
+    * BUG FIX: EDDGrid FromMergeIRFiles.lowGetSourceMetadata () Ei lisännyt mitään globaaleja ominaisuuksia. Nyt on.
          
 
 ## Versio 1.74{#version-174} 
- (Lähde: 2016-10-07) 
+ (julkaistu 2016-10-07) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :**   
+*    **Uudet ominaisuudet (käyttäjille) :**   
      
-    * Kun on olemassa luettelo tietoaineistoista (Kaikki tai etsinnästä) Näytetään verkkosivulla, pitkät otsikot näkyvät useilla riveillä. Aiemmin otsikko korvattiin "... Kiitos Margaret O'Brien, LTER ja EML.
+    * Nyt, kun luettelo Datasets (Kaikki tai hausta) Näytetään verkkosivuilla, pitkät otsikot näkyvät useilla riveillä. Aiemmin pitkä otsikko korvattiin nimellä " ...." Kiitos Margaret O'Brienin, LTERin ja EML:n.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:**   
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:**   
      
-    * TO DO: Linux-tietokoneissa, vaihda Apache-aikatauluasetuksia niin, että aikaa vievät käyttäjäpyynnöt eivät aikatauluta. (Se, mitä usein kutsutaan "Proxy" tai "Bad Gateway" -virheeksi.) . Käyttäjänä:
+    * TO: Linux-tietokoneilla, vaihda Apache aikakatkaisuasetukset niin, että aikaa vievät käyttäjän pyynnöt eivät aikakatkaisu (jossa usein näyttää "proxy" tai "Bad Gateway" virhe) . Juurikäyttäjänä:
         
-        1. Muokkaa apassia http d.conf tiedosto (Yleensä /etc / http d/conf/) :
-Muuta olemassa olevaa&lt;Aikataulut &gt; Asetukset (tai lisätä tiedoston lopussa) 3600 (Sekunnit) Oletusarvon sijaan 60 tai 120 sekuntia.
-Muuta olemassa olevaa&lt;ProxyTimeout &gt;asetukset (tai lisätä tiedoston lopussa) 3600 (Sekunnit) Oletusarvon sijaan 60 tai 120 sekuntia.
-        2. Käynnistä Apache: /usr/sbin/apachectl K Graceful (Joskus se on toisessa hakemistossa.) .
+        1. Muokkaa apassia http d.conf-tiedosto (yleensä /etc/ http d/conf/) :
+Muuta nykyistä&lt;Aikakatkaisu&gt; asetus (tai lisää yksi tiedoston loppuun) - 3600 (sekuntia) , sijasta oletus 60 tai 120 sekuntia.
+Muuta nykyistä&lt;ProxyTimeout&gt; asetus (tai lisää yksi tiedoston loppuun) - 3600 (sekuntia) , sijasta oletus 60 tai 120 sekuntia.
+        2. Käynnistä apassi uudelleen: /usr/sbin/apachectl - k suloinen (mutta joskus se on eri hakemistossa) .
         
-Kiitos Thomas Oliverille.
+Kiitos Thomas Oliverin.
          
-    * Uusi: \\[ BigParentDirectory / Kova Lippuhakemisto
-Tämä toimii kuten lippuhakemisto, mutta myös hardFlag-versio poistaa kaikki tallennetut tiedot. Ei ole olemassa URL-osoitteita, jotka asettaisivat kovan lipun. Tätä voidaan käyttää vain laittamalla tiedosto tähän hakemistoon.
-kovaa kovaa Liput ovat erittäin hyödyllisiä, kun teet jotain, joka aiheuttaa muutoksen ERDDAP™ lukee ja tulkitsee lähdetietoja esimerkiksi asentamalla uuden version ERDDAP™ jos olet tehnyt tietyntyyppisiä muutoksia tietoaineiston määritelmään datasets.xml . Näytä [Tämä dokumentti](/docs/server-admin/additional-information#hard-flag) . Kiitos John Kerfootille ja kaikille Argo-ryhmille.
+    * UUTTA: \\[ bigPentDirectory/kova Lippukansio
+Tämä toimii kuten lippuhakemisto, mutta hardFlag-versio poistaa myös kaikki välimuistin tiedot. Ei ole olemassa URL-osoitteita, jotka voisivat asettaa hardFlagin. Tätä voidaan käyttää vain laittamalla tiedosto tuohon hakemistoon.
+kova Liput ovat erittäin hyödyllisiä, kun teet jotain, joka aiheuttaa muutoksen miten ERDDAP™ lukee ja tulkitsee lähdetietoja, esimerkiksi kun asennat uuden version ERDDAP™ tai kun olet tehnyt tietyntyyppisiä muutoksia tietokokonaisuuden määritelmään datasets.xml . Katso [nämä asiakirjat](/docs/server-admin/additional-information#hard-flag) . John Kerfootin ja Argo-ryhmien ansiosta.
          
-    * Alkuperäinen nimi: GenerateDatasets Xml on nyt EDDTableFromEML-vaihtoehto
-tietoaineiston kuvaus ekologisella metadatakielellä (EML) tiedoston lataaminen, siihen liittyvän datatiedoston lataaminen ja sen luominen datasets.xml jotta aineisto voidaan lisätä ERDDAP . On myös EDDTableFromEMLBatch, joka tekee samoin kaikille EML-tiedostoille. Tämä toimii erittäin hyvin, koska EML tekee erinomaisen työn kuvata aineistoa ja koska KNB ja LTER tekevät todellisia tiedostoja saatavilla.
-EML plus ERDDAP™ Se voi olla hyvä yhdistelmä, koska ERDDAP™ Voidaan antaa käyttäjille enemmän suoraa pääsyä KNB- ja LTER-tietoihin ja auttaa näitä hankkeita täyttämään Yhdysvaltain hallituksen. [Julkinen pääsy tutkimustuloksiin (Paar) Vaatimukset](https://nosc.noaa.gov/EDMC/PD.DSP.php) asettamalla tiedot saataville verkkopalvelun kautta.
-Näytä [Tämä dokumentti](/docs/server-admin/EDDTableFromEML) . Kiitos Margaret O'Brien, LTER ja EML.
+    * UUTTA: Luo datasettejä Xml on nyt EDDtableFromEML vaihtoehto
+joka lukee tietokokonaisuuden kuvauksen ekologisen metadatan kielellä (EML) tiedosto, lataa siihen liittyvän tiedoston ja luo palan datasets.xml jotta tietokokonaisuus voidaan lisätä ERDDAP . On myös EDDtableFromEMLBatch, joka tekee saman kaikille EML-tiedostoja hakemistossa. Tämä toimii hyvin, koska EML kuvaa aineistoa erinomaisesti ja koska KNB ja LTER asettavat varsinaiset tiedostot saataville.
+EML + ERDDAP™ Voi olla hyvä yhdistelmä, koska ERDDAP™ KNB: n ja LTER: n tietojen runsaus voitaisiin antaa käyttäjille suoremmin käyttöön ja auttaa näitä hankkeita saavuttamaan Yhdysvaltain hallituksen [Tutkimustulosten julkisuus (PARR) vaatimukset](https://nosc.noaa.gov/EDMC/PD.DSP.php) asettamalla tiedot saataville verkkopalvelun kautta.
+Katso [nämä asiakirjat](/docs/server-admin/EDDTableFromEML) . Kiitos Margaret O'Brienin, LTERin ja EML:n.
          
-    * Alkuperäinen nimi: GenerateDatasets Xml on nyt EDDTableFromInPort-vaihtoehto
-joka lukee tietoaineiston kuvauksen InPort XML -tiedostossa ja yrittää luoda nauhan datasets.xml jotta aineisto voidaan lisätä ERDDAP . Tämä harvoin luo XML:n käyttövalmiiksi datasets.xml Se luo hyvän karkean luonnoksen, joka on hyvä lähtökohta ihmisen muokkaamiselle.
-Olisi hienoa, jos InPort-palvelua käyttävä henkilö dokumentoi tietoaineistonsa myös käyttäisi ERDDAP™ Todellisten tietojen saattaminen saataville ERDDAP Verkkopalvelut ja vastaavat Yhdysvaltain hallituksen ja NOAA &gt; [Julkinen pääsy tutkimustuloksiin (Paar) Vaatimukset](https://www.whitehouse.gov/blog/2013/02/22/expanding-public-access-results-federally-funded-research) asettamalla tiedot saataville verkkopalvelun kautta. Tämä on ratkaisu, jota voidaan käyttää juuri nyt. ( erd.data at noaa.gov On ilo auttaa.)   
-Näytä [Tämä dokumentti](/docs/server-admin/datasets#eddtablefrominport) . Kiitos Evan Howell ja Melanie Abecassis.
+    * UUTTA: Luo datasettejä Xml on nyt EDDtableFromInPort vaihtoehto
+joka lukee tiedoston kuvaus InPort XML-tiedosto ja yrittää luoda pala datasets.xml jotta tietokokonaisuus voidaan lisätä ERDDAP . Tämä harvoin luo käyttövalmis pala XML varten datasets.xml , mutta se luo hyvän karkea luonnos, joka on hyvä lähtökohta editointi ihmisen.
+Olisi hienoa, jos ihmiset, jotka käyttävät InPortia tiedostojensa dokumentoimiseen, käyttäisivät myös ERDDAP™ saattaa todelliset tiedot saataville ERDDAP " web palvelut ja siten täyttävät Yhdysvaltain hallituksen ja NOAA S [Tutkimustulosten julkisuus (PARR) vaatimukset](https://www.whitehouse.gov/blog/2013/02/22/expanding-public-access-results-federally-funded-research) asettamalla tiedot saataville verkkopalvelun kautta. Tätä ratkaisua voitaisiin käyttää juuri nyt. ( erd.data at noaa.gov Autan mielelläni.)   
+Katso [nämä asiakirjat](/docs/server-admin/datasets#eddtablefrominport) . Kiitos Evan Howellin ja Melanie Abecassisin.
          
-    * Improvisoitu: ERDDAP™ Netcdf-java 4.6.
-Aiemmissa versioissa netcdf-java lukee joitakin täyttöarvoja (Ehkä netcdf-4-tiedostoissa) kuin 0. Nyt se lukee osan niistä netcdf-standardin täyttöarvoksi: -127 tavua, -32767 shortseja, -21473647 ints. Unidata Uusi käytös on oikeaa käyttäytymistä. Jos tietoaineistossa oleva muuttuja alkaa näyttää yhtä näistä arvoista, joissa ne näyttivät 0, voit lisätä esimerkiksi,
+    * PARANTAA: ERDDAP™ Nyt käyttää netcdf-java 4.6.
+Aiemmilla versioilla netcdf-java lukee joitakin täyttöarvoja (Ehkä vain netcdf-4 tiedostoja) Kuin 0. Nyt se lukee joitakin niistä netcdf standardin täyttöarvo: -127 tavua, -32767 shortsit, -2147483647 ints. Unidata Sanoo, että uusi käytös on asianmukaista. Jos datakansiossa oleva muuttuja alkaa näyttää yhtä näistä arvoista, joissa se näytti 0:ta, voit lisätä esimerkiksi
 ```
         <att name="\\_FillValue" type="short">-32767</att>  
 ```
-Muuttujien addAttributes kertomaan ERDDAP™ Tätä arvoa kohdellaan kuin missing\\_value /Fill arvoa. Useimmissa tapauksissa se ei tuota toivottua tulosta: 0. Jos näin on, harkitse tiedostojen muokkaamista NCO tai tiedostojen uudelleenkirjoittaminen. Valituksia? Ota yhteyttä Unidata ;)
+muuttujan addAttributes kertoa ERDDAP™ kohdella tätä arvoa missing\\_value /\\_täytä Arvo. Monissa tapauksissa tämä ei kuitenkaan tuota toivottua tulosta: 0. Jos on, harkitse tiedostojen muuttamista NCO Tai kirjoittaa tiedostot uudelleen. Valituksia? Ota yhteyttä Unidata ;-)
          
-    * Lähde: New TopographyDepth
-Kannustan sinua vaihtamaan kaikki tietoaineistot, jotka käyttävät OceanDepth-palettia käyttääkseen uutta TopographyDepth-palettia, joka on kuin Topografia, paitsi värit, jotka on käännetty, jotta se soveltuu syvyysarvoihin. (Positiivinen = alaspäin) Korkeusarvojen sijaan (Positiivinen =) . Suositellut asetukset tälle paletille ovat:
+    * TEHDÄ: Uusi Topography Syvä paletti
+Kehotan teitä vaihtamaan kaikki tiedostot, jotka käyttävät OceanDepth palettia käyttää uutta Topography Syvyyspalettia, joka on kuin Topography, paitsi värit käännetty, niin että se sopii syvyysarvot (positiivinen = alas) , sijasta korkeusarvot (positiivinen=up) . Tämän paletin suositellut asetukset ovat:
 ```
             <att name="colorBarMaximum" type="double">8000.0</att>
             <att name="colorBarMinimum" type="double">-8000.0</att>
             <att name="colorBarPalette">TopographyDepth</att> 
 ```
 
-    * Uusia ideoita: String missing\\_value ja/tai |-arvo
-Jos muuttuja määrittää missing\\_value ja/tai | &gt; &gt; &gt; ERDDAP™ poistaa nämä arvot tiedoista ja korvaa ne tyhjällä merkkijonolla, jotta puuttuvat arvot näkyvät tyhjinä merkkijonoina, kuten muissa aineistoissa. ERDDAP . Kiitos Margaret O'Brien, LTER ja EML.
+    * UUDET PIIRTEET: Merkkijono missing\\_value ja/tai \\_FillValue
+Jos merkkijonomuuttuja määrittelee missing\\_value ja/tai \\_FillValue ERDDAP™ nyt poistaa nämä arvot tiedoista ja korvata ne tyhjällä merkkijonolla, jotta puuttuvat arvot näkyvät tyhjinä jonoina, kuten muidenkin tietoaineistojen ERDDAP . Kiitos Margaret O'Brienin, LTERin ja EML:n.
          
-    * Uusia ideoita: Tukea paikallisiin aikoihin
-Aikaleimamuuttujat, joiden lähdetiedot Stringsistä voivat nyt määrittää aikavyöhykkeen time\\_zone "Armo, joka johtaa ERDDAP™ Paikallis-aika-alueen lähdeajat (Joitakin vakio-aikoja, osa päivänvalon säästöaikaa) sisään Zulu Ajat. Luettelo voimassa olevista aikavyöhykkeiden nimistä on todennäköisesti sama kuin TZ-sarakkeen luettelossa. [Tämä pöytä](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Oletusarvo on " Zulu ". Yhdysvaltain aikavyöhykkeet ovat: US/Hawaii, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, US/Itä. Aikaleimamuuttujat, joissa on numeerisia lähteitä, voit määrittää " time\\_zone "Anteeksi, mutta arvon on oltava" Zulu Tai ”UTC”. Kiitos Margaret O'Brien, LTER ja EML.
+    * UUDET PIIRTEET: Paikallisten aikakausien tuki
+aikaleima muuttujat lähdetietoja Strings voi nyt määrittää aikavyöhykkeen kautta " time\\_zone " ominaisuus, joka johtaa ERDDAP™ paikallisen aika-alueen lähdeajan muuntaminen (Jotkut normaalissa ajassa, jotkut päivänvalossa) sisään Zulu kertaa. Luettelo voimassa olevista aikavyöhykkeiden nimistä on todennäköisesti sama kuin TZ-sarakkeessa [tämä taulukko](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Oletus on " Zulu " Yhdysvaltain yhteiset aikavyöhykkeet ovat: US/Havaiji, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, USA/Itä. Saat aikaleima muuttujia numeerinen lähdetiedot, voit määrittää " time\\_zone " ominaisuus, mutta arvon on oltava " Zulu "tai "UTC." Kiitos Margaret O'Brienin, LTERin ja EML:n.
          
-    * NEW FEATURE: EDDTableFromAsciiFiles tukee nyt erillisiä tiedostoja
-Se on viisaampi erottajan kuvaamisessa. Kiitos Margaret O'Brien, LTER ja EML.
+    * UUTTA: DDDTableFromAsciiFiles tukee nyt puolipiste-erillisiä tiedostoja
+ja on fiksumpi selvittää erotin. Kiitos Margaret O'Brienin, LTERin ja EML:n.
          
-    * Uusia ideoita: Jos latauspisteissä on merkittävä virhe (suuret tai pienet, esimerkiksi kadonneet tai mitättömät datasets.xml Asiakirja) , ERDDAP™ ilmoittaa sen nyt status.html, aivan alla "n Datasets Failed To Load" kuin ERROR: datasets.xml Katso log.txt yksityiskohdista.
+    * UUDET PIIRTEET: Jos latauksessa on merkittävä virheDataseteissa (merkittävä tai vähäinen, esimerkiksi puuttuva tai virheellinen datasets.xml asiakirja) , ERDDAP™ nyt ilmoittaa sen status.html, aivan alla "n Datasets Fained To Load" VIROR: käsittelyn aikana datasets.xml : katso log.txt lisätietoja.
          
-    * Uusia ideoita: ERDDAP™ Etsitään orpoja.
-Milloin ERDDAP™ Suuri kuorma Tiedot, nyt etsitään orpoja (Tietoja, jotka ovat ERDDAP™ Mutta ei sisällä datasets.xml ) . Jos ne löytyvät, ne on lueteltu status.html, aivan alla "n Datasets Failed To Load" ERROR: n Orphan Datasets (Tietoja sisällä ERDDAP™ Mutta ei sisällä datasets.xml ) =...
-Jos haluat poistaa (Lataa) appelsiinista ERDDAP™ Sinun on lisättävä
-        &lt;tiedostotyyppi = "_anyValidType_" datasetID = "_theDatasetID_" Aktiivinen = "väärä"
-että datasets.xml kunnes aineisto on ladattu seuraavan suuren taakan aikana.
+    * UUDET PIIRTEET: ERDDAP™ Etsi orpoja.
+Milloin ERDDAP™ tekee suuren kuorman Datasetit, se etsii nyt orpojen tietoja. (tiedot, jotka ovat ERDDAP™ mutta ei sisällä datasets.xml ) . Jos niitä löytyy, ne on lueteltu status.html:ssä, aivan alla "n Datasetit, joita ei voitu ladata" ERROR: n Orphan Datasetit (tiedot ERDDAP™ mutta ei sisällä datasets.xml ) = ....
+Jos haluat poistaa (pura) orpo ERDDAP™ , sinun täytyy lisätä
+        &lt;Tiedoston tyyppi="_anyValidType_" datasetID ="_theDatasetID_" active="false" /&gt;
+- datasets.xml kunnes tietokokonaisuus puretaan seuraavan suuren kuorman aikanaDatasets.
          
-    * Viisikymppinen: Jos aineistossa on numeerinen aikaleima muuttuja kuin yksiköissä "seconds since 1970-01-01T00:00:00Z" ja sen kanssa&lt;Päivitä EveryNMillis&gt;-järjestelmä aktiivisesti, aikaleimamuuttujan vaihteluväli asetettiin virheellisesti, kun tietoaineisto päivitettiin. Kiitos John Kerfootille.
+    * BUG FIX: Jos aineistossa on numeerinen aikaleimamuuttuja, jossa on muita yksiköitä kuin "seconds since 1970-01-01T00:00:00Z" ja&lt;updateEveryNMillis&gt; järjestelmä aktiivinen, aikaleima muuttujan vaihteluväli asetettiin väärin, kun tietokokonaisuus päivitettiin. John Kerfootin ansiosta.
          
-    * FIX: Jos&lt;Nopea uudelleenkäynnistys oli totta asennus.xml ja pyysit tietoja EDDTableFrom. Tiedostot, joita käytetään&lt;Päivitä EveryNMillis&gt;, ensimmäinen pyyntö tietokantaan epäonnistuisi, mutta myöhemmät pyynnöt onnistuisivat. Ensimmäinen pyyntö ei nyt epäonnistu. Kiitos John Kerfootille.
+    * BUG FIX: Jos&lt;QuickRestart&gt; oli totta setup.xml ja pyysit tietoja EDDtableF alkaen... Käytetyt tiedostot&lt;updateEveryNMillis&gt;, ensimmäinen pyyntö aineistoon epäonnistuisi, mutta myöhemmät pyynnöt onnistuisivat. Ensimmäinen pyyntö ei epäonnistu. John Kerfootin ansiosta.
          
-    * BUG FIX: GenerateDatasetsXml.sh ja .bat eivät toimineet komentorivillä &gt; 9 parametrin kanssa. Nyt he tekevät. Kiitos John Kerfootille.
+    * BUG FIX: GenerateDatasetsXml.sh ja .bat eivät toimineet yli 9 parametrit komentorivillä. Nyt he tietävät. John Kerfootin ansiosta.
          
-    * Viisikymppinen: Uusi EDDTableFromMultidimNcFiles ei poistanut johdonmukaisesti jousia. Nyt se tekee. Tämä koskee erityisesti ARGO-tiedostoja. Kiitos Kevin O'Brien ja Roland Schweitzer.
+    * BUG FIX: Uusi EDDtableFromMultidimNcFiles ei johdonmukaisesti poista jälkitilat jousista. Nyt on. Tämä vaikutti Argo-tiedostoihin. Kevin O'Brienin ja Roland Schweitzerin ansiosta.
          
-    * Vinkki: Kaikki etäyhteys DAP Palvelut aloitetaan nykyaikaisemmalla koodilla. Tämä korjaa "yhteys suljetun" virheen, kun käytät joitakin EDDTableFromErddapin tietoaineistoja. Kiitos Kevin O'Brien.
+    * BUG FIX: Kaikki etäyhteydet DAP Palvelut käynnistetään nyt nykyaikaisemmalla koodilla. Tämä korjaa "kytkentä suljettu" -virheen, kun käytät joitakin EDDtableFromErddap-tiedostoja. Kiitos Kevin O'Brienin.
          
-    * Vinkki: Käsittelyn orderBy ............ () ja erottuva () ovat nyt palanneet tapaan, jolla he olivat ennen viimeaikaisia muutoksia: tietyllä pyynnöllä voi olla useita orderBy ............ () tai erillinen () suodatin; ERDDAP™ hoitaa ne siinä järjestyksessä kuin ne on määritelty. Kiitos David Karugalle.
+    * BUG FIX: Käsittely orderBy ... () ja erillinen () ovat nyt takaisin niin kuin ne olivat ennen viimeaikaisia muutoksia: tietty pyyntö voi olla useita orderBy ... () ja/tai erillinen () suodatin; ERDDAP™ käsittelee ne järjestyksessä ne on määritelty. Kiitos David Karugan.
          
-    * Viisikymppinen: Jos tiedosto on EDDTableFromDatabase ja kysely on [Lähde:CanOrderBy](/docs/server-admin/datasets#sourcecanorderby) ja/tai [Lähde:CanDoDistinct](/docs/server-admin/datasets#sourcecandodistinct) Tämän jälkeen tietokanta voi (Riippuen asetuksista datasets.xml ) osittain tai kokonaan **Vain ensimmäinen**   orderBy . () tai erottuva () . Kiitos David Karugalle.
+    * BUG FIX: Jos tietokokonaisuus on EDDtableFromDatabase ja kysely on [sourceCan OrderBy](/docs/server-admin/datasets#sourcecanorderby) ja/tai [lähdeCanDoDistinct](/docs/server-admin/datasets#sourcecandodistinct) , sitten tietokanta voi (riippuen asetuksista datasets.xml ) osittain tai kokonaan kahva **Ainoastaan ensimmäinen**   orderBy .. () tai erillinen () . Kiitos David Karugan.
          
-    * Viisikymppinen: Viimeaikaiset lisäprosentit aiheuttivat ongelmia joidenkin kyselyiden kanssa. .nc CF-tiedostot, esim. HTTP-tila 500 - Hakuvirhe: muuttuja = asema on lueteltu kahdesti tulosmuuttujaluettelossa. Kiitos Kevin O'Brien.
+    * BUG FIX: Äskettäin ylimääräinen prosentti-koodaus aiheutti ongelmia joitakin kyselyjä .nc CF-tiedostot, esim. "HTTP-tila 500 - Kyselyvirhe: muuttuja=status on lueteltu kahdesti tulosmuuttujaluettelossa." Kiitos Kevin O'Brienin.
          
-    * BUG FIX: EDDTableFromFilesillä oli vaikeuksia ladata tietoaineistoa uudelleen, kun yksi sarakkeista oli todellinen char-sarake. Kiitos Roland Schweitzerille.
+    * BUG FIX: EDDTableFromFiles oli vaikeuksia ladata tiedostoa uudelleen, kun yksi sarakkeista oli todellinen char sarake. Kiitos Roland Schweitzerin.
          
-    * Vinkki: EDDGrid Lähde: NCFiles Pakkaamattomat myös missing\\_value ja •Fill-arvo vakioarvoille, jotta tiedostot, joilla on erilaiset arvot, voidaan koota yhteen. Muutoksen vuoksi, kun olet asentanut tämän uuden version ERDDAP™ Ole hyvä ja aseta yksi [kovaa kovaa Lippu](/docs/server-admin/additional-information#hard-flag) Jokaiselle EDDGrid Lähde: NCFiles Pakkaamattomat tiedot sisälläsi ERDDAP .
+    * BUG FIX: EDDGrid FromNcFiles Irrota nyt muuntaa myös missing\\_value ja \\_FillValue vakioarvoihin, jotta eri arvoilla varustetut tiedostot voidaan yhdistää. Tämän muutoksen vuoksi, kun olet asentanut tämän uuden version ERDDAP™ , ole hyvä ja aseta [kova Lippu](/docs/server-admin/additional-information#hard-flag) kullekin EDDGrid FromNcFiles Pakkaamaton tietoaineisto ERDDAP .
          
-    * IMPROVED: EDDTableFromNcCFiles voi nyt käsitellä tiedostoja, joilla on useita näytteitä. Tietyn aineiston on käytettävä vain muuttujaa, joka käyttää yhtä näytteen ulottuvuuksista. Kiitos Ajay Krishnanille.
+    * PARANTAA: EDDTableFromNcCFFiles voi nyt käsitellä tiedostoja, joissa on useita näyte\\_dimensions. Tietyssä aineistossa saa käyttää ainoastaan muuttujia, joissa käytetään yhtä näytettä\\_mittoja. Kiitos Ajay Krishnanin.
          
-    * EDDTableFrom...Files,&lt;SortFilesBySourceNams Nyt on mahdollista erottaa (Suositeltu) Avaruuden erilliset luettelot muuttuvista lähteistä. Kummassakin tapauksessa yksittäisiä muuttuvia nimiä voidaan ympäröidä kaksoislainoilla, esimerkiksi jos nimessä on sisäinen tila.
+    * EDDTable From...&lt;sortFilesBySourceNames&gt; nyt mahdollistaa pilkun erottamisen (suositellaan) tai avaruuseroteltuja luetteloita muuttuvista lähteistä. Kummassakin tapauksessa yksittäisten muuttujien nimet voidaan ympäröidä kahdella lainauksella, esim. jos nimessä on sisäinen tila.
 
 ## Versio 1.72{#version-172} 
- (Lähde: 2016-05-12) 
+ (julkaistu 2016-05-12) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :** Ei mitään.
+*    **Uudet ominaisuudet (käyttäjille) :** Ei
      
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Uusi EDDTableFromMultidimNcFiles [EDDTableFromMultidimNcFiles Näytä tarkat tiedot](/docs/server-admin/datasets#eddtablefrommultidimncfiles) Uusi vaihtoehto EDDTableFromNcFilesille. Se on suunniteltu käsittelemään tiedostoryhmiä, joissa on useita muuttujia, joilla on yhteiset mitat, esim. var1 \\[ A \\]  \\[ b b b b \\] Var2 \\[ A \\] Var3 \\[ b b b b \\] skalaari. Kiitos Argo Project, Aurélie Briand ja Roland Schweitzer.
-    * Vinkki: ERDDAP™   (FileVisitorDNLS- ja FileVistorSubdir-luokissa) Seuraa symbolisia linkkejä Linuxissa. ERDDAP™ Ei vieläkään seuraa .lnk:tä Windowsissa.
-    * BUG FIX vika esiteltiin 1.70: erillinen + orderBy Yhdessä pyynnössä ei sallittu. Nyt ne ovat taas. Ne eivät ole molemminpuolisesti yksinoikeudellisia tai irtisanottuja. Kiitos David Karugalle.
-    * Muutokseen datasets.xml IP-osoitteiden musta lista:
-IP v4 -osoitteet näyttävät ERDDAP™ neljä erillistä hex-numeroa.
-IP v6 -osoitteet näkyvät kahdeksana erillisenä heksinä.
-Niinpä ERDDAP™ tukee tällä listalla olevia IP-osoitteita ja:* luettelon lopussa estääkseen useita osoitteita.
-    * Improvisoitu: ERDDAP™ NetcdfileWriter kirjoittaa .nc tiedostot poistetun NetcdfileWriteablen sijaan. Tuloksena oleviin tiedostoihin ei pitäisi olla havaittavissa muutosta. Tämä avaa mahdollisuuden tehdä suuria .nc tiedostoja, jotka käyttävät .nc 3 64-bittinen laajennus. Jos haluat/tarvitset sitä, lähetä pyyntö erd.data at noaa.gov .
-    * IMPROVED: Monet etäverkkosivustojen linkit olivat vanhentuneita. He ovat ajan tasalla ja käyttävät https: Sen sijaan http • Aina kun mahdollista.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * UUSI EDDtaulukkoMultidimNc-arkistoista [EDDTableFromMultidimNcFiles](/docs/server-admin/datasets#eddtablefrommultidimncfiles) on uusi vaihtoehto EDDtableFromNcFiles. Se on suunniteltu käsittelemään tiedostoryhmiä, joilla on useita muuttujia, joilla on jaettu ulottuvuus, esim. var1 \\[ a \\]  \\[ b \\] , var2 \\[ a \\] , var3 \\[ b \\] ScalarVar. Kiitos Argo-projektin, Aurélie Briandin ja Roland Schweitzerin.
+    * BUG FIX: ERDDAP™   (FileVisitorDNLS- ja FileVistorSubdir-luokkien kautta) nyt seuraa symbolisia linkkejä Linux. ERDDAP™ Ei vieläkään seuraa .lnk's Windowsissa.
+    * BUG FIX, joka on otettu käyttöön 1.70 kohdassa: erillinen + orderBy ei hyväksytty yhdessä pyynnössä. Nyt ne ovat taas. Ne eivät sulje toisiaan pois/saattavat. Kiitos David Karugan.
+    * MUUTOS datasets.xml IP-osoitteiden musta lista:
+IP v4 osoitteet näyttävät ERDDAP™ 4 jakson erotellut hex numerot.
+IP v6-osoitteet ovat 8 kaksoisolentoa.
+Joten ERDDAP™ nyt tukee paksusuolen IP-osoitteita luettelossa ja:\\* lopussa luettelon estää useita osoitteita.
+    * PARANTAA: ERDDAP™ Nyt käyttää NetcdfFileWriter kirjoittaa .nc tiedostot sijaan deprecated NetcdfFileWriteable. Tuloksena oleviin tiedostoihin ei pitäisi tehdä havaittavaa muutosta. Tämä avaa mahdollisuuden tehdä iso .nc tiedostot, jotka käyttävät .nc 3 64-bittiset laajennukset. Jos haluat tai tarvitset sitä, lähetä pyyntö osoitteeseen erd.data at noaa.gov .
+    * PARANTAA: Monet linkit etäsivustoille olivat vanhentuneita. Nyt ne ovat ajan tasalla ja käyttävät https: Sen sijaan http : aina kun mahdollista.
     * Paljon pieniä muutoksia.
 
 ## Versio 1.70{#version-170} 
- (Lähde: 2016-04-15) 
+ (julkaistu 2016-04-15) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :** Ei mitään.
+*    **Uudet ominaisuudet (käyttäjille) :** Ei
      
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** Alla on useita suositeltuja muutoksia asennus.xml-tiedostossa.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** Alla on useita suositeltuja muutoksia dokumentaation setup.xml tiedosto.
 Tee nämä muutokset nyt.
-30 minuutin työ voi säästää sekaannusta tulevaisuudessa.
-    * Bug fix: Ongelma oli se, että pyynnöt ohjattiin kauko-ohjaukseen. ERDDAP Epäkelvottomalla hahmolla" | Virheviesti. Tämä tapahtui vain Tomcatin viimeisimmissä versioissa. Kiitos Rusty Holleman, Conor Delaney ja Roy Mendelssohn.
-    * Bug fix: ERDDAP™ Käyttää ajantasaista versiota netcdf-javasta (Se on pitkä tarina) joka sisältää NCML:n ajantasaisen tuen, joka korjaa NCML LogicalReducen ongelman, joka ei toimi odotetulla tavalla. Metatietoihin voi tulla pieniä muutoksia, jotka ERDDAP™ Netcdf-javan kautta .nc , .hdf .grib ja .bufr. Kiitos Favio Medrano.
-    * Uusi [EDDTableAggregateRows](/docs/server-admin/datasets#eddtableaggregaterows) Voit tehdä yhdistetyn EDDTable-tietoaineiston kahdesta tai useammasta EDDTable-tietoaineistosta, joilla on samat tietomuuttujat käyttäen samoja yksiköitä. Kiitos Kevin O'Brienille.
-    * Uusia vaihtoehtoja EDDTableFromDatabase ( [Lähde:CanOrderBy](/docs/server-admin/datasets#sourcecanorderby) ja [Lähde:CanDoDistinct](/docs/server-admin/datasets#sourcecandodistinct) ) määrittää, onko ERDDAP™ tietokanta, tai molemmat, käsitellä erottuva ja orderBy   (Kaikki variantit) rajoituksia. Kiitos David Karugalle.
-    * Voit nyt asettaa yksityisen tietoaineiston grafiikat ja metatiedot yleisön saataville uuden kautta.&lt;Grafiikka: Julkinen&lt;/grafiikka &gt; (Docs/server-admin/datasets#graphsaccessibleto Näytä tarkat tiedot) Tag. Kiitos Emanuele Lombardille.
-    * Jos merkkijono siirtyy GenerateDatasetsille Xml tai DasDds ympäröivät kaksinkertaiset lainaukset. (Aivan kuin se olisi JSON) . Kiitos John Kerfoot ja Melanie Abecassis.
-    * GenerateDatasets Xml tukee nyt "oletuksena" saada oletus ja "ei mitään" saada tyhjä jono (Työskentelet tarjousten kanssa tai ilman) . Tämä ratkaisee joitakin ongelmia, jotka liittyvät tyhjien merkkijonojen ohittamiseen.
-    * GenerateDatasetsissa XML, kaikille EDDGrid Files ja EDDTable Files-aineisto, jos näyte FileName, jonka määrität, on " (Tyhjä jousi) , se käyttää viimeinen vastaava tiedostoName hakemistosta + regex + recursive = totta.
-    * Päivitetty: Selainkoodi, jota käytetään GenerateDatasetsXmlin ja DasDdsin tulosten näyttämiseen Linux-tietokoneissa, oli vanhentunut ja antoi omituisen viestin Netscapesta. Nykyaikainen Linux-työkalu: xdg-open. Kiitos Melanie Abecassis.
-    * The allDatasets Datalla on nyt "files" sarake, joka osoittaa /tiedostojen linkin URL-osoitteen (Jos on yksi) aineiston osalta.
-    * Lisää yleistä turvallisuuttasi ERDDAP™ Muuttamalla tomcat-hakemistoon ja BigParentDirectoryan liittyviä oikeuksia:
-         (Alla olevat käskyt ovat Linuxille. Muiden OS:n kohdalla tehdään analogisia muutoksia.) 
-        * Muuta "ryhmä" tomcatiksi, käyttäjänimeksi tai pienen ryhmän nimeksi, joka sisältää tomcatin ja kaikki Tomcatin ylläpitäjät ERDDAP esim.
-chgrp - R_yourUserName_ apache-tomcat-_8.0.23_
-Chgrp - R_your KäyttäjäName BigParentDirectory
-        * Muuta lupia niin, että Tomcat ja ryhmä ovat lukeneet, kirjoittaneet, toteuttaneet etuoikeuksia.
-chmod - R ug +rwx apache-tomcat-_8.0.23_
-chmod - R ug +rwx _bigParentDirectory_
-        * Poista "muut" käyttäjän lukemis-, kirjoitus- tai suoritusoikeudet:
+30 minuutin työ voi säästää tunteja hämmennystä tulevaisuudessa.
+    * Virheen korjaaminen: Ongelmana oli se, että pyynnöt ohjattiin kauko-ohjaamoon. ERDDAP epäonnistui virheellinen merkki ' | Virheviesti. Tämä tapahtui vain Tomcatin tuoreilla versioilla. Kiitos Rusty Hollemanin, Conor Delaneyn ja Roy Mendelssohnin.
+    * Virheen korjaaminen: ERDDAP™ Nyt käyttää ajan tasalla versio netcdf-java (Se on pitkä tarina.) joka sisältää ajantasaista tukea NcML, joka korjaa ongelman NcML LogicalReduce ei toimi odotetulla tavalla. Metatiedoissa voi olla joitakin pieniä muutoksia, jotka ERDDAP™ lukee kautta netcdf-jaava alkaen .nc , .hdf , .grib, ja .bufr tiedostoja. Kiitos Favio Medranon.
+    * Uusi [EDDtableAggregateRows](/docs/server-admin/datasets#eddtableaggregaterows) Voit tehdä yhdistetyn EDDTable-aineiston kahdesta tai useammasta EDDTable-aineistosta, joissa on samat tietomuuttujat samoja yksiköitä käyttäen. Kiitos Kevin O'Brienille.
+    * Uusia vaihtoehtoja EDDtableFromDatabase ( [sourceCan OrderBy](/docs/server-admin/datasets#sourcecanorderby) sekä [lähdeCanDoDistinct](/docs/server-admin/datasets#sourcecandodistinct) ) Määrittele, ERDDAP™ , tietokanta, tai molemmat, käsitellä erillisiä ja orderBy   (ja kaikki vaihtoehdot) rajoitukset. Kiitos David Karugan.
+    * Voit nyt saattaa yksityisen aineiston kaaviot ja metatiedot yleisön saataville uuden [&lt;graafitKäytettävissä&gt;julkiselle&lt;/graphsAccessible to &gt;] (/docs/server-admin/datasets#graphs accessed to) Tag. Kiitos Emanuele Lombardin.
+    * Nyt, jos merkkijono kulkee GeneDatasets Xml tai DasDds ympäröi kaksinkertainen lainausmerkkejä, se on noteeraamaton (Kuin se olisi JSONin merkkijono.) . John Kerfootin ja Melanie Abecassisin ansiosta.
+    * Luo tiedostoja Xml nyt tukee "oletus" saada oletus ja "ei mitään" saada tyhjä merkkijono (ne toimivat lainausmerkeillä tai ilman niitä) . Tämä ratkaisee joitakin ongelmia, jotka liittyvät kulkee tyhjiä kieliä.
+    * Nyt, GenerateDatasets Xml, kaikille EDDGrid Kansiosta ja EDDTablesta Tietoaineistoista, jos näyte Määrittelemäsi tiedostonimi on "" (tyhjä merkkijono) , se käyttää viimeisin täsmäävä tiedostoNimi hakemistosta + regex + rekursiivinen=true.
+    * Päivitetty: NäyttöInBrowser koodi, jota käytetään näyttämään tulokset GenerateDatasetsXml ja DasDds Linux tietokoneet oli vanhentunut ja antoi outoa viestiä Netscape. Tämä käyttää modernia Linux-työkalua: xdg-open. Kiitos Melanie Abecassisin.
+    * • allDatasets Tiedosto on nyt "files" sarake, joka ilmoittaa linkin / tiedostojen perus URL-osoitteen (jos) tietoaineistosta.
+    * Parannetaan yleistä turvallisuutta ERDDAP™ muuttamalla tomcat-hakemistoon ja isoon ParentDirectoryyn liittyviä oikeuksia:
+         (Alla olevat komennot ovat Linuxille. Muiden käyttöjärjestelmien osalta on tehtävä vastaavia muutoksia.) 
+        * Muuta "ryhmäksi" tomcat, käyttäjätunnuksesi tai pienen ryhmän nimi, johon kuuluu tomcat ja kaikki Tomcat/ ERDDAP , esimerkiksi
+chgrp -R _ yourUserName_ apache-tomcat-_8.0.23_
+chgrp - R _oma Käyttäjänimi bigPentDirectory_
+        * Muuta oikeuksia niin, että tomcat ja ryhmä ovat lukeneet, kirjoittaneet, suorittaneet oikeuksia esim.
+chmod - R ug+rwx apache-tomcat-_8.0.23_
+chmod -R ug+rwx _isoParentDirectory_
+        * Poista "toisen" käyttäjän oikeudet lukea, kirjoittaa tai suorittaa:
 chmod - R o-rwx apache-tomcat-_8.0.23_
-chmod - R o-rwx_bigParentDirectory_
-Tämä on tärkeää, koska se estää muita käyttäjiä lukemasta mahdollisesti arkaluonteisia tietoja. ERDDAP™ tiedostojen, lokitiedostojen ja tiedostojen asentaminen yksityisistä tietoaineistoista.
-    * Tunnistus-/login-järjestelmä on uusittu. Kiitos Thomas Gardnerille, Emanuele Lombardille ja Yhdysvaltain uudelle hallitukselle. [HTTPS-standardi](https://home.dotgov.gov/management/preloading/dotgovhttps/) .
-        * Autentikointi = avoin vaihtoehto poistettiin. Se oli vanhentunutta.
-        * Uusi, suositeltu, [Todentaminen = Google](/docs/server-admin/additional-information#google) Vaihtoehtoja käytetään Google allekirjoittaa (Lähde: OAuth 2.0) sallia kaikille, joilla on Googlen sähköpostitili (mukaan lukien Google hallinnoi tilejä kuten @noaa.gov ) Kirjaudu sisään.
-        * Uusi, [Autentikointi = sähköposti](/docs/server-admin/additional-information#email) Vaihtoehtona on varmuuskopiointi = google. Käyttäjät, joilla on&lt;Käyttäjä &gt; Tag in datasets.xml Kirjaudu sisään lähettämällä heille sähköpostia, jossa on erityinen linkki.
-        * Asennuksessa.xml, vaihda kuvaus&lt;Todentaminen &gt; olla
+chmod -R o-rwx _bigParentDirectory _
+Tämä on tärkeää, koska se estää muita käyttäjiä lukemasta mahdollisesti arkaluonteisia tietoja ERDDAP™ asettaa tiedostoja, lokitiedostoja ja tiedostoja, joissa on tietoa yksityisistä tiedostoista.
+    * Tunnistautumis-/login-järjestelmä uusittiin. Kiitos Thomas Gardnerin, Emanuele Lombardin ja Yhdysvaltain hallituksen uuden [Vain HTTPS-standardi](https://home.dotgov.gov/management/preloading/dotgovhttps/) .
+        * Autentikointi=peninkulmainen vaihtoehto poistettiin. Se oli vanhanaikaista.
+        * Uusi, suositeltava [tunnistautuminen = google](/docs/server-admin/additional-information#google) option käyttö Google- kirjaudu sisään (Perustuu OAuth 2.0:een) sallia kenen tahansa Googlen sähköpostitilin (mukaan lukien Google hallinnoi tilejä kuten @noaa.gov ) Kirjautua sisään.
+        * Uusi. [tunnistautuminen=sähköposti](/docs/server-admin/additional-information#email) vaihtoehto on varmuuskopiointi autentikointi=google. Se mahdollistaa käyttäjille&lt;käyttäjä&gt; tag in datasets.xml kirjautua sisään lähettämällä heille sähköpostia, jossa on erityinen linkki.
+        * In the setup.xml, ole hyvä ja muuta kuvaus&lt;todennus&gt; on
 ```
             <!-- If you want to restrict access to some datasets, 
             you need to specify the method used for logging on (authentication).
@@ -1567,7 +1582,7 @@ Tämä on tärkeää, koska se estää muita käyttäjiä lukemasta mahdollisest
             -->
 ```
 
-        * Asennuksessa.xml, lisää tämä alapuolelle&lt;Todentaminen &gt; Tag
+        * Lisää tämä setup.xml alla&lt;todentaminen&gt; tunniste
 ```
             <!-- If authentication=google, you must supply your Google Client ID. 
             See
@@ -1583,10 +1598,10 @@ Tämä on tärkeää, koska se estää muita käyttäjiä lukemasta mahdollisest
             <googleClientID></googleClientID>
 ```
 
-        * Käyttäjät, jotka eivät ole kirjautuneet sisään, voivat käyttää http tai tai https URL-osoitteet (jos olet asentanut&lt;BaseHttpsUrl&gt; in your setup.xml. Kiitos Yhdysvaltojen uudesta hallituksesta [HTTPS-standardi](https://https.cio.gov/) .
-        * Voit kannustaa kaikkia käyttäjiä käyttämään https   (Ei ei ei http ) asettamalla&lt;&gt; &gt; olla https URL. pakottaa käyttäjät käyttämään vain https Sinun on myös tehtävä muutoksia Apache/Tomcat-asetteluun estääksesi ei- https pääsy. Kiitos Yhdysvaltojen uudesta hallituksesta [HTTPS-standardi](https://https.cio.gov/) .
+        * Nyt käyttäjät, jotka eivät ole kirjautuneet sisään voivat käyttää http tai https URL-osoitteet (jos olet perustanut&lt;baseHtpsUrl&gt; in your setup.xml). Kiitos Yhdysvaltain uuden hallituksen [Vain HTTPS-standardi](https://https.cio.gov/) .
+        * Nyt voit kannustaa kaikkia käyttäjiä käyttämään https   (ei http ) asetus&lt;baseUrl&gt; olla https URL. Vain käyttäjien pakottaminen https , sinun täytyy myös tehdä muutoksia apache / Tomcat asetukset estää ei-- https Pääsy. Kiitos Yhdysvaltain uuden hallituksen [Vain HTTPS-standardi](https://https.cio.gov/) .
             
-Asennuksessa.xml, vaihda kuvaus&lt;&gt; &gt; olla
+In the setup.xml, ole hyvä ja muuta kuvaus&lt;baseUrl&gt; on
 ```
             <!-- baseUrl is the start of the public URL, to which "/erddap" 
             is appended. For example:
@@ -1602,7 +1617,7 @@ Asennuksessa.xml, vaihda kuvaus&lt;&gt; &gt; olla
             -->
 ```
 
-        * Vaihtoehdot&lt;salasana » muuttunut. Asennuksessa.xml, vaihda kuvaus&lt;salasana &gt; olla
+        * Vaihtoehdot&lt;Salasana Koodaus&gt; Muuttunut. In the setup.xml, ole hyvä ja muuta kuvaus&lt;salasanaEncoding&gt; to be
 ```
             <!-- For "custom" authentication, this specifies how you have 
             stored passwords in the roles tags in datasets.xml.
@@ -1618,7 +1633,7 @@ Asennuksessa.xml, vaihda kuvaus&lt;&gt; &gt; olla
             --> 
 ```
 
-        * Asennuksessa.xml, vaihda kuvaus&lt;Spotify &gt; Olla
+        * In the setup.xml, ole hyvä ja muuta kuvaus&lt;baseHtpsUrl&gt; on
 ```
             <!-- This is a variant of <baseUrl> which is used when 
             authentication is active and the user is logged in.
@@ -1639,9 +1654,9 @@ Asennuksessa.xml, vaihda kuvaus&lt;&gt; &gt; olla
             --> 
 ```
 
-        * Nyt, jos luetteloPrivateDatasets=true in setup.xml, on vielä vähemmän tietoa aineistoista, joihin käyttäjällä ei ole pääsyä.
-    * Varsinkin silloin, kun olet alunperin perustamassa ERDDAP Nyt voit kertoa ERDDAP™ Älä yritä tilata etäisyyttä ERDDAP™ Dataa. Kiitos Filipe Rocha Freire.
-Asennuksessa.xml, juuri ennen&lt;FontFamily &gt; Lisää
+        * Nyt, jos listaPrivateDatasets=true in setup.xml, vielä vähemmän tietoa näytetään tietoaineistoista, joihin käyttäjällä ei ole pääsyä.
+    * Nyt, varsinkin kun olet aluksi perustaa oman ERDDAP , voit nyt kertoa ERDDAP™ ei yritä tilata etä ERDDAP™ tiedot. Kiitos Filipen, Rocha Freiren.
+Sinun setup.xml, juuri ennen&lt;fontFamily&gt;, lisää
 ```
         <!-- Normally, if you have a EDDGridFromErddap or EDDTableFromErddap 
         dataset in your datasets.xml, it will try to subscribe to the remote 
@@ -1659,468 +1674,468 @@ Asennuksessa.xml, juuri ennen&lt;FontFamily &gt; Lisää
         <subscribeToRemoteErddapDataset>true</subscribeToRemoteErddapDataset>
 ```
 
-    * asennuksessa.xml, yllä olevissa ohjeissa&lt;Sähköpostiosoite &gt;, lisää:
-Jos mahdollista, aseta se turvallisen yhteyden käyttöön. (SSL / TLS) sähköpostipalvelimeen.
-Jos asennus ei käytä turvallista yhteyttä sähköpostipalvelimeen, tee muutokset sen tekemiseksi.
-    * Sisälläsi datasets.xml Lisää tämä linkki kuvaukseen&lt;PostBlacklist &gt; In Your datasets.xml :
-Voit käyttää nimeä "\\*"Koko verkkotunnus, esim.\\*@example.com.
-    * Koska kirjautuminen on muuttunut v1.66, lokitiedosto ei ole koskaan ajan tasalla. On aina viestejä tai viestejä, jotka odottavat kirjautumista lokitiedostoon. Voit tehdä sen ajan tasalla (hetkeksi) katsomalla sinun ERDDAP Tilan verkkosivuillahttp://_your.domain.org_/erddap/status.html.
+    * Setup.xml, alla olevissa ohjeissa&lt;Sähköpostiosoite&gt;, ole hyvä ja lisää:
+Jos mahdollista, aseta tämä turvallisen yhteyden käyttöön (SSL / TLS) sähköpostipalvelimelle.
+Jos asetukset eivät käytä suojattua yhteyttä sähköpostipalvelimeen, tee muutokset tehdäksesi niin.
+    * • datasets.xml , lisää tämä rivi kuvauksen&lt;tilausSähköpostiMusta lista&gt; datasets.xml :
+Voit käyttää nimeä "\\*" mustalle listalle koko verkkotunnus, esim.\\*@example.com .
+    * Koska muutos kirjautumisjärjestelmään v1.66, lokitiedosto ei ole koskaan ajan tasalla. Lokitiedostoon kirjoitetaan aina viestejä tai osia viesteistä. Nyt voit tehdä siitä ajan tasalla (hetkeksi) katsomalla ERDDAP Tilan verkkosivu http://_your.domain.org_/erddap/status.html .
     * HashDigest...
-    * Pieni muutos (Kirjoittanut String2.canonical) Tämä auttaa pitämään asiat liikkeessä nopeasti, kun ERDDAP™ Se on erittäin kiireinen ja käsittelee myös paljon dataa.
-    * vahvasti Suositus: Lopeta käyttö&lt;ContublicSourceUrl &gt; Sisällä datasets.xml IP-numeron muuntaminen tietoaineistossa&lt; sourceUrl &gt; (esim.http://192.168.#.#/) Domainin nimi (esim. http My.domain.org/) . Tästä eteenpäin uusia tilauksiahttp://localhost,http://127.0.0.1jahttp://192.168.#.#URL-osoitteita ei sallita turvallisuussyistä. Käytä aina yleistä verkkotunnusta.&lt; sourceUrl &gt; Tag (Tarvittaessa DNS-ongelmat) Voit käyttää [/etc / hosts pöytä palvelimellasi](https://linux.die.net/man/5/hosts) ratkaista ongelma muuntamalla paikalliset verkkotunnukset IP-numeroiksi ilman DNS-palvelinta. Voit testata, jos tietty verkkotunnus saadaan kunnolla ratkaistua käyttämällä
-_some.domain.name_
-    * IngeneratDatasets.xml, for etätiedot (Esimerkkinä kolme palvelinta) automaattisesti luotu datasetID Ne ovat muuttumattomia useimmille verkkotunnuksille. Muutama verkkotunnus, ensimmäinen osa (a. Nimi) automaattisesti tuotettu datasetID tulee olemaan vähän erilainen. Nimillä, joilla oli yksi osa, on nyt kaksi osaa. Esimerkiksi tietoaineistothttp://oos.soest.hawaii.eduAiemmin johti datasetID Havaijilla aloitettu, mutta nyt datasetID Alkuperäisnimi Hawaiii's Theest. Jos tämä aiheuttaa ongelmia sinulle, lähetä minulle sähköpostia. Siellä voi olla työpaikka.
-    * Cassandra-kuljettaja päivitettiin cassandra-ohjain-core-3.0.0.jariin, joten Cassandra v3. EDDTableFromCassandra ei hyödynnä Cassandrassa uusia ominaisuuksia. v3. Cassandra-indeksit voivat olla monimutkaisempia, mutta ERDDAP™ käyttää edelleen Cassandra v2 -indeksimallia, joka olettaa, että indeksoitu sarake voidaan suoraan kyseenalaistaa. '=' rajoituksia. GenerateDatasets EDDTableFromCassandra ei enää havaitse sarakkeita indekseillä; jos indeksi on yksinkertainen, se on määritettävä. datasets.xml käsin. Jos tarvitset tukea monimutkaisempiin indekseihin tai muihin uusiin ominaisuuksiin, pyydämme sähköpostia. erd.data at noaa.gov .
-&#33;&#33;&#33; Jos käytät Cassandra 2.x:ää, jatka käyttöä. ERDDAP™ V1.68 kunnes päivität Cassandra 3.x:n.
-    * Jars ja Classpath - Lähes kaikki kolmannen osapuolen .jar-tiedostot päivitettiin uusimpiin versioihinsa.
-        * slf4j.jar on lisätty luokkaan /lib.
-        * Joo. Jar ja tsik. Poistettiin libistä ja luokasta.
-        * Jos saat virheilmoituksia luokkista, joita ei löydy, kun kokoat tai käytät ERDDAP™ tai yksi sen työkaluista, vertaa komentolinjan luokkapolkua ERDDAP &gt; [Nykyinen luokka](/docs/contributing/programmer-guide#development-environment) Selvitä, mitä .jars on kadonnut luokkatiestäsi.
+    * Pieni muutos (String2. kanoninen) että pitäisi auttaa pitämään asiat liikkeessä nopeasti kun ERDDAP™ on erittäin kiireinen ja myös paremmin käsitellä erittäin suuri määrä tietoja.
+    * Vahvasti Suositeltava: lopeta käyttö&lt;MuuntaaPublicSourceUrl&gt; in datasets.xml muuntaa IP-numeron tietokokonaisuuden&lt; sourceUrl &gt; (esim. http://192.168.#.#/ ) verkkotunnukseen (esim. http :my.domain.org/) . Tästä lähtien uudet tilaukset http://localhost , http://127.0.0.1 ja http://192.168.#.# URLS ei ole sallittu turvallisuussyistä. Joten käytä aina julkista verkkotunnusta&lt; sourceUrl &gt; tag (tarvittaessa DNS-ongelmien vuoksi) , voit käyttää [/etc/host-pöytä palvelimellasi](https://linux.die.net/man/5/hosts) ratkaista ongelma muuntamalla paikalliset verkkotunnukset IP-numeroita ilman DNS-palvelimen. Voit testata, jos tietty verkkotunnus saadaan kunnolla ratkaistua käyttämällä
+ping _some.domain.name_
+    * TuodaDatasets.xml, etätiedostoja (esim. THREDDS-palvelimelta) , automaattisesti luotu datasetID Useimmilla aloilla ne eivät muutu. Muutamilla aloilla ensimmäinen osa (eli nimi) automaattisesti luotu datasetID Se on vähän erilainen. Etenkin nimillä, joilla oli yksi osa, on nyt todennäköisemmin kaksi osaa. Esimerkiksi tiedot http://oos.soest.hawaii.edu aiemmin datasetID s joka alkoi Havaijilla\\_, mutta nyt johtaa datasetID Se alkaa Havaijilla. Jos tämä aiheuttaa ongelmia, lähetä sähköpostia. Voi olla jokin keino.
+    * Cassandra-kuljettaja päivitettiin Cassandra-driver-core-30,0.jar ja siten Cassandra v3. EDDtableFromCassandra ei hyödynnä uusia ominaisuuksia Cassandra v3. Indexes Cassandra voi nyt olla monimutkaisempi, mutta ERDDAP™ käyttää edelleen Cassandra v2-indeksimallia, jossa oletetaan, että indeksoitu sarake voidaan suoraan kysyä '=' rajoitukset. Luo tiedostoja Xml EDDtableFromCassandra ei enää havaitse sarakkeita indeksit; jos indeksi on yksinkertainen, sinun täytyy täsmentää se datasets.xml käsin. Jos tarvitset tukea monimutkaisempiin hakemistoihin tai muihin uusiin ominaisuuksiin, lähetä sähköpostia erd.data at noaa.gov .
+&#33; Jos käytät edelleen Cassandra 2.x -valmistetta, jatka käyttöä ERDDAP™ v1.68 kunnes päivität Cassandra 3.x.
+    * Jars ja Classpath -- Lähes kaikki mukana kolmannen osapuolen .jar tiedostot päivitettiin niiden uusimpiin versioihin.
+        * Slf4j.jar lisättiin /lib ja luokkapolku.
+        * Joid. Purkki ja tsik. Purkki poistettiin /lib ja luokkapolku.
+        * Jos saat virheviestejä luokista, joita ei löydy koottaessa tai suoritettaessa ERDDAP™ tai jokin sen työkaluista, vertaa komentorivin luokkapolku ERDDAP S [nykyinen luokkapolku](/docs/contributing/programmer-guide#development-environment) Selvittää, ketkä ovat kateissa luokkapolultasi.
 
 ## Versio 1.68{#version-168} 
- (Lähde: 2016-02-08) 
+ (julkaistu 2016-02-08) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :** Ei mitään.
+*    **Uudet ominaisuudet (käyttäjille) :** Ei
      
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    *    [ EDDGrid FromFiles Aggregation, tiedostonimi tai globaali metatieto](/docs/server-admin/datasets#aggregation-via-file-names-or-global-metadata) -----
-Kaikki variaatiot EDDGrid FromFiles voi nyt koota tiedostoryhmän lisäämällä uuden vasemman ulottuvuuden, yleensä ajan, joka perustuu kunkin tiedostonimen arvoon tai kunkin tiedoston arvoon.
-    * IMPROVED: Olemme aiemmin ehdottaneet, että haluat luoda EDDGrid Erddap-tietokanta omassa datasets.xml Tämä viittaus ja uudelleenpalvelin jplMU RSS T-tietokanta meidän ERDDAP . Koska aineistosta on nyt olemassa uusi versio, tämä tietoaineisto poistetaan. Jos sinulla on nämä tiedot sisälläsi ERDDAP™ Lisää tämä uusi tietoaineisto
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    *    [ EDDGrid Tiedostoista Kokoaminen tiedostonimien tai maailmanlaajuisten metatietojen avulla](/docs/server-admin/datasets#aggregation-via-file-names-or-global-metadata) --
+Kaikki muutokset EDDGrid FromFiles voi nyt yhdistää joukon tiedostoja lisäämällä uuden vasemmanpuoleimman ulottuvuuden, yleensä ajan, joka perustuu arvo johdettu kustakin tiedostonimestä tai arvo maailmanlaajuisen ominaisuuden, joka on kussakin tiedostossa.
+    * PARANTAA: Olemme aiemmin ehdottaneet, että haluat luoda EDDGrid Erddapin aineistosta datasets.xml joka viittasi ja served jplMU RSS T-aineisto ERDDAP . Koska aineistosta on nyt uudempi versio, se tietokokonaisuus on nyt vanhentunut. Joten jos sinulla on se tietoaineisto ERDDAP™ , lisää tämä uusi tietokokonaisuus
 ```
         <dataset type="EDDGridFromErddap" datasetID="jplMURSST41" active="true">  
           <!-- Multi-scale Ultra-high Resolution (MUR) SST analysis fv04.1, Global, 0.011 Degree, Daily -->  
           <sourceUrl>https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplMURSST41</sourceUrl>  
         </dataset>  
 ```
-Jos haluat poistaa vanhan jplMU:n RSS T-tietokanta sinun ERDDAP™   (Se on sinun valintasi) Vaihda sen aktiivinen asetus "todellisuudesta" "vääriin".
-    * Bug fix: Tarkista BigParentDirectory, jonka olet määrittänyt asetuksessa.xml. Jos et laittaisi laukausta lopussa&lt;BigParentDirectory &gt; Nimi ERDDAP™ Hän on luonut useita hakemistoja lisäämällä sanoja suoraan nimeen, jonka olet määrittänyt sen sijaan, että luot aliohjeita. versio 1.68, ERDDAP™ Lisää hakemiston nimen loppuun, jos et määritä sitä. Joten jos et ole aiemmin määrittänyt laukausta lopussa, kun olet asentanut ERDDAP™ 1.68 Sinun on siirrettävä ja nimettävä nämä hakemistot uudelleen **jälkeen** Suljit vanhan ERDDAP™ ja **Ennen ennen** Aloitat uuden ERDDAP . Esimerkiksi, jos olet virheellisesti määrittänyt BigParentDirectory / Home/erdapBPD (Ei traileria) ja ERDDAP™ virheellisesti luotuja hakemistoja, kuten
-Hotellit/erddapBPDcache
-Home / ErddapBPDcopy
-Home / ErddapBDdataset
-Hotellit/erdapBPDflag
-Home/erdapBPDlogs
-Hotellit/erdapBPDlucene
-ja tiedosto nimeltä/home/erdapBPDsubscriptionsV1.txt,
-Sitten sinun on siirryttävä ja nimettävä ne uudelleen.
-Home/erddapBPD/Cache
-/ Home/erddapBPD/copy/
-Home/erddapBPD/dataset
-Home/erddapBPD/flag
-Home/erdapBPD/logs Näytä tarkat tiedot
-Home/erddapBPD/lucene
-/ Home/erddapBPD/subscriptionsV1.txt
-    * Bug fix: Sisällä oli bugeja EDDGrid LonPM180 ERDDAP™ v1.66, joka tapahtui, kun lapsitiedot EDDGrid Lähde: Erddap
-    * Bug fix: Sisällä oli bugi EDDGrid Files ja EDDTable Files in ERDDAP™ V1.66 aiheutti&lt;Päivitä EveryNMillis&gt;, jotta tietoaineisto ladataan uudelleenkäynnistyksen jälkeen.
-    * Bug fix / Uudet ominaisuudet: Jos lapsitietokanta sisältää EDDGrid Aggregateexistingdimension, EDDGrid kopio, EDDGrid EDDTable, EDDGrid LonPM180, EDDGrid SideBySide, EDDTableCopy tai EDDTableFrom EDDGrid on ...DromErddap-tietokannasta, että emotietoaineisto nyt merkitsee taustalla olevaa ERDDAP™ Dataa. Jos taustalla ERDDAP™ Data on samassa ERDDAP™ tilaus ja sen validointi tehdään suoraan; et saa sähköpostia, jossa sinua pyydetään vahvistamaan tilaus. Muuten, jos tilausjärjestelmä on sinun ERDDAP™ sammutetaan, asetetaan&lt;Reload EveryNMinutes&gt; Emoyhtiön tietoaineiston asettaminen pieneen numeroon (60?) Näin se pysyy ajan tasalla.
-    * Bug fix / Uudet ominaisuudet: Jos lapsitietokanta sisältää EDDGrid Aggregateexistingdimension, EDDGrid kopio, EDDGrid EDDTable, EDDGrid LonPM180, EDDGrid SideBySide, EDDTableCopy tai EDDTableFrom EDDGrid on aktiivinen = "väärä", että lapsitiedot ovat nyt ohi.
+Jos haluat poistaa vanhan jplMU RSS T-aineisto ERDDAP™   (Se on sinun valintasi.) , muuttaa sen aktiivinen asetus "tosi" "väärä."
+    * Virheen korjaaminen: Tarkista bigPentDirectory, että olet määritellyt setup.xml. Jos et laittaisi viiltoa loppuun&lt;bigPerentDirectory&gt; nimi, sitten ERDDAP™ on luonut useita hakemistoja liittämällä sanoja suoraan mainitsemaasi nimeen sen sijaan, että olisit luonut alihakemistoja. Aloitetaan versiolla 1.68. ERDDAP™ Lisää slash lopussa hakemiston nimi, jos et määrittele yksi. Joten jos aiemmin ei määritellä viilto lopussa, sitten kun asennat ERDDAP™ v1.68 sinun täytyy siirtää ja nimetä uudelleen hakemistot **jälkeen** Sinä sammutat vanhan ERDDAP™ sekä **ennen** Käynnistät uuden ERDDAP . Esimerkiksi, jos olet virheellisesti määritellyt bigPentDirectory kuten /home/erddapBPD (ei jälkiviivaa) sekä ERDDAP™ on virheellisesti luonut hakemistoja kuten
+/koti/perddapBPDcache
+/koti/perddapBPDcopy
+/home/erddapBPDdataset
+/koti/perddapBPDflag
+/kotisivutBPDlogit
+/koti/perddapBPDluseeni
+ja tiedoston nimeltä /home/erddapBPDscriptionsV1.txt,
+sitten sinun täytyy siirtää ja nimetä ne uudelleen olla
+/koti/perddapBPD/välimuisti
+/koti/perddapBPD/kopio
+/koti/perddapBPD/dataset
+/koti/perddapBPD/lippu
+/koti/perddapBPD/logs
+/koti/perddapBPD/luseeni
+ja /home/erddapBPD / reseptitV1.txt
+    * Virheen korjaaminen: Siellä oli ötököitä. EDDGrid LonPM180 ERDDAP™ v1.66, joka tapahtui, kun lapsitieto on EDDGrid -Erddapilta.
+    * Virheen korjaaminen: Siellä oli ötökkä. EDDGrid Kansiosta ja EDDTablesta Files in ERDDAP™ v1.66 joka aiheutti&lt;updateEveryNMillis&gt; ei oteta huomioon ensimmäistä kertaa tiedosto ladattiin uudelleenkäynnistyksen jälkeen.
+    * Vikakorjaus/Uusi ominaisuus: Jos lapsiaineisto on sisällä EDDGrid Aggregaatti EDDGrid Selvä. EDDGrid EDDTablesta EDDGrid LonPM180 EDDGrid SideBySide, EDDTableCopy tai EDDTableFrom EDDGrid on ...FromErddap aineisto, että emo aineisto nyt merkitsee kohde ERDDAP™ tietokokonaisuus. Jos kohde-etuutena on ERDDAP™ tietokokonaisuus on samassa ERDDAP™ , tilaus ja sen validointi tehdään suoraan; et saa sähköpostia pyytää sinua vahvistamaan tilauksen. Muussa tapauksessa, jos tilausjärjestelmä ERDDAP™ on sammutettu, aseta&lt;reloadEveryNMinutes&gt; asetus emoaineistosta pieneen määrään (60?) Jotta se pysyy ajan tasalla.
+    * Vikakorjaus/Uusi ominaisuus: Jos lapsiaineisto on sisällä EDDGrid Aggregaatti EDDGrid Selvä. EDDGrid EDDTablesta EDDGrid LonPM180 EDDGrid SideBySide, EDDTableCopy tai EDDTableFrom EDDGrid on aktiivinen="false," että lapsi aineisto on nyt ohitettu.
 
-## versio 1.66{#version-166} 
- (Julkaistu 2016-01-19) 
+## Versio 1.66{#version-166} 
+ (julkaistu 2016-01-19) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :** 
-    * Grafiikka (Ei karttoja) Nyt voi olla laskevia arvoja akseleissa. Saadaksesi tämän käyttämällä Make A Graph -verkkosivua, vaihda uusi Y Axis: ylösnousemusasetukset (Oletusarvo) laskeutumaan. URL-osoitteessa, joka pyytää graafia, käytä uutta valinnaista kolmatta | "parametri" [&.x Range ja/tai & YRANG-kytkin](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#GraphicsCommands) joka ei voi olla mitään (Oletusarvo) , totta tai t saada nousevia arvoja tai käyttää vääriä tai f saada laskevia arvoja. Todellinen | Väärät arvot ovat epäherkkiä. Kiitos Chris Fullilove, John Kerfoot, Luke Campbell ja Cara Wilson.
-    * Käyttäjät voivat nyt määrittää kuvien taustavärin lisäämällä &.bgColor=0x_. AARRGGBB -kytkin URL-osoitteeseen, joka pyytää grafiikkaa. .bgColor Graphics Commands -osassa [Griddap](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#GraphicsCommands) ja [ tabledap ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#GraphicsCommands) dokumentointi. Kiitos John Kerfoot ja Luke Campbell.
-    * Tabulaarisissa aineistoissa rajoitukset voivat nyt viitata min (_someVariableName_) tai max (_someVariableName_) . Näytä [min () Max () ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#min) . Kiitos John Kerfootille.
-    * Tabulaarisissa aineistoissa aikarajoitukset, joita käytetään [Nyt nyt](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#now) Voit määrittää millisekunnin tai millisin aikayksiköt.
-    * Tabulaarisen tietoaineiston kuvapyyntö tekee nyt kartan (Ei grafiikkaa) jos x- ja y-muuttujat ovat pituusmaisia ja leveysmuuttujat (yhteensopivat yksiköt) . Kiitos Rich Signell.
-    * Bug fix: Aika-akselien etiketit ja punkit olivat joskus outoja epäsäännöllisyyksiä pyytäessään useita kaavioita samanaikaisesti. (esimerkiksi verkkosivulla) . Ongelma oli SGT:n grafiikkakirjastossa. ERDDAP™ käyttää (Yksi muuttuja oli staattinen, jota ei olisi pitänyt) . Kiitos Bradford Butmanille.
+*    **Uudet ominaisuudet (käyttäjille) :** 
+    * Kaaviot (ei karttoja) Akseleilla voi nyt olla laskevat arvot. Saadaksesi tämän, kun käytät Make A Graph -sivua, vaihda uusi Y Axis: nouseva asetus (oletus) Laskeudumme. Tai, URL, joka pyytää kaavion, käytä uutta vapaaehtoista 3. " | ' Parametri [& x Etäisyys ja/tai &. YRange-kytkimet](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#GraphicsCommands) , joka ei voi olla mitään (oletus) , totta, tai t saada nousevia arvoja, tai käyttää vääriä tai f saada laskevat arvot. Todellinen | väärät arvot ovat epäherkkiä. Kiitos Chris Fulliloven, John Kerfootin, Luke Campbellin ja Cara Wilsonin.
+    * Käyttäjät voivat nyt määrittää taustaväri kaavioita lisäämällä &.bgColor=0x_ AARGGBB_ vaihda URL-osoitteeseen, joka pyytää kaaviota. Katso .bgColor Graphics komentoja osassa [griddap](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#GraphicsCommands) sekä [ tabledap ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#GraphicsCommands) asiakirjat. John Kerfootin ja Luke Campbellin ansiosta.
+    * Taulukon tietokokonaisuuksissa rajoitteet voivat nyt viitata min (_joku variableName_) tai enintään (_joku variableName_) . Katso [min () ja enintään () ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#min) . John Kerfootin ansiosta.
+    * Taulukon tietokokonaisuuksien aikarajoitukset [Nyt](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#now) voi nyt määrittää aikayksiköt millisekuntia tai millis.
+    * Pyyntö kuva taulukko aineisto nyt tekee kartan (ei kaaviota) jos x- ja y-muuttujat ovat pituusasteen ja leveysasteen kaltaisia muuttujia (yhteensopivat yksiköt) . Kiitos Rich Signellin.
+    * Virheen korjaaminen: Aika-akseli tarrat ja punkit joskus ollut outoja sääntöjenvastaisuuksia, kun pyydetään useita kaavioita samanaikaisesti (esim. verkkosivulla) . Ongelma oli vika SVT-grafiikkakirjastossa, että ERDDAP™ Käyttö (Yksi muuttuja oli "staattinen," jonka ei olisi pitänyt olla) . Kiitos Bradford Butmanin.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * On tietoturvariski, että laitat sähköpostisalasanasi selkeään tekstitiedostoon, kuten setup.xml. Tämän ongelman lieventämiseksi suosittelemme vahvasti:
-        1. Lataa sähköpostitili vain ERDDAP Käyttö, esim. erddap@yourInstitution.org Sillä on myös muita etuja, erityisesti enemmän kuin yksi ERDDAP™ Järjestäjälle voidaan antaa pääsy kyseiseen sähköpostitiliin.
-        2. Tee setup.xml-tiedoston rw luvat (Lukeminen + kirjoittaminen) Käyttäjä, joka käyttää Tomcatia ja ERDDAP™   (Käyttäjä: Tomcat?) Ei lupaa (Älä lue tai kirjoita) ryhmälle ja muille käyttäjille. Kiitos Filipe Rocha Freire.
-    * Uusi [ArchiveaDataset](/docs/server-admin/additional-information#archiveadataset) Työkalu yksinkertaistaa työskentelyä .tar  .gz arkistoidaan tietoaineiston alijoukkona muodossa, joka soveltuu arkistoimiseen (Erityisesti, NOAA NCEI) . Tästä pitäisi olla hyötyä monille ERDDAP™ useissa tilanteissa, mutta erityisesti ryhmissä NOAA .
-    * Uusi tiedostotyyppi [ EDDGrid Lähde: NCFiles Unpacked](/docs/server-admin/datasets#eddgridfromncfilesunpacked) Se on variantti EDDGrid Lähde: NCFiles. Erona on, että luokka purkaa kaikki tiedostot ennen EDDGrid Files katsoo tiedostoja:
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Se on turvallisuusriski laittaa sähköpostin salasanan tavallinen tekstitiedosto, kuten setup.xml. Lieventääksemme tätä ongelmaa suosittelemme vahvasti, että:
+        1. Aseta sähköpostitili vain ERDDAP Käyttö, esim. erddap@ yourInstitution.org . Tämä on myös muita etuja, erityisesti enemmän kuin yksi ERDDAP™ hallinnoijalle voidaan antaa pääsy tälle sähköpostitilille.
+        2. Tee oikeudet setup.xml tiedosto rw (lue+kirjoitus) käyttäjälle, joka johtaa Tomcatia ja ERDDAP™   (käyttäjä=tomcat?) ja ilman oikeuksia (ei lue tai kirjoita) ryhmälle ja muille käyttäjille. Kiitos Filipen, Rocha Freiren.
+    * Uusi [ArchiveADataset](/docs/server-admin/additional-information#archiveadataset) työkalu yksinkertaistaa tekemistä .tar  .gz arkiston osajoukko aineisto muodossa, joka sopii arkistointi (erityisesti NOAA NCEI) . Tämän pitäisi olla hyödyllistä monille ERDDAP™ hallinnoijia monissa tilanteissa, mutta erityisesti ryhmille sisällä NOAA .
+    * Uusi tietokokonaisuustyyppi [ EDDGrid FromNcFilesUnpackage](/docs/server-admin/datasets#eddgridfromncfilesunpacked) on EDDGrid NcFilesistä. Erona on, että tämä luokka purkaa jokaisen tiedoston ennen EDDGrid FromFiles katsoo tiedostoja:
         
-        * Pakkaa pakattuja muuttujia, jotka käyttävät scale\\_factor ja/tai add\\_offset .
-        * Se edistää kokonaismuuttujia, joilla on \\Unsigned=true attributes suurempaan kokonaislukutietotyyppiin, jotta arvot näkyvät allekirjoittamattomina arvoina. Esimerkki = True Tate (8 bittiä) Muuttujasta tulee lyhyt (16 bittiä) muuttuja.
-        * Se muuntaa arvoa ja missing\\_value Arvot olla Nan (tai MAX_VALUE integer -tietotyypit) .
+        * Se purkaa pakattuja muuttujia, jotka scale\\_factor ja/tai add\\_offset .
+        * Se edistää kokonaisluku muuttujia, jotka ovat \\_Unsigned=true attribuutit suurempi kokonaisluku tiedon tyyppi niin, että arvot näkyvät allekirjoittamattomia arvoja. Esimerkiksi \\_allekirjoittamaton=oikea tavu (8 bittiä) muuttujasta tulee allekirjoitettu lyhyt (16 bittiä) muuttuja.
+        * Se muuntaa\\_FillValue ja missing\\_value NaN:n arvot (tai MAX\\_VALUE kokonaislukutietotyypeille) .
         
-Tämän luokan suurin etu on, että se tarjoaa tavan käsitellä erilaisia arvoja. scale\\_factor , add\\_offset arvoa, tai missing\\_value eri tiedostoissa kokoelmassa. Muussa tapauksessa sinun on käytettävä työkalua, kuten [NCML](/docs/server-admin/datasets#ncml-files) tai tai [ NCO ](/docs/server-admin/datasets#netcdf-operators-nco) muuttaa kunkin tiedoston erojen poistamiseksi, jotta tiedostot voidaan käsitellä EDDGrid Lähde: NCFiles. Jotta tämä luokka toimisi kunnolla, tiedostojen on noudatettava CF-standardeja. Kiitos Philippe Makowskille.
-    * Uusi tiedostotyyppi [ EDDGrid LonPM180](/docs/server-admin/datasets#eddgridlonpm180) Voit muuttaa tietoja, joiden pituusarvot ovat yli 180 (Esim. vaihteluväli 0-360) aineistoihin, joiden pituusarvot vaihtelevat -180 - 180 (Longitude Plus tai Minus 180, joten nimi) . Suuri etu datajoukkojen tarjoamisessa, joiden pituusarvot ovat alueella -180 - 180, on se, että OGC Palvelupalvelut (esim. WMS ) Tarvitaan pituusarvoja tällä alueella. Kiitos Lynne Tablewski, Fabien Guichard, Philippe Makowski ja Martin Spel.
-2016-01-26 Päivitys: Eeek&#33; Tämä on vika, joka tapahtuu, kun lapsitiedot ovat EDDGrid FromErddap viittaa tietoaineistoon samassa ERDDAP . Tämä vika on kiinnitetty ERDDAP™ v1.68.
-    * Sisällä [GenerateDatasetsXml](/docs/server-admin/datasets#generatedatasetsxml) uusi tietotyyppi, EDDGrid LonPM180FromErddapCatalogin avulla voit luoda datasets.xml for EDDGrid LonPM180 aineistoa kaikista EDDGrid Tietoja eräässä ERDDAP Pituusarvot ovat yli 180.
-    * Kaikille EDDGrid Tietoja, sisään datasets.xml Nyt voit käyttää valinnaista
-[...]&lt;Saatavuus Via WMS &gt; Totta | Väärin väärä&lt;/ saavutettavissa Via WMS &gt; (Docs/server-admin/datasets#accessibleviawms)   (Oletus = totta) . Tämän asettaminen valheellisesti poistaa WMS palvelua tälle aineistolle. Jos se on totta, aineistoa ei välttämättä ole vielä saatavilla WMS Muista syistä (Ei lat- tai lon-akseleja) . Tämä on erityisen hyödyllistä aineistoille, jotka ovat olemassa itse ja jotka on kääritty EDDGrid LonPM180, jolloin vain LonPM180-versio on saatavilla WMS .
-    * Asennuksessa.xml voit määrittää eri oletusvärin kuvien taustalle. Väri on määritelty 8-numeroiseksi heksadesimaaliarvoksi muodossa 0x_AARRGGB_, jossa AA, RR, GG ja BB ovat läpinäkymättömät, punaiset, vihreät ja siniset komponentit, jotka on määritelty 2-digit heksadecimal numeroiksi. Kankaat ovat aina valkoisia, joten (Semi -) Läpinäkyvä graafinen taustaväri sekoittuu valkoiseen kankaaseen. Oletusarvo on sininen:
+Suuri etu tämän luokan on, että se tarjoaa tapa käsitellä erilaisia arvoja scale\\_factor , add\\_offset , \\_ FillValue tai missing\\_value eri tiedostoissa kokoelmassa. Muuten sinun pitäisi käyttää työkalua kuten [NcML](/docs/server-admin/datasets#ncml-files) tai [ NCO ](/docs/server-admin/datasets#netcdf-operators-nco) muokata kunkin tiedoston poistaa eroja niin, että tiedostot voidaan käsitellä EDDGrid NcFilesistä. Jotta tämä luokka toimisi asianmukaisesti, tiedostojen on noudatettava CF-standardeja niihin liittyvien ominaisuuksien osalta. Kiitos Philippe Makowskin.
+    * Uusi tietokokonaisuustyyppi [ EDDGrid LonPM180](/docs/server-admin/datasets#eddgridlonpm180) voit muuttaa tietoja, jotka ovat joitakin pituuspiirin arvoja yli 180 (esim. vaihteluväli 0-360) tietokokonaisuuksiin, joiden pituuspiirin arvot ovat -180-180 (Pituusaste Plus tai Miinus 180, joten nimi) . Suuri etu tarjota tietoja pituuspiirin arvoja välillä -180 180 on, että OGC palvelut (esim. WMS ) vaatia pituuspiirin arvoja tällä alueella. Lynne Tablewskin, Fabien Guichardin, Philippe Makowskin ja Martin Spelin ansiosta.
+2016-01-26 Päivitys: Eeek&#33; Tämä on vika, joka tapahtuu, kun lapsitieto on EDDGrid Erddapista, joka viittaa samaan aineistoon ERDDAP . Tämä vika on korjattu ERDDAP™ v1.68.
+    * Sisään [Luo DatasetsXml](/docs/server-admin/datasets#generatedatasetsxml) , uusi tietokokonaisuustyyppi, EDDGrid LonPM180FromErddapCatalog, voit luoda datasets.xml B. EDDGrid LonPM180 dataa kaikista EDDGrid tiedot ERDDAP joiden pituuspiirin arvot ovat yli 180.
+    * Kaikki EDDGrid tietoaineistot, datasets.xml Voit nyt käyttää valinnaista
+[&lt;Esteetön Via WMS &gt;true | väärä&lt;/käytettävissä Via WMS &gt;] (/docs/server-admin/datasets# accessible viawms)   (oletus=true) . Tämän asettaminen vääräksi väkisin poistaa käytöstä WMS Tämän tietokokonaisuuden palvelu. Jos se on totta, aineisto ei välttämättä ole vielä saatavilla WMS muista syistä (esim. ei lat- tai lon-akselia) . Tämä on erityisen hyödyllistä aineistoja, jotka ovat olemassa yksin ja kääritty EDDGrid LonPM180, jotta vain LonPM180-versio on käytettävissä WMS .
+    * Vuonna setup.xml, voit määrittää eri oletusväri taustakuvat. Väri määritellään 8-numeroisena heksadesimaaliarvona muodossa 0x_AARRGGBB_, jossa AA, RR, GG ja BB ovat kaksinumeroiset heksadesimaalinumerot. Huomaa, että kangas on aina läpinäkymätön valkoinen, joten (puoli -) läpinäkyvä graafinen taustaväri sekoittuu valkoiseen kankaaseen. Oletusarvo on vaaleansininen:
 ```
         <graphBackgroundColor>0xffccccff</graphBackgroundColor>  
 ```
-Kiitos John Kerfoot ja Luke Campbell.
-    * Asennuksessa.xml, voit määrittää maksimikoko [Lokitiedosto](/docs/server-admin/additional-information#log)   (kun se nimetään uudelleen kirjautumaan. Txt. Edellinen ja uusi logiikka. Txt on luotu) MegaBytesissä. Minimi sallittu on 1. Suurin sallittu on 2000. Oletusarvo on 20 (MB) . Esimerkiksi:
+John Kerfootin ja Luke Campbellin ansiosta.
+    * Vuonna setup.xml, voit nyt määrittää maksimikoon [lokitiedosto](/docs/server-admin/additional-information#log)   (kun se on nimetty lokikirjaksi. txt. Edellinen ja uusi loki. txt on luotu) MegaBytesissä. Sallittu vähimmäismäärä on 1. Sallittu enimmäismäärä on 2000. Oletus on 20 (Mt) . Esimerkiksi:
 ```
         <logMaxSizeMB>20</logMaxSizeMB>
 ```
-    * Sisällä datasets.xml [ ]&lt;fgdcfile &gt; (Docs/server-admin/datasets#fgdcfile Näytä tarkat tiedot) tai [&lt;Iso19115File[muokkaa wikitekstiä] (Docs/server-admin/datasets#iso19115file Näytä tarkat tiedot) Nyt voi olla paikallinen tiedosto (Kuten ennen) tai URL (joka ladataan niin, että on paikallinen kopio) . Jos ERDDAP™ ei voi ladata tiedostoa, tietojen lataaminen jatkuu, mutta aineistossa ei ole fgdc- tai iso19115-tiedostoa.
-    *    EDDGrid Files ja EDDTable FromFiles-aineistot voivat nyt käynnistää uudelleen (järjestelmä, joka ERDDAP™ käyttää, kun tietoaineistot ladataan ensimmäisen kerran ERDDAP™ Käynnistetään uudelleen) . Tämä nopeuttaa käynnistymistä ERDDAP .
-2016-01-26 Päivitys: Eeek&#33; Tässä on vika, joka aiheuttaa&lt;Päivitä EveryNMillis&gt;, jotta tietoaineisto ladataan uudelleenkäynnistyksen jälkeen. Tämä vika on kiinnitetty ERDDAP™ v1.68.
-    * Nopean uudelleenkäynnistysjärjestelmän yleinen parannus mahdollistaa ERDDAP™ Tietojen lataaminen nopeammin, kun ERDDAP™ on aloitettu uudelleen.
-    * Kaikki Kaikki Kaikki Kaikki EDDGrid Files ja EDDTable Files-aliryhmät hyväksyvät nyt uuden&lt;Regex&gt;-tunniste, joka on yleensä määritelty alla&lt;rekursiivinen &gt; Jos rekursiivinen on "tosi", vain täydet aliohjausreitit, jotka vastaavat polkua Regex. (Oletusarvo =") hyväksytään. Samoin A&lt; sourceUrl &gt; Tag in a EDDGrid AggregateExistingDimension voi nyt sisältää PathRegex-ominaisuuden. (Oletusarvo =") .
-    * Oletusarvoa&lt;PartialRequestMaxBytes&gt; in setup.xml on nyt 490 000 (490 MB) . Tämä estää joitakin ongelmia / ajatuksia, jotka liittyvät tietojen saamiseen THREDDS-tietopalvelimilta. Kiitos Leslie Thornelle.
-    * Pieni muutos lokijärjestelmään on mahdollista ERDDAP™ olla responsiivinen, kun se on hyvin, hyvin kiireinen. Tiedot on nyt kirjoitettu levyaseman lokitiedostoon melko suurissa ketjuissa. Etu on se, että se on erittäin tehokas - ERDDAP™ Älä koskaan estä tietojen kirjoittamista lokitiedostoon. Haittapuolena on, että loki päättyy lähes aina osittaiseen viestiin, jota ei saa päätökseen ennen kuin seuraava naarmuunnos on kirjoitettu.
-    * Bug fix liittyy inotify ja&lt;Päivitä kaikki ns. (Docs/server-admin/datasets#updateeverynmillis) järjestelmän EDDGrid Files ja EDDTable Files-aineistot: Ei ole enää tarpeen määrittää suurta fs.inotify.max \\ \\ \'watches tai fs.inotify. Sisällä on bugi Java Tämä aiheuttaa joitakin osia Java Inotify/WatchDirectory -järjestelmä, jota ei kerätä, kun ne on viimeistelty; lopulta zombie-inotify-kellojen tai -tapahtumien määrä ylittää määritetyn enimmäismäärän. ERDDAP™ Nyt toimii tämän ympäri Java Bug.
-Myös inotify-lankojen määrä on lueteltu status.html-verkkosivulla, joten voit pitää silmällä sen käyttöä. Tyypillisesti on olemassa 1 inotify-lanka per EDDGrid Files ja EDDTable Files-aineisto.
-    * Bug-korjaus: monissa paikoissa, sen sijaan, että palautus tapahtuisi, syntyi uusi virhe, joka sisälsi vain lyhyen version alkuperäisestä virheviestistä ja ilman pino jälkiä. Nyt, kun syntyy uusi virhe, se sisältää koko alkuperäisen poikkeuksen, esimerkiksi heittää uutta poikkeusta. ("Uusi viesti", e) ;
-Kiitos Susan Perkins.
-    * Bug fix: viime aikoina (V1.64?) Jos a... datasetID URL-osoitetta pyydettiin, ERDDAP™ Lisää .html URL-osoitteeseen. V1.64:ssä tämä epäonnistui (Väärin muotoiltu URL-osoite syntyi ja epäonnistui) . Nyt tämä toimii taas. Kiitos Chris Fullilovelle.
+    * Sisään datasets.xml , [&lt;fgdcFile&gt; (/docs/server-admin/datasets#fgdcfile) tai [&lt;iso19115File&gt; (/docs/server-admin/datasets#iso19115file) voi nyt olla paikallinen tiedosto (kuten ennen) tai URL (joka ladataan niin on paikallinen kopio) . Jos ERDDAP™ ei voi ladata tiedostoa, tiedoston lataus jatkuu, mutta tiedostossa ei ole fgdc- tai iso19115-tiedostoa.
+    *    EDDGrid Kansiosta ja EDDTablesta FromFiles-aineistot voivat nyt tehdä nopeanRestart (järjestelmä, joka ERDDAP™ yrittää käyttää, kun tietoaineistot ensin ladataan ERDDAP™ aloitetaan uudelleen) . Tämä nopeuttaa uudelleenkäynnistystä ERDDAP .
+2016-01-26 Päivitys: Eeek&#33; Tämä on vika, joka aiheuttaa&lt;updateEveryNMillis&gt; ei oteta huomioon ensimmäistä kertaa tiedosto ladataan uudelleenkäynnistyksen jälkeen. Tämä vika on korjattu ERDDAP™ v1.68.
+    * Yleinen parannus pikakäynnistysjärjestelmään mahdollistaa ERDDAP™ ladata tiedostoja nopeammin, kun ERDDAP™ on käynnistetty uudelleen.
+    * Kaikki EDDGrid Kansiosta ja EDDTablesta FromFiles alaluokat nyt hyväksyä uuden&lt;polkuRegex&gt; tag, yleensä määritelty alla&lt;rekursiivinen&gt;. Jos rekursiivinen on "true," vain täydet alihakemistopolut, jotka vastaavat polkuaRegex (oletus=".\\*") hyväksytään. Samoin&lt; sourceUrl s&gt; tag in an EDDGrid AggregaattiExistingDimension voi nyt sisältää polkuRegex-attribuutin (oletus=".\\*") .
+    * Oletus&lt;osittainenRequestMaxBytes&gt; in setup.xml on nyt 490000000 (~490 Mt) . Näin vältetään joitakin ongelmia / aikakatkaisuja, jotka liittyvät tietojen saamiseen THREDDS-tietopalvelimilta. Kiitos Leslie Thornen.
+    * Pienen muutoksen lokijärjestelmään pitäisi mahdollistaa ERDDAP™ olla reagoivampi, kun se on hyvin, hyvin kiireinen. Tiedot on nyt kirjoitettu levyaseman lokitiedostoon melko suurissa paloissa. Etuna on, että tämä on hyvin tehokasta -- ERDDAP™ ei koskaan estä odottamasta tietojen kirjoittamista lokitiedostoon. Haittana on se, että loki päättyy lähes aina osittaiseen viestiin, joka valmistuu vasta kun seuraava pala on kirjoitettu.
+    * Virheen korjaaminen liittyvät inotify ja [&lt;updateEveryNMillis&gt;] (/docs/server-admin/datasets#update everyenmillis) järjestelmä EDDGrid Kansioista ja EDDTablesta Tietoaineistoista: Ei ole enää tarpeen määritellä suurta fs.inotify.max\\_user\\_kelloa tai fs.inotify.max\\_user\\_instancesia. Siinä on vika. Java joka aiheuttaa joitakin osia Java 's inotify/WatchDirectory järjestelmä ei roskia kerätään, kun ne on viimeistelty; lopulta, määrä zombi inotify kellot tai tapaukset ylittäisi enimmäismäärä määritetty. ERDDAP™ Nyt toimii tämän ympärillä Java Ötökkä.
+Myös, määrä inotify langat on listattu status.html web-sivulla, joten voit pitää silmällä sen käyttöä. Tyypillisesti, on 1 inotify lanka per EDDGrid Kansiosta ja EDDTablesta Tiedostoista.
+    * Bug korjata: monissa paikoissa, sen sijaan, että virhe olisi uudelleenheitetty, syntyi uusi virhe, joka sisälsi vain lyhyen version alkuperäisestä virheviestistä ja ilman pino jälkiä. Nyt, kun uusi virhe on syntynyt, se sisältää asianmukaisesti koko alkuperäisen poikkeuksen esim., heittää uusi poikkeus ("uusi viesti," e) ;
+Kiitos Susan Perkinsin.
+    * Virheen korjaaminen: vasta äskettäin (V1,64?) jos .../ datasetID URL pyydettiin, ERDDAP™ lisäisi .html URL. V1.64 (väärin muotoiltu URL luotiin ja sitten epäonnistui) . Nyt tämä toimii taas. Kiitos Chris Fulliloven.
 
-## versio 1.64{#version-164} 
- (2015-08-19) 
+## Versio 1.64{#version-164} 
+ (julkaistu 2015-08-19) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :** 
-    * Nyt on ohjeita salasanasuojatun yksityisen ERDDAP™ Dataa ( https:// ) kautta curl ja Python . Nähdään [ curl ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#curl) ja [ Python ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#Python) ohjeita.
-Kiitos Emilio Mayorga NANOOS ja Paul Janecek Spyglass Technologies.
+*    **Uudet ominaisuudet (käyttäjille) :** 
+    * Nyt on ohjeistus käyttää salasanasuojattua yksityistä ERDDAP™ Tiedostot ( https:// ) via curl sekä Python . Katso [ curl ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#curl) sekä [ Python ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#Python) ohjeet.
+Kiitos NANOOSin Emilio Mayorgalle ja Spyglass Technologiesin Paul Janecekille.
          
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    *    ERDDAP™ Nyt tarvitaan Java 1.8+.
-         Java 1.7 Saavuttaa [Elämän loppu](https://www.oracle.com/technetwork/java/eol-135779.html)   (Ei enää tietoturvapäivityksiä) huhtikuussa 2015. Tämä versio ERDDAP™ Ei toimi versioiden kanssa Java Alle 1.8. Jos päivität Java 1.7 (tai aikaisemmin) Päivitä myös Tomcat. Nähdään [ ERDDAP™ Aseta ohjeita](/docs/server-admin/deploy-install) Lataa linkkejä ja neuvoja.
-    * Uusi datan tarjoajamuoto.
-Kun tietopalveluntarjoaja tulee luoksesi toivoen lisättävän joitakin tietoja ERDDAP™ voi olla vaikeaa ja aikaa vievää kerätä kaikki metatiedot, joita tarvitaan tietojen lisäämiseen. ERDDAP . Useita tietolähteitä (.csv-tiedostoja, Excel-tiedostot, tietokannat) Ei sisäisiä metatietoja, joten ERDDAP™ sillä on uusi datantarjoajamuoto, joka kerää metatietoja palveluntarjoajalta ja antaa tietojen tarjoajalle muita ohjeita, mukaan lukien laajat ohjeet tietokantoihin. Toimitetut tiedot muunnetaan datasets.xml Muotoilu ja sitten sähköpostitse ERDDAP™ Hallinnollinen (Sinä) ja kirjoitettu (liitetty) BigParentDirectory/logs/dataProviderForm.log. Näin muoto puoliautomatisoi prosessin saada tietoaineiston ERDDAP™ mutta ERDDAP™ Järjestäjän on vielä täytettävä datasets.xml Klikkaa ja käsittele datatiedoston hankkimista (s) Palveluntarjoaja tai yhteys tietokantaan. Lisätietoja, katso [Datan tarjoaja Muotokuvaus](/docs/server-admin/datasets#data-provider-form) .
-    * Uusi Uusi Uusi&lt;AxisNDigits &gt;
-voidaan käyttää EDDGrid Filejä (Näin ollen NCFiles ja MergeIRFiles) , EDDGrid Aggregateexistingdimension, EDDGrid kopioida ja EDDGrid SideBySide-tietoaineistot määrittävät, kuinka täsmällisesti eri tiedostojen akseliarvot ovat (Kuinka monta numeroa) 0 = ei tarkistusta (Älä käytä tätä&#33;) 1-18 tarkkuuden lisäämiseksi tai 20 (Oletusarvo) Tarkkaa tasa-arvoa. n = 1-18, ERDDAP™ varmistaa, että ensimmäiset kaksinkertaiset arvot (tai tai (+1) Div 2 kelluville arvoille) ovat tasa-arvoisia.
-        &lt;AxisNDigits &gt; korvaa&lt;AxisValuesAreEqual, joka on nyt poistettu. AxisNDigits = 20. "väärin" arvo (Älä tee tätä&#33;) Muutetaan otteluksi AxisNDigits=0.
-    *    EDDGrid Files ja EDDTable FromFiles latautuu erittäin hitaasti, kun käytät tätä versiota ERDDAP .
-         ERDDAP™ Säilyttää nyt sisäisen tiedoston tiedot hieman eri tavalla, joten sisäinen tiedostotaulukko on rakennettava uudelleen. Älä huoli. Mikään ei ole väärin. Se on yksi kerta.
-    * Etälähteen tiedostot
-         EDDGrid FromNcFiles, EDDTableFromNcFiles, EDDTableFromNcCFiles antavat tiedostojen olla etätiedostoja hakemistossa, johon on pääsy. http://   (Ehkä https:// ftp:/, mutta ei ole testattu) jos etäpalvelin tukee [Range-pyynnöt](https://en.wikipedia.org/wiki/Byte_serving) pyynnön otsikko. THREDDS ja Amazon S3 tukevat Range-pyyntöjä Hyrax Ei. Tämän järjestelmän avulla voit käyttää tietoja etätiedostoissa lataamatta tiedostoja. (Mikä on hyödyllistä, jos etätiedostot ovat liian volumiinisia) Näiden tiedostojen käyttö on huomattavasti hitaampaa kuin pääsy paikallisiin tiedostoihin tai jopa etäkäyttöön. OPeNDAP Lähde.
-Tämä sisältää "files" Amazon S3:ssa, koska ne ovat saatavilla http:// . Jos S3-objektit ovat kuin tiedostonimiä (Sisäinen / kuin Linux-hakemisto) , ERDDAP™ Tiedostojen saatavuus voidaan tehdä myös kautta ERDDAP &gt; "files" järjestelmä. Tätä varten S3-tunnustuksesi on oltava ~/.aws/credentials (Linux, OS X tai Unix) tai C: Username.aws. (Windowsissa) palvelimen kanssa ERDDAP . Nähdään [Amazon SDK -dokumentointi](https://docs.aws.amazon.com/sdk-for-java/?id=docs_gateway#aws-sdk-for-java,-version-1) .
-    * GenerateDatasets Xml on uusi, epätavallinen vaihtoehto: EDDsFromFiles.
-Tämä käy läpi tiedostojärjestelmän (Etäjärjestelmä, kuten Amazon S3, jos objekteilla on tiedoston kaltaisia nimiä) ja luoda datasets.xml Sarjassa on useita aineistoja. Kilometri voi vaihdella. Tämä toimii hyvin, jos tiedostot on järjestetty niin, että kaikki tietotiedostot tietyssä hakemistossa. (ja sen alihankkijat) Soveltuu yhteen tietoaineistoon (Kaikki SST 1 päivän komposiitit) . Muuten (jos hakemisto sisältää joitakin SST-tiedostoja ja joitakin Chlorophyll-tiedostoja) Tämä toimii huonosti, mutta voi silti olla hyödyllistä.
-    * Ohjelmoijat: uusia /lib .jar-tiedostoja.
-Jos kokoat ERDDAP™ Huomioi .jar-tiedostot luokkapath -cp-parametrissa, joka on lueteltu .jar-tiedostoissa ERDDAP™   [Ohjelmoijan opas](/docs/contributing/programmer-guide) .
-    * meri | _ _ _ _ _ _ _ _
-Jos käytät CF-standardin nimimeri \\ water \\saliniteettia mihin tahansa muuttujaan, kehotan sinua siirtymään seawater \\practical \\salinity, joka on käytettävissä. [CF Standard Name -taulukon 29 versio](https://cfconventions.org/Data/cf-standard-names/29/build/cf-standard-name-table.html)   (Muutamia aiempia versioita - en tiennyt) . Tämä nimi viittaa siihen, että tämä on käytännön suolaisuusarvo. Practical Salinity Units   ( PSU ) Toisin kuin vanha g/kg. Kanoniset yksiköt ovat erilaisia, mutta silti uskomattoman hyödyllisiä: 1 1 (Luultavasti viitaten PSU PSS-78) Toisin kuin 1e-3 (Epäilemättä g/kg) Merenkulku | | _ _ _ \\[ Hei, Unidata CF:llä: Tunnistamme arvot, jotka käyttävät muita asteikoita, kuten Fahrenheit tai Celsius, asteikon nimi tai jokin variaatio. Miksi suolayksikköjä ei voi tunnistaa mittakaavassa, esim. PSS-78? PSS-78-arvot ovat "ei-toivottuja", mutta on olemassa asteikko, eikö niin? Jos keksin uuden käytännön suolapitoisuusasteikon, jossa arvot ovat 0,875 kertaa PSS-78-arvot, olisiko kanonisten yksiköiden silti oltava 1? Miten käyttäjä voi erottaa? Yksiköt 1e-3 ja 1 eivät ole kuvaavia tai hyödyllisiä käyttäjille, jotka yrittävät selvittää, mitä numerot osoittavat. \\] 
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    *    ERDDAP™ Nyt vaatii Java 1,8+.
+         Java 1.7 [Elämän loppu](https://www.oracle.com/technetwork/java/eol-135779.html)   (ei enää tietoturvapäivityksiä) huhtikuussa 2015. Tämä versio ERDDAP™ ei toimi versioiden Java alle 1.8. Jos päivität osoitteesta Java 1.7x (tai aiemmin) Sinun pitäisi myös päivittää Tomcatia. Katso [ ERDDAP™ Aseta ohjeet](/docs/server-admin/deploy-install) lataa linkkejä ja neuvoja.
+    * Uusi tiedontarjoajan lomake.
+Kun tietojen tarjoaja tulee luoksesi toivoen voivansa lisätä tietoja ERDDAP™ , voi olla vaikeaa ja aikaa vievää kerätä kaikki metatiedot tarvitaan lisätä aineisto ERDDAP . Monet tietolähteet (esimerkiksi .csv-tiedostot, Excel-tiedostot, tietokannat) ei ole sisäisiä metatietoja, joten ERDDAP™ on uusi tietojen tarjoaja lomake, joka kerää metatietoja tietojen tarjoajalta ja antaa tiedon tarjoajalle joitakin muita ohjeita, mukaan lukien laaja opastus tietojen tietokantaan. Toimitetut tiedot muunnetaan datasets.xml muoto ja sitten sähköpostitse ERDDAP™ hallinnoija (Sinä) ja kirjoittanut (Liite) bigParentDirectory/logs/dataProviderForm.log . Näin ollen lomake puoliautomaattinen prosessi saada aineisto osaksi ERDDAP™ , mutta ERDDAP™ hallinnoijan on vielä täytettävä datasets.xml chunk ja käsitellä saada tiedoston (tilu) palveluntarjoajalta tai tietokannasta. Lisätietoja: [Tietojen tarjoaja Lomakkeen kuvaus](/docs/server-admin/datasets#data-provider-form) .
+    * Uusi&lt;MatchAxisNDIgits&gt;
+voi käyttää EDDGrid Tiedostoista (ja siten NcFiles ja MergeIRFiles) , EDDGrid Aggregaatti EDDGrid Selvä. EDDGrid SideBySide-aineistot määrittää, kuinka tarkasti sama akseliarvot eri tiedostoja on (kuinka monta numeroa) : 0 = ei tarkastuksia (Älä käytä tätä&#33;) , 1-18 lisätä tarkkuutta, tai 20 (oletus) Tasa-arvon vuoksi. n=1-18 ERDDAP™ varmistaa, että ensimmäiset n numerot kaksinkertaiset arvot (tai (n+1) Kaksinumerotaso 2 kelluville arvoille) ovat tasa-arvoisia.
+        &lt;matchAxisNDIgits&gt; korvaa&lt;varmistaaAxisValuesAreEqual&gt;, joka on nyt vanhentunut. Arvo 'tosi' muunnetaan vastaamaan AxisNDIgits=20. Väärä arvo (Älä tee tätä&#33;) muunnetaan täsmääväksi AxisNdigitit=0.
+    *    EDDGrid Kansiosta ja EDDTablesta FromFiles lataa hyvin hitaasti ensimmäisen kerran käytät tätä versiota ERDDAP .
+         ERDDAP™ nyt tallentaa sisäiset tiedostotiedot hieman eri tavalla, joten sisäinen tiedostotaulukko kunkin tietokokonaisuuden on rakennettava uudelleen. Älä huoli. Mikään ei ole vialla. Se on yhden kerran juttu.
+    * Etälähdekooditiedostot
+         EDDGrid FromNcFiles, EDDTableFromNcCFFiles antaa tiedostojen olla etätiedostoja hakemistossa, johon pääsee http://   (ja luultavasti https:// ja ftp://, mutta ne ovat testaamattomia) jos etäpalvelin tukee [Etäisyyspyynnöt](https://en.wikipedia.org/wiki/Byte_serving) pyynnön otsikossa. THREDDS ja Amazon S3 tukevat etäisyyspyynnöt, Hyrax Ei. Tämän järjestelmän avulla voit käyttää tietoja etätiedostoja lataamatta tiedostoja (joka on hyödyllistä, jos etätiedostot ovat liian laaja) , mutta pääsy näihin tiedostoihin on paljon hitaampaa kuin pääsy paikallisiin tiedostoihin tai jopa etä OPeNDAP Lähde.
+Tähän sisältyy "files" Amazon S3 kauhassa, koska ne ovat saatavilla kautta http:// . Jos S3-olion nimet ovat kuin tiedostonimet (sisällä / on kuin Linux-hakemistopuu) , ERDDAP™ voi myös tehdä tiedostoja saatavilla kautta ERDDAP S "files" Järjestelmä. Jotta tämä toimisi, S3-tunnuksesi on oltava ~/.aws/ valtakirjat (Linuxissa, OS X:ssä tai Unix:ssä) , tai C:\\ users\\ USENAME\\.aws\\ cacters (Windowsissa) palvelimella kanssa ERDDAP . Katso [Amazon SDK -dokumentaatio](https://docs.aws.amazon.com/sdk-for-java/?id=docs_gateway#aws-sdk-for-java,-version-1) .
+    * Luo tiedostoja Xml on uusi, epätavallinen vaihtoehto: EDDsFromFromFiles.
+Tämä menee tiedostojärjestelmän läpi (jopa etäjärjestelmä kuten Amazon S3 jos objektit ovat tiedoston kaltaisia nimiä) ja luoda datasets.xml Osaa sarjasta tietoja. Matkasi voi vaihdella. Tämä toimii hyvin, jos tiedostot on järjestetty niin, että kaikki tiedostot tietyn hakemiston (ja sen alihakemistot) soveltuvat yhteen tietokokonaisuuteen (Esim. kaikki SST 1 päivän komposiitit) . Muuten (Esimerkiksi, jos hakemisto sisältää joitakin SST-tiedostoja ja joitakin klorofylli-a-tiedostoja) , Tämä toimii huonosti, mutta voi silti olla hyödyllistä.
+    * Ohjelmoijat: uudet /lib . jar tiedostot.
+Jos kokoat ERDDAP™ , Huomaa uudet .jar tiedostot luokkapath -cp-parametrin lueteltu ERDDAP™   [Ohjelmoijan opas](/docs/contributing/programmer-guide) .
+    * meri\\_vesi\\_käytännöllinen\\_suolaisuus
+Jos käytät CF-standardinimi sea\\_water\\_salinity tahansa muuttuja, kehotan sinua vaihtamaan meri\\_water\\_practical\\_salinity joka on saatavilla [CF Standard-nimitaulukon versio 29](https://cfconventions.org/Data/cf-standard-names/29/build/cf-standard-name-table.html)   (ja joitakin aiempia versioita -- En tiennyt, että) . Tämä nimi osoittaa, että tämä on todellakin käytännön suolapitoisuus arvo käyttäen Practical Salinity Units   ( PSU ) , verrattuna vanhempi g/kg arvo. Kanoniset yksiköt ovat erilaisia, mutta silti uskomattoman hyödyttömiä: 1 (Olettaen PSU PSS-78) , toisin kuin 1e-3 (Oletettavasti g/kg) merille\\_vesi\\_sality. \\[ Hei. Unidata ja CF: Tunnistamme arvot, jotka käyttävät muita asteikkoja, esimerkiksi Fahrenheit tai Celsius, kautta yksiköiden merkkijono, joka on nimi asteikon tai jonkin muun. Miksi emme tunnista suolaisuusyksiköitä niiden asteikolla, esim. PSS-78? Tiedän: PSS-78 arvot ovat "yhtenäisiä," mutta on olemassa implisiittinen mittakaava, eikö? Jos keksin uuden käytännöllisen suolapitoisuusasteikon, jossa arvot ovat 0,875-kertaiset PSS-78-arvoihin nähden, pitäisikö kanonisten yksiköiden olla vielä "1"? Miten käyttäjä voi erottaa heidät? Yksiköt 1e-3 ja 1 eivät ole kuvailevia tai hyödyllisiä käyttäjille, jotka yrittävät selvittää, mitä numerot osoittavat. \\] 
 
 ## Versio 1.62{#version-162} 
- (2015-06-08) 
+ (julkaistu 2015-06-08) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :** 
-    * For For EDDGrid aineistot, käyttäjät voivat nyt tehdä Graph Type: Surface grafiikka tahansa yhdistelmä numeerisia akselia, ei vain pituus vs. leveys. Näin voit tehdä x versus y (ennustettu) Kuvia ja erilaisia [Hovmöller-diagnoosi](https://en.wikipedia.org/wiki/Hovm%C3%B6ller_diagram) Esimerkiksi pituus vs. syvyys tai aika vs. syvyys. \\[ Huomautus: Jos syvyys on y-akselilla, se todennäköisesti käännetään siitä, mitä haluat. Pahoittelut, ettei se ole vielä vaihtoehto. \\] Kiitos Cara Wilsonille ja Lynn DeWittille.
-    * On olemassa uusi [Oceanic/Atmospheric Acronym Converter](https://coastwatch.pfeg.noaa.gov/erddap/convert/oceanicAtmosphericAcronyms.html) jonka avulla voit muuntaa yhteisen meri- ja ilmakehän akronyymin kokonaiseksi nimeksi.
-    * On olemassa uusi [Oceanic / Ilmakehä Muuttuva nimi Converter](https://coastwatch.pfeg.noaa.gov/erddap/convert/oceanicAtmosphericVariableNames.html) jonka avulla voit muuntaa yleisen valtameren tai ilmakehän muuttujan nimen kokonaiseksi nimeksi.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
+*    **Uudet ominaisuudet (käyttäjille) :** 
+    * -Ei. EDDGrid Tiedostot, käyttäjät voivat nyt tehdä Graph Tyyppi: Pintakuvat tahansa yhdistelmä numeerisia akseleita, ei vain pituuspiiri vs. leveysaste. Näin voit tehdä x vastaan y (ennuste) kaavioita ja erilaisia [Hovmöller-kaaviot](https://en.wikipedia.org/wiki/Hovm%C3%B6ller_diagram) , esimerkiksi, juoni Pituuspiiri vs. syvyys, tai aika vs. syvyys. \\[ Huom: jos syvyys on Y-akselilla, se luultavasti käännetään pois mitä haluat. Anteeksi, se ei ole vielä vaihtoehto. \\] Cara Wilsonin ja Lynn DeWittin ansiosta.
+    * Uusi [Oceanic/Atmospheric Acronym Converter](https://coastwatch.pfeg.noaa.gov/erddap/convert/oceanicAtmosphericAcronyms.html) jonka avulla voit muuntaa yhteisen valtameren / ilmakehän lyhenne / koko nimi.
+    * Uusi [Oceanic/Atmospheric Muuttujan nimien muunnin](https://coastwatch.pfeg.noaa.gov/erddap/convert/oceanicAtmosphericVariableNames.html) jonka avulla voit muuntaa yhteisen valtameren / ilmakehän muuttuja nimi / koko nimi.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
     *    Java 7/8
-         Oracle Ei enää tukea (Tarjoaa turvavirheitä)   Java 7. ERDDAP™ tukee edelleen Java 7, mutta siirry Java 8. Seuraava vapautus ERDDAP™ Ehkä tarvitaan Java 8.
-    *    valid\\_min Max/range
-Aiemmin ja nyt, jos dataVariable olisi ollut scale\\_factor ja add\\_offset metatiedot, ERDDAP™ poistaa tietoarvot ja poistaa metatiedot. aikaisemmin, ERDDAP™ Ei muokattu/pakattu valid\\_range , valid\\_min , valid\\_max Metadata (joka yleensä sisältää pakattuja arvoja) By scale\\_factor ja add\\_offset . Nyt se tekee. Etsitkö sinä ERDDAP™ "Valid" ja varmista, että kaikki muuttujat valid\\_range , valid\\_min tai valid\\_max on oikeat arvot, kun tiedot näkyvät uudessa versiossa ERDDAP . Näytä [ valid\\_range min/max dokumentointi](/docs/server-admin/datasets#valid_range) .
-    * ACD-1,3
-aikaisemmin, ERDDAP™   (GenerateDatasets XM) Käytetty/suositeltu alkuperäinen (1.0) versiosta [ NetCDF Tietoaineiston löytämisen yleissopimus](https://wiki.esipfed.org/ArchivalCopyOfVersion1) jota kutsuttiin " Unidata Dataset Discovery v1.0 on maailmanlaajuinen yleissopimus ja Metadata\\_Conventions attribuutit. Nyt suosittelemme [ACDD versio 1.3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Ratifioitiin vuoden 2015 alussa ja sitä kutsutaan nimellä ACD-1.3. Onneksi ACD-1.3 on täysin taaksepäin yhteensopiva versio 1.0:n kanssa. Me uskomme, että sinä [Vaihda ACD-1.3](/docs/server-admin/datasets#switch-to-acdd-13) . Ei ole vaikeaa.
-    * GenerateDatasets XML Attributes
-Muutoksia on tehty paljon, jotta voidaan parantaa&lt; addAttributes GenerateDatasetsin ehdottamat arvot Globaalit sopimukset, creator\\_name /email/url, avainsanat, yhteenveto ja otsikkoominaisuudet sekä muuttujille long\\_name attribuutti. Muutokset liittyvät ACD-1.3:n uuteen käyttöön.
-    * EDDTableFrom SOS Dataa
-Uusien tyyppien satunnainen lisäys SOS palvelimille ja vanhoille palvelimille tehdyt muutokset vaikeuttavat ERDDAP™ tunnistaa palvelimen tyypin automaattisesti palvelimen vastauksista. Käyttäminen [&lt;SosServerType » (Docs/server-admin/datasets#eddtable frommsos-skeleton-xml)   (IO _NDBC, IOOS _NOS OOSTethys tai kuka) Nyt se on vahvasti korjattu. Jos jollakin tämän tyyppisistä tietovaroistasi on ongelmia uudessa versiossa ERDDAP Kokeile uudelleen GenerateDatasets XML:ää SOS Palvelin synnyttää uuden roskan datasets.xml tätä dataa varten. GenerateDatasets XML antaa sinun kokeilla erilaisia&lt;SosServerType&gt;-vaihtoehdot, kunnes löydät oikean palvelimen. Jos sinulla on vielä ongelmia, kerro minulle ongelma, jonka näet ja palvelimen URL ja yritän auttaa.
-    * EDDTableFromFileNamesin tietoaineistot
-joitakin ominaisuuksia, joita suositeltiin addAttributes Nyt ne ovat lähteitä. Sinun ei todennäköisesti tarvitse muuttaa mitään olemassa olevia tietoaineistoja. datasets.xml .
-    * Bug fix liittyy tiettyihin pyyntöihin EDDTableFromNcCFiles-tietoaineistoihin.
-Lisäsin myös suuren määrän yksikkötestejä taustalla olevien menetelmien suuriin yksikkötesteihin. (100 skenaariota) . Kiitos Eli Hunterille.
-    * Bug fix/s pieniä muutoksia EDDGrid Mergeri.
-Kiitos Jonathan Lafite ja Philippe Makowski
-    * Bug fix: EDDGrid FromErddap toimii, vaikka etätietoaineistolla ei olisikaan ioos\\_category Muuttuvia ominaisuuksia.
-Kiitos Kevin O'Brien.
-    * Bug fix .graph verkkosivuilla EDDGrid aineistot, kun on vain yksi akselimuuttuja, jolla on enemmän kuin yksi arvo.
-Kiitos Charles Carletonille.
-    * Muita pieniä parannuksia, muutoksia ja korjauksia.
+         Oracle ei enää tukea (tarjoaa tietoturvavirheiden korjauksia)   Java 7. ERDDAP™ tukee edelleen Java 7, mutta siirry Java 8. Seuraava julkaisu ERDDAP™ todennäköisesti Java 8.
+    *    valid\\_min /max/vaihteluväli
+Aiemmin ja nyt, jos dataVariable oli scale\\_factor sekä add\\_offset metatiedot, ERDDAP™ purkaa data-arvot ja poistaa metatiedot. Aiemmin tapahtunutta: ERDDAP™ ei muuttanut tai purkanut mitään valid\\_range , valid\\_min , valid\\_max metatiedot (jotka yleensä/joiden pitäisi sisältää pakattuja arvoja) mennessä scale\\_factor sekä add\\_offset . Nyt on. Etsi ERDDAP™ "valid\\_" ja varmista, että kaikki muuttujat, jotka ovat valid\\_range , valid\\_min , tai valid\\_max oltava oikeat arvot, kun tiedot näkyvät uuden version ERDDAP . Katso [ valid\\_range /min/max-asiakirjat](/docs/server-admin/datasets#valid_range) .
+    * ACDD-1,3
+Aiemmin tapahtunutta: ERDDAP™   (erityisesti tuottaa datasetteja Xml) käytetty/suositeltiin alkuperäistä (1. 0) versio [ NetCDF Attribuuttisopimus Dataset Discoverylle](https://wiki.esipfed.org/ArchivalCopyOfVersion1) josta käytettiin nimitystä " Unidata Dataset Discovery v1.0" maailmanlaajuisissa yleissopimuksissa ja Metadata\\_Conventions ominaisuudet. Nyt suosittelemme [ACDD versio 1.3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) joka ratifioitiin vuoden 2015 alussa ja josta käytetään nimitystä "ACDD-1,3." Onneksi ACDD-1.3 on erittäin taaksepäin yhteensopiva versio 1.0. SUOSITTELEE, että [siirtyminen ACDD-1.3:een](/docs/server-admin/datasets#switch-to-acdd-13) . Ei se ole vaikeaa.
+    * Luo tiedostoja Xml- attribuutit
+Muutoksia oli paljon.&lt; addAttributes &gt; arvot, joita GenerateDatasets ehdottaa Xml maailmanlaajuisille yleissopimuksille, creator\\_name /email/url, avainsanat, yhteenveto ja otsikko ominaisuudet ja muuttuja long\\_name attribuutti. Jotkin muutokset liittyvät ACDD-1.3:n uuteen käyttöön.
+    * EDDTableFrom SOS Tiedostot
+Satunnaisesti lisäämällä uusia tyyppejä SOS palvelimet ja muutokset vanhat palvelimet, se on tulossa vaikeampaa ERDDAP™ tunnistaa palvelimen tyyppi automaattisesti palvelimen vastauksista. Käyttö [&lt;sosServerType&gt; (/docs/server-admin/datasets#eddtable fromsos-beleton-xml)   (arvo IOOS\\_NDBC, IOOS\\_NOS, OOSTethys , tai KOKO) STRANGLY ON SUOSITETTU. Jos jokin tietokansiosi tämäntyyppisiä ongelmia uuden version ERDDAP , kokeile uudelleenajo GenerateDatasets Xml SOS palvelimen luoda uusi pala datasets.xml kyseisen aineiston osalta. Luo tiedostoja Xml voit kokeilla eri&lt;sosServerType&gt; -valinnat, kunnes löydät oikean palvelimelle. Jos sinulla on vielä ongelmia, kerro minulle ongelma näet ja URL palvelimen ja yritän auttaa.
+    * EDDtableFromFileNames -aineistot
+Jotkin suositellut ominaisuudet addAttributes ovat nyt lähdeAttributes. Sinun ei varmaan tarvitse muuttaa mitään olemassa olevia tiedostoja datasets.xml .
+    * Bug korjaus liittyvät tiettyihin pyyntöihin EDDtableFromNcCF tiedostoja.
+Lisäsin myös useita yksikkötestejä nykyisiin lukuisiin perusmenetelmien yksikkötesteihin. (On 100: n skenaarioita) . Eli Hunterin ansiosta.
+    * Vikakorjaus / pieniä muutoksia EDDGrid Mergeiristä.
+Jonathan Lafiten ja Philippe Makowskin ansiosta.
+    * Virheen korjaaminen: EDDGrid FromErddap toimii nyt, vaikka etätiedosto ei ole ioos\\_category muuttujat.
+Kiitos Kevin O'Brienin.
+    * Vika korjata . graph verkkosivuilla EDDGrid tiedot, kun on olemassa vain yksi akselimuuttuja, jolla on useampi kuin yksi arvo.
+Charles Carletonin ansiosta.
+    * Oli muitakin pieniä parannuksia, muutoksia ja korjauksia.
 
 ## Versio 1.60{#version-160} 
- (2015-03-12) 
+ (julkaistu 2015-03-12) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :** Ei kukaan
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Vahvistettu: päivitä palvelimen [Robotit.txt](/docs/server-admin/additional-information#robotstxt) Tiedosto sisältää:
-Disallow: /erddap/files/
-    * Ilmoita ongelmasta ja ratkaisusta:
-Linux-tietokoneissa, jos käytät&lt;Päivitä kaikki nimet &gt; tyypin kanssa = EDDGrid Files, EDDTableFromFiles EDDGrid Kopioi, EDDTableCopy tai niiden alaluokat, voit nähdä ongelman, jossa tietoaineisto ei lataudu. (ajoittain tai johdonmukaisesti) Virhesanoma: "IOE-poikkeus: Käyttäjän raja inotify-tapauksissa, jotka on saavutettu tai liian monta avointa tiedostoa." Jos näin on, voit korjata ongelman soittamalla. (kuin juuret) :
-echo fs.inotify.max \\_watches=65536 | A/etc/sysctl.conf (käytetty)
-echo fs.inotify.max = 1024 | A/etc/sysctl.conf (käytetty)
-Sysctl -p
-Käytä suurempia numeroita, jos ongelma jatkuu. Kellojen oletusarvo on 8192. Esimerkkejä on 128. \\[ Päivitys: Sisällä on bugi Java joka aiheuttaa inotify-tapauksia, joita ei kerätä. Tämä ongelma vältetään ERDDAP™ 66 ja korkeampi. Paras vaihtoehto on siirtyä uusimpaan versioon. ERDDAP . \\] 
-    * NouchFilee-poikkeaminen Bug fix:
-On olemassa vika, joka voi aiheuttaa tyypin aineistoja = EDDGrid Files, EDDTableFromFiles EDDGrid Kopioi, EDDTableCopy tai niiden alaluokat, joita ei ladata ajoittain virheellä "NoSuchFileException: _someFileName_". Vika liittyy FileVisitorin käyttöön ja se otettiin käyttöön ERDDAP™ v1.56. Ongelma on harvinainen, ja se vaikuttaa todennäköisimmin tietoaineistoihin, joissa on paljon muuttuvia tietotiedostoja.
-    * Pieniä parannuksia, muutoksia ja vikoja.
+*    **Uudet ominaisuudet (käyttäjille) :** ei mitään
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * SUOSITELTU: Päivitä palvelimen [robotit.txt](/docs/server-admin/additional-information#robotstxt) tiedosto, johon sisältyy:
+Poista: /erddap/files/
+    * Ilmoita ongelmasta ja ratkaisu:
+Linux-tietokoneissa, jos käytät&lt;updateEveryNMillis&gt; tiedot, joiden tyyppi = EDDGrid Kansioista. EDDGrid Kopio, DDDtableCopy, tai niiden alaluokat, saatat nähdä ongelman, jossa tietokokonaisuus ei ladata (satunnaisesti tai johdonmukaisesti) virheviestillä: "IOLukuun ottamatta: Käyttäjärajaa inotify-tilanteita saavutettu tai liian monta avointa tiedostoa." Jos on, voit korjata tämän ongelman soittamalla (juurina) :
+kaiku fs.inotify.max\\_user\\_kellot=65536 | Te -a /etc/syctl.conf
+kaiku fs.inotify.max\\_user\\_instances=1024 | Te -a /etc/syctl.conf
+sysctl-p
+Tai käytä suurempia numeroita, jos ongelma jatkuu. Oletus kellot on 8192. Tapausten oletusarvo on 128. \\[ -Ei. Java mikä aiheuttaa sen, että tapauksia ei kerätä roskia. Tämä ongelma vältetään ERDDAP™ v1.66 ja korkeampi. Joten parempi ratkaisu on siirtyä uusimpaan versioon ERDDAP . \\] 
+    * NoSuchFilePoikkeus Virheen korjaaminen:
+Oli vika, joka voi aiheuttaa tiedostoja tyyppi= EDDGrid Kansioista. EDDGrid Kopioi, EDDTableCopy tai niiden alaluokat ei ladata ajoittain virhe "NoSuchFilePoikkeus: _someFileName_." Virhe liittyy FileVisitorin käyttöön ja otettiin käyttöön ERDDAP™ v1.56. Ongelma on harvinainen ja vaikuttaa todennäköisesti tietoaineistoihin, joissa on suuri määrä usein muuttuvia tiedostoja.
+    * Oli joitakin pieniä parannuksia, muutoksia, ja korjauksia.
 
 ## Versio 1.58{#version-158} 
- (2015-02-25) 
+ (julkaistu 2015-02-25) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :** 
-    * Uusi [ "files" ](https://coastwatch.pfeg.noaa.gov/erddap/files/documentation.html) Järjestelmän avulla voit selata virtuaalitiedostojärjestelmää ja ladata lähdetiedostoja monista ERDDAP™ Dataa. The "files" järjestelmä toimii oletusarvoisesti, mutta ERDDAP™ Järjestäjät voivat poistaa sen käytöstä laittamalla
+*    **Uudet ominaisuudet (käyttäjille) :** 
+    * Uusi [ "files" ](https://coastwatch.pfeg.noaa.gov/erddap/files/documentation.html) järjestelmän avulla voit selata virtuaalinen tiedostojärjestelmä ja ladata lähdetiedostoja monista ERDDAP™ tiedot. • "files" järjestelmä toimii oletusarvoisesti, mutta ERDDAP™ ylläpitäjät voivat poistaa sen asettamalla
 ```
         <filesActive>false</filesActive>  
 ```
-Sisällä ERDDAP™ asennus.xml-tiedosto. Erityiskiitos Philippe Makowskille, joka pysyi, kun olin hidas arvostamaan tämän ajatuksen kauneutta.
-    * Aika määrä Max... Aiemmin EDDTable-tietoaineistojen aikamuuttujat, joilla oli lähes reaaliaikaisia tietoja, olivat NaN:n kohdemax, mikä merkitsi, että aineiston enimmäisarvo on hiljattain, mutta ei juuri tiedossa ja muuttuu usein. Nyt määränpäällä on todellinen arvo, josta käy ilmi viimeksi tunnettu. Monet aineistot ovat jatkuvasti päivittäneet tietoja. ERDDAP™ tukee pääsyä uusimpiin tietoihin, vaikka se olisi viimeksi tiedossa. Huomaa, että uusi [&lt;Päivitä kaikki ns. (Docs/server-admin/datasets#updateeverynmillis) Tukea EDDGrid Files ja EDDTable FromFiles-tietoaineisto päivittää aikamuuttujan määränpääMax. Toinen syy tähän muutokseen on se, että datasetID = allDatasets Dataset sisältää nyt viimeksi tunnetun maxTime-sarakkeiden. Kiitos John Kerfootille.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Vahvistettu: päivitä palvelimen [Robotit.txt](/docs/server-admin/additional-information#robotstxt) Tiedosto sisältää:
-Disallow: /Fiilit /
-Disallow: /erddap/files/
-    * Esimerkki datasets.xml ----- Viime vuonna suosittelimme useita erinomaisia aineistoja rannikolla. ERDDAP™ että voisit lisätä ERDDAP™ Vain lisäämällä muutaman rivin omaan datasets.xml . Jos lisäsit erdVH-tietoaineiston, siirry uudempiin erdVH2-tiedostoihin:
-        * Tee jäljennös kaikista erdVH-tiedostoista ja vaihda kopioitu datasetID erdVH:sta erdvH2:een ja muutetaan viittaus sourceUrl ErdVH:sta erdvH2:een...
-        * Aseta erdVH-tiedostot aktiiviseksi = "väärä".
-    * Kaikki Kaikki Kaikki Kaikki EDDGrid Files ja EDDTable Files-aliryhmät tukevat nyt&lt;Käytettävissä olevat tiedostot &gt; (Docs/server-admin/datasets#accessibleviafiles Näytä tarkat tiedot) tiedostojen saatavuus lähteen kautta "files" järjestelmät. Oletusarvoisesti tämä järjestelmä on poistettu jokaisesta tietoaineistosta. Sinun on lisättävä tagi siihen. Kiitos Philippe Makowskille.
-    * Kaikki Kaikki Kaikki Kaikki EDDGrid Files ja EDDTable Files-aliryhmät tukevat nyt&lt;Päivitä kaikki ns. (Docs/server-admin/datasets#updateeverynmillis) . Oletusarvoisesti tämä järjestelmä on poistettu jokaisesta tietoaineistosta. Sinun on lisättävä tagi siihen. Dominic Fuller-Rowellin ja NGDC:n ansiosta.
-    * Uusi [EdDTableFromFileNames](/docs/server-admin/datasets#eddtablefromfilenames) luo tietoaineiston palvelimen tiedostojärjestelmään kuuluvasta tiedostoryhmästä, mutta se ei palvele tietoja tiedostojen sisältä. Tämä on hyödyllinen esimerkiksi kuvatiedostojen, äänitiedostojen, videotiedostojen, sanankäsittelytiedostojen ja laskentataulukkotiedostojen kokoelmien jakamisessa. Tämä toimii käsi kädessä uuden [ "files" ](https://coastwatch.pfeg.noaa.gov/erddap/files/documentation.html) järjestelmä, jotta käyttäjät voivat ladata tiedostoja. Erityiskiitos Philippe Makowskille, joka pysyi, kun olin hidas arvostamaan tämän ajatuksen kauneutta.
-    * Uusi [ EDDGrid EDDTable](/docs/server-admin/datasets#eddgridfromeddtable) Voit muuntaa tabulaarin tietoaineiston verkkoon. Kiitos Ocean Networks.
-    * Uusi [ EDDGrid Lähde: MergeIRFiles](/docs/server-admin/datasets#eddgridfrommergeirfiles) Aggregoida tietoja paikallisesta MergeIR-ryhmästä .gz tiedostoja. EDDGrid FromMergeIRFiles on ero, joka on ensimmäinen koodinpunainen, jota käytetään ERDDAP . Se on tehty täysin ilman apuamme. Jonathan Lafite ja Philippe Makowski R.Tech Engineering.
-    * Uusi, valinnainen asennus.xml-tunnus,&lt;yksikköTestDataDir&gt;, joka määrittää hakemiston yksikkötestidatatiedostoilla, jotka ovat saatavilla uuden GitHub-varaston kautta: [https://github.com/ERDDAP/erddapTest](https://github.com/ERDDAP/erddapTest) . Esimerkiksi:
+ae ERDDAP™ setup.xml-tiedosto. Erityiskiitos Philippe Makowskille, joka kesti, kun olin hidas arvostamaan tämän idean kauneutta.
+    * määräpaikka Max... Aiemmin EDDTable-aineistojen aikamuuttujassa, jossa oli lähes reaaliaikaiset tiedot, oli määränpääMax of NaN, mikä tarkoitti, että aineiston enimmäisaika-arvo on tuore, mutta ei tarkasti tiedossa ja muuttuu usein. Nyt kohde Max on todellinen arvo, joka osoittaa tällä hetkellä tunnettu viimeksi. Monissa aineistoissa on jatkuvasti päivitetty tietoja. ERDDAP™ tukee uusimman tiedon saantia, vaikka se olisikin viimeksi tunnetun tiedon jälkeen. Huomaa, että uusi [&lt;updateEveryNMillis&gt;] (/docs/server-admin/datasets#update everyenmillis) tuki EDDGrid Kansiosta ja EDDTablesta FromFiles-aineistot päivittää aikamuuttujan kohdeMax. Toinen seuraus tästä muutoksesta on, että datasetID = allDatasets Tiedosto sisältää nyt maxTime-sarakkeissa tunnetun viimeisen kerran. John Kerfootin ansiosta.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * SUOSITELTU: Päivitä palvelimen [robotit.txt](/docs/server-admin/additional-information#robotstxt) tiedosto, johon sisältyy:
+Poista: /tiedostot/
+Poista: /erddap/files/
+    * Näyte datasets.xml -- Viime vuonna suosittelimme useita erinomaisia tietoja rannikkovartiostossa ERDDAP™ että voit lisätä oman ERDDAP™ vain lisäämällä muutaman rivin datasets.xml . Jos olet lisännyt erdVH-aineistot, vaihda uudempiin erdVH2-aineistoihin:
+        * Tee kopio kaikista erdVH-aineistoista ja muuta kopioita datasetID Se on erdVH:sta erdVH2:ksi. sourceUrl ErdVH:sta erdVH2:een.
+        * Aseta erdVH... tiedot aktiiviseen="false" .
+    * Kaikki EDDGrid Kansiosta ja EDDTablesta FromFiles alaluokista nyt tukea [&lt;EsteetönViaFiles&gt;] (/docs/server-admin/datasets# accessibleviafiles) Saada lähdetiedostot saataville kautta "files" Järjestelmät. Oletuksena tämä järjestelmä on pois päältä jokaisen tiedoston osalta. Sinun täytyy lisätä merkki mahdollistaaksesi sen. Kiitos Philippe Makowskin.
+    * Kaikki EDDGrid Kansiosta ja EDDTablesta FromFiles alaluokista nyt tukea [&lt;updateEveryNMillis&gt;] (/docs/server-admin/datasets#update everyenmillis) . Oletuksena tämä järjestelmä on pois päältä jokaisen tiedoston osalta. Sinun täytyy lisätä merkki mahdollistaaksesi sen. Kiitos Dominic Fuller-Rowellin ja NGDC:n.
+    * Uusi [EDDtableFromFileNames](/docs/server-admin/datasets#eddtablefromfilenames) luo tiedoston palvelimen tiedostojärjestelmässä olevista tiedostoista, mutta se ei palvele tiedostojen tietoja. Tämä on hyödyllistä esimerkiksi kuvatiedostojen, äänitiedostojen, videotiedostojen, tekstinkäsittelytiedostojen ja taulukkolaskentatiedostojen kokoelmien jakelussa. Tämä toimii käsi kädessä uuden [ "files" ](https://coastwatch.pfeg.noaa.gov/erddap/files/documentation.html) järjestelmä, jotta käyttäjät voivat ladata tiedostoja. Erityiskiitos Philippe Makowskille, joka kesti, kun olin hidas arvostamaan tämän idean kauneutta.
+    * Uusi [ EDDGrid DDDTablesta](/docs/server-admin/datasets#eddgridfromeddtable) Voit muuntaa taulukkotiedoston ruudukoksi. Kiitos Ocean Networks Canada.
+    * Uusi [ EDDGrid FromMergeIRFiles](/docs/server-admin/datasets#eddgridfrommergeirfiles) paikallisen MergeIR-ryhmän aggregaatit .gz tiedostot. EDDGrid FromMergeIRFiles on ero on ensimmäinen osa koodin osaltaan ERDDAP . Se tehtiin täysin ilman apuamme. Kolme hurraa ja erityinen kiitos Jonathan Lafite ja Philippe Makowski R.Tech Engineering.
+    * On uusi, valinnainen setup.xml tag,&lt;UnitTestDataDir&gt;, joka määrittelee yksikön testitietotiedostojen hakemiston, joka on saatavilla uuden GitHub-varaston kautta: [ https://github.com/ERDDAP/erddapTest ](https://github.com/ERDDAP/erddapTest) . Esimerkiksi:
 ```
         <unitTestDataDir>/erddapTest/</unitTestDataDir>  
 ```
-Tämä ei ole vielä hyödyllistä, mutta se on osa siirtymistä kohti niin monen yksikkötestin suorittamista kuin mahdollista. Kiitos Terry Rankine.
-    * Pieniä parannuksia, muutoksia ja korjauksia oli paljon.
+Tämä ei ole vielä hyödyllistä, mutta se on osa pyrkimystä saada mahdollisimman monta muiden suorittamaa testiyksikköä. Kiitos Terry Rankinen.
+    * Oli monia pieniä parannuksia, muutoksia, ja korjauksia.
 
 ## Versio 1.56{#version-156} 
- (2014-12-16) 
+ (julkaistu 2014-12-16) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :**   (Ei kukaan) 
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Ehkä tiedät jo [ EDDGrid Lähde: Eddap](/docs/server-admin/datasets#eddfromerddap) ja [EdDTableFromDap](/docs/server-admin/datasets#eddfromerddap) jonka avulla voit linkittää tietoaineistoihin muissa ERDDAP ja ne näkyvät sinun ERDDAP . Käyttäjän pyynnöt todellisista tiedoista siirtyvät näkymättömästi lähteelle ERDDAP™ Tiedot eivät virtaa järjestelmäsi läpi tai käytä kaistanleveyttäsi. Näytteessä on nyt suuri luettelo suositelluista tietoaineistoista. datasets.xml erdapContent .zip . sisällyttää ne sinun ERDDAP™ Kaikki mitä sinun tarvitsee tehdä on kopioida ja liittää haluamasi datasets.xml . Kiitos Conor Delaneylle.
-    * Jos kokoat ERDDAP™ Sinun täytyy lisätä jotain uutta. Jar-tiedostot sinulle [Luokka:Cp](/docs/contributing/programmer-guide#development-environment) Javac ja Java.
-    * Uusi [EDDTableFromCassandra](/docs/server-admin/datasets#eddtablefromcassandra) käsittelee tietojen saamista [Cassandra](https://cassandra.apache.org/) . Kiitos Ocean Networks.
-    * Uusi [EDDTableFromColumnarAsciiFiles](/docs/server-admin/datasets#eddtablefromcolumnarasciifiles) Käsittelee saada tietoja ASCII-tiedostoista kiinteän leveyden sarakkeilla. Kiitos Philippe Makowskille.
-    * Kaikki Kaikki Kaikki Kaikki EDDGrid Files ja EDDTable Files-aliluokka käyttää nyt uutta menetelmää, FileVisitor (Lisätty Java 1.7) kerätä tietoa tiedostoista. Tällä ei ehkä ole mitään hyötyä tiedostotietoaineiston ensimmäisestä keräämisestä, mutta se vaikuttaa olevan valtava hyöty myöhemmille kokouksille, jos se on tehty pian, kun taas OS on edelleen tiedot välitetty. Kiitos NGDC:lle.
+*    **Uudet ominaisuudet (käyttäjille) :**   (Ei ole) 
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Luultavasti tiedät jo [ EDDGrid FromErddap](/docs/server-admin/datasets#eddfromerddap) sekä [EDDTableFromErddap](/docs/server-admin/datasets#eddfromerddap) jonka avulla voit linkittää tiedostoja muissa ERDDAP äm ERDDAP . Käyttäjä pyytää näiden tietoaineistojen todellisia tietoja näkymättömästi lähde ERDDAP™ , jotta data ei virtaa läpi järjestelmän tai käyttää kaistanleveys. Näytteessä on nyt suuri luettelo suositelluista tiedoista. datasets.xml in erddapContent .zip . -Ei. ERDDAP™ Sinun tarvitsee vain kopioida ja liittää haluamasi. datasets.xml . Kiitos Conor Delaneyn.
+    * Jos kokoat ERDDAP™ , sinun täytyy lisätä joitakin uusia . purkki tiedostoja [luokkapolku -cp-kytkin](/docs/contributing/programmer-guide#development-environment) Javalle ja Javalle.
+    * Uusi [EDDTableFromCassandra](/docs/server-admin/datasets#eddtablefromcassandra) käsittelee saada tietoja [Cassandra](https://cassandra.apache.org/) . Kiitos Ocean Networks Canada.
+    * Uusi [EDDTableFromColumnarAsciiFiles](/docs/server-admin/datasets#eddtablefromcolumnarasciifiles) käsittelee saada tietoja ASCII datatiedostoja kiinteän leveyden sarakkeita. Kiitos Philippe Makowskin.
+    * Kaikki EDDGrid Kansiosta ja EDDTablesta FromFiles alaluokat nyt käyttää uutta menetelmää, FileVisitor (lisätty Java 1,7) kerätä tietoja tiedostoista. Tästä ei välttämättä ole hyötyä tiedostotietojen ensimmäisessä keräämisessä tietystä aineistosta, mutta näyttää olevan valtava hyöty myöhemmille kokouksille, jos ne tehdään pian, kun taas käyttöjärjestelmä on edelleen välimuistissa. Kiitos NGDC:n.
         
-Suosittelemme edelleen: Jos aineistossa on paljon tiedostoja (&gt; 1000) käyttöjärjestelmä (ja siten EDDGrid Files ja EDDTableFromFiles) Toimii paljon tehokkaammin, jos tallennat tiedostot aliohjaussarjaan. (1 vuosi tai yksi kuukaudessa tiedostojen kanssa) Koskaan ei ole valtavaa määrää tiedostoja tietyssä hakemistossa.
+Suosittelemme edelleen: Jos tiedostossa on suuri määrä tiedostoja (esim. &gt; 1000) , käyttöjärjestelmä (ja siten EDDGrid From Files and EDDTableF from Files) toimii paljon tehokkaammin, jos säilytät tiedostoja sarjassa alihakemistoja (yksi vuodessa tai yksi kuukaudessa aineistoista, joissa on hyvin usein tiedostoja) , jotta ei ole koskaan valtava määrä tiedostoja tietyssä hakemistossa.
         
     * Useita pieniä parannuksia EDDTableFromAsciiFiles.
-    * Joitakin parannuksia EDDTableFromAsciiServiceNOS, erityisesti saada lisätietoja lähteestä. Kiitos Lynn DeWitt.
-    * ISO 19115 -standardiin liittyvät pienet bugit ERDDAP™ tuottaa. Kiitos Anna Milanosta.
+    * Joitakin parannuksia EDDtableFromAsciiServiceNOS, erityisesti saada joitakin lisätietoja lähteestä. Kiitos Lynn DeWittin.
+    * Joitakin pieniä korjauksia liittyvät ISO 19115 että ERDDAP™ luo. Kiitos Anna Milanin.
 
 ## Versio 1.54{#version-154} 
- (2014-10-24) 
+ (julkaistu 2014-10-24) 
 
-*    **Uudet ominaisuudet (Käyttäjille) :** 
-    * Jotkut muuttujat työskentelevät nyt ajan kanssa millisekunneissa tarkkuudella, esim. 2014-10-24T16:41:22.485Z. Kiitos Dominic Fuller-Rowellille.
-*    **Pienet muutokset/Bug-korjaukset:** 
-    * Bug fix: tiettyjen olosuhteiden yhdistelmä, EDDGrid FromNcFile-tietoaineistot palauttivat tiedot vähennetyllä tarkkuudella (Esimerkiksi kaksinkertaisten sijasta kelluvat) . Tämä voi vaikuttaa vain &gt; 8 merkittävään lukuun. Anteeksipyyntöni. (Se oli klassinen tietokoneohjelmointivirhe: yksi väärä hahmo.) Kiitos Dominic Fuller-Rowellille.
+*    **Uudet ominaisuudet (käyttäjille) :** 
+    * Jotkut muuttujat toimivat nyt ajan kanssa millisekuntien tarkkuudella, esim., 2014-10-24T16:41:22.485Z. Kiitos Dominic Fuller-Rowellin.
+*    **Pienet muutokset / viankorjaukset:** 
+    * Bug fix: tiettyjen olosuhteiden yhdistelmä, EDDGrid FromNcFile-aineistot palauttivat tietoja pienemmällä tarkkuudella (esim. kellukkeet kaksoiskappaleiden sijaan) . Tämä voi vaikuttaa ainoastaan tietoarvoihin, joissa on yli 8 merkitsevää lukua. Pyydän anteeksi. (Se oli klassinen ohjelmointivirhe: yksi väärä hahmo.) Kiitos Dominic Fuller-Rowellin.
     * Paljon pieniä muutoksia.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Griddap-tiedot tukevat nyt aikaleima-akselimuuttujaa ja datamuuttujaa (muuttujia, joilla on aika-arvoja, mutta destinationName Muuta kuin "time" ) . Kiitos Dominic Fuller-Rowellille.
-    *    ERDDAP™ Tukee nyt oikein millisekuntia time\\_precision 1970-01-01-00:00.000Z Yksi tarkoituksellinen omituisuus: kun kirjoitat ajat ihmislähtöisiin tiedostoihin (.csv, .tsv , .json , .xhtml ) , ERDDAP™ käyttää määritettyjä time\\_precision jos se sisältää sekuntia ja/tai desimaalisekuntia; muuten sekuntia käytetään time\\_precision 1970-01-01T00:00:00 (Johdonmukaisuus ja taaksepäin yhteensopivuus) . Kiitos Dominic Fuller-Rowellille.
-    *    EDDGrid FromNcFiles tukee lukemista dataVariable s.
-    *    .nc Griddapin kirjoittamat tiedostot voivat nyt olla String dataVariable s.
-    * GenerateDatasets XML sisältää nyt lisää flushia () kehottaa välttämään tiedon ongelman, jota ei ole kirjoitettu tiedostoihin. Kiitos Thierry Valerolle.
-    * GenerateDatasetsXml:n dokumentointia parannettiin erityisesti osoittamalla, että -i-kytkin toimii vain, jos määrität kaikki komentorivin vastaukset. (Esim. käsikirjoitustila) . Käsikirjoitustila on selitetty. Kiitos Thierry Valerolle.
-    *    ERDDAP™ ei enää salli kahta muuttujaa aineistossa sourceName . (Jos joku on tehnyt sen aiemmin, se on todennäköisesti johtanut virheilmoituksiin.) Kuten ennenkin, ERDDAP™ ei salli kahta muuttujaa tietoaineistossa olla sama destinationName .
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Griddap-aineistot tukevat nyt aikaleiman akselimuuttujia ja tietomuuttujia (eli muuttujat, joilla on aika-arvot, mutta destinationName muu kuin "time" ) . Kiitos Dominic Fuller-Rowellin.
+    *    ERDDAP™ tukee nyt oikein millisekuntia time\\_precision "1970-01-01T00:00:00:00.000Z." Yksi tahallinen oikku: kirjoittaessaan aikoja ihmissuuntautuneisiin tiedostoihin (esim. .tsv , .json , .xhtml ) , ERDDAP™ käyttää määriteltyä time\\_precision jos se sisältää sekunnit ja/tai desimaali sekuntia; muussa tapauksessa se käyttää sekuntia time\\_precision 1970-01-01T00:00:00Z (johdonmukaisuus ja taaksepäin yhteensopivuus) . Kiitos Dominic Fuller-Rowellin.
+    *    EDDGrid FromNcFiles tukee lukemista dataVariable S.
+    *    .nc griddapin kirjoittamat tiedostot voivat nyt olla merkkijono dataVariable S.
+    * Luo tiedostoja Xml sisältää nyt enemmän huuhtelu () kehottaa välttämään sen, että tiedostoihin ei kirjoiteta tietoja. Kiitos Thierry Valeron.
+    * GenerateDatasetsXml:n dokumentaatiota parannettiin erityisesti huomauttamalla, että -i-kytkin toimii vain, jos määrittelet kaikki vastaukset komentorivillä (esim. skriptitila) . Käsikirjoitustila on selitetty. Kiitos Thierry Valeron.
+    *    ERDDAP™ ei enää salli kahta muuttujaa aineisto on sama sourceName . (Jos joku teki sen aiemmin, se luultavasti johti virheviesteihin.) Kuten ennenkin. ERDDAP™ ei salli kahta muuttujaa aineistossa on sama destinationName .
 
-## versio 1.52{#version-152} 
- (2014-10-03) 
+## Versio 1.52{#version-152} 
+ (julkaistu 2014-10-03) 
 
-*    **Uudet ominaisuudet:**   (Ei kukaan) 
-*    **Pienet muutokset/Bug-korjaukset:** 
-    * Toinen (pienempiä) Muutos tehdä ERDDAP™ nopeammin.
-    * ISO 19115 -tiedostojen kehittäminen ERDDAP Lisätty äskettäin suositeltu&lt;GMD: Protocol &gt; arvot (tietoja, etsintää, OPeNDAP : OPeNDAP , ERDDAP Griddap, ja ERDDAP : tabledap ) sisällä sisällä sisällä&lt;Gmd: C \\ OnlineResource &gt; Kiitos Derrick Snowdenille ja John Maurerille.
+*    **Uudet ominaisuudet:**   (ei mitään) 
+*    **Pienet muutokset / viankorjaukset:** 
+    * Toinen (pienempi) tehtävä muutos ERDDAP™ Nopeammin.
+    * ISO 19115 -tiedostojen parantaminen ERDDAP : lisätty uusi suositus&lt;gmd:protocol&gt; arvot (tiedot, haku, OPeNDAP : OPeNDAP , ERDDAP :griddap ja ERDDAP : tabledap ) sisällä&lt;gmd:CI\\_OnlineResource&gt;. Derrick Snowdenin ja John Maurerin ansiosta.
     * Paljon pieniä muutoksia.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Bug fix: GenerateDatasetsXml.sh ja DasDds.sh eivät olleet erddap.sodassa 1.48 ja 1.50. Nyt ne ovat. Kiitos Thierry Valerolle.
-    * Pienet muutokset nopeustesteissä TestAllissa tekevät niistä vähemmän alttiita sattumalle. Kiitos Terry Rankine.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Bug korjaus: GenerateDatasetsXml.sh ja DasDds.sh eivät olleet erddap.war varten 1.48 ja 1.50. Nyt he ovat. Thierry Valeron ansiosta.
+    * Pienet muutokset joihinkin nopeustesteihin TestAllissa, jotta ne olisivat vähemmän alttiita sattumalle. Kiitos Terry Rankinen.
 
 ## Versio 1.50{#version-150} 
- (2014-09-06) 
+ (julkaistu 2014-09-06) 
 
-*    **Uudet ominaisuudet:**   (Ei kukaan) 
-*    **Pienet muutokset/Bug-korjaukset:** 
-    * Tämä tämä ERDDAP™ Se on huomattavasti nopeampi kuin viimeisimmät versiot.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:**   (Ei mitään ei) 
+*    **Uudet ominaisuudet:**   (ei mitään) 
+*    **Pienet muutokset / viankorjaukset:** 
+    * Tämä ERDDAP™ pitäisi olla paljon nopeampi kuin viimeaikaiset versiot.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:**   (Ei mitään) 
 
-## versio 1.48{#version-148} 
- (2014-09-04) 
+## Versio 1.48{#version-148} 
+ (julkaistu 2014-09-04) 
 
 *    **Uudet ominaisuudet:** 
-    *    ERDDAP™ luo aina tabulaarin, datasetID = allDatasets , jolla on taulukko tiedoista kaikista tietokannoista tässä ERDDAP . Voidaan kysellä kuten mikä tahansa muu tabulaari. Tämä on hyödyllinen vaihtoehto nykyiselle järjestelmälle tietojen saamiseksi ohjelmallisesti.
-    * EDDTablessa on kaksi uutta tiedostotyyppiä ja EDDGrid .csv0 ja .tsv 0. Ne ovat koomma- ja välilehti-eriarvotiedostoja, joilla ei ole riviä sarakkeiden nimien tai yksiköiden kanssa. Tiedot alkavat ensimmäisellä rivillä. Ne ovat erityisen hyödyllisiä käsikirjoituksissa, jotka haluavat vain yhden tiedon. ERDDAP .
-*    **Pienet muutokset/Bug-korjaukset:** 
-    * Karttoja voidaan tehdä pituuskaavoihin -720 - 720.
-    * Uusi .nc ml-vastetiedostotyyppi on kaikkien saatavilla EDDGrid Dataa. Se palauttaa [NCML](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/ncml_overview.html) \\-muotoinen kuvaus aineistosta (Samanlainen kuin yhdistetty .dds + .das) .
-    * Bug fix: Tabular-tietojen tallentaminen .nc tiedosto oli rajoitettu 100 000 arvoon muuttujia kohden. Nyt se on vain 2 Gt:n kokoinen tiedostokoko. Kiitos Kevin O'Brien.
-    * Bug fix: Säästäminen Matlab Menetelmät varmistavat nyt, että datasetID S muunnetaan turvalliseksi Matlab muuttuvia nimiä. Suosittelen vahvasti, että luot datasetID s, jotka ovat päteviä muuttuvia nimiä: alkaen kirjeestä ja sitten vain käyttämällä A-Z, a-z, 0-9 ja \\. Näytä [ datasetID ](/docs/server-admin/datasets#datasetid) . Kiitos Luke Campbellille.
-    * Bug fix EDDTableFromDatabase: Tietyntyyppisiä tietokantoja, ei Tietokannan DATA-vastaus johti pisteettömään 30 toiseen viivästykseen ERDDAP . Kiitos Greg Williamsille.
-    * Bug fix: EDDGrid Tee grafiikka graafisella tyypillä = linjat (Merkkejä tai merkintöjä ja viivoja) X-akselimuuttuja on aika. Nyt voi olla mikä tahansa akseli. Kiitos Lynn DeWitt.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Valmistettu: päivitetty Java   
-Tämä versio ERDDAP™ Vaatii Java 7 tai enemmän, mutta Java 7 saavuttaa loppuelämänsä huhtikuussa 2015 (Pian&#33;) Nyt on hyvä aika vaihtaa Java 8. Näin Java 8 on täysin korjattu. Kokeilen Java 8. Huomaa, että Java 6. Elämänsä päättyi helmikuussa 2013 (Ei enää turvavirheitä&#33;) .
-    * Kehittäjä: Update Tomcat
-Jos käytät Tomcatia, siirry Tomcatin uusimpaan versioon. Tomcat 8 on suunniteltu toimimaan Java 8.
-    * """ ERDDAP ”Ei ole enää akronyymi. Nyt se on vain nimi. En halua nimen korostavan ERD . Haluan ERDDAP™ korostamaan instituutiotasi ja tietojasi.
-    * Tyytyväinen [muokata ulkonäköäsi ERDDAP™ asennus, jossa korostetaan laitostasi ja tietojasi](/docs/server-admin/deploy-install#customize) . Tunnin työllä voit tehdä hyviä parannuksia, jotka kestävät ikuisesti.
-    * Asennuksessa.xml,&lt;DiagnosticInfo&gt; -vaihtoehto on aina sivuutettu ja käsitelty kuin arvo olisi väärä.
-Valmistettu: Poista&lt;NäytäDiagnosticInfo&gt;-tunniste ja siihen liittyvät tiedot asetuksesta.xml.
-    * Asennus.xml, oletus&lt; drawLandMask ”Oli”, mutta nyt se on ”alla”, mikä on parempi yleinen oletusarvo. (Toimii hyvin kaikkien aineistojen kanssa) .
-    * GenerateDatasetsXml.sh- ja DadDds.sh Linux-skriptit käyttävät nyt bashia kuin csh-sarjoja. Kiitos Emilio Mayorgalle
-    * GenerateDatasets Xml ja DasDds luovat omat lokitiedostonsa (GenerateDatasetsXml.log ja DasDds.log) Tuota tiedostot (GenerateDatasetsXml.out ja Dadds.out) _bigParentDirectory_/logs/, eikä koskaan laittaa tuloksia leikepöydälle.
-    * GenerateDatasets Xml tukee nyt -i-komentoriviparametria, joka lisää tuoton määritettyyn tiedostoon tietyssä paikassa. Nähdään [dokumentointi](/docs/server-admin/datasets#generatedatasetsxml) . Kiitos Terry Rankine.
-    * EDDTableFromDatabase tukee&lt;ColumnNameQuotes »&lt;/columnNameQuotes&gt;, jolla on voimassa olevat arvot (Oletusarvo) &gt; tai ei mitään. Tämä ominaisuus (Jos) Käytetään ennen ja jälkeen sarakkeen nimet SQL-kyselyissä. Eri tietokantojen tyypit, jotka on perustettu eri tavoin, tarvitsevat erilaisia sarakkeen nimimerkintöjä.
-    * Tabulaarinen leveys ja pituusmuuttujat ovat nyt räätälöityjä long\\_name Esimerkki: Profile Latitude Aiemmin ne voivat olla vain leveyttä ja pituutta.
-    * Tästä eteenpäin määritä "defaultDataQuery" ja "defaultGraphQuery" tietoaineiston maailmanlaajuisen metatietokannan ominaisuuksina (ts.&lt;&gt; ei erikseen&lt;defaultDataQuery &gt; ja&lt;Epäonnistunut GraphQuery &gt; tagit (Jos kuitenkin vielä tarkennat niitä sivujen kautta, ERDDAP™ luo automaattisesti maailmanlaajuisia ominaisuuksia.) 
+    *    ERDDAP™ Nyt luo aina taulukkotietokanta, datasetID = allDatasets , joka on taulukko kaikista tietoaineistoista tässä ERDDAP . Sitä voidaan kysyä kuten mitä tahansa taulukkotiedostoa. Tämä on hyödyllinen vaihtoehto nykyiselle järjestelmälle saada tietoa aineistoista ohjelmallisesti.
+    * On olemassa kaksi uutta tuloste tiedostotyypit EDDTable ja EDDGrid , .csv0 ja .tsv 0. Ne ovat pilkku- ja välilehti-eristettyjä-arvotiedostoja, joissa ei ole riviä sarakkeen nimiä tai yksiköitä. Tiedot alkavat ensimmäisellä rivillä. Ne ovat erityisen hyödyllisiä käsikirjoituksia, jotka haluavat vain yhden palan tietoa ERDDAP .
+*    **Pienet muutokset / viankorjaukset:** 
+    * Karttoja voidaan nyt tehdä pituusasteille -720-720.
+    * Uusi .nc ml vastaus Tiedostotyyppi on saatavilla kaikille EDDGrid tiedot. Se palauttaa [NCML](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/ncml_overview.html) \\- tiedoston muotoinen kuvaus (Samanlainen kuin yhdistetty .dds + .das) .
+    * Vikakorjaus: Tallennetaan taulukkotiedot .nc tiedosto rajoitettiin 100 000 arvoon muuttujaa kohti. Nyt se on vain rajoitettu 2 GB koko tiedoston. Kiitos Kevin O'Brienin.
+    * Vikakorjaus: saveAs Matlab menetelmät nyt varmistaa, että datasetID s muutetaan turvalliseksi Matlab Muuttuvia nimiä. Mutta suosittelen silti vahvasti, että luot datasetID s jotka ovat kelvollisia muuttujanimiä: alkaen kirjaimella ja sitten vain käyttämällä A-Z, a- z, 0-9 ja \\_. Katso [ datasetID ](/docs/server-admin/datasets#datasetid) . Kiitos Luke Campbellin.
+    * Virheen korjaaminen EDDtableF-tiedostossa Tietokanta: Tietyillä tietokannoilla, NO\\_ Tietokannasta saatu tietotulos johti turhaan 30 sekunnin viiveeseen ERDDAP . Kiitos Greg Williamsin.
+    * Virheen korjaaminen: EDDGrid Tee kaavio kuviolla = rivit (tai merkkiaineet ja viivat) pakotettu x akselin muuttuja ajaksi. Nyt se voi olla mikä tahansa akseli. Kiitos Lynn DeWittin.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * SUOSITELTU SUOSITUS: Päivitys Java   
+Tämä versio ERDDAP™ vaatii Java 7 tai enemmän, mutta Java 7 tulee loppuun huhtikuussa 2015 (Pian&#33;) , Joten nyt on hyvä aika vaihtaa Java 8. Joten Java 8:aa on muutettu. Testaan Java 8. Huomaa, että Java 6 saavutti elämänsä päättymisen helmikuussa 2013 (Ei enää turvavirheitä&#33;) .
+    * SUOSITELTU SUOSITUS: Päivitys Tomcat
+Jos käytät Tomcatia, vaihda Tomcatin uusimpaan versioon. Tomcat 8 on suunniteltu toimimaan Java 8.
+    * " ERDDAP "ei ole enää lyhenne. Nyt se on vain nimi. En halua mainita nimeä. ERD . Haluan. ERDDAP™ korostaa instituutiota ja tietoja.
+    * Ole kiltti. [muokata ulkonäköä ERDDAP™ laitos ja tietosi esille](/docs/server-admin/deploy-install#customize) . Tunnin työllä voit tehdä mukavia parannuksia, jotka kestävät ikuisesti.
+    * Setup.xml,&lt;NäytäDiagnosticInfo&gt; vaihtoehto jätetään nyt aina huomiotta ja käsitellään ikään kuin arvo olisi väärä.
+SUOSITTELEE:&lt;NäytäDiagnosticInfo&gt; tag ja siihen liittyvät tiedot setup.xml.
+    * In setup.xml, oletus&lt; drawLandMask &gt; oli "yli," mutta nyt se on "ali," joka on parempi yleinen oletusarvo (toimii hyvin kaikkien tietokokonaisuuksien kanssa) .
+    * GenerateDatasetsXml.sh ja DadDds.sh Linux skriptit nyt käyttää bash sijaan csh, ja on laajennus .sh. Kiitos Emilio Mayorgan
+    * Luo tiedostoja Xml ja DasDds nyt luoda omia lokitiedostoja (GenerateDatasetsXml.log ja DasDds.log) ja tulostiedostot (LuodaDatasetsXml.out ja isäDds.out) _bigPerentDirectory_/logs/, eikä koskaan laita tuloksia leikepöydälle.
+    * Luo tiedostoja Xml tukee nyt komentoriviparametria, joka syöttää tulosteen tiettyyn tiedostoon tietyssä paikassa. Katso [asiakirjat](/docs/server-admin/datasets#generatedatasetsxml) . Kiitos Terry Rankinen.
+    * EDDtableFromDatabase tukee nyt&lt;SarakeNameQuates&gt;&lt;/sarakeNimiNameQuotes&gt;, jolla on voimassa olevat arvot " (oletus) Tai ei mitään. Tämä merkki (jos) käytetään ennen ja jälkeen sarakkeiden nimet SQL kyselyissä. Erityyppiset tietokannat, jotka on perustettu eri tavoin, tarvitsevat erilaisia sarakkeen nimi lainausmerkkejä.
+    * Taulukon leveys- ja pituusastemuuttujat ovat nyt räätälöityjä long\\_name 's, esim., Profiili Leveysaste. Aiemmin ne olivat vain pituus- ja pituusasteita.
+    * Tästedes määritä "oletusdataQuery" ja "oletusgraafinenQuery" attribuutteina tietokokonaisuuden maailmanlaajuisessa metadatassa (eli&lt;addAtts&gt;, ei erillisenä&lt;oletusDataQuery&gt; ja&lt;oletusGraphQuery&gt; tagit. (Vaikka, jos vielä määrität ne tunnisteiden kautta, ERDDAP™ luo automaattisesti maailmanlaajuisia ominaisuuksia tietoja.) 
 
 ## Versio 1.46{#version-146} 
- (2013-07-09) 
+ (julkaistu 2013-07-09) 
 
 *    **Uudet ominaisuudet:** 
-    *    (Ei kukaan) 
-*    **Pienet muutokset/Bug-korjaukset:** 
-    * EDDTableFromDatabase, versiossa 1.44 ERDDAP™ Tietokannan taulukon nimi on merkitty väärin SQL-lauseissa. Se on nyt korjattu. Kiitos Kevin O'Brien.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    *    ** Jos et muokkaa tavallisia viestejä.xml,
-delegaatti \\[ Tom \\] Sisältö/erddap/viestit.xml **   
-Oletusviestit.xml-tiedosto on nyt erdapissa. Sotatiedosto, ei erddapContent .zip . Sinun ei enää tarvitse päivittää viestejä.xml.
-    * Jos muutat viestejä.xml, joka kerta, kun päivität ERDDAP™ Myös:
-        * Tee samat muutokset, jotka olet tehnyt ennen uutta
-             \\[ Tom \\] /webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/viestejä.xml
-Tällä kertaa: Poista \\[ Tom \\] Sisältö/erddap/viestit.xml
-        * Selvitä, mikä on muuttunut uudessa viestissä. (Diffin kautta) ja muokkaamaan
-             \\[ Tom \\] / Sisältö/erddap/viestejä.xml-tiedosto vastaavasti.
+    *    (Ei ole) 
+*    **Pienet muutokset / viankorjaukset:** 
+    * Bug fix: In EDDtableFromDatabase, vain versiossa 1.44, ERDDAP™ väärin lainattu tietokannan taulukon nimeä SQL-lausunnoissa. Se on nyt korjattu. Kiitos Kevin O'Brienin.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    *    ** Jos et muokkaa standardiviestejä viesteihin.xml,
+poistaa \\[ tomcat \\] /content/erddap/messages.xml . **   
+Oletusviestit.xml tiedosto on nyt erddap. Sotatiedosto, ei erddapContent .zip . Joten sinun ei enää tarvitse manuaalisesti päivittää viestejä.xml .
+    * Jos muutat viestejä viestit.xml, tästä lähtien, joka kerta kun päivität ERDDAP™ joko:
+        * Tee samat muutokset ennen kuin uusi
+             \\[ tomcat \\] /webaps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml.
+Ja tällä kertaa: poista \\[ tomcat \\] /content/erddap/messages.xml .
+        * Tai, selvittää, mitä on muuttunut uusien viestien.xml (diff:n kautta) , ja muokata
+             \\[ tomcat \\] /content/erddap/messages.xml tiedosto vastaavasti.
 
-## versio 1.44{#version-144} 
- (2013-05-30) 
+## Versio 1.44{#version-144} 
+ (julkaistu 2013-05-30) 
 
 *    **Uudet ominaisuudet:** 
-    * EDDTable-tietoaineistot tukevat nyt & orderBy Minulle mini (............) ja orderByMinMax  (............)   (joka palauttaa kaksi riviä kussakin ryhmässä, ja vähintään orderBy Arvon arvo) . Kiitos Lynn DeWitt.
-    * On kaksi uutta tabledap tiedostotyypit: .nc CFHeader ja .nc CFMA Head (jotka palauttavat vastaavan ncdump-maisen otsikon .nc CF ja .nc CFMA-tiedostot) . Kiitos Steve Hankinille.
-*    **Pienet muutokset/Bug-korjaukset:** 
-    * Bug fix: .graphin ja .html-verkkosivujen lataaminen tietoaineistoille, joilla on paljon aika-arvoja, oli hidasta. ERDDAP™ Se oli hidas, kun se loi ajan liukumisvaihtoehdot. Nyt se on aina nopea. Kiitos Michael Barry, OOICI ja Kristian Sebastian Blalid.
-    * Bug fix: Joissakin EDDTable-tiedostotyypeissä aikarajoituksia ei aina käsitelty oikein. Nyt ne ovat. Kiitos John Maurer ja Kevin O'Brien.
-    * Bug fix: Datasetit eivät kuormittaisi, kun kaikki subsetVariables olivat kiinteät arvomuuttujat. Nyt he haluavat. Kiitos Lynn DeWitt ja John Peterson.
-    * IMPROVED: Nyt kaikki kyselyt, jotka koskevat vain alasarjan muuttujia, toimivat kuin &distinct () Se on osa kyselyä.
-    * IMPROVED: nyt, kyselyihin, jotka sisältävät & .json _functionName_, _funktio Nimi = 1 tai enemmän (kausierillään) sanoja. Jokaisen sanan on aloitettava ISO 8859 -kirjeellä tai -kirjaimella, ja sitä seuraa 0 tai enemmän ISO 8859 -kirjeitä, numeroita tai . Tämä on rajoittavampaa kuin Java Käsikirjoituksen vaatimukset toiminnallisille nimille.
-    * Aika-akseli grafiikoilla toimii nyt hyvin pidemmän ajan alueilla. (80-10000 vuotta) Lyhyempi aikaväli (0.003 - 180 sekuntia) .
-    *    ERDDAP™ Nyt se on enemmän anteeksiantavaa, kun se sisältää ISO-8601-muotoisia aikatietoja.
-    * Muutamia pieniä muutoksia ja korjauksia oli paljon.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    *    **Päivitä uusimpaan versioon ollaksesi turvassa.**   
-         ERDDAP™ Turvatarkastus tehtiin. Joitakin vikoja ja heikkouksia oli. Versio 1.44 sisältää useita tärkeitä turvavirheitä ja useita muutoksia turvallisuuden ja saavutettavuuden parantamiseksi. (näön heikentyneet käyttäjät) . Versio 1.44 on suorittanut seurantaturvatarkastuksen. Kiitos kaikille Acunetixin ja USGS:n hyville ihmisille. (Ei pitäisi olla NOAA Teetkö tätä?) 
-    * Uusi [EDDTableFrom WFS Tiedostot](/docs/server-admin/datasets#eddtablefromwfsfiles) paikallinen kopio kaikista tiedoista ArcGIS MapServer WFS palvelin, joten tiedot voidaan palauttaa nopeasti ERDDAP™ käyttäjiä. Kiitos Christy Caudill.
-    * Uusi [EDDTableFrom EDDGrid ](/docs/server-admin/datasets#eddtablefromeddgrid) Voit luoda EDDTable-tietoaineiston yhdestä EDDGrid Dataa. Yleisiä syitä tähän ovat:
-        * Näin aineistoa voidaan kyseenalaistaa OPeNDAP Valintarajoitukset (jota käyttäjä on voinut pyytää) .
-        * Tietoaineisto on luonnostaan tabulaarista dataa. Kiitos OOICI, Jim Potemra, Roy Mendelssohn.
-    * Muuttuva nimi "syvyys" on nyt erityinen vaihtoehto "korkeudelle". Yksikön on oltava jonkinlainen "mittarien" variantti. Datan arvojen on oltava positiivisia. ERDDAP™ on nyt täysin tietoinen "syvyydestä" ja tukee sitä missä korkeutta tuetaan. (esim. osana CF DSG cdm |datype = profiiliaineistoa) . Tietoaineistossa ei saa olla sekä "syvyyttä" että "korkeutta".
-    * Sisälläsi datasets.xml Ole hyvä ja poista kaikki käyttötavat&lt;att-nimi ="cd_altitude \\xy" &gt; Syvyys&lt;Koska syvyys on nyt erityinen vaihtoehto korkeudelle, joten sitä ei tarvitse tunnistaa.
-    * Sisälläsi datasets.xml Ole hyvä ja poista kaikki käyttötavat&lt;KortitudeMetersPerSourceUnit &gt;, paitsi EDDTable From SOS .
+    * Kyselyt DDDTablen tietokokonaisuuksiin nyt tukea & orderBy Vähintään (...) ja orderByMinMax  (...)   (joka palauttaa kaksi riviä kussakin ryhmässä, jossa on vähintään ja enintään orderBy arvo) . Kiitos Lynn DeWittin.
+    * On kaksi uutta tabledap tiedostotyypit: .nc CFHeader ja .nc CFMA- otsikko (joka palauttaa vastaavan ncdump-tyyppisen otsikon .nc CF ja .nc CFMA-tiedostotyypit) . Steve Hankinin ansiosta.
+*    **Pienet muutokset / viankorjaukset:** 
+    * Bug fix: lataaminen .graph ja .html web-sivut tietokokonaisuuksia paljon aika-arvot oli hidas, koska ERDDAP™ oli hidas luotaessa aika liukusäädin vaihtoehtoja. Nyt se on aina nopea. Kiitos Michael Barryn, OOICI:n ja Kristian Sebastian Blalidin.
+    * Virheen korjaaminen: Eräissä EDDTable-aineistotyypeissä aikarajoituksia ei aina käsitelty oikein. Nyt he ovat. John Maurerin ja Kevin O'Brienin ansiosta.
+    * Bug korjaus: tiedot eivät ladata, kun kaikki subsetVariables olivat kiinteitä arvoja. Nyt he tulevat. Lynn DeWittin ja John Petersonin ansiosta.
+    * PARANTAA: nyt kaikki kyselyt vain subset muuttujat toimivat ikään kuin & erota () on osa kyselyä.
+    * PARANTAA: nyt, kyselyt, jotka sisältävät & .json p=_funktioName, _toiminto Nimi_ PITÄÄ nyt olla sarja 1 tai enemmän (jakso) Sanat. Kunkin sanan on alettava ISO 8859 -kirjaimella tai "\\_" ja sen jälkeen on oltava vähintään 0 ISO 8859 -kirjainta, numeroa tai "\\_" . Kyllä, tämä on rajoittavampaa kuin Java Toimintonimiä koskevat komentosarjan vaatimukset.
+    * Aikaakseli kaavioita nyt toimii hyvin pidempiä ajanjaksoja (80-10 000 vuotta) ja lyhyemmät aikavälit (0,003 - 180 sekuntia) .
+    *    ERDDAP™ on nyt enemmän anteeksiantavaa, kun jäsentämällä muutoksia ISO-8601-formaattien aikatiedot.
+    * Oli monia muita pieniä muutoksia ja korjauksia.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    *    **Sinun täytyy päivittää uusimpaan versioon ollaksesi varma.**   
+         ERDDAP™ hänelle tehtiin turvatarkastus. Siellä oli ötököitä ja heikkouksia. Versio 1.44 sisältää useita tärkeitä tietoturvavirheitä ja useita muutoksia turvallisuuden ja saavutettavuuden parantamiseksi (Esimerkiksi näkövammaisille käyttäjille) . Versio 1.44 on läpäissyt turvatarkastuksen. Kiitos kaikille hyville ihmisille USGS ja Acunetix jotka tekivät tämän mahdolliseksi. (Ei pitäisi. NOAA Tehdä tämän?) 
+    * Uusi [EDDTableFrom WFS Tiedostot](/docs/server-admin/datasets#eddtablefromwfsfiles) tekee paikallisen kopion kaikista tiedoista osoitteesta ArcGIS KarttaServer WFS palvelimen ja niin tiedot voidaan sitten palauttaa nopeasti ERDDAP™ käyttäjät. Christy Caudillin ansiosta.
+    * Uusi [EDDTableFrom EDDGrid ](/docs/server-admin/datasets#eddtablefromeddgrid) voit luoda EDDTable-tiedoston EDDGrid tietokokonaisuus. Yleisiä syitä tähän ovat:
+        * Tämä mahdollistaa aineiston kyselyn OPeNDAP valintarajoitukset (käyttäjä on saattanut pyytää) .
+        * Aineisto on luonnostaan taulukkotietokanta. Kiitos OOICI:n, Jim Potemran, Roy Mendelssohnin.
+    * Muuttuja nimi "syvyys" on nyt erityinen vaihtoehto "korkeus." Yksikköjen on oltava jokin "metrien" variantti. Tietojen arvojen on oltava positiivisia = alaspäin. ERDDAP™ on nyt täysin tietoinen "syvällinen" merkitys ja tukee sitä missä tahansa korkeudessa tuetaan (esim. CF DSG cdm\\_data\\_type=profile datan osana) . Aineistossa ei saa olla sekä "syviä" että "korkeusmuuttujia."
+    * • datasets.xml , poista kaikki käyttötavat&lt;att name="cdm\\_altitude\\_proxy"&gt;syvyys&lt;/att&gt; koska syvyys on nyt erityinen vaihtoehto korkeus ja niin ei tarvitse erityisesti tunnistaa.
+    * • datasets.xml , poista kaikki käyttötavat&lt;korkeusMetersPerSourceUnit&gt;, paitsi EDDTable Mistä SOS .
 Kun arvo on 1, poista se.
-Kun arvo on -1, harkitse muuttuvan nimen vaihtamista syvyyteen.
-Muihin arvoihin lisätty&lt; addAttributes &gt; esimerkiksi:
+Kun arvo on -1, harkitse muuttujan nimen muuttamista syvyyteen.
+Lisää muihin arvoihin&lt; addAttributes &gt; esimerkiksi:
 ```
         <att name="scale\\_factor" type="float">-1</att>
 ```
 
-    * Kaikki aineistot tukevat nyt
+    * Kaikki tiedostot tukevat nyt
         
-        *   &lt;defaultDataQuery, jota käytetään, jos .html on pyydetty ilman kyselyä.
-            * Tätä on todennäköisesti harvoin pakko käyttää.
-            * Griddap-tietoaineistojen yhteisenä tarkoituksena on määritellä erilainen oletussyvyys tai korkeuden ulottuvuuden arvo. (esim. \\[ 0 \\] Sen sijaan \\[ Viimeinen viimeinen \\] ) .
-Joka tapauksessa sinun pitäisi aina listata kaikki muuttujat, aina käyttää samoja ulottuvuuksia kaikkiin muuttujiin. \\[ 0 \\] , \\[ Viimeinen viimeinen \\] tai \\[ 0: Viimeinen \\] ulottuvuuden arvoihin.
+        *   &lt;oletusDataQuery&gt; jota käytetään, jos .html pyydetään ilman kyselyä.
+            * Sinun tulee todennäköisesti harvoin käyttää tätä.
+            * Ruudukkokarttaaineistojen osalta tätä käytetään yleisesti eri oletussyvyyden tai korkeusmitan määrittämiseksi (esim. \\[ 0 \\] Sen sijaan \\[ viimeinen \\] ) .
+Joka tapauksessa, sinun pitäisi aina luetella kaikki muuttujat, aina käyttää samoja muuttujat, ja lähes aina käyttää \\[ 0 \\] , \\[ viimeinen \\] , tai \\[ 0:viimeinen \\] dimension arvot.
 Esimerkiksi:
 ```
                 <defaultDataQuery>u\\[last\\]\\[0\\]\\[0:last\\]\\[0:last\\],v\\[last\\]\\[0\\]\\[0:last\\]\\[0:last\\]</defaultDataQuery>
 ```
 
-            * For For tabledap aineistot, yleisin käyttö tässä on määrittää eri oletusaika (toistaiseksi, esimerkiksi & Time & Gt; now- 1 päivä) .
-Muista, että tietojen muuttujien pyytäminen on sama kuin kaikkien tietojen muuttujien määrittäminen, joten voit yleensä määrittää uuden aikarajoituksen.
+            * -Ei. tabledap tietoaineistot, yleisin käyttö tämä on määrittää eri oletusaikaväli (verrattuna tähän, esim., &time&gt;= now- 1 vrk) .
+Muista, että ei datamuuttujia on sama kuin kaikki tietomuuttujat, joten yleensä voit vain määritellä uuden aikarajoituksen.
 Esimerkiksi:
 ```
                 <defaultDataQuery>&amp;time&gt;=now-1day</defaultDataQuery>
 ```
 
-        *   &lt;oletusarvoinen GraphQuery, jota käytetään, jos .graphia pyydetään ilman kyselyä.
-            * Tätä on todennäköisesti harvoin pakko käyttää.
-            * Griddap-tietoaineistojen yleisin käyttö on määrittää erilainen oletussyvyys tai korkeuden ulottuvuuden arvo. (esim. \\[ 0 \\] Sen sijaan \\[ Viimeinen viimeinen \\] ) ja/tai määrittää, että tietyt muuttujat on kuvattava.
-Käyttää lähes aina \\[ 0 \\] , \\[ Viimeinen viimeinen \\] tai \\[ 0: Viimeinen \\] ulottuvuuden arvoihin.
+        *   &lt;OletusGraphQuery&gt; jota käytetään, jos .graph pyydetään ilman kyselyä.
+            * Sinun tulee todennäköisesti harvoin käyttää tätä.
+            * Ruudukkokarttaaineistojen yleisin käyttötapa on määritellä eri oletussyvyys tai korkeusmitta-arvo (esim. \\[ 0 \\] Sen sijaan \\[ viimeinen \\] ) ja/tai täsmentää, että tietty muuttuja on graafinen.
+Joka tapauksessa käytät lähes aina \\[ 0 \\] , \\[ viimeinen \\] , tai \\[ 0:viimeinen \\] dimension arvot.
 Esimerkiksi:
 ```
                 <defaultGraphQuery>temp\\[last\\]\\[0\\]\\[0:last\\]\\[0:last\\]&amp;.draw=surface&amp;.vars=longitude|latitude|temp</defaultGraphQuery>
 ```
 
-            * For For tabledap aineistot, tämän yleisimmät käyttötarkoitukset on määrittää eri muuttujat, jotka on kuvattava, erilainen oletusaika (toistaiseksi, esimerkiksi & Time & Gt; now- 1 päivä) ja/tai eri grafiikkaasetukset (Esim. Merkkityyppi) .
+            * -Ei. tabledap tietoaineistot, yleisimpiä käyttötarkoituksia tämän on määritellä eri muuttujat on graafinen, eri oletusaikaväli (verrattuna tähän, esim., &time&gt;= now- 1 vrk) ja/tai eri oletusgrafiikan asetukset (esim. merkkityyppi) .
 Esimerkiksi:
 ```
                 <defaultGraphQuery>longitude,latitude,seaTemperature&amp;time&gt;=now-1day&amp;.marker=1|5</defaultGraphQuery>
 ```
 
-Muista, että tarvitset XML-koodin tai prosenttikoodin (kumpaakaan, mutta ei molempia) Oletuskysymykset, koska ne ovat XML-dokumentissa. Esimerkiksi ja tulee & amp;amp;&lt;tulee &amp;lt; ja &gt; muuttuu & amp;gt;
-Tarkista työsi. On helppoa tehdä virhe eikä saada mitä haluaa.
-Kiitos Charles Carleton, Kevin O'Brien, Luke Campbell ja muut.
-    *    EDDGrid Dap, EDDGrid FromErddap ja EDDTableFrom EDDGrid uusi järjestelmä, joka käsittelee usein muuttuvia tietoja (yhtä usein kuin 0,5 s) . Toisin kuin ERDDAP "Säännöllinen, ennakoiva järjestelmä, joka lataa kaikki tietoaineistot täysin, tämä valinnainen lisäjärjestelmä on reaktiivinen" (Käyttäjän pyynnöstä) Lisääntyvä (päivittää tietoja, jotka on päivitettävä) . Jos esimerkiksi pyyntö EDDGrid FromDap-tietokantaa esiintyy enemmän kuin millisekuntien määrä viimeisimmän päivityksen jälkeen. ERDDAP™ Katsotaan, onko vasemmistolle uusia arvoja. (Yleensä yleensä "time" ) ulottuvuus ja jos on, lataa nämä uudet arvot ennen käyttäjän pyynnön käsittelyä. Järjestelmä on erittäin hyvä pitämään nopeasti muuttuva tietoaineisto ajan tasalla tietolähteen vähimmäisvaatimusten kanssa, mutta joidenkin käyttäjäpyyntöjen käsittelyn hidastumisen hinnalla. Näet [&lt;Päivitä kaikki ns. (Docs/server-admin/datasets#updateeverynmillis)   
-Kiitos Michael Barrylle ja OOICI:lle.
-    *    EDDGrid FromNcFiles, EDDTableFromNcFiles ja EDDTableFromNcFiles tukevat nyt [NCML .nc ml](/docs/server-admin/datasets#ncml-files) Lähdetiedostot sijasta .nc tiedostoja. Kiitos Jose B Rodriguez Ruedalle.
-    * For For EDDGrid Aggregateexistingdimension, ERDDAP™ tukee uutta palvelinType="dodsindex"-vaihtoehtoa palvelimenType-tunnistetta varten&lt; sourceUrl s &gt; tag. Tämä toimii verkkosivuilla, joilla on luettelo tiedostoista.&lt;Pre&gt;&lt;&gt; ja usein alle OPeNDAP logo. Esimerkki on [https://opendap.jpl.nasa.gov/opendap/GeodeticsGravity/tellus/L3/mascon/RL06/JPL/v02/CRI/netcdf/contents.html](https://opendap.jpl.nasa.gov/opendap/GeodeticsGravity/tellus/L3/mascon/RL06/JPL/v02/CRI/netcdf/contents.html) .
-    * EDDTableFrom SOS Tukee nyt valinnaista tagia
+Muista, että sinun täytyy XML-encode tai prosentti-encode (joko yksi, mutta ei molempia) oletuskyselyt, koska ne ovat XML-asiakirjassa. Esimerkiksi, & tulee &amp; ,&lt;tulee &amp;lt; , ja &gt; tulee &amp;gt; .
+Tarkistakaa työnne. On helppoa tehdä virhe ja olla saamatta mitä haluaa.
+Charles Carletonin, Kevin O'Brienin, Luke Campbellin ja muiden ansiosta.
+    *    EDDGrid Dapista. EDDGrid Erddapista ja EDDtablesta alkaen EDDGrid on uusi järjestelmä käsitellä tietoja, jotka muuttuvat usein (yhtä usein kuin noin joka 0,5 s) . Toisin kuin ERDDAP 's säännöllinen, proaktiivinen järjestelmä täysin ladata kunkin aineiston, tämä valinnainen lisäjärjestelmä on reaktiivinen (Käyttäjän pyynnöstä) ja (Päivitetään vain ajantasaistettavat tiedot.) . Jos esimerkiksi EDDGrid FromDap aineisto esiintyy enemmän kuin määritelty määrä millisekuntia jälkeen edellisen päivityksen, ERDDAP™ Katsotaan, onko vasemmalla uusia arvoja (yleensä "time" ) ulottuvuus ja, jos on, lataa nämä uudet arvot ennen käyttäjän pyynnön käsittelyä. Tämä järjestelmä on erittäin hyvä pitämään nopeasti muuttuvan tietokokonaisuuden ajan tasalla, ja tietolähteelle on asetettu minimaalisia vaatimuksia, mutta se hidastaa hieman joidenkin käyttäjäpyyntöjen käsittelyä. Katso [&lt;updateEveryNMillis&gt;] (/docs/server-admin/datasets#update everyenmillis)   
+Michael Barryn ja OOICI:n ansiosta.
+    *    EDDGrid FromNcFiles, EDDTableFromNcFiles, and EDDTableFromNcCFFiles [NcML .nc ml](/docs/server-admin/datasets#ncml-files) lähdetiedostojen sijasta .nc tiedostot. Kiitos Jose B Rodriguez Ruedan.
+    * -Ei. EDDGrid Aggregaatti ERDDAP™ tukee uuden palvelimenType="dodsindex" vaihtoehto palvelimenType ominaisuus&lt; sourceUrl s&gt; tag. Tämä toimii web-sivuilla, jotka ovat luetteloita tiedostoja sisällä&lt;pre&gt;&lt;/pre&gt; ja usein alle OPeNDAP logo. Esimerkkinä mainittakoon [ https://opendap.jpl.nasa.gov/opendap/GeodeticsGravity/tellus/L3/mascon/RL06/JPL/v02/CRI/netcdf/contents.html ](https://opendap.jpl.nasa.gov/opendap/GeodeticsGravity/tellus/L3/mascon/RL06/JPL/v02/CRI/netcdf/contents.html) .
+    * EDDTable From SOS tukee valinnaista tunnistetta
 ```  
         <sosServerType>_serverType_</sosServerType>  
 ```
-Voit määrittää tyypin SOS Palvelin (niin ERDDAP™ Ei tarvitse selvittää sitä) . Hyvät arvot&lt;_serverTypegt; ovat IOOS NDBC, IOOS OOSTethys ja kuka (Äskettäin tuettu palvelin Tyyppi) . Näytä [EDDTableFrom SOS ](/docs/server-admin/datasets#eddtablefromsos) . Kiitos Derrick Snowden ja Janet Fredericks.
-    * Kaikki Kaikki Kaikki Kaikki EDDGrid Files, EDDTableFrom... EDDGrid Kopioi ja EDDTable Kopio tukee nyt valinnaista tunnistetta
+joten voit määritellä tyypin SOS palvelin (Joten ERDDAP™ Ei tarvitse selvittää sitä.) . Kelvolliset arvot&lt;_serverType_\\&gt; ovat IOOS\\_NDBC, IOOS\\_NOS, OOSTethys , ja KOKO (uusi tuettu palvelin Tyyppi) . Katso [EDDTableFrom SOS ](/docs/server-admin/datasets#eddtablefromsos) . Derrick Snowdenin ja Janet Fredericksin ansiosta.
+    * Kaikki EDDGrid Fileistä, EDDTableista... EDDGrid Kuittaan, ja EDDTable Kopioi nyt tuki valinnaista tunnistetta
 ```
         <fileTableInMemory>true</fileTableInMemory> (The default is false.)  
 ```
-joka voi kertoa ERDDAP™ säilyttää tiedosto Pöytä (Tietoa jokaisesta lähdetiedostosta) Muistin sijasta vain levyllä (Oletusarvo) . Pidä tiedostotaulukko muistissa nopeuttaa tietojen pyyntöjä (Varsinkin jos &gt; 1000 lähdetiedostoa) käyttää enemmän muistia. Jos asetat tämän todeksi mihin tahansa tietoaineistoon, pidä silmällä muistia: tällä hetkellä käytä linjaa _yourDomain_. /erddap/status.html varmistaa, että ERDDAP™ Hänellä on paljon vapaata muistia. Kiitos Fredrik Straylle.
-    * EDDTableFromASCIIFiles tukee nyt&lt;Kartta » Kaksi yleisintä karttaa (Herkkä tapaus&#33;) ISO-8859-1 (Oletusarvo) UTF-8.
-    * Suositus: asennus.xml, sisällä&lt;HeadHtml &gt; Muuta&lt;html &gt; sisään
-        &lt;html lang="Yhdysvallat" (tai toisenlainen [kielen koodi](https://www.w3schools.com/tags/ref_language_codes.asp) Jos olet kääntänyt viestejä.xml) .
-    * setup.xml on uusia valinnaisia tunnisteita poistaa osat ERDDAP :
-        *   &lt;Aktiivinen &gt; Väärä&lt;ConvertersActive »&lt;Oletus on totta -&gt;
-        *   &lt;DideSorterActive &gt; Väärä&lt;SlideSorterActive &gt;&lt;Oletus on totta -&gt;
-        *   &lt;Väärä &gt; Väärä&lt;/wmsaktiivisuus&lt;Oletus on totta -&gt; Yleisesti ottaen suosittelemme, että asetamme jonkin näistä vääriksi.
-    * GenerateDatasets Xml kirjoittaa tuloksia _bigParentDirectory_/logs/generateDatasetsXmlLog.txt, ei log.txt. Kiitos Kristian Sebastian Blalid.
-    * GenerateDatasets XML on hyvä ehdotus&lt;Reload Jokainen minuutti » Kiitos tästä NOAA UAF-projekti.
-    * Paljon pieniä parannuksia GenerateDatasetsXml. Kiitos tästä NOAA UAF-projekti.
+joka voi kertoa ERDDAP™ säilyttää tiedosto Taulukko (tiedot kustakin lähdetiedostosta) muistissa eikä vain levyllä (oletus) . Muistitiedoston säilyttäminen nopeuttaa tietopyyntöjä (varsinkin jos lähdetiedostoja on &gt; 1000) , mutta käyttää enemmän muistia. Jos olet asettanut tämän todeksi mille tahansa tiedostolle, pidä muistia silmällä: käytät tällä hetkellä riviä _yourDomain_ /erddap/status.html varmistaa, että ERDDAP™ Hänellä on vielä paljon vapaata muistia. Kiitos Fredrik Strayn.
+    * EDDtableFromASCIIFiles tukee nyt&lt;charset&gt;. Kaksi yleisintä sanakirjaa (Juttu on herkkä.) ovat ISO-8859-1 (oletus) ja UTF-8.
+    * Suositeltava: setup.xml, sisällä&lt;KäynnistäHtml&gt;, vaihda&lt;html&gt; sisään
+        &lt;html lang="en-US"&gt; (tai muuta [kielikoodi](https://www.w3schools.com/tags/ref_language_codes.asp) jos olet kääntänyt viestejä.xml) .
+    * setup.xml on uusia valinnaisia tunnisteita poistaa osia ERDDAP :
+        *   &lt;MuuntajatAktiivinen&gt;väärä&lt;/muuntajatAktiivinen&gt;&lt;&#33;-- oletus on totta --&gt;
+        *   &lt;diaSorterActive&gt;false&lt;/lideSorterActive&gt;&lt;&#33;-- oletus on totta --&gt;
+        *   &lt;wmsActive&gt;false&lt;/wmsActive&gt;&lt;&#33;-- oletus on totta --&gt;Yleisesti, suosittelemme asettamatta mitään näistä vääriksi.
+    * Luo tiedostoja Xml nyt kirjoittaa tuloksia _bigParentDirectory_/logs/generateDatasetsXmlLog.txt, ei log.txt. Kristian Sebastian Blalidin ansiosta.
+    * Luo tiedostoja Xml nyt tekee hyvän ehdotuksen&lt;lataa uudelleen EveryNMinutes&gt;. Kiitos NOAA UAF-projekti.
+    * Monet pienet parannukset tuottaaDatasetsXml. Kiitos NOAA UAF-projekti.
 
 ## Versio 1.42{#version-142} 
- (2012-11-26) 
+ (julkaistu 2012-11-26) 
 
 *    **Uudet ominaisuudet:** 
     *    (Ei suuria uusia ominaisuuksia.) 
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Jos päivität ERDDAP™ 1.38 tai 1.40 ei ollut muutoksia, jotka edellyttivät sinun muuttavan määritystiedostojasi. (Käytä uutta viestiä.xml) .
-    *    ERDDAP™ Jälleen kerran voi juosta Java 1.6. ( ERDDAP™ V1.40 Tarvitaan Java 1.7.) Suosittelemme käyttämään uusinta versiota. Java 1.7.
-    * uusi tietotyyppi, [EDDTableFrom Awsxmlfiilit](/docs/server-admin/datasets#eddtablefromawsxmlfiles) Voit lukea tietoja automaattisesta sääasemasta (AWS) XML-tiedostot. Kiitos Lynn Dewitt ja Exploratorium.
-*    **Pienet muutokset/Bug-korjaukset:** 
-    * NDBC:n muutokset SOS tietopalvelimet.
-    * Sopeutettu NOS COOPS ASCII -palveluiden muutoksiin.
-    * Teimme useita pieniä muutoksia ja korjauksia.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Jos olet päivittämässä ERDDAP™ 1.38 tai 1.40, ei ollut muutoksia, jotka vaativat tekemään muutoksia asetustiedostoihin (mutta sinun täytyy käyttää uusia viestejä.xml-tiedosto) .
+    *    ERDDAP™ jälleen voi olla Java 1.6 ( ERDDAP™ v1.40 vaaditaan Java 1. 7.) Suosittelemme edelleen vahvasti uusimman version käyttöä Java 1. 7.
+    * Uusi tietokokonaisuustyyppi [EDDTableFrom AwsXml-arkistot](/docs/server-admin/datasets#eddtablefromawsxmlfiles) , voi lukea tietoja joukko Automaattinen sääasema (AWS) XML- tiedostot. Kiitos Lynn Dewittin ja Exploratorion.
+*    **Pienet muutokset / viankorjaukset:** 
+    * Mukautettu NDBC:n muutoksiin SOS lähdetietopalvelimet.
+    * Mukautettu muutoksiin NOS COOPS ASCII -palveluissa.
+    * Teki useita pieniä muutoksia ja korjauksia.
 
 ## Versio 1.40{#version-140} 
- (2012-10-25) 
+ (julkaistu 2012-10-25) 
 
 *    **Uudet ominaisuudet:** 
-    * Uusi tulostiedostomuoto tabledap Tietoja: .nc CFMA, joka tallentaa pyydetyt tiedot .nc tiedostot, jotka ovat CF:n mukaisia [Discrete Sampling Geometria](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Moniulotteiset Array-vaihtoehdot, jotka ovat NODC-mallien mukaisia \\[ 2021: Nyt on [NCEI-mallit](https://www.ncei.noaa.gov/netcdf-templates)  \\] tällaisten tietojen tallentamiseen. Kiitos NODC:lle.
-    *    tabledap Pyynnöt voivat nyt sisältää aikarajoituksia, kuten & Time now- 5 päivää. Nähdään [dokumentointi](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#now) . Kiitos James Goslingille.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Jos päivität ERDDAP™ 1.38 Ei ollut muutoksia, jotka edellyttivät sinun muuttavan määritystiedostojasi. (Käytä uutta viestiä.xml) .
-    *    ERDDAP™ Julkiset julkaisut ja sisäiset virstanpylväät ovat saatavilla [ ERDDAP™ Kirjoittanut GitHub](https://github.com/ERDDAP) . Lisätietoja, katso [Wiki](https://github.com/ERDDAP/erddap/wiki) Sillä ERDDAP™ Projekti sekä yleisempi [ ERDDAP™ Ohjelmoijan opas](/docs/contributing/programmer-guide) . (Tämä ilmoitettiin erikseen muutaman viikon kuluttua ERDDAP™ 1.38 Vapautuminen.) 
-    * GenerateDatasets XML on parantunut.
-        * Käsikirjoitus tarkistettiin, jotta se toimisi oikein kaikissa Linux-tietokoneissa. (Ei vain muutamia) .
-        * Nyt lisätään creator\\_name , creator\\_email ja creator\\_url Aina kun mahdollista.
-        * Paljon muita pieniä parannuksia.
-    * jalostettu miten ERDDAP™ käsittelee aikaa.
-        * sisäisesti, ERDDAP™ Ajoja millisekunnin tarkkuudella (Ei sekunteja) .
-        * Voit määrittää valinnaisesti tietyn tietoaineiston tarkkuuden, katso [ time\\_precision ](/docs/server-admin/datasets#time_precision) . Voit esimerkiksi määrittää tietoaineiston näyttämään aika-arvoja päivämäärän tarkkuudella. (esim. 1970-01-01) .
-        * Nykyiset tietoaineistosi käyttävät oletusasetuksia, joten nämä muutokset eivät vaikuta niihin ja näyttävät edelleen aikaa sekunneilla. Kiitos Servet Cizmeli ja Philip Goldstein.
-    *    [EDDTableFromNcFiles](/docs/server-admin/datasets#eddtablefromnccffiles) on uusi tietotyyppi, jota voit käyttää datasets.xml tiedosto. Se voi lukea tietoja mistä tahansa lukuisista tiedostomuodoista, jotka on määritetty [CF Discrete Sampling Geometria](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) yleissopimuksia. NODC:n ja Kyle Wilcoxin ansiosta näytetiedostojen antaminen pätevien DSG-tiedostomuotojen valtavalle määrälle ja niiden julkistaminen.
-*    **Pienet muutokset/Bug-korjaukset:** 
-    * laajentaa [Nopea käynnistys](#quick-restart) Järjestelmä kaikki asiaankuuluvat EDDGrid EDDTable subclasses Näytä tarkat tiedot
-    * Parannettu dokumentointi, erityisesti miten käyttää [Griddap](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#fileType) ja [ tabledap ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#fileType) eri ohjelmistoja.
-    * Muutettu edistynyt etsintä tukemaan minTime ja / tai maxTime ilmaistuna epochSeconds. Kiitos Lynn Dewitt.
-    * Muuttunut .htmlTable URL-osoitteiden ja sähköpostiosoitteiden näyttäminen linkeinä.
-    * Lisätty "rel=" ja "rev="&lt;href&gt; tagit. Kiitos Pat Cappelaere OGC   REST projekti.
-    * Parannettu suoja epärealistisesti suuria tietopyyntöjä vastaan, erityisesti tabledap missä se on vaikeampi ongelma.
-    * Lisää viestejä.xml.
-    * nopeuden parannuksia.
-    * Kiinteä EDDGrid Files mahdollistaa laskeutuvien akselien. Kiitos Maricel Etchegaraylle.
-    * poistaa viittaukset iGoogleen, koska se lopetetaan.
-    * Teimme useita pieniä muutoksia ja korjauksia.
+    * On uusi tulostiedostomuoto tabledap Tiedostot: .nc CFMA, joka tallentaa pyydetyt tiedot .nc CF:n mukainen tiedosto [Selkeä näytteenotto Geometriat](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Moniulotteiset Array-vaihtoehdot, jotka ovat siten NODC-mallien mukaisia \\[ 2021: nyt [NCEI-mallit](https://www.ncei.noaa.gov/netcdf-templates)  \\] Tämäntyyppisten tietojen tallentamiseen. Kiitos NODC:n.
+    *    tabledap Pyynnöt voivat nyt sisältää aikarajoitteita, kuten & aika&gt; now- Viisi päivää. Katso [asiakirjat](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#now) . Kiitos James Goslingin.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Jos olet päivittämässä ERDDAP™ 1.38, ei ollut muutoksia, jotka vaativat tekemään muutoksia asetustiedostoihin (mutta sinun täytyy käyttää uusia viestejä.xml-tiedosto) .
+    *    ERDDAP™ julkaisut ja sisäiset välitavoitteet ovat saatavilla [ ERDDAP™ GitHubista](https://github.com/ERDDAP) . Lisätietoja: [Wiki](https://github.com/ERDDAP/erddap/wiki) (DE-III) ERDDAP™ projekti sekä yleisempää [ ERDDAP™ Ohjelmoijan opas](/docs/contributing/programmer-guide) . (Tämä ilmoitettiin erikseen muutaman viikon kuluttua ERDDAP™ 1.38.) 
+    * Luo tiedostoja Xml on parantunut.
+        * Käsikirjoitus tarkistettiin, joten sen pitäisi toimia oikein kaikissa Linux-tietokoneissa. (Ei vain muutama) .
+        * Nyt se lisää creator\\_name , creator\\_email ja creator\\_url mahdollisuuksien mukaan.
+        * Monet muut pienet parannukset.
+    * Puhdistettu ERDDAP™ Hoidamme ajan.
+        * Sisäisesti ERDDAP™ Nyt käsittelee ajat millisekunnin tarkkuudella (ei sekuntia) .
+        * Voit nyt valinnaisesti määritellä tietyn tietokokonaisuuden aikatarkkuuden, katso [ time\\_precision ](/docs/server-admin/datasets#time_precision) . Voit esimerkiksi asettaa tietokokonaisuuden näyttämiseksi aika-arvot päivämäärän tarkkuudella (esim., 1970-01-01) .
+        * Nykyiset tietokokonaisuudet käyttävät oletusasetuksia, joten nämä muutokset eivät vaikuta niihin ja näyttävät aikaa sekunnin tarkkuudella. Kiitos Servet Cizmelin ja Philip Goldsteinin.
+    *    [EDDTableFromNcCFFiles](/docs/server-admin/datasets#eddtablefromnccffiles) on uusi tietokokonaisuustyyppi, jota voit käyttää datasets.xml Tiedosto. Se voi lukea tietoja mistä tahansa lukuisista tiedostomuodoista, jotka määritellään [CF Selkeä näytteenotto Geometriat](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) konferenssit. Kiitos NODC ja erityinen kiitos Kyle Wilcox tehdä näytetiedostoja valtava määrä voimassa DSG tiedostomuotoja ja julkistaa ne.
+*    **Pienet muutokset / viankorjaukset:** 
+    * Laajensi [pikakäynnistys](#quick-restart) järjestelmä kaikille asiaankuuluville EDDGrid ja EDDTable alaluokat.
+    * Parempi dokumentaatio, joka liittyy erityisesti käyttötapoihin [griddap](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#fileType) sekä [ tabledap ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#fileType) eri asiakasohjelmistoista.
+    * Muuttunut kehittynyt haku tukee minTime ja / tai maxTime ilmaistuna aikaseconds. Kiitos Lynn Dewittin.
+    * Muutos .htmlTable tuloste näyttää urls ja sähköpostiosoitteet linkkejä.
+    * Lisätty "rel=" ja "rev=" asiaan&lt;a href&gt; tagit. Kiitos Pat Cappelaere alkaen OGC   REST projekti.
+    * Parempi suoja epärealistisen suuria tietopyyntöjä vastaan, erityisesti tabledap , missä se on vaikeampi ongelma.
+    * Siirsi lisää viestejä viesteihin.xml.
+    * Tein nopeusparannuksia.
+    * Kiinteä EDDGrid Fileistä sallimaan lajiteltavien akselien laskeutumisen. Kiitos Maricel Etchegarayn.
+    * Poistettu viittaukset iGoogle koska se lopetetaan.
+    * Teki useita pieniä muutoksia ja korjauksia.
 
 ## Versio 1.38{#version-138} 
- (2012-04-21) 
+ (julkaistu 2012-04-21) 
 
 *    **Uudet ominaisuudet:** 
-    * ISO 19115 ja FGDC ERDDAP™ Voit automaattisesti luoda ISO 19115- ja FGDC XML -metadatatiedostoja jokaiseen tietoaineistoon. Linkit tiedostoihin näkyvät kaikissa tietoaineistojen luetteloissa (Lähde: Full Text Search) Myös Web Accessible -kansiot (Vauva)   (Katsokaa [FGDC WAF](https://coastwatch.pfeg.noaa.gov/erddap/metadata/fgdc/xml/) ja [ISO 19115 WAF](https://coastwatch.pfeg.noaa.gov/erddap/metadata/iso19115/xml/) ) . Kiitos Ted Habermann, Dave Neufeld ja monet muut.
-    * Täyden tekstin etsinnät aineistoille tukevat nyt \\-_ excludedWord _ _ _ _ _ Ilman lausetta Kiitos Rich Signell.
-    * Tietoaineistojen etsinnät palauttavat sivun kerrallaan. Oletusarvo käyttää parametrijonoa: sivu = 1 &itemsPerPage = 1000, mutta voit muuttaa pyynnön URL-arvoja. Kiitos Steve Hankinille ja UAF-projektille.
-    *    OpenSearch ----- ERDDAP™ Nyt tukee [ OpenSearch 1.1](https://coastwatch.pfeg.noaa.gov/erddap/opensearch1.1/index.html) standardi tietojen etsimiseen. Tämä mahdollistaa muun muassa katalogisen aggregointisivuston hakemisen (hakupyyntö jokaiselle luettelolle, jonka se tietää) .
-    * Comma erotettu Arvon arvo (CSV) Tiedostot - ERDDAP™ Luo CSV-tiedostoja, joissa on vain yhteenveto arvojen välillä (Mikä Excel suosii) Paitsi komma+space. Kiitos Jeff DeLaBeaujardierelle.
-    * Miljoonat tiedot - Tukea varten tehtiin useita muutoksia ERDDAP Meillä on valtava määrä dataa, ehkä jopa miljoona. Kiitos Steve Hankinille ja UAF-projektille.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-#### Nopea käynnistys{#quick-restart} 
-*    [A](#quick-restart) Nopea käynnistys mahdollistaa ERDDAP™ käynnistää paljon nopeammin.
-     **Lisää tämä asennus.xml-tiedostoosi.** heti&lt;DatasetsRegex &gt;:
+    * ISO 19115 ja FGDC -- ERDDAP™ voi automaattisesti luoda ISO 19115- ja FGDC XML-metatietotiedostoja kullekin tietokokonaisuudelle. Linkit tiedostoihin näkyvät jokaisessa tiedostoluettelossa (Esimerkiksi koko tekstin etsinnästä) ja myös Web Esteetön kansiot (WAF)   (ks. [FGDC WAF](https://coastwatch.pfeg.noaa.gov/erddap/metadata/fgdc/xml/) sekä [ISO 19115 WAF](https://coastwatch.pfeg.noaa.gov/erddap/metadata/iso19115/xml/) ) . Kiitos Ted Habermann, Dave Neufeld, ja monet muut.
+    * Koko tekstin etsii datasettejä nyt tukea\\-_ excludedWord _ ja \\- "_ poissuljettu lause_" . Kiitos Rich Signellin.
+    * Hakee tietoja nyt palata tuloksia sivu kerrallaan. Oletus käyttää parametrimerkkijonoa: sivu = 1&itetsPerPage=1000, mutta voit muuttaa pyyntösi URL-arvoja. Steve Hankinin ja UAF-projektin ansiosta.
+    *    OpenSearch -- ERDDAP™ nyt tukee [ OpenSearch 1. 1](https://coastwatch.pfeg.noaa.gov/erddap/opensearch1.1/index.html) tietokokonaisuuksien hakustandardi. Muun muassa tämä mahdollistaa luettelo aggregaatin sivustoja tehdä hajautettuja hakuja (lähettää hakupyynnön jokaiselle luettelolle, josta se tietää) .
+    * Pilkku erotettu Arvo (CSV) Tiedostot... ERDDAP™ nyt tuottaa CSV-tiedostoja vain pilkku arvojen välillä (mikä Excel suosii) , sijaan pilkku+avaruus. Kiitos Jeff deLaBeaujardieren.
+    * Miljoona datasetiä... Tukiin tehtiin useita muutoksia ERDDAP s on valtava määrä tietoja, ehkä jopa miljoona. Steve Hankinin ja UAF-projektin ansiosta.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+#### Nopea uudelleenkäynnistys{#quick-restart} 
+*    [A](#quick-restart) nopea uudelleenkäynnistys mahdollistaa ERDDAP™ Käynnistää paljon nopeammin.
+     **Lisää tämä setup.xml-tiedostoosi** Heti sen jälkeen&lt;/datasetitRegex&gt;:
 ```
               <!-- If true, when you start up ERDDAP™, some types of datasets (e.g., 
               EDDGridFromDap) will used cached information (.dds, .das, etc.) to reload
@@ -2131,8 +2146,8 @@ joka voi kertoa ERDDAP™ säilyttää tiedosto Pöytä (Tietoa jokaisesta lähd
               <quickRestart>true</quickRestart>
 ```
 
-    * Täydelliset tietoaineistojen hakutulokset voidaan tehdä Lucene-hakukoneella (Suosittelemme alkuperäistä hakukonetta, jos sinulla on alle 10 000 aineistoa.) Alkuperäinen hakujärjestelmä.
-         **Lisää tämä asennus.xml-tiedostoosi.** heti&lt;/ DisplayDiagnosticInfo&gt;:
+    * Tietoaineistojen koko tekstihaku voidaan nyt tehdä Lucenen hakukoneella (vaikka suosittelemme alkuperäistä hakukonetta, jos sinulla on alle 10 000 dataa) tai alkuperäinen hakujärjestelmä.
+         **Lisää tämä setup.xml-tiedostoosi** Heti sen jälkeen&lt;/näyttöDiagnosticInfo&gt;:
 ```
               <!-- ERDDAP™ lets you choose between two search engines for full text searches:
               \\* original (the default) -- is the best choice if your ERDDAP™ has fewer 
@@ -2149,73 +2164,73 @@ joka voi kertoa ERDDAP™ säilyttää tiedosto Pöytä (Tietoa jokaisesta lähd
               <searchEngine>original</searchEngine>
 ```
 
-    * Setup.xml:ssa voit/pitäisi nyt lisätä kaksi uutta kategoriaa erilliseen luetteloon.&lt; categoryAttributes &gt; &gt;
-        * Lähde: Akeywords (Lisätietoja: Global: Institution) - uusi erikoistapaus, joka laatii koodatun luettelon avainsanoista globaaleista avainsanoista, jotta jokainen avainsana saataisiin erikseen.
-        * Muuttuva Nimen nimi (Lisää se lopussa) uusi tapaus, joka luokittelee jokaisen dataVariable   destinationName s.
-    * Asennus.xml, voit (Mutta miksi?) Kertokaa ERDDAP™ ei tarjoa FGDC- ja/tai ISO 19115 -metatietoja mihinkään tietoaineistoon
+    * Vuonna setup.xml, voit / pitäisi nyt lisätä kaksi uutta kategoriaa pilkun erotettu luettelo&lt; categoryAttributes &gt;:
+        * globaali: avainsanat (Lisää se heti maailmanlaajuisen:toimielin) -- uusi erityistapaus, joka tulkitsee pilkulla erotetun avainsanojen luettelon maailmanlaajuisista avainsanoista tehdäkseen erillisen merkinnän jokaiselle avainsanalle.
+        * muuttuja Nimi (Lisää se loppuun) -- uusi erikoistapaus, joka luokittelee jokaisen dataVariable   destinationName S.
+    * Vuonna setup.xml, voit (Miksi?) Kerro ERDDAP™ FGDC:n ja/tai ISO 19115 -metatietojen tarjoaminen mille tahansa tietokokonaisuudelle
 ```
         <fgdcActive>false</fgdcActive>  
         <iso19115Active>false</iso19115Active>
 ```
 
 Näiden asetusten oletusarvot ovat totta.
-    * Sisällä datasets.xml Ole hyvä ja harkitse metatietojesi parantamista. ERDDAP™ Nyt luomme automaattisesti ISO 19115- ja FGDC XML -metadatatiedostoja jokaiseen tietoaineistoon, joka perustuu aineiston metatietoihin.
-Niin, **Hyvä metadata johtaa hyvään ERDDAP ISO 19115 ja FGDC metadata.**   
-         **Katso uusi dokumentti monista uusista [Globaalit ominaisuudet](/docs/server-admin/datasets#global-attributes) .** 
-    * Sisällä datasets.xml jos haluat kertoa ERDDAP™ käyttää esivalmistettua FGDC- ja/tai ISO 19115 -tiedostoa, joka on jossain palvelimen tiedostojärjestelmässä sen sijaan, että olisi ERDDAP™ Luo nämä tiedostot, käytä:
+    * Sisään datasets.xml , Harkitkaa parantaa metatietoja tietokokonaisuuksia. ERDDAP™ nyt tuottaa automaattisesti ISO 19115- ja FGDC XML-metatietotiedostoja kullekin datakokonaisuudelle datakokonaisuuden metatietojen perusteella.
+No niin. **hyvä datadata johtaa hyvään ERDDAP -generoitu ISO 19115 ja FGDC metatiedot.**   
+         **Katso uudet asiakirjat monista uusista SUOSITELTU [Global attribuutit](/docs/server-admin/datasets#global-attributes) .** 
+    * Sisään datasets.xml , jos haluat kertoa ERDDAP™ käyttää esivalmistettua FGDC- ja/tai ISO 19115 -tiedostoa, joka on jossain palvelimen tiedostojärjestelmässä sen sijaan, että sillä olisi ERDDAP™ luoda nämä tiedostot, käyttää:
 ```
         <fgdcFile>_fullFileName_</fgdcFile>  
         <iso19115File>_fullFileName_</iso19115File>
 ```
-Jos _fullFileName&gt; tai tiedostoa ei löydy, aineistossa ei ole FGDC- ja/tai ISO 19115 -metatietoja. Tämä on myös hyödyllistä, jos haluat tukahduttaa FGDC- ja/tai ISO 19115 -metatiedot.
-    * Sisällä datasets.xml Kaikille EDDGrid SideBySide ja EDDGrid AggregateExistingDimension-tietoaineistot varmistavat, että lasten tietoaineistot ovat erilaisia. datasetID kuin vanhempansa ja muut lapset. (Voit seurata George Foremanin yksinkertaista, mutta tehokasta järjestelmää lasten nimeämiseksi.) Jos perheen nimet ovat täsmälleen samat, aineisto ei lataudu. (virheviestillä, että yhdistetyn akselin arvot eivät ole järjestyksessä) .
-    * Sisällä datasets.xml Joitakin muutoksia luetteloon ioos\\_category Metatiedot:
-        * "PCO2" vaihdettiin "CO2".
-        * "Fysikaalinen valtameri" lisättiin.
+Jos _fullFileName_\\="" tai tiedostoa ei löydy, tiedostossa ei ole FGDC:tä eikä/tai ISO 19115:ää metatietoa. Joten tämä on myös hyödyllistä, jos haluat poistaa FGDC ja / tai ISO 19115 metatietoja tietyn aineiston.
+    * Sisään datasets.xml , kaikille EDDGrid SideBySide ja EDDGrid AggregaattiExistingDimension-aineistot, varmista, että lapsiaineistot ovat erilaisia datasetID s kuin niiden vanhemmat tiedot ja muut lapset. (Voisit esimerkiksi seurata George Foremanin yksinkertaista mutta tehokasta järjestelmää nimetä hänen lapsensa.) Jos kaikki nimet perheessä ovat täsmälleen samat, aineisto ei ladata (virheviestillä, että aggregoidun akselin arvot eivät ole järjestyksessä) .
+    * Sisään datasets.xml , joitakin muutoksia luetteloon voimassa ioos\\_category metatiedot:
+        * "pCO2" muutettiin "CO2."
+        * "Fysikaalinen merentutkimus" lisättiin.
         * "Soils" lisättiin.
-    * Sisällä datasets.xml , ERDDAP™ "Ei enää salli" datasetID . Se oli sallittua, mutta lannistunut. (Anteeksi) 
-    * Sisällä datasets.xml EDDTableFromThreddsFiles ja EDDTableFrom Hyrax Tiedostot ovat muuttuneet hieman, koska molemmat luokat on vain uusittu tehokkaammiksi. (Molemmat luokat tekevät aina paikallisen kopion kaikista etätiedostoista.) . Katso dokumentit näiden luokkien perustamisesta: [EDDTableFrom Hyrax Tiedostot](/docs/server-admin/datasets#eddtablefromhyraxfiles) ja [EDDTableFromThreddsFiles](/docs/server-admin/datasets#eddtablefromthreddsfiles) . Katso tarkistetut kommentit&lt;tiedostot &gt; (Nyt epäolennaista) ja&lt; sourceUrl &gt; (Nyt olennaista) . Sinun ei myöskään pitäisi koskaan kääriä tätä luokkaa EDDTableCopy tehokkuuteen.
-    * Sisällä datasets.xml jos käytät EDDTableFromDatabasea Oracle Tietokanta, sinun pitäisi sisällyttää yhteys Kiinteistöt kuten
+    * Sisään datasets.xml , ERDDAP™ ei enää salli '.' datasetID . Se oli sallittua, mutta lannistunut. (Anteeksi.) 
+    * Sisään datasets.xml , EDDTable From Thredds Files ja EDDTableFrom Hyrax Tiedostot ovat hieman muuttuneet, koska molemmat luokat on juuri kirjoitettu uudelleen ollakseen tehokkaampi (Molemmat luokat tekevät aina paikallisen kopion kaikista etätiedostoista) . Katso näiden luokkien perustamista koskevat asiakirjat: [EDDTableFrom Hyrax Tiedostot](/docs/server-admin/datasets#eddtablefromhyraxfiles) sekä [EDDTableFrom Threeds Files](/docs/server-admin/datasets#eddtablefromthreddsfiles) . Ks. erityisesti tarkistetut kommentit&lt;tiedostoDir&gt; (nyt merkityksetön) sekä&lt; sourceUrl &gt; (nyt välttämätön) . Myös, sinun ei pitäisi koskaan kääriä tätä luokkaa EDDTableCopy tehokkuutta.
+    * Sisään datasets.xml , jos käytät EDDtableFromDatabase kanssa Oracle tietokanta, sinun pitäisi sisällyttää yhteys Omaisuus, kuten
 ```
         <connectionProperty name="defaultRowPrefetch">4096</connectionProperty>  
 ```
-määrittää, kuinka monta tietoriviä noutaa kerrallaan, koska oletusarvo on 10, mikä on kauhean tehotonta. Nähdään [ Oracle dokumentointi](https://docs.oracle.com/cd/B10501_01/java.920/a96654/basic.htm) . MySql ja PostgreSQL näyttävät olevan parempia. Kiitos Kevin O'Brien.
-    * Jos käytät EDDTableFromDatabasea, katso parannettu [Nopea dokumentaatio](/docs/server-admin/datasets#eddtablefromdatabase) lisäehdotuksia suorituskyvyn parantamiseksi. Kiitos Kevin O'Brien.
-    * Sisällä datasets.xml kaikkiin EDDTable-tietoihin, yleissopimuksiin ja Metadata\\_Conventions Globaalit ominaisuudet, katso CF-1.6 (ei CF-1.0, 1.1, 1.2, 1.3, 1.4 tai 1,5) CF-1.6 on ensimmäinen versio, joka sisältää Discrete Sampling Geometrian muutokset.
-    * Ohjelmoijat, jotka kokoavat ERDDAP™ Koodin on lisättävä lib/lucene-core.jar jar-tiedostojen luetteloon javac- ja java-komentorivillä.
-    *    ERDDAP™ Hänellä on [Uusi palvelu](https://coastwatch.pfeg.noaa.gov/erddap/convert/keywords.html) Muuntaa CF Standard Name / GCMD Science Keyword. Saatat huomata tämän hyödylliseksi, kun luot maailmanlaajuisia avainsanojen metatietoja tietoaineistoillesi. ERDDAP .
-    * Bottien kanssa - Lue tämä neuvo [estää bottien ryöstämisen ERDDAP™ Tyhmällä tavalla](/docs/server-admin/additional-information#robotstxt) .
-    * Käännökset - Teksti on ERDDAP "verkkosivut ovat nyt enimmäkseen viestejä.xml ja soveltuvat käännöksiin eri kielille. (mm. saksaksi, ranskaksi) . Viestit käyttävät usein MessageFormat-muotoilua, myös käännösten tekemiseen. Jos olet kiinnostunut käännöksen tekemisestä, ota yhteyttä erd dot data at noaa dot gov .
-    * Esimerkki datasets.xml ----- Näytteessä oli useita pieniä mutta merkittäviä virheitä. datasets.xml . Jos käytät näitä tietoja, hanki uudemmat versiot uudesta näytteestä. datasets.xml Uusi erdapContent .zip tiedosto. Kiitos James Wilkinsonille.
-    * Jättiläinen - Yritän kovasti tehdä ERDDAP™ GitHub-projekti ASAP tämän julkaisun jälkeen.
-*    **Pienet muutokset/Bug-korjaukset:** 
-    * Uusi taulukko, OceanDepth, on hyödyllinen syvällisille arvoille. (Positiivinen on alas) esimerkiksi 0 (matalalla) 8000 (syvä syvä syvä) .
-    * The .kml Tuotteesta tabledap Käytä parempaa merkkiä (Se ei ole fuzzy) . Se, että se on merkki, tekee siitä suuremman.
-    * EDDTableFromFiles - Viimeisimmässä päivityksessä uudella netcdf-java-kirjastolla oli tiukemmat rajoitukset muuttujan nimille. .nc tiedostoja. Tämä aiheuttaa ongelmia EDDTableFromFiles, jos muuttuja sourceName Hänellä oli tietyt täsmällisyyshahmot. EDDTableFromFiles on nyt muokattu ongelman välttämiseksi. Kiitos Thomas Holcombille.
-    * .subset-sivu tukee nyt 0/10/100/1000/10000/100, ei linkitettyjä tietoja. Tooltip varoittaa, että 100000 voi aiheuttaa selaimen kaatua. Kiitos Annette DesRochers, Richard (A) Coughlin ja IOOS-biologinen projekti.
-    * Tietoa/info/_ datasetID _/index.html-sivut näyttävät nyt URL-osoitteita ja sähköpostiosoitteita klikattavina linkeinä. Kiitos Richard (A) Coughlin ja IOOS-biologinen projekti.
-    * Bug fix: In tabledap aineistoihin, joissa on korkeus MeterSourceUnit&lt;0, korkeusrajoituksista saadut kysymykset käsitellään väärin. Kiitos Kyle Wilcoxille.
-    * Bug fix: EDDGrid AggregateFromExistingDimension tukee nyt monipuolisempia TDS-URL-osoitteita. Kiitos?
+Määritellä, kuinka monta riviä tietoja hakea kerralla, koska oletus on 10, mikä on hirvittävän tehoton. Katso [ Oracle asiakirjat](https://docs.oracle.com/cd/B10501_01/java.920/a96654/basic.htm) . MySql ja PostgreSQL näyttävät olevan parempia oletusarvoja tämän asetuksen. Kiitos Kevin O'Brienin.
+    * Jos käytät EDDtableFromDatabase, katso parannettu [Nopeusasiakirjat](/docs/server-admin/datasets#eddtablefromdatabase) muita ehdotuksia suorituskyvyn parantamiseksi. Kiitos Kevin O'Brienin.
+    * Sisään datasets.xml , kaikkien EDDTable... tiedot, valmistelukunnissa ja Metadata\\_Conventions maailmanlaajuiset ominaisuudet, ks. CF-1.6 (ei CF-1.0, 1.1, 1.2, 1.3, 1.4 tai 1.5) , koska CF-1.6 on ensimmäinen versio, joka sisältää muutokset, jotka liittyvät Discretary Sample Geometria.
+    * Ohjelmoijat, jotka kokoavat ERDDAP™ koodin täytyy lisätä lib/lucene-core.jar listaan purkkitiedostoja niiden java ja Java komentorivipolkuja.
+    *    ERDDAP™ on [uusi palvelu](https://coastwatch.pfeg.noaa.gov/erddap/convert/keywords.html) muuntaa CF Standard nimi / GCMD Science Keyword. Saatat pitää tätä hyödyllisenä, kun luot maailmanlaajuisia avainsanoja metatietoja tiedostoistasi ERDDAP .
+    * Botsin kanssa... Lue tämä ohje [estää botteja ryömimästä ERDDAP™ Typerällä tavalla](/docs/server-admin/additional-information#robotstxt) .
+    * Käännös... Teksti ERDDAP 's web-sivut ovat nyt enimmäkseen viestejä.xml ja niin sopii käännös eri kielille (esim., saksa, ranska) . Viestit käyttävät nyt usein MessageFormat formating, myös auttaa tekemään käännöksiä. Jos olet kiinnostunut tekemään käännöksen, lähetä sähköpostia erd dot data at noaa dot gov .
+    * Näyte datasets.xml -- Otoksessa oli useita pieniä mutta merkittäviä virheitä datasets.xml . Jos käytät näitä tietoja, ota uudemmat versiot uudesta näytteestä datasets.xml uudessa .zip Tiedosto. James Wilkinsonin ansiosta.
+    * Git... Yritän kovasti ERDDAP™ GitHub-projekti ASAP tämän julkaisun jälkeen.
+*    **Pienet muutokset / viankorjaukset:** 
+    * Uusi paletti, OceanDepth, on hyödyllinen syvyysarvoille (positiivinen on laskenut) , esim. 0 (matala) 8000 (syvä) .
+    * • .kml tuloste tabledap käyttää parempaa merkkikuvaketta (Se ei ole sumeaa.) . Ja leijuminen merkin päällä tekee siitä isomman.
+    * EDDTable From Files -- Viimeisimmässä päivityksessä uudella netcdf-jaava-kirjastolla oli tiukemmat rajoitukset vaihteleville nimille .nc tiedostot. Tämä aiheutti ongelmia EDDTableFromFiles jos muuttuja sourceName Hänellä oli välimerkkejä. EDDtableFromFles on nyt muutettu välttääkseen tämän ongelman. Kiitos Thomas Holcombin.
+    * .subset-sivu tukee nyt 0/10/100/10000/10000/100000 sen sijaan valintaruutu Related Data. Työkaluvihje varoittaa, että 100000 voi aiheuttaa selaimen kaatumisen. Kiitos Annette DesRochersin, Richard. (Abe) Coughlin ja IOOS-biologinen projekti.
+    * .../eddap/info/_ datasetID _/index.html verkkosivut nyt näyttää urls ja sähköpostiosoitteet klikkaavia linkkejä. Kiitos Richardin. (Abe) Coughlin ja IOOS-biologinen projekti.
+    * Virheen korjaus: sisään tabledap , kun on kyse tiedoista, joissa on korkeus MetersPerSourceUnit&lt;0, korkeusrajoitteisia kyselyjä käsiteltiin väärin. Kiitos Kyle Wilcoxin.
+    * Virheen korjaaminen: EDDGrid AggregateFromExistingDimension tukee nyt monipuolisempia TDS URL-osoitteita. Kiitos?
 
-## versio 1.36{#version-136} 
- (2011-08-01) 
+## Versio 1.36{#version-136} 
+ (julkaistu 2011-08-01) 
 
 *    **Uudet ominaisuudet:** 
     * Ei merkittäviä muutoksia käyttäjän näkökulmasta.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * PmelTao-tietoaineistoa, jota käytettiin usein näytetietoaineistona tabledap   
-Dokumentaatiota ei ole enää saatavilla. ERDDAP™ Hallitsijoiden on tehtävä nämä muutokset:
-        * Sisälläsi datasets.xml jos sinulla on datasetID = "pmelTao"-tietokanta, lisää
-Aktiivisuus = "väärä" juuri ennen tämän lauseen loppua.
-        * Asennuksessa.xml, jos&lt;EddtableIdExample » PmelTao, sitten:
-            * Jos sinun datasets.xml Ei ole dataa, jossa datasetID = ’erdGlobecBottle’, lisää
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * PmelTao-aineisto, jota käytettiin usein näyteaineistona tabledap   
+asiakirjat eivät ole enää saatavilla. ERDDAP™ Hoitajien on tehtävä nämä muutokset:
+        * • datasets.xml , jos sinulla on datasetID ="pmelTao" tietokokonaisuus, lisätään
+aktiivinen="false" juuri ennen "&gt;" rivin lopussa.
+        * Setup.xml, jos&lt;EDDTaulukkoIdEsimerkki&gt; on pmelTao, sitten:
+            * Jos datasets.xml ei ole tiedostoa datasetID ="erdGlobecBottle," lisätään
 ```
                 <dataset type="EDDTableFromErddap" datasetID="erdGlobecBottle" active="true">  
                   <sourceUrl>https://coastwatch.pfeg.noaa.gov/erddap/tabledap/erdGlobecBottle</sourceUrl>  
                 </dataset>
 ```
-            * Asetuksessa.xml korvaa kaikki merkit&lt;EddtableIdExample » kautta läpi
-                &lt;EdDTable Matlab Esimerkki &gt; kanssa
+            * Vuonna setup.xml, korvaa kaikki tagit alkaen&lt;EDDTaulukkoIdEsimerkki&gt; läpi
+                &lt;EDD-taulukko Matlab PlotExample&gt; kun
 ```
                 <!-- Tabledap Examples
                 This group of settings is used to make examples for the tabledap documentation 
@@ -2260,68 +2275,68 @@ Aktiivisuus = "väärä" juuri ennen tämän lauseen loppua.
                 <EDDTableMatlabPlotExample>plot(erdGlobecBottle.bottle\\_posn, erdGlobecBottle.temperature1)</EDDTableMatlabPlotExample>
 ```
                 
-    * Jos tyyppi on EDDTableFromFilesin alaluokka, voit nyt tehdä tietoja metadatasta.
-Voit nyt tehdä muunnelman yhdestä alkuperäisestä muuttujasta.
-Esimerkiksi datasets.xml Sisällä A&lt; dataVariable &gt; tagi, jos käytät
+    * Tiedostoille, joissa tyyppi on EDDtableF-tiedostojen alaluokka, voit nyt tehdä tietoja metadatasta.
+Tarkemmin, voit nyt tehdä muuttujan arvoista attribuutti yksi alkuperäinen muuttuja.
+Esimerkiksi datasets.xml , sisällä&lt; dataVariable &gt; tag, jos käytät
 ```
         <sourceName>variable:cruise:PI</sourceName>  
 ```
-         ERDDAP™ Muuttujan tulee olla Risteilymuuttujan PI-ominaisuuden arvoja.
-Kiitos WOD.
+         ERDDAP™ tekee muuttujan, jossa on risteilymuuttujan PI-attribuutin arvot.
+Kiitos WOD:n.
 *    **Muutokset:** 
-    * Pieniä muutoksia
+    * Pienet muutokset
 
 ## Versio 1.34{#version-134} 
- (2011-06-15) 
+ (julkaistu 2011-06-15) 
 
 *    **Muutokset:** 
-    * Bug fix: Korjattu muistivuoto, joka tapahtui noin 64-bittisessä Java asennuksia.
-    * Bug fix: ERDDAP™ Nyt oikein määritellään nämä globaalit ominaisuudet, kun leveysmitan arvot vaihtelevat korkeasta alhaaseen: geospatiaaliset × min, geospatiaaliset _t_max, Southernmost _Northing, Northernmost_Northing.
+    * Virheen korjaaminen: Korjasin muistivuodon, joka tapahtui noin 64-bitillä. Java laitokset.
+    * Virheen korjaaminen: ERDDAP™ nyt asettaa nämä maailmanlaajuiset ominaisuudet oikein, kun leveysasteen arvot vaihtelevat korkeasta alhaiseen: geospatial\\_lat\\_min, geospatial\\_lat\\_max, Southern most\\_pohjoisn, Northing.
         
-Huomaa, että actual\\_range se on muuttumaton: sillä voi olla alhaiset, korkeat arvot tai korkeat, alhaiset arvot, koska sen tarkoituksena on ilmoittaa varastoinnin laajuus ja järjestys.
+Huomaa, että actual\\_range on muuttumaton: sillä voi olla alhaiset, korkeat tai alhaiset arvot, koska sen tarkoituksena on ilmoittaa varastointialue ja -järjestys.
         
     * Pieniä muutoksia.
-    *    ERDDAP™ Hallinnoitsijoiden ei tarvitse tehdä muutoksia niiden asennus.xml tai datasets.xml .
+    *    ERDDAP™ hallinnoijien ei tarvitse tehdä muutoksia niiden setup.xml tai datasets.xml .
 
 ## Versio 1.32{#version-132} 
- (2011-05-20) 
+ (julkaistu 2011-05-20) 
 
 *    **Muutokset:** 
-    * Äskettäin ratifioitu CF Discrete Sampling Geometries (joka ei ole vielä saatavilla verkossa) Tämä korvaa ehdotetut CF Point Observation -sopimukset.
-         ERDDAP™ Käyttäjät näkevät, että cd \feature \\ \\ tation korvataan TimeSeriesillä ja tiedostoihin on tehty pieniä muutoksia. .nc CF-tiedostotyyppi (Litteää ulottuvuutta kutsutaan nyt näytteeksi) .
-         ERDDAP™ Hallitsijoiden on tehtävä nämä muutokset datasets.xml :
-        * cdm \\ \\ \\ \\ \\ \\ \\ t \\ \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t t \\ t t t t t \\ t t t t t t t t t t t \\ \\ t t t t t t t t \\ \\ t t t t t \\ t t t t t t \\ t t \\ \\ t \\ \\ t t \\ t t t \\ t \\ \\ t t \\ \\ \\ \\ \\ t t \\ t \\ \\ \\ 
-        * cdm \ta \\ \\ \\ \\ \\ tation \\ \\ \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ \\ t \\ t \\ t \\ t \\ \\ t t \\ \\ t t t \\ \\ t t t t t t \\ \\ t t \\ t t \\ \\ \\ \\ \\ t t t t t \\ \\ t \\ \\ t t \\ t t \\ \\ t \\ \\ t t \\ \\ t \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
-        * cdm = cdm &#123;\\displaystyle \\ &#125; \\ \\ \\ \\ t \\ \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t; \\ t \\ t \\ t \\ t t \\ t t t t t t \\ t t t t \\ t t t t t t t \\ t t \\ t t t t t t t t t t t t \\ t t t t t t \\ t t \\ t t t \\ t t \\ t t t \\ t \\ \\ t t t \\ t \\ t t t \\ t t \\ t 
-        * cf &#123;\\displaystyle &#125; \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
-    * Uusi Uusi Uusi ioos\\_category Värillinen liukeneva orgaaninen aine, PCO2, Stream Flow, Total Suspended Matter
-    * Mahdolliset ratkaisut 64-bittiseen muistivuotoon Java . \\[ Se ei toiminut. \\] 
+    * Tuki äskettäin ratifioiduille CF:n erillisotoksille (joka ei valitettavasti ole vielä saatavilla verkossa) , joka korvaa ehdotetut koheesiorahastoa koskevat havaintosopimukset.
+         ERDDAP™ käyttäjät näkevät, että cdm\\_feature\\_type=Station korvataan TimeSeriesillä ja tiedostoihin tehdään pieniä muutoksia .nc Tiedostotyyppi (litteä\\_ulottuvuus on nyt nimeltään näyte\\_mitta) .
+         ERDDAP™ hallintojen on tehtävä nämä muutokset datasets.xml :
+        * cdm\\_data\\_type=Station muutetaan cdm\\_data\\_type=TimeSeriesiksi.
+        * cdm\\_data\\_type=StationProfile muutetaan cdm\\_data\\_type=TimeSeriesProfileiksi.
+        * cdm\\_station\\_variables tulisi muuttaa cdm\\_timeseries\\_variables:iksi.
+        * cf\\_role=station\\_id muutetaan cf\\_role=timeseries\\_id:ksi.
+    * Uusi ioos\\_category vaihtoehdot: "Värillinen liuotettu orgaaninen aine," "pCO2," "Stream Flow," "Total keskeytetty aine."
+    * Mahdollinen ratkaisu mahdolliseen 64-bittiseen muistivuotoon Java . \\[ Se ei toiminut. \\] 
     * Pieniä muutoksia.
 
 ## Versio 1.30{#version-130} 
- (2011-04-29) 
+ (julkaistu 2011-04-29) 
 
 *    **Uudet ominaisuudet:** 
-    * 64-bittinen tuki Java . Käytetty 64 bit Java , ERDDAP™ Voit nyt käyttää paljon enemmän muistia ja käsitellä useita samanaikaisia pyyntöjä.
-    * Tukea .nc tiedostopyynnöt jopa 2GB (Ilman 64-bittistä Java ) paremman käytön kautta ERDDAP "Tietojen käsittelyä chunksissa.
-    * Koodin 2X nopeusparannukset ja 2X nopeus nousevat Java 1.6 Tee ERDDAP™ 2X-4X nopeammin kuin ennen.
-    * Muistinsäästöparannukset ovat huomattavasti alhaisemmat ERDDAP perusmuistin käyttö.
-    * Tabulaariset tiedot, ERDDAP™ on nyt täysin tietoinen tietoaineiston cd data \\ \\ \\ \\ \\ \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t \\ t t \\ t t t \\ t t t t t t t t t t t t t t t t t t t \\ t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t  Nähdään [CF Discrete Sampling Geometries spesifikaatio](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) . Ehkä jonain päivänä, tämä Word-tiedosto muunnetaan .html ja korvata nykyiset "OBSOLETE" tiedot kyseisellä sivulla. Kiitos tästä NOAA UAF-projekti.
-    * Useimmille EDDTable-tietokoneille uusi lähtötiedostotyyppi, .nc CF, Contiguous Ragged Array .nc tiedostot, jotka ovat uusimman version mukaisia [CF Discrete Sampling Geometries yleissopimukset](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) . Nämä tiedostot on rakennettu kuvaamaan CDM-tietotyyppiä. Koska ehdotetut yleissopimukset ovat juuri muuttuneet, netcdf-java-kirjasto ei vielä tue tiedostomuotojen lukemista. ERDDAP ja tulkita niitä CDM-tiedostoina. Ehkä se tulee pian. Kiitos tästä NOAA UAF-projekti.
-    * The View : Distinct Data -vaihtoehto .subset-sivulla on nyt pudotusluettelo, jonka avulla käyttäjät voivat määrittää erillisten tietojen rivien enimmäismäärän. (Oletusarvo 1000) . Muutos ja muut sallivat ERDDAP™ Työskentele sellaisten tietoaineistojen kanssa, joilla on hyvin suuri määrä erillisiä tietoja. (Ainutlaatuisten arvojen määrä on edelleen ongelma, mutta se voi olla melko korkea. (20 000?) .subset ja muut sivut latautuvat todella hitaasti.) Kiitos tästä NOAA UAF-projekti.
-    * .subset-sivuilla on uusi vaihtoehto: Katso Distinct Data Counts Kiitos GTOPP-projektista.
-    * Käyttäjien auttamiseksi eri arvot (Aseman nimi) Näytetään nyt Make-A-Graph- ja Data Access -muodossa. Kiitos tästä NOAA UAF-projekti.
-    * Transparent Png-pyynnöt tukevat nyt kaikenlaisia grafiikoita ja tietojen esityksiä. Se piirtää vain tietoja - ei akseleita, legendoja, maskia tai mitään muuta. Tämä mahdollistaa kuvien tekemisen läpinäkyvinä punkkeina. Jos ja.sizewidth | _korkeus_ määritellään kyselyssä (Suositeltu) Se on kunnioitettu. Oletusarvo on 360x360 pikseliä. Ainoa poikkeus on EDDGrid &.draw=surface, missä oletus (Kuten ennen) kuva, jossa on ~1/pikseli per datapiste (enintään 3000 x ja y pikseliä) . Kiitos Fred Hochstaedterille.
-    * The WMS Web-sivut näyttävät nyt aineiston muuttujan väripalkin. (s) . Kiitos Emilio Mayorgalle ja muille.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * Vapautumiseen liittyy paljon muutoksia. Ne ovat kaikki tärkeitä. Ole kärsivällinen ja toimi alla lueteltujen muutosten läpi.
-    * Tämä versio on julkaistu aiemmin kuin on tarkoitus käsitellä joitakin Java Turvallisuusvikoja. Useita tähän tarkoitukseen tarkoitettuja ominaisuuksia/korjauksia ERDDAP™ versio ei ole tässä versiossa. Anteeksi. Toivottavasti seuraava versio tulee pian. (Helpompi päivittää) .
-    * Välttää useita turvavirheitä Java 6 päivitys 23 ja alla, lataa ja asenna uusin versio Java   ( Java 6 päivitystä 24 tai enemmän) . Jos käytössä on 64-bittinen käyttöjärjestelmä, hanki 64-bittinen versio. Java .
-    * Jos käytät Tomcat 5:tä, päivitä Tomcat 6:een tai 7:een (Mieluiten) . Jos käytät Tomcat 6:a, päivitä Tomcat-versioon 7.
-    * Noudata kaikkia ohjeita [Uuden perustaminen ERDDAP™ ](/docs/server-admin/deploy-install) tarvittaessa kopioit tiedostoja vanhasta asennuksesta uuteen asennukseen, erityisesti \\[ Tom \\] Sisältö / tiedostot. Osana tätä, huomioi [Tomcat-suositukset](/docs/server-admin/deploy-install#tomcat) .
-    * Oletusarvoinen erdap.css on nyt mukana erddap.war-tiedostossa.
-        * käyttää oletusarvoa erddap.css, **delegaatti** Vanha \\[ Tom \\] Sisältö/erddap/images/erddap.css.
-        * Jos muutat \\[ Tom \\] Sisältö/erddap/images/erddap.css ja haluat käyttää sitä: jätä se paikoilleen ja vaihda se&lt;Input&gt;-osio:
+    * Tuki 64-bittiselle Java . Käytetään 64 bitin kanssa Java , ERDDAP™ voi nyt käyttää paljon enemmän kasa muistia ja käsitellä monia muita samanaikaisia pyyntöjä.
+    * Tuki .nc tiedostopyynnöt enintään 2GB (jopa ilman 64-bittistä Java ) tehostamalla ERDDAP Tietojen käsittely palasina.
+    * Monet 2X nopeus parannuksia koodi ja 2X nopeuttaa alkaen Java 1.6 merkki ERDDAP™ 2X-4X nopeammin kuin ennen.
+    * Muistinsäästöjen paraneminen huomattavasti vähemmän ERDDAP Perusmuistin käyttö.
+    * Taulukkotiedostot ERDDAP™ on nyt täysin tietoinen tietokokonaisuuden cdm\\_data\\_type, ja miten datakartat CDM tyyppi. Katso [CF Erityinen näytteenotto Geometrian erittely](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) . Ehkä jonain päivänä pian, että Word-tiedosto muunnetaan .html ja korvata nykyisen "Obsolete" tiedot tällä sivulla. Kiitos NOAA UAF-projekti.
+    * Useimmissa EDDTable-aineistoissa on uusi tiedostotyyppi, .nc CF, luo Contigative Ragged Array .nc tiedostot, jotka ovat viimeisimmän version mukaisia [CF Selkeä näytteenotto Geometriakäytännöt](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) . Nämä tiedostot on jäsennetty vastaamaan tietokannan CDM-tietotyyppiä. Koska ehdotetut yleissopimukset juuri muuttunut, koska tämä kirjoitus, netcdf-java kirjasto ei vielä tue lukemista tiedostomuotoja luonut ERDDAP ja tulkita niitä CDM tiedostoja. Luultavasti pian. Kiitos NOAA UAF-projekti.
+    * Näkymä: Erillinen Data-vaihtoehto .subset-sivulla on nyt pudotus-down-lista, jonka avulla käyttäjät voivat määrittää yksittäisten tietojen rivien enimmäismäärän (oletus = 1000) . Tämä muutos ja muut ERDDAP™ työskennellä tietoaineistojen kanssa, joilla on erittäin suuri määrä erillisiä tietoja. (Ainutlaatuisten arvojen määrä yhdelle muuttujalle on edelleen ongelma, mutta se voi olla melko korkea (20 000?) ennen .subset ja muut web-sivut ladata todella hitaasti.) Kiitos NOAA UAF-projekti.
+    * .subset verkkosivuilla on uusi vaihtoehto: Näytä erottuva datamäärä. GTOPP-projektin ansiosta.
+    * Käyttäjien avuksi (esim. aseman nimet) Näytetään nyt Make-A-Grap- ja Data Access -lomakkeissa. Kiitos NOAA UAF-projekti.
+    * . läpinäkyvä Png-pyynnöt tukevat nyt kaikenlaisia kaavioita ja tietojen esitystapoja. Se piirtää vain dataa. Ei kirveitä, legendoja, maamatoja tai mitään muuta. Näin on mahdollista tehdä kuvia kerroksina läpinäkyvä Pngs. If &. size=_wide_ | _Korkeus_ on määritetty kyselyssä (suositellaan) Se on kunnia. Oletusarvo on 360x360 pikseliä. Ainoa poikkeus on EDDGrid &.draw=pinta, jossa oletusarvo (kuten ennen) on kuva, jossa on ~1/pikseli tietopistettä kohti (enintään 3000 x ja y pikseliä) . Kiitos Fred Hochstaedterin.
+    * • WMS Web-sivut näyttävät nyt tiedoston muuttujan väripalkin (tilu) . Kiitos Emilio Mayorgan ja muiden.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Tämä julkaisu sisältää paljon muutoksia. Ne ovat kaikki tärkeitä. Ole kärsivällinen ja selvitä kaikki seuraavassa luetellut muutokset.
+    * Tämä versio on työnnetty pois aikaisemmin kuin tarkoitus käsitellä joitakin Java Vartijoita. Valitettavasti useita ominaisuuksia / korjauksia tarkoitettu tähän ERDDAP™ versio ei ole tässä versiossa. Anteeksi. Toivottavasti seuraava versio on suhteellisen pian (ja paljon helpompi päivittää) .
+    * Välttää useita tietoturvavikoja Java 6 päivittää 23 ja alla, lataa ja asenna uusin versio Java   ( Java 6 päivitys 24 tai enemmän) . Jos sinulla on 64-bittinen käyttöjärjestelmä, ota 64-bittinen versio Java .
+    * Jos käytät Tomcat 5:tä, sinun täytyy päivittää Tomcat 6:een tai 7:een (parempi) . Jos käytät Tomcat 6:ta, harkitse päivittämistä versioon 7.
+    * Noudata kaikkia ohjeita. [uuden ERDDAP™ ](/docs/server-admin/deploy-install) , mutta tarvittaessa, kopioi tiedostoja vanhasta asennuksesta uuteen asennukseen, erityisesti \\[ tomcat \\] /content/erddap-hakemisto ja tiedostot. Tähän liittyen [uudet Tomcat-asetussuositukset](/docs/server-admin/deploy-install#tomcat) .
+    * Oletuksena erddap.css on nyt mukana erddap.war tiedosto.
+        * Käyttää oletus erddap.css, **poistaa** vanha \\[ tomcat \\] /content/erddap/images/erddap.css .
+        * Jos olet muokannut \\[ tomcat \\] /content/erddap/images/erddap.css, ja haluat jatkaa sen käyttöä: jätä se paikoilleen ja korvaa&lt;syöte&gt; osa, jossa
 ```
             /\\* Small input items let more be shown on one screen  
             (esp. Chrome and Safari). Google Chrome and Safari have  
@@ -2337,8 +2352,8 @@ Huomaa, että actual\\_range se on muuttumaton: sillä voi olla alhaiset, korkea
             input.skinny {padding:0px 1px; }
 ```
 
-    * Sisälläsi \\[ Tom \\] Sisältö/erddap/setup.xml:
-        * Korvaa kommentit ja tunnisteet, jotka liittyvät&lt;osittaispyynnöt &gt; ja&lt;PartialRequestMaxCells kanssa
+    * • \\[ tomcat \\] /content/erddap/setup.xml:
+        * Korvaa kommentit ja tunnisteet liittyvät&lt;osittainen pyyntöMaxBytes&gt; ja&lt;osittainen pyyntöMax Cells&gt; kun
 ```
             <!-- When possible (and it isn't always possible),  
             ERDDAP™ breaks source data requests into chunks to  
@@ -2351,7 +2366,7 @@ Huomaa, että actual\\_range se on muuttumaton: sillä voi olla alhaiset, korkea
              <partialRequestMaxCells>100000</partialRequestMaxCells>  
             \\-->
 ```
-        * Korvaa kommentit, jotka liittyvät&lt; categoryAttributes &gt; ja harkitse tagin arvon muuttamista:
+        * Korvaa&lt; categoryAttributes &gt; ja harkita tunnisteen arvon muuttamista:
 ```
             <!-- This is the comma-separated list (recommended:  
             in alphabetical order) of the global attribute and  
@@ -2366,75 +2381,75 @@ Huomaa, että actual\\_range se on muuttumaton: sillä voi olla alhaiset, korkea
             long\\_name, standard\\_name</categoryAttributes>  
 ```
 
-Yksilöllinen&lt; categoryAttributes Nämä ovat globaaleja ominaisuuksia, jotka on nyt tunnistettava maailmanlaajuisesti: (Globaali: Institution) . Muiden ominaisuuksien oletetaan olevan muuttuvia ominaisuuksia. (esim. standard\\_name ) . Myös institutionaaliset arvot (Ainoat) jätettiin alkuperäiseen tapaukseen. Kaikki luokka-arvot muunnetaan alemmaksi.
-    * Sisälläsi \\[ Tom \\] Sisältö/erddap/ datasets.xml :
-        * Improvisoidut: ERDDAP™ sisältää uusia vaatimuksia, jotka liittyvät tabulaarisen tietoaineiston cdm datatyyppiin. Erityisesti jokaisella tietoaineistolla on oltava oikeat metatiedot ja muuttujat, jotka liittyvät cdm data tyyppiin. Jos ei, aineisto ei kuormita ja heittää virheen. Katso dokumentit [cd | | | _ _ _ _ _](/docs/server-admin/datasets#cdm_data_type) .
-        * FYI: On olemassa uusi tietotyyppi: EDDTableFromAsciiServiceNOS.
-        * ADAMUS: Kolme uutta sallittua ioos\\_category Vaihtoehtoja: Hydrologia, laatu (esim. laatulippujen osalta) ja tilastot (E.S. Tarkoitan) .
-        * EDDTableFrom... Tiedostot, poista kaikki&lt;nDimensions &gt; tagit Niitä ei enää tarvita tai käytetä.
-        * Muuttujien kanssa destinationName = asenne, ERDDAP™ Ei enää pakota long\\_name ollakseen alttari. Käy läpi sinun datasets.xml Etsi toistuvasti&lt; destinationName &gt; ja lisättyä tuohon muuttujaan&lt; addAttributes &gt; &gt;
+Yksilö&lt; categoryAttributes &gt; jotka ovat nyt maailmanlaajuisia ominaisuuksia PITÄÄ tunnistaa etuliitteen kautta maailmanlaajuisesti: (Esim.) . Muiden ominaisuuksien oletetaan olevan muuttuvia ominaisuuksia (esim. standard\\_name ) . Myös laitoksen arvot (ainoat) ne jätettiin alkuperäiseen tapaukseen. Nyt kaikki luokan arvot muunnetaan pieniksi.
+    * • \\[ tomcat \\] Sisällön/eddap datasets.xml :
+        * -Ei. ERDDAP™ on uusia vaatimuksia liittyvät taulukkotiedoston cdm\\_data\\_tyyppi. Kussakin aineistossa on oltava oikeat metatiedot ja muuttujat, jotka liittyvät cdm\\_data\\_tyyppiin. Jos ei, tiedosto ei lataudu ja heittää virhe. Ks. [cdm\\_data\\_tyyppi](/docs/server-admin/datasets#cdm_data_type) .
+        * FYI: On olemassa uusi tiedostotyyppi: EDDTableFromAsciiServiceNOS.
+        * Tiedoksi: on kolme uutta sallittua ioos\\_category vaihtoehdot: Hydralogia, laatu (Esimerkiksi laatulippujen osalta) , ja tilastot (esim.) .
+        * EDDTable... Tiedostot tiedostot, poista kaikki&lt;nMittaukset&gt; tagit. Niitä ei enää tarvita tai käytetä.
+        * Muuttujat, joiden destinationName = korkeus, ERDDAP™ ei enää pakota long\\_name Olla Korkeus. Ole hyvä ja käy läpi datasets.xml ja toistuvasti etsiä&lt; destinationName &gt; korkeus ja lisätä kyseisen muuttujan&lt; addAttributes &gt;:
 ```
               <att name="long\\_name">Altitude</att>  
 ```
-             (Tai hieman erilainen long\\_name erityistapauksissa) .
-        * Valinnainen: Kaikki EDDTableFromFiles-alisarjat tukevat muuttujaa [ sourceName = Globaali:](/docs/server-admin/datasets#global-sourcenames) muuntaa maailmanlaajuiset metatiedot kustakin tiedostosta tietomuuttujaksi. Kiitos Lynn DeWitt.
-    * EDDTableFromDatabase -käyttäjät ERDDAP™ Uusi JDBC 4 -kuljettaja postgresille. Muissa tietokannoissa tarkista verkko viimeisimmästä JDBC .jar-tiedostosta tietokantaan. Siitä lähtien ERDDAP™ Nyt käytetään Java 1.6 + JDBC 4 (Ei 3) todennäköisesti suositellaan.
-    * FYI
-        *    EDDGrid Lähde: Files and EDDTable From... Tiedostotiedot tallentavat nyt tiedostotaulukon tiedot
-             \\[ isovanhemmat \\] / Data Info/ \\[  datasetID  \\] **** .nc tiedostoja.
-EDDTable-tietoaineistot tallentavat nyt alijoukkotiedot
-             \\[ isovanhemmat \\] / Data Info/ \\[  datasetID  \\] **** .nc tiedostoja. Nämä tiedostot olivat ennen
-             \\[ isovanhemmat \\] / Data Info/ \\[  datasetID  \\] **** .json tiedostoja.
-Vanhat tiedostot poistetaan automaattisesti, kun ERDDAP™ Aloita. Voit poistaa kaikki tiedostot (Jätä tyhjät alihankinnat) Sisällä \\[ isovanhemmat \\] DatasetInfo/
-        * Olen työskennellyt uudessa EDDTableFromNcCFilesissa, joka lukee tietoja paikallisista ja etätiedostoista ehdotetuilla CF Point Observation Conventioneilla. Mutta se ei ole tässä vapautuksessa. Netcdf-java-kirjastoissa on ongelmia, jotka liittyvät joihinkin menetelmiin näiden tiedostojen lukemiseksi. Muutoksia on tehty CF Point Observation Conventionissa. Kun netcdf-java-kirjasto on vahvistettu ja päivitetty viimeisimpään ehdotukseen, jatkan tätä.
-        * Juokseminen ERDDAP™ Windowsissa voi olla ongelmia: erityisesti voit nähdä \\[ BigParentDirectory/log.txt-tiedosto, joka ERDDAP™ Joskus ei voi poistaa ja/tai nimetä tiedostoja nopeasti. Tämä johtuu virustorjuntaohjelmistosta (Lähde: McAfee and Norton) Tämä tarkistaa tiedostoja viruksia. Jos törmäät tähän ongelmaan (jotka näkyvät loki.txt-tiedoston virheviesteissä, kuten "Ei voi poistaa ...") Virustorjuntaohjelmiston asetukset saattavat osittain lievittää ongelmaa.
-Jos ERDDAP™ Windowsissa on vain työpöydälläsi käynnissä oleva testi, joka on vain ärsyttävää.
-Jos ERDDAP™ Windows on yleisösi ERDDAP™ Harkitse siirtymistä Linux-palvelimeen.
-    * Hidas aloitus - Ensimmäinen kerta, kun juokset ERDDAP™ päivityksen jälkeen, ERDDAP™ Voi olla hidasta ladata aineistoja. Tie ERDDAP™ Tiedot koostetuista tiedostoista ovat muuttuneet, joten ERDDAP™ Pitää lukea lisää tietoa kaikista näistä tiedostoista. Se vie aikaa.
-    * Virheet käynnistysvaiheessa - Kun otetaan huomioon cdm_data-tyyppiin liittyvät muutokset, on todennäköistä, että osa aineistoistasi ei kuormita ja heittää virheitä. Lue päivittäinen raportti, joka ERDDAP™ Lähetän kun ERDDAP™ on valmis aloittamaan. Siinä on luettelo aineistoista, joita ei ole ladattu. (Huipulla) Syy, miksi he eivät kuormittaneet (Lähellä pohjaa) .
-    * Jos olet juuttunut tai sinulla on muita kysymyksiä, lähetä minulle sähköpostia: erd.data at noaa.gov .
-    * Ohjelmoijat ----- Jos kirjoitat Java Ohjelmat, jotka juoksevat ERDDAP™ Koodi, sinun on muutettava joitakin komentosarjan parametrin viittauksia:
-        * Vaihda Joda-time-1.6.2.jar joda-aikaan. ja
-        * Vaihda postgres JDBC .jar viittaus postgresql.jdbc.jar
-*    **Pienet muutokset ja korjaukset:** 
+             (tai hieman erilaista long\\_name erityistapauksissa) .
+        * Valinnainen: Kaikki EDDTableFromFiles alaluokista tukimuuttuja [ sourceName = maailmanlaajuinen:](/docs/server-admin/datasets#global-sourcenames) muuntaa maailmanlaajuiset metatiedot jokaisesta tiedostosta datamuuttujaksi. Kiitos Lynn DeWittin.
+    * EDDtableTietojen käyttäjiltä -- ERDDAP™ mukana uusi JDBC 4 -ajuri Postgresille. Muissa tietokannoissa, tarkista verkosta uusin JDBC .jar tiedosto tietokantaan. Mistä lähtien ERDDAP™ Nyt käyttää Java 1,6+, JDBC 4 (ei 3) on suositeltavaa.
+    * FOI
+        *    EDDGrid Fileistä ja EDDTablesta Mistä... Tiedostot tiedostot nyt tallenna tiedostotaulukon tiedot
+             \\[ bigPentDirectory \\] /dataset Info/ \\[  datasetID  \\] /\\ * .nc tiedostot.
+EDDTable-aineistot tallentavat nyt osajoukkotiedot
+             \\[ bigPentDirectory \\] /dataset Info/ \\[  datasetID  \\] /\\ * .nc tiedostot. Nämä tiedostot olivat ennen
+             \\[ bigPentDirectory \\] /dataset Info/ \\[  datasetID  \\] .\\ * .json tiedostot.
+Vanhat tiedostot poistetaan automaattisesti, kun ERDDAP™ Aloitetaan. Tai voit poistaa kaikki tiedostot (mutta jätä tyhjät alihakemistot) in \\[ bigPentDirectory \\] /datasetInfo/.
+        * Olen työskennellyt uuden EDDtableFromNcCFFiles, joka lukee tietoja paikallisia ja etätiedostoja käyttäen ehdotettuja, uusia CF Point Observation Conventions. Mutta se ei ole tässä julkaisussa. Netcdf-java-kirjastoissa on ongelmia, jotka liittyvät joihinkin näiden tiedostojen lukemiseen. Ehdotetut CF-pisteiden tarkkailua koskevat yleissopimukset muuttuivat hiljattain. Kun netcdf-java-kirjasto on korjattu ja päivitetty viimeisimmän ehdotuksen mukaiseksi, jatkan asian käsittelyä.
+        * Suoritetaan ERDDAP™ Windows voi olla ongelmia: erityisesti, voit nähdä \\[ bigPerentDirectory/logs/log.txt-tiedosto ERDDAP™ ei voi joskus poistaa ja/tai nimetä tiedostoja nopeasti. Tämä johtuu virustorjuntaohjelmistosta (Esimerkiksi, McAfee ja Norton) Joka tutkii virusten tiedostoja. Jos törmäät tähän ongelmaan (joka näkyy virheviesteillä log.txt-tiedostossa kuten "Ei voitu poistaa ...") , muuttaa antivirus-ohjelmiston asetuksia voi osittain lievittää ongelmaa.
+Jos ERDDAP™ Windows on vain testi käynnissä työpöydällä, tämä on vain ärsytystä.
+Jos ERDDAP™ Windows on julkinen ERDDAP™ , harkita siirtymistä Linux-palvelimelle.
+    * Hidas alku. Kun juokset ensimmäistä kertaa ERDDAP™ parannuksen jälkeen, ERDDAP™ Aineistojen lataaminen voi olla hidasta. Tapa ERDDAP™ tallentaa tietoja yhdistettyjä tiedostoja on muuttunut, joten ERDDAP™ Sinun täytyy lukea joitakin tietoja kaikista noista tiedostoista. Se vie aikaa.
+    * Virheitä käynnistyksessä -- Kun otetaan huomioon cdm\\_data\\_tyyppiin liittyvät muutokset, on todennäköistä, että jotkin tiedostoistasi eivät lataa ja heittää virheitä. Lue huolellisesti Daily Report sähköpostia, että ERDDAP™ lähettää milloin ERDDAP™ Aloittaminen on päättynyt. Siinä on lista tiedoista, jotka eivät latautuneet. (huipulla) Ja miksi he eivät ladanneet (lähellä pohjaa) .
+    * Jos jäät jumiin tai sinulla on muita kysymyksiä, lähetä minulle sähköpostilla: erd.data at noaa.gov .
+    * Ohjelmoijat -- Jos kirjoitat Java Suorittavat ohjelmat ERDDAP™ koodi, sinun täytyy muuttaa joitakin komentorivin parametriviitteitä:
+        * Vaihda joda-aika-1.6.2.jar joda-aika. purkki
+        * Muuta Postgres JDBC . jaar viittaus postgresql.jdbc.jar
+*    **Pienet muutokset ja viat:** 
     
-    * Parannettu liitäntäkäsittely, jotta vältytään ripulilta.
-    * Parannetut valuutankäytännöt, joilla käsitellään lähes yhtäaikaisia pyyntöjä tehokkaammin.
-    *    ERDDAP™ NetcdfAll-4.2.jar (Nimetty netcdfAll-viimeiseksi. ja) . Tämä kytkin tarvitsi useita sisäisiä muutoksia ja aiheutti muutamia pieniä ulkoisia muutoksia, esimerkiksi muutoksia siihen, miten harmaatiedostoja luetaan ja pieniä muutoksia. .nc Headerin tuotanto.
-    * Uusi ominaisuus: \\[ Erddap \\] Convert/fipscounty.html muunnelmia FIPS Maakuntakoodit / maakunnan nimistä.
-    * Kartoilla rajat ovat nyt tummia violetteja, joten ne erottuvat paremmin kaikista taustaväreistä.
-    * Tabulaari .kml Tuotanto käyttää jälleen pyöreää kuvaketta pisteiden merkitsemiseen (Ei lentokoneen ikoni Google muutti hiljattain) .
-    * erdCalcofi-tietoaineistot järjestettiin uudelleen ja ne toimitetaan nyt paikallisista tiedostoista. (nopeammin) .
-    * GenerateDatasets XML:stä Thredds Katalogi luo nyt tulostiedoston:
-         \\[ Tom \\] /webapps/erddap/WEB-INF/temp EDDGrid FromThreddsCatalog.xml Kiitos Kevin O'Brien.
-    * GenerateDatasets XML:stä Thredds Katalogi yrittää nyt poistaa tarpeettomat satamanumerot URL-osoitteesta (:8080 ja :8081 voidaan joskus poistaa.) . Kiitos NOAA keskustan turvallisuusjoukkue.
-    * .subset-verkkosivuilla Distinct-tietojen kartalla on nyt muuttuva lat lon -alue.
-    * Useita listoja ERDDAP™   (esim. taulukko, joka näyttää kaikki tiedot) A.A.S.A.A.S. on luokiteltu ennen a. .z . Nyt ne ovat tapausherkällä tavalla.
-    * Pienet muutokset .subset-verkkosivuilla, mukaan lukien: yksikkö on nyt ilmoitettu.
-    * GenerateDatasets Xml ja DasDds eivät enää heittele poikkeusta, jos ne eivät voi laittaa tuloksia järjestelmän leikepöydälle tai näyttöön InBrowser. Kiitos Eric Bridger ja Greg Williams.
-    * Bug fix: Kun aineisto on ladattu, ERDDAP™ poistaa tai muokata maantieteellisiä ominaisuuksia. Kiitos Charles Carletonille.
-    * Bug fix: String2.getClassPath () Nyt kunnolla luokitellaan luokka Tie (Erityisesti Windowsissa tiedostonimen tilat näyttivät %20) . Tämä vaikuttaa ERDDAP™ SSR.getContextDirectoryn nimi () Sisällön/erdapin löytäminen. Kiitos Abe Coughlinille.
-    * Bug fix: EDDTableFromFiles liittyy saadaDataForDapQuery käsittely erillinen () pyyntöjä. Kiitos Eric Bridger.
-    * Bug fix: tabledap pyynnöt eivät ole asianmukaisesti käsitelleet korkeusrajoituksia, kun aineiston korkeus MetersPerSourceUnit oli -1. Kiitos Eric Bridger.
-    * Bug fix: EDDTableFrom Tiedostoaineistot käsittelevät nyt oikein pyyntöjä, jotka sisältävät = NaN ja &#33;= NaNaN.
+    * Parannettu yhteyden käsittely välttää ripusta lankaa.
+    * Paremmat valuuttakäytännöt lähes samankaltaisten pyyntöjen hoitamiseksi tehokkaammin.
+    *    ERDDAP™ nyt käyttää netcdfAll-4.2.jar (Nimi on netcdfKaikki. purkki) . Tämä kytkin vaati useita sisäisiä muutoksia ja aiheutti joitakin pieniä ulkoisia muutoksia, esimerkiksi muutoksia siihen, miten kääretiedostoja luetaan ja pieniä muutoksia .nc Otsikkolähtö.
+    * Uusi ominaisuus: \\[ erddap \\] /convert/fipscounty.html muuntaa FIPS Piirikunnan koodit piirikunnan nimille/nimille.
+    * Kartoissa valtion rajat ovat nyt tummat, joten ne erottuvat paremmin kaikilla taustaväreillä.
+    * Taulu .kml tuloste käyttää taas pyöreä kuvake merkitä pisteitä (ei lentokoneen kuvaketta Google siirtyi äskettäin) .
+    * ErdCalcofi-aineistot oli järjestetty uudelleen ja ne ovat nyt saatavilla paikallisista tiedostoista (Nopeammin) .
+    * Luo tiedostoja Xml alkaen Tuhka Catalog luo nyt tulostiedoston:
+         \\[ tomcat \\] /webaps/erddap/WEB-INF/temp/ EDDGrid From ThrreddsCatalog.xml . Kiitos Kevin O'Brienin.
+    * Luo tiedostoja Xml alkaen Tuhka Katsasta nyt yrittää poistaa tarpeettomat porttinumerot lähde URL (Esimerkiksi:8080 ja:8081 voidaan joskus poistaa) . Kiitos NOAA Centralin turvaryhmä.
+    * .subset web-sivuille, Kartta erottuva data on nyt vaihteleva lat en valikoima.
+    * Useat luettelot ERDDAP™   (Esimerkiksi taulukko, jossa esitetään kaikki tiedot) A.Z. lajiteltiin ennen a. .z . Nyt he lajittelevat tapauksen tunteettomalla tavalla.
+    * Pienet muutokset .subset-sivuille, mukaan lukien: yksiköt on nyt ilmoitettu.
+    * Luo tiedostoja Xml ja DasDds eivät enää heitä poikkeusta, jos tuloksia ei voida laittaa järjestelmän leikepöydälle tai näyttöInBrowser. Kiitos Eric Bridgerin ja Greg Williamsin.
+    * Virheen korjaaminen: Kun tiedot on ladattu, ERDDAP™ Nyt poistaa tai muuttaa geospatiaalisia maailmanlaajuisia ominaisuuksia. Charles Carletonin ansiosta.
+    * Vikakorjaus: String2.getClassPath () Nyt kunnolla prosenttia decodes luokan Polku (Erityisesti Windowsissa tiedostonimessä olevat välilyöntit ilmestyivät nimellä [52]) . Tämä ERDDAP™ ED Staattinen puhelu SSR.getContextDirectory () ja löytää sisältöä/erddap. Abe Coughlinin ansiosta.
+    * Vika: EDDTableF alkaen tiedostot liittyvät saadaDataForDapQuery käsittely erillinen () pyynnöt. Kiitos Eric Bridgerin.
+    * Virheen korjaaminen: tabledap Pyynnöt eivät oikein käsitellä korkeus rajoituksia, kun tiedoston korkeus MetersPerSourceUnit oli -1. Kiitos Eric Bridgerin.
+    * Bug korjaus: EDDtableFrom... Tiedostot tiedostot nyt oikein käsitellä pyyntöjä, jotka sisältävät = Nan ja &#33;=Nan.
     
 ## Versio 1.28{#version-128} 
- (2010-08-27) 
+ (julkaistu 2010-08-27) 
 
-*    **Uudet ominaisuudet:** Ei mitään.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** Ei mitään.
-*    **Bug fix:** Korjaa ohjelmointivirhe (Vain 1.26) Tämä tehty ERDDAP™ erittäin hidasta.
+*    **Uudet ominaisuudet:** Ei yhtään.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** Ei yhtään.
+*    **Virheen korjaaminen:** Korjaa ohjelmointivirhe (Ainoastaan 1,26 kohdassa.) -Ei. ERDDAP™ Erittäin hitaasti.
      
 
 ## Versio 1.26{#version-126} 
- (2010-08-25) 
+ (julkaistu 2010-08-25) 
 
-*    **Uudet ominaisuudet:** Ei mitään.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** 
-    * sinun \\[ Tom \\] Sisältö/erddap/setup.xml
-        * Sisällä&lt;Laillinen &gt; Uuden linjan alla \\[ Standard standard standard standard standard standard standard standard standard standard standard standard DataLisää \\] Insert \\[ Standard Yhteystiedot \\] . \\[ Standard Yhteystiedot \\] viitataan&lt;adminEmail&gt; määritelty korkeammalle asennus.xml.
-        * Poistaa&lt;CommonBGColor &gt; ja&lt;HighlightBGColor &gt; Näytä tarkat tiedot
-        * Suositellaan: Muut muutokset&lt;endbodyHtml &gt; &gt;
+*    **Uudet ominaisuudet:** Ei yhtään.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** 
+    * Sinun \\[ tomcat \\] /content/erddap/setup.xml
+        * Sisään&lt;oikeudellinen&gt;, uudella rivillä \\[ standardi DataLicenses \\] , lisää \\[ standardContact \\] . \\[ standardContact \\] viittaa&lt;adminEmail&gt; määritelty korkeampi setup.xml.
+        * Poista&lt;TaulukkoCommonBGColor&gt; ja&lt;TaulukkoHighlightBGColor&gt;.
+        * Suositeltu: Muutos&lt;endBodyHtml&gt;
 ```
             <endBodyHtml><!\\[CDATA\\[  
             <br>&nbsp;  
@@ -2447,55 +2462,55 @@ Jos ERDDAP™ Windows on yleisösi ERDDAP™ Harkitse siirtymistä Linux-palveli
             \\]\\]></endBodyHtml>
 ```
 
-    * Vaadittu: sinun \\[ Tom \\] / sisältö / erddap / kuvat / erddap.css ja erdapAlt.css, lisää pohjaan:
+    * Vaaditaan: Sinun \\[ tomcat \\] /content/erddap/images/erddap.css ja erddapAlt.css, lisätään alareunaan:
 ```
         /\\* This is used on the /info/\\[datasetID\\]/index.html pages to highlight a row or cell. \\*/  
         tr.highlightBGColor {background-color:#cceecc; }  
         td.highlightBGColor {background-color:#cceecc; }
 ```
-*    **Pieniä korjauksia ja pieniä muutoksia:** 
+*    **Vikakorjauksia ja pieniä muutoksia:** 
     
-    * Bug fix: Joissakin tilanteissa lomakkeet eivät toimineet joissakin Internet Explorer -versioissa. Kiitokset Greg Williamsille.
-    * Bug fix: Tehdä Graph-painikkeet eivät toimi, jos tietoaineisto on peräisin etäisestä ERDDAP .
-    * Bug fix: WMS Joskus se ei toimi, jos aineisto oli etäältä. ERDDAP .
-    * Paljon pieniä muutoksia ja vikoja.
+    * Bug korjaus: Joissakin tilanteissa lomakkeet eivät toimineet joissakin versioissa Internet Explorer. Kiitos paljon Greg Williamsille.
+    * Virheen korjaaminen: Make A Graph -painikkeet eivät toimineet, jos aineisto oli kaukosäätimestä ERDDAP .
+    * Virheen korjaaminen: WMS Joskus ei toiminut, jos aineisto oli kaukosäädin ERDDAP .
+    * Paljon pieniä muutoksia ja korjauksia.
     
 
 ## Versio 1.24{#version-124} 
- (2010-08-06) 
+ (julkaistu 2010-08-06) 
 
 *    **Uudet ominaisuudet:** 
-    * Uusi Uusi Uusi [Alakohtaiset verkkosivut](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/index.html) Käytä kasvojenhakua valitsemaan tabulaaristen tietoaineistojen alijoukkoja. Kiitos POST.
-    * Uusi Uusi Uusi [Edistynyt etsintä](https://coastwatch.pfeg.noaa.gov/erddap/search/advanced.html) Yhdistä kaikki muut hakuvaihtoehdot ja lisää pituus, leveys ja aikaa sitovat laatikot. Kiitos Ellyn Montgomerylle. (Anteeksi viivästys.) 
-    * Uusi Uusi Uusi [Muuntaa aikaa](https://coastwatch.pfeg.noaa.gov/erddap/convert/time.html) Web-sivun ja palvelun avulla voit muuntaa numeeriset ajat ISO-jousitusajoiksi.
-    * Uusi Uusi Uusi [Muunna yksiköt](https://coastwatch.pfeg.noaa.gov/erddap/convert/units.html) Verkkosivut ja palvelut, joiden avulla voit muuntaa UDUNITS UCUM-yksiköistä. Kiitos NOAA IOOS SOS .
-    * Jos a tabledap Sisältää & Units ("UCUM") Yksiköiden nimet muunnetaan alkuperäisistä nimistä. (Yleensä yleensä UDUNITS ) että [U](https://unitsofmeasure.org/ucum.html) yksiköiden nimet. Tämä koskee vain yksiköitä\\*Nimiä\\*Ei data-arvoja. Kiitos NOAA IOOS SOS .
-    * Parannuksia tehdä Graph verkkosivuja ja kaavioita ja karttoja:
-        * Jos grafiikka on kartta, on olemassa uusia Make A Graph -painikkeita zoomata sisään/out ja uusi vaihtoehto napsauttaa kartan keskipistettä. Kiitos POST.
-        * Suodattimet on lisätty pohjan läheisyyteen. Kiitos Greg Williamsille.
-        * Rannikkodatatiedostot on päivitetty GSHS v2.0:een. Kiitos POST.
-        * Karttoja ovat nyt järvet ja joet. Kiitos POST. (Sacramento-joen delta puuttuu, koska rantaviivatietoja tai järven/joen tietoja ei käsitellä.) 
-        * Pscoast-johdetut maa-/tilatiedostot päivitettiin. Kiitos POST.
-        * Topography.cpt:tä on muutettu hieman. (Anteeksi jos tämä vaikuttaa haitallisesti sinuun.) Kiitos POST.
-        * Griddap’s Make A Graph, jos käyttäjä muuttaa muuttujaa, lomake lähetetään automaattisesti niin, että axisVariable s' showStart AndStop heijastaa aina graafisia muuttujia. Kiitos Joaquin Trinanesille.
-        * Png- ja pdf-kuvien URL-osoitteet:
-            * New &.landvalue_, jossa _value_ voi olla alla (Topografia) Tai ”yli” (Näytä Bathymetry) . Jos ei ole määritetty, oletusarvo on [ drawLandMask ](/docs/server-admin/datasets#global-drawlandmask) Sisällä datasets.xml Asennus.xml. Kiitos POST.
-            * Liian pitkän legendan linjat jaetaan automaattisesti useisiin riveihin. Kiitos POST.
-        * Png-kuvan URL-osoitteet:
-            * New &.legend_value_, jossa _arvo_ voi olla "Bottom" (Oletus) "Off" tai "vain" Tämä antaa sinun sisällyttää legenda, poissulkea legenda tai saada vain legenda. Kiitos Cara Wilsonille.
-            * Uusi ja.trim Pixels jättää nPixelsin rajan (esim. 10) kuvan pohjassa. Sitä käytetään .legend=Offin jälkeen. Kiitos Cara Wilsonille.
-            * Uusi & sizewidth | _korkeus_ määrittää kuvan leveyden ja korkeuden pikseleissä.
-    * Uusia tiedostomuotoja:
-        * .csvp ja .tsv .csv ja .tsv mutta " (_yksiköt_) "Lisätty sarakkeiden nimiin ensimmäisellä rivillä.
-        * .odvTxt tekee .txt-tiedoston, joka yksinkertaistaa tietojen saantia [Ocean dataa Näkymä (ODV) ](https://odv.awi.de/) .
-        * .esriCsv tekee .csv-tiedoston, joka soveltuu ESRI:n tuontiin ArcGIS . (Tabulaariset tiedot) Jan Masonin, Jeff de La Beaujardieren ja NOAA IOOS SOS projekti.
-    * GUI-parannukset [Kategoria](https://coastwatch.pfeg.noaa.gov/erddap/categorize/index.html) verkkosivut. Myös luokitteluarvot (muu kuin instituutio) Kaikki ovat nyt matalampia. Ei-alhaiset pyynnöt hyväksytään (uudelleenohjattu) taaksepäin yhteensopivuus. Kiitos Roy Mendelssohnille.
-    * Virheviestit ovat entistä lyhyempiä ja käyttäjälähtöisempiä. Kiitos Greg Williamsille.
-    * Sisäinen muutos, joka vähentää merkittävästi ERDDAP perusmuistin käyttö.
-    * Paljon uusia ominaisuuksia, jotka ovat vain POST-projektin kannalta tärkeitä.
-*    **Asioita ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä:** Muutoksia on paljon. Anteeksi. Jokainen tuo kuitenkin hyviä etuja.
-    * Big Changes to GenerateDatasetXml, se kysyy usein lisää (Katso asiaa [Data Tyypit](/docs/server-admin/datasets#detailed-descriptions-of-dataset-types) Tietoa) ja luo aina olennaisesti käyttövalmiita sisältöjä datasets.xml . Olet edelleen vastuussa asennuksesta, joten sinun pitäisi vielä tarkistaa datasets.xml sisältöä ennen sen käyttöä. Ihmisen työn tekeminen projektiin on aina parempi kuin tietokoneohjelma. Kiitos UAF-projektista.
-    * REQUIRED: In setup.xml, sinun täytyy tarkistaa WMS osasto. Niihin pitäisi nyt sisällyttää (Ole vapaa muuttamaan arvoja) :
+    * Uusi [Subset web-sivut](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/index.html) Käytä faced hakua valita subsets of tabular tietokokonaisuuksia. Kiitos Postin.
+    * Uusi [Tarkennettu haku](https://coastwatch.pfeg.noaa.gov/erddap/search/advanced.html) yhdistää kaikki muut hakuvaihtoehdot ja lisää pituus-, leveys- ja aikarajoituslaatikot. Kiitos Ellyn Montgomeryn. (Anteeksi viivästys.) 
+    * Uusi [Muunna aika](https://coastwatch.pfeg.noaa.gov/erddap/convert/time.html) Web-sivun ja palvelun avulla voit muuntaa numeroita kertaa / alkaen ISO merkkijono kertaa.
+    * Uusi [Muunna yksiköt](https://coastwatch.pfeg.noaa.gov/erddap/convert/units.html) Web-sivun ja palvelun avulla voit muuntaa UDUNITS UCUM-yksiköille/yksiköille. Kiitos NOAA IOOS SOS .
+    * Jos tabledap Pyyntö sisältää & yksiköt ('UCUM') , yksiköiden nimet muunnetaan alkuperäisistä nimistä (yleensä UDUNITS ) - [UCUM](https://unitsofmeasure.org/ucum.html) yksiköiden nimet. Tämä vaikuttaa vain yksiköihin\\*nimi\\*, ei tietojen arvoja. Kiitos NOAA IOOS SOS .
+    * Parannukset tehdä Graafinen web-sivut ja kaaviot ja kartat:
+        * Jos kaavio on kartta, on olemassa uusi Tee Graaf-painikkeet zoomata sisään/ulos ja uusi vaihtoehto klikkaa muuttaa kartan keskusta. Kiitos Postin.
+        * Suodatinasetukset lisätty pohjan lähelle. Kiitos Greg Williamsin.
+        * Rannikolle rakennetut tiedostot päivitettiin GSHHS v2.0:een. Kiitos Postin.
+        * Karttoja ovat nyt järvet ja joet. Kiitos Postin. (Valitan, Sacramento-joki Delta puuttuu, koska rannikko- ja järvi-joki-aineistot eivät käsittele sitä.) 
+        * Pscoast-johdetut kansallis-/valtiotiedostot päivitettiin. Kiitos Postin.
+        * Topography.cpt muutettiin hieman. (Anteeksi, jos tämä vaikuttaa haitallisesti sinuun.) Kiitos Postin.
+        * Jos käyttäjä muuttaa muuttujaa, se lähetetään automaattisesti uudelleen. axisVariable s' showStartAndStop heijastaa aina kaaviomuuttujia. Kiitos Joaquin Trinanien.
+        * Png- ja pdf-kuvan URL:
+            * Uusi &.land=_value_, jossa _arvo_ voi olla "alle" (näytä topografia) tai "over" (Näytä vain kylpymetriaa) . Jos ei ole määritelty, oletus on asetettu [ drawLandMask ](/docs/server-admin/datasets#global-drawlandmask) in datasets.xml tai setup.xml. Kiitos Postin.
+            * Uusi: Legendan viivoja, jotka ovat liian pitkiä, murtuvat automaattisesti useaan riviin. Kiitos Postin.
+        * Png-kuvan URL:
+            * Uusi &.legend=_value_, jossa _arvo_ voi olla "Bottom" (oletus) -"Pois" tai "vain." Tämän avulla voit sisällyttää legenda, pois legenda, tai saada vain legenda. Cara Wilsonin ansiosta.
+            * Uusi &.trim=_n Pikselit_ jättää rajan nPixels (esim. 10) kuvan alareunassa. Sitä sovelletaan .legend=Offin jälkeen. Cara Wilsonin ansiosta.
+            * Uusi &. koko=_leveys_ | _High_ voit määrittää kuvan leveyden ja korkeuden pikseleinä.
+    * Uudet tulostetiedostomuodot:
+        * .csvp ja .tsv p -- kuten .csv ja .tsv , mutta " (_yksiköt_) " Liitteenä sarakkeen nimiä ensimmäisellä rivillä.
+        * .odvTxt -- tekee .txt-tiedoston, joka yksinkertaistaa tietojen saamista [Ocean Data Näytä (ODV) ](https://odv.awi.de/) .
+        * .esriCsv -- tekee .csv-tiedoston, joka soveltuu tuotavaksi ESRI:n ArcGIS . (Vain taulukkotiedostot) Jan Masonin, Jeff de La Beaujardieren ja NOAA IOOS SOS projekti.
+    * Käyttöliittymän parantaminen [Luokittele](https://coastwatch.pfeg.noaa.gov/erddap/categorize/index.html) verkkosivut. Myös luokittele arvot (muu kuin laitos) Nyt kaikki pienet. Ei-pienimmät pyynnöt hyväksytään (ohjattu) kun kyseessä on taaksepäin asennettava yhteensopivuus. Kiitos Roy Mendelssohnin.
+    * Virheviestit ovat nyt entistä lyhyempiä ja enemmän suunnattuja käyttäjille. Kiitos Greg Williamsin.
+    * Sisäinen muutos, joka vähentää huomattavasti ERDDAP Perusmuistin käyttö.
+    * Monet uudet ominaisuudet ovat merkityksellisiä ainoastaan Post-hankkeen kannalta.
+*    **Asiat ERDDAP™ Hallintovirkamiesten on tiedettävä ja tehtävä:** On paljon muutoksia. Anteeksi. Mutta jokainen tuo hyviä etuja.
+    * Suuret muutokset GenerateDatasetXml:iin - se kysyy nyt usein lisää kysymyksiä (ks. [Tietokokonaisuus Tyyppi](/docs/server-admin/datasets#detailed-descriptions-of-dataset-types) tiedot) ja nyt aina tuottaa pääasiassa käyttövalmis sisältö datasets.xml . Olet edelleen vastuussa järjestelmän, joten sinun pitäisi silti tarkistaa datasets.xml sisältö ennen käyttöä. Inhimillinen panostus projektiin on aina parempi kuin tietokoneohjelma. Kiitos UAF-projektin.
+    * VAADITTU: Vuonna setup.xml, sinun täytyy tarkistaa WMS kohta. Sen pitäisi nyt sisältää nämä tunnisteet (mutta voit vapaasti muuttaa arvoja) :
 ```
         <!-- These default accessConstraints, fees, and keywords are used 
         by the SOS, WCS, and WMS services.
@@ -2542,7 +2557,7 @@ Jos ERDDAP™ Windows on yleisösi ERDDAP™ Harkitse siirtymistä Linux-palveli
         <wmsSampleBBox>0,-75,360,75</wmsSampleBBox>
 ```
 
-    * REQUIRED: In setup.xml, kopioi ja liitä tämä uusi ehdotettu&lt;HeadHtml korvaa vanhan version. Ole vapaa tekemään muutoksia mieltymyksiisi.
+    * VAADITTU: Vuonna setup.xml, kopioi ja liitä tämä uusi ehdotettu&lt;KäynnistäHtml&gt; vanhan versiosi tilalle. Mutta voit tehdä muutoksia mieltymyksiisi.
 ```
         <!-- startHeadHtml has the start of the HTML document and the 
         'head' tags (starting at "<!DOCTYPE>", but not including 
@@ -2602,9 +2617,9 @@ Jos ERDDAP™ Windows on yleisösi ERDDAP™ Harkitse siirtymistä Linux-palveli
         <tableHighlightBGColor>#cceecc</tableHighlightBGColor>
 ```
 
-Kiitos POST, Hans Vedo ja Rick Blair.
-    * REQUIRED: In setup.xml&lt;Alkuperäinen nimi: BodyHtml, Change the&lt;Keho &gt; Tag to be just&lt;Keho &gt;, koska tyyli on nyt asetettu erdap.css.
-    * REQUIRED: In setup.xml, change to this&lt;endbodyhtml &gt; (mutta vaihda sähköpostiosoite sähköpostiosoitteeseen ja tunne vapaasti tehdä muita muutoksia.) :
+Kiitos Postin, Hans Vedon ja Rick Blairin.
+    * VAADITTU: Setup.xml,&lt;KäynnistäBodyHtml&gt;, vaihda&lt;runko&gt; tunniste olla vain&lt;runko&gt;, koska tyyli on nyt asetettu erddap.css.
+    * VAADITTU: Aseta.xml, muuttaa tähän&lt;endBodyHtml&gt; (mutta muuttaa sähköpostiosoite sähköpostiosoitteesi ja voit tehdä muita muutoksia) :
 ```
         <!-- The end of the body of the HTML code for all HTML web pages
           (with "</body>" at the end). 
@@ -2634,7 +2649,7 @@ Kiitos POST, Hans Vedo ja Rick Blair.
         \\]\\]></endBodyHtml>
 ```
 
-    * HIGHLY RECOMENDED: In setup.xml, suositus&lt;ShortDescriptionHtml on nyt
+    * SUHTEELLISESTI SUOSITETTU: In setup.xml, suositellaan&lt;Lyhyt kuvausHtml&gt; on nyt
 ```
         <theShortDescriptionHtml><!\\[CDATA\\[ 
         <h1>ERDDAP</h1>
@@ -2649,30 +2664,30 @@ Kiitos POST, Hans Vedo ja Rick Blair.
         \\]\\]></theShortDescriptionHtml>
 ```
 
-Tätä voi vapaasti muuttaa, erityisesti ensimmäisen kappaleen viimeinen lause.
-    * In setup.xml, sähköpostia Kaikki ja sähköpostia DailyReport Voidaan nyt olla erillinen luettelo sähköpostiosoitteista. Ensimmäinen sähköposti kaikki Jotta EDDXxxxFromErddap-tietoaineistot ovat erityisiä, esimerkiksi EDDXxxxFromDap-tietoaineistojen tilaukset käyttävät kyseistä sähköpostiosoitetta. Kiitos John Maurerille.
-    * Sähköpostivirheet kirjautuvat nyt \\[ isovanhemmat \\] /logs/emailLogYYY-MMM-DD.txt-tiedosto.
-    * In setup.xml, on olemassa uusi, valinnainen parametri asettaa sähköpostitilin ominaisuudet (yleensä heti jälkeen).&lt;Sähköpostiosoite &gt;:
+Voitte vapaasti muuttaa tätä, erityisesti ensimmäisen kohdan viimeistä virkettä.
+    * Setup.xml, sähköpostiKaikkiTo ja sähköpostiDailyReport Voit nyt olla pilkulla erotettu luettelot sähköpostiosoitteet. Ensimmäinen sähköpostiKaikki Jotta esimerkiksi EDDXxxxxFromErddap-aineistojen tilaaminen on erityistä, käytetään tätä sähköpostiosoitetta. John Maurerin ansiosta.
+    * Sähköpostivirheet ovat nyt kirjautuneet \\[ bigPentDirectory \\] /logs/emailLogVVVV-MM-DD.txt-tiedosto.
+    * In setup.xml, on uusi, valinnainen parametri asettaa sähköpostitilin ominaisuudet (yleensä heti&lt;SähköpostiSalasana&gt;:
 ```
           <emailProperties>_propertyName1_|_propertyValue1_|_propertyName2_| _propertyValue2_|...</emailProperties>  
         For example, gmail accounts need  
           <emailProperties>mail.smtp.starttls.enable|true</emailProperties>  
 ```
 
-Oletusarvo ei ole mitään. Kiitos Rich Signell.
-    * Kysymys: Jos käytät EDDTableCopya tai EDDGrid Kopioi, sinun täytyy suunnitella kaikki \\[ isovanhemmat \\] kopiot/hakemistot ja tiedostot, jotka sisältävät "xh" hakemistossa tai tiedostonimiä vanhan pysähdyksen jälkeen ERDDAP™ ennen uuden alkua ERDDAP™ Nämä tiedostot kopioidaan uudelleen. Olen pahoillani, mutta oli tärkeää tehdä muutos ja toivottavasti se vaikuttaa harvoihin tiedostoihin.
-Linux, löydät nämä tiedostot, cd \\[ isovanhemmat \\] Copy
-Löydä.\\*xD\\*  
-Windowsissa löydät nämä tiedostot, aloita | Etsintä
-Mitä haluat etsiä: Dokumentit
-Kaikki tai osa tiedostonimeä: xh
-Lähde: Browse -&gt; \\[ isovanhemmat \\] Copy
-Klikkaa "Etsi"
-valitsemaan ne kaikki
+Oletusarvo ei ole mitään. Kiitos Rich Signellin.
+    * Jos käytät EDDTableCopia tai EDDGrid Kuittaan, sinun täytyy poistaa kaikki \\[ bigPentDirectory \\] /kopio/ kansiot ja tiedostot, jotka sisältävät "xh" hakemistossa tai tiedostonimiä pysäytyksen jälkeen ERDDAP™ ja ennen uuden ERDDAP™ Joten ne tiedostot kopioidaan uudelleen. Olen pahoillani, mutta oli tärkeää tehdä muutos ja toivottavasti se vaikuttaa muutamaan ylläpitäjään ja muutamaan tiedostoon.
+Linuxista löydät nämä tiedostot, cd \\[ bigPentDirectory \\] /kopio
+löytää .\\*xh\\*  
+Windowsista löydät nämä tiedostot, Käynnistä | Etsi
+Mitä haluat etsiä: Asiakirjat
+Tiedostonimen koko tai osa: xh
+Katso: Selaa -&gt; \\[ bigPentDirectory \\] /kopio
+Klikkaa 'Etsi'
+^A valita ne kaikki
 Del poistaa ne kaikki
-    * Vastaus: In datasets.xml EDDTableFromDatabase-tietoaineistojen, päivämäärä- ja aikaleimamuuttujan osalta tietojen muuttaminen Tyyppi kaksinkertaistaa ja yksiköt sekunteiksi sitten 1970-01-01T00:00:00. Pyydämme, että tallennat aikaleimatiedot tietokantaan.\\*kanssa\\*Aikavyöhyke. Ilman aikavyöhykettä, kyselyt, jotka ERDDAP™ tietokantaan ja tuloksiin, jotka ERDDAP™ JDBC:n kautta saadut tietokannat ovat epäselviä ja todennäköisesti väärässä. Yritimme, mutta emme löytäneet luotettavaa tapaa käsitellä aikaleimaa ilman aikavyöhykettä. Tämä on hyvä käytäntö joka tapauksessa. Loppujen lopuksi "aikaleima ilman aikavyöhykettä" on implisiittinen aikavyöhyke. Vaikka on hienoa, että aikavyöhyke on ilmiselvä tietokannan ylläpitäjälle, on järkevää määrittää se nimenomaisesti, jotta muut ohjelmistot voivat olla asianmukaisesti yhteydessä tietokantaan. Kiitos ja anteeksi Michael Urzen.
-    * Hyvin tehty: In datasets.xml Jotta .subset-verkkosivut voisivat etsiä tabulaaritietojasi, sinun on lisättävä [&lt; subsetVariables &gt; (Docs/server-admin/datasets#subsetvariables Näytä tarkat tiedot) aineiston globaaleista ominaisuuksista.
-    * Valmistettu: In datasets.xml jos sinulla on tietoaineistoa datasetID PmelGtsppp, vaihda se
+    * VAADITTU: datasets.xml , EDDtableFromDatabase tietoaineistot, päivämäärä ja aikaleima muuttujat, muuttaa tietoja Kirjoita kahteen ja yksiköt sekunteihin vuodesta 1970-01-01T00:00:00Z. Me REQUE että tallennat aikaleiman tiedot tietokantaan\\*kun\\*Aikavyöhyke. Ilman aikavyöhyke tietoja, kyselyt, että ERDDAP™ lähettää tietokantaan ja tuloksia, että ERDDAP™ Tietokannasta JDBC:n kautta saadut tiedot ovat epäselviä ja todennäköisesti vääriä. Yritimme, mutta emme löytäneet luotettavaa tapaa käsitellä "aikaleima ilman aikavyöhyke" tietoja. Tämä on mielestämme joka tapauksessa hyvä käytäntö. Onhan "aikaleima ilman aikavyöhykettä" tiedot on implisiittinen aikavyöhyke. Vaikka on hienoa, että aikavyöhyke on ilmiselvä tietokantaan admin, on järkevää määritellä se nimenomaisesti, jotta muut ohjelmistot voivat asianmukaisesti vuorovaikutuksessa tietokantaan. Kiitos, Michael Urzen.
+    * SUOSITTELEE KORKEASTI: datasets.xml , jotta .subset web-sivut faceted haku oman taulukkotiedostoja, sinun täytyy lisätä [&lt; subsetVariables &gt;] (/docs/server-admin/datasets#subsetvariables) tietokokonaisuuden maailmanlaajuisiin ominaisuuksiin.
+    * SUOSITTELEE: datasets.xml , jos sinulla on aineisto kanssa datasetID ="pmelGtsppp," ole hyvä ja muuta se
 ```
           <dataset type="EDDTableFromDapSequence" datasetID="pmelGtsppp" active="false">  
         Whether or not you had that dataset, feel free to add this new GTSPP dataset:  
@@ -2680,45 +2695,45 @@ Del poistaa ne kaikki
             <sourceUrl>https://coastwatch.pfeg.noaa.gov/erddap/tabledap/erdGtsppBest</sourceUrl>  
           </dataset>
 ```
-    * Valmistettu: In datasets.xml Uusia vaihtoehtoja on [...]&lt;cdm | | _ _ _ _ &#125;&#125; (Docs/server-admin/datasets#cdm_data_type) Globaali attribuutti, joten sinun on tarkistettava / muutettava aineistosi arvoa.
-    * Sisällä datasets.xml Uusi [&lt;LähteetNeeds ExpandedFP EQ&gt;) (Docs/server-admin/datasets#sourceneedsexpandedfp_eq) on hyödyllinen, jos lähdepalvelin ei johdonmukaisesti käsittele αvariable-testejä oikein (Koska [Yleinen vaikeus testata kelluvan pistemäärän tasa-arvoa](https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/) ) . LähteetNeeds ExpandedFP Oletusarvoisesti totta (Turvallisin asetus) Joten sinun ei tarvitse tehdä mitään muutoksia.
-    * Uusi Uusi Uusi [EDDTableFromAsciiFiles](/docs/server-admin/datasets#eddtablefromasciifiles) . Kiitos Jerry Yun Panille.
-    * Uusi Uusi Uusi [EDDTableFromThreddsFiles](/docs/server-admin/datasets#eddtablefromthreddsfiles) . Kiitos Roy Mendelssohnille.
-    * Muutoksia [EDDTableFromNcFiles](/docs/server-admin/datasets#eddtablefromncfiles) Käytetään laajemmalla valikoimalla tiedostoja.
-    * EDDTableFromBMDE on poistettu käytöstä. Aktiivisia ja tarkoituksenmukaisia tietolähteitä ei enää ole.
-    * GenerateDatasetXml, uusi EDDGrid FromThredds Katalogi kerää kokonaisen 3DS-luettelon (tai alaryhmä) ja tuottaa datasets.xml Sisältöä. Kiitos UAF-projektista.
-    * GenerateDatasets Xml ja DasDds tuovat tuloksensa \\[ isovanhemmat \\] /logs/log.txt. Kiitos Rich Signell ja Charles Carleton.
-    * Paljon parannuksia kirjautumisjärjestelmään. Kiitos POST.
-*    **Asioita ERDDAP™ Ohjelmoijat On tiedettävä ja tehtävä:** 
-    * Hakemuksessa/WEB-inf/lib/hakemistossa on tapahtunut muutoksia. Muuta javac- ja java-luokkaa vastaavasti.
-    * On olemassa uusi \\[ sinun Url \\] /erddap/versio määrittää ERDDAP . Vastaus on teksti, esim. ERDDAP = 1,24 Jos saat HTTP 404 Not-Found -virheviestin, käsittele ERDDAP™ versio 1.22 tai pienempi. Kiitos POST.
-*    **Pienet muutokset ja korjaukset:** 
+    * SUOSITTELEE: datasets.xml , on olemassa uusia valid vaihtoehtoja [&lt;cdm\\_data\\_tyyppi&gt;] (/docs/server-admin/datasets#cdm_data_type) global attribuutti, joten sinun pitäisi tarkistaa / muuttaa arvo tietokokonaisuuksia.
+    * Sisään datasets.xml , uusi [&lt;lähdeNeedsExpandedFP\\_EQ&gt;] (/docs/server-admin/datasets#source needsexpandedfp_eq) on hyödyllinen, jos lähdepalvelin ei johdonmukaisesti käsittele &_variable_\\=_value_ testejä oikein (koska [yleinen vaikeus testata tasa-arvo liukulukujen numerot](https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/) ) . lähdeNeeds laajennettu FP\\_EQ on oletusarvoisesti valittu todeksi (turvallisin asetus) Sinun ei tarvitse tehdä muutoksia.
+    * Uusi [EDDTableFromAsciiFiles](/docs/server-admin/datasets#eddtablefromasciifiles) . Kiitos Jerry Yun Panin.
+    * Uusi [EDDTableFrom Threeds Files](/docs/server-admin/datasets#eddtablefromthreddsfiles) . Kiitos Roy Mendelssohnin.
+    * Muutokset [EDDTableFromNcFiles](/docs/server-admin/datasets#eddtablefromncfiles) käyttää sitä laajemman tiedostovalikoiman kanssa.
+    * DDDtableFromBMDE on poistettu käytöstä. Aktiivisia, asianmukaisia tietolähteitä ei enää ole.
+    * LuodaDatasetXml, uusi EDDGrid From Thredds Koko THREDDS-katalogi (tai alaryhmä) ja tuottaa datasets.xml sisältöä. Kiitos UAF-projektin.
+    * Luo tiedostoja Xml ja DasDds nyt myös laittaa tuloksia \\[ bigPentDirectory \\] /logs/log.txt. Rich Signellin ja Charles Carletonin ansiosta.
+    * Monet parannukset kirjautumisjärjestelmään. Kiitos Postin.
+*    **Asiat ERDDAP™ Ohjelmoijat Täytyy tietää ja tehdä:** 
+    * /WEB-INF/ lib/ hakemistossa on tapahtunut muutoksia. Vaihda java- ja Java-luokkapatteriasetukset vastaavasti.
+    * Uusi \\[ sinun Url \\] /erddap/versiopalvelu määrittääksesi version ERDDAP . Vastaus on teksti, esim. ERDDAP \\_version=1.24 Jos saat HTTP 404 Ei-Found virheviestin, hoida ERDDAP™ versio 1.22 tai alempi. Kiitos Postin.
+*    **Pienet muutokset ja viat:** 
     
-    * EDDTableFrom Muutokset:
-        * Tukea IOOSin lukemiseen SOS XML-vastaukset.
-        * Lisätukea lukemiseen IOOS SOS Tekstiä/csv. (NOS SOS Tällä hetkellä palvelimia ei tueta.) 
-        * Muutoksia, jotka liittyvät IOOS:iin SOS palvelimen yksityiskohdat.
-        * Lisätty tuki BBOX-kyselyille IOOS:lle SOS ja OOSTethys   SOS palvelimia. Nämä muutokset nopeuttavat merkittävästi asiaankuuluvia tietopyyntöjä. Kiitos IOOS SOS .
-    * Teksti sisällä .mat Tabulaaritiedostot tallennetaan nyt oikein. Kiitos Roy Mendelssohnille.
+    * EDDTableFrom Sos muutokset:
+        * Lukemisen IOOS-tuki kaatui SOS XML-vastaukset.
+        * Lisätty tuki lukemiselle IOOS SOS teksti/csv. (NOS SOS palvelimia ei tällä hetkellä tueta.) 
+        * Teki paljon muutoksia liittyvät IOOS SOS palvelimen tiedot.
+        * Lisätty tuki BBOX-kyselyille IOOSille SOS sekä OOSTethys   SOS Palvelimet. Nämä muutokset nopeuttavat merkittävästi asiaankuuluvia tietopyyntöjä. Kiitos IOOS: SOS .
+    * Teksti .mat taulukkotiedostot on nyt tallennettu oikein. Kiitos Roy Mendelssohnin.
     *    WMS 
-        *    OpenLayers on nyt yhdistetty ERDDAP™ Käyttöä varten WMS verkkosivut. Tämä korjaa ongelman, kun OpenLayers Muutama vuosi sitten ja ehkäisee tulevia ongelmia.
-        * Sisällä WMS   GetCapabilities Vastaus,&lt;Online Resources » Arvo on nyt URL-osoite WMS palvelua. Kiitos Charlton Galvarino.
-        * Legenda näkyy tässä WMS WEB Näytä väribaari Kiitos Emilio Mayorgalle.
-    *    EDDGrid AggregateExistingDimensionin rakentajalla oli ongelmia akselin lähteen kanssa Arvot eivät olleet samat kuin määränpäänsä. Arvot, esim. lähdeaika oli jotain muuta kuin "seconds since 1970-01-01" . Kiitos Todd Spindler.
-    * TableWriterGeoJson, ylimääräinen, bboxin jälkeen \\[ ............ \\] on poistettu. Kiitos Greg Williamsille.
-    * Paljon pieniä muutoksia ja vikoja.
+        *    OpenLayers on nyt liitetty ERDDAP™ käytettäväksi WMS verkkosivut. Tämä korjaa ongelmia, jotka johtuvat OpenLayers Muutos muutama kuukausi sitten ja estää tulevia ongelmia.
+        * Vuonna WMS   GetCapabilities vaste&lt;OnlineResource&gt; arvo on nyt URL WMS Palvelu. Charlton Galvarinon ansiosta.
+        * Legenda näkyy WMS Sivu näyttää väripalkin. Kiitos Emilio Mayorgan.
+    *    EDDGrid AggregaattiExistingDimension constructor oli ongelmia, jos akselin lähde Arvot eivät olleet yhtä suuret kuin määränpää Arvot, esim. jos lähdeaika oli jotain muuta kuin "seconds since 1970-01-01" . Kiitos Todd Spindler.
+    * TaulukossaWriterGeoJson, ylimääräinen ',' jälkeen bbox \\[ ... \\] on poistettu. Kiitos Greg Williamsin.
+    * Paljon pieniä muutoksia ja korjauksia.
     
 ## Versio 1.22{#version-122} 
- (2009-07-05) 
+ (julkaistu 2009-07-05) 
 
-* SlideSorter Bug, joka esiteltiin 1.20.
-* 1.20 käyttöön otettu OBIS-virhe on kiinnitetty.
-* Viittaukset Jasonin tietoaineistoihin kuvat/gadgetit/GoogleGadgets-sivulla poistettiin.
+* Vuonna 1.20 käyttöön otettu SlideSorter-vika on korjattu.
+* Vuonna 1.20 käyttöön otettu OBIS-vika on korjattu.
+* Viitaukset Jason-aineistoihin kuvien/gadgets/GoogleGadgets-sivulla poistettiin.
      
 ## Versio 1.20{#version-120} 
- (2009-07-02) 
+ (julkaistu 2009-07-02) 
 
-*    ERDDAP™ Järjestäjät, lisää tämä asennus.xml-tiedostoon:
+*    ERDDAP™ ylläpitäjät, lisää tämä setup.xml-tiedostoosi:
 ```
     <!-- If you want to restrict access to some datasets, you need to 
     specify the method used for logging on (authentication). See the info 
@@ -2760,75 +2775,75 @@ Del poistaa ne kaikki
     <unusualActivity>10000</unusualActivity>
 ```
 
-* Uusia datatyyppejä [ EDDGrid Kopio](/docs/server-admin/datasets#eddgridcopy) ja [EdDTableCopy](/docs/server-admin/datasets#eddtablecopy) Tee ja säilytä paikallinen kopio toisesta EDDGrid EDDTable-tietoaineiston tiedot ja ne palvelevat paikallista kopiota. Niitä on helppo käyttää ja erittäin tehokas. **Ratkaisut suurimpiin ongelmiin etätietolähteistä saatujen tietojen toimittamisessa:** 
+* Uudet tietoaineistotyypit [ EDDGrid Kopioi](/docs/server-admin/datasets#eddgridcopy) sekä [EDDTableCopy](/docs/server-admin/datasets#eddtablecopy) tehdä ja ylläpitää paikallinen kopio toisen EDDGrid tai EDDTablen tietokokonaisuuden tiedot ja tiedot paikallisesta kopiosta. Nämä ovat erittäin helppoja ja tehokkaita **ratkaisuja joihinkin suurimmista ongelmista etätiedon tarjonnassa:** 
     
-    * Tietojen saaminen etätietolähteestä voi olla hidasta (useista syistä) .
-    * Etäaineisto on joskus saatavilla (Jälleen, monesta syystä) .
-    * Luottamus yhteen tietolähteeseen ei mittaa hyvin (Esimerkiksi, kun monet käyttäjät ja monet ERDDAP käyttää sitä) .
+    * Etätietolähteen tietojen saanti voi olla hidasta (eri syistä) .
+    * Etätiedosto on joskus saatavilla (jälleen, eri syistä) .
+    * Yhdellä tietolähteellä luottaminen ei skaalaudu hyvin (esim. kun monet käyttäjät ja monet ERDDAP s käyttää sitä) .
     
-Lisäksi paikallinen kopio on alkuperäisen varmuuskopio, joka on hyödyllinen, jos jotain tapahtuu alkuperäiselle.
+Lisäksi paikallinen kopio on varmuuskopio alkuperäisestä, mikä on hyödyllistä, jos alkuperäiselle tapahtuu jotain.
     
-Ei ole mitään uutta tehdä paikallinen kopio tietoaineistosta. Mikä on uusi asia, että nämä luokat tekevät\\*Help helppoa\\*luoda ja\\*ylläpitää\\*Paikallinen kopio datasta\\*Erilaisia\\*etätietolähteiden ja\\*Lisää metadataa\\*kopioimalla tietoja.
+Ei ole mitään uutta tehdä paikallinen kopio aineisto. Mitä uutta täällä on, että nämä luokat tekevät\\*helppo\\*luoda ja\\*ylläpito\\*paikallinen kopio\\*lajike\\*etätietolähteiden tyypit ja\\*lisää metadata\\*kopioitaessa tietoja.
     
-Nämä aineistotyypit ovat osa täydellistä ominaisuutta, joka yksinkertaistaa luomista. [Verkot/klusterit/federaatiot ERDDAP s](/docs/server-admin/scaling) käsitellä erittäin raskaita kuormia (esimerkiksi datakeskuksessa) .
+Nämä tietokokonaisuuden tyypit ovat osa täydellistä joukkoa ominaisuuksia, jotka yksinkertaistavat luomista [ruudukot / klusterit / federaatiot ERDDAP tilu](/docs/server-admin/scaling) käsitellä erittäin raskaita kuormia (esim. datakeskuksessa) .
     
-* Uusi datatyyppi [EDDTableFromDatabase](/docs/server-admin/datasets#eddtablefromdatabase) Saat tietoja paikallisesta tai etätietokannasta.
-*    ERDDAP™ Nyt on [Turvallisuusturvallisuus](/docs/server-admin/additional-information#security) järjestelmä, joka tukee todentamista (Käyttäjien kirjautuminen sisään) ja lupa (antaa heille pääsyn tiettyihin yksityisiin tietoaineistoihin) .
-* On olemassa [Kaksi uutta, komentorivi-työkalua](/docs/server-admin/datasets#tools) auttaa ERDDAP™ Ylläpitäjät luovat XML:n uuteen tietoaineistoon datasets.xml :
-    * GenerateDatasets Xml voi luoda karkean luonnoksen XML-tietokoneesta lähes kaikentyyppisille tietoaineistoille.
-    * DasDds auttaa sinua testaamaan ja jalostamaan XML:ää toistuvasti. ERDDAP GenerateDatasets Xml-sivut on poistettu. Turvallisuussyistä he tukivat vain muutamaa tietotyyppiä. Uudet työkalut ovat parempi ratkaisu.
-* Uusi [Tilasivut](/docs/server-admin/additional-information#status-page) Anna kenenkään (Erityisesti ylläpitäjät) näkemys yhden ERDDAP™ mistä tahansa selaimesta menemällä \\[ Perusta \\]  /erddap/status.html .
-* Tabledap tukee [palvelimen sivutoiminnot](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#functions) :
-    * &distinct () poistaa kaksoisrivit vastaustaulukosta,
-    * & orderBy  (............) Voit määrittää, miten vastaustaulukko on ratkaistava.
-    * & orderByMax  (............) Voit määrittää, miten vastaustaulukko on lajiteltava ja poistaa kaikki rivit lukuun ottamatta riviä, joiden enimmäisarvot on määritetty viimeisessä sarakkeessa. Tätä voidaan käyttää esimerkiksi viimeiseen saatavilla olevaan dataan.
-* Tabulaariset tietoaineistot voivat nyt sisältää lisäaikamuuttujat, joita ei ole nimetty "time" . Nämä muuttujat on tunnustettu niiden "yksiköt" metadata, joka täytyy sisältää " since "   (Numeerinen päivämäärä Ajat) tai "YY" tai "YY" (Formatted String päivämäärät) . Ole hyvä ja käytä destinationName   "time" Pääpäivänä Aikavaihtelua.
-*    ERDDAP™ Nyt syntyy yksi [Map.xml](/docs/server-admin/additional-information#sitemapxml) tiedosto, joka kertoo hakukoneet, että ERDDAP Pitää vain ryöstää joka kuukausi. ERDDAP™ Järjestäjät, seuratkaa [Nämä ohjeet](/docs/server-admin/additional-information#sitemapxml) ilmoittaa hakukoneet uudesta sivustokartta.xml-tiedostosta.
-*    ERDDAP Virheviestit ovat nyt paljon lyhyempiä ja suunnattu asiakkaille. (Ei ohjelmoijia) . Kiitos Greg Williamsille.
-* [...]&lt;Pyydä musta lista » (Docs/server-admin/datasets#requestblacklist Näytä tarkat tiedot) Tukee myös IP-osoitteita, joissa viimeinen numero on korvattu.
-* Pyynnöt .json .geoJson-tiedostot voivat nyt sisältää valinnaisen [jsonp](https://niryariv.wordpress.com/2009/05/05/jsonp-quickly/) Lisäämällä "& .json p.functionName -kyselyn loppuun asti. Periaatteessa tämä vain kertoo ERDDAP™ Lisää "_functionName_ ("Vastauksen alku ja") "Vastauksen loppuun asti. Jos alun perin kyselyä ei ollut, jätä "ja" pois kyselystäsi. Kiitos Greg Williamsille.
-* Uusia tilastoja on lisätty [Päivittäinen raportti](/docs/server-admin/additional-information#daily-report) .
-* Verkkosivuilla, joilla on luettelo tietoaineistoista, laitoksesta ja id:stä, on nyt äärioikeistossa. Tämä siirtää tilauksen ja muita hyödyllisempiä sarakkeita näkyviin kapeilla tietokonenäytöillä.
-* Kaikilla verkkosivuilla sivun otsikko (perustuu sivuun)&lt;Otsikko &gt; Sisällä&lt;StarHeadHtml&gt;, jonka määrität asennuksessa.xml) on muokattu sisältämään parempi kuvaus verkkosivusta. (esimerkiksi nykyisen tietoaineiston otsikko ja laitos) .
-* Xmx-tiedot sisältyvät nyt log.txt-, Daily Report- ja status.html-tietoihin. Kiitos Ellyn Montgomerylle.
-*    ERDDAP™ ylimääräinen yleiskäyttöinen suoja kaikkia virheitä vastaan (Lähde: OutOfMemoryError) . Kiitos Charles Carletonille.
+* Uusi tietokokonaisuustyyppi [EDDTableTietokanta](/docs/server-admin/datasets#eddtablefromdatabase) Saa tietoja paikallisesta tai etätietokannasta.
+*    ERDDAP™ Nyt on [turvallisuus](/docs/server-admin/additional-information#security) todentamista tukeva järjestelmä (käyttäjien kirjautuminen sisään) ja valtuutus (myöntää niille pääsy tiettyihin yksityisiin tietokantoihin) .
+* On [kaksi, uudet, komentorivityökalut](/docs/server-admin/datasets#tools) auttaa ERDDAP™ hallinnoijat luoda XML uuden aineiston datasets.xml :
+    * Luo tiedostoja Xml voi luoda karkean luonnoksen aineisto XML lähes minkä tahansa aineiston.
+    * DasDds auttaa sinua toistuvasti testata ja tarkentaa XML-tiedoston. ERDDAP 's GenerateDatasets Xml-verkkosivut on poistettu. Turvallisuussyistä ne tukivat vain muutamia tietoaineistotyyppejä. Uudet komentorivityökalut ovat parempi ratkaisu.
+* Uusi [tilasivu](/docs/server-admin/additional-information#status-page) Antaa kenen tahansa (mutta erityisesti hallintoviranomaiset) tarkastella tilan a ERDDAP™ mistä tahansa selaimesta menemällä \\[ baseUrl \\]  /erddap/status.html .
+* Tabledap tukee nyt [palvelinsivutoiminnot](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#functions) :
+    * & erota () poistaa kaksi riviä vastaustaulukosta,
+    * & orderBy  (...) määrittää, miten vastaustaulukko on lajiteltu,
+    * & orderByMax  (...) voit määrittää, miten vastetaulukko on lajiteltu ja poistaa kaikki rivit lukuun ottamatta rivejä, joissa on korkeimmat arvot viimeisessä sarakkeessa. Tätä voidaan käyttää esimerkiksi kunkin aseman viimeisen saatavilla olevan tiedon saamiseksi.
+* Taulukon tiedot voivat nyt sisältää lisää päivämääräTime muuttujat, joita ei ole nimetty "time" . Nämä muuttujat tunnistetaan niiden "yksiköt" metatiedot, joiden on sisällettävä " since "   (Numeerinen päivämäärä Ajat) tai "yy" tai "YY" (for formated String dateTimes) . Mutta käytä silti destinationName   "time" pääpäivämäärä Aikamuuttuja.
+*    ERDDAP™ Nyt tuottaa [sitemap.xml](/docs/server-admin/additional-information#sitemapxml) tiedosto, joka kertoo hakukoneiden että ERDDAP Vain ryömitään joka kuukausi. ERDDAP™ Hallintovirkamiehet, seuratkaa [nämä ohjeet](/docs/server-admin/additional-information#sitemapxml) ilmoittaa hakukoneille uusi sitemap.xml tiedosto.
+*    ERDDAP 's virheviestit ovat nyt paljon lyhyempiä ja suunnattu asiakkaille (ei ohjelmoijia) . Kiitos Greg Williamsin.
+* [&lt;pyyntöMusta lista&gt;] (/docs/server-admin/datasets#requestblacklist) nyt tukee myös IP-osoitteita, joissa viimeinen numero on korvattu \\*.
+* Pyynnöt .json ja .geoJson tiedostot voivat nyt sisältää valinnainen [jsonp](https://niryariv.wordpress.com/2009/05/05/jsonp-quickly/) pyyntö lisäämällä "& .json p=_functionName_" kyselyn loppuun. Tämä kertoo kaiken. ERDDAP™ lisätään "_functionName_ ("vastauksen alkuun ja ") "vastauksen loppuun. Jos kyselyä ei alun perin ollut, jätä pois "&" kyselyssä. Kiitos Greg Williamsin.
+* Paljon uusia tilastoja lisättiin [Päivittäinen raportti](/docs/server-admin/additional-information#daily-report) .
+* Verkkosivuilla on luetteloita tietokannoista, laitos ja tunnisteet ovat nyt äärioikeilla. Tämä siirtää tilauksen ja muita hyödyllisempiä sarakkeita tarkastella kapea tietokoneen näytöt.
+* Kaikilla verkkosivuilla, sivun otsikko (perustuu&lt;Otsikko&gt;&lt;StartHeadHtml&gt; että määrittelet setup.xml) muutetaan sisällyttää parempi kuvaus web-sivun (esimerkiksi sisällyttämällä nykyisen tietokokonaisuuden otsikko ja laitos) .
+* Xmx tiedot on nyt mukana muistitiedot painettu log.txt, Daily Report, ja tila.html. Kiitos Ellyn Montgomeryn.
+*    ERDDAP™ hänellä on lisäsuoja kaikkia virheitä vastaan (Esimerkiksi, OutOfMemoryError) . Charles Carletonin ansiosta.
 * Virheiden käsittelyn parantaminen, jos vastaus on jo tehty.
-* EDDTableFromFiles ja EDDGrid Files nyt sallii&lt;MetadataFrom &gt; ensimmäinen tai viimeinen Penultimaa ei enää tueta. Ensimmäiset ja viimeiset perustuvat tiedostojen viimeisimpään versioon.
-* Bug fix: EDDTableFrom SOS pätemättömät tiedot yhdestä asemasta heikensivät poikkeusta ja aiheuttivat koko tietoaineiston hylkäämisen. Näitä asemia on vain sivuutettu (Virheilmoitus on kirjattu log.txtiin) . Kiitos Rick Blairille.
+* PARANNETTU: EDDTableF fromFiles and EDDGrid FromFiles nyt vain sallia&lt;metadataFrom&gt; ensimmäinen tai viimeinen. Perimmäistä ei enää tueta. Ja ensimmäinen ja viimeinen perustuvat nyt tiedostojen viime kodifioitu aika.
+* Virheen korjaaminen: EDDtableFrom SOS , virheellinen tiedot yhden aseman heitti poikkeuksen ja aiheutti koko tietokokonaisuuden hylätään. Ne asemat on jätetty huomiotta. (ja virheviesti on kirjautunut loki.txt) . Kiitos Rick Blairin.
      
 
 ## Versio 1.18{#version-118} 
- (2009-04-08) 
+ (julkaistu 2009-04-08) 
 
-* Bug fix: Alkaen 1.14, EDDTable Data Access Form ja Make A Graph Web-sivu ei oikein käsiteltyjä rajoituksia.
-* 1.14 alkaen EDDTableFromDapSequence ei käsitellyt aikarajoituksia oikein, jos lähteen aikayksiköt eivät olleet "toisia vuosien 1970-01T00:00 jälkeen".
+* Bug fix: Alkaen 1.14, EDDTable Data Access Form ja Make A Graph web-sivu ei kunnolla käsitellä lainattuja rajoituksia.
+* Bug fix: Alkaen 1.14, EDDtableFromDapSequence ei käsitellyt aikarajoituksia oikein, jos lähde aikayksiköt eivät olleet "sekuntia vuodesta 1970-01-01T00:00:00" .
      
 
 ## Versio 1.16{#version-116} 
- (2009-03-26) 
+ (julkaistu 2009-03-26) 
 
-*    ERDDAP™ Hallinnoitsijat:
-    * Tämä on tärkeä julkaisu, koska se korjaa virheen, joka jätti ERDDAP™ thread, jos käytät Tomcat Manager Stop / Start tai Reload ERDDAP . Kun asennat 1.16, älä käytä Tomcat-ohjainta poistaaksesi vanhan ERDDAP™ ja ottaa käyttöön uuden ERDDAP . Sen sijaan: **Erota vanha ERDDAP™ Käynnistä Tomcat (tai palvelin) Ja sitten uusi ERDDAP .** On aina hyvä idea tehdä se uuden version asennuksessa.
-    * Lisätään [&lt;Pyydä ilmaista »&lt;/ RequestBlacklist » (Docs/server-admin/datasets#requestblacklist Näytä tarkat tiedot) sinun datasets.xml . Tätä voidaan käyttää määrittämään luettelo asiakkaan IP-osoitteista, jotka on estettävä. (mm. poistaakseen palvelunestohyökkäyksen tai liian kiihkeän verkkorobotin) .
-* Nyt on olemassa a \\[ isovanhemmat \\] /logs Näytä tarkat tiedot ERDDAP™ Lokitiedostoja. Kun aloitat ERDDAP™ Se tekee arkiston kopion log.txt ja log. txt. aiemmat tiedostot, joissa on aikaleima. Jos on ongelmia ennen uudelleenkäynnistystä, voi olla hyödyllistä analysoida näitä tiedostoja.
-*    ERD &gt; ERDDAP™ Nyt tilausjärjestelmä on käynnistynyt.
-*    ERDDAP™ Jälleen kerran sallittu (Silti ei suositella) "%26" koodaus "ja" pyynnöstä URL-osoitteet (Katsokaa [V1.14 Muutos](#percent26) ) .
-* Useita uusia lisäyksiä Tally-osioon [Päivittäinen raportti](/docs/server-admin/additional-information#daily-report) .
-* Pienet vikakorjaukset tuottavat DatasetsXml.
-* Muutamia pieniä korjauksia.
+*    ERDDAP™ hallinnoijat:
+    * Tämä on tärkeä julkaisu, koska se korjaa vika, joka jätti ERDDAP™ lanka käynnissä, jos käytit Tomcat Manager Stop / Käynnistä tai Lataa ERDDAP . Joten kun asennat 1.16, älä käytä Tomcat Manager vain poistaa vanha ERDDAP™ ja ottaa käyttöön uuden ERDDAP . Sen sijaan: **poistaa vanha ERDDAP™ , käynnistä Tomcat uudelleen (tai palvelimella) , sitten käyttää uutta ERDDAP .** Se on aina hyvä ajatus tehdä, kun asentaa uuden version.
+    * Lisätkää [&lt;pyyntöMusta lista&gt;&lt;/pyyntöMusta lista&gt;] (/docs/server-admin/datasets#requestblacklist) ja datasets.xml . Tätä voidaan käyttää määrittämään luettelo asiakkaan IP-osoitteista, jotka on suljettava (Esim. palvelun epäämisen tai liian kiihkeän verkkorobotin torjumiseksi) .
+* Nyt on \\[ bigPentDirectory \\] /logs-hakemisto, jota voit pitää ERDDAP™ lokitiedostoja. Kun aloitat ERDDAP™ , se tekee arkisto kopion log.txt ja log. txt. aikaisemmat tiedostot aikaleimalla. Jos oli ongelmia ennen uudelleenkäynnistystä, voi olla hyödyllistä analysoida näitä tiedostoja.
+*    ERD S ERDDAP™ Nyt on tilausjärjestelmä päällä.
+*    ERDDAP™ Jälleen kerran (mutta ei silti suosittele) "% 26" koodaus "&" pyynnöstä URL (ks. [Asiaan liittyvä v1.14 muutos](#percent26) ) .
+* Useita uusia lisäyksiä Tally osion [Päivittäinen raportti](/docs/server-admin/additional-information#daily-report) .
+* Pieniä korjauksia tuottaaDatasetsXml.
+* Pari pientä korjausta.
      
 
 ## Versio 1.14{#version-114} 
- (2009-03-17) 
+ (julkaistu 2009-03-17) 
 
-* Muutoksia käyttäjille:
-    * verkkotietopyynnöissä, ERDDAP™ Nyt tukee: [Viimeinen](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#last) missä n on indeksien ja [ (Viimeinen d) ](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#lastInParentheses) missä d on numeerinen arvo (Aika, se on sekunneissa) .
-    * Tabular-tietopyynnöissä String-rajoitukset vaativat nyt [Kaksinkertainen lainaus](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#QuoteStrings) Esimerkiksi &id="NDBC40121" Tätä tarvitaan DAP protokolla.
-    * Tabulaarisissa tiedoissa, ERDDAP™ Nyt tarvitaan [Kaikki rajoitukset ovat asianmukaisesti koodattuja.](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#PercentEncode) . Selaimet tekevät tämän automaattisesti, joten tämä vaikuttaa enimmäkseen tietokoneohjelmiin / skripteihin, jotka käyttävät ERDDAP .
-#### % 26{#percent26} 
-*    [aikaisemmin,](#percent26) The [Sisältää graafisen sivun](https://coastwatch.pfeg.noaa.gov/erddap/images/embed.html) ja [ ERDDAP™ Google Gadget verkkosivut](https://coastwatch.pfeg.noaa.gov/erddap/images/gadgets/GoogleGadgets.html) Korvaa kuvan URL-osoitteen "ja" prosenttiosuudella 26. Tästä eteenpäin sinun on korvattava kuvan URL-osoitteen "ja" . Joten sinun on korvattava kaikki "%26" olemassa olevilla verkkosivuilla ja Google Gadgets "&amp;" (Anteeksi) 
-*    ERDDAP™ Järjestäjät, kiitos:
-    * Lisää seuraavat asiat omaan [Asennus.xml](/docs/server-admin/deploy-install#setupxml) tiedostotiedosto (Muuta lippua KeyKeyn arvo) :
+* Muutokset käyttäjille:
+    * Verkkodatapyynnöissä ERDDAP™ tukee nyt: [last-n](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#last) jossa n on kokonaislukumäärä indeksejä ja [ (viimeinen-d) ](https://coastwatch.pfeg.noaa.gov/erddap/griddap/documentation.html#lastInParentheses) jossa d on numeerinen arvo (ajan, se on sekuntia) .
+    * Taulukon tietopyynnöissä String rajoitteet vaativat nyt [kaksinkertainen lainaus](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#QuoteStrings) noin arvo, esimerkiksi, &id="NDBC40121" Tämä on tarpeen DAP Protokolla.
+    * Taulukon tietopyynnöissä ERDDAP™ Nyt edellyttää, että [kaikki rajoitteet on koodattu asianmukaisesti](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/documentation.html#PercentEncode) . Selaimet tekevät tämän automaattisesti, joten tämä vaikuttaa useimmiten tietokoneohjelmiin/skripteihin, jotka ovat käytettävissä ERDDAP .
+#### %26{#percent26} 
+*    [Aiemmin tapahtunutta:](#percent26) a [upota kaavion web-sivu](https://coastwatch.pfeg.noaa.gov/erddap/images/embed.html) ja [ ERDDAP™ Google Gadget -verkkosivu](https://coastwatch.pfeg.noaa.gov/erddap/images/gadgets/GoogleGadgets.html) sanoi korvata "&" kuvan URL- osoitteella "% 26." Tästä lähtien sinun pitäisi korvata "&" kuvan URL-osoitteessa "&amp;." Joten sinun täytyy korvata kaikki "% 26" olemassa verkkosivuilla ja Google Gadgets " &amp; ." (Anteeksi.) 
+*    ERDDAP™ Hallintovirkamiehet:
+    * Lisää seuraava [setup.xml](/docs/server-admin/deploy-install#setupxml) tiedosto (ja vaihtaa lippu Avaimen arvo) :
 ```
         <!-- ERDDAP™ has a service that lets remote users set a flag
         to notify ERDDAP™ to try to reload a dataset.
@@ -2858,12 +2873,12 @@ Nämä aineistotyypit ovat osa täydellistä ominaisuutta, joka yksinkertaistaa 
         <subscriptionSystemActive>true</subscriptionSystemActive>  
 ```
 
-    * Rivillä sen jälkeen&lt;Sähköpostiosoite » [Asennus.xml](/docs/server-admin/deploy-install#setupxml) tiedosto, lisää
+    * Rivillä sen jälkeen&lt;sähköpostiUserName&gt; [setup.xml](/docs/server-admin/deploy-install#setupxml) tiedosto, lisää
 ```
         <emailPassword>_myPassword_</emailPassword> <!-- optional; if absent, emails can't be sent to non-local addresses -->  
 ```
-Kirjoita todellinen salasanasi.
-    * Voit muuttaa&lt;msSampleBox &gt; omassa [Asennus.xml](/docs/server-admin/deploy-install#setupxml) tiedosto sisältää pituusarvoja jopa 360, esim.
+ja syötä oikea salasanasi.
+    * Voit muuttua.&lt;wmsSampleBBox &gt; [setup.xml](/docs/server-admin/deploy-install#setupxml) tiedosto, jossa on enintään 360 pituuspiiriä, esim.
 ```
         <!-- The bounding box values are 
            minLongitude,minLatitude,maxLongitude,maxLatitude.
@@ -2871,89 +2886,89 @@ Kirjoita todellinen salasanasi.
         <wmsSampleBBox>0,-75,360,75</wmsSampleBBox>  
 ```
 
-    * Sisälläsi datasets.xml tiedosto, nimeä EDDTableFromNc4DFiles EDDTableFromNcFiles tiedostoiksi (jotka tukevat tiedostoja millä tahansa mitalla) . Jos sinulla on EDDTableFromNc4DFiles-tiedot:
+    * • datasets.xml tiedosto, nimeä tiedostotyyppi EDDTableFromNc4DFiles EDDTableFromNcFiles (joka tukee nyt tiedostoja, joiden mitat ovat mitä tahansa) . Jos sinulla on EDDtableFromNc4DFiles-aineisto:
         
-        1. Sinun on muututtava tyypiksi = "EDDTableFromNcFiles" tiedostoissasi. XML-tiedosto.
-        2. Sinun on lisättävä&lt;ndimensio &gt; 4 4&lt;/nDimensions&gt; tag to the dataset's XML
-        3. Voit lisätä uuden&lt;sortFilesBySourceNames&gt;-tunnisteet tiedostojen sisäisen järjestyksen määrittämiseksi, mikä määrittää palautettujen tietojen kokonaisjärjestyksen.
+        1. Sinun täytyy muuttaa kirjoittaa="EDDtableFromNcFiles" tiedostoihin. XML-tiedosto.
+        2. Sinun täytyy lisätä&lt;nMäärät&gt; 4&lt;/nDimensions&gt; tag to the dataset's XML.
+        3. Voit lisätä uuden&lt;sortFilesBySourceNames&gt; tag tarkenna tiedostojen sisäinen tilaus, joka määrittää palautettujen tietojen yleisen järjestyksen.
         
-yksityiskohtiin, katso [EDDTableFromfiilit](/docs/server-admin/datasets#eddtablefromfiles) .
-    * EDDTableFromDapSequence (käytetty) OPeNDAP DRDS-palvelimet datasets.xml Käytimme&lt;Lähde:CanConstrainStringsRege&lt;Lähde:CanConstrainStringRegex&gt; DRDS-regex-tuki on rajallisempi kuin ERDDAP "Sen vuoksi suosittelemme&lt;Lähde:CanConstrainStringsRegex&lt;/sourceCanConstrainStringRegex &gt; niin, että regex-rajoituksia ei siirretä lähteelle, vaan ne käsitellään sen sijaan ERDDAP .
-    * Lähde: Constrain... Sisällä datasets.xml By [EdDTableFromDapsequence Näytä tarkat tiedot](/docs/server-admin/datasets#eddtablefromdapsequence) ja (Sisäisesti) Kaikki EDDTable-tiedostotyypit. Uusi järjestelmä on yksinkertaisempi ja heijastaa paremmin eri tietolähteiden vaihtelua. Saatat joutua muokkaamaan XML:ää tietoaineistoissasi datasets.xml .
-* On olemassa useita uusia ominaisuuksia, jotka ovat hyödyllisiä itse, mutta yhdistettynä myös helpottavat luomista. [Verkot/klusterit/federaatiot ERDDAP s](/docs/server-admin/additional-information#grids-clusters-and-federations) .
-    * Uusia datatyyppejä:
-        *    [ EDDGrid Lähde: Eddap](/docs/server-admin/datasets#eddfromerddap) ja [EdDTableFromDap](/docs/server-admin/datasets#eddfromerddap) joka antaa yhden ERDDAP™ Sisältää tietoja toisesta ERDDAP™ erittäin yksinkertaisella ja erittäin tehokkaalla tavalla.
-        *    [ EDDGrid Filejä](/docs/server-admin/datasets#eddgridfromfiles)   (ja sen alaluokka, [ EDDGrid Lähde: NCFiles](/docs/server-admin/datasets#eddgridfromncfiles) joka osaa lukea NetCDF   .nc GRIB .grb ja HDF   .hdf tiedostoja) .
-        *    [EDDTableFromNcFiles](/docs/server-admin/datasets#eddtablefromncfiles) joka osaa lukea NetCDF   .nc jolla on pöydän kaltainen rakenne.
-    * RunLoadDatasets ja LoadDatasets uusittiin ERDDAP™ on hyvin reagoiva tietojen lataamiseen perustuen tiedostoihin [Lippu](/docs/server-admin/additional-information#flag) Hakemisto (usein)&lt;5 sekuntia, jos pääasiallinen taajuus on tällä hetkellä valmis.
-    * Uusi palvelu mahdollistaa [URL luo lipputiedoston](/docs/server-admin/additional-information#set-dataset-flag) tiettyyn tietoaineistoon, esim.
+Lisätietoja: [EDDTableF fromFiles](/docs/server-admin/datasets#eddtablefromfiles) .
+    * Aiemmin EDDtableFromDapSequence, for OPeNDAP DRDS-palvelimet, sisään datasets.xml , käytimme&lt;lähdeCanConstrainStringsRegex&gt;~=&lt;/sourceCanConstrainStringRegex&gt;. Nyt näemme kuitenkin, että DRDS regex -tuki on rajoitetumpaa kuin ERDDAP 's, joten suosittelemme&lt;lähdeCanConstrainStringsRegex&gt;&lt;/sourceCanConstrainStringRegex&gt; siten, että regex-rajoitteita ei siirretä lähde, vaan ne käsitellään ERDDAP .
+    * LähdeCanConstrainin uudistettu käsittely... in datasets.xml mennessä [EDDTableFromDapSequence](/docs/server-admin/datasets#eddtablefromdapsequence) sekä (sisäisesti) kaikki DDDTablen tietokokonaisuuden tyypit. Uusi järjestelmä on yksinkertaisempi ja vastaa paremmin eri tietolähteiden vaihtelevuutta. Saatat joutua muuttamaan XML tiedostoja datasets.xml .
+* On olemassa useita uusia ominaisuuksia, jotka ovat hyödyllisiä itse, mutta kun yhdessä, myös helpottaa luomista [ruudukot / klusterit / federaatiot ERDDAP tilu](/docs/server-admin/additional-information#grids-clusters-and-federations) .
+    * Uudet tietokokonaisuustyypit:
+        *    [ EDDGrid FromErddap](/docs/server-admin/datasets#eddfromerddap) sekä [EDDTableFromErddap](/docs/server-admin/datasets#eddfromerddap) joka antaa yhden ERDDAP™ sisältää aineiston toiselta ERDDAP™ hyvin yksinkertaisella ja tehokkaalla tavalla.
+        *    [ EDDGrid Tiedostoista](/docs/server-admin/datasets#eddgridfromfiles)   (ja sen alaluokka, [ EDDGrid FromNcFiles](/docs/server-admin/datasets#eddgridfromncfiles) jotka osaavat lukea NetCDF   .nc , GRIB .grb ja HDF   .hdf tiedostot) .
+        *    [EDDTableFromNcFiles](/docs/server-admin/datasets#eddtablefromncfiles) jotka osaavat lukea NetCDF   .nc joiden rakenne on pöytämäinen.
+    * RunLoadDatasets ja LoadDatasets muutettiin niin, että ERDDAP™ on hyvin reagoiva ladata tiedostoja perustuu tiedostoja [lippu](/docs/server-admin/additional-information#flag) kansio (usein&lt;5 sekuntia, jos pääkuormitusDatasetit on tehty).
+    * Uusi palvelu [URL-osoite, jolla luodaan lipputiedosto](/docs/server-admin/additional-information#set-dataset-flag) tietyn aineiston osalta esim.
     ```
         https://coastwatch.pfeg.noaa.gov/erddap/setDatasetFlag.txt?datasetID=rPmelTao&flagKey=123456789  
     ```
-Luo lipputiedosto rPmelTao-lippuhakemistoon (Vaikka lippu Avain on väärässä) .
-    * Uusi Uusi Uusi [tilaus](https://coastwatch.pfeg.noaa.gov/erddap/subscriptions) palvelu, jotta asiakas voi määrittää toimen, joka tehdään, kun tietty tietoaineisto luodaan. (Milloin ERDDAP™ Käynnistetään uudelleen) Aina kun aineisto muuttuu millään tavalla. Järjestelmä voidaan poistaa käytöstä&lt;Järjestelmänvalmistus &gt; omassa [Asennus.xml](/docs/server-admin/deploy-install#setupxml) tiedosto. The ERDDAP™   [Päivittäinen raportti](/docs/server-admin/additional-information#daily-report) Listaa kaikki tilaukset ja sisältää URL-osoitteen, joka on tarpeen jokaisen peruuttamiseksi, jos sinusta tuntuu, että järjestelmä on väärinkäytetty. Sisällä datasets.xml Uusi, valinnainen [&lt;tilaus Emailblacklist » (Docs/server-admin/datasets#subscriptionemailblacklist Näytä tarkat tiedot) Tag, jotta järjestelmänvalvojat voivat määrittää koodatun luettelon sähköpostiosoitteista, jotka on välittömästi mustalle listalle tilausjärjestelmästä.
-    * Uusi [&lt;Muutos » (Docs/server-admin/datasets#onchange) Attribuutti datasets.xml Annetaan ERDDAP™ Hallinnoitsija määrittää toimen, joka toteutetaan, kun tietty tietoaineisto luodaan. (Milloin ERDDAP™ Käynnistetään uudelleen) Aina kun aineisto muuttuu millään tavalla.
-    * Parannukset täydelliseen tekstihakuun: kunkin tietoaineiston hakusanan tallentaminen käyttää nyt 1/2 muistia. Algoritmin etsintä (Boyer-Moore) 3X nopeampi.
-    * Sähköpostit ERDDAP™ Aiheeseen ja sisältöön aina \\[ Erddap Url \\] jotta olisi selvää, mikä ERDDAP™ Tämä tuli (Jos käytät useita ERDDAP s) .
-    * Laajempia tilastoja kerätään [Päivittäinen raportti](/docs/server-admin/additional-information#daily-report) sähköpostia.
-    * Uusi lokitiedosto \\[ isovanhemmat \\] /emailLogyEAR-MM-DD.txt kirjaa kaikki sähköpostit lähetetään ERDDAP™ joka päivä. Tämä on erityisen hyödyllistä, jos palvelimesi ei todellakaan voi lähettää sähköposteja, voit ainakin lukea ne lokissa.
-    *    ERDDAP™ Nyt tekee \\[ isovanhemmat \\] /Cache/ ( datasetID ) Hakemisto jokaisesta tietoaineistosta, koska tiedostoja voi olla paljon.
-* Uusi Uusi Uusi [ RSS 2.1.](https://coastwatch.pfeg.noaa.gov/erddap/information.html#subscriptions) Rehua jokaiseen dataan (Etsi appelsiinia RSS Icons on lists of datasets, Data Access Forms, and Make A Graph verkkosivut) .
-*    EDDGrid   .kml Resurssit käyttävät nyt laadittuja kuvia ("superoverlays" - dynaamisesti luotu neliökuva) . Alkuperäiset kuvat latautuvat GoogleEarthiin paljon nopeammin kuin ennen. Kartan resoluutio kasvaa, kun zoomaat sisään, koko tietoaineiston resoluutioon asti. Suositus: Käyttäjien on pyydettävä .kml Kerran, mutta aineiston koko pituus, leveys. Ajankäytön tuki poistettiin (Toivottavasti se tulee takaisin) .
-*    ERDDAP™ Nyt lisätään [Cache-Control max-age otsikot](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) Kaikki tiedostot, jotka on pyydetty /images-hakemistosta. Tämä vähentää huomattavasti staattisten tiedostopyyntöjen määrää. ERDDAP Näin nopeutuu eniten ERDDAP™ sivuja. Myös monet Java Script-tiedostojen viittaukset siirtyivät HTML-sivujen pohjaan, mikä myös nopeuttaa monia ERDDAP™ sivuja. Kiitos Steve Soudersin kirjasta "High Performance Web Sites" ja FireFoxin ySlow-lisäosan.
-*    ERDDAP™ Vaihdettu netcdf-java 2.2.22 netcdf-java 4.0. Muun muassa tämä mahdollistaa EDDGrid NCFiles luettavaksi HDF   .hdf GRIB .grb ja NetCDF   .nc tiedostoja.
-*    EDDGrid ADP ja EDDGrid NCFiles tukee nyt myös Darrayta (Myös DGRID)   dataVariable s. Jos ulottuvuudella ei ole vastaavaa koordinaattimuuttujaa, ERDDAP™ Luo akselimuuttuja indeksiarvoilla (esim. 0, 1, 2, ..., 311, 312) . Kaikki muut näkökohdat EDDGrid Jää samaksi:
-**** Se palvelee edelleen kaikkia tietoaineistoja verkkoina, joissa on akselimuuttuja kullekin ulottuvuudelle.
-**** Kyselyt voivat edelleen pyytää arvoja akselimuuttujalta.
-Kiitos Charles Carleton, Thomas Im, Dorian Raymer ja muut.
-* The WMS   OpenLayers Sivuilla on nyt oletuspituus, leveysalue, joka on hieman suurempi kuin tietoaineiston valikoima. (ei ole tarkka ulottuvuus, joten pienten aineistojen konteksti on selkeämpi.) . Oletusarvo voi nyt olla myös 0-360, joka mahdollistaa monien tietoaineistojen koko valikoiman. Kiitos Todd Spindler.
-* Uudet liukuportaat joissakin Data Access -muodoissa ja tee Graph-sivut. yksinkertaistaa (Risti) halutun tiedon määrittäminen ja hyvän visuaalisen palautteen antaminen.
-* Uusi vaihtoehto&lt;Tietoja &gt; Tagit sisään datasets.xml : [Aktiivinen = "väärä"](/docs/server-admin/datasets#active) .
-* Viittaukset ERD &gt; ERDDAP™ Vaihtoehtoinen rannikko.pfel (Toimii edelleen proxyllä) Rannikkovartiosto.pfeg (Mieluiten) .
-* Uusi tuki [ data\\_min ja data\\_max ](/docs/server-admin/datasets#data_min-and-data_max) Muuttuvat metatiedot.
-* Osittainen ratkaisu [Odota sitten TryAgain / Poikkeukset](/docs/server-admin/additional-information#waitthentryagain-exception) : Jotkin pyynnöt, jotka aiemmin epäonnistuivat, kun tietolähteen muutos havaittiin, onnistuvat, koska ERDDAP™ palauttaa tietoaineiston ja pyytää tietoja uudelleen automaattisesti, kaikki alkuperäisen pyynnön yhteydessä.
-* Bug fix: Tuottaa Dataa XML oli vammainen ERDDAP™ versio 1.12. Kiitos Ellyn Montgomerylle tästä.
+luo lipputiedoston lippuhakemistoon rPmelTaolle (vaikka lippu Avain on väärässä.) .
+    * Uusi [tilaus](https://coastwatch.pfeg.noaa.gov/erddap/subscriptions) Palvelu siten, että asiakas voi määritellä toimen, joka tehdään, kun tietty tietokokonaisuus luodaan (kun ERDDAP™ aloitetaan uudelleen) ja aina kun tietokokonaisuus muuttuu jollakin tavalla. Tämä järjestelmä voidaan poistaa käytöstä&lt;TilausSystemActive&gt; [setup.xml](/docs/server-admin/deploy-install#setupxml) Tiedosto. • ERDDAP™   [Päivittäinen raportti](/docs/server-admin/additional-information#daily-report) nyt listaa kaikki tilaukset ja sisältää URL tarvitaan peruuttaa jokainen, jos tunnet, että järjestelmää käytetään väärin. Sisään datasets.xml , on uusi, valinnainen [&lt;tilaus SähköpostiMustalista&gt;] (/docs/server-admin/datasets#subscriptionemailblacklist) tag niin, että ylläpitäjät voivat määrittää pilkulla erotettu luettelo sähköpostiosoitteita, jotka on heti mustalla listalla tilausjärjestelmästä.
+    * Uusi [&lt;Muutos&gt;] (/docs/server-admin/datasets#onchange) ominaisuus datasets.xml Antaa ERDDAP™ ylläpitäjä määrittää toimen, joka toteutetaan, kun tietty tietokokonaisuus luodaan (kun ERDDAP™ aloitetaan uudelleen) ja aina kun tietokokonaisuus muuttuu jollakin tavalla.
+    * Parannukset koko tekstin hakuun: Hakujonon tallentaminen jokaiselle tiedostolle käyttää nyt 1/2 muistia. Hakualgoritmi (Boyer-Mooren kaltainen) Nyt 3X on nopeampi.
+    * Sähköposti ERDDAP™ nyt aina prepend aihe ja sisältö \\[ erddap Url \\] , jotta on selvää, mitä ERDDAP™ Tämä tuli (jos käytät useita ERDDAP tilu) .
+    * Laajemmat tilastot [Päivittäinen raportti](/docs/server-admin/additional-information#daily-report) Sähköposti.
+    * Uusi lokitiedosto \\[ bigPentDirectory \\] /emailLogYEAR-MM-DD.txt lokit kaikki sähköpostit lähettämät ERDDAP™ Joka päivä. Tämä on erityisen hyödyllistä, jos palvelimesi ei voi lähettää sähköpostia -- voit ainakin lukea ne lokista.
+    *    ERDDAP™ Nyt tekee \\[ bigPentDirectory \\] /välimuisti ( datasetID ) kansio kunkin tiedoston koska voi olla paljon tiedostoja välimuistissa.
+* Uusi [ RSS 2, 01](https://coastwatch.pfeg.noaa.gov/erddap/information.html#subscriptions) syöte kustakin aineistosta (Etsi oranssia RSS kuvakkeet tietokokonaisuuksien luetteloista, tietojen saatavuuslomakkeista ja tehdä kaavion verkkosivut) .
+*    EDDGrid   .kml vastaukset nyt käytä laatoitettuja kuvia ("Superoverlays" -- dynaamisesti luodut neliökuvat) . Alkuperäinen kuva latautuu GoogleEarthiin paljon aiempaa nopeammin. Kartan resoluutio kasvaa, kun zoomaat tiedoston koko resoluutioon asti. Suosittele: käyttäjien tulisi pyytää .kml Yksi aikapiste, mutta aineisto on koko pituus- ja leveysaste. Valitettavasti aikavälien tuki poistettiin (Toivottavasti se palaa.) .
+*    ERDDAP™ nyt lisää [Päättymiset ja välimuistin enimmäisiän otsikot](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) kaikkiin tiedostoihin, joita pyydetään /kuvat-hakemistosta. Tämä vähentää huomattavasti staattisia tiedostopyyntöjä lähetetään ERDDAP ja siten suuresti nopeuttaa eniten ERDDAP™ sivulastit. Myös monet Java Script- tiedostoviittaukset siirtyivät niiden HTML-sivujen alareunaan, mikä myös nopeuttaa monia ERDDAP™ sivulastit. Kiitos kirjan "High Performance Web Sites" Steve Souders ja ySlow lisäksi FireBug plugin FireFox.
+*    ERDDAP™ Siirtyi netcdf-java 2.2.22 netcdf-java 4.0. Tämä mahdollistaa muun muassa EDDGrid FromNcFiles to ready HDF   .hdf , sekä GRIB .grb ja NetCDF   .nc tiedostot.
+*    EDDGrid -Ei. EDDGrid FromNcFiles tukee nyt myös DArray (sekä DGrid)   dataVariable S. Jos ulottuvuudessa ei ole vastaavaa koordinaattimuuttujaa, ERDDAP™ luo akselimuuttujan indeksiarvoilla (esim. 0, 1, 2, ..., 311, 312) . Joten kaikki muut näkökohdat EDDGrid pysyvät samoina:
+\\ * Se palvelee edelleen kaikkia tiedostoja ruudukkoina, joissa on akselimuuttuja kullekin ulottuvuudelle.
+\\ * Kyselyt voivat edelleen pyytää arvoja akselimuuttujista.
+Charles Carletonin, Thomas Imin, Dorian Raymerin ja muiden ansiosta.
+* • WMS   OpenLayers sivuilla on nyt oletus pituuspiiri, leveyspiiri, joka on hieman suurempi kuin tietokokonaisuuden vaihteluväli (ei tarkkaa vaihteluväliä, joten konteksti pienten tietoaineistojen on selkeämpää) . Oletusalue voi nyt olla 0-360, mikä mahdollistaa monien tietoaineistojen täyden valikoiman nyt. Kiitos Todd Spindler.
+* Uusia liukusäätimiä joissakin tiedonsiirtolomakkeissa ja tehdä kaavio web-sivuja. Ne yksinkertaistavat (raaka) erittely halutuista tiedoista ja antaa hyvää visuaalista palautetta.
+* Uusi vaihtoehto&lt;Tietokokonaisuus&gt; tunnisteet datasets.xml : [aktiivinen="false"](/docs/server-admin/datasets#active) .
+* Viittaukset ERD S ERDDAP™ muuttunut rannikkokello.pfel (toimii edelleen välityspalvelimen kautta) rannikkovartiostoon.pfeg (parempi) .
+* Uusi tuki [ data\\_min sekä data\\_max ](/docs/server-admin/datasets#data_min-and-data_max) muuttujat metatiedot.
+* Osittainen liuos [OdotaSitten yritä uudelleen / osittain tulokset poikkeus](/docs/server-admin/additional-information#waitthentryagain-exception) : Nyt jotkut pyynnöt, jotka aiemmin epäonnistuivat, kun tietolähteen muutos havaittiin onnistuu, koska ERDDAP™ lataa tietokokonaisuuden uudelleen ja pyytää tiedot uudelleen automaattisesti alkuperäisen pyynnön yhteydessä.
+* Vikakorjaus: luo Dataset Xml ei ollut käytössä ERDDAP™ versio 1.12. Kiitos Ellyn Montgomeryn.
 * Pieniä muutoksia virheiden käsittelyyn.
-* Monia parannuksia, joiden avulla vältetään ja käsitellään mahdollisia kilpailuolosuhteita (mahdolliset ongelmat, jotka johtuvat monikielisestä luonteesta ERDDAP ) Se aiheutti pieniä ja harvinaisia ongelmia.
-* Jos kuvassa on virheilmoitus, kuva pysyy vain välimuistissa 5-10 minuuttia. (Ei 60) . Kiitos Cara Wilsonille.
-* Vakioviesti, kun tietoja ei ole, on nyt "kyselysi ei tuottanut vastaavia tuloksia", mikä on lyhyempi, tarkempi ja yhteensopiva. OPeNDAP palvelimia.
-*    EDDGrid Ei enää sidottuja akseliarvoja.
-* Pieniä muutoksia .ver- ja .help-pyyntöihin.
-* Paljon pieniä muutoksia ja vikoja.
+* Monia parannuksia mahdollisten kilpailuolosuhteiden välttämiseksi ja hoitamiseksi (Toisin sanoen mahdolliset ongelmat, jotka johtuvat ERDDAP ) joka aiheutti pieniä, harvinaisia ongelmia.
+* Nyt, jos virheviesti on kirjoitettu kuva, kuva pysyy välimuistissa vain ~5-10 minuuttia (60) . Cara Wilsonin ansiosta.
+* Vakioviesti, kun tietoja ei ole, on nyt "Sinun kyselysi ei tuottanut vastaavia tuloksia." OPeNDAP Palvelimet.
+*    EDDGrid ei enää salli sidottuja akseliarvoja.
+* Pieniä muutoksia .ver ja .help pyyntöjä.
+* Paljon pieniä muutoksia ja korjauksia.
      
 
 ## Versio 1.12{#version-112} 
- (2008-10-31) 
+ (julkaistu 2008-10-31) 
 
-* EDDTableFrom SOS Jälleen kerran NDBC SOS Toimii uuden NOS:n kanssa SOS .
-* EDDTableFromBMDE vaatii ERDDAP™ admin määrittää dataVariable s.
-*    EDDGrid Se ei enää edellytä, että lat ja lon ovat tasaisia. Läpinäkyvä Ping tai .kml . Kiitos Todd Spindler.
-* Muutamia pieniä muutoksia.
+* EDDTableFrom SOS Toimii jälleen NDBC:n kanssa SOS ja toimii uuden NOS:n kanssa SOS .
+* DDDTableFromBMDE vaatii nyt ERDDAP™ admin dataVariable S.
+*    EDDGrid ei enää vaadi, että lat ja lon on tasainen välilyönti varten. läpinäkyvä Png tai .kml . Kiitos Todd Spindler.
+* Muutama pieni muutos.
      
 
 ## Versio 1.10{#version-110} 
- (2008-10-14) 
+ (julkaistu 2008-10-14) 
 
-* Uusi "colorBar" metadata datamuuttujat datasets.xml määrittää oletusväripalkkiasetukset grafiikoille ja kartille. Näytä [Lisää tietoa](/docs/server-admin/datasets#color-bar-attributes) . Tämä on tärkeää, koska se parantaa huomattavasti Make A Graphin tuottamien oletuskuvien ja karttojen ulkonäköä ja koska oletuskaavioilla ja kartoilla on johdonmukainen väripalkki, vaikka asiakas muuttaa pyydetyn ajan tai maantieteellisen alueen. Tämä oli myös välttämätöntä, jotta WMS .
-*    ERDDAP™ Tarjoamme nyt suurimman osan verkon tiedoista WMS palvelua. Tämä on tärkeää, koska se osoittaa, että lisäksi saada tietoja useista palvelimista, ERDDAP™ Tietoja voidaan jakaa eri protokollien kautta ( DAP , WMS ... lisää tulevaisuudessa) . Nähdään [Asiakkaan dokumentointi](https://coastwatch.pfeg.noaa.gov/erddap/wms/documentation.html) . Tai [dokumentointia johtajille](/docs/server-admin/datasets#wms) . tai [Kokeile vaikka](https://coastwatch.pfeg.noaa.gov/erddap/wms/index.html) .
-* Pituusarvojen uusi tuki &gt; 180 .kml tiedostoja.
-* Uusi cdm = muut
-*    ERDDAP™ Tukee nyt "boolean" lähdeaineistoa. Näytä [Lisää tietoa](/docs/server-admin/datasets#boolean-data) Tästä on hyötyä tulevalle EDDTableFromDatabase -palvelulle.
-* Uusi EDDTableFromBMDE tukee DiGIR/BMDE-tietolähteitä.
-* EDVGridAxis mahdollistaa laskevien arvojen laskemisen. PmelOscar-tietokanta tarvitsi tämän.
-*    ERDDAP™ HTTP-virheet (Esim. ”404 resurssille/sivulle, jota ei löydy”) enemmän kuin HTML-sivuja, joissa on virheilmoituksia.
-* Paljon muutoksia / lisäyksiä ERDDAP™ dokumentointi.
+* Uusi "colorBar" metadata data muuttujia datasets.xml määrittää oletusväripalkin asetukset kaavioita ja karttoja. Katso [Lisätietoja](/docs/server-admin/datasets#color-bar-attributes) . Tämä on tärkeää, koska se parantaa suuresti ulkoasua oletuskuvat ja kartat tuotetaan Make A Graph ja koska oletuskuvat ja kartat ovat nyt johdonmukainen väripalkki, vaikka asiakas muuttaa pyydetty aika tai maantieteellinen alue. Lisäksi tämä oli tarpeen WMS .
+*    ERDDAP™ Nyt palvelee useimmat verkkotiedot kautta WMS Palvelu. Tämä on tärkeää, koska se osoittaa, että sen lisäksi, että saamme tietoja erityyppisistä datapalvelimet, ERDDAP™ voi jakaa tietoja eri protokollien kautta ( DAP , WMS , ... enemmän tulevaisuudessa) . Katso [asiakasasiakirjat](https://coastwatch.pfeg.noaa.gov/erddap/wms/documentation.html) . Tai [ylläpitoa koskevat asiakirjat](/docs/server-admin/datasets#wms) . Tai [Kokeile.](https://coastwatch.pfeg.noaa.gov/erddap/wms/index.html) .
+* Uusi tuki pituuspiirin arvoille &gt; 180 .kml tiedostot.
+* Uusi cdm\\_data\\_tyyppi: Muu .
+*    ERDDAP™ Nyt tukee "boolean"-lähdetietojaType. Katso [Lisätietoja](/docs/server-admin/datasets#boolean-data) Tästä tulee hyödyllinen tulevalle EDDtableF-tiedosta.
+* Uusi EDDtableFromBMDE tukee DiGIR/BMDE tietolähteitä.
+* EDVGridAxis mahdollistaa nyt lajiteltujen arvojen laskeutumisen. PmelOscar-aineistot tarvitsivat tätä.
+*    ERDDAP™ nyt palauttaa HTTP- virheet (esim. "404 resurssille/sivulle, jota ei löydy") useammin tilanteissa, sijasta HTML-sivuja virheviestejä.
+* Paljon muutoksia / lisäyksiä ERDDAP™ asiakirjat.
 * Paljon pieniä muutoksia.
-* Joitakin vikoja korjataan.
-*    **Asioita ERDDAP™ Järjestelmänvalvojien tulisi päivittää tätä versiota:** 
-    * Sisällä datasets.xml Mikä tahansa EDDTableFrom SOS Tietoaineistot, jotka muuttavat "observedProperty" -metatietoja "lähdeObservedProperty".
-    * Säännöt an axisVariable tai tai dataVariable &gt; destinationName Nyt ovat [tiukempi](/docs/server-admin/datasets#datavariable-addattributes) . Tarkista, että muuttuvat nimet ovat voimassa. Tarkista ne käsin tai juokse ERDDAP™ Katso virheilmoitukset raportissa, joka on lähetetty ylläpitäjälle.
-    * Sisällä datasets.xml jos haluat verkkotietomuuttujan olevan käytettävissä WMS Sinun on lisättävä metadataa. Ainakin esimerkiksi&lt;nimi =" colorBarMinimum Tyyppi = kaksinkertainen &gt; 0&lt;&gt;
+* Joitakin korjauksia.
+*    **Asiat ERDDAP™ hallinnoijien tulisi tehdä päivittää tähän versioon:** 
+    * Sisään datasets.xml , kaikille EDDTableFrom SOS Datatiedostot, muuttaa "havainnoituProperty" metadataksi "sourceObservedProperty."
+    * Säännöt axisVariable tai dataVariable S destinationName ovat nyt [tiukempi](/docs/server-admin/datasets#datavariable-addattributes) . Tarkista, että muuttujat ovat voimassa. Tarkista ne joko käsin tai juokse ERDDAP™ ja katso virheviestejä raportin, joka on lähetetty ylläpitäjälle.
+    * Sisään datasets.xml , jos haluat verkkodatamuuttujan olevan saatavilla kautta WMS , sinun täytyy lisätä väriBar metadata. Ainakin&lt;att nimi=" colorBarMinimum " type="double"&gt;0&lt;/att&gt;
 ```
           <att name="colorBarMaximum" type="double">32</att>  
 ```
-Näytä [Lisää tietoa](/docs/server-admin/datasets#wms) .
-    * Lisää seuraavat asiat omaan [Asennus.xml](/docs/server-admin/deploy-install#setupxml) tiedostotiedosto (muokata sitä tietojesi avulla) :
+Katso [Lisätietoja](/docs/server-admin/datasets#wms) .
+    * Lisää seuraava [setup.xml](/docs/server-admin/deploy-install#setupxml) tiedosto (mutta muokata sitä tietoja) :
 
 ```
         <!-- drawLand specifies the default Make A Graph setting for 
@@ -3014,50 +3029,50 @@ Näytä [Lisää tietoa](/docs/server-admin/datasets#wms) .
         <wmsSampleBBox>0,-75,180,75</wmsSampleBBox>
 ```
 
-## versio 1.08{#version-108} 
- (2008-07-13) 
+## Versio 1.08{#version-108} 
+ (julkaistu 2008-07-13) 
 
-* Uusi verkkopalvelu ERDDAP™ tuottaminen Dataa XML, Apua ERDDAP™ ylläpitäjät luomalla karkean XML-luonnoksen, jota tarvitaan kuvaamaan tietoaineistoa datasets.xml 
-* Joitakin muutoksia/bug-korjauksia, jotka liittyvät verkkoverkon näkemiseen avoimena palvelimena, mukaan lukien: maailmanlaajuinen metadata on nyt merkitty "NCGLOBAL". ("Globalin" sijaan) .
-* The EDDGrid EDDTable Data Access Forms hyödyntää nyt kyselytietoja URL-osoitteessa. Esimerkiksi, jos käyttäjä siirtyy Make A Graph -lomakkeesta Data Access -lomakkeeseen, rajoitukset siirtyvät.
-*    tabledap Tehdään Graph nyt sallia rajoituksia String-muuttujat.
-* EDDTable's Make A Graph antaa NaN-rajoitteita. Kiitos Steve Hankinille.
-* Bug fix: EDDTable Säästäminen Asimage ei tunnistanut .colorbar min ja max arvoja oikein. Kiitos Steve Hankin
-* Paljon parannuksia asennukseen DatasetsXml. Kiitos Ellyn Montgomerylle.
-* Griddap-pyynnöt sallivat () -tyyli pyytää hieman akselivälin ulkopuolella. Tämä on sopivaa, koska () Arvot pyöristetään lähimpään todelliseen arvoon. Kiitos Cindy Besseylle
-* Tein FloatArray- ja DoubleArray-testin, joka on kehittyneempi. Se on aina epätäydellistä (koska testi on räätälöity jokaiseen tietoaineistoon) Mutta sen pitäisi olla parempi. Kiitos Ellyn Montgomerylle.
-* Muutin asennus.html ja setupDatasets Xml.html erddapin /download-hakemisto ja kova koodaus kaikki linkit niihin. Nyt voin tehdä muutoksia ja päivittää tiedot heti.
-* Paljon pieniä muutoksia. Muutamia pieniä korjauksia.
-*    **Asioita ERDDAP™ Järjestelmänvalvojien tulisi päivittää tätä versiota:** 
-    * Liikkuminen&lt;Lyhyt kirjoitus Html &gt; viesteistäsi.xml [Asennus.xml](/docs/server-admin/deploy-install#setupxml) tiedosto. Se määrittää tekstin, joka näkyy vasemmalla puolella ERDDAP™ Kotisivu. Lisää&lt;h1&gt; ERDDAP &lt;h1&gt; (tai jokin muu otsikko) sen huipulle. **Tai** kopioita&lt;TheShortDescriptionHtml uudessa [Asennus.xml](/docs/server-admin/deploy-install#setupxml) tiedostotiedosto (Uusi erdapContent .zip ) Asennukseen.xml.
+* Uusi verkkopalvelu ERDDAP™ , tuottaa Dataset Xml, auttaa ERDDAP™ hallinnoijat luomalla karkea luonnos XML tarvitaan kuvaamaan aineiston datasets.xml 
+* Joitakin muutoksia/vikoja korjauksia, jotka liittyvät siihen, että netcdf-jaava voi nähdä opendap-palvelimena, mukaan lukien: maailmanlaajuinen metatieto on nyt merkitty "NC\\_GLOBAL" (GLOBALin sijasta) .
+* • EDDGrid ja EDDtable Data Access Forms käyttää nyt kyselyn tietoja URL. Joten esimerkiksi, jos käyttäjä siirtyy Make A Graph -lomakkeesta Data Access -lomakkeeseen, rajoitukset siirretään nyt asianmukaisesti.
+*    tabledap 's Make A Graph nyt sallii rajoitteet String muuttujat.
+* EDDtable's Make A Graph sallii nyt Nan rajoitteet. Steve Hankinin ansiosta.
+* Vikakorjaus: EDDTable tallenna AsImage ei oikein tunnista .colorbar min ja max arvot. Steve Hankinin ansiosta.
+* Monet parannukset setupDatasetsXml. Kiitos Ellyn Montgomeryn.
+* Griddap-pyynnöt sallitaan nyt () -Tyyli pyytää hieman akselin ulkopuolella. Tämä on aiheellista, koska () - arvot pyöristetään lähimpään todelliseen arvoon. Kiitos Cindy Besseyn.
+* Tein FloatArray ja DoubleArray testi on EvenlySpaced kehittyneempi. Se on aina epätäydellinen (koska testi olisi räätälöitävä kunkin tietokokonaisuuden) Sen pitäisi olla parempi. Kiitos Ellyn Montgomeryn.
+* Muutin setup.html ja setupDatasets Xml.html erddap /lataa hakemisto ja kova koodattu kaikki linkit niihin. Nyt voin tehdä muutoksia ja päivittää asetukset tiedot välittömästi.
+* Paljon pieniä muutoksia. Pari pientä korjausta.
+*    **Asiat ERDDAP™ hallinnoijien tulisi tehdä päivittää tähän versioon:** 
+    * Siirrä&lt;Lyhyt kuvaus Html&gt; viesteistäsi.xml [setup.xml](/docs/server-admin/deploy-install#setupxml) Tiedosto. Se määrittelee tekstin, joka näkyy keskellä vasemmalla puolella ERDDAP™ Kotisivu. Lisää myös&lt;H1&gt; ERDDAP &lt;H1&gt; (tai jokin muu otsikko) Sen huipulle. **Tai,** kappale&lt;Uusi lyhytkuvausHtml&gt; [setup.xml](/docs/server-admin/deploy-install#setupxml) tiedosto (from the new erddapContent .zip ) Setup.xml.
          
 
-## versio 1.06{#version-106} 
- (2008-06-20) 
+## Versio 1.06{#version-106} 
+ (julkaistu 2008-06-20) 
 
 * Uusi tuki IOOS DIF SOS tietolähteet.
-* Paljon pieniä muutoksia. Muutamia pieniä korjauksia.
+* Paljon pieniä muutoksia. Pari pientä korjausta.
      
 
 ## Versio 1.04{#version-104} 
- (2008-06-10) 
+ (julkaistu 2008-06-10) 
 
-* Uusi Slide Sorter.
+* Uusi Slide Sorter -ominaisuus.
 * Uusi Google Gadgets -sivu ja esimerkkejä.
-* Bug korjaa EDDGrid .saveAsNc muuttuvassa mittakaavassa ja addOffsetissa.
+* Virheen korjaaminen EDDGrid .saveAsNc muuttujan kanssa mittakaava ja addOffset.
      
 
-## versio 1.02{#version-102} 
- (2008-05-26) 
+## Versio 1.02{#version-102} 
+ (julkaistu 2008-05-26) 
 
-* Uusi Uusi Uusi EDDGrid SideBySide mahdollistaa eri axisVariable s \\[ 0 \\] Lähdelähde arvoja.
-* Kaikki virtaukset ja tuulet yhdistettiin EDDGrid SideBySide Datasets.
-* Kuvapyyntöjen kuvat on nyt kiinnitetty tunniksi.
+* Uusi EDDGrid SideBySide mahdollistaa erilaisia axisVariable tilu \\[ 0 \\] lähde Arvoja.
+* Kaikki virtaukset ja tuulet yhdistettiin EDDGrid SideBySide-aineistot.
+* Kuvapyyntöjen kuvia säilytetään nyt tunnin ajan.
      
 
 ## Versio 1.00{#version-100} 
- (2008-05-06) 
+ (julkaistu 2008-05-06) 
 
-* Tee Graph-sivut ja grafiikkakomennot URL-osoitteissa.
-* Lipputiedostojen tukeminen pakottaa tietojen lataamisen uudelleen.
-* Uusi tiedostotyyppi: EDDTableFrom4DFiles (EDDTableFromFilesin ensimmäinen alaluokka) .
+* Tee Graafisen web-sivun ja grafiikan komennot URL-osoitteissa.
+* Tuki lipputiedostoille tiedoston uudelleen lataamiseksi.
+* Uusi tietokokonaisuustyyppi: EDDtableFrom4DFiles (EDDTableF-arkistojen ensimmäinen alaluokka) .

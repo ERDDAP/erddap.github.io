@@ -5,14 +5,14 @@ sidebar_position: 2
 Jak zrobić aktualizację istniejącego ERDDAP™ na serwerze
 
 ## Zmiany{#changes} 
-1. Dokonaj zmian wymienionych w [Zmiany](/changes) w sekcji zatytułowanej "Rzeczy ERDDAP™ Administratorzy muszą wiedzieć i zrobić "dla wszystkich ERDDAP™ wersje od wersji, której używasz.
+1. Dokonaj zmian wymienionych w [Zmiany](/changes) w sekcji zatytułowanej "Rzeczy ERDDAP™ Administratorzy muszą wiedzieć i zrobić "dla wszystkich ERDDAP™ wersje od wersji, której używałeś.
      
 ##  Java  {#java} 
-2. Jeśli uaktualniasz ERDDAP™ wersja 2.18 lub poniżej, musisz przejść do Java 25 (lub nowsze) i powiązanego Tomcata 10. Patrz regularnie ERDDAP™ Instrukcja montażu [ Java ](/docs/server-admin/deploy-install#java) oraz [Tomcat](/docs/server-admin/deploy-install#tomcat) . Będziesz również musiał skopiować swój _tomcat_/content/erddap katalog ze starej instalacji Tomcat do nowej instalacji Tomcat.
+2. Jeśli uaktualniasz ERDDAP™ wersja 2.18 lub poniżej, musisz przejść do Java 25 (lub nowsze) i związany z nim Tomcat 10. Patrz regularnie ERDDAP™ Instrukcja montażu [ Java ](/docs/server-admin/deploy-install#java) oraz [Kot](/docs/server-admin/deploy-install#tomcat) . Będziesz również musiał skopiować swój _tomcat_/content/erddap katalog ze starej instalacji Tomcat do nowej instalacji Tomcat.
 
 ## Pobierz{#download} 
-3. Pobierz [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) into _ tomcat _ / webapps.
-     (Wersja 2.29.0, 706,788,135 bajtów, MD5 = A5ED0DCC8D46CA27640FFEB8CE4A8560, datowany 12- 15- 2025) 
+3. Pobierz [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) into _ tomcat _ / webapps.
+     (Wersja 2.30.0, 706,939,121 bajtów, MD5 = CDC4B3D82A20B33A6623B85312F6DC21, datowany 2026- 04- 02) 
      
 ## messages.xml{#messagesxml} 
 4. 
@@ -20,7 +20,7 @@ Jak zrobić aktualizację istniejącego ERDDAP™ na serwerze
          
     * Rzadko: Jeśli uaktualniasz ERDDAP™ wersja 1.44 (lub poniżej) ,
 MUSI usunąć stary plik messages.xml:
-         _tomcat_/content/erddap Messages.xml.
+         _tomcat_/content/erddap messages.xml.
 Nowy standard messages.xml zostanie zainstalowany automatycznie (wśród plików .class poprzez erddap. wojna) .
          
     * Rzadko: Jeśli zawsze wprowadzasz zmiany do standardowego pliku messages.xml (na miejscu) ,
@@ -31,30 +31,30 @@ WEB- INF / classes / gov / noaa / pfel / erddap / util / messages.xml po erddap.
 Musisz się dowiedzieć (przez diff) jakie zmiany zostały wprowadzone w domyślnym messages.xml (które są w nowym erddap. wojna jako
 WEB- INF / classes / gov / noaa / pfel / erddap / util / messages.xml) i odpowiednio modyfikuj swój plik messages.xml.
          
-## Instalacja{#install} 
+## Instaluj{#install} 
 5. Zainstaluj nowy ERDDAP™ w języku Tomcat:
 * Nie używaj Tomcat Manager. Prędzej czy później będą problemy z pamięcią PermGen. Lepiej jest wyłączyć i uruchomić Tomcat.
 \\ * Zastąp odnośniki do _ tomcat _ below aktualnym katalogiem Tomcat na komputerze.
      
 ### Linux i Mac{#linux-and-macs} 
-1. Wyłącz Tomcat: Z linii poleceń użyj: _ tomcat _ / bin / shutdown.sh
-I użyj ps-ef | grep tombot, aby sprawdzić, czy / kiedy proces został zatrzymany. (To może zająć minutę lub dwie.) 
+1. Zamknąć Tomcat: Z linii poleceń użyj: _ tomcat _ / bin / shutdown.sh
+I użyj ps-ef | Sgrep tombot, aby sprawdzić, czy / kiedy proces został zatrzymany. (To może zająć minutę lub dwie.) 
 2. Usuń zdekompresowane ERDDAP™ instalacja: In _ tomcat _ / webapps, use
-rm-rf erddap
+rm -rf erddap
 3. Usuń stary erddap. plik wojenny: In _ tomcat _ / webapps, użyj rm erddap. wojna
-4. Skopiuj nowy erddap. plik wojenny z katalogu tymczasowego do _ tomcat _ / webapps
+4. Skopiuj nowy erddap. plik wojenny z tymczasowego katalogu do _ tomcat _ / webapps
 5. Przywróć Tomcat i ERDDAP : use _ tomcat _ / bin / startup.sh
-6. Widok ERDDAP™ w przeglądarce, aby sprawdzić, czy restart się powiódł.
+6. Widok ERDDAP™ w przeglądarce, aby sprawdzić, czy restart powiódł się.
      (Często musisz spróbować kilka razy i poczekać minutę zanim zobaczysz ERDDAP™ .)   
              
 ### Okna{#windows} 
-1. Wyłącz Tomcat: Z linii poleceń użyj: _ tomcat _\\ bin\\ shutdown.bat 
+1. Zamknąć Tomcat: Z linii poleceń użyj: _ tomcat _\\ bin\\ shutdown.bat 
 2. Usuń zdekompresowane ERDDAP™ instalacja: In _ tomcat _ / webapps, use
 del / S / Q erddap
 3. Usuń stary erddap. akta wojenne: In _ tomcat _\\ webapps, użyj del erddap. wojna
 4. Skopiuj nowy erddap. plik wojenny z katalogu tymczasowego do _ tomcat _\\ webapps
 5. Przywróć Tomcat i ERDDAP : use _ tomcat _\\ bin\\ startup.bat
-6. Widok ERDDAP™ w przeglądarce, aby sprawdzić, czy restart się powiódł.
+6. Widok ERDDAP™ w przeglądarce, aby sprawdzić, czy restart powiódł się.
      (Często musisz spróbować kilka razy i poczekać minutę zanim zobaczysz ERDDAP™ .) 
 
-Aktualizacja problemów ERDDAP ? Zobacz [rozdział dotyczący uzyskania dodatkowego wsparcia](/docs/intro#support) .
+Aktualizacja problemów ERDDAP ? Zobacz nasze [rozdział dotyczący uzyskania dodatkowego wsparcia](/docs/intro#support) .

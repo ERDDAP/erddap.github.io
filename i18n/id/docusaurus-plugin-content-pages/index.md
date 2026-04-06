@@ -1,196 +1,196 @@
 ---
 title: "ERDDAP™ Documentation"
 ---
-## Sitemap ERDDAP™ Sitemap{#latest-erddap-version} 
+## Terbaru ERDDAP™ versi{#latest-erddap-version} 
 
-2.29.0, lihat [perubahan dokumentasi](/changes#version-2290) Login [Unduh](https://github.com/ERDDAP/erddap/releases/tag/v2.29.0) Sitemap
+2.30.0, lihat [perubahan dokumentasi](/changes#version-2300) dan [unduh](https://github.com/ERDDAP/erddap/releases/tag/v2.30.0) .
 
-##  ERDDAP™ Sitemap{#erddap-information} 
+##  ERDDAP™ informasi{#erddap-information} 
 
- ERDDAP™ adalah server data ilmiah yang memberi pengguna cara sederhana, konsisten untuk mengunduh subset
-dataset ilmiah gridded dan tabular dalam format file umum dan membuat grafik dan peta.
- ERDDAP™ Gratis dan Open Source (Apache dan Apache-seperti)   Java Login NOAA   NMFS   SWFSC Divisi Penelitian Lingkungan ( ERD ) Sitemap
+ ERDDAP™ adalah sebuah server data ilmiah yang memberikan pengguna cara sederhana, konsisten untuk mengunduh subset dari
+gridded dan tabular data ilmiah dalam format berkas umum dan membuat grafik dan peta.
+ ERDDAP™ adalah Free and Open Source (Apache dan Apache-seperti)   Java Hamba dari NOAA   NMFS   SWFSC Divisi Penelitian Lingkungan ( ERD ) .
 
-* Untuk melihat / menggunakan ERDDAP™ instalasi: [https://coastwatch.pfeg.noaa.gov/erddap/index.html](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 
-* Untuk memulai dengan membaca instalasi [panduan pemasangan](/docs/server-admin/deploy-install) Sitemap
-* Untuk berkontribusi kode melihat [panduan programmer](/docs/contributing/programmer-guide) Sitemap
-
-
-Di bawah ini Anda akan menemukan tautan yang relevan untuk mengajukan pertanyaan dan cara berkontribusi.
-* Tinjau percakapan dan mengajukan pertanyaan di [https://groups.google.com/g/erddap](https://groups.google.com/g/erddap) atau di [https://github.com/erddap/erddap/discussions](https://github.com/erddap/erddap/discussions) 
-* Tinjau dan kirimkan masalah untuk [https://github.com/erddap/erddap/issues](https://github.com/erddap/erddap/issues) 
-* Untuk mengusulkan permintaan fitur, ikuti panduan ini: [ ERDDAP Diskusi #93 (Sitemap) ](https://github.com/ERDDAP/erddap/discussions/93#discussion-4920427) 
+* Untuk melihat / menggunakan ERDDAP™ instalasi: [ https://coastwatch.pfeg.noaa.gov/erddap/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/index.html) 
+* Untuk memulai dengan pembacaan instalasi [the outset install guide](/docs/server-admin/deploy-install) .
+* Untuk berkontribusi kode melihat [Panduan programmer](/docs/contributing/programmer-guide) .
 
 
-## Cari Beberapa ERDDAP™ Login
-Ada dua cara untuk mencari beberapa ERDDAP™ s untuk dataset: [Cari Beberapa ERDDAP™ Login](/SearchMultipleERDDAPs.html) Login [ ERDDAP™ Database](http://erddap.com/) Sitemap
+Di bawah Anda akan menemukan link yang relevan untuk mengajukan pertanyaan dan bagaimana berkontribusi.
+* Ulasan percakapan dan mengajukan pertanyaan di [ https://groups.google.com/g/erddap ](https://groups.google.com/g/erddap) atau pada [ https://github.com/erddap/erddap/discussions ](https://github.com/erddap/erddap/discussions) 
+* Ulasan dan mengirimkan masalah ke [ https://github.com/erddap/erddap/issues ](https://github.com/erddap/erddap/issues) 
+* Untuk mengajukan permintaan fitur, ikuti bimbingan ini: [ ERDDAP Diskusi # 93 (komentar) ](https://github.com/ERDDAP/erddap/discussions/93#discussion-4920427) 
 
 
-## Tetapkan Sendiri ERDDAP™  {#set-up-your-own-erddap} 
+## Cari Beberapa ERDDAP™ s
+Ada dua cara untuk mencari banyak ERDDAP™ s untuk dataset: [Cari Beberapa ERDDAP™ s](/SearchMultipleERDDAPs.html) dan [ ERDDAP™ Dataset Discovery](http://erddap.com/) .
 
- ERDDAP™ Sitemap [Sumber Bebas dan Terbuka](https://en.wikipedia.org/wiki/Free_and_open-source_software) Sitemap Java   (Login) , aplikasi web yang berjalan di server aplikasi web (misalnya, Tomcat (Sitemap) , atau Jetty (itu bekerja, tapi kita tidak mendukung Meme it) ) Sitemap Halaman web ini sebagian besar untuk orang (Sitemap ERDDAP™ Login) yang ingin mengatur mereka sendiri Meme it ERDDAP™ instalasi di situs web mereka sendiri.
 
-Untuk memulai dengan membaca instalasi [panduan pemasangan](/docs/server-admin/deploy-install) Sitemap
+## Set Up Your Own ERDDAP™  {#set-up-your-own-erddap} 
 
-### Sitemap ERDDAP™ mendistribusikan data Anda?{#why-use-erddap-to-distribute-your-data} 
+ ERDDAP™ adalah [Sumber Terbuka dan Bebas](https://en.wikipedia.org/wiki/Free_and_open-source_software) , semua- Java   (serlet) , aplikasi web yang berjalan dalam server aplikasi web (misalnya, Tomcat (disarankan) , atau Jetty (Ini berhasil, tapi kami tidak mendukungnya) ) . Halaman web ini sebagian besar untuk orang (" ERDDAP™ administrator ") yang ingin mengatur sendiri ERDDAP™ instalasi di website mereka sendiri.
 
-Karena upaya kecil untuk mengatur ERDDAP™ membawa banyak manfaat.
+Untuk memulai dengan pembacaan instalasi [the outset install guide](/docs/server-admin/deploy-install) .
+
+### Mengapa menggunakan ERDDAP™ untuk mendistribusikan datamu?{#why-use-erddap-to-distribute-your-data} 
+
+Karena usaha kecil untuk mengatur ERDDAP™ membawa banyak keuntungan.
 
 * Jika Anda sudah memiliki layanan web untuk mendistribusikan data Anda,
-Anda dapat mengatur ERDDAP™ mengakses data Anda melalui layanan yang ada.
-Atau, Anda dapat mengatur ERDDAP™ mengakses data Anda langsung dari file lokal.
-* Untuk setiap dataset, Anda hanya perlu menulis chunk kecil XML untuk memberitahu ERDDAP™ Bagaimana cara mengakses dataset.
-* Setelah Anda memiliki ERDDAP™ melayani data, pengguna akhir dapat:
-    * Meminta data dengan berbagai cara ( DAP Login WMS dan banyak lagi di masa depan) Sitemap
-    * Dapatkan respons data dalam berbagai format file. (Itu mungkin alasan terbesar&#33;) 
-    * Membuat grafik dan peta. (Semua orang suka gambar yang cantik.) 
-    * Membangun hal-hal yang berguna dan menarik lainnya di atas ERDDAP 's web service -- melihat Meme it [ Awesome ERDDAP Login](https://github.com/IrishMarineInstitute/awesome-erddap) daftar mengagumkan ERDDAP - proyek terkait.
+Anda dapat mengatur ERDDAP™ untuk mengakses data Anda melalui layanan yang ada.
+Atau, Anda dapat mengatur ERDDAP™ untuk mengakses data Anda langsung dari berkas lokal.
+* Untuk setiap data, Anda hanya perlu menulis sepotong kecil XML untuk memberitahu ERDDAP™ bagaimana mengakses data.
+* Setelah Anda memiliki ERDDAP™ melayani data Anda, akhir pengguna dapat:
+    * Meminta data dalam berbagai cara ( DAP , WMS , dan lebih di masa depan) .
+    * Dapatkan balasan data dalam berbagai format berkas. (Itu mungkin alasan terbesar&#33;) 
+    * Membuat grafik dan peta. (Semua orang suka gambar cantik.) 
+    * Bangun hal-hal berguna dan menarik lainnya di atas ERDDAP layanan web - melihat [ Awesome ERDDAP ♪](https://github.com/IrishMarineInstitute/awesome-erddap) daftar mengagumkan ERDDAP - Proyek terkait.
 
-Kamu bisa [Login](/docs/server-admin/deploy-install#customize) Login ERDDAP 's penampilan sehingga ERDDAP™ mencerminkan organisasi Anda dan cocok dengan sisa situs web Anda.
+Anda dapat [disesuaikan](/docs/server-admin/deploy-install#customize) Anda ERDDAP penampilan jadi ERDDAP™ mencerminkan organisasi Anda dan cocok dengan seluruh website Anda.
 
-## Apakah prosedur instalasi keras? Bisakah saya melakukannya?{#is-the-installation-procedure-hard-can-i-do-it} 
+## Apakah prosedur instalasi sulit? Dapatkah saya melakukannya?{#is-the-installation-procedure-hard-can-i-do-it} 
 
-Instalasi awal memakan waktu beberapa waktu, tetapi tidak terlalu keras. Anda bisa melakukannya. Jika Anda terjebak, email saya di Meme it erd dot data at noaa dot gov Sitemap Saya akan membantu Anda.
-Atau, Anda dapat bergabung dengan [ ERDDAP™ Daftar Google Group / Mailing](https://groups.google.com/g/erddap) dan posting pertanyaan Anda di sana. Meme it
+Instalasi awal butuh waktu, tapi tidak terlalu sulit. Kau bisa melakukannya. Jika Anda terjebak, email saya di erd dot data at noaa dot gov . Aku akan membantumu.
+Atau, Anda dapat bergabung dengan [ ERDDAP™ Daftar Grup Google / Mailing](https://groups.google.com/g/erddap) dan posting pertanyaan Anda di sana.
 
-## Siapa yang Menggunakan ERDDAP™  {#who-uses-erddap} 
+## Siapa Uses ERDDAP™  {#who-uses-erddap} 
 
- ERDDAP™ telah diinstal oleh sekitar 100 organisasi setidaknya 17 negara
+ ERDDAP™ telah dipasang oleh sekitar 100 organisasi di setidaknya 17 negara
 
- (Australia, Belgia, Kanada, Cina, Prancis, India, Irlandia, Italia, Selandia Baru, Rusia, Afrika Selatan, Spanyol, Sri Lanka, Thailand, Inggris, Amerika Serikat) termasuk:
+ (Australia, Belgia, Kanada, Cina, Perancis, India, Irlandia, Italia, Selandia Baru, Rusia, Afrika Selatan, Spanyol, Sri Lanka, Swedia, Thailand, Inggris, Amerika Serikat) , termasuk:
 
-*    [Login](https://apdrc.soest.hawaii.edu/erddap/index.html)   (Pusat Penelitian Data-Pasifik Asia-Pasifik, Pusat Penelitian Pasifik Internasional) di University of Hawaii (Login)  
-*    [BCO-DMO](https://erddap.bco-dmo.org/erddap/index.html)   (Biologis dan Kimia Oceanografi Kantor Manajemen Data di Woods Hole Oceanographic Login)  
-*    [Login ERDDAP™ ](https://canwinerddap.ad.umanitoba.ca/erddap/index.html)   (Jaringan Informasi Watershed Kanada) di Pusat Ilmu Pengawasan Bumi (Login) Universitas Manitoba
-*    [Login](https://erddap.cdip.ucsd.edu/erddap/index.html)   (Program Informasi Data Coastal di UCSD)  
-*    [Sitemap](https://data.iadc.cnr.it/erddap/index.html)   (Dewan Penelitian Nasional Italia, Institut Ilmu Polar)  
-* Login (Organisasi Penelitian Ilmiah dan Industri Australia dan Sistem Pengawasan Laut Terpadu) 
-*    [Login ( NOAA Login) ](https://pub-data.diver.orr.noaa.gov/erddap/index.html)   ( NOAA Kantor Tanggapan dan Restorasi)  
-*    [Fisika EMODnet](https://erddap.emodnet-physics.eu/erddap/index.html)   (Pengamatan Laut Eropa dan Jaringan Data - Fisika)  
-*    [Login](https://erddap.griidc.org/erddap/index.html)   (Gulf of Mexico Research Database)  
-*    [Institut Hakai](https://catalogue.hakai.org/erddap/index.html)   (Hakai Institute di Pantai Tengah British Columbia, Kanada) 
-*    [Layanan Teknologi Sekolah Tinggi](https://myhsts.org) , yang menawarkan coding dan pelatihan teknologi untuk siswa dan orang dewasa
-*    [Login](https://erddap.ichec.ie/erddap/index.html)   (Pusat Irlandia untuk Komputasi High-End) 
-*    [Login NCO Login](https://erddap.incois.gov.in/erddap/index.html)   (Pusat Nasional India untuk Layanan Informasi Laut)  
-* Login (Institut de recherche tuangkan le Développement, Prancis)   
-Login (Pusat Nasional de la Recherche Scientifique, Prancis)   
-Login (Université Pierre et Marie CURIE, Paris, Login)   
-Login (Université Cheikh Anta Diop de Dakar, Sénégal)   
-Login (Université Gaston Berger -- Saint-Louis du Sénégal)   
-Login (Login HOUPHOUVIDEOT-BOIGNY)   
-Login (Institut Pierre Simon Laplace de l'environnement, Paris, Login)   
-Login (Sitemap _ Laboratoire «Etude du Climat en Afrique de l'Ouest et de ses Interaksi avec l'Environnement Régional, et appui aux layanan klimatiques») 
-* Login (Komisi Eropa - Pusat Penelitian Bersama, Uni Eropa) 
-*    [Institut Laut](https://erddap.marine.ie/erddap/index.html)   (Login)  
-* Instrumen Laut S.A. (Login) 
-* Login (Infrastruktur Komputasi Nasional Australia) 
-*    [ NOAA Login](https://coastwatch.noaa.gov/erddap/index.html)   (Login)  
-*    [ NOAA Login](https://cwcgom.aoml.noaa.gov/erddap/index.html)   (Karibia/Gulf dari Meksiko Node)  
-*    [ NOAA Login](https://coastwatch.glerl.noaa.gov/erddap/index.html)   (Node Danau Besar)  
-*    [ NOAA CoastWatch Pantai Barat](https://coastwatch.pfeg.noaa.gov/erddap/index.html) yang dialokasikan dengan dan bekerja dengan
-     [ NOAA   ERD ](https://coastwatch.pfeg.noaa.gov/erddap/index.html)   (Divisi Penelitian Lingkungan SWFSC Login NMFS ) 
-*    [ NOAA Sensor IOOS](https://erddap.sensors.ioos.us/erddap/index.html)   (Sistem Pengamatan Samudra Terpadu)  
-*    [ NOAA Login NCO Login](https://erddap.axiomdatascience.com/erddap/index.html)   (Sistem Pengamatan Laut California Tengah dan Utara, dijalankan oleh Ilmu Data Axiom)  
-*    [ NOAA IOOS GCOOS Amos dan Data Oceanografi: Sistem Pengawet](https://erddap.gcoos.org/erddap/index.html)   
-     [ NOAA IOOS GCOOS Amos dan Data Oceanografi: Koleksi Sejarah](https://gcoos5.geos.tamu.edu/erddap/index.html)   
-     [ NOAA IOOS GCOOS Biologis dan Socioekonomi](https://gcoos4.tamu.edu/erddap/index.html)   (Gulf Coast Ocean Sistem Pengawetan) 
-*    [ NOAA Login](http://www.neracoos.org/erddap/index.html)   (Asosiasi Daerah Northeastern Sistem Pengawetan Coastal dan Ocean)  
-*    [ NOAA Login](https://data.ioos.us/gliders/erddap/index.html)   (Glider Nasional Pusat Perakitan Data)  
-*    NOAA IOOS NANOOS (Asosiasi barat laut dari Sistem Pengamatan Laut Jaringan) 
-*    [ NOAA Login](https://pae-paha.pacioos.hawaii.edu/erddap/index.html)   (Sistem Pengamatan Laut Kepulauan Pasifik) di University of Hawaii (Login)  
-*    NOAA Login (Sistem Pengamatan Samudra California Selatan) 
-*    [ NOAA IOOS SECOORA](https://erddap.secoora.org/erddap/index.html)   (Asosiasi Daerah Pengamatan Laut Pantai Tenggara)  
-*    [ NOAA Login](https://www.ncei.noaa.gov/erddap/index.html)   (Pusat Nasional Informasi Lingkungan)    
-*    NOAA Login (Geofisika Nasional Pusat Data, Fisika matahari -- Terrestrial) 
-*    NOAA   NMFS Login (Pusat Ilmu Perikanan Timur Laut) 
-*    [ NOAA Sitemap](https://opendap.co-ops.nos.noaa.gov/erddap/index.html)   (Pusat Produk dan Layanan Oceanografi Operasional)  
-*    [ NOAA Login](http://osmc.noaa.gov/erddap/index.html)   (Pusat Pemantauan Sistem Pengawasan)  
-*    [ NOAA Login](https://oceanwatch.pifsc.noaa.gov/erddap/index.html)   (Pusat Ilmu Perikanan Kepulauan Pasifik)  
-*    [ NOAA Login](https://data.pmel.noaa.gov/pmel/erddap/index.html) 
-*    [ NOAA Login](https://polarwatch.noaa.gov/erddap/index.html) 
-*    [ NOAA Login](https://upwell.pfeg.noaa.gov/erddap/index.html)   (Sitemap)  
-*    [Jaringan Laut Kanada](http://dap.onc.uvic.ca/erddap/index.html)  
-*    [Jaringan Pelacakan Laut](https://members.oceantrack.org/erddap/index.html)  
-*    [OOI](https://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/index.html)   (Ocean Observatories)   
-Database
+*    [APDRC](https://apdrc.soest.hawaii.edu/erddap/index.html)   (Asia- Pacific Data-Research Center, International Pacific Research Center) di Universitas Hawaii (UH)  
+*    [BCO- DMO di wHOI](https://erddap.bco-dmo.org/erddap/index.html)   (Biologi dan Kimia Oceanografi Kantor Manajemen Data di Woods Hole Oceanographic Institusi)  
+*    [CanWIN ERDDAP™ ](https://canwinerddap.ad.umanitoba.ca/erddap/index.html)   (Jaringan Informasi Air Terang Kanada) di Pusat Ilmu Pengamatan Bumi (CEOS) , Universitas Manitoba
+*    [CDIP](https://erddap.cdip.ucsd.edu/erddap/index.html)   (Program Informasi Data Coastal di UCSD)  
+*    [CNR-ISP](https://data.iadc.cnr.it/erddap/index.html)   (Dewan Penelitian Nasional Italia, Institut Ilmu Polar)  
+* CSIRO dan IMOS (Australia Commonwealth Scientific and industrial Research Organisation and the Integrated Marine Observing System) 
+*    [DIVER ( NOAA ORR) ](https://pub-data.diver.orr.noaa.gov/erddap/index.html)   ( NOAA Kantor Respon dan Restorasi)  
+*    [Fisika Emodnet](https://erddap.emodnet-physics.eu/erddap/index.html)   (Pengamatan Laut Eropa dan Jaringan Data -- Fisika)  
+*    [GoMRI](https://erddap.griidc.org/erddap/index.html)   (Teluk Mexico Research Initiative)  
+*    [Institut Hakai](https://catalogue.hakai.org/erddap/index.html)   (Institut Hakai di Pantai Tengah British Columbia, Kanada) 
+*    [Layanan Teknologi SMA](https://myhsts.org) , yang menawarkan coding dan pelatihan teknologi untuk siswa dan orang dewasa
+*    [ICHEC](https://erddap.ichec.ie/erddap/index.html)   (Pusat Irlandia untuk High- End Computing) 
+*    [Aku... NCO IS](https://erddap.incois.gov.in/erddap/index.html)   (Pusat Nasional India untuk Layanan Informasi Samudera)  
+* IRD (Instaut de Recherche pour le Dévelopement, France)   
+CNRS (Pusat Nasional de la Recherche Scientifique, Perancis)   
+UMPC (Universté Pierre et Marie Curtis, Paris, Perancis)   
+UCAD (Universté Cheikh Anta Diop de Dakar, Sénégal)   
+UGB (Université Gaston Berger -- Saint--Louis du Sénégal)   
+UFHB (Universté Félix HOUPHOUTE T- BOIGNY, Abidjan, Côte d 'Ivoire)   
+IPSL (Invitut Pierre Simon Laplace des sciences de l 'envirenment, Paris, Perancis)   
+LMI ECLAIRS (Laboratoire Mixte International "Etide du Climat en Afrique de l 'Ouest et de ses Interactions avec l' Environment Régional, et appui aux service climatiques") 
+* JRC (Komisi Eropa - Pusat Penelitian Gabungan, Uni Eropa) 
+*    [Institut Marinir](https://erddap.marine.ie/erddap/index.html)   (Irlandia)  
+* Instrumen Marinir S.A. (Spanyol) 
+* NCI (Infrastruktur Komputer Nasional Australia) 
+*    [ NOAA CoastWatch](https://coastwatch.noaa.gov/erddap/index.html)   (tengah)  
+*    [ NOAA CoastWatch CGOM](https://cwcgom.aoml.noaa.gov/erddap/index.html)   (Karibia / Teluk Meksiko Node)  
+*    [ NOAA CoastWatch GLERL](https://coastwatch.glerl.noaa.gov/erddap/index.html)   (Great Lakes Node)  
+*    [ NOAA Pantai Barat CoastWatch](https://coastwatch.pfeg.noaa.gov/erddap/index.html) yang co-located dengan dan bekerja dengan
+     [ NOAA   ERD ](https://coastwatch.pfeg.noaa.gov/erddap/index.html)   (Divisi Penelitian Lingkungan SWFSC dari NMFS ) 
+*    [ NOAA Loos Sensor](https://erddap.sensors.ioos.us/erddap/index.html)   (Sistem Pengamatan Samudera Terpadu)  
+*    [ NOAA IOOS Ce NCO OS](https://erddap.axiomdatascience.com/erddap/index.html)   (Sistem Pengamatan Samudera Tengah dan Utara California, dijalankan oleh Ilmu Data Axiom)  
+*    [ NOAA IOOS GCOOS Atmospheric and Oceanographic Data: Sistem Pengamatan](https://erddap.gcoos.org/erddap/index.html)   
+     [ NOAA IOOS Atmosfer GCOOS dan Data Oceanographic: Koleksi Sejarah](https://gcoos5.geos.tamu.edu/erddap/index.html)   
+     [ NOAA IOOS GCOOS Biologi dan Sosioekonomi](https://gcoos4.tamu.edu/erddap/index.html)   (Sistem Pengamatan Laut Teluk) 
+*    [ NOAA LOOS NERACOOS](http://www.neracoos.org/erddap/index.html)   (Northeastern Regional Association of Coastal and Ocean Observing Systems)  
+*    [ NOAA LOOS NGDAC](https://data.ioos.us/gliders/erddap/index.html)   (Glider Nasional Pusat Majelis Data)  
+*    NOAA Tidak&#33; (Northwest Association of Networks Ocean Observing Systems) 
+*    [ NOAA LOOS PANGGUS](https://pae-paha.pacioos.hawaii.edu/erddap/index.html)   (Sistem Pengamatan Samudera Kepulauan Pasifik) di Universitas Hawaii (UH)  
+*    NOAA LOOS SCCOOS (Southern California Coastal Ocean Mengamati Sistem) 
+*    [ NOAA LOOS SECOORA](https://erddap.secoora.org/erddap/index.html)   (Southeast Coastal Ocean Observing Regional Association)  
+*    [ NOAA NCEI](https://www.ncei.noaa.gov/erddap/index.html)   (Pusat Nasional untuk Informasi Lingkungan)    
+*    NOAA STP NGDC (Geophical Nasional Pusat Data, Solar -- Fisika Bumi) 
+*    NOAA   NMFS NEFSC (Pusat Ilmu Perikanan Timur Laut) 
+*    [ NOAA NOS CO-OPS](https://opendap.co-ops.nos.noaa.gov/erddap/index.html)   (Pusat untuk Operasional Oceanographic Products and Services)  
+*    [ NOAA OSMC](http://osmc.noaa.gov/erddap/index.html)   (Pusat Pemantauan Sistem Pengamatan)  
+*    [ NOAA PIFSC](https://oceanwatch.pifsc.noaa.gov/erddap/index.html)   (Pusat Ilmu Perikanan Kepulauan Pasifik)  
+*    [ NOAA PMEL](https://data.pmel.noaa.gov/pmel/erddap/index.html) 
+*    [ NOAA PolarWatch](https://polarwatch.noaa.gov/erddap/index.html) 
+*    [ NOAA UAF](https://upwell.pfeg.noaa.gov/erddap/index.html)   (Framework Akses Terunified)  
+*    [Ocean Networks Canada](http://dap.onc.uvic.ca/erddap/index.html)  
+*    [Jaringan Pelacakan Lautan](https://members.oceantrack.org/erddap/index.html)  
+*    [OOI / Semua Data](https://erddap-goldcopy.dataexplorer.oceanobservatories.org/erddap/index.html)   (Inisiatif Pengamatan Samudera)   
+OOI / Data Uncabled
 * Princeton, Grup Penelitian Hidrometeorologi
-* R.Tech Teknik
-*    [Universitas Rutgers, Departemen Ilmu Laut dan Pantai](https://tds.marine.rutgers.edu/erddap/index.html)   
+* R.Tech Engineering, Perancis
+*    [Universitas Rutgers, Departemen Ilmu Kelautan dan Kelautan](https://tds.marine.rutgers.edu/erddap/index.html)   
 * Institut Estuary San Francisco
-*    [Scripps Lembaga Oceanografi, Semprot Gliders Bawah Air](https://spraydata.ucsd.edu/erddap/index.html)  
-*    [Login](https://www.smartatlantic.ca/erddap/index.html) Universitas Memorial Newfoundland
-* Jaringan Pengawasan Lingkungan Afrika Selatan
-* Teknologi Spyglass
-* Universitas Stanford, Stasiun Laut Hopkins
-*    [IODE UNESCO](https://erddap.oa.iode.org/erddap/index.html)   (Oceanografi Internasional dan Informasi Database)  
-*    [Universitas British Columbia, Bumi, Laut & Atmosfer Departemen Ilmu](https://salishsea.eos.ubc.ca/erddap/index.html)  
-*    [University of California di Davis, Laboratorium Laut Bodega](http://bmlsc.ucdavis.edu:8080/erddap/index.html)  
-*    [Universitas Delaware, Stasiun Penerima Satelit](https://basin.ceoe.udel.edu/erddap/index.html)  
+*    [Scripps Institution of Oceanography, Spray Underwater Gliders](https://spraydata.ucsd.edu/erddap/index.html)  
+*    [Smart Atlantic](https://www.smartatlantic.ca/erddap/index.html) Memorial University of Newfoundland
+* Jaringan Pengamatan Lingkungan Afrika Selatan
+* Technologies Spyglass
+* Stanford University, Hopkins Marine Station
+*    [UNESCO IODE](https://erddap.oa.iode.org/erddap/index.html)   (International Oceanographic and Information Pertukaran Data)  
+*    [University of British Columbia, Earth, Ocean & Atmospheric Departemen Sains](https://salishsea.eos.ubc.ca/erddap/index.html)  
+*    [Universitas California di Davis, Laboratorium Laut Bodega](http://bmlsc.ucdavis.edu:8080/erddap/index.html)  
+*    [University of Delaware, Stasiun Penerimaan Satelit](https://basin.ceoe.udel.edu/erddap/index.html)  
 * Universitas Washington, Laboratorium Fisika Terapan
-*    [Sitemap](https://geoport.usgs.esipfed.org/erddap/index.html)   (Program Geologi Pantai dan Laut)  
-*    [Login](https://erddap.observations.voiceoftheocean.org/erddap/index.html)   (Suara Samudra, Swedia)  
+*    [USGS CMGP](https://geoport.usgs.esipfed.org/erddap/index.html)   (Coastal dan Marine Geology Program)  
+*    [VOTO](https://erddap.observations.voiceoftheocean.org/erddap/index.html)   (Suara Samudera, Swedia)  
 
-Ini adalah daftar hanya beberapa organisasi di mana Meme it ERDDAP™ telah diinstal oleh beberapa individu atau beberapa kelompok. Tidak menyiratkan bahwa individu, kelompok, atau organisasi merekomendasikan atau mendukung ERDDAP Sitemap
+Ini adalah daftar hanya beberapa organisasi di mana ERDDAP™ telah diinstal oleh beberapa individu atau beberapa kelompok. Ini tidak berarti bahwa individu, kelompok, atau organisasi merekomendasikan atau mendukung ERDDAP .
 
-###  ERDDAP™ direkomendasikan dalam NOAA dan CNRS{#erddap-is-recommended-within-noaa-and-cnrs} 
- [ NOAA 's Akses Data Procedural Directive](https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendations#Software_implementations) Sitemap ERDDAP™ dalam daftar server data yang disarankan untuk digunakan oleh kelompok dalam NOAA Sitemap ERDDAP™ disarankan untuk disebutkan di bagian 4.2.3 dari
-[Guide de bonnes pratiques sur la gestion des données de la recherche
- (Database Panduan Praktik Terbaik) Sitemap (https://mi-gt-donnees.pages.math.unistra.fr/guide/04-traiter.html#deposer-et-structurer-dans-des-plateformes-de-gestion-de-donnees-locales) Pusat Nasional de la Recherche Scientifique (Login) di Prancis.
+###  ERDDAP™ disarankan dalam NOAA dan CNRS{#erddap-is-recommended-within-noaa-and-cnrs} 
+ [ NOAA 's Data Access Procedural Direktif](https://www.ngdc.noaa.gov/wiki/index.php/Data_Access_Technical_Recommendations#Software_implementations) termasuk ERDDAP™ dalam daftar server data yang direkomendasikan untuk digunakan oleh grup dalam NOAA . ERDDAP™ dapat disebutkan dalam bagian 4.2.3 dari
+[Panduan de bonnes pratiques sur la traffic des données de la recherche
+ (Manajemen Data Penelitian Panduan Praktek Terbaik) ] ( https://mi-gt-donnees.pages.math.unistra.fr/guide/04-traiter.html#deposer-et-structurer-dans-des-plateformes-de-gestion-de-donnees-locales ) Dari Pusat Nasional de la Recherche Scientifique (CNRS) di Perancis.
 
-## Pertunjukan Slide{#slide-shows} 
+## Slide Tampilkan{#slide-shows} 
 
-Berikut adalah beberapa PowerPoint slide menunjukkan dan dokumen yang Bob Simons telah menciptakan terkait ERDDAP Sitemap
+Berikut adalah beberapa tampilan slide PowerPoint dan dokumen yang dibuat Bob Simons terkait dengan ERDDAP .
 
- **DISCLAIMER: Konten dan pendapat yang dinyatakan dalam dokumen ini adalah pendapat pribadi Bob Simons dan tidak selalu mencerminkan posisi Pemerintah atau National Oceanic and Atmospheric Administration Sitemap** 
+ **DICLAIMER: Isi dan pendapat yang diungkapkan dalam dokumen ini adalah pendapat pribadi Bob Simons dan tidak selalu mencerminkan posisi apapun dari Pemerintah atau National Oceanic and Atmospheric Administration .** 
 
 Empat Dokumen Utama:
 
-*    [Pengenalan utama untuk ERDDAP™   (versi 5) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/erddapTalk5.pptx) Sitemap
-Kamu juga bisa [menonton video ini Bob memberikan pembicaraan ini![Login](/img/youtube.png)](https://www.youtube.com/watch?v=H541G1XXZrU&t=4) Sitemap
-*    [Deskripsi Satu Halaman ERDDAP™   (.pdf) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ERDDAP_OnePage.pdf) 
-*    [ ERDDAP : Beban Berat, Grid, Cluster, Federasi, dan Komputasi Cloud](/docs/server-admin/scaling) 
-*    [Panduan Bob untuk Sistem Distribusi Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/erdData.html) 
+*    [Perkenalan utama dengan ERDDAP™   (versi 5) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/erddapTalk5.pptx) .
+Kau juga bisa. [menonton video Bob memberikan pembicaraan ini![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=H541G1XXZrU&t=4) .
+*    [Keterangan Satu Halaman ERDDAP™   (.pdf) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ERDDAP_OnePage.pdf) 
+*    [ ERDDAP : Heavy Loads, Grids, Clusters, Federation, and Cloud Computing](/docs/server-admin/scaling) 
+*    [Buku Panduan Bob untuk Sistem Distribusi Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/erdData.html) 
 
-Presentasi lain:
+Presentasi Lain:
 
-*    [2020 EDM: Fitur Baru di ERDDAP™ di.10](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapFeatures2.10.pptx) 
-*    [2020-05-19 DMIT: Database](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapDataIngest.pptx)   (Sitemap [menonton video ini Bob memberikan pembicaraan ini](https://www.youtube.com/watch?v=9ArYxgwON2k) Sitemap) 
-*    [2019 IOOS DMAC: Fitur Baru di ERDDAP™ g](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/Erddapv2Features.pptx) 
-*    [Sitemap Musim panas ESIP: Subsetting Dalam ERDDAP™ ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsErddapSubset2018.pptx) 
-*    [Sitemap Musim panas ESIP: JSON Dukungan Dalam ERDDAP™ ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsErddapJson2018.pptx) 
-*    [2018 EDM: Sistem Distribusi Layanan Web (Lebih cepat, Lebih Mudah, Kurang Mahal)   (Atau, mengapa saya senang 4 tahun lalu.) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/10P.04_Simons_DistributedWebServices2018.pptx) 
-*    [2018 EDM: ERDDAP™ di 2018](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/7A4_Simons_ErddapSession2018.pptx) 
-*    [2018 EDM: Fitur Baru di ERDDAP™ untuk Gambar, Audio, dan Data Video](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/4D4_Simons_ErddapMediaFiles2018.pptx) 
+*    [2020 EDM: Fitur baru di ERDDAP™ v2.10](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapFeatures2.10.pptx) 
+*    [202005-19 DMIT: Data Ingest](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapDataIngest.pptx)   (Atau [menonton video Bob memberikan pembicaraan ini](https://www.youtube.com/watch?v=9ArYxgwON2k) .) 
+*    [2019 LOOS DMAC: Fitur baru di ERDDAP™ v2.0](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/Erddapv2Features.pptx) 
+*    [2018 Musim panas ESIP: subsetting Masuk ERDDAP™ ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsErddapSubset2018.pptx) 
+*    [2018 JSON Dukung Masuk ERDDAP™ ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsErddapJson2018.pptx) 
+*    [2018 EDM: Sebuah Sistem Distributed dari Layanan Web (Lebih cepat, lebih mudah, lebih murah.)   (Atau, mengapa aku bahagia 4 tahun yang lalu.) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/10P.04_Simons_DistributedWebServices2018.pptx) 
+*    [2018 EDM: ERDDAP™ pada 2018](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/7A4_Simons_ErddapSession2018.pptx) 
+*    [2018 EDM: Fitur baru di ERDDAP™ untuk Gambar, Audio, dan Data Video](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/4D4_Simons_ErddapMediaFiles2018.pptx) 
 *    [2018 EDM: UAF dan ERDDAP™ Solusi untuk Integrasi Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/3D3_Simons_DataIntegration2018.pptx) 
-*    [2017 EDM: Pengantar Cepat untuk ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapIntro.pptx) 
-*    [2017 EDM dan 2017 IOOS: Baru atau Little Known ERDDAP™ Sitemap (Pengguna) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapUserFeatures2017.pptx) 
-*    [2017 EDM dan 2017 IOOS: Baru atau Little Known ERDDAP™ Sitemap (untuk Administrator) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapAdminFeatures2017.pptx) 
+*    [2017 EDM: Perkenalan Cepat ke ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapIntro.pptx) 
+*    [2017 EDM and 2017 LOOS: Baru atau Sedikit Dikenal ERDDAP™ Fitur (bagi Pengguna) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapUserFeatures2017.pptx) 
+*    [2017 EDM and 2017 LOOS: Baru atau Sedikit Dikenal ERDDAP™ Fitur (bagi Administrator) ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/ErddapAdminFeatures2017.pptx) 
 *    [2017 EDM: EML, KNB, dan ERDDAP ](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/eml_knb_erddap.pptx) 
-*    [Sitemap Login Bagaimana data dari sumber pengguna akhir? Sekolah Tua versus Sekolah Baru](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/OldSchoolNewSchool.pptx) 
-*    [Sitemap Summer ESIP: Gambar Besar: PARR, OPeNDAP Login ERDDAP™ , dan Distribusi Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TheBigPicture.pptx) 
-*    [2016 EDM: Satu Dan Done](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/OneAndDone.pptx) 
-*    [Sitemap Gov API: Generasi Selanjutnya Database](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/NextGeneration.pptx) 
-*    [Sitemap Facebook Twitter Google Plus Pinterest Email](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TabularAggregation.pptx) 
-*    [2014 EDM: Bob's Do's dan Jangan untuk Data Tabular](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsDosDontsTabular.pptx) 
-*    [2014 EDM: Antarmuka Pengguna yang Ideal](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TheIdealUserInterface.pptx) 
-*    [Sitemap ESIP musim panas: Data Tabular](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TabularData.pptx) 
-*    [2013: Jangan Mengobati Data In-Situ dan Tabular Seperti Data Gridded](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TablesAndGrids.html) 
+*    [2017 EDM: Bagaimana data mendapatkan dari sumber ke pengguna akhir? Old School versus New School](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/OldSchoolNewSchool.pptx) 
+*    [2016 - The Big Picture: OPeNDAP , ERDDAP™ , dan Distribusi Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TheBigPicture.pptx) 
+*    [2016 EDM: Satu Dan Selesai](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/OneAndDone.pptx) 
+*    [2016 Gov API: Generasi Berikutnya Server Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/NextGeneration.pptx) 
+*    [2015 Agregasi Tabular](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TabularAggregation.pptx) 
+*    [2014 EDM: Bob 's Do and Don' t for Tabular Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/SimonsDosDontsTabular.pptx) 
+*    [EDM 2014: Interface Pengguna Ideal](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TheIdealUserInterface.pptx) 
+*    [2014 Data Tabular](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TabularData.pptx) 
+*    [2013: Jangan Perlakukan Data In- Sidu dan Tabular Seperti Data Gridded](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/TablesAndGrids.html) 
 *    [2013 EDM: Lakukan Lebih Dengan Kurang](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/DoMoreWithLess.ppt) 
-*    [2012 EDM: Pedoman untuk Sistem Distribusi Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/guidelines3.ppt) 
+*    [2012 EDM: Panduan untuk Sistem Distribusi Data](https://coastwatch.pfeg.noaa.gov/erddap/images/erddapTalk/guidelines3.ppt) 
 
-Presentasi oleh orang lain:
+Presentasi Oleh Orang Lain:
 
-*    [Alat berbasis FAIR untuk meningkatkan berbagi Data Global![Login](/img/youtube.png)](https://www.youtube.com/watch?v=kdBTgNEp5TA&ab_channel=GOOSIOC)   
-oleh Kevin O'Brien di Global Ocean Observing System (Login) Grup Koordinasi Konservasi Webinar (Login) Seri / 1, 12 November 2020.
-*    [Membangun Aplikasi Cuaca Anda Sendiri NOAA Buka Data dan Jupyter Notebook![Login](/img/youtube.png)](https://www.youtube.com/watch?v=MF-WH01Qw0g)   
-oleh Filipe Fernandes dan Rich Signell di SciPy 2018, 13 Juli 2018.
-*    [Menggunakan OOI ERDDAP ![Login](/img/youtube.png)](https://www.youtube.com/watch?v=tj4M9hodTG0)   
-oleh Rich Signell, Februari 2018.
-*    [Login Promo: " ERDDAP Bicara Petir"![Login](/img/youtube.png)](https://youtu.be/2-ydBByYB0M?t=160)   
-Delapan 5-Minute Talks Tentang Menarik Hal-hal Orang Yang Melakukan Dengan ERDDAP oleh Jenn Sevadjian, Jim Potemra, Conor Delaney, Kevin O'Brien, John Kerfoot, Stephanie Petillo, Charles Carleton dan Eli Hunter disajikan sebagai ESIP Tech Dive pada tanggal 31 Agustus 2017.
-*    [Sitemap ERDDAP™ untuk mengakses Data Tabular![Login](/img/youtube.png)](https://www.youtube.com/watch?v=_BwMHRh7CS8)   
-oleh Rich Signell, Agustus 2015.
-*    [Uji Menggunakan ERDDAP™ untuk Data Karbon Biru![Login](/img/youtube.png)](https://www.youtube.com/watch?v=TbOhElC_-qU)   
-oleh Rich Signell, Agustus 2015.
-*    [Menggunakan Data Dari ERDDAP™ Sitemap NOAA Sitemap GNOME Login![Login](/img/youtube.png)](https://www.youtube.com/watch?v=18xZoXu1USM) Sitemap
-Dalam video ini, Rich Signell mengunduh data ramalan arus laut dari ERDDAP™ untuk model tumpahan beracun di laut menggunakan [ NOAA Sitemap GNOME Sitemap](https://response.restoration.noaa.gov/oil-and-chemical-spills/oil-spills/response-tools/gnome.html)   (dalam waktu 5 menit&#33;) Sitemap (Satu kesalahan kecil dalam video: ketika mencari dataset, tidak menggunakan DAN antara istilah pencarian. Ini adalah implicit.) Oleh Rich Signell, April 8, 2011.
+*    [Alat berbasis FAIR untuk meningkatkan sharing Data Global![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=kdBTgNEp5TA&ab_channel=GOOSIOC)   
+oleh Kevin O 'Brien di Global Ocean Observing System (GOOS) Webinar / Kelompok Koordinasi Pengamatan (OCG) Series / 1, 12 November, 2020.
+*    [Membangun App Cuaca Sendiri Anda Menggunakan NOAA Buka Buku Catatan Data dan Jupyter![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=MF-WH01Qw0g)   
+oleh Filipe Fernandes dan Rich Signgell di SciPy 2018, 13 Juli 2018.
+*    [Menggunakan OOI ERDDAP ![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=tj4M9hodTG0)   
+oleh Rich Signgell, Februari 2018.
+*    [ESIP Tech Dive: " ERDDAP Lightning Talks "![YouTube](/img/youtube.png)](https://youtu.be/2-ydBByYB0M?t=160)   
+Delapan Lima Menit Bicara Tentang Menarik Hal Orang Apakah Melakukan Dengan ERDDAP oleh Jenn Sevadjian, Jim Potemra, Conor Delaney, Kevin O 'Brien, John Kerfoot, Stephanie Petillo, Charles Carleton dan Eli Hunter disajikan sebagai ESIP Tech Dive pada 31 Agustus 2017.
+*    [Menggunakan ERDDAP™ ke Akses Data Tabular![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=_BwMHRh7CS8)   
+oleh Rich Signgell, Agustus 2015.
+*    [Uji Penggunaan ERDDAP™ untuk Blue Carbon Data![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=TbOhElC_-qU)   
+oleh Rich Signgell, Agustus 2015.
+*    [Menggunakan Data Dari ERDDAP™ in NOAA ' GNOME Perangkat Lunak![YouTube](/img/youtube.png)](https://www.youtube.com/watch?v=18xZoXu1USM) .
+Dalam video ini, Rich Signgell download arus laut diperkirakan data dari ERDDAP™ untuk model tumpahan beracun di laut menggunakan [ NOAA ' GNOME perangkat lunak](https://response.restoration.noaa.gov/oil-and-chemical-spills/oil-spills/response-tools/gnome.html)   (dalam 5 menit&#33;) . (Satu kesalahan kecil dalam video: ketika mencari kumpulan data, jangan gunakan AND diantara istilah pencarian. Hal ini implisit.) Oleh Rich Signgell, 8 April 2011.

@@ -1,60 +1,60 @@
 ---
 sidebar_position: 2
 ---
-# frissítés
-Hogyan készítsünk egy meglévő frissítést ERDDAP™ A szervered
+# Frissítés
+Hogyan lehet frissíteni egy meglévő ERDDAP™ A kiszolgáló
 
-## változások{#changes} 
-1. Készítse el a felsorolt változásokat [változások](/changes) a „Things” című szakaszban ERDDAP™ Az adminisztrátoroknak tudniuk kell és meg kell tenniük az egészet ERDDAP™ verziók az Ön által használt verzió óta.
+## Változások{#changes} 
+1. A felsorolt módosítások [Változások](/changes) "Dolgok ERDDAP™ Administrators Need to know and Do "az összes ERDDAP™ verziók óta a verzió használt.
      
 ##  Java  {#java} 
-2. Ha frissülsz ERDDAP™ 2.18 vagy alul, át kell váltani Java 25. (vagy újabb) a kapcsolódó Tomcat 10. Lásd a rendszert ERDDAP™ telepítési utasítások [ Java ](/docs/server-admin/deploy-install#java) és [Tomcat](/docs/server-admin/deploy-install#tomcat) ... Meg kell másolnia is _tomcat_/content/erddap könyvtár a régi Tomcat telepítés az új Tomcat telepítés.
+2. Ha Ön korszerűsíti ERDDAP™ 2.18-as verzió vagy az alábbi, át kell váltanod Java 25 (vagy újabb) és a kapcsolódó Tomcat 10. Lásd a reguláris ERDDAP™ beszerelési utasítások: [ Java ](/docs/server-admin/deploy-install#java) és [Tomcat](/docs/server-admin/deploy-install#tomcat) . Akkor is kell másolni a _tomcat_/content/erddap könyvtár a régi Tomcat telepítés az új Tomcat telepítés.
 
 ## Letöltés{#download} 
-3. Letöltés [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) _tomcat_/webapps .
-     (2.29.0, 706.788.135 bytes, MD5=A5ED0DCC8D46CA27640FFEB8CE4A8560, 12-15-2025) 
+3. Letöltés [Erddap. War](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) into _ tomcat _ / webapps.
+     (2.30.0, 706,939,121 bájt, MD5 = CDC4B3D82A20B33A6623B85312F6DC21 változat, 2026- 04- 02 keltezésű) 
      
-## üzenetek.xml{#messagesxml} 
+## messages.xml{#messagesxml} 
 4. 
-    * Gyakori: Ha frissülsz ERDDAP™ verzió 1.46 (vagy felette) és csak a szabványos üzeneteket használja, az új szabványos üzeneteket.xml automatikusan telepítik (a .class fájlok között az erddapon keresztül. háború) ...
+    * Gyakori: Ha Ön korszerűsíti ERDDAP™ változat (vagy magasabb) és csak használja a standard üzenetek, az új standard üzenet.xml lesz telepítve automatikusan (a .class fájlok között az erddap-on keresztül. háború) .
          
-    * Ritka: Ha frissülsz ERDDAP™ verzió 1.44 (vagy alább) ,
-Törölje a régi üzeneteket.xml fájlt:
-         _tomcat_/content/erddap /messages.xml .
-Az új szabványos üzeneteket.xml automatikusan telepítik (a .class fájlok között az erddapon keresztül. háború) ...
+    * Ritka: Ha Ön korszerűsíti ERDDAP™ változat (vagy alatta) ,
+Törölje a régi üzenetet.
+         _tomcat_/content/erddap / üzenet.xml.
+Az új standard üzenet.xml lesz telepítve automatikusan (a .class fájlok között az erddap-on keresztül. háború) .
          
-    * Ritka: Ha mindig módosítja a szabványos üzeneteket.xml fájl (helyén) ,
-meg kell tennie ezeket a változásokat az új üzenetek.xml fájlba (ami az
-WEB-INF / osztályok / gov/noaa/pfel/erddap/util/messages.xml, miután az erddap.war depressziós Tomcat.
+    * Ritka: Ha mindig változtatsz a standard üzenetfájlon (a helyén) ,
+meg kell tennie ezeket a változtatásokat az új üzenet.xml fájlt (ami
+WEB- INF / osztályok / gov / noaa / pfel / erddap / util / messages.xml után erdda.war is decompressed by Tomcat).
          
-    * Ritka: Ha fenntart egy egyedi üzeneteket.xml fájlt _tomcat_/content/erddap /,
-Ki kell találnod (keresztül diff) milyen változások történtek az alapértelmezett üzenetek.xml (ami az új erddap. háború, mint
-WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml), és ennek megfelelően módosítja a szokásos üzeneteket.xml fájlt.
+    * Ritka: Ha egy egyedi üzenet.xml fájlt _tomcat_/content/erddap /,
+Ki kell találnod valamit. (diff) milyen változások történtek az alapértelmezett üzenetekben.xml (amelyek az új erddap. háború
+WEB- INF / osztályok / gov / noaa / pfel / erddap / util / messages.xml) és ennek megfelelően módosítsa az egyedi messages.xml fájlt.
          
-## Beállítás{#install} 
-5. Telepítse az újat ERDDAP™ Tomcatban:
-\\* Ne használja a Tomcat Managert. Előbb vagy utóbb PermGen memória problémák lesznek. Jobb, ha ténylegesen leállítjuk és elindítjuk a Tomcat-ot.
-\\* Helyettesítse az alábbi _tomcat_-t a tényleges Tomcat könyvtárral a számítógépén.
+## Telepítés{#install} 
+5. Telepítse az új ERDDAP™ in Tomcat:
+- Igen. Ne használd a Tomcat Managert. Előbb vagy utóbb lesznek PermGen memória problémák. Jobb, ha kikapcsoljuk és elkezdjük Tomcat-ot.
+\\ * Utalás a _ tomcat _ lenti könyvtárra az aktuális Tomcat könyvtárra a számítógépen.
      
-### Linux és Macska{#linux-and-macs} 
-1. Shutdown Tomcat: Egy parancssorból használd: _tomcat_/bin/shutdown.sh
-Használjon ps -ef | grep tomcat látni, ha/ha a folyamat leállt. (Lehet, hogy egy-két percet vesz igénybe.) 
-2. Távolítsa el a depressziót ERDDAP™ telepítés: _tomcat_/webapps, használat
-rm -rf erddap
-3. Törölje a régi erddap. háborús fájl: In _tomcat_/webapps, használja rm erddap. háború
-4. Másolja az új erddapot. háborús fájl az ideiglenes könyvtárból _tomcat_/webapps
-5. Indítsa újra Tomcat és ERDDAP Használat _tomcat_/bin/startup.sh
-6. Megtekintés ERDDAP™ a böngészőben ellenőrizze, hogy az újraindítás sikeres volt.
-     (Gyakran meg kell próbálnia néhányszor, és várjon egy percet, mielőtt látja ERDDAP™ ...)   
+### Linux és Macs{#linux-and-macs} 
+1. Shutdown Tomcat: Egy parancssorból használd: _ tomcat _ / bin / shutdow.sh
+És használja a p-efet | grep tomcat látni, ha / amikor a folyamat leállt. (Eltarthat egy-két percig.) 
+2. Távolítsa el a dekompresszált ERDDAP™ telepítés: A _ tomcat _ / webalkalmazásokban használható
+rm - rf erddap
+3. Törölje a régi erddap. war file: In _ tomcat _ / webapps, használja rm erddap. háború
+4. Másold le az új erddap-ot. háborús fájl az ideiglenes könyvtárból a _ tomcat _ / webapps könyvtárba
+5. Visszaállítás Tomcat és ERDDAP : use _ tomcat _ / bin / startupsh
+6. Nézet ERDDAP™ a böngészőben, hogy ellenőrizze, hogy az újraindítás sikerült.
+     (Gyakran, meg kell próbálni egy párszor, és várjon egy percet, mielőtt meglátja ERDDAP™ .)   
              
-### Windows Windows{#windows} 
-1. Shutdown Tomcat: Egy parancssorból használjuk: _tomcat_bin\\ shutdown.bat 
-2. Távolítsa el a depressziót ERDDAP™ telepítés: _tomcat_/webapps, használat
-del /S/Q erddap
-3. Törölje a régi erddap. háborús fájl: A _tomcat_ \\ webapps, használja del erddap. háború
-4. Másolja az új erddapot. háborús fájl az ideiglenes könyvtárból _tomcat_\'webapps-be
-5. Indítsa újra Tomcat és ERDDAP Használat _tomcat_\bin\\startup.bat
-6. Megtekintés ERDDAP™ a böngészőben ellenőrizze, hogy az újraindítás sikeres volt.
-     (Gyakran meg kell próbálnia néhányszor, és várjon egy percet, mielőtt látja ERDDAP™ ...) 
+### Windows{#windows} 
+1. Shutdown Tomcat: Egy parancssorból használd: _ tomcat _\\ bin\\\ shutdown.bat 
+2. Távolítsa el a dekompresszált ERDDAP™ telepítés: A _ tomcat _ / webalkalmazásokban használható
+del / S / Q erddap
+3. Törölje a régi erddap. háborús fájl: In _ tomcat _\\ webapps, use del erddap. háború
+4. Másold le az új erddap-ot. háborús fájl az ideiglenes könyvtárból _ tomcat _\\ webapps
+5. Visszaállítás Tomcat és ERDDAP : use _ tomcat _\\ bin\\ startup.bat
+6. Nézet ERDDAP™ a böngészőben, hogy ellenőrizze, hogy az újraindítás sikerült.
+     (Gyakran, meg kell próbálni egy párszor, és várjon egy percet, mielőtt meglátja ERDDAP™ .) 
 
-Troubles frissítés ERDDAP ? Lásd: [rész további támogatás megszerzéséről](/docs/intro#support) ...
+Problémák frissítése ERDDAP ? Lásd a mi [szakasz a kiegészítő támogatás megszerzéséről](/docs/intro#support) .

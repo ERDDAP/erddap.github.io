@@ -5,14 +5,14 @@ sidebar_position: 2
 Wie man ein Update eines Vorstehenden tut ERDDAP™ auf Ihrem Server
 
 ## Änderungen{#changes} 
-1. Ändern Sie die in [Änderungen](/changes) in der Sektion "Dinge ERDDAP™ Administratoren müssen wissen und tun" für alle ERDDAP™ Versionen seit der verwendeten Version.
+1. Ändern Sie die in [Änderungen](/changes) in der Sektion "Dinge ERDDAP™ Administratoren müssen wissen und tun" für alle ERDDAP™ Versionen seit der von Ihnen verwendeten Version.
      
 ##  Java  {#java} 
 2. Wenn Sie von ERDDAP™ Version 2.18 oder unten, Sie müssen auf Java ANHANG (oder neuer) und den verwandten Tomcat 10. Siehe regelmäßige ERDDAP™ Installationsanweisungen für [ Java ](/docs/server-admin/deploy-install#java) und [Tomcat](/docs/server-admin/deploy-install#tomcat) . Sie müssen auch Ihre _tomcat_/content/erddap Verzeichnis von Ihrer alten Tomcat Installation auf Ihre neue Tomcat Installation.
 
 ## Downloads{#download} 
-3. Downloads [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) in _tomcat_/webapps .
-     (Version 2.29.0, 706,788,135 Bytes, MD5=A5ED0DCC8D46CA27640FFEB8CE4A8560, datiert 12-15-2025) 
+3. Downloads [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) in _tomcat_/webapps .
+     (Version 2.30.0, 706,939,121 Bytes, MD5=CDC4B3D82A20B33A6623B85312F6DC21, datiert 2026-04-06) 
      
 ## Nachrichten.xml{#messagesxml} 
 4. 
@@ -28,12 +28,12 @@ Sie müssen diese Änderungen in der neuen Messages.xml-Datei (die ist
 WEB-INF/classes/gov/noaa/pfel/erdap/util/messages.xml nach erddap.war wird von Tomcat dekomprimiert).
          
     * Selten: Wenn Sie eine benutzerdefinierte Nachrichten.xml-Datei in _tomcat_/content/erddap /,
-du musst herausfinden (via diff) welche Änderungen an der Standard-Nachrichten.xml vorgenommen wurden (die sich im neuen Erddap befinden). Krieg als
-WEB-INF/classes/gov/noaa/pfel/erdap/util/messages.xml) und modifizieren Sie Ihre benutzerdefinierte message.xml-Datei entsprechend.
+du musst herausfinden (via diff) welche Änderungen an der Standard-Nachrichten.xml vorgenommen wurden (die sich im neuen Erddap befinden). Krieg
+WEB-INF/classes/gov/noaa/pfel/erdap/util/messages.xml) und ändern Sie Ihre benutzerdefinierte message.xml-Datei entsprechend.
          
 ## Installieren{#install} 
 5. Installieren Sie das neue ERDDAP™ in Tomcat:
-) Verwenden Sie Tomcat Manager nicht. Früher oder später gibt es PermGen Speicherprobleme. Es ist besser, tatsächlich abschalten und starten Tomcat.
+) Verwenden Sie Tomcat Manager nicht. Früher oder später gibt es PermGen Speicherprobleme. Es ist besser, tatsächlich abzuschalten und starten Tomcat.
 \\* Ersetzen Sie Referenzen auf _tomcat_ unten mit dem aktuellen Tomcat-Verzeichnis auf Ihrem Computer.
      
 ### Linux und Macs{#linux-and-macs} 

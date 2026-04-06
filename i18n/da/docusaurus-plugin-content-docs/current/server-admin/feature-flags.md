@@ -1,508 +1,520 @@
-# Feature Flags
+# Feature Flag
 
-Denne side dokumenterer konfigurationsflagene til rådighed i systemet. Disse flag styrer forskellige funktioner, eksperimentelle kapaciteter og arv adfærd.
+Denne side dokumenterer konfigurationsflag tilgængelige i systemet. Disse flag styre forskellige funktioner, eksperimentelle evner, og arv adfærd.
 
-##  **Flag Lifecycle Legend** 
+##  **Name** 
 
-*  **Stabil:** Forudbestilt så langsigtede flag for at tillade administratorer at ændre funktionalitet. Sikker til produktion.
-*  **Test:** Funktioner, der er klar til test. Disse vil enten blive uddannet til "Stable" eller i sidste ende blive sat til deres målværdi og har flaget fjernet.
-*  **Under konstruktion:** I øjeblikket hårdtkodet til falsk i koden, uanset konfiguration. Funktionerne er endnu ikke klar til brug.
+*  **Stabil:** Påtænkt som langsigtede flag for at gøre det muligt for administratorer at ændre funktionalitet. Sikker til produktion.
+*  **Test:** Funktioner, der er klar til test. Disse vil enten opgradere til "Stable" eller i sidste ende blive sat til deres målværdi og få flaget fjernet.
+*  **Under opførelse:** I øjeblikket hardkodet til false i koden, uanset konfiguration. Funktionen er endnu ikke klar til brug.
 
-##  **🚀 Optimering af test** 
+##  **Name Optimering af test** 
 
 Det er flag, der sandsynligvis vil blive fjernet i fremtiden.
 
-###  **touchThread OnlyNårItems** 
+###  **touchThreadOnlyWhenPets** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Optimeringsflag. Hvis det er tilfældet, kører berøringstråden kun, når der er elementer til at behandle.
+Varebeskrivelse
+Optimeringsflag. Hvis sandt, den touch tråd kun kører, når der er elementer til at behandle.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Test af test | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 2.29.0 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Test | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet under 2.29.0 | 
 
-###  **opgaveCacheClear** 
+###  **taskCacheClear** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktiverer baggrundsopgaven, der fjerner udløbne elementer fra cachen.
+Varebeskrivelse
+Aktiverer den baggrundsopgave der fjerner udløbne elementer fra cachen.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 2.27.0 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet under 2.27.0 | 
 
-###  **I nærheden af ncHeaderMakeFile** 
+###  **ncHeaderMakeFile** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Hvis sand serveren vil generere hele nc-filen, før du opretter ncheader-resultatet. Den nye (foretrukket foretrukne) adfærd, når falsk er at direkte generere ncheader-resultatet.
+Varebeskrivelse
+Hvis sandt serveren vil generere hele nc-fil, før du opretter ncheader resultat. Det nye (foretrækkes) adfærd, når falsk er at direkte generere ncheader resultat.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Test af test | 
- |   **Nuværende Standard**   | falsk | 
- |   **Langsigtet Goal**   | falsk | 
- |   **Historiehistorie**   | Tilføjet i 2.29.0 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Test | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | falsk | 
+ |   **Historie**   | Tilføjet under 2.29.0 | 
 
-###  **BrugEddReflection** 
+###  **use EddReflection** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktiver brugen af Java Refleksion til øjeblikkelige EDD ( ERDDAP Datasæt) klasser.
+Varebeskrivelse
+Aktiverer brugen af Java Refleksion til instantiate EDD ( ERDDAP Datasæt) Timer.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Test af test | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Standard ændret til ægte i 2.28.0, tilføjet i 2.25 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Test | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Standard ændret til true i 2.28.0, tilføjet i 2.25 | 
 
-###  **baggrundOpretSubsetTables** 
+###  **backgroundCreateSubsetTables** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Tillader, at undermapper skal oprettes i baggrundstråde for at forbedre datasæt indlæsningstiden.
+Varebeskrivelse
+Giver mulighed for at delsætte tabeller, der skal oprettes i baggrundstråde for at forbedre dataenes loading tid.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Test af test | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 2.29.0 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Test | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet under 2.29.0 | 
 
-###  **BrugNcMetadataForFileTable** 
+###  **use NcMetadataForFileTable** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Bruger NetCDF metadata til at simulere filtabelvisningen. Især hvis en nc-fil indeholder faktiske_range for hver variabel, kan datasættet indlæsning springe hele filen.
+Varebeskrivelse
+Anvendelse NetCDF metadata til at befolke filtabelvisningen. Især hvis en nc-fil indeholder faktiske _ range for hver variabel, datasættet indlæsning kan springe læse hele filen.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 2.29.0 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet under 2.29.0 | 
 
-##  **🛠 System & Core Behavior** 
+##  **Name** 
 
-###  **e-mail IsActive** 
+###  **email Isaktive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Kontrol af, om systemet forsøger at sende faktiske e-mails (f.eks. til abonnementsopdateringer eller fejlrapporter) via den konfigurerede SMTP-server.
+Varebeskrivelse
+Kontrollerer om systemet forsøger at sende rigtige e-mails (f.eks. for abonnementsopdateringer eller fejlrapporter) via den konfigurerede SMTP server.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | falsk | 
- |   **Langsigtet Goal**   | sande sande sande sande (Afhængigt af administrator config)   | 
- |   **Historiehistorie**   | Legacy | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | true (Afhængig af admin config)   | 
+ |   **Historie**   | Legacy | 
 
-Anmeldelse afinfo Logic
-Dette flag beregnes dynamisk ved opstart. Det svarer til falsk, medmindre alle nødvendige SMTP-legitimationsoplysninger (vært, port, bruger, adgangskode, fra-adresse) leveres strengt i opsætning.xml.
-Sidste gang:
+::: info Logic
+Dette flag beregnes dynamisk ved opstart. Det er standard at falsk, medmindre alle nødvendige SMTP-oplysninger (vært, havn, bruger, adgangskode, fra- adresse) er strengt fastsat i setup.xml.
+::
 
-###  **VisLoad FejlerOnStatusPage** 
+###  **showLoadErrorsOnStatusPage** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Hvis detaljerede datasæt belastningsfejl vises offentligt på statussiden.
+Varebeskrivelse
+Bestemmer om detaljerede datasætbelastningsfejl vises offentligt på statussiden.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sæt som ønsket | 
- |   **Historiehistorie**   | Tilføjet i 2.25 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | indstillet som ønsket | 
+ |   **Historie**   | Tilføjet i 2.25 | 
 
-###  **StandardAccessibleViaFiles** 
+###  **defaultAccessibleViaFiles** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Angiver standardadfærden for, om et datasæts underliggende filer kan tilgås i filtjenesten.
+Varebeskrivelse
+Sætter standardopførsel for om et datasets underliggende filer kan tilgås i filtjenesten.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | falsk | 
- |   **Langsigtet Goal**   | falsk | 
- |   **Historiehistorie**   | Tilføjet i 2.10 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | falsk | 
+ |   **Historie**   | Tilføjet i 2.10 | 
 
 ##  **Datasæt** 
 
-###  **hurtigstart** 
+###  **quickGenstart** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Hvis det er aktiveret, forsøger systemet at starte hurtigere ved at springe visse dybe valideringstjek på datasæt under initialisering.
+Varebeskrivelse
+Hvis aktiveret, systemet forsøger at starte hurtigere ved at springe visse dybe validering kontrol af datasæt under initialisering.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 1.38 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 1.38 | 
 
-###  **aktivereEnvParsing** 
+###  **enableEnvParsing** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktivering af behandlingen datasets.xml fil med en [StrygSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Dette har mange anvendelser, herunder indstilling af private værdier (som adgangskoder) Brug af miljøvariabler.
+Varebeskrivelse
+Aktiverer behandling af datasets.xml fil med en [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Dette har mange anvendelser, herunder indstilling af private værdier (som adgangskoder) ved hjælp af miljøvariabler.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sæt som ønsket | 
- |   **Historiehistorie**   | Tilføjet i 2.29.0 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | indstillet som ønsket | 
+ |   **Historie**   | Tilføjet under 2.29.0 | 
 
-###  **Brug afSaxParser** 
+###  **use SaxParser** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Switcher den interne XML parsing motor til at bruge en SAX (Enkel API til XML) parser i stedet for DOM parser. Dette gør det muligt for nogle nye avancerede funktioner som XInclude og [brugerdefinerede skærm attributter](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
+Varebeskrivelse
+Skifter den interne XML parsing motor til at bruge en SAX (Simple API for XML) Parser i stedet for DOM parser. Dette muliggør nogle nye avancerede funktioner som XInclude, og [brugerdefinerede visningsegenskaber](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Test af test | 
- |   **Nuværende Standard**   | falsk | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 2.25 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Test | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 2.25 | 
 
-###  **listePrivateDatasets** 
+###  **listPrivatDatasets** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Bestems, hvis private datasæt (dem, der kræver godkendelse) vises på listen over hoveddatasæt.
+Varebeskrivelse
+Bestemmer om private datasæt (dem, der kræver godkendelse) findes i hoveddatasætlisten.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | falsk | 
- |   **Langsigtet Goal**   | falsk | 
- |   **Historiehistorie**   | Tilføjet i 1.20 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | falsk | 
+ |   **Historie**   | Tilføjet i 1.20 | 
 
-###  **Politiske ordsprog** 
+###  **politiskBundariesActive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Kontrol af, om politiske grænser kan trækkes på kort.
+Varebeskrivelse
+Kontrollerer om politiske grænser kan tegnes på kort.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 1.80 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 1.80 | 
+
+###  **kraftSynkronousLoading** 
+
+Varebeskrivelse
+Indlæs datasæt synkront i stedet for udskudt baggrundsindlæsning.
+
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | falsk | 
+ |   **Historie**   | Tilføjet i 2.30 | 
 
 ##  **Metadata og standarder** 
 
-###  **FgdcActive** 
+###  **fgdcActive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Generer og tjener FGDC (Forbunds Geografisk Dataudvalg) metadata.
+Varebeskrivelse
+Genererer og serverer FGDC (Federal Geographic Dataudvalget) metadata.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 1.38 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 1.38 | 
 
-###  **iso19115 Active Active Active** 
+###  **iso19115 Aktiv** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Generer og tjener ISO 19115 metadata.
+Varebeskrivelse
+Genererer og serverer ISO 19115 metadata.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 1.38 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 1.38 | 
 
-###  **BrugSisISO19115** 
+###  **use Sisisiso19115** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Brug Apache SIS-biblioteket til at generere ISO 19115 metadata i stedet for den ældre generator. Hvis dette er på og brugSisISO19139 ikke er på, vil standard IOS 19115 metadata være i ISO19115_3_2016 format. Hvis dette er falsk, vil standardformatet være i den arv modificeret ISO19115_2 format.
+Varebeskrivelse
+Bruger Apache SIS-biblioteket til at generere ISO 19115 metadata i stedet for den ældre generator. Hvis dette er på og bruger Sisisiso19139 er ikke på, standard IOS 19115 metadata vil være i ISO19115 _ 3 _ 2016 format. Hvis dette er falsk, vil standardformatet være i det ændrede ISO19115 _ 2-format.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Test af test | 
- |   **Nuværende Standard**   | falsk | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 2.26 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Test | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 2.26 | 
 
-###  **BrugSisISO19139** 
+###  **usSisiso19139** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Brug Apache SIS biblioteket til at generere ISO19139_2007 metadata.
+Varebeskrivelse
+Bruger Apache SIS-biblioteket til at generere ISO19139 _ 2007 metadata.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Test af test | 
- |   **Nuværende Standard**   | falsk | 
- |   **Langsigtet Goal**   | falsk | 
- |   **Historiehistorie**   | Tilføjet i 2.29.0 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Test | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | falsk | 
+ |   **Historie**   | Tilføjet under 2.29.0 | 
 
-###  **jsonActiveld** 
+###  **jsonldActive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Generer og tjener JSON-LD (Disse data) metadata.
+Varebeskrivelse
+Genererer og serverer JSON- LD (Sammenkædede data) metadata.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Legacy | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Legacy | 
 
-###  **generereCroissantSchema** 
+###  **generateCroissantSchema** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Generer "Croissant" metadata schema som standard schema for maskinlæringsparathed.
+Varebeskrivelse
+Genererer "Croissant" metadata skema som standard skema for machine learning parathed.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Test af test | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 2.28.0 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Test | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 2.28.0 | 
 
-###  **variablerMustHavIoosKategori** 
+###  **variablesMust HaveIoosCategory** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Forstærker, at variabler skal have en IOOS kategori attribut.
+Varebeskrivelse
+Kræver, at variabler skal have en IOOS kategori attribut.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sæt som ønsket | 
- |   **Historiehistorie**   | Legacy | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | indstillet som ønsket | 
+ |   **Historie**   | Legacy | 
 
-###  **inkludereNcCFSubsetVariables** 
+###  **includeNcCFSubsetVariabler** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Legacy adfærd var at generere subset variabler kun til EDDTableFraNcCFFiles datasets. Dette blev tilføjet til standard adfærd for EDDTableFraNcCFFiles at være i overensstemmelse med andre datasæt typer. Hvis du har brug for arv automatisk subsetVariables Du kan aktivere dette. Den bedre løsning ville være at tilføje subsetVariables til definition af datasæt.
+Varebeskrivelse
+Legacy adfærd var at generere delsæt variabler kun for EDDTableFromNcCFFiles datasæt. Dette blev tilføjet til standard opførsel for EDDTableFromNcCFFiles at være i overensstemmelse med andre datasæt typer. Hvis du har brug for arven automatisk subsetVariables du kan aktivere dette. Den bedste løsning ville være at tilføje subsetVariables til datasætdefinitionen.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Test af test | 
- |   **Nuværende Standard**   | falsk | 
- |   **Langsigtet Goal**   | falsk | 
- |   **Historiehistorie**   | Tilføjet i 2.26 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Test | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | falsk | 
+ |   **Historie**   | Tilføjet i 2.26 | 
 
-##  **Abonnementer og meddelelser** 
+##  **Abonnementer og anmeldelser** 
 
-###  **Abonnement** 
+###  **abonnentSystemAktiv** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktiverer e-mail-abonnementssystemet for opdateringer af datasæt.
+Varebeskrivelse
+Aktiverer e- mail- abonnementssystemet for datasæt opdateringer.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 1.14 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 1.14 | 
 
-###  **Tilmeld dig vores nyhedsbrev** 
+###  **subscribeToRemoteErddapDataset** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Tillader dette ERDDAP f.eks. at abonnere på fjern ERDDAP Datasæt til opdateringer.
+Varebeskrivelse
+Tillader dette ERDDAP instans at abonnere på fjernbetjening ERDDAP Datasæt til opdateringer.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 1.70 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 1.70 | 
 
-###  **OpdaterSubsRsOnFileChanges** 
+###  **updateSubsRssOnFileChanges** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Udløser abonnement og RSS opdateringer, når underliggende filer ændres. Den ældre adfærd var kun at foretage opdateringer på dataset reload (som nogle servere havde lige så uvist som ugentligt) .
+Varebeskrivelse
+Triggers abonnement og RSS opdateringer, når underliggende filer ændres. Den arv adfærd var kun at gøre opdateringer på datasæt genindlæsning (som nogle servere havde så sjældent som ugentlig) .
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 2.26 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 2.26 | 
 
-###  **Aktivering MqttBroker** 
+###  **Aktivér MqttBroker** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Starter en intern MQTT mægler inden for ansøgningen for at håndtere meddelelser.
+Varebeskrivelse
+Starter en intern MQTT mægler i programmet til at håndtere beskeder.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Test af test | 
- |   **Nuværende Standard**   | falsk | 
- |   **Langsigtet Goal**   | sæt som ønsket | 
- |   **Historiehistorie**   | Tilføjet i 2.29.0 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Test | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | indstillet som ønsket | 
+ |   **Historie**   | Tilføjet under 2.29.0 | 
 
-###  **Udgivelse afMqtttNotif** 
+###  **Name** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktiver udgivelse af meddelelser (som datasæt ændringer) til MQTT mægler.
+Varebeskrivelse
+Aktiverer offentliggørelse af meddelelser (som datasætændringer) til MQTT mægler.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Test af test | 
- |   **Nuværende Standard**   | falsk | 
- |   **Langsigtet Goal**   | sæt som ønsket | 
- |   **Historiehistorie**   | Tilføjet i 2.29.0 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Test | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | indstillet som ønsket | 
+ |   **Historie**   | Tilføjet under 2.29.0 | 
 
-##  **Websider/konfigurering** 
+##  **Name** 
 
-###  **Brug afHeadersFor Url** 
+###  **use HeadersFor Url** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Tillader at bruge HTTP-headere til at bestemme anmodnings-URL-oplysningerne (nyttige bag proxies) .
+Varebeskrivelse
+Tillader at bruge HTTP-overskrifter til at bestemme forespørgslens URL-detaljer (nyttige bag proxies) .
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Standard ændret til ægte i 2.28.0, Tilføjet i 2.27.0 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Standard ændret til true i 2.28.0, tilføjet i 2.27.0 | 
 
-###  **Aktivering Cors** 
+###  **Aktivér Kors** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktivering af Cross-Origin Resource (CORS) Overskrifter på HTTP-reaktioner.
+Varebeskrivelse
+Aktiverer deling af ressourcer på tværs af oprindelse (KORS) overskrifter på HTTP-svar.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | falsk | 
- |   **Langsigtet Goal**   | sæt som ønsket | 
- |   **Historiehistorie**   | Tilføjet i 2.26 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | indstillet som ønsket | 
+ |   **Historie**   | Tilføjet i 2.26 | 
 
-##  **🔍 Søg** 
+##  **Name** 
 
-###  **Brug afLuceneSearchEngine** 
+###  **use LucenSearchEngine** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
+Varebeskrivelse
 Skifter den interne søgemaskine til at bruge Apache Lucene.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Test af test | 
- |   **Nuværende Standard**   | falsk | 
- |   **Langsigtet Goal**   | ? | 
- |   **Historiehistorie**   | Legacy | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Test | 
+ |   **Nuværende standard**   | falsk | 
+ |   **Målsætning på lang sigt**   | ? | 
+ |   **Historie**   | Legacy | 
 
-##  **Tjenesteydelser og -protokoller** 
+##  **Denne bevilling er bestemt til at dække følgende udgifter:** 
 
-###  **filerActive** 
+###  **filesActive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktiverer "Files" browservisning for datasæt, der understøtter det.
+Varebeskrivelse
+Aktiverer "Files" browservisningen for datasæt der understøtter den.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 1.58 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 1.58 | 
 
-###  **OmformereActive** 
+###  **convertersActive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktiverer konverteringsværktøjer i brugergrænsefladen.
+Varebeskrivelse
+Aktiverer konverteringsværktøjer i UI.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 1.44 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 1.44 | 
 
-###  **Klik her for at købe** 
+###  **slideSorterActive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktiverer Slide Sorter.
+Varebeskrivelse
+Aktiverer slidesorteren.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 1.44 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 1.44 | 
 
-###  **DataProviderFormActive** 
+###  **dataProviderFormActive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktiverer formularen, så dataudbydere kan indtaste metadata.
+Varebeskrivelse
+Gør det muligt for dataudbyderne at indtaste metadata.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Legacy | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Legacy | 
 
-###  **afDateDatasetsActive** 
+###  **outOfDateDatasettsActive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktivering af forældede datasæt.
+Varebeskrivelse
+Aktiverer indberetning af dataserier uden for datoen.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 1.82 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 1.82 | 
 
 ###  **wmsActive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktiver Web Map Service ( WMS ) interface.
+Varebeskrivelse
+Aktiverer webkorttjenesten ( WMS ) interface.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Tilføjet i 1.44 | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Tilføjet i 1.44 | 
 
 ###  **wmsClientActive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktiverer det interne WMS klientfunktioner.
+Varebeskrivelse
+Aktiverer den interne WMS klientfunktioner.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Stable | 
- |   **Nuværende Standard**   | sande sande sande sande | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
- |   **Historiehistorie**   | Legacy | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | Stabil | 
+ |   **Nuværende standard**   | true | 
+ |   **Målsætning på lang sigt**   | true | 
+ |   **Historie**   | Legacy | 
 
-###  **geoservicesRestActive** 
+###  **geoServicesRestactive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktivering af RESTful interface til Geospatial Services. Ikke fuldt implementeret.
+Varebeskrivelse
+Aktiverer RESTful interface til geospatiale tjenester. Ikke fuldt implementeret.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Under konstruktion | 
- |   **Nuværende Standard**   | falsk (Hårdt kode)   | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | under opførelse | 
+ |   **Nuværende standard**   | falsk (Hardkodet)   | 
+ |   **Målsætning på lang sigt**   | true | 
 
 ###  **wcsActive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktiver Web Coverage Service ( WCS ) interface. Ikke fuldt implementeret.
+Varebeskrivelse
+Aktiverer webdækningstjenesten ( WCS ) interface. Ikke fuldt implementeret.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Under konstruktion | 
- |   **Nuværende Standard**   | falsk (Hårdt kode)   | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | under opførelse | 
+ |   **Nuværende standard**   | falsk (Hardkodet)   | 
+ |   **Målsætning på lang sigt**   | true | 
 
-###  **SåsActive** 
+###  **sosActive** 
 
-Beskrivelse Beskrivelse Beskrivelse Beskrivelse
-Aktivering af Sensorobservation Service ( SOS ) interface.
+Varebeskrivelse
+Aktiverer Sensor Observation Service ( SOS ) interface.
 
- | Ejendom | Detaljer Detaljer | 
- | :--- | :--- | 
- |   **Livscyklus**   | Under konstruktion | 
- |   **Nuværende Standard**   | falsk (Hårdt kode)   | 
- |   **Langsigtet Goal**   | sande sande sande sande | 
+ | Ejendom | Detaljer | 
+ | : -- -- | : -- -- | 
+ |   **Livscyklus**   | under opførelse | 
+ |   **Nuværende standard**   | falsk (Hardkodet)   | 
+ |   **Målsætning på lang sigt**   | true | 

@@ -75,7 +75,7 @@ Tillåter att subset tabeller skapas i bakgrundstrådar för att förbättra dat
 ###  **AnvändNcMetadataForFileTable** 
 
 Beskrivning
-Användning NetCDF metadata för att fylla filtabellvyn. I synnerhet om en nc-fil innehåller faktisk_range för varje variabel kan dataset-laddningen hoppa över att läsa hela filen.
+Användning NetCDF metadata för att fylla filtabellvyn. I synnerhet om en nc-fil innehåller faktisk_range för varje variabel kan datasetbelastningen hoppa över att läsa hela filen.
 
  | Fastighet | Detaljer | 
  | -------- | -------- | 
@@ -86,7 +86,7 @@ Användning NetCDF metadata för att fylla filtabellvyn. I synnerhet om en nc-fi
 
 ##  **System & Core Behavior** 
 
-###  **e-post e-post e-post e-post e-post e-post e-post IsActive** 
+###  **e-post e-post e-post e-post e-post e-post e-post e-post e-post e-post e-post e-post e-post e-post e-post e-post e-post e-mail e-post e-post e-post e-post e-post e-post e-post e-post e-post e-post e-mail e-mail e-post e-post e-post e-post e-post e-post e-post e-post e-post e-mail e-post e-post e-mail e-mail e-mail e-mail e-mail e-post e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e-mail e IsAktiv** 
 
 Beskrivning
 Kontrollerar om systemet försöker skicka faktiska e-postmeddelanden (t.ex. för abonnemangsuppdateringar eller felrapporter) via konfigurerad SMTP-server.
@@ -188,6 +188,18 @@ Kontrollerar om politiska gränser kan dras på kartor.
  |   **Långsiktigt mål**   | sanning sant | 
  |   **Historia historia**   | Tillagd i 1,80 | 
 
+###  **forcesynchronousLoading** 
+
+Beskrivning
+Load datasets synkron i stället för uppskjuten bakgrundsbelastning.
+
+ | Fastighet | Detaljer | 
+ | -------- | -------- | 
+ |   **Livscykel**   | Stabilt | 
+ |   **Nuvarande standard**   | falska lögner | 
+ |   **Långsiktigt mål**   | falska lögner | 
+ |   **Historia historia**   | Tillagd i 2.30 | 
+
 ##  **Metadata och standarder** 
 
 ###  **FgdcActive** 
@@ -202,7 +214,7 @@ Genererar och tjänar FGDC (Federal Geographic Datakommittén) metadata.
  |   **Långsiktigt mål**   | sanning sant | 
  |   **Historia historia**   | Tillagd i 1.38 | 
 
-###  **iso19115 Aktiv** 
+###  **iso19115 Aktivt** 
 
 Beskrivning
 Genererar och serverar ISO 19115 metadata.
@@ -303,7 +315,7 @@ Möjliggör e-postabonnemangssystemet för datasetuppdateringar.
 ###  **Prenumerera påRemoteErddapDataset** 
 
 Beskrivning
-Tillåter detta ERDDAP instans att prenumerera på fjärrkontroll ERDDAP Dataset för uppdateringar.
+Tillåter detta ERDDAP instans att prenumerera på fjärrkontroll ERDDAP dataset för uppdateringar.
 
  | Fastighet | Detaljer | 
  | -------- | -------- | 
@@ -324,7 +336,7 @@ Triggers prenumeration och RSS uppdateringar när underliggande filer ändras. D
  |   **Långsiktigt mål**   | sanning sant | 
  |   **Historia historia**   | Tillagd i 2,26 | 
 
-###  **aktivera MqttBroker** 
+###  **möjliggöra MqttBroker** 
 
 Beskrivning
 Startar en intern MQTT-mäklare inom ansökan för att hantera meddelanden.
@@ -362,7 +374,7 @@ Tillåter att använda HTTP-rubriker för att bestämma begäran URL-information
  |   **Långsiktigt mål**   | sanning sant | 
  |   **Historia historia**   | Standard ändrades till sant i 2.28.0, Added in 2.27.0 | 
 
-###  **aktivera Cors** 
+###  **möjliggöra Cors** 
 
 Beskrivning
 Möjliggör Cross-Origin Resource Sharing (Kor) rubriker på HTTP svar.
@@ -400,7 +412,7 @@ Möjliggör webbläsarvyn "Files" för dataset som stöder den.
  |   **Livscykel**   | Stabilt | 
  |   **Nuvarande standard**   | sanning sant | 
  |   **Långsiktigt mål**   | sanning sant | 
- |   **Historia historia**   | Tillagd i 1.58 | 
+ |   **Historia historia**   | Tillagd i 1,58 | 
 
 ###  **konverterareActive** 
 
@@ -412,7 +424,7 @@ Möjliggör konverteringsverktyg i UI.
  |   **Livscykel**   | Stabilt | 
  |   **Nuvarande standard**   | sanning sant | 
  |   **Långsiktigt mål**   | sanning sant | 
- |   **Historia historia**   | Tillagd i 1.44 | 
+ |   **Historia historia**   | Tillagd i 1,44 | 
 
 ###  **Bilder från SorterActive** 
 
@@ -424,7 +436,7 @@ Möjliggör Slide Sorter.
  |   **Livscykel**   | Stabilt | 
  |   **Nuvarande standard**   | sanning sant | 
  |   **Långsiktigt mål**   | sanning sant | 
- |   **Historia historia**   | Tillagd i 1.44 | 
+ |   **Historia historia**   | Tillagd i 1,44 | 
 
 ###  **DataProviderFormActive** 
 
@@ -438,7 +450,7 @@ Möjliggör formuläret så att dataleverantörer kan mata in metadata.
  |   **Långsiktigt mål**   | sanning sant | 
  |   **Historia historia**   | Legacy | 
 
-###  **outOfDateDatasetsActive** 
+###  **outOfDateDatasetsAktiv** 
 
 Beskrivning
 Möjliggör rapportering av out-of-date dataset.
@@ -460,7 +472,7 @@ Möjliggör Web Map Service ( WMS ) gränssnitt.
  |   **Livscykel**   | Stabilt | 
  |   **Nuvarande standard**   | sanning sant | 
  |   **Långsiktigt mål**   | sanning sant | 
- |   **Historia historia**   | Tillagd i 1.44 | 
+ |   **Historia historia**   | Tillagd i 1,44 | 
 
 ###  **WmsClientActive** 
 

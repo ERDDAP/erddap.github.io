@@ -4,13 +4,13 @@ Cette page documente les drapeaux de configuration disponibles dans le système.
 
 ##  **Légende du cycle de vie du drapeau** 
 
-*  **Stable :** Conçu comme des drapeaux à long terme pour permettre aux administrateurs de changer de fonctionnalité. En sécurité pour la production.
+*  **Stable :** Conçu comme des drapeaux à long terme pour permettre aux administrateurs de changer de fonctionnalité. Sans danger pour la production.
 *  **Essai:** Caractéristiques prêtes à être testées. Ceux-ci seront soit gradués à "Stable" ou éventuellement fixés à leur valeur cible et faire enlever le drapeau.
-*  **En construction :** Actuellement codé à faux dans le code, indépendamment de la configuration. La fonction n'est pas encore prête à être utilisée.
+*  **En construction :** Actuellement codé à faux dans le code, quelle que soit la configuration. La fonctionnalité n'est pas encore prête à être utilisée.
 
-##  **( ) Optimisations des essais** 
+##  **C'est ce qu'il a dit. Optimisations des essais** 
 
-Ces drapeaux sont susceptibles d'être enlevés à l'avenir.
+Ce sont des drapeaux susceptibles d'être enlevés à l'avenir.
 
 ###  **touchThreadOnlyQuand les éléments** 
 
@@ -24,7 +24,7 @@ Signal d'optimisation. Si vrai, le thread tactile ne fonctionne que lorsqu'il y 
  |   **Objectif à long terme**   | vrai | 
  |   **Historique**   | Ajouté au 2.29.0 | 
 
-###  **TaskCacheClear** 
+###  **tâcheCacheClear** 
 
 Désignation des marchandises
 Active la tâche de fond qui efface les éléments expirés du cache.
@@ -39,7 +39,7 @@ Active la tâche de fond qui efface les éléments expirés du cache.
 ###  **ncHeaderMakeFile** 
 
 Désignation des marchandises
-Si true le serveur va générer l'ensemble du fichier nc avant de créer le résultat ncheader. La nouvelle (préféré) comportement quand false doit générer directement le résultat ncheader.
+Si true le serveur va générer le fichier nc entier avant de créer le résultat ncheader. La nouvelle (préféré) comportement quand false est de générer directement le résultat ncheader.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
@@ -51,7 +51,7 @@ Si true le serveur va générer l'ensemble du fichier nc avant de créer le rés
 ###  **UtiliserEddReflexion** 
 
 Désignation des marchandises
-Permet l'utilisation de Java Réflexion pour initier l'EDD ( ERDDAP Ensemble de données) cours.
+Permet l'utilisation de Java Réflexion pour initier l'EDD ( ERDDAP Ensemble de données) les cours.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
@@ -98,11 +98,11 @@ Contrôle si le système tente d'envoyer des courriels réels (Par exemple, pour
  |   **Objectif à long terme**   | vrai (Selon la configuration de l'administration)   | 
  |   **Historique**   | Héritage | 
 
-:::info Logique
-Ce drapeau est calculé dynamiquement au démarrage. Il est par défaut false à moins que toutes les identifiants SMTP requis (hôte, port, utilisateur, mot de passe, adresse) sont strictement fournis dans setup.xml.
+:: :info Logique
+Ce drapeau est calculé dynamiquement au démarrage. Il est par défaut false sauf si toutes les identifiants SMTP requis (hôte, port, utilisateur, mot de passe, adresse) sont strictement fournis dans setup.xml.
 :: :
 
-###  **AfficherLoadErrorsOnStatusPage** 
+###  **AfficherLoadErrorsSurStatutPage** 
 
 Désignation des marchandises
 Détermine si des erreurs de charge détaillées sont affichées publiquement sur la page d'état.
@@ -131,7 +131,7 @@ Définit le comportement par défaut pour savoir si les fichiers sous-jacents d'
 ###  **Démarrage rapide** 
 
 Désignation des marchandises
-S'il est activé, le système tente de démarrer plus rapidement en sautant certaines vérifications profondes de validation des ensembles de données pendant l'initialisation.
+Si activé, le système tente de démarrer plus rapidement en sautant certains contrôles de validation profonds sur les ensembles de données pendant l'initialisation.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
@@ -143,7 +143,7 @@ S'il est activé, le système tente de démarrer plus rapidement en sautant cert
 ###  **activerEnvParsing** 
 
 Désignation des marchandises
-Permet de traiter la datasets.xml fichier avec un [Sous-titrage](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Cela a de nombreuses utilisations, y compris la fixation de valeurs privées (comme les mots de passe) utilisant des variables d'environnement.
+Permet de traiter le datasets.xml fichier avec un [ChaîneSubstituteur](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Cela a de nombreuses utilisations, y compris la fixation de valeurs privées (comme les mots de passe) utilisant des variables d'environnement.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
@@ -179,7 +179,7 @@ Déterminer si des ensembles de données privés (ceux qui nécessitent une auth
 ###  **politiques** 
 
 Désignation des marchandises
-Contrôle si des frontières politiques peuvent être tracées sur des cartes.
+Contrôler si des frontières politiques peuvent être tracées sur des cartes.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
@@ -188,12 +188,24 @@ Contrôle si des frontières politiques peuvent être tracées sur des cartes.
  |   **Objectif à long terme**   | vrai | 
  |   **Historique**   | Ajouté en 1.80 | 
 
+###  **forceSynchroneEngagement** 
+
+Désignation des marchandises
+Charger les ensembles de données synchrones au lieu d'une charge de fond différée.
+
+ | Biens | Détails | 
+ | - Oui. | - Oui. | 
+ |   **Cycle de vie**   | Stable | 
+ |   **Par défaut actuel**   | faux | 
+ |   **Objectif à long terme**   | faux | 
+ |   **Historique**   | Ajouté en 2.30 | 
+
 ##  **Métadonnées et normes** 
 
 ###  **fgdcActivé** 
 
 Désignation des marchandises
-Génére et sert la FGDC (fédéral géographique Comité des données) métadonnées.
+Génére et sert la FGDC (Fédéral Géographique Comité des données) métadonnées.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
@@ -202,7 +214,7 @@ Génére et sert la FGDC (fédéral géographique Comité des données) métadon
  |   **Objectif à long terme**   | vrai | 
  |   **Historique**   | Ajouté en 1.38 | 
 
-###  **iso19115 Activité** 
+###  **iso19115 Actif** 
 
 Désignation des marchandises
 Génére et sert les métadonnées ISO 19115.
@@ -214,10 +226,10 @@ Génére et sert les métadonnées ISO 19115.
  |   **Objectif à long terme**   | vrai | 
  |   **Historique**   | Ajouté en 1.38 | 
 
-###  **utiliserSisISO19115** 
+###  **UtilisationSisISO19115** 
 
 Désignation des marchandises
-Utilise la bibliothèque Apache SIS pour générer des métadonnées ISO 19115 au lieu du générateur existant. Si ce n'est pas le cas, les métadonnées IOS 19115 par défaut seront au format ISO19115_3_2016. Si c'est faux, le format par défaut sera dans le format ISO19115_2 modifié.
+Utilise la bibliothèque Apache SIS pour générer des métadonnées ISO 19115 au lieu du générateur existant. Si cette fonction est activée et que l'utilisationSisISO19139 n'est pas activée, les métadonnées IOS 19115 par défaut seront au format ISO19115_3_2016. Si c'est faux, le format par défaut sera dans le format ISO19115_2 modifié.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
@@ -253,16 +265,16 @@ Génére et sert JSON-LD (Données liées) métadonnées.
 ###  **générerCroissantSchema** 
 
 Désignation des marchandises
-Génére le schéma de métadonnées "Croissant" comme schéma par défaut pour la préparation à l'apprentissage automatique.
+Génére un schéma de métadonnées "Croissant" comme schéma par défaut pour la préparation à l'apprentissage automatique.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
  |   **Cycle de vie**   | Essais | 
  |   **Par défaut actuel**   | vrai | 
  |   **Objectif à long terme**   | vrai | 
- |   **Historique**   | Ajouté au 2.28.0 | 
+ |   **Historique**   | Ajouté en 2.28.0 | 
 
-###  **VariablesMustHaveIoosCatégorie** 
+###  **variablesMustHaveIoosCatégorie** 
 
 Désignation des marchandises
 Applique que les variables doivent avoir un attribut de catégorie IOOS.
@@ -288,7 +300,7 @@ Le comportement hérité devait générer des variables sous-ensembles uniquemen
 
 ##  **Abonnements et notifications** 
 
-###  **abonnementSystemActive** 
+###  **abonnementSystèmeActive** 
 
 Désignation des marchandises
 Active le système d'abonnement par courriel pour les mises à jour des ensembles de données.
@@ -300,7 +312,7 @@ Active le système d'abonnement par courriel pour les mises à jour des ensemble
  |   **Objectif à long terme**   | vrai | 
  |   **Historique**   | Ajouté en 1.14 | 
 
-###  **subscribeToRemoteErddapDataset** 
+###  **s'abonnerToRemoteErddapDataset** 
 
 Désignation des marchandises
 Permet cela ERDDAP instance pour s'abonner à distant ERDDAP ensembles de données pour les mises à jour.
@@ -315,7 +327,7 @@ Permet cela ERDDAP instance pour s'abonner à distant ERDDAP ensembles de donné
 ###  **updateSubsRssOnFileChanges** 
 
 Désignation des marchandises
-L'abonnement et RSS mises à jour lorsque les fichiers sous-jacents changent. Le comportement de l'héritage était seulement de faire des mises à jour sur l'ensemble de données recharger (que certains serveurs avaient aussi rarement qu'hebdomadaire) .
+L'abonnement et RSS mises à jour lorsque les fichiers sous-jacents changent. Le comportement hérité était seulement de faire des mises à jour sur l'ensemble de données recharger (dont certains serveurs avaient aussi peu d'hebdomadaires) .
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
@@ -339,7 +351,7 @@ Démarre un courtier MQTT interne dans l'application pour gérer la messagerie.
 ###  **publierMqttNotif** 
 
 Désignation des marchandises
-Permet la publication des notifications (comme les changements d'ensemble de données) au courtier du MQTT.
+Permet la publication des notifications (comme les modifications des ensembles de données) au courtier du MQTT.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
@@ -350,7 +362,7 @@ Permet la publication des notifications (comme les changements d'ensemble de don
 
 ##  **En-têtes/Configuration Web** 
 
-###  **UtilisationEn-têtesPour Autres** 
+###  **Pour utiliser Autres** 
 
 Désignation des marchandises
 Permet d'utiliser des en-têtes HTTP pour déterminer les détails de l'URL de la requête (utile derrière les proxies) .
@@ -360,12 +372,12 @@ Permet d'utiliser des en-têtes HTTP pour déterminer les détails de l'URL de l
  |   **Cycle de vie**   | Stable | 
  |   **Par défaut actuel**   | vrai | 
  |   **Objectif à long terme**   | vrai | 
- |   **Historique**   | Par défaut modifié à true dans 2.28.0, Ajouté dans 2.27.0 | 
+ |   **Historique**   | La valeur par défaut est passée à true dans 2.28.0, Ajouté dans 2.27.0 | 
 
 ###  **activer Les cors** 
 
 Désignation des marchandises
-Permet le partage des ressources entre les pays d'origine (CORS) en-têtes sur les réponses HTTP.
+Permet le partage de ressources trans-origine (CORS) en-têtes sur les réponses HTTP.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
@@ -393,7 +405,7 @@ Commute le moteur de recherche interne pour utiliser Apache Lucene.
 ###  **fichiersActive** 
 
 Désignation des marchandises
-Active la vue du navigateur "Files" pour les ensembles de données qui le supportent.
+Active la vue "Files" du navigateur pour les ensembles de données qui le supportent.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
@@ -438,7 +450,7 @@ Active le formulaire permettant aux fournisseurs de données d'entrer des métad
  |   **Objectif à long terme**   | vrai | 
  |   **Historique**   | Héritage | 
 
-###  **horsdedateDatasetsActive** 
+###  **hors dela date** 
 
 Désignation des marchandises
 Permet la déclaration des ensembles de données périmés.
@@ -465,7 +477,7 @@ Active le service de carte Web ( WMS ) interface.
 ###  **wmsClientActive** 
 
 Désignation des marchandises
-Active le WMS caractéristiques du client.
+Active le WMS les caractéristiques du client.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 
@@ -477,7 +489,7 @@ Active le WMS caractéristiques du client.
 ###  **géoServicesRestActive** 
 
 Désignation des marchandises
-Active le RESTful interface pour les services géospatials. Non intégralement mis en œuvre.
+Active la RESTful interface pour les services géospatials. Non intégralement mis en œuvre.
 
  | Biens | Détails | 
  | - Oui. | - Oui. | 

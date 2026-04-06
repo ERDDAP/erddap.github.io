@@ -1,60 +1,60 @@
 ---
 sidebar_position: 2
 ---
-# Päivitys
-Miten päivittää olemassa oleva ERDDAP™ Sinun palvelijasi
+# Päivitä
+Miten tehdä päivitys olemassa olevasta ERDDAP™ Palvelimen
 
-## Muutoksia{#changes} 
-1. Tee muutoksista listattu [Muutoksia](/changes) osiossa ”Asiat” ERDDAP™ Hallitsijoiden on tiedettävä ja tehtävä kaikki ERDDAP™ versioita käyttämästäsi versiosta.
+## Muutokset{#changes} 
+1. Tee listatut muutokset [Muutokset](/changes) jaksossa "Asiat ERDDAP™ Hallintovirkamiesten täytyy tietää ja tehdä" kaikkien ERDDAP™ versioita, koska versio käytät.
      
 ##  Java  {#java} 
-2. Jos päivität ERDDAP™ 2.18 tai uudempi, sinun on vaihdettava Java 25 25 (tai uudempaa) Tomcat 10:stä. Katso säännölliset ERDDAP™ Asennusohjeet [ Java ](/docs/server-admin/deploy-install#java) ja [Tomca](/docs/server-admin/deploy-install#tomcat) . Sinun täytyy myös kopioida _tomcat_/content/erddap Hakemisto vanhasta Tomcat-asennuksesta uuteen Tomcat-asennukseen.
+2. Jos olet päivittämässä ERDDAP™ versio 2.18 tai alla, sinun täytyy vaihtaa Java 25 (tai uudempi) ja siihen liittyvä Tomcat 10. Katso ERDDAP™ asennusohjeet [ Java ](/docs/server-admin/deploy-install#java) sekä [Tomcat](/docs/server-admin/deploy-install#tomcat) . Sinun täytyy myös kopioida _tomcat_/content/erddap vanhasta Tomcat-installaatiosta uuteen Tomcat-installaatioosi.
 
-## Download Download{#download} 
-3. Download Download [Erddap.sota](https://github.com/ERDDAP/erddap/releases/download/v2.29.0/erddap.war) _tomcat_/webapps.
-     (versio 2.29.0, 706.788.135 tavua, MD5=A5ED0DCC8D46CA27640FFEB8CE4A8560, päivätty 12-15-2025) 
+## Lataa{#download} 
+3. Lataa [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) _Tomcat_/webapps .
+     (version 2.30.0, 706.939,130 tavua, MD5=CDC4B3D82A20B33A6623B85312F6DC21, päivätty 20260-02) 
      
-## Viestit.xml{#messagesxml} 
+## viestit.xml{#messagesxml} 
 4. 
-    * Yhteinen: Jos päivität ERDDAP™ versio 1.46 (tai yläpuolella) Käytät vain vakioviestejä, asennetaan uusi standardiviestit.xml automaattisesti. (.class-tiedostojen joukossa erddapin kautta. sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota) .
+    * Yleinen: Jos olet päivittämässä ERDDAP™ versio 1.46 (tai yli) ja käytät vain standardiviestejä, uusia standardiviestejä.xml asennetaan automaattisesti (joukossa . luokan tiedostoja erddap. sota) .
          
-    * Harvinainen: Jos päivität ERDDAP™ versio 1.44 (tai alapuolella) ,
-Poista vanhat viestit.xml-tiedostot:
-         _tomcat_/content/erddap Viestit.xml.
-Uusi standardi viestit.xml asennetaan automaattisesti (.class-tiedostojen joukossa erddapin kautta. sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota) .
+    * Harvinainen: Jos olet päivittämässä ERDDAP™ versio 1.44 (tai alla) ,
+Sinun täytyy poistaa vanhat viestit.xml-tiedosto:
+         _tomcat_/content/erddap /viestit.xml .
+Uudet standardiviestit.xml asennetaan automaattisesti (joukossa . luokan tiedostoja erddap. sota) .
          
-    * Harvinainen: Jos teet aina muutoksia tavallisiin viesteihin.xml-tiedostoon (paikallaan) ,
-Sinun on tehtävä nämä muutokset uuteen viestiin.xml-tiedostoon (joka on
-WEB INF/luokat/gov/noaa/pfel/erddap/util/viestejä.xml, kun Tomcat masentaa erdap.war-sotaa.
+    * Harvinainen: Jos teet aina muutoksia standardiin viestit.xml tiedosto (Käytössä) ,
+sinun täytyy tehdä nämä muutokset uusiin viesteihin.xml tiedosto (joka on
+WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml erddap.warin jälkeen Tomcat puristaa.
          
-    * Harvinainen: Jos ylläpidät mukautettuja viestejä.xml-tiedostoa _tomcat_/content/erddap /
-Sinun täytyy selvittää (Diffin kautta) Mitä muutoksia on tehty oletusviesteissä.xml (joka on uudessa erdapissa) sotaa kuin
-WEB-INF/luokat/gov/noaa/pfel/erddap/util/viestit.xml) ja muokata mukautettuja viestejä.xml-tiedostoa vastaavasti.
+    * Harvinainen: Jos ylläpitää mukautettuja viestejä.xml tiedosto _tomcat_/content/erddap /
+Sinun täytyy selvittää se. (diff:n kautta) mitä muutoksia on tehty oletusviesteihin.xml (jotka ovat uudessa erddap. sota
+WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml) ja muokata mukautettuja viestejä.xml tiedosto vastaavasti.
          
-## Asentaminen{#install} 
+## Asenna{#install} 
 5. Asenna uusi ERDDAP™ Tomcatissa:
-**** Älä käytä Tomcat Manageria. Ennemmin tai myöhemmin tulee mieleen PermGen. On parempi lopettaa ja aloittaa Tomcat.
-Korvaa viittaukset _tomcat_ alla olevaan Tomcat-hakemistoon tietokoneellasi.
+\\ * Älä käytä Tomcat Manageria. Ennemmin tai myöhemmin on PermGen muistiongelmia. On parempi sulkea ja käynnistää Tomcat.
+\\* Korvaa viittaukset alla olevaan _tomcat_-hakemistoon tietokoneellasi.
      
-### Linux ja Macit{#linux-and-macs} 
-1. Shutdown Tomcat: Käytä komentoriviä: _tomcat_/bin/shutdown.sh
-Käytä ps -ef | Tomcat nähdä, onko prosessi pysäytetty. (Se voi kestää minuutin tai kaksi.) 
-2. Poista masentunut ERDDAP™ Asennus: _tomcat_/webapps, Käytä
-rf erddap
-3. Poista vanha erdap. _tomcat_/webapps, käytä rm erddap. sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota
-4. Kopioi uusi erdap. Sotatiedosto väliaikaisesta hakemistosta _tomcat_/webappsiin
-5. Käynnistä Tomcat ja ERDDAP Käytä _tomcat_/bin/startup.sh
-6. Näkymä ERDDAP™ Selaimessasi tarkistaa, että uudelleenkäynnistys onnistui.
-     (Usein sinun täytyy kokeilla muutaman kerran ja odottaa minuuttia ennen kuin näet. ERDDAP™ .)   
+### Linux ja Mac{#linux-and-macs} 
+1. Sammuta Tomcat. Käytä komentoriviltä: _tomcat_/bin/shutdown.sh
+Ja käytä ps-ef | grep tomcat tarkistaa, onko/kun prosessi on pysäytetty. (Se voi viedä pari minuuttia.) 
+2. Poista puristettu ERDDAP™ asennus: In _tomcat_/webapps, use
+rm - rf erddap
+3. Poista vanha erddap. Sotatiedosto: In _tomcat_/webaps, käytä rm erddap. sota
+4. Kuittaan. Sotatiedosto väliaikaisesta kansiosta _Tomcat_/webappsiin
+5. Käynnistä Tomcat uudelleen ERDDAP : use _tomcat_/bin/startup.sh
+6. Näytä ERDDAP™ selaimessa tarkistaa, että uudelleenkäynnistys onnistui.
+     (Usein sinun täytyy yrittää muutaman kerran ja odota hetki ennen kuin näet ERDDAP™ .)   
              
-### Windows Windows{#windows} 
-1. Shutdown Tomcat: Komentorivistä, käytä:_tomcatbin. shutdown.bat 
-2. Poista masentunut ERDDAP™ Asennus: _tomcat_/webapps, Käytä
+### Ikkunat{#windows} 
+1. Sammuta Tomcat. Käytä komentoriviltä: _tomcat_\\bin\\\ shutdown.bat 
+2. Poista puristettu ERDDAP™ asennus: In _tomcat_/webapps, use
 del/S/Q erddap
-3. Poista vanha erdap. War tiedostot: _tomcatwebapps, käytä del erddap. sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota sota
-4. Kopioi uusi erdap. sotatiedosto tilapäisestä hakemistosta _tomcatwebappsiin
-5. Käynnistä Tomcat ja ERDDAP Käytä _tomcatbin_startup.
-6. Näkymä ERDDAP™ Selaimessasi tarkistaa, että uudelleenkäynnistys onnistui.
-     (Usein sinun täytyy kokeilla muutaman kerran ja odottaa minuuttia ennen kuin näet. ERDDAP™ .) 
+3. Poista vanha erddap. Sotatiedosto: _Tomcat_\\ webapps, käytä del erddap. sota
+4. Kuittaan. sotatiedosto väliaikaisesta kansiosta _tomcat_\\webappsiin
+5. Käynnistä Tomcat uudelleen ERDDAP Käytä _tomcat_\\bin\\startup.bat
+6. Näytä ERDDAP™ selaimessa tarkistaa, että uudelleenkäynnistys onnistui.
+     (Usein sinun täytyy yrittää muutaman kerran ja odota hetki ennen kuin näet ERDDAP™ .) 
 
-vaikeuksia päivittää ERDDAP ?? Katso meidän [Lisätuen saaminen](/docs/intro#support) .
+Ongelmat päivitys ERDDAP ? Katso [kohta:](/docs/intro#support) .

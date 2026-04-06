@@ -1,6 +1,6 @@
 # Özel Bayraklar
 
-Bu sayfa, sistemde mevcut olan yapılandırma bayraklarını belgeliyor. Bu bayraklar çeşitli özellikleri, deneysel yetenekleri ve mirası kontrol eder.
+Bu sayfa, sistemde mevcut olan yapılandırma bayraklarını belgelemektedir. Bu bayraklar çeşitli özellikleri, deneysel yetenekleri ve mirası kontrol eder.
 
 ##  **Bayrak Lifecycle Legend** 
 
@@ -20,68 +20,68 @@ Optimizasyon bayrağı. Eğer doğruysa, dokunma iplik sadece işlem için öğe
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Test Testi Test Testi | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 2.29.0'da eklendi. | 
 
 ###  **GörevCacheClear** 
 
 Açıklama
-Hazırlanan arka plan görevi önbelleklerden sona ermiş.
+Hazırlanan arka plan görevi önbelleklerden sona ermiştir.
 
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 2.27.0 | 
 
 ###  **ncHeaderMakeFile** 
 
 Açıklama
-Eğer gerçek bir sunucu, ncheader sonucu oluşturmadan önce tüm nc dosyasını üretecektir. Yeni The new (tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih) Sahte olan davranış doğrudan ncheader sonucu yaratır.
+Eğer gerçek bir sunucu, ncheader sonucu oluşturmadan önce tüm nc dosyasını üretecektir. Yeni Yeni The new (tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih tercih) Sahte olan davranış doğrudan ncheader sonucu yaratır.
 
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Test Testi Test Testi | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış | 
- |   **Long-term Goal**   | Sahte sahte yanlış | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
+ |   **Long-term Goal**   | sahte yanlış | 
  |   **Tarih Tarihi**   | 2.29.0'da eklendi. | 
 
 ###  **EddReflection** 
 
 Açıklama
-Enables the use of Java Şimdiye Kadar Düşünmek ( ERDDAP Dataset) Sınıflar.
+Enables the use of the use of Java Şimdiye Kadar Düşünmek ( ERDDAP Dataset) Sınıflar.
 
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Test Testi Test Testi | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Tarih Tarihi**   | Varsayılan olarak 2.28.0'te doğru değiştirildi, 2.25'te eklendi. | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Tarih Tarihi**   | Varsayılan olarak 2.28.0'te gerçek olarak değiştirildi, 2.25'te eklendi. | 
 
 ###  **arka planCreateSubsetTables** 
 
 Açıklama
-Veri setlerini yükleme süresini geliştirmek için arka ipliklerde oluşturulacak alt masalara izin verin.
+Subset masalarının veri setlerini yükleme süresini geliştirmek için arka ipliklerde yaratılmasına izin verin.
 
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Test Testi Test Testi | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 2.29.0'da eklendi. | 
 
-###  **useNcMetadaForFileTable** 
+###  **NcMetadaForFileTable** 
 
 Açıklama
-Kullanımları NetCDF Metadata dosyayı görüntülemek için. Özellikle bir nc dosyası her değişken için gerçek_range içeriyorsa, dataset yükleme tüm dosyayı okumayı atabilir.
+Kullanımları NetCDF Metadata dosya tablo görünümünü populate etmek için. Özellikle bir nc dosyası her değişken için gerçek_range içeriyorsa, veri set yükleme tüm dosyayı okumayı atabilir.
 
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 2.29.0'da eklendi. | 
 
 ##  **  System & Core Davranış** 
@@ -89,28 +89,28 @@ Kullanımları NetCDF Metadata dosyayı görüntülemek için. Özellikle bir nc
 ###  **e-posta e-posta e-posta e-posta IsActive** 
 
 Açıklama
-Sistem gerçek e-posta göndermeye çalışırsa kontroller (e.g., abonelik güncelleştirmeleri veya hata raporları için) yapılandırılmış SMTP sunucusu aracılığıyla.
+Sistem gerçek e-posta göndermeye çalışırsa kontroller (e.g., abonelik güncellemeler veya hata raporları için) yapılandırılmış SMTP sunucusu aracılığıyla.
 
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek (Yönetici yapılandırmasına bağlı olarak)   | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek (Yönetici yapılandırmasına bağlı olarak)   | 
  |   **Tarih Tarihi**   | Mirası | 
 
-:::info Mantık
+:::info
 Bu bayrak başlangıçta dinamik olarak hesaplanmıştır. Tüm gerekli SMTP kimlik bilgilerini gerekli olmadıkça yanlış varsayılanlar (host, port, user, password, from-address) Kurulumda kesinlikle sağlanır.xml.
 :::
 
 ###  **LoadErrorsOnStatusPage** 
 
 Açıklama
-Belirli veri kümesi yük hatalarının durum sayfasında halka açık gösterilmesini belirler.
+Detaylı veri kümesi yük hatalarının durum sayfasında halka açık gösterilmesini belirler.
 
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Long-term Goal**   | İstenildiği gibi seti | 
  |   **Tarih Tarihi**   | 2.25 yılında eklendi. | 
 
@@ -122,8 +122,8 @@ Bir veri kümesinin altta yatan dosyaların dosyaların dosyalarda erişilebilir
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış | 
- |   **Long-term Goal**   | Sahte sahte yanlış | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
+ |   **Long-term Goal**   | sahte yanlış | 
  |   **Tarih Tarihi**   | 2.10'da eklendi. | 
 
 ##  **🗃️ Datasets** 
@@ -136,8 +136,8 @@ Eğer etkinleştirilirse, sistem başlangıçta veri setlerinde belirli derin do
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 1.38 yılında eklendi. | 
 
 ###  **etkinleştirin** 
@@ -148,7 +148,7 @@ Enables processing the Enables processing the datasets.xml Bir dosya ile [String
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Long-term Goal**   | İstenildiği gibi seti | 
  |   **Tarih Tarihi**   | 2.29.0'da eklendi. | 
 
@@ -160,20 +160,20 @@ Bir SAX kullanmak için iç XML parsing motoru Anahtarlar (XML için Basit API) 
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Test Testi Test Testi | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 2.25 yılında eklendi. | 
 
 ###  **ListeÖzel Verisets** 
 
 Açıklama
-Özel veri kümeleri belirlerse (Kimlik doğrulama gerektirenler) Ana veri kümesi listesinde görünür.
+Özel veri kümeleri belirlerse (Kimlik doğrulama gerektirenler) Ana veri kümesi listesinde görünüyor.
 
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış | 
- |   **Long-term Goal**   | Sahte sahte yanlış | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
+ |   **Long-term Goal**   | sahte yanlış | 
  |   **Tarih Tarihi**   | 1.20 yılında eklendi. | 
 
 ###  **Siyasi SınırlarActive** 
@@ -184,9 +184,21 @@ Siyasi sınırların haritalarda çizilebileceği kontroller.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 1.80 yılında eklendi. | 
+
+###  **PowerSyncousLoading** 
+
+Açıklama
+Gönderilen arka yükleme yerine veri setleri senkronize eder.
+
+ | Emlak | Detaylar | 
+ | : | : | 
+ |   **Yaşam döngüsü**   | Stable Stable | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
+ |   **Long-term Goal**   | sahte yanlış | 
+ |   **Tarih Tarihi**   | 2.30 yılında eklendi. | 
 
 ##  ** Meta Metadata & Standards** 
 
@@ -198,8 +210,8 @@ Genrates ve FGDC'ye hizmet eder (Federal Coğrafya Data Committee) metadata.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 1.38 yılında eklendi. | 
 
 ###  **iso19115 Aktif Aktif Aktif Aktif Aktif Aktif Aktif** 
@@ -210,8 +222,8 @@ Genrates ve ISO 19115 metadata'ya hizmet eder.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 1.38 yılında eklendi. | 
 
 ###  **SisISO19115** 
@@ -222,8 +234,8 @@ Geleneksel jeneratör yerine ISO 19115 metadata oluşturmak için Apache SIS kü
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Test Testi Test Testi | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 2.26 yılında eklendi. | 
 
 ###  **SisISO19139** 
@@ -234,8 +246,8 @@ ISO19139_2007 metadata üretmek için Apache SIS kütüphanesini kullanın.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Test Testi Test Testi | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış | 
- |   **Long-term Goal**   | Sahte sahte yanlış | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
+ |   **Long-term Goal**   | sahte yanlış | 
  |   **Tarih Tarihi**   | 2.29.0'da eklendi. | 
 
 ###  **jsonldActive** 
@@ -246,8 +258,8 @@ Genrates ve JSON-LD'a hizmet eder (Linked Data) metadata.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | Mirası | 
 
 ###  **CroissantSchema** 
@@ -258,8 +270,8 @@ Genrates "Croissant" metadata şeması, makine öğrenimi hazırlığı için va
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Test Testi Test Testi | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 2.28.0'te eklendi. | 
 
 ###  **DeğişkenlerMust HaveIoosCategory** 
@@ -270,20 +282,20 @@ Değişkenlerin IOOS kategorisi özelliği olması gerekir.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Long-term Goal**   | İstenildiği gibi seti | 
  |   **Tarih Tarihi**   | Mirası | 
 
 ###  **NcCFSubsetVariables** 
 
 Açıklama
-Miras davranışı sadece EDDTable FromNcCFFiles datasets için alt küme değişkenler üretmekti. Bu, EDDTableFromNcCFFiles'in diğer veri setleri ile tutarlı olması için davranışını varsayılan olarak eklendi. Geleneksel otomatikliğe ihtiyacınız varsa subsetVariables Bunu etkinleştirebilirsiniz. Daha iyi çözüm eklemek olacaktır subsetVariables Veri kümesi tanımına.
+Miras davranışı sadece EDDTable FromNcCFFiles datasets için alt küme değişkenler üretmekti. Bu, EDDTableFromNcCFFiles'in diğer veri setleri ile tutarlı olması için davranışını varsayılan olarak eklendi. Eğer mirası otomatik ihtiyacınız varsa subsetVariables Bunu etkinleştirebilirsiniz. Daha iyi çözüm eklemek olacaktır subsetVariables Dataset tanımına.
 
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Test Testi Test Testi | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış | 
- |   **Long-term Goal**   | Sahte sahte yanlış | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
+ |   **Long-term Goal**   | sahte yanlış | 
  |   **Tarih Tarihi**   | 2.26 yılında eklendi. | 
 
 ##  **Abonelikler ve Bildirimler** 
@@ -296,8 +308,8 @@ Veri set güncellemeleri için e-posta abonelik sistemi kullanılabilir.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 1.14'te eklendi. | 
 
 ###  **aboneToRemoteErddapDataset** 
@@ -308,8 +320,8 @@ Buna izin verin ERDDAP Örneğin uzaktan abone olmak için ERDDAP Güncellemeler
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 1.70 yılında eklendi. | 
 
 ###  **UpdateSubsRsOnFileChanges** 
@@ -320,8 +332,8 @@ Promosyonlar abonelik ve RSS Altta yatan dosyalar değiştiğinde güncelleştir
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 2.26 yılında eklendi. | 
 
 ###  **enable enable enable enable enable enable MqttBroker** 
@@ -332,7 +344,7 @@ mesajlaşmayı işlemek için uygulama içinde bir iç MQTT brokerine başlayın
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Test Testi Test Testi | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
  |   **Long-term Goal**   | İstenildiği gibi seti | 
  |   **Tarih Tarihi**   | 2.29.0'da eklendi. | 
 
@@ -344,7 +356,7 @@ Enables yayını bildirimleri (Dataset gibi değişiklikler) MQTT brokerine.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Test Testi Test Testi | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
  |   **Long-term Goal**   | İstenildiği gibi seti | 
  |   **Tarih Tarihi**   | 2.29.0'da eklendi. | 
 
@@ -358,9 +370,9 @@ HTTP başlıkları kullanarak istek URL ayrıntılarını belirlemek için izinl
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Tarih Tarihi**   | Varsayılan olarak 2.28.0'te doğru olarak değiştirildi, 2.27.0'da eklendi. | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Tarih Tarihi**   | Varsayılan olarak 2.28.0'te doğru değiştirildi, 2.27.0'da eklendi. | 
 
 ###  **enable enable enable enable enable enable Cors** 
 
@@ -370,7 +382,7 @@ Enables Cross-Origin Resource Paylaşım (KURUMSAL) HTTP yanıtlarına dikkat ed
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
  |   **Long-term Goal**   | İstenildiği gibi seti | 
  |   **Tarih Tarihi**   | 2.26 yılında eklendi. | 
 
@@ -384,7 +396,7 @@ Apache Lucene'yi kullanmak için iç arama motoruna işaret eder.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Test Testi Test Testi | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış | 
+ |   **Mevcut Tembel**   | sahte yanlış | 
  |   **Long-term Goal**   | ?? | 
  |   **Tarih Tarihi**   | Mirası | 
 
@@ -398,8 +410,8 @@ Enables the "Files" browser view for datasets that support it.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 1.58 yılında eklendi. | 
 
 ###  **dönüştürücülerActive** 
@@ -410,8 +422,8 @@ UI'deki enables dönüştürme araçları.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 1.44 yılında eklendi. | 
 
 ###  **slideSorterActive** 
@@ -422,8 +434,8 @@ Enables the Slide Sorter.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 1.44 yılında eklendi. | 
 
 ###  **VerilerProviderFormActive** 
@@ -434,8 +446,8 @@ Form veri sağlayıcılarının metadata'ya girmesine izin verir.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | Mirası | 
 
 ###  **outOfDateDatasetsActive** 
@@ -446,8 +458,8 @@ Mevcut veri kümelerinin raporlanması.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 1.82'de eklendi. | 
 
 ###  **wmsActive** 
@@ -458,8 +470,8 @@ Web Map Service ( WMS ) arayüz.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | 1.44 yılında eklendi. | 
 
 ###  **wmsClientActive** 
@@ -470,8 +482,8 @@ Açıklama
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | Stable Stable | 
- |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
  |   **Tarih Tarihi**   | Mirası | 
 
 ###  **geoServicesRestActive** 
@@ -482,8 +494,8 @@ Enables the RESTful Geospatial Hizmetleri için arayüz. Tamamen uygulanmadı.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | İnşaatın Altında | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış (Hardcoded)   | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | sahte yanlış (Hardcoded)   | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
 
 ###  **wcsActive** 
 
@@ -493,8 +505,8 @@ Web Coverage Service ( WCS ) arayüz. Tamamen uygulanmadı.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | İnşaatın Altında | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış (Hardcoded)   | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | sahte yanlış (Hardcoded)   | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
 
 ###  **SosActive** 
 
@@ -504,5 +516,5 @@ Sensör Gözlem Servisi ( SOS ) arayüz.
  | Emlak | Detaylar | 
  | : | : | 
  |   **Yaşam döngüsü**   | İnşaatın Altında | 
- |   **Mevcut Tembel**   | Sahte sahte yanlış (Hardcoded)   | 
- |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 
+ |   **Mevcut Tembel**   | sahte yanlış (Hardcoded)   | 
+ |   **Long-term Goal**   | Gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek gerçek | 

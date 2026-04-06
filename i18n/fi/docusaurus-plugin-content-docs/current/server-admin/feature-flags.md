@@ -1,508 +1,520 @@
-# Lippujen ominaisuudet
+# Ominaisuusliput
 
-Tällä sivulla dokumentoidaan järjestelmässä käytettävissä olevat konfiguraatioliput. Nämä liput hallitsevat erilaisia ominaisuuksia, kokeellisia kykyjä ja perintökäyttäytymistä.
+Tällä sivulla dokumentoidaan järjestelmän asetusliput. Nämä liput kontrolloivat erilaisia ominaisuuksia, kokeellisia ominaisuuksia ja perinteistä käyttäytymistä.
 
-##  **Lipun elinkaaren legenda** 
+##  **Lippu Lifecycle Legend** 
 
-*  **Vakaa:** Pitkän aikavälin lippuja, joiden avulla järjestelmänvalvojat voivat muuttaa toiminnallisuutta. Turvallinen tuotantoon.
-*  **Testaus:** Ominaisuudet, jotka ovat valmiita testaamiseen. Nämä joko valmistuvat "Stable" tai lopulta asetetaan niiden tavoitearvo ja poistaa lippu.
-*  **Rakentamisen alla:** Tällä hetkellä koodissa on väärennetty, koodauksesta riippumatta. Ominaisuus ei ole vielä valmis käytettäväksi.
+*  **Vakaa:** Suunniteltu pitkän aikavälin lippuja, jotta ylläpitäjät voivat muuttaa toimintoja. Turvallinen tuotannolle.
+*  **Testaus:** Ominaisuudet, jotka ovat valmiita testattavaksi. Nämä joko valmistuvat "stabiiliksi" tai asetetaan lopulta niiden tavoitearvoon ja poistetaan lippu.
+*  **Rakennuksessa:** Tällä hetkellä koodattu vääräksi koodissa riippumatta konfiguraatiosta. Ominaisuus ei ole vielä valmis käyttöön.
 
-##  **&gt; Optimointi testeissä** 
+##  **... Optimointi testauksessa** 
 
-Nämä liput todennäköisesti poistetaan tulevaisuudessa.
+Nämä ovat todennäköisesti tulevaisuudessa poistettavat liput.
 
-###  **Kosketa vain kun kohteet** 
+###  **kosketaThradeVain silloin, kun** 
 
-Kuvaus
-optimointilippu. Jos on totta, kosketuslanka kulkee vain silloin, kun on asioita, joita käsitellään.
+Tavaran kuvaus
+Optimointilippu. Jos se on totta, kosketuslanka toimii vain silloin, kun on asioita käsiteltävänä.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Testaus | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 2.29.0 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Testaus | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 2.29.0 | 
 
-###  **Tehtävä: Clear** 
+###  **tehtäväCacheClear** 
 
-Kuvaus
-Mahdollistaa taustatehtävän, joka puhdistaa päättyneet kohteet välimuistista.
+Tavaran kuvaus
+Mahdollistaa taustatehtävän, joka poistaa vanhentuneet kohteet välimuistista.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 2.27.0 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 2.27,0 | 
 
-###  **ncheaderMakeFile** 
+###  **ncHeaderMakeFile** 
 
-Kuvaus
-Jos totta, palvelin tuottaa koko nc-tiedoston ennen ncheader-tuloksen luomista. Uusi (Mieluiten) Käyttäytyminen, kun valhe on suoranainen tulos.
+Tavaran kuvaus
+Jos totta palvelin luo koko nc-tiedoston ennen kuin luot ncheaderin tuloksen. Uusi (parempi) Käyttäydy, kun väärä on suoraan luoda Ncheader tulos.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Testaus | 
- |   **Nykyinen oletus**   | Väärin väärä | 
- |   **Pitkän aikavälin tavoite**   | Väärin väärä | 
- |   **Historian historia**   | Lisätty 2.29.0 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Testaus | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | väärä | 
+ |   **Historia**   | Lisätty 2.29.0 | 
 
-###  **Käyttövalmius** 
+###  **useEdddReflection** 
 
-Kuvaus
-mahdollistaa käytön Java Instantiate EDD ( ERDDAP Dataa) luokkia.
+Tavaran kuvaus
+Mahdollistaa Java EDD:n instantiointi ( ERDDAP Dataset) kurssit.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Testaus | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Oletus muuttui todeksi 2.28.0, lisätty 2,25 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Testaus | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Oletus muuttunut todeksi kohdassa 2.28.0, lisätty kohtaan 2.25 | 
 
-###  **Taustaluominen subsettables** 
+###  **taustaCreateSubsetTables** 
 
-Kuvaus
-Alijoukkotaulukot voidaan luoda taustasäikeissä, jotta voidaan parantaa tietoaineistojen latausaikaa.
+Tavaran kuvaus
+Sallii osajoukkotaulukot luodaan taustakierteitä parantaa tietoaineistojen latausaika.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Testaus | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 2.29.0 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Testaus | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 2.29.0 | 
 
-###  **NcMetadataForFileTable (käytetty)** 
+###  **useNcMetadataForFileTable** 
 
-Kuvaus
-käyttää NetCDF Metadata populoida tiedostotaulukon näkymä. Erityisesti jos nc-tiedosto sisältää todellisen_range-arvon jokaiselle muuttujalle, tietojen lataaminen voi ohittaa koko tiedoston lukemisen.
+Tavaran kuvaus
+Käyttö NetCDF metadataa tiedostotaulukosta. Erityisesti jos nc-tiedosto sisältää kunkin muuttujan todellisen_vaihteluvälin, tiedoston lataus voi ohittaa koko tiedoston lukemisen.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 2.29.0 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 2.29.0 | 
 
-##  **Järjestelmä ja ydinkäyttäytyminen** 
+##  **Järjestelmä & ydin käyttäytyminen** 
 
-###  **Sähköposti Aktiivinen** 
+###  **sähköposti Aktiivinen** 
 
-Kuvaus
-Järjestelmä yrittää lähettää todellisia sähköposteja (esimerkiksi tilauspäivitysten tai virheilmoitusten osalta) SMTP-palvelimen kautta.
+Tavaran kuvaus
+Valvoo, yrittääkö järjestelmä lähettää oikeita sähköposteja (Esimerkiksi tilauspäivityksiä tai virheraportteja varten) SMTP-palvelimen kautta.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Väärin väärä | 
- |   **Pitkän aikavälin tavoite**   | Todellista (Admin Config)   | 
- |   **Historian historia**   | Legacy | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | tosi (Riippuu admin config)   | 
+ |   **Historia**   | Perintö | 
 
-Lähde: Info Logic
-Lippu lasketaan dynaamisesti käynnistysvaiheessa. Epäonnistuu, ellei kaikki tarvittavat SMTP-tunnukset (isäntä, portti, käyttäjä, salasana, osoitteesta) Se on tiukasti määritelty asennus.xml.
-:::
+:: info Logic
+Tämä lippu lasketaan dynaamisesti käynnistettäessä. Se on virheellinen, ellei kaikki vaaditut SMTP-tiedot (isäntä, portti, käyttäjä, salasana, osoitteesta) ovat tiukasti toimitetaan setup.xml.
+:
 
-###  **Näyttelijät:LoadErrorsOnStatusPage** 
+###  **näytäLoadErrorsOnStatusPage** 
 
-Kuvaus
-Määrittää, näkyvätkö yksityiskohtaiset tiedonsiirtovirheet julkisesti statussivulla.
+Tavaran kuvaus
+Määrittää, jos yksityiskohtaiset tiedostojen kuormitusvirheet näkyvät julkisesti tila sivulla.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | kuin haluttu | 
- |   **Historian historia**   | Lisätty 2.25 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | Aseta haluamallasi tavalla | 
+ |   **Historia**   | Lisätty 2.25 | 
 
-###  **Epäonnistumismahdollisuus** 
+###  **OletusAccessibleViaFiles** 
 
-Kuvaus
-Aseta oletuskäyttäytyminen siitä, voidaanko tietoaineiston taustalla olevia tiedostoja käyttää tiedostopalvelussa.
+Tavaran kuvaus
+Asettaa oletuskäyttäytymisen siitä, voidaanko tiedoston taustalla olevia tiedostoja käyttää tiedostopalvelussa.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Väärin väärä | 
- |   **Pitkän aikavälin tavoite**   | Väärin väärä | 
- |   **Historian historia**   | Lisätty 2.10 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | väärä | 
+ |   **Historia**   | Lisätty kohtaan 2.10 | 
 
-##  **&gt; Datasetit** 
+##  **** 
 
-###  **Nopea käynnistys** 
+###  **pikakäynnistys** 
 
-Kuvaus
-Järjestelmä pyrkii käynnistymään nopeammin ohittamalla tiettyjä perusteellisia validointitarkastuksia tietoaineistoissa aloittamisen aikana.
+Tavaran kuvaus
+Jos käytössä, järjestelmä yrittää käynnistyä nopeammin ohittamalla tiettyjä syvä validointi tarkastuksia tietokokonaisuuksia alustamisen aikana.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 1.38 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 1,38 | 
 
-###  **mahdollistaa** 
+###  **Ota EnvParsing käyttöön** 
 
-Kuvaus
-Mahdollistaa käsittelyn datasets.xml tiedoston kanssa [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Sillä on monia käyttötarkoituksia, kuten yksityisten arvojen asettaminen. (kuin salasanat) ympäristömuuttujat.
+Tavaran kuvaus
+Mahdollistaa käsittelyn datasets.xml tiedosto, jolla [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) . Tällä on monia käyttötarkoituksia, kuten yksityisten arvojen asettaminen (kuten salasanat) ympäristömuuttujien käyttö.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | kuin haluttu | 
- |   **Historian historia**   | Lisätty 2.29.0 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | Aseta haluamallasi tavalla | 
+ |   **Historia**   | Lisätty 2.29.0 | 
 
-###  **Käyttäjä:SaxParser** 
+###  **käytäSaxParseria** 
 
-Kuvaus
-Siirrä sisäistä XML-suojausmoottoria SAX:n käyttöön (Yksinkertainen XML) Sarjan sijaan. Tämä mahdollistaa joitakin kehittyneitä ominaisuuksia, kuten Xinclude. [Mukautetut näytön ominaisuudet](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
+Tavaran kuvaus
+Vaihda sisäinen XML jäsennys moottori käyttää SAX (Yksinkertainen XML- sovellusliittymä) -Ei DOM-järjestäjää. Tämä mahdollistaa joitakin uusia kehittyneitä ominaisuuksia kuten XInclude, ja [mukautetut näytön ominaisuudet](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) .
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Testaus | 
- |   **Nykyinen oletus**   | Väärin väärä | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 2.25 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Testaus | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 2.25 | 
 
-###  **PrivateDatasets** 
+###  **luetteloPrivateDatasets** 
 
-Kuvaus
-määrittää, onko yksityiset tietoaineistot (jotka vaativat todentamista) näkyy päätietojen luettelossa.
+Tavaran kuvaus
+Määrittää onko yksityinen tietoaineisto (jotka edellyttävät todentamista) esitetään päätietoluettelossa.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Väärin väärä | 
- |   **Pitkän aikavälin tavoite**   | Väärin väärä | 
- |   **Historian historia**   | Lisätty 1.20 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | väärä | 
+ |   **Historia**   | Lisätään 1.20 kohtaan. | 
 
-###  **Poliittiset rajat** 
+###  **poliittiset rajatAktiivinen** 
 
-Kuvaus
-Poliittiset rajat voidaan määritellä kartoilla.
+Tavaran kuvaus
+Valvoo, voidaanko kartalle piirtää poliittisia rajoja.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 1.80 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 1,80 | 
 
-##  **Metadata & Standards** 
+###  **VoimaSynchronousLoading** 
 
-###  **fgdaktiivista** 
+Tavaran kuvaus
+Kuormitustietokokonaisuudet synkronoitu eikä lykätty taustakuormitus.
 
-Kuvaus
-Sukupolvet ja FGDC (liittovaltion maantieteellinen Datakomitea) metadataa.
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | väärä | 
+ |   **Historia**   | Lisätty 2.30 | 
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 1.38 | 
+##  **Metatiedot ja standardit** 
 
-###  **Isoäiti 115 Aktiivinen** 
+###  **fgdcActive** 
 
-Kuvaus
-Käytössä on ISO 19115 metadata.
+Tavaran kuvaus
+Luo ja palvelee FGDC:tä (Federal Geographic Datakomitea) metadata.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 1.38 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 1,38 | 
 
-###  **Käyttöjärjestelmä 19115** 
+###  **iso19115 Aktiivinen** 
 
-Kuvaus
-Apache SIS -kirjastolla luodaan ISO 19115 -metadata perintögeneraattorin sijaan. Jos tämä on käytössä ja ei ole SisISO19139, oletusarvoinen IOS 19115 -metadata on ISO19115_3_2016 -muodossa. Jos tämä on virheellistä, oletusmuoto on muutettu ISO19115_2 -muodossa.
+Tavaran kuvaus
+Luo ja palvelee ISO 19115 metatietoja.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Testaus | 
- |   **Nykyinen oletus**   | Väärin väärä | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 2.26 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 1,38 | 
 
-###  **Käyttöjärjestelmä 19139** 
+###  **useSisISO19115** 
 
-Kuvaus
-Apache SIS -kirjastolla luodaan ISO19139_2007-metadata.
+Tavaran kuvaus
+Käyttää Apache SIS -kirjastoa ISO 19115 -metadatan tuottamiseen aiemman generaattorin sijaan. Jos tämä on päällä ja käyttääSisISO19139 ei ole päällä, oletus IOS 19115 metadata on ISO 19115_3_2016-muodossa. Jos tämä on väärä oletusmuoto on perintöä muutettu ISO19115_2 muodossa.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Testaus | 
- |   **Nykyinen oletus**   | Väärin väärä | 
- |   **Pitkän aikavälin tavoite**   | Väärin väärä | 
- |   **Historian historia**   | Lisätty 2.29.0 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Testaus | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 2.26 | 
 
-###  **jsonldactive** 
+###  **useSisISO19139** 
 
-Kuvaus
-Sukupolvet ja palvelut JSON-LD (Liittyvät tiedot) metadataa.
+Tavaran kuvaus
+Käyttää Apache SIS-kirjastoa ISO19139_2007 -metatiedon tuottamiseen.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Legacy | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Testaus | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | väärä | 
+ |   **Historia**   | Lisätty 2.29.0 | 
 
-###  **CroissantSchema** 
+###  **jsonldActive** 
 
-Kuvaus
-"Croissant" metadata schema on koneoppimisen valmiuden oletuskohta.
+Tavaran kuvaus
+Luo ja palvelee JSON-LD:ää (Linkit) metadata.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Testaus | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 2.28.0 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Perintö | 
 
-###  **MuuttujiaMustHaveIoosCategory** 
+###  **createCroissantSchema** 
 
-Kuvaus
-Muuttujilla on oltava IOOS-luokitus.
+Tavaran kuvaus
+Luo "Croissant" metadata skeema oletuksena skeema koneen oppimisen valmius.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | kuin haluttu | 
- |   **Historian historia**   | Legacy | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Testaus | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 2.28.0 | 
 
-###  **Sisältää NCFSubsetVariables** 
+###  **muuttujatHaveIoos-luokka** 
 
-Kuvaus
-Legacy-käyttäytymisenä oli tuottaa subset-muuttujat vain EDDTableFromNcFiles-tiedostoille. Tämä lisättiin oletusarvoisesti EDDTableFromNcCFiles-käyttäytymiseen muiden aineistotyyppien kanssa. Jos tarvitset automaattista perintöä subsetVariables Voit ottaa tämän käyttöön. Paras ratkaisu olisi lisätä subsetVariables aineiston määritelmään.
+Tavaran kuvaus
+Voimat, että muuttujat on oltava IOOS luokka ominaisuus.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Testaus | 
- |   **Nykyinen oletus**   | Väärin väärä | 
- |   **Pitkän aikavälin tavoite**   | Väärin väärä | 
- |   **Historian historia**   | Lisätty 2.26 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | Aseta haluamallasi tavalla | 
+ |   **Historia**   | Perintö | 
 
-##  **• Tilaukset ja ilmoitukset** 
+###  **includeNcCFSubsetVarataan** 
 
-###  **Järjestelmäaktiivinen** 
+Tavaran kuvaus
+Legacy käyttäytyminen oli luoda subset muuttujia vain EDDtableFromNcCFFles tietoaineistot. Tämä lisättiin oletuksena käyttäytyminen EDDtableFromNcCFFles olla yhdenmukainen muiden tiedostotyyppien. Jos tarvitset perinnön automaattinen subsetVariables Voit sallia tämän. Parempi ratkaisu olisi lisätä subsetVariables tietokokonaisuuden määritelmään.
 
-Kuvaus
-Mahdollistaa sähköpostin tilausjärjestelmän tietoaineiston päivityksille.
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Testaus | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | väärä | 
+ |   **Historia**   | Lisätty 2.26 | 
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 1.14 | 
+##  **Tilaukset ja ilmoitukset** 
 
-###  **Tekijä: RemoteErddapDataset** 
+###  **TilausSystemActive** 
 
-Kuvaus
-Sallikaa tämän ERDDAP Etätilaaminen ERDDAP päivityksiin liittyviä tietoja.
+Tavaran kuvaus
+Mahdollistaa sähköpostin tilausjärjestelmän tiedostojen päivityksiä varten.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 1.70 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätään kohtaan 1.14. | 
 
-###  **PäivitysSubsRssOnFileChanges** 
+###  **tilataToRemoteErddapDataset** 
 
-Kuvaus
-Triggersin tilaus ja RSS Päivitykset, kun taustalla olevat tiedostot muuttuvat. Perintökäyttäytyminen teki vain päivityksiä tietoaineiston lataamiseen. (joita palvelimilla oli yhtä usein kuin viikoittain) .
+Tavaran kuvaus
+Mahdollistaa tämän ERDDAP esimerkiksi tilata etä ERDDAP tiedot päivityksistä.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 2.26 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 1,70 | 
 
-###  **mahdollistaa MqttBroker** 
+###  **updateSubsRssOnFileMuutoksia** 
 
-Kuvaus
-Käynnistä sisäinen MQTT-välittäjä sovelluksessa viestien käsittelyyn.
+Tavaran kuvaus
+Matkanjärjestäjät RSS päivittää, kun taustalla olevat tiedostot muuttuvat. Perinnöllinen käytös oli vain tehdä päivityksiä aineisto uudelleen ladata (Jotkut palvelimet oli yhtä harvoin kuin viikoittain) .
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Testaus | 
- |   **Nykyinen oletus**   | Väärin väärä | 
- |   **Pitkän aikavälin tavoite**   | kuin haluttu | 
- |   **Historian historia**   | Lisätty 2.29.0 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 2.26 | 
 
-###  **Lähde:MqttNotif** 
+###  **käytössä MqttBroker** 
 
-Kuvaus
-Mahdollistaa ilmoitusten julkaisemisen (Tietojen muuttaminen) MQTT-välittäjä.
+Tavaran kuvaus
+Aloittaa sisäisen MQTT-välittäjän sovelluksen sisällä viestien käsittelyyn.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Testaus | 
- |   **Nykyinen oletus**   | Väärin väärä | 
- |   **Pitkän aikavälin tavoite**   | kuin haluttu | 
- |   **Historian historia**   | Lisätty 2.29.0 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Testaus | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | Aseta haluamallasi tavalla | 
+ |   **Historia**   | Lisätty 2.29.0 | 
 
-##  **Web Headers / Konfiguraatio** 
+###  **julkaistaMqttNotif** 
 
-###  **Käyttöpäät Url** 
+Tavaran kuvaus
+Mahdollistaa ilmoitusten julkaisemisen (kuten tietokokonaisuuksien muutokset) MQTT-välittäjälle.
 
-Kuvaus
-HTTP-otsikoiden avulla voidaan määrittää pyynnön URL-osoitteen tiedot (Hyödyllisiä proksien takana) .
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Testaus | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | Aseta haluamallasi tavalla | 
+ |   **Historia**   | Lisätty 2.29.0 | 
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Oletus muuttui todeksi 2.28.0, lisätty 2.27.0 | 
+##  **Web-otsikot/konfiguraatio** 
 
-###  **mahdollistaa Cors** 
+###  **useOtsikko Url** 
 
-Kuvaus
-Mahdollistaa Cross-Origin -resurssien jakamisen (Koruja) HTTP-vastaukset.
+Tavaran kuvaus
+Sallii HTTP- otsikoiden käytön pyynnön URL-tietojen määrittämiseen (hyödyllisiä apurahojen takana) .
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Väärin väärä | 
- |   **Pitkän aikavälin tavoite**   | kuin haluttu | 
- |   **Historian historia**   | Lisätty 2.26 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Oletus muuttunut todeksi 2.28.0, lisätty 2.27.0 | 
 
-##  **Search** 
+###  **käytössä Cors** 
 
-###  **Käyttöluettelo** 
+Tavaran kuvaus
+Mahdollistaa lähtöalueiden välisen resurssien jakamisen (KORIT) HTTP-vastausten otsikot.
 
-Kuvaus
-Siirrä sisäinen hakukone käyttää Apache Lucene.
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | Aseta haluamallasi tavalla | 
+ |   **Historia**   | Lisätty 2.26 | 
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Testaus | 
- |   **Nykyinen oletus**   | Väärin väärä | 
- |   **Pitkän aikavälin tavoite**   | ?? | 
- |   **Historian historia**   | Legacy | 
+##  **Etsi** 
 
-##  **Palvelut ja pöytäkirjat** 
+###  **useLuceneSearchEngine** 
 
-###  **tiedostoja aktiivisesti** 
+Tavaran kuvaus
+Vaihda sisäinen hakukone käyttää Apache Lucene.
 
-Kuvaus
-Mahdollistaa "Files"-selainnäkymän tietoaineistoille, jotka tukevat sitä.
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Testaus | 
+ |   **Oletus**   | väärä | 
+ |   **Pitkän aikavälin tavoite**   | ? | 
+ |   **Historia**   | Perintö | 
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 1.58 | 
+##  **Palvelut & Protokollat** 
 
-###  **Transaktiivisuus** 
+###  **tiedostotAktiivinen** 
 
-Kuvaus
-mahdollistaa muuntotyökalut UI:ssa.
+Tavaran kuvaus
+Mahdollistaa tiedostojen selaimen näkymän tiedostoille, jotka tukevat sitä.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 1.44 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 1,58 | 
 
-###  **Sorteraktiivisuus** 
+###  **MuuttajatAktiivinen** 
 
-Kuvaus
-Sisältää Slide Sorterin.
+Tavaran kuvaus
+Mahdollistaa muuntaminen työkaluja käyttöliittymässä.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 1.44 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 1,44 | 
 
-###  **Palveluntarjoaja FormActive** 
+###  **diaSorterActive** 
 
-Kuvaus
-mahdollistaa lomakkeen, jonka avulla tietojen tarjoajat voivat syöttää metatietoja.
+Tavaran kuvaus
+Slide Sorter on käytössä.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Legacy | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 1,44 | 
 
-###  **OutDateDatasetsActive** 
+###  **dataProviderFormActive** 
 
-Kuvaus
-mahdollistaa ajantasaisten tietoaineistojen raportoinnin.
+Tavaran kuvaus
+Sallii lomakkeen, jonka avulla tietojen tarjoajat voivat syöttää metatietoja.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 1.82 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Perintö | 
 
-###  **ms aktiivisesti** 
+###  **outOfDateDatasetsActive** 
 
-Kuvaus
-Verkkokarttapalvelun käyttöönotto ( WMS ) rajapinta.
+Tavaran kuvaus
+Mahdollistaa vanhentuneiden tietoaineistojen raportoinnin.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Lisätty 1.44 | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 1.82 | 
 
-###  **MSClientActive** 
+###  **WMSActive** 
 
-Kuvaus
-Mahdollistaa sisäisen WMS asiakkaan ominaisuuksia.
+Tavaran kuvaus
+Mahdollistaa verkkokarttapalvelun ( WMS ) käyttöliittymä.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | vakaa | 
- |   **Nykyinen oletus**   | Todellista | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
- |   **Historian historia**   | Legacy | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Lisätty 1,44 | 
 
-###  **GeoServices** 
+###  **wmsClientActive** 
 
-Kuvaus
-mahdollistaa RESTful Geospatial-palveluiden käyttöliittymä. Ei täysin toteutettu.
+Tavaran kuvaus
+Mahdollistaa sisäisen WMS asiakkaan ominaisuudet.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Rakentamisen alla | 
- |   **Nykyinen oletus**   | Väärin väärä (Hardcode)   | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Vakaa | 
+ |   **Oletus**   | tosi | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+ |   **Historia**   | Perintö | 
 
-###  **WC** 
+###  **GeoServicesRestactive** 
 
-Kuvaus
-Verkon kattavuuspalvelun käyttöönotto ( WCS ) rajapinta. Ei täysin toteutettu.
+Tavaran kuvaus
+Mahdollistaa RESTful Geospatiaalipalvelujen käyttöliittymä. Ei täysin toteutettu.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Rakentamisen alla | 
- |   **Nykyinen oletus**   | Väärin väärä (Hardcode)   | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Rakentamisessa | 
+ |   **Oletus**   | väärä (Koodattu)   | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
 
-###  **Sonsaktiivisuus** 
+###  **wcsActive** 
 
-Kuvaus
-Sensorin tarkkailupalvelun käyttöönotto ( SOS ) rajapinta.
+Tavaran kuvaus
+Mahdollistaa Web Coverage -palvelun ( WCS ) käyttöliittymä. Ei täysin toteutettu.
 
- | omaisuus | Yksityiskohdat | 
- | :--- | :--- | 
- |   **elinkaari**   | Rakentamisen alla | 
- |   **Nykyinen oletus**   | Väärin väärä (Hardcode)   | 
- |   **Pitkän aikavälin tavoite**   | Todellista | 
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Rakentamisessa | 
+ |   **Oletus**   | väärä (Koodattu)   | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 
+
+###  **sosActive** 
+
+Tavaran kuvaus
+Mahdollistaa sensorien tarkkailupalvelun ( SOS ) käyttöliittymä.
+
+ | Omaisuus | Yksityiskohdat | 
+ | ---- | ---- | 
+ |   **Elinkaari**   | Rakentamisessa | 
+ |   **Oletus**   | väärä (Koodattu)   | 
+ |   **Pitkän aikavälin tavoite**   | tosi | 

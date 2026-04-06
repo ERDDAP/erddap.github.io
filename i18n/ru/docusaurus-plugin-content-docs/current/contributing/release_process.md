@@ -19,9 +19,9 @@ mvn verify
 mvn verify -P external
 mvn verify -P slowAWS
 ```
-* Используйте TranslateMessages.translate () Обновлять переводы при необходимости
+* Использовать `python translation/translate.py` Обновление переводов при необходимости.
 * Разработчик: EDStatic.java Set Development Режим ложный, изменить номер версии и указать дату выхода.
-* Постройте
+* Делай строительство.
 ```
 mvn clean
 mvn compile
@@ -41,10 +41,10 @@ mvn package
   * в \\[ кот \\] /webapps/ :
 rm -rf erddap
 РМ Эрддап. война
-ср ../content/erddap/erddap2.22.war erddap.war // или как там номер
+ср ../content/erddap/erddap2.22.war erddap.war // или что бы это ни было
   * в \\[ кот \\] /bin/ :
 /startup.sh
-  * После этого ERDDAP вернули веб-страницу, в \\[ кот \\] /webapps/ :
+  * После этого ERDDAP Вернул веб-страницу, в \\[ кот \\] /webapps/ :
 Исполнитель: R erddap
 chmod - R g + rw erddap
 chmod - R o-rwx erddap
@@ -54,7 +54,8 @@ chmod - R o-rwx erddap
 
 title: The official v2.25 version
 описать: Смотрите список изменений в
-      https://erddap.github.io/changes#version-225
+       https://erddap.github.io/changes#version-225
+ 
 
 ## Обновление документации
 * Обновить номер версии в файле docusaurus.config.ts (в нижнем отделении) .
@@ -70,17 +71,19 @@ title: The official v2.25 version
 В основном это означает ErddapContent и ErddapTest, но они должны быть обновлены во время изменений в разработке.
 
 ## Уведомлять пользователей
-Уведомить пользователей, которые запросили изменения (Для тех, чьи баги были исправлены) . Дайте им время, чтобы проверить изменения и / или поднять вопросы.
+Уведомить пользователей, которые запросили изменения (или чьи баги были исправлены) . Дайте им время, чтобы проверить изменения и / или поднять вопросы.
 
  ERDDAP Версия 2.25 уже доступна&#33;
 
 Вы можете прочитать об изменениях в
-https://erddap.github.io/changes#version-225
+ https://erddap.github.io/changes#version-225
+ 
 
 Некоторые изменения — это изменения, которые вы предложили. Большое спасибо за ваши предложения. Ищите свое имя в списке изменений, чтобы увидеть детали. Было бы здорово, если бы вы могли опробовать новые функции в ближайшее время, прежде чем я объявлю эту новую версию более широкой аудитории.
 
 Если вы являетесь ERDDAP Администратор, инструкции по модернизации находятся на
-https://erddap.github.io/docs/server-admin/deploy-update
+ https://erddap.github.io/docs/server-admin/deploy-update
+ 
 
 Если у вас есть какие-либо проблемы, вопросы, предложения, пожалуйста, напишите мне.
 

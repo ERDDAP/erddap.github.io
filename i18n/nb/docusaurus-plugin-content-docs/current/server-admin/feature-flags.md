@@ -4,15 +4,15 @@ Denne siden dokumenterer konfigurasjonsflaggene som er tilgjengelige i systemet.
 
 ##  **Flag Lifecycle Legend** 
 
-*  **Stabilt:** Tiltenkt som langsiktige flagg for å tillate administratorer å endre funksjonalitet. Sikker for produksjon.
-*  **Testing:** Funksjoner som er klare til testing. Disse vil enten utdanne til "Stable" eller til slutt bli satt til deres målverdi og få flagget fjernet.
+*  **Stabil:** Tiltenkt som langsiktige flagg for å tillate administratorer å endre funksjonalitet. Sikker for produksjon.
+*  **Testing:** Funksjoner som er klare til å teste. Disse vil enten utdanne til "Stable" eller til slutt bli satt til deres målverdi og få flagget fjernet.
 *  **Under konstruksjon:** For tiden hardcoded til falsk i koden, uansett konfigurasjon. Funksjonen er ennå ikke klar til bruk.
 
 ##  **🚀 Optimasjon i testing** 
 
 Dette er flagg som sannsynligvis vil bli fjernet i fremtiden.
 
-###  **TouchTreadOnlyWhen items** 
+###  **touchTreadOnlyWhenItems** 
 
 Beskrivelse
 Optimasjonsflagg. Hvis det er sant, kjører berøringstråden bare når det er elementer å behandle.
@@ -24,14 +24,14 @@ Optimasjonsflagg. Hvis det er sant, kjører berøringstråden bare når det er e
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 2.29.0 | 
 
-###  **oppgaveCacheClear** 
+###  **taskCacheClear** 
 
 Beskrivelse
 Aktiverer bakgrunnsoppgaven som fjerner utløpte elementer fra bufferen.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 2.27.0 | 
@@ -39,7 +39,7 @@ Aktiverer bakgrunnsoppgaven som fjerner utløpte elementer fra bufferen.
 ###  **ncHeaderMakeFile** 
 
 Beskrivelse
-Hvis sant serveren vil generere hele nc-filen før du oppretter ncheader-resultatet. Den nye (Foretrukket) atferd når falsk er å direkte generere ncheader resultat.
+Hvis det er sant vil serveren generere hele nc-filen før du oppretter ncheader-resultatet. Den nye (Foretrukket) atferd når falsk er å direkte generere ncheader-resultatet.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
@@ -63,7 +63,7 @@ Aktiverer bruk av Java Refleksjon til å instantere EDD ( ERDDAP Datasett) klass
 ###  **BakgrunnOpprettSubsetTables** 
 
 Beskrivelse
-Tillater undergruppetabeller å bli opprettet i bakgrunnstråder for å forbedre datasettets lastetid.
+Tillater undergruppetabeller å opprettes i bakgrunnstråder for å forbedre datasettets lastingstid.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
@@ -75,11 +75,11 @@ Tillater undergruppetabeller å bli opprettet i bakgrunnstråder for å forbedre
 ###  **brukNcMetadataForFileTable** 
 
 Beskrivelse
-Bruker NetCDF metadata for å populere filtabellvisningen. Spesielt hvis en nc-fil inneholder faktisk_område for hver variabel, kan datasettet lastes over å lese hele filen.
+Bruker NetCDF metadata for å populere filtabellvisningen. Spesielt hvis en nc-fil inneholder actual_range for hver variabel, kan datasettlastingen hoppe over å lese hele filen.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 2.29.0 | 
@@ -93,23 +93,23 @@ Kontrollerer om systemet prøver å sende faktiske e-poster (For eksempel for ab
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | falsk | 
  |   **Langsiktige mål**   | sant (Avhengig av administratorinnstilling)   | 
  |   **Historie**   | Legacy | 
 
 ::info Logic
-Dette flagget beregnes dynamisk ved oppstart. Det standarder til falsk med mindre alle nødvendige SMTP- legitimasjoner (host, port, bruker, passord, fra-adresse) er strengt levert i setup.xml.
+Dette flagget beregnes dynamisk ved oppstart. Det er standard til falsk med mindre alle nødvendige SMTP- legitimasjoner (host, port, bruker, passord, fra-adresse) er strengt anordnet i setup.xml.
 ::
 
 ###  **showLoadErrorsOnStatusPage** 
 
 Beskrivelse
-Avgjør om detaljerte datasettlastfeil vises offentlig på statussiden.
+Bestemer om detaljerte datasettslastfeil vises offentlig på statussiden.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | Sett som ønsket | 
  |   **Historie**   | Lagt til i 2.25 | 
@@ -121,7 +121,7 @@ Angi standard atferd for om et datasetts underliggende filer kan nås i filtjene
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | falsk | 
  |   **Langsiktige mål**   | falsk | 
  |   **Historie**   | Lagt til i 2.10 | 
@@ -131,11 +131,11 @@ Angi standard atferd for om et datasetts underliggende filer kan nås i filtjene
 ###  **Rask omstart** 
 
 Beskrivelse
-Hvis aktivert, forsøker systemet å starte opp raskere ved å hoppe over visse dype valideringskontroller på datasett under oppstart.
+Hvis aktivert, forsøker systemet å starte opp raskere ved å hoppe over visse dype valideringskontroller på datasett under initialisering.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 1.38 | 
@@ -143,11 +143,11 @@ Hvis aktivert, forsøker systemet å starte opp raskere ved å hoppe over visse 
 ###  **EnvParsing** 
 
 Beskrivelse
-Tillater behandling av datasets.xml fil med en [StringSubstitor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) .. Dette har mange bruksområder inkludert å sette private verdier (som passord) bruk av miljøvariabler.
+Aktiverer behandling av datasets.xml fil med a [StringSubstitutor](https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/StringSubstitutor.html) .. Dette har mange bruksområder inkludert å sette private verdier (som passord) bruk av miljøvariabler.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | Sett som ønsket | 
  |   **Historie**   | Lagt til i 2.29.0 | 
@@ -155,7 +155,7 @@ Tillater behandling av datasets.xml fil med en [StringSubstitor](https://commons
 ###  **brukSaxParser** 
 
 Beskrivelse
-Bytter den interne XML-tolkermotoren til å bruke en SAX (Enkelt API for XML) I stedet for DOM-tolkeren. Dette muliggjør nye avanserte funksjoner som XInclude, og [egendefinerte skjermattributter](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) ..
+Bytter den interne XML-tolkingmotoren til å bruke en SAX (Enkelt API for XML) Tolker i stedet for DOM-tolkeren. Dette muliggjør noen nye avanserte funksjoner som XInclude, og [egendefinerte skjermattributter](https://erddap.github.io/docs/server-admin/display-info?_highlight=usesaxparser#usage-instructions) ..
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
@@ -164,40 +164,52 @@ Bytter den interne XML-tolkermotoren til å bruke en SAX (Enkelt API for XML) I 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 2.25 | 
 
-###  **ListePrivateDatasett** 
+###  **listePrivateDatasett** 
 
 Beskrivelse
 Avgjør om private datasett (De som krever autentisering) vises i hovedlisten.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | falsk | 
  |   **Langsiktige mål**   | falsk | 
  |   **Historie**   | Lagt til i 1.20 | 
 
-###  **politiske bøker** 
+###  **politisk** 
 
 Beskrivelse
-Kontrollere om politiske grenser kan tegnes på kart.
+Kontrollerer om politiske grenser kan tegnes på kart.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 1.80 | 
 
-##  **📂 Metadata og standarder** 
+###  **ForceSynkronousLoading** 
+
+Beskrivelse
+Last datasett synkron i stedet for utsett bakgrunnslasting.
+
+ | Eiendom | Detaljer | 
+ | ---- | ---- | 
+ |   **Livssyklus**   | Stabil | 
+ |   **Gjeldende standard**   | falsk | 
+ |   **Langsiktige mål**   | falsk | 
+ |   **Historie**   | Lagt til i 2.30 | 
+
+##  **Metadata og standarder** 
 
 ###  **fgdcActive** 
 
 Beskrivelse
-Oppretter og tjener FGDC (forbundsgeografisk Datakomiteen) metadata.
+Oppretter og tjener FGDC (Federal Geographic Datakomiteen) Metadata.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 1.38 | 
@@ -209,7 +221,7 @@ Oppretter og betjener ISO 19115 metadata.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 1.38 | 
@@ -217,7 +229,7 @@ Oppretter og betjener ISO 19115 metadata.
 ###  **brukSisISO19115** 
 
 Beskrivelse
-Bruker Apache SIS-biblioteket til å generere ISO 19115 metadata i stedet for arvegeneratoren. Hvis dette er på og brukSisISO19139 ikke er på, vil standard IOS 19115 metadata være i ISO19115_3_2016-format. Hvis dette er feil, vil standardformatet være i det tidligere endret ISO19115_2-formatet.
+Bruker Apache SIS-biblioteket til å generere ISO 19115 metadata i stedet for arvegeneratoren. Hvis dette er på og brukSisISO19139 er ikke på, vil standard IOS 19115 metadata være i ISO19115_3_2016 format. Hvis dette er falsk, vil standardformatet være i det tidligere endret ISO19115_2-formatet.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
@@ -241,11 +253,11 @@ Bruker Apache SIS-biblioteket til å generere ISO19139_2007 metadata.
 ###  **JsonldActive** 
 
 Beskrivelse
-Genererer og tjener JSON-LD (Linkede data) metadata.
+Genererer og tjener JSON-LD (Linked Data) Metadata.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Legacy | 
@@ -253,7 +265,7 @@ Genererer og tjener JSON-LD (Linkede data) metadata.
 ###  **genererCroissantSchema** 
 
 Beskrivelse
-Oppretter "Croissant" metadata skjema som standard skjema for maskinlæring beredskap.
+Genererer "Croissant" metadata skjema som standard skjema for maskinlæring beredskap.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
@@ -269,15 +281,15 @@ Forsterker at variabler må ha en IOOS-kategoriattributt.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | Sett som ønsket | 
  |   **Historie**   | Legacy | 
 
-###  **NcCFSubsetVariables** 
+###  **inkludertNcCFSubsetVariables** 
 
 Beskrivelse
-Legacy-adferd var å generere undergruppevariabler kun for EDDTableFromNcCFFiles-datasett. Dette ble lagt til standard atferd for EDDTableFromNcCFFiles å være i samsvar med andre datasett typer. Hvis du trenger arven automatisk subsetVariables Du kan aktivere dette. Den bedre løsningen vil være å legge til subsetVariables til definisjonen av datasett.
+Legacy-adferd var å generere undergruppevariabler bare for EDDTableFromNcCFFiles-datasett. Dette ble lagt til standard atferden for EDDTableFromNcCFFiles å være i samsvar med andre datasett typer. Hvis du trenger arven automatisk subsetVariables Du kan aktivere dette. Den bedre løsningen vil være å legge til subsetVariables til definisjonen av datasett.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
@@ -291,11 +303,11 @@ Legacy-adferd var å generere undergruppevariabler kun for EDDTableFromNcCFFiles
 ###  **abonnement SystemActive** 
 
 Beskrivelse
-Aktiverer e-postabonnementssystemet for datasettoppdateringer.
+Aktiverer e-postabonnementsystemet for datasettoppdateringer.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 1.14 | 
@@ -303,11 +315,11 @@ Aktiverer e-postabonnementssystemet for datasettoppdateringer.
 ###  **abonnentToRemoteErddapDataset** 
 
 Beskrivelse
-Tillater dette ERDDAP eksempel å abonnere på fjernkontrollen ERDDAP datasett for oppdateringer.
+Tillater dette ERDDAP å abonnere på fjernkontrollen ERDDAP datasett for oppdateringer.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 1.70 | 
@@ -315,16 +327,16 @@ Tillater dette ERDDAP eksempel å abonnere på fjernkontrollen ERDDAP datasett f
 ###  **updateSubsRssOnFileChanges** 
 
 Beskrivelse
-Abonnement og RSS Oppdaterer når underliggende filer endres. Den gamle oppførselen var bare å gjøre oppdateringer på datasett reload (som noen servere hadde så sjelden som ukentlig) ..
+Triggers abonnement og RSS Oppdaterer når underliggende filer endres. Den gamle oppførselen var bare å gjøre oppdateringer på datasett reload (som noen servere hadde så sjelden som ukentlig) ..
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 2.26 | 
 
-###  **aktiver MqttBroker** 
+###  **Aktiver MqttBroker** 
 
 Beskrivelse
 Starter en intern MQTT megler i programmet for å håndtere meldinger.
@@ -336,10 +348,10 @@ Starter en intern MQTT megler i programmet for å håndtere meldinger.
  |   **Langsiktige mål**   | Sett som ønsket | 
  |   **Historie**   | Lagt til i 2.29.0 | 
 
-###  **publiseringMqttNotif** 
+###  **publisereMqttNotif** 
 
 Beskrivelse
-Aktiverer publisering av varslinger (som endringer i datasett) til MQTT megler.
+Aktiverer publisering av meldinger (som endringer i datasett) til MQTT megleren.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
@@ -353,23 +365,23 @@ Aktiverer publisering av varslinger (som endringer i datasett) til MQTT megler.
 ###  **brukHeadersFor Url** 
 
 Beskrivelse
-Tillater bruk av HTTP-overskrifter å bestemme forespørselens URL-detaljer (Nyttig bak proxies) ..
+Tillater bruk av HTTP-hoder å bestemme forespørselens URL-detaljer (nyttig bak proxies) ..
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Standard endret til sant i 2.28.0, lagt til i 2.27.0 | 
 
-###  **aktiver Cors** 
+###  **Aktiver Cors** 
 
 Beskrivelse
-Aktiverer deling av ressurser på krysset (CORS) overskrifter på HTTP-svar.
+Aktiverer deling av ressurser i kryssorigo (CORS) overskrifter på HTTP-svar.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | falsk | 
  |   **Langsiktige mål**   | Sett som ønsket | 
  |   **Historie**   | Lagt til i 2.26 | 
@@ -379,7 +391,7 @@ Aktiverer deling av ressurser på krysset (CORS) overskrifter på HTTP-svar.
 ###  **brukLuceneSearchEngine** 
 
 Beskrivelse
-Bytter den interne søkemotoren for å bruke Apache Lucene.
+Bytter den interne søkemotoren til å bruke Apache Lucene.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
@@ -397,19 +409,19 @@ Aktiverer browser Filer" nettleservisning for datasett som støtter det.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 1.58 | 
 
-###  **omformereActive** 
+###  **konvertereActive** 
 
 Beskrivelse
 Aktiverer konverteringsverktøy i UI.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 1.44 | 
@@ -421,7 +433,7 @@ Aktiverer lysbildesorteringen.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 1.44 | 
@@ -429,23 +441,23 @@ Aktiverer lysbildesorteringen.
 ###  **dataProviderFormActive** 
 
 Beskrivelse
-Aktiverer skjemaet som gjør det mulig for dataleverandører å skrive inn metadata.
+Aktiverer skjemaet som gjør det mulig å skrive inn metadata.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Legacy | 
 
-###  **outOfDateDatasettActive** 
+###  **outOfDateDatasett** 
 
 Beskrivelse
 Aktiverer rapportering av utdaterte datasett.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 1.82 | 
@@ -457,7 +469,7 @@ Aktiverer webkarttjenesten ( WMS ) grensesnitt.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Lagt til i 1.44 | 
@@ -465,11 +477,11 @@ Aktiverer webkarttjenesten ( WMS ) grensesnitt.
 ###  **wmsClientActive** 
 
 Beskrivelse
-Aktiverer det interne WMS Kundefunksjoner.
+Aktiverer den interne WMS kundefunksjoner.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
- |   **Livssyklus**   | Stable | 
+ |   **Livssyklus**   | Stabil | 
  |   **Gjeldende standard**   | sant | 
  |   **Langsiktige mål**   | sant | 
  |   **Historie**   | Legacy | 
@@ -482,18 +494,18 @@ Aktiverer RESTful grensesnitt for Geospatial Services. Ikke fullt implementert.
  | Eiendom | Detaljer | 
  | ---- | ---- | 
  |   **Livssyklus**   | Under konstruksjon | 
- |   **Gjeldende standard**   | falsk (Hardcoded)   | 
+ |   **Gjeldende standard**   | falsk (Hardkodet)   | 
  |   **Langsiktige mål**   | sant | 
 
 ###  **wcsActive** 
 
 Beskrivelse
-Aktiverer nettdekningstjenesten ( WCS ) grensesnitt. Ikke fullt implementert.
+Aktiverer webdekningstjenesten ( WCS ) grensesnitt. Ikke fullt implementert.
 
  | Eiendom | Detaljer | 
  | ---- | ---- | 
  |   **Livssyklus**   | Under konstruksjon | 
- |   **Gjeldende standard**   | falsk (Hardcoded)   | 
+ |   **Gjeldende standard**   | falsk (Hardkodet)   | 
  |   **Langsiktige mål**   | sant | 
 
 ###  **sosActive** 
@@ -504,5 +516,5 @@ Aktiverer sensorobservasjonstjenesten ( SOS ) grensesnitt.
  | Eiendom | Detaljer | 
  | ---- | ---- | 
  |   **Livssyklus**   | Under konstruksjon | 
- |   **Gjeldende standard**   | falsk (Hardcoded)   | 
+ |   **Gjeldende standard**   | falsk (Hardkodet)   | 
  |   **Langsiktige mål**   | sant | 
