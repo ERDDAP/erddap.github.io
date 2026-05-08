@@ -11,7 +11,7 @@ Cómo hacer una actualización de un existente ERDDAP™ en su servidor
 2. Si usted está actualizando de ERDDAP™ versión 2.18 o abajo, necesita cambiar a Java 25 (o más nuevos) y el correspondiente Tomcat 10. Ver el regular ERDDAP™ Instrucciones de instalación para [ Java ](/docs/server-admin/deploy-install#java) y [Tomcat](/docs/server-admin/deploy-install#tomcat) . También tendrá que copiar su _tomcat_/content/erddap directorio desde tu antigua instalación de Tomcat a tu nueva instalación de Tomcat.
 
 ## Descargar{#download} 
-3. Descargar [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) en _tomcat_/webapps.
+3. Descargar [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) en _tomcat_/webapps.
      (versión 2.30.0, 706,939,121 bytes, MD5=CDC4B3D82A20B33A6623B85312F6DC21, dated 2026-04-06) 
      
 ## mensajes.xml{#messagesxml} 

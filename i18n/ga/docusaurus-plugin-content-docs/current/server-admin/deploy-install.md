@@ -357,7 +357,7 @@ is smaoineamh maith a fhíorú go bhfuil an toradh go maith XML trí ghreamú an
      
 ### Suiteáil an erddap. comhad cogadh{#install-the-erddapwar-file} 
 
-4. Ar Linux, Mac, agus Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) _ isteach `riachtanais uisce: measartha` :
+4. Ar Linux, Mac, agus Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) _ isteach `riachtanais uisce: measartha` :
 
 __Version 2.30.0, 706,939,121 beart, MD5 = CDC4B3D82A20B33A6623B85312F6DC21, dar dáta 2026-04-06___
 

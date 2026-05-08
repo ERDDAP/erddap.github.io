@@ -357,7 +357,7 @@ det er en god idé at kontrollere, at resultatet er velformet XML ved at indsæt
      
 ### Installer erddap. krigsfil{#install-the-erddapwar-file} 
 
-4. På Linux, Mac og Windows, _ _ download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) I `tomcat / webapps` :
+4. På Linux, Mac og Windows, _ _ download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) I `tomcat / webapps` :
 
 _ _ Version 2.30.0, 706,939,121 bytes, MD5 = CDC4B3D82A20B33A6623B85312F6DC21, dateret 2026- 04- 02 _ _
 

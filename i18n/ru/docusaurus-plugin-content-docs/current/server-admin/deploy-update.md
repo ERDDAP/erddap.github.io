@@ -11,7 +11,7 @@ sidebar_position: 2
 2. Если вы совершенствуетесь от ERDDAP™ Версия 2.18 или ниже, вы должны перейти на Java 25 (или новый) Похожие игры Tomcat 10 Смотрите регулярные ERDDAP™ Инструкции по установке [ Java ](/docs/server-admin/deploy-install#java) и [Томкат](/docs/server-admin/deploy-install#tomcat) . Вам также придется скопировать _tomcat_/content/erddap От старой установки Tomcat до новой установки Tomcat.
 
 ## скачать{#download} 
-3. скачать [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) _tomcat_/webapps.
+3. скачать [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) _tomcat_/webapps.
      (версия 2.30.0, 706,939,121 байт, MD5=CDC4B3D82A20B33A6623B85312F6DC21, от 2026-04-06) 
      
 ## Сообщения.xml{#messagesxml} 

@@ -357,7 +357,7 @@ sidebar_position: 1
      
 ### 安裝 erddap 。 戰爭檔案{#install-the-erddapwar-file} 
 
-4. 在 Linux 、 Mac 和 Windows 上, 下載 [出自: Erddap.](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) 入 `有相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相` :
+4. 在 Linux 、 Mac 和 Windows 上, 下載 [出自: Erddap.](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) 入 `有相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相` :
 
 第 2.30.0地道, 706 939 130字節, MD5= D95A02A22DAC1 CEF8B12F7910A4FD09E地道, 日期: 2026-04-06_.
 

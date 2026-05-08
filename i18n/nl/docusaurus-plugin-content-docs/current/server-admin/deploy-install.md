@@ -357,7 +357,7 @@ het is een goed idee om te controleren of het resultaat goed gevormd XML is door
      
 ### Installeer de erddap. war-bestand{#install-the-erddapwar-file} 
 
-4. Op Linux, Mac en Windows, __downloaden [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) Naar binnen. `tomcat/webapps` :
+4. Op Linux, Mac en Windows, __downloaden [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) Naar binnen. `tomcat/webapps` :
 
 __Versie 2.30,0, 706,939,121 bytes, MD5=CDC4B3D82A20B33A6623B85312F6DC21, gedateerd 2026-02-02__
 

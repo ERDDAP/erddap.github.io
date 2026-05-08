@@ -357,7 +357,7 @@ Det är en bra idé att verifiera att resultatet är välformat XML genom att kl
      
 ### Installera erddap. krigsfil{#install-the-erddapwar-file} 
 
-4. På Linux, Mac och Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) __ in `Tomcat/webapps` Från:
+4. På Linux, Mac och Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) __ in `Tomcat/webapps` Från:
 
 __Version 2.30.0, 706.939.130 byte, MD5=CDC4B3D82A20B33A6623B85312F6DC21, daterad 2026-04-06_______________________________________________________________________________________________________________________________________________________________________________________________________
 

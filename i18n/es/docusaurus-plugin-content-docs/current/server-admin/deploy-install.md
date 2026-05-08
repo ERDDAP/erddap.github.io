@@ -357,7 +357,7 @@ es una buena idea verificar que el resultado es XML bien formado al pegar el tex
      
 ### Instala el erddap. archivo de guerra{#install-the-erddapwar-file} 
 
-4. En Linux, Mac y Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) Adentro. `tomcat/webapps` :
+4. En Linux, Mac y Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) Adentro. `tomcat/webapps` :
 
 __Version 2.30.0, 706,939,121 bytes, MD5=CDC4B3D82A20B33A6623B85312F6DC21, dated 2026-04-06_
 

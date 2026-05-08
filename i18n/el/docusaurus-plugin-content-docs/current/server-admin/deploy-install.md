@@ -357,7 +357,7 @@ __Έκδοση 1.0.1, 20683 bytes, MD5=98a8099e7e674da59fe35e9c96efa7b5, με η
      
 ### Εγκαταστήστε το erddap. αρχείο πολέμου{#install-the-erddapwar-file} 
 
-4. Σε Linux, Mac, και Windows, __download [erddap.war (στα Αγγλικά).](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) __ `tomcat/webapps` :
+4. Σε Linux, Mac, και Windows, __download [erddap.war (στα Αγγλικά).](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) __ `tomcat/webapps` :
 
 __Παροχή 2.30.0, 706.939.130 bytes, MD5=CDC4B3D82A20B33A6623B85312F6DC21, με ημερομηνία 2026-04-06__
 

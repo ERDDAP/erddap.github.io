@@ -357,7 +357,7 @@ dobrym pomysłem jest sprawdzenie, czy wynik jest dobrze ukształtowany XML popr
      
 ### Zainstaluj erddap. akta wojenne{#install-the-erddapwar-file} 
 
-4. Na Linuksie, Mac i Windows, _ _ download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) - Tak. `tomcat / webapps` :
+4. Na Linuksie, Mac i Windows, _ _ download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) - Tak. `tomcat / webapps` :
 
 _ _ Wersja 2.30.0, 706,939,121 bajtów, MD5 = CDC4B3D82A20B33A6623B85312F6DC21, datowany 2026- 04- 02 _ _
 

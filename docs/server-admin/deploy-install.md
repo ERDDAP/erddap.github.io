@@ -357,7 +357,7 @@ it is a good idea to verify that the result is well-formed XML by pasting the XM
      
 ### Install the erddap.war file {#install-the-erddapwar-file}
 
-4. On Linux, Mac, and Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war)__ into `tomcat/webapps`:
+4. On Linux, Mac, and Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war)__ into `tomcat/webapps`:
 
    __Version 2.30.0, 706,939,121 bytes, MD5=CDC4B3D82A20B33A6623B85312F6DC21, dated 2026-04-06__
 

@@ -357,7 +357,7 @@ je dobrý nápad ověřit, že výsledek je dobře tvořen XML tím, že vložen
      
 ### Nainstalujte erddap. válečný spis{#install-the-erddapwar-file} 
 
-4. Na Linux, Mac a Windows _ _ download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) _ _ `tomcat / webové aplikace` :
+4. Na Linux, Mac a Windows _ _ download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) _ _ `tomcat / webové aplikace` :
 
 _ _ Version 2.30.0, 706,939,121 bytes, MD5 = CDC4B3D82A20B33A6623B85312F6DC21, dated 2026-04-06 _
 

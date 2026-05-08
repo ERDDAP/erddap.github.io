@@ -357,7 +357,7 @@ __Версия 1.0.1, 20683 байт, MD5=98a8099e7e674da59fe35e9c96efa7b5, от
      
 ### Установите erddap. военный файл{#install-the-erddapwar-file} 
 
-4. Linux, Mac и Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) ___ в `Tomcat/webapps` :
+4. Linux, Mac и Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) ___ в `Tomcat/webapps` :
 
 __Версия 2.30.0, 706,939,121 байт, MD5=CDC4B3D82A20B33A6623B85312F6DC21, от 2026-04-06__
 

@@ -357,7 +357,7 @@ es ist eine gute Idee, zu überprüfen, ob das Ergebnis gut gebildet XML ist, in
      
 ### Installieren Sie das Erddap. Kriegsakte{#install-the-erddapwar-file} 
 
-4. Unter Linux, Mac und Windows __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) Ich bin in der Lage. `tomcat/webapps` :
+4. Unter Linux, Mac und Windows __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) Ich bin in der Lage. `tomcat/webapps` :
 
 __ 2.3Version0.0, 706,939,121 Bytes, MD5=CDC4B3D82A20B33A6623B85312F6DC21, datiert 2026-04-06__
 

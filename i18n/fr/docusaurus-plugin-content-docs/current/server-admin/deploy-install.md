@@ -357,7 +357,7 @@ c'est une bonne idée de vérifier que le résultat est bien formé XML en colla
      
 ### Installez l'erddap. fichier de guerre{#install-the-erddapwar-file} 
 
-4. Sur Linux, Mac et Windows, _télécharger [Guerre](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) _dans `tomcat/webapps` :
+4. Sur Linux, Mac et Windows, _télécharger [Guerre](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) _dans `tomcat/webapps` :
 
 __Version 2.30.0, 706,939,121 octets, MD5=CDC4B3D82A20B33A6623B85312F6DC21, datée du 2026-04-06__
 

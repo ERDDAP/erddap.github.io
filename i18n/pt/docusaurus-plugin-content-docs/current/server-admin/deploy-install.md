@@ -357,7 +357,7 @@ Alterações a `erddap2.css` só produzir efeitos quando ERDDAP™ é reiniciado
      
 ### Instale o erddap. arquivo de guerra{#install-the-erddapwar-file} 
 
-4. No Linux, Mac e Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) __ em `tomcat/webapps` :
+4. No Linux, Mac e Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) __ em `tomcat/webapps` :
 
 __Versão 2.30.0, 706.939,130 bytes, MD5=CDC4B3D82A20B33A6623B85312F6DC21, datado de 2026-04-06__
 
