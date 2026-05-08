@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocumentation=globalThis.webpackChunkdocumentation||[]).push([[7472],{55513(t){t.exports=JSON.parse('{"title":"\u0939\u093e\u0932 \u0915\u0947 \u092a\u094b\u0938\u094d\u091f","items":[]}')}}]);

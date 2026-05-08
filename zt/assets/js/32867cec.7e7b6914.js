@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocumentation=globalThis.webpackChunkdocumentation||[]).push([[8840],{3565(t){t.exports=JSON.parse('{"metadata":{"permalink":"/zt/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":0,"blogDescription":"\u90e8\u843d\u683c","blogTitle":"\u90e8\u843d\u683c"}}')}}]);
