@@ -11,7 +11,7 @@ sidebar_position: 2
 2. আপগ্রেড করা হলে ERDDAP™ সংস্করণ ২.১৮ অথবা নিচে, আপনাকে পরিবর্তন করতে হবে Java ২৫ (নতুন অথবা কম) আর টম ১০ এর সাথে সম্পর্কিত. নিয়মিত দেখুন ERDDAP™ নির্দেশাবলী নির্দেশ [ Java ](/docs/server-admin/deploy-install#java) এবং [টমটাক্ট](/docs/server-admin/deploy-install#tomcat) . . তোমাকেও কপি করতে হবে _tomcat_/content/erddap আপনার পুরোনো টম্যাট ইনস্টলেশনের জন্য আপনার পুরনো টম্যাট ইনস্টলেশন থেকে ডিরেক্টরিতে ক্লিক করুন।
 
 ## ডাউনলোড করা হয়েছে{#download} 
-3. ডাউনলোড করা হয়েছে [সার্দ্দি।](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) সার্বজনীন রূপে চিহ্নিত করুন (_i)
+3. ডাউনলোড করা হয়েছে [সার্দ্দি।](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) সার্বজনীন রূপে চিহ্নিত করুন (_i)
      (2. 30, 76, 1330 বাইট, MD522ABEC98F21F7F949393EC9399EC993EE, তারিখ) 
      
 ## বার্তা{#messagesxml} 

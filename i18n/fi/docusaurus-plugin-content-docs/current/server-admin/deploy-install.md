@@ -357,7 +357,7 @@ On hyvä ajatus tarkistaa, että tulos on hyvin muotoiltu XML liittämällä XML
      
 ### Asenna kierrosluku. Sotatiedosto{#install-the-erddapwar-file} 
 
-4. Linuxissa, Macissa ja Windowsissa __lataa [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) _ `tomcat/webaps` :
+4. Linuxissa, Macissa ja Windowsissa __lataa [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) _ `tomcat/webaps` :
 
 __Versio 2.10.0, 706.939,130 tavua, MD5=CDC4B3D82A20B33A6623B85312F6DC21, päivätty 2026-04-2__
 

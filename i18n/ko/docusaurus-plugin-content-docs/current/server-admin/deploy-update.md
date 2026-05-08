@@ -11,7 +11,7 @@ Existing의 업데이트를 수행하는 방법 ERDDAP™ 서버에서
 2. 당신이 졸업하면 ERDDAP™ 버전 2.18 이하, 당신은 전환해야 Java 25 분 (또는 newer) 그리고 관련 Tomcat 10. 자주 묻는 질문 ERDDAP™ 설치 설명서 [ Java ](/docs/server-admin/deploy-install#java) · [톰캣](/docs/server-admin/deploy-install#tomcat) · 당신은 또한 당신의 복사해야합니다 _tomcat_/content/erddap 오래된 Tomcat 설치에서 새로운 Tomcat 설치로 디렉토리.
 
 ## 다운로드{#download} 
-3. 다운로드 [다운로드](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) 으로 _tomcat_/webapps .
+3. 다운로드 [다운로드](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) 으로 _tomcat_/webapps .
      (버전 2.30.0, 706,939,121 바이트, MD5=CDC4B3D82A20B33A6623B85312F6DC21, 날짜 2026-04-06) 
      
 ## 메시지.xml{#messagesxml} 

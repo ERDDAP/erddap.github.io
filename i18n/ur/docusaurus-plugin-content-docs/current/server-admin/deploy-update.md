@@ -11,7 +11,7 @@ sidebar_position: 2
 2. اگر تم نے سوچا ہے کہ ERDDAP™ ورژن 2.18 یا نیچے، آپ کو تبدیل کرنے کی ضرورت ہے Java 25 (یا نیا) اور متعلقہ ٹومکاٹ 10۔ باقاعدہ دیکھیں ERDDAP™ کے لئے ہدایات انسٹال کریں [ Java ](/docs/server-admin/deploy-install#java) اور [قبرص](/docs/server-admin/deploy-install#tomcat) . . آپ کو بھی اپنی نقل کرنا پڑے گا _tomcat_/content/erddap آپ کی پرانی ٹامکاٹ تنصیب سے اپنے نئے ٹامکاٹ تنصیب تک ڈائریکٹر رہے۔
 
 ## اوپر لکھیں{#download} 
-3. اوپر لکھیں [ایوارڈ.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) _atomcate webapps میں
+3. اوپر لکھیں [ایوارڈ.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) _atomcate webapps میں
      (ورژن 2.30.0, 706,939,121 Bhes, MD5=CDC4B3D82A20B33A6623B85312F6DC21, اخذ شدہ بتاریخ 2026-04-06) 
      
 ## پیغامات{#messagesxml} 

@@ -357,7 +357,7 @@ ide yang bagus untuk memastikan bahwa hasilnya adalah XML yang terbentuk baik de
      
 ### Pasang erddap. berkas perang{#install-the-erddapwar-file} 
 
-4. Pada Linux, Mac, dan Windows, _ _ unduh [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) _ Ke `tomcat / webapps` :
+4. Pada Linux, Mac, dan Windows, _ _ unduh [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) _ Ke `tomcat / webapps` :
 
 _ Versi 2.30.0, 706,939.130 bytes, MD5 = D95A02A2DA2C1CEF8F7910A4FD09E, tertanggal 2026-04-06 _
 

@@ -11,7 +11,7 @@ sidebar_position: 2
 2. 如果你正在升级 从 ERDDAP™ 您需要切换到 Java 第 25 条 (或更新) 和相关的Tomcat 10. 见常规 ERDDAP™ 安装指令 [ Java ](/docs/server-admin/deploy-install#java) 财务报告和审定财务报表 [汤姆猫](/docs/server-admin/deploy-install#tomcat) 。 。 。 。 你也得复制你的书 _tomcat_/content/erddap 从旧的Tomcat安装到新的Tomcat安装的目录。
 
 ## 下载{#download} 
-3. 下载 [战争](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) 输入 _tomcat_/webapps 。
+3. 下载 [战争](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) 输入 _tomcat_/webapps 。
      (版本 2.30.0, 706 939 130字节, MD5=CDC4B3D82A20B33A6623B85312F6DC21,日期为2026-04-06) 
      
 ## 信件.xml{#messagesxml} 

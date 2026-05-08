@@ -357,7 +357,7 @@ Isa itong mabuting ideya upang tiyakin na ang resulta ay mahusay ang pagkakaanyo
      
 ### Iluklok ang erddap. talaksang digmaan{#install-the-erddapwar-file} 
 
-4. Sa Linux, Mac, at Windows, _download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) _ ilagay `tomcat/webapps` :
+4. Sa Linux, Mac, at Windows, _download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) _ ilagay `tomcat/webapps` :
 
 __Version 2.30.0, 706,939,121 bytes, MD5=D95A02A22DACEF8B12F7910A4FD09E, na may petsang 2026-04-06___
 

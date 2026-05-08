@@ -357,7 +357,7 @@ este o idee bună pentru a verifica dacă rezultatul este bine format XML prin l
      
 ### Instalați Erddap. fișier de război{#install-the-erddapwar-file} 
 
-4. Pe Linux, Mac și Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) __ în `Tomcat/Webapps` :
+4. Pe Linux, Mac și Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) __ în `Tomcat/Webapps` :
 
 __Versiunea 2.30,0, 706,939,121 octeți, MD5=CDC4B3D82A20B33A6623B85312F6DC21, datată 2026-04-06__
 

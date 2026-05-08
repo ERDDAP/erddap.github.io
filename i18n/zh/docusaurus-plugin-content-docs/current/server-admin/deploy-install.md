@@ -357,7 +357,7 @@ sidebar_position: 1
      
 ### 安装 erddap 。 战争文件{#install-the-erddapwar-file} 
 
-4. 在 Linux, Mac 和 Windows 上, 下载 [战争](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) 进入 `Tomcat/网络应用程序` 数字 :
+4. 在 Linux, Mac 和 Windows 上, 下载 [战争](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) 进入 `Tomcat/网络应用程序` 数字 :
 
 ^ Version 2.30.0, 706,939,121字节,MD5=D95A02A22DAC1 CEF8B12F7910A4FD09E,日期为2026-04-06__
 

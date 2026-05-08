@@ -357,7 +357,7 @@ _Version 1.0.1, 20683 Bagh, MD5=988099e7e74da59fe35ec96e96efa7b5, اخذ شدہ 
      
 ### ایوارڈ انسٹال کریں جنگ فائل{#install-the-erddapwar-file} 
 
-4. لینکس، میک اور ونڈوز پر _ ڈاؤن لوڈ [ایوارڈ.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) جگہ `حرارت/webapps` :
+4. لینکس، میک اور ونڈوز پر _ ڈاؤن لوڈ [ایوارڈ.war](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) جگہ `حرارت/webapps` :
 
 _Version 2.30.0, 706,939,121 Bhorn, MD5=D95A02A22DC1CEF8B12F7910A4FD09E اخذ شدہ بتاریخ 2026-04-06_____
 

@@ -11,7 +11,7 @@ sidebar_position: 2
 2. Εάν αναβαθμίζετε από ERDDAP™ έκδοση 2.18 ή κάτω, θα πρέπει να αλλάξετε σε Java 25 (ή νεότερη) και το σχετικό Tomcat 10. Δείτε την τακτική ERDDAP™ οδηγίες εγκατάστασης για [ Java ](/docs/server-admin/deploy-install#java) και [Τομκάτ](/docs/server-admin/deploy-install#tomcat) . Θα πρέπει επίσης να αντιγράψετε _tomcat_/content/erddap κατάλογος από την παλιά εγκατάσταση Tomcat σας στη νέα εγκατάσταση Tomcat.
 
 ## Λήψη{#download} 
-3. Λήψη [erddap.war (στα Αγγλικά).](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/erddap.war) _tomcat_/webapps .
+3. Λήψη [erddap.war (στα Αγγλικά).](https://github.com/ERDDAP/erddap/releases/download/v2.30.0/ERDDAP-2.30.0.war) _tomcat_/webapps .
      (έκδοση 2.30.0, 706.939.130 bytes, MD5=CDC4B3D82A20B33A6623B85312F6DC21, με ημερομηνία 2026-04-06) 
      
 ## μηνύματα.xml{#messagesxml} 
