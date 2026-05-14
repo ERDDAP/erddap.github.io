@@ -21,7 +21,7 @@ Untuk membantu panduan ERDDAP kemajuan dan interaksi dengan global ERDDAP komuni
 ##  ERDDAP Login{#erddap-outlook} 
 Login ERDDAP masyarakat terus tumbuh dan lebih bergetar dari sebelumnya. Perkembangan ERDDAP -SIG memberikan kesempatan yang jelas untuk memastikan dukungan, pertumbuhan dan perkembangan berkelanjutan ERDDAP dan untuk menumbuhkan momentum ERDDAP telah menciptakan komunitas manajemen data selama dekade terakhir.
 
-## Sitemap (pada Agustus, 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## Sitemap (mei 2026)  {#appendix-a--sig-members} 
 * Login Login NOAA Login (Login) 
 * Mr. Victor Yang Login NOAA Login
 * Aletta Ocean - Laboratorium Penelitian Naval AS
@@ -29,7 +29,7 @@ Login ERDDAP masyarakat terus tumbuh dan lebih bergetar dari sebelumnya. Perkemb
 * Mr. Victor Yang NOAA Sitemap NMFS Sitemap SWFSC Sitemap ERD Login
 * Login NOAA Sitemap NMFS Sitemap SWFSC Sitemap ERD 
 * Mr. Victor Yang Login NOAA Sitemap NMFS Sitemap SWFSC 
-* Mr. Victor Yang Login NOAA /OAR/PMEL, UW/CIOCES (Login) 
+* Mr. Victor Yang Login GOOS   (Sistem Pengawetan Laut Global)   (Login) 
 * Shane St Savage - Ilmu Data Axiom
 * Login Login NOAA Login
 
@@ -42,4 +42,4 @@ Login ERDDAP masyarakat terus tumbuh dan lebih bergetar dari sebelumnya. Perkemb
 
 ---
 
-Dokumen ini dibangun menggunakan halaman GitHub. Untuk mengusulkan perubahan dokumen, edit file sumber GitHub di [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Dokumen ini dibangun menggunakan halaman GitHub. Untuk mengusulkan perubahan dokumen, edit file sumber GitHub di [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

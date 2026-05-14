@@ -21,7 +21,7 @@ Pour aider le guide ERDDAP et l ' interaction avec le monde ERDDAP la communaut�
 ##  ERDDAP perspectives{#erddap-outlook} 
 Les ERDDAP La communauté continue de croître et est plus vigoureuse que jamais. Le développement de la ERDDAP -SIG offre une occasion claire d'assurer le soutien, la croissance et le développement continus de ERDDAP et de cultiver la dynamique ERDDAP a créé dans la collectivité de la gestion des données au cours de la dernière décennie.
 
-## Annexe A. Membres du SIG (en août 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## Annexe A. Membres du SIG (en mai 2026)  {#appendix-a--sig-members} 
 * Mathew Biddle - Oui. NOAA /NOS/US IOOS (coprésident) 
 * Eugene Burger - Oui. NOAA /OAR/PMEL
 * Seth Champagne - Laboratoire de recherche navale des États-Unis
@@ -29,7 +29,7 @@ Les ERDDAP La communauté continue de croître et est plus vigoureuse que jamais
 * Chris John... NOAA / NMFS / SWFSC / ERD , MNE
 * - C'est une bonne idée. NOAA / NMFS / SWFSC / ERD 
 * Heather Nicholas - Oui. NOAA / NMFS / SWFSC 
-* Kevin O.Brien - Oui. NOAA /OAR/PMEL, UW/CIOCES (coprésident) 
+* Kevin O.Brien - Oui. GOOS   (Système mondial d ' observation des océans)   (coprésident) 
 * Shane St Savage - Axiom Data Science
 * Micah Wengren - Oui. NOAA /NOS/US IOOS
 
@@ -42,4 +42,4 @@ Les ERDDAP La communauté continue de croître et est plus vigoureuse que jamais
 
 ---
 
-Ce document est construit en utilisant les pages GitHub. Pour proposer des modifications au document, modifiez le fichier source GitHub à [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Ce document est construit en utilisant les pages GitHub. Pour proposer des modifications au document, modifiez le fichier source GitHub à [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

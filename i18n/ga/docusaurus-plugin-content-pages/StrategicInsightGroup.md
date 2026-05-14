@@ -21,7 +21,7 @@ Chun cabhrú le treoir ERDDAP dul chun cinn agus idirghníomhaíocht leis an dom
 ##  ERDDAP outlook{#erddap-outlook} 
 An bhfuil ERDDAP leanann an pobal ag fás agus tá sé níos bríomhar ná riamh. Forbairt an ERDDAP - Soláthraíonn SIG deis soiléir chun a chinntiú go bhfuil tacaíocht leanúnach, fás agus forbairt ERDDAP agus a chothú an móiminteam ERDDAP Tá cruthaithe sa phobal bainistíochta sonraí le deich mbliana anuas.
 
-## Aguisín A. Comhaltaí SIG (mar de Lúnasa, 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## Aguisín A. Comhaltaí SIG (as Bealtaine, 2026)  {#appendix-a--sig-members} 
 * Bhí an t-eolas mícheart nó as dáta - - - - - NOAA / NOS / USD IOOS (comhchathaoirleach) 
 * cliceáil grianghraf a mhéadú - - - - - NOAA / OAR / PMEL
 * cliceáil grianghraf a mhéadú - Saotharlann Taighde Cabhlaigh na Stát Aontaithe
@@ -29,7 +29,7 @@ An bhfuil ERDDAP leanann an pobal ag fás agus tá sé níos bríomhar ná riamh
 * Chris John - NOAA / Baile NMFS / Baile SWFSC / Baile ERD , MNE
 * Seirbhís do Chustaiméirí NOAA / Baile NMFS / Baile SWFSC / Baile ERD 
 * taiseachas aeir: fliuch - - - - - NOAA / Baile NMFS / Baile SWFSC 
-* Inis dúinn, le do thoil... - - - - - NOAA / OAR / PMEL, UW / CIOCES (comhchathaoirleach) 
+* Inis dúinn, le do thoil... - - - - - GOOS   (Domhanda Ocean Córas Breathnú)   (comhchathaoirleach) 
 * Shane St Savage - Axiom Sonraí Eolaíocht
 * Mic Léinn Idirnáisiúnta - - - - - NOAA / NOS / USD IOOS
 
@@ -42,4 +42,4 @@ An bhfuil ERDDAP leanann an pobal ag fás agus tá sé níos bríomhar ná riamh
 
 ---
 
-Tá an doiciméad seo tógtha ag baint úsáide as leathanaigh GitHub. A mholadh athruithe ar an doiciméad, in eagar an comhad foinse GitHub ag [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Tá an doiciméad seo tógtha ag baint úsáide as leathanaigh GitHub. A mholadh athruithe ar an doiciméad, in eagar an comhad foinse GitHub ag [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

@@ -21,7 +21,7 @@ Zu helfen Anleitung ERDDAP Förderung und Interaktion mit der globalen ERDDAP Co
 ##  ERDDAP Ausblick{#erddap-outlook} 
 Die ERDDAP Die Gemeinschaft wächst weiter und ist energischer als je zuvor. Die Entwicklung der ERDDAP -SIG bietet eine klare Gelegenheit, die weitere Unterstützung, Wachstum und Entwicklung zu gewährleisten ERDDAP und die Dynamik kultivieren ERDDAP hat in der Datenverwaltungsgemeinschaft im letzten Jahrzehnt geschaffen.
 
-## Anlage A. SIG Mitglieder (ab August, 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## Anlage A. SIG Mitglieder (ab Mai, 2026)  {#appendix-a--sig-members} 
 * Mathew Biddle - Ja. NOAA /NOS/US IOOS (Co-Stuhl) 
 * E-Mail-Adresse: - Ja. NOAA /OAR/PMEL
 * Seth Champagner - U.S. Naval Research Laboratory
@@ -29,7 +29,7 @@ Die ERDDAP Die Gemeinschaft wächst weiter und ist energischer als je zuvor. Die
 * Chris John - NOAA / NMFS / SWFSC / ERD , MNE
 * Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
 * Heather Nicholas - Ja. NOAA / NMFS / SWFSC 
-* Kevin O’Brien - Ja. NOAA /OAR/PMEL, UW/CIOCES (Co-Stuhl) 
+* Kevin O’Brien - Ja. GOOS   (Global Ocean Observing System)   (Co-Stuhl) 
 * Shane St Savage - Axiom Data Science
 * Micah Wengren - Ja. NOAA /NOS/US IOOS
 
@@ -42,4 +42,4 @@ Die ERDDAP Die Gemeinschaft wächst weiter und ist energischer als je zuvor. Die
 
 ---
 
-Dieses Dokument wird mit GitHub-Seiten erstellt. Um Änderungen des Dokuments vorzuschlagen, bearbeiten Sie die GitHub Quelldatei in [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Dieses Dokument wird mit GitHub-Seiten erstellt. Um Änderungen des Dokuments vorzuschlagen, bearbeiten Sie die GitHub Quelldatei in [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

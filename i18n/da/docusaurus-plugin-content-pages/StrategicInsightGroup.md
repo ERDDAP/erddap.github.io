@@ -21,7 +21,7 @@ For at hjælpe guide ERDDAP fremskridt og interaktion med den globale ERDDAP fæ
 ##  ERDDAP udsigter{#erddap-outlook} 
 The The The The The The The ERDDAP fællesskabet fortsætter med at vokse og er mere energisk end nogensinde. Udvikling af udviklingen af ERDDAP -SIG giver en klar mulighed for at sikre den fortsatte støtte, vækst og udvikling af ERDDAP og til at dyrke momentum ERDDAP har skabt i datastyringssamfundet over det seneste årti.
 
-## Ansøgningsmedlemmer (af august, 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## Ansøgningsmedlemmer (af maj, 2026)  {#appendix-a--sig-members} 
 * Mathew Biddle - - - - NOAA /NOS/US IOOS (stol) 
 * Hoteller i nærheden af Eugene Burger - - - - NOAA /OAR/PMEL
 * Seth Champagne - U.S. Naval Research Laboratory
@@ -29,7 +29,7 @@ The The The The The The The ERDDAP fællesskabet fortsætter med at vokse og er 
 * I nærheden af Chris John - NOAA / / / / NMFS / / / / SWFSC / / / / ERD , MNE
 * Billeder af Roy Mendelssohn NOAA / / / / NMFS / / / / SWFSC / / / / ERD 
 * I nærheden af Heather Nicholas - - - - NOAA / / / / NMFS / / / / SWFSC 
-* Kevin O’Brien - - - - NOAA /OAR/PMEL, UW/CIOCES (stol) 
+* Kevin O’Brien - - - - GOOS   (Global Ocean Observing System)   (stol) 
 * Hoteller i nærheden af Shane St Savage - Axiom Data Science
 * Micah Wengren - - - - NOAA /NOS/US IOOS
 
@@ -42,4 +42,4 @@ The The The The The The The ERDDAP fællesskabet fortsætter med at vokse og er 
 
 ---
 
-Dette dokument er bygget ved hjælp af GitHub sider. Hvis du vil foreslå ændringer i dokumentet, skal du redigere GitHub-kildefilen på [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Dette dokument er bygget ved hjælp af GitHub sider. Hvis du vil foreslå ændringer i dokumentet, skal du redigere GitHub-kildefilen på [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

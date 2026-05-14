@@ -21,7 +21,7 @@ Pentru a ajuta ghid ERDDAP progresul și interacțiunea cu lumea globală ERDDAP
 ##  ERDDAP Perspectivă{#erddap-outlook} 
 ă ERDDAP comunitatea continuă să crească și este mai viguroasă decât oricând. Dezvoltarea ERDDAP -SIG oferă o oportunitate clară de a asigura susţinerea, creşterea şi dezvoltarea continuă a ERDDAP și să cultive impulsul ERDDAP a creat în comunitatea de gestionare a datelor în ultimul deceniu.
 
-## Apendicele A. Membrii SIG (din august 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## Apendicele A. Membrii SIG (din mai 2026)  {#appendix-a--sig-members} 
 * Mathew Biddle - NOAA /NOS/US IOOS (copreşedinte) 
 * Eugene Burger - NOAA /OAR/PMEL
 * Seth Champagne - Laboratorul Naval de Cercetare U.S.
@@ -29,7 +29,7 @@ Pentru a ajuta ghid ERDDAP progresul și interacțiunea cu lumea globală ERDDAP
 * Chris John - NOAA / NMFS / SWFSC / ERD , MNE
 * Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
 * Heather Nicholas - NOAA / NMFS / SWFSC 
-* Kevin O - NOAA /OAR/PMEL, UW/CIOCES (copreşedinte) 
+* Kevin O - GOOS   (Sistemul global de observare a oceanelor)   (copreşedinte) 
 * Shane St Savage - Stiinta datelor Axiom
 * Micah Wengren - NOAA /NOS/US IOOS
 
@@ -42,4 +42,4 @@ Pentru a ajuta ghid ERDDAP progresul și interacțiunea cu lumea globală ERDDAP
 
 ---
 
-Acest document este construit folosind pagini GitHub. Pentru a propune modificări ale documentului, editați fișierul sursă GitHub la [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Acest document este construit folosind pagini GitHub. Pentru a propune modificări ale documentului, editați fișierul sursă GitHub la [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

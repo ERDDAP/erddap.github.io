@@ -21,7 +21,7 @@
 ##  ERDDAP Προοπτικές{#erddap-outlook} 
 Η ERDDAP Η κοινότητα συνεχίζει να αναπτύσσεται και είναι πιο δυναμική από ποτέ. Η εξέλιξη της ERDDAP -Η SIG παρέχει μια σαφή ευκαιρία να εξασφαλιστεί η συνεχής υποστήριξη, ανάπτυξη και ανάπτυξη της ERDDAP και να καλλιεργήσει την ορμή ERDDAP έχει δημιουργηθεί στην κοινότητα διαχείρισης δεδομένων την τελευταία δεκαετία.
 
-## Προσάρτημα Α. Μέλη SIG (από τον Αύγουστο του 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## Προσάρτημα Α. Μέλη SIG (από τον Μάιο του 2026)  {#appendix-a--sig-members} 
 * Mathew Μπίντλ - Ναι. NOAA /NOS/ΗΠΑ (Συμπρόεδρος) 
 * Γιουτζίν Μπέργκερ. - Ναι. NOAA /OAR/ΠΜΕΛ
 * Σεθ Σαμπάνια - Εργαστήριο Ναυτικής Έρευνας ΗΠΑ
@@ -29,7 +29,7 @@
 * Κρις Τζον... NOAA / NMFS / SWFSC / ERD , ΜΝΕ
 * Ρόι Μέντελσον... NOAA / NMFS / SWFSC / ERD 
 * Χέδερ Νίκολας. - Ναι. NOAA / NMFS / SWFSC 
-* Κέβιν Ο ’Μπράιαν - Ναι. NOAA /OAR/PMEL, UW/CIOCES (Συμπρόεδρος) 
+* Κέβιν Ο ’Μπράιαν - Ναι. GOOS   (Παγκόσμιο σύστημα παρατήρησης ωκεανών)   (Συμπρόεδρος) 
 * Shane St Savage - Επιστήμη Δεδομένων Αξιώματος
 * Μιχαίας Γουένγκρεν - Ναι. NOAA /NOS/ΗΠΑ
 
@@ -42,4 +42,4 @@
 
 ---
 
-Αυτό το έγγραφο είναι χτισμένο χρησιμοποιώντας σελίδες GitHub. Για να προτείνετε αλλαγές στο έγγραφο, επεξεργαστείτε το αρχείο πηγαίου κώδικα GitHub στο [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Αυτό το έγγραφο είναι χτισμένο χρησιμοποιώντας σελίδες GitHub. Για να προτείνετε αλλαγές στο έγγραφο, επεξεργαστείτε το αρχείο πηγαίου κώδικα GitHub στο [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

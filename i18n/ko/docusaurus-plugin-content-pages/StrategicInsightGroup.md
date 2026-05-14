@@ -21,7 +21,7 @@
 ##  ERDDAP 아웃룩{#erddap-outlook} 
 더 보기 ERDDAP 지역 사회는 계속 성장하고 그 어느 때보다 더 활발합니다. 의 개발 ERDDAP -SIG는 지속적인 지원, 성장 및 발전을 보장하는 명확한 기회를 제공합니다 ERDDAP 그리고 모멘텀을 재배 ERDDAP 지난 10년간 데이터 관리 커뮤니티에서 만들어졌습니다.
 
-## A. SIG 회원 (까지 8월, 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## A. SIG 회원 (까지 5월, 2026)  {#appendix-a--sig-members} 
 * 수학 Biddle - - - NOAA /NOS / 미국 IOOS (채용 정보) 
 * 유진 버거 - - - NOAA /오라/PMEL
 * Seth 샴페인 - 미국 해군 연구소
@@ -29,7 +29,7 @@
 * 크리스 존 - NOAA / 한국어 NMFS / 한국어 SWFSC / 한국어 ERD , 말
 * 로이 Mendelssohn - NOAA / 한국어 NMFS / 한국어 SWFSC / 한국어 ERD 
 * Heather 니콜라스 - - - NOAA / 한국어 NMFS / 한국어 SWFSC 
-* 케빈 O'Brien - - - NOAA /OAR/PMEL의 UW/CIOCES (채용 정보) 
+* 케빈 O'Brien - - - GOOS   (글로벌 오션 전망 시스템)   (채용 정보) 
 * Shane St Savage - Axiom 데이터 과학
 * 콜롬비아 - - - NOAA /NOS / 미국 IOOS
 
@@ -42,4 +42,4 @@
 
 ---
 
-이 문서는 GitHub 페이지를 사용합니다. 문서에 변경을 제안하려면 GitHub 소스 파일을 편집하십시오. [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+이 문서는 GitHub 페이지를 사용합니다. 문서에 변경을 제안하려면 GitHub 소스 파일을 편집하십시오. [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

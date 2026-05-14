@@ -21,7 +21,7 @@
 ##  ERDDAP দৃষ্টিভঙ্গি{#erddap-outlook} 
 এটা ERDDAP সম্প্রদায় ক্রমাগত বৃদ্ধি পাচ্ছে এবং আগের চেয়ে আরো বেশী শক্তিশালী হচ্ছে। উন্নয়ন ERDDAP -জি, ক্রমাগত সমর্থন, বৃদ্ধি এবং উন্নয়ন নিশ্চিত করার জন্য একটি পরিষ্কার সুযোগ প্রদান করে। ERDDAP যাতে গতি বৃদ্ধি পায় ERDDAP গত কয়েক দশক ধরে তথ্য ব্যবস্থাপনা সম্প্রদায় তৈরি করা হয়েছে।
 
-## ক্রমবিবর্তন (আগস্টের ২০,২৪ পর্যন্ত)  {#appendix-a--sig-members-as-of-august-2024} 
+## ক্রমবিবর্তন (মে মাসের মতো, ই.)  {#appendix-a--sig-members} 
 * মাদ্রাস -কি? NOAA /NIN/SOSOS (চেয়ারের চুল) 
 * ইউজিন বার্গার -কি? NOAA /যোগ করুন
 * শ্যাম্পেইন - মার্কিন নৌ গবেষণা গবেষণাগার
@@ -29,7 +29,7 @@
 * ক্রিস জন - NOAA / NMFS / SWFSC / ERD ; এম.
 * রয় মেন্ডেস NOAA / NMFS / SWFSC / ERD 
 * হিথের নিকোলাস -কি? NOAA / NMFS / SWFSC 
-* কেভিন ও'ব্রান -কি? NOAA /যোগ/প্রধানতলে, UW /COCON (চেয়ারের চুল) 
+* কেভিন ও'ব্রান -কি? GOOS   (গ্লোবাল ওশান পর্যবেক্ষণ সিস্টেম)   (চেয়ারের চুল) 
 * শেন সেন্ট সাভেজ - আ্যক্সিম ডাটা বিজ্ঞান
 * কা. -কি? NOAA /NIN/SOSOS
 
@@ -42,4 +42,4 @@
 
 ---
 
-এই ডকুমেন্টটি জিওহাব পেজ ব্যবহার করে তৈরি করা হয়েছে। ডকুমেন্ট- এ পরিবর্তন করতে, GHtহাব উৎস ফাইল সম্পাদন করুন [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+এই ডকুমেন্টটি জিওহাব পেজ ব্যবহার করে তৈরি করা হয়েছে। ডকুমেন্ট- এ পরিবর্তন করতে, GHtহাব উৎস ফাইল সম্পাদন করুন [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

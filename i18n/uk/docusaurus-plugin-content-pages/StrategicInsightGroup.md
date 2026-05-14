@@ -21,7 +21,7 @@
 ##  ERDDAP Опитування{#erddap-outlook} 
 Про нас ERDDAP громада продовжує зростати і є більш енергійним, ніж коли-небудь. Розвиток розвитку ERDDAP -SIG надає чітку можливість забезпечити продовження підтримки, зростання та розвиток ERDDAP і для вирощування імпульсу ERDDAP протягом останнього десятиліття створено в громаді управління даними.
 
-## Додаток А. SIG (від Серпень, 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## Додаток А. SIG (від Травень, 2026)  {#appendix-a--sig-members} 
 * Матев Біддл до NOAA Українська (ко-купе) 
 * Євген Бургер до NOAA /Оар / ПМЕЛЬ
 * Сет Шампанське - Лабораторія морських досліджень У.С.
@@ -29,7 +29,7 @@
 * Кріс Джон - NOAA Українська NMFS Українська SWFSC Українська ERD , МНЕ
 * Рой Мендельсон - NOAA Українська NMFS Українська SWFSC Українська ERD 
 * Теплиця Микола до NOAA Українська NMFS Українська SWFSC 
-* Кевін O'Brien до NOAA /OAR / PMEL, UW / CIOCES (ко-купе) 
+* Кевін O'Brien до GOOS   (Глобальна система спостереження за океаном)   (ко-купе) 
 * Shane St Savage - Axiom Data Science
 * Миха Венрен до NOAA Українська
 
@@ -42,4 +42,4 @@
 
 ---
 
-Цей документ побудовано за допомогою сторінок GitHub. Пропонувати зміни до документа, редагувати файл джерела GitHub у [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Цей документ побудовано за допомогою сторінок GitHub. Пропонувати зміни до документа, редагувати файл джерела GitHub у [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

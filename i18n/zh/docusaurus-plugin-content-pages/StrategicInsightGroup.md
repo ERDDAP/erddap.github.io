@@ -21,7 +21,7 @@
 ##  ERDDAP 展望{#erddap-outlook} 
 那个 ERDDAP 社区继续增长,比以往任何时候都更加活跃。 联合国 ERDDAP - SIG为确保持续支持、增长和发展提供了明确的机会。 ERDDAP 并培养势头 ERDDAP 在过去十年里,数据管理界已经创建。
 
-## 附录A. SIG成员 (截至2024年8月)  {#appendix-a--sig-members-as-of-august-2024} 
+## 附录A. SIG成员 (截止2026年5月)  {#appendix-a--sig-members} 
 * 马修·比德尔 - 怎么样? NOAA (单位:千美元) (共同主席) 
 * 尤金汉堡 - 怎么样? NOAA /OAR/PMEL 数据
 * 赛斯香槟 - 美国海军研究实验室
@@ -29,7 +29,7 @@
 * 克里斯・约翰 NOAA 页:1 NMFS 页:1 SWFSC 页:1 ERD , 摩尔多瓦
 * 罗伊·门德尔索恩 NOAA 页:1 NMFS 页:1 SWFSC 页:1 ERD 
 * 希瑟·尼古拉斯(英语: - 怎么样? NOAA 页:1 NMFS 页:1 SWFSC 
-* 凯文·奥布莱恩 - 怎么样? NOAA /OAR/PMEL、UW/CIOCES (共同主席) 
+* 凯文·奥布莱恩 - 怎么样? GOOS   (全球海洋观测系统)   (共同主席) 
 * Shane St Savage - 轴数据科学
 * 米卡·温格伦 - 怎么样? NOAA (单位:千美元)
 
@@ -42,4 +42,4 @@
 
 ---
 
-此文档使用 GitHub 页面构建 。 要对文档提出修改, 请编辑 GitHub 源文件 。 [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+此文档使用 GitHub 页面构建 。 要对文档提出修改, 请编辑 GitHub 源文件 。 [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

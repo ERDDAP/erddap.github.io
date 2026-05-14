@@ -21,7 +21,7 @@ Upang tumulong ERDDAP pagsulong at interaksiyon sa globo ERDDAP Sambayanan, Isan
 ##  ERDDAP pananaw{#erddap-outlook} 
 Ang ERDDAP Ang komunidad ay patuloy na lumalago at lalong masigla higit kailanman. Ang pag - unlad ng ERDDAP -SIG nagbibigay ng malinaw na pagkakataon upang matiyak ang patuloy na suporta, paglaki at pag-unlad ng ERDDAP at linangin ang momentum ERDDAP ay lumikha sa komunidad ng data management sa nakalipas na dekada.
 
-## Isang Appendix A. SIG Members (noong Agosto, 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## Isang Appendix A. SIG Members (noong Mayo, 2026)  {#appendix-a--sig-members} 
 * Mathew Biddle - NOAA /NOS/US IOOS (co-chair) 
 * Si Eugene Burger - NOAA /OAR/PMEL
 * Si Set Champagne - Naval Research Laboratory ng Estados Unidos
@@ -29,7 +29,7 @@ Ang ERDDAP Ang komunidad ay patuloy na lumalago at lalong masigla higit kailanma
 * Chris John - NOAA / NMFS / SWFSC / ERD , MNE
 * Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
 * Heather Nicholas - NOAA / NMFS / SWFSC 
-* Kevin OixiBrien - NOAA /OAR/PMEL, UW/CIOCES (co-chair) 
+* Kevin OixiBrien - GOOS   (Sistema ng Pagmamasid sa Pangglobong Karagatan)   (co-chair) 
 * Shane St Savage - Axiom Data Science
 * Mikas Wengren - NOAA /NOS/US IOOS
 
@@ -42,4 +42,4 @@ Ang ERDDAP Ang komunidad ay patuloy na lumalago at lalong masigla higit kailanma
 
 ---
 
-Itinayo ang dokumentong ito gamit ang mga pahinang GitHub. Upang magmungkahi ng mga pagbabago sa dokumento, isaayos ang talaksan ng source sa GitHub [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Itinayo ang dokumentong ito gamit ang mga pahinang GitHub. Upang magmungkahi ng mga pagbabago sa dokumento, isaayos ang talaksan ng source sa GitHub [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

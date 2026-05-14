@@ -21,7 +21,7 @@ Pomoci průvodce ERDDAP pokrok a interakce s globálním ERDDAP komunita, strate
 ##  ERDDAP Výhled{#erddap-outlook} 
 The ERDDAP komunita stále roste a je silnější než kdy předtím. Vývoj ERDDAP -SIG poskytuje jasnou příležitost k zajištění trvalé podpory, růstu a rozvoje ERDDAP a pěstovat hybnost ERDDAP vytvořila v komunitě správy dat za poslední desetiletí.
 
-## Dodatek A. SIG Členové (od srpna 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## Dodatek A. SIG Členové (od května 2026)  {#appendix-a--sig-members} 
 * Mathew Biddle - NOAA /NOS/US IOOS (spolupředsedkyně) 
 * Eugene Burger - NOAA /OAR/PMEL
 * Seth Champagne - U.S. Námořní výzkumná laboratoř
@@ -29,7 +29,7 @@ The ERDDAP komunita stále roste a je silnější než kdy předtím. Vývoj ERD
 * Chris John - NOAA / NMFS / SWFSC / ERD , MNE
 * Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
 * Heather Nicholasová - NOAA / NMFS / SWFSC 
-* Kevin O-Brien - NOAA /OAR/PMEL, UW/CIOCES (spolupředsedkyně) 
+* Kevin O-Brien - GOOS   (Globální systém sledování oceánu)   (spolupředsedkyně) 
 * Shane St Savage - Axiom Data Science
 * Micah Wengren - NOAA /NOS/US IOOS
 
@@ -42,4 +42,4 @@ The ERDDAP komunita stále roste a je silnější než kdy předtím. Vývoj ERD
 
 ---
 
-Tento dokument je postaven pomocí stránek GitHub. Chcete-li navrhnout změny dokumentu, upravte zdrojový soubor GitHub na [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Tento dokument je postaven pomocí stránek GitHub. Chcete-li navrhnout změny dokumentu, upravte zdrojový soubor GitHub na [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

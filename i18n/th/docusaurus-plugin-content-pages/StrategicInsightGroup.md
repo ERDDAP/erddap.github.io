@@ -21,7 +21,7 @@
 ##  ERDDAP มุมมอง{#erddap-outlook} 
 เดอะ ERDDAP ชุมชนยังคงเติบโตอย่างต่อเนื่อง และแข็งแรงมากขึ้นกว่าเดิม การพัฒนาของ ERDDAP - STIG ให้โอกาสที่ชัดเจนเพื่อให้แน่ใจว่าการสนับสนุนอย่างต่อเนื่อง เติบโตและพัฒนา ERDDAP และสร้างแรงผลักดัน ERDDAP ได้สร้างสังคมจัดการข้อมูล ในช่วงทศวรรษที่ผ่านมา
 
-## เพิ่มขนาด A. SIG (24 สิงหาคม พ.ศ.)  {#appendix-a--sig-members-as-of-august-2024} 
+## เพิ่มขนาด A. SIG (2026 พ.ศ.)  {#appendix-a--sig-members} 
 * คณิตศาสตร์ - NOAA /NNOSS/US IOOS (เก้าอี้ร่วม) 
 * ยูจีน เบอร์เกอร์ - NOAA (โออาร์/ พ.ศ.
 * เซธ แชมเปญ - ห้องวิจัยของกองทัพเรือสหรัฐ
@@ -29,7 +29,7 @@
 * คริส จอห์น - NOAA / NMFS / SWFSC / ERD MEN
 * รอย เมนเดลสัน NOAA / NMFS / SWFSC / ERD 
 * เฮ เท อร์ นิ โคลั ส - NOAA / NMFS / SWFSC 
-* เค วิน โอ ไบ รอัน - NOAA (OAR/MPEL, UW/CIOCES) (เก้าอี้ร่วม) 
+* เค วิน โอ ไบ รอัน - GOOS   (ระบบ เฝ้า ดู มหาสมุทร ทั่ว โลก)   (เก้าอี้ร่วม) 
 * เชน เซนต์ ซาเวจ - วิทยาศาสตร์ ข้อมูล
 * มิ คา เอล เว็ง รีน - NOAA /NNOSS/US IOOS
 
@@ -42,4 +42,4 @@
 
 ---
 
-เอกสารนี้ถูกสร้างโดยใช้หน้า GitHub เพื่อเสนอการเปลี่ยนแปลงไปยังเอกสาร โปรดแก้ไขแฟ้มต้นฉบับของ GitHub ที่ [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+เอกสารนี้ถูกสร้างโดยใช้หน้า GitHub เพื่อเสนอการเปลี่ยนแปลงไปยังเอกสาร โปรดแก้ไขแฟ้มต้นฉบับของ GitHub ที่ [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

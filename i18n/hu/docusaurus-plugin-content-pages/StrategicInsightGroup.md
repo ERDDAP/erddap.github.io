@@ -21,7 +21,7 @@ Segítség útmutató ERDDAP fejlődés és kölcsönhatás a globális ERDDAP k
 ##  ERDDAP dalszöveg{#erddap-outlook} 
 A ERDDAP A közösség tovább növekszik, és erőteljesebb, mint valaha. A fejlődés a fejlődés ERDDAP A SIG egyértelmű lehetőséget nyújt a folyamatos támogatás, növekedés és fejlődés biztosítására ERDDAP és termeszteni a lendületet ERDDAP az elmúlt évtizedben létrehozta az adatkezelő közösséget.
 
-## A. SIG Tagok függeléke (2024 augusztusától)  {#appendix-a--sig-members-as-of-august-2024} 
+## A. SIG Tagok függeléke (májustól 2026)  {#appendix-a--sig-members} 
 * Mathew Biddle - NOAA /NOS/US IOOS (co-chair) 
 * Eugene Burger - NOAA /OAR/PMEL
 * Seth Champagne Egyesült Államok Naval Research Laboratory
@@ -29,7 +29,7 @@ A ERDDAP A közösség tovább növekszik, és erőteljesebb, mint valaha. A fej
 * Chris John - NOAA / NMFS / SWFSC / ERD , MNE
 * Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
 * Heather Nicholas - NOAA / NMFS / SWFSC 
-* Kevin O'Brien - NOAA /OAR/PMEL, UW/CIOCES (co-chair) 
+* Kevin O'Brien - GOOS   (Globális óceán megfigyelő rendszer)   (co-chair) 
 * Shane St Savage - Axiom Data Science
 * Micah Wengren - NOAA /NOS/US IOOS
 
@@ -42,4 +42,4 @@ A ERDDAP A közösség tovább növekszik, és erőteljesebb, mint valaha. A fej
 
 ---
 
-Ez a dokumentum a GitHub oldalak használatával készült. A dokumentum módosításainak javasolásához szerkesztse a GitHub forrásfájlját [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Ez a dokumentum a GitHub oldalak használatával készült. A dokumentum módosításainak javasolásához szerkesztse a GitHub forrásfájlját [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

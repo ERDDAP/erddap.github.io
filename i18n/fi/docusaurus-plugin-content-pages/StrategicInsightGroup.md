@@ -21,7 +21,7 @@ Auta opastamaan ERDDAP Vuorovaikutus ja vuorovaikutus maailman kanssa ERDDAP Yht
 ##  ERDDAP Näkymät{#erddap-outlook} 
 The ERDDAP Yhteisö kasvaa ja on vahvempi kuin koskaan. Kehityksen ERDDAP SIG tarjoaa selkeän mahdollisuuden varmistaa jatkuvan tuen, kasvun ja kehityksen ERDDAP ja viljellä vauhtia ERDDAP tietohallintoyhteisössä viime vuosikymmenen aikana.
 
-## A. SIG jäsenet (Elokuussa 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## A. SIG jäsenet (toukokuussa 2026)  {#appendix-a--sig-members} 
 * Maw Biddle Näytä tarkat tiedot - NOAA NOS/US IOOS (co-chair) 
 * Eugene Burger - NOAA Lähde/PMEL
 * Seitsemän samppanjaa Yhdysvaltain laivaston tutkimuslaboratorio
@@ -29,7 +29,7 @@ The ERDDAP Yhteisö kasvaa ja on vahvempi kuin koskaan. Kehityksen ERDDAP SIG ta
 * Chris John - NOAA // NMFS // SWFSC // ERD MNE
 * Roy Mendelssohn (käytetty) NOAA // NMFS // SWFSC // ERD 
 * Pääosat Nicholas - NOAA // NMFS // SWFSC 
-* Kevin O'Brien - NOAA OAR/PMEL, UW/CIOCES (co-chair) 
+* Kevin O'Brien - GOOS   (Maailman merien tarkkailujärjestelmä)   (co-chair) 
 * Shane St Savage - Axiom Data Science (käytetty)
 * Micah Wengren - NOAA NOS/US IOOS
 
@@ -42,4 +42,4 @@ The ERDDAP Yhteisö kasvaa ja on vahvempi kuin koskaan. Kehityksen ERDDAP SIG ta
 
 ---
 
-Tämä asiakirja on rakennettu GitHub-sivuilla. Ehdottaa muutoksia asiakirjaan, muokkaa GitHub lähdetiedostoa [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Tämä asiakirja on rakennettu GitHub-sivuilla. Ehdottaa muutoksia asiakirjaan, muokkaa GitHub lähdetiedostoa [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

@@ -21,7 +21,7 @@
 ##  ERDDAP ニュース{#erddap-outlook} 
 ザ・オブ・ザ・ ERDDAP コミュニティは成長し続けています。 研究開発 ERDDAP -SIGは、継続的なサポート、成長、開発を確実にするために明確な機会を提供します ERDDAP 瞬間を育てる ERDDAP 過去10年間にデータ管理コミュニティで作成しました。
 
-## A. SIGメンバー (2024年8月現在)  {#appendix-a--sig-members-as-of-august-2024} 
+## A. SIGメンバー (2026年5月現在)  {#appendix-a--sig-members} 
 * Mathew バイドル ・ NOAA /NOS/米国IOOS (コチェア) 
 * ユージンバーガー ・ NOAA /OAR/PMEL(オアール)
 * セスシャンパン - 米国海軍研究所
@@ -29,7 +29,7 @@
 * クリス・ジョン - NOAA / / / / NMFS / / / / SWFSC / / / / ERD , ムネ
 * ロイ・メンデルスゾーン - NOAA / / / / NMFS / / / / SWFSC / / / / ERD 
 * ヒーザーニコラス ・ NOAA / / / / NMFS / / / / SWFSC 
-* ケビン・オビエン ・ NOAA /OAR/PMEL、UW/CIOCES (コチェア) 
+* ケビン・オビエン ・ GOOS   (グローバル海洋観測システム)   (コチェア) 
 * シャイン・セント・サベージ - 軸線データサイエンス
 * ミカ・ウェンレン ・ NOAA /NOS/米国IOOS
 
@@ -42,4 +42,4 @@
 
 ---
 
-このドキュメントはGitHubページで作成されます。 ドキュメントの変更を提案するには、GitHub ソースファイルを編集します。 [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+このドキュメントはGitHubページで作成されます。 ドキュメントの変更を提案するには、GitHub ソースファイルを編集します。 [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

@@ -21,7 +21,7 @@ Rehberliğe yardımcı olmak için ERDDAP Küreselleşme ve etkileşim ERDDAP to
 ##  ERDDAP görünüm görünümü{#erddap-outlook} 
 The The The The The The The The ERDDAP Toplum büyümeye devam ediyor ve her zamankinden daha güçlü. The development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the ERDDAP -SIG, devam eden desteği, büyüme ve gelişimi sağlamak için açık bir fırsat sunuyor ERDDAP Ve momentumu geliştirmek ERDDAP Son on yılda veri yönetimi topluluğunda yaratıldı.
 
-## Ek A. SIG Üyeleri (Ağustos ayı itibariyle 2024)  {#appendix-a--sig-members-as-of-august-2024} 
+## Ek A. SIG Üyeleri (Mayıs ayı itibariyle 2026)  {#appendix-a--sig-members} 
 * Mathew Biddle - NOAA /NOS/US IOOS (co-chair) 
 * Eugene Burger - NOAA /OAR/PMEL
 * Seth şampanya - U.S. Naval Research Laboratory
@@ -29,7 +29,7 @@ The The The The The The The The ERDDAP Toplum büyümeye devam ediyor ve her zam
 * Chris John - NOAA / NMFS / SWFSC / ERD MNE
 * Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
 * Heather Nicholas - NOAA / NMFS / SWFSC 
-* Kevin O'Brien - NOAA / OAR/PMEL, UW/CIOCES (co-chair) 
+* Kevin O'Brien - GOOS   (Global Ocean Observing System)   (co-chair) 
 * Shane St Savage - Axiom Data Science
 * Micah Wengren - NOAA /NOS/US IOOS
 
@@ -42,4 +42,4 @@ The The The The The The The The ERDDAP Toplum büyümeye devam ediyor ve her zam
 
 ---
 
-Bu belge GitHub sayfaları kullanılarak inşa edilmiştir. Belgeye değişiklikler önermek için, GitHub kaynak dosyasını düzenler [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Bu belge GitHub sayfaları kullanılarak inşa edilmiştir. Belgeye değişiklikler önermek için, GitHub kaynak dosyasını düzenler [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

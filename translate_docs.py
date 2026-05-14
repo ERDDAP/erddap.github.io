@@ -394,6 +394,7 @@ dont_translate_strings = [
     "Google Charts",
     "Google Earth",
     "Google Visualization",
+    "GOOS",
     # "gzip", #is below after x-gzip
     "h, hr, hrs, hour, hours,",
     "HDF",
