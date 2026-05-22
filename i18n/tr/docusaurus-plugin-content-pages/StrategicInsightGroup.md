@@ -22,20 +22,20 @@ Rehberliğe yardımcı olmak için ERDDAP Küreselleşme ve etkileşim ERDDAP to
 The The The The The The The The ERDDAP Toplum büyümeye devam ediyor ve her zamankinden daha güçlü. The development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the development of the ERDDAP -SIG, devam eden desteği, büyüme ve gelişimi sağlamak için açık bir fırsat sunuyor ERDDAP Ve momentumu geliştirmek ERDDAP Son on yılda veri yönetimi topluluğunda yaratıldı.
 
 ## Ek A. SIG Üyeleri (Mayıs ayı itibariyle 2026)  {#appendix-a--sig-members} 
-* Mathew Biddle - NOAA /NOS/US IOOS (co-chair) 
-* Eugene Burger - NOAA /OAR/PMEL
+* Mathew Biddle - NOAA/NOS/US IOOS   (co-chair) 
+* Eugene Burger - NOAA/OAR/PMEL 
 * Seth şampanya - U.S. Naval Research Laboratory
 * Conor Delaney - EMODnet (European Marine Observation Data Network Network) 
-* Chris John - NOAA / NMFS / SWFSC / ERD MNE
-* Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
-* Heather Nicholas - NOAA / NMFS / SWFSC 
-* Kevin O'Brien - GOOS   (Global Ocean Observing System)   (co-chair) 
+* Chris John - NOAA/NMFS/SWFSC/ERD MNE
+* Roy Mendelssohn - NOAA/NMFS/SWFSC/ERD 
+* Heather Nicholas - NOAA/NMFS/SWFSC 
+* Kevin O'Brien - GOOS/WMO   (co-chair) 
 * Shane St Savage - Axiom Data Science
-* Micah Wengren - NOAA /NOS/US IOOS
+* Micah Wengren - NOAA/NOS/US IOOS 
 
 ### Eski Üyeleri Eski Üyeleri{#former-members} 
 * Filipe Fernandes - (SECOORA /IOOS)  
-* Toby Garfield - NOAA / NMFS / SWFSC / ERD   (Emekli) 
+* Toby Garfield - NOAA/NMFS/SWFSC/ERD   (Emekli) 
 * Alex Kerney - Maine Araştırma Enstitüsü
 * Dale Robinson - NESDIS / CoastWatch, UCS/CIMEAS
 * Bob Simons - Yaratıcısı ERDDAP   (Emekli) 

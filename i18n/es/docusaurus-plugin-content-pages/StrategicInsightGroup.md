@@ -22,20 +22,20 @@ Para ayudar a guiar ERDDAP y la interacción con el mundo ERDDAP la comunidad, u
 El ERDDAP la comunidad sigue creciendo y es más vigorosa que nunca. El desarrollo del ERDDAP -SIG ofrece una clara oportunidad para garantizar el apoyo, el crecimiento y el desarrollo continuos ERDDAP y cultivar el impulso ERDDAP ha creado en la comunidad de gestión de datos durante el último decenio.
 
 ## Apéndice A. Miembros SIG (a mayo de 2026)  {#appendix-a--sig-members} 
-* Mathew Biddle - NOAA /NOS/US IOOS (copresidente) 
-* Eugene Burger - NOAA /OAR/PMEL
+* Mathew Biddle - NOAA/NOS/US IOOS   (copresidente) 
+* Eugene Burger - NOAA/OAR/PMEL 
 * Seth Champagne - U.S. Naval Research Laboratory
 * Conor Delaney - EMODnet (European Marine Observation Red de datos) 
-* Chris John... NOAA / NMFS / SWFSC / ERD , MNE
-* Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
-* Heather Nicholas - NOAA / NMFS / SWFSC 
-* Kevin O'Brien - GOOS   (Sistema Mundial de Observación de los Océanos)   (copresidente) 
+* Chris John... NOAA/NMFS/SWFSC/ERD , MNE
+* Roy Mendelssohn - NOAA/NMFS/SWFSC/ERD 
+* Heather Nicholas - NOAA/NMFS/SWFSC 
+* Kevin O'Brien - GOOS/WMO   (copresidente) 
 * Shane St Savage - Axiom Data Science
-* Micah Wengren - NOAA /NOS/US IOOS
+* Micah Wengren - NOAA/NOS/US IOOS 
 
 ### Ex Miembros{#former-members} 
 * Filipe Fernandes - (SECOORA/IOOS)  
-* Toby Garfield - NOAA / NMFS / SWFSC / ERD   (Retirada) 
+* Toby Garfield - NOAA/NMFS/SWFSC/ERD   (Retirada) 
 * Alex Kerney - Gulf of Maine Research Institute
 * Dale Robinson - NESDIS/CoastWatch, UCS/CIMEAS
 * Bob Simons - Creador de ERDDAP   (Retirada) 

@@ -22,20 +22,20 @@ Auta opastamaan ERDDAP Vuorovaikutus ja vuorovaikutus maailman kanssa ERDDAP Yht
 The ERDDAP Yhteisö kasvaa ja on vahvempi kuin koskaan. Kehityksen ERDDAP SIG tarjoaa selkeän mahdollisuuden varmistaa jatkuvan tuen, kasvun ja kehityksen ERDDAP ja viljellä vauhtia ERDDAP tietohallintoyhteisössä viime vuosikymmenen aikana.
 
 ## A. SIG jäsenet (toukokuussa 2026)  {#appendix-a--sig-members} 
-* Maw Biddle Näytä tarkat tiedot - NOAA NOS/US IOOS (co-chair) 
-* Eugene Burger - NOAA Lähde/PMEL
+* Maw Biddle Näytä tarkat tiedot - NOAA/NOS/US IOOS   (co-chair) 
+* Eugene Burger - NOAA/OAR/PMEL 
 * Seitsemän samppanjaa Yhdysvaltain laivaston tutkimuslaboratorio
 * Conor Delaney - EMODnet (käytetty) (Euroopan merien tarkkailu Tietoverkko) 
-* Chris John - NOAA // NMFS // SWFSC // ERD MNE
-* Roy Mendelssohn (käytetty) NOAA // NMFS // SWFSC // ERD 
-* Pääosat Nicholas - NOAA // NMFS // SWFSC 
-* Kevin O'Brien - GOOS   (Maailman merien tarkkailujärjestelmä)   (co-chair) 
+* Chris John - NOAA/NMFS/SWFSC/ERD MNE
+* Roy Mendelssohn (käytetty) NOAA/NMFS/SWFSC/ERD 
+* Pääosat Nicholas - NOAA/NMFS/SWFSC 
+* Kevin O'Brien - GOOS/WMO   (co-chair) 
 * Shane St Savage - Axiom Data Science (käytetty)
-* Micah Wengren - NOAA NOS/US IOOS
+* Micah Wengren - NOAA/NOS/US IOOS 
 
 ### Entiset jäsenet{#former-members} 
 * Filippiinit - (SECOOOORA/IOOS)  
-* Pääosat Garfield - NOAA // NMFS // SWFSC // ERD   (Eläkkeellä) 
+* Pääosat Garfield - NOAA/NMFS/SWFSC/ERD   (Eläkkeellä) 
 * Alex Kerney, Maine Research Instituten lahden
 * Dale Robinson NESDIS/CoastWatch, UCS/CIMEAS
 * Bob Simons - Luoja ERDDAP   (Eläkkeellä) 

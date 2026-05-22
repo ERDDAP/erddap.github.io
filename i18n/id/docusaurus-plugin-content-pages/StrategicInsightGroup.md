@@ -22,20 +22,20 @@ Untuk membantu panduan ERDDAP kemajuan dan interaksi dengan global ERDDAP komuni
 Login ERDDAP masyarakat terus tumbuh dan lebih bergetar dari sebelumnya. Perkembangan ERDDAP -SIG memberikan kesempatan yang jelas untuk memastikan dukungan, pertumbuhan dan perkembangan berkelanjutan ERDDAP dan untuk menumbuhkan momentum ERDDAP telah menciptakan komunitas manajemen data selama dekade terakhir.
 
 ## Sitemap (mei 2026)  {#appendix-a--sig-members} 
-* Login Login NOAA Login (Login) 
-* Mr. Victor Yang Login NOAA Login
+* Login Login NOAA/NOS/US IOOS   (Login) 
+* Mr. Victor Yang Login NOAA/OAR/PMEL 
 * Aletta Ocean - Laboratorium Penelitian Naval AS
 * EMODNET (Observasi Laut Eropa Jaringan Data) 
-* Mr. Victor Yang NOAA Sitemap NMFS Sitemap SWFSC Sitemap ERD Login
-* Login NOAA Sitemap NMFS Sitemap SWFSC Sitemap ERD 
-* Mr. Victor Yang Login NOAA Sitemap NMFS Sitemap SWFSC 
-* Mr. Victor Yang Login GOOS   (Sistem Pengawetan Laut Global)   (Login) 
+* Mr. Victor Yang NOAA/NMFS/SWFSC/ERD Login
+* Login NOAA/NMFS/SWFSC/ERD 
+* Mr. Victor Yang Login NOAA/NMFS/SWFSC 
+* Mr. Victor Yang Login GOOS/WMO   (Login) 
 * Shane St Savage - Ilmu Data Axiom
-* Login Login NOAA Login
+* Login Login NOAA/NOS/US IOOS 
 
 ### Mantan Anggota{#former-members} 
 * Login Login (Login)  
-* Login Login NOAA Sitemap NMFS Sitemap SWFSC Sitemap ERD   (Login) 
+* Login Login NOAA/NMFS/SWFSC/ERD   (Login) 
 * Alex Kerney - Teluk Lembaga Penelitian Utama
 * Mr. Victor Yang - NESDIS/CoastWatch, UCS/CIMEAS
 * Bob Simons - Kreator ERDDAP   (Login) 

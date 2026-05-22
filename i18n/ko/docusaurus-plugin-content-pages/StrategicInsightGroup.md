@@ -22,20 +22,20 @@
 더 보기 ERDDAP 지역 사회는 계속 성장하고 그 어느 때보다 더 활발합니다. 의 개발 ERDDAP -SIG는 지속적인 지원, 성장 및 발전을 보장하는 명확한 기회를 제공합니다 ERDDAP 그리고 모멘텀을 재배 ERDDAP 지난 10년간 데이터 관리 커뮤니티에서 만들어졌습니다.
 
 ## A. SIG 회원 (까지 5월, 2026)  {#appendix-a--sig-members} 
-* 수학 Biddle - - - NOAA /NOS / 미국 IOOS (채용 정보) 
-* 유진 버거 - - - NOAA /오라/PMEL
+* 수학 Biddle - - - NOAA/NOS/US IOOS   (채용 정보) 
+* 유진 버거 - - - NOAA/OAR/PMEL 
 * Seth 샴페인 - 미국 해군 연구소
 * Conor 델라니 - EMODnet (유럽 바다 전망 데이터 네트워크) 
-* 크리스 존 - NOAA / 한국어 NMFS / 한국어 SWFSC / 한국어 ERD , 말
-* 로이 Mendelssohn - NOAA / 한국어 NMFS / 한국어 SWFSC / 한국어 ERD 
-* Heather 니콜라스 - - - NOAA / 한국어 NMFS / 한국어 SWFSC 
-* 케빈 O'Brien - - - GOOS   (글로벌 오션 전망 시스템)   (채용 정보) 
+* 크리스 존 - NOAA/NMFS/SWFSC/ERD , 말
+* 로이 Mendelssohn - NOAA/NMFS/SWFSC/ERD 
+* Heather 니콜라스 - - - NOAA/NMFS/SWFSC 
+* 케빈 O'Brien - - - GOOS/WMO   (채용 정보) 
 * Shane St Savage - Axiom 데이터 과학
-* 콜롬비아 - - - NOAA /NOS / 미국 IOOS
+* 콜롬비아 - - - NOAA/NOS/US IOOS 
 
 ### 이전 회원{#former-members} 
 * Filipe 페르난데스 - - - (SECOORA/IOOS의 특징)  
-* 으로 Garfield - - - NOAA / 한국어 NMFS / 한국어 SWFSC / 한국어 ERD   (전체장편) 
+* 으로 Garfield - - - NOAA/NMFS/SWFSC/ERD   (전체장편) 
 * Alex Kerney - 메인 연구소의 걸프
 * Dale 로빈슨 - NESDIS/CoastWatch, UCS/CIMEAS
 * Bob Simons - 창조자 ERDDAP   (전체장편) 

@@ -22,20 +22,20 @@ Upang tumulong ERDDAP pagsulong at interaksiyon sa globo ERDDAP Sambayanan, Isan
 Ang ERDDAP Ang komunidad ay patuloy na lumalago at lalong masigla higit kailanman. Ang pag - unlad ng ERDDAP -SIG nagbibigay ng malinaw na pagkakataon upang matiyak ang patuloy na suporta, paglaki at pag-unlad ng ERDDAP at linangin ang momentum ERDDAP ay lumikha sa komunidad ng data management sa nakalipas na dekada.
 
 ## Isang Appendix A. SIG Members (noong Mayo, 2026)  {#appendix-a--sig-members} 
-* Mathew Biddle - NOAA /NOS/US IOOS (co-chair) 
-* Si Eugene Burger - NOAA /OAR/PMEL
+* Mathew Biddle - NOAA/NOS/US IOOS   (co-chair) 
+* Si Eugene Burger - NOAA/OAR/PMEL 
 * Si Set Champagne - Naval Research Laboratory ng Estados Unidos
 * Conor Delaney - EMODnet (Pagdiriwang ng mga Marine sa Europa Data Network) 
-* Chris John - NOAA / NMFS / SWFSC / ERD , MNE
-* Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
-* Heather Nicholas - NOAA / NMFS / SWFSC 
-* Kevin OixiBrien - GOOS   (Sistema ng Pagmamasid sa Pangglobong Karagatan)   (co-chair) 
+* Chris John - NOAA/NMFS/SWFSC/ERD , MNE
+* Roy Mendelssohn - NOAA/NMFS/SWFSC/ERD 
+* Heather Nicholas - NOAA/NMFS/SWFSC 
+* Kevin OixiBrien - GOOS/WMO   (co-chair) 
 * Shane St Savage - Axiom Data Science
-* Mikas Wengren - NOAA /NOS/US IOOS
+* Mikas Wengren - NOAA/NOS/US IOOS 
 
 ### Dating mga Miyembro{#former-members} 
 * Filipe Fernandes - (SECOORA/IOOS)  
-* Si Toby Garfield - NOAA / NMFS / SWFSC / ERD   (Nagretiro) 
+* Si Toby Garfield - NOAA/NMFS/SWFSC/ERD   (Nagretiro) 
 * Alex Kerney - Gulpo ng Maine Research Institute
 * Si Dale Robinson - NESDIS/CastWatch, UCS/CIMEAS
 * Bob Simons - Maylalang ng ERDDAP   (Nagretiro) 

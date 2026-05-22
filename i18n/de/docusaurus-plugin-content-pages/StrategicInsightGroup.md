@@ -22,20 +22,20 @@ Zu helfen Anleitung ERDDAP Förderung und Interaktion mit der globalen ERDDAP Co
 Die ERDDAP Die Gemeinschaft wächst weiter und ist energischer als je zuvor. Die Entwicklung der ERDDAP -SIG bietet eine klare Gelegenheit, die weitere Unterstützung, Wachstum und Entwicklung zu gewährleisten ERDDAP und die Dynamik kultivieren ERDDAP hat in der Datenverwaltungsgemeinschaft im letzten Jahrzehnt geschaffen.
 
 ## Anlage A. SIG Mitglieder (ab Mai, 2026)  {#appendix-a--sig-members} 
-* Mathew Biddle - Ja. NOAA /NOS/US IOOS (Co-Stuhl) 
-* E-Mail-Adresse: - Ja. NOAA /OAR/PMEL
+* Mathew Biddle - Ja. NOAA/NOS/US IOOS   (Co-Stuhl) 
+* E-Mail-Adresse: - Ja. NOAA/OAR/PMEL 
 * Seth Champagner - U.S. Naval Research Laboratory
 * Conor Delaney - EMODnet (Europäische Meeresbeobachtung Datennetz) 
-* Chris John - NOAA / NMFS / SWFSC / ERD , MNE
-* Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
-* Heather Nicholas - Ja. NOAA / NMFS / SWFSC 
-* Kevin O’Brien - Ja. GOOS   (Global Ocean Observing System)   (Co-Stuhl) 
+* Chris John - NOAA/NMFS/SWFSC/ERD , MNE
+* Roy Mendelssohn - NOAA/NMFS/SWFSC/ERD 
+* Heather Nicholas - Ja. NOAA/NMFS/SWFSC 
+* Kevin O’Brien - Ja. GOOS/WMO   (Co-Stuhl) 
 * Shane St Savage - Axiom Data Science
-* Micah Wengren - Ja. NOAA /NOS/US IOOS
+* Micah Wengren - Ja. NOAA/NOS/US IOOS 
 
 ### Ehemalige Mitglieder{#former-members} 
 * Filipe Fernandes - Ja. (SECOORA/IOOS)  
-* Toby Garfield - Ja. NOAA / NMFS / SWFSC / ERD   (Ruhestand) 
+* Toby Garfield - Ja. NOAA/NMFS/SWFSC/ERD   (Ruhestand) 
 * Alex Kerney - Golf von Maine Research Institute
 * Ich bin hier. - NESDIS/CoastWatch, UCS/CIMEAS
 * Bob Simons - Schöpfer von ERDDAP   (Ruhestand) 

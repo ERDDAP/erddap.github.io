@@ -22,20 +22,20 @@ Pomoci průvodce ERDDAP pokrok a interakce s globálním ERDDAP komunita, strate
 The ERDDAP komunita stále roste a je silnější než kdy předtím. Vývoj ERDDAP -SIG poskytuje jasnou příležitost k zajištění trvalé podpory, růstu a rozvoje ERDDAP a pěstovat hybnost ERDDAP vytvořila v komunitě správy dat za poslední desetiletí.
 
 ## Dodatek A. SIG Členové (od května 2026)  {#appendix-a--sig-members} 
-* Mathew Biddle - NOAA /NOS/US IOOS (spolupředsedkyně) 
-* Eugene Burger - NOAA /OAR/PMEL
+* Mathew Biddle - NOAA/NOS/US IOOS   (spolupředsedkyně) 
+* Eugene Burger - NOAA/OAR/PMEL 
 * Seth Champagne - U.S. Námořní výzkumná laboratoř
 * Conor Delaney - EMODnet (Evropské mořské pozorování Datová síť) 
-* Chris John - NOAA / NMFS / SWFSC / ERD , MNE
-* Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
-* Heather Nicholasová - NOAA / NMFS / SWFSC 
-* Kevin O-Brien - GOOS   (Globální systém sledování oceánu)   (spolupředsedkyně) 
+* Chris John - NOAA/NMFS/SWFSC/ERD , MNE
+* Roy Mendelssohn - NOAA/NMFS/SWFSC/ERD 
+* Heather Nicholasová - NOAA/NMFS/SWFSC 
+* Kevin O-Brien - GOOS/WMO   (spolupředsedkyně) 
 * Shane St Savage - Axiom Data Science
-* Micah Wengren - NOAA /NOS/US IOOS
+* Micah Wengren - NOAA/NOS/US IOOS 
 
 ### Bývalí členové{#former-members} 
 * Filipe Fernandes - (SECOORA/IOOS)  
-* Toby Garfield - NOAA / NMFS / SWFSC / ERD   (V důchodu) 
+* Toby Garfield - NOAA/NMFS/SWFSC/ERD   (V důchodu) 
 * Alex Kerney - Výzkumný ústav Maine
 * Dale Robinson - NESDIS/CoastWatch, UCS/CIMEAS
 * Bob Simons - Stvořitel ERDDAP   (V důchodu) 

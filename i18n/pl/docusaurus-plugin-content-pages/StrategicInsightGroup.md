@@ -22,20 +22,20 @@ Aby pomóc przewodnik ERDDAP postęp i interakcje z globalnym ERDDAP społeczno�
 W ERDDAP Społeczność nadal rośnie i jest bardziej energiczna niż kiedykolwiek. Rozwój ERDDAP -SIG stanowi wyraźną okazję do zapewnienia stałego wsparcia, wzrostu i rozwoju ERDDAP i pielęgnować pęd ERDDAP stworzył w społeczności zarządzania danymi w ciągu ostatniej dekady.
 
 ## Dodatek A. Członkowie SIG (od maja 2026 r.)  {#appendix-a--sig-members} 
-* Mathew Biddle - NOAA / NOS / US IOOS (fotel współosobowy) 
-* Eugene Burger - NOAA / OAR / PMEL
+* Mathew Biddle - NOAA/NOS/US IOOS   (fotel współosobowy) 
+* Eugene Burger - NOAA/OAR/PMEL 
 * Seth Szampan - U.S. Naval Research Laboratory
 * Conor Delaney - EMODnet (Europejska Obserwacja Morska Sieć danych) 
-* Chris John... NOAA / NMFS / SWFSC / ERD , MNE
-* Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
-* Heather Nicholas - NOAA / NMFS / SWFSC 
-* Kevin O 'Brien - GOOS   (Globalny system obserwacji oceanów)   (fotel współosobowy) 
+* Chris John... NOAA/NMFS/SWFSC/ERD , MNE
+* Roy Mendelssohn - NOAA/NMFS/SWFSC/ERD 
+* Heather Nicholas - NOAA/NMFS/SWFSC 
+* Kevin O 'Brien - GOOS/WMO   (fotel współosobowy) 
 * Shane St Savage - Axiom Data Science
-* Micah Wengren - NOAA / NOS / US IOOS
+* Micah Wengren - NOAA/NOS/US IOOS 
 
 ### Byli członkowie{#former-members} 
 * Filipe Fernandes - (SECOORA / IOOS)  
-* Toby Garfield - NOAA / NMFS / SWFSC / ERD   (Emerytowany) 
+* Toby Garfield - NOAA/NMFS/SWFSC/ERD   (Emerytowany) 
 * Alex Kerney - Instytut Badań Zatoki Maine
 * Dale Robinson - NESDIS / CoastWatch, UCS / CIMEAS
 * Bob Simons - twórca ERDDAP   (Emerytowany) 

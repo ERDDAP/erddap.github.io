@@ -29,7 +29,7 @@ The ERDDAP community continues to grow and is more vigorous than ever.  The deve
 * Chris John - NOAA/NMFS/SWFSC/ERD, MNE
 * Roy Mendelssohn - NOAA/NMFS/SWFSC/ERD
 * Heather Nicholas - NOAA/NMFS/SWFSC
-* Kevin O’Brien - GOOS (Global Ocean Observing System) (co-chair)
+* Kevin O’Brien - GOOS/WMO (co-chair)
 * Shane St Savage - Axiom Data Science
 * Micah Wengren - NOAA/NOS/US IOOS
 

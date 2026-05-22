@@ -22,20 +22,20 @@ Segítség útmutató ERDDAP fejlődés és kölcsönhatás a globális ERDDAP k
 A ERDDAP A közösség tovább növekszik, és erőteljesebb, mint valaha. A fejlődés a fejlődés ERDDAP A SIG egyértelmű lehetőséget nyújt a folyamatos támogatás, növekedés és fejlődés biztosítására ERDDAP és termeszteni a lendületet ERDDAP az elmúlt évtizedben létrehozta az adatkezelő közösséget.
 
 ## A. SIG Tagok függeléke (májustól 2026)  {#appendix-a--sig-members} 
-* Mathew Biddle - NOAA /NOS/US IOOS (co-chair) 
-* Eugene Burger - NOAA /OAR/PMEL
+* Mathew Biddle - NOAA/NOS/US IOOS   (co-chair) 
+* Eugene Burger - NOAA/OAR/PMEL 
 * Seth Champagne Egyesült Államok Naval Research Laboratory
 * Conor Delaney - EMODnet (Európai tengeri megfigyelés Adathálózat) 
-* Chris John - NOAA / NMFS / SWFSC / ERD , MNE
-* Roy Mendelssohn - NOAA / NMFS / SWFSC / ERD 
-* Heather Nicholas - NOAA / NMFS / SWFSC 
-* Kevin O'Brien - GOOS   (Globális óceán megfigyelő rendszer)   (co-chair) 
+* Chris John - NOAA/NMFS/SWFSC/ERD , MNE
+* Roy Mendelssohn - NOAA/NMFS/SWFSC/ERD 
+* Heather Nicholas - NOAA/NMFS/SWFSC 
+* Kevin O'Brien - GOOS/WMO   (co-chair) 
 * Shane St Savage - Axiom Data Science
-* Micah Wengren - NOAA /NOS/US IOOS
+* Micah Wengren - NOAA/NOS/US IOOS 
 
 ### Korábbi Tagok{#former-members} 
 * Fülöp-szigetek - (SECOORA/IOOS)  
-* Toby Garfield - NOAA / NMFS / SWFSC / ERD   (Nyugodt) 
+* Toby Garfield - NOAA/NMFS/SWFSC/ERD   (Nyugodt) 
 * Alex Kerney - Gulf of Maine Research Institute
 * Dale Robinson - NESDIS/CoastWatch, UCS/CIMEAS
 * Bob Simons - Teremtő ERDDAP   (Nyugodt) 

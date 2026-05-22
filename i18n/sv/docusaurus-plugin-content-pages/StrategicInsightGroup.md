@@ -22,20 +22,20 @@ Att hjälpa guide ERDDAP framsteg och interaktion med den globala ERDDAP communi
 och ERDDAP samhället fortsätter att växa och är mer kraftfull än någonsin. utveckling av ERDDAP -SIG ger en tydlig möjlighet att säkerställa fortsatt stöd, tillväxt och utveckling ERDDAP och kultivera momentum ERDDAP har skapats i datahanteringsgemenskapen under det senaste decenniet.
 
 ## Bilaga A. SIG-medlemmar (i maj, 2026)  {#appendix-a--sig-members} 
-* Mathew Biddle - NOAA NOS/US IOOS (medordförande) 
-* Eugene Burger - NOAA /OAR/PMEL
+* Mathew Biddle - NOAA/NOS/US IOOS   (medordförande) 
+* Eugene Burger - NOAA/OAR/PMEL 
 * Seth Champagne U.S. Naval Research Laboratory
 * Conor Delaney - EMODnet (Europeiska marina observationer Datanätverk) 
-* Chris John - NOAA /// NMFS /// SWFSC /// ERD MNE
-* Roy Mendelssohn - NOAA /// NMFS /// SWFSC /// ERD 
-* Heather Nicholas - NOAA /// NMFS /// SWFSC 
-* Kevin O'Brien - GOOS   (Global Ocean observationssystem)   (medordförande) 
+* Chris John - NOAA/NMFS/SWFSC/ERD MNE
+* Roy Mendelssohn - NOAA/NMFS/SWFSC/ERD 
+* Heather Nicholas - NOAA/NMFS/SWFSC 
+* Kevin O'Brien - GOOS/WMO   (medordförande) 
 * Shane St Savage - Axiom Data Science
-* Micah Wengren - NOAA NOS/US IOOS
+* Micah Wengren - NOAA/NOS/US IOOS 
 
 ### Tidigare medlemmar{#former-members} 
 * Filipe Fernandes - (SECOORA/IOOS)  
-* Toby Garfield - NOAA /// NMFS /// SWFSC /// ERD   (Pensionerad) 
+* Toby Garfield - NOAA/NMFS/SWFSC/ERD   (Pensionerad) 
 * Alex Kerney - Gulf från Maine Research Institute
 * Dale Robinson - NESDIS/CoastWatch, UCS/CIMEAS
 * Bob Simons - Skapare av ERDDAP   (Pensionerad) 
