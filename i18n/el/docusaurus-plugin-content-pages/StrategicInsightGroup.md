@@ -1,6 +1,6 @@
 #  ERDDAP - Ομάδα Στρατηγικής Ενόρασης
 
-Αυτό το έγγραφο είναι χτισμένο χρησιμοποιώντας σελίδες GitHub. Για να προτείνετε αλλαγές στο έγγραφο, δείτε το GitHub [πηγαίο αρχείο](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) .
+Αυτό το έγγραφο είναι χτισμένο χρησιμοποιώντας σελίδες GitHub. Για να προτείνετε αλλαγές στο έγγραφο, δείτε το GitHub [πηγαίο αρχείο](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) .
 
 ## Ιστορικό{#background} 
  ERDDAP είναι ένας επιστημονικός διακομιστής δεδομένων που δίνει στους χρήστες έναν απλό, συνεπή τρόπο για να κατεβάσετε υποσύνολα των gridded και πίνακα επιστημονικών δεδομένων σε κοινές μορφές αρχείων και να κάνει γραφήματα και χάρτες. ERDDAP είναι Ελεύθερο και Ανοικτό λογισμικό πηγαίου κώδικα (ΑΦΟΣ) αρχικά αναπτύχθηκε σε National Oceanic and Atmospheric Administration   ( NOAA ) Εθνική Υπηρεσία Θαλάσσιας Αλιείας ( NMFS ) Νοτιοδυτικό Κέντρο Επιστημών Αλιείας ( SWFSC ) Τμήμα Περιβαλλοντικής Έρευνας ( ERD ) .
@@ -42,4 +42,4 @@
 
 ---
 
-Αυτό το έγγραφο είναι χτισμένο χρησιμοποιώντας σελίδες GitHub. Για να προτείνετε αλλαγές στο έγγραφο, επεξεργαστείτε το αρχείο πηγαίου κώδικα GitHub στο [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Αυτό το έγγραφο είναι χτισμένο χρησιμοποιώντας σελίδες GitHub. Για να προτείνετε αλλαγές στο έγγραφο, επεξεργαστείτε το αρχείο πηγαίου κώδικα GitHub στο [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

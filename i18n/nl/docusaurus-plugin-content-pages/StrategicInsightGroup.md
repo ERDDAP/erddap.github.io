@@ -1,6 +1,6 @@
 #  ERDDAP - Strategic Insight Group
 
-Dit document is gebouwd met behulp van GitHub pagina's. Om wijzigingen aan het document voor te stellen, zie de GitHub [bronbestand](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) .
+Dit document is gebouwd met behulp van GitHub pagina's. Om wijzigingen aan het document voor te stellen, zie de GitHub [bronbestand](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) .
 
 ## Achtergrond{#background} 
  ERDDAP is een wetenschappelijke dataserver die gebruikers een eenvoudige, consistente manier geeft om subsets van gerasterde en tabeller wetenschappelijke datasets in gemeenschappelijke bestandsformaten te downloaden en grafieken en kaarten te maken. ERDDAP is Vrije en Open Bron Software (FOSS) oorspronkelijk ontwikkeld op National Oceanic and Atmospheric Administration   ( NOAA ) Nationale dienst voor maritieme visserij ( NMFS ) Southwest Fisheries Science Center ( SWFSC ) Afdeling Milieuonderzoek ( ERD ) .
@@ -42,4 +42,4 @@ De ERDDAP gemeenschap blijft groeien en is krachtiger dan ooit. De ontwikkeling 
 
 ---
 
-Dit document is gebouwd met behulp van GitHub pagina's. Om wijzigingen aan het document voor te stellen, bewerk het GitHub bronbestand op [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Dit document is gebouwd met behulp van GitHub pagina's. Om wijzigingen aan het document voor te stellen, bewerk het GitHub bronbestand op [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

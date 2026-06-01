@@ -1,6 +1,6 @@
 #  ERDDAP - اسٹریٹجک انٹلیجنس گروپ -
 
-یہ دستاویز جٹ ہب صفحات کا استعمال کرتی ہے۔ دستاویزات میں تبدیلیاں تجویز کرنے کے لیے جی ٹی وی کو دیکھیں [فائل نکالیں](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) . .
+یہ دستاویز جٹ ہب صفحات کا استعمال کرتی ہے۔ دستاویزات میں تبدیلیاں تجویز کرنے کے لیے جی ٹی وی کو دیکھیں [فائل نکالیں](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) . .
 
 ## غیر متصل{#background} 
  ERDDAP ایک سائنسی ڈیٹا سرور ہے جو صارفین کو ایک سادہ، ضمنی طریقہ فراہم کرتا ہے جس کی مدد سے رجسٹرڈ اور تبتی سائنسی اعداد و شمار کو عام فائل فارمیٹ میں ڈاؤن لوڈ کیا جاتا ہے اور گراف اور نقشے بناتا ہے۔ ERDDAP مفت اور کھلا چشمہ سوفٹ ویئر ہے۔ (روس) ابتدا میں تیار کی گئی National Oceanic and Atmospheric Administration   ( NOAA ) نیشنل بحری ماہی گیری سروس ( NMFS ) جنوب مغربی ماہی گیریز سائنس سینٹر ( SWFSC ) ماحولیاتی تحقیقی تقسیم ( ERD ) . .
@@ -42,4 +42,4 @@
 
 ---
 
-یہ دستاویز جٹ ہب صفحات کا استعمال کرتی ہے۔ دستاویزات میں تبدیلی کی تجویز کرنے کے لیے، جی ٹی وی ماخذ فائل میں ترمیم کرتے ہیں۔ [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+یہ دستاویز جٹ ہب صفحات کا استعمال کرتی ہے۔ دستاویزات میں تبدیلی کی تجویز کرنے کے لیے، جی ٹی وی ماخذ فائل میں ترمیم کرتے ہیں۔ [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

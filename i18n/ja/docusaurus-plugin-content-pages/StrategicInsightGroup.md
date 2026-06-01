@@ -1,6 +1,6 @@
 #  ERDDAP - 戦略的インサイトグループ
 
-このドキュメントはGitHubページで作成されます。 ドキュメントの変更を提案するには、GitHub を参照してください。 [ソースファイル](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) お問い合わせ
+このドキュメントはGitHubページで作成されます。 ドキュメントの変更を提案するには、GitHub を参照してください。 [ソースファイル](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) お問い合わせ
 
 ## プロフィール{#background} 
  ERDDAP 一般的なファイル形式でグリッドと表形式の科学データセットのサブセットをダウンロードし、グラフやマップを作るために、ユーザーがシンプルで一貫した方法でユーザーを与える科学データサーバーです。 ERDDAP 自由でオープンソースソフトウェア (フォス) もともと開発されました National Oceanic and Atmospheric Administration   ( NOAA ) 海上漁業サービス ( NMFS ) 南西漁業科学センター ( SWFSC ) 環境研究部 ( ERD ) お問い合わせ
@@ -42,4 +42,4 @@
 
 ---
 
-このドキュメントはGitHubページで作成されます。 ドキュメントの変更を提案するには、GitHub ソースファイルを編集します。 [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+このドキュメントはGitHubページで作成されます。 ドキュメントの変更を提案するには、GitHub ソースファイルを編集します。 [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

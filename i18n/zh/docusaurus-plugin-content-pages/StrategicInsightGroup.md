@@ -1,6 +1,6 @@
 #  ERDDAP - 战略透视小组
 
-此文档使用 GitHub 页面构建 。 要对文件提出修改,请参见GitHub [源文件](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) 。 。 。 。
+此文档使用 GitHub 页面构建 。 要对文件提出修改,请参见GitHub [源文件](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 。 。 。 。
 
 ## 背景情况{#background} 
  ERDDAP 是一个科学数据服务器,它为用户提供了一个简单,一致的方法,以通用的文件格式下载网格化和表格化的科学数据集子集,并制作图表和地图. ERDDAP 是自由和开放源码软件 (自由和开放源码软件) 原开发时间 National Oceanic and Atmospheric Administration   ( NOAA ) 国家海洋渔业局 ( NMFS ) 西南渔业科学中心 ( SWFSC ) 环境研究司 ( ERD ) 。 。 。 。
@@ -42,4 +42,4 @@
 
 ---
 
-此文档使用 GitHub 页面构建 。 要对文档提出修改, 请编辑 GitHub 源文件 。 [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+此文档使用 GitHub 页面构建 。 要对文档提出修改, 请编辑 GitHub 源文件 。 [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

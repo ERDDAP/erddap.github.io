@@ -1,6 +1,6 @@
 #  ERDDAP - กลุ่มข้อมูลเชิงลึก
 
-เอกสารนี้ถูกสร้างโดยใช้หน้า GitHub เพื่อเสนอการเปลี่ยนแปลงเป็นเอกสาร ดู Githoub [แฟ้มต้นทาง](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) .
+เอกสารนี้ถูกสร้างโดยใช้หน้า GitHub เพื่อเสนอการเปลี่ยนแปลงเป็นเอกสาร ดู Githoub [แฟ้มต้นทาง](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) .
 
 ## พื้นหลัง{#background} 
  ERDDAP เป็นเซิร์ฟเวอร์ข้อมูลทางวิทยาศาสตร์ ที่ให้ผู้ใช้สามารถดาวน์โหลด สับเซตของข้อมูลทางวิทยาศาสตร์ที่ฝังอยู่ และแท็บลาร์ในรูปแบบแฟ้มทั่วไป และทํากราฟและแผนที่ได้ ERDDAP ซอฟต์แวร์เสรีและโอเพนซอร์ส (OSS) เดิมทีถูกพัฒนาขึ้นที่ National Oceanic and Atmospheric Administration   ( NOAA ) บริการ ประมง ทาง ทะเล แห่ง ชาติ ( NMFS ) ศูนย์ประมงตะวันตกเฉียงใต้ ( SWFSC ) แผนกวิจัยสิ่งแวดล้อม ( ERD ) .
@@ -42,4 +42,4 @@
 
 ---
 
-เอกสารนี้ถูกสร้างโดยใช้หน้า GitHub เพื่อเสนอการเปลี่ยนแปลงไปยังเอกสาร โปรดแก้ไขแฟ้มต้นฉบับของ GitHub ที่ [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+เอกสารนี้ถูกสร้างโดยใช้หน้า GitHub เพื่อเสนอการเปลี่ยนแปลงไปยังเอกสาร โปรดแก้ไขแฟ้มต้นฉบับของ GitHub ที่ [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

@@ -1,6 +1,6 @@
 #  ERDDAP - 전략적 통찰력 그룹
 
-이 문서는 GitHub 페이지를 사용합니다. 문서에 변화를 제안하려면 GitHub를 참조하십시오. [소스 파일](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) ·
+이 문서는 GitHub 페이지를 사용합니다. 문서에 변화를 제안하려면 GitHub를 참조하십시오. [소스 파일](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) ·
 
 ## 이름 *{#background} 
  ERDDAP 사용자를 제공하는 과학적인 데이터 서버는 일반적인 파일 형식의 그리드 및 tabular 과학 데이터 세트의 하위 세트를 다운로드하고 그래프와지도를 만듭니다. ERDDAP 무료 및 오픈 소스 소프트웨어 (제품정보) 원래 개발 National Oceanic and Atmospheric Administration   ( NOAA ) National Marine Fisheries 서비스 ( NMFS ) Southwest Fisheries 과학 센터 ( SWFSC ) 환경연구과 ( ERD ) ·
@@ -42,4 +42,4 @@
 
 ---
 
-이 문서는 GitHub 페이지를 사용합니다. 문서에 변경을 제안하려면 GitHub 소스 파일을 편집하십시오. [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+이 문서는 GitHub 페이지를 사용합니다. 문서에 변경을 제안하려면 GitHub 소스 파일을 편집하십시오. [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

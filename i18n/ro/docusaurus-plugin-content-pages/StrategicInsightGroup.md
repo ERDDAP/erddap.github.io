@@ -1,6 +1,6 @@
 #  ERDDAP - Strategic Insight Group
 
-Acest document este construit folosind pagini GitHub. Pentru a propune modificări ale documentului, consultați GitHub [fișier sursă](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) .
+Acest document este construit folosind pagini GitHub. Pentru a propune modificări ale documentului, consultați GitHub [fișier sursă](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) .
 
 ## Context{#background} 
  ERDDAP este un server de date științifice care oferă utilizatorilor o modalitate simplă, coerentă de a descărca subseturi de seturi de date științifice în formate de fișiere comune și de a face grafice și hărți. ERDDAP este Free and Open Source Software (FOS) iniţial dezvoltat la National Oceanic and Atmospheric Administration   ( NOAA ) Serviciul național pentru pescuit marin ( NMFS ) Southwest Fisheries Science Center ( SWFSC ) Divizia de cercetare în domeniul mediului ( ERD ) .
@@ -42,4 +42,4 @@ Pentru a ajuta ghid ERDDAP progresul și interacțiunea cu lumea globală ERDDAP
 
 ---
 
-Acest document este construit folosind pagini GitHub. Pentru a propune modificări ale documentului, editați fișierul sursă GitHub la [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Acest document este construit folosind pagini GitHub. Pentru a propune modificări ale documentului, editați fișierul sursă GitHub la [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

@@ -1,6 +1,6 @@
 #  ERDDAP Stratégiai felügyeleti csoport
 
-Ez a dokumentum a GitHub oldalak használatával készült. A dokumentum módosításainak javasolására lásd a GitHub-ot [forrás fájl](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) ...
+Ez a dokumentum a GitHub oldalak használatával készült. A dokumentum módosításainak javasolására lásd a GitHub-ot [forrás fájl](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) ...
 
 ## Háttér{#background} 
  ERDDAP egy tudományos adatkiszolgáló, amely egyszerű, következetes módot biztosít a felhasználók számára, hogy letöltsék a hálózati és mesés tudományos adatkészleteket a közös fájlformátumokban, és grafikákat és térképeket készítsenek. ERDDAP Ingyenes és nyílt forráskódú szoftver (FOSS) eredetileg fejlett National Oceanic and Atmospheric Administration   ( NOAA ) Nemzeti tengeri halászati szolgálat ( NMFS ) Délnyugati halászati tudományos központ ( SWFSC ) Környezetkutatási osztály ( ERD ) ...
@@ -42,4 +42,4 @@ A ERDDAP A közösség tovább növekszik, és erőteljesebb, mint valaha. A fej
 
 ---
 
-Ez a dokumentum a GitHub oldalak használatával készült. A dokumentum módosításainak javasolásához szerkesztse a GitHub forrásfájlját [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Ez a dokumentum a GitHub oldalak használatával készült. A dokumentum módosításainak javasolásához szerkesztse a GitHub forrásfájlját [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

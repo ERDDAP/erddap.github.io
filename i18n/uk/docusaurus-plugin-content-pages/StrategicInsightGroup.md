@@ -1,6 +1,6 @@
 #  ERDDAP - Стратегічна група Insight
 
-Цей документ побудовано за допомогою сторінок GitHub. Пропонувати зміни до документа, див. GitHub [файл](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) й
+Цей документ побудовано за допомогою сторінок GitHub. Пропонувати зміни до документа, див. GitHub [файл](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) й
 
 ## Підземелля{#background} 
  ERDDAP - це науковий сервер даних, який надає користувачам простий, послідовний спосіб завантаження підсетів сітчастих і табличних наукових даних у спільних форматах файлів і робить графіки та карти. ERDDAP Безкоштовний і відкритий джерело програмного забезпечення (ФОСС) спочатку розвивалися на National Oceanic and Atmospheric Administration   ( NOAA ) Послуги морського рибного господарства ( NMFS ) Південно-Західний Рибарський науковий центр ( SWFSC ) Відділ досліджень навколишнього середовища ( ERD ) й
@@ -42,4 +42,4 @@
 
 ---
 
-Цей документ побудовано за допомогою сторінок GitHub. Пропонувати зміни до документа, редагувати файл джерела GitHub у [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Цей документ побудовано за допомогою сторінок GitHub. Пропонувати зміни до документа, редагувати файл джерела GitHub у [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

@@ -1,6 +1,6 @@
 #  ERDDAP - Strategic Insight Group
 
-Itinayo ang dokumentong ito gamit ang mga pahinang GitHub. Upang magmungkahi ng mga pagbabago sa dokumento, tingnan ang GitHub [pinagmulang talaksan](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) .
+Itinayo ang dokumentong ito gamit ang mga pahinang GitHub. Upang magmungkahi ng mga pagbabago sa dokumento, tingnan ang GitHub [pinagmulang talaksan](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) .
 
 ## Pinagmulan{#background} 
  ERDDAP ay isang siyentipikong tagapagsilbi ng impormasyon na nagbibigay sa mga gumagamit ng simple, di - nagbabagong paraan ng pag - download ng mga subset ng grid at tabular na siyentipikong mga dataset sa karaniwang mga format ng file at paggawa ng mga graph at mapa. ERDDAP ay Malaya at Open Software (MGA FOS) orihinal na ginawa sa National Oceanic and Atmospheric Administration   ( NOAA ) Paglilingkod ng Pambansang Marine Fisheries ( NMFS ) Southwest Fisheries Science Center ( SWFSC ) Paghahati sa Pananaliksik sa Kapaligiran ( ERD ) .
@@ -42,4 +42,4 @@ Ang ERDDAP Ang komunidad ay patuloy na lumalago at lalong masigla higit kailanma
 
 ---
 
-Itinayo ang dokumentong ito gamit ang mga pahinang GitHub. Upang magmungkahi ng mga pagbabago sa dokumento, isaayos ang talaksan ng source sa GitHub [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Itinayo ang dokumentong ito gamit ang mga pahinang GitHub. Upang magmungkahi ng mga pagbabago sa dokumento, isaayos ang talaksan ng source sa GitHub [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

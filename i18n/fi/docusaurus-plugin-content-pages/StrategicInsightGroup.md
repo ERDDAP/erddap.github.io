@@ -1,6 +1,6 @@
 #  ERDDAP Strateginen Insight Group
 
-Tämä asiakirja on rakennettu GitHub-sivuilla. Jos haluat tehdä muutoksia asiakirjaan, katso GitHub. [Lähde tiedosto](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) .
+Tämä asiakirja on rakennettu GitHub-sivuilla. Jos haluat tehdä muutoksia asiakirjaan, katso GitHub. [Lähde tiedosto](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) .
 
 ## Taustalla{#background} 
  ERDDAP Se on tieteellinen tietopalvelin, joka antaa käyttäjille yksinkertaisen ja johdonmukaisen tavan ladata verkko- ja tabulaarisia tieteellisiä tietoaineistoja yhteisissä tiedostomuodoissa ja tehdä kaavioita ja karttoja. ERDDAP Free and Open Source -ohjelmisto (FOSS) alun perin kehitetty National Oceanic and Atmospheric Administration   ( NOAA ) Kansallinen merikalastuspalvelu ( NMFS ) Southwest Fisheries Science Center Näytä tarkat tiedot ( SWFSC ) Ympäristötutkimusyksikkö ( ERD ) .
@@ -42,4 +42,4 @@ The ERDDAP Yhteisö kasvaa ja on vahvempi kuin koskaan. Kehityksen ERDDAP SIG ta
 
 ---
 
-Tämä asiakirja on rakennettu GitHub-sivuilla. Ehdottaa muutoksia asiakirjaan, muokkaa GitHub lähdetiedostoa [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Tämä asiakirja on rakennettu GitHub-sivuilla. Ehdottaa muutoksia asiakirjaan, muokkaa GitHub lähdetiedostoa [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

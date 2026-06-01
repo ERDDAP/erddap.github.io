@@ -1,6 +1,6 @@
 #  ERDDAP - স্ট্রাটিজিক ইনসাইট গ্রুপ
 
-এই ডকুমেন্টটি জিওহাব পেজ ব্যবহার করে তৈরি করা হয়েছে। ডকুমেন্ট পরিবর্তন করতে Gantuhbus দেখুন [উৎস ফাইল](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) . .
+এই ডকুমেন্টটি জিওহাব পেজ ব্যবহার করে তৈরি করা হয়েছে। ডকুমেন্ট পরিবর্তন করতে Gantuhbus দেখুন [উৎস ফাইল](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) . .
 
 ## পটভূমি{#background} 
  ERDDAP একটি বৈজ্ঞানিক উপাত্ত সার্ভার, যা ব্যবহারকারীদেরকে একটি সাধারণ এবং ট্যাবলেলীয় বৈজ্ঞানিক উপাত্তের অংশ ডাউনলোড করতে দেয়। সাধারণ ফাইল বিন্যাসে গ্রাফ এবং ম্যাপ তৈরি করে। ERDDAP মুক্ত এবং মুক্ত সফ্টওয়্যার (টোউস) প্রথম শুরু হয়েছিল National Oceanic and Atmospheric Administration   ( NOAA ) জাতীয় সামুদ্রিক ফিশার্স সার্ভিস ( NMFS ) দক্ষিণপশ্চিম ফিশার্স সায়েন্স সেন্টার ( SWFSC ) পরিবেশ গবেষণা বিভাগ ( ERD ) . .
@@ -42,4 +42,4 @@
 
 ---
 
-এই ডকুমেন্টটি জিওহাব পেজ ব্যবহার করে তৈরি করা হয়েছে। ডকুমেন্ট- এ পরিবর্তন করতে, GHtহাব উৎস ফাইল সম্পাদন করুন [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+এই ডকুমেন্টটি জিওহাব পেজ ব্যবহার করে তৈরি করা হয়েছে। ডকুমেন্ট- এ পরিবর্তন করতে, GHtহাব উৎস ফাইল সম্পাদন করুন [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

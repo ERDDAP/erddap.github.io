@@ -1,6 +1,6 @@
 #  ERDDAP - Strategická skupina Insight
 
-Tento dokument je postaven pomocí stránek GitHub. Návrh změn dokumentu viz GitHub [zdrojový soubor](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) .
+Tento dokument je postaven pomocí stránek GitHub. Návrh změn dokumentu viz GitHub [zdrojový soubor](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) .
 
 ## Souvislosti{#background} 
  ERDDAP je vědecký datový server, který dává uživatelům jednoduchý, konzistentní způsob, jak stáhnout podskupiny mřížkovaných a tabularních vědeckých souborů v běžných formátech souborů a vytvářet grafy a mapy. ERDDAP je svobodný a otevřený zdrojový software (FOSS) původně vyvinutý při National Oceanic and Atmospheric Administration   ( NOAA ) Národní služba mořského rybolovu ( NMFS ) Jihozápadní rybářské vědecké centrum ( SWFSC ) Oddělení environmentálního výzkumu ( ERD ) .
@@ -42,4 +42,4 @@ The ERDDAP komunita stále roste a je silnější než kdy předtím. Vývoj ERD
 
 ---
 
-Tento dokument je postaven pomocí stránek GitHub. Chcete-li navrhnout změny dokumentu, upravte zdrojový soubor GitHub na [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Tento dokument je postaven pomocí stránek GitHub. Chcete-li navrhnout změny dokumentu, upravte zdrojový soubor GitHub na [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

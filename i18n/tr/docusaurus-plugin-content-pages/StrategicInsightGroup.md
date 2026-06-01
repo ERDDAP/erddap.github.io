@@ -1,6 +1,6 @@
 #  ERDDAP - Stratejik İçgörü Grubu
 
-Bu belge GitHub sayfaları kullanılarak inşa edilmiştir. Belgeye değişiklikler önermek için, GitHub'ı görmek [kaynak dosyası](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) .
+Bu belge GitHub sayfaları kullanılarak inşa edilmiştir. Belgeye değişiklikler önermek için, GitHub'ı görmek [kaynak dosyası](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) .
 
 ## Arka plan arka plan arka plan{#background} 
  ERDDAP Kullanıcılara basit, tutarlı bir yol veren ve yaygın dosya formatlarında grid ve tabular bilimsel veri setlerini indirmek ve grafikler ve haritalar yapmak. ERDDAP Free ve Open Source Software (FOSS) Başlangıçta başlangıçta gelişmişti National Oceanic and Atmospheric Administration   ( NOAA ) Ulusal Deniz Balıkçılık Servisi ( NMFS ) Southwest Fisheries Science Center ( SWFSC ) Çevre Araştırma Bölümü ( ERD ) .
@@ -42,4 +42,4 @@ The The The The The The The The ERDDAP Toplum büyümeye devam ediyor ve her zam
 
 ---
 
-Bu belge GitHub sayfaları kullanılarak inşa edilmiştir. Belgeye değişiklikler önermek için, GitHub kaynak dosyasını düzenler [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Bu belge GitHub sayfaları kullanılarak inşa edilmiştir. Belgeye değişiklikler önermek için, GitHub kaynak dosyasını düzenler [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

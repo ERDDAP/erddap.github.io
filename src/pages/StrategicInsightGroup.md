@@ -1,6 +1,6 @@
 # ERDDAP -  Strategic Insight Group
 
-This document is built using GitHub pages. To propose changes to the document, see the GitHub [source file](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md).
+This document is built using GitHub pages. To propose changes to the document, see the GitHub [source file](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md).
 
 ## Background {#background}
 ERDDAP is a scientific data server that gives users a simple, consistent way to download subsets of gridded and tabular scientific datasets in common file formats and make graphs and maps. ERDDAP is Free and Open Source Software (FOSS) originally developed at National Oceanic and Atmospheric Administration (NOAA) National Marine Fisheries Service (NMFS) Southwest Fisheries Science Center (SWFSC) Environmental Research Division (ERD).
@@ -42,4 +42,4 @@ The ERDDAP community continues to grow and is more vigorous than ever.  The deve
 
 ---
 
-This document is built using GitHub pages. To propose changes to the document, edit the GitHub source file at [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md)
+This document is built using GitHub pages. To propose changes to the document, edit the GitHub source file at [https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md)

@@ -1,6 +1,6 @@
 #  ERDDAP - Grúpa léargais Straitéisigh
 
-Tá an doiciméad seo tógtha ag baint úsáide as leathanaigh GitHub. Chun athruithe ar an doiciméad a mholadh, féach an GitHub [foirm duille: oval](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) .
+Tá an doiciméad seo tógtha ag baint úsáide as leathanaigh GitHub. Chun athruithe ar an doiciméad a mholadh, féach an GitHub [foirm duille: oval](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) .
 
 ## Clár na dToghthóirí{#background} 
  ERDDAP Is freastalaí sonraí eolaíochta a thugann úsáideoirí simplí, ar bhealach comhsheasmhach a íoslódáil fo-thacar de gridded agus tabular tacar sonraí eolaíochta i bhformáidí comhad coitianta agus graif agus léarscáileanna a dhéanamh. ERDDAP Tá Bogearraí Foinse Saor in Aisce agus Oscailte (Seirbhís do Chustaiméirí) forbartha ar dtús ag National Oceanic and Atmospheric Administration   ( NOAA ) An tSeirbhís Náisiúnta Iascaigh Mara ( NMFS ) Ionad Eolaíochta Iascaigh an Iarthuaiscirt ( SWFSC ) An Rannóg Taighde Comhshaoil ( ERD ) .
@@ -42,4 +42,4 @@ An bhfuil ERDDAP leanann an pobal ag fás agus tá sé níos bríomhar ná riamh
 
 ---
 
-Tá an doiciméad seo tógtha ag baint úsáide as leathanaigh GitHub. A mholadh athruithe ar an doiciméad, in eagar an comhad foinse GitHub ag [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Tá an doiciméad seo tógtha ag baint úsáide as leathanaigh GitHub. A mholadh athruithe ar an doiciméad, in eagar an comhad foinse GitHub ag [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

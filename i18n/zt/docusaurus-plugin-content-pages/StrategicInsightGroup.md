@@ -1,6 +1,6 @@
 #  ERDDAP - 战略洞察小组
 
-此文件使用 GitHub 頁面建構 。 要修改此文件, 請參考 GitHub [來源檔案](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) .
+此文件使用 GitHub 頁面建構 。 要修改此文件, 請參考 GitHub [來源檔案](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) .
 
 ## 背景{#background} 
  ERDDAP 一個科學的數據伺服器, 它讓使用者可以簡單、一致的方式以共同的檔案格式下載被網格化的和表格化的科學數據集, 並製作圖和地圖。 ERDDAP 是自由與開放源碼軟體 (自由和开放源码软件) 最初 National Oceanic and Atmospheric Administration   ( NOAA ) 国家海洋渔业局 ( NMFS ) 西南渔业科學中心 ( SWFSC ) 司 ( ERD ) .
@@ -42,4 +42,4 @@
 
 ---
 
-此文件使用 GitHub 頁面建構 。 要提出文件的變更, 請編輯 GitHub 源碼檔案 。 [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+此文件使用 GitHub 頁面建構 。 要提出文件的變更, 請編輯 GitHub 源碼檔案 。 [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 

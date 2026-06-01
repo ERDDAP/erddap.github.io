@@ -1,6 +1,6 @@
 #  ERDDAP - Grup Wawasan Strategis
 
-Dokumen ini dibangun menggunakan halaman GitHub. Untuk mengusulkan perubahan dokumen, lihat GitHub [file sumber](https://github.com/ERDDAP/erddap/blob/main/documentation/src/pages/StrategicInsightGroup.md) Sitemap
+Dokumen ini dibangun menggunakan halaman GitHub. Untuk mengusulkan perubahan dokumen, lihat GitHub [file sumber](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) Sitemap
 
 ## Login{#background} 
  ERDDAP adalah server data ilmiah yang memberi pengguna cara sederhana, konsisten untuk mengunduh subset data ilmiah gridded dan tabular dalam format file umum dan membuat grafik dan peta. ERDDAP Gratis dan Open Source Software (Login) awalnya dikembangkan National Oceanic and Atmospheric Administration   ( NOAA ) Layanan Perikanan Laut Nasional ( NMFS ) Pusat Ilmu Perikanan Barat Daya ( SWFSC ) Divisi Penelitian Lingkungan ( ERD ) Sitemap
@@ -42,4 +42,4 @@ Login ERDDAP masyarakat terus tumbuh dan lebih bergetar dari sebelumnya. Perkemb
 
 ---
 
-Dokumen ini dibangun menggunakan halaman GitHub. Untuk mengusulkan perubahan dokumen, edit file sumber GitHub di [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Dokumen ini dibangun menggunakan halaman GitHub. Untuk mengusulkan perubahan dokumen, edit file sumber GitHub di [ https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap.github.io/blob/main/src/pages/StrategicInsightGroup.md) 
