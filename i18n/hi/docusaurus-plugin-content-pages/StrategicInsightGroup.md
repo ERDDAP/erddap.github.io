@@ -21,25 +21,25 @@
 ##  ERDDAP दृष्टिकोण{#erddap-outlook} 
 The The most of the ERDDAP समुदाय बढ़ने के लिए जारी रहता है और कभी से अधिक जोरदार होता है। विकास ERDDAP -SIG निरंतर समर्थन, विकास और विकास सुनिश्चित करने का एक स्पष्ट अवसर प्रदान करता है। ERDDAP और गति को विकसित करने के लिए ERDDAP पिछले दशक में डेटा प्रबंधन समुदाय में बनाया गया है।
 
-## परिशिष्ट A.SIG सदस्य (अगस्त, 2024 तक)  {#appendix-a--sig-members-as-of-august-2024} 
-* मैथ्यू बिडल - NOAA एनओएस (co-chair) 
-* यूजीन बर्गर - NOAA / OAR / PMEL
+## परिशिष्ट A.SIG सदस्य (मई, 2026 तक)  {#appendix-a--sig-members} 
+* मैथ्यू बिडल - NOAA/NOS/US IOOS   (co-chair) 
+* यूजीन बर्गर - NOAA/OAR/PMEL 
 * सेठ शैम्पेन - अमेरिकी नौसेना अनुसंधान प्रयोगशाला
 * Conor Delaney - EMODnet (यूरोपीय समुद्री अवलोकन डेटा नेटवर्क) 
-* क्रिस जॉन - NOAA / NMFS / SWFSC / ERD MNE
-* रॉय Mendelssohn - NOAA / NMFS / SWFSC / ERD 
-* हीथ निकोलस - NOAA / NMFS / SWFSC 
-* केविन ओ'ब्रायन - NOAA / OAR/PMEL, UW/CIOCES (co-chair) 
+* क्रिस जॉन - NOAA/NMFS/SWFSC/ERD MNE
+* रॉय Mendelssohn - NOAA/NMFS/SWFSC/ERD 
+* हीथ निकोलस - NOAA/NMFS/SWFSC 
+* केविन ओ'ब्रायन - GOOS/WMO   (co-chair) 
 * Axiom Data Science
-* Micah Wengren - NOAA एनओएस
+* Micah Wengren - NOAA/NOS/US IOOS 
 
 ### सदस्य{#former-members} 
 * Filipe Fernandes - (SECOORA/IOOS)  
-* टोबी गारफील्ड - NOAA / NMFS / SWFSC / ERD   (सेवानिवृत्त) 
+* टोबी गारफील्ड - NOAA/NMFS/SWFSC/ERD   (सेवानिवृत्त) 
 * एलेक्स केर्नी - मैन रिसर्च इंस्टीट्यूट की खाड़ी
 * डेल रॉबिन्सन - NESDIS/CoastWatch, UCS/CIMEAS
 * बॉब सिमोन - निर्माता ERDDAP   (सेवानिवृत्त) 
 
 ---
 
-यह दस्तावेज़ GitHub पृष्ठों का उपयोग करके बनाया गया है। दस्तावेज़ में परिवर्तन का प्रस्ताव करने के लिए, GitHub स्रोत फ़ाइल को संपादित करें [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+यह दस्तावेज़ GitHub पृष्ठों का उपयोग करके बनाया गया है। दस्तावेज़ में परिवर्तन का प्रस्ताव करने के लिए, GitHub स्रोत फ़ाइल को संपादित करें [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

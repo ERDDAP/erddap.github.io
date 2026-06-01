@@ -21,25 +21,25 @@
 ##  ERDDAP 展望{#erddap-outlook} 
 其 ERDDAP 社區持續發展, 建立 ERDDAP - SIG提供明确的契机,以确保持续支持、增長和发展 ERDDAP 和培植活力 ERDDAP 數據管理群體在過去10年中建立。
 
-## 附 件 A (截至2024年8月)  {#appendix-a--sig-members-as-of-august-2024} 
-* 馬修比多 - – NOAA /NOS/US IOOS (共同主席) 
-* 尤金漢堡 - – NOAA /OAR/PMEL
+## 附 件 A (截至2026年5月)  {#appendix-a--sig-members} 
+* 馬修比多 - – NOAA/NOS/US IOOS   (共同主席) 
+* 尤金漢堡 - – NOAA/OAR/PMEL 
 * 塞斯香檳 - 美國海軍研究實驗室
 * 康納·德拉尼 - EMODnet (歐洲海洋觀察 資料網路) 
-* 克里斯·約翰 NOAA / NMFS / SWFSC / ERD , MNE
-* 羅伊·門德爾索恩 NOAA / NMFS / SWFSC / ERD 
-* 海瑟·尼古拉斯 - – NOAA / NMFS / SWFSC 
-* 凱文·奧布萊恩 - – NOAA /OAR/PMEL、UW/CIOCES (共同主席) 
+* 克里斯·約翰 NOAA/NMFS/SWFSC/ERD , MNE
+* 羅伊·門德爾索恩 NOAA/NMFS/SWFSC/ERD 
+* 海瑟·尼古拉斯 - – NOAA/NMFS/SWFSC 
+* 凱文·奧布萊恩 - – GOOS/WMO   (共同主席) 
 * Shane St Savage - Axiom 資料科學
-* 米卡·溫格倫 - – NOAA /NOS/US IOOS
+* 米卡·溫格倫 - – NOAA/NOS/US IOOS 
 
 ### 前成員{#former-members} 
 * 菲利佩·費南德斯 - – (出口/石油组织)  
-* 托比·加菲爾德 - – NOAA / NMFS / SWFSC / ERD   (退休) 
+* 托比·加菲爾德 - – NOAA/NMFS/SWFSC/ERD   (退休) 
 * Alex Kerney - 缅因湾研究所
 * 戴爾·羅賓森 - NESDIS/海岸监视,UCS/CIMEAS
 * Bob Simons - 造物主 ERDDAP   (退休) 
 
 ---
 
-此文件使用 GitHub 頁面建構 。 要提出文件的變更, 請編輯 GitHub 源碼檔案 。 [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+此文件使用 GitHub 頁面建構 。 要提出文件的變更, 請編輯 GitHub 源碼檔案 。 [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

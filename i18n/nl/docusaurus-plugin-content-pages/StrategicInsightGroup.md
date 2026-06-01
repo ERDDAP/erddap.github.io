@@ -21,25 +21,25 @@ Helpen begeleiden ERDDAP vooruitgang en interactie met de wereld ERDDAP communit
 ##  ERDDAP vooruitzichten{#erddap-outlook} 
 De ERDDAP gemeenschap blijft groeien en is krachtiger dan ooit. De ontwikkeling van de ERDDAP -SIG biedt een duidelijke gelegenheid om de voortdurende steun, groei en ontwikkeling van ERDDAP en om het momentum te kweken ERDDAP heeft de afgelopen tien jaar in de data management community opgericht.
 
-## Bijlage A. SIG-leden (vanaf augustus 2024)  {#appendix-a--sig-members-as-of-august-2024} 
-* Mathew Biddle - NOAA NOS/US IOOS (medevoorzitter) 
-* Eugene Burger - NOAA /OAR/PMEL
+## Bijlage A. SIG-leden (vanaf mei 2026)  {#appendix-a--sig-members} 
+* Mathew Biddle - NOAA/NOS/US IOOS   (medevoorzitter) 
+* Eugene Burger - NOAA/OAR/PMEL 
 * Seth Champagne - US Naval Research Laboratory
 * Conor Delaney - EMODnet (Europese mariene observatie Gegevensnetwerk) 
-* Chris John. NOAA ' NMFS ' SWFSC ' ERD , MNE
-* Roy Mendelssohn NOAA ' NMFS ' SWFSC ' ERD 
-* Heather Nicholas - NOAA ' NMFS ' SWFSC 
-* Kevin O.Brien - NOAA /OAR/PMEL, UW/CIOCES (medevoorzitter) 
+* Chris John. NOAA/NMFS/SWFSC/ERD , MNE
+* Roy Mendelssohn NOAA/NMFS/SWFSC/ERD 
+* Heather Nicholas - NOAA/NMFS/SWFSC 
+* Kevin O.Brien - GOOS/WMO   (medevoorzitter) 
 * Shane St Savage - Axiom Data Science
-* Micah Wengren - NOAA NOS/US IOOS
+* Micah Wengren - NOAA/NOS/US IOOS 
 
 ### Voormalige leden{#former-members} 
 * Filipe Fernandes - (SECORA/IOOS)  
-* Toby Garfield - NOAA ' NMFS ' SWFSC ' ERD   (Gepensioneerd) 
+* Toby Garfield - NOAA/NMFS/SWFSC/ERD   (Gepensioneerd) 
 * Alex Kerny - Gulf of Maine Research Institute
 * Dale Robinson - NESDIS/CoastWatch, UCS/CIMEAS
 * Bob Simons - Schepper van ERDDAP   (Gepensioneerd) 
 
 ---
 
-Dit document is gebouwd met behulp van GitHub pagina's. Om wijzigingen aan het document voor te stellen, bewerk het GitHub bronbestand op [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Dit document is gebouwd met behulp van GitHub pagina's. Om wijzigingen aan het document voor te stellen, bewerk het GitHub bronbestand op [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

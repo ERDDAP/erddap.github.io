@@ -21,25 +21,25 @@
 ##  ERDDAP ニュース{#erddap-outlook} 
 ザ・オブ・ザ・ ERDDAP コミュニティは成長し続けています。 研究開発 ERDDAP -SIGは、継続的なサポート、成長、開発を確実にするために明確な機会を提供します ERDDAP 瞬間を育てる ERDDAP 過去10年間にデータ管理コミュニティで作成しました。
 
-## A. SIGメンバー (2024年8月現在)  {#appendix-a--sig-members-as-of-august-2024} 
-* Mathew バイドル ・ NOAA /NOS/米国IOOS (コチェア) 
-* ユージンバーガー ・ NOAA /OAR/PMEL(オアール)
+## A. SIGメンバー (2026年5月現在)  {#appendix-a--sig-members} 
+* Mathew バイドル ・ NOAA/NOS/US IOOS   (コチェア) 
+* ユージンバーガー ・ NOAA/OAR/PMEL 
 * セスシャンパン - 米国海軍研究所
 * Conor Delaney - EMODnet(エモネット) (欧州海洋観測 データネットワーク) 
-* クリス・ジョン - NOAA / / / / NMFS / / / / SWFSC / / / / ERD , ムネ
-* ロイ・メンデルスゾーン - NOAA / / / / NMFS / / / / SWFSC / / / / ERD 
-* ヒーザーニコラス ・ NOAA / / / / NMFS / / / / SWFSC 
-* ケビン・オビエン ・ NOAA /OAR/PMEL、UW/CIOCES (コチェア) 
+* クリス・ジョン - NOAA/NMFS/SWFSC/ERD , ムネ
+* ロイ・メンデルスゾーン - NOAA/NMFS/SWFSC/ERD 
+* ヒーザーニコラス ・ NOAA/NMFS/SWFSC 
+* ケビン・オビエン ・ GOOS/WMO   (コチェア) 
 * シャイン・セント・サベージ - 軸線データサイエンス
-* ミカ・ウェンレン ・ NOAA /NOS/米国IOOS
+* ミカ・ウェンレン ・ NOAA/NOS/US IOOS 
 
 ### 旧メンバー{#former-members} 
 * フィリペ・フェルナンデス ・ (SECOORA/IOOSの特長)  
-* トビー・ガーフィールド ・ NOAA / / / / NMFS / / / / SWFSC / / / / ERD   (リティレッド) 
+* トビー・ガーフィールド ・ NOAA/NMFS/SWFSC/ERD   (リティレッド) 
 * アレックス・ケニー - 主要研究所のガルフ
 * デール・ロビンソン - NESDIS/CoastWatch、UCS/CIMEAS
 * ボブ・シモンズ - クリエイターのクリエイター ERDDAP   (リティレッド) 
 
 ---
 
-このドキュメントはGitHubページで作成されます。 ドキュメントの変更を提案するには、GitHub ソースファイルを編集します。 [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+このドキュメントはGitHubページで作成されます。 ドキュメントの変更を提案するには、GitHub ソースファイルを編集します。 [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

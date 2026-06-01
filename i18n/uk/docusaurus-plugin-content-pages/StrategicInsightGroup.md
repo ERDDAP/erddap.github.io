@@ -21,25 +21,25 @@
 ##  ERDDAP Опитування{#erddap-outlook} 
 Про нас ERDDAP громада продовжує зростати і є більш енергійним, ніж коли-небудь. Розвиток розвитку ERDDAP -SIG надає чітку можливість забезпечити продовження підтримки, зростання та розвиток ERDDAP і для вирощування імпульсу ERDDAP протягом останнього десятиліття створено в громаді управління даними.
 
-## Додаток А. SIG (від Серпень, 2024)  {#appendix-a--sig-members-as-of-august-2024} 
-* Матев Біддл до NOAA Українська (ко-купе) 
-* Євген Бургер до NOAA /Оар / ПМЕЛЬ
+## Додаток А. SIG (від Травень, 2026)  {#appendix-a--sig-members} 
+* Матев Біддл до NOAA/NOS/US IOOS   (ко-купе) 
+* Євген Бургер до NOAA/OAR/PMEL 
 * Сет Шампанське - Лабораторія морських досліджень У.С.
 * Конор Делане - EMODnet (Європейське Морське спостереження Мережа даних) 
-* Кріс Джон - NOAA Українська NMFS Українська SWFSC Українська ERD , МНЕ
-* Рой Мендельсон - NOAA Українська NMFS Українська SWFSC Українська ERD 
-* Теплиця Микола до NOAA Українська NMFS Українська SWFSC 
-* Кевін O'Brien до NOAA /OAR / PMEL, UW / CIOCES (ко-купе) 
+* Кріс Джон - NOAA/NMFS/SWFSC/ERD , МНЕ
+* Рой Мендельсон - NOAA/NMFS/SWFSC/ERD 
+* Теплиця Микола до NOAA/NMFS/SWFSC 
+* Кевін O'Brien до GOOS/WMO   (ко-купе) 
 * Shane St Savage - Axiom Data Science
-* Миха Венрен до NOAA Українська
+* Миха Венрен до NOAA/NOS/US IOOS 
 
 ### Колишні члени{#former-members} 
 * Філіпе Фернандес до (СКАЧАТИ / IOOS)  
-* Тобі Гарфілд до NOAA Українська NMFS Українська SWFSC Українська ERD   (Ретичер) 
+* Тобі Гарфілд до NOAA/NMFS/SWFSC/ERD   (Ретичер) 
 * Олексій Керні - Затока Головного наукового інституту
 * Дале Робін - NESDIS/CoastWatch, UCS/CIMEAS
 * Боб Симони - Креатор ERDDAP   (Ретичер) 
 
 ---
 
-Цей документ побудовано за допомогою сторінок GitHub. Пропонувати зміни до документа, редагувати файл джерела GitHub у [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Цей документ побудовано за допомогою сторінок GitHub. Пропонувати зміни до документа, редагувати файл джерела GitHub у [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

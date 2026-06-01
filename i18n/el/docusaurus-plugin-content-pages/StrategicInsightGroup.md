@@ -21,25 +21,25 @@
 ##  ERDDAP Προοπτικές{#erddap-outlook} 
 Η ERDDAP Η κοινότητα συνεχίζει να αναπτύσσεται και είναι πιο δυναμική από ποτέ. Η εξέλιξη της ERDDAP -Η SIG παρέχει μια σαφή ευκαιρία να εξασφαλιστεί η συνεχής υποστήριξη, ανάπτυξη και ανάπτυξη της ERDDAP και να καλλιεργήσει την ορμή ERDDAP έχει δημιουργηθεί στην κοινότητα διαχείρισης δεδομένων την τελευταία δεκαετία.
 
-## Προσάρτημα Α. Μέλη SIG (από τον Αύγουστο του 2024)  {#appendix-a--sig-members-as-of-august-2024} 
-* Mathew Μπίντλ - Ναι. NOAA /NOS/ΗΠΑ (Συμπρόεδρος) 
-* Γιουτζίν Μπέργκερ. - Ναι. NOAA /OAR/ΠΜΕΛ
+## Προσάρτημα Α. Μέλη SIG (από τον Μάιο του 2026)  {#appendix-a--sig-members} 
+* Mathew Μπίντλ - Ναι. NOAA/NOS/US IOOS   (Συμπρόεδρος) 
+* Γιουτζίν Μπέργκερ. - Ναι. NOAA/OAR/PMEL 
 * Σεθ Σαμπάνια - Εργαστήριο Ναυτικής Έρευνας ΗΠΑ
 * Κόνορ Ντιλέινι - EMODnet (Ευρωpiαϊκή θαλάσσια piαρατήρηση Δίκτυο δεδομένων) 
-* Κρις Τζον... NOAA / NMFS / SWFSC / ERD , ΜΝΕ
-* Ρόι Μέντελσον... NOAA / NMFS / SWFSC / ERD 
-* Χέδερ Νίκολας. - Ναι. NOAA / NMFS / SWFSC 
-* Κέβιν Ο ’Μπράιαν - Ναι. NOAA /OAR/PMEL, UW/CIOCES (Συμπρόεδρος) 
+* Κρις Τζον... NOAA/NMFS/SWFSC/ERD , ΜΝΕ
+* Ρόι Μέντελσον... NOAA/NMFS/SWFSC/ERD 
+* Χέδερ Νίκολας. - Ναι. NOAA/NMFS/SWFSC 
+* Κέβιν Ο ’Μπράιαν - Ναι. GOOS/WMO   (Συμπρόεδρος) 
 * Shane St Savage - Επιστήμη Δεδομένων Αξιώματος
-* Μιχαίας Γουένγκρεν - Ναι. NOAA /NOS/ΗΠΑ
+* Μιχαίας Γουένγκρεν - Ναι. NOAA/NOS/US IOOS 
 
 ### Πρώην μέλη{#former-members} 
 * Φιλίπ Φερνάντες γενν. - Ναι. (SECOORA/ΙΙΟΣ)  
-* Τόμπι Γκάρφιλντ. - Ναι. NOAA / NMFS / SWFSC / ERD   (Αποσύρθηκε) 
+* Τόμπι Γκάρφιλντ. - Ναι. NOAA/NMFS/SWFSC/ERD   (Αποσύρθηκε) 
 * Alex Kerney - Ερευνητικό Ινστιτούτο Κόλπου του Μέιν
 * Ντέιλ Ρόμπινσον - NESDIS/CoastWatch, UCS/CIMEAS
 * Bob Simons - Δημιουργός του ERDDAP   (Αποσύρθηκε) 
 
 ---
 
-Αυτό το έγγραφο είναι χτισμένο χρησιμοποιώντας σελίδες GitHub. Για να προτείνετε αλλαγές στο έγγραφο, επεξεργαστείτε το αρχείο πηγαίου κώδικα GitHub στο [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Αυτό το έγγραφο είναι χτισμένο χρησιμοποιώντας σελίδες GitHub. Για να προτείνετε αλλαγές στο έγγραφο, επεξεργαστείτε το αρχείο πηγαίου κώδικα GitHub στο [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

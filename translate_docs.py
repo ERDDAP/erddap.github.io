@@ -146,6 +146,13 @@ dont_translate_strings = [
     "'='",
     # <kbd> was here
 
+    # Affiliation abbreviations from the StrategicInsightGroup page.
+    "GOOS/WMO",
+    "NOAA/NOS/US IOOS",
+    "NOAA/OAR/PMEL",
+    "NOAA/NMFS/SWFSC/ERD",
+    "NOAA/NMFS/SWFSC",
+
     # All psuedo entities (used for param names, proper nouns, substitutions)
     #  MUST be here by themselves
     #  OR in <kbd>&pseudoEntity;</kbd> above

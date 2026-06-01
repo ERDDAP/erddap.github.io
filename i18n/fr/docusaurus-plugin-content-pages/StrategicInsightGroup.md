@@ -21,25 +21,25 @@ Pour aider le guide ERDDAP et l ' interaction avec le monde ERDDAP la communaut�
 ##  ERDDAP perspectives{#erddap-outlook} 
 Les ERDDAP La communauté continue de croître et est plus vigoureuse que jamais. Le développement de la ERDDAP -SIG offre une occasion claire d'assurer le soutien, la croissance et le développement continus de ERDDAP et de cultiver la dynamique ERDDAP a créé dans la collectivité de la gestion des données au cours de la dernière décennie.
 
-## Annexe A. Membres du SIG (en août 2024)  {#appendix-a--sig-members-as-of-august-2024} 
-* Mathew Biddle - Oui. NOAA /NOS/US IOOS (coprésident) 
-* Eugene Burger - Oui. NOAA /OAR/PMEL
+## Annexe A. Membres du SIG (en mai 2026)  {#appendix-a--sig-members} 
+* Mathew Biddle - Oui. NOAA/NOS/US IOOS   (coprésident) 
+* Eugene Burger - Oui. NOAA/OAR/PMEL 
 * Seth Champagne - Laboratoire de recherche navale des États-Unis
 * Conor Delaney - EMODnet (Observation marine européenne Réseau de données) 
-* Chris John... NOAA / NMFS / SWFSC / ERD , MNE
-* - C'est une bonne idée. NOAA / NMFS / SWFSC / ERD 
-* Heather Nicholas - Oui. NOAA / NMFS / SWFSC 
-* Kevin O.Brien - Oui. NOAA /OAR/PMEL, UW/CIOCES (coprésident) 
+* Chris John... NOAA/NMFS/SWFSC/ERD , MNE
+* - C'est une bonne idée. NOAA/NMFS/SWFSC/ERD 
+* Heather Nicholas - Oui. NOAA/NMFS/SWFSC 
+* Kevin O.Brien - Oui. GOOS/WMO   (coprésident) 
 * Shane St Savage - Axiom Data Science
-* Micah Wengren - Oui. NOAA /NOS/US IOOS
+* Micah Wengren - Oui. NOAA/NOS/US IOOS 
 
 ### Anciens membres{#former-members} 
 * Filipe Fernandes - Oui. (SECOORA/IOOS)  
-* Toby Garfield - Oui. NOAA / NMFS / SWFSC / ERD   (Retraités) 
+* Toby Garfield - Oui. NOAA/NMFS/SWFSC/ERD   (Retraités) 
 * Alex Kerney - Institut de recherche du golfe du Maine
 * Dale Robinson - NESDIS/CoastWatch, UCS/CIMEAS
 * Bob Simons - Créateur de ERDDAP   (Retraités) 
 
 ---
 
-Ce document est construit en utilisant les pages GitHub. Pour proposer des modifications au document, modifiez le fichier source GitHub à [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Ce document est construit en utilisant les pages GitHub. Pour proposer des modifications au document, modifiez le fichier source GitHub à [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

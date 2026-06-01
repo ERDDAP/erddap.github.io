@@ -21,25 +21,25 @@
 ##  ERDDAP نظریہ{#erddap-outlook} 
 جواب ERDDAP آجکل لوگ ترقی کرتے ہیں اور پہلے سے کہیں زیادہ سرگرم ہیں ۔ ارتقا ERDDAP -SIG مسلسل حمایت، ترقی اور ترقی کو یقینی بنانے کے لیے ایک واضح موقع فراہم کرتا ہے۔ ERDDAP اور ترقی کو فروغ دینا ERDDAP گزشتہ دہائی سے ڈیٹا انتظامیہ کمیونٹی میں تخلیق کیا گیا ہے۔
 
-## ایک خاص قسم کے لوگ (اگست 2024 کے طور پر)  {#appendix-a--sig-members-as-of-august-2024} 
-* مادہ‌پرستی - NOAA /NOS/US IOS (ساتھی) 
-* یوگین برگر - NOAA / تصویر / تصویر
+## ایک خاص قسم کے لوگ (مئی ، 2026 کے طور پر)  {#appendix-a--sig-members} 
+* مادہ‌پرستی - NOAA/NOS/US IOOS   (ساتھی) 
+* یوگین برگر - NOAA/OAR/PMEL 
 * سیت چمپین - امریکی ناول ریسرچ لیبارٹری -
 * کنور ڈیلانی - ایمو ڈینیٹ - (یورپی بحری حدود ڈاٹ نیٹ ورک) 
-* کرس جان - NOAA / NMFS / SWFSC / ERD ،
-* Roy Mendelsohn - NOAA / NMFS / SWFSC / ERD 
-* ہیدر نکولس - NOAA / NMFS / SWFSC 
-* کین‌برین - NOAA /OR/PMIL, UW/CICES (ساتھی) 
+* کرس جان - NOAA/NMFS/SWFSC/ERD ،
+* Roy Mendelsohn - NOAA/NMFS/SWFSC/ERD 
+* ہیدر نکولس - NOAA/NMFS/SWFSC 
+* کین‌برین - GOOS/WMO   (ساتھی) 
 * Stavaage - Axiom Data Science -
-* میکاہ رسول - NOAA /NOS/US IOS
+* میکاہ رسول - NOAA/NOS/US IOOS 
 
 ### سابقہ ممبر{#former-members} 
 * فلپ فرنانڈس - (سِقُورہ/یاوس)  
-* توبی گارفیلڈ - NOAA / NMFS / SWFSC / ERD   (دوبارہ کوشش) 
+* توبی گارفیلڈ - NOAA/NMFS/SWFSC/ERD   (دوبارہ کوشش) 
 * ایلکس کیرنی - خلیج مین ریسرچ انسٹی ٹیوٹ -
 * ڈیل رابنسن -NSDIS/Coast Cres, UCS/CIMAS
 * بوب شمعون - خالق ERDDAP   (دوبارہ کوشش) 
 
 ---
 
-یہ دستاویز جٹ ہب صفحات کا استعمال کرتی ہے۔ دستاویزات میں تبدیلی کی تجویز کرنے کے لیے، جی ٹی وی ماخذ فائل میں ترمیم کرتے ہیں۔ [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+یہ دستاویز جٹ ہب صفحات کا استعمال کرتی ہے۔ دستاویزات میں تبدیلی کی تجویز کرنے کے لیے، جی ٹی وی ماخذ فائل میں ترمیم کرتے ہیں۔ [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

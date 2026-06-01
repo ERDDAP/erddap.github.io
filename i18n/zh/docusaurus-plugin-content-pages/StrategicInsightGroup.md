@@ -21,25 +21,25 @@
 ##  ERDDAP 展望{#erddap-outlook} 
 那个 ERDDAP 社区继续增长,比以往任何时候都更加活跃。 联合国 ERDDAP - SIG为确保持续支持、增长和发展提供了明确的机会。 ERDDAP 并培养势头 ERDDAP 在过去十年里,数据管理界已经创建。
 
-## 附录A. SIG成员 (截至2024年8月)  {#appendix-a--sig-members-as-of-august-2024} 
-* 马修·比德尔 - 怎么样? NOAA (单位:千美元) (共同主席) 
-* 尤金汉堡 - 怎么样? NOAA /OAR/PMEL 数据
+## 附录A. SIG成员 (截止2026年5月)  {#appendix-a--sig-members} 
+* 马修·比德尔 - 怎么样? NOAA/NOS/US IOOS   (共同主席) 
+* 尤金汉堡 - 怎么样? NOAA/OAR/PMEL 
 * 赛斯香槟 - 美国海军研究实验室
 * 康纳·德拉尼 - EMODnet (欧洲海洋观测组织 数据网络) 
-* 克里斯・约翰 NOAA 页:1 NMFS 页:1 SWFSC 页:1 ERD , 摩尔多瓦
-* 罗伊·门德尔索恩 NOAA 页:1 NMFS 页:1 SWFSC 页:1 ERD 
-* 希瑟·尼古拉斯(英语: - 怎么样? NOAA 页:1 NMFS 页:1 SWFSC 
-* 凯文·奥布莱恩 - 怎么样? NOAA /OAR/PMEL、UW/CIOCES (共同主席) 
+* 克里斯・约翰 NOAA/NMFS/SWFSC/ERD , 摩尔多瓦
+* 罗伊·门德尔索恩 NOAA/NMFS/SWFSC/ERD 
+* 希瑟·尼古拉斯(英语: - 怎么样? NOAA/NMFS/SWFSC 
+* 凯文·奥布莱恩 - 怎么样? GOOS/WMO   (共同主席) 
 * Shane St Savage - 轴数据科学
-* 米卡·温格伦 - 怎么样? NOAA (单位:千美元)
+* 米卡·温格伦 - 怎么样? NOAA/NOS/US IOOS 
 
 ### 前成员{#former-members} 
 * 菲利佩·费尔南德斯 - 怎么样? (证监会/内部监督组织)  
-* 托比·加菲尔德 - 怎么样? NOAA 页:1 NMFS 页:1 SWFSC 页:1 ERD   (退休人员) 
+* 托比·加菲尔德 - 怎么样? NOAA/NMFS/SWFSC/ERD   (退休人员) 
 * Alex Kerney - 缅因湾研究所
 * 戴尔·鲁滨逊 - NESDIS/海岸观察,UCS/CIMEAS
 * 鲍勃·西蒙斯 - 创建者 ERDDAP   (退休人员) 
 
 ---
 
-此文档使用 GitHub 页面构建 。 要对文档提出修改, 请编辑 GitHub 源文件 。 [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+此文档使用 GitHub 页面构建 。 要对文档提出修改, 请编辑 GitHub 源文件 。 [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 

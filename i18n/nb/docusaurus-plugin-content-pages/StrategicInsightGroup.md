@@ -21,25 +21,25 @@ For å hjelpe guide ERDDAP Fremskritt og interaksjon med det globale ERDDAP samf
 ##  ERDDAP utsikter{#erddap-outlook} 
 Den ERDDAP Samfunnet fortsetter å vokse og er kraftigere enn noensinne. Utviklingen av ERDDAP -SIG gir en klar mulighet til å sikre fortsatt støtte, vekst og utvikling av ERDDAP å dyrke momentum ERDDAP har i det siste tiåret opprettet dataadministrasjon.
 
-## Tillegg A. SIG Medlemmer (fra august 2024)  {#appendix-a--sig-members-as-of-august-2024} 
-* Mathew Biddle - NOAA /NOS/US IOOS (medstol) 
-* Eugene Burger - NOAA /OAR/PMEL
+## Tillegg A. SIG Medlemmer (fra mai 2026)  {#appendix-a--sig-members} 
+* Mathew Biddle - NOAA/NOS/US IOOS   (medstol) 
+* Eugene Burger - NOAA/OAR/PMEL 
 * Seth Champagne - US Naval Research Laboratory
 * Conor Delaney - EMODnet (European Marine Observation Datanettverk) 
-* Chris John- NOAA / NMFS / SWFSC / ERD , MNE
-* Roy Mendelssohn- NOAA / NMFS / SWFSC / ERD 
-* Heather Nicholas - NOAA / NMFS / SWFSC 
-* Kevin O’Brien - NOAA /OAR/PMEL, UW/CIOCES (medstol) 
+* Chris John- NOAA/NMFS/SWFSC/ERD , MNE
+* Roy Mendelssohn- NOAA/NMFS/SWFSC/ERD 
+* Heather Nicholas - NOAA/NMFS/SWFSC 
+* Kevin O’Brien - GOOS/WMO   (medstol) 
 * Shane St Savage - Axiom Data Science
-* Micah Wengren - NOAA /NOS/US IOOS
+* Micah Wengren - NOAA/NOS/US IOOS 
 
 ### Tidligere medlemmer{#former-members} 
 * Filipe Fernandes - (SECOORA/IOOS)  
-* Toby Garfield - NOAA / NMFS / SWFSC / ERD   (pensjonert) 
+* Toby Garfield - NOAA/NMFS/SWFSC/ERD   (pensjonert) 
 * Alex Kerney - Maine-forskningsinstituttet
 * Dale Robinson - NESDIS/CoastWatch, UCS/CIMEAS
 * Bob Simons - skaperen av ERDDAP   (pensjonert) 
 
 ---
 
-Dette dokumentet er bygget ved hjelp av GitHub sider. Hvis du vil foreslå endringer i dokumentet, kan du redigere GitHub-kildefilen på [https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
+Dette dokumentet er bygget ved hjelp av GitHub sider. Hvis du vil foreslå endringer i dokumentet, kan du redigere GitHub-kildefilen på [ https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md ](https://github.com/ERDDAP/erddap/edit/main/documentation/src/pages/StrategicInsightGroup.md) 
