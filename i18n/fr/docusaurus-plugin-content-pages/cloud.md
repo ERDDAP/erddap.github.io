@@ -17,7 +17,9 @@ Cela élimine la nécessité de maintenir un datacenter/serveur. Il permet égal
 
 Oui.
 
- ERDDAP™ est conçu pour fonctionner au sein de Tomcat qui peut être exécuté localement ou dans des environnements nuageux. Il y a un soutien communautaire pour courir à Docker et il y a [fonctionnaire Docker soutien à venir bientôt](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+ ERDDAP™ est conçu pour fonctionner au sein de Tomcat qui peut être exécuté localement ou dans des environnements nuageux. L'image officielle Docker est disponible à [Centre Docker](https://hub.docker.com/r/erddap/erddap) . Les `erddap:alpha-latest` tag est une compilation basée sur les derniers changements (quelque chose comme une sortie "nuit", [détails alpha-derniers](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) , pendant `erddap:dernier` est la plus récente version testée ( [derniers détails](https://hub.docker.com/layers/erddap/erddap/latest/) ) . Vous pouvez également consulter les versions du registre des conteneurs GitHub [Paquets GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) . Vous pouvez en savoir plus sur l'utilisation ERDDAP™ avec [Coq](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+
+Pour les déploiements de Kubernetes, voir les nouveaux déploiements de Kubernetes [la documentation](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) .
 
 Cela dit, ERDDAP™ a été conçu à un moment où les serveurs dédiés étaient la norme. Il n'est pas sans serveur, et serait extrêmement difficile sinon impossible de le rendre sans serveur.
 

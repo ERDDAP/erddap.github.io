@@ -138,6 +138,10 @@
     "message": "Clibeanna:",
     "description": "The label alongside a tag list"
   },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Dún na nGall",
+    "description": "The ARIA label for close button of announcement bar"
+  },
   "theme.admonition.caution": {
     "message": "rabhadh",
     "description": "The default label used for the Caution admonition (:::caution)"
@@ -162,10 +166,6 @@
     "message": "rabhadh",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Dún na nGall",
-    "description": "The ARIA label for close button of announcement bar"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Blag post le déanaí nascleanúint",
     "description": "The ARIA label for recent posts in the blog sidebar"
@@ -177,10 +177,6 @@
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
     "message": "Catagóir sidebar Collapse ''{label}''",
     "description": "The ARIA label to collapse the sidebar category"
-  },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(Osclaíonn i cluaisín nua)",
-    "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
     "message": "Príomhchathair",
@@ -360,5 +356,9 @@
   "theme.tags.tagsPageTitle": {
     "message": "Clibeanna",
     "description": "The title of the tag list page"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(Osclaíonn i cluaisín nua)",
+    "description": "The ARIA label for the external link icon"
   }
 }

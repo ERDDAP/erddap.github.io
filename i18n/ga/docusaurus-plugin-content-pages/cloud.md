@@ -17,7 +17,9 @@ Cuireann sé seo deireadh leis an ngá atá le seomra sonraí a choinneáil. Lig
 
 Tá.
 
- ERDDAP™ Tá sé deartha a reáchtáil laistigh Tomcat is féidir a reáchtáil go háitiúil nó i dtimpeallachtaí scamall. Tá tacaíocht pobail do reáchtáil i Docker agus tá [oifigiúla Tacaíocht Docker ag teacht go luath](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+ ERDDAP™ Tá sé deartha a reáchtáil laistigh Tomcat is féidir a reáchtáil go háitiúil nó i dtimpeallachtaí scamall. Tá an íomhá Docker oifigiúil ar fáil ag [Seirbhís do Chustaiméirí](https://hub.docker.com/r/erddap/erddap) . An bhfuil `cliceáil grianghraf a mhéadú` Is tag a thógáil bunaithe ar na hathruithe is déanaí (rud éigin cosúil le 'oíche' scaoileadh, [sonraí alfa-láidir](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) , cé `erddap: déanaí` Is é an scaoileadh tástála is déanaí ( [Na sonraí is déanaí](https://hub.docker.com/layers/erddap/erddap/latest/) ) . Is féidir leat brabhsáil freisin ar an GitHub scaoileadh clárlainne coimeádán ag [Pacáiste GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) . Is féidir leat níos mó a léamh faoi úsáid ERDDAP™ le [Déan teagmháil Linn](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+
+Le haghaidh imscaradh Kubernetes, féach an nua imscaradh-kubernetes [data recovery](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) .
 
 Dúirt sé sin, ERDDAP™ dearadh ag an am nuair a bhí freastalaithe tiomanta an norm. Níl sé gan fhreastalaí, agus bheadh sé thar a bheith deacair mura féidir é a dhéanamh gan fhreastalaí.
 

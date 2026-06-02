@@ -17,7 +17,9 @@ title: "ERDDAP™ and the Cloud"
 
 جی ہاں.
 
- ERDDAP™ ٹومکاٹ کے اندر چلنے کے لیے بنایا گیا ہے جو مقامی طور پر یا بادل کے ماحول میں چلایا جا سکتا ہے۔ ڈکر میں چلنے کے لیے کمیونٹی حمایت موجود ہے اور وہاں موجود ہے۔ [اداکار جلد آنے والی حمایت](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) . .
+ ERDDAP™ ٹومکاٹ کے اندر چلنے کے لیے بنایا گیا ہے جو مقامی طور پر یا بادل کے ماحول میں چلایا جا سکتا ہے۔ سرکاری ڈریک تصویر پر دستیاب ہے۔ [بیکر ہب](https://hub.docker.com/r/erddap/erddap) . . جواب `ارداپ (انگریزی:alpha-latest) بھارت کا ایک رہائشی علاقہ جو آندھرا پردیش میں واقع ہے۔` ٹیگ حالیہ تبدیلیوں پر مبنی ایک عمارت ہے۔ (ایک 'رات‘ کی طرح ریلیز، [الصفحة الصفا تفسیر ہے۔](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) ) `صحن` حالیہ ٹیسٹ ریلیز ہونے والی سب سے زیادہ ہے۔ ( [تازہ تفصیلات](https://hub.docker.com/layers/erddap/erddap/latest/) ) . . آپ GitHub Grant رجسٹر کو بھی اپ لوڈ کر سکتے ہیں [جی‌وب پیکج](https://github.com/ERDDAP/erddap/pkgs/container/erddap) . . استعمال کے بارے میں مزید پڑھیں ERDDAP™ ساتھ [بیکر](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) . .
+
+کوبرنیٹس کے لیے نئے کوبرنیٹس کو دیکھیں [دستاویز](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) . .
 
 یہ کہا، ERDDAP™ یہ ایسے وقت میں ایجاد ہوا جب وقف سرور تھے ۔ یہ بغیر سرور کے نہیں ہے اور اگر اسے سرور بنایا ناممکن نہ ہو تو انتہائی مشکل ہو جائے گا۔
 

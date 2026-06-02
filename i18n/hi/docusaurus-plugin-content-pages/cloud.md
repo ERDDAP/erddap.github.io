@@ -17,7 +17,9 @@ title: "ERDDAP™ and the Cloud"
 
 हाँ।
 
- ERDDAP™ टॉमकैट के भीतर चलने के लिए डिज़ाइन किया गया है जिसे स्थानीय रूप से या क्लाउड वातावरण में चलाया जा सकता है। डॉकर में चलने के लिए सामुदायिक समर्थन है और वहाँ है [अधिकारी जल्द ही आ रहा है](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) ।
+ ERDDAP™ टॉमकैट के भीतर चलने के लिए डिज़ाइन किया गया है जिसे स्थानीय रूप से या क्लाउड वातावरण में चलाया जा सकता है। आधिकारिक डोकर छवि पर उपलब्ध है [डॉकर हब](https://hub.docker.com/r/erddap/erddap) । The The most of the `erddap:alpha-latest` टैग हाल के परिवर्तनों के आधार पर एक निर्माण है (एक 'रात' रिलीज की तरह कुछ, [alpha-latest विवरण](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) जबकि `erddap: नवीनतम` हाल ही में परीक्षण किया रिलीज है ( [नवीनतम विवरण](https://hub.docker.com/layers/erddap/erddap/latest/) ) । आप गिटहब कंटेनर रजिस्ट्री रिलीज को भी ब्राउज़ कर सकते हैं [गिटहब पैकेज](https://github.com/ERDDAP/erddap/pkgs/container/erddap) । आप उपयोग के बारे में अधिक पढ़ सकते हैं ERDDAP™ साथ [डोकर](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) ।
+
+Kubernetes तैनाती के लिए, नई तैनाती-kubernetes देखें [दस्तावेज़ीकरण](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) ।
 
 उसने कहा ERDDAP™ एक समय में डिजाइन किया गया था जब समर्पित सर्वर मानक थे। यह सर्वर रहित नहीं है और यह सर्वर रहित बनाने के लिए असंभव नहीं होगा।
 

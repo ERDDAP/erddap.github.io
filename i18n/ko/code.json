@@ -138,6 +138,10 @@
     "message": "태그 :",
     "description": "The label alongside a tag list"
   },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "이름 *",
+    "description": "The ARIA label for close button of announcement bar"
+  },
   "theme.admonition.caution": {
     "message": "주 메뉴",
     "description": "The default label used for the Caution admonition (:::caution)"
@@ -162,10 +166,6 @@
     "message": "이름 *",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "이름 *",
-    "description": "The ARIA label for close button of announcement bar"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Blog 최근 게시물 네비게이션",
     "description": "The ARIA label for recent posts in the blog sidebar"
@@ -177,10 +177,6 @@
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
     "message": "Collapse 사이드바 범주 이름 *{label}이름 *",
     "description": "The ARIA label to collapse the sidebar category"
-  },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(새 탭에서 열림)",
-    "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
     "message": "주요 특징",
@@ -360,5 +356,9 @@
   "theme.tags.tagsPageTitle": {
     "message": "이름 *",
     "description": "The title of the tag list page"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(새 탭에서 열림)",
+    "description": "The ARIA label for the external link icon"
   }
 }

@@ -22,6 +22,7 @@ markdown_formatting_line_start = [
     "#### ",
     "##### ",
     "###### ",
+    ":::",
 ]
 
 markdown_formatting_preserve_preceding_whitespace = [

@@ -17,7 +17,9 @@ Ini menghilangkan kebutuhan untuk mempertahankan ruang data center/server. Hal i
 
 Login
 
- ERDDAP™ dirancang untuk berjalan di Tomcat yang dapat dijalankan secara lokal atau di lingkungan cloud. Ada dukungan komunitas untuk berjalan di Docker dan ada [Sitemap Dukungan Docker segera datang](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) Sitemap
+ ERDDAP™ dirancang untuk berjalan di Tomcat yang dapat dijalankan secara lokal atau di lingkungan cloud. Gambar Docker resmi tersedia di [Login](https://hub.docker.com/r/erddap/erddap) Sitemap Login `Sitemap` tag adalah build berdasarkan perubahan terbaru (sesuatu seperti rilis 'malam', [alpha-latest rincian](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) Sitemap `Sitemap` adalah rilis terbaru ( [Sitemap](https://hub.docker.com/layers/erddap/erddap/latest/) ) Sitemap Anda juga dapat menelusuri rilis registry wadah GitHub di [Paket GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) Sitemap Anda dapat membaca lebih banyak tentang menggunakan ERDDAP™ Login [Login](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) Sitemap
+
+Untuk penyebaran Kubernetes, lihat deploy-kubernetes baru [Sitemap](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) Sitemap
 
 Yang mengatakan, ERDDAP™ dirancang pada waktu ketika server khusus adalah norma. Tidak serverless, dan akan sangat sulit jika tidak mungkin untuk membuatnya tanpa server.
 

@@ -17,7 +17,9 @@ Dette eliminerer behovet for at opretholde et datacenter/serverrum. Det giver og
 
 Ja.
 
- ERDDAP™ er designet til at køre inden for Tomcat, som kan køre lokalt eller i skymiljøer. Der er fællesskabsstøtte til at køre i Docker og der er [officielle officielle Docker support kommer snart](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+ ERDDAP™ er designet til at køre inden for Tomcat, som kan køre lokalt eller i skymiljøer. Den officielle Docker billede er tilgængelig på [Docker Hub](https://hub.docker.com/r/erddap/erddap) . The The The The The The The `Erddap:alpha-latest` tag er en bygge baseret på de seneste ændringer (noget som en "natlig" udgivelse, [alpha-latest detaljer](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) , mens `Erddap:latest` er den seneste testede udgivelse ( [seneste detaljer](https://hub.docker.com/layers/erddap/erddap/latest/) ) . Du kan også gennemse GitHub containerposters.dk. [Pakkerejser til GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) . Du kan læse mere om brugen ERDDAP™ med med [Docker](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+
+For Kubernetes udrulninger, se de nye udrulninger [dokumentationsdokumentation](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) .
 
 Det sagde: ERDDAP™ blev designet på et tidspunkt, hvor dedikerede servere var normen. Det er ikke serverløs, og ville være ekstremt vanskeligt, hvis ikke umuligt at gøre det serverløst.
 

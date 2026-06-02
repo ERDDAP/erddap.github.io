@@ -17,7 +17,9 @@ Ez kiküszöböli annak szükségességét, hogy egy adatközpont / szerver szob
 
 Igen.
 
- ERDDAP™ Úgy tervezték, hogy a Tomcat-on belül futjon, amely helyileg vagy felhő környezetben futhat. Van közösség támogatása futni Docker és ott van [hivatalos Docker támogatás hamarosan](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) ...
+ ERDDAP™ Úgy tervezték, hogy a Tomcat-on belül futjon, amely helyileg vagy felhő környezetben futhat. A hivatalos Docker kép elérhető a [Docker Hub](https://hub.docker.com/r/erddap/erddap) ... A `erddap:alpha-latest` A címke a legutóbbi változásokon alapuló építmény (valami, mint egy "éjszakai" kiadás, [alfa-latest részletek](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) , míg `erddap:Legjobb` a legutóbbi tesztelt kiadás ( [legújabb részletek](https://hub.docker.com/layers/erddap/erddap/latest/) ) ... Böngészheti a GitHub konténerregistry kiadásait is [GitHub csomagok](https://github.com/ERDDAP/erddap/pkgs/container/erddap) ... Tudsz többet olvasni a használatról ERDDAP™ vele [Docker](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) ...
+
+Kubernetes telepítések, lásd az új telepítés-kubernetes [dokumentáció](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) ...
 
 Azt mondta: ERDDAP™ akkor tervezték, amikor a dedikált szerverek voltak a norma. Ez nem szerver nélküli, és rendkívül nehéz lenne, ha nem lehetetlen, hogy kiszolgálatlan.
 

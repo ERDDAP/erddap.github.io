@@ -138,6 +138,10 @@
     "message": "Sitemap",
     "description": "The label alongside a tag list"
   },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Sitemap",
+    "description": "The ARIA label for close button of announcement bar"
+  },
   "theme.admonition.caution": {
     "message": "Login",
     "description": "The default label used for the Caution admonition (:::caution)"
@@ -162,10 +166,6 @@
     "message": "Login",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Sitemap",
-    "description": "The ARIA label for close button of announcement bar"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "WordPress.org",
     "description": "The ARIA label for recent posts in the blog sidebar"
@@ -177,10 +177,6 @@
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
     "message": "Kategori sidebar yang lebih baik Sitemap{label}Sitemap",
     "description": "The ARIA label to collapse the sidebar category"
-  },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(terbuka di tab baru)",
-    "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
     "message": "Login",
@@ -360,5 +356,9 @@
   "theme.tags.tagsPageTitle": {
     "message": "Login",
     "description": "The title of the tag list page"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(terbuka di tab baru)",
+    "description": "The ARIA label for the external link icon"
   }
 }

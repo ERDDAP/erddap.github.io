@@ -17,7 +17,9 @@ Acest lucru elimină necesitatea de a menține o cameră de datecenter/server. D
 
 Da.
 
- ERDDAP™ este proiectat pentru a rula în Tomcat, care poate fi rulat local sau în medii cloud. Există sprijin comunitar pentru rularea în Docker și există [oficial Suport Docker vine în curând](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+ ERDDAP™ este proiectat pentru a rula în Tomcat, care poate fi rulat local sau în medii cloud. Imaginea oficială Docker este disponibilă la [Docker Hub](https://hub.docker.com/r/erddap/erddap) . ă `Erddap: alfa-ultima` tag-ul este o bază bazată pe cele mai recente modificări (ceva de genul "noapte" eliberare, [Ultimele detalii alfa](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) , în timp `Erddap:Ultima` este cea mai recentă versiune testată ( [ultimele detalii](https://hub.docker.com/layers/erddap/erddap/latest/) ) . De asemenea, puteți răsfoi registrul container GitHub la [Pachete GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) . Puteți citi mai multe despre utilizarea ERDDAP™ cu [Docker](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+
+Pentru implementarea Kubernetes, a se vedea noile implementari-kubernetes [documentația](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) .
 
 Acestea fiind spuse, ERDDAP™ a fost proiectat într-un moment în care serverele dedicate erau norma. Nu este fără server, și ar fi extrem de dificil dacă nu imposibil de a face fără server.
 

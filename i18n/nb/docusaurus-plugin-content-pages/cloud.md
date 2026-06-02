@@ -17,7 +17,9 @@ Dette eliminerer behovet for å opprettholde et datasenter/serverrom. Det gir og
 
 Ja.
 
- ERDDAP™ er designet for å kjøre i Tomcat som kan kjøres lokalt eller i skymiljøer. Det er felles støtte til drift i Docker og det er [offisiell Docker støtte kommer snart](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) ..
+ ERDDAP™ er designet for å kjøre i Tomcat som kan kjøres lokalt eller i skymiljøer. Det offisielle Docker-bildet er tilgjengelig på [Docker Hub](https://hub.docker.com/r/erddap/erddap) .. Den `erddap:alfa-latert` Tagg er et bygg basert på de siste endringene (noe som en \"nightly\" utgivelse, [alfa-laterte detaljer](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) , mens `erddap:latert` er den siste testede utgivelsen ( [siste detaljer](https://hub.docker.com/layers/erddap/erddap/latest/) ) .. Du kan også se gjennom GitHub container registerutgivelser på [Pakkereiser til GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) .. Du kan lese mer om bruk ERDDAP™ med [Docker](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) ..
+
+For Kubernetes utplasseringer, se de nye utplasseringskubernetene [dokumentasjon](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) ..
 
 Som sagt: ERDDAP™ ble designet på et tidspunkt da dedikerte servere var normen. Det er ikke serverløst, og ville være ekstremt vanskelig hvis ikke umulig å gjøre det serverløst.
 

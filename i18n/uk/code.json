@@ -138,6 +138,10 @@
     "message": "Мітки:",
     "description": "The label alongside a tag list"
   },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Головна",
+    "description": "The ARIA label for close button of announcement bar"
+  },
   "theme.admonition.caution": {
     "message": "каута",
     "description": "The default label used for the Caution admonition (:::caution)"
@@ -162,10 +166,6 @@
     "message": "Зареєструватися",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Головна",
-    "description": "The ARIA label for close button of announcement bar"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Блог Останні повідомлення навігації",
     "description": "The ARIA label for recent posts in the blog sidebar"
@@ -177,10 +177,6 @@
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
     "message": "Категорії бічних барів Collapse Р{label}Р",
     "description": "The ARIA label to collapse the sidebar category"
-  },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(відкривається в новій вкладці)",
-    "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
     "message": "Головна",
@@ -360,5 +356,9 @@
   "theme.tags.tagsPageTitle": {
     "message": "Панчохи",
     "description": "The title of the tag list page"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(відкривається в новій вкладці)",
+    "description": "The ARIA label for the external link icon"
   }
 }

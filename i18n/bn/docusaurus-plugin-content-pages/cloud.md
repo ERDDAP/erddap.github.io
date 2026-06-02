@@ -17,7 +17,9 @@ title: "ERDDAP™ and the Cloud"
 
 হ্যাঁ।
 
- ERDDAP™ এটা নকশা করা হয়েছে টমকের মধ্যে দিয়ে যেটা স্থানীয়ভাবে অথবা মেঘের পরিবেশে চালানো যায়। ডকার-এ পালিয়ে যাওয়ার জন্য সম্প্রদায়ের সমর্থন রয়েছে এবং সেখানে রয়েছে [অফিসিয়ালি ডকার সমর্থন শীঘ্রই আসছে](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) . .
+ ERDDAP™ এটা নকশা করা হয়েছে টমকের মধ্যে দিয়ে যেটা স্থানীয়ভাবে অথবা মেঘের পরিবেশে চালানো যায়। অফিসিয়াল ডকার ছবিটি পাওয়া যাচ্ছে [ডকার হাব](https://hub.docker.com/r/erddap/erddap) . . এটা `ক্যালেণ্ডার: Famp` ট্যাগটি সাম্প্রতিক পরিবর্তনের উপর ভিত্তি করে তৈরি করা হয় ('নাইট' মুক্তির মত কিছু, [অধিক বিবরণ](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) এবং `ক্যালেণ্ডারName` সবচেয়ে সাম্প্রতিক পরীক্ষা ( [সর্বশেষ বিবরণ](https://hub.docker.com/layers/erddap/erddap/latest/) ) . . এছাড়াও আপনি GtotHub কন্টেইন রেজিস্ট্রিটি ব্রাউজ করতে পারেন [গিটহাব প্যাকেজ](https://github.com/ERDDAP/erddap/pkgs/container/erddap) . . আপনি ব্যবহার করে আরও পড়তে পারেন ERDDAP™ সহ [ডকার](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) . .
+
+কুব্বারনেটেসমেন্টের জন্য, নতুন গেট-কুবারেটগুলো দেখুন। [নথিপত্র](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) . .
 
 যে বলেন, ERDDAP™ একটি সময় ডিজাইন করা হয় যখন নিবেদিত সার্ভার ছিল. এটা সার্ভার ছাড়া আর খুব কঠিন হবে না।
 

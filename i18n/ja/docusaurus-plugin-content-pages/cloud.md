@@ -17,7 +17,9 @@ title: "ERDDAP™ and the Cloud"
 
 はい。
 
- ERDDAP™ ローカルまたはクラウド環境で実行できる Tomcat 内で実行するように設計されています。 Docker で実行するためのコミュニティサポートがあります。 [公式サイト Docker のサポートがすぐに対応](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) お問い合わせ
+ ERDDAP™ ローカルまたはクラウド環境で実行できる Tomcat 内で実行するように設計されています。 Docker の公式イメージは、 [ドッカーハブ](https://hub.docker.com/r/erddap/erddap) お問い合わせ ザ・オブ・ザ・ `erddap:アルファレート` 最近の変更に基づくタグはビルドです ('nightly' リリースのようなもの、 [アルファレートの細部](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) , しばらく `erddap:latestの仕様` 最近のテスト済みリリース ( [最新情報](https://hub.docker.com/layers/erddap/erddap/latest/) ) お問い合わせ また、GitHubコンテナレジストリのリリースを閲覧することもできます。 [GitHub パッケージ](https://github.com/ERDDAP/erddap/pkgs/container/erddap) お問い合わせ ご利用についてもっと読む ERDDAP™ お問い合わせ [ドッカー](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) お問い合わせ
+
+Kubernetes の展開については、新しい展開kubernetes を参照してください。 [ドキュメント](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) お問い合わせ
 
 と言った。 ERDDAP™ 専用のサーバーが標準だったときに設計されました。 サーバレスではなく、サーバーレス化が不可能な場合は非常に困難です。
 

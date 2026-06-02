@@ -17,7 +17,9 @@ Inaalis nito ang pangangailangang mapanatili ang isang silid ng datacenter/serve
 
 Mayroon.
 
- ERDDAP™ ay dinisenyo upang tumakbo sa loob ng Tomcat na maaaring patakbuhin sa lokal o sa maulap na kapaligiran. May suporta ng komunidad sa pagtakbo sa Docker at mayroon [opisyal Malapit nang dumating ang suporta ng Docker](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+ ERDDAP™ ay dinisenyo upang tumakbo sa loob ng Tomcat na maaaring patakbuhin sa lokal o sa maulap na kapaligiran. Ang opisyal na larawan ng Docker ay makukuha sa [Hub ng Docker](https://hub.docker.com/r/erddap/erddap) . Ang `erddap:alpha-latest` Ang tag ay isang gusali batay sa pinakabagong mga pagbabago (tulad ng 'nightly' release', [Mga detalye ng alpha-latest](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) , habang `erddap:latest` ang pinakabagong sinubok na paglabas ( [pinakabagong mga detalye](https://hub.docker.com/layers/erddap/erddap/latest/) ) . Maaari mo ring i - browse ang mga release ng container ng GitHub [Mga Package ng GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) . Marami ka pang mababasa tungkol sa paggamit ERDDAP™ kasama [Docker](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+
+Para sa mga pagpopondo ng Kubernetes, tingnan ang mga bagong proposed-kubernetes [Mga dokumento](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) .
 
 Sinabi niya, ERDDAP™ ay dinisenyo sa panahon na ang dedikadong mga server ay pangkaraniwan. Hindi ito walang - silbi, at magiging napakahirap kung hindi man imposibleng gawin itong walang - silbi.
 

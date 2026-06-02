@@ -17,7 +17,9 @@ title: "ERDDAP™ and the Cloud"
 
 Ναι.
 
- ERDDAP™ έχει σχεδιαστεί για να τρέχει εντός Tomcat που μπορεί να τρέξει τοπικά ή σε περιβάλλοντα σύννεφο. Υπάρχει κοινοτική υποστήριξη για τρέξιμο στο Docker και υπάρχει [επίσημο Υποστήριξη Docker έρχεται σύντομα](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+ ERDDAP™ έχει σχεδιαστεί για να τρέχει εντός Tomcat που μπορεί να τρέξει τοπικά ή σε περιβάλλοντα σύννεφο. Η επίσημη εικόνα Docker είναι διαθέσιμη στο [Κουμπί Docker](https://hub.docker.com/r/erddap/erddap) . Η `erddap:α-τελευταία` tag είναι μια κατασκευή με βάση τις πιο πρόσφατες αλλαγές (Κάτι σαν \"νυχτερινή\" απελευθέρωση, [α-τελευταία λεπτομέρεια](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) , ενώ `erddap:τελευταίο` είναι η πιο πρόσφατη ελεγχόμενη απελευθέρωση ( [νεότερες λεπτομέρειες](https://hub.docker.com/layers/erddap/erddap/latest/) ) . Μπορείτε επίσης να περιηγηθείτε στις εκδόσεις του μητρώου εμπορευματοκιβωτίων GitHub στο [Πακέτα GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) . Μπορείτε να διαβάσετε περισσότερα σχετικά με τη χρήση ERDDAP™ με [Ντόκερ](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+
+Για την ανάπτυξη του Kubernetes, δείτε το νέο development-kubernetes [τεκμηρίωση](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) .
 
 Αυτό είπε, ERDDAP™ σχεδιάστηκε σε μια εποχή όπου οι αφοσιωμένοι servers ήταν ο κανόνας. Δεν είναι χωρίς server, και θα ήταν εξαιρετικά δύσκολο αν δεν ήταν αδύνατο να γίνει χωρίς server.
 

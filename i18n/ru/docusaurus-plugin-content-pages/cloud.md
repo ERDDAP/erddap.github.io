@@ -17,7 +17,9 @@ title: "ERDDAP™ and the Cloud"
 
 Да.
 
- ERDDAP™ Он предназначен для работы в Tomcat, которая может работать локально или в облачных средах. В Docker есть поддержка сообщества, и есть [официальный Поддержка Docker скоро](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+ ERDDAP™ Он предназначен для работы в Tomcat, которая может работать локально или в облачных средах. Официальное изображение Докера доступно в [Docker Hub](https://hub.docker.com/r/erddap/erddap) . The `erddap: альфа-латест` Tag - это сборка, основанная на самых последних изменениях. (Что-то вроде "ночного" выпуска, [Альфа-последние детали](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) Пока `erddap:latest` Самый последний проверенный выпуск ( [Последние подробности](https://hub.docker.com/layers/erddap/erddap/latest/) ) . Вы также можете просмотреть релизы реестра контейнеров GitHub [Пакеты GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) . Вы можете прочитать больше об использовании ERDDAP™ с [Докер](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+
+Для развертывания Kubernetes см. новые развертывания-kubernetes [документация](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) .
 
 Это говорит, ERDDAP™ Он был разработан в то время, когда выделенные серверы были нормой. Он не бессерверный, и было бы чрезвычайно трудно, если не невозможно, сделать его бессерверным.
 

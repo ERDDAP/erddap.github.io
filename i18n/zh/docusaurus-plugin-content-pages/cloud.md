@@ -17,7 +17,9 @@ title: "ERDDAP™ and the Cloud"
 
 对
 
- ERDDAP™ 目的是在Tomcat内部运行,可以在当地运行,也可以在云环境运行. 有社区支持在多克运行,有 [公务 Docker的支持即将到来](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) 。 。 。 。
+ ERDDAP™ 目的是在Tomcat内部运行,可以在当地运行,也可以在云环境运行. 官方 Docker 图像可用于 [吊顶枢纽](https://hub.docker.com/r/erddap/erddap) 。 。 。 。 那个 `erddap:最高级` 标签是一个基于最近变化的构建 (像是"夜晚"的释放, [阿尔法最新细节](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) 时 `错误:最晚` 是最近测试过的释放 ( [最新详情](https://hub.docker.com/layers/erddap/erddap/latest/) ) 。 。 。 您也可以浏览 GitHub 容器登记表的发布时间 。 [GitHub 软件包](https://github.com/ERDDAP/erddap/pkgs/container/erddap) 。 。 。 。 您可以阅读更多关于使用 ERDDAP™ 与 [插头](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) 。 。 。 。
+
+Kubernetes的部署,见新部署库伯内特 [文档](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) 。 。 。 。
 
 这么说 ERDDAP™ 是在专用服务器成为规范的时候设计的。 它不是没有服务器的,如果不是不可能使它没有服务器,将是极其困难的。
 

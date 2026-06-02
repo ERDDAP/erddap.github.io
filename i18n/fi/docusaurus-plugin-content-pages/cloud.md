@@ -17,7 +17,9 @@ Tämä poistaa tarvetta ylläpitää palvelin- ja datakeskusta. Se mahdollistaa 
 
 Kyllä.
 
- ERDDAP™ Se on suunniteltu toimimaan Tomcatissa, jota voidaan käyttää paikallisesti tai pilviympäristössä. Yhteinen tuki Dockerille ja siellä on [Virallinen virkamies Dockerin tuki tulossa pian](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+ ERDDAP™ Se on suunniteltu toimimaan Tomcatissa, jota voidaan käyttää paikallisesti tai pilviympäristössä. Virallinen Docker-kuva on saatavilla [Kirjoittaja Hub](https://hub.docker.com/r/erddap/erddap) . The `Alkuperäinen nimi: Alpha-latest` Rakennukset perustuvat uusimpiin muutoksiin (Jotain "yöllä" -julkaisua, [Alfa-viimeiset yksityiskohdat](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) Vaikka `Alkuperäinen nimi: Thelatest` Viimeisin testattu vapautus ( [Viimeisimmät yksityiskohdat](https://hub.docker.com/layers/erddap/erddap/latest/) ) . Voit myös selata GitHub-säiliörekisteriä [GitHub-paketit](https://github.com/ERDDAP/erddap/pkgs/container/erddap) . Voit lukea lisää käyttämisestä ERDDAP™ kanssa [Docker](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+
+Kubernetes-lähetyksille nähtävyydet [dokumentointi](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) .
 
 Tämä sanoi, ERDDAP™ Se oli suunniteltu aikana, jolloin palvelimet olivat normaaleja. Se ei ole palvelinkelvotonta, ja se olisi erittäin vaikeaa, jos se ei olisi mahdotonta.
 

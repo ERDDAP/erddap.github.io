@@ -17,7 +17,9 @@ title: "ERDDAP™ and the Cloud"
 
 是的
 
- ERDDAP™ 設計在Tomcat體內, 有社區支持在多克跑步,有 [正式 Docker 支援很快就到](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+ ERDDAP™ 設計在Tomcat體內, 官方的 Docker 影像可用於 [嵌入器](https://hub.docker.com/r/erddap/erddap) . 其 `epdap: 最高` 標籤是根據最近變更建立的 (像是"夜晚"的放行 [Alpha 最新細節](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) ,而 `erddap: 最晚` 是最近驗證的放行 ( [最近的细节](https://hub.docker.com/layers/erddap/erddap/latest/) ) . 您也可以瀏覽 GitHub 容器登記器於 [GitHub 套件](https://github.com/ERDDAP/erddap/pkgs/container/erddap) . 您可以讀取更多關於使用 ERDDAP™ 與 [嵌入器](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) .
+
+關於Kubernetes的部署,請參考新部署的Kubernetes [文件](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) .
 
 意思是 ERDDAP™ 設計的時刻, 它不是無伺服器的, 而且要讓它無伺服器非常難, 或是不可能 。
 

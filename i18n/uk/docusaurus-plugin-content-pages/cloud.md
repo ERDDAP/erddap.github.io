@@ -17,7 +17,9 @@ title: "ERDDAP™ and the Cloud"
 
 Так.
 
- ERDDAP™ Призначений для запуску в межах Tomcat, який може працювати локально або в хмарних умовах. Є підтримка спільноти для бігу в Docker і є [Головна Докерська підтримка незабаром](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) й
+ ERDDAP™ Призначений для запуску в межах Tomcat, який може працювати локально або в хмарних умовах. Офіційне зображення Docker доступна на [Докер Хаб](https://hub.docker.com/r/erddap/erddap) й Про нас `erddap: альфа-латест` мітка - це збірка на основі останніх змін (щось схоже на 'nightly' реліз, [альфа-латестові деталі](https://hub.docker.com/layers/erddap/erddap/alpha-latest/) ) й `ерддап:латест` Найновіші тести ( [останні деталі](https://hub.docker.com/layers/erddap/erddap/latest/) ) й Ви також можете переглянути випуски реєстру контейнерів GitHub на [Пакети GitHub](https://github.com/ERDDAP/erddap/pkgs/container/erddap) й Детальніше про використання ERDDAP™ з [Докер](https://github.com/ERDDAP/erddap/blob/main/DOCKER.md) й
+
+Для розгортання Kubernetes див. нові розгортання [документація](https://erddap.github.io/docs/server-admin/admin-tips/deploy-kubernetes) й
 
 Що сказав, ERDDAP™ був розроблений в той час, коли виділені сервери були нормою. Це не серверний, і буде дуже важко, якщо не неможливо зробити його без серверів.
 

@@ -138,6 +138,10 @@
     "message": "Tagit:",
     "description": "The label alongside a tag list"
   },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Lähellä",
+    "description": "The ARIA label for close button of announcement bar"
+  },
   "theme.admonition.caution": {
     "message": "Varovaisuutta",
     "description": "The default label used for the Caution admonition (:::caution)"
@@ -162,10 +166,6 @@
     "message": "Varoitusvaroitus",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Lähellä",
-    "description": "The ARIA label for close button of announcement bar"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Äskettäin julkaistu blogi",
     "description": "The ARIA label for recent posts in the blog sidebar"
@@ -177,10 +177,6 @@
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
     "message": "Collapsen sivupersoona \"\"\"{label}\"\"\"",
     "description": "The ARIA label to collapse the sidebar category"
-  },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(Ohjattu sivulta New Tab)",
-    "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
     "message": "Pää",
@@ -360,5 +356,9 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tagit",
     "description": "The title of the tag list page"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(Ohjattu sivulta New Tab)",
+    "description": "The ARIA label for the external link icon"
   }
 }
