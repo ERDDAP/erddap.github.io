@@ -78,5 +78,13 @@
   "sidebar.docSidebar.category.User Tips.link.generated-index.description": {
     "message": "Tip i trick writeup dla użytkowników",
     "description": "The generated-index page description for category 'User Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Dataset Examples": {
+    "message": "Przykłady zbioru danych",
+    "description": "The label for category 'Dataset Examples' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Dataset Examples.link.generated-index.description": {
+    "message": "Przykłady definicji zbioru danych",
+    "description": "The generated-index page description for category 'Dataset Examples' in sidebar 'docSidebar'"
   }
 }

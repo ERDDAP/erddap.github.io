@@ -78,5 +78,13 @@
   "sidebar.docSidebar.category.User Tips.link.generated-index.description": {
     "message": "Tip at trick writeups para sa mga gumagamit",
     "description": "The generated-index page description for category 'User Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Dataset Examples": {
+    "message": "Nakasingit na mga Halimbawa",
+    "description": "The label for category 'Dataset Examples' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Dataset Examples.link.generated-index.description": {
+    "message": "Mga halimbawa ng mga pagpapakahulugan sa datos",
+    "description": "The generated-index page description for category 'Dataset Examples' in sidebar 'docSidebar'"
   }
 }

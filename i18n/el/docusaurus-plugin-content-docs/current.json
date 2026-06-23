@@ -78,5 +78,13 @@
   "sidebar.docSidebar.category.User Tips.link.generated-index.description": {
     "message": "Συμβουλή και τέχνασμα εγγραφές για τους χρήστες",
     "description": "The generated-index page description for category 'User Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Dataset Examples": {
+    "message": "Παραδείγματα συνόλου δεδομένων",
+    "description": "The label for category 'Dataset Examples' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Dataset Examples.link.generated-index.description": {
+    "message": "Παραδείγματα ορισμών συνόλου δεδομένων",
+    "description": "The generated-index page description for category 'Dataset Examples' in sidebar 'docSidebar'"
   }
 }

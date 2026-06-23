@@ -78,5 +78,13 @@
   "sidebar.docSidebar.category.User Tips.link.generated-index.description": {
     "message": "ユーザーのためのヒントとトリックの書き込み",
     "description": "The generated-index page description for category 'User Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Dataset Examples": {
+    "message": "データセット例",
+    "description": "The label for category 'Dataset Examples' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Dataset Examples.link.generated-index.description": {
+    "message": "データセット定義の例",
+    "description": "The generated-index page description for category 'Dataset Examples' in sidebar 'docSidebar'"
   }
 }

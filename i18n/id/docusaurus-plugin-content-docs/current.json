@@ -78,5 +78,13 @@
   "sidebar.docSidebar.category.User Tips.link.generated-index.description": {
     "message": "Tip dan trik menulis untuk pengguna",
     "description": "The generated-index page description for category 'User Tips' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Dataset Examples": {
+    "message": "Contoh Dataset",
+    "description": "The label for category 'Dataset Examples' in sidebar 'docSidebar'"
+  },
+  "sidebar.docSidebar.category.Dataset Examples.link.generated-index.description": {
+    "message": "Contoh definisi dataset",
+    "description": "The generated-index page description for category 'Dataset Examples' in sidebar 'docSidebar'"
   }
 }
