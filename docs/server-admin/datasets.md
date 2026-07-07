@@ -5257,7 +5257,28 @@ ERDDAP's reload system is proactive -- datasets are reloaded soon after their re
     ```
     *   If "\[standard\]" occurs in the attribute value, it will be replaced by the standard ERDDAP™ license from the &lt;standardLicense> tag in ERDDAP's  
         \[tomcat\]/webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml file.  
-         
+
+###### classification {#classification}
+*   [**classification**](#classification) classification level of the data. 
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * Acceptable values are _unclassified_, _confidential_, _restricted_, _secret_,  or _top_secret_.
+
+###### topic_category {#topic_category}
+*   [**topic_category**](#topic_category) High-level geographic data thematic classification to assist in the grouping and search of available geographic data sets.
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    *  Acceptable values are _biota_, _boundaries_, _climatology_meteorology_atomosphere_, _economy_, _elevation_, _environment_, _farming_, _geoscientific_information_, _health_, _imagery_base_maps_earth_cover_, _inland_waters_, _intelligence_military_, _location_, _oceans_, _planning_cadastre_, _society_, _structure_, _transporation_, _utlities_communication_. 
+
+###### maintenance_frequency {#maintenance_frequency}
+*   [**maintenance_frequency**](#maintenance_frequency) Frequency with which modifications and deletions are made to the data after it is first produced.
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * Acceptable values are Acceptable values are _annually_, _as_needed_, _biannually_, _continual_, _daily_, _fortnightly_, _irregular_, _monthly_, _not_planned_, _quarterly_, _unknown_, _weekly_.
+
 ###### Metadata\_Conventions {#metadata_conventions}
 *   [**Metadata\_Conventions**](#metadata_conventions) is from the outdated [ACDD 1.0](https://wiki.esipfed.org/ArchivalCopyOfVersion1) (which was identified in Metadata\_Conventions as "Unidata Dataset Discovery v1.0") metadata standard. The attribute value was a comma-separated list of metadata conventions used by this dataset.  
     If a dataset uses ACDD 1.0, this attribute is STRONGLY RECOMMENDED, for example,  
