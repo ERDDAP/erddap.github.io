@@ -1,6 +1,22 @@
 {
   // This file is not used in compilation. It is here just for a nice editor experience.
-  "extends": "@docusaurus/tsconfig",
-  "compilerOptions": {},
+  // "extends": "@docusaurus/tsconfig",
+  // docusaurus/tsconfig.json has deprecated baseUrl, we're copying it here and modifying.
+  // Once they've updated we can transition back to using the provided tsconfig.json.
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Docusaurus",
+  "docs": "https://docusaurus.io/docs/typescript-support",
+  "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "moduleResolution": "bundler",
+    "module": "esnext",
+    "noEmit": true,
+    "paths": {"*": ["./*"]},
+    "skipLibCheck": true
+  },
   "exclude": [".docusaurus", "build"]
 }
