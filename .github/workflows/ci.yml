@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check if package.json exists
+        id: check_files
+        run: |
+          if [ -f package.json ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup Node.js
+        if: steps.check_files.outputs.exists == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install dependencies
+        if: steps.check_files.outputs.exists == 'true'
+        run: npm ci
+
+      - name: Typecheck
+        if: steps.check_files.outputs.exists == 'true'
+        run: npm run typecheck
+
+      - name: Build site
+        if: steps.check_files.outputs.exists == 'true'
+        run: npm run build
+
+      - name: Serve and Verify Pages
+        if: steps.check_files.outputs.exists == 'true'
+        run: |
+          npm run serve &
+          
+          echo "Waiting for Docusaurus server to start..."
+          for i in {1..30}; do
+            if curl -s -o /dev/null -w "%{http_code}" http://localhost:3000/ | grep -q "200"; then
+              echo "Docusaurus server is up!"
+              break
+            fi
+            sleep 2
+          done
+          
+          # List of pages to verify
+          urls=(
+            "http://localhost:3000/"
+            "http://localhost:3000/changes"
+            "http://localhost:3000/docs/intro"
+          )
+          
+          failed=0
+          for url in "${urls[@]}"; do
+            echo "Verifying $url..."
+            status=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+            if [ "$status" = "200" ]; then
+              echo "✓ Success: $url loaded with status 200"
+            else
+              echo "✗ Error: $url failed with status $status"
+              failed=1
+            fi
+          done
+          
+          if [ "$failed" -ne 0 ]; then
+            echo "Some pages failed to load!"
+            exit 1
+          fi
