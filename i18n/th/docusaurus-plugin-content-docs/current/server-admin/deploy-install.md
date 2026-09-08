@@ -357,9 +357,9 @@ Unzip `แก้ไขโครงการหลัก... .zip ` เข้า�
      
 ### ติดตั้งเอดแดป แฟ้มสงคราม{#install-the-erddapwar-file} 
 
-4. บนลินุกซ์, แมก, และวินโดวส์, _ดาวน์โหลด [เอดดาป](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) _ใส่ `Tomcat/ webapps` .
+4. บนลินุกซ์, แมก, และวินโดวส์, _ดาวน์โหลด [เอดดาป](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) _ใส่ `Tomcat/ webapps` .
 
-_Version 2.31.0, 719,567,541 bytes, MD5 = DB0FEDE1FTA148666666291A1110D7, ลงวันที่ 2026-08-28_BAR_
+_Version 2.31.1, 719,561,982 bytes, MD5=2F6D2B22932323B31848809853 ลงวันที่ 2026-09-03_BAR_
 
 แฟ้ม .War นี้ ใหญ่ มาก เพราะ มี แนว ชายฝั่ง ที่ ดี เยี่ยม, ขอบ เขต, และ ข้อมูล ระดับ สูง ซึ่ง จําเป็น ต่อ การ สร้าง แผนที่.
 

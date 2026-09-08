@@ -357,9 +357,9 @@ Is smaoineamh maith a fhíorú go bhfuil an toradh go maith XML trí ghreamú an
      
 ### Suiteáil an erddap. comhad cogadh{#install-the-erddapwar-file} 
 
-4. Ar Linux, Mac, agus Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) _ isteach `riachtanais uisce: measartha` :
+4. Ar Linux, Mac, agus Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) _ isteach `riachtanais uisce: measartha` :
 
-__Version 2.31.0, 719,567,541 beart, MD5 = DB0AFDE1F441CA9262CB66291A1110D7, dátaithe Tuilleadh roghanna...
+__Version 2.31.1, 719,561,982 beart, MD5 = 2F6D2B2992B3233CB918B80629A09853, dátaithe Clár na dToghthóirí
 
 Is é an comhad .war mór toisc go bhfuil sé chósta réiteach ard, teorainn, agus sonraí ingearchló is gá chun léarscáileanna a chruthú.
 

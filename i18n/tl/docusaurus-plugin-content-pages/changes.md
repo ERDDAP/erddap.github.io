@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 Narito ang mga pagbabagong nauugnay sa bawat isa ERDDAP™ paglaya.
 
+## Bersiyong 2.31.1{#version-2311} 
+ (inilabas noong 2026-09-03) 
+
+*    **Mga pagbabago** 
+      * Sapat [Ang EDDTable FromMultidimNcFiles ay nagkukuwarentenas ng malulusog na source files](https://github.com/ERDDAP/erddap/issues/556) . Masama (o Paninirahan) Ang mga tanong ay hindi na dapat maging sanhi ng pagkukuwarentenas ng mabubuting file.
+
 ## Bersiyong 2.31.0{#version-2310} 
  (inilabas noong 2026-08-28) 
 

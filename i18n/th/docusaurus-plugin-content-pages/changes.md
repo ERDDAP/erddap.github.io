@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 นี่เป็นการเปลี่ยนแปลงที่เกี่ยวข้องกับแต่ละรายการ ERDDAP™ ปล่อย
 
+## รุ่น 2. 31. 1{#version-2311} 
+ (ออกจําหน่าย 2026-09-03) 
+
+*    **เปลี่ยน** 
+      * แก้ไข [DDTable from Multiidnc Februarys context files worder](https://github.com/ERDDAP/erddap/issues/556) . แย่ (หรือประพฤติตัวไม่เหมาะสม) ไม่ทําให้ไฟล์ดีถูกกักกันอีกต่อไป
+
 ## รุ่น 2. 31. 0{#version-2310} 
  (ออกจําหน่าย 2026-08-28) 
 

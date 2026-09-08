@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## Nyeste ERDDAP™ version version version{#latest-erddap-version} 
 
-2.31.0, se den [Ændringer af dokumentation](/changes#version-2310) og og og [Download den](https://github.com/ERDDAP/erddap/releases/tag/v2.31.0) .
+2.31.1, se den [Ændringer af dokumentation](/changes#version-2311) og og og [Download den](https://github.com/ERDDAP/erddap/releases/tag/v2.31.1) .
 
 ##  ERDDAP™ Oplysninger om information{#erddap-information} 
 

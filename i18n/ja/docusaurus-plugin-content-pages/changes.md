@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 それぞれに関連した変更は次のとおりです。 ERDDAP™ リリース
 
+## バージョン 2.31.1{#version-2311} 
+ (リリース 2026-09-03) 
+
+*    **変更点** 
+      * インストール [EDDTableFromMultidimNcFilesの検疫の健康な源ファイル](https://github.com/ERDDAP/erddap/issues/556) お問い合わせ ログイン (または誤解) クエリはもはや検疫されるべきよいファイルを引き起こしません。
+
 ## バージョン 2.31.0{#version-2310} 
  (リリース 2026-08-28) 
 

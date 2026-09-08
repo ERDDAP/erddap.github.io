@@ -357,9 +357,9 @@ Modifiche a `erddap2.css` solo prendere effetto quando ERDDAP™ è riavviato e 
      
 ### Installare l'erddap. file di guerra{#install-the-erddapwar-file} 
 
-4. Su Linux, Mac e Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) D'accordo. `tomcat/webapps` :
+4. Su Linux, Mac e Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) D'accordo. `tomcat/webapps` :
 
-__Versione 2.31.0, 719,567,541 byte, MD5=DB0AFDE1F441CA9262CB66291A1110D7, datata 2026-08-28_
+__Versione 2.31.1, 719,561,982 byte, MD5=2F6D2B2992B3233CB918B80629A09853, datata 2026-09-03_
 
 Il file .war è grande perché contiene costi di alta risoluzione, confine e dati di elevazione necessari per creare mappe.
 

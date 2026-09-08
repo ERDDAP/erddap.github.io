@@ -106,10 +106,6 @@
     "message": "Deze pagina bewerken",
     "description": "The link label to edit the current page"
   },
-  "theme.common.headingLinkTitle": {
-    "message": "Directe link naar{heading}",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": "op{date}",
     "description": "The words used to describe on which date a page has been last updated"
@@ -122,13 +118,17 @@
     "message": "Laatst bijgewerkt{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versies",
-    "description": "The label for the navbar versions dropdown on mobile view"
+  "theme.common.headingLinkTitle": {
+    "message": "Directe link naar{heading}",
+    "description": "Title for link to heading"
   },
   "theme.NotFound.title": {
     "message": "Pagina niet gevonden",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versies",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "Tags:",
@@ -158,14 +158,6 @@
     "message": "waarschuwing",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Sluiten",
-    "description": "The ARIA label for close button of announcement bar"
-  },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "Blog recente berichten navigatie",
-    "description": "The ARIA label for recent posts in the blog sidebar"
-  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Categorie zijbalk uitvouwen '{label}'",
     "description": "The ARIA label to expand the sidebar category"
@@ -178,14 +170,6 @@
     "message": "(opent in nieuw tabblad)",
     "description": "The ARIA label for the external link icon"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "Hoofd",
-    "description": "The ARIA label for the main navigation"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Talen",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "We konden niet vinden wat je zocht.",
     "description": "The first paragraph of the 404 page"
@@ -193,6 +177,14 @@
   "theme.NotFound.p2": {
     "message": "Neem contact op met de eigenaar van de site die u heeft gekoppeld aan de originele URL en laat hen weten dat hun link is verbroken.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Hoofd",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Talen",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Op deze pagina",
@@ -230,18 +222,6 @@
     "message": "Startpagina",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs zijbalk",
-    "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Zijbalk invouwen",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Zijbalk invouwen",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "Navigatiebalk sluiten",
     "description": "The ARIA label for close button of mobile sidebar"
@@ -254,6 +234,10 @@
     "message": "Navigatiebalk aan/uit",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Blog recente berichten navigatie",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "Uitvouwbaar maken",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -261,6 +245,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Dropdown invouwen",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Zijbalk invouwen",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Zijbalk invouwen",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Zijbalk uitvouwen",
@@ -270,21 +262,9 @@
     "message": "Zijbalk uitvouwen",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.SearchBar.noResultsText": {
-    "message": "Geen resultaten"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Zie alle resultaten buiten \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Zie alle resultaten binnen \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Bekijk alle resultaten"
-  },
-  "theme.SearchBar.label": {
-    "message": "Zoeken",
-    "description": "The ARIA label and placeholder for search button"
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs zijbalk",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Zoekresultaten voor \"{query}\"",
@@ -304,6 +284,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "Er zijn geen documenten gevonden",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Geen resultaten"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Zie alle resultaten buiten \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Zie alle resultaten binnen \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Bekijk alle resultaten"
+  },
+  "theme.SearchBar.label": {
+    "message": "Zoeken",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "Eén post|{count}posten",

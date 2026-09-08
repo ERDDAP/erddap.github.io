@@ -357,9 +357,9 @@ Det är en bra idé att verifiera att resultatet är välformat XML genom att kl
      
 ### Installera erddap. krigsfil{#install-the-erddapwar-file} 
 
-4. På Linux, Mac och Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) __ in `Tomcat/webapps` Från:
+4. På Linux, Mac och Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) __ in `Tomcat/webapps` Från:
 
-__Version 2.31.0, 719.567.541 byte, MD5=DB0AFDE1F441CA9262CB66291A1110D7, daterad 2026-08-28___
+__Version 2.31.1, 719,561,982 byte, MD5=2F6D2B2992B3233CB918B80629A09853, daterad 2026-09-03___
 
 Krigsfilen är stor eftersom den innehåller högupplöst kustlinje, gräns och höjddata som behövs för att skapa kartor.
 

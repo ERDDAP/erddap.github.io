@@ -11,8 +11,8 @@ sidebar_position: 2
 2. ถ้าคุณกําลังเพิ่มขึ้นจาก ERDDAP™ รุ่น 2.18 หรือด้านล่าง คุณต้องสลับที่ Java 25 (หรือใหม่กว่า) และทอมแคท 10 คนที่เกี่ยวข้อง ดูปกติ ERDDAP™ คําสั่งการติดตั้งสําหรับ [ Java ](/docs/server-admin/deploy-install#java) ถึง [ทอมแคท](/docs/server-admin/deploy-install#tomcat) . คุณจะต้องคัดลอก _tomcat_/content/erddap ไดเรกทอรีจากการติดตั้ง Tomcat เก่าของคุณ ไปการติดตั้งทอมแคทใหม่ของคุณ
 
 ## ดาวน์โหลด{#download} 
-3. ดาวน์โหลด [เอดดาป](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) ลงใน_สื่อย่อย
-     (รุ่น 2.31.0, 719,567,541 bytes, MD5 =DB0FED1FT1F441482C6662911110D7, ลงวันที่ 2026-08-28.) 
+3. ดาวน์โหลด [เอดดาป](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) ลงใน_สื่อย่อย
+     (รุ่น 2.31.1, 719,561,982 bytes, MD5 =2 F6D2B22B232323CB91880480909853 ลงวันที่ 2026-09-03.) 
      
 ## ข้อความ.xml{#messagesxml} 
 4. 

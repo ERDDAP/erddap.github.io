@@ -106,10 +106,6 @@
     "message": "Bu sayfayı Düzenle",
     "description": "The link label to edit the current page"
   },
-  "theme.common.headingLinkTitle": {
-    "message": "Doğrudan bağlantı{heading}",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": "Onda{date}",
     "description": "The words used to describe on which date a page has been last updated"
@@ -122,13 +118,17 @@
     "message": "Son Güncelleme{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versions",
-    "description": "The label for the navbar versions dropdown on mobile view"
+  "theme.common.headingLinkTitle": {
+    "message": "Doğrudan bağlantı{heading}",
+    "description": "Title for link to heading"
   },
   "theme.NotFound.title": {
     "message": "Sayfa bulunamadı",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versions",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "Etiketler:",
@@ -158,14 +158,6 @@
     "message": "Uyarı",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Close Close Close Close Close",
-    "description": "The ARIA label for close button of announcement bar"
-  },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "Blog Son Yazılar navigasyon",
-    "description": "The ARIA label for recent posts in the blog sidebar"
-  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Expand sidebar kategorisi ‘ ‘ ‘{label}‘ ‘ ‘",
     "description": "The ARIA label to expand the sidebar category"
@@ -178,14 +170,6 @@
     "message": "(Yeni sekmede açılır)",
     "description": "The ARIA label for the external link icon"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "Main Main Main Main",
-    "description": "The ARIA label for the main navigation"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Diller",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "Ne aradığınızı bulamadık.",
     "description": "The first paragraph of the 404 page"
@@ -193,6 +177,14 @@
   "theme.NotFound.p2": {
     "message": "Lütfen sizi orijinal URL'ye bağlayan sitenin sahibine ulaşın ve bağlantılarının kırıldığını bildirin.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Main Main Main Main",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Diller",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Bu sayfada",
@@ -230,18 +222,6 @@
     "message": "Home page",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
-    "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Colalt sidebar",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Colalt sidebar",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "Yakın navigasyon bar",
     "description": "The ARIA label for close button of mobile sidebar"
@@ -254,6 +234,10 @@
     "message": "Toggle navigasyon bar",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Blog Son Yazılar navigasyon",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "Kaldırımı genişletin",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -261,6 +245,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Collap the dropdown",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Colalt sidebar",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Colalt sidebar",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Expand sidebar",
@@ -270,21 +262,9 @@
     "message": "Expand sidebar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.SearchBar.noResultsText": {
-    "message": "Sonuçlar yok"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Tüm sonuçları dışarıda görün.”{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "\\ içinde tüm sonuçları görün\"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Tüm sonuçları gör"
-  },
-  "theme.SearchBar.label": {
-    "message": "Arama Arama",
-    "description": "The ARIA label and placeholder for search button"
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs sidebar",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "\\ için arama sonuçları\"{query}\"",
@@ -304,6 +284,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "Hiçbir belge bulunamadı",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Sonuçlar yok"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Tüm sonuçları dışarıda görün.”{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "\\ içinde tüm sonuçları görün\"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Tüm sonuçları gör"
+  },
+  "theme.SearchBar.label": {
+    "message": "Arama Arama",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "Bir posta|{count}Mesajlar",

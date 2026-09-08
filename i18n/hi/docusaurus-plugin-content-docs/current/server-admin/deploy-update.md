@@ -11,8 +11,8 @@ sidebar_position: 2
 2. यदि आप उन्नयन कर रहे हैं ERDDAP™ संस्करण 2.18 या उससे नीचे, आपको स्विच करने की आवश्यकता है Java 25 (या नया) और संबंधित टॉमकैट 10. नियमित देखें ERDDAP™ स्थापना के लिए निर्देश [ Java ](/docs/server-admin/deploy-install#java) और [टॉमकैट](/docs/server-admin/deploy-install#tomcat) । आपको अपनी प्रतिलिपि बनाना होगा _tomcat_/content/erddap अपने पुराने टॉमकैट इंस्टॉलेशन से आपकी नई टॉमकैट इंस्टॉलेशन तक निर्देशिका।
 
 ## डाउनलोड{#download} 
-3. डाउनलोड [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) in _tomcat_/webapps.
-     (संस्करण 2.31.0, 719,567,541 बाइट्स, MD5=DB0AFDE1F441CA9262CB66291A1110D7, दिनांक 2026-08-28) 
+3. डाउनलोड [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) in _tomcat_/webapps.
+     (संस्करण 2.31.1, 719,561,982 बाइट्स, MD5=2F6D2B2992B3233CB918B80629A09853, दिनांक 2026-09-03) 
      
 ## संदेश{#messagesxml} 
 4. 

@@ -106,10 +106,6 @@
     "message": "اس صفحہ کو مرتب کرو",
     "description": "The link label to edit the current page"
   },
-  "theme.common.headingLinkTitle": {
-    "message": "براہ راست لنک{heading}",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": "پر{date}",
     "description": "The words used to describe on which date a page has been last updated"
@@ -122,13 +118,17 @@
     "message": "آخری تجدید{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "ورژنز",
-    "description": "The label for the navbar versions dropdown on mobile view"
+  "theme.common.headingLinkTitle": {
+    "message": "براہ راست لنک{heading}",
+    "description": "Title for link to heading"
   },
   "theme.NotFound.title": {
     "message": "صفحہ نہیں ملا",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "ورژنز",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "تاج:",
@@ -158,14 +158,6 @@
     "message": "تنبیہ",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "بندکرو",
-    "description": "The ARIA label for close button of announcement bar"
-  },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "بلاگ حالیہ پوسٹ گریجویٹ",
-    "description": "The ARIA label for recent posts in the blog sidebar"
-  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "سب سے پہلے '{label}'",
     "description": "The ARIA label to expand the sidebar category"
@@ -178,14 +170,6 @@
     "message": "( نئے تبتی میں اتارے)",
     "description": "The ARIA label for the external link icon"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "مین",
-    "description": "The ARIA label for the main navigation"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "زبانیں",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "ہم آپ کی تلاش میں کیا تلاش کر رہے تھے تلاش نہیں کر سکتے.",
     "description": "The first paragraph of the 404 page"
@@ -193,6 +177,14 @@
   "theme.NotFound.p2": {
     "message": "براہ مہربانی اس سائٹ کے مالک سے رابطہ کریں جو آپ کو اصل محور سے منسلک کرتا ہے اور انہیں پتہ چلتا ہے کہ ان کا تعلق ٹوٹ گیا ہے.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "مین",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "زبانیں",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "اس صفحہ پر",
@@ -230,18 +222,6 @@
     "message": "گھریلو صفحہ",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "دَور",
-    "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "مرکزی کنارہ",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "مرکزی کنارہ",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "قریب ترین بار",
     "description": "The ARIA label for close button of mobile sidebar"
@@ -254,6 +234,10 @@
     "message": "بار کو روشن کرنے کیلئے",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "بلاگ حالیہ پوسٹ گریجویٹ",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "گر تے هو ئے",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -261,6 +245,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "گر تے هو ئے",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "مرکزی کنارہ",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "مرکزی کنارہ",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "قریبی کنارہ",
@@ -270,21 +262,9 @@
     "message": "قریبی کنارہ",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.SearchBar.noResultsText": {
-    "message": "کوئی نتیجہ نہیں"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "تمام نتائج خارجہ –{context}٭"
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "2008 کے اندر سب نتائج دیکھیں\"{context}٭"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "تمام نتائج دیکھیں"
-  },
-  "theme.SearchBar.label": {
-    "message": "تلاش",
-    "description": "The ARIA label and placeholder for search button"
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "دَور",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "تلاش کے نتائج %d{query}٭",
@@ -304,6 +284,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "کوئی دستاویز نہیں ملی تھی",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "کوئی نتیجہ نہیں"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "تمام نتائج خارجہ –{context}٭"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "2008 کے اندر سب نتائج دیکھیں\"{context}٭"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "تمام نتائج دیکھیں"
+  },
+  "theme.SearchBar.label": {
+    "message": "تلاش",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "ایک پوسٹ|{count}پوسٹ",

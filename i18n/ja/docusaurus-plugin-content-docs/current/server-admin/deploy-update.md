@@ -11,8 +11,8 @@ sidebar_position: 2
 2. からアップグレードする場合 ERDDAP™ バージョン 2.18 以下, 切り替える必要があります。 Java 25 日 (または新しい) 関連するTomcat 10. 定番を見る ERDDAP™ 取付けの指示のための [ Java ](/docs/server-admin/deploy-install#java) そして、 [トムキャット](/docs/server-admin/deploy-install#tomcat) お問い合わせ コピーする必要もあります _tomcat_/content/erddap 古いTomcatインストールから新しいTomcatインストールまでのディレクトリ。
 
 ## ダウンロード{#download} 
-3. ダウンロード [erddap.warの](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) _tomcat_/webapps に。
-     (バージョン2.31.0、719,567,541バイト、MD5=DB0AFDE1F441CA9262CB66291A1110D7、日付 2026-08-28) 
+3. ダウンロード [erddap.warの](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) _tomcat_/webapps に。
+     (バージョン 2.31.1、719,561,982 バイト、MD5=2F6D2B2992B3233CB918B80629A09853、日付 2026-09-03) 
      
 ## メッセージ.xml{#messagesxml} 
 4. 

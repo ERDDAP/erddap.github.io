@@ -357,9 +357,9 @@ het is een goed idee om te controleren of het resultaat goed gevormd XML is door
      
 ### Installeer de erddap. war-bestand{#install-the-erddapwar-file} 
 
-4. Op Linux, Mac en Windows, __downloaden [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) Naar binnen `tomcat/webapps` :
+4. Op Linux, Mac en Windows, __downloaden [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) Naar binnen `tomcat/webapps` :
 
-__Versie 2.11.0, 719,567.541 bytes, MD5=DB0AFDE1F441CA9262CB66291A1110D7, gedateerd 2026-08-28__
+__Versie 2.11.1, 719,561.982 bytes, MD5=2F6D2B2992B3233CB918B80629A09853, gedateerd 2026-09-03__
 
 Het .war bestand is groot omdat het hoge resolutie kustlijn, grens, en hoogte gegevens die nodig zijn om kaarten te maken bevat.
 

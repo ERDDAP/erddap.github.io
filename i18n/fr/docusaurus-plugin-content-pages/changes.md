@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 Voici les changements associés à chaque ERDDAP™ libérer.
 
+## Version 2.31.1{#version-2311} 
+ (publié le 2026-09-03) 
+
+*    **Changements** 
+      * Correction [EDDTableFromMultidimNcFiles met en quarantaine des fichiers sources sains](https://github.com/ERDDAP/erddap/issues/556) . Mauvais (ou une mauvaise conduite) les requêtes ne devraient plus entraîner la mise en quarantaine de bons dossiers.
+
 ## Version 2.31.0{#version-2310} 
  (publié le 2026-08-28) 
 

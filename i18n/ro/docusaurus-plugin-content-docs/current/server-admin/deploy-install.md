@@ -357,9 +357,9 @@ este o idee bună pentru a verifica dacă rezultatul este bine format XML prin l
      
 ### Instalați Erddap. fișier război{#install-the-erddapwar-file} 
 
-4. Pe Linux, Mac și Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) __ în `Tomcat/Webapps` :
+4. Pe Linux, Mac și Windows, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) __ în `Tomcat/Webapps` :
 
-__Versiunea 2.31.0, 719,567,541 bytes, MD5=DB0AFDE1F441CA9262CB66291A1110D7, datată 2026-08-28__
+__Versiunea 2.31,1, 719,561,982 bytes, MD5=2F6D2B2992B3233CB918B80629A09853, datată 2026-09-03__
 
 Fișierul .war este mare, deoarece conține date de coastă de înaltă rezoluție, limită, și elevație necesare pentru a crea hărți.
 

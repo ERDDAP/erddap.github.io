@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 Berikut adalah perubahan yang terkait dengan masing-masing ERDDAP™ Sitemap
 
+## Versi 2.31.1{#version-2311} 
+ (dirilis 2026-09-03) 
+
+*    **Login** 
+      * Login [EDDTableDariMultidimNcFiles quarantines file sumber yang sehat](https://github.com/ERDDAP/erddap/issues/556) Sitemap Login (atau bersalah) pertanyaan tidak boleh lagi menyebabkan file yang baik untuk dikuduskan.
+
 ## Versi 2.31.0{#version-2310} 
  (dirilis 2026-08-28) 
 

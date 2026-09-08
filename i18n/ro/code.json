@@ -106,10 +106,6 @@
     "message": "Editează această pagină",
     "description": "The link label to edit the current page"
   },
-  "theme.common.headingLinkTitle": {
-    "message": "Legătură directă către{heading}",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": "privind{date}",
     "description": "The words used to describe on which date a page has been last updated"
@@ -122,13 +118,17 @@
     "message": "Ultima actualizare{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versiuni",
-    "description": "The label for the navbar versions dropdown on mobile view"
+  "theme.common.headingLinkTitle": {
+    "message": "Legătură directă către{heading}",
+    "description": "Title for link to heading"
   },
   "theme.NotFound.title": {
     "message": "Pagina nu a fost găsită",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versiuni",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "Etichete:",
@@ -158,14 +158,6 @@
     "message": "Avertisment",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Închide",
-    "description": "The ARIA label for close button of announcement bar"
-  },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "Blog de navigare posturi recente",
-    "description": "The ARIA label for recent posts in the blog sidebar"
-  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Extinde categoria barei laterale '{label}'",
     "description": "The ARIA label to expand the sidebar category"
@@ -178,14 +170,6 @@
     "message": "(se deschide în tab nou)",
     "description": "The ARIA label for the external link icon"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "Principal",
-    "description": "The ARIA label for the main navigation"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Limbi",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "Nu am putut găsi ceea ce căutai.",
     "description": "The first paragraph of the 404 page"
@@ -193,6 +177,14 @@
   "theme.NotFound.p2": {
     "message": "Vă rugăm să contactați proprietarul site-ului care v-a legat de URL-ul original și să le spuneți că link-ul lor este rupt.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Principal",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Limbi",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Pe această pagină",
@@ -230,18 +222,6 @@
     "message": "Pagina de start",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "Bara laterală a Docurilor",
-    "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Bara laterală a colapsului",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Bara laterală a colapsului",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "Închide bara de navigație",
     "description": "The ARIA label for close button of mobile sidebar"
@@ -254,6 +234,10 @@
     "message": "Comută bara de navigație",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Blog de navigare posturi recente",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "Extindeţi căderea",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -261,6 +245,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Distrugeţi căderea",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Bara laterală a colapsului",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Bara laterală a colapsului",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Extinde bara laterală",
@@ -270,21 +262,9 @@
     "message": "Extinde bara laterală",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.SearchBar.noResultsText": {
-    "message": "Niciun rezultat"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Vezi toate rezultatele afara \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Vezi toate rezultatele din \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Vezi toate rezultatele"
-  },
-  "theme.SearchBar.label": {
-    "message": "Caută",
-    "description": "The ARIA label and placeholder for search button"
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Bara laterală a Docurilor",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Rezultate căutare pentru \"{query}\"",
@@ -304,6 +284,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "Nu s-au găsit documente.",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Niciun rezultat"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Vezi toate rezultatele afara \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Vezi toate rezultatele din \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Vezi toate rezultatele"
+  },
+  "theme.SearchBar.label": {
+    "message": "Caută",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "Un singur post|{count}Posturi",

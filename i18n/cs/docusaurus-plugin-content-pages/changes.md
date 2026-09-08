@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 Zde jsou změny spojené s každým ERDDAP™ Uvolnit.
 
+## Verze 2.31.1{#version-2311} 
+ (propuštěn 2026-09-03) 
+
+*    **Změny** 
+      * Oprava [EDDTableFromMultidimNcFiles karanténa zdravé zdrojové soubory](https://github.com/ERDDAP/erddap/issues/556) . Špatné (nebo špatné chování) dotazy by již neměly způsobit karanténu dobrých souborů.
+
 ## Verze 2.31.0{#version-2310} 
  (propuštěn 2026-08-28) 
 

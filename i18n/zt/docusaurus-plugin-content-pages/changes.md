@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 以下是與每項變更相關的變更 ERDDAP™ 釋放
 
+## 2.3.1版本{#version-2311} 
+ (2026-09-03年) 
+
+*    **變更** 
+      * 修正 [從多數dimNcFiles隔離的 EDD Table 健康源碼檔案](https://github.com/ERDDAP/erddap/issues/556) . 壞 (或行為不端) 查詢不該再造成好文件被隔離。
+
 ## 2.3.1.0版本{#version-2310} 
  (2026-08-28年) 
 

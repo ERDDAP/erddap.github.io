@@ -11,8 +11,8 @@ Conas a dhéanamh Nuashonrú de atá ann cheana ERDDAP™ ar do Freastalaí
 2. Má tá tú ag uasghrádú ó ERDDAP™ leagan 2.18 nó thíos, ní mór duit a athrú go Java 25 - 25 (nó newer) agus Tomcat 10. Féach an rialta ERDDAP™ treoracha a shuiteáil [ Java ](/docs/server-admin/deploy-install#java) agus [cliceáil grianghraf a mhéadú](/docs/server-admin/deploy-install#tomcat) . Beidh ort freisin a chóipeáil do _tomcat_/content/erddap eolaire ó do shuiteáil Tomcat d'aois le do shuiteáil Tomcat nua.
 
 ## Íoslódáil{#download} 
-3. Íoslódáil [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) isteach _ síos / iarratais.
-     (leagan 2.31.0, 719,567,541 bytes, MD5 = DB0AFDE1F441CA9262CB66291A1110D7, dar dáta 2026-08-28) 
+3. Íoslódáil [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) isteach _ síos / iarratais.
+     (leagan 2.31.1, 719,561,982 beart, MD5 = 2F6D2B2992B3233CB918B80629A09853, dar dáta 2026-09-03) 
      
 ## teachtaireachtaí.xml{#messagesxml} 
 4. 

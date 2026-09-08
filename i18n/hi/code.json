@@ -106,10 +106,6 @@
     "message": "इस पृष्ठ को संपादित करें",
     "description": "The link label to edit the current page"
   },
-  "theme.common.headingLinkTitle": {
-    "message": "प्रत्यक्ष लिंक{heading}",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": "पर{date}",
     "description": "The words used to describe on which date a page has been last updated"
@@ -122,13 +118,17 @@
     "message": "अद्यतन{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "संस्करण",
-    "description": "The label for the navbar versions dropdown on mobile view"
+  "theme.common.headingLinkTitle": {
+    "message": "प्रत्यक्ष लिंक{heading}",
+    "description": "Title for link to heading"
   },
   "theme.NotFound.title": {
     "message": "पृष्ठ नहीं मिला",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "संस्करण",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "टैग:",
@@ -158,14 +158,6 @@
     "message": "चेतावनी",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "बंद",
-    "description": "The ARIA label for close button of announcement bar"
-  },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "हाल के पोस्ट नेविगेशन",
-    "description": "The ARIA label for recent posts in the blog sidebar"
-  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "साइडबार श्रेणी का विस्तार करें '{label}'",
     "description": "The ARIA label to expand the sidebar category"
@@ -178,14 +170,6 @@
     "message": "(नया टैब में खुलता है)",
     "description": "The ARIA label for the external link icon"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "मुख्य",
-    "description": "The ARIA label for the main navigation"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "भाषा",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "हमें पता नहीं था कि आप क्या देख रहे थे।",
     "description": "The first paragraph of the 404 page"
@@ -193,6 +177,14 @@
   "theme.NotFound.p2": {
     "message": "कृपया उस साइट के मालिक से संपर्क करें जो आपको मूल यूआरएल से जोड़ता है और उन्हें पता है कि उनका लिंक टूट गया है।",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "मुख्य",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "भाषा",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "इस पृष्ठ पर",
@@ -230,18 +222,6 @@
     "message": "होम पेज",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
-    "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "पतन साइडबार",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "पतन साइडबार",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "बंद नेविगेशन बार",
     "description": "The ARIA label for close button of mobile sidebar"
@@ -254,6 +234,10 @@
     "message": "टॉगल नेविगेशन बार",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "हाल के पोस्ट नेविगेशन",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "ड्रॉपडाउन का विस्तार करें",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -261,6 +245,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "गिरावट को कम करें",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "पतन साइडबार",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "पतन साइडबार",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "साइडबार का विस्तार",
@@ -270,21 +262,9 @@
     "message": "साइडबार का विस्तार",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.SearchBar.noResultsText": {
-    "message": "कोई परिणाम नहीं"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "बाहर सभी परिणाम देखें{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "\\ के भीतर सभी परिणाम देखें{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "सभी परिणाम देखें"
-  },
-  "theme.SearchBar.label": {
-    "message": "खोज",
-    "description": "The ARIA label and placeholder for search button"
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs sidebar",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "\\ के लिए खोज परिणाम{query}\"",
@@ -304,6 +284,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "कोई दस्तावेज नहीं मिला",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "कोई परिणाम नहीं"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "बाहर सभी परिणाम देखें{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "\\ के भीतर सभी परिणाम देखें{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "सभी परिणाम देखें"
+  },
+  "theme.SearchBar.label": {
+    "message": "खोज",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "एक पोस्ट|{count}पोस्ट",

@@ -106,10 +106,6 @@
     "message": "Επεξεργασία αυτής της σελίδας",
     "description": "The link label to edit the current page"
   },
-  "theme.common.headingLinkTitle": {
-    "message": "Άμεση σύνδεση με{heading}",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": "Εμπρός{date}",
     "description": "The words used to describe on which date a page has been last updated"
@@ -122,13 +118,17 @@
     "message": "Τελευταία ενημέρωση{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Εκδόσεις",
-    "description": "The label for the navbar versions dropdown on mobile view"
+  "theme.common.headingLinkTitle": {
+    "message": "Άμεση σύνδεση με{heading}",
+    "description": "Title for link to heading"
   },
   "theme.NotFound.title": {
     "message": "Η σελίδα δε βρέθηκε",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Εκδόσεις",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "Ετικέτες:",
@@ -158,14 +158,6 @@
     "message": "προειδοποίηση",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Κλείσιμο",
-    "description": "The ARIA label for close button of announcement bar"
-  },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "Blog πρόσφατες δημοσιεύσεις πλοήγησης",
-    "description": "The ARIA label for recent posts in the blog sidebar"
-  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Επέκταση κατηγορίας πλευρικής ράβδου \"{label}\"",
     "description": "The ARIA label to expand the sidebar category"
@@ -178,14 +170,6 @@
     "message": "(Ανοίγει σε νέα καρτέλα)",
     "description": "The ARIA label for the external link icon"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "Κύρια",
-    "description": "The ARIA label for the main navigation"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Γλώσσες",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "Δεν μπορέσαμε να βρούμε αυτό που έψαχνες.",
     "description": "The first paragraph of the 404 page"
@@ -193,6 +177,14 @@
   "theme.NotFound.p2": {
     "message": "Παρακαλώ επικοινωνήστε με τον ιδιοκτήτη της ιστοσελίδας που σας συνέδεσε με το αρχικό URL και ενημερώστε τους ότι ο σύνδεσμός τους είναι σπασμένος.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Κύρια",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Γλώσσες",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Σε αυτή τη σελίδα",
@@ -230,18 +222,6 @@
     "message": "Αρχική σελίδα",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "Πλευρική μπάρα Docs",
-    "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Σύμπτυξη πλευρικής ράβδου",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Σύμπτυξη πλευρικής ράβδου",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "Κλείσιμο γραμμής πλοήγησης",
     "description": "The ARIA label for close button of mobile sidebar"
@@ -254,6 +234,10 @@
     "message": "Εναλλαγή γραμμής πλοήγησης",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Blog πρόσφατες δημοσιεύσεις πλοήγησης",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "Επέκταση της πτώσης",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -261,6 +245,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Κατάρρευση της πτώσης",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Σύμπτυξη πλευρικής ράβδου",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Σύμπτυξη πλευρικής ράβδου",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Επέκταση πλευρικής ράβδου",
@@ -270,21 +262,9 @@
     "message": "Επέκταση πλευρικής ράβδου",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.SearchBar.noResultsText": {
-    "message": "Κανένα αποτέλεσμα"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Δείτε όλα τα αποτελέσματα έξω \"{context}~"
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Δείτε όλα τα αποτελέσματα εντός \"{context}~"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Δείτε όλα τα αποτελέσματα"
-  },
-  "theme.SearchBar.label": {
-    "message": "Αναζήτηση",
-    "description": "The ARIA label and placeholder for search button"
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Πλευρική μπάρα Docs",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Αποτελέσματα αναζήτησης για \"{query}~",
@@ -304,6 +284,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "Δεν βρέθηκαν έγγραφα",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Κανένα αποτέλεσμα"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Δείτε όλα τα αποτελέσματα έξω \"{context}~"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Δείτε όλα τα αποτελέσματα εντός \"{context}~"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Δείτε όλα τα αποτελέσματα"
+  },
+  "theme.SearchBar.label": {
+    "message": "Αναζήτηση",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "Μία θέση|{count}θέσεις",

@@ -11,8 +11,8 @@ Kung Paano Gagawin ang Isang Update ng Pag - iral ERDDAP™ sa Iyong Server
 2. Kung ikaw ay lumalayo ERDDAP™ bersyon 2.18 o sa ibaba, kailangan mong lumipat Java 25 (o mas bago) at ang kaugnay na Tomcat 10. Tingnan ang regular ERDDAP™ maglagay ng mga tagubilin para sa [ Java ](/docs/server-admin/deploy-install#java) at [Tomcat](/docs/server-admin/deploy-install#tomcat) . Kailangan mo ring kopyahin ang iyong _tomcat_/content/erddap directory mula sa iyong lumang instalasyon ng Tomcat sa iyong bagong instalasyon ng Tomcat.
 
 ## Ibaba{#download} 
-3. Ibaba [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) sa _tomcat_/webapps .
-     (bersyon 2.31.0, 719,567,541 bytes, MD5=DB0AFDE1F41CA9262CB629A1110D7, may petsang 2026-08-28) 
+3. Ibaba [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) sa _tomcat_/webapps .
+     (bersyon 2.31.1, 719,561,982 bytes, MD5=2F6D2B2992B3233CB918B80629A09853, na may petsang 2026-09-03) 
      
 ## .xml{#messagesxml} 
 4. 

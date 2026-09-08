@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 Hier zijn de veranderingen in verband met elk ERDDAP™ Laat los.
 
+## Versie 2.3.1{#version-2311} 
+ (uitgebracht 2026-09-03) 
+
+*    **Wijzigingen** 
+      * Repareren [EDDTableVanMultidimNcFiles quarantaines gezonde bronbestanden](https://github.com/ERDDAP/erddap/issues/556) . Slecht (of misdragen) Vragen mogen niet langer leiden tot het in quarantaine plaatsen van goede bestanden.
+
 ## Versie 2.31.0{#version-2310} 
  (uitgebracht 2026-08-28) 
 

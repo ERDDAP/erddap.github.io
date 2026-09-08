@@ -357,9 +357,9 @@ es ist eine gute Idee, zu überprüfen, ob das Ergebnis gut gebildet XML ist, in
      
 ### Installieren Sie das Erddap. Kriegsakte{#install-the-erddapwar-file} 
 
-4. Auf Linux, Mac und Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) Ich bin in der Lage. `tomcat/webapps` :
+4. Auf Linux, Mac und Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) Ich bin in der Lage. `tomcat/webapps` :
 
-__ 2.3Version1.0, 719,567,541 Bytes, MD5=DB0AFDE1F441CA9262CB66291A1110D7, datiert 2026-08-28__
+__ 2.3Version1.1, 719.561,982 Bytes, MD5=2F6D2B2992B3233CB918B80629A09853, datiert 2026-09-03___
 
 Die .war-Datei ist groß, weil sie hochauflösende Küste, Grenze und Höhendaten enthält, die benötigt werden, um Karten zu erstellen.
 

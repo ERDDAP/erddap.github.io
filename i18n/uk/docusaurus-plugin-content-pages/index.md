@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## Новини ERDDAP™ версія{#latest-erddap-version} 
 
-2.31.0 див. у [документація](/changes#version-2310) і [скачати](https://github.com/ERDDAP/erddap/releases/tag/v2.31.0) й
+2.31.1, див. [документація](/changes#version-2311) і [скачати](https://github.com/ERDDAP/erddap/releases/tag/v2.31.1) й
 
 ##  ERDDAP™ Інформація{#erddap-information} 
 

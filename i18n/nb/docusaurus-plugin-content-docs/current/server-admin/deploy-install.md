@@ -357,9 +357,9 @@ det er en god ide å bekrefte at resultatet er velformet XML ved å lime XML-tek
      
 ### Installer erddap. krigsfil{#install-the-erddapwar-file} 
 
-4. På Linux, Mac og Windows _ Last ned [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) _inn i `tomcat/webapps` :)
+4. På Linux, Mac og Windows _ Last ned [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) _inn i `tomcat/webapps` :)
 
-__Versjon 2.31.0, 719.567.541 bytes, MD(2005)DB0AFDE1F441CA9262CB66291A1110D7, datert 2026-08-28_
+_ _Versjon 2.3.1, 719.561.982 bytes, MD(2005)2F6D2B2992B3233CB918B80629A09853, dateret 2026-09-03_
 
 .war-filen er stor fordi den inneholder høy oppløsning kystlinje, grenser og høydedata som trengs for å opprette kart.
 

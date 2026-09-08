@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 यहाँ प्रत्येक के साथ जुड़े परिवर्तन हैं ERDDAP™ रिलीज
 
+## संस्करण 2.31.1{#version-2311} 
+ (2026-09-03 जारी) 
+
+*    **परिवर्तन** 
+      * फिक्स [EDDTableFromMultidimNcFiles quarantine स्वस्थ स्रोत फ़ाइलों](https://github.com/ERDDAP/erddap/issues/556) । बुरा (या misbehaving) प्रश्नों को अब अच्छी फाइलों को क्वांटिन किया जाना चाहिए।
+
 ## संस्करण 2.31.0{#version-2310} 
  (2026-08-28 जारी) 
 

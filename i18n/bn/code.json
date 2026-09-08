@@ -106,10 +106,6 @@
     "message": "এই পৃষ্ঠা সম্পাদন করুন",
     "description": "The link label to edit the current page"
   },
-  "theme.common.headingLinkTitle": {
-    "message": "সরাসরি সংযোগ{heading}",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": "এর উপর{date}",
     "description": "The words used to describe on which date a page has been last updated"
@@ -122,13 +118,17 @@
     "message": "সর্বশেষ আপডেট{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "সংস্করণ",
-    "description": "The label for the navbar versions dropdown on mobile view"
+  "theme.common.headingLinkTitle": {
+    "message": "সরাসরি সংযোগ{heading}",
+    "description": "Title for link to heading"
   },
   "theme.NotFound.title": {
     "message": "পৃষ্ঠা পাওয়া যায়নি",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "সংস্করণ",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "ট্যাগ:",
@@ -158,10 +158,6 @@
     "message": "সতর্কতা",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "বন্ধ",
-    "description": "The ARIA label for close button of announcement bar"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "সম্প্রতি ব্যবহৃত ব্লগ",
     "description": "The ARIA label for recent posts in the blog sidebar"
@@ -173,10 +169,6 @@
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
     "message": "স্থানীয় হোস্ট-নেম সম্পাদনা 'আ'{label}'আ'",
     "description": "The ARIA label to collapse the sidebar category"
-  },
-  "theme.IconExternalLink.ariaLabel": {
-    "message": "(নতুন ট্যাবের মধ্যে খোলা হবে)",
-    "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
     "message": "প্রধান",
@@ -193,6 +185,14 @@
   "theme.NotFound.p2": {
     "message": "অনুগ্রহ করে মূল URL-এর সাথে যুক্ত পরিচিতি-এর মালিকের সাথে যোগাযোগ করুন এবং তাদের লিংক ভাঙ্গা হয়েছে।",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "প্রধান",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "ভাষা",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "এই ওয়েবপেজটি",
@@ -230,10 +230,6 @@
     "message": "হোম পেজ",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "সাইডবার",
-    "description": "The ARIA label for the sidebar navigation"
-  },
   "theme.docs.sidebar.collapseButtonTitle": {
     "message": "স্থানীয় অ্যাড্রেস বই",
     "description": "The title attribute for collapse button of doc sidebar"
@@ -241,6 +237,10 @@
   "theme.docs.sidebar.collapseButtonAriaLabel": {
     "message": "স্থানীয় অ্যাড্রেস বই",
     "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "সাইডবার",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "ন্যাভিগেশন বার বন্ধ করো",
@@ -254,6 +254,10 @@
     "message": "ন্যাভিগেশন বার",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "সম্প্রতি ব্যবহৃত ব্লগ",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "ড্রপ-ডাউন প্রসারিত করুন",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -261,6 +265,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "ড্রপ-ডাউন নিষ্ক্রিয় করা হবে",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "স্থানীয় অ্যাড্রেস বই",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "স্থানীয় অ্যাড্রেস বই",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "সাইড-বার প্রসারণ",
@@ -270,21 +282,9 @@
     "message": "সাইড-বার প্রসারণ",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.SearchBar.noResultsText": {
-    "message": "কোনো ফলাফল প্রাপ্ত হয়নি"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "সব ফলাফল বাইরে দেখুন।{context}ডিস্‌প্লে"
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "এর মধ্যে সব ফলাফল দেখতে পাবেন।{context}ডিস্‌প্লে"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "সকল ফলাফল প্রদর্শন"
-  },
-  "theme.SearchBar.label": {
-    "message": "অনুসন্ধান",
-    "description": "The ARIA label and placeholder for search button"
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "সাইডবার",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "অনুসন্ধানের ফলাফল{query}ডিস্‌প্লে",
@@ -304,6 +304,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "কোনো ডকুমেন্ট পাওয়া যায়নি",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "কোনো ফলাফল প্রাপ্ত হয়নি"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "সব ফলাফল বাইরে দেখুন।{context}ডিস্‌প্লে"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "এর মধ্যে সব ফলাফল দেখতে পাবেন।{context}ডিস্‌প্লে"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "সকল ফলাফল প্রদর্শন"
+  },
+  "theme.SearchBar.label": {
+    "message": "অনুসন্ধান",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "এক পোস্ট|{count}পোস্ট",

@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 Hier sind die Änderungen, die jeder ERDDAP™ Veröffentlichung.
 
+## Artikel 2.31.1{#version-2311} 
+ (veröffentlicht 2026-09-03) 
+
+*    **Änderungen** 
+      * Fehler [EDDTableFromMultidimNcFiles quarantines gesunde Quelldateien](https://github.com/ERDDAP/erddap/issues/556) . Schlecht (oder Fehlverhalten) Anfragen sollten nicht mehr dazu führen, dass gute Dateien quarantiniert werden.
+
 ## Version 2.31.0{#version-2310} 
  (veröffentlicht 2026-08-28) 
 

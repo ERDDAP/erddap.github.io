@@ -106,10 +106,6 @@
     "message": "Edytuj tę stronę",
     "description": "The link label to edit the current page"
   },
-  "theme.common.headingLinkTitle": {
-    "message": "Bezpośredni link do{heading}",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": "dnia{date}",
     "description": "The words used to describe on which date a page has been last updated"
@@ -122,13 +118,17 @@
     "message": "Ostatnia aktualizacja{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Wersje",
-    "description": "The label for the navbar versions dropdown on mobile view"
+  "theme.common.headingLinkTitle": {
+    "message": "Bezpośredni link do{heading}",
+    "description": "Title for link to heading"
   },
   "theme.NotFound.title": {
     "message": "Strona nie znaleziono",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Wersje",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "Tags:",
@@ -158,14 +158,6 @@
     "message": "ostrzeżenie",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Zamknij",
-    "description": "The ARIA label for close button of announcement bar"
-  },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "Blog niedawne posty nawigacji",
-    "description": "The ARIA label for recent posts in the blog sidebar"
-  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Rozszerz pasek boczny '{label}'",
     "description": "The ARIA label to expand the sidebar category"
@@ -178,14 +170,6 @@
     "message": "(otwiera się w nowej zakładce)",
     "description": "The ARIA label for the external link icon"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "Główne",
-    "description": "The ARIA label for the main navigation"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Języki",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "Nie mogliśmy znaleźć tego, czego szukaliście.",
     "description": "The first paragraph of the 404 page"
@@ -193,6 +177,14 @@
   "theme.NotFound.p2": {
     "message": "Proszę skontaktować się z właścicielem strony, która powiązała Cię z oryginalnym adresem URL i dać im znać, że ich link jest zepsuty.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Główne",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Języki",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Na tej stronie",
@@ -230,18 +222,6 @@
     "message": "Strona główna",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "Pasek boczny dokumentów",
-    "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Zwiń pasek boczny",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Zwiń pasek boczny",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "Zamknij pasek nawigacyjny",
     "description": "The ARIA label for close button of mobile sidebar"
@@ -254,6 +234,10 @@
     "message": "Przełączanie paska nawigacyjnego",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Blog niedawne posty nawigacji",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "Rozwiń upadek",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -261,6 +245,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Zwiń upadek",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Zwiń pasek boczny",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Zwiń pasek boczny",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Rozszerz pasek boczny",
@@ -270,21 +262,9 @@
     "message": "Rozszerz pasek boczny",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.SearchBar.noResultsText": {
-    "message": "Brak wyników"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Zobacz wszystkie wyniki na zewnątrz\\ \"{context}\\ \""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Zobacz wszystkie wyniki w\\ \"{context}\\ \""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Zobacz wszystkie wyniki"
-  },
-  "theme.SearchBar.label": {
-    "message": "Szukaj",
-    "description": "The ARIA label and placeholder for search button"
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Pasek boczny dokumentów",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Wyniki wyszukiwania dla\\ \"{query}\\ \"",
@@ -304,6 +284,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "Nie znaleziono żadnych dokumentów",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Brak wyników"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Zobacz wszystkie wyniki na zewnątrz\\ \"{context}\\ \""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Zobacz wszystkie wyniki w\\ \"{context}\\ \""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Zobacz wszystkie wyniki"
+  },
+  "theme.SearchBar.label": {
+    "message": "Szukaj",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "Jeden post|{count}stanowiska",

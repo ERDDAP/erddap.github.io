@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 以下是与每个 ERDDAP™ 释放
 
+## 第2.31.1版 翻译:{#version-2311} 
+ (释放 2026-09-03) 
+
+*    **变动** 
+      * 修补 [来自多维度NcFiles隔离的EDDTable 健康源文件](https://github.com/ERDDAP/erddap/issues/556) 。 。 。 。 差劲 (或行为不当) 查询不应再造成好档案隔离.
+
 ## 版本2.31.0{#version-2310} 
  (2026-08-28年发布) 
 

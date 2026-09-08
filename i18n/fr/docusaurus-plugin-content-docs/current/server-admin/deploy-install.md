@@ -357,9 +357,9 @@ c'est une bonne idée de vérifier que le résultat est bien formé XML en colla
      
 ### Installez l'erddap. fichier de guerre{#install-the-erddapwar-file} 
 
-4. Sous Linux, Mac et Windows, _télécharger [Guerre](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) _dans `tomcat/webapps` :
+4. Sous Linux, Mac et Windows, _télécharger [Guerre](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) _dans `tomcat/webapps` :
 
-__Version 2.31.0, 719567,541 octets, MD5=DB0AFDE1F441CA9262CB66291A1110D7, datée 2026-08-28__
+__Version 2.31.1, 719561,982 octets, MD5=2F6D2B2992B3233CB918B80629A09853, datée 2026-09-03__
 
 Le fichier .war est grand parce qu'il contient des données de littoral, de limite et d'altitude à haute résolution nécessaires pour créer des cartes.
 

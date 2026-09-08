@@ -11,8 +11,8 @@ sidebar_position: 2
 2. 如果你正在升级 从 ERDDAP™ 2.18或以下版本,需要切换到 Java 第25条 (或更新) 和相关的Tomcat 10. 见常规 ERDDAP™ 安装指令 [ Java ](/docs/server-admin/deploy-install#java) 和 [汤姆猫](/docs/server-admin/deploy-install#tomcat) 。 。 。 你也得复制你的书 _tomcat_/content/erddap 从旧的Tomcat安装到新的Tomcat安装的目录。
 
 ## 下载{#download} 
-3. 下载 [战争](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) 输入 _tomcat_/webapps 。
-     (2.31.0,719,567,541字节,MD5=DB0AFDE1F441CA9262CB66291A1110D7,日期2026-08-28) 
+3. 下载 [战争](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) 输入 _tomcat_/webapps 。
+     (2.31.1,719,561,982字节,MD5=2F6D2B2992B3233CB918B80629A09853,日期2026-09-03) 
      
 ## 信件. xml{#messagesxml} 
 4. 

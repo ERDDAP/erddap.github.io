@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## Mais recentes ERDDAP™ versão{#latest-erddap-version} 
 
-2.31.0, veja o [muda a documentação](/changes#version-2310) e [Faça o download](https://github.com/ERDDAP/erddap/releases/tag/v2.31.0) .
+2.31.1, ver o [muda a documentação](/changes#version-2311) e [Faça o download](https://github.com/ERDDAP/erddap/releases/tag/v2.31.1) .
 
 ##  ERDDAP™ informação{#erddap-information} 
 

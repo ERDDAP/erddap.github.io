@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 각각의 변화는 다음과 같습니다. ERDDAP™ 다운로드
 
+## 버전 2.31.1{#version-2311} 
+ (출시 2026-09-03) 
+
+*    **기타** 
+      * 수정하기 [EDDTableFromMultidimNcFiles quarantines 건강한 근원 파일](https://github.com/ERDDAP/erddap/issues/556) · 이름 * (또는 잘못) 쿼리는 더 이상 quarantined 할 수있는 좋은 파일을 발생하지 않아야합니다.
+
 ## 버전 2.31.0{#version-2310} 
  (출시 2026-08-28) 
 

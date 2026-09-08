@@ -357,9 +357,9 @@ es una buena idea verificar que el resultado es XML bien formado al pegar el tex
      
 ### Instala el erddap. archivo de guerra{#install-the-erddapwar-file} 
 
-4. En Linux, Mac y Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) Adentro. `tomcat/webapps` :
+4. En Linux, Mac y Windows, __download [Erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) Adentro. `tomcat/webapps` :
 
-__Version 2.31.0, 719.567.541 bytes, MD5=DB0AFDE1F441CA9262CB66291A1110D7, fechada 2026-08-28__
+__Version 2.31.1, 719,561,982 bytes, MD5=2F6D2B2992B3233CB918B80629A09853, fechada 2026-09-03_
 
 El archivo .war es grande porque contiene datos de alta resolución de costa, frontera y elevación necesarios para crear mapas.
 

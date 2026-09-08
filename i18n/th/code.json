@@ -106,10 +106,6 @@
     "message": "แก้ไขหน้านี้",
     "description": "The link label to edit the current page"
   },
-  "theme.common.headingLinkTitle": {
-    "message": "เชื่อมโยงโดยตรงไปยัง{heading}",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": "บน{date}",
     "description": "The words used to describe on which date a page has been last updated"
@@ -122,13 +118,17 @@
     "message": "ปรับปรุงล่าสุด{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "รุ่น",
-    "description": "The label for the navbar versions dropdown on mobile view"
+  "theme.common.headingLinkTitle": {
+    "message": "เชื่อมโยงโดยตรงไปยัง{heading}",
+    "description": "Title for link to heading"
   },
   "theme.NotFound.title": {
     "message": "ไม่พบหน้า",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "รุ่น",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "ป้ายกํากับ:",
@@ -158,14 +158,6 @@
     "message": "คําเตือน",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "ปิด",
-    "description": "The ARIA label for close button of announcement bar"
-  },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "การนําทางโพสต์ล่าสุดของบล็อก",
-    "description": "The ARIA label for recent posts in the blog sidebar"
-  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "ขยายหมวดหมู่แถบด้านข้าง '{label}'",
     "description": "The ARIA label to expand the sidebar category"
@@ -178,14 +170,6 @@
     "message": "(เปิดในแท็บใหม่)",
     "description": "The ARIA label for the external link icon"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "หลัก",
-    "description": "The ARIA label for the main navigation"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "ภาษา",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "เราไม่พบสิ่งที่คุณกําลังมองหา",
     "description": "The first paragraph of the 404 page"
@@ -193,6 +177,14 @@
   "theme.NotFound.p2": {
     "message": "โปรดติดต่อเจ้าของเว็บไซต์ที่เชื่อมโยงคุณไปยังที่อยู่ URL เดิม และให้พวกเขาทราบว่าลิงก์ของพวกเขาเสียหาย",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "หลัก",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "ภาษา",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "ในหน้านี้",
@@ -230,18 +222,6 @@
     "message": "หน้าหลัก",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "ช่องด้านข้าง",
-    "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "แถบด้านข้าง",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "แถบด้านข้าง",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "ปิดแถบนําทาง",
     "description": "The ARIA label for close button of mobile sidebar"
@@ -254,6 +234,10 @@
     "message": "เปิด/ ปิดแถบนําทาง",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "การนําทางโพสต์ล่าสุดของบล็อก",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "ขยายการวางลง",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -261,6 +245,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "ย่อเก็บลง",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "แถบด้านข้าง",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "แถบด้านข้าง",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "ขยายแถบด้านข้าง",
@@ -270,21 +262,9 @@
     "message": "ขยายแถบด้านข้าง",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.SearchBar.noResultsText": {
-    "message": "ไม่มีผล"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "ดูผลทั้งหมดข้างนอก\"{context}-\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "ดูผลลัพธ์ทั้งหมดภายใน /\"{context}-\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "ดูผลทั้งหมด"
-  },
-  "theme.SearchBar.label": {
-    "message": "ค้นหา",
-    "description": "The ARIA label and placeholder for search button"
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "ช่องด้านข้าง",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "สืบค้นผลสําหรับ /\"{query}-\"",
@@ -304,6 +284,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "ไม่พบเอกสารใด ๆ",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "ไม่มีผล"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "ดูผลทั้งหมดข้างนอก\"{context}-\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "ดูผลลัพธ์ทั้งหมดภายใน /\"{context}-\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "ดูผลทั้งหมด"
+  },
+  "theme.SearchBar.label": {
+    "message": "ค้นหา",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "หนึ่งตําแหน่ง|{count}เสา",

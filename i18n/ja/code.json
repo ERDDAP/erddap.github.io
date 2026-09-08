@@ -106,10 +106,6 @@
     "message": "このページの編集",
     "description": "The link label to edit the current page"
   },
-  "theme.common.headingLinkTitle": {
-    "message": "直接リンク{heading}",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": "お問い合わせ{date}",
     "description": "The words used to describe on which date a page has been last updated"
@@ -122,13 +118,17 @@
     "message": "更新履歴{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "バージョン",
-    "description": "The label for the navbar versions dropdown on mobile view"
+  "theme.common.headingLinkTitle": {
+    "message": "直接リンク{heading}",
+    "description": "Title for link to heading"
   },
   "theme.NotFound.title": {
     "message": "ページが見つかりません",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "バージョン",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "タグ:",
@@ -158,14 +158,6 @@
     "message": "警告",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "ふりがな",
-    "description": "The ARIA label for close button of announcement bar"
-  },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "最近の投稿ナビゲーション",
-    "description": "The ARIA label for recent posts in the blog sidebar"
-  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "サイドバーカテゴリの拡大 お問い合わせ{label}お問い合わせ",
     "description": "The ARIA label to expand the sidebar category"
@@ -178,14 +170,6 @@
     "message": "(新しいタブで開きます)",
     "description": "The ARIA label for the external link icon"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "メインページ",
-    "description": "The ARIA label for the main navigation"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "語学学校",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "探していたものが見つかりませんでした。",
     "description": "The first paragraph of the 404 page"
@@ -193,6 +177,14 @@
   "theme.NotFound.p2": {
     "message": "元のURLにリンクしたサイトの所有者に連絡し、リンクが壊れていることを知らせてください。",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "メインページ",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "語学学校",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "サイトマップ",
@@ -230,18 +222,6 @@
     "message": "サイトマップ",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs サイドバー",
-    "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "崩壊のサイドバー",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "崩壊のサイドバー",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "ナビゲーションバー",
     "description": "The ARIA label for close button of mobile sidebar"
@@ -254,6 +234,10 @@
     "message": "トグルナビゲーションバー",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "最近の投稿ナビゲーション",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "ドロップダウンを拡大",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -261,6 +245,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "ドロップダウンを崩壊させる",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "崩壊のサイドバー",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "崩壊のサイドバー",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "サイドバーを拡張",
@@ -270,21 +262,9 @@
     "message": "サイドバーを拡張",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.SearchBar.noResultsText": {
-    "message": "結果なし"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "外部の全ての結果を見る \"{context}お問い合わせ"
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "\"内のすべての結果を参照してください。{context}お問い合わせ"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "すべての結果を見る"
-  },
-  "theme.SearchBar.label": {
-    "message": "インフォメーション",
-    "description": "The ARIA label and placeholder for search button"
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs サイドバー",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "\"の検索結果{query}お問い合わせ",
@@ -304,6 +284,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "文書が見つかりませんでした",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "結果なし"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "外部の全ての結果を見る \"{context}お問い合わせ"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "\"内のすべての結果を参照してください。{context}お問い合わせ"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "すべての結果を見る"
+  },
+  "theme.SearchBar.label": {
+    "message": "インフォメーション",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "1つの投稿|{count}ニュース",

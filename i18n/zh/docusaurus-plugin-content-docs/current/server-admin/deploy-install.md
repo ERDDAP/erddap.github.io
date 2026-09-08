@@ -357,9 +357,9 @@ sidebar_position: 1
      
 ### 安装 erddap 。 战争文件{#install-the-erddapwar-file} 
 
-4. 在 Linux, Mac 和 Windows 上, 下载 [战争](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) 改为 `Tomcat/网络应用程序` 数字 :
+4. 在 Linux, Mac 和 Windows 上, 下载 [战争](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) 改为 `Tomcat/网络应用程序` 数字 :
 
-— Version 2. 31.0, 719, 567, 541字节, MD5=DB0AFDE1F441 CA9262CB66291A1110D7, 日期 2026-08-28___ (英语).
+− Version 2.31.1, 719, 561,982字节, MD5=2F6D2B2992B3233B918B80629A09853, 日期 2026-09-03__(简体中文).
 
 .war文件很大,因为它包含了高分辨率的海岸线,边界,以及创建地图所需的海拔数据.
 

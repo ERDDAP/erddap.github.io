@@ -357,9 +357,9 @@ MD5=98a8099e7e674da59fe35e9c96efa7b5,
      
 ### 安裝 erddap 。 戰爭檔案{#install-the-erddapwar-file} 
 
-4. 在 Linux 、 Mac 和 Windows 上, 下載 [戰爭](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) 切入 ` tomcat/ webapps 中` :
+4. 在 Linux 、 Mac 和 Windows 上, 下載 [戰爭](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) 切入 ` tomcat/ webapps 中` :
 
-− Version 2. 31.0, 719, 567, 541 字節, MD5 = DB0AFDE1F441 CA9262CB66291A1110D7, 日期 2026-08-28__
+— Version 2.31.1, 719, 561, 982 字節, MD5=2F6D2B2992B3233CB918B80629A09853, 日期 2026-09-03__
 
 . war 檔案很大, 因為它包含高分辨率的海岸线、 邊界、 以及建立地圖所需的海拔資料 。
 

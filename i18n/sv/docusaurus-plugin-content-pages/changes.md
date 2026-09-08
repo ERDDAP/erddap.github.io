@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 Här är förändringarna i samband med varje ERDDAP™ release.
 
+## Version 2.31.1{#version-2311} 
+ (släppt 2026-09-03) 
+
+*    **Förändringar** 
+      * Fix [EDDTableFromMultidimNcFiles karantän friska källfiler](https://github.com/ERDDAP/erddap/issues/556) . Dåligt (eller misbehaving) Förfrågningar bör inte längre orsaka att bra filer karantän.
+
 ## Version 2.31.0{#version-2310} 
  (släppt 2026-08-28) 
 

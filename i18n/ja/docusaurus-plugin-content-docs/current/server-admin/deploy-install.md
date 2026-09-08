@@ -357,9 +357,9 @@ bigParentDirectory の親ディレクトリから bigParentDirectory を作成�
      
 ### erddap をインストールします。 戦争ファイル{#install-the-erddapwar-file} 
 
-4. Linux、Mac、Windows、_ダウンロード [erddap.warの](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) __ に `tomcat/webappsの使い方` : : :
+4. Linux、Mac、Windows、_ダウンロード [erddap.warの](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) __ に `tomcat/webappsの使い方` : : :
 
-__Version 2.31.0、719,567,541バイト、MD5=DB0AFDE1F441CA9262CB66291A1110D7、日付 2018年8月28日
+__バージョン2.31.1、719,561,982バイト、MD5=2F6D2B2992B3233CB918B80629A09853、日付 2026-09-03___ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 .war ファイルは高解像度の海岸線、境界線、および関連するデータがマップを作成する必要があるため大きいです。
 

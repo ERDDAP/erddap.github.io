@@ -106,10 +106,6 @@
     "message": "Edit halaman ini",
     "description": "The link label to edit the current page"
   },
-  "theme.common.headingLinkTitle": {
-    "message": "Tautan langsung ke{heading}",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": "Sitemap{date}",
     "description": "The words used to describe on which date a page has been last updated"
@@ -122,13 +118,17 @@
     "message": "Terakhir diperbarui{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Sitemap",
-    "description": "The label for the navbar versions dropdown on mobile view"
+  "theme.common.headingLinkTitle": {
+    "message": "Tautan langsung ke{heading}",
+    "description": "Title for link to heading"
   },
   "theme.NotFound.title": {
     "message": "Sitemap",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Sitemap",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "Sitemap",
@@ -158,14 +158,6 @@
     "message": "Login",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Sitemap",
-    "description": "The ARIA label for close button of announcement bar"
-  },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "WordPress.org",
-    "description": "The ARIA label for recent posts in the blog sidebar"
-  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Memperluas kategori sidebar Sitemap{label}Sitemap",
     "description": "The ARIA label to expand the sidebar category"
@@ -178,14 +170,6 @@
     "message": "(terbuka di tab baru)",
     "description": "The ARIA label for the external link icon"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "Login",
-    "description": "The ARIA label for the main navigation"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Login",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "Kita tidak bisa menemukan apa yang Anda cari.",
     "description": "The first paragraph of the 404 page"
@@ -193,6 +177,14 @@
   "theme.NotFound.p2": {
     "message": "Silakan hubungi pemilik situs yang menghubungkan Anda ke URL asli dan beri tahu tautan mereka rusak.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Login",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Login",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Di halaman ini",
@@ -230,18 +222,6 @@
     "message": "Login",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "Login",
-    "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Login",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Login",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "Bar navigasi dekat",
     "description": "The ARIA label for close button of mobile sidebar"
@@ -254,6 +234,10 @@
     "message": "Login",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "WordPress.org",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "Memperluas dropdown",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -261,6 +245,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Kocok dropdown",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Login",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Login",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Login",
@@ -270,21 +262,9 @@
     "message": "Login",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.SearchBar.noResultsText": {
-    "message": "Sitemap"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Lihat semua hasil di luar \"{context}Sitemap"
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Lihat semua hasil dalam \"{context}Sitemap"
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Lihat semua hasil"
-  },
-  "theme.SearchBar.label": {
+  "theme.docs.sidebar.navAriaLabel": {
     "message": "Login",
-    "description": "The ARIA label and placeholder for search button"
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Cari hasil untuk \"{query}Sitemap",
@@ -304,6 +284,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "Tidak ada dokumen yang ditemukan",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Sitemap"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Lihat semua hasil di luar \"{context}Sitemap"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Lihat semua hasil dalam \"{context}Sitemap"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Lihat semua hasil"
+  },
+  "theme.SearchBar.label": {
+    "message": "Login",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "Satu posting|{count}Login",

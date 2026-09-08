@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 Aici sunt modificările asociate cu fiecare ERDDAP™ Eliberare.
 
+## Versiunea 231.1{#version-2311} 
+ (eliberat 2026-09-03) 
+
+*    **Modificări** 
+      * Fixează [Tabel EDD Din MultidimNcFiles carantină fişiere sursă sănătoasă](https://github.com/ERDDAP/erddap/issues/556) . Rău (sau să se poarte urât) Întrebările nu ar trebui să mai provoace carantina unor dosare bune.
+
 ## Versiunea 2.11.0{#version-2310} 
  (eliberat 2026-08-28) 
 

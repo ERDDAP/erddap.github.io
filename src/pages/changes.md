@@ -7,6 +7,12 @@ ERDDAP™ is a great example of [User-Driven Innovation](https://en.wikipedia.or
 
 Here are the changes associated with each ERDDAP™ release.
 
+## Version 2.31.1 {#version-2311}
+(released 2026-09-03)
+
+*   **Changes**
+      * Fix [EDDTableFromMultidimNcFiles quarantines healthy source files](https://github.com/ERDDAP/erddap/issues/556). Bad (or misbehaving) queries should no longer cause good files to be quarantined.
+
 ## Version 2.31.0 {#version-2310}
 (released 2026-08-28)
 

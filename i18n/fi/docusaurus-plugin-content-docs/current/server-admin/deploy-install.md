@@ -357,9 +357,9 @@ On hyvä tarkistaa, että tulos on hyvin muotoiltu XML liittämällä XML-teksti
      
 ### Asenna erddap. War tiedostot{#install-the-erddapwar-file} 
 
-4. Linux, Mac ja Windows, _download [Erddap.sota](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) Sisään `Tomcat/webapps` :
+4. Linux, Mac ja Windows, _download [Erddap.sota](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) Sisään `Tomcat/webapps` :
 
-__Version 2.31.0, 719 567 541 tavua, MD5=DB0AFDE1F441CA9262CB66291A1110D7, päivätty 2026-08-28
+__Version 2.31.1, 719.561,982 tavua, MD5=2F6D2B293233CB918B80629A09853, päivätty 2026-09-03
 
 .war-tiedosto on suuri, koska se sisältää korkean resoluution rantaviivaa, rajoja ja korkeustietoja, joita tarvitaan karttojen luomiseen.
 

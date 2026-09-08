@@ -357,9 +357,9 @@ _Version 1.0.1, 20683 Bagh, MD5=988099e7e74da59fe35ec96e96efa7b5, اخذ شدہ 
      
 ### ایوارڈ انسٹال کریں. جنگ فائل{#install-the-erddapwar-file} 
 
-4. لینکس، میک اور ونڈوز پر _ ڈاؤن لوڈ [ایوارڈ.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) عمل میں `حرارت/webapps` :
+4. لینکس، میک اور ونڈوز پر _ ڈاؤن لوڈ [ایوارڈ.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) عمل میں `حرارت/webapps` :
 
-_Version 2,31.0, 719,567,541 Bagh, MD5=D0AFDE1F441CA9262CB66291A1110D7, اخذ شدہ بتاریخ: 2026-08-28__ڈپہ-
+_Version 2,31.1, 719,561,982 Bagh, MD5=2F6D2B2992B3233CB918B80629A09853, اخذ شدہ بتاریخ: 2026-09-03__
 
 .war فائل بہت بڑی ہے کیونکہ اس میں نقشہ سازی کے لیے اعلیٰ حلول ساحل، سرحد اور اوپری ڈیٹا کی ضرورت ہوتی ہے۔
 

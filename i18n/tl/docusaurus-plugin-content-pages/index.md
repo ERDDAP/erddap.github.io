@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## Pinakahuli ERDDAP™ bersyon{#latest-erddap-version} 
 
-2.31.0, tingnan ang [Pagbabago ng dokumentasyon](/changes#version-2310) at [download ito](https://github.com/ERDDAP/erddap/releases/tag/v2.31.0) .
+2.31.1, tingnan ang [Pagbabago ng dokumentasyon](/changes#version-2311) at [download ito](https://github.com/ERDDAP/erddap/releases/tag/v2.31.1) .
 
 ##  ERDDAP™ impormasyon{#erddap-information} 
 

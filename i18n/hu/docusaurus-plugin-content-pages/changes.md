@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 Íme a változások, amelyek mindegyikhez kapcsolódnak ERDDAP™ kiadás.
 
+## Verzió 2.31.1{#version-2311} 
+ (2026-09-03) 
+
+*    **változások** 
+      * Fix [EDDTableFromMultidimNcFiles karanténok egészséges forrásfájlok](https://github.com/ERDDAP/erddap/issues/556) ... Bad (vagy félretéve) A lekérdezéseknek többé nem okozhatnak jó fájlokat karanténnak.
+
 ## Verzió 2.31.0{#version-2310} 
  (megjelent 2026-08-28) 
 

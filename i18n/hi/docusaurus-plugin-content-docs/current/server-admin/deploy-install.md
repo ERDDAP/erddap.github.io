@@ -357,9 +357,9 @@ unzip `erddapContent .zip ` वांछित निर्देशिका �
      
 ### erddap स्थापित करें। युद्ध{#install-the-erddapwar-file} 
 
-4. लिनक्स, मैक और विंडोज पर, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) __ in `Tomcat/webapps` :
+4. लिनक्स, मैक और विंडोज पर, __download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) __ in `Tomcat/webapps` :
 
-__Version 2.31.0, 719,567,541 बाइट्स, MD5=DB0AFDE1F441CA9262CB66291A1110D7, दिनांकित 2026-08-28__
+__Version 2.31.1, 719,561,982 बाइट्स, MD5=2F6D2B2992B3233CB918B80629A09853, दिनांकित 2026-09-03__
 
 .war फ़ाइल बड़ा है क्योंकि इसमें मानचित्र बनाने के लिए उच्च रिज़ॉल्यूशन तटरेखा, सीमा और ऊंचाई डेटा की आवश्यकता होती है।
 

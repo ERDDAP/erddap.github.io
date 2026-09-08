@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 İşte her biri ile ilişkili değişiklikler ERDDAP™ salıver.
 
+## Version 2.31.11.1{#version-2311} 
+ (2026-09-03 yayınlandı) 
+
+*    **Değişiklikler Değişiklikler Değişiklikler** 
+      * Fix [EDDTable FromMultidimNcFiles quarantines sağlıklı kaynak dosyaları](https://github.com/ERDDAP/erddap/issues/556) . Kötü Kötü Kötü (veya yanlış davranma) sorgular artık iyi dosyaların karantinaya alınmasına neden olmamalıdır.
+
 ## Version 2.31.01.0{#version-2310} 
  (2026-08-28) 
 

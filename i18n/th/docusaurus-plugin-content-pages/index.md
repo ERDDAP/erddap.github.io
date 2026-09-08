@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## รุ่นล่าสุด ERDDAP™ รุ่น{#latest-erddap-version} 
 
-2.31.0 ดู [เปลี่ยนเอกสาร](/changes#version-2310) ถึง [ดาวน์โหลดมัน](https://github.com/ERDDAP/erddap/releases/tag/v2.31.0) .
+2.31.1, ดู [เปลี่ยนเอกสาร](/changes#version-2311) ถึง [ดาวน์โหลดมัน](https://github.com/ERDDAP/erddap/releases/tag/v2.31.1) .
 
 ##  ERDDAP™ ข้อมูล{#erddap-information} 
 

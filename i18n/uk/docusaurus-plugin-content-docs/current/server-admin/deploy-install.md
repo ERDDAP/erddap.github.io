@@ -357,9 +357,9 @@ __Version 1.0.1, 20683 байтів, MD5=98a8099e7e674da59fe35e9c96efa7b5, ві�
      
 ### Встановіть ерддап. War файл{#install-the-erddapwar-file} 
 
-4. На Linux, Mac та Windows, __download [ерддап.воєнний](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) __ в `веб-камери` :
+4. На Linux, Mac та Windows, __download [ерддап.воєнний](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) __ в `веб-камери` :
 
-__Version 2.31.0, 719,567,541 байтів, MD5=DB0AFDE1F441CA9262CB66291A1110D7 від 2026-08-28__
+__Version 2.31.1, 719,561,982 байтів, MD5=2F6D2B2992B3233CB918B80629A09853, від 2026-09-03__
 
 .war файл є великим, тому що він містить берегову лінію високої роздільної здатності, граничні та дані висоти, необхідні для створення карт.
 

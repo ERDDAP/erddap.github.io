@@ -357,9 +357,9 @@ XML 텍스트를 XML 검수원과 같은 XML 검수원에 붙여진 결과가 �
      
 ### erddap 설치. 전쟁 파일{#install-the-erddapwar-file} 
 
-4. 리눅스, Mac 및 Windows에서, __download [다운로드](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) __ 로그인 `tomcat/웹앱` ::
+4. 리눅스, Mac 및 Windows에서, __download [다운로드](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) __ 로그인 `tomcat/웹앱` ::
 
-__Version 2.31.0, 719,567,541 바이트, MD5=DB0AFDE1F441CA9262CB66291A1110D7, dated 2026-08-28__에
+__Version 2.31.1, 719,561,982 바이트, MD5=2F6D2B2992B3233CB918B80629A09853, dated 2026-09-03__ ·
 
 .war 파일은 고해상도 해안선, 경계선 및 지도를 생성하는 데 필요한 고도 데이터가 포함되어 있기 때문에 큰 파일입니다.
 

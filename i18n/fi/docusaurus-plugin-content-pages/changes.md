@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 Tässä ovat muutokset, jotka liittyvät jokaiseen ERDDAP™ Vapautuminen.
 
+## Versio 2.31.1{#version-2311} 
+ (2026-09-03) 
+
+*    **Muutoksia** 
+      * Korjaus [EDDTableFromMultidimNcFiles karanteeni terveellisiä lähdetiedostoja](https://github.com/ERDDAP/erddap/issues/556) . Bad (tai väärinkäytöstä) Kyselyt eivät saa enää aiheuttaa hyviä tiedostoja karanteeniin.
+
 ## Versio 2.31.0{#version-2310} 
  (Lähde: 2026-08-28) 
 

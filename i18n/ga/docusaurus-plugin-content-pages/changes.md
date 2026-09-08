@@ -7,6 +7,12 @@ title: "ERDDAP™ - Changes"
 
 Seo iad na hathruithe a bhaineann le gach ERDDAP™ scaoileadh.
 
+## Leagan 2.31.1{#version-2311} 
+ (2026-09-03 scaoileadh) 
+
+*    **Amharc ar gach eolas** 
+      * An bhfuil a fhios agat [EDDTableFromMultidimNcFiles coraintín comhaid foinse sláintiúil](https://github.com/ERDDAP/erddap/issues/556) . taiseachas aeir: fliuch (nó mí-iompar) Ba chóir fiosruithe a thuilleadh a chur faoi deara comhaid maith a bheith coraintín.
+
 ## Leagan 2.31.0{#version-2310} 
  (scaoileadh 2026-08-28) 
 

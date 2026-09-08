@@ -3,7 +3,7 @@ title: "ERDDAP™ Documentation"
 ---
 ## Sitemap ERDDAP™ Sitemap{#latest-erddap-version} 
 
-2.31.0, lihat [perubahan dokumentasi](/changes#version-2310) Login [Unduh](https://github.com/ERDDAP/erddap/releases/tag/v2.31.0) Sitemap
+2.31.1, lihat [perubahan dokumentasi](/changes#version-2311) Login [Unduh](https://github.com/ERDDAP/erddap/releases/tag/v2.31.1) Sitemap
 
 ##  ERDDAP™ Sitemap{#erddap-information} 
 

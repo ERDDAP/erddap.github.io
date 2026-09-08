@@ -357,9 +357,9 @@ Ito ay isang mabuting ideya upang kumpirmahin na ang resulta ay maayos na XML sa
      
 ### Iluklok ang erddap. talaksang digmaan{#install-the-erddapwar-file} 
 
-4. Sa Linux, Mac, at Windows, _download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) _ ilagay `tomcat/webapps` :
+4. Sa Linux, Mac, at Windows, _download [erddap.war](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) _ ilagay `tomcat/webapps` :
 
-__Version 2.31.0, 719,567,541 bytes, MD5=DBCAFDE1F41CA9262CB6629A1110D7, na may petsang ika-11107 2026-08-28___
+__Version 2.31.1, 719,561,982 bytes, MD5=2F6D2992B3233CB918B80629A09853, na may petsang09853 2026-09-03__
 
 Ang talaksang .war ay malaki dahil ito ay naglalaman ng mataas na resolution baybayin, hangganan, at taas na mga datos na kinakailangan upang lumikha ng mga mapa.
 

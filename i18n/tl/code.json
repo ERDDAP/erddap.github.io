@@ -106,10 +106,6 @@
     "message": "Baguhin ang pahinang ito",
     "description": "The link label to edit the current page"
   },
-  "theme.common.headingLinkTitle": {
-    "message": "Tuwirang kawing sa{heading}",
-    "description": "Title for link to heading"
-  },
   "theme.lastUpdated.atDate": {
     "message": "patuloy{date}",
     "description": "The words used to describe on which date a page has been last updated"
@@ -122,13 +118,17 @@
     "message": "Huling binago{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Mga Bersiyon",
-    "description": "The label for the navbar versions dropdown on mobile view"
+  "theme.common.headingLinkTitle": {
+    "message": "Tuwirang kawing sa{heading}",
+    "description": "Title for link to heading"
   },
   "theme.NotFound.title": {
     "message": "Pahinang Hindi Nasumpungan",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Mga Bersiyon",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "Mga Tag:",
@@ -158,14 +158,6 @@
     "message": "babala",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Malapit",
-    "description": "The ARIA label for close button of announcement bar"
-  },
-  "theme.blog.sidebar.navAriaLabel": {
-    "message": "Paglalakbay ng mga poste kamakailan",
-    "description": "The ARIA label for recent posts in the blog sidebar"
-  },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Pinalawak na kategorya ng sidebar '{label}'",
     "description": "The ARIA label to expand the sidebar category"
@@ -178,14 +170,6 @@
     "message": "( Buksan sa bagong tab)",
     "description": "The ARIA label for the external link icon"
   },
-  "theme.NavBar.navAriaLabel": {
-    "message": "Pangunahin",
-    "description": "The ARIA label for the main navigation"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Wika",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "Hindi namin makita ang hinahanap mo.",
     "description": "The first paragraph of the 404 page"
@@ -193,6 +177,14 @@
   "theme.NotFound.p2": {
     "message": "Pakisuyong makipag-ugnayan sa may-ari ng site na nag-uugnay sa iyo sa orihinal na URL at ipaalam sa kanila na ang kanilang link ay sira.",
     "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Pangunahin",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Wika",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Sa pahinang ito",
@@ -230,18 +222,6 @@
     "message": "Home page",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
-  "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
-    "description": "The ARIA label for the sidebar navigation"
-  },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Patag na sidebar",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Patag na sidebar",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "Malapitang bahagi ng nabigasyon",
     "description": "The ARIA label for close button of mobile sidebar"
@@ -254,6 +234,10 @@
     "message": "Tugle sa nabigasyon",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Paglalakbay ng mga poste kamakailan",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "Palawakin ang Pagbagsak",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -261,6 +245,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Baligtarin ang Pagbagsak",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Patag na sidebar",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Patag na sidebar",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Pinalawak na bahagibar",
@@ -270,21 +262,9 @@
     "message": "Pinalawak na bahagibar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
-  "theme.SearchBar.noResultsText": {
-    "message": "Walang mga resulta"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "Tingnan ang lahat ng resulta sa labas ng \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "Tingnan ang lahat ng resulta sa loob ng \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "Tingnan ang lahat ng resulta"
-  },
-  "theme.SearchBar.label": {
-    "message": "Paghahanap",
-    "description": "The ARIA label and placeholder for search button"
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs sidebar",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Paghahanap ng mga resulta para sa \"{query}\"",
@@ -304,6 +284,22 @@
   "theme.SearchPage.noResultsText": {
     "message": "Walang natagpuang dokumento",
     "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Walang mga resulta"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Tingnan ang lahat ng resulta sa labas ng \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Tingnan ang lahat ng resulta sa loob ng \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Tingnan ang lahat ng resulta"
+  },
+  "theme.SearchBar.label": {
+    "message": "Paghahanap",
+    "description": "The ARIA label and placeholder for search button"
   },
   "theme.blog.post.plurals": {
     "message": "Isang poste|{count}mga poste",

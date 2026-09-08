@@ -11,8 +11,8 @@ Miten päivittää olemassa oleva ERDDAP™ Sinun palvelijasi
 2. Jos päivität ERDDAP™ 2.18 tai uudempi, sinun on vaihdettava Java 25 25 (tai uudempaa) Tomcat 10:stä. Katso säännölliset ERDDAP™ Asennusohjeet [ Java ](/docs/server-admin/deploy-install#java) ja [Tomca](/docs/server-admin/deploy-install#tomcat) . Sinun täytyy myös kopioida _tomcat_/content/erddap Hakemisto vanhasta Tomcat-asennuksesta uuteen Tomcat-asennukseen.
 
 ## Download Download{#download} 
-3. Download Download [Erddap.sota](https://github.com/ERDDAP/erddap/releases/download/v2.31.0/ERDDAP-2.31.0.war) _tomcat_/webapps.
-     (versio 2.31.0, 719 567 541 tavua, MD5=DB0AFDE1F441CA9262CB66291A1110D7, päivätty 2026-08-28) 
+3. Download Download [Erddap.sota](https://github.com/ERDDAP/erddap/releases/download/v2.31.1/ERDDAP-2.31.1.war) _tomcat_/webapps.
+     (versio 2.31.1, 719 561 982 tavua, MD5=2F6D2B2992B3233CB918B80629A09853, päivätty 2026-09-03) 
      
 ## Viestit.xml{#messagesxml} 
 4. 
