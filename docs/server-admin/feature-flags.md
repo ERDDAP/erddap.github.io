@@ -386,6 +386,18 @@ Enables Cross-Origin Resource Sharing (CORS) headers on HTTP responses.
 | **Long-term Goal** | set as desired |
 | **History** | Added in 2.26 |
 
+### **use422ForNoDataStatusCode**
+
+Description  
+Answers 422 Unprocessable Content instead of 404 when a request names a real dataset but matches no data, for example when a time constraint excludes every row. A client cannot tell the default 404 apart from a dataset that does not exist, and proxies that ban clients after repeated 404s can treat ordinary empty queries as scanning. Staying in the 4xx range keeps `raise_for_status()` and the equivalent checks in other clients firing. A dataset that genuinely is not there still answers 404 either way.
+
+| Property | Details |
+| :---- | :---- |
+| **Lifecycle** | Stable |
+| **Current Default** | false |
+| **Long-term Goal** | set as desired |
+| **History** | Added in 2.32.0 |
+
 ## **🔍 Search**
 
 ### **useLuceneSearchEngine**
