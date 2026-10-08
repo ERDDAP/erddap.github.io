@@ -1102,7 +1102,7 @@ a JSON 檔案格式化,供使用 Google Visualization 客戶端文庫 ( Google C
     * 切換到 EDD 表從 EDDGrid 那樣就更好了 從 EDD 表格 EDDGrid 讓使用者查詢網格化的數據集, 如表格化的數據集 ("按價值來平靜") .
         
         * 它現在支持&lt;最大轴0 &gt; 標籤 (缺省=10) 指定最大轴數 \\[ 0 \\]   (通常 "time" ) 可立即查詢的值。 這可以防止天真的要求從中取得 EDD Table EDDGrid 以搜尋整個網格化的數據集 (以逾時錯誤失敗) .
-        * 產生達塔斯 Xml 現在可以產生 EDD Table 從 EDDGrid 指定中所有網格化数据集的數據集 ERDDAP™ 符合指定的正则 (使用 .QQ 以匹配所有數據集) . 它建立的數據集在摘要屬性中有附加資訊, 表示這是一個被網格化的數據集的表格版本 。 而他們 datasetID 是 datasetID 中,加上“% AsATable”。
+        * 產生達塔斯 Xml 現在可以產生 EDD Table 從 EDDGrid 指定中所有網格化数据集的數據集 ERDDAP™ 符合指定的正则 (使用 .QQ 以匹配所有數據集) . 它建立的數據集在摘要屬性中有附加資訊, 表示這是一個被網格化的數據集的表格版本 。 而他們 datasetID 是 datasetID 加上 "\\_AsATable" .
         * 最常用的設定有大速度:當網格化的數據集是 EDDGrid 從同樣的 Erddap 数据集 ERDDAP .
         
 多虧了詹姆斯·加拉格和艾德·阿姆斯特朗

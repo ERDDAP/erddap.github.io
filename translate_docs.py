@@ -79,6 +79,7 @@ dont_translate_strings = [
     "\"&amp;units=...\"",
     "\"&C;\"",
     "\"&micro;\"", # otherwise it is often dropped from the translation.   Only used in one place
+    "\"\_AsATable\"",
     # in messages.xml.
     "\"BLANK\"",
     "\"c/s\"",

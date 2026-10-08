@@ -1102,7 +1102,7 @@ Näytä [Tämä dokumentti](/docs/server-admin/datasets#aggregation-via-file-nam
     * Muutoksia EDDTableFrom EDDGrid joka tekee siitä paljon paremman. EDDTableFrom EDDGrid Käyttäjät voivat kysellä verkkotietoaineistoja ikään kuin ne olisivat tabulaarisia tietoaineistoja. ("Kysymys arvosta") .
         
         * Nyt se tukee a&lt;MaxAxis0 &gt; Tag (Oletusarvo = 10) joka määrittää akselin enimmäismäärän \\[ 0 \\]   (Yleensä yleensä "time" ) arvoja, joita voi kysellä heti. Tämä estää naiivit pyynnöt saada EDDTableFrom EDDGrid haku koko verkkotietoaineiston kautta (joka epäonnistuisi aikalisävirheellä) .
-        * GenerateDatasets XML:llä on nyt mahdollisuus luoda EDDTableFrom EDDGrid Tiedot kaikista verkkotietokannoista tietyssä ERDDAP™ jotka vastaavat tiettyä regexiä (käyttää .* vastaamaan kaikkia tietoaineistoja) . Sen luomilla tietoaineistoilla on lisätietoja tiivistelmän ominaisuuksista, jotka osoittavat, että tämä on tabulaarinen versio verkkotietokannasta. ja heidän datasetID on datasetID verkostoitunut tietoaineisto, plus "AsATable".
+        * GenerateDatasets XML:llä on nyt mahdollisuus luoda EDDTableFrom EDDGrid Tiedot kaikista verkkotietokannoista tietyssä ERDDAP™ jotka vastaavat tiettyä regexiä (käyttää .* vastaamaan kaikkia tietoaineistoja) . Sen luomilla tietoaineistoilla on lisätietoja tiivistelmän ominaisuuksista, jotka osoittavat, että tämä on tabulaarinen versio verkkotietokannasta. ja heidän datasetID on datasetID Verkkotietokanta, plus "\\_AsATable" .
         * Yleisimmän asennuksen nopeus on suuri: kun verkkotietokanta on EDDGrid Tietokanta, joka on samassa ERDDAP .
         
 Kiitos James Gallagher ja Ed Armstrong.
