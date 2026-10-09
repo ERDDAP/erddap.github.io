@@ -80,6 +80,7 @@ dont_translate_strings = [
     "\"&C;\"",
     "\"&micro;\"", # otherwise it is often dropped from the translation.   Only used in one place
     "\"\_AsATable\"",
+    "\"\_global\"",
     # in messages.xml.
     "\"BLANK\"",
     "\"c/s\"",

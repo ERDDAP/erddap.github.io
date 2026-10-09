@@ -42,7 +42,7 @@ Kun tietopalveluntarjoaja tulee luoksesi toivoen lisättävän joitakin tietoja 
 Todellisten tiedostojen lähettäminen ulkoisista lähteistä on suuri turvallisuusriski. ERDDAP™ ei käsittele sitä. Sinun on selvitettävä sinulle ja palveluntarjoajalle toimiva ratkaisu, esimerkiksi sähköposti (Pieniä tiedostoja) Vedä pilvestä (Esimerkiksi DropBox tai Google Drive) Sftp-sivusto (salasanat) tai sneaker Netissä (USB-peukalo tai ulkoinen kiintolevy) . Sinun pitäisi hyväksyä tiedostoja vain henkilöiltä, jotka tiedät. Sinun täytyy skannata tiedostoja viruksia ja ottaa muita varotoimenpiteitä.
 
 Ei ole linkkiä ERDDAP™ Tietojen toimittajamuodossa (Esimerkiksi, että ERDDAP™ Kotisivu) . Sen sijaan, kun joku kertoo haluavansa, että heidän tietojaan palvellaan ERDDAP Voit lähettää heille sähköpostia, jossa sanotaan:
-Kyllä, voimme saada tietosi ERDDAP . Aloita, täytä lomakehttps://*yourUrl*/erddap/dataProviderForm.html  (tai tai http:// jos https:// ei ole sallittua) .
+Kyllä, voimme saada tietosi ERDDAP . Aloita, täytä lomake https://*yourUrl*/erddap/dataProviderForm.html   (tai tai http:// jos https:// ei ole sallittua) .
 Kun olet valmis, otan sinuun yhteyttä saadakseni selville viimeiset yksityiskohdat.
 Jos haluat vain katsoa muotoa (täyttämättä sitä) Voit nähdä lomakkeen ERD &gt; ERDDAP : [Johdanto](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) , [Osa 1](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) , [Osa 2](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) , [Osa 3](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) ja [Osa 4](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) . Nämä linkit ovat ERD   ERDDAP™ lähettää tietoja minulle, ei sinulle, joten älä lähetä tietoja heille, ellet todella halua lisätä tietoja ERD   ERDDAP .
 
@@ -190,23 +190,23 @@ Tämä EDDType tuottaa kaiken datasets.xml Tarvitsemme vaahtoa [EdDTableFromDap]
      
 #####  EDDGrid Lähde: ThreddsCatalog{#eddgridfromthreddscatalog} 
 Tämä EDDType tuottaa kaiken datasets.xml Tarvittavat jyvät kaikkiin [ EDDGrid Lähde:Dap](#eddgridfromdap) aineistot, joita se voi löytää ryömimällä toistuvasti THREDDS: n kautta (sub) Katalogi. 3DS-katalogisia URL-osoitteita on monia. Tämä vaihtoehto REQUIRES A THREDDS .xml URL with/catalog/ in it, esim.
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xmltai tai
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml tai tai
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (Ohjattu sivulta .html)
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.htmljoka ei ole hyväksyttävää EDDGrid Lähde: ThreddsCatalog).
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html joka ei ole hyväksyttävää EDDGrid Lähde: ThreddsCatalog).
 Jos sinulla on ongelmia EDDGrid FromThredds Katalogi:
 * Varmista, että käyttämäsi URL-osoite on voimassa, sisältää /catalog / ja päättyy /catalog.xml.
-* Jos mahdollista, käytä julkista IP-osoitetta (esimerkiksihttps://oceanwatch.pfeg.noaa.gov) URL-osoitteessa, ei paikallisessa numeroinnissa (esimerkiksihttps://12.34.56.78) . Jos THREDDS on saatavilla vain paikallisen numerollisen IP-osoitteen kautta, voit käyttää [-]&lt;ConvertToPublicSourceUrl[muokkaa] (#converttopublicsourceurl) niin ERDDAP™ käyttäjät näkevät julkisen osoitteen, vaikka ERDDAP™ Saat tietoja paikallisesta numeerisesta osoitteesta.
+* Jos mahdollista, käytä julkista IP-osoitetta (esimerkiksi https://oceanwatch.pfeg.noaa.gov ) URL-osoitteessa, ei paikallisessa numeroinnissa (esimerkiksi https://12.34.56.78 ) . Jos THREDDS on saatavilla vain paikallisen numerollisen IP-osoitteen kautta, voit käyttää [-]&lt;ConvertToPublicSourceUrl[muokkaa] (#converttopublicsourceurl) niin ERDDAP™ käyttäjät näkevät julkisen osoitteen, vaikka ERDDAP™ Saat tietoja paikallisesta numeerisesta osoitteesta.
 * Jos sinulla on ongelmia, joita et voi ratkaista, [Katso vianmääritysvinkkejä](#troubleshooting-tips) .
 * Alhainen koodi tällä hetkellä käyttää Unidata Netcdf-java-kataloginen crawler-koodi (Kynttilät. Katalogiset luokat) jotta kaikki 3DS-luettelot voidaan käsitellä (joka voi olla yllättävän monimutkainen) Kiitos Unidata tähän koodiin.
          
 #####  EDDGrid LonPM180FromErddapCatalog{#eddgridlonpm180fromerddapcatalog} 
 Tämä EDDType tuottaa datasets.xml tehdä [ EDDGrid LonPM180](#eddgridlonpm180) Tietoja kaikista EDDGrid Tietoja eräässä ERDDAP Pituusarvot ovat yli 180.
-* Jos mahdollista, käytä julkista IP-osoitetta (esimerkiksihttps://oceanwatch.pfeg.noaa.gov) URL-osoitteessa, ei paikallisessa numeroinnissa (esimerkiksihttps://12.34.56.78) . Jos ERDDAP™ on saatavilla vain paikallisen numerollisen IP-osoitteen kautta, jota voit käyttää&lt;ConvertToPublicSourceUrl[muokkaa] (#converttopublicsourceurl) niin ERDDAP™ käyttäjät näkevät julkisen osoitteen, vaikka ERDDAP™ Saat tietoja paikallisesta numeerisesta osoitteesta.
+* Jos mahdollista, käytä julkista IP-osoitetta (esimerkiksi https://oceanwatch.pfeg.noaa.gov ) URL-osoitteessa, ei paikallisessa numeroinnissa (esimerkiksi https://12.34.56.78 ) . Jos ERDDAP™ on saatavilla vain paikallisen numerollisen IP-osoitteen kautta, jota voit käyttää&lt;ConvertToPublicSourceUrl[muokkaa] (#converttopublicsourceurl) niin ERDDAP™ käyttäjät näkevät julkisen osoitteen, vaikka ERDDAP™ Saat tietoja paikallisesta numeerisesta osoitteesta.
          
 #####  EDDGrid Lon0360FromErddapCatalog{#eddgridlon0360fromerddapcatalog} 
 Tämä EDDType tuottaa datasets.xml tehdä [ EDDGrid Lon0360](#eddgridlon0360) Tietoja kaikista EDDGrid Tietoja eräässä ERDDAP Pituusarvoja on alle 0.
-* Jos mahdollista, käytä julkista IP-osoitetta (esimerkiksihttps://oceanwatch.pfeg.noaa.gov) URL-osoitteessa, ei paikallisessa numeroinnissa (esimerkiksihttps://12.34.56.78) . Jos ERDDAP™ on saatavilla vain paikallisen numerollisen IP-osoitteen kautta, jota voit käyttää&lt;ConvertToPublicSourceUrl[muokkaa] (#converttopublicsourceurl) niin ERDDAP™ käyttäjät näkevät julkisen osoitteen, vaikka ERDDAP™ Saat tietoja paikallisesta numeerisesta osoitteesta.
+* Jos mahdollista, käytä julkista IP-osoitetta (esimerkiksi https://oceanwatch.pfeg.noaa.gov ) URL-osoitteessa, ei paikallisessa numeroinnissa (esimerkiksi https://12.34.56.78 ) . Jos ERDDAP™ on saatavilla vain paikallisen numerollisen IP-osoitteen kautta, jota voit käyttää&lt;ConvertToPublicSourceUrl[muokkaa] (#converttopublicsourceurl) niin ERDDAP™ käyttäjät näkevät julkisen osoitteen, vaikka ERDDAP™ Saat tietoja paikallisesta numeerisesta osoitteesta.
          
 ##### Eddsfromfiilejä{#eddsfromfiles} 
 Aloitushakemiston vuoksi tämä siirtyy hakemistoon ja kaikkiin aliohjauksiin ja pyrkii luomaan tietoaineiston jokaiselle löytämilleen tietotiedostoryhmälle.
@@ -566,7 +566,7 @@ NCCSV 1.0 -tiedostot eivät tue allekirjoittamattomia kokonaislukuja.
 ### Tyypin kommentteja{#data-type-comments} 
 * Pitkän, ulomman ja char-tietojen huonon tuen vuoksi monissa tiedostotyypeissä lannistamme näiden tietotyyppien käytön. ERDDAP . Jos mahdollista, käytä tuplasti pidemmän ja ulomman sijasta ja käytä Stringiä charin sijaan.
      
-* Metadata - koska(OPeN)DAP.das ja .dds-vastaukset eivät tue pitkiä tai pitkiä ominaisuuksia tai tietotyyppejä (Näytä ne kaksinkertaisiksi) Voit sen sijaan käyttää ERDDAP Metadatan tabulaarinen esitys, sellaisena kuin se näkyy http Erddap/ **Info** // * datasetID * .html verkkosivut (esimerkiksi [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (jotka voit saada myös muissa tiedostotyypeissä, esim. .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) tai .nccsv Metadata vastaus (esimerkiksi [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) Vaikka .nccsv Metadata on saatavana vain tabulaarisille tietoaineistoille.) Molemmat tukevat kaikkia tietotyyppejä (Huomattavasti, pitkä, ulong ja char) .
+* Metadata - koska(OPeN)DAP.das ja .dds-vastaukset eivät tue pitkiä tai pitkiä ominaisuuksia tai tietotyyppejä (Näytä ne kaksinkertaisiksi) Voit sen sijaan käyttää ERDDAP Metadatan tabulaarinen esitys, sellaisena kuin se näkyy http Erddap/ **Info** // * datasetID * .html verkkosivut (esimerkiksi [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (jotka voit saada myös muissa tiedostotyypeissä, esim. .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) tai .nccsv Metadata vastaus (esimerkiksi [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) Vaikka .nccsv Metadata on saatavana vain tabulaarisille tietoaineistoille.) Molemmat tukevat kaikkia tietotyyppejä (Huomattavasti, pitkä, ulong ja char) .
          
 ### Mediatiedostot{#media-files} 
 Kaikki tiedot eivät ole numeroita tai tekstiä. Jotkin tietoaineistot koostuvat tai sisältävät mediatiedostoja, kuten kuvia, ääni- ja videotiedostoja. ERDDAP™ on joitakin erityisiä ominaisuuksia, joiden avulla käyttäjät voivat käyttää mediatiedostoja. Tämä on kaksivaiheinen prosessi:
@@ -604,7 +604,7 @@ Tai jos käyttäjä napsauttaa tiedostonimeä, joka näkyy yhdellä ERDDAP™ We
 ### AWS S3 -tiedostot{#working-with-aws-s3-files} 
  [Amazon Web palvelut (AWS) ](https://aws.amazon.com) on myyjä [Pilvitietokone](https://en.wikipedia.org/wiki/Cloud_computing) palvelut. [S3](https://aws.amazon.com/s3/) Se on AWS:n tarjoama objektivarastojärjestelmä. Perinteisen tiedostojärjestelmän hakemistojen ja tiedostojen sijasta (kuin kiintolevy PC:ssä) , S3 tarjoaa vain "buckets", joka pitää "objekteja" (Me kutsumme heitä "files" ) .
 
-ASCII-tiedostoja (Esimerkkinä .csv) , ERDDAP™ Voit työskennellä tiedostojen kanssa suoraan bucketsissa. Ainoa mitä sinun tarvitsee tehdä on määritellä&lt;tiedostoDir&gt; for the dataset käyttämällä AWS:n taakan tiettyä muotoa, esimerkiksihttps://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/. Sinun ei pitäisi käyttää&lt;CacheFromUrl. Katso alta yksityiskohtia.
+ASCII-tiedostoja (Esimerkkinä .csv) , ERDDAP™ Voit työskennellä tiedostojen kanssa suoraan bucketsissa. Ainoa mitä sinun tarvitsee tehdä on määritellä&lt;tiedostoDir&gt; for the dataset käyttämällä AWS:n taakan tiettyä muotoa, esimerkiksi https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ . Sinun ei pitäisi käyttää&lt;CacheFromUrl. Katso alta yksityiskohtia.
 
 Binaaritiedostoja (esim. .nc .grib, .bufr ja .hdf tiedostoja) Sinun täytyy käyttää&lt;CacheFromUrl-järjestelmä kuvattu alla. ERDDAP Netcdf-java (jonka ERDDAP™ Käyttää lukea tietoja näistä tiedostoista) ja muut tieteelliset tietoohjelmistot on suunniteltu toimimaan tiedostojen kanssa perinteisessä tiedostojärjestelmässä, joka tarjoaa [Lohkojen taso](https://en.wikipedia.org/wiki/Block-level_storage) Pääsy tiedostoihin (joka sallii tiedoston lukemisen) S3 tarjoaa vain [tiedoston taso (objekti objektiivi) ](https://en.wikipedia.org/wiki/Block-level_storage) Pääsy tiedostoihin (joka sallii koko tiedoston lukemisen) . AWS tarjoaa vaihtoehdon S3:lle. [Elastic Block -kauppa (EBS) ](https://aws.amazon.com/ebs/) ), joka tukee lohkotason pääsyä tiedostoihin, mutta se on kalliimpaa kuin S3, joten sitä käytetään harvoin suurten tietotiedostojen massavarastointiin. (Kun ihmiset sanovat tietojen tallentamista pilveen (S3) Se on halpaa, se on yleensä appelsiinien vertailu.) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 Vastaava URL-osoite tälle kohteelle on
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 AWS tukee hieman vaihtelua URL:n rakentamisessa, mutta ERDDAP™ Tarvitaan tämä erityinen muoto:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 kuin ERDDAP V2.29 Voit käyttää `s3:/` URI-osoitteen sijaan bucket URL. Tämä on muoto, jota käytetään [s3 cli](https://docs.aws.amazon.com/cli/latest/reference/s3/) .
 s3:/ *BucketName* // *Keskeinen avain* 
@@ -697,22 +697,22 @@ Yksityiselle S3-tietokoneelle bucketin omistajan on annettava sinulle pääsy bu
 Kaikissa tapauksissa tarvitset AWS-tilin, koska AWS SDK Java   (jonka ERDDAP™ käyttää hakemaan tietoa bucketin sisällöstä) Tarvitaan AWS-tilitunnuksia. (Lisää tästä alapuolella) 
 
  ERDDAP™ Voit käyttää vain AWS S3 -liitännät, jos määrität [&lt;CacheFromUrl » (#cachefromurl) (tai&lt;Tietyssä muodossa:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 missä missä
 
 * BucketName on bucket-nimen lyhyt muoto, esim. noaa-goes17.
 * Aws-alue, esim. me-east-1, on peräisin "alue" sarakkeesta yhdessä pöydässä. [AWS-palvelun päätepisteet](https://docs.aws.amazon.com/general/latest/gr/rande.html) missä bucket sijaitsee.
 * Prefix on valinnainen. Jos on läsnä, sen on loputtava '/' .
 
-Esimerkiksi,https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+Esimerkiksi, https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 Tämä URL-osoite on yksi AWS S3 -suosituksista: [Pääsy Bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) ja [Tämä kuvaus prefixeistä](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) . ERDDAP™ edellyttää, että yhdistät bucket-URL-osoitteen ja valinnaisen etuliitteen yhteen URL-osoitteeseen määrittääksesi&lt;CacheFromUrl (tai&lt;tiedoston &gt;), jossa tiedostot sijaitsevat.
 
 #### Testaa AWS S3 Buckets{#test-public-aws-s3-buckets} 
 Julkisissa bucketsissa voit ja kannattaa testata AWS S3 -hakemiston URL-osoitetta selaimessasi, esim.
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) Jos URL-osoite on oikea ja sopiva ERDDAP palauttaa XML-dokumentin, jolla on (Osittainen) Luettelo tuon bucketin sisällöstä. Täysi URL (URL-osoite ja prefix) että ERDDAP™ Tietyn aineiston käyttö ei toimi selaimessa. AWS ei tarjoa järjestelmää, joka selaa hierarkiaa helposti selaimessasi. (Jos se on väärin, pyydämme sähköpostia. Johannes osoitteessa Noaa.gov. Muussa tapauksessa, Amazon, ole hyvä ja lisää tukea tähän&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) Jos URL-osoite on oikea ja sopiva ERDDAP palauttaa XML-dokumentin, jolla on (Osittainen) Luettelo tuon bucketin sisällöstä. Täysi URL (URL-osoite ja prefix) että ERDDAP™ Tietyn aineiston käyttö ei toimi selaimessa. AWS ei tarjoa järjestelmää, joka selaa hierarkiaa helposti selaimessasi. (Jos se on väärin, pyydämme sähköpostia. Johannes osoitteessa Noaa.gov. Muussa tapauksessa, Amazon, ole hyvä ja lisää tukea tähän&#33;) 
 
 #### Katso Bucketin sisältö{#viewing-the-contents-of-a-bucket} 
-S3 taajuus sisältää usein pari tiedostokategoriaa, muutamassa pseudo-aliohjauksessa, joista voi tulla pari. ERDDAP™ Dataa. tehdäkseen ERDDAP™ Tiedot, sinun täytyy tietää aloitushakemisto&lt;CacheFromUrl (tai&lt;tiedostoDir&gt;) ja tiedostonimien muoto, jotka tunnistavat kyseisen tiedostojen alaryhmän. Jos yrität katsoa koko bucket-sisällön selaimessa, S3 näyttää vain ensimmäiset 1000 tiedostoa, jotka eivät riitä. Tällä hetkellä paras tapa tarkastella kaikkea bucketin sisältöä on tehdä [EdDTableFromFileNames](#eddtablefromfilenames) Data (PC:lläsi ERDDAP™ ja/tai julkisesti ERDDAP ) , joka myös antaa sinulle helpon tavan selata hakemistorakennetta ja ladata tiedostoja. The&lt;tiedostoDir&gt;, sillä se on URL, jonka olet tehnyt yllä, esim.https://noaa-goes17.s3.us-east-1.amazonaws.com. \\[ Miksi AWS S3 ei tarjoa nopeaa ja helppoa tapaa tehdä tätä ilman AWS-tiliä? \\] Huomautus: Kun teen tämän tietokoneellani ei-Amazon-verkossa, näyttää siltä, että Amazon hidastaa vastausta yritykseen. (noin 100 (??) tiedostoja per chunk) Muutaman ensimmäisen kierroksen jälkeen (1000 tiedostoa per chunk) on ladattu. Koska buckets voi olla valtava määrä tiedostoja (Noaa-Goes17 on 26 miljoonaa) , saada kaikki sisältö bucket voi kestää EDDTableFileNames useita tunteja (Esim. 12&#33;) loppuun. \\[ Amazon, eikö niin? \\] 
+S3 taajuus sisältää usein pari tiedostokategoriaa, muutamassa pseudo-aliohjauksessa, joista voi tulla pari. ERDDAP™ Dataa. tehdäkseen ERDDAP™ Tiedot, sinun täytyy tietää aloitushakemisto&lt;CacheFromUrl (tai&lt;tiedostoDir&gt;) ja tiedostonimien muoto, jotka tunnistavat kyseisen tiedostojen alaryhmän. Jos yrität katsoa koko bucket-sisällön selaimessa, S3 näyttää vain ensimmäiset 1000 tiedostoa, jotka eivät riitä. Tällä hetkellä paras tapa tarkastella kaikkea bucketin sisältöä on tehdä [EdDTableFromFileNames](#eddtablefromfilenames) Data (PC:lläsi ERDDAP™ ja/tai julkisesti ERDDAP ) , joka myös antaa sinulle helpon tavan selata hakemistorakennetta ja ladata tiedostoja. The&lt;tiedostoDir&gt;, sillä se on URL, jonka olet tehnyt yllä, esim. https://noaa-goes17.s3.us-east-1.amazonaws.com . \\[ Miksi AWS S3 ei tarjoa nopeaa ja helppoa tapaa tehdä tätä ilman AWS-tiliä? \\] Huomautus: Kun teen tämän tietokoneellani ei-Amazon-verkossa, näyttää siltä, että Amazon hidastaa vastausta yritykseen. (noin 100 (??) tiedostoja per chunk) Muutaman ensimmäisen kierroksen jälkeen (1000 tiedostoa per chunk) on ladattu. Koska buckets voi olla valtava määrä tiedostoja (Noaa-Goes17 on 26 miljoonaa) , saada kaikki sisältö bucket voi kestää EDDTableFileNames useita tunteja (Esim. 12&#33;) loppuun. \\[ Amazon, eikö niin? \\] 
 
 #### Tehdä EDDTable FileNames-tietokanta, jossa on AWS S3 Bucket{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 Jos sinulla on bucket-nimi, mutta sinulla ei ole jo luetteloa tiedostoista S3-taskussa tai etuliite, joka tunnistaa tiedostojen sijainnin bucketissa, käytä alla olevia ohjeita tehdäksesi EDDTableFileNames-tietoaineiston, jotta voit selata S3-laastarin hakemistohierarkiaa. ERDDAP &gt; "files" järjestelmä.
@@ -727,22 +727,24 @@ Java.lang. Laiton väite: profiilitiedosto ei voi olla nollavirhe ERDDAP log.txt
 Linuxin ja Mac OS:n vihje: Tomcatia käyttävän käyttäjän kotihakemistossa (ja ERDDAP )   (Käyttäjä = Tomcat) tiedostossa nimeltä ~/.aws/credentials. Älä oleta, että ~ on/home/tomcat – itse asiassa käytä cd:tä selvittääksesi, missä käyttöjärjestelmä ajattelee - käyttäjälle = Tomcat on. Luo hakemisto, jos sitä ei ole olemassa. Lisäksi, kun olet laittanut valtakirjatiedoston käyttöön, varmista, että tiedoston käyttäjä ja ryhmä ovat tomcat ja käytä chmod 400 -tunnustusta varmistaaksesi, että tiedosto on luettu vain käyttäjälle.
     
 3. Luo bucket URL [muotoilua, ERDDAP™ Vaatii](#accessing-files-in-an-aws-s3-bucket) esim.
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) ja (Julkinen buckets) testaa selaimessa varmistaakseen, että se palauttaa XML-dokumentin, jolla on osittainen luettelo kyseisen taakan sisällöstä.
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) ja (Julkinen buckets) testaa selaimessa varmistaakseen, että se palauttaa XML-dokumentin, jolla on osittainen luettelo kyseisen taakan sisällöstä.
      
 4. Käytä [GenerateDatasetsXml](#generatedatasetsxml) luodaan [EdDTableFromFileNames](#eddtablefromfilenames) Tietoja:
     * Käytä tätä syntaksia:
         \\*\\*\\ \\ *Lähde:* Your BucketUrl**
 esimerkiksi
-        \\*\\*&gt; &gt; &gt; &gt; &gt;https://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\*&gt; &gt; &gt; &gt; &gt; https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * Tiedoston nimi Regex? ****
     * toistuvasti? Todellista
     * Reload Kaikki minuutit? 10080
-    *    infoUrl ??https://registry.opendata.aws/noaa-goes/
+    *    infoUrl ?? https://registry.opendata.aws/noaa-goes/
+ 
     * instituutio? NOAA 
     * Yhteenveto? Ei mitään ei ( ERDDAP™ luodaan tiivistelmä automaattisesti.) 
     * Titteli? Ei mitään ei ( ERDDAP™ Se luo automaattisesti hyvän otsikon.) Kuten tavallista, sinun tulisi muokata tuloksena olevaa XML-osoitetta korjataksesi korrektiuden ja tehdä parannuksia ennen kuin tietoaineistot on kiinnitetty siihen. datasets.xml .
 5. Jos noudatat yllä olevia ohjeita ja lataat tiedot ERDDAP Olet luonut EDDTableFromFiles-aineiston. Esimerkkinä ja helpottaaksemme sitä, että kuka tahansa voi selata ja ladata tiedostoja AWS Open Data bucketsista, olemme luoneet EDDTableFromFileNames -tietokannan (katso luettelosta.
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) Lähes kaikkiin [AWS S3 Open Data Buckets Näytä tarkat tiedot](https://registry.opendata.aws/) .
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) Lähes kaikkiin [AWS S3 Open Data Buckets Näytä tarkat tiedot](https://registry.opendata.aws/) .
      \\[ Muutama ämpäri, jota emme sisältäneet, sisältää runsaasti tiedostoja juurihakemistoon. (enemmän kuin voidaan ladata kohtuullisessa ajassa) tai ei salli julkista pääsyä (Eikö kaikkien pitäisi olla julkisia?) tai ovat pyynnön vastaanottajia (Esimerkki: Sentinel) . \\]   
 Jos klikkaat "files" linkki johonkin näistä tietoaineistoista, voit selata hakemistopuuta ja tiedostoja kyseisessä S3-laastarissa. Tien vuoksi\\*\\*TheFly EDDTableFromFiles toimii, nämä hakemistot ovat aina ajan tasalla, koska ERDDAP™ Ota ne lennolle. Jos napsautat hakemistopuuta oikeaan tiedostonimeen ja klikkaat tiedoston nimeä, ERDDAP™ Ohjaa pyyntösi uudelleen AWS S3:een, jotta voit ladata tiedoston suoraan AWS:ltä. Tämän jälkeen voit tarkastaa tiedoston.
     
@@ -756,7 +758,7 @@ On valitettavaa, että AWS ei salli ihmisten käyttää selainta nähdäkseen ju
  **Sitten voit tehdä ERDDAP™ tietoaineistot, jotka antavat käyttäjille pääsyn tiedostoihin.**   
 Katso ohjeet [ ERDDAP™ S3 Buckets](#erddap-and-aws-s3-buckets)   (yläpuolella) .
 Näytteen EDDTableFromFileNames-tietoaineistosta, jonka olet tehnyt edellä, jos teet hieman hakemiston ja tiedoston nimien kanssa hakemistossa, on selvää, että ylätason hakemistojen nimet (ABI-L1b-RadC) vastaa mitä ERDDAP™ Kutsutaan erillisiä aineistoja. Se, jonka kanssa työskentelet, voi olla samanlainen. Voit luoda erillisiä tietoaineistoja ERDDAP™ jokaisesta näistä tietoaineistoista, esimerkiksi
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 kuin&lt;CacheFromUrl. Valitettavasti tässä esimerkissä bucketin tietoaineistot näyttävät olevan tasoa 1 tai tasoa 2. ERDDAP™   [ei ole erityisen hyvä](#dimensions) aineisto on monimutkaisempi muuttujien kokoelma, joka käyttää erilaisia ulottuvuuksia.
      
     
@@ -975,7 +977,7 @@ Rajoittamattomat ulottuvuudet osoittavat lähes aina ongelman lähdeaineiston ka
 ###  EDDGrid Lähde:Dap{#eddgridfromdap} 
  [ ** EDDGrid Lähde:Dap** ](#eddgridfromdap) verkon muuttujia [ DAP ](https://www.opendap.org/) palvelimia.
 
-* Suosittelemme voimakkaasti käyttämään [GenerateDatasets XML-ohjelma](#generatedatasetsxml) tehdä karkea luonnos datasets.xml Chunk tälle aineistolle. Voit kerätä tietoja, joita tarvitset muokataksesi tai luodaksesi oman XML:n. EDDGrid FromDap-tietoaineistosta katsomalla lähdeaineiston DDS- ja DAS-tiedostoja selaimessasi (Lisäämällä .das ja .dds to the sourceUrl esimerkiksi, [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
+* Suosittelemme voimakkaasti käyttämään [GenerateDatasets XML-ohjelma](#generatedatasetsxml) tehdä karkea luonnos datasets.xml Chunk tälle aineistolle. Voit kerätä tietoja, joita tarvitset muokataksesi tai luodaksesi oman XML:n. EDDGrid FromDap-tietoaineistosta katsomalla lähdeaineiston DDS- ja DAS-tiedostoja selaimessasi (Lisäämällä .das ja .dds to the sourceUrl esimerkiksi, [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
      
 *    EDDGrid FromDap voi saada tietoja mistä tahansa moniulotteisesta muuttujasta DAP palvelin. (aikaisemmin, EDDGrid FromDap oli rajoittunut muuttujiin, jotka on nimetty "verkoksi", mutta se ei ole enää vaatimus.)   
      
@@ -1335,7 +1337,7 @@ Täydellinen esimerkki yhdestä axisVariable joka tekee yhdistetyn tietoaineisto
         </addAttributes>
       </axisVariable>
 ```
-Huomaa, että talteenottoryhmän numero 2:n käyttö tallentaa numerot, jotka tapahtuvat ’r’ tai ’s’ jälkeen, ja ennen ’global’. Tässä esimerkissä kerrotaan, miten lisätään lisäominaisuuksia. (esim. ioos\\_category ja yksiköt) Axis-muuttuja.
+Huomioi kaappausryhmän numero 2:n käyttö, jotta voit tallentaa numerot, jotka tapahtuvat "r" tai "s" jälkeen, ja ennen "\\_global" . Tässä esimerkissä kerrotaan, miten lisätään lisäominaisuuksia. (esim. ioos\\_category ja yksiköt) Axis-muuttuja.
      
 #### Ulkoisesti painettuja tiedostoja{#externally-compressed-files} 
 * Tiedot, jotka ovat osajoukkoja EDDGrid Files ja EDDTable FromFiles voi palvella tietoja suoraan ulkoisesti pakatuista tietotiedostoista, mukaan lukien .tgz , .tar  .gz , .tar  .gzip , .gz , .gzip , .zip , .bz2 .Z-tiedostoja.
@@ -1433,7 +1435,7 @@ Kaikki Kaikki Kaikki Kaikki EDDGrid FromFiles ja kaikki EDDTableFromFiles-aineis
 Sen sijaan käytä [&lt;CacheFromUrl &gt; järjestelmä (#cachefromurl) .
 
 Saavuttaminen ERDDAP™ Tiedot tiedostoina sivuvälipyyntöjen kautta -
-Klikkaa tätä ympärillesi, koska voit (Teoriassa) Ajattele aineistoa ERDDAP™ kuin jättiläinen .nc tiedoston liittämällä " .nc "Perustuen pohjaan DAP URL-osoite tietylle tietoaineistolle (esim.https://myserver.org/erddap/griddap/datasetID.ncja myös lisäämällä "kyselyn sen jälkeen, jotta voidaan määrittää osa-alue) On ehkä järkevää kysyä, voitko käyttää netcdf-javaa. Ferret Tai joku muu NetCDF Asiakasohjelmisto lukee dataa HTTP Range Pyynnöt ERDDAP . Vastaus on ei, koska ei todellakaan ole valtavaa. .nc &gt; tiedosto. Jos haluat tehdä tämän, tee jokin näistä vaihtoehdoista:
+Klikkaa tätä ympärillesi, koska voit (Teoriassa) Ajattele aineistoa ERDDAP™ kuin jättiläinen .nc tiedoston liittämällä " .nc "Perustuen pohjaan DAP URL-osoite tietylle tietoaineistolle (esim. https://myserver.org/erddap/griddap/datasetID.nc ja myös lisäämällä "kyselyn sen jälkeen, jotta voidaan määrittää osa-alue) On ehkä järkevää kysyä, voitko käyttää netcdf-javaa. Ferret Tai joku muu NetCDF Asiakasohjelmisto lukee dataa HTTP Range Pyynnöt ERDDAP . Vastaus on ei, koska ei todellakaan ole valtavaa. .nc &gt; tiedosto. Jos haluat tehdä tämän, tee jokin näistä vaihtoehdoista:
 
 * Käytä(OPeN)DAPAsiakasohjelmistot yhdistävät verkkopalveluihin, joita tarjotaan ERDDAP . Tämä on mitä DAP   (ja siten ERDDAP ) oli suunniteltu. Se on erittäin tehokasta.
 * Lataa lähdetiedosto (s) From the "files" Järjestelmäjärjestelmä (tai aliryhmätiedoston kautta .nc ?? Kysely) tietokoneellesi ja käytä netcdf-javaa Ferret Tai joku muu NetCDF Asiakasohjelmisto lukee (Nyt nyt) Paikallinen tiedosto (s) .
@@ -2253,9 +2255,9 @@ tietojen säilyttäminen kokoelmassa NetCDF v3 .nc tiedostoja (Erityisesti erity
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### EdDTableFromDapsequence Näytä tarkat tiedot{#eddtablefromdapsequence} 
- [ **EdDTableFromDapsequence Näytä tarkat tiedot** ](#eddtablefromdapsequence) muuttujien käsittely 1- ja 2-tason jaksoissa [ DAP ](https://www.opendap.org/) palvelimet, kuten DAP P (olihttps://www.pmel.noaa.gov/epic/software/dapper/Nyt lopetettu) .
+ [ **EdDTableFromDapsequence Näytä tarkat tiedot** ](#eddtablefromdapsequence) muuttujien käsittely 1- ja 2-tason jaksoissa [ DAP ](https://www.opendap.org/) palvelimet, kuten DAP P (oli https://www.pmel.noaa.gov/epic/software/dapper/ Nyt lopetettu) .
 
-* Suosittelemme voimakkaasti käyttämään [GenerateDatasets XML-ohjelma](#generatedatasetsxml) tehdä karkea luonnos datasets.xml Chunk tälle aineistolle. Sen jälkeen voit muokata sitä hienosti. Voit kerätä tarvitsemasi tiedot katsomalla lähdetietoaineiston DDS- ja DAS-tiedostoja selaimessasi (lisäämällä .das ja .dds) sourceUrl (Esimerkki olihttps://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds).
+* Suosittelemme voimakkaasti käyttämään [GenerateDatasets XML-ohjelma](#generatedatasetsxml) tehdä karkea luonnos datasets.xml Chunk tälle aineistolle. Sen jälkeen voit muokata sitä hienosti. Voit kerätä tarvitsemasi tiedot katsomalla lähdetietoaineiston DDS- ja DAS-tiedostoja selaimessasi (lisäämällä .das ja .dds) sourceUrl (Esimerkki oli https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds ).
     
 * Muuttuja on a DAP Jos .dds-vastaus osoittaa, että muuttujan tietorakenne on "sekvenssi" (Tapaus herkkä) .
 * Joissakin tapauksissa näet sekvenssin, 2-tasoisen sekvenssin - EDDTableFromDapSequence käsittelee myös näitä.
@@ -2378,15 +2380,15 @@ GenerateDatasets Xml tarjoaa kolme erillistä vaihtoehtoa EDDTableFromDatabase:
 * (JDBC-kuljettaja)&lt;Kuljettajan nimi » (#jdbc-ohjain) ----- Sinun on hankittava oikea JDBC 3- tai JDBC 4 -ohjaintiedosto tietokantaan ja
 Laita se sisään *Tom* /webapps/erddap/WEB-INF/lib asennuksen jälkeen ERDDAP . Sitten, sinun datasets.xml Näitä tietoja varten sinun on määriteltävä&lt;Kuljettajan nimi, joka on (Valitettavasti) Toisin kuin tiedostonimi. Etsi verkkoa JDBC-ohjaimelle tietokantaasi ja ohjainNamea varten. Java täytyy käyttää sitä.
     
-    * MariaDB, kokeile [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * MariaDB, kokeile [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 The&lt;Kuljettajan nimi &gt; käyttää datasets.xml   (Katso alapuolelta) Ehkä se on org.mariadb.jdbc. Kuljettaja.
-    * MySQL ja Amazon RDS [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * MySQL ja Amazon RDS [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 The&lt;Kuljettajan nimi &gt; käyttää datasets.xml   (Katso alapuolelta) Todennäköisesti com.mysql.jdbc. Kuljettaja.
-    * For For Oracle Kokeile, [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
+    * For For Oracle Kokeile, [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
 The&lt;Kuljettajan nimi &gt; käyttää datasets.xml   (Katso alapuolelta) Ehkä se on oracle.jdbc.driver. Oracle Kuljettaja.
-    * Postgresql sai JDBC 4 -kuljettajan [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * Postgresql sai JDBC 4 -kuljettajan [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 The&lt;Kuljettajan nimi &gt; käyttää datasets.xml   (Katso alapuolelta) Ehkä se on org.postgresql. Kuljettaja.
-    * SQL Serverille voit saada JTDS JDBC -kuljettajan [https://jtds.sourceforge.net](https://jtds.sourceforge.net) .
+    * SQL Serverille voit saada JTDS JDBC -kuljettajan [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) .
 The&lt;Kuljettajan nimi &gt; käyttää datasets.xml   (Katso alapuolelta) Net.sourceforge.jtds.jdbc. Kuljettaja.
     
 Kun olet laittanut JDBC-kuljettajan ERDDAP™ Lib-hakemisto, sinun on lisättävä viittaus .jar-tiedostoon .bat- ja/tai .sh-käsikirjoitustiedostoihin GenerateDatasetsille Xml, DasDds ja ArchiveADataset, jotka ovat *Tom* /webapps/erddap/WEB-INF/hakemisto; muuten saat ClassNotFoundExceptionin, kun suoritat käsikirjoituksia.
@@ -2524,7 +2526,7 @@ ja *Tom* /conf/context.xml, määritä resurssi, jolla on samat tiedot
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-Tietoa datan käytöstä on saatavilla [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
+Tietoa datan käytöstä on saatavilla [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
 Näytä [Tomcat DataSource tiedot](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) ja [Tomcat DataSource esimerkkejä](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) Etsi verkkoa esimerkiksi käyttämällä tietolähteitä muiden sovelluspalvelimien kanssa.
 * Jos kaikki muu epäonnistuu,
 tietojen säilyttäminen kokoelmassa NetCDF v3 .nc tiedostoja (Erityisesti erityisesti .nc tiedostoja, jotka käyttävät [CF Discrete Sampling Geometria (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Kontiguous Ragged Array -tietorakenteet ja niin voidaan käsitellä ERDDAP &gt; [EDDTableFromNcFiles](#eddtablefromnccffiles) ) . Jos se on loogisesti järjestetty (Jokaisella on dataa avaruuden ja ajan huipulle) , ERDDAP™ Tiedot voidaan kerätä erittäin nopeasti.
@@ -2608,7 +2610,7 @@ tietojen säilyttäminen kokoelmassa NetCDF v3 .nc tiedostoja (Erityisesti erity
     
 GenerateDatasetsXml:n tuottama XML-levy sisältää:
     
-    * A datasetID Mikä on EDDGrid &gt; datasetID plus: "Kyllä"
+    * A datasetID Mikä on EDDGrid &gt; datasetID plus "\\_AsATable" .
     * Maailmanlaajuinen attribuutti, joka on EDDGrid tiivistelmä ja uusi ensimmäinen kohta, jossa kuvataan, mitä nämä tiedot ovat.
     * Maailmanlaajuinen nimi, joka on EDDGrid Otsikko plus, (kuin pöytä) ".
     * Uusi maxAxis0 globaali ominaisuus, jonka arvo on 10.
@@ -2644,21 +2646,21 @@ GenerateDatasetsXml:n tuottama XML-levy sisältää:
 *    [Tietoja EDDTableFileNames-tietoaineistosta](#eddtablefromfilenames-data) Pöytä, joka ERDDAP™ luo lennon aikana tietoja paikallisista tiedostoista. Pöydässä on rivi jokaiselle tiedostolle. Neljä erityistä ominaisuutta [ datasets.xml Tätä aineistoa](#eddtablefromfilenames-skeleton-xml) Määritä, mitkä tiedostot sisältyvät tähän tietoaineistoon:
     
 ##### tiedostotiedosto Dir{#filedir} 
-    *   &lt;tiedostot &gt;- Tämä määrittää lähdehakemiston palvelimen tiedostojärjestelmässä tämän tietoaineiston tiedostojen kanssa. Tiedostot, jotka sijaitsevat palvelimen tiedostojärjestelmässä&lt;tiedostoDir&gt; näkyy tämän tietoaineiston URL-sarakkeessa virtuaalihakemiston sisällä.https://*serverUrl*/erddap/files/*datasetID/*.
+    *   &lt;tiedostot &gt;- Tämä määrittää lähdehakemiston palvelimen tiedostojärjestelmässä tämän tietoaineiston tiedostojen kanssa. Tiedostot, jotka sijaitsevat palvelimen tiedostojärjestelmässä&lt;tiedostoDir&gt; näkyy tämän tietoaineiston URL-sarakkeessa virtuaalihakemiston sisällä. https://*serverUrl*/erddap/files/*datasetID/* .
 Esimerkiksi jos datasetID JPMU RSS T,
 ja&lt;tiedostoDir&gt; on/home/data/mur/
 Hakemistolla on tiedosto nimeltä jplMU RSS T20150103000.png,
 URL-osoite, joka näytetään käyttäjille kyseisestä tiedostosta, on
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png.
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png .
         
 Paikallisen hakemiston lisäksi&lt;tiedostoDir&gt;, voit myös määrittää URL-osoitteen etänä, hakemistona olevalla verkkosivustolla. Tämä toimii:
         
         * Kompromisseja THREDDS, esim.
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Tämä palvelin ei ole enää luotettava. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Tämä palvelin ei ole enää luotettava. \\] 
         * Unaggregated datasarjoja Hyrax esim.
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * Useimmat Apachen kaltaiset hakemistot, esim.
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### Lähde: The Fly{#fromonthefly} 
  [\\*\\*Lähde: The Fly](#fromonthefly) ----- Muutamia S3-busseja (Noaa-goes17, jossa on 26 miljoonaa tiedostoa) Se voi ottaa ERDDAP™ enintään 12 tuntia ladata kaikki tiedot pakettien sisällöstä (Sitten on muita ongelmia) . Ympärillämme on erityinen tapa käyttää&lt;tiedostoDir&gt; EDDTableFromFileNamesissa, jotta voit tehdä tietoaineiston hakemistolla ja tiedoston nimillä AWS S3 -laatikosta. Tietoaineistolla ei ole luetteloa kaikista S3-tiedoston hakemistoista ja tiedoston nimistä, joita käyttäjä voi hakea pyyntöjen kautta. Mutta tietoaineisto saa hakemistojen ja tiedostojen nimet lennolla, jos käyttäjä siirtyy hakemistohierarkiaan tietoaineiston avulla. "files" vaihtoehto. Näin käyttäjät voivat selata S3-tiedoston hierarkiaa ja tiedostoja tietoaineiston kautta. "files" järjestelmä. Tämän tekemiseksi sen sijaan, että S3:n URL-osoite määritettäisiin "Aloitehakemistoksi" (GenerateDatasets XM) tai tai&lt;tiedostot &gt; (Sisällä datasets.xml ) Käyttö:
 ```
@@ -2837,13 +2839,13 @@ Kaikki Kaikki Kaikki Kaikki EDDGrid FromFiles ja kaikki EDDTableFromFiles-aineis
     * The&lt;CacheFromUrl&gt;-tunnuksen avulla voit määrittää URL-osoitteen luettelon etätietoaineiston tiedostoista kaukotiedostoluettelosta.
         
         * Kompromisseja THREDDS, esim.
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Tämä palvelin ei ole enää luotettava. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Tämä palvelin ei ole enää luotettava. \\] 
         * Unaggregated datasarjoja Hyrax esim.
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * Useimmat Apachen kaltaiset hakemistot, esim.
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * S3-lisät, esim.
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 Tämä saattaa kuitenkin vaatia AWS-tiliä ja lisää asennusta.
 Näytä [S3 Bucketsin kanssa ERDDAP™ ](#working-with-aws-s3-files) .
 Yleensä sinun ei tarvitse käyttää välimuistia FromUrl, jossa on tiedostoja S3:ssa, jos tiedostot ovat ASCII-tiedostoja (Esimerkkinä .csv) koska ERDDAP™ Voit lukea tiedot tehokkaasti bucketista suoraan virran kautta.
@@ -2901,7 +2903,7 @@ Sitten on sarja pested capture -ryhmiä, joissa ensimmäinen vaihtoehto ei ole m
 Toinen vaihtoehto on erityinen arvo.
             
 Yllä oleva esimerkki vastaa hakemistoja vain vuoden 2018 toisella 10 päivällä, esimerkiksi
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020-10-21 Tämä palvelin ei ole enää luotettava. \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020-10-21 Tämä palvelin ei ole enää luotettava. \\]   
 Päivä 011, 012, 019.
              (Näe tämä [Regex-dokumentointi](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) ja [Regex Tutorial](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) .)   
 Jos tarvitset apua luomiseen&lt;CachePartialPathRegex &gt; Lähetä sähköpostia&lt;CacheFromUrl &gt; Chris Johannes osoitteessa Noaa.gov.
@@ -3384,7 +3386,7 @@ Mitä tahansa aineistoa ERDDAP™ Kun lähetät pyynnön ERDDAP™ tietoaineisto
 
 * .insert
     * Pyyntö on muotoiltu kuin vakiomuotoinen HTML-lomakevaste, jossa on avain=arvoparit, jotka erotetaan & . Esimerkiksi,
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 kertoo ERDDAP™ lisätä tai muuttaa tietoja stationID = 46088 määrättyyn aikaan.
     * Muutoksen tekijä on JohnSmith ja avain on SomeKey1.
     * URL-osoitteessa on oltava voimassa olevat arvot (Ei puuttuvia arvoja) Kaikille [ http Vaadittu Variables](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ kertoo ERDDAP™ lisätä tai muuttaa tietoja stationID = 46088 määrättyyn ai
              
     * .delete
         * Pyyntö on muotoiltu kuin vakiomuotoinen HTML-lomakevaste, jossa on avain=arvoparit, jotka erotetaan & . Esimerkiksi,
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 kertoo ERDDAP™ poistaa tiedot stationID = 46088 määriteltyyn aikaan.
         * Muutoksen tekijä on JohnSmith ja avain on SomeKey1.
         * URL-osoitteen on määritettävä [ http Vaadittu Variables](#httpgetrequiredvariables-global-attribute) Pyynnössä (esim. stationID Aikaa) . Jos nämä arvot vastaavat arvoja rivillä jo tietoaineistossa (jonka yleensä) Vanhat arvot poistetaan tehokkaasti (Vanhat arvot ovat edelleen saatavilla, jos käyttäjä pyytää tietoja aiemmasta [versio versio versio versio versio](#versioning) Tietokannan) .
@@ -3667,7 +3669,7 @@ Kaikilla ei ole tarvetta tällaiseen hienosäädettyyn versioon, mutta se on eri
     
 ##### HTTPS Put and Delete{#https-put-and-delete} 
 *    ["Entä HTTPS PUT ja DELETE?"](#https-put-and-delete)   
-     [Hypertekstien siirtoprotokolla (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) on perusta World Wide Web ja syy, että verkkosivun URL-osoitteet alkavat.http://"tai "https://". HTTPS on HTTP, jossa on lisätietoturvakerros. Selaimet, käsikirjoitukset ja tietokoneohjelmat tekevät miljardeja HTTP-ohjelmia päivittäin. (S)   **Lähde** pyytää tietoa etälähteistä. HTTP (S) sisältää myös muita [Verbs](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) erityisesti PUT (työntää tietoja palvelimelle) Delete (Tietojen poistaminen palvelimelta) . Kyllä, PUT ja DELETE ovat oikea tapa lisätä tietoja ja poistaa tietoja HTTP:n kautta. (S) . GET tukee kaikkia ohjelmistoja, jotka voivat toimia HTTP:n kanssa. (S) . GET on todella helppo työskennellä. Kaikki tietävät, miten tehdä yhteistyötä GET:n kanssa ja monet osaavat käyttää POSTia. (jota voidaan käyttää olennaisesti samalla tavalla kuin GET) Teimme EDDTableFromHttpGet-työtä GET:n ja POST:n kanssa. Hyvin harvat ihmiset (Vain harvat tietokoneohjelmoijat) Hän on koskaan työskennellyt Putin ja Deletein kanssa. PUT ja DELETE ovat yleensä vain tietokonekielten tukemia, joten niiden käyttö edellyttää taitavaa ohjelmaa. Joten PUT ja DELETE ovat yleensä paljon vaikeampi lähestymistapa, koska miten työkalut ovat kehittyneet.
+     [Hypertekstien siirtoprotokolla (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) on perusta World Wide Web ja syy, että verkkosivun URL-osoitteet alkavat. http://" tai " https://" . HTTPS on HTTP, jossa on lisätietoturvakerros. Selaimet, käsikirjoitukset ja tietokoneohjelmat tekevät miljardeja HTTP-ohjelmia päivittäin. (S)   **Lähde** pyytää tietoa etälähteistä. HTTP (S) sisältää myös muita [Verbs](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) erityisesti PUT (työntää tietoja palvelimelle) Delete (Tietojen poistaminen palvelimelta) . Kyllä, PUT ja DELETE ovat oikea tapa lisätä tietoja ja poistaa tietoja HTTP:n kautta. (S) . GET tukee kaikkia ohjelmistoja, jotka voivat toimia HTTP:n kanssa. (S) . GET on todella helppo työskennellä. Kaikki tietävät, miten tehdä yhteistyötä GET:n kanssa ja monet osaavat käyttää POSTia. (jota voidaan käyttää olennaisesti samalla tavalla kuin GET) Teimme EDDTableFromHttpGet-työtä GET:n ja POST:n kanssa. Hyvin harvat ihmiset (Vain harvat tietokoneohjelmoijat) Hän on koskaan työskennellyt Putin ja Deletein kanssa. PUT ja DELETE ovat yleensä vain tietokonekielten tukemia, joten niiden käyttö edellyttää taitavaa ohjelmaa. Joten PUT ja DELETE ovat yleensä paljon vaikeampi lähestymistapa, koska miten työkalut ovat kehittyneet.
      
 ##### HttpGet muistiinpanoja{#httpget-notes} 
 *    [Huomautuksia](#httpget-notes) 
@@ -3676,7 +3678,7 @@ Kaikilla ei ole tarvetta tällaiseen hienosäädettyyn versioon, mutta se on eri
 ##### Kiitos{#thanks} 
 *    [Kiitos perusideasta.](#thanks)   
 Etusivu EDDTableFromHttpGet (i.s. käyttäen HTTP GET pyytää lisätietoja tietoaineistoon) Lähde: UCAR's (NCAR?)   [Cloud-Hosted Real Time -tietopalvelut (Koristeita) ](https://github.com/earthcubeprojects-chords) projekti. Pyynnössä olevat parametrit (toistuvasti *Nimi = arvo* erottaa & s) on sama standardimuoto, jota HTML-muodot käyttävät verkkosivuilla. Se on yksinkertainen ja loistava ajatus ja vielä enemmän, koska se sotkee niin täydellisesti. ERDDAP olemassa oleva järjestelmä, jolla käsitellään tabulaaritietoja. Ajatus on ilmeinen, mutta minä (Bob) ei ajatellut sitä. EDDTableFromHtp Hyödynnä tätä perusideaa yhdistettynä ajatuksiimme siitä, miten se toteutetaan, jotta voimme luoda järjestelmän ERDDAP™ tietojen lataamiseen. EDDTableFromHttpGetin käyttöönotto on täysin erilainen ja täysin riippumaton CHORDSista ja sillä on erilaiset ominaisuudet. (esimerkiksi lokitiedostot, tietojen kiinnitys, eri turvallisuusjärjestelmä, CRUD-tuki, toistettavissa olevat tiedot) . Altistuminen CHORDSiin oli vain webinaari. Emme katsoneet heidän koodiaan tai lukeneet heidän projektiaan, koska tiesimme heti, että halusimme toteuttaa järjestelmän eri tavalla. Olemme kiitollisia perusajatuksesta. Koko viittaus CHORDSiin on
-Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014 2014 2014 2014) . Cloud-Hosted Real Time Data Services for the Geosciences Näytä tarkat tiedot (Koristeita) ohjelmisto. UCAR/NCAR - Maapallon tarkkailulaboratorio. [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014 2014 2014 2014) . Cloud-Hosted Real Time Data Services for the Geosciences Näytä tarkat tiedot (Koristeita) ohjelmisto. UCAR/NCAR - Maapallon tarkkailulaboratorio. [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### EDDTableFrom Hyrax Tiedostot{#eddtablefromhyraxfiles} 
  [ **EDDTableFrom Hyrax Tiedostot** ](#eddtablefromhyraxfiles)   (Vähentynyt) aggregates datatiedostoja, joissa on useita muuttujia, joista jokaisella on yksi tai useampi jaettu ulottuvuus. (Esimerkiksi aika, korkeus (tai syvyys) Leveys, pituus) ja palvelee a [ Hyrax   OPeNDAP Palvelin](https://www.opendap.org/software/hyrax-data-server) .
@@ -3692,7 +3694,7 @@ Jos valituksia ei ole ennen vuotta 2020, tietotyyppi voidaan poistaa. **
 * Tämä luokan piirros rikkoo Hyrax Web-sivut, joissa on luettelo tiedostoista jokaisessa hakemistossa. Tämä johtuu siitä, että se on hyvin erityinen nykyiseen muotoon. Hyrax verkkosivut. Yritämme sopeutua ERDDAP™ Jos/kun tulevat versiot Hyrax Muuta, miten tiedostot on listattu.
 * The&lt;tiedostoDir&gt;-asetus on sivuutettu. Koska tämä luokka lataa ja tekee paikallisen kopion jokaisesta etätiedostosta, ERDDAP™ Pakottaa tiedostot Likainen olla *isovanhemmat* Copy/ * datasetID * /
 * For For&lt; sourceUrl &gt; käytä tietoaineiston perushakemiston URL-osoitetta Hyrax esimerkiksi palvelin
-    &lt; sourceUrl &gt;http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;// sourceUrl &gt;
+    &lt; sourceUrl &gt; http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;// sourceUrl &gt;
      (Laita se yhteen linjaan)   (Pahoittelut, että palvelinta ei ole enää saatavilla) .
 The sourceUrl Verkkosivut ovat yleensä " OPeNDAP Palvelimen indeksi \\[ Ohjaaja \\] &gt; huipulla.
 * Koska tämä luokka lataa aina ja tekee paikallisen kopion kunkin etätiedoston, sinun ei pitäisi koskaan kääriä tätä tietoaineistoa. [EdDTableCopy](#eddtablecopy) .
@@ -3706,7 +3708,7 @@ Yksityiskohdat: Näillä tiedostoilla on useita ± koko-muuttujat, joista jokais
 
 Toinen ongelma näissä tiedostoissa: Principal \\Investigator row \\size muuttuja ei ole näyte ulottuvuus attribuutti eikä noudata edellä mainittua sääntöä.
 
-Näytetiedostot tälle tietoaineistotyypille löytyväthttps://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 Tämä palvelin ei ole enää luotettava \\] .
+Näytetiedostot tälle tietoaineistotyypille löytyvät https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020-10-21 Tämä palvelin ei ole enää luotettava \\] .
 
 Katso tämän luokan superluokka, [EDDTableFromfiilit](#eddtablefromfiles) Tietoa siitä, miten luokka toimii ja miten sitä käytetään.
 
@@ -3850,10 +3852,10 @@ Ensimmäinen asia, jonka GenerateDatasetsXml tekee tällaiselle tietoaineistolle
  [ **EDDTableFromNOS** ](#eddtablefromnos)   (Vähennetty) Tietojen käsittely a NOAA   [NOS](https://opendap.co-ops.nos.noaa.gov/axis/) lähde, joka käyttää [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) pyyntöihin ja vastauksiin. Se on hyvin erityinen NOAA NOS XML. Katso näyte EDDTableFromNOS-tietoaineisto tietoaineistossa2.xml.
  
 ### EddtableFromOBIS{#eddtablefromobis} 
- [ **EddtableFromOBIS** ](#eddtablefromobis) Ocean Biogeographic Information Systemin tiedot (Obis) Palvelin (olihttp://www.iobis.org ) . On mahdollista, että ei ole enää aktiivisia palvelimia, jotka käyttävät tätä nykyistä ajantasaista OBIS-palvelinjärjestelmää.
+ [ **EddtableFromOBIS** ](#eddtablefromobis) Ocean Biogeographic Information Systemin tiedot (Obis) Palvelin (oli http://www.iobis.org  ) . On mahdollista, että ei ole enää aktiivisia palvelimia, jotka käyttävät tätä nykyistä ajantasaista OBIS-palvelinjärjestelmää.
 
 * OBIS-palvelimet odottavat XML-pyyntöä ja palauttavat XML-vastauksen.
-* Kaikki OBIS-palvelimet palvelevat samoja muuttujia. (olihttp://iobis.org/tech/provider/questions) Sinun ei tarvitse määrittää paljon, jotta voit luoda OBIS-tietoaineiston. ERDDAP .
+* Kaikki OBIS-palvelimet palvelevat samoja muuttujia. (oli http://iobis.org/tech/provider/questions ) Sinun ei tarvitse määrittää paljon, jotta voit luoda OBIS-tietoaineiston. ERDDAP .
 * Sinun täytyy sisällyttää " creator\\_email ”Arvostusta globaalissa addAttributes Koska näitä tietoja käytetään lisenssissä. Sopiva sähköpostiosoite löytyy lukemalla XML-vastauksen lähdeURL-osoitteesta.
 * Saatat tai et voi saada maailmanlaajuista tunnustusta.&lt; subsetVariables &gt; (#Subsetvariables) toimimaan tietyn OBIS-palvelimen kanssa. Jos yrität, kokeile vain yhtä muuttujaa. (Esimerkiksi ScientificName tai Genus) .
 #### EddtableFromOBIS Skeleton XML{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ Ensimmäinen asia, jonka GenerateDatasetsXml tekee tällaiselle tietoaineistolle
     * Vantaa (Sensor Web Enable) ja SOS   (Sensorin tarkkailupalvelu) ovat [OpenGIS®-standardit](https://www.ogc.org/standards) . Tällä sivustolla on standardiasiakirjat.
     * The OGC Verkkopalveluiden yleiset tiedot 1.1.0 ( OGC 06-121) GET- ja POST-kyselyiden rakentaminen (ks. kohta 7.2.3 ja kohta 9) .
     * Jos lähetät hakukoneen xml-pyynnön SOS Palvelin ( sourceUrl + ”palvelu” SOS & Request = GetCapabilities """) Saat xml-tuloksen, jossa on luettelo asemista ja havaituista Kiinteistöt, joihin heillä on tietoja.
-    * Havaittu kiinteistö on virallinen URI viittaus omaisuuteen. Esimerkiksi urn:ogc:phenomenon:longitude:wgs84 taihttps://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * Havaittu kiinteistö on virallinen URI viittaus omaisuuteen. Esimerkiksi urn:ogc:phenomenon:longitude:wgs84 tai https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * Huomattu omaisuus ei ole muuttuja.
-    * Yhdellä muuttujalla voi olla sama havainto omaisuus (Esimerkiksi sisätiloissa ja ulkona Kumpikin olisi voinut huomata omaisuushttps://mmisw.org/ont/cf/parameter/air\\_temperature) .
+    * Yhdellä muuttujalla voi olla sama havainto omaisuus (Esimerkiksi sisätiloissa ja ulkona Kumpikin olisi voinut huomata omaisuus https://mmisw.org/ont/cf/parameter/air\\_temperature ) .
     * Jos lähetät hakuilmoituksen xml-pyynnön SOS palvelin, saat xml-tuloksen, jossa on kuvauksia kenttänimistä vastauksessa, kenttäyksiköissä ja tiedoissa. Kentän nimet sisältävät pituus, leveys, syvyys (Ehkä ehkä ehkä ehkä ehkä) ja aikaa.
     * Jokainen jokainen dataVariable EDDTableFrom SOS on sisällytettävä "observedProperty"-ominaisuus, joka tunnistaa havaitun Operaatio-ominaisuuden, jota on pyydettävä palvelimelta tämän muuttujan saamiseksi. Usein useita dataVariable S listaa saman havaitun komposiitin.
     * Tietotekniikka jokaiselle dataVariable Palvelin ei voi määrittää. Jos näin on, sinun on tarkasteltava XML-tietovastauksia palvelimelta ja määritettävä asianmukaiset tiedot.&lt;Tietotyyppi &gt; (#datatype) Sisällä ERDDAP™ Data dataVariable määritelmiä.
@@ -3991,11 +3994,11 @@ Jos valituksia ei ole ennen vuotta 2020, tietotyyppi voidaan poistaa. **
 * Tämä luokka lukee luettelon.xml-tiedostoja, joita THREDDS tarjoaa luetteloilla.&lt;Kataloginen &gt; (Lisätiedot Catalog.xml sub-files) ja&lt;Dataa &gt; (Tiedostot) .
 * The&lt;tiedostoDir&gt;-asetus on sivuutettu. Koska tämä luokka lataa ja tekee paikallisen kopion jokaisesta etätiedostosta, ERDDAP™ Pakottaa tiedostot Likainen olla *isovanhemmat* Copy/ * datasetID * /
 * For For&lt; sourceUrl &gt; käytä luettelo.xml-tiedoston URL-osoitetta THREDDS-palvelimen tietoaineistoon, esimerkiksi: tätä URL-osoitetta varten, jota voidaan käyttää selaimessa,
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020-10-21 Tämä palvelin ei ole enää luotettava. \\] ,
-käyttää&lt; sourceUrl &gt;https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;// sourceUrl &gt;
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020-10-21 Tämä palvelin ei ole enää luotettava. \\] ,
+käyttää&lt; sourceUrl &gt; https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;// sourceUrl &gt;
      (Laita se yhteen linjaan) .
 * Koska tämä luokka lataa aina ja tekee paikallisen kopion kunkin etätiedoston, sinun ei pitäisi koskaan kääriä tätä tietoaineistoa. [EdDTableCopy](#eddtablecopy) .
-* Tämä aineistotyyppi tukee OPTIONAL-, harvoin käytettyä, erityistä tunnistetta,&lt;SpecialMode » *Mode* &lt;/specialMode&gt;, jota voidaan käyttää määrittämään, että erityisiä, kovakoodisia sääntöjä on käytettävä määrittämään, mitkä tiedostot on ladattava palvelimelta. Tällä hetkellä ainoa voimassa oleva *Mode* SAMOS, jota käytetään tietoaineistojen kanssahttps://tds.coaps.fsu.edu/thredds/catalog/samosLataa tiedostot vain viimeisellä versionumerolla.
+* Tämä aineistotyyppi tukee OPTIONAL-, harvoin käytettyä, erityistä tunnistetta,&lt;SpecialMode » *Mode* &lt;/specialMode&gt;, jota voidaan käyttää määrittämään, että erityisiä, kovakoodisia sääntöjä on käytettävä määrittämään, mitkä tiedostot on ladattava palvelimelta. Tällä hetkellä ainoa voimassa oleva *Mode* SAMOS, jota käytetään tietoaineistojen kanssa https://tds.coaps.fsu.edu/thredds/catalog/samos Lataa tiedostot vain viimeisellä versionumerolla.
 * Katso tämän luokan superluokka, [EDDTableFromfiilit](#eddtablefromfiles) Tietoa siitä, miten luokka toimii ja miten sitä käytetään.
 * Katso 1D, 2D, 3D ja 4D-esimerkit [EDDTableFromNcFiles](#eddtablefromncfiles) .
      
@@ -4182,8 +4185,8 @@ Kun palvelin päättää pyynnön käsittelyn, se tarkistaa, kuinka kauan viimei
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-Tämä aiheuttaa paikallisen sourceUrl   (kutenhttps://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-yleisölle sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) .
+Tämä aiheuttaa paikallisen sourceUrl   (kuten https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+yleisölle sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) .
 Muutokset tämän sivun arvoon tulevat voimaan seuraavalla kerralla. ERDDAP™ Lukeminen datasets.xml mukaan lukien vastauksena tietoaineistoon [Lippu](/docs/server-admin/additional-information#flag) .
 
 turvallisuussyistä ja tilausjärjestelmään liittyvistä syistä, **Älä käytä tätä puhetta&#33;**   
@@ -4314,7 +4317,7 @@ Käyttäjät eivät usein tiedä, että heidän pyyntönsä ovat hankalia. He ov
     ```
     * Sinun ei tarvitse aloittaa uudelleen ERDDAP™ Muutoksiin&lt;Pyydä mustavalkoista &gt; voimaan. Muutokset havaitaan seuraavalla kerralla. ERDDAP™ Tarkista, onko tietoaineistoa syytä ladata uudelleen. Voit nopeuttaa prosessia vierailemalla [Säätiö Lippu URL](/docs/server-admin/additional-information#set-dataset-flag) mihin tahansa dataan.
     * Sinun ERDDAP™ Päivittäinen raportti sisältää luettelon/tally aktiivisimmista sallituista ja estetyimmistä hakijoista.
-    * Jos haluat selvittää, mikä verkkotunnus/instituutio liittyy numerolliseen IP-osoitteeseen, voit käyttää ilmaista ja käänteistä DNS-verkkopalvelua. [https://network-tools.com/](https://network-tools.com/) .
+    * Jos haluat selvittää, mikä verkkotunnus/instituutio liittyy numerolliseen IP-osoitteeseen, voit käyttää ilmaista ja käänteistä DNS-verkkopalvelua. [ https://network-tools.com/ ](https://network-tools.com/) .
     * On aikoja, jolloin on järkevää estää tietyt käyttäjät korkeammalla tasolla, esimerkiksi haitalliset käyttäjät. Voit esimerkiksi estää pääsyn kaikkeen palvelimellasi, ei vain ERDDAP . Linuxissa yksi tällainen menetelmä on [iptables](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) . Voit esimerkiksi lisätä säännön, joka estää kaiken, mitä tulee 198.51.100.0 komennolla.
 I INPUT - 198.51.100.0 DROP
        
@@ -4738,17 +4741,17 @@ VAROITUS: Jos lisäät räätälöityjä palettia ERDDAP™ ja sinulla on EDDGri
     * Tällä hetkellä, EDDGrid aliluokka, mikä tahansa muutos metadataan tai akselimuuttujaan (Esimerkiksi lähes reaaliaikaisten tietojen uusi aikapiste) katsotaan muutokseksi, mutta tietojen lataamista ei pidetä muutoksena. (itsestään) .
     * Tällä hetkellä EDDTable-alaluokkien osalta aineiston uudelleenlataamista pidetään muutoksena.
     * Tällä hetkellä sallitaan vain kahdenlaisia toimia:
-        * """http://"tai "https://"----- Jos toiminta alkaa "http://"tai "https://", ERDDAP™ lähettää HTTP GET Pyydä ilmaista URL-osoitetta. Vastaus jätetään huomiotta. Esimerkiksi URL-osoite saattaa kertoa jollekin muulle verkkopalvelulle.
+        * """ http://" tai " https://" ----- Jos toiminta alkaa " http://" tai " https://" , ERDDAP™ lähettää HTTP GET Pyydä ilmaista URL-osoitetta. Vastaus jätetään huomiotta. Esimerkiksi URL-osoite saattaa kertoa jollekin muulle verkkopalvelulle.
             * Jos URL-osoitteessa on kyselyosa (jälkeen "?) Sen on oltava jo [% koodattu](https://en.wikipedia.org/wiki/Percent-encoding) . Sinun on koodattava erityishahmoja rajoitteisiin. (muu kuin alkuperäinen & tärkein '=' Rajoituksissa) muotoon %H, jossa HH on luonteen kaksinumeroinen heksadesimaalinen arvo. Yleensä sinun tarvitsee vain muuntaa muutamia täsmällisyysmerkkejä: %25, ja %26, %22,&lt;%3C, = %3D, &gt; %3E, + %2B, | %7C, \\[ %5B, \\] %5D, tila %20 ja muunna kaikki yli #127-merkit UTF-8-muodoksi ja sitten kooditavut UTF-8-muodossa %H-muotoon (Kysy ohjelmoijalta apua) .
 Esimerkiksi & stationID &#123;&#123;41004&#125;&#125;
 Tulee & stationID %3E= %2241004 %22 %
 Koodaus on yleensä tarpeen, kun käytät ERDDAP Muun ohjelmiston kuin selaimen kautta. Selaimet käsittelevät yleensä prosenttiosuuden koodausta.
 Joissakin tilanteissa sinun on koodattava kaikki muut hahmot kuin A-Za-z0-9. """ () *, mutta älä koodaa alkuperäistä & tai pääosaa '=' rajoituksissa.
-Ohjelmointikielillä on työkaluja tähän (ks. Java &gt; [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) ja Java Käsikirjoitus [encodeURIComponent()) (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) ja on
+Ohjelmointikielillä on työkaluja tähän (ks. Java &gt; [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) ja Java Käsikirjoitus [encodeURIComponent()) ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) ja on
                  [Verkkosivut, jotka prosenttiin koodaavat/dekoodaavat sinulle](https://www.url-encode-decode.com/) .
             * Siitä lähtien datasets.xml XML-tiedosto, sinun täytyy myös ja koodata kaikki ja&lt;"ja" URL-osoitteessa "&amp;"&lt;&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
             * Esimerkki: URL-osoitteeseen, jonka voit kirjoittaa selaimeen:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 Sinun pitäisi määritellä&lt;onChange &gt; Tag by (Yhdellä linjalla) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ Tämä voi vaikuttaa myös lyhyiden sanojen ja pidempien sanojen lajitteluun, jo
     * A sourceUrl voi alkaa http:// , https:// ftp: ja ehkä myös muita etuliitteitä. https yhteydet lukevat ja tarkistavat lähteen digitaalisen sertifikaatin varmistaakseen, että lähde on se, mitä ne sanovat olevan. Harvinaisissa tapauksissa tämä tarkistus voi epäonnistua virheellä "javax.net.ssl.SSLProtocolException: handshake-varoitus: tunnistamaton nimi". Tämä johtuu todennäköisesti verkkotunnuksesta, joka ei vastaa käyttämääsi verkkotunnusta. Voit lukea ja lukea yksityiskohtia sourceUrl "Sertifikaatti verkkoselaimessasi, erityisesti "DNS Name" -luettelo "Subject Alternative Name" -osiossa.
         
 Joissakin tapauksissa, sourceUrl käytät voi olla alias verkkotunnuksen todistuksessa. Esimerkiksi,
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/Tämä virhe heitetään, mutta
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/Se, joka käyttää verkkotunnusta todistuksessa, ei. Ratkaisu näissä tapauksissa on verkkotunnuksen löytäminen ja käyttö todistuksessa. Jos et löydä sitä todistuksesta, ota yhteyttä palveluntarjoajaan.
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ Tämä virhe heitetään, mutta
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ Se, joka käyttää verkkotunnusta todistuksessa, ei. Ratkaisu näissä tapauksissa on verkkotunnuksen löytäminen ja käyttö todistuksessa. Jos et löydä sitä todistuksesta, ota yhteyttä palveluntarjoajaan.
         
 Muissa tapauksissa todistuksen verkkotunnus voi olla nimiryhmä. Jos tämä tapahtuu tai ongelma on muuten ratkaisematon, pyydämme sähköpostia Chris. Noaa.gov raportoi ongelmasta.
          
@@ -5221,7 +5224,7 @@ Tulee & stationID %3E= %2241004 %22 %
 Koodaus on yleensä tarpeen, kun käytät ERDDAP Muun ohjelmiston kuin selaimen kautta. Selaimet käsittelevät yleensä prosenttiosuuden koodausta.
 Joissakin tilanteissa sinun on koodattava kaikki muut hahmot kuin A-Za-z0-9. """ () *, mutta älä koodaa alkuperäistä & tai pääosaa '=' .
 Ohjelmointikielillä on työkaluja tähän (ks. Java &gt; [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-ja Java Käsikirjoitus [encodeURIComponent()) (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) ja on
+ja Java Käsikirjoitus [encodeURIComponent()) ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) ja on
          [Verkkosivut, jotka prosenttiin koodaavat/dekoodaavat sinulle](https://www.url-encode-decode.com/) .
     * Siitä lähtien datasets.xml XML-tiedosto, sinun täytyy myös ja koodata kaikki ja&lt;"ja" URL-osoitteessa "&amp;"&lt;&gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt; &gt;
     *    infoUrl on ainutlaatuinen ERDDAP . Se ei ole minkäänlaista metadataa.
@@ -5257,7 +5260,28 @@ Kun aineisto on ladattu ERDDAP ,
     ```
     * Jos " \\[ Standard standard standard standard standard standard standard standard standard standard standard standard \\] "Tarkoittaa attribuuttiarvoa, se korvataan standardilla. ERDDAP™ lisenssistä&lt;StandardLicense &gt; Tag in ERDDAP &gt;
          \\[ Tom \\] /webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/viestejä.xml-tiedosto.
-         
+
+###### Luokittelu{#classification} 
+*    [ **Luokittelu** ](#classification) tietojen luokittelutaso.
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * Hyväksyttävät arvot ovat _luokittelematon_, _luottamus_, _rajoitettu_, _scret_ tai_top_secret_.
+
+###### Aihe: Kategoria{#topic_category} 
+*    [ **Aihe: Kategoria** ](#topic_category) Korkeatasoinen maantieteellinen tietojen temaattinen luokitus, joka auttaa käytettävissä olevien maantieteellisten tietojoukkojen ryhmittelyssä ja etsinnässä.
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * Hyväksyttävät arvot ovat _biota_, _boundaries_, _climatology_meteorology_atomosphere_, _economy_, _elevation_, _ympäristö_, _farming_, _geoscientific_information_, _health_, _imagery_base_maps_ear_cover_, _inland_ets, _strain_sil_station_sil_st
+
+###### Ylläpito_taajuus{#maintenance_frequency} 
+*    [ **Ylläpito_taajuus** ](#maintenance_frequency) Taajuus, jolla muutokset ja poistot tehdään tietoihin ensimmäisen tuotantonsa jälkeen.
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * Hyväksyttävät arvot ovat hyväksyttäviä arvoja _annual_, _as_need_, _biannually_, _jatkuva_, _daily_, _fortnightly_, _irregular_, _monthly_, _not_planned_, _quarterly_, _unknown_, _weekly_.
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) on peräisin vanhentuneista [ACD 1.0](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (jotka on tunnistettu Metadata\\_Conventions kuin " Unidata Dataset Discovery v1.0) Metadatastandardi. Attribuuttiarvo oli koodattu luettelo metadatan yleissopimuksista, joita tämä tietoaineisto käyttää.
 Jos aineisto käyttää ACD 1.0:aa, tämä ominaisuus on vahvasti valmistettu, esimerkiksi
@@ -5389,7 +5413,7 @@ Jos indeksi on&lt;1. Tietoaineistoa pidetään ajan tasalla.
 Jos indeksi on&lt;= 1, aineistoa pidetään vanhentuneena.
 Jos indeksi on&lt;= 2, aineistoa pidetään hyvin ajantasaisena.
     
-The testOutOfDate Arvoa käytetään myös ERDDAP™ tuottaahttps://*yourDomain*/erddap/outOfDateDatasets.htmlWEB WEB WEB WEB WEB ( [esimerkki esimerkki esimerkki esimerkki](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) jotka osoittavat aineistot, joilla on&lt; testOutOfDate &gt; tagit, joiden aineistot on sijoitettu sen mukaan, kuinka ulkopuolisia ne ovat. Jos vaihdat tiedostotyyppiä (.html .csv, .jsonlCSV , .nc , .tsv ,...) Voit saada nämä tiedot eri tiedostomuodoissa.
+The testOutOfDate Arvoa käytetään myös ERDDAP™ tuottaa https://*yourDomain*/erddap/outOfDateDatasets.html WEB WEB WEB WEB WEB ( [esimerkki esimerkki esimerkki esimerkki](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) jotka osoittavat aineistot, joilla on&lt; testOutOfDate &gt; tagit, joiden aineistot on sijoitettu sen mukaan, kuinka ulkopuolisia ne ovat. Jos vaihdat tiedostotyyppiä (.html .csv, .jsonlCSV , .nc , .tsv ,...) Voit saada nämä tiedot eri tiedostomuodoissa.
     
 Jos mahdollista, [GenerateDatasetsXml](#generatedatasetsxml) Lisää A testOutOfDate Attribuutti globaalille addAttributes Eräästä datasta. Tämä arvo on ehdotus, joka perustuu GenerateDatasetsXmlin saataviin tietoihin. Jos arvo ei ole sopiva, vaihda se.
     
@@ -5948,8 +5972,8 @@ Pakkausarvo = pakattu Arvo \\ * scale\\_factor + add\\_offset
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone Se on OPTIONALINEN, jota käytetään ERDDAP™   (Ei metatietoja) for [Aika- ja aikaleimamuuttujat](#time-units) , jotka voivat olla verkottuneissa tietoaineistoissa tai tabulaarisissa tietoaineistoissa.
     * Oletusarvo on " Zulu """ (Nykyaikainen versio GMT:stä) .
-    * Background information: Time offsets Näytä tarkat tiedot (Pacific Standard Time, 08:00, GMT-8) kiinteät, konkreettiset kompenssit suhteessa Zulu   (GM) . Päinvastoin, "aikavyöhykkeet" ovat paljon monimutkaisempia asioita, joihin Daylight Saving vaikuttaa. (Esimerkiksi ”Yhdysvallat/Tyynenmeri”) Sillä on ollut erilaisia sääntöjä eri paikoissa eri aikoina. Aikavyöhykkeillä on aina nimet, koska niitä ei voi tiivistää yksinkertaisella offset-arvolla. (Katso taulukon "TZ-tietokannan nimet" [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP &gt; time\\_zone attribuutti auttaa sinua käsittelemään paikallisia aikatietoja tietyltä aikavyöhykkeeltä (1987-03-25T17:32:05 Tyynenmeren Aika-aika) . Jos sinulla on merkkijono tai numeerinen aikatiedot (Kiinteä) Ajan myötä, sinun pitäisi vain säätää tietoja Zulu   (Mikä on mitä ERDDAP™ Haluavat) määrittämällä eri perusta-aika yksikköjen attribuutissa (mm. "tunnit vuodesta 1970-01-01T08:00:00Z", huomauttaa T08 määrittää aika offset.) Tarkista aina tulokset, jotta saat haluamasi tulokset.
-    * Aikaleimamuuttujat, joissa on lähdetietoja Stringsistä, tämän ominaisuuden avulla voit määrittää aikavyöhykkeen, joka johtaa ERDDAP™ Paikallis-aika-alueen lähdeajat (Joitakin vakio-aikoja, osa päivänvalon säästöaikaa) sisään Zulu Kertoja (joka on aina normaalia aikaa) . Luettelo voimassa olevista aikavyöhykkeiden nimistä on todennäköisesti sama kuin TZ-sarakkeessa olevassa luettelossa. [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Yhdysvaltain aikavyöhykkeet ovat: US/Hawaii, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, US/Itä.
+    * Background information: Time offsets Näytä tarkat tiedot (Pacific Standard Time, 08:00, GMT-8) kiinteät, konkreettiset kompenssit suhteessa Zulu   (GM) . Päinvastoin, "aikavyöhykkeet" ovat paljon monimutkaisempia asioita, joihin Daylight Saving vaikuttaa. (Esimerkiksi ”Yhdysvallat/Tyynenmeri”) Sillä on ollut erilaisia sääntöjä eri paikoissa eri aikoina. Aikavyöhykkeillä on aina nimet, koska niitä ei voi tiivistää yksinkertaisella offset-arvolla. (Katso taulukon "TZ-tietokannan nimet" [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP &gt; time\\_zone attribuutti auttaa sinua käsittelemään paikallisia aikatietoja tietyltä aikavyöhykkeeltä (1987-03-25T17:32:05 Tyynenmeren Aika-aika) . Jos sinulla on merkkijono tai numeerinen aikatiedot (Kiinteä) Ajan myötä, sinun pitäisi vain säätää tietoja Zulu   (Mikä on mitä ERDDAP™ Haluavat) määrittämällä eri perusta-aika yksikköjen attribuutissa (mm. "tunnit vuodesta 1970-01-01T08:00:00Z", huomauttaa T08 määrittää aika offset.) Tarkista aina tulokset, jotta saat haluamasi tulokset.
+    * Aikaleimamuuttujat, joissa on lähdetietoja Stringsistä, tämän ominaisuuden avulla voit määrittää aikavyöhykkeen, joka johtaa ERDDAP™ Paikallis-aika-alueen lähdeajat (Joitakin vakio-aikoja, osa päivänvalon säästöaikaa) sisään Zulu Kertoja (joka on aina normaalia aikaa) . Luettelo voimassa olevista aikavyöhykkeiden nimistä on todennäköisesti sama kuin TZ-sarakkeessa olevassa luettelossa. [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Yhdysvaltain aikavyöhykkeet ovat: US/Hawaii, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, US/Itä.
     * Aikaleimamuuttujat, joissa on numeerisia lähteitä koskevia tietoja, voit määrittää time\\_zone "Anteeksi, mutta arvon on oltava" Zulu Tai ”UTC”. Jos tarvitset tukea muihin aikavyöhykkeisiin, lähetä sähköpostia. Johannes osoitteessa Noaa.gov.
          
 ###### Alkuperäinen nimi: Time_adjust{#legacy_time_adjust} 

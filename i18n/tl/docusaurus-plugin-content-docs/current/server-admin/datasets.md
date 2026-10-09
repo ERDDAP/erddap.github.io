@@ -42,7 +42,7 @@ Kapag lumapit sa iyo ang isang data provider sa pag - asang magdagdag ng ilang i
 Ang pagsusumite ng mga aktuwal na data files mula sa mga panlabas na pinagmulan ay isang malaking panganib sa seguridad, kaya ERDDAP™ ay hindi tumatalakay niyan. Kailangan mong alamin ang solusyon na makatutulong sa iyo at sa data provider, halimbawa, sa email (para sa maliliit na file) , Hugot mula sa ulap (Halimbawa, Drive ng DropBox o Google) , isang sftp site (na may mga password) , o palihim Net (isang USB hinlalaki drive o panlabas na hard drive) . Malamang na tanggapin mo lamang ang mga file mula sa mga taong kilala mo. Kailangan mong suriin ang mga salansan ng mga virus at gumawa ng iba pang mga pag - iingat sa seguridad.
 
 Walang link ERDDAP™ sa Puri ng Data (halimbawa, sa ERDDAP™ pantahanang pahina) . Sa halip, kapag may nagsabi sa iyo na nais nilang ang kanilang impormasyon ay isilbi sa iyo ERDDAP , maaari mo silang padalhan ng email na nagsasabi ng gaya ng:
-Oo, maaari nating makuha ang iyong datos ERDDAP . Upang magsimula, pakisuyong punan ang pormahttps://*yourUrl*/erddap/dataProviderForm.html  (o http:// kung gayon https:// ay hindi magawa) .
+Oo, maaari nating makuha ang iyong datos ERDDAP . Upang magsimula, pakisuyong punan ang porma https://*yourUrl*/erddap/dataProviderForm.html   (o http:// kung gayon https:// ay hindi magawa) .
 Pagtapos mo, makikipag - ugnayan ako sa iyo para malaman ang mga detalye.
 Kung nais mo lamang tingnan ang anyo (nang hindi ito pinupuno) , makikita mo ang anyo sa ERD ' ERDDAP : [Introduksiyon](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) , [Bahagi 1](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) , [Bahagi 2](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) , [Bahagi 3](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) , at [Bahagi 4](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) . Ang mga kawing na ito sa ERD   ERDDAP™ magpadala ng impormasyon sa akin, hindi sa inyo, kaya huwag kayong magpadala ng impormasyon sa kanila malibang talagang nais ninyong dagdagan ng datos ang mga ito ERD   ERDDAP .
 
@@ -190,23 +190,23 @@ Ang EDDType na ito ang gumagawa ng lahat ng datasets.xml Mga tipak na kailangang
      
 #####  EDDGrid Mula sa ThreddsCatalog{#eddgridfromthreddscatalog} 
 Ang EDDType na ito ang gumagawa ng lahat ng datasets.xml Mga tipak na kailangan para sa lahat [ EDDGrid Mula sa Dap](#eddgridfromdap) mga datos na masusumpungan nito sa pamamagitan ng paggapang na pabalik - balik sa pamamagitan ng THEDDS (Ilalim) katalogo. Maraming uri ng katalogo ng THEDDS na URL. Ang option na ito REQURE ISANG THREDS .xml URL na may /catalog/ dito, halimbawa,
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xmlo
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml o
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (Ang isang kaugnay na .html katalogo ay nasa
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html, na hindi katanggap-tanggap sa EDDGrid Mula sa ThreddsCatalog).
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html , na hindi katanggap-tanggap sa EDDGrid Mula sa ThreddsCatalog).
 Kung may problema ka EDDGrid Mga Mula sa Thredd Catalog:
 * Tiyakin ang URL na ginagamit mo ay tama, kasama ang /catalog/, at nagtatapos sa /catalog.xml .
-* Hangga't maaari, gumamit ng adres na pampubliko (Halimbawa,https://oceanwatch.pfeg.noaa.gov) sa URL, hindi isang lokal na direksiyon ng numero (Halimbawa,https://12.34.56.78) . Kung ang THEDDS ay mararating lamang sa pamamagitan ng lokal na numerong IP address, magagamit mo [&lt;kumbinasyon sa PubliSourceUrl&gt;] (#convertto Publicsourceurl) gayo'y ERDDAP™ nakikita ng mga gumagamit ang pahayag pangmadla, bagaman ERDDAP™ ay kumukuha ng impormasyon mula sa lokal na direksiyon ng numero.
+* Hangga't maaari, gumamit ng adres na pampubliko (Halimbawa, https://oceanwatch.pfeg.noaa.gov ) sa URL, hindi isang lokal na direksiyon ng numero (Halimbawa, https://12.34.56.78 ) . Kung ang THEDDS ay mararating lamang sa pamamagitan ng lokal na numerong IP address, magagamit mo [&lt;kumbinasyon sa PubliSourceUrl&gt;] (#convertto Publicsourceurl) gayo'y ERDDAP™ nakikita ng mga gumagamit ang pahayag pangmadla, bagaman ERDDAP™ ay kumukuha ng impormasyon mula sa lokal na direksiyon ng numero.
 * Kung may mga problema kang hindi mo malutas, [Tingnan ang problema sa pagpapaputok ng mga tip](#troubleshooting-tips) .
 * Ang mababang antas na kodigo para rito ngayon ay gumagamit ng kodigo Unidata " netcdf-java katalogo " na kodigong gumagapang (th. uri ng katalogo) upang pangasiwaan nito ang lahat ng katalogo ng THEDS (na maaaring maging nakagugulat at masalimuot) Salamat Unidata para sa kodigong iyan.
          
 #####  EDDGrid LonPM180 Mula sa UpdapCatalog{#eddgridlonpm180fromerddapcatalog} 
 Ang EDDType na ito ang lumilikha ng datasets.xml upang makagawa [ EDDGrid LonPM180](#eddgridlonpm180) datos mula sa lahat EDDGrid mga datos sa loob ng isang ERDDAP na may anumang halaga ng longhitud na higit pa sa 180.
-* Hangga't maaari, gumamit ng adres na pampubliko (Halimbawa,https://oceanwatch.pfeg.noaa.gov) sa URL, hindi isang lokal na direksiyon ng numero (Halimbawa,https://12.34.56.78) . Kung gayon ERDDAP™ ay makukuha lamang sa pamamagitan ng lokal na numerong direksiyon ng IP, magagamit ninyo [&lt;kumbinasyon sa PubliSourceUrl&gt;] (#convertto Publicsourceurl) gayo'y ERDDAP™ nakikita ng mga gumagamit ang pahayag pangmadla, bagaman ERDDAP™ ay kumukuha ng impormasyon mula sa lokal na direksiyon ng numero.
+* Hangga't maaari, gumamit ng adres na pampubliko (Halimbawa, https://oceanwatch.pfeg.noaa.gov ) sa URL, hindi isang lokal na direksiyon ng numero (Halimbawa, https://12.34.56.78 ) . Kung gayon ERDDAP™ ay makukuha lamang sa pamamagitan ng lokal na numerong direksiyon ng IP, magagamit ninyo [&lt;kumbinasyon sa PubliSourceUrl&gt;] (#convertto Publicsourceurl) gayo'y ERDDAP™ nakikita ng mga gumagamit ang pahayag pangmadla, bagaman ERDDAP™ ay kumukuha ng impormasyon mula sa lokal na direksiyon ng numero.
          
 #####  EDDGrid Lon0360 MulaErddapCatalog{#eddgridlon0360fromerddapcatalog} 
 Ang EDDType na ito ang lumilikha ng datasets.xml upang makagawa [ EDDGrid Lon0360](#eddgridlon0360) datos mula sa lahat EDDGrid mga datos sa loob ng isang ERDDAP na may anumang halaga ng longhitud na wala pang 0.
-* Hangga't maaari, gumamit ng adres na pampubliko (Halimbawa,https://oceanwatch.pfeg.noaa.gov) sa URL, hindi isang lokal na direksiyon ng numero (Halimbawa,https://12.34.56.78) . Kung gayon ERDDAP™ ay makukuha lamang sa pamamagitan ng lokal na numerong direksiyon ng IP, magagamit ninyo [&lt;kumbinasyon sa PubliSourceUrl&gt;] (#convertto Publicsourceurl) gayo'y ERDDAP™ nakikita ng mga gumagamit ang pahayag pangmadla, bagaman ERDDAP™ ay kumukuha ng impormasyon mula sa lokal na direksiyon ng numero.
+* Hangga't maaari, gumamit ng adres na pampubliko (Halimbawa, https://oceanwatch.pfeg.noaa.gov ) sa URL, hindi isang lokal na direksiyon ng numero (Halimbawa, https://12.34.56.78 ) . Kung gayon ERDDAP™ ay makukuha lamang sa pamamagitan ng lokal na numerong direksiyon ng IP, magagamit ninyo [&lt;kumbinasyon sa PubliSourceUrl&gt;] (#convertto Publicsourceurl) gayo'y ERDDAP™ nakikita ng mga gumagamit ang pahayag pangmadla, bagaman ERDDAP™ ay kumukuha ng impormasyon mula sa lokal na direksiyon ng numero.
          
 ##### Mga EDD Mula sa mga Bakod{#eddsfromfiles} 
 Nagbibigay ng panimulang directory, ito ay tumatawid sa directory at sa lahat ng subdirectories at nagsisikap na lumikha ng isang dataset para sa bawat pangkat ng mga data file na nasusumpungan nito.
@@ -566,7 +566,7 @@ Ang NCCSV 1.0 files ay hindi sumusuporta sa anumang hindi nakasigned integer dat
 ### Uri ng Komento ng Data{#data-type-comments} 
 * Dahil sa mahinang suporta sa mahaba, ulong, at char data sa maraming uri ng file, hindi namin hinihimok ang paggamit ng mga uring ito ng datos sa ERDDAP . Kung maaari, gumamit ng doble sa halip ng mahaba at ulong, at gamitin ang String sa halip na char.
      
-* Metadata - Dahil sa(OPeN)DAP'Ang mga tugong .da at .dds ay hindi sumusuporta sa mga mahahaba o ulong attribute o mga uri ng datos (at sa halip ipakita ang mga ito bilang doble) , sa halip ay baka gusto mong gamitin ERDDAP 's tabular representasyon ng metadata gaya ng makikita sa http .../erddap/ **Pagkain** / * datasetID * .html web page (Halimbawa, [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (na makukuha mo rin sa ibang uri ng talaksan, e.g., .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) o ang .nccsv Ang tugon ng Metadata (Halimbawa, [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) bagaman .nccsv Ang metadata ay makukuha lamang para sa tabular datasets) , parehong sumusuporta sa lahat ng uri ng datos (Partikular, ang mahaba, ulong, at char) .
+* Metadata - Dahil sa(OPeN)DAP'Ang mga tugong .da at .dds ay hindi sumusuporta sa mga mahahaba o ulong attribute o mga uri ng datos (at sa halip ipakita ang mga ito bilang doble) , sa halip ay baka gusto mong gamitin ERDDAP 's tabular representasyon ng metadata gaya ng makikita sa http .../erddap/ **Pagkain** / * datasetID * .html web page (Halimbawa, [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (na makukuha mo rin sa ibang uri ng talaksan, e.g., .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) o ang .nccsv Ang tugon ng Metadata (Halimbawa, [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) bagaman .nccsv Ang metadata ay makukuha lamang para sa tabular datasets) , parehong sumusuporta sa lahat ng uri ng datos (Partikular, ang mahaba, ulong, at char) .
          
 ### Ang Media Files{#media-files} 
 Hindi lahat ng datos ay mga hanay ng bilang o teksto. Ang ilang mga dataset ay binubuo o kinabibilangan ng mga file ng media, tulad ng imahe, audio at video files. ERDDAP™ ay may ilang pantanging katangian upang gawing mas madali para sa mga gumagamit na ma-access ang mga file ng media. Dalawang hakbang:
@@ -604,7 +604,7 @@ O, kung ang gumagamit ay kumukumpas sa pangalan na ipinakikita sa isang pangalan
 ### Paggawang Kasama ng AWS S3 Files{#working-with-aws-s3-files} 
  [Paglilingkod sa Web ng Amazon (MGA AW) ](https://aws.amazon.com) ay isang nagbebenta ng [pagpupuslit ng ulap](https://en.wikipedia.org/wiki/Cloud_computing) mga serbisyo. [S3](https://aws.amazon.com/s3/) ay isang bagay na nakaimbak na sistema na iniaalok ng AWS. Sa halip ng sistemang herarkiya ng mga direktoryo at mga salansan ng isang tradisyunal na sistema ng talaksan (tulad ng isang hard drive sa iyong PC) , ang S3 ay nag-aalok lamang ng "buckets" na may hawak na "mga bagay". (Tatawagin natin "files" ) .
 
-Para sa mga talaksang ASCII (e.g., .csv) , ERDDAP™ ay maaaring gumawa sa mga salansan sa mga timba nang tuwiran. Ang tanging bagay na kailangan mong gawin ay magtakda ng&lt;fileDir&gt; para sa dataset gamit ang espesipikong format para sa AWS bucket, e.g.,https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/. Hindi mo dapat gamitin&lt;Hache Mula sa Url&gt; . Tingnan ang ibaba para sa mga detalye.
+Para sa mga talaksang ASCII (e.g., .csv) , ERDDAP™ ay maaaring gumawa sa mga salansan sa mga timba nang tuwiran. Ang tanging bagay na kailangan mong gawin ay magtakda ng&lt;fileDir&gt; para sa dataset gamit ang espesipikong format para sa AWS bucket, e.g., https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ . Hindi mo dapat gamitin&lt;Hache Mula sa Url&gt; . Tingnan ang ibaba para sa mga detalye.
 
 Subalit para sa binary files (e.g., .nc , .grib, .bufr, at .hdf mga talaksan) , kailangan mong gamitin ang&lt;cache FromUrl&gt; system na inilarawan sa ibaba. ERDDAP , netcdf-java (alin ERDDAP™ gamit sa pagbasa ng datos mula sa mga talaksang ito) , at ang iba pang siyentipikong data software ay dinisenyo upang gumana sa pamamagitan ng mga file sa isang tradisyonal na file system [antas ng bloke](https://en.wikipedia.org/wiki/Block-level_storage) pagkuha ng talaksan (na nagpapahintulot sa pagbasa ng mga tipak ng talaksan) , ngunit S3 lamang ang nag-aalok [antas ng talaksan (bagay) ](https://en.wikipedia.org/wiki/Block-level_storage) pagkuha ng talaksan (na nagpapahintulot lamang na mabasa ang buong talaksan) . Nag-aalok ang AWS ng alternatibo sa S3, [Elastic Block Store (EBS) ](https://aws.amazon.com/ebs/) ), na sumusuporta sa pag-access ng block level sa mga file ngunit ito ay mas mahal kaysa sa S3, kaya ito ay bihirang gamitin para sa maramihang pag-iimbak ng maraming data files. (Kaya kapag sinasabi ng mga tao na nag - iimbak ng impormasyon sa ulap (S3) ay mura, ito ay karaniwang isang mansanas sa mga kahel na paghahambing.) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 Ang katumbas na URl para sa bagay na iyon ay
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 Sinusuportahan ng AWS ang kaunting pagkakaiba sa kung paano ginagawa ang URL na iyon, subalit ERDDAP™ kailangan ang isang espesipikong format:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 Kung Tungkol sa ERDDAP 0.29, magagamit mo na ngayon ang `s3://` URI format sa halip ng timba URL. Ito ang format na ginagamit ng [AWS s3 cli](https://docs.aws.amazon.com/cli/latest/reference/s3/) .
 s3:// *balde* / *susi* 
@@ -697,22 +697,22 @@ Para sa isang pribadong kahon ng datos na S3, ang may - ari ng timba ay dapat na
 Sa lahat ng kaso, kakailanganin mo ang isang ulat ng WAS sapagkat ang WAS SDK para sa Java   (alin ERDDAP™ para makuha ang impormasyon tungkol sa laman ng timba) ay nangangailangan ng mga kredensiyal sa kuwenta ng AWS. (sa ibaba) 
 
  ERDDAP™ magagamit lamang ang AWS S3 balde kung itatakda mo ang [&lt;Hache Mula sa Url&gt;] (#cache simulaurl) (o&lt;fileDir&gt;) sa isang espesipikong format:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 kung saan
 
 * Ang baldeName ay ang maikling anyo ng pangalan ng timba, e.g. noaa-goes17 .
 * Ang aws-region, e.g., we-east-1, ay mula sa "Region" column sa isa sa mga mesa ng [Nagwakas ang Paglingkurang WOS](https://docs.aws.amazon.com/general/latest/gr/rande.html) kung saan aktuwal na matatagpuan ang timba.
 * Ang unlapi ay opsyonal. Kung sa kasalukuyan, dapat itong matapos sa '/' .
 
-Halimbawa,https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+Halimbawa, https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 Ang URL format na ito ay isa sa mga rekomendasyon ng WAS S3: tingnan ang [Pagkakuha ng Bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) at [ang paglalarawang ito ng mga unlapi](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) . ERDDAP™ Kailangan mong pagsamahin ang timba na URL at ang opsyonal na panlapi sa isang URL upang matiyak ang&lt;Oches Mula sa Url&gt; (o&lt;fileDir&gt;) kung saan matatagpuan ang mga files.
 
 #### Subukin ang mga AWS S3 Bucket{#test-public-aws-s3-buckets} 
 Para sa pampublikong mga timba, maaari at dapat mong subukin ang timba na URL ng WAS S3 directory sa iyong browser, e.g.,
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) Kung ang timba ay tama at angkop para sa ERDDAP , ibabalik nito ang isang dokumentong XML na mayroon na (bahagi) Itinala ang laman ng timba. Nakalulungkot, ang buong URL (I.e., timba URL plus panlapi) yaon pang ERDDAP™ ang kagustuhan para sa isang ibinigay na dataset ay hindi gumagana sa isang browser. Ang AWS ay hindi nag - aalok ng isang sistema upang mabilis na manginain ng herarkiya ng isang timba sa iyong browser. (Kung mali iyan, pakisuyong email Chris. John sa noaa.gov. Kung hindi, ang Amazon, pakisuyong magdagdag ng suporta rito&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) Kung ang timba ay tama at angkop para sa ERDDAP , ibabalik nito ang isang dokumentong XML na mayroon na (bahagi) Itinala ang laman ng timba. Nakalulungkot, ang buong URL (I.e., timba URL plus panlapi) yaon pang ERDDAP™ ang kagustuhan para sa isang ibinigay na dataset ay hindi gumagana sa isang browser. Ang AWS ay hindi nag - aalok ng isang sistema upang mabilis na manginain ng herarkiya ng isang timba sa iyong browser. (Kung mali iyan, pakisuyong email Chris. John sa noaa.gov. Kung hindi, ang Amazon, pakisuyong magdagdag ng suporta rito&#33;) 
 
 #### Pagtingin sa mga Nilalaman{#viewing-the-contents-of-a-bucket} 
-Ang mga timba na S3 ay kadalasang naglalaman ng dalawang kategorya ng mga salansan, sa dalawang pseudo subdirectories, na maaaring maging dalawa sa mga ito ERDDAP™ mga datos. Upang makagawa ng ERDDAP™ mga dataset, kailangan mong malaman ang panimulang directory para sa&lt;Oches Mula sa Url&gt; (o&lt;fileDir&gt;) at ang format ng mga pangalan ng talaksan na nagpapakilala sa subset na iyon ng mga file. Kung titingnan mo ang buong laman ng timba sa isang browser, ipakikita lamang sa iyo ng S3 ang unang 1000 file, na hindi sapat. Sa kasalukuyan, ang pinakamabuting paraan upang makita mo ang lahat ng laman ng timba ay ang gumawa ng isang timba [Mapagkakatiwalaan Mula sa mga Bilibini](#eddtablefromfilenames) datos (sa iyong PC ERDDAP™ at/o sa publiko ERDDAP ) , na nagbibigay rin sa iyo ng madaling paraan upang browse ang istraktura ng directory at mag-download ng mga file. Ang&lt;fileDir&gt; para diyan ang URL na ginawa mo sa itaas, e.g.https://noaa-goes17.s3.us-east-1.amazonaws.com. \\[ Bakit ang AWS S3 ay hindi nag-aalok ng mabilis at madaling paraan para sa sinuman na gawin ito nang walang salaysay ng AWS? \\] Pansinin na kapag ginagawa ko ito sa aking PC sa isang non-Amazon network, lumilitaw na ang Amazon ay nagpapabagal sa pagtugon sa isang patak (mga 100 (?) mga talaksan sa bawat tipak) pagkatapos ng unang ilang tipak (ng 1000 talaksan sa bawat tipak) ay downloaded. Yamang ang mga timba ay maaaring maraming salansan (Ang noaa-goes17 ay may 26 milyon) , ang pagkuha ng lahat ng laman ng isang timba ay maaaring kumuha ng EDDTable FromFileNames ng ilang oras (e.g., 12&#33;) upang matapos. \\[ Amazon, tama ba iyan? \\] 
+Ang mga timba na S3 ay kadalasang naglalaman ng dalawang kategorya ng mga salansan, sa dalawang pseudo subdirectories, na maaaring maging dalawa sa mga ito ERDDAP™ mga datos. Upang makagawa ng ERDDAP™ mga dataset, kailangan mong malaman ang panimulang directory para sa&lt;Oches Mula sa Url&gt; (o&lt;fileDir&gt;) at ang format ng mga pangalan ng talaksan na nagpapakilala sa subset na iyon ng mga file. Kung titingnan mo ang buong laman ng timba sa isang browser, ipakikita lamang sa iyo ng S3 ang unang 1000 file, na hindi sapat. Sa kasalukuyan, ang pinakamabuting paraan upang makita mo ang lahat ng laman ng timba ay ang gumawa ng isang timba [Mapagkakatiwalaan Mula sa mga Bilibini](#eddtablefromfilenames) datos (sa iyong PC ERDDAP™ at/o sa publiko ERDDAP ) , na nagbibigay rin sa iyo ng madaling paraan upang browse ang istraktura ng directory at mag-download ng mga file. Ang&lt;fileDir&gt; para diyan ang URL na ginawa mo sa itaas, e.g. https://noaa-goes17.s3.us-east-1.amazonaws.com . \\[ Bakit ang AWS S3 ay hindi nag-aalok ng mabilis at madaling paraan para sa sinuman na gawin ito nang walang salaysay ng AWS? \\] Pansinin na kapag ginagawa ko ito sa aking PC sa isang non-Amazon network, lumilitaw na ang Amazon ay nagpapabagal sa pagtugon sa isang patak (mga 100 (?) mga talaksan sa bawat tipak) pagkatapos ng unang ilang tipak (ng 1000 talaksan sa bawat tipak) ay downloaded. Yamang ang mga timba ay maaaring maraming salansan (Ang noaa-goes17 ay may 26 milyon) , ang pagkuha ng lahat ng laman ng isang timba ay maaaring kumuha ng EDDTable FromFileNames ng ilang oras (e.g., 12&#33;) upang matapos. \\[ Amazon, tama ba iyan? \\] 
 
 #### Paggawang Mapagkakatiwalaan Mula sa FaileNames Dataset na may AWS S3 Bucket{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 Kung may pangalan ka nang timba, subalit wala ka nang listahan ng mga file sa timba ng S3 o ang unlapi na nagpapakilala sa kinaroroonan ng kaugnay na mga file sa timba, gamitin ang mga instruksiyon sa ibaba upang gumawa ng EDDTable FromFileNames dataset upang makita mo ang pamunuan ng directory ng timba na S3 ERDDAP ' "files" sistema.
@@ -727,22 +727,24 @@ java.lang. Ilegal na ArgumentException: ang talaksang profile ay hindi maaaring 
 Mungkahi para sa Linux at Mac OS: ang talaksan ng kredensiyal ay dapat na nasa home directory ng gumagamit na nagpapatakbo sa Tomcat (at ERDDAP )   (para sa parapong ito, iaakala natin ang gumagamit na=tomcat) sa isang file na tinatawag na ~/.aws/credentials . Huwag ipalagay na ang ~ ay /home/tomcat -- aktuwal na gumamit ng cd ~ upang malaman kung saan ang operating system ay nag-iisip ng ~ para sa gumagamit na=tomat ay. Gumawa ng directory kung hindi ito umiiral. Gayundin, pagkatapos ninyong ilagay ang talaksang kredensiyal, tiyakin ang tagagamit at grupo para sa file ay tomcat at pagkatapos ay gumamit ng chmod 400 kredensiyal upang matiyak na ang file ay basahin-lamang para sa user=tomcat.
     
 3. Gawing URL ang timba [formatin na ERDDAP™ kailangan](#accessing-files-in-an-aws-s3-bucket) , e.g.,
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) , at (para sa pampublikong timba) Subukin ito sa isang browser upang matiyak na ito'y babalik sa isang dokumento ng XML na may bahagyang talaan ng nilalaman ng timba na iyon.
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) , at (para sa pampublikong timba) Subukin ito sa isang browser upang matiyak na ito'y babalik sa isang dokumento ng XML na may bahagyang talaan ng nilalaman ng timba na iyon.
      
 4. Gamitin [GenerateDatasetsXml](#generatedatasetsxml) upang lumikha ng isang [Mapagkakatiwalaan Mula sa mga Bilibini](#eddtablefromfilenames) datos:
     * Para sa Begint directory, gamitin ang total na ito:
         \\*\\*\\ *Mula sa Paalam,* iyongBucketUrl*
 Halimbawa,
-        \\*\\*\\* mula sa On theFly,https://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\*\\* mula sa On theFly, https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * Pangalan ng talaksan na regex? .\\*
     * Muling Pag - opera? totoo
     * Muling pagkarga Bawat UNMinute? 10080
-    *    infoUrl ?https://registry.opendata.aws/noaa-goes/
+    *    infoUrl ? https://registry.opendata.aws/noaa-goes/
+ 
     * institusyon? NOAA 
     * sumaryo? wala ( ERDDAP™ ay kusang lilikha ng isang disenteng sumaryo.) 
     * ang pangalan? wala ( ERDDAP™ ay kusang lilikha ng isang disenteng titulo.) Gaya ng dati, dapat mong isaayos ang resultang XML upang matiyak ang pagiging tama at gumawa ng mga pagsulong bago ang mga dataset na gumagamit nito datasets.xml .
 5. Kung susundin mo ang mga tagubilin sa itaas at ikarga ang dataset ERDDAP , lumikha ka ng isang EDDTable FromFiles dataset. Bilang isang halimbawa, at upang gawing mas madali para sa sinuman na mag - browse at mag - download ng mga file mula sa mga timba ng AWS Open Data, nilikha namin ang EDDTable FromFileNames datasets (tingnan ang talaan sa
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) para sa halos lahat ng [Buksan ng AWS S3 ang mga balde ng Data](https://registry.opendata.aws/) .
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) para sa halos lahat ng [Buksan ng AWS S3 ang mga balde ng Data](https://registry.opendata.aws/) .
      \\[ Ang ilang timba na hindi namin isinama ay may maraming file sa root directory (higit pa sa maaaring i - download sa makatuwirang haba ng panahon) , o huwag hayaang makapasok ang publiko (Hindi ba silang lahat ay dapat na maging hayagan?) , o kaya'y humihiling ng mga timba (e.g., Sentinel) . \\]   
 Kung i - click mo ito "files" link para sa isa sa mga datasets na ito, maaari mong browse ang directory tree at files sa bucket na iyon ng S3. Dahil sa daan\\*\\*\\* from On TheFly EDDTable FromFiles works, ang mga talaang ito ng directory ay laging ganap na up-to-date dahil ERDDAP™ makuha ang mga ito on-the-fly. Kung itunugan mo ang puno ng directory sa aktuwal na pangalan ng talaksan at i- click ang pangalan ng talaksan, ERDDAP™ ang iyong kahilingan sa AWS S3 upang mai - download mo ang file nang tuwiran mula sa AWS. Pagkatapos ay maaari mong suriin ang salansan na iyon.
     
@@ -756,7 +758,7 @@ Nakalulungkot na ang AWS ay hindi lamang nagpapahintulot sa mga tao na gumamit n
  **Kung gayon maaari kang gumawa ERDDAP™ mga dataset na nagbibigay sa mga gumagamit ng access sa data sa mga files.**   
 Tingnan ang mga tagubilin [ ERDDAP™ at S3 Buckets](#erddap-and-aws-s3-buckets)   (sa itaas) .
 Para sa sampol na EDDTable FromFileNames dataset na ginawa mo sa itaas, kung lalagyan mo ng kaunting pangalan ang directory at file sa directory tree, nagiging maliwanag na ang itaas na mga pangalan ng directory (e.g., ABI-L1b-RadC) katumbas ng ERDDAP™ ay tatawag ng hiwalay na mga dataset. Ang timba na ginagamit mo ay maaaring katulad nito. Pagkatapos ay maaari mong ipagpatuloy ang paglikha ng hiwalay na mga datasets ERDDAP™ para sa bawat isa sa mga dataset na iyon, gamit ang e.g.,
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 bilang ang&lt;Hache Mula sa Url&gt;. Sa kasamaang palad, para sa partikular na halimbawang ito, ang mga dataset sa timba ay pawang waring may antas na 1 o may antas na 2 datasets, na siyang bumubuo sa 2 datasets ERDDAP™   [ay hindi gaanong mabuti](#dimensions) , dahil ang dataset ay isang mas komplikadong kalipunan ng mga variable na gumagamit ng iba't ibang dimensiyon.
      
     
@@ -975,7 +977,7 @@ Ang mga hindi natukoy na dimensiyonal na halaga ay halos palaging nagpapahiwatig
 ###  EDDGrid Mula sa Dap{#eddgridfromdap} 
  [ ** EDDGrid Mula sa Dap** ](#eddgridfromdap) humahawak ng iba't ibang uri ng grid [ DAP ](https://www.opendap.org/) Mga server.
 
-* Mahigpit naming inirerekomenda ang paggamit ng [Mga GenerateDataset Xml programa](#generatedatasetsxml) upang gumawa ng isang magaspang na burador ng datasets.xml Para sa dataset na ito. Puwede mong tipunin ang impormasyong kailangan mo para makagawa ng XML para sa isang XML EDDGrid Mula sa datos ng Dap sa pamamagitan ng pagtingin sa mga file ng source dataset na DDS at DAS sa iyong browser (sa pagdaragdag ng .das at .dds sa sourceUrl , halimbawa, [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
+* Mahigpit naming inirerekomenda ang paggamit ng [Mga GenerateDataset Xml programa](#generatedatasetsxml) upang gumawa ng isang magaspang na burador ng datasets.xml Para sa dataset na ito. Puwede mong tipunin ang impormasyong kailangan mo para makagawa ng XML para sa isang XML EDDGrid Mula sa datos ng Dap sa pamamagitan ng pagtingin sa mga file ng source dataset na DDS at DAS sa iyong browser (sa pagdaragdag ng .das at .dds sa sourceUrl , halimbawa, [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
      
 *    EDDGrid Makakakuha ng datos ang FromDap mula sa anumang multi-dimensional variable mula sa isang multi-dimensional na variable DAP server ng datos. (Dati, EDDGrid Ang FromDap ay limitado sa mga variable na itinalaga bilang "grid"'s, ngunit hindi na ito isang kahilingan.)   
      
@@ -1335,7 +1337,7 @@ Isang buong halimbawa ng isang axisVariable na gumagawa sa isang aggregated data
         </addAttributes>
       </axisVariable>
 ```
-Pansinin ang paggamit ng grupong bihag bilang 2 upang makuha ang mga digit na nangyayari pagkatapos ng 'r' o 's', at bago ang "\\_global". Ipinakikita rin ng halimbawang ito kung paano magdaragdag ng karagdagang mga katangian (e.g., ioos\\_category at mga yunit) sa axis ay iba - iba.
+Pansinin ang paggamit ng grupong nakahuli ng numero 2 upang makuha ang mga numero na nangyayari pagkatapos ng 'r' o 's', at bago ang "\\_global" . Ipinakikita rin ng halimbawang ito kung paano magdaragdag ng karagdagang mga katangian (e.g., ioos\\_category at mga yunit) sa axis ay iba - iba.
      
 #### Mga Bulaang Hindi Pa Nabubulok{#externally-compressed-files} 
 * Mga datos na mga subset ng EDDGrid Mula sa mga Latian at Uso Mula saFiles ay maaaring magsilbi ng datos nang tuwiran mula sa panlabas na siksik na mga data file, pati na .tgz , .tar  .gz , .tar  .gzip , .gz , .gzip , .zip , .bz2 , at .Z files.
@@ -1433,7 +1435,7 @@ Lahat EDDGrid Ang mga FromFile at lahat ng EDDTable FromFiles datasets ay sumusu
 Sa halip, gamitin ang [&lt;Hache Mula sa sistemang&gt;] (#cache simulaurl) .
 
 Pagkakamit ERDDAP™ datos bilang files sa pamamagitan ng byte range requests --
-Ibabad ito, kung maaari (sa teoriya) isipin ang isang dataset sa ERDDAP™ bilang isang higante .nc ng talaksan sa pamamagitan ng pag-apending " .nc " sa paanan ng OPen DAP URL para sa ibinigay na datos (e.g.,https://myserver.org/erddap/griddap/datasetID.ncat gayundin sa pagdaragdag ng isang ?query pagkatapos niyan upang magtakda ng isang subset) , marahil makatuwirang itanong kung magagamit mo ang netcdf-java, Ferret , o iba pa NetCDF software ng kliyente para magbasa ng datos sa pamamagitan ng Mga Kahilingan ng HTTP Range ERDDAP . Ang sagot ay hindi, sapagkat wala naman talagang napakalaki " .nc " talaksan. Kung nais mong gawin ito, sa halip ay gawin ang isa sa mga mapagpipiliang ito:
+Ibabad ito, kung maaari (sa teoriya) isipin ang isang dataset sa ERDDAP™ bilang isang higante .nc ng talaksan sa pamamagitan ng pag-apending " .nc " sa paanan ng OPen DAP URL para sa ibinigay na datos (e.g., https://myserver.org/erddap/griddap/datasetID.nc at gayundin sa pagdaragdag ng isang ?query pagkatapos niyan upang magtakda ng isang subset) , marahil makatuwirang itanong kung magagamit mo ang netcdf-java, Ferret , o iba pa NetCDF software ng kliyente para magbasa ng datos sa pamamagitan ng Mga Kahilingan ng HTTP Range ERDDAP . Ang sagot ay hindi, sapagkat wala naman talagang napakalaki " .nc " talaksan. Kung nais mong gawin ito, sa halip ay gawin ang isa sa mga mapagpipiliang ito:
 
 * Gamitin(OPeN)DAPAng client software upang makipag-ugnayan sa mga serbisyo ng griddap na inaalok ng ERDDAP . Iyan ang dahilan DAP   (at sa gayon ERDDAP ) ay dinisenyo para rito. Napakahusay nito.
 * O, i-download ang source file (s) mula sa "files" sistema (o isang subset file sa pamamagitan ng isang .nc ? tanong) sa iyong computer at gumamit ka ng netcdf-java, Ferret , o iba pa NetCDF Ang kliyenteng software upang basahin ang (ngayon) lokal na talaksan (s) .
@@ -2253,9 +2255,9 @@ ang pag - iimbak ng impormasyon sa koleksiyon ng NetCDF v3 .nc mga talaksan (lal
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### Mapagkakatiwalaan Mula sa Pagiging Mapagkakatiwalaan{#eddtablefromdapsequence} 
- [ **Mapagkakatiwalaan Mula sa Pagiging Mapagkakatiwalaan** ](#eddtablefromdapsequence) humahawak ng mga variable sa loob ng 1- at 2-level sequences mula sa [ DAP ](https://www.opendap.org/) mga server gaya ng DAP PER (noonhttps://www.pmel.noaa.gov/epic/software/dapper/, ngayo'y huminto) .
+ [ **Mapagkakatiwalaan Mula sa Pagiging Mapagkakatiwalaan** ](#eddtablefromdapsequence) humahawak ng mga variable sa loob ng 1- at 2-level sequences mula sa [ DAP ](https://www.opendap.org/) mga server gaya ng DAP PER (noon https://www.pmel.noaa.gov/epic/software/dapper/ , ngayo'y huminto) .
 
-* Mahigpit naming inirerekomenda ang paggamit ng [Mga GenerateDataset Xml programa](#generatedatasetsxml) upang gumawa ng isang magaspang na burador ng datasets.xml Para sa dataset na ito. Pagkatapos ay maaari mo itong i - edit na mabuti. Maaari mong tipunin ang impormasyon na kailangan mo sa pamamagitan ng pagtingin sa mga file ng source dataset at DAS sa iyong browser (sa pamamagitan ng pagdaragdag ng .das at .dds sa source dataset sourceUrl ( Isang halimbawa ang nasahttps://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds).
+* Mahigpit naming inirerekomenda ang paggamit ng [Mga GenerateDataset Xml programa](#generatedatasetsxml) upang gumawa ng isang magaspang na burador ng datasets.xml Para sa dataset na ito. Pagkatapos ay maaari mo itong i - edit na mabuti. Maaari mong tipunin ang impormasyon na kailangan mo sa pamamagitan ng pagtingin sa mga file ng source dataset at DAS sa iyong browser (sa pamamagitan ng pagdaragdag ng .das at .dds sa source dataset sourceUrl ( Isang halimbawa ang nasa https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds ).
     
 * Iba - iba ang kalagayan DAP Ang pagkakasunud-sunod kung ang tugon ng .dds ay nagpapakita na ang estruktura ng data na humahawak ng variable ay isang "sequence". (kasong walang pakiramdam) .
 * Sa ilang mga kaso, makikita mo ang isang pagkakasunud-sunod sa loob ng isang pagkakasunud-sunod, isang 2-level sequence -- EDDTable FromDapSequence ang humahawak din dito.
@@ -2378,15 +2380,15 @@ Mga GenerateDataset Ang Xml ay may tatlong espesyal na opsyon para sa EDDTable F
 * [JDBC Driver at&lt;DrerName&gt;] (#jdbc-driver) -- Kailangan mong makuha ang angkop na JDBC 3 o JDBC 4 driver .jar file para sa iyong database at JDBC 4 driver file
 ilagay sa *tomcat* /webapps/erddap/WEB-INF/lib matapos mong i-install ERDDAP . Pagkatapos, sa iyong silid datasets.xml para sa dataset na ito, dapat mong tiyakin ang&lt;DrerName&gt; para sa drayber na ito, na ito (Sa kasamaang palad) na iba sa pangalan. Hanapin sa web para sa drayber ng JDBC para sa iyong database at sa driverName na Java kailangang gamitin ito.
     
-    * Para sa MariaDB, subukan [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * Para sa MariaDB, subukan [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 Ang&lt;" DrerName&gt; " upang gamitin datasets.xml   (Tingnan ang ibaba) ay malamang na org.mariadb.jdbc. Driver .
-    * Para sa MySQL at Amazon RDS, subukan [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * Para sa MySQL at Amazon RDS, subukan [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 Ang&lt;" DrerName&gt; " upang gamitin datasets.xml   (Tingnan ang ibaba) ay malamang na com.mysql.jdbc. Driver .
-    * Sapagkat Oracle , subukan [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
+    * Sapagkat Oracle , subukan [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
 Ang&lt;" DrerName&gt; " upang gamitin datasets.xml   (Tingnan ang ibaba) marahil ay orakulo.jdbc.d ilog. Oracle Driver .
-    * Para sa Postgresql, nakuha namin ang drayber ng JDBC 4 [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * Para sa Postgresql, nakuha namin ang drayber ng JDBC 4 [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 Ang&lt;" DrerName&gt; " upang gamitin datasets.xml   (Tingnan ang ibaba) ong.postgresql. Driver .
-    * Para sa SQL Server, makukuha mo ang drayber ng JTDS JDBC mula sa [https://jtds.sourceforge.net](https://jtds.sourceforge.net) .
+    * Para sa SQL Server, makukuha mo ang drayber ng JTDS JDBC mula sa [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) .
 Ang&lt;" DrerName&gt; " upang gamitin datasets.xml   (Tingnan ang ibaba) ay malamang net.sourceforge.jtds.jdbc. Driver .
     
 Pagkatapos mong ilagay ang drayber ng JDBC .jar ERDDAP™ Lib directory, kailangan magdagdag ng reperensiya sa .jar file na iyon sa .bat at/o .sh script files para sa GenerateDatasets Xml, DasDds, at ArchiveADataset na nasa loob ng *tomcat* /webapps/erddap/WEB-INF/ directory; kung hindi, makakakuha ka ng Class NotFoundException kapag pinapatakbo mo ang mga script na iyon.
@@ -2524,7 +2526,7 @@ At sa loob *tomcat* /conf/context.xml, bigyang kahulugan ang isang yaman na may 
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-Pangkalahatang impormasyon tungkol sa paggamit ng isang DateSource [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
+Pangkalahatang impormasyon tungkol sa paggamit ng isang DateSource [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
 Tingnan [Tomcat Databource information](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) at [Mga halimbawa ng Tomcat DataSource](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) o hanapin ang web para sa mga halimbawa ng paggamit ng DataSources sa iba pang application servers.
 * Kung ang lahat ay mabigo,
 ang pag - iimbak ng impormasyon sa koleksiyon ng NetCDF v3 .nc mga talaksan (lalo na .nc mga talaksan na gumagamit ng [CF Mga Sampling Geometriya (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Kontiguous Ragged Array data istruktura kaya't maaaring hawakan gamit ang ERDDAP ' [Mga EDDTable Mula sa mga Latian](#eddtablefromnccffiles) ) . Kung sila ay makatuwirang organisado (bawat isa ay may datos para sa isang tipak ng espasyo at panahon) , ERDDAP™ ay madaling makakuha ng impormasyon mula sa mga ito.
@@ -2608,7 +2610,7 @@ ang pag - iimbak ng impormasyon sa koleksiyon ng NetCDF v3 .nc mga talaksan (lal
     
 Ang daglat ng XML na nililikha ng GenerateDatasetsXml para sa bawat dataset ay kinabibilangan ng:
     
-    * A datasetID alin ang EDDGrid ' datasetID Kasama pa ang "\\_ATable".
+    * A datasetID alin ang EDDGrid ' datasetID plus "\\_AsATable" .
     * Isang bagong buod na pangglobong katangian na siyang katangian EDDGrid ' s buod at isang bagong unang parapo na naglalarawan kung ano ang dataset na ito.
     * Isang bagong titulo na pangglobong katangian na siyang katangian EDDGrid 'Pangalang plus ", (Bilang Isang Mesa) ".
     * Isang bagong maxAxis0 global attribute na may halaga na 10.
@@ -2644,21 +2646,21 @@ Ang daglat ng XML na nililikha ng GenerateDatasetsXml para sa bawat dataset ay k
 *    [Ang datos sa isang EDDTable FromFileNames dataset](#eddtablefromfilenames-data) ay isang mesa na ERDDAP™ Lumilikha ng on-the-fly na may impormasyon tungkol sa isang grupo ng mga lokal na files. Sa mesa, may isang hanay para sa bawat file. Apat na natatanging katangian sa [ datasets.xml para sa datos na ito](#eddtablefromfilenames-skeleton-xml) kung aling mga file ang isasama sa dataset na ito:
     
 ##### talaksan Dir{#filedir} 
-    *   &lt;fileDir&gt; -- Ito ay nagsasaad sa source directory sa sistemang file ng server na may mga file para sa dataset na ito. Ang mga file na aktuwal na matatagpuan sa file system ng server&lt;lilitaw ang fileDir&gt; sa url column ng dataset na ito sa loob ng isang virtual directory na pinangalananhttps://*serverUrl*/erddap/files/*datasetID/*.
+    *   &lt;fileDir&gt; -- Ito ay nagsasaad sa source directory sa sistemang file ng server na may mga file para sa dataset na ito. Ang mga file na aktuwal na matatagpuan sa file system ng server&lt;lilitaw ang fileDir&gt; sa url column ng dataset na ito sa loob ng isang virtual directory na pinangalanan https://*serverUrl*/erddap/files/*datasetID/* .
 Halimbawa, kung ang datasetID ay jplMU RSS T,
 at ang&lt;fileDir&gt; ay /home/data/mur/ ,
 at ang directory na iyon ay may talaksan na pinanganlang jplMU RSS T20150103000000.png,
 Pagkatapos ang URL na ipapalabas sa mga tagagamit para sa talaksang iyon ay magiging
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png.
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png .
         
 Bukod sa paggamit ng isang lokal na directory para sa&lt;fileDir&gt;, maaari mo ring tiyakin ang URL ng isang malayong, directory-tulad ng web page. Ito'y may kaugnayan sa:
         
         * Di-nag-aagregated datasets sa THEDDS, e.g.,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Ang server na ito ay hindi na magagamit. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Ang server na ito ay hindi na magagamit. \\] 
         * Hindi ma-gregated datasets sa Hyrax , e.g.,
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * Karamihan sa mga talaan ng Apache-tulad ng directory, e.g.,
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### mula sa Bahay - Bata{#fromonthefly} 
  [\\*\\*\\* mula sa On theFly](#fromonthefly) -- Para sa ilang malalaking timba na S3 (tulad ng noa-goes17, na may 26 milyong files) , maaaring kailanganin ito ERDDAP™ hanggang 12 oras upang kunin ang lahat ng impormasyon tungkol sa laman ng timba (at pagkatapos ay may iba pang mga problema) . Upang mapagtagumpayan ito, may isang pantanging paraan ng paggamit&lt;fileDir&gt; sa EDDTable FromFileNames upang gumawa ng dataset kasama ang directory at file na mga pangalan mula sa isang AWS S3 back. Ang dataset ay hindi magkakaroon ng listahan ng lahat ng mga direktoryo ng S3 bucket at file na mga pangalan na maaaring hanapin ng gumagamit sa pamamagitan ng mga kahilingan sa dataset. Ngunit ang dataset ay makakakuha ng mga pangalan ng mga direktoryo at files on-the-fly kung ang gumagamit ay tatawid sa directory hierarchy na may dataset's "files" Pumili. Kaya, ito ay nagpapahintulot sa mga gumagamit na browse ang file hierarkiya ng S3 back at mga file sa pamamagitan ng dataset's "files" sistema. Upang magawa ito, sa halip na itakda ang URL para sa bucket ng S3 bilang ang "Starting directory" (sa GenerateDatasets Xml) o&lt;fileDir&gt; (sa loob datasets.xml ) , gamitin:
 ```
@@ -2837,13 +2839,13 @@ Lahat EDDGrid Ang mga FromFile at lahat ng EDDTable FromFiles datasets ay sumusu
     * Ang&lt;Ang cache FromUrl&gt; tag ay nagpapangyari sa iyo na magtakda ng isang URL na may listahan ng mga file ng remote dataset mula sa isang malayong listahan ng talaksan.
         
         * Di-nag-aagregated datasets sa THEDDS, e.g.,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Ang server na ito ay hindi na magagamit. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Ang server na ito ay hindi na magagamit. \\] 
         * Hindi ma-gregated datasets sa Hyrax , e.g.,
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * Karamihan sa mga talaan ng Apache-tulad ng directory, e.g.,
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * Mga timba na s3, e.g,
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 Gayunman, ito ay maaaring mangailangan ng isang ulat ng AWS at higit pang setup.
 Tingnan [Paggawang kasama ng S3 Buckets ERDDAP™ ](#working-with-aws-s3-files) .
 Gayundin, karaniwan nang hindi mo kailangang gumamit ng cache Mula sa Url na may talaksan sa mga baldeng S3 kung ang mga file ay mga talaksang ASCII (e.g., .csv) , dahil ERDDAP™ ay mahusay na nakababasa ng impormasyon mula sa timba sa pamamagitan ng isang sapa.
@@ -2901,7 +2903,7 @@ Pagkatapos ay may sunud - sunod na pangkat ng mga pangkat na nakahuli kung saan 
 at ang ikalawang mapagpipilian ay isang espesipikong halaga.
             
 Ang halimbawa sa itaas ay magtutugma lamang ng mga direktoryo sa ikalawang 10 araw ng 2018, e.g.,
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020-10-21 Ang server na ito ay hindi na magagamit. \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020-10-21 Ang server na ito ay hindi na magagamit. \\]   
 at araw 011, 012, ..., 019.
              (Tingnan ito [dokumentasyon ng regex](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) at [regex tutorial](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) .)   
 Kung kailangan mo ng tulong sa paglikha&lt;cachePartialPathRegex&gt;, pakisuyong i-mail ang&lt;cache FromUrl&gt; hanggang Chris. Juan sa noaa.gov .
@@ -3384,7 +3386,7 @@ Para sa anumang dataset sa ERDDAP™ , kapag ikaw ay humihiling ERDDAP™ para s
 
 * .insert
     * Ang kahilingan ay binubuo na parang isang pamantayang anyong HTML na tugon, na may susing=halagang pares, na pinaghihiwalay ng '&'. Halimbawa,
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 nagsasabi ERDDAP™ idagdag o palitan ang datos para sa stationID =46088 para sa itinakdang panahon.
     * Ang may akda ng pagbabagong ito ay si JohnSmith at ang susi ay mgaKey1.
     * Dapat ilakip sa URL ang makatuwirang mga pamantayan (hindi nawawalang mga pamantayan) sa lahat [ http Maging Mausisa](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ nagsasabi ERDDAP™ idagdag o palitan ang datos para sa stationID =46088 para sa
              
     * .delete
         * Ang kahilingan ay binubuo na parang isang pamantayang anyong HTML na tugon, na may susing=halagang pares, na pinaghihiwalay ng '&'. Halimbawa,
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 nagsasabi ERDDAP™ upang alisin ang impormasyon para sa stationID =46088 sa itinakdang panahon.
         * Ang may akda ng pagbabagong ito ay si JohnSmith at ang susi ay mgaKey1.
         * Kailangang tiyakin ng URL ang [ http Maging Mausisa](#httpgetrequiredvariables-global-attribute) sa kahilingan (e.g., stationID at panahon) . Kung ang mga pamantayang iyon ay katugma ng mga pamantayan sa isang hanay na nasa dataset na (na karaniwang gagawin nila) , ang dating mga pamantayan ay mabisang inaalis (Bagaman ang dating mga pamantayan ay maaari pa ring makuha kung ang gumagamit ay humihiling ng impormasyon mula sa isang nauna [bersyon](#versioning) ng dataset) .
@@ -3667,7 +3669,7 @@ Hindi lahat ay may pangangailangan sa ganitong uri ng pinong-guined versioning, 
     
 ##### ISINULAT at Pinahihina ang HTTPS{#https-put-and-delete} 
 *    ["Ano naman ang HTTPS PUT at DELETE?".](#https-put-and-delete)   
-     [Hypertext Transfer Protocol (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) ang saligan ng World Wide Web at ang dahilan kung bakit nagsisimula ang mga web page na URL "http://"o "https://". Ang HTTPS ay HTTP na may karagdagang patong ng seguridad. Araw - araw, bilyun - bilyong HTTP ang ginagawa ng mga browser, script at computer program (S)   **MABUTI** na kumuha ng impormasyon mula sa malalayong pinagmumulan. HTTP (S) kasama rin ang iba pa [mga pandiwa](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , PUT lalo na (upang itulak ang data sa server) at ANG DELETE (sa STELETE data mula sa server) . Oo, ang PUT at DELETE ang tamang paraan ng pagpapasok ng impormasyon, at pag - aalis ng impormasyon mula sa, isang dataset sa pamamagitan ng HTTP (S) . Ang akses ay suportado ng bawat piraso ng software na maaaring gumana gamit ang HTTP (S) . ANG paninigarilyo ay talagang madaling pakitunguhan. Alam na ng lahat kung paano magtrabaho nang tahimik at marami ang marunong gumamit ng POST (na maaaring gamitin sa aktuwal na paraan na katulad ng paghinto) , kaya gumawa kami ng EDDTable FromHttp Get na trabaho sa pamamagitan ng SCT at POST. Kakaunting tao (maging ang iilang computer programmer) ay kailanman gumawa kasama ng PUT at DELETE. PUT at DELETE ay karaniwan nang sinusuportahan lamang ng mga wika ng computer, kaya ang paggamit nito ay nangangailangan ng isang mahusay na programa. Kaya ang PUT at DELETE ay karaniwan nang mas mahirap na paraan kung paano lumitaw ang mga kagamitan.
+     [Hypertext Transfer Protocol (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) ang saligan ng World Wide Web at ang dahilan kung bakit nagsisimula ang mga web page na URL " http://" o " https://" . Ang HTTPS ay HTTP na may karagdagang patong ng seguridad. Araw - araw, bilyun - bilyong HTTP ang ginagawa ng mga browser, script at computer program (S)   **MABUTI** na kumuha ng impormasyon mula sa malalayong pinagmumulan. HTTP (S) kasama rin ang iba pa [mga pandiwa](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , PUT lalo na (upang itulak ang data sa server) at ANG DELETE (sa STELETE data mula sa server) . Oo, ang PUT at DELETE ang tamang paraan ng pagpapasok ng impormasyon, at pag - aalis ng impormasyon mula sa, isang dataset sa pamamagitan ng HTTP (S) . Ang akses ay suportado ng bawat piraso ng software na maaaring gumana gamit ang HTTP (S) . ANG paninigarilyo ay talagang madaling pakitunguhan. Alam na ng lahat kung paano magtrabaho nang tahimik at marami ang marunong gumamit ng POST (na maaaring gamitin sa aktuwal na paraan na katulad ng paghinto) , kaya gumawa kami ng EDDTable FromHttp Get na trabaho sa pamamagitan ng SCT at POST. Kakaunting tao (maging ang iilang computer programmer) ay kailanman gumawa kasama ng PUT at DELETE. PUT at DELETE ay karaniwan nang sinusuportahan lamang ng mga wika ng computer, kaya ang paggamit nito ay nangangailangan ng isang mahusay na programa. Kaya ang PUT at DELETE ay karaniwan nang mas mahirap na paraan kung paano lumitaw ang mga kagamitan.
      
 ##### Kumuha ng Pansin ang Http{#httpget-notes} 
 *    [Mga Noble](#httpget-notes) 
@@ -3676,7 +3678,7 @@ Hindi lahat ay may pangangailangan sa ganitong uri ng pinong-guined versioning, 
 ##### Salamat{#thanks} 
 *    [Salamat sa CORDS para sa saligang ideya.](#thanks)   
 Ang pangunahing ideya para sa EDDTable FromHttp Get (I.e., gamit ang isang HTTP GET humiling na magdagdag ng datos sa isang dataset) mula sa UCAR's (NCAR's?)   [Cloud-Hosted Real-time Data Services (MGA KORDO) ](https://github.com/earthcubeprojects-chords) proyekto. Ang format para sa mga parameter sa kahilingan (inulit *Pangalan=halaga* , hiwalay ng &'s) ay ang parehong pamantayang format na ginagamit ng mga anyong HTML sa mga web page. Ito'y isang simple at maningning na ideya at lalo pa nga dahil sa ito'y lubusang kasuwato ng ideya ERDDAP 'Ang umiiral na sistema para sa pakikitungo sa tabular data. Kitang - kita ang ideyang ito, pero ako (Bob) Hindi ito naisip. Mapagkakatiwalaan Mula sa Hap Gamitin ang saligang ideyang iyan, lakip na ang ating mga ideya kung paano ito isasagawa, upang gumawa ng isang sistema sa ERDDAP™ para sa pag-download ng datos. Bukod sa pangunahing ideya ng paggamit ng fall upang itulak ang impormasyon sa sistema, ang EDDTable FromHtp Get pagpapatupad ay lubhang kakaiba at lubusang independiyente sa CORDS at may iba't ibang katangian (e.g., log files, pag - aalis ng mga datos, iba't ibang sistema ng seguridad, suporta ng CRUD, reproducibleng datos) . Ang aming pagkalantad sa CRODS ay isa lamang tirahan. Hindi namin tiningnan ang kanilang kodigo o binasa ang kanilang proyekto sapagkat agad naming alam na nais naming ipatupad ang sistema sa ibang paraan. Subalit kami'y nagpapasalamat sa kanila sa saligang ideya. Ang buong pagtukoy sa CRODS ay
-Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014) . Cloud-Hosted Real-time Data Services for the Geosciences (MGA KORDO) software. UCAR/NCAR -- Earth Observing Laboratory. [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014) . Cloud-Hosted Real-time Data Services for the Geosciences (MGA KORDO) software. UCAR/NCAR -- Earth Observing Laboratory. [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### Maaasahan Mula sa Hyrax Mga Bunton{#eddtablefromhyraxfiles} 
  [ **Maaasahan Mula sa Hyrax Mga Bunton** ](#eddtablefromhyraxfiles)   (pinabayaan) Hinahati ang mga data file na may iba't ibang sukat, na bawat isa ay may isa o higit pang sukat (Halimbawa, panahon, altitud (o lalim) , latitud, longhitud) , at pinaglilingkuran ng isang [ Hyrax   OPeNDAP server](https://www.opendap.org/software/hyrax-data-server) .
@@ -3692,7 +3694,7 @@ Kung walang reklamo bago ang 2020, ang uring dataset na ito ay maaaring alisin. 
 * Itong class screen-scrapes ang Hyrax Mga web page na may listahan ng mga file sa bawat directory. Dahil dito, napakaespesipiko nito sa kasalukuyang format ng Hyrax web pahina. Sisikapin naming makibagay ERDDAP™ mabilis kung/kapag hinaharap na bersyon ng Hyrax baguhin kung paano nakatala ang mga file.
 * Ang&lt;ang talaksangDir&gt; setting ay hindi pinapansin. Yamang ang klaseng ito ay nag - download at gumagawa ng lokal na kopya ng bawat remote data file, ERDDAP™ ang talaksan Malapit na *Malaking Direktoryo* /copy/ * datasetID * /.
 * Sapagkat&lt; sourceUrl &gt;, gamitin ang URL ng base directory ng dataset sa Hyrax server, halimbawa,
-    &lt; sourceUrl &gt;http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;/ sourceUrl &gt;
+    &lt; sourceUrl &gt; http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;/ sourceUrl &gt;
      (ngunit ilagay ito sa isang linya)   (Ikinalulungkot mo, wala na ang serverg iyon) .
 Ang sourceUrl web page na karaniwang may " OPeNDAP Seryeng Indise ng \\[ directoryName \\] " sa itaas.
 * Yamang ang klaseng ito ay laging nag - download at gumagawa ng lokal na kopya ng bawat remote data file, hindi mo dapat ibalot ang dataset na ito [Mapagkakatiwalaang Komponiya](#eddtablecopy) .
@@ -3706,7 +3708,7 @@ Mga Detalye: Ang mga file na ito ay may multiple row\\_size variables, bawat isa
 
 Ang isa pang problema sa mga file na ito: ang Prinsipal\\_Investigator row\\_size variable ay walang sampol\\_dimension attribute at hindi sumusunod sa nasabing tuntunin.
 
-Ang mga Sample file para sa uring dataset na ito ay matatagpuan sahttps://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 Ang server na ito ay hindi na magagamit \\] .
+Ang mga Sample file para sa uring dataset na ito ay matatagpuan sa https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020-10-21 Ang server na ito ay hindi na magagamit \\] .
 
 Tingnan ang superclass ng klaseng ito, [Mapagkakatiwalaan Mula sa mga Bakod](#eddtablefromfiles) , para sa impormasyon kung paano gumagana ang klaseng ito at kung paano ito gagamitin.
 
@@ -3850,10 +3852,10 @@ Ang unang bagay na ginagawa ng GenerateDatasetsXml para sa ganitong uri ng datas
  [ **MAHIRAP SA MGA DOTO** ](#eddtablefromnos)   (PINAHAHALAGAHAN) humahawak ng datos mula sa isang NOAA   [WALA](https://opendap.co-ops.nos.noaa.gov/axis/) source, na ginagamit [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) para sa mga kahilingan at mga pagtugon. Napakaespesipiko nito sa NOAA NOS's XML. Tingnan ang sampol na EDDTable FromNOS dataset sa datasets2.xml.
  
 ### MAHABANG MGA ULOBIS{#eddtablefromobis} 
- [ **MAHABANG MGA ULOBIS** ](#eddtablefromobis) Gamitin ang datos mula sa Ocean Biogeographic Information System (OBIS) server (noon ayhttp://www.iobis.org ) . Posibleng wala nang mga aktibong server na gumagamit nito ngayong out-of-date na uri ng sistemang OBIS server.
+ [ **MAHABANG MGA ULOBIS** ](#eddtablefromobis) Gamitin ang datos mula sa Ocean Biogeographic Information System (OBIS) server (noon ay http://www.iobis.org  ) . Posibleng wala nang mga aktibong server na gumagamit nito ngayong out-of-date na uri ng sistemang OBIS server.
 
 * Inaasahan ng mga server ng OBIS ang isang kahilingan ng XML at ibabalik ang isang tugon ng XML.
-* Dahil pare - pareho ang paraan ng lahat ng server ng OBIS (noon ayhttp://iobis.org/tech/provider/questions) , hindi mo na kailangan pang magtakda ng isang dataset ng OBIS ERDDAP .
+* Dahil pare - pareho ang paraan ng lahat ng server ng OBIS (noon ay http://iobis.org/tech/provider/questions ) , hindi mo na kailangan pang magtakda ng isang dataset ng OBIS ERDDAP .
 * Ikaw AY May Kabilang na " creator\\_email " Nasa pangglobong katangian addAttributes , dahil ang impormasyong iyon ay ginagamit sa loob ng lisensiya. Matatagpuan ang angkop na adres ng email sa pamamagitan ng pagbasa ng tugon ng XML mula sa sourceURL.
 * Maaaring makuha o hindi mo makuha ang pangglobong katangian [&lt; subsetVariables &gt;] (Mga #subsetvariable) upang magtrabaho sa isang ibinigay na OBIS server. Kung ikaw ay sumusubok, subukin mo lamang ang isang pagbabago (Halimbawa, ang ScientificName o Genus) .
 #### MAHABANG MGA ULOBIS kalansay XML{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ Ang unang bagay na ginagawa ng GenerateDatasetsXml para sa ganitong uri ng datas
     * SWEE (Mapagkakatiwalaang Web) at SOS   (Paglilingkod ng Sensor Obserbasyon) Ay [Mga pamantayang OpenGIS MERA](https://www.ogc.org/standards) . Nasa website na iyon ang mga pamantayang dokumento.
     * Ang OGC Web Services Common Speciation ver 1.0 ( OGC 06-121r3) ang pagtatayo ng mga queries ng COT at POST (tingnan ang seksiyon 7.2.3 at seksiyon 9) .
     * Kung magpadala ka ng accessCapabilities xml request SOS server ( sourceUrl + "?service= SOS &request= GetCapabilities ") , makakakuha ka ng isang xml na resulta sa listahan ng mga istasyon at sa mga naobserbahan Mga detalye na mayroon silang datos para sa.
-    * Ang isang napagmasdang Property ay isang pormal na reference sa URI sa isang propesyunal. Halimbawa, urn:ogc:phenomenon:longude:wgs84 ohttps://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * Ang isang napagmasdang Property ay isang pormal na reference sa URI sa isang propesyunal. Halimbawa, urn:ogc:phenomenon:longude:wgs84 o https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * Ang nakikitang Property ay hindi nagbabago.
-    * Maaaring mahigit sa isang bagay ang may iisang obserbasyon Mga ari - arian (Halimbawa, sa loob ng Temp at labas Maaaring kapuwa napansin ng temp Mga ari - arianhttps://mmisw.org/ont/cf/parameter/air\\_temperature) .
+    * Maaaring mahigit sa isang bagay ang may iisang obserbasyon Mga ari - arian (Halimbawa, sa loob ng Temp at labas Maaaring kapuwa napansin ng temp Mga ari - arian https://mmisw.org/ont/cf/parameter/air\\_temperature ) .
     * Kung magpadala ka ng isang kahilingan para sa goObservation xml SOS server, makakakuha ka ng isang xml na resulta ng mga paglalarawan ng mga pangalan sa larangan sa tugon, field units, at datos. Kabilang sa mga pangalan sa larangan ang longhitud, latitud, lalim (marahil) , at panahon.
     * Bawat Isa dataVariable para sa Isang Mapagkakatiwalaang Bagay SOS ay dapat na kinabibilangan ng isang "naobserbahang Property" attribute, na nagpapakilala sa napagmasdang Property na dapat hilingin mula sa server upang makuha ang variable na iyon. Kadalasan, ang ilan ay dataVariable ay magtatala ng parehong kalipunan ng napagmasdang Property.
     * Ang dataType para sa bawat isa dataVariable ay maaaring hindi tiyakin ng server. Kung gayon, dapat mong tingnan ang mga tugon ng datos ng XML mula sa server at mag - atas ng angkop [&lt;dataType&gt;s] (#datatype) sa loob ERDDAP™ datos dataVariable Mga katuturan.
@@ -3991,11 +3994,11 @@ Kung walang reklamo bago ang 2020, ang uring dataset na ito ay maaaring alisin. 
 * Binabasa ng klaseng ito ang katalogo.xml files na pinaglilingkuran ng THEDDS na may listahan ng mga talaan ng mga talaan&lt;katalogong Refs&gt; (Mga reperensiya sa karagdagang katalogo.xml sub-files) at&lt;datos&gt; (mga talaksang datos) .
 * Ang&lt;ang talaksangDir&gt; setting ay hindi pinapansin. Yamang ang klaseng ito ay nag - download at gumagawa ng lokal na kopya ng bawat remote data file, ERDDAP™ ang talaksan Malapit na *Malaking Direktoryo* /copy/ * datasetID * /.
 * Sapagkat&lt; sourceUrl &gt;, gamitin ang URL ng katalogo.xml file para sa dataset sa THREDS server, halimbawa: para sa URL na ito na maaaring gamitin sa isang web browser,
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020-10-21 Ang server na ito ay hindi na magagamit. \\] ,
-gamitin&lt; sourceUrl &gt;https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;/ sourceUrl &gt;
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020-10-21 Ang server na ito ay hindi na magagamit. \\] ,
+gamitin&lt; sourceUrl &gt; https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;/ sourceUrl &gt;
      (ngunit ilagay ito sa isang linya) .
 * Yamang ang klaseng ito ay laging nag - download at gumagawa ng lokal na kopya ng bawat remote data file, hindi mo dapat ibalot ang dataset na ito [Mapagkakatiwalaang Komponiya](#eddtablecopy) .
-* Ang dataset type na ito ay sumusuporta sa isang OPSIYONAL, bihirang-gamit, espesyal na tag,&lt;espesyal na "Mode&gt; " *mode* &lt;/ espesyal naMode&gt; na maaaring gamitin upang magtakda na ang mga espesyal, hard-coded na alituntunin ay dapat gamitin upang malaman kung aling files ang dapat download mula sa server. Sa kasalukuyan, ang tanging may bisa *mode* ay SAMOS na ginagamitan ng datos mula sahttps://tds.coaps.fsu.edu/thredds/catalog/samosupang i-download lamang ang mga files na may huling numero ng bersyon.
+* Ang dataset type na ito ay sumusuporta sa isang OPSIYONAL, bihirang-gamit, espesyal na tag,&lt;espesyal na "Mode&gt; " *mode* &lt;/ espesyal naMode&gt; na maaaring gamitin upang magtakda na ang mga espesyal, hard-coded na alituntunin ay dapat gamitin upang malaman kung aling files ang dapat download mula sa server. Sa kasalukuyan, ang tanging may bisa *mode* ay SAMOS na ginagamitan ng datos mula sa https://tds.coaps.fsu.edu/thredds/catalog/samos upang i-download lamang ang mga files na may huling numero ng bersyon.
 * Tingnan ang superclass ng klaseng ito, [Mapagkakatiwalaan Mula sa mga Bakod](#eddtablefromfiles) , para sa impormasyon kung paano gumagana ang klaseng ito at kung paano ito gagamitin.
 * Tingnan ang 1D, 2D, 3D, at 4D halimbawa para sa [Mapagkakatiwalaan Mula sa mga Latian](#eddtablefromncfiles) .
      
@@ -4182,8 +4185,8 @@ Kapag natapos na ng server ang pag - aasikaso sa isang kahilingan, susuriin nito
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-ay magpapangyari ng isang katugmang lokal sourceUrl   (gaya nghttps://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-sa publiko sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) .
+ay magpapangyari ng isang katugmang lokal sourceUrl   (gaya ng https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+sa publiko sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) .
 Anumang pagbabago sa halaga ng tag na ito ay matutupad sa susunod na pagkakataon ERDDAP™ basahin datasets.xml , kasama bilang tugon sa isang dataset [bandila](/docs/server-admin/additional-information#flag) .
 
 Subalit, sa mga kadahilanang panseguridad at mga kadahilanang nauugnay sa sistema ng suskripsiyon, **HUWAG MONG SAGUMPAYAN ITO&#33;**   
@@ -4314,7 +4317,7 @@ Kadalasan nang hindi nalalaman ng mga gumagamit nito na ang kanilang mga kahilin
     ```
     * Hindi mo kailangang mag - restart ERDDAP™ ng mga pagbabago&lt;hilingin ng blacklist&gt; na ipatupad. Ang mga pagbabago ay mapapansin sa susunod na pagkakataon ERDDAP™ kung may anumang dataset na kailangang ikargang muli. O, maaari mong pabilisin ang proseso sa pamamagitan ng pagdalaw sa isang bisita [set URL ng Bandila](/docs/server-admin/additional-information#set-dataset-flag) para sa anumang dataset.
     * Ang iyong sarili ERDDAP™ Ang pang-araw-araw na ulat ay kinabibilangan ng isang talaan/sa kabuuan ng pinaka-aktibong pinapayagan at hinarangang mga request.
-    * Kung nais mong malaman kung anong domain/institution ay nauugnay sa isang numerong IP address, maaari kang gumamit ng isang libre, baligtad na serbisyo sa web ng DNS tulad ng [https://network-tools.com/](https://network-tools.com/) .
+    * Kung nais mong malaman kung anong domain/institution ay nauugnay sa isang numerong IP address, maaari kang gumamit ng isang libre, baligtad na serbisyo sa web ng DNS tulad ng [ https://network-tools.com/ ](https://network-tools.com/) .
     * Maaaring may mga panahon na makatuwirang hadlangan ang ilang gumagamit sa mas mataas na antas, halimbawa, ang may masamang hangaring mga gumagamit nito. Halimbawa, maaari mong hadlangan ang kanilang paglapit sa lahat ng bagay sa iyong server, hindi lamang basta ERDDAP . Sa Linux, ang isa sa gayong paraan ay ang gamitin ang [Mga gamit](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) . Halimbawa, maaari kang magdagdag ng tuntunin na hahadlang sa lahat ng bagay na darating mula 198.51.100.0 na may utos
 Iptables -I INPUT -s 198.51.100.000. -j DROP
        
@@ -4738,17 +4741,17 @@ BABALA: Kung idaragdag mo ang mga kaugalian sa iyong katawan ERDDAP™ at ikaw a
     * Sa kasalukuyan, para sa EDDGrid Mga subclass, anumang pagbabago tungo sa metadata o sa axis ay iba't iba (Halimbawa, isang bagong time point para sa halos-real-time na datos) ay itinuturing na pagbabago, ngunit ang muling pagkarga ng dataset ay hindi itinuturing na pagbabago (mag - isa) .
     * Sa kasalukuyan, para sa EDDTable subclass, anumang muling pagkarga ng dataset ay itinuturing na pagbabago.
     * Sa kasalukuyan, dalawang uri lamang ng pagkilos ang ipinahihintulot:
-        * "http://"o "https://"-- Kung magsimula ang pagkilos "http://"o "https://", ERDDAP™ ay magpapadala ng HTTP GET tanong sa espesipikong URL. Ang tugon ay ipagwawalang - bahala. Halimbawa, maaaring sabihan ng URL ang iba pang web service na gumawa ng isang bagay.
+        * " http://" o " https://" -- Kung magsimula ang pagkilos " http://" o " https://" , ERDDAP™ ay magpapadala ng HTTP GET tanong sa espesipikong URL. Ang tugon ay ipagwawalang - bahala. Halimbawa, maaaring sabihan ng URL ang iba pang web service na gumawa ng isang bagay.
             * Kung ang URL ay may bahaging query (pagkatapos ng "?".) , ito ay UST na [naka-iskedyul ng porsiyento](https://en.wikipedia.org/wiki/Percent-encoding) . Kailangan mong mag - isip ng pantanging mga tauhan sa mga pagbabawal (Kahit na ang unang '&' at ang pangunahin '=' mga pagbabawal) sa anyong %H, kung saan ang HH ang 2 digit na hexadecimal na halaga ng karakter. Karaniwan, kailangan mo lamang gawing %25, & sa %26, " tungo sa %22,&lt;sa %3C, = sa %3D, &gt; sa %3E, + sa %2B, | sa %7C, \\[ sa %5B, \\] sa %5D, ang espasyo sa %20, at ginagawa ang lahat ng mga character sa itaas #127 sa kanilang UTF-8 form at pagkatapos ay ang porte ng UTF-8 format (humingi ng tulong sa isang programmer) .
 Halimbawa, & stationID &gt;="410004"
 maging & stationID %3E=%2241004%22
 Karaniwan nang kailangan ang percent calcation kapag mayroon kang makuha ERDDAP sa pamamagitan ng software maliban sa browser. Karaniwan nang pinangangasiwaan ng mga Browser ang pag - aayos ng mga porsiyento para sa iyo.
 Sa ilang sitwasyon, kailangan mong bigyan ng porsiyento ang lahat ng karakter maliban sa A-Za-z0-9\\_-&#33; ' () \\*, ngunit hindi pa rin nai-record ang paunang '&' o ang pangunahin '=' sa mga pagbabawal.
-Ang mga wikang pamprograma ay may mga kasangkapan upang magawa ito (halimbawa, tingnan Java ' [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) at Java [rip]encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) at mayroon
+Ang mga wikang pamprograma ay may mga kasangkapan upang magawa ito (halimbawa, tingnan Java ' [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) at Java [rip]encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) at mayroon
                  [Mga website na pinag - aaralan ng porsiyento](https://www.url-encode-decode.com/) .
             * Mula Noon datasets.xml ay isang XML file, ikaw MUST din &-encode all 'Bear', '&lt;', at '&gt;' sa URL bilang 'Lamp;', '&lt;', at 'ligt; pagkatapos ng porsyentong perpektibo.
             * Halimbawa: Para sa isang URL na maaari mong iuri sa isang browser bilang:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 Dapat mong magtakda ng isang&lt;tag ng onChange&gt; sa pamamagitan ng (sa isang linya) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ Maaari rin itong makaapekto sa pag-uuri ng maiikling salita laban sa mas mahaban
     * A sourceUrl ay maaaring magsimula sa http:// , https:// , ftp://, at marahil iba pang mga unlapi. https Mga koneksiyon basahin at tingnan ang digital na sertipiko ng pinagkunan upang matiyak na ang pinagkunan ay kung sino sila. Sa mga bihirang kaso, ang tsekeng ito ay maaaring mabigo sa pagkakamaling "javax.net.ssl.SLProtocolException: pakikipagkamay na alerto: hindi kilalang\\_name". Ito marahil ay dahil sa pangalan ng nasasakupan sa sertipiko na hindi tumutugma sa pangalan ng nasasakupan na ginagamit mo. Maaari at dapat mong basahin ang mga detalye ng sourceUrl ''s sertipiko sa inyong web browser, lalo na, ang listahan ng "DNS Name" sa seksiyong "Sober Alternative Name".
         
 Sa ilang kaso, ang ilan ay sourceUrl Maaaring ang ginagamit mo ay alyas ng pangalan ng nasasakupan sa sertipiko. Halimbawa,
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ang pagkakamaling ito, subalit
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/, na gumagamit ng tatak ng domain sa sertipiko, ay hindi. Kaya ang solusyon sa mga kasong ito ay hanapin at gamitin ang pangalan ng nasasakupan sa sertipiko. Kung hindi mo ito makita sa sertipiko, makipag - ugnayan sa data provider.
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ang pagkakamaling ito, subalit
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ , na gumagamit ng tatak ng domain sa sertipiko, ay hindi. Kaya ang solusyon sa mga kasong ito ay hanapin at gamitin ang pangalan ng nasasakupan sa sertipiko. Kung hindi mo ito makita sa sertipiko, makipag - ugnayan sa data provider.
         
 Sa ibang kaso, ang pangalan ng nasasakupan sa sertipiko ay maaaring para sa isang grupo ng mga pangalan. Kung mangyari ito o ang problema ay hindi maaaring lutasin, pakisuyong email Chris. John sa noa.gov upang iulat ang problema.
          
@@ -5221,7 +5224,7 @@ maging & stationID %3E=%2241004%22
 Karaniwan nang kailangan ang percent calcation kapag mayroon kang makuha ERDDAP sa pamamagitan ng software maliban sa browser. Karaniwan nang pinangangasiwaan ng mga Browser ang pag - aayos ng mga porsiyento para sa iyo.
 Sa ilang sitwasyon, kailangan mong bigyan ng porsiyento ang lahat ng karakter maliban sa A-Za-z0-9\\_-&#33; ' () \\*, ngunit hindi pa rin nai-record ang paunang '&' o ang pangunahin '=' .
 Ang mga wikang pamprograma ay may mga kasangkapan upang magawa ito (halimbawa, tingnan Java ' [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-at Java [rip]encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) at mayroon
+at Java [rip]encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) at mayroon
          [Mga website na pinag - aaralan ng porsiyento](https://www.url-encode-decode.com/) .
     * Mula Noon datasets.xml ay isang XML file, ikaw MUST din &-encode all 'Bear', '&lt;', at '&gt;' sa URL bilang 'Lamp;', '&lt;', at 'ligt; pagkatapos ng porsyentong perpektibo.
     *    infoUrl ay natatangi sa ERDDAP . Hindi ito mula sa anumang pamantayang metadata.
@@ -5257,7 +5260,28 @@ Kapag may dataset ERDDAP ,
     ```
     * Kung " \\[ Pamantayan \\] " ay lumilitaw sa halaga ng attribute, ito ay hahalinhan ng pamantayan ERDDAP™ lisensiya mula sa&lt;Pamantayang&gt; tag sa ERDDAP '
          \\[ tomcat \\] /webapps/erddap/WEB-INF/class/gov/noa/pfel/erddap/util/messages.xml file.
-         
+
+###### klasipikasyon{#classification} 
+*    [ **klasipikasyon** ](#classification) antas ng klasipikasyon ng datos.
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * Ang kanais - nais na mga pamantayan ay _________________________/lihim_, o _top_lihim_.
+
+###### paksang_category{#topic_category} 
+*    [ **paksang_category** ](#topic_category) High-level heograpikong datos na sekswal na klasipikasyon upang makatulong sa paggrupo at paghahanap ng makukuhang heograpikong data sets.
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * Ang angkop na mga pamantayan ay _biota_, ____________meterology_atomosphere_, _economy_, _elevation_, _environment_, _farming_, _/geolohikal_impormasyon_impormasyon_, __imication_base_maps_ground_cover_, _inland_waters_s_, _intelligence_imposition_, _locanc_cance_c_cance_s_place_place_cant_p.
+
+###### Kabihasnan sa pagmamantini{#maintenance_frequency} 
+*    [ **Kabihasnan sa pagmamantini** ](#maintenance_frequency) Frequency with modifieds and delections is to the data matapos ito unang gawin.
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * Ang kanais - nais na mga pamantayan ay ang ____as_need_, ____________/continual_, _daily_, _fortnightly_, _irreguilar_, _monthly_, _not_planed_, _quarterly_, __unidential_, _lingweekly_.
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) mula sa lipas na [ACDD 1.0](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (na ipinakilala Metadata\\_Conventions bilang " Unidata Dataset Discovery v1.0") Pamantayang metadata. Ang halaga ng attribute ay isang comma-published na talaan ng mga metadata convention na ginagamit ng dataset na ito.
 Kung ang isang dataset ay gumagamit ng ACD 1.0, ang attribute na ito ay SSTROGLY RECOMMENDED, halimbawa,
@@ -5389,7 +5413,7 @@ Kung ang indise ay&lt;1, ang dataset ay itinuturing na up-to-date.
 Kung ang indise ay&lt;=1, ang dataset ay itinuturing na out-of-date.
 Kung ang indise ay&lt;=2, ang dataset ay itinuturing na out-of-date.
     
-Ang testOutOfDate Ang halaga ay ginagamit din ng ERDDAP™ upang lumikha nghttps://*yourDomain*/erddap/outOfDateDatasets.htmlweb pahina ( [halimbawa](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) na nagpapakita ng mga dataset na may&lt; testOutOfDate &gt; Mga tag, na may datos na inihanay sa pamamagitan ng kung gaano out-of-date ang mga ito. Kung babaguhin mo ang uri ng talaksan (mula .html hanggang .csv, .jsonlCSV , .nc , .tsv , ...) , makukuha mo ang impormasyong iyon sa iba't ibang format ng talaksan.
+Ang testOutOfDate Ang halaga ay ginagamit din ng ERDDAP™ upang lumikha ng https://*yourDomain*/erddap/outOfDateDatasets.html web pahina ( [halimbawa](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) na nagpapakita ng mga dataset na may&lt; testOutOfDate &gt; Mga tag, na may datos na inihanay sa pamamagitan ng kung gaano out-of-date ang mga ito. Kung babaguhin mo ang uri ng talaksan (mula .html hanggang .csv, .jsonlCSV , .nc , .tsv , ...) , makukuha mo ang impormasyong iyon sa iba't ibang format ng talaksan.
     
 Kung maaari, [GenerateDatasetsXml](#generatedatasetsxml) sabi pa ng isang testOutOfDate Ayon sa pangglobo addAttributes ng isang dataset. Ang halagang ito ay isang mungkahi batay sa impormasyong makukuha sa GenerateDatasetsXml. Kung ang halaga ay hindi angkop, baguhin ito.
     
@@ -5948,8 +5972,8 @@ na nakabuklat na Talaksan = siksik Halaga \\* scale\\_factor + add\\_offset
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone ay isang OPSYONAL na katangian na ginagamit ng ERDDAP™   (at walang pamantayan ng metadata) para sa [mga pagbabago sa oras at timestamp](#time-units) , na maaaring nasa mga grided datasets o tabular datasets.
     * Ang default ay " Zulu " (na modernong time zone na bersyon ng GMT) .
-    * Mga impormasyon sa likuran: "ang panahon ay nakabawi" (e.g., Pacific Standard Time, -08:00, GMT-8) ay nakatakda, espisipiko, mga offset depende sa Zulu   (GMT) . Sa kabaligtaran, ang "time zones" ay ang mas komplikadong mga bagay na apektado ng Daylight Saving (e.g., "US/Pacific") , na may iba't ibang mga alituntunin sa iba't ibang mga lugar sa iba't ibang panahon. Ang mga sona ng oras ay laging may mga pangalan yamang ang mga ito ay hindi maibubuod sa simpleng halagang offset (tingnan ang "TZ database na pangalan" na hanay sa mesa [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP ' time\\_zone attribute ay tumutulong sa iyo na harapin ang lokal na impormasyon tungkol sa oras mula sa ilang sona ng oras (e.g., 1987-03-25T17:32:05 Pasipiko Panahon) . Kung mayroon kang string o numerong time data na may datos (nakapirme) Time offset, dapat mo lamang i - adjust ang impormasyon Zulu   (alin ang ERDDAP™ nais) sa pamamagitan ng pagtatakda ng iba't ibang baseng oras sa mga yunit na attribute (e.g., "hours mula noong 1970-01-01T08:00:00Z", pansinin ang T08 upang tiyakin ang Time offset) , at laging suriin ang mga resulta upang matiyak na matatamo mo ang mga resulta na nais mo.
-    * Para sa mga timestamp variable na may source data mula sa Strings, ang attribute na ito ay nagpapahintulot sa iyo na magtakda ng isang sona ng oras na patungo sa ERDDAP™ upang makomberte ang lokal-time-zone source times (ang ilan sa karaniwang panahon, ang ilan sa Daylight Saving time) sa loob Zulu ng mga panahon (na laging nasa Pamantayang panahon) . Ang talaan ng tanggap na mga pangalan ng sona ng oras ay malamang na katulad ng talaan sa hanay ng TZ sa [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Ang mga karaniwang sona ng oras ng US ay: US/Hawaii, US/Alaska, US/Pacific, US/Eastern, US/Arizona, US/Central, US/Eastern.
+    * Mga impormasyon sa likuran: "ang panahon ay nakabawi" (e.g., Pacific Standard Time, -08:00, GMT-8) ay nakatakda, espisipiko, mga offset depende sa Zulu   (GMT) . Sa kabaligtaran, ang "time zones" ay ang mas komplikadong mga bagay na apektado ng Daylight Saving (e.g., "US/Pacific") , na may iba't ibang mga alituntunin sa iba't ibang mga lugar sa iba't ibang panahon. Ang mga sona ng oras ay laging may mga pangalan yamang ang mga ito ay hindi maibubuod sa simpleng halagang offset (tingnan ang "TZ database na pangalan" na hanay sa mesa [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP ' time\\_zone attribute ay tumutulong sa iyo na harapin ang lokal na impormasyon tungkol sa oras mula sa ilang sona ng oras (e.g., 1987-03-25T17:32:05 Pasipiko Panahon) . Kung mayroon kang string o numerong time data na may datos (nakapirme) Time offset, dapat mo lamang i - adjust ang impormasyon Zulu   (alin ang ERDDAP™ nais) sa pamamagitan ng pagtatakda ng iba't ibang baseng oras sa mga yunit na attribute (e.g., "hours mula noong 1970-01-01T08:00:00Z", pansinin ang T08 upang tiyakin ang Time offset) , at laging suriin ang mga resulta upang matiyak na matatamo mo ang mga resulta na nais mo.
+    * Para sa mga timestamp variable na may source data mula sa Strings, ang attribute na ito ay nagpapahintulot sa iyo na magtakda ng isang sona ng oras na patungo sa ERDDAP™ upang makomberte ang lokal-time-zone source times (ang ilan sa karaniwang panahon, ang ilan sa Daylight Saving time) sa loob Zulu ng mga panahon (na laging nasa Pamantayang panahon) . Ang talaan ng tanggap na mga pangalan ng sona ng oras ay malamang na katulad ng talaan sa hanay ng TZ sa [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Ang mga karaniwang sona ng oras ng US ay: US/Hawaii, US/Alaska, US/Pacific, US/Eastern, US/Arizona, US/Central, US/Eastern.
     * Para sa mga timestamp variable na may numeromeric source data, maaari mong tiyakin ang " time\\_zone " Aminin ninyo, ngunit ang halaga ay tiyak na " Zulu " o "UTC". Kung kailangan mo ng suporta para sa ibang sona ng oras, pakisuyong email Chris. Juan sa noaa.gov .
          
 ###### Halimbawa_time_adjust{#legacy_time_adjust} 
