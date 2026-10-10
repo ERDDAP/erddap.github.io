@@ -45,14 +45,14 @@ NCCSVフォーマットの設計は、いくつかの要件の残高です。
 この仕様は、動作するように設計されている他のいくつかの仕様とライブラリを参照しますが、この仕様は、それらの他の仕様の一部ではありません。また、それはそれらへの変更を必要としません。また、それらと競合しません。 これらの基準の1つに関する詳細がここに指定されていない場合は、関連する仕様を参照してください。 特に、以下が含まれます:
 
 * データセットのディスカバリーのための属性条約 (パスワード) メタデータ規格:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) お問い合わせ
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) お問い合わせ
 * 気候と予測 (CFシリーズ) メタデータ規格:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) お問い合わせ
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) お問い合わせ
 * ザ・オブ・ザ・ NetCDF ユーザーガイド (ログイン) : : :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) お問い合わせ
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) お問い合わせ
 * ザ・オブ・ザ・ NetCDF ソフトウェアライブラリ NetCDF -Javaと NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) お問い合わせ これらのライブラリはNCCSVファイルを読むことができませんが、読み込むことができます。 .nc NCCSVファイルから作成されたファイル。
-* ジェイソン: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) お問い合わせ これらのライブラリはNCCSVファイルを読むことができませんが、読み込むことができます。 .nc NCCSVファイルから作成されたファイル。
+* ジェイソン: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### インフォメーション{#notation} 
 この指定では、ブラケット、 \\[   \\] 任意項目を記述して下さい。
@@ -152,12 +152,12 @@ scalar データ変数が読み込まれるとき ERDDAP™ , scalar は、す�
     * 二重引用符 (ツイート) 2つのダブルクォートとしてエンコードする必要があります (お問い合わせ) お問い合わせ これは、.csvファイルを読むときにスプレッドシートプログラムが必要とするものです。 これは、スプレッドシートを.csvファイルとして保存したときに、スプレッドシートプログラムが書き込まれるものです。
     * 特別なJSONバックスラッシュエンコード文字はJSONでエンコードする必要があります(notably) \\n (newline)、\\\(backslash)、\f(formfeed)、\t(tab)、\r(キャリッジリターン)、または [メニュー *ログイン* ](#uhhhh) 構文。 スプレッドシートでは、Alt Enter を使用してテキストセル内の新しい行を指定しません。代わりに、使用 \\n   (2文字:バックスラッシュとn お問い合わせ) 新規行を表示する
 #####  uhhhh  {#uhhhh} 
-    * メニュー *hhhh - 文字#32以下、文字#26よりも大きいすべての文字で、それ以外の場合はエンコードされていない、構文\\uでエンコードする必要があります* hhhhhhhh は、文字の 4 桁の 16 進数です。例えば、ユーロ記号は \\u20AC です。 参照されているコードページを参照してください。 [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) 特定のUnicode文字に関連付けられている16進数の数字を見つけるか、ソフトウェアライブラリを使用してください。
+    * メニュー *hhhh - 文字#32以下、文字#26よりも大きいすべての文字で、それ以外の場合はエンコードされていない、構文\\uでエンコードする必要があります* hhhhhhhh は文字の 4 桁の 16 進数です。例えば、ユーロ記号は \\ \\u20AC お問い合わせ 参照されているコードページを参照してください。 [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) 特定のUnicode文字に関連付けられている16進数の数字を見つけるか、ソフトウェアライブラリを使用してください。
     * 文字列が先頭または末尾にスペースがある場合、または " (二重引用符) またはコンマ、または他のデータ型として解釈される値を含む (例:イント) または "null" という単語で、文字列全体が二重引用符で囲まなければなりません。それ以外の場合は、JSON とは異なり、二重引用符を囲むこともできます。 推奨事項: 疑わしい場合は、ダブルクォートで文字列全体を囲みます。 文字列の先頭または末尾のスペースは強くお勧めします。
     * 今のところ、#255よりも大きい文字の使用は控えめです。 NCCSV対応 ERDDAP™ 内部でサポートします。 出力ファイルの種類によっては、それらをサポートするものもあります。 (例: .json そして、 .nccsv ) お問い合わせ しかし、多くの出力ファイルタイプはサポートしていません。 例えば、 NetCDF -3 ファイルはそのような文字をサポートしていません NetCDF file は 1 バイトの文字と CF を使用して、Unicode 文字がエンコードされているかを指定するシステムがありません。 NetCDF ストリング (例: UTF-8) お問い合わせ これはおそらく時間が経つにつれて改善されます。
          
 #### チャート{#char} 
-* char 属性値は 1 つの UCS-2 文字です。 (例:2バイトのUnicode文字 Java ) つまり、7ビットのASCII、JSONのような文字で他の文字が指定できるように記述する必要があります。 (特別な文字のエンコーディングのために上記の文字列の定義を参照してください。単一の引用符を \\ としてエンコーディングする追加 お問い合わせ) お問い合わせ 単一の引用符でChar属性値が封入されなければならない (内部の引用語句) 二重引用符 (外側の引用符) ,例えば, "'a'", "'"" (二重引用文字) , "\\" , "\\\" , "\\\" , "\\\" , "\\\" , "\\\\" , "\\\\" , "\\\\" , "\\\\" , "\\\\" , "\\" , "\\" , "\\\" , "\\\\\\" , "\\\\\\\" , "\\" , "\\\\\\\\\\\\\\\\\\" ," , "\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ (単一の引用文字) , '\' '\' '\' '\' '\' '\' ' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' ' '\' ' '\' '\' '\' ' '\'\' ' ' ' ' ' '\'\'\' ' ' ' ' ' ' '\' ' ' '\'\' ' '\' ' ' ' ' ' ' ' '\'\' '\'\'\'\'\'\'\'\'\' ' ' ' ' ' ' '\'\'\'\'\'\'\'\' (タブ) , "\\u20AC" (ユーロ文字) お問い合わせ シングルクォートとダブルクォートを使用するこのシステムは奇妙で面倒ですが、スプレッドシートで動作する文字列からchar値を区別する方法です。 char のように見えますが、無効な値でエラーメッセージが生成されます。 Strings と同様に、#255 よりも大きい文字の使用は現在無効です。
+* char 属性値は 1 つの UCS-2 文字です。 (例:2バイトのUnicode文字 Java ) つまり、7ビットのASCII、JSONのような文字で他の文字が指定できるように記述する必要があります。 (特別な文字のエンコーディングのために上記の文字列の定義を参照してください。単一の引用符を \\ としてエンコーディングする追加 お問い合わせ) お問い合わせ 単一の引用符でChar属性値が封入されなければならない (内部の引用語句) 二重引用符 (外側の引用符) ,例えば, "'a'", "'"" (二重引用文字) , "\\" , "\\\" , "\\\" , "\\\" , "\\\" , "\\\\" , "\\\\" , "\\\\" , "\\\\" , "\\\\" , "\\" , "\\" , "\\\" , "\\\\\\" , "\\\\\\\" , "\\" , "\\\\\\\\\\\\\\\\\\" ," , "\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ (単一の引用文字) , '\' '\' '\' '\' '\' '\' ' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' '\' ' '\' ' '\' '\' '\' ' '\'\' ' ' ' ' ' '\'\'\' ' ' ' ' ' ' '\' ' ' '\'\' ' '\' ' ' ' ' ' ' ' '\'\' '\'\'\'\'\'\'\'\'\' ' ' ' ' ' ' '\'\'\'\'\'\'\'\' (タブ) , , , , , \\u20AC ' ' ' (ユーロ文字) お問い合わせ シングルクォートとダブルクォートを使用するこのシステムは奇妙で面倒ですが、スプレッドシートで動作する文字列からchar値を区別する方法です。 char のように見えますが、無効な値でエラーメッセージが生成されます。 Strings と同様に、#255 よりも大きい文字の使用は現在無効です。
 
 ### サフィックス{#suffix} 
 NCCSVファイルの属性セクションでは、すべての数値属性値がサフィックス文字を持っている必要があります。 (例:'b') 数値データ型を識別するため (例:バイト) お問い合わせ しかし、NCCSVファイルのデータセクションでは、数値データ値がこれらのサフィックスの文字を持たない必要があります (長い整数と 'uL' の例外を ulong 整数) — データ型は、\\*データシート\\*変数の属性。
@@ -220,7 +220,7 @@ DateTime は数値として表される値は、" を指定する単位の属性
 時間、単位、1970-01-01T00:00:00Z以来の秒
 
 DateTime は、文字列の値として表される値が文字列を持っている必要があります\\*データシート\\*属性と日付を指定する単位属性 指定した時間パターン Java DateTimeFormatter クラス
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) お問い合わせ 例えば、
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) お問い合わせ 例えば、
 時間、単位、 yyyy-MM-dd 'T'HH:mm:ssZの
 指定したデータ変数の dateTime のすべての値は、同じ形式を使用する必要があります。
 ほとんどの場合、unit 属性に必要な dateTime パターンは、これらのフォーマットの 1 つのバリエーションになります。
@@ -245,7 +245,7 @@ CFで要求されるように、すべての程度の価値 (例えば、経度�
 ##  [DSGについて 特徴のタイプ](#dsg-feature-types)  {#dsg-feature-types} 
 
 NCCSVファイルにはCFディスクリートサンプリング幾何学が含まれる場合があります
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) データ。 この作業を行う属性です。
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) データ。 この作業を行う属性です。
 
 1. CF で要求されるように、NCCSV ファイルがメタデータセクションの行を含める必要があります。 [\\*グローバル\\*](#global)   featureType 属性、例えば、
     \\*グローバル\\*, featureType 、trajectory
@@ -326,7 +326,7 @@ Bell M. Shimada,2017-03-23T01:45:00Z,28.0003,-130.3472,\\u20AC,0,127,-9007199254
 
 * このサンプルファイルには多くの難易度例が含まれています (例:char と long の変数と 難しい String の値) お問い合わせ ほとんどのNCCSVファイルはより簡単です。
 * ライセンスラインは2つの行に分けられますが、サンプルファイルの1行だけです。
-* \\u20AC はユーロ文字のエンコーディングであり、\\u00FC は ü のエンコーディングです。
+* ツイート \\u20AC ユーロ文字のエンコーディングと\\u00FCは ü のエンコーディングです。
 * 詳しくはこちら たとえば文字列は、タイトル、ロン単位属性、およびデータ3行を含む多くのグローバル属性がなくてもダブルクォートで囲まれています。)
 * testLong 変数のユニット属性が文字列の値であるというダブルクォートで書かれていたら、それはより明確で優れています。 しかし、現在の表現 (1、引用なし) "i' 接尾辞がないため、整数ではなく、文字列として正しく解釈されます。
 * 他の数値型とは異なり、データセクションの長い値はサフィックスを持っています (ツイート) 数値型を識別する。 スプレッドシートは、フローティングポイントの数値として値を解釈し、精度を失うことを防ぐ必要があります。
@@ -336,7 +336,7 @@ Bell M. Shimada,2017-03-23T01:45:00Z,28.0003,-130.3472,\\u20AC,0,127,-9007199254
 スプレッドシートでは、NCCSVファイルとして:
 
 * NCCSVファイルで指定した数値属性値を記述する (例: suffix 文字、 'f' など、属性のデータ型を識別する) お問い合わせ
-* 文字列では、すべての文字を ASCII 文字未満 #32 以上の文字を JSON のような バックスラッシュされた文字の 126 文字以下に書きます。 (例: \\n 新規登録) または16進数のUnicode文字数として (場合の無感覚) 構文を使って [メニュー *ログイン* ](#uhhhh)   (例:ユーロサイン用\\u20AC) お問い合わせ 使用条件 \\n   (2文字:バックスラッシュとn お問い合わせ) Alt Enterではなく、新しい行を表示する
+* 文字列では、すべての文字を ASCII 文字未満 #32 以上の文字を JSON のような バックスラッシュされた文字の 126 文字以下に書きます。 (例: \\n 新規登録) または16進数のUnicode文字数として (場合の無感覚) 構文を使って [メニュー *ログイン* ](#uhhhh)   (例:\\ \\u20AC ユーロサイン用) お問い合わせ 使用条件 \\n   (2文字:バックスラッシュとn お問い合わせ) Alt Enterではなく、新しい行を表示する
 
 NCCSVファイルとこれらの規則に従うアナログスプレッドシートの違いは、次のとおりです。
 
@@ -392,7 +392,7 @@ GoogleスプレッドシートからNCCSVファイルを作成するには:
 * NCCSVファイルが行末にコンマが過剰な場合、NCCSVファイルをNCCSVファイルを変換して削除できます。 NetCDF ファイルを変換し、 NetCDF NCCSVファイルに戻ります。
 * NCCSVファイルを変換しようとすると NetCDF ファイル、ソフトウェアによってエラーが検出され、エラーメッセージが生成され、変換が失敗します。 他の問題は、キャッチしにくい、エラーメッセージや警告を生成しません。 その他の問題 (例:行末のコンマが過剰) 無視されます。 ファイルのコンバーターは、結果の正しさを最小限にチェックします NetCDF CF のコンプライアンスに関してファイル、例えば。 変換の結果が希望どおり、正しいことを確認し、ファイル作成者の責任とファイルユーザの責任です。 確認する2つの方法は次のとおりです。
     * コンテンツのプリント .nc ncdumpファイル
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) お問い合わせ
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) お問い合わせ
     * データの内容を見る ERDDAP お問い合わせ
 
 ##  [変更点](#changes)  {#changes} 

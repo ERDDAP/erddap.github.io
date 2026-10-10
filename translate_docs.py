@@ -147,6 +147,7 @@ dont_translate_strings = [
     "'*'",
     "'^'",
     "'='",
+    "\\u20AC",
     # <kbd> was here
 
     # Affiliation abbreviations from the StrategicInsightGroup page.

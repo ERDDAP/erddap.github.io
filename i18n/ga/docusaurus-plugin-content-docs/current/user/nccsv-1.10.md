@@ -45,14 +45,14 @@ Más cosúil go bhfuil roinnt riachtanas sa doiciméad seo corr nó picky, is d�
 Tagraíonn an tsonraíocht seo do shonraíochtaí agus leabharlanna éagsúla eile go bhfuil sé ceaptha a bheith ag obair leis, ach nach bhfuil an tsonraíocht seo mar chuid d'aon cheann de na sonraíochtaí eile, ná ní gá aon athruithe a dhéanamh orthu, ná ní chuireann sé salach orthu. Mura sonraítear sonraí a bhaineann le ceann de na caighdeáin seo anseo, féach an tsonraíocht a bhaineann leo. Go suntasach, áirítear leis seo:
 
 * An Coinbhinsiún ómós d'Fhionnachtan Sonraí (Clár na dToghthóirí) meiteashonraí caighdeánach:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * An Aeráid agus Réamhaisnéis (CF) meiteashonraí caighdeánach:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * An bhfuil NetCDF Treoir Úsáideora (NUG) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * An bhfuil NetCDF leabharlanna bogearraí ar nós NetCDF - java agus NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Ní féidir leis na leabharlanna a léamh comhaid NCCSV, ach is féidir leo a léamh .nc comhaid a cruthaíodh ó chomhaid NCCSV.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . Ní féidir leis na leabharlanna a léamh comhaid NCCSV, ach is féidir leo a léamh .nc comhaid a cruthaíodh ó chomhaid NCCSV.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Amharc ar gach eolas{#notation} 
 Sa tsonraíocht seo, lúibíní, \\[   \\] , míreanna roghnacha denote.
@@ -152,12 +152,12 @@ Is iad na sainmhínithe ar na cineálacha sonraí tréith:
     * Sleachta dúbailte (" " ") Ní mór a ionchódú mar dhá Sleachta dúbailte ("") . Sin an méid a éilíonn cláir scarbhileog nuair a léamh.csv comhaid. Sin an méid a scríobh cláir scarbhileog nuair a shábháil tú scarbhileog mar .csv comhad.
     * Ní mór an speisialta JSON backslash-ionchódaithe carachtair a ionchódú mar i JSON (notably \\n (nua-líne), ach freisin \\\\\ (backslash), \\f (beathaform), \\t (tab), \\r (tuairisceán carráiste) nó leis an [Táirgí gaolmhara *Tá an* ](#uhhhh) syntax. I scarbhileog, ná bain úsáid as Alt Cuir isteach chun líne nua a shonrú laistigh de chill téacs; ina ionad sin, úsáid a bhaint as \\n   (2 carachtair: backslash agus 'n '') a chur in iúl líne nua.
 #####  uhhhh  {#uhhhh} 
-    * Táirgí gaolmhara *hhhh - Ní mór gach carachtar níos lú ná carachtar #32 nó níos mó ná carachtar #126, agus ní ionchódaithe ar shlí eile, a ionchódú leis an syntax \\u* hhh*, i gcás inarb é hhhhh an uimhir heicseagóid 4-digit den charachtar, m.sh., is é an comhartha Euro \\u20AC. Féach ar na leathanaigh cód tagairt ag [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) chun teacht ar na huimhreacha hexadecimal a bhaineann le carachtair Unicode ar leith, nó a úsáid leabharlann bogearraí.
+    * Táirgí gaolmhara *hhhh - Ní mór gach carachtar níos lú ná carachtar #32 nó níos mó ná carachtar #126, agus ní ionchódaithe ar shlí eile, a ionchódú leis an syntax \\u* hhh*, i gcás inarb é hhhhh an uimhir heicseagánach 4-digit den charachtar, m.sh., is é an comhartha Euro \\ \\u20AC . Féach ar na leathanaigh cód tagairt ag [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) chun teacht ar na huimhreacha hexadecimal a bhaineann le carachtair Unicode ar leith, nó a úsáid leabharlann bogearraí.
     * Má tá spás ag an Curtain ag an tús nó an deireadh, nó folaíonn sé " (ceanglófar dúbailte) nó camóg, nó ina bhfuil luachanna a bheadh a léiriú ar shlí eile mar chineál sonraí éigin eile (e.g.) , nó is é an focal "null", ní mór an Curtain ar fad a bheith iniata i Sleachta dúbailte; ar shlí eile, murab ionann agus JSON, tá na Sleachta dúbailte inclosing roghnach. Molaimid: nuair a bhíonn amhras ort, cuir an Curtain ar fad i Sleachta dúbailte. Spásanna ag tús nó deireadh le String discouraged go láidir.
     * Chun anois, tá an úsáid a bhaint as carachtair níos mó ná #255 discouraged. Tacaíonn NCCSV leo. ERDDAP™ tacú leo go hinmheánach. Roinnt cineálacha comhaid aschur tacaíocht a thabhairt dóibh (e.g., .json agus .nccsv ) . Ach ní thacaíonn go leor cineálacha comhaid aschuir leo. Mar shampla, NetCDF -3 Ní comhaid tacaíocht carachtair den sórt sin mar gheall ar NetCDF comhaid a úsáid 1-byte carachtair agus CF faoi láthair nach bhfuil córas a shonrú conas carachtair Unicode ionchódaithe i NetCDF soilse loingseoireachta E (e.g., UTF-8) . Beidh sé seo feabhas dócha le himeacht ama.
          
 #### foirm duille: líneach{#char} 
-* Tá luachanna tréith char carachtar UCS-2 amháin (i.e., 2-byte carachtair Unicode, mar atá i Java ) , Ní mór a bheith scríofa mar ASCII 7-giotán, JSON-mhaith carachtair ionas gur féidir carachtair eile a shonrú (féach an sainmhíniú Teaghrán thuas le haghaidh ionchódú carachtair speisialta, leis an Chomh maith le ionchódú ceanglófar amháin mar \\ '') . Ní mór luachanna tréith Char a bheith iniata i Sleachta aonair (na Sleachta istigh) agus Sleachta dúbailte (na Sleachta seachtrach) , m.sh., "'a'", "'" (carachtar ceanglófar dúbailte) ", '\'' (carachtar ceanglófar amháin) , "'\t'" (a tab) ", "\\u20AC" (carachtar Euro) . Tá an córas seo a úsáid Sleachta aonair agus dúbailte corr agus cumbersome, ach tá sé ar bhealach chun idirdhealú a dhéanamh luachanna char ó Strings ar bhealach a oibríonn le scarbhileoga. Beidh luach a bhreathnaíonn cosúil le char ach tá neamhbhailí ghiniúint teachtaireacht earráide. Mar is amhlaidh le Stringsa, tá úsáid carachtair níos mó ná #255 discouraged faoi láthair.
+* Tá luachanna tréith char carachtar UCS-2 amháin (i.e., 2-byte carachtair Unicode, mar atá i Java ) , Ní mór a bheith scríofa mar ASCII 7-giotán, JSON-mhaith carachtair ionas gur féidir carachtair eile a shonrú (féach an sainmhíniú Teaghrán thuas le haghaidh ionchódú carachtair speisialta, leis an Chomh maith le ionchódú ceanglófar amháin mar \\ '') . Ní mór luachanna tréith Char a bheith iniata i Sleachta aonair (na Sleachta istigh) agus Sleachta dúbailte (na Sleachta seachtrach) , m.sh., "'a'", "'" (carachtar ceanglófar dúbailte) ", '\'' (carachtar ceanglófar amháin) , "'\t'" (a tab) ", \\u20AC '" (carachtar Euro) . Tá an córas seo a úsáid Sleachta aonair agus dúbailte corr agus cumbersome, ach tá sé ar bhealach chun idirdhealú a dhéanamh luachanna char ó Strings ar bhealach a oibríonn le scarbhileoga. Beidh luach a bhreathnaíonn cosúil le char ach tá neamhbhailí ghiniúint teachtaireacht earráide. Mar is amhlaidh le Stringsa, tá úsáid carachtair níos mó ná #255 discouraged faoi láthair.
 
 ### Amharc ar gach eolas{#suffix} 
 Tabhair faoi deara go sa rannóg tréithe de chomhad NCCSV, ní mór litir iarmhír a bheith ag gach luachanna tréith uimhriúil (e.g.) a aithint ar an gcineál sonraí uimhriúil (e.g.) . Ach sa chuid sonraí de chomhad NCCSV, ní mór go mbeadh na litreacha iarmhíre seo ag luachanna sonraí uimhriúla (cé is moite de 'L' le haghaidh slánuimhreacha fada agus 'uL' le haghaidh slánuimhreacha ulong) — sonraítear an cineál sonraí ag an\\*Amharc ar gach eolas\\*tréith don athróg.
@@ -220,7 +220,7 @@ Ní mór go mbeadh tréith aonad ag luachanna DateTime a léiríonn an " *minic�
 am, aonaid, soicind ó 1970-01T00:00:00Z
 
 Ní mór luachanna DateTime ionadaíocht mar luachanna String bheith acu Curtain\\*Amharc ar gach eolas\\*tréith agus aonad tréith a shonraíonn dáta patrún ama mar atá sonraithe ag an Java Dáta Tuairimí Ré
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Mar shampla,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Mar shampla,
 am, aonaid, yyyy-MM-dd 'T'H: mm: SZ
 Ní mór gach luachanna dateTime le haghaidh athróg sonraí ar leith a úsáid an fhormáid chéanna.
 I bhformhór na gcásanna, beidh an patrún dateTime gá duit le haghaidh an tréith aonad a bheith ina athrú ar cheann de na formáidí:
@@ -245,7 +245,7 @@ Mar is gá ag CF, gach luachanna céime (e.g., le fada agus domhanleithead) Ní 
 ##  [DSG Cineálacha Gné](#dsg-feature-types)  {#dsg-feature-types} 
 
 D'fhéadfadh comhad NCCSV bhfuil CF Discrete Sampling Céimseata
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) sonraí. Is iad na tréithe a dhéanann an obair seo:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) sonraí. Is iad na tréithe a dhéanann an obair seo:
 
 1. Mar is gá de réir CF, ní mór go n-áireofaí sa chomhad NCCSV líne sa rannóg meiteashonraí a shainaithníonn an [\\*GLOBAL\\*](#global)   featureType tréith, mar shampla,
     \\*GLOBAL\\*, featureType taiseachas aeir: fliuch
@@ -326,7 +326,7 @@ Nótaí:
 
 * Cuimsíonn an comhad sampla go leor cásanna deacra (e.g., athróg char agus fada agus luachanna teaghrán deacair) . Beidh an chuid is mó comhaid NCCSV a bheith i bhfad níos simplí.
 * Tá an líne ceadúnas briste i dhá líne anseo, ach tá ach líne amháin sa chomhad sampla.
-* \\ Is é \\u20AC ionchódú charachtar an euro agus is é \\u00FC ionchódú ü.
+* \\ \\u20AC Is é an ionchódú de charachtar an Euro agus \\u00FC an ionchódú de ü.
 * Go leor Stringsa sa sampla atá faoi iamh ag Sleachta dúbailte cé nach bhfuil siad a bheith, m.sh., tréithe domhanda go leor lena n-áirítear an teideal, an tréith aonad lon, agus an líne 3ú sonraí.)
 * Bheadh sé níos soiléire agus níos fearr má scríobhadh na haonaid tréith don athróg testLong i Sleachta dúbailte a léiríonn go bhfuil sé ina luach Curtain. Ach an ionadaíocht reatha (1, gan Sleachta) a léiriú i gceart mar Teaghrán, ní slánuimhir, toisc nach bhfuil aon 'i' iarmhír.
 * Murab ionann agus cineálacha sonraí uimhriúla eile, tá an iarmhír ag na luachanna fada sa rannán sonraí ('L') aithníonn a gcineál sonraí uimhriúla. Tá sé seo ag teastáil chun cosc scarbhileoga ó léirmhíniú na luachanna mar uimhreacha pointe snámh agus dá bhrí sin a chailliúint cruinneas.
@@ -336,7 +336,7 @@ Nótaí:
 I scarbhileog, mar atá i gcomhad NCCSV:
 
 * Scríobh luachanna tréith uimhriúil mar atá sonraithe do chomhaid NCCSV (e.g., le litir iarmhíre, m.sh., 'f', chun cineál sonraí na tréithe a aithint) .
-* I Stringsa, scríobh na carachtair níos lú ná carachtar ASCII #32 nó níos mó ná carachtar #126 mar ceachtar carachtar JSON-mhaith backslashed (e.g., \\n le haghaidh líne nua) nó mar an uimhir charachtar Unicode hexadecimal (cás íogair) leis an syntax [Táirgí gaolmhara *Tá an* ](#uhhhh)   (e.g., \\u20AC don chomhartha Euro) . Úsáid Úsáid Úsáidte \\n   (2 carachtair: backslash agus 'n '') a chur in iúl líne nua, ní Alt Iontráil.
+* I Stringsa, scríobh na carachtair níos lú ná carachtar ASCII #32 nó níos mó ná carachtar #126 mar ceachtar carachtar JSON-mhaith backslashed (e.g., \\n le haghaidh líne nua) nó mar an uimhir charachtar Unicode hexadecimal (cás íogair) leis an syntax [Táirgí gaolmhara *Tá an* ](#uhhhh)   (e.g. \\u20AC don chomhartha Euro) . Úsáid Úsáid Úsáidte \\n   (2 carachtair: backslash agus 'n '') a chur in iúl líne nua, ní Alt Iontráil.
 
 Is iad na difríochtaí amháin idir comhaid NCCSV agus an scarbhileog chomhchosúil a leanann na coinbhinsiúin seo:
 
@@ -392,7 +392,7 @@ Chun comhad NCCSV a chruthú ó leathbhileog Bileog Google:
 * Má tá Comas breise ag comhad NCCSV ag deireadh na sraitheanna, is féidir leat iad a bhaint tríd an gcomhad NCCSV a athrú isteach i gcomhad NCCSV NetCDF comhad agus ansin a athrú ar an NetCDF comhad ar ais isteach i gcomhad NCCSV.
 * Nuair a dhéanann tú iarracht comhad NCCSV a thiontú ina NetCDF comhad, beidh roinnt earráidí a bhrath ag na bogearraí agus beidh teachtaireachtaí earráide a ghiniúint, is cúis leis an chomhshó a theipeann. Tá fadhbanna eile crua nó dodhéanta a ghabháil agus ní bheidh a ghiniúint teachtaireachtaí earráide nó rabhaidh. Fadhbanna eile (e.g., comórtha breise ag deireadh na sraitheanna) beidh neamhaird. Ní dhéanfaidh an tiontaire comhaid ach seiceáil íosta ar cheartacht an toradh NetCDF comhad, m.sh., maidir le comhlíonadh CF. Is é an cruthaitheoir comhad agus úsáideoir comhad freagracht a sheiceáil go bhfuil na torthaí an chomhshó mar atá ag teastáil agus ceart. Tá dhá bhealach a sheiceáil:
     * Priontáil ábhar an .nc comhad le ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * Féach ar an ábhar na sonraí i ERDDAP .
 
 ##  [Amharc ar gach eolas](#changes)  {#changes} 

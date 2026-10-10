@@ -45,14 +45,14 @@ Jeżeli pewien wymóg w niniejszym dokumencie wydaje się dziwny lub wybredny, t
 Specyfikacja ta odnosi się do kilku innych specyfikacji i bibliotek, z którymi jest ona przeznaczona, ale specyfikacja ta nie jest częścią żadnej z tych innych specyfikacji, ani nie wymaga żadnych zmian, ani nie jest z nimi sprzeczna. Jeżeli nie określono w tym miejscu szczegółów dotyczących jednej z tych norm, zob. odnośna specyfikacja. W szczególności obejmuje to:
 
 * Konwencja o atrybucie dla wyszukiwania danych (ACDD) standard metadanych:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * Klimat i prognoza (CF) standard metadanych:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * W NetCDF Przewodnik dla użytkowników (NUG) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * W NetCDF biblioteki oprogramowania, takie jak NetCDF - Java i NetCDF - c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Te biblioteki nie mogą czytać plików NCSV, ale mogą czytać .nc pliki utworzone z plików NCSV.
-* / [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . Te biblioteki nie mogą czytać plików NCSV, ale mogą czytać .nc pliki utworzone z plików NCSV.
+* / [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Notowanie{#notation} 
 W niniejszej specyfikacji, nawiasy, \\[   \\] , określić pozycje opcjonalne.
@@ -152,12 +152,12 @@ Definicje typów danych atrybutów są następujące:
     * Podwójne cytaty (") musi być zakodowany jako dwa podwójne cytaty ("") . Tego wymagają programy arkuszy kalkulacyjnych podczas odczytu plików .csv. Tak piszą programy arkuszy kalkulacyjnych, gdy zapisujesz arkusz kalkulacyjny jako plik .csv.
     * Specjalne znaki zakodowane przez JSON muszą być zakodowane jak w JSON (w szczególności \\n (newline), ale także\\\ (backslash),\\ f (formfeed),\\ t (tab),\\ r (powóz return) lub z [\\ u *hhhh* ](#uhhhh) Składnia. W arkuszu kalkulacyjnym nie używaj Alt Enter, aby określić nową linię w komórce tekstowej; zamiast tego użyj \\n   (2 znaki: backslash i 'n') by wskazać nową linię.
 #####  uhhhh  {#uhhhh} 
-    * \\ u *hhhh - Wszystkie znaki mniejsze niż znak # 32 lub większe niż znak # 126 i nie zakodowane w inny sposób, muszą być kodowane składnią\\ u* hhhh *, gdzie hhhh jest czterocyfrową liczbą szesnastkową znaku, np. znakiem Euro jest\\ u20AC. Zob. strony kodowe, o których mowa w [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) znaleźć numery szesnastkowe związane z określonymi znakami Unicode lub używać biblioteki oprogramowania.
+    * \\ u *hhhh - Wszystkie znaki mniejsze niż znak # 32 lub większe niż znak # 126 i nie zakodowane w inny sposób, muszą być kodowane składnią\\ u* hhhh *, gdzie hhhh jest czterocyfrową liczbą szesnastkową znaku, np. znakiem Euro jest\\ \\u20AC . Zob. strony kodowe, o których mowa w [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) znaleźć numery szesnastkowe związane z określonymi znakami Unicode lub używać biblioteki oprogramowania.
     * Jeśli String ma miejsce na początku lub końcu, lub zawiera " (Podwójny cytat) lub przecinek, lub zawiera wartości, które w innym przypadku byłyby interpretowane jako jakiś inny typ danych (np. int) , lub jest słowo "null", cały String musi być dołączony do podwójnych cudzysłówek; w przeciwnym razie, w przeciwieństwie do JSON, dodatkowe podwójne cudzysłówka są opcjonalne. Polecamy: w razie wątpliwości, załączyć cały String w podwójnych cytaty. Przestrzenie na początku lub końcu struny są mocno zniechęcone.
     * Na razie zniechęca się do używania znaków większych niż # 255. NCSSV je wspiera. ERDDAP™ wspiera je wewnętrznie. Niektóre typy plików wyjściowych je obsługują (np., .json oraz .nccsv ) . Ale wiele typów plików wyjściowych ich nie obsługuje. Na przykład: NetCDF -3 pliki nie obsługują takich znaków, ponieważ NetCDF pliki używają znaków 1- bajtowych, a CF obecnie nie posiada systemu określania, w jaki sposób znaki Unicode są kodowane NetCDF Struny (np. UTF- 8) . To prawdopodobnie poprawi się z czasem.
          
 #### char{#char} 
-* wartości atrybutów char są pojedynczym znakiem UCS-2 (2-bajtowe znaki Unicode, jak w Java ) , które muszą być zapisane jako 7- bit ASCII, znaków JSON- jak tak, że inne znaki mogą być określone (zobacz powyższą definicję String dla kodowania znaków specjalnych, z dodatkiem kodowania pojedynczego cytatu jako\\ ') . Wartości atrybutów Char muszą być zawarte w pojedynczych kwotowaniach (wewnętrzne kwotowania) i podwójne cytaty (zewnętrzne kwotowania) , np. "" a "" "" "" "" (znak podwójnego cytatu) ", '\\" " (znak pojedynczego cytatu) ", '\\ t'" (zakładka) ", '\\ u20AC'" (znak euro) . Ten system stosowania pojedynczych i podwójnych cytatów jest dziwny i uciążliwy, ale jest to sposób na odróżnienie wartości znaków od Strings w sposób, który działa z arkuszy kalkulacyjnych. Wartość, która wygląda jak znak, ale jest nieprawidłowa, wygeneruje komunikat błędu. Podobnie jak w przypadku Strings, używanie znaków większych niż # 255 jest obecnie zniechęcane.
+* wartości atrybutów char są pojedynczym znakiem UCS-2 (2-bajtowe znaki Unicode, jak w Java ) , które muszą być zapisane jako 7- bit ASCII, znaków JSON- jak tak, że inne znaki mogą być określone (zobacz powyższą definicję String dla kodowania znaków specjalnych, z dodatkiem kodowania pojedynczego cytatu jako\\ ') . Wartości atrybutów Char muszą być zawarte w pojedynczych kwotowaniach (wewnętrzne kwotowania) i podwójne cytaty (zewnętrzne kwotowania) , np. "" a "" "" "" "" (znak podwójnego cytatu) ", '\\" " (znak pojedynczego cytatu) ", '\\ t'" (zakładka) ", '\\ \\u20AC '" (znak euro) . Ten system stosowania pojedynczych i podwójnych cytatów jest dziwny i uciążliwy, ale jest to sposób na odróżnienie wartości znaków od Strings w sposób, który działa z arkuszy kalkulacyjnych. Wartość, która wygląda jak znak, ale jest nieprawidłowa, wygeneruje komunikat błędu. Podobnie jak w przypadku Strings, używanie znaków większych niż # 255 jest obecnie zniechęcane.
 
 ### Suffix{#suffix} 
 Należy zauważyć, że w sekcji atrybutów pliku NCSSV wszystkie wartości atrybutów numerycznych muszą mieć literę przyrostową (np. 'b') identyfikacja typu danych liczbowych (np. bajt) . Ale w sekcji danych pliku NCSV, numeryczne wartości danych nie mogą mieć tych przyrostków. (z wyjątkiem "L" dla długich liczb całkowitych i "uL" dla liczb całkowitych ulong) - typ danych jest określony przez\\*DANE\\ _ TYP\\*atrybut zmiennej.
@@ -220,7 +220,7 @@ Wartości DateTime reprezentowane jako wartości liczbowe muszą posiadać atryb
 czas, jednostki, sekundy od 1970- 01-01T00: 00: 00Z
 
 Wartości DateTime reprezentowane jako wartości String muszą mieć String\\*DANE\\ _ TYP\\*atrybut i atrybut jednostek określający datę Schemat czasowy określony przez Java Klasa DateTimeFormatter
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Na przykład:
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Na przykład:
 czas, jednostki, yyyy-MM-dd Nie.
 Wszystkie wartości dateTime dla danej zmiennej danych muszą używać tego samego formatu.
 W większości przypadków, schemat dateTime potrzebny dla atrybutu jednostek będzie zmiennością jednego z tych formatów:
@@ -245,7 +245,7 @@ Zgodnie z wymogami CF, wszystkie wartości stopnia (np. dla długości i szeroko
 ##  [DSG Rodzaje cech](#dsg-feature-types)  {#dsg-feature-types} 
 
 Plik NCSSV może zawierać geometrię pobierania próbek dyskretnych CF
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) dane. To atrybuty sprawiają, że to działa:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) dane. To atrybuty sprawiają, że to działa:
 
 1. Zgodnie z wymaganiami CF plik NCCSV musi zawierać wiersz w sekcji metadanych określającej [\\*GLOBAL\\*](#global)   featureType atrybut, np.,
     \\*GLOBAL\\*, featureType , trajektoria
@@ -326,7 +326,7 @@ Uwagi:
 
 * Ten plik zawiera wiele trudnych przypadków (np. Charr i długie zmienne i trudne wartości String) . Większość plików NCSSV będzie znacznie prostsza.
 * Linia licencyjna jest podzielona na dwie, ale jest tylko jedną linią w pliku próbnym.
-* \\ u20AC jest kodowaniem znaku euro, a\\ u00FC jest kodowaniem uU.
+* \\ \\u20AC jest kodowaniem znaku Euro, a\\ u00FC jest kodowaniem Wy.
 * Wiele Fragmenty w przykładzie są zawarte w podwójnych kwotowaniach, nawet jeśli nie muszą być, np., wieloma atrybutami globalnymi, w tym tytułem, atrybutem jednostek lonu i trzecią linią danych.)
 * Byłoby jaśniej i lepiej, gdyby atrybut jednostek dla zmiennej testLong został zapisany w podwójnych kwotowaniach wskazujących, że jest to wartość String. Ale obecna reprezentacja (1, bez notowań) będzie poprawnie interpretowany jako String, nie jako integer, ponieważ nie ma przyrostka 'i'.
 * W przeciwieństwie do innych typów danych liczbowych, długie wartości w sekcji danych mają przyrostek ('L') które identyfikują ich typ danych liczbowych. Jest to wymagane, aby zapobiec interpretacji arkuszy kalkulacyjnych wartości jako liczby zmiennoprzecinkowe i tym samym utraty precyzji.
@@ -336,7 +336,7 @@ Uwagi:
 W arkuszu kalkulacyjnym, jak w pliku NCSSV:
 
 * Zapisz wartości atrybutów numerycznych określone dla plików NCSV (np. z literą przyrostową, np. 'f', w celu identyfikacji typu danych atrybutu) .
-* W Strings, napisz wszystkie znaki mniejsze niż ASCII znak # 32 lub większe niż znak # 126 jako albo JSON- jak odwrotny znak (np., \\n dla nowej linii) lub jako szesnastkowy numer znaków Unicode (nieczuły przypadek) z składnią [\\ u *hhhh* ](#uhhhh)   (np.\\ u20AC dla znaku Euro) . Stosowanie \\n   (2 znaki: backslash i 'n') aby wskazać nową linię, a nie Alt Enter.
+* W Strings, napisz wszystkie znaki mniejsze niż ASCII znak # 32 lub większe niż znak # 126 jako albo JSON- jak odwrotny znak (np., \\n dla nowej linii) lub jako szesnastkowy numer znaków Unicode (nieczuły przypadek) z składnią [\\ u *hhhh* ](#uhhhh)   (np.\\ \\u20AC dla znaku euro) . Stosowanie \\n   (2 znaki: backslash i 'n') aby wskazać nową linię, a nie Alt Enter.
 
 Jedyne różnice pomiędzy plikami NCSSV a analogicznym arkuszem kalkulacyjnym, które są następujące po tych konwencjach, to:
 
@@ -392,7 +392,7 @@ Aby utworzyć plik NCCSV z arkusza kalkulacyjnego Google:
 * Jeśli plik NCCSV ma nadmiar przecinków na końcu wiersza, można je usunąć poprzez konwersję pliku NCSV w NetCDF plik, a następnie przekształcenie NetCDF z powrotem do pliku NCSV.
 * Kiedy próbujesz przekształcić plik NCSSV w NetCDF plik, niektóre błędy zostaną wykryte przez oprogramowanie i wygenerują komunikaty błędów, powodując niepowodzenie konwersji. Inne problemy są trudne lub niemożliwe do złapania i nie generują komunikatów błędów lub ostrzeżeń. Inne problemy (np. nadmiar przecinków na końcu wiersza) zostaną zignorowane. Konwerter plików będzie tylko minimalne sprawdzenie poprawności wynikających NetCDF dokumentację, np. w odniesieniu do zgodności CF. Zadaniem twórcy i użytkownika plików jest sprawdzenie, czy wyniki konwersji są tak pożądane i prawidłowe. Dwa sposoby sprawdzenia to:
     * Drukuj zawartość .nc plik z ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * Wyświetl zawartość danych w ERDDAP .
 
 ##  [Zmiany](#changes)  {#changes} 

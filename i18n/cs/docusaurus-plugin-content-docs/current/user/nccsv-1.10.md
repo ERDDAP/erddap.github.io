@@ -45,14 +45,14 @@ Pokud se některé požadavky v tomto dokumentu jeví podivné nebo vybíravé, 
 Tato specifikace odkazuje na několik dalších specifikací a knihoven, se kterými má pracovat, ale tato specifikace není součástí žádné z těchto jiných specifikací, ani nepotřebuje žádné změny, ani s nimi není v rozporu. Pokud zde není uveden detail týkající se jednoho z těchto standardů, viz související specifikace. To zahrnuje zejména:
 
 * Úmluva o atributu pro odhalení datových souborů (ACDD) standard metadat:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * Klima a předpovědi (CF) standard metadat:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * The NetCDF Uživatelská příručka (NUG) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * The NetCDF softwarové knihovny jako NetCDF - Java a NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Tyto knihovny nemohou číst NCCSV soubory, ale mohou číst .nc soubory vytvořené z NCCSV souborů.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . Tyto knihovny nemohou číst NCCSV soubory, ale mohou číst .nc soubory vytvořené z NCCSV souborů.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Zápis{#notation} 
 V této specifikaci, závorkách, \\[   \\] , označuje nepovinné položky.
@@ -152,12 +152,12 @@ Definice atributových datových typů jsou:
     * Dvojité citace (") musí být zakódováno jako dvě dvojité citace ("") . To je to, co tabulkové programy vyžadují při čtení .csv souborů. To je to, co programy tabulky psát, když uložíte tabulku jako .csv soubor.
     * Speciální JSON backslash-kódované znaky musí být zakódovány jako v JSON (zejména \\n (newline), ale také \\\\ (backslash), \\f (formfeed), \\\t (tab), \\r (carriage return) nebo s [\\\ u *Hhhh* ](#uhhhh) Syntaxe. V tabulce nepoužívejte Alt Enter k určení nového řádku v textové buňce; místo toho použijte \\n   (2 znaky: backslash and 'n ') Naznačit novou linku.
 #####  uhhhh  {#uhhhh} 
-    * \\\ u *hhhh - Všechny znaky menší než znak #32 nebo větší než znak #126, a jinak nezakódované, musí být zakódovány pomocí syntaxe \\u* hhhh*, kde hhhh je čtyřmístné hexadecimální číslo znaku, např. euro znamení je \\u20AC. Viz stránky kódů odkazované na [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) najít hexadecimální čísla spojená s konkrétními znaky Unicode nebo použít softwarovou knihovnu.
+    * \\\ u *hhhh - Všechny znaky menší než znak #32 nebo větší než znak #126, a jinak nezakódované, musí být zakódovány pomocí syntaxe \\u* hhhh*, kde hhhh je čtyřmístné hexadecimální číslo znaku, např. euro znak je \\ \\u20AC . Viz stránky kódů odkazované na [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) najít hexadecimální čísla spojená s konkrétními znaky Unicode nebo použít softwarovou knihovnu.
     * Pokud String má prostor na začátku nebo na konci, nebo zahrnuje " (dvojitá citace) nebo čárka nebo obsahuje hodnoty, které by jinak byly vykládány jako jiný datový typ (např. int) , nebo je slovo "null," celý String musí být přiložen ve dvou citacích; jinak, na rozdíl od JSON, enclosing double citations jsou volitelné. Doporučujeme: když máte pochybnosti, zavřete celý řetězec do dvou citací. Prostory na začátku nebo na konci řetězce jsou silně odrazovány.
     * Prozatím je používání postav větších než #255 odrazováno. NCCSV je podporuje. ERDDAP™ podporuje je interně. Některé typy výstupních souborů je podporují (např. .json a .nccsv ) . Ale mnoho typů výstupních souborů je nepodporuje. Například, NetCDF -3 soubory nepodporuje takové znaky, protože NetCDF soubory používají 1-bajtové znaky a CF v současné době nemá systém pro určení, jak jsou znaky Unicode zakódovány v NetCDF Struny (např. UTF-8) . To se časem pravděpodobně zlepší.
          
 #### char{#char} 
-* znak atribut hodnoty jsou jeden UCS-2 znak (tj. 2-bajtové Unicode znaky jako Java ) , které musí být psáno jako 7-bit ASCII, JSON-jako znaky tak, aby ostatní znaky mohly být specifikovány (viz výše definice String pro kódování speciálních znaků, s přidáním kódování jedné citace jako \\ ') . Hodnoty atributu Char musí být uvedeny v jednotlivých uvozovkách (vnitřní uvozovky) a dvojité uvozovky (vnější uvozovky) , např. "'a'," "'""""" (dvojcitační znak) , "'\\'" (jediný znak citace) , "'\\ t'" (záložka) , "'\\\ u20AC'" (Euro znak) . Tento systém používání jednoduchých a dvojitých uvozovek je zvláštní a těžkopádný, ale je to způsob, jak rozlišit hodnoty znaku od řetězců způsobem, který pracuje s tabulkovými listy. Hodnota, která vypadá jako znak, ale je neplatná, vytvoří chybovou zprávu. Stejně jako u Strings, použití znaků větších než #255 je v současné době odrazován.
+* znak atribut hodnoty jsou jeden UCS-2 znak (tj. 2-bajtové Unicode znaky jako Java ) , které musí být psáno jako 7-bit ASCII, JSON-jako znaky tak, aby ostatní znaky mohly být specifikovány (viz výše definice String pro kódování speciálních znaků, s přidáním kódování jedné citace jako \\ ') . Hodnoty atributu Char musí být uvedeny v jednotlivých uvozovkách (vnitřní uvozovky) a dvojité uvozovky (vnější uvozovky) , např. "'a'," "'""""" (dvojcitační znak) , "'\\'" (jediný znak citace) , "'\\ t'" (záložka) , "'\\ \\u20AC '" (Euro znak) . Tento systém používání jednoduchých a dvojitých uvozovek je zvláštní a těžkopádný, ale je to způsob, jak rozlišit hodnoty znaku od řetězců způsobem, který pracuje s tabulkovými listy. Hodnota, která vypadá jako znak, ale je neplatná, vytvoří chybovou zprávu. Stejně jako u Strings, použití znaků větších než #255 je v současné době odrazován.
 
 ### Sufix{#suffix} 
 Všimněte si, že v části atributů NCCSV musí mít všechny číselné hodnoty atributů příponu. (např. 'b') pro identifikaci číselného datového typu (např. byte) . Ale v datové sekci NCCSV souboru nesmí mít číselné hodnoty nikdy tato příponová písmena (s výjimkou 'L' pro dlouhá celá čísla a 'uL' pro ulong celá čísla) ?\\*DATA\\_TYPE\\*atribut pro proměnnou.
@@ -220,7 +220,7 @@ Hodnoty DateTime zastoupené jako číselné hodnoty musí mít atribut jednotek
 čas, jednotky, sekundy od 1970-01-01T00:00:00Z
 
 Hodnoty DateTime představující hodnoty String musí mít String\\*DATA\\_TYPE\\*atribut a atribut jednotek, který určuje datum Časový vzorec podle specifikace Java Třída DateTimeForhmota
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Například,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Například,
 čas, jednotky, yyyy-MM-dd T'HH:mm:ssZ
 Všechny hodnoty dataTime pro danou datovou proměnnou musí používat stejný formát.
 Ve většině případů bude dateTime vzor, který potřebujete pro atribut jednotek, variací jednoho z těchto formátů:
@@ -245,7 +245,7 @@ Jak vyžaduje CF, všechny hodnoty stupně (např. u zeměpisné délky a zeměp
 ##  [DSG Typy funkcí](#dsg-feature-types)  {#dsg-feature-types} 
 
 NCCSV soubor může obsahovat CF Diskrétní odběr vzorků geometrie
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) data. Jsou to atributy, díky kterým to funguje:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) data. Jsou to atributy, díky kterým to funguje:
 
 1. Jak vyžaduje CF, musí soubor NCCSV obsahovat řádek v sekci metadat označující [\\*GLOBÁLNÍ\\*](#global)   featureType atribut, např.,
     \\*GLOBÁLNÍ\\*, featureType ,trajektorie
@@ -326,7 +326,7 @@ Poznámky:
 
 * Tento soubor obsahuje mnoho složitých případů (např. znakové a dlouhé proměnné a obtížné hodnoty řetězce) . Většina NCCSV souborů bude mnohem jednodušší.
 * Licenční čára je zde rozdělena do dvou řádků, ale je to jen jeden řádek ve vzorku souboru.
-* \\u20AC je kódování znaku Euro a \\u00FC je kódování ü.
+* \\ \\u20AC je kódování znaku Euro a \\u00FC je kódování ü.
 * Mnoho Struny v příkladu jsou přiloženy dvojími uvozovkami, i když nemusí být např. mnoha globálními atributy včetně názvu, atributu lon jednotek a třetího řádku dat.)
 * Bylo by jasnější a lepší, kdyby atribut jednotek pro testDlouhá proměnná byla zapsána ve dvoucitacích, což naznačuje, že je hodnota Stringu. Ale současné zastoupení (1, bez kotací) bude interpretován správně jako String, ne celé číslo, protože neexistuje žádný 'i' přípona.
 * Na rozdíl od jiných numerických datových typů mají dlouhé hodnoty v datovém oddílu příponu ("L") který identifikuje jejich číselný datový typ. To je nutné, aby se zabránilo tomu, aby tabulky interpretovaly hodnoty jako čísla plovoucích bodů, a tím ztratily přesnost.
@@ -336,7 +336,7 @@ Poznámky:
 V tabulce, stejně jako v NCCSV souboru:
 
 * Zapsat číselné hodnoty atributu, jak je uvedeno pro NCCSV soubory (např. s příponou, např. 'f', pro identifikaci datového typu atributu) .
-* V řetězech napište všechny znaky menší než ASCII znak #32 nebo větší než znak #126 jako buď JSON-jako backslashed znak (např. \\n pro nový řádek) nebo jako hexadecimální znakové číslo Unicode (případ necitlivý) se syntaxi [\\\ u *Hhhh* ](#uhhhh)   (např. \\\u20AC pro euroznačku) . Použití \\n   (2 znaky: backslash and 'n ') k označení nové linie, nikoli Alt Enter.
+* V řetězech napište všechny znaky menší než ASCII znak #32 nebo větší než znak #126 jako buď JSON-jako backslashed znak (např. \\n pro nový řádek) nebo jako hexadecimální znakové číslo Unicode (případ necitlivý) se syntaxi [\\\ u *Hhhh* ](#uhhhh)   (např. \\ \\u20AC pro euro znamení) . Použití \\n   (2 znaky: backslash and 'n ') k označení nové linie, nikoli Alt Enter.
 
 Jedinými rozdíly mezi soubory NCCSV a analogickou tabulkou, která se řídí těmito úmluvami, jsou:
 
@@ -392,7 +392,7 @@ Vytvořit NCCSV soubor z tabulky Google Sheets:
 * Pokud NCCSV soubor má nadbytečnou čárku na konci řádků, můžete je odstranit převodem NCCSV souboru do NetCDF soubor a pak převést NetCDF soubor zpět do NCCSV souboru.
 * Když se snažíte převést NCCSV soubor do NetCDF soubor, některé chyby budou detekovány software a bude generovat chybové zprávy, což způsobí, že konverze selže. Jiné problémy jsou těžké nebo nemožné chytit a nebudou generovat chybové zprávy nebo varování. Další problémy (Například přebytečné čárky na konci řádku) budou ignorováni. Převodník souborů provede pouze minimální kontrolu správnosti výsledné NetCDF soubor, např. pokud jde o dodržování předpisů CF. Je povinností tvůrce souboru a uživatele souboru ověřit, zda jsou výsledky konverze požadované a správné. Dva způsoby kontroly jsou:
     * Vytiskněte obsah .nc soubor s ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * Zobrazit obsah dat v ERDDAP .
 
 ##  [Změny](#changes)  {#changes} 

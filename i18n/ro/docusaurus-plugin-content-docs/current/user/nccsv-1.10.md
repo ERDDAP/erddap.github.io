@@ -45,14 +45,14 @@ Dacă o cerinţă din acest document pare ciudată sau pretenţioasă, este prob
 Această specificație se referă la mai multe alte specificații și biblioteci cu care este concepută pentru a lucra, dar această specificație nu face parte din oricare dintre aceste alte specificații și nici nu are nevoie de modificări ale acestora și nici nu intră în conflict cu acestea. Dacă nu se specifică aici un detaliu legat de unul dintre aceste standarde, a se vedea specificațiile aferente. În special, aceasta include:
 
 * Convenţia de atribuire a datelor (ACDD) standard de metadate:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * Clima şi prognoza (CF) standard de metadate:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * ă NetCDF Ghid utilizator (NUG) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * ă NetCDF biblioteci software ca NetCDF - Java şi NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Aceste biblioteci nu pot citi fișiere NCCSV, dar pot citi .nc fișiere create din fișiere NCCSV.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . Aceste biblioteci nu pot citi fișiere NCCSV, dar pot citi .nc fișiere create din fișiere NCCSV.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Număr{#notation} 
 În prezenta specificație, paranteze, \\[   \\] , indică elemente opționale.
@@ -152,12 +152,12 @@ Definițiile tipurilor de date privind atributele sunt:
     * Citate duble (") trebuie codificate ca două citate duble (") . Aceasta este ceea ce programele foii de calcul necesită atunci când citiți fișiere .csv. Aceasta este ceea ce programe de foi de calcul scrie atunci când salvați o foaie de calcul ca un fișier .csv.
     * Personajele speciale JSON trebuie codificate ca în JSON (în special \\n (Newline), dar, de asemenea, \\\\ (backslash), \\f (formfeed), \\t (tab), \\r (retur de transport) sau cu [\\u *hhhh* ](#uhhhh) Sintaxă. Într-o foaie de calcul, nu utilizați Alt Enter pentru a specifica o nouă linie într-o celulă de text; în schimb, utilizați \\n   (2 caractere: backslash and 'n ') pentru a indica o nouă linie.
 #####  uhhhh  {#uhhhh} 
-    * \\u *hhhh - Toate personajele mai puțin decât caracterul #32 sau mai mare decât caracterul #126, și nu altfel codificate, trebuie să fie codificate cu sintaxa \\ \\u* hhhh*, unde hhhh este numărul hexazecimal de 4 cifre al personajului, de exemplu, semnul Euro este \\ \\u20AC. A se vedea paginile de cod menționate la [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) să găsească numerele hexazecimale asociate cu caractere specifice Unicode sau să folosească o bibliotecă de software.
+    * \\u *hhhh - Toate personajele mai puțin decât caracterul #32 sau mai mare decât caracterul #126, și nu altfel codificate, trebuie să fie codificate cu sintaxa \\ \\u* hhhh*, unde hhhh este numărul hexazecimal de 4 cifre al personajului, de exemplu, semnul Euro este \\ \\u20AC . A se vedea paginile de cod menționate la [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) să găsească numerele hexazecimale asociate cu caractere specifice Unicode sau să folosească o bibliotecă de software.
     * În cazul în care String are un spațiu la început sau la sfârșit, sau include " (citat dublu) sau o virgulă sau conține valori care altfel ar fi interpretate ca alte tipuri de date (de exemplu, un int) , sau este cuvântul "null," întregul String trebuie să fie inclus în ghilimele duble; altfel, spre deosebire de JSON, ghilimelele duble incluse sunt opționale. Vă recomandăm: atunci când sunteți în îndoială, anexați întregul String în ghilimele duble. Spaţiile de la începutul sau sfârşitul unei coarde sunt puternic descurajate.
     * Pentru moment, utilizarea caracterelor mai mari decât #255 este descurajată. NCCSV le sprijină. ERDDAP™ îi sprijină intern. Unele tipuri de fișiere de ieșire le susțin (de exemplu, .json şi .nccsv ) . Dar multe tipuri de fișiere de ieșire nu le susțin. De exemplu, NetCDF -3 fişiere nu suportă astfel de caractere deoarece NetCDF fişierele folosesc caractere de 1 octet şi CF în prezent nu are un sistem pentru a specifica modul în care caracterele Unicode sunt codificate în NetCDF Coarde (De exemplu, UTF-8) . Acest lucru se va îmbunătăţi probabil în timp.
          
 #### char{#char} 
-* Valorile atributelor char sunt un singur caracter UCS-2 (și anume, caractere unicode de 2 octeți, ca în Java ) , care trebuie să fie scrise ca 7-bit ASCII, JSON-ca caractere, astfel încât alte caractere pot fi specificate (vezi definiția String de mai sus pentru codificarea caracterelor speciale, cu adăugarea codării unui singur citat ca \\ ') . Valorile atributelor Char trebuie incluse în ghilimele unice (citatele interioare) și citate duble (citatele exterioare) , de exemplu, "'a'," "'"""" (un caracter dublu) , "'\\'" (un singur caracter citat) , "'\\t'" (o filă) , "'\\u20AC'" (un caracter Euro) . Acest sistem de utilizare a ghilimelelor simple și duble este ciudat și greoaie, dar este o modalitate de a distinge valorile Char de Strings într-un mod care funcționează cu foile de calcul. O valoare care arata ca un char, dar este invalid va genera un mesaj de eroare. Ca și în cazul Strings, utilizarea caracterelor mai mari decât #255 este în prezent descurajată.
+* Valorile atributelor char sunt un singur caracter UCS-2 (și anume, caractere unicode de 2 octeți, ca în Java ) , care trebuie să fie scrise ca 7-bit ASCII, JSON-ca caractere, astfel încât alte caractere pot fi specificate (vezi definiția String de mai sus pentru codificarea caracterelor speciale, cu adăugarea codării unui singur citat ca \\ ') . Valorile atributelor Char trebuie incluse în ghilimele unice (citatele interioare) și citate duble (citatele exterioare) , de exemplu, "'a'," "'"""" (un caracter dublu) , "'\\'" (un singur caracter citat) , "'\\t'" (o filă) , "'\\ \\u20AC '" (un caracter Euro) . Acest sistem de utilizare a ghilimelelor simple și duble este ciudat și greoaie, dar este o modalitate de a distinge valorile Char de Strings într-un mod care funcționează cu foile de calcul. O valoare care arata ca un char, dar este invalid va genera un mesaj de eroare. Ca și în cazul Strings, utilizarea caracterelor mai mari decât #255 este în prezent descurajată.
 
 ### Sufix{#suffix} 
 Notă: în secțiunea atribute a unui fișier NCCSV, toate valorile atributelor numerice trebuie să aibă o literă sufixă (de exemplu, "b") identificarea tipului de date numerice (de exemplu, octet) . Dar în secțiunea de date a unui fișier NCCSV, valorile datelor numerice nu trebuie să aibă niciodată aceste litere sufixe (cu excepția "L" pentru numere întregi lungi și "ul" pentru numere întregi lungi) Tipul de date este specificat de\\*DATE\\_TYPE\\*atributul variabilei.
@@ -220,7 +220,7 @@ Valorile DataTime reprezentate ca valori numerice trebuie să aibă un atribut d
 timp, unităţi, secunde din 1970-01-01T00:00:00Z
 
 Valorile dateTime reprezentate ca valori String trebuie să aibă o coardă\\*DATE\\_TYPE\\*atribut și atribut de unități care specifică o dată Tipul de timp specificat de către Java DataTimeFormatery class
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . De exemplu,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . De exemplu,
 timp, unități; yyyy-MM-dd 'T'HH:mm:ssZ
 Toate valorile dateTime pentru o anumită variabilă de date trebuie să utilizeze același format.
 În majoritatea cazurilor, modelul dataTime de care aveți nevoie pentru atributul unități va fi o variație a unuia dintre aceste formate:
@@ -245,7 +245,7 @@ Conform cerințelor CF, toate valorile gradelor (De exemplu, pentru longitudine 
 ##  [DSG Tipuri de caracteristici](#dsg-feature-types)  {#dsg-feature-types} 
 
 Un fișier NCCSV poate conține Geometria de eșantionare a discretelor CF
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) date. Este atributele care fac acest lucru:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) date. Este atributele care fac acest lucru:
 
 1. În conformitate cu cerințele CF, fișierul NCCSV trebuie să includă o linie în secțiunea metadate care identifică [\\*GLOBAL\\*](#global)   featureType atribut, de exemplu,
     \\*GLOBAL\\*, featureType ,traiectorie
@@ -392,7 +392,7 @@ Pentru a crea un fișier NCCSV dintr-o foaie de calcul a foilor Google:
 * În cazul în care un fișier NCCSV are viraje în exces la sfârșitul rândurilor, le puteți elimina prin conversia fișierului NCCSV într-o NetCDF fișier și apoi convertirea NetCDF fișier înapoi într-un fișier NCCSV.
 * Când încercați să convertiți un fișier NCCSV într-o NetCDF fişier, unele erori vor fi detectate de software-ul şi vor genera mesaje de eroare, ceea ce duce la eşecul conversiei. Alte probleme sunt greu sau imposibil de prins și nu va genera mesaje de eroare sau avertismente. Alte probleme (De exemplu, virgule în exces la sfârșitul rândurilor) vor fi ignorate. Convertorul de fișiere va face doar verificarea minimă a corectitudinii rezultatului NetCDF dosar, de exemplu, în ceea ce privește conformitatea CF. Este responsabilitatea creatorului de fișiere și a utilizatorului de fișiere să verifice dacă rezultatele conversiei sunt cele dorite și corecte. Două moduri de a verifica sunt:
     * Tipărește conținutul .nc fișier cu ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * Vezi conţinutul datelor în ERDDAP .
 
 ##  [Modificări](#changes)  {#changes} 
