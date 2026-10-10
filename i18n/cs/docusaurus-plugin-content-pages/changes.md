@@ -1102,7 +1102,7 @@ Viz [Tato dokumentace](/docs/server-admin/datasets#aggregation-via-file-names-or
     * ZMĚNY NA EDDTableFrom EDDGrid což je mnohem lepší. EDDTableFrom EDDGrid Umožňuje uživatelům dotazovat se mřížkované soubory dat, jako by to byly tabulární soubory dat ("Query by value") .
         
         * Nyní podporuje&lt;maxAxis0&gt; tag (výchozí=10) který určuje maximální počet os \\[ 0 \\]   (obvykle "time" ) hodnoty, které mohou být dotazovány najednou. To brání naivním požadavkům získat z EDDTableFrom EDDGrid prohledat celý datový soubor sítě (která by selhala s chybou timeout) .
-        * Generovat soubory dat Xml má nyní možnost generovat EDDTableFrom EDDGrid Soubory údajů pro všechny datové soubory v dané síti ERDDAP™ který odpovídá stanovenému regexu (použít .\\* pro porovnání všech souborů dat) . Soubory údajů, které vytváří, mají další informace v souhrnném atributu, které naznačují, že se jedná o tabulární verzi mřížkovaného datového souboru. A jejich datasetID je datasetID z mřížkovaného souboru, plus "\\_AsATable."
+        * Generovat soubory dat Xml má nyní možnost generovat EDDTableFrom EDDGrid Soubory údajů pro všechny datové soubory v dané síti ERDDAP™ který odpovídá stanovenému regexu (použít .\\* pro porovnání všech souborů dat) . Soubory údajů, které vytváří, mají další informace v souhrnném atributu, které naznačují, že se jedná o tabulární verzi mřížkovaného datového souboru. A jejich datasetID je datasetID datové sítě, plus "\\_AsATable" .
         * K dispozici je velká rychlost pro nejčastější nastavení: když mřížkovaný datový soubor je EDDGrid FromErddap soubor, který je ve stejném ERDDAP .
         
 Díky Jamesi Gallagherovi a Edu Armstrongovi.

@@ -42,7 +42,7 @@ sidebar_position: 3
 بیرونی ذرائع سے حقیقی اعداد و شمار کی اطاعت ایک بہت بڑا حفاظتی خطرہ ہے، ERDDAP™ ایسا نہیں ہے ۔ آپ کو ایک ایسا حل معلوم کرنا ہوگا جو آپ اور ڈیٹا فراہم کنندہ کے لئے کام کرتا ہے، مثال کے طور پر، ای میل (چھوٹے فائلیں کے لیے) ، بادلوں سے کشش (مثال کے طور پر گربہ بوکس یا گوگل ڈرافٹ۔) ، ایک خفیہ سائٹ (پاس ورڈ) ) نیٹ ورک (ایک USB ڈرافٹ چلانے یا بیرونی ہارڈ ڈسک) . . آپ کو صرف لوگوں کی طرف سے فائلوں کو قبول کرنا چاہئے آپ کو وائرسوں کے لیے فائلوں کا جائزہ لینا ہوگا اور دیگر حفاظتی تدابیر اختیار کرنی ہوں گی۔
 
 میں کوئی تعلق نہیں ہے ERDDAP™ ڈیٹا فراہم کُنندہ کے لیے (مثال کے طور پر، پر ERDDAP™ گھر بار) . . اس کی بجائے، جب کوئی آپ سے کہتا ہے کہ وہ اپنے اعداد و شمار آپ کی طرف سے خدمات انجام دینا چاہتے ہیں۔ ERDDAP ، آپ انہیں کچھ یوں کہہ سکتے ہیں:
-جی ہاں، ہم آپ کے ڈیٹا کو اندر حاصل کر سکتے ہیں ERDDAP . . شروع کر نے کے لئے، براہ مہربانی فارم مکمل کر کےhttps://*yourUrl*/erddap/dataProviderForm.html  (یا http:// اگر تم نے ایسا کیا تو https:// یہ ممکن نہیں ہے) . .
+جی ہاں، ہم آپ کے ڈیٹا کو اندر حاصل کر سکتے ہیں ERDDAP . . شروع کر نے کے لئے، براہ مہربانی فارم مکمل کر کے https://*yourUrl*/erddap/dataProviderForm.html   (یا http:// اگر تم نے ایسا کیا تو https:// یہ ممکن نہیں ہے) . .
 فارغ التحصیل ہونے کے بعد میں آپ سے رابطہ کروں گا کہ آخری تفصیل سے کام کریں۔
 اگر آپ صرف شکل کو دیکھنا چاہتے ہیں (اسے بھرنے کے بغیر) ، آپ پر فارم دیکھ سکتے ہیں ERD ' ERDDAP : [اندراج](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) : [حصہ 1](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) : [حصہ 2](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) : [تیسرا حصہ](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) ، اور [حصہ 4](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) . . یہ تعلقات ERD   ERDDAP™ میرے پاس معلومات بھیجیں، آپ نہیں، تو ان کے ساتھ معلومات پیش نہ کریں جب تک آپ حقیقت میں ڈیٹا کو شامل کرنا چاہتے ہیں۔ ERD   ERDDAP . .
 
@@ -190,23 +190,23 @@ sidebar_position: 3
      
 #####  EDDGrid اِس کی کیا وجہ ہے ؟{#eddgridfromthreddscatalog} 
 یہ سب کچھ پیدا کرتا ہے datasets.xml تمام لوگوں کے لئے ضرورت ہے [ EDDGrid سنگاپور سے](#eddgridfromdap) اعداد و شمار سے پتہ چلتا ہے کہ اسے جانداروں کی گردش کے ذریعے ایک THDS کے ذریعے حل کیا جا سکتا ہے۔ (ذیل) کیٹلاگ. THDS کیٹلاگصفی کی بہت سی صورتیں ہیں۔ یہ انتخاب ATEDS ایک TEDS.xl کے ساتھ /catalo/ اس میں، مثال کے طور پر،
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xmlیا
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml یا
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (اس سے متعلقہ کیٹلاگ رہا ہے۔
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html، جو قابل قبول نہیں ہے۔ EDDGrid . . . . .
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html ، جو قابل قبول نہیں ہے۔ EDDGrid . . . . .
 اگر آپ کے پاس مسائل ہیں EDDGrid حشرات سے کاتالوگ:
 * اس بات کو یقینی بنائیں کہ آپ استعمال کر رہے ہیں، اس میں /catalo/, اور اختتام /catalo.xl پر ختم ہوتا ہے۔
-* اگر ممکن ہو تو عوامی آئی پی پتے استعمال کریں (مثال کے طور پرhttps://oceanwatch.pfeg.noaa.gov) Gmail میں، کوئی مقامی نیوکلیئر آئی پی پتہ نہیں (مثال کے طور پرhttps://12.34.56.78) . . اگر THEDDS صرف مقامی نیوکلیائی آئی پی پتے کے ذریعے دستیاب ہے تو آپ استعمال کر سکتے ہیں۔&lt;خودکار بھیجنے میں تبدیلی (#convertto Public Sourl) تو ERDDAP™ صارفین عوامی پتہ دیکھتے ہیں اگرچہ ERDDAP™ مقامی نیوکلیائی پتہ سے ڈیٹا حاصل ہوتا ہے۔
+* اگر ممکن ہو تو عوامی آئی پی پتے استعمال کریں (مثال کے طور پر https://oceanwatch.pfeg.noaa.gov ) Gmail میں، کوئی مقامی نیوکلیئر آئی پی پتہ نہیں (مثال کے طور پر https://12.34.56.78 ) . . اگر THEDDS صرف مقامی نیوکلیائی آئی پی پتے کے ذریعے دستیاب ہے تو آپ استعمال کر سکتے ہیں۔&lt;خودکار بھیجنے میں تبدیلی (#convertto Public Sourl) تو ERDDAP™ صارفین عوامی پتہ دیکھتے ہیں اگرچہ ERDDAP™ مقامی نیوکلیائی پتہ سے ڈیٹا حاصل ہوتا ہے۔
 * اگر آپ کے پاس مسائل ہیں جو آپ حل نہیں کر سکتے ہیں، [مشکلات کا جائزہ لیں](#troubleshooting-tips) . .
 * اب اس کے لیے کم درجہ بندی کوڈ استعمال ہوتا ہے۔ Unidata نیٹcdf-java کیٹلاگ کوڈ (توڑ. کی بورڈ کلاس) تاکہ یہ تمام THDS کیٹلاگ کو حل کر سکے (جو حیرت انگیز طور پر پیچیدہ ہو سکتی ہے۔) شکریہ Unidata اس کوڈ کے لئے.
          
 #####  EDDGrid LonPM180 from Erddap Catalog{#eddgridlonpm180fromerddapcatalog} 
 یہ ڈی بگ پلگ ان datasets.xml بنانے کے لئے [ EDDGrid لون پی ایم180](#eddgridlonpm180) تمام اعداد و شمار سے متعلق EDDGrid ایک میں اعداد و شمار ERDDAP کہ 180 سے زیادہ طویل اقدار رکھتا ہے.
-* اگر ممکن ہو تو عوامی آئی پی پتے استعمال کریں (مثال کے طور پرhttps://oceanwatch.pfeg.noaa.gov) Gmail میں، کوئی مقامی نیوکلیئر آئی پی پتہ نہیں (مثال کے طور پرhttps://12.34.56.78) . . اگر ERDDAP™ مقامی نیوکلیئر آئی پی پتے کے ذریعے صرف رسائی حاصل ہے، آپ استعمال کر سکتے ہیں&lt;خودکار بھیجنے میں تبدیلی (#convertto Public Sourl) تو ERDDAP™ صارفین عوامی پتہ دیکھتے ہیں اگرچہ ERDDAP™ مقامی نیوکلیائی پتہ سے ڈیٹا حاصل ہوتا ہے۔
+* اگر ممکن ہو تو عوامی آئی پی پتے استعمال کریں (مثال کے طور پر https://oceanwatch.pfeg.noaa.gov ) Gmail میں، کوئی مقامی نیوکلیئر آئی پی پتہ نہیں (مثال کے طور پر https://12.34.56.78 ) . . اگر ERDDAP™ مقامی نیوکلیئر آئی پی پتے کے ذریعے صرف رسائی حاصل ہے، آپ استعمال کر سکتے ہیں&lt;خودکار بھیجنے میں تبدیلی (#convertto Public Sourl) تو ERDDAP™ صارفین عوامی پتہ دیکھتے ہیں اگرچہ ERDDAP™ مقامی نیوکلیائی پتہ سے ڈیٹا حاصل ہوتا ہے۔
          
 #####  EDDGrid Lon0360 از ErddapCatalog{#eddgridlon0360fromerddapcatalog} 
 یہ ڈی بگ پلگ ان datasets.xml بنانے کے لئے [ EDDGrid لو 360](#eddgridlon0360) تمام اعداد و شمار سے متعلق EDDGrid ایک میں اعداد و شمار ERDDAP کہ ہر طویل مقداری اقدار 0 سے کم ہیں۔
-* اگر ممکن ہو تو عوامی آئی پی پتے استعمال کریں (مثال کے طور پرhttps://oceanwatch.pfeg.noaa.gov) Gmail میں، کوئی مقامی نیوکلیئر آئی پی پتہ نہیں (مثال کے طور پرhttps://12.34.56.78) . . اگر ERDDAP™ مقامی نیوکلیئر آئی پی پتے کے ذریعے صرف رسائی حاصل ہے، آپ استعمال کر سکتے ہیں&lt;خودکار بھیجنے میں تبدیلی (#convertto Public Sourl) تو ERDDAP™ صارفین عوامی پتہ دیکھتے ہیں اگرچہ ERDDAP™ مقامی نیوکلیائی پتہ سے ڈیٹا حاصل ہوتا ہے۔
+* اگر ممکن ہو تو عوامی آئی پی پتے استعمال کریں (مثال کے طور پر https://oceanwatch.pfeg.noaa.gov ) Gmail میں، کوئی مقامی نیوکلیئر آئی پی پتہ نہیں (مثال کے طور پر https://12.34.56.78 ) . . اگر ERDDAP™ مقامی نیوکلیئر آئی پی پتے کے ذریعے صرف رسائی حاصل ہے، آپ استعمال کر سکتے ہیں&lt;خودکار بھیجنے میں تبدیلی (#convertto Public Sourl) تو ERDDAP™ صارفین عوامی پتہ دیکھتے ہیں اگرچہ ERDDAP™ مقامی نیوکلیائی پتہ سے ڈیٹا حاصل ہوتا ہے۔
          
 ##### چاروں طرف سے نشان{#eddsfromfiles} 
 ایک شروعاتی ڈائریکٹر فراہم کرتے ہیں، یہ ڈائریکٹری اور تمام ذیلی سمتوں کو چلاتا ہے اور ڈیٹا فائلوں کے ہر گروپ کے لئے ڈیٹا سیٹ بنانے کی کوشش کرتا ہے جو وہ مل جاتا ہے.
@@ -566,7 +566,7 @@ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html
 ### ڈیٹا قسم کے تبصرے{#data-type-comments} 
 * بہت سی فائل اقسام میں طویل، سستا اور کرنسی ڈیٹا کے لیے معاونت کی وجہ سے ہم ان اعداد و شمار کے استعمال کی حوصلہ افزائی کرتے ہیں۔ ERDDAP . . جب ممکن ہو تو لمبے اور سستے کی بجائے ڈبل کا استعمال کریں اور قرص کی بجائے اسٹرنگ استعمال کریں۔
      
-* میتادا - کیونکہ(OPeN)DAP'س.ڈاس اور.dds جوابات طویل یا سست رفتار خصوصیات یا ڈیٹا اقسام کی حمایت نہیں کرتے۔ (اور اس کی بجائے انہیں دوگنا دکھایا جاتا ہے۔) ، آپ استعمال کرنا چاہتے ہیں ERDDAP ' میٹاداتا کی تبتی نمائندگی جو اس میں نظر آتی ہے۔ http ...ر/رُد/ر/ت **معلومات** / * datasetID * .html ویب صفحہ (مثال کے طور پر [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (جسے آپ دیگر فائلوں میں بھی حاصل کر سکتے ہیں مثلاً، .htmlTable : .itx : .json : .jsonlCSV1 : .jsonlCSV : .jsonlKVP : .mat : .nc : .nccsv : .tsv : .xhtml ) یا .nccsv جواب (مثال کے طور پر [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) حالانکہ .nccsv Metadata صرف تبتی ڈیٹا سیٹوں کے لیے دستیاب ہے۔) ، جو دونوں ڈیٹا کی تمام اقسام کی حمایت کرتے ہیں۔ (کوئی بات نہیں، لمبا، لمبا اور لمبا) . .
+* میتادا - کیونکہ(OPeN)DAP'س.ڈاس اور.dds جوابات طویل یا سست رفتار خصوصیات یا ڈیٹا اقسام کی حمایت نہیں کرتے۔ (اور اس کی بجائے انہیں دوگنا دکھایا جاتا ہے۔) ، آپ استعمال کرنا چاہتے ہیں ERDDAP ' میٹاداتا کی تبتی نمائندگی جو اس میں نظر آتی ہے۔ http ...ر/رُد/ر/ت **معلومات** / * datasetID * .html ویب صفحہ (مثال کے طور پر [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (جسے آپ دیگر فائلوں میں بھی حاصل کر سکتے ہیں مثلاً، .htmlTable : .itx : .json : .jsonlCSV1 : .jsonlCSV : .jsonlKVP : .mat : .nc : .nccsv : .tsv : .xhtml ) یا .nccsv جواب (مثال کے طور پر [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) حالانکہ .nccsv Metadata صرف تبتی ڈیٹا سیٹوں کے لیے دستیاب ہے۔) ، جو دونوں ڈیٹا کی تمام اقسام کی حمایت کرتے ہیں۔ (کوئی بات نہیں، لمبا، لمبا اور لمبا) . .
          
 ### فائلیں{#media-files} 
 تمام اعداد و شمار یا متن کی ترتیب نہیں ہیں۔ کچھ اعداد و شمار پر مشتمل ہوتے ہیں یا اس میں میڈیا فائلوں پر مشتمل ہوتے ہیں مثلاً تصویر، آڈیو اور ویڈیو فائل۔ ERDDAP™ صارفین کو میڈیا فائلوں تک رسائی حاصل کرنے میں کچھ خاص خصوصیات ہیں۔ یہ دو مرحلہ ہے:
@@ -604,7 +604,7 @@ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html
 ### اے وی ایس ایس 3 فائلیں ساتھ کام کرتے ہیں۔{#working-with-aws-s3-files} 
  [امیزون ویب سروس (آیزو) ](https://aws.amazon.com) فروخت کنندہ ہے۔ [بادل کی دُھن](https://en.wikipedia.org/wiki/Cloud_computing) خدمات. [ص3](https://aws.amazon.com/s3/) اے وی ایس کی طرف سے پیش کردہ ایک باسکٹ ذخیرہ نظام ہے۔ ڈائریکٹری اور روایتی فائل سسٹم کی بجائے ہیریریریکل سسٹم کی جگہ ((اے رسول(ص)) آپ(ص) کی سیریز کی طرح ہے۔) ، ص3 صرف "بُک" پیش کرتا ہے جس کا رکن" ہے۔ (ہم انہیں فون کریں گے "files" ) . .
 
-ایس آئی فائلوں کیلئے (مثلا،csv) : ERDDAP™ برتنوں میں فائلوں کے ساتھ براہ راست کام کر سکتے ہیں۔ صرف آپ کو یہ کرنے کے لئے کی ضرورت ہے صرف ایک چیز ہے&lt;ڈیٹا سیٹ کے لیے فائلDir &https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/. . آپ کو استعمال نہیں کرنا چاہئے&lt;کیچ سے شروع ہوئی تفصیل کے لیے نیچے دیکھیں ۔
+ایس آئی فائلوں کیلئے (مثلا،csv) : ERDDAP™ برتنوں میں فائلوں کے ساتھ براہ راست کام کر سکتے ہیں۔ صرف آپ کو یہ کرنے کے لئے کی ضرورت ہے صرف ایک چیز ہے&lt;ڈیٹا سیٹ کے لیے فائلDir & https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ . . آپ کو استعمال نہیں کرنا چاہئے&lt;کیچ سے شروع ہوئی تفصیل کے لیے نیچے دیکھیں ۔
 
 لیکن بین‌الاقوامی فائلوں کیلئے (مثلا، .nc . . . . . .hdf فائلیں) ، آپ کو استعمال کرنے کی ضرورت ہے&lt;کیچ سے متعلقہ نظام مندرجہ ذیل ہے۔ ERDDAP ، نیٹکڈف-جاوا (جسے ERDDAP™ ان فائلوں سے ڈیٹا کو پڑھنے کے لیے استعمال ہوتا ہے۔) ''اور دیگر سائنسی اعداد و شمار کے سافٹ ویئر کو ایک روایتی فائل سسٹم میں فائلوں کے ساتھ کام کرنے کے لیے بنایا گیا ہے جو پیش کرتا ہے۔ [بلاک سطح](https://en.wikipedia.org/wiki/Block-level_storage) فائلوں تک رسائی (جس سے کسی فائل کو پڑھنے کی اجازت مل جاتی ہے۔) ، لیکن صرف ص3 پیشکش کرتا ہے۔ [فائل کا درجہ (جگہ) ](https://en.wikipedia.org/wiki/Block-level_storage) فائلوں تک رسائی (جو صرف پوری فائل پڑھنے کی اجازت دیتا ہے۔) . . AWS S3 کا متبادل پیش کرتا ہے، [ایلمک بلاک اسٹور (EBS) ](https://aws.amazon.com/ebs/) ) جو بلاک کی سطح تک رسائی کی حمایت کرتا ہے تاہم یہ S3 سے زیادہ مہنگی ہے، اس لیے یہ ڈیٹا فائلوں کے بڑے ذخائر کے لیے بہت کم استعمال ہوتا ہے۔ (تو جب لوگ کہتے ہیں کہ بادل میں ڈیٹا ذخیرہ (ص3) عام طور پر ، یہ عام طور پر نقل‌مکانی کرنے والے لوگوں کے لئے موزوں ہوتی ہے ۔) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 اس چیز کے لئے متعلقہ رُل ہے
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 AWS یہ کیسے بنایا جاتا ہے لیکن ERDDAP™ اس ایک مخصوص فارمیٹ کی ضرورت ہے:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 بطور۔ ERDDAP 'وی2.29، اب آپ استعمال کر سکتے ہیں `s3:` کی بجائے برتن کی شکل میں یہ وہ فارمیٹ ہے جسے استعمال کیا جاتا ہے۔ [AWS S3](https://docs.aws.amazon.com/cli/latest/reference/s3/) . .
 s3: *دودھ کا نام* / *کلید* 
@@ -697,22 +697,22 @@ ABI-Lib.2018.052.22.OR @ABI-L1b-RadM2-M3C10 &_G16_s20805224757575)، اس کے �
 تمام معاملات میں، آپ کو AWS اکاؤنٹ کی ضرورت ہوگی کیونکہ AWS SDK کے لئے Java   (جسے ERDDAP™ ایک برتن کے مواد کے بارے میں معلومات حاصل کرنے کے لیے معلومات استعمال کریں) AWS اکاؤنٹ شناختی سند درکار ہے. (اس پر مزید مندرجہ ذیل ہیں۔) 
 
  ERDDAP™ اگر آپ کو پتہ ہے&lt;کاache from Url & (#Cachelorl) (یا)&lt;فائل:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 کہاں
 
 * Vala name، brula name کی مختصر شکل ہے، مثلا Noa-ye17۔
 * محافظات-region, e., ہمارے مشرقی-1, اخذ شدہ بتاریخ 1, "Region" کے کالم سے ہے ایک تختے کے ایک حصے میں [اِس سلسلے میں ایک مثال پر غور کریں ۔](https://docs.aws.amazon.com/general/latest/gr/rande.html) جہاں کال دراصل موجود ہے۔
 * لیکن یہ سچ نہیں ہے ۔ اگر موجود ہو تو اسے ختم کرنا پڑے گا۔ '/' . .
 
-مثال کے طور پرhttps://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+مثال کے طور پر https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 یہ شمارندی انداز AWS S3 سفارشات میں سے ایک ہے: [آواز تک رسائی](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) اور [پُراسرار چیزوں کی یہ تفصیل](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) . . ERDDAP™ اس کے لیے ضروری ہے کہ آپ کی ضرورت ہے کہ آپ برتن کے برتن کو ملا دیں اور آپ کو معلوم کرنے کے لئے ایک کوائل میں تبدیل کریں&lt;(یا)&lt;فائلDir &) جہاں فائل موجود ہے۔
 
 #### ٹیسٹ پبلی کیشنز نمبر ۳{#test-public-aws-s3-buckets} 
 عوامی بالٹیوں کے لئے، آپ کر سکتے ہیں اور آپ کو آپ کے براؤزر میں اے وی ایس 3 ڈائریکٹرز کے ...
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) اگر بوتل کا ٹکڑا صحیح اور مناسب ہو ERDDAP ، یہ ایکس ایم ایل کی دستاویز واپس کرے گا جس کے پاس ہے۔ (جزو) اِس کی فہرست ۔ بدقسمتی سے، مکمل دادی (یعنی، برتن کے ساتھ جمع پیک) وہ ERDDAP™ دئے گئے اعداد و شمار کے لیے ایک براؤزر میں کام نہیں کرتا۔ AWS آپ کے براؤزر میں آسانی سے ایک برتن کے کھروں کو نکالنے کے لئے کوئی نظام پیش نہیں کرتا. (اگر یہ غلط ہے تو، ای میل کرس براہ مہربانی. جون نایا۔gov۔ ورنہ، ایمازون، اس کے لئے مزید مدد&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) اگر بوتل کا ٹکڑا صحیح اور مناسب ہو ERDDAP ، یہ ایکس ایم ایل کی دستاویز واپس کرے گا جس کے پاس ہے۔ (جزو) اِس کی فہرست ۔ بدقسمتی سے، مکمل دادی (یعنی، برتن کے ساتھ جمع پیک) وہ ERDDAP™ دئے گئے اعداد و شمار کے لیے ایک براؤزر میں کام نہیں کرتا۔ AWS آپ کے براؤزر میں آسانی سے ایک برتن کے کھروں کو نکالنے کے لئے کوئی نظام پیش نہیں کرتا. (اگر یہ غلط ہے تو، ای میل کرس براہ مہربانی. جون نایا۔gov۔ ورنہ، ایمازون، اس کے لئے مزید مدد&#33;) 
 
 #### ایک بُک کے موضوع پر غور کریں{#viewing-the-contents-of-a-bucket} 
-ص3 برتنوں میں اکثر فائلوں کی ایک قسم ہوتی ہے، پسدو ذیلی شاخوں میں جوڑوں کا جوڑا بن سکتا ہے۔ ERDDAP™ اعداد و شمار بنانے کے لئے ERDDAP™ اعداد و شمار، آپ کو شروع ڈائریکٹر کے لئے جاننا ہوگا&lt;(یا)&lt;فائل ڈرم) اور ان فائلوں کی شکل جس میں فائلوں کی ذیلی تقسیم کی شناخت ہو۔ اگر آپ کسی براؤزر میں ایک برتن کے سارے مواد کو دیکھنے کی کوشش کریں تو، S3 صرف پہلی 1000 فائل دکھا دیں گے، جو ناکافی ہے. اس وقت آپ کے لئے سب سے بہترین طریقہ یہ ہے کہ آپ کسی برتن کا مواد دیکھیں [نام تبدیل کئے گئے ہیں](#eddtablefromfilenames) ڈیٹا سیٹ (آپ کے پی سی پر ERDDAP™ اور اپنے عوام پر ERDDAP ) . . . . . جواب&lt;اس کے لئے آپ نے اوپر بنایا ہے.https://noaa-goes17.s3.us-east-1.amazonaws.com. . \\[ AWS S3 کسی کے لیے تیز اور آسان طریقہ کیوں پیش نہیں کرتا؟ \\] غور کریں کہ جب میں اپنے پی سی کو غیر ایمازون نیٹ ورک پر کرتا ہوں تو ایسا لگتا ہے کہ امیزون کسی فریب کے جواب میں سست ہو جاتا ہے۔ (تقریباً ۱۰۰ (...) چیکن میں سے فائلیں) اور پچھلوں میں سے تھوڑے سے (ہر چین میں 1000 فائلیں) اتار دئے گئے ہیں ۔ چونکہ برتنوں کی بڑی تعداد فائلوں کی ہو سکتی ہے۔ (نوائے وقت 17 میں 26 ملین ہے۔) ، ایک برتن کے تمام مواد کو حاصل کرنے سے کئی گھنٹوں کے اندر ای‌ڈی‌ٹی‌ٹی لے جا سکتی ہے (مثلا، 12&#33;) ختم. \\[ ایمزون، ٹھیک ہے؟ \\] 
+ص3 برتنوں میں اکثر فائلوں کی ایک قسم ہوتی ہے، پسدو ذیلی شاخوں میں جوڑوں کا جوڑا بن سکتا ہے۔ ERDDAP™ اعداد و شمار بنانے کے لئے ERDDAP™ اعداد و شمار، آپ کو شروع ڈائریکٹر کے لئے جاننا ہوگا&lt;(یا)&lt;فائل ڈرم) اور ان فائلوں کی شکل جس میں فائلوں کی ذیلی تقسیم کی شناخت ہو۔ اگر آپ کسی براؤزر میں ایک برتن کے سارے مواد کو دیکھنے کی کوشش کریں تو، S3 صرف پہلی 1000 فائل دکھا دیں گے، جو ناکافی ہے. اس وقت آپ کے لئے سب سے بہترین طریقہ یہ ہے کہ آپ کسی برتن کا مواد دیکھیں [نام تبدیل کئے گئے ہیں](#eddtablefromfilenames) ڈیٹا سیٹ (آپ کے پی سی پر ERDDAP™ اور اپنے عوام پر ERDDAP ) . . . . . جواب&lt;اس کے لئے آپ نے اوپر بنایا ہے. https://noaa-goes17.s3.us-east-1.amazonaws.com . . \\[ AWS S3 کسی کے لیے تیز اور آسان طریقہ کیوں پیش نہیں کرتا؟ \\] غور کریں کہ جب میں اپنے پی سی کو غیر ایمازون نیٹ ورک پر کرتا ہوں تو ایسا لگتا ہے کہ امیزون کسی فریب کے جواب میں سست ہو جاتا ہے۔ (تقریباً ۱۰۰ (...) چیکن میں سے فائلیں) اور پچھلوں میں سے تھوڑے سے (ہر چین میں 1000 فائلیں) اتار دئے گئے ہیں ۔ چونکہ برتنوں کی بڑی تعداد فائلوں کی ہو سکتی ہے۔ (نوائے وقت 17 میں 26 ملین ہے۔) ، ایک برتن کے تمام مواد کو حاصل کرنے سے کئی گھنٹوں کے اندر ای‌ڈی‌ٹی‌ٹی لے جا سکتی ہے (مثلا، 12&#33;) ختم. \\[ ایمزون، ٹھیک ہے؟ \\] 
 
 #### خود کو زخمی کریں GeoNames Dataset سے AWS S3 Bucket{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 اگر آپ کے پاس ایک بالٹی نام ہے، لیکن پہلے ہی سے S3 بالٹی میں فائل کی فہرست نہیں ہے یا اس کے پاس نہیں ہے جو بوتل میں متعلقہ فائلز کے مقام کی شناخت کرتا ہے، ERDDAP ' "files" نظام.
@@ -727,22 +727,24 @@ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*
 لینکس اور میک او ایس کے لیے ربط : وصیت شدہ فائل صارف کی گھریلو ڈائریکٹری میں ہونی چاہئے جو ٹومکٹ چلا رہا ہے۔ (اور ERDDAP )   (اس پیراگراف کے لیے، ہم صارف =tomcat فرض کریں گے) ایک فائل میں جسے ~ws/credentials کہا جاتا ہے یہ اندازہ مت لگائیں کہ ~ ہوم / ایٹمی ذرات -- اصل میں Cd ~ کا استعمال کیا جائے تاکہ پتہ چل سکے کہ آپریٹنگ سسٹم ~ صارفین کے لیے ڈائریکٹر بنائیں اگر وہ موجود نہ ہو تو اس کے علاوہ ، وصیت شدہ فائل کو مرتب کرنے کے بعد ، اس بات کو یقینی بنائیں کہ آپ فائل کے لئے صارف اور گروپ کوTmcat ہے اور پھر اس کے بعد kmod 400 سندیں استعمال کریں تاکہ فائل کو یقینی طور پر بنانے کے لئے صرف %d=tomcat پڑھی جا سکے
     
 3. رنگوں کا رنگ [فارم ERDDAP™ درکار](#accessing-files-in-an-aws-s3-bucket) ، مثلا؛
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) ، اور (عوامی برتنوں کیلئے) اس کو یقینی بنانے کے لئے اسے ایکس ایم ایل کی دستاویز میں جانچ لیں جس میں ایک جزوی فہرست ہے
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) ، اور (عوامی برتنوں کیلئے) اس کو یقینی بنانے کے لئے اسے ایکس ایم ایل کی دستاویز میں جانچ لیں جس میں ایک جزوی فہرست ہے
      
 4. استعمال [جناتی دَتَسَتَتَسَل](#generatedatasetsxml) تخلیق کار [نام تبدیل کئے گئے ہیں](#eddtablefromfilenames) اعداد و شمار:
     * شروع کرنے کے ڈائریکٹر کے لئے، اس سیریز کا استعمال کرتے ہیں:
         \\*\\*٭ *اُس وقت سے* آپ کی بوکیسل*
 مثال کے طور پر
-        \\*\\*^ ا ب آئی ایم ڈی بی -https://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\*^ ا ب آئی ایم ڈی بی - https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * فائل کا نام پوچھتے ہیں: .۔
     * معافی؟ سچ
     * مصر ہر مہینہ؟ 10080
-    *    infoUrl ...https://registry.opendata.aws/noaa-goes/
+    *    infoUrl ... https://registry.opendata.aws/noaa-goes/
+ 
     * ادارے؟ NOAA 
     * خلاصہ؟ کچھ نہیں ( ERDDAP™ ایک موزوں خلاصہ خودبخود تیار کِیا جائیگا ۔) 
     * عنوان؟ کچھ نہیں ( ERDDAP™ ذاتی طور پر ایک قابلِ‌قبول عنوان تخلیق کریں گے ۔) عام طور پر، آپ کو XML کی ترمیم کرنی چاہیے تاکہ درستی کی تصدیق ہو سکے اور اس میں استعمال ہونے والے اعداد و شمار کے چناؤ سے قبل بہتری لائی جائے۔ datasets.xml . .
 5. اوپر دی گئی ہدایات پر عمل کریں اور ڈیٹا سیٹ لوڈ کریں۔ ERDDAP ، آپ نے دکھائی جانے والے ڈیٹا سیٹ سے ایک EdDtable بنایا ہے. مثال کے طور پر اور کسی کے لیے AWS اوپن ڈیٹا کے برتنوں سے فائلیں نکالنے اور ڈاؤن لوڈ کرنے میں سہولت فراہم کرنے کے لیے ہم نے AdDTAble from NANames datasets (دیکھو فہرست میں درج فہرست) بنائی ہے۔
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) تقریباً سب کے لئے [AWS S3 اوپن ڈیٹا کی بوتل](https://registry.opendata.aws/) . .
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) تقریباً سب کے لئے [AWS S3 اوپن ڈیٹا کی بوتل](https://registry.opendata.aws/) . .
      \\[ چند برتن جن میں ہم نے یا تو شامل نہیں کیا ان میں جڑی بوٹیوں کی بڑی تعداد ہے۔ (زیادہ وقت کی مناسب مقدار میں ڈاؤن لوڈ کیا جا سکتا ہے۔) ، یا عوام تک رسائی کی اجازت نہیں دیتے (ان سب کو عوامی ہونا چاہیے؟) . . . . (جیسے، سینٹینل) . . \\]   
 اگر آپ پر کلک کریں "files" ان اعداد و شمار میں سے ایک کا تعلق، آپ اس سی 3 کی بوتل میں خانہ بدوش درخت اور فائلیں کاٹ سکتے ہیں۔ راستے کی وجہ\\*\\*@#* On The Fly EdDTabout from Views,, یہ ڈائریکٹری فہرست ہمیشہ مکمل طور پر قائم رہتی ہے کیونکہ ERDDAP™ ان کو حاصل. اگر آپ برانچ کا درخت اصل فائل نام پر نازل کریں اور فائل نام پر کلک کریں تو ERDDAP™ آپ کی درخواست AWS S3 کو منسوخ کر دے گی تاکہ آپ براہ راست فائل AWS سے اتار سکیں۔ پھر آپ وہ فائل چیک کر سکتے ہیں.
     
@@ -756,7 +758,7 @@ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*
  **پھر آپ بنا سکتے ہیں ERDDAP™ ایسے اعداد و شمار جو صارفین کو فائلوں میں ڈیٹا تک رسائی فراہم کرتے ہیں۔**   
 ہدایات کو دیکھیں [ ERDDAP™ اور ص3 بُک](#erddap-and-aws-s3-buckets)   (اوپر) . .
 آپ نے اوپر بنایا ہے، اگر آپ ڈائریکٹر کے ساتھ ایک چھوٹا سا پوکنگ کریں اور ڈائریکٹری کے درخت میں فائل کے نام کریں تو یہ بات واضح ہو جاتی ہے کہ اوپری سطح کے ڈائریکٹر نام (مثلاً، اے بی آئی-L1b-RadC۔) اس کے عین مطابق ERDDAP™ الگ اعداد و شمار کہلاتے۔ آپ اُس کی طرح کام کر رہے ہیں ۔ آپ اس کے بعد الگ ڈیٹا سیٹ بنانے کی کوشش کر سکتے ہیں ERDDAP™ ان میں سے ہر ڈیٹا کے لیے، استعمال، مثلا،
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 بطور۔&lt;کیچ آف Url & بدقسمتی سے، اس خاص مثال کے لیے، برتن میں موجود اعداد و شمار سب کی سطح 1 یا سطح 2 ڈیٹا سیٹ لگتا ہے، جو کہ ERDDAP™   [خاص طور پر اچھا نہیں ہے](#dimensions) ، کیونکہ اعداد و شمار میں تبدیلی کا زیادہ پیچیدہ مجموعہ ہے جو مختلف پیمانے پر استعمال ہوتا ہے۔
      
     
@@ -975,7 +977,7 @@ nco/ncatted -a units, Time,o,c,'s secos from 1970-01-01T00:00Z'# .nc
 ###  EDDGrid سنگاپور سے{#eddgridfromdap} 
  [ ** EDDGrid سنگاپور سے** ](#eddgridfromdap) گراب کو از سے شروع کريں [ DAP ](https://www.opendap.org/) سرور.
 
-* ہم سخت سفارش کرتے ہیں [جینیاتی دُنیا Xml پروگرام](#generatedatasetsxml) ایک سخت ڈرنے کے لئے datasets.xml اس ڈیٹا سیٹ کے لیے چیک. آپ ان معلومات کو جمع کر سکتے ہیں جو آپ کو ایکس ایم ایل کے لئے جمع کر سکتے ہیں EDDGrid آپ کے براؤزر میں سرچ ڈیٹا سیٹ کے ڈی ڈی ایس اور ڈی ایس کی فائلوں کو دیکھ کر ڈی این ایس کے اعداد و شمار کے حساب سے (''ڈیاس اور ڈیدز کو ملا کر sourceUrl مثال کے طور پر، [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) . .
+* ہم سخت سفارش کرتے ہیں [جینیاتی دُنیا Xml پروگرام](#generatedatasetsxml) ایک سخت ڈرنے کے لئے datasets.xml اس ڈیٹا سیٹ کے لیے چیک. آپ ان معلومات کو جمع کر سکتے ہیں جو آپ کو ایکس ایم ایل کے لئے جمع کر سکتے ہیں EDDGrid آپ کے براؤزر میں سرچ ڈیٹا سیٹ کے ڈی ڈی ایس اور ڈی ایس کی فائلوں کو دیکھ کر ڈی این ایس کے اعداد و شمار کے حساب سے (''ڈیاس اور ڈیدز کو ملا کر sourceUrl مثال کے طور پر، [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) . .
      
 *    EDDGrid دیپ سے کسی بھی کثیر تقسیمی متغیر سے ڈیٹا حاصل کیا جا سکتا ہے۔ DAP ڈیٹا سرور. (پہلے، EDDGrid دیپ سے تبدیل شدہ متغیرات تک محدود تھا جو "گرید" کے طور پر مقرر کیے گئے لیکن اب یہ لازمی نہیں ہے۔)   
      
@@ -1335,7 +1337,7 @@ THDS میں بھی ایسی ہی خصوصیت کے برعکس، ERDDAP™ ہمی
         </addAttributes>
       </axisVariable>
 ```
-قبضے کے گروپ نمبر 2 کے استعمال پر غور کریں جو 'ر‘ یا 'س‘ کے بعد واقع ہونے والے 'پر قبضہ کرنے کے لیے ہوتا ہے اور اس سے پہلے کہ " http://global"۔ اس مثال سے یہ بھی پتہ چلتا ہے کہ اضافی خصوصیات کیسے شامل کی جا سکتی ہیں۔ (مثلا، ioos\\_category اور تقسیمات) (یعنی) کافروں پر
+قبضے کے گروپ نمبر 2 کے استعمال پر غور کریں جو 'ر' یا 'س' کے بعد واقع ہونے والی 'س‘ اور اس سے پہلے واقع ہوتا ہے۔ "\\_global" . . اس مثال سے یہ بھی پتہ چلتا ہے کہ اضافی خصوصیات کیسے شامل کی جا سکتی ہیں۔ (مثلا، ioos\\_category اور تقسیمات) (یعنی) کافروں پر
      
 #### بیرونی محکمہ جات{#externally-compressed-files} 
 * اعداد و شمار جو زیریں ہیں۔ EDDGrid ” اَے [ یہوواہ ] &#33; نظر سے بیرونی دباؤ سے اعداد و شمار کی براہ راست خدمت کر سکتے ہیں، جن میں شامل ہیں۔ .tgz : .tar  .gz : .tar  .gzip : .gz : .gzip : .zip : .bz2 ....Z فائلیں
@@ -1433,7 +1435,7 @@ THDS میں بھی ایسی ہی خصوصیت کے برعکس، ERDDAP™ ہمی
 اس کی بجائے استعمال کرنا&lt;کیچ سے شروع ہونے والا نظام (#Cachelorl) . .
 
 رسائی ERDDAP™ اعداد و شمار جیسا کہ فائلوں کے ذریعے مختلف طلبہ -
-اس کے ارد گرد، آپ کر سکتے ہیں کہ دے دیا (نظریہ میں) اعداد و شمار کے بارے میں سوچیں ERDDAP™ ایک بڑا کے طور پر .nc فائل _نکالیں .nc " بنیادی اوپن تک DAP دئے گئے ڈیٹا سیٹ کے لئے لاگ ان (مثلا،https://myserver.org/erddap/griddap/datasetID.ncاور اس کے بعد صوبوں کو متعین کرنے کے لیے ایک نمبر جمع کرتے ہیں۔) ، شاید یہ پوچھنا معقول ہے کہ کیا آپ نیٹ‌کوڈف جاوا استعمال کر سکتے ہیں؟ Ferret )، یا کچھ اور NetCDF کلائنٹ سافٹ وئیر جو اعداد پڑھنے کے ذریعے ایچ ٹی‌ٹی‌پی رینج کی درخواست ERDDAP . . جواب ہے نہیں، کیونکہ واقعی ایک بڑا "ہے .nc " فائل. اگر آپ ایسا کرنا چاہتے ہیں تو ان میں سے کسی ایک کو یہ اختیار دیں:
+اس کے ارد گرد، آپ کر سکتے ہیں کہ دے دیا (نظریہ میں) اعداد و شمار کے بارے میں سوچیں ERDDAP™ ایک بڑا کے طور پر .nc فائل _نکالیں .nc " بنیادی اوپن تک DAP دئے گئے ڈیٹا سیٹ کے لئے لاگ ان (مثلا، https://myserver.org/erddap/griddap/datasetID.nc اور اس کے بعد صوبوں کو متعین کرنے کے لیے ایک نمبر جمع کرتے ہیں۔) ، شاید یہ پوچھنا معقول ہے کہ کیا آپ نیٹ‌کوڈف جاوا استعمال کر سکتے ہیں؟ Ferret )، یا کچھ اور NetCDF کلائنٹ سافٹ وئیر جو اعداد پڑھنے کے ذریعے ایچ ٹی‌ٹی‌پی رینج کی درخواست ERDDAP . . جواب ہے نہیں، کیونکہ واقعی ایک بڑا "ہے .nc " فائل. اگر آپ ایسا کرنا چاہتے ہیں تو ان میں سے کسی ایک کو یہ اختیار دیں:
 
 * استعمال(OPeN)DAPکلائنٹ سافٹ وئیر کو Garddap سروسز سے متصل کرنے کے لیے تیار ہیں۔ ERDDAP . . یہ کیا ہے DAP   (اور اسی طرح ERDDAP ) اس کے لیے بنایا گیا تھا۔ یہ بہت مؤثر ہے ۔
 * یا، ماخذ فائل ڈاؤن لوڈ کریں (بند) سے "files" نظام (یا ایک ذیلی فائل کے ذریعے .nc ... غیر متصل) آپ کے کمپیوٹر میں اور نیٹکڈف-جاوا استعمال، Ferret )، یا کچھ اور NetCDF حرف پڑھنے کے لیے کلائنٹ سافٹ وئیر (ابھی) مقامی فائل (بند) . .
@@ -2253,9 +2255,9 @@ CQL کی طبیعت یہ ہے کہ انفصرام ہیں۔ [تقسیم کار](h
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### دُکھ‌تکلیف سے پاک{#eddtablefromdapsequence} 
- [ **دُکھ‌تکلیف سے پاک** ](#eddtablefromdapsequence) 1- اور 2 سطح کے خطوں کے اندر تبدیل کرتا ہے۔ [ DAP ](https://www.opendap.org/) ایسے سرور جیسے DAP مصر (پر تھاhttps://www.pmel.noaa.gov/epic/software/dapper/، اب دوبارہ شروع) . .
+ [ **دُکھ‌تکلیف سے پاک** ](#eddtablefromdapsequence) 1- اور 2 سطح کے خطوں کے اندر تبدیل کرتا ہے۔ [ DAP ](https://www.opendap.org/) ایسے سرور جیسے DAP مصر (پر تھا https://www.pmel.noaa.gov/epic/software/dapper/ ، اب دوبارہ شروع) . .
 
-* ہم سخت سفارش کرتے ہیں [جینیاتی دُنیا Xml پروگرام](#generatedatasetsxml) ایک سخت ڈرنے کے لئے datasets.xml اس ڈیٹا سیٹ کے لیے چیک. اِس کے بعد آپ اِسے اچھی طرح تبدیل کر سکتے ہیں ۔ آپ سرچ ڈیٹاسیٹ کی ڈی ڈی ایس او ڈی ایس فائل کو دیکھ کر ضرورت کی معلومات جمع کر سکتے ہیں (اپنی براؤزر میں شامل کرنے کے لیے . sourceUrl (ایک مثال سامنے تھیhttps://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds)
+* ہم سخت سفارش کرتے ہیں [جینیاتی دُنیا Xml پروگرام](#generatedatasetsxml) ایک سخت ڈرنے کے لئے datasets.xml اس ڈیٹا سیٹ کے لیے چیک. اِس کے بعد آپ اِسے اچھی طرح تبدیل کر سکتے ہیں ۔ آپ سرچ ڈیٹاسیٹ کی ڈی ڈی ایس او ڈی ایس فائل کو دیکھ کر ضرورت کی معلومات جمع کر سکتے ہیں (اپنی براؤزر میں شامل کرنے کے لیے . sourceUrl (ایک مثال سامنے تھی https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds )
     
 * ایک تبدیلی DAP ترتیب اگر...ds جواب سے پتہ چلتا ہے کہ اعداد و شمار کی ترکیب کا رکن ایک "مصدر" ہے۔ (غلطی) . .
 * کچھ صورتوں میں، آپ کو ایک ترتیب کے اندر ایک ترتیب دیکھیں گے، 2- سطح کی ترتیب --
@@ -2378,15 +2380,15 @@ Timestamps بغیر وقتی زون معلومات میں درست کام نہی
 * [JDBC ڈرائیور اور&lt;ڈرائیور نام (#jdbc-d River) -- آپ کو اپنے ڈیٹا بیس کے لئے مناسب جے ڈی بی سی 3 یا جے ڈی بی 4 ڈرائیور 4 کی فائل حاصل کرنی چاہیے
 اسے ڈال دو *بائٹس* تنصیب کے بعد /webapps/erdap/WEB-INF/lib ERDDAP . . پھر آپ میں، datasets.xml اس ڈیٹا سیٹ کے لئے، آپ کو معلوم کرنا ہوگا&lt;اس ڈرائیور کے لیے ڈرائیور نام، جو ہے (بدقسمتی سے) مریخ سے مختلف. آپ کی ڈیٹا بیس اور ڈرائیور کے لئے ویب پر تلاش کریں کہ Java اسے استعمال کرنے کی ضرورت ہے۔
     
-    * ماریا ڈی بی کے لئے کوشش [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * ماریا ڈی بی کے لئے کوشش [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 جواب&lt;ڈرائیور کے استعمال کے لیے نامزد کردہ datasets.xml   (نیچے دیکھیں) غالباً یاگ۔ماریاڈب۔jdb۔ ڈرائیور...
-    * میری ایس کیو ایل اور ایمزون آر ڈی ایس کے لئے کوشش کرتے ہیں۔ [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * میری ایس کیو ایل اور ایمزون آر ڈی ایس کے لئے کوشش کرتے ہیں۔ [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 جواب&lt;ڈرائیور کے استعمال کے لیے نامزد کردہ datasets.xml   (نیچے دیکھیں) غالباً کوم.mysql.jdbc ہے. ڈرائیور...
-    * کے لئے Oracle ، کوشش کریں [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) . .
+    * کے لئے Oracle ، کوشش کریں [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) . .
 جواب&lt;ڈرائیور کے استعمال کے لیے نامزد کردہ datasets.xml   (نیچے دیکھیں) غالباً oracle.jdbc.d River ہے. Oracle ڈرائیور...
-    * پوسٹگریسکل کے لیے ہمیں جے ڈی بی 4 ڈرائیور ملا [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * پوسٹگریسکل کے لیے ہمیں جے ڈی بی 4 ڈرائیور ملا [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 جواب&lt;ڈرائیور کے استعمال کے لیے نامزد کردہ datasets.xml   (نیچے دیکھیں) غالباً یاگ.postgressql. ڈرائیور...
-    * موبائل سرور کے لیے، آپ سے JTDS JDBC ڈرائیور مل سکتے ہیں۔ [https://jtds.sourceforge.net](https://jtds.sourceforge.net) . .
+    * موبائل سرور کے لیے، آپ سے JTDS JDBC ڈرائیور مل سکتے ہیں۔ [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) . .
 جواب&lt;ڈرائیور کے استعمال کے لیے نامزد کردہ datasets.xml   (نیچے دیکھیں) ہو سکتا ہے نیٹ ورک.sourceforge.jts.jdbc. ڈرائیور...
     
 آپ نے جے ڈی بی کا ڈرائیور بننے کے بعد ERDDAP™ لائبریری، آپ کو 'رباط اور/یا 'ش اسکرپٹ فائل کے لیے ایک حوالہ جات شامل کرنے کی ضرورت ہے۔ Xml, DasDds, and Archive ADataset جو اس میں واقع ہے۔ *بائٹس* /webapps/erdap/WEB-INF / ڈائریکٹری؛ اس کے علاوہ جب آپ ان اسکرپٹس چلاتے ہیں۔
@@ -2524,7 +2526,7 @@ Database باطل کو تبدیل کر دیا جائے گا۔ ERDDAP™ اِن �
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-ڈاٹ کام استعمال کرنے کے بارے میں عمومی معلومات [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) . .
+ڈاٹ کام استعمال کرنے کے بارے میں عمومی معلومات [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) . .
 دیکھیں [ٹومکاٹ ڈاٹ کام کی معلومات](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) اور [ٹومکاٹ ڈاٹ کام کی مثالیں](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) یا پھر دیگر اطلاقی سروروں کے ساتھ ساتھ ڈیٹا شمارندوں کے استعمال کے نمونوں کے لئے ویب تلاش.
 * اگر اور بھی ناکام رہے تو
 اعداد و شمار کو جمع کرنے پر غور کریں NetCDF 'وی3 .nc فائلیں (خاص کر .nc فائلیں جو استعمال کرتی ہیں۔ [CF کُل‌وقتی خدمت (ڈی ایس ایل) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) قابلِ‌غور رُجحانات آرای ڈیٹا کی ترکیبوں اور اس طرح سے اس کا مقابلہ کیا جا سکتا ہے۔ ERDDAP ' [این‌سی‌سی‌سی‌پی سے ای‌میل](#eddtablefromnccffiles) ) . . اگر وہ منطقی طور پر منظم ہیں تو (ہر ڈیٹا کے ساتھ فضاء اور وقت کے حساب سے) : ERDDAP™ ان سے بہت جلد ڈیٹا نکالا جا سکتا ہے۔
@@ -2608,7 +2610,7 @@ Database باطل کو تبدیل کر دیا جائے گا۔ ERDDAP™ اِن �
     
 ایکس ایم ایل کا چناؤ جو ہر ڈیٹا سیٹ کے لیے جینیریٹڈاتاساتل سے پیدا ہوتا ہے اس میں شامل ہے:
     
-    * جواب datasetID کہ ہے EDDGrid ' datasetID جمع:
+    * جواب datasetID کہ ہے EDDGrid ' datasetID جمع "\\_AsATable" . .
     * ایک نیا خلاصہ عالمی نظریہ جو ہے EDDGrid ' خلاصہ جمع ایک نیا پیراگراف ہے جو اس ڈیٹا سیٹ کی وضاحت کرتا ہے۔
     * ایک نیا عنوان عالمی نظریہ جو ہے EDDGrid ' عنوان جمع '، (ایک میز) ".
     * 10 کی قیمت کے ساتھ ایک نیا MaxAxis0 عالمی طور پر منسوب ہے۔
@@ -2644,21 +2646,21 @@ Database باطل کو تبدیل کر دیا جائے گا۔ ERDDAP™ اِن �
 *    [حسابِ ابجد کی رو سے ڈیٹا میں اعداد و شمار](#eddtablefromfilenames-data) میز ہے ERDDAP™ مقامی فائلوں کے ایک گروہ کے بارے میں معلومات کے ساتھ-اف پر تخلیق کرتا ہے۔ میز میں ہر فائل کا قطر ہوتا ہے۔ آئین میں چار خاص خصوصیات ہیں۔ [ datasets.xml اس اعداد و شمار کے لیے](#eddtablefromfilenames-skeleton-xml) اس بات کا تعین کریں کہ اس ڈیٹا بیس میں کون سے فائلیں شامل ہوں گی:
     
 ##### فائل ڈیئر{#filedir} 
-    *   &lt;فائل:- یہ سرور کی فائل سسٹم میں سرچ ڈائریکٹر کو اس ڈیٹا سیٹ کے لیے فائل کے ساتھ منسلک کرتا ہے۔ وہ فائلیں جو درحقیقت سرور کے فائل سسٹم میں موجود ہیں۔&lt;فائلDir &https://*serverUrl*/erddap/files/*datasetID/*. .
+    *   &lt;فائل:- یہ سرور کی فائل سسٹم میں سرچ ڈائریکٹر کو اس ڈیٹا سیٹ کے لیے فائل کے ساتھ منسلک کرتا ہے۔ وہ فائلیں جو درحقیقت سرور کے فائل سسٹم میں موجود ہیں۔&lt;فائلDir & https://*serverUrl*/erddap/files/*datasetID/* . .
 مثال کے طور پر، اگر ایسا ہے datasetID JplMU ہے RSS ٹی
 اور&lt;فائل ڈیئر/گھر /data/mur/;
 اور اسی ڈائریکٹر کے پاس ایک فائل ہے جس کا نام JplMU ہے۔ RSS T205010300,000.png,
 اس کے بعد وہ فائل جو صارفین کو دکھائی دے گی۔
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png. .
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png . .
         
 اس کے علاوہ مقامی ڈائریکٹر کے لیے بھی استعمال ہوتا ہے۔&lt;فائلDirzip، آپ کسی دور دراز، ڈائریکٹری جیسے ویب صفحے کا ربط بھی بتا سکتے ہیں۔ یہ کام ساتھ کرتے ہیں:
         
         * THEDS میں بے روزگار اعداد و شمار، مثلا،
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 یہ سرور اب دوبارہ دستیاب نہیں ہے۔ \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 یہ سرور اب دوبارہ دستیاب نہیں ہے۔ \\] 
         * غیر رجسٹرڈ ڈیٹا سیٹ میں Hyrax ، مثلا؛
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * زیادہ تر اپاچی کی طرح کی ڈائریکٹری کی فہرست، مثلا،
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### اونی سے{#fromonthefly} 
  [\\*\\*^ ا ب آئی ایم ڈی بی -](#fromonthefly) -- بعض بڑے ایس3 کیمروں کے لئے (بطور نوائے وقت17 جس میں 26 لاکھ فائلیں ہیں۔) ، یہ لے سکتا ہے ERDDAP™ اِس عمل کے بارے میں ۱۲ گھنٹے تک معلومات کو ڈاؤن‌لوڈ کرنے کے لئے (اور پھر دیگر مسائل بھی ہیں۔) . . اس دور میں پہنچنے کے لیے استعمال ہونے کا خاص ذریعہ ہے۔&lt;فائل &یہ میں فائلوں کا نام اعداد و شمار کی فہرست S3 ڈسکہ کے تمام ڈائریکٹروں اور فائل ناموں کی فہرست نہیں ہوگی کہ ایک صارف اعداد و شمار کی درخواستوں کے ذریعے تلاش کر سکتا ہے۔ لیکن ڈیٹا سیٹ پر ڈائریکٹرز اور فائلوں کے نام ملتے ہوں گے اگر صارف ڈیٹا سیٹ کے ساتھ ڈائریکٹر ہراساں کرتا ہے۔ "files" انتخاب. لہٰذا، اس سے صارفین کو ایس3 کی بوتل کی فائل کو گرانے اور ڈیٹا سیٹ کے ذریعے فائل بنانے کی سہولت ملتی ہے۔ "files" نظام. ایسا کرنے کے لئے، ایس 3 کیٹل کامبیٹ کرنے کی بجائے، "آپجنگ ڈائریکٹر" کے طور پر (جناتی دُنیا میں Xml) یا&lt;فائل رولر (اندر datasets.xml ) استعمال:
 ```
@@ -2837,13 +2839,13 @@ Database باطل کو تبدیل کر دیا جائے گا۔ ERDDAP™ اِن �
     * جواب&lt;کاache from Urlnet آپ کو ایک بعید فائل کی فہرست میں شامل کرنے دیتے ہیں۔
         
         * THEDS میں بے روزگار اعداد و شمار، مثلا،
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 یہ سرور اب دوبارہ دستیاب نہیں ہے۔ \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 یہ سرور اب دوبارہ دستیاب نہیں ہے۔ \\] 
         * غیر رجسٹرڈ ڈیٹا سیٹ میں Hyrax ، مثلا؛
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * زیادہ تر اپاچی کی طرح کی ڈائریکٹری کی فہرست، مثلا،
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * S3 بالٹی، مثلا،
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 تاہم ، یہ AWS اکاؤنٹ اور زیادہ سیٹ کی ضرورت پڑ سکتی ہے ۔
 دیکھیں [ایس3 بوکٹس کے ساتھ کام کرتے ہیں۔ ERDDAP™ ](#working-with-aws-s3-files) . .
 اس کے علاوہ، آپ کو عام طور پر کیچ استعمال کرنے کی ضرورت نہیں ہے ایس3 ڈرل میں فائلوں سے اگر فائلیں ایس آئی کی فائلیں ہیں تو (مثلا،csv) ، کیونکہ ERDDAP™ اِس کی بجائے اُس نے اِس بات پر غور کِیا کہ اُس نے کیا کِیا ہے ۔
@@ -2901,7 +2903,7 @@ Database باطل کو تبدیل کر دیا جائے گا۔ ERDDAP™ اِن �
 اور دوسرا انتخاب ایک خاص اہمیت کا حامل ہے۔
             
 مثال کے طور پر 2018ء کے دوسرے 10 دن کے لیے صرف میچ ڈائریکٹرز ہوں گے، مثلا،
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020-10-21 یہ سرور اب دوبارہ دستیاب نہیں ہے۔ \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020-10-21 یہ سرور اب دوبارہ دستیاب نہیں ہے۔ \\]   
 اور دن 011، 012، ... 019.
              (یہ دیکھو [طےشدہ](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) اور [دوبارہ شروع](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) . .)   
 اگر آپ کو تخلیق کرنے میں مدد کی ضرورت ہے تو&lt;Cachepartial Regex &&lt;کیچ سے کرس تک. ''نوا پر جان ۔
@@ -3384,7 +3386,7 @@ EdDtable from Http مستقبل کی منفرد خصوصیات درج ذیل ہ�
 
 * . . .
     * طلبہ کو ایک معیار ایچ ٹی ایم ایل کی تشکیل کی صورت میں تشکیل دیا جاتا ہے، جس میں کلیدی= مقداری جوڑوں کو الگ کر کے '&' سے جدا کیا جاتا ہے۔ مثال کے طور پر
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 پتہ ERDDAP™ تاکہ ڈیٹا کو جمع یا تبدیل کیا جا سکے۔ stationID =46088 مقررہ وقت کے لیے.
     * اس تبدیلی کے مصنف جان سمتھ ہیں اور کلید کچھKey1 ہے۔
     * پلگ ان میں صحیح قدریں شامل کرنا ضروری ہے۔ (اقدار کو فراموش نہیں کیا گیا) ان سب کے لئے [ http لائق اشخاص حاصل کریں](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ EdDtable from Http مستقبل کی منفرد خصوصیات درج ذیل ہ�
              
     * رنگ
         * طلبہ کو ایک معیار ایچ ٹی ایم ایل کی تشکیل کی صورت میں تشکیل دیا جاتا ہے، جس میں کلیدی= مقداری جوڑوں کو الگ کر کے '&' سے جدا کیا جاتا ہے۔ مثال کے طور پر
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 پتہ ERDDAP™ ڈیٹا کو ختم کرنے کے لئے stationID =46088 مقررہ وقت پر۔
         * اس تبدیلی کے مصنف جان سمتھ ہیں اور کلید کچھKey1 ہے۔
         * طےشدہ [ http لائق اشخاص حاصل کریں](#httpgetrequiredvariables-global-attribute) درخواست میں (مثلا، stationID اور وقت کی) . . اگر یہ مقداریں پہلے سے ہی ڈیٹا سیٹ میں ایک قطار پر قیمتوں سے مطابقت رکھتی ہیں۔ (جسے عام طور پر وہ کرتے ہیں۔) ، پرانے اقدار کو مؤثر طور پر ختم کیا جاتا ہے۔ (حالانکہ پرانی قدریں اب بھی قابل رسائی ہیں اگر کسی صارف سے پہلے سے درخواست کردہ ڈیٹا۔ [ورژن](#versioning) اعداد و شمار کے اعداد و شمار) . .
@@ -3667,7 +3669,7 @@ EdDtable from Httpping استعمال ہوتا ہے۔ [جون لائنز سی ا
     
 ##### ایچ‌ٹی‌ٹی‌ٹی‌ایس پی .{#https-put-and-delete} 
 *    ["HTTPSPS PUT اور DLET کے بارے میں کیا ہے؟"](#https-put-and-delete)   
-     [ہائیپر ٹیک ٹرانسپورٹ پروٹوکول (ایچ ٹی‌ٹی‌پی) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) ورلڈ وائڈ ویب کی بنیاد ہے اور اسی وجہ سے ویب صفحہ URLs سے شروع ہوتا ہے "http://"یا "https://". . HTTPS ایک اضافی حفاظتی پٹی کے ساتھ HTTP ہے۔ ہر روز براؤزر، اسکرپٹ اور کمپیوٹر پروگرام ارب پتی ایچ ٹی پی بناتے ہیں۔ (ایس)   **حاصل** دور ذرائع سے معلومات حاصل کرنے کی درخواست۔ ایچ ٹی‌ٹی‌پی (ایس) دیگر شامل ہیں۔ [فعل](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) ، ممکنہ طور پر نہیں (سرور تک ڈیٹا دباؤ کرنے کے لئے) اور (سرور کی طرف سے ڈیٹا تک) . . جی ہاں، PUT اور DELETE کے ذریعے اعداد و شمار کو داخل کرنے کا درست طریقہ ہے اور ایچ ٹی پی کے ذریعے ڈیٹا کو حذف کرنے کا طریقہ ہے۔ (ایس) . . حاصل کرنے کے لیے ہر سافٹ ویئر کا سہارا لیا جاتا ہے جو ایچ ٹی ٹی پی کے ساتھ کام کر سکتا ہے۔ (ایس) . . حاصل کرنے کے لئے واقعی آسان ہے. ہر کوئی پہلے ہی سے جانتا ہے کہ کس طرح حاصل کرنے کے لئے کام کرنا ہے اور بہت سے لوگ جانتے ہیں کہ پی آر ایل کا استعمال کیسے کیا جا سکتا ہے۔ (جسے بنیادی طور پر حاصل ہونے والے یکساں طریقے میں استعمال کیا جا سکتا ہے۔) ، تو، ہم نے Http مستقبل کے کام سے EdDtable بنایا. بہت کم لوگ ہیں۔ (یہاں تک کہ کم کمپیوٹر پروگرامرز بھی ہیں۔) پی ٹی او ڈی ایلیٹ کے ساتھ کبھی کام کیا ہے۔ عام طور پر PUT اور DELETE کو کمپیوٹر زبانوں سے ہی سہارا دیا جاتا ہے، اس لیے ان کا استعمال ماہرانہ پروگرام لازمی ہوتا ہے۔ لہٰذا ، عام طور پر ، آلات میں تبدیلی کی وجہ سے فراہم کئے جانے والے آلات کی تعداد بہت زیادہ ہے ۔
+     [ہائیپر ٹیک ٹرانسپورٹ پروٹوکول (ایچ ٹی‌ٹی‌پی) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) ورلڈ وائڈ ویب کی بنیاد ہے اور اسی وجہ سے ویب صفحہ URLs سے شروع ہوتا ہے " http://" یا " https://" . . HTTPS ایک اضافی حفاظتی پٹی کے ساتھ HTTP ہے۔ ہر روز براؤزر، اسکرپٹ اور کمپیوٹر پروگرام ارب پتی ایچ ٹی پی بناتے ہیں۔ (ایس)   **حاصل** دور ذرائع سے معلومات حاصل کرنے کی درخواست۔ ایچ ٹی‌ٹی‌پی (ایس) دیگر شامل ہیں۔ [فعل](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) ، ممکنہ طور پر نہیں (سرور تک ڈیٹا دباؤ کرنے کے لئے) اور (سرور کی طرف سے ڈیٹا تک) . . جی ہاں، PUT اور DELETE کے ذریعے اعداد و شمار کو داخل کرنے کا درست طریقہ ہے اور ایچ ٹی پی کے ذریعے ڈیٹا کو حذف کرنے کا طریقہ ہے۔ (ایس) . . حاصل کرنے کے لیے ہر سافٹ ویئر کا سہارا لیا جاتا ہے جو ایچ ٹی ٹی پی کے ساتھ کام کر سکتا ہے۔ (ایس) . . حاصل کرنے کے لئے واقعی آسان ہے. ہر کوئی پہلے ہی سے جانتا ہے کہ کس طرح حاصل کرنے کے لئے کام کرنا ہے اور بہت سے لوگ جانتے ہیں کہ پی آر ایل کا استعمال کیسے کیا جا سکتا ہے۔ (جسے بنیادی طور پر حاصل ہونے والے یکساں طریقے میں استعمال کیا جا سکتا ہے۔) ، تو، ہم نے Http مستقبل کے کام سے EdDtable بنایا. بہت کم لوگ ہیں۔ (یہاں تک کہ کم کمپیوٹر پروگرامرز بھی ہیں۔) پی ٹی او ڈی ایلیٹ کے ساتھ کبھی کام کیا ہے۔ عام طور پر PUT اور DELETE کو کمپیوٹر زبانوں سے ہی سہارا دیا جاتا ہے، اس لیے ان کا استعمال ماہرانہ پروگرام لازمی ہوتا ہے۔ لہٰذا ، عام طور پر ، آلات میں تبدیلی کی وجہ سے فراہم کئے جانے والے آلات کی تعداد بہت زیادہ ہے ۔
      
 ##### ہیپاٹائٹس{#httpget-notes} 
 *    [نوٹ](#httpget-notes) 
@@ -3676,7 +3678,7 @@ EdDtable from Httpping استعمال ہوتا ہے۔ [جون لائنز سی ا
 ##### شکریہ{#thanks} 
 *    [بنیادی تصور کے لیے CHORDS شکریہ.](#thanks)   
 EdDtable from Http مستقبل کے لیے بنیادی نظریہ (یعنی، ایک استعمال کرتے ہیں۔ HTTP GET ڈیٹا سیٹ میں ڈیٹا شامل کرنے کی درخواست) UCAR سے ہے (NCAR ہے؟)   [کلاؤڈ-ہوسٹیڈ وقتی ڈیٹا سروسز (چلی) ](https://github.com/earthcubeprojects-chords) منصوبہ. طلبہ میں پیرامیٹرز کے لیے فارمیٹ (بار بار *نام= قیمت* ، اور کے ذریعے الگ) ویب صفحات پر ایچ ٹی ایم ایل فارمز کا استعمال کرنے والا وہی معیاری انداز ہے۔ یہ ایک سادہ اور شاندار تصور ہے اور اس سے بھی زیادہ اس لیے کہ یہ اتنا درست ہے ERDDAP 'توبل ڈاٹ کام سے نمٹنے کا موجودہ نظام. خیال غیر واضح ہے، لیکن میں نے (بوب) اس کا خیال نہیں تھا۔ ایچ‌ٹیپ سے دُور وہ بنیادی تصور استعمال کریں، اپنے نظریات کے ساتھ مل کر اس پر عمل پیرا ہونا، ایک نظام بنانے کے لئے ERDDAP™ ڈیٹا اپ لوڈ کرنے کے لئے. نظام میں ڈیٹا کو دبانے کے لیے حاصل کرنے کے لیے حاصل ہونے والے بنیادی تصور کے علاوہ EdDTAbleFHtping عمل میں لانا مکمل طور پر الگ اور مکمل طور پر MORDS کی حیثیت رکھتا ہے اور مختلف خصوصیات رکھتا ہے۔ (مثلا، لاگ فائل، چیکنگ آف ڈیٹا، مختلف حفاظتی نظام، سی آر یو ڈی حمایت، ریپڈبل ڈیٹا۔) . . ہم صرف ایک ہمبر تھے. ہم نے ان کے کوڈ کا جائزہ نہیں لیا اور نہ ہی ان کے منصوبے کے بارے میں پڑھا کیونکہ ہم فوراً جانتے تھے کہ ہم نظام کو ایک الگ طریقے سے عمل میں لانا چاہتے ہیں۔ لیکن ہم انہیں بنیادی خیال کے لیے شکرگزار ہیں۔ ڈاکٹرز کا مکمل حوالہ ہے۔
-دانیال، ایم ڈی، کرکز، بی، چانڈرسیکر، وی، گرلز، ایس، پیپرز، ڈی ایس، مارٹن، سی، ڈی جی، ایم، گووچ، آر، بارتوس، ایم، جونز، جے، کیسر، کے۔ (2014) . . کلاؤڈ-ہوستڈ حقیقی- وقتی ڈیٹا سروسز کے لیے جیوسیکس کے لیے (چلی) سافٹ وئیر. UCAR/CAR -- زمین کی گردش. [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+دانیال، ایم ڈی، کرکز، بی، چانڈرسیکر، وی، گرلز، ایس، پیپرز، ڈی ایس، مارٹن، سی، ڈی جی، ایم، گووچ، آر، بارتوس، ایم، جونز، جے، کیسر، کے۔ (2014) . . کلاؤڈ-ہوستڈ حقیقی- وقتی ڈیٹا سروسز کے لیے جیوسیکس کے لیے (چلی) سافٹ وئیر. UCAR/CAR -- زمین کی گردش. [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### حفاظتی تدابیر Hyrax فائلز{#eddtablefromhyraxfiles} 
  [ **حفاظتی تدابیر Hyrax فائلز** ](#eddtablefromhyraxfiles)   (ضرب) کئی متغیرات کے ساتھ ڈیٹا فائلیں شامل کریں، ہر ایک ایک یا اس سے زیادہ شیئر شدہ مقدار کے ساتھ (مثال کے طور پر، وقت، اونچائی (یا گہرائی) [ تصویر کا حوالہ ]) ، اور ایک خدمت گار [ Hyrax   OPeNDAP سرور](https://www.opendap.org/software/hyrax-data-server) . .
@@ -3692,7 +3694,7 @@ EdDtable from Http مستقبل کے لیے بنیادی نظریہ (یعنی، 
 * اس کلاس سکرین کی اوپر Hyrax ہر ڈائریکٹر میں فائلوں کی فہرست کے ساتھ ویب صفحات۔ اس کی وجہ یہ موجودہ شکل کے لیے بہت مخصوص ہے۔ Hyrax ویب سائٹ ہم تبدیلی لانے کی کوشش کریں گے ERDDAP™ جلدی اگر مستقبل کے نسخے Hyrax فائلوں کی فہرست کیسے تبدیل کی جاتی ہے۔
 * جواب&lt;فائل ڈرائنگ وقت کو نظر انداز کیا جاتا ہے. چونکہ یہ کلاس ڈاؤن لوڈ کرتی ہے اور ہر دور کے ڈیٹا فائل کی مقامی کاپی بناتی ہے، ERDDAP™ فائل کو مجبور کرتا ہے۔ ڈور *بڑے کیمیائی مرکبات* /رَقَر/َبِّت/َقَدْنَا أَوْمَعُونَ سانچہ:قرآن-سورہ 37 آیت 19۔۔۔* * datasetID * /.
 * کے لئے&lt; sourceUrl مزید یہ کہ اعداد و شمار کے ذیلی ڈائریکٹر کا استعمال کریں Hyrax سرور مثلا،
-    &lt; sourceUrl مزیدhttp://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;/ sourceUrl مزید
+    &lt; sourceUrl مزید http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;/ sourceUrl مزید
      (اور اسے ایک لکیر پر ڈال دیں)   (معذرت، کہ سرور اب دستیاب نہیں ہے) . .
 جواب sourceUrl ویب پیج عام طور پر " OPeNDAP سرور انڈیکس \\[ اختیارات نام \\] " سب سے اوپر.
 * چونکہ یہ کلاس ہمیشہ ڈاؤن لوڈ کرتی ہے اور ہر دور کے ڈیٹا فائل کی ایک مقامی کاپی بناتی ہے اس لیے آپ کو اس ڈیٹا سیٹ کو کبھی نہیں لپیٹنا چاہیے۔ [ڈی‌ٹی‌ڈی‌ڈی](#eddtablecopy) . .
@@ -3706,7 +3708,7 @@ EdDtable from Http مستقبل کے لیے بنیادی نظریہ (یعنی، 
 
 ان فائلوں کے ساتھ ایک اور مسئلہ: Princel &
 
-اس ڈیٹا سیٹ کی نوعیت کے لیے خفیہ فائلیں مل سکتی ہیں۔https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 یہ سرور اب دوبارہ دستیاب نہیں ہے۔ \\] . .
+اس ڈیٹا سیٹ کی نوعیت کے لیے خفیہ فائلیں مل سکتی ہیں۔ https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020-10-21 یہ سرور اب دوبارہ دستیاب نہیں ہے۔ \\] . .
 
 اس کلاس کی سپر کلاس دیکھیں، [اپنے رویے سے مناسبت](#eddtablefromfiles) ، معلومات کے لئے کہ یہ کلاس کس طرح کام کرتی ہے اور کس طرح استعمال کیا جا سکتا ہے۔
 
@@ -3850,10 +3852,10 @@ EdDtable from MultidimNcipes میں ان فائلوں سے نمٹنے کے لی�
  [ **ایس .** ](#eddtablefromnos)   (غیر متصل) ایک سے ڈیٹا وصول کرتا ہے۔ NOAA   [جگہ](https://opendap.co-ops.nos.noaa.gov/axis/) ماخذ، جس میں استعمال ہوتا ہے۔ [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) درخواستوں اور جوابات کے لیے۔ یہ بہت مخصوص ہے۔ NOAA NoS کی XML. اعداد و شمار2.xml دیکھیں
  
 ### میکسیکو سے جاگو &#33;{#eddtablefromobis} 
- [ **میکسیکو سے جاگو &#33;** ](#eddtablefromobis) ایک Ocean Biogeographic Information System سے ڈیٹا وصول کرتا ہے۔ (بابل) سرور (تھاhttp://www.iobis.org ) . . ممکن ہے کہ مزید کوئی فعال سرور موجود نہ ہوں جو اس وقت خارجی نظام OBIS سرور نظام کا استعمال کرتے ہیں۔
+ [ **میکسیکو سے جاگو &#33;** ](#eddtablefromobis) ایک Ocean Biogeographic Information System سے ڈیٹا وصول کرتا ہے۔ (بابل) سرور (تھا http://www.iobis.org  ) . . ممکن ہے کہ مزید کوئی فعال سرور موجود نہ ہوں جو اس وقت خارجی نظام OBIS سرور نظام کا استعمال کرتے ہیں۔
 
 * OBIS سرور ایکس ایم ایل درخواست کی توقع رکھتے ہیں اور ایکس ایم ایل جواب واپس لے سکتے ہیں۔
-* کیونکہ تمام OBIS سرور اسی تبدیلی کی خدمت کرتے ہیں۔ (تھاhttp://iobis.org/tech/provider/questions) ، آپ کو OBIS اعداد و شمار کی سیٹ مرتب کرنے کے لئے بہت زیادہ نہیں کرنا پڑے گا ERDDAP . .
+* کیونکہ تمام OBIS سرور اسی تبدیلی کی خدمت کرتے ہیں۔ (تھا http://iobis.org/tech/provider/questions ) ، آپ کو OBIS اعداد و شمار کی سیٹ مرتب کرنے کے لئے بہت زیادہ نہیں کرنا پڑے گا ERDDAP . .
 * آپ کو ایک "ایک" شامل ہے creator\\_email "دنیا میں منسوب ہے۔ addAttributes کیونکہ یہ معلومات لائسنس کے اندر استعمال کی جاتی ہیں۔ ایک مناسب ای میل کا پتہ سرسید کی طرف سے ایکس ایم ایل کو پڑھنے سے ملتا ہے۔
 * آپ ہو سکتے ہیں یا عالمی علت حاصل نہیں کر سکتے&lt; subsetVariables [ تصویر ] (#سبکدوش) تاکہ ایک دی ہوئی OBIS سرور کے ساتھ کام کریں۔ اگر آپ کوشش کریں، صرف ایک تبدیل کرنے کی کوشش کریں (مثلاً سائنسی نام یا جینس۔) . .
 #### میکسیکو سے جاگو &#33; مصر{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ EdDtable from MultidimNcipes میں ان فائلوں سے نمٹنے کے لی�
     * س. (قابلِ‌غور ویب‌سائٹس) اور SOS   (سینئر اوبلاست سروس) ہیں. [غیرمتوقع معیار](https://www.ogc.org/standards) . . اس ویب سائٹ کے پاس معیار دستاویزات ہیں۔
     * جواب OGC ویب سروسز عام طور پر 1.1.0 سے آگے ( OGC 06-121r3) حاصل ہونے والی تعمیر اور دوسری جگہوں پر (دیکھیں ابواب 7.2.3 اور ابواب 9) . .
     * اگر آپ کسی چیز کے لئے ایک حاصل Capabilities Xml بھیجتا ہے تو SOS سرور ( sourceUrl + "? SOS &redate= (معاونت) GetCapabilities ") ''آپ کو اسٹیشنوں اور مشاہدہ کی فہرست کے ساتھ xml نتیجہ ملتا ہے۔ ان کے پاس اعداد و شمار موجود ہیں۔
-    * ایک مشاہدہ‌شُدہ شخص کسی ملکیت کا حوالہ دیتا ہے ۔ مثال کے طور پر یورین:gec:phenomenon: لمبائی:wgs84 یاhttps://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * ایک مشاہدہ‌شُدہ شخص کسی ملکیت کا حوالہ دیتا ہے ۔ مثال کے طور پر یورین:gec:phenomenon: لمبائی:wgs84 یا https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * ایک مشاہدہ کنوٹی ایک متغیر نہیں ہے.
-    * ایک سے زیادہ تبدیل شدہ ایک ہی مشاہدہ ہو سکتا ہے۔ پرنٹ (مثال کے طور پر، اندرونی ٹیم اور باہر شاید دونوں نے غور کِیا ہو پرنٹhttps://mmisw.org/ont/cf/parameter/air\\_temperature) . .
+    * ایک سے زیادہ تبدیل شدہ ایک ہی مشاہدہ ہو سکتا ہے۔ پرنٹ (مثال کے طور پر، اندرونی ٹیم اور باہر شاید دونوں نے غور کِیا ہو پرنٹ https://mmisw.org/ont/cf/parameter/air\\_temperature ) . .
     * اگر آپ کسی چیز کی درخواست کریں SOS سرور، آپ کو ایکسمل نتیجہ ملتا ہے جس میں جواب، فیلڈ یونٹ اور ڈیٹا میں میدانی ناموں کی تشریح کی گئی ہے۔ میدانی ناموں میں طویل حجم، گہرائی، گہرائی شامل ہوں گے۔ (شاید) ، اور وقت.
     * ہر کوئی dataVariable (یعنی) کسی قدر اُس زمانے میں سے SOS ضروری ہے کہ "مریخی تخطProper" کی خصوصیت شامل کی جائے، جس میں اس مشاہدے کی تشخیص کی گئی ہے کہ سرور سے اس تبدیلی کو حاصل کرنے کے لیے درخواست کی جانی چاہیے۔ اکثر، کئی dataVariable ایس . اے .
     * اعداد و شمار ہر ایک کے لئے dataVariable سرور کی طرف سے مخصوص نہیں ہو سکتا. اگر ایسا ہے تو آپ سرور کی طرف سے XML ڈیٹا کے جواب کو دیکھیں اور مناسب ٹھہرایا جائے&lt;اعداد و شمار (%s) (#datatytype) میں ERDDAP™ ڈیٹا سیٹ dataVariable تشریحات ۔
@@ -3991,11 +3994,11 @@ EdDtable from MultidimNcipes میں ان فائلوں سے نمٹنے کے لی�
 * یہ کلاس کیٹلاگ پڑھتی ہے. کمپیوٹر فائلوں کی طرف سے خدمات انجام دیں فہرستوں کے ساتھ&lt;فولڈرز (اضافی کیٹلاگ کے بارے میں.xml ذیلی فائلوں) اور&lt;اعداد و شمار (ڈیٹا فائلیں) . .
 * جواب&lt;فائل ڈرائنگ وقت کو نظر انداز کیا جاتا ہے. چونکہ یہ کلاس ڈاؤن لوڈ کرتی ہے اور ہر دور کے ڈیٹا فائل کی مقامی کاپی بناتی ہے، ERDDAP™ فائل کو مجبور کرتا ہے۔ ڈور *بڑے کیمیائی مرکبات* /رَقَر/َبِّت/َقَدْنَا أَوْمَعُونَ سانچہ:قرآن-سورہ 37 آیت 19۔۔۔* * datasetID * /.
 * کے لئے&lt; sourceUrl مزیدبرآں ، ڈیٹا سیٹ کا استعمال کریں ۔ TTEDS سرور میں موجود ڈیٹا سیٹ کے لئے کمپیوٹر فائل استعمال کریں ، مثال کے طور پر : اس شمارے کے لئے جو کسی ویب براؤزر میں استعمال ہو سکتا ہے
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020-10-21 یہ سرور اب دوبارہ دستیاب نہیں ہے۔ \\] :
-استعمال&lt; sourceUrl مزیدhttps://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;/ sourceUrl مزید
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020-10-21 یہ سرور اب دوبارہ دستیاب نہیں ہے۔ \\] :
+استعمال&lt; sourceUrl مزید https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;/ sourceUrl مزید
      (اور اسے ایک لکیر پر ڈال دیں) . .
 * چونکہ یہ کلاس ہمیشہ ڈاؤن لوڈ کرتی ہے اور ہر دور کے ڈیٹا فائل کی ایک مقامی کاپی بناتی ہے اس لیے آپ کو اس ڈیٹا سیٹ کو کبھی نہیں لپیٹنا چاہیے۔ [ڈی‌ٹی‌ڈی‌ڈی](#eddtablecopy) . .
-* یہ ڈیٹا سیٹ قسم ایک OPTIONAL کی حمایت کرتی ہے، کم استعمال، خاص ٹیگ،&lt;خصوصی اگلوں کو *موڈ* &lt;/ متعلقہ مضامین جن میں اس بات کا تعین کیا جا سکتا ہے کہ خاص، سخت کوڈ کے اصولوں کو جانچنے کے لیے استعمال کیا جائے کہ سرور سے کس فائل کو ڈاؤن لوڈ کیا جائے۔ موجودہ طور پر واحد واجب ہے۔ *موڈ* ایس ایم اوس ہے جو اعداد و شمار کے ساتھ ساتھ استعمال ہوتا ہے۔https://tds.coaps.fsu.edu/thredds/catalog/samosآخری نسخہ نمبر کے ساتھ فائلوں کو صرف ڈاؤن لوڈ کرنے کے لیے
+* یہ ڈیٹا سیٹ قسم ایک OPTIONAL کی حمایت کرتی ہے، کم استعمال، خاص ٹیگ،&lt;خصوصی اگلوں کو *موڈ* &lt;/ متعلقہ مضامین جن میں اس بات کا تعین کیا جا سکتا ہے کہ خاص، سخت کوڈ کے اصولوں کو جانچنے کے لیے استعمال کیا جائے کہ سرور سے کس فائل کو ڈاؤن لوڈ کیا جائے۔ موجودہ طور پر واحد واجب ہے۔ *موڈ* ایس ایم اوس ہے جو اعداد و شمار کے ساتھ ساتھ استعمال ہوتا ہے۔ https://tds.coaps.fsu.edu/thredds/catalog/samos آخری نسخہ نمبر کے ساتھ فائلوں کو صرف ڈاؤن لوڈ کرنے کے لیے
 * اس کلاس کی سپر کلاس دیکھیں، [اپنے رویے سے مناسبت](#eddtablefromfiles) ، معلومات کے لئے کہ یہ کلاس کس طرح کام کرتی ہے اور کس طرح استعمال کیا جا سکتا ہے۔
 * 1D، 2D، 3D اور 4D مثالوں کے لیے دیکھیے: [این‌این‌کُن سے محفوظ](#eddtablefromncfiles) . .
      
@@ -4182,8 +4185,8 @@ EdDtable from MultidimNcipes میں ان فائلوں سے نمٹنے کے لی�
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-ایک ملتی جلتی جگہ sourceUrl   (کچھhttps://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-عوام میں sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) . .
+ایک ملتی جلتی جگہ sourceUrl   (کچھ https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+عوام میں sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) . .
 اس ٹیگ کی قیمت میں کوئی بھی تبدیلی اگلی بار عمل میں آئے گی۔ ERDDAP™ پڑھئے datasets.xml )، جس میں ڈیٹا سیٹ کے جواب میں بھی شامل ہے۔ [جھنڈ](/docs/server-admin/additional-information#flag) . .
 
 لیکن، حفاظتی وجوہات اور وجوہات کی بنا پر، **یہ TG نہیں&#33;**   
@@ -4314,7 +4317,7 @@ Secont Rereserve Max Bytes ایک عنصری گرانٹ ڈیٹا طلب کے ل�
     ```
     * آپ کو دوبارہ پیدا کرنے کی ضرورت نہیں ہے ERDDAP™ تبدیلیوں کے لیے&lt;اثرانداز ہونے کے لیے Blacklist & اگلی بار تبدیلیاں کی جائیں گی۔ ERDDAP™ چیک کریں کہ کوئی ڈیٹا سیٹ اپ لوڈ کرنے کی ضرورت ہے۔ یا، آپ کسی شخص کا دورہ کرتے ہوئے اس عمل کو تیز کر سکتے ہیں۔ [ڈیٹنگ فالي رنگ](/docs/server-admin/additional-information#set-dataset-flag) کسی بھی ڈیٹا سیٹ کے لئے.
     * آپ کی ERDDAP™ روزانہ رپورٹ میں فہرست/tally سب سے زیادہ فعال اجازت یافتہ اور رکاوٹوں کی فہرست شامل ہے۔
-    * اگر آپ یہ جاننا چاہتے ہیں کہ ڈومین/institution ایک نامی آئی پی پتے سے کیا تعلق رکھتا ہے تو آپ آزاد، متبادل DNS ویب سروس جیسے استعمال کر سکتے ہیں۔ [https://network-tools.com/](https://network-tools.com/) . .
+    * اگر آپ یہ جاننا چاہتے ہیں کہ ڈومین/institution ایک نامی آئی پی پتے سے کیا تعلق رکھتا ہے تو آپ آزاد، متبادل DNS ویب سروس جیسے استعمال کر سکتے ہیں۔ [ https://network-tools.com/ ](https://network-tools.com/) . .
     * بعض‌اوقات ایسے بھی ہو سکتے ہیں جب بعض صارفین کو اعلیٰ سطح پر بند کر دیا جاتا ہے ۔ مثال کے طور پر، آپ اپنے سرور پر ہر چیز تک ان کی رسائی کو روک سکتے ہیں، نہ صرف ERDDAP . . لینکس پر، ایک ایسا طریقہ استعمال کرنا ہے۔ [جواب](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) . . مثال کے طور پر، آپ ایک ایسا قانون شامل کر سکتے ہیں جس میں تمام چیزیں 1.51.51.100.0 کمانڈ کے ساتھ آ جائیں گی۔
 Iptables - IinPUT -s 1.51.100.0 -JXOP -
        
@@ -4738,17 +4741,17 @@ NThreads=2: اگرچہ، اکثر نستعلیق کی بجائے NThreads=2 کا
     * فی الحال، کے لئے EDDGrid زیریں طبقہ، کسی بھی قسم کی تبدیلی میتادات یا فرضی متغیر میں تبدیل ہوتی ہے۔ (مثلاً قریب ترین وقتی اعداد و شمار کے لیے ایک نیا وقت۔) تبدیلی کو سمجھا جاتا ہے لیکن ڈیٹا سیٹ کی ایک تبدیلی کو نہیں مانا جاتا ہے۔ (خود ہی) . .
     * فی الحال EdDTabble subclass کے لیے اعداد و شمار کی کوئی بھی نقل و حرکت ایک تبدیلی سمجھی جاتی ہے۔
     * فی الحال صرف دو قسم کے عمل کی اجازت ہے:
-        * "http://"یا "https://"-- اگر عمل شروع ہوتا ہے "http://"یا "https://": ERDDAP™ بھیج دیں گے HTTP GET معین کردہ پلگ ان کے لئے درخواست کریں. جوابات کو نظر انداز کیا جائے گا۔ مثال کے طور پر ، کسی کام کے لئے کچھ اور ویب سروس کو بتا سکتے ہیں ۔
+        * " http://" یا " https://" -- اگر عمل شروع ہوتا ہے " http://" یا " https://" : ERDDAP™ بھیج دیں گے HTTP GET معین کردہ پلگ ان کے لئے درخواست کریں. جوابات کو نظر انداز کیا جائے گا۔ مثال کے طور پر ، کسی کام کے لئے کچھ اور ویب سروس کو بتا سکتے ہیں ۔
             * اگر محوری حصہ ہے تو ("کے بعد؟") ، یہ پہلے سے موجود ہے [فیصد Encded](https://en.wikipedia.org/wiki/Percent-encoding) . . آپ کو تنازعات میں خصوصی حروف کو کوڈ کرنے کی ضرورت ہے (ابتدائی '&' اور مرکز کے علاوہ '=' دباؤ میں) شکل %H میں، جہاں HH ہے وہ حروف تہجی کی 2 مصرعی مقدار ہے۔ عام طور پر، آپکو صرف چند پنجابی حروف کو تبدیل کرنے کی ضرورت ہے: %25, اور %26 میں، "%22 میں"&lt;%3C میں = %3D, %3E, %3E, + %2B | %7C میں، \\[ %5B میں، \\] %5D میں، جگہ %20 میں، اور تمام حروف کو اوپر #127 کو اپنی UTF-8 شکل میں تبدیل کر کے پھر یو ٹی ایف-8 شکل کے ہر حصے کو %H کے فارمیٹ میں شامل کر کے %HH شکل میں شامل کر دیا گیا ہے۔ (مدد کیلئے پروگرامر پوچھیں) . .
 مثلاً، & stationID مزید 41004"۔
 & stationID %3E=%2241004%22
 عام طور پر جب آپ تک رسائی حاصل کرتے ہیں تو پرcent aptation کی ضرورت ہوتی ہے۔ ERDDAP سوفٹ ویئر کے علاوہ عام طور پر آپ کے لئے براہِ‌راست استعمال ہونے والے بریکٹ کا استعمال کریں ۔
 کچھ حالات میں، آپ کو A-Za-Z0-9 & ' () @#*، لیکن پھر بھی ابتدائی '&' یا بنیادی کوڈ نہیں کرتے '=' تنازعات میں.
-زبانوں میں ایسا کرنے کے لیے اوزار موجود ہیں (مثلاً دیکھیے، Java ' [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) اور Java اسکرپٹ ہےencodeURIComponent()[] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) اور وہاں ہیں۔
+زبانوں میں ایسا کرنے کے لیے اوزار موجود ہیں (مثلاً دیکھیے، Java ' [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) اور Java اسکرپٹ ہےencodeURIComponent()[] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) اور وہاں ہیں۔
                  [ویب سائٹ جو کہ آپ کے لئے](https://www.url-encode-decode.com/) . .
             * بعد از datasets.xml ایکس ایم ایل فائل ہے، آپ کو بھی '&'، 'سے شامل کیا گیا ہے&lt;'، اور 'ی' میں '&amp; '، '&lt;'، اور '&gt;' فیصد کے بعد
             * مثال: ایک صارف کے لئے کہ آپ بطور صارف ٹائپ کریں:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 آپ كو متعین كرنا چاہیے&lt;اِس شمارے میں (ایک لائن پر) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ NThreads=2: اگرچہ، اکثر نستعلیق کی بجائے NThreads=2 کا
     * جواب sourceUrl شروع سے ہو سکتا ہے۔ http:// : https:// ،فٹپ http://, اور شاید دوسرے پاخانہ. https رابطہ پڑھنے اور ماخذ کی ڈیجیٹل سند کا جائزہ لینے کے لیے ماخذ کو یہ یقین دلانے کے لیے کہ وہ کون ہیں نامعلوم صورتوں میں، یہ چیک غلطی "javax.net.SSLProtocol lession:HNGEDTED & یہ غالباً ڈومین نیم کی وجہ سے ہے ڈومین نیم جو آپ استعمال کر رہے ہیں۔ آپ تفصیل پڑھ سکتے ہیں اور پڑھنا چاہئے sourceUrl 'آپ کی ویب براؤزر میں سند، قابل ذکر طور پر، "DNS Name" سیکشن میں "Subject Alternative Name".
         
 بعض صورتوں میں، sourceUrl آپ سند پر ڈومین نام کا اندراج ہو سکتا ہے۔ مثال کے طور پر
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/اس غلطی کو گرا دے گا.
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/. جو سند پر ڈومین نام استعمال کرتا ہے، ایسا نہیں ہوگا۔ ان معاملات میں حل اس لیے سند پر ڈومین نام تلاش کرنا اور استعمال کرنا ہے۔ اگر آپ سند پر نہیں مل سکتے تو ڈیٹا فراہم کنندہ سے رابطہ کریں۔
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ اس غلطی کو گرا دے گا.
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ . جو سند پر ڈومین نام استعمال کرتا ہے، ایسا نہیں ہوگا۔ ان معاملات میں حل اس لیے سند پر ڈومین نام تلاش کرنا اور استعمال کرنا ہے۔ اگر آپ سند پر نہیں مل سکتے تو ڈیٹا فراہم کنندہ سے رابطہ کریں۔
         
 دیگر صورتوں میں سند پر ڈومین نام ایک جماعت کے لیے ہو سکتا ہے۔ اگر یہ وقوع پزیر ہو یا مسئلہ دیگر غیر حل ہو، براہ مہربانی ای میل کرس. اس مسئلے کو رپورٹ کرنے کے لئے جان نے کہا ۔
          
@@ -5221,7 +5224,7 @@ NThreads=2: اگرچہ، اکثر نستعلیق کی بجائے NThreads=2 کا
 عام طور پر جب آپ تک رسائی حاصل کرتے ہیں تو پرcent aptation کی ضرورت ہوتی ہے۔ ERDDAP سوفٹ ویئر کے علاوہ عام طور پر آپ کے لئے براہِ‌راست استعمال ہونے والے بریکٹ کا استعمال کریں ۔
 کچھ حالات میں، آپ کو A-Za-Z0-9 & ' () @#*، لیکن پھر بھی ابتدائی '&' یا بنیادی کوڈ نہیں کرتے '=' . .
 زبانوں میں ایسا کرنے کے لیے اوزار موجود ہیں (مثلاً دیکھیے، Java ' [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-اور Java اسکرپٹ ہےencodeURIComponent()[] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) اور وہاں ہیں۔
+اور Java اسکرپٹ ہےencodeURIComponent()[] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) اور وہاں ہیں۔
          [ویب سائٹ جو کہ آپ کے لئے](https://www.url-encode-decode.com/) . .
     * بعد از datasets.xml ایکس ایم ایل فائل ہے، آپ کو بھی '&'، 'سے شامل کیا گیا ہے&lt;'، اور 'ی' میں '&amp; '، '&lt;'، اور '&gt;' فیصد کے بعد
     *    infoUrl منفرد ہے ERDDAP . . یہ کسی بھی مراٹھی معیار سے نہیں ہے۔
@@ -5257,7 +5260,28 @@ NThreads=2: اگرچہ، اکثر نستعلیق کی بجائے NThreads=2 کا
     ```
     * اگر \\[ معیار \\] " خصوصیت میں واقع ہوتا ہے، اس کی جگہ معیار کی جگہ لی جائے گی۔ ERDDAP™ اجازت&lt;معیاری لِسِنَّمَا يَوْمَةٍ ERDDAP '
          \\[ بائٹس \\] /webapps/erdap/WEB-INF/class/gov/noa/pfel/redap/util/cons.xil فائل۔
-         
+
+###### کلاس{#classification} 
+*    [ **کلاس** ](#classification) اعداد و شمار کی درجہ بندی۔
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * قابل قبول قدرات _نظر ہیں، _confidate_,_constrict, Sexing, or opens.
+
+###### _فولڈرز{#topic_category} 
+*    [ **_فولڈرز** ](#topic_category) اعلی درجے کے جغرافیائی اعداد و شمار کے موضوعاتی درجہ بندی کے تحت دستیاب جغرافیائی اعداد و شمار کے مجموعے اور تلاش میں مدد کے لیے
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * قابل قبول قدرات _biota, _quities_, _climatology_ateology_etomorology_economy_seconomy_elevironment, science_science_settlement, Missouri) ہیں۔
+
+###### _ پاس ورڈ:{#maintenance_frequency} 
+*    [ **_ پاس ورڈ:** ](#maintenance_frequency) جس کے ساتھ پہلی پیداوار کے بعد اعداد و شمار میں ترمیم اور تبدیلی کی جاتی ہے۔
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * قابل قبول قدرات مجاز ہیں، مثلاً "بمعنی "، "آج کا دن"، "اردو زبان میں"، "اردو زبان میں"، "اردو زبان میں"، "ادبی زبان"، "بزبان"، "تلفظ:
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) (وہ جہنم کی) انتہا سے ہے، [CCD 1.0](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (جس کی شناخت اس میں کی گئی تھی۔ Metadata\\_Conventions بطور " Unidata Dataset v1.0") metadata standard. مشترکہ قدر اس اعداد و شمار کے استعمال کے لیے استعمال ہونے والی میٹاداتا کنونشنوں کی فہرست تھی۔
 اگر کوئی ڈیٹا سیٹ ACD 1.0 استعمال کرتا ہے، تو یہ مفروضہ STRGAL RECOMED ہے، مثال کے طور پر،
@@ -5389,7 +5413,7 @@ NThreads=2: اگرچہ، اکثر نستعلیق کی بجائے NThreads=2 کا
 اگر انڈیکس ہے&lt;1=1، اعداد و شمار کو خارجی طور پر سمجھا جاتا ہے۔
 اگر انڈیکس ہے&lt;=2، اعداد و شمار کو بہت خارجی انداز میں سمجھا جاتا ہے۔
     
-جواب testOutOfDate قیمت بھی استعمال کی جاتی ہے۔ ERDDAP™ بنانے کے لئےhttps://*yourDomain*/erddap/outOfDateDatasets.htmlویب سائٹ ( [مثال](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) جو اعداد و شمار کو ظاہر کرتا ہے جن کے پاس موجود ہے۔&lt; testOutOfDate مزید معلومات کے ساتھ اعداد و شمار کا درجہ دیا گیا ہے کہ وہ کیسے خارجہ ہیں۔ فائل کا نام تبدیل کریں (...html سے . .jsonlCSV : .nc : .tsv ،...) ، آپ مختلف فائل فارمیٹ میں وہ معلومات حاصل کر سکتے ہیں.
+جواب testOutOfDate قیمت بھی استعمال کی جاتی ہے۔ ERDDAP™ بنانے کے لئے https://*yourDomain*/erddap/outOfDateDatasets.html ویب سائٹ ( [مثال](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) جو اعداد و شمار کو ظاہر کرتا ہے جن کے پاس موجود ہے۔&lt; testOutOfDate مزید معلومات کے ساتھ اعداد و شمار کا درجہ دیا گیا ہے کہ وہ کیسے خارجہ ہیں۔ فائل کا نام تبدیل کریں (...html سے . .jsonlCSV : .nc : .tsv ،...) ، آپ مختلف فائل فارمیٹ میں وہ معلومات حاصل کر سکتے ہیں.
     
 جب ممکن ہو، [جناتی دَتَسَتَتَسَل](#generatedatasetsxml) ایک جمع testOutOfDate دنیا سے منسوب ہے۔ addAttributes ایک ڈیٹا سیٹ کا۔ یہ قدر (انگریزی: Generate Datasets Xml) معلومات پر مبنی ایک تجویز ہے۔ اگر قیمت مناسب نہ ہو تو اسے تبدیل کریں۔
     
@@ -5948,8 +5972,8 @@ EdDTabout Stames کے لیے، صرف ایک بہت، بہت ہی کم ہے (ش�
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone اِس کا مطلب ہے کہ اِس کا مطلب ہے کہ ہم اِس بات پر غور کریں کہ خدا کی بادشاہت کیا ہے ۔ ERDDAP™   (اور کوئی مترادفات معیار نہیں) کے لئے [وقت اور اوقات تبدیلی](#time-units) ''جس کے ذریعے جدول ڈاٹا یا تبتی ڈیٹا سیٹوں میں ہو سکتا ہے۔
     * طے شدہ " ہے۔ Zulu " (جو جدید زمانے کا زون ورژن ہے۔) . .
-    * غیر واضح معلومات: "وقت کا استعمال"۔ (مثلاً، پیسیفک معیاری وقت، -08:00، ایم ٹی-8) طے شدہ، مخصوص، متناسب، متناسب رشتہ دار ہوتے ہیں۔ Zulu   (غیر متصل) . . اس کے برعکس "وقت کے زون" زیادہ پیچیدہ چیزیں ہیں جو روزنامہ لائٹ ساومنگ سے متاثر ہوتی ہیں۔ (مثلاً "US/Pacific"۔) ) جو مختلف اوقات میں مختلف جگہوں پر مختلف قوانین رکھتا تھا۔ وقت کے زون ہمیشہ نام رکھتے ہیں کیونکہ ان کو سادہ ذرہ قیمت سے اخذ نہیں کیا جا سکتا (میز پر "TZ ڈیٹا بیس" کے کالم دیکھیں [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . . ERDDAP ' time\\_zone تشریح کسی زمانے کے زون سے مقامی وقت کے اعداد و شمار سے نمٹنے میں مدد دیتی ہے۔ (مثلاً 19877-03-25T17:32:05 پیسیفک وقت) . . اگر آپ کے پاس star یا Numberic Time data کسی کے ساتھ ہو۔ (جگہ) وقت کے بارے میں، آپ کو صرف ڈیٹا کو تبدیل کرنا چاہئے Zulu   (جو کیا ہے ERDDAP™ چاہتے ہیں) یونٹوں میں مختلف بنیادی وقت کا تعین کرنے سے (مثلاً، " گھنٹے 1970-01-01T08:00Z"، نوٹ کریں T08 وقت کو ترتیب دینے کے لئے) اور ہمیشہ ان نتائج کا جائزہ لیں جو آپ چاہتے ہیں
-    * اس کی وجہ یہ ہے کہ آپ کو ایک ٹائم زون مقرر کرنے کی اجازت دیتا ہے جس کی قیادت کرتا ہے۔ ERDDAP™ مقامی وقت کے ماخذ کو تبدیل کرنے کے لئے (بعض معیاری وقت میں ، بعض دن کی روشنی میں محفوظ وقت میں) اندر Zulu اوقات (جو ہمیشہ معیاری وقت میں رہتے ہیں۔) . . صحیح وقت زون ناموں کی فہرست غالباً TZ کالم میں درج فہرست سے مشابہ ہے۔ [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . . عام امریکی وقت کے زون یہ ہیں: امریکی/Hawai, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, US/Eastern.
+    * غیر واضح معلومات: "وقت کا استعمال"۔ (مثلاً، پیسیفک معیاری وقت، -08:00، ایم ٹی-8) طے شدہ، مخصوص، متناسب، متناسب رشتہ دار ہوتے ہیں۔ Zulu   (غیر متصل) . . اس کے برعکس "وقت کے زون" زیادہ پیچیدہ چیزیں ہیں جو روزنامہ لائٹ ساومنگ سے متاثر ہوتی ہیں۔ (مثلاً "US/Pacific"۔) ) جو مختلف اوقات میں مختلف جگہوں پر مختلف قوانین رکھتا تھا۔ وقت کے زون ہمیشہ نام رکھتے ہیں کیونکہ ان کو سادہ ذرہ قیمت سے اخذ نہیں کیا جا سکتا (میز پر "TZ ڈیٹا بیس" کے کالم دیکھیں [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . . ERDDAP ' time\\_zone تشریح کسی زمانے کے زون سے مقامی وقت کے اعداد و شمار سے نمٹنے میں مدد دیتی ہے۔ (مثلاً 19877-03-25T17:32:05 پیسیفک وقت) . . اگر آپ کے پاس star یا Numberic Time data کسی کے ساتھ ہو۔ (جگہ) وقت کے بارے میں، آپ کو صرف ڈیٹا کو تبدیل کرنا چاہئے Zulu   (جو کیا ہے ERDDAP™ چاہتے ہیں) یونٹوں میں مختلف بنیادی وقت کا تعین کرنے سے (مثلاً، " گھنٹے 1970-01-01T08:00Z"، نوٹ کریں T08 وقت کو ترتیب دینے کے لئے) اور ہمیشہ ان نتائج کا جائزہ لیں جو آپ چاہتے ہیں
+    * اس کی وجہ یہ ہے کہ آپ کو ایک ٹائم زون مقرر کرنے کی اجازت دیتا ہے جس کی قیادت کرتا ہے۔ ERDDAP™ مقامی وقت کے ماخذ کو تبدیل کرنے کے لئے (بعض معیاری وقت میں ، بعض دن کی روشنی میں محفوظ وقت میں) اندر Zulu اوقات (جو ہمیشہ معیاری وقت میں رہتے ہیں۔) . . صحیح وقت زون ناموں کی فہرست غالباً TZ کالم میں درج فہرست سے مشابہ ہے۔ [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . . عام امریکی وقت کے زون یہ ہیں: امریکی/Hawai, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, US/Eastern.
     * متعدد اوقات کے لیے نیوکلیئر سرچ ڈیٹا کے ساتھ تبدیل شدہ تبدیلیوں کے لیے، آپ "اس " کا تعین کر سکتے ہیں۔ time\\_zone " بیان کرتا ہے، لیکن قدر" ہونا ضروری ہے۔ Zulu " یا "UTC". اگر آپ کو دوسرے وقتی زونوں کے لئے حمایت کی ضرورت ہے، تو ای میل کرس براہ مہربانی. ''نوا پر جان ۔
          
 ###### جگہ{#legacy_time_adjust} 

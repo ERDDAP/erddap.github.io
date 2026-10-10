@@ -1102,7 +1102,7 @@ Se endnu [denne dokumentation](/docs/server-admin/datasets#aggregation-via-file-
     * CHANGES til EDDTableFra EDDGrid hvilket gør det meget bedre. EDDTableFra EDDGrid lader brugerne forespørge gitterded-datasæt, når de var faneformede datasæt ("Beskydning af værdi") .
         
         * Det understøtter nu en&lt;maxAxis0&gt; tag (Standard=10) der angiver det maksimale antal akser \\[ 0 \\]   (normalt "time" ) værdier, der kan genbruges på én gang. Dette forhindrer naive anmodninger fra at få EDDTableFra EDDGrid at søge gennem en hel gitterded datasæt (som ville mislykkes med en timeout fejl) .
-        * GenererDatasets Xml har nu mulighed for at generere EDDTableFra EDDGrid Datasæt til alle de gitterede datasæt i en given ERDDAP™ som matcher en bestemt regex (Brug .\\* for at matche alle datasæt) . De datasæt, som det skaber, har yderligere oplysninger i den sammenfattende egenskab, der angiver, at dette er en faneformet version af et gitteret datasæt. Og deres datasetID er det datasetID af gitteret datasæt, plus "\\_AsATable".
+        * GenererDatasets Xml har nu mulighed for at generere EDDTableFra EDDGrid Datasæt til alle de gitterede datasæt i en given ERDDAP™ som matcher en bestemt regex (Brug .\\* for at matche alle datasæt) . De datasæt, som det skaber, har yderligere oplysninger i den sammenfattende egenskab, der angiver, at dette er en faneformet version af et gitteret datasæt. Og deres datasetID er det datasetID af gitteret datasæt, plus "\\_AsATable" .
         * Der er en stor hastighed op for den mest almindelige opsætning: når gitteret datasæt er en EDDGrid FraErddap datasæt, der er i samme ERDDAP .
         
 Tak til James Gallagher og Ed Armstrong.

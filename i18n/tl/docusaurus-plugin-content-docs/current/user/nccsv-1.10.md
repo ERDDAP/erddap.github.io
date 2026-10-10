@@ -45,14 +45,14 @@ Kung ang ilang kahilingan sa dokumentong ito ay waring kakatwa o mahirap, malama
 Ang detalyeng ito ay tumutukoy sa iba pang mga detalye at mga aklatan na dinisenyo upang gamitin, subalit ang detalyeng ito ay hindi bahagi ng alinman sa mga ibang detalyeng iyon, ni nangangailangan man ito ng anumang pagbabago sa mga ito, ni ito man ay salungat sa mga ito. Kung ang detalyeng may kaugnayan sa isa sa mga pamantayang ito ay hindi binanggit dito, tingnan ang kaugnay na detalye. Kapansin - pansin, kalakip dito ang:
 
 * Ang Attribute Convention for Dataset Discovery (ACDD) Pamantayan ng metadata:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * Ang Klima at Hula (CF) Pamantayan ng metadata:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * Ang NetCDF Patnubay ng User (NIUG) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * Ang NetCDF Talaan ng mga software na aklatan tulad ng NetCDF -java at NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Hindi mabasa ng mga aklatan na ito ang mga talaksang NCCSV, ngunit mababasa nila .nc na nilikha mula sa mga talaksang NCCSV.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . Hindi mabasa ng mga aklatan na ito ang mga talaksang NCCSV, ngunit mababasa nila .nc na nilikha mula sa mga talaksang NCCSV.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Pagbibigay - Pansin{#notation} 
 Sa detalyeng ito, mga bracket, \\[   \\] , ay nagpapahiwatig ng opsyonal na mga bagay.
@@ -152,12 +152,12 @@ Ang mga kahulugan ng mga uri ng attribute data ay:
     * Dalawang - uring pagsipi (") ay kailangang i-install bilang dalawang dobleng quote ("") . Iyan ang kinakailangan ng mga programa ng disheet kapag nagbabasa ng .csv files. Iyan ang isinusulat ng mga programang disheet kapag nasagip mo ang isang diffesheet bilang isang .csv file.
     * Ang espesyal na JSON backslash-encoded na mga character ay dapat na i-recorded bilang sa JSON (na kapansin-pansin \\n (newline), ngunit gayundin ang \\ (backslash), \\f (pormal), \\ (tab), \\ (carriage return) o kasama ng \\ (tab), \\ (carriage return) [\\u *hhhh* ](#uhhhh) Makipag - usap. Sa isang diverseet, huwag gumamit ng Alt Enter upang magtakda ng bagong linya sa loob ng isang selula ng teksto; sa halip, gamitin ang \\n   (2 tauhan: backslash at 'n ') upang ipahiwatig ang isang bagong linya.
 #####  uhhhh  {#uhhhh} 
-    * \\u *Hhhh - Ang lahat ng tauhan na wala pang character #32 o mas malaki kaysa sa character #126, at hindi nai-record, ay dapat na i-record na kasama ng confix \\u* Hhhh*, kung saan ang hhhh ay ang 4-digit na hexadecimal na bilang ng karakter, e.g., ang Euro sign ay \\u20AC. Tingnan ang mga pahina ng kodigo na binabanggit sa [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) upang mahanap ang mga numerong hexadecimal na nauugnay sa espesipikong mga karakter na Unicode, o gumamit ng isang aklatan ng software.
+    * \\u *Hhhh - Ang lahat ng tauhan na wala pang character #32 o mas malaki kaysa sa character #126, at hindi nai-record, ay dapat na i-record na kasama ng confix \\u* hhh*, kung saan ang hhhhh ay ang 4-digit na hexadecimal na bilang ng karakter, e.g., ang Euro sign ay \\ \\u20AC . Tingnan ang mga pahina ng kodigo na binabanggit sa [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) upang mahanap ang mga numerong hexadecimal na nauugnay sa espesipikong mga karakter na Unicode, o gumamit ng isang aklatan ng software.
     * Kung ang String ay may puwang sa simula o dulo, o kasama " (dobleng pagsipi) o isang komma, o naglalaman ng mga pamantayan na kung hindi ay bibigyang - kahulugan bilang iba pang uri ng datos (e.g., isang int) , o kaya ay ang salitang "null", ang buong String ay dapat na nakapaloob sa mga dobleng quote; kung hindi, hindi tulad ng JSON, ang paglalakip ng mga dobleng quote ay opsyonal. Iminumungkahi namin: kapag nag - aalinlangan, ilakip ang buong String sa dalawang sinipi. Ang mga espasyo sa simula o dulo ng isang String ay matinding nasisiraan ng loob.
     * Sa ngayon, nasisiraan ng loob ang paggamit ng mga karakter na mas malaki sa #255. Sinusuportahan sila ng NCSV. ERDDAP™ ay umaalalay sa kanila sa loob. Ang ilang uri ng output ay sumusuporta sa kanila (e.g., .json at .nccsv ) . Subalit maraming uri ng output file ay hindi sumusuporta sa mga ito. Halimbawa, NetCDF -3 files ay hindi sumusuporta sa gayong mga karakter dahil NetCDF ang mga talaksan ay gumagamit ng 1-byte na karakter at ang CF sa kasalukuyan ay walang sistema para sa pagtatakda kung paanong ang mga karakter ng Unicode ay naka-signed sa NetCDF Mga Hagdan (e.g., UTF-8) . Malamang na bubuti ito sa paglipas ng panahon.
          
 #### char{#char} 
-* Ang char attribute values ay isang solong karakter ng UCS-2 (I.e., 2-byte Unicode characters, tulad ng sa Java ) , na dapat isulat bilang 7-bit ASCII, JSON-like characters upang ang ibang mga character ay matiyak (Tingnan ang pagpapakahulugan sa String sa itaas para sa pag - uugnay ng pantanging mga tauhan, na may dagdag na isang sinipi bilang \\ ') . Ang mga pamantayan ng attribute ay dapat na ilakip sa isahang mga sinipi (panloob na mga sinipi) at dobleng mga pagsipi (ang panlabas na mga sinipi) , e.g., "'a'", "'"' (dalawahang quote karakter) , "'\'" (isang tauhan sa pagsipi) , "'\t'" (isang tab) , "'\\u20AC'" (Isang Euro character) . Ang sistemang ito ng paggamit ng isahan at dobleng mga sinipi ay kakatwa at mahirap, subalit isang paraan ito upang makilala ang mga halaga ng char mula sa Strings sa paraan na gumagana sa mga disheet. Ang isang halaga na mukhang char ngunit walang bisa ay lilikha ng maling mensahe. Katulad ng sa Strings, ang paggamit ng mga karakter na mas malaki sa #255 ay kasalukuyang nasisiraan ng loob.
+* Ang char attribute values ay isang solong karakter ng UCS-2 (I.e., 2-byte Unicode characters, tulad ng sa Java ) , na dapat isulat bilang 7-bit ASCII, JSON-like characters upang ang ibang mga character ay matiyak (Tingnan ang pagpapakahulugan sa String sa itaas para sa pag - uugnay ng pantanging mga tauhan, na may dagdag na isang sinipi bilang \\ ') . Ang mga pamantayan ng attribute ay dapat na ilakip sa isahang mga sinipi (panloob na mga sinipi) at dobleng mga pagsipi (ang panlabas na mga sinipi) , e.g., "'a'", "'"' (dalawahang quote karakter) , "'\'" (isang tauhan sa pagsipi) , "'\t'" (isang tab) , "'\\ \\u20AC '" (Isang Euro character) . Ang sistemang ito ng paggamit ng isahan at dobleng mga sinipi ay kakatwa at mahirap, subalit isang paraan ito upang makilala ang mga halaga ng char mula sa Strings sa paraan na gumagana sa mga disheet. Ang isang halaga na mukhang char ngunit walang bisa ay lilikha ng maling mensahe. Katulad ng sa Strings, ang paggamit ng mga karakter na mas malaki sa #255 ay kasalukuyang nasisiraan ng loob.
 
 ### Sapat na{#suffix} 
 Pansinin na sa mga katangiang bahagi ng isang talaksang NCSV, ang lahat ng mga halaga ng numerikong attribute ay dapat na may hulaping titik (e.g., 'b') upang matukoy ang uri ng numero (e.g., byte) . Subalit sa seksyon ng datos ng isang talaksang NCSV, ang mga halagang numerikong datos ay hindi dapat magkaroon ng mga titik na ito na hulapi (maliban sa 'L' sa mahabang integer at 'uL' para sa mga ulong integer) — ang uri ng datos ay tinitiyak ng\\*DATA\\_TYPE\\*Isaalang - alang ang pagkakaiba.
@@ -220,7 +220,7 @@ Ang mga pamantayan sa petsa na kinakatawan ng mga halaga ng numero ay dapat na m
 Oras,units, seconds mula 1970-01-01T00:00:00Z
 
 Ang mga pamantayan sa petsa na kinakatawan bilang String na mga pamantayan ay dapat na may String\\*DATA\\_TYPE\\*Ang attribute at ang isang yunit ay may palagay kung alin ang nagsasabi ng petsa Oras na huwaran ayon sa pagkakatukoy Java Ang klase sa Petsa na Formatter
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Halimbawa,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Halimbawa,
 oras,units, yyyy-MM-dd 'T'H:mm:ssZ
 Ang lahat ng mga halagang dateTim para sa isang ibinigay na data variable ay dapat gumamit ng parehong format.
 Sa karamihan ng mga kaso, ang huwaran ng petsa na kailangan mo para sa mga yunit na binanggit ay iba't ibang anyo ng mga format na ito:
@@ -245,7 +245,7 @@ Gaya ng hinihiling ng CF, lahat ng mga pamantayan sa antas (e.g., para sa longhi
 ##  [DSG Mga Uri ng Katangian](#dsg-feature-types)  {#dsg-feature-types} 
 
 Ang isang talaksang NCSV ay maaaring maglaman ng CF Discrete Sampling Geometry
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) datos. Ito ang mga katangian na gumagawa sa gawaing ito:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) datos. Ito ang mga katangian na gumagawa sa gawaing ito:
 
 1. Gaya ng kahilingan ng CF, dapat isama sa talaksang NCSV ang isang linya sa bahaging metadata na nagpapakilala sa bahaging metadata [\\*GLOBYA\\*](#global)   featureType Halimbawa, e.g.,
     \\*GLOBYA\\*, featureType ,trajectory
@@ -326,7 +326,7 @@ Mga Paunawa:
 
 * Kabilang sa talaksang sampol na ito ang maraming mahihirap na kaso (e.g., char at mahabang variables at mahirap String mga halaga) . Karamihan sa mga talaksang NCSV ay magiging mas simple.
 * Ang linya ng lisensiya ay nahahati sa dalawang linya dito, ngunit isa lamang linya sa sampol na talaksan.
-* Ang \\u20AC ay ang  encoding ng karakter sa Euro at ang \\u00FC ay ang \\ ü.
+* \\ \\u20AC ay ang regulator ng karakter na Euro at ang \\u00FC ay ang  encoding ng ü.
 * Marami Ang mga sting sa halimbawa ay nakapaloob sa pamamagitan ng mga dobleng quote bagaman ang mga ito ay hindi kailangang maging, e.g., maraming mga katangiang global kabilang ang pamagat, ang mga lon units na attribute, at ang ika-3 linya ng datos.)
 * Magiging mas maliwanag at mas mabuti kung ang mga yunit na kabilang sa testLong variable ay isinulat sa dobleng mga sinipi na nagpapahiwatig na ito ay isang halagang String. Subalit ang kasalukuyang representasyon (1, walang mga sinipi) ay bibigyan ng tamang kahulugan bilang isang String, hindi isang integer, dahil walang 'i' hulapi.
 * Di - tulad ng ibang uri ng datos na numeriko, ang mahahabang halaga sa bahaging datos ay may hulapi ('L') na nagpapakilala sa kanilang uri ng datos na numero. Ito ay kinakailangan upang maiwasan ang mga disheet mula sa pagpapakahulugan ng mga halaga bilang lumulutang na mga numero ng punto at sa gayon ay mawalan ng prekwensiya.
@@ -336,7 +336,7 @@ Mga Paunawa:
 Sa isang diffesheet, gaya sa isang talaksang NCSV:
 
 * Isulat ang mga halaga ng numeric attribute ayon sa pagkakasunud - sunod ng NCCSV files (e.g., na may hulaping titik, e.g., 'f', upang makilala ang data type ng attribute) .
-* Sa Strings, isulat ang lahat ng karakter na mas mababa sa ASCII character #32 o mas malaki sa character #126 bilang alinman sa isang JSON-tulad ng backsladed character (e.g., \\n para sa newline) o bilang numero ng karakter na hexadecimal Unicode (kasong walang pakiramdam) sa pamamagitan ng pagdurugtong [\\u *hhhh* ](#uhhhh)   (e.g., \\u20AC para sa Euro sign) . Gamitin \\n   (2 tauhan: backslash at 'n ') upang ipahiwatig ang isang bagong linya, hindi ang Alt Enter.
+* Sa Strings, isulat ang lahat ng karakter na mas mababa sa ASCII character #32 o mas malaki sa character #126 bilang alinman sa isang JSON-tulad ng backsladed character (e.g., \\n para sa newline) o bilang numero ng karakter na hexadecimal Unicode (kasong walang pakiramdam) sa pamamagitan ng pagdurugtong [\\u *hhhh* ](#uhhhh)   (e.g., \\ \\u20AC para sa Euro sign) . Gamitin \\n   (2 tauhan: backslash at 'n ') upang ipahiwatig ang isang bagong linya, hindi ang Alt Enter.
 
 Ang tanging pagkakaiba sa pagitan ng mga talaksang NCSV at ng analogous disheet na kasunod ng mga kombensiyong ito ay:
 
@@ -392,7 +392,7 @@ Upang lumikha ng isang talaksang NCSV mula sa isang Google Sheetsheet:
 * Kung ang isang talaksan ng NCCSV ay may labis na mga comma sa dulo ng mga hanay, maaari mo itong alisin sa pamamagitan ng pagkumberte sa talaksang NCCSV upang maging isang NetCDF talaksan at pagkatapos ay binabago ang NetCDF ilagay muli sa talaksang NCCSV.
 * Kapag sinisikap mong gawing isang talaksang NCSV NetCDF file, ang ilang pagkakamali ay mapapansin ng software at lilikha ng mga maling mensahe, na nagiging sanhi ng pagkabigo ng konbersiyon. Ang ibang mga problema ay mahirap o imposibleng mahuli at hindi lilikha ng mga maling mensahe o babala. Iba pang problema (e.g., sobrang mga komma sa dulo ng mga hanay) ay ipagwawalang - bahala. Hindi gaanong susuriin ng file converter ang pagiging tama ng resulta NetCDF e.g., kung tungkol sa pagsunod ng CF. Pananagutan ng tagalikha ng file at file user na suriin na ang mga resulta ng konbersiyon ay ayon sa nais at tama. Ang dalawang paraan ng pagsusuri ay:
     * Ilimbag ang nilalaman ng .nc talaksang may ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * Tingnan ang nilalaman ng datos sa ERDDAP .
 
 ##  [Mga pagbabago](#changes)  {#changes} 

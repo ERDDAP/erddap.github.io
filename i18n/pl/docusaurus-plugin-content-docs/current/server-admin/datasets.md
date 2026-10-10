@@ -42,7 +42,7 @@ Kiedy dostawca danych przychodzi do Ciebie mając nadzieję na dodanie niektóry
 Składanie rzeczywistych plików danych ze źródeł zewnętrznych jest ogromnym ryzykiem dla bezpieczeństwa, więc ERDDAP™ Nie ma z tym problemu. Musisz znaleźć rozwiązanie, które działa dla Ciebie i dostawcy danych, na przykład, e-mail (dla małych plików) , ciągnąć z chmury (na przykład DropBox lub Google Drive) , strona sftp (z hasłami) lub trampki netto (pendrive USB lub zewnętrzny dysk twardy) . Powinieneś akceptować tylko pliki ludzi, których znasz. Trzeba będzie skanować pliki w poszukiwaniu wirusów i podjąć inne środki ostrożności.
 
 Nie ma połączenia w ERDDAP™ do formularza dostawcy danych (na przykład, na ERDDAP™ strona główna) . Zamiast tego, kiedy ktoś mówi, że chce mieć swoje dane podawane przez ERDDAP , można wysłać im e-mail mówiąc coś w stylu:
-Tak, możemy przenieść twoje dane do ERDDAP . Aby rozpocząć, proszę wypełnić formularz nahttps://*yourUrl*/erddap/dataProviderForm.html  (lub http:// jeżeli https:// nie jest włączona) .
+Tak, możemy przenieść twoje dane do ERDDAP . Aby rozpocząć, proszę wypełnić formularz na https://*yourUrl*/erddap/dataProviderForm.html   (lub http:// jeżeli https:// nie jest włączona) .
 Jak skończysz, skontaktuję się z tobą, żeby ustalić szczegóły.
 Jeśli chcesz tylko spojrzeć na formularz (bez wypełniania go) , można zobaczyć formularz na ERD jest ERDDAP : [Wprowadzenie](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) , [Część 1](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) , [Część 2](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) , [Część 3](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) oraz [Część 4](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) . Te linki do ERD   ERDDAP™ wysyłaj informacje do mnie, nie do ciebie, więc nie przesyłaj informacji z nimi, chyba że rzeczywiście chcesz dodać dane do ERD   ERDDAP .
 
@@ -190,23 +190,23 @@ Ten EDDType generuje wszystkie datasets.xml kawałki potrzebne do zrobienia [EDD
      
 #####  EDDGrid FromThreddsCatalog{#eddgridfromthreddscatalog} 
 Ten EDDType generuje wszystkie datasets.xml części potrzebne do wszystkich [ EDDGrid FromDap](#eddgridfromdap) zbiory danych, które można znaleźć poprzez rekursywne pełzanie poprzez THREDDS (sub) Katalog. Istnieje wiele form katalogu THREDDS adresów URL. Ta opcja wymaga URL THREDDS .xml z / katalog / w nim, na przykład,
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xmllub
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml lub
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (powiązany katalog .html jest na
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.htmlco jest niedopuszczalne dla EDDGrid FromThredsCatalog).
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html co jest niedopuszczalne dla EDDGrid FromThredsCatalog).
 Jeśli u pacjenta występują problemy z EDDGrid FromThreds Przewodniczący Katalog:
 * Upewnij się, że używany adres URL jest prawidłowy, zawiera / katalog / i kończy się na / katalog.xml.
-* Jeśli to możliwe, należy użyć publicznego adresu IP (na przykład:https://oceanwatch.pfeg.noaa.gov) w URL, nie lokalny numeryczny adres IP (na przykład:https://12.34.56.78) . Jeśli THREDDS jest dostępny tylko za pośrednictwem lokalnego numerycznego adresu IP, można użyć [&lt;convertToPublicSourceUrl &gt;] (# converttopublicsourceurl) więc ERDDAP™ użytkownicy zobaczyć adres publiczny, nawet jeśli ERDDAP™ pobiera dane z lokalnego adresu numerycznego.
+* Jeśli to możliwe, należy użyć publicznego adresu IP (na przykład: https://oceanwatch.pfeg.noaa.gov ) w URL, nie lokalny numeryczny adres IP (na przykład: https://12.34.56.78 ) . Jeśli THREDDS jest dostępny tylko za pośrednictwem lokalnego numerycznego adresu IP, można użyć [&lt;convertToPublicSourceUrl &gt;] (# converttopublicsourceurl) więc ERDDAP™ użytkownicy zobaczyć adres publiczny, nawet jeśli ERDDAP™ pobiera dane z lokalnego adresu numerycznego.
 * Jeśli masz problemy, których nie możesz rozwiązać, [sprawdź wskazówki dotyczące rozwiązywania problemów](#troubleshooting-tips) .
 * Kod niskiego poziomu do tego teraz używa Unidata netcdf- java katalog crawler kod (Trójki. klasy katalogowe) tak, że może obsługiwać wszystkie katalogi THREDDS (które mogą być zaskakująco skomplikowane) Dzięki Unidata dla tego kodu.
          
 #####  EDDGrid LonPM180FromErddapCatalog{#eddgridlonpm180fromerddapcatalog} 
 Ten EDDType generuje datasets.xml do zrobienia [ EDDGrid LonPM180](#eddgridlonpm180) zestawów danych ze wszystkich EDDGrid zbiory danych w ERDDAP których długość geograficzna jest większa niż 180.
-* Jeśli to możliwe, należy użyć publicznego adresu IP (na przykład:https://oceanwatch.pfeg.noaa.gov) w URL, nie lokalny numeryczny adres IP (na przykład:https://12.34.56.78) . Jeśli ERDDAP™ jest dostępny tylko przez lokalny numeryczny adres IP, można użyć [&lt;convertToPublicSourceUrl &gt;] (# converttopublicsourceurl) więc ERDDAP™ użytkownicy zobaczyć adres publiczny, nawet jeśli ERDDAP™ pobiera dane z lokalnego adresu numerycznego.
+* Jeśli to możliwe, należy użyć publicznego adresu IP (na przykład: https://oceanwatch.pfeg.noaa.gov ) w URL, nie lokalny numeryczny adres IP (na przykład: https://12.34.56.78 ) . Jeśli ERDDAP™ jest dostępny tylko przez lokalny numeryczny adres IP, można użyć [&lt;convertToPublicSourceUrl &gt;] (# converttopublicsourceurl) więc ERDDAP™ użytkownicy zobaczyć adres publiczny, nawet jeśli ERDDAP™ pobiera dane z lokalnego adresu numerycznego.
          
 #####  EDDGrid Lon0360FromErddapCatalog{#eddgridlon0360fromerddapcatalog} 
 Ten EDDType generuje datasets.xml do zrobienia [ EDDGrid Lon0360](#eddgridlon0360) zestawów danych ze wszystkich EDDGrid zbiory danych w ERDDAP o dowolnej długości geograficznej mniejszej niż 0.
-* Jeśli to możliwe, należy użyć publicznego adresu IP (na przykład:https://oceanwatch.pfeg.noaa.gov) w URL, nie lokalny numeryczny adres IP (na przykład:https://12.34.56.78) . Jeśli ERDDAP™ jest dostępny tylko przez lokalny numeryczny adres IP, można użyć [&lt;convertToPublicSourceUrl &gt;] (# converttopublicsourceurl) więc ERDDAP™ użytkownicy zobaczyć adres publiczny, nawet jeśli ERDDAP™ pobiera dane z lokalnego adresu numerycznego.
+* Jeśli to możliwe, należy użyć publicznego adresu IP (na przykład: https://oceanwatch.pfeg.noaa.gov ) w URL, nie lokalny numeryczny adres IP (na przykład: https://12.34.56.78 ) . Jeśli ERDDAP™ jest dostępny tylko przez lokalny numeryczny adres IP, można użyć [&lt;convertToPublicSourceUrl &gt;] (# converttopublicsourceurl) więc ERDDAP™ użytkownicy zobaczyć adres publiczny, nawet jeśli ERDDAP™ pobiera dane z lokalnego adresu numerycznego.
          
 ##### Pliki EDDsFromFiles{#eddsfromfiles} 
 Biorąc pod uwagę katalog startowy, to przemienia katalog i wszystkie podkatalogi i próbuje utworzyć zbiór danych dla każdej grupy plików danych, które znajduje.
@@ -566,7 +566,7 @@ Pliki NCSSV 1.0 nie obsługują niepodpisanych typów danych całkowitych.
 ### Uwagi dotyczące rodzaju danych{#data-type-comments} 
 * Ze względu na słabe wsparcie dla danych długich, ulong i char w wielu typach plików, zniechęcamy do stosowania tych typów danych w ERDDAP . Jeśli to możliwe, używaj podwójnych zamiast długich i ulongów, a String zamiast znaku.
      
-* Metadane - Ponieważ(OPeN)DAPodpowiedzi .das i .dds nie wspierają atrybutów długich lub ulong lub typów danych (i zamiast tego pokaż im jak dubles) , może zamiast tego chcesz użyć ERDDAP tabelaryczne przedstawienie metadanych, jak widać w http ... / erddap / **info** / * datasetID * Strona internetowa .html (na przykład: [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (które można również uzyskać w innych typach plików, np. .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) lub .nccsv Odpowiedź metadanych (na przykład: [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) Chociaż .nccsv Metadane są dostępne tylko dla zbiorów danych tabelarycznych) , z których obie obsługują wszystkie typy danych (w szczególności, długie, ulong i char) .
+* Metadane - Ponieważ(OPeN)DAPodpowiedzi .das i .dds nie wspierają atrybutów długich lub ulong lub typów danych (i zamiast tego pokaż im jak dubles) , może zamiast tego chcesz użyć ERDDAP tabelaryczne przedstawienie metadanych, jak widać w http ... / erddap / **info** / * datasetID * Strona internetowa .html (na przykład: [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (które można również uzyskać w innych typach plików, np. .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) lub .nccsv Odpowiedź metadanych (na przykład: [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) Chociaż .nccsv Metadane są dostępne tylko dla zbiorów danych tabelarycznych) , z których obie obsługują wszystkie typy danych (w szczególności, długie, ulong i char) .
          
 ### Pliki mediów{#media-files} 
 Nie wszystkie dane są tablicami liczb lub tekstu. Niektóre zbiory danych składają się z plików medialnych, takich jak obrazy, pliki audio i wideo. ERDDAP™ posiada specjalne funkcje ułatwiające użytkownikom dostęp do plików medialnych. To dwuetapowy proces:
@@ -604,7 +604,7 @@ Lub, jeśli użytkownik kliknie na nazwę pliku pokazaną na ERDDAP™ strona in
 ### Praca z plikami AWS S3{#working-with-aws-s3-files} 
  [Amazon Web Service (AWS) ](https://aws.amazon.com) jest sprzedawcą [przetwarzanie w chmurze](https://en.wikipedia.org/wiki/Cloud_computing) usługi. [S3](https://aws.amazon.com/s3/) jest systemem przechowywania obiektów oferowanym przez AWS. Zamiast hierarchicznego systemu katalogów i plików tradycyjnego systemu plików (jak dysk twardy w komputerze) , S3 oferuje tylko "wiadra", które posiadają "obiekty" (Zadzwonimy do nich. "files" ) .
 
-Dla plików ASCII (np. .csv) , ERDDAP™ może pracować z plikami w wiadrach bezpośrednio. Jedyne, co musisz zrobić, to określić&lt;fileDir &gt; dla zbioru danych przy użyciu określonego formatu dla wiadra AWS, np.https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/. Nie należy stosować leku&lt;cacheFromUrl &gt;. Szczegóły przedstawiono poniżej.
+Dla plików ASCII (np. .csv) , ERDDAP™ może pracować z plikami w wiadrach bezpośrednio. Jedyne, co musisz zrobić, to określić&lt;fileDir &gt; dla zbioru danych przy użyciu określonego formatu dla wiadra AWS, np. https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ . Nie należy stosować leku&lt;cacheFromUrl &gt;. Szczegóły przedstawiono poniżej.
 
 Ale dla plików binarnych (np., .nc , .grib, .bufr, oraz .hdf pliki) , trzeba użyć&lt;system cacheFromUrl &gt; opisany poniżej. ERDDAP , netcdf- java (które ERDDAP™ wykorzystuje do odczytu danych z tych plików) , i inne oprogramowanie danych naukowych są zaprojektowane do pracy z plikami w tradycyjnym systemie plików, który oferuje [poziom bloku](https://en.wikipedia.org/wiki/Block-level_storage) dostęp do plików (który pozwala na odczytanie fragmentów pliku) , ale S3 tylko oferuje [poziom pliku (obiekt) ](https://en.wikipedia.org/wiki/Block-level_storage) dostęp do plików (która pozwala tylko na przeczytanie całego pliku) . AWS oferuje alternatywę dla S3, [Elastyczny Block Store (EBS) ](https://aws.amazon.com/ebs/) ), który obsługuje dostęp do plików na poziomie bloku, ale jest droższy niż S3, więc rzadko jest używany do przechowywania dużych ilości plików danych. (Więc kiedy ludzie mówią, że przechowują dane w chmurze (S3) jest tanie, jest zwykle jabłka do pomarańczy porównania.) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 Odpowiednim URL dla tego obiektu jest
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 AWS obsługuje niewielką zmianę w sposobie konstruowania tego URL, ale ERDDAP™ wymaga tego jednego konkretnego formatu:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 Od ERDDAP v2.29, możesz teraz użyć `s3: / /` Format URI zamiast URL wiadra. Jest to format używany przez [AWS s3 cli](https://docs.aws.amazon.com/cli/latest/reference/s3/) .
 s3: / / *bucetName* / *klucz* 
@@ -697,22 +697,22 @@ Dla prywatnego wiadra danych S3, właściciel wiadra musi dać Ci dostęp do wia
 We wszystkich przypadkach będziesz potrzebował konta AWS, ponieważ AWS SDK dla Java   (które ERDDAP™ wykorzystuje do pobierania informacji o zawartości wiadra) wymaga potwierdzenia konta AWS. (więcej na ten temat poniżej) 
 
  ERDDAP™ można uzyskać dostęp tylko do wiader AWS S3, jeśli określić [&lt;cacheFromUrl &gt;] (# cachefromurl) (lub&lt;fileDir &gt;) w określonym formacie:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 gdzie
 
 * BucetName jest krótką formą nazwy wiadra, np. noaagoes17.
 * Region, np. us- east-1, pochodzi z kolumny "Region" w jednej z tabel [Punkty końcowe usługi AWS](https://docs.aws.amazon.com/general/latest/gr/rande.html) gdzie wiadro jest rzeczywiście zlokalizowane.
 * Prefiks jest opcjonalny. Jeśli występuje, musi zakończyć się '/' .
 
-Na przykład:https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+Na przykład: https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 Ten format URL jest jednym z zaleceń AWS S3: patrz [Dostęp do wiadra](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) oraz [ten opis przedrostków](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) . ERDDAP™ wymaga, aby połączyć bucket URL i opcjonalny przedrostek do jednego URL w celu określenia&lt;cacheFromUrl &gt; (lub&lt;fileDir &gt;) gdzie znajdują się pliki.
 
 #### Test Public AWS S3 Buckets{#test-public-aws-s3-buckets} 
 Dla publicznych wiader można i należy przetestować adres URL wiadra katalogu AWS S3 w przeglądarce, np.:
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) Jeśli kubełek URL jest prawidłowy i odpowiedni dla ERDDAP , zwróci dokument XML, który ma (częściowy) listę zawartości tego wiadra. Niestety, pełny adres URL (np. bucket URL plus prefix) że ERDDAP™ wants for a dataset does not work in a browser. AWS nie oferuje systemu do przeglądania hierarchii wiadra łatwo w przeglądarce. (Jeśli jest to nieprawidłowe, proszę wysłać e-mail do Chrisa. John w Noah. W przeciwnym razie, Amazon, proszę dodać wsparcie dla tego&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) Jeśli kubełek URL jest prawidłowy i odpowiedni dla ERDDAP , zwróci dokument XML, który ma (częściowy) listę zawartości tego wiadra. Niestety, pełny adres URL (np. bucket URL plus prefix) że ERDDAP™ wants for a dataset does not work in a browser. AWS nie oferuje systemu do przeglądania hierarchii wiadra łatwo w przeglądarce. (Jeśli jest to nieprawidłowe, proszę wysłać e-mail do Chrisa. John w Noah. W przeciwnym razie, Amazon, proszę dodać wsparcie dla tego&#33;) 
 
 #### Przeglądanie zawartości wiadra{#viewing-the-contents-of-a-bucket} 
-Koszyki S3 często zawierają kilka kategorii plików, w kilku pseudokatalogach, które mogą stać się kilkoma ERDDAP™ zestawów danych. Aby ERDDAP™ zestaw danych, musisz znać katalog startowy dla&lt;cacheFromUrl &gt; (lub&lt;fileDir &gt;) oraz format nazw plików identyfikujących ten podzbiór plików. Jeśli spróbujesz wyświetlić całą zawartość wiadra w przeglądarce, S3 pokaże Ci pierwsze 1000 plików, co jest niewystarczające. Obecnie najlepszym sposobem, aby zobaczyć całą zawartość wiadra jest zrobić [Nazwy EDDTableFromFileName](#eddtablefromfilenames) zbiór danych (na komputerze ERDDAP™ lub publicznie ERDDAP ) , co daje również łatwy sposób przeglądania struktury katalogów i pobierania plików. W&lt;fileDir &gt; dla tego będzie podany powyżej adres URL, np.https://noaa-goes17.s3.us-east-1.amazonaws.com. \\[ Dlaczego AWS S3 nie oferuje szybkiego i łatwego sposobu na zrobienie tego bez konta AWS? \\] Zauważ, że kiedy robię to na komputerze w sieci non-Amazon, wydaje się, że Amazon spowalnia reakcję na trickle (około 100 (?) pliki na kawałek) po kilku pierwszych kawałkach (1000 plików na kawałek) są pobierane. Ponieważ wiadra mogą mieć ogromną liczbę plików (noaa- goes17 ma 26 milionów) , uzyskanie całej zawartości wiadra może zająć EDDTableFromFileName kilka godzin (np. 12&#33;) Do końca. \\[ Amazon, zgadza się? \\] 
+Koszyki S3 często zawierają kilka kategorii plików, w kilku pseudokatalogach, które mogą stać się kilkoma ERDDAP™ zestawów danych. Aby ERDDAP™ zestaw danych, musisz znać katalog startowy dla&lt;cacheFromUrl &gt; (lub&lt;fileDir &gt;) oraz format nazw plików identyfikujących ten podzbiór plików. Jeśli spróbujesz wyświetlić całą zawartość wiadra w przeglądarce, S3 pokaże Ci pierwsze 1000 plików, co jest niewystarczające. Obecnie najlepszym sposobem, aby zobaczyć całą zawartość wiadra jest zrobić [Nazwy EDDTableFromFileName](#eddtablefromfilenames) zbiór danych (na komputerze ERDDAP™ lub publicznie ERDDAP ) , co daje również łatwy sposób przeglądania struktury katalogów i pobierania plików. W&lt;fileDir &gt; dla tego będzie podany powyżej adres URL, np. https://noaa-goes17.s3.us-east-1.amazonaws.com . \\[ Dlaczego AWS S3 nie oferuje szybkiego i łatwego sposobu na zrobienie tego bez konta AWS? \\] Zauważ, że kiedy robię to na komputerze w sieci non-Amazon, wydaje się, że Amazon spowalnia reakcję na trickle (około 100 (?) pliki na kawałek) po kilku pierwszych kawałkach (1000 plików na kawałek) są pobierane. Ponieważ wiadra mogą mieć ogromną liczbę plików (noaa- goes17 ma 26 milionów) , uzyskanie całej zawartości wiadra może zająć EDDTableFromFileName kilka godzin (np. 12&#33;) Do końca. \\[ Amazon, zgadza się? \\] 
 
 #### Tworzenie tabeli EDD FromFileNames Dataset z pojemnikiem AWS S3{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 Jeśli masz nazwę wiadra, ale nie masz jeszcze listy plików w pojemniku S3 lub przedrostku, który identyfikuje lokalizację odpowiednich plików w pojemniku, użyj poniższych instrukcji, aby EDDTableFromFileNames dataset tak można przeglądać hierarchię katalogu wiadra S3 poprzez ERDDAP jest "files" system.
@@ -727,22 +727,24 @@ Java.lang. IllegalArgumentException: plik profilu nie może być błędem null w
 Wskazówka dla Linuksa i Mac OS: plik uwierzytelniania musi być w katalogu domowym użytkownika, który jest uruchomiony Tomcat (oraz ERDDAP )   (dla tego ustępu, przyjmiemy użytkownik = tomcat) w pliku o nazwie ~ / .aws / referencje. Nie zakładaj, że ~ is / home / tomcat -- właściwie użyj cd ~ aby dowiedzieć się, gdzie system operacyjny myśli ~ dla użytkownika = tomcat jest. Utwórz katalog, jeśli nie istnieje. Ponadto, po umieszczeniu pliku uwierzytelniania w miejscu, upewnij się, że użytkownik i grupa do pliku są Tomcat, a następnie użyj chmod 400 referencji, aby upewnić się, że plik jest read- tylko dla użytkownika = tomcat.
     
 3. Utwórz bucket URL w [format, który ERDDAP™ wymaga](#accessing-files-in-an-aws-s3-bucket) , np.,
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) oraz (do wiader publicznych) przetestować go w przeglądarce, aby upewnić się, że zwraca dokument XML, który ma częściową listę zawartości tego wiadra.
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) oraz (do wiader publicznych) przetestować go w przeglądarce, aby upewnić się, że zwraca dokument XML, który ma częściową listę zawartości tego wiadra.
      
 4. Stosowanie [GenerateDatasetsXml](#generatedatasetsxml) do tworzenia [Nazwy EDDTableFromFileName](#eddtablefromfilenames) zbiór danych:
     * Dla katalogu startowego, użyj tej składni:
         \\*\\*\\ *Z OntheFly,* Twój BucketUrl
 na przykład:
-        \\*\\*Z OntheFly,https://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\*Z OntheFly, https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * Nazwa pliku?.
     * Rekursywne? prawda
     * przeładowanie Każdej minuty? 10080
-    *    infoUrl ?https://registry.opendata.aws/noaa-goes/
+    *    infoUrl ? https://registry.opendata.aws/noaa-goes/
+ 
     * Instytucja? NOAA 
     * Podsumowanie? nic ( ERDDAP™ będzie tworzyć przyzwoite podsumowanie automatycznie.) 
     * Tytuł? nic ( ERDDAP™ automatycznie stworzy przyzwoity tytuł.) Jak zwykle, należy edytować otrzymany XML, aby sprawdzić poprawność i dokonać ulepszeń przed kawałkiem zbiorów danych za pomocą go w datasets.xml .
 5. Jeśli postępujesz zgodnie z powyższymi instrukcjami i załadujesz zestaw danych ERDDAP , stworzyłeś zestaw danych EDDTableFromFiles. Jako przykład, i aby ułatwić każdemu przeglądanie i pobieranie plików z AWS Open Data buckets, stworzyliśmy EDDTableFromFileNames datasets (zobacz listę na
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) dla prawie wszystkich [AWS S3 Otwarte zbiorniki danych](https://registry.opendata.aws/) .
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) dla prawie wszystkich [AWS S3 Otwarte zbiorniki danych](https://registry.opendata.aws/) .
      \\[ Kilka wiader, których nie uwzględniliśmy, ma dużą liczbę plików w katalogu głównym. (więcej niż można pobrać w rozsądnej ilości czasu) lub nie zezwalają na publiczny dostęp (Czy wszyscy nie powinni być jawni?) lub są wiadrami Pays Requester (np. Sentinel) . \\]   
 Jeśli klikniesz na "files" link do jednego z tych zbiorów danych, można przeglądać drzewo katalogów i pliki w tym wiadrze S3. Z powodu drogi\\*\\*\\ * from OnTheFly EDDTableFromFiles działa, te listy katalogowe są zawsze idealnie up- to- date, ponieważ ERDDAP™ Włączam je. Jeśli klikniesz w drzewo katalogowe na nazwę pliku i klikniesz na nazwę pliku, ERDDAP™ przekieruje Państwa prośbę do AWS S3, aby można było pobrać plik bezpośrednio z AWS. Możesz sprawdzić te akta.
     
@@ -756,7 +758,7 @@ Szkoda, że AWS nie pozwala ludziom po prostu korzystać z przeglądarki, aby zo
  **Potem możesz zrobić ERDDAP™ zbiory danych dające użytkownikom dostęp do danych w plikach.**   
 Patrz instrukcja [ ERDDAP™ i S3 Buckets](#erddap-and-aws-s3-buckets)   (powyżej) .
 Dla próbki EDDTableFromFileNames dataset, że zostały wykonane powyżej, jeśli zrobić trochę węszenie wokół z katalogu i nazwy plików w drzewie katalogu, staje się jasne, że nazwy katalogu najwyższego poziomu (np. ABI- L1b- RadC) co ERDDAP™ Zawołać osobne zbiory danych. Kubeł, z którym pracujesz może być podobny. Można następnie kontynuować tworzenie oddzielnych zbiorów danych w ERDDAP™ dla każdego z tych zbiorów danych, przy użyciu np.:
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 jako&lt;cacheFromUrl &gt;. Niestety, dla tego konkretnego przykładu, zbiory danych w wiadrze wydają się być zbiorami danych na poziomie 1 lub 2, które ERDDAP™   [nie jest szczególnie dobry w](#dimensions) , ponieważ zbiór danych jest bardziej skomplikowanym zbiorem zmiennych, które używają różnych wymiarów.
      
     
@@ -975,7 +977,7 @@ Niesortowane wartości wymiarów prawie zawsze wskazują na problem z zbiorem da
 ###  EDDGrid FromDap{#eddgridfromdap} 
  [ ** EDDGrid FromDap** ](#eddgridfromdap) obsługuje zmienne siatki z [ DAP ](https://www.opendap.org/) serwerów.
 
-* Zdecydowanie zalecamy użycie [GenerateDatasets Program Xml](#generatedatasetsxml) zrobić szorstki szkic datasets.xml Chunk za ten zestaw danych. Możesz zebrać informacje potrzebne do dostrojenia lub tworzenia własnego XML dla EDDGrid Zestaw danych FromDap patrząc na pliki DDS i DAS źródłowego zbioru danych w przeglądarce (przez dodanie .das i .dds do sourceUrl na przykład: [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
+* Zdecydowanie zalecamy użycie [GenerateDatasets Program Xml](#generatedatasetsxml) zrobić szorstki szkic datasets.xml Chunk za ten zestaw danych. Możesz zebrać informacje potrzebne do dostrojenia lub tworzenia własnego XML dla EDDGrid Zestaw danych FromDap patrząc na pliki DDS i DAS źródłowego zbioru danych w przeglądarce (przez dodanie .das i .dds do sourceUrl na przykład: [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
      
 *    EDDGrid FromDap może pobrać dane z dowolnej wielowymiarowej zmiennej z DAP serwer danych. (Poprzednio: EDDGrid FromDap był ograniczony do zmiennych oznaczonych jako "siatka", ale nie jest to już wymóg.)   
      
@@ -1335,7 +1337,7 @@ Pełny przykład axisVariable który tworzy zagregowany zbiór danych z nową os
         </addAttributes>
       </axisVariable>
 ```
-Należy zwrócić uwagę na użycie grupy przechwytywania nr 2 do wychwytywania cyfr, które występują po 'r' lub 's', a przed '\\ _ global'. Ten przykład pokazuje również jak dodać dodatkowe atrybuty (np., ioos\\_category i jednostki) do zmiennej osi.
+Należy zwrócić uwagę na użycie grupy przechwytywania nr 2 do przechwytywania cyfr, które występują po 'r' lub 's', a przed "\\_global" . Ten przykład pokazuje również jak dodać dodatkowe atrybuty (np., ioos\\_category i jednostki) do zmiennej osi.
      
 #### Zewnętrznie skompresowane pliki{#externally-compressed-files} 
 * Zestawy danych, które są podzbiorami EDDGrid Pliki FromFiles i EDDTable FromFiles może obsługiwać dane bezpośrednio z zewnętrznych plików danych skompresowanych, w tym .tgz , .tar  .gz , .tar  .gzip , .gz , .gzip , .zip , .bz2 i pliki .Z.
@@ -1433,7 +1435,7 @@ Wszystkie EDDGrid Pliki FromFiles i wszystkie pliki EDDTableFromFiles obsługuj�
 Zamiast tego, użyj [&lt;cacheFromUrl &gt; system] (# cachefromurl) .
 
 Dostęp ERDDAP™ zbiory danych jako pliki poprzez żądania zakresu bajtów --
-Otaczając to, biorąc pod uwagę, że możesz (teoretycznie) Pomyśl o zestawie danych w ERDDAP™ jak olbrzym .nc plik przez aputting " .nc "do bazy Open DAP URL dla danego zbioru danych (np.,https://myserver.org/erddap/griddap/datasetID.nca także poprzez dodanie a? query, aby określić podzbiór) , być może rozsądne jest pytanie, czy można użyć netcdf- java, Ferret lub inne NetCDF oprogramowanie klienta do odczytu danych poprzez Zapytania zakresu HTTP z ERDDAP . Odpowiedź brzmi nie, ponieważ nie ma naprawdę ogromny " .nc "plik. Jeśli chcesz to zrobić, zrób jedną z tych opcji:
+Otaczając to, biorąc pod uwagę, że możesz (teoretycznie) Pomyśl o zestawie danych w ERDDAP™ jak olbrzym .nc plik przez aputting " .nc "do bazy Open DAP URL dla danego zbioru danych (np., https://myserver.org/erddap/griddap/datasetID.nc a także poprzez dodanie a? query, aby określić podzbiór) , być może rozsądne jest pytanie, czy można użyć netcdf- java, Ferret lub inne NetCDF oprogramowanie klienta do odczytu danych poprzez Zapytania zakresu HTTP z ERDDAP . Odpowiedź brzmi nie, ponieważ nie ma naprawdę ogromny " .nc "plik. Jeśli chcesz to zrobić, zrób jedną z tych opcji:
 
 * Stosowanie(OPeN)DAPoprogramowanie klienta do podłączenia do usług griddap oferowanych przez ERDDAP . Właśnie to. DAP   (i tym samym ERDDAP ) został zaprojektowany do. Jest bardzo wydajny.
 * Albo, pobierz plik źródłowy (s) od "files" system (lub podzbiór pliku poprzez .nc ? zapytanie) do komputera i używać netcdf- java, Ferret lub inne NetCDF oprogramowanie klienta do czytania (teraz) plik lokalny (s) .
@@ -2253,9 +2255,9 @@ rozważyć przechowywanie danych w zbiorze NetCDF v3 .nc pliki (szczególnie .nc
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### EDDTableFromDapSequence{#eddtablefromdapsequence} 
- [ **EDDTableFromDapSequence** ](#eddtablefromdapsequence) obsługuje zmienne w sekwencji 1- i 2- poziomu od [ DAP ](https://www.opendap.org/) serwery takie jak DAP PER (był whttps://www.pmel.noaa.gov/epic/software/dapper/, teraz przerwany) .
+ [ **EDDTableFromDapSequence** ](#eddtablefromdapsequence) obsługuje zmienne w sekwencji 1- i 2- poziomu od [ DAP ](https://www.opendap.org/) serwery takie jak DAP PER (był w https://www.pmel.noaa.gov/epic/software/dapper/ , teraz przerwany) .
 
-* Zdecydowanie zalecamy użycie [GenerateDatasets Program Xml](#generatedatasetsxml) zrobić szorstki szkic datasets.xml Chunk za ten zestaw danych. Następnie można to edytować, aby dostroić. Możesz zebrać informacje, których potrzebujesz, patrząc na pliki DDS i DAS źródłowe w przeglądarce (dodając .das i .dds do sourceUrl (przykładem byłhttps://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds).
+* Zdecydowanie zalecamy użycie [GenerateDatasets Program Xml](#generatedatasetsxml) zrobić szorstki szkic datasets.xml Chunk za ten zestaw danych. Następnie można to edytować, aby dostroić. Możesz zebrać informacje, których potrzebujesz, patrząc na pliki DDS i DAS źródłowe w przeglądarce (dodając .das i .dds do sourceUrl (przykładem był https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds ).
     
 * Zmienna jest w DAP sekwencja, jeżeli reakcja .dds wskazuje, że struktura danych trzymająca zmienną jest "sekwencją" (nieczuły przypadek) .
 * W niektórych przypadkach, zobaczycie sekwencję w ciągu sekwencji, sekwencję 2-poziomową -- EDDTableFromDapSequence również się tym zajmuje.
@@ -2378,15 +2380,15 @@ GenerateDatasets Xml ma trzy specjalne opcje dla EDDTableFromDatabase:
 * [Kierowca JDBC i&lt;driverName &gt;] (# jdbc- driver) -- Musisz uzyskać odpowiedni plik sterownika .jar JDBC 3 lub JDBC 4 dla bazy danych i
 Włóż to. *tomcat* / webapps / erddap / WEB-INF / lib po instalacji ERDDAP . Następnie, w twoim datasets.xml dla tego zbioru danych, należy określić&lt;driverName &gt; dla tego sterownika, który jest (Niestety) różni się od nazwy pliku. Szukaj w sieci sterownika JDBC dla bazy danych i driverName Java musi go użyć.
     
-    * Dla MariaDB, spróbuj [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * Dla MariaDB, spróbuj [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 W&lt;driverName &gt; do stosowania w datasets.xml   (zob. poniżej) jest prawdopodobnie org.mariadb.jdbc. Kierowca.
-    * Dla MySQL i Amazon RDS, spróbuj [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * Dla MySQL i Amazon RDS, spróbuj [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 W&lt;driverName &gt; do stosowania w datasets.xml   (zob. poniżej) jest prawdopodobnie com.mysql.jdbc. Kierowca.
-    * Dla Oracle Spróbuj [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
+    * Dla Oracle Spróbuj [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
 W&lt;driverName &gt; do stosowania w datasets.xml   (zob. poniżej) jest prawdopodobnie oracle.jdbc.driver. Oracle Kierowca.
-    * Dla Postgresql, mamy kierowcę JDBC 4 z [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * Dla Postgresql, mamy kierowcę JDBC 4 z [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 W&lt;driverName &gt; do stosowania w datasets.xml   (zob. poniżej) jest prawdopodobnie org.postgresql. Kierowca.
-    * Dla SQL Server można uzyskać sterownik JTDS JDBC z [https://jtds.sourceforge.net](https://jtds.sourceforge.net) .
+    * Dla SQL Server można uzyskać sterownik JTDS JDBC z [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) .
 W&lt;driverName &gt; do stosowania w datasets.xml   (zob. poniżej) jest prawdopodobnie net.sourceforge.jtds.jdbc. Kierowca.
     
 Po umieszczeniu kierowcy JDBC .jar ERDDAP™ katalog lib, musisz dodać odniesienie do pliku .jar w plikach skryptowych .bat i / lub .sh dla GenerateDatasets Xml, DasDds i ArchiveAdataset *tomcat* / webapps / erddap / WEB- INF / directory; w przeciwnym razie otrzymasz ClassNotFoundException podczas uruchamiania tych skryptów.
@@ -2524,7 +2526,7 @@ I *tomcat* / conf / context.xml, zdefiniuj zasób zawierający te same informacj
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-Ogólne informacje na temat korzystania z DataSource jest na [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
+Ogólne informacje na temat korzystania z DataSource jest na [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
 Patrz [Informacje o Tomcat DataSource](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) oraz [Przykłady Tomcat DataSource](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) lub wyszukać w sieci przykłady korzystania z DataSources z innymi serwerami aplikacji.
 * Jeśli wszystko zawiedzie,
 rozważyć przechowywanie danych w zbiorze NetCDF v3 .nc pliki (szczególnie .nc plików, które używają [CF Geometrie do pobierania próbek dyskretnych (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Kontyguous Ragged Struktury danych Array i tak mogą być obsługiwane z ERDDAP jest [Pliki EDDTableFromNcCFFiles](#eddtablefromnccffiles) ) . Jeśli są logicznie zorganizowane (każdy z danymi dla kawałka przestrzeni i czasu) , ERDDAP™ może pobrać dane z nich bardzo szybko.
@@ -2608,7 +2610,7 @@ rozważyć przechowywanie danych w zbiorze NetCDF v3 .nc pliki (szczególnie .nc
     
 Część XML generowana przez GenerateDatasetsXml dla każdego zbioru danych zawiera:
     
-    * A datasetID który jest EDDGrid jest datasetID plus "\\ _ Asatable".
+    * A datasetID który jest EDDGrid jest datasetID plus "\\_AsATable" .
     * Nowe podsumowanie atrybut globalny, który jest EDDGrid streszczenie plus nowy akapit pierwszy opisujący, czym jest ten zbiór danych.
     * Nowy atrybut globalny tytułu, który jest EDDGrid Tytuł plus ", (Jako tabela) ".
     * Nowy atrybut globalny maxAxis0 o wartości 10.
@@ -2644,21 +2646,21 @@ Część XML generowana przez GenerateDatasetsXml dla każdego zbioru danych zaw
 *    [Dane w zbiorze danych EDDTableFromFileNames](#eddtablefromfilenames-data) jest stołem, który ERDDAP™ tworzy on-the@-@ fly z informacjami o grupie lokalnych plików. W tabeli jest wiersz dla każdego pliku. Cztery specjalne atrybuty w [ datasets.xml dla tego zbioru danych](#eddtablefromfilenames-skeleton-xml) określić, które pliki zostaną włączone do tego zbioru danych:
     
 ##### plik Dir{#filedir} 
-    *   &lt;fileDir &gt; -- Określa katalog źródłowy w systemie plików serwera z plikami dla tego zbioru danych. Pliki, które znajdują się w systemie plików serwera w&lt;fileDir &gt; pojawi się w kolumnie url tego zbioru danych w wirtualnym katalogu o nazwiehttps://*serverUrl*/erddap/files/*datasetID/*.
+    *   &lt;fileDir &gt; -- Określa katalog źródłowy w systemie plików serwera z plikami dla tego zbioru danych. Pliki, które znajdują się w systemie plików serwera w&lt;fileDir &gt; pojawi się w kolumnie url tego zbioru danych w wirtualnym katalogu o nazwie https://*serverUrl*/erddap/files/*datasetID/* .
 Na przykład, jeśli datasetID jest jplMU RSS T,
 oraz&lt;fileDir &gt; is / home / data / mur /,
 i ten katalog ma plik o nazwie jplMU RSS T20150103000000.png,
 wtedy URL, który zostanie pokazany użytkownikom dla tego pliku będzie
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png.
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png .
         
 Oprócz korzystania z lokalnego katalogu&lt;fileDir &gt;, można również określić adres URL strony internetowej typu zdalnego, directory-. Dotyczy to:
         
         * Niezagregowane zbiory danych w THREDDS, np.,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020- 10- 21 Serwer ten nie jest już dostępny. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020- 10- 21 Serwer ten nie jest już dostępny. \\] 
         * Niezagregowane zbiory danych w Hyrax , np.,
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * Większość wykazów katalogów podobnych do ApacheName
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### Z OntheFly{#fromonthefly} 
  [\\*\\** from OntheFly](#fromonthefly) -- Dla ogromnych wiader S3 (jak noaa- goes17, który ma 26 milionów plików) , może potrwać ERDDAP™ do 12 godzin, aby pobrać wszystkie informacje o zawartości wiadra (i wtedy są inne problemy) . Aby to obejść, istnieje specjalny sposób użycia&lt;fileDir &gt; w EDDTableFromFileNames zrobić zestaw danych z katalogu i nazwy plików z wiadra AWS S3. Zestaw danych nie będzie zawierał listy wszystkich katalogów i nazw plików wiadra S3, które użytkownik może przeszukiwać za pomocą żądań do zbioru danych. Ale zbiór danych uzyska nazwy katalogów i plików na -the- fly, jeśli użytkownik przemierza hierarchię katalogów z zbiorem danych "files" opcja. Pozwala to użytkownikom na przeglądanie hierarchii plików i plików z wiadra S3 za pośrednictwem zbioru danych "files" system. Aby to zrobić, zamiast podać adres URL dla wiadra S3 jako "Katalog startowy" (w GenerateDatasets Xml) lub&lt;fileDir &gt; (w datasets.xml ) , stosować:
 ```
@@ -2837,13 +2839,13 @@ Wszystkie EDDGrid Pliki FromFiles i wszystkie pliki EDDTableFromFiles obsługuj�
     * W&lt;cacheFromUrl &gt; tag pozwala określić adres URL z listą zdalnych plików z listy zdalnych plików.
         
         * Niezagregowane zbiory danych w THREDDS, np.,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020- 10- 21 Serwer ten nie jest już dostępny. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020- 10- 21 Serwer ten nie jest już dostępny. \\] 
         * Niezagregowane zbiory danych w Hyrax , np.,
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * Większość wykazów katalogów podobnych do ApacheName
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * S3 wiadra, np.
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 Może to jednak wymagać konta AWS i więcej konfiguracji.
 Patrz [pracy z S3 Buckets w ERDDAP™ ](#working-with-aws-s3-files) .
 Ponadto, zazwyczaj nie trzeba używać cache FromUrl z plikami w wiadrach S3, jeśli pliki są plikami ASCII (np. .csv) , ponieważ ERDDAP™ może skutecznie odczytać dane z wiadra bezpośrednio poprzez strumień.
@@ -2901,7 +2903,7 @@ następnie ma serię zagnieżdżonych grup przechwytywania, gdzie pierwsza opcja
 a druga opcja jest określoną wartością.
             
 Powyższy przykład będzie pasował tylko do katalogów przez drugie 10 dni 2018 r., np.:
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020- 10- 21 Serwer ten nie jest już dostępny. \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020- 10- 21 Serwer ten nie jest już dostępny. \\]   
 i dzień 011, 012,..., 019.
              (Widzisz to? [dokumentacja regex](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) oraz [regex tutorial](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) .)   
 Jeśli potrzebujesz pomocy w tworzeniu&lt;cachePartialPathRegex &gt;, proszę wysłać e-mail&lt;cacheFromUrl &gt; do Chrisa. John w Noa.gov.
@@ -3384,7 +3386,7 @@ Dla każdego zbioru danych w ERDDAP™ , po wysłaniu wniosku do ERDDAP™ dla p
 
 * .insert
     * Żądanie jest sformatowane jak standardowa odpowiedź HTML, z kluczem = pary wartości, oddzielone przez '&'. Na przykład:
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 mówi ERDDAP™ dodać lub zmienić dane dla stationID = 46088 dla określonego czasu.
     * Autorem tej zmiany jest JohnSmith, a kluczem jest jakiś Key1.
     * URL musi zawierać prawidłowe wartości (nie brakujące wartości) dla wszystkich [ http GetRequiredZmienne](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ mówi ERDDAP™ dodać lub zmienić dane dla stationID = 46088 dla określonego 
              
     * .delete
         * Żądanie jest sformatowane jak standardowa odpowiedź HTML, z kluczem = pary wartości, oddzielone przez '&'. Na przykład:
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 mówi ERDDAP™ do usunięcia danych stationID = 46088 w określonym czasie.
         * Autorem tej zmiany jest JohnSmith, a kluczem jest jakiś Key1.
         * URL musi określić [ http GetRequiredZmienne](#httpgetrequiredvariables-global-attribute) we wniosku (np., stationID i czas) . Jeśli te wartości odpowiadają wartościom w wierszu już znajdującym się w zbiorze danych (które zwykle będą) , stare wartości są skutecznie usuwane (chociaż stare wartości są nadal dostępne, jeśli użytkownik żąda danych z poprzedniego [wersja](#versioning) zbioru danych) .
@@ -3667,7 +3669,7 @@ Nie każdy potrzebuje tego typu finezowanej wersji, ale jest to niezwykle przyda
     
 ##### Wstaw i usuń HTTPS{#https-put-and-delete} 
 *    ["A co z HTTPS PUT i DELETE?"](#https-put-and-delete)   
-     [Protokół przeniesienia hipertekstu (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) jest podstawą World Wide Web i powodem, dla którego strony internetowej adresy URL zaczynają się od "http://"albo "https://". HTTPS to HTTP z dodatkową warstwą bezpieczeństwa. Codziennie przeglądarki, skrypty i programy komputerowe tworzą miliardy HTTP (S)   **GET** wnioski o uzyskanie informacji z odległych źródeł. HTTP (S) obejmuje również inne [czasowniki](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , w szczególności PUT (aby wcisnąć dane do serwera) oraz DELETA (do DELETE dane z serwera) . Tak, PUT i DELETE są właściwym sposobem na wstawianie danych i usuwanie danych z zbioru danych poprzez HTTP (S) . GET jest obsługiwany przez każdy element oprogramowania, które może pracować z HTTP (S) . GET jest bardzo łatwy w pracy. Każdy wie już, jak pracować z GET i wielu wie, jak korzystać z POST (które mogą być stosowane zasadniczo w taki sam sposób jak GET) , więc zrobiliśmy EDDTableFromHttpGet pracy z GET i POST. Bardzo mało osób (nawet kilku programistów komputerowych) kiedykolwiek pracował z PUT i DELETE. PUT i DELETE są na ogół obsługiwane wyłącznie przez języki komputerowe, więc używanie ich wymaga programu umiejętności. Więc PUT i DELETE są zazwyczaj o wiele bardziej kłopotliwe podejście biorąc pod uwagę sposób, w jaki narzędzia ewoluowały.
+     [Protokół przeniesienia hipertekstu (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) jest podstawą World Wide Web i powodem, dla którego strony internetowej adresy URL zaczynają się od " http://" albo " https://" . HTTPS to HTTP z dodatkową warstwą bezpieczeństwa. Codziennie przeglądarki, skrypty i programy komputerowe tworzą miliardy HTTP (S)   **GET** wnioski o uzyskanie informacji z odległych źródeł. HTTP (S) obejmuje również inne [czasowniki](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , w szczególności PUT (aby wcisnąć dane do serwera) oraz DELETA (do DELETE dane z serwera) . Tak, PUT i DELETE są właściwym sposobem na wstawianie danych i usuwanie danych z zbioru danych poprzez HTTP (S) . GET jest obsługiwany przez każdy element oprogramowania, które może pracować z HTTP (S) . GET jest bardzo łatwy w pracy. Każdy wie już, jak pracować z GET i wielu wie, jak korzystać z POST (które mogą być stosowane zasadniczo w taki sam sposób jak GET) , więc zrobiliśmy EDDTableFromHttpGet pracy z GET i POST. Bardzo mało osób (nawet kilku programistów komputerowych) kiedykolwiek pracował z PUT i DELETE. PUT i DELETE są na ogół obsługiwane wyłącznie przez języki komputerowe, więc używanie ich wymaga programu umiejętności. Więc PUT i DELETE są zazwyczaj o wiele bardziej kłopotliwe podejście biorąc pod uwagę sposób, w jaki narzędzia ewoluowały.
      
 ##### HttpGet Notatki{#httpget-notes} 
 *    [Uwagi](#httpget-notes) 
@@ -3676,7 +3678,7 @@ Nie każdy potrzebuje tego typu finezowanej wersji, ale jest to niezwykle przyda
 ##### Dzięki.{#thanks} 
 *    [Dzięki CHORDS za podstawowy pomysł.](#thanks)   
 Podstawowy pomysł dla EDDTableFromHttpGet (np. przy użyciu HTTP GET wniosek o dodanie danych do zbioru danych) pochodzi z UCAR (NCAR?)   [Cloud- Hosted Real- time Data Services (CHORDY) ](https://github.com/earthcubeprojects-chords) projekt. Format parametrów we wniosku (powtarzany *nazwa = wartość* , oddzielone przez & 's) jest tym samym standardowym formatem, który jest używany przez formularze HTML na stronach internetowych. Jest to prosty i genialny pomysł, a nawet bardziej dlatego, że ma tak doskonale z ERDDAP istniejący system zajmowania się danymi tabelarycznymi. Pomysł jest oczywisty, ale... (Bob) Nie pomyślałem o tym. EDDTableFromHttp Skorzystaj z tego podstawowego pomysłu, w połączeniu z naszymi pomysłami jak go wdrożyć, aby system w ERDDAP™ do przesyłania danych. Poza podstawową ideą wykorzystania GET do wprowadzania danych do systemu, implementacja EDDTableFromHttpGet jest zupełnie inna i całkowicie niezależna od CHORDS i ma różne funkcje (np. logowanie plików, zbieranie danych, różne systemy bezpieczeństwa, obsługa CRUD, odtwarzalne dane) . Nasz kontakt z chordymi był tylko webinarem. Nie przyjrzeliśmy się ich kodom ani nie czytaliśmy o ich projekcie, ponieważ od razu wiedzieliśmy, że chcemy wdrożyć system w inny sposób. Ale jesteśmy im wdzięczni za podstawową ideę. Pełne odniesienie do CHORDS
-Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014) . Cloud- Hosted Real- time Usługi danych dla geonauki (CHORDY) oprogramowanie. Laboratorium Obserwacji Ziemi. [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014) . Cloud- Hosted Real- time Usługi danych dla geonauki (CHORDY) oprogramowanie. Laboratorium Obserwacji Ziemi. [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### Tabela EDDFrom Hyrax Pliki{#eddtablefromhyraxfiles} 
  [ **Tabela EDDFrom Hyrax Pliki** ](#eddtablefromhyraxfiles)   (depregated) pliki danych agregatów z kilkoma zmiennymi, z których każdy ma jeden lub więcej wspólnych wymiarów (na przykład, czas, wysokość (lub głębokość) , szerokość i długość geograficzna) , i służył przez [ Hyrax   OPeNDAP serwer](https://www.opendap.org/software/hyrax-data-server) .
@@ -3692,7 +3694,7 @@ W przypadku braku skarg przed 2020 r., ten typ zbioru danych może zostać usuni
 * Ta klasa scree- scrapes Hyrax strony internetowe z listami plików w każdym katalogu. Z tego powodu jest bardzo specyficzny dla obecnego formatu Hyrax stron internetowych. Spróbujemy się dostosować. ERDDAP™ szybko jeśli / kiedy przyszłe wersje Hyrax zmienić sposób wyświetlania plików.
 * W&lt;ustawienie fileDir &gt; jest ignorowane. Ponieważ ta klasa pobiera i robi lokalną kopię każdego pliku danych zdalnych, ERDDAP™ zmusza plik Reżyseria *bigParentDirectory* / kopiuj / * datasetID * /.
 * Dla&lt; sourceUrl &gt;, użyj URL katalogu bazowego zbioru danych w Hyrax na przykład serwer,
-    &lt; sourceUrl &gt;http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;/ sourceUrl &gt;
+    &lt; sourceUrl &gt; http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;/ sourceUrl &gt;
      (ale umieścić go na jednej linii)   (Przepraszam, ten serwer nie jest już dostępny.) .
 W sourceUrl strona internetowa zazwyczaj ma " OPeNDAP Indeks serwera \\[ DirectoryName \\] "na szczycie.
 * Ponieważ ta klasa zawsze pobiera i robi lokalną kopię każdego zdalnego pliku danych, nigdy nie należy zawijać tego zbioru danych w [EDDTableCopy](#eddtablecopy) .
@@ -3706,7 +3708,7 @@ Szczegóły: Pliki te mają wiele zmiennych wiersza\\ _ size, każdy z atrybutem
 
 Kolejny problem z tymi plikami: zmienna Direct\\ _ Investigator row\\ _ size nie ma atrybutu próbki\\ _ size i nie jest zgodna z powyższą regułą.
 
-Przykładowe pliki dla tego typu zbioru danych można znaleźć na stroniehttps://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020- 10- 21 Serwer ten nie jest już niezawodnie dostępny \\] .
+Przykładowe pliki dla tego typu zbioru danych można znaleźć na stronie https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020- 10- 21 Serwer ten nie jest już niezawodnie dostępny \\] .
 
 Widzisz tę klasę "superklasy", [Pliki EDDTableFromFiles](#eddtablefromfiles) , dla informacji o tym, jak ta klasa działa i jak jej używać.
 
@@ -3850,10 +3852,10 @@ Pierwszą rzeczą, którą GenerateDatasetsXml robi dla tego typu zbioru danych 
  [ **EDDTableFromNOS** ](#eddtablefromnos)   (ZANIECHANE) obsługuje dane z NOAA   [NOS](https://opendap.co-ops.nos.noaa.gov/axis/) źródło, które wykorzystuje [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) w przypadku wniosków i odpowiedzi. Jest to bardzo specyficzne dla NOAA XML NOS. Patrz: zestaw danych EDDTableFromNOS w datasets2.xml.
  
 ### EDDTableFromOBIS{#eddtablefromobis} 
- [ **EDDTableFromOBIS** ](#eddtablefromobis) obsługuje dane z Oceanicznego Systemu Informacji Biogeograficznej (OBIS) serwer (behttp://www.iobis.org ) . Możliwe, że nie ma już aktywnych serwerów, które używają tego typu serwera OBIS.
+ [ **EDDTableFromOBIS** ](#eddtablefromobis) obsługuje dane z Oceanicznego Systemu Informacji Biogeograficznej (OBIS) serwer (be http://www.iobis.org  ) . Możliwe, że nie ma już aktywnych serwerów, które używają tego typu serwera OBIS.
 
 * Serwery OBIS oczekują żądania XML i zwracają odpowiedź XML.
-* Ponieważ wszystkie serwery OBIS służą tym samym zmiennym w ten sam sposób (behttp://iobis.org/tech/provider/questions) , nie trzeba określić wiele, aby skonfigurować zestaw danych OBIS w ERDDAP .
+* Ponieważ wszystkie serwery OBIS służą tym samym zmiennym w ten sam sposób (be http://iobis.org/tech/provider/questions ) , nie trzeba określić wiele, aby skonfigurować zestaw danych OBIS w ERDDAP .
 * MUSI zawierać " creator\\_email "atrybut w świecie addAttributes , ponieważ informacje te są wykorzystywane w ramach licencji. Odpowiedni adres e-mail można znaleźć czytając odpowiedź XML z sourceURL.
 * Możesz lub nie być w stanie uzyskać atrybut globalny [&lt; subsetVariables &gt;] (# subsetvarels) do pracy z danym serwerem OBIS. Jeśli spróbujesz, spróbuj jednej zmiennej (na przykład, Nazwa naukowa lub genus) .
 #### EDDTableFromOBIS szkielet XML{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ Pierwszą rzeczą, którą GenerateDatasetsXml robi dla tego typu zbioru danych 
     * SWE (Enablement strony czujnika) oraz SOS   (Usługi obserwacji czujników) są [Standardy OpenGIS ®](https://www.ogc.org/standards) . Ta strona ma dokumenty standardów.
     * W OGC Web Services Common Specification ver 1.1.0 ( OGC 06- 121r3) obejmuje budowę zapytań GET i POST (Patrz punkt 7.2.3 i 9.) .
     * Jeśli wysłać getCapability xml żądanie do SOS serwer ( sourceUrl + "? service = SOS & żądanie = GetCapabilities ") , otrzymasz wynik xml z listą stacji i obserwowanych Właściwości, do których mają dane.
-    * ObservedProperty jest formalnym odniesieniem URI do nieruchomości. Na przykład, urn: ogc: fenomen: długość geograficzna: wgs84 lubhttps://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * ObservedProperty jest formalnym odniesieniem URI do nieruchomości. Na przykład, urn: ogc: fenomen: długość geograficzna: wgs84 lub https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * ObservedProperty nie jest zmienną.
-    * Więcej niż jedna zmienna może mieć ten sam obserwowany Własność (na przykład, insideTemp i na zewnątrz Temp mógł być obserwowany Własnośćhttps://mmisw.org/ont/cf/parameter/air\\_temperature) .
+    * Więcej niż jedna zmienna może mieć ten sam obserwowany Własność (na przykład, insideTemp i na zewnątrz Temp mógł być obserwowany Własność https://mmisw.org/ont/cf/parameter/air\\_temperature ) .
     * Jeśli wysyłasz żądanie getObservation xml do SOS serwer, otrzymasz wynik xml z opisami nazw pól w odpowiedzi, jednostek pola i danych. Nazwy pól obejmują długość, szerokość geograficzną, głębokość (być może) i czas.
     * Każdy dataVariable dla tabeli EDDFrom SOS musi zawierać atrybut "observedProperty", który identyfikuje zaobserwowaną Property, która musi być wymagana od serwera w celu uzyskania tej zmiennej. Często, kilka dataVariable s będzie wymieniał te same złożone obserwacje Property.
     * Data Typ dla każdego dataVariable nie może być określony przez serwer. Jeśli tak, należy spojrzeć na odpowiedzi danych XML z serwera i przypisać odpowiednie [&lt;dataType &gt; s] (# datatype) w ERDDAP™ zbiór danych dataVariable definicje.
@@ -3991,11 +3994,11 @@ W przypadku braku skarg przed 2020 r., ten typ zbioru danych może zostać usuni
 * Ta klasa czyta pliki katalog.xml obsługiwane przez THREDDS z listami&lt;KatalogRefs &gt; (odniesienia do dodatkowych podplików katalog.xml) oraz&lt;zbiór danych &gt; s (pliki danych) .
 * W&lt;ustawienie fileDir &gt; jest ignorowane. Ponieważ ta klasa pobiera i robi lokalną kopię każdego pliku danych zdalnych, ERDDAP™ zmusza plik Reżyseria *bigParentDirectory* / kopiuj / * datasetID * /.
 * Dla&lt; sourceUrl &gt;, użyj URL pliku katalog.xml dla zbioru danych na serwerze THREDDS, na przykład: dla tego URL, który może być używany w przeglądarce internetowej,
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020- 10- 21 Serwer ten nie jest już dostępny. \\] ,
-podanie&lt; sourceUrl &gt;https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;/ sourceUrl &gt;
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020- 10- 21 Serwer ten nie jest już dostępny. \\] ,
+podanie&lt; sourceUrl &gt; https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;/ sourceUrl &gt;
      (ale umieścić go na jednej linii) .
 * Ponieważ ta klasa zawsze pobiera i robi lokalną kopię każdego zdalnego pliku danych, nigdy nie należy zawijać tego zbioru danych w [EDDTableCopy](#eddtablecopy) .
-* Ten typ zbioru danych obsługuje optyczny, rareli- używany, specjalny znacznik,&lt;SpecialMode &gt; *tryb* &lt;/ specialMode &gt;, który może być użyty do określenia, że do określenia, które pliki powinny być pobierane z serwera, powinny być używane specjalne, zaszyfrowane zasady. Obecnie tylko ważne *tryb* jest SAMOS, który jest stosowany z zestawami danych zhttps://tds.coaps.fsu.edu/thredds/catalog/samosaby pobrać tylko pliki z ostatnim numerem wersji.
+* Ten typ zbioru danych obsługuje optyczny, rareli- używany, specjalny znacznik,&lt;SpecialMode &gt; *tryb* &lt;/ specialMode &gt;, który może być użyty do określenia, że do określenia, które pliki powinny być pobierane z serwera, powinny być używane specjalne, zaszyfrowane zasady. Obecnie tylko ważne *tryb* jest SAMOS, który jest stosowany z zestawami danych z https://tds.coaps.fsu.edu/thredds/catalog/samos aby pobrać tylko pliki z ostatnim numerem wersji.
 * Widzisz tę klasę "superklasy", [Pliki EDDTableFromFiles](#eddtablefromfiles) , dla informacji o tym, jak ta klasa działa i jak jej używać.
 * Zobacz przykłady 1D, 2D, 3D i 4D [Pliki EDDTableFromNc@@](#eddtablefromncfiles) .
      
@@ -4182,8 +4185,8 @@ Gdy serwer zakończy obsługę żądania, będzie sprawdzał, jak dawno temu ost
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-spowoduje dopasowanie lokalnych sourceUrl   (takie jakhttps://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-na rynek publiczny sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) .
+spowoduje dopasowanie lokalnych sourceUrl   (takie jak https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+na rynek publiczny sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) .
 Wszelkie zmiany wartości tego znacznika będą skuteczne następnym razem ERDDAP™ odczyt datasets.xml , w tym w odpowiedzi na zbiór danych [bandera](/docs/server-admin/additional-information#flag) .
 
 Ale ze względów bezpieczeństwa i związanych z systemem subskrypcji, **Nie używaj tej tagi&#33;**   
@@ -4314,7 +4317,7 @@ Użytkownicy są często po prostu nieświadomi, że ich wnioski są kłopotliwe
     ```
     * Nie musisz zaczynać od nowa. ERDDAP™ dla zmian&lt;requestBlacklist &gt; do wejścia w życie. Zmiany zostaną wykryte następnym razem ERDDAP™ sprawdza, czy jakiekolwiek zestawy danych muszą być ponownie załadowane. Lub, można przyspieszyć proces odwiedzając [setDataset URL flagi](/docs/server-admin/additional-information#set-dataset-flag) dla dowolnego zbioru danych.
     * Twój ERDDAP™ raport dzienny zawiera wykaz / zestawienie najbardziej aktywnych zgłoszeń dopuszczonych i zablokowanych.
-    * Jeśli chcesz dowiedzieć się, jaka domena / instytucja jest powiązana z numerycznym adresem IP, możesz użyć darmowej, odwrotnej usługi internetowej DNS jak [https://network-tools.com/](https://network-tools.com/) .
+    * Jeśli chcesz dowiedzieć się, jaka domena / instytucja jest powiązana z numerycznym adresem IP, możesz użyć darmowej, odwrotnej usługi internetowej DNS jak [ https://network-tools.com/ ](https://network-tools.com/) .
     * Mogą być czasy, kiedy sensowne jest blokowanie niektórych użytkowników na wyższym poziomie, na przykład złośliwych użytkowników. Na przykład, można zablokować ich dostęp do wszystkiego na serwerze, nie tylko ERDDAP . W Linuksie jedną z takich metod jest użycie [iptables](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) . Na przykład, można dodać regułę, która zablokuje wszystko pochodzące z 198.51.100.0 z polecenia
 iptables I INPUT -s 198.51.100.0 - j DROP
        
@@ -4738,17 +4741,17 @@ UWAGA: Jeśli dodasz niestandardowe palety do swojego ERDDAP™ i masz EDDGrid F
     * Obecnie EDDGrid podklasy, wszelkie zmiany metadanych lub zmiennej osiowej (Na przykład, nowy punkt czasowy dla danych w czasie bliskim-rzeczywistym) jest uważany za zmianę, ale przeładowanie zbioru danych nie jest uważane za zmianę (sam w sobie) .
     * Obecnie, dla podklas EDDTable, jakiekolwiek przeładowanie zbioru danych jest uważane za zmianę.
     * Obecnie dozwolone są tylko dwa rodzaje działań:
-        * "http://"albo "https://"-- Jeśli akcja zaczyna się od "http://"albo "https://", ERDDAP™ wyśle HTTP GET żądanie do określonego adresu URL. Odpowiedź zostanie zignorowana. Na przykład, URL może powiedzieć jakiejś innej usługi internetowej, aby coś zrobić.
+        * " http://" albo " https://" -- Jeśli akcja zaczyna się od " http://" albo " https://" , ERDDAP™ wyśle HTTP GET żądanie do określonego adresu URL. Odpowiedź zostanie zignorowana. Na przykład, URL może powiedzieć jakiejś innej usługi internetowej, aby coś zrobić.
             * Jeśli adres URL ma część zapytania (Po "?) To musi być już [% zakodowanych](https://en.wikipedia.org/wiki/Percent-encoding) . Musisz zakodować specjalne znaki w ograniczeniach (inne niż początkowe '&' i główne '=' w ograniczeniach) w postaci% HH, gdzie HH jest dwucyfrową wartością szesnastkową znaku. Zazwyczaj trzeba zamienić kilka znaków interpunkcji:% na% 25, & na% 26 ", na% 22,&lt;% 3C, =% 3D, &gt;% 3E, +% 2B, | w% 7C, \\[ w% 5B, \\] do% 5D, spacja do% 20 i konwertuj wszystkie znaki powyżej # 127 na ich formę UTF- 8, a następnie procent kodowania każdego bajtu formy UTF- 8 do formatu% HH (poproś programistę o pomoc) .
 Na przykład, & stationID &gt; = "41004"
 staje się & stationID % 3E =% 2241004% 22
 Procent kodowania jest na ogół wymagany przy dostępie ERDDAP za pomocą oprogramowania innego niż przeglądarka. Przeglądarki zwykle zajmują się procentowym kodowaniem.
 W niektórych sytuacjach, trzeba procent kodowania wszystkich znaków innych niż A- Za- z0- 9\\ _ -&#33;. ~ ' () \\ *, ale nadal nie koduj inicjału '&' lub głównego '=' w ograniczeniach.
-Języki programowania mają do tego narzędzia (na przykład patrz Java jest [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) oraz Java Skrypt [encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) i są
+Języki programowania mają do tego narzędzia (na przykład patrz Java jest [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) oraz Java Skrypt [encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) i są
                  [strony internetowe, które procent kodowania / dekodowania dla Ciebie](https://www.url-encode-decode.com/) .
             * Od datasets.xml jest plikiem XML, należy również & -encode ALL '&',&lt;", i" &gt; "w URL jako" & amp; ",&lt;', i' & gt; 'po procentach kodowania.
             * Przykład: Dla URL, który można wpisać do przeglądarki jako:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 Należy określić&lt;onChange &gt; tag poprzez (na jednej linii) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ Może to również wpływać na sortowanie krótkich słów i dłuższych słów
     * A sourceUrl może rozpocząć się od http:// , https:// , ftp: / / i być może inne przedrostki. https połączenia odczytują i sprawdzają cyfrowy certyfikat źródła, aby upewnić się, że źródło jest tym, za kogo się podaje. W rzadkich przypadkach kontrola ta może się nie udać z błędem "javax.net.ssl.SSLProtocolution Exception: handshake alert: unfasted\\ _ name". Jest to prawdopodobnie spowodowane nazwą domeny na certyfikacie, która nie pasuje do nazwy domeny, której używasz. Można i należy przeczytać szczegóły sourceUrl Certyfikat w przeglądarce internetowej, w szczególności lista "DNS Name" s w sekcji "Temat Nazwa alternatywna".
         
 W niektórych przypadkach sourceUrl używasz może być aliasem nazwy domeny na certyfikacie. Na przykład:
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/będzie rzucać ten błąd, ale
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/, który używa nazwy domeny na certyfikacie, nie będzie. Rozwiązaniem w tych przypadkach jest zatem znalezienie i użycie nazwy domeny na świadectwie. Jeśli nie możesz go znaleźć na certyfikacie, skontaktuj się z dostawcą danych.
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ będzie rzucać ten błąd, ale
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ , który używa nazwy domeny na certyfikacie, nie będzie. Rozwiązaniem w tych przypadkach jest zatem znalezienie i użycie nazwy domeny na świadectwie. Jeśli nie możesz go znaleźć na certyfikacie, skontaktuj się z dostawcą danych.
         
 W innych przypadkach nazwa domeny na świadectwie może dotyczyć grupy nazw. Jeśli tak się stanie lub problem jest inaczej nie do rozwiązania, proszę wysłać e-mail do Chrisa. John w Noa.gov zgłosić problem.
          
@@ -5221,7 +5224,7 @@ staje się & stationID % 3E =% 2241004% 22
 Procent kodowania jest na ogół wymagany przy dostępie ERDDAP za pomocą oprogramowania innego niż przeglądarka. Przeglądarki zwykle zajmują się procentowym kodowaniem.
 W niektórych sytuacjach, trzeba procent kodowania wszystkich znaków innych niż A- Za- z0- 9\\ _ -&#33;. ~ ' () \\ *, ale nadal nie koduj inicjału '&' lub głównego '=' .
 Języki programowania mają do tego narzędzia (na przykład patrz Java jest [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-oraz Java Skrypt [encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) i są
+oraz Java Skrypt [encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) i są
          [strony internetowe, które procent kodowania / dekodowania dla Ciebie](https://www.url-encode-decode.com/) .
     * Od datasets.xml jest plikiem XML, należy również & -encode ALL '&',&lt;", i" &gt; "w URL jako" & amp; ",&lt;', i' & gt; 'po procentach kodowania.
     *    infoUrl jest unikalny dla ERDDAP . Nie pochodzi z żadnego standardu metadanych.
@@ -5257,7 +5260,28 @@ Kiedy zestaw danych jest załadowany ERDDAP ,
     ```
     * Jeśli " \\[ standard \\] "występuje w wartości atrybutu, zostanie zastąpiony przez standard ERDDAP™ licencji&lt;StandardLicence &gt; tag in ERDDAP jest
          \\[ tomcat \\] / webapps / erddap / WEB- INF / classes / gov / noaa / pfel / erddap / util / messages.xml file.
-         
+
+###### klasyfikacja{#classification} 
+*    [ **klasyfikacja** ](#classification) poziom klasyfikacji danych.
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * Dopuszczalne wartości to _ niesklasyfikowany _, _ poufny _, _ zastrzeżony _, _ tajny _ lub _ top _ tajny _.
+
+###### Temat _ kategoria{#topic_category} 
+*    [ **Temat _ kategoria** ](#topic_category) Wysokopoziomowa klasyfikacja tematyczna danych geograficznych w celu wsparcia grupowania i wyszukiwania dostępnych zbiorów danych geograficznych.
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * Wartości dopuszczalne to: _ biota _, _ borders _, _ climatology _ meteorology _ atomosphere _, _ economy _, _ elevation _, _ environment _, _ agriculture _, _ geoscientific _ information _, _ health _, _ imagery _ base _ maps _ earth _ cover _, _ inland _ waters _, _ intelligence _ military _, _ location _, _ oceans _, _ planning _ katastre _, _ society _, _ structure _, _ transportation _, _ utlities _ communication _.
+
+###### _ częstotliwość konserwacji{#maintenance_frequency} 
+*    [ **_ częstotliwość konserwacji** ](#maintenance_frequency) Częstotliwość dokonywania modyfikacji i usuwania danych po ich pierwszym opracowaniu.
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * Wartości akceptowalne to wartości akceptowalne: _ coroczne _, _ as _ need _, _ biyear _, _ continual _, _ daily _, _ esterly _, _ monthly _, _ not _ planted _, _ quarternal _, _ unknown _, _ weekly _.
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) pochodzi z przestarzałych [ACDD 1, 0](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (które zidentyfikowano w Metadata\\_Conventions jako " Unidata Dataset Discovery v1.0 ") standard metadanych. Wartość atrybutu była oddzieloną od comma- list konwencji metadanych używanych w tym zbiorze danych.
 Jeśli zbiór danych używa ACDD 1.0, atrybut ten jest ZALECANY, na przykład,
@@ -5389,7 +5413,7 @@ Jeśli indeks&lt;1, zbiór danych jest uważany za up- to- date.
 Jeśli indeks&lt;= 1, zbiór danych jest uważany za niedostępny.
 Jeśli indeks&lt;= 2, zbiór danych jest uważany za bardzo przestarzały.
     
-W testOutOfDate wartość jest również używana przez ERDDAP™ do generowaniahttps://*yourDomain*/erddap/outOfDateDatasets.htmlstrona internetowa ( [przykład](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) który pokazuje zbiory danych, które mają&lt; testOutOfDate &gt; tagi, z zestawami danych w rankingu według tego, jak są nieaktualne. Jeśli zmienisz typ pliku (od .html do .csv, .jsonlCSV , .nc , .tsv ...) , można uzyskać te informacje w różnych formatach plików.
+W testOutOfDate wartość jest również używana przez ERDDAP™ do generowania https://*yourDomain*/erddap/outOfDateDatasets.html strona internetowa ( [przykład](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) który pokazuje zbiory danych, które mają&lt; testOutOfDate &gt; tagi, z zestawami danych w rankingu według tego, jak są nieaktualne. Jeśli zmienisz typ pliku (od .html do .csv, .jsonlCSV , .nc , .tsv ...) , można uzyskać te informacje w różnych formatach plików.
     
 Jeśli to możliwe, [GenerateDatasetsXml](#generatedatasetsxml) dodaje testOutOfDate atrybut globalny addAttributes zestawu danych. Wartość ta jest sugestią opartą na informacjach dostępnych GenerateDatasetsXml. Jeśli wartość nie jest odpowiednia, zmień ją.
     
@@ -5948,8 +5972,8 @@ unpackedValue = spakowany Wartość\\ * scale\\_factor + add\\_offset
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone jest atrybutem optycznym używanym przez ERDDAP™   (i brak standardów metadanych) zamiast [Zmienne czasu i znacznika czasu](#time-units) , które mogą być ujęte w zbiornikach danych lub zestawach danych tabelarycznych.
     * Domyślnie jest " Zulu " (która jest nowoczesną wersją strefy czasowej GMT) .
-    * Informacje ogólne: "przesunięcia czasowe" (np., Pacific Standard Time, -08: 00, GMT- 8) są stałe, specyficzne, offsety względem Zulu   (GMT) . Natomiast "strefy czasowe" to o wiele bardziej skomplikowane rzeczy, na które wpływa oszczędzanie światła dziennego (np. "US / Pacific") , które miały różne zasady w różnych miejscach w różnych czasach. Strefy czasowe zawsze mają nazwy, ponieważ nie mogą być podsumowane przez prostą wartość offsetową (patrz kolumna "Nazwy baz danych TZ" w tabeli [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP jest time\\_zone atrybut pomaga uporać się z danymi czasu lokalnego z jakiejś strefy czasowej (np. 1987- 03- 25T17: 32: 05 Pacyfik Czas) . Jeśli posiadasz dane z łańcuchem lub liczbami (stałe) przesunięcie czasu, należy po prostu dostosować dane do Zulu   (co jest co ERDDAP™ chce) poprzez określenie innego czasu bazowego w atrybucie jednostek (np. "godziny od 1970- 01-01T08: 00: 00Z", zauważyć T08, aby określić przesunięcie czasu) i zawsze sprawdzaj wyniki, aby zapewnić uzyskanie wyników, które chcesz.
-    * Dla zmiennych timestamp z danymi źródłowymi ze Strings atrybut ten pozwala określić strefę czasową, która prowadzi ERDDAP™ aby przekonwertować czas-strefa źródłowa (niektóre w czasie standardowym, niektóre w czasie dziennym) do Zulu razy (które są zawsze w czasie standardowym) . Lista ważnych nazw stref czasowych jest prawdopodobnie identyczna z listą w kolumnie TZ [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Wspólne strefy czasowe USA to: US / Hawaje, US / Alaska, US / Pacific, US / Mountain, US / Arizona, US / Central, US / Eastern.
+    * Informacje ogólne: "przesunięcia czasowe" (np., Pacific Standard Time, -08: 00, GMT- 8) są stałe, specyficzne, offsety względem Zulu   (GMT) . Natomiast "strefy czasowe" to o wiele bardziej skomplikowane rzeczy, na które wpływa oszczędzanie światła dziennego (np. "US / Pacific") , które miały różne zasady w różnych miejscach w różnych czasach. Strefy czasowe zawsze mają nazwy, ponieważ nie mogą być podsumowane przez prostą wartość offsetową (patrz kolumna "Nazwy baz danych TZ" w tabeli [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP jest time\\_zone atrybut pomaga uporać się z danymi czasu lokalnego z jakiejś strefy czasowej (np. 1987- 03- 25T17: 32: 05 Pacyfik Czas) . Jeśli posiadasz dane z łańcuchem lub liczbami (stałe) przesunięcie czasu, należy po prostu dostosować dane do Zulu   (co jest co ERDDAP™ chce) poprzez określenie innego czasu bazowego w atrybucie jednostek (np. "godziny od 1970- 01-01T08: 00: 00Z", zauważyć T08, aby określić przesunięcie czasu) i zawsze sprawdzaj wyniki, aby zapewnić uzyskanie wyników, które chcesz.
+    * Dla zmiennych timestamp z danymi źródłowymi ze Strings atrybut ten pozwala określić strefę czasową, która prowadzi ERDDAP™ aby przekonwertować czas-strefa źródłowa (niektóre w czasie standardowym, niektóre w czasie dziennym) do Zulu razy (które są zawsze w czasie standardowym) . Lista ważnych nazw stref czasowych jest prawdopodobnie identyczna z listą w kolumnie TZ [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Wspólne strefy czasowe USA to: US / Hawaje, US / Alaska, US / Pacific, US / Mountain, US / Arizona, US / Central, US / Eastern.
     * Dla zmiennych timestamp z numerycznymi danymi źródłowymi można określić " time\\_zone "atrybut, ale wartość musi być" Zulu "lub" UTC ". Jeśli potrzebujesz wsparcia dla innych stref czasowych, proszę wysłać e-mail do Chrisa. John w Noa.gov.
          
 ###### legacy _ time _ adjuste{#legacy_time_adjust} 

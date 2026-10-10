@@ -42,7 +42,7 @@ sidebar_position: 3
 从外部来源提交实际数据文件是一个巨大的安全风险,所以 ERDDAP™ 不处理这一点。 您必须想出一个对您和数据提供者有效的解决方案, 例如电子邮件 (用于小文件) 从云中拉出 (例如, DropBox 或 Google 驱动器) ,一个 sftp 站点 (带有密码) ,或运动鞋 净额 (USB 拇指驱动器或外部硬盘) 。 。 。 你也许应该只接受你认识的人的文件 您需要扫描病毒的文件,并采取其它安全防范措施。
 
 没有联系 ERDDAP™ 到数据提供者表格 (例如,关于 ERDDAP™ 主页) 。 。 。 相反,当有人告诉你,他们希望 他们的数据服务于你 ERDDAP 你可以发电子邮件给他们说:
-是的,我们可以把数据输入 ERDDAP 。 。 。 要开始,请填写表格https://*yourUrl*/erddap/dataProviderForm.html  (或 http:// 若为 https:// 未启用) 。 。 。 。
+是的,我们可以把数据输入 ERDDAP 。 。 。 要开始,请填写表格 https://*yourUrl*/erddap/dataProviderForm.html   (或 http:// 若为 https:// 未启用) 。 。 。 。
 完事后 我会联系你 确定最后的细节
 如果你只是想看看表格的话 (没有填满它) ,可见表格上 ERD 因为 ERDDAP 数字 : [导言](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) , (中文). [第一编](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) , (中文). [第2编](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) , (中文). [第三编](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) ,以及 [第四编](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) 。 。 。 。 这些链接在 ERD   ERDDAP™ 所以不要跟他们提交信息 除非你真的想把数据添加到 ERD   ERDDAP 。 。 。 。
 
@@ -190,23 +190,23 @@ GenerateDatasetsXml的输出是一个粗略的草稿.
      
 #####  EDDGrid 从 ThreddsCatalog 调用{#eddgridfromthreddscatalog} 
 此 EDDType 生成所有 datasets.xml 全部所需块数 [ EDDGrid 从 Dap 中](#eddgridfromdap) 通过THREDDS递归爬行可以找到的数据集 (次级) 目录. THREDDS目录URL有很多形式. 此选项需要带有/ catalog/ 的 THREDDS .xml URL, 例如 ,
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml或
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml 或
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (一个相关的.html目录在
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html,则不能接受 EDDGrid From ThreddsCatalog) (英语).
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html ,则不能接受 EDDGrid From ThreddsCatalog) (英语).
 如果你有问题 EDDGrid 从垃圾 目录 :
 * 确定您使用的 URL 是有效的, 包括 / catalog/, 并以 / catalog. xml 结尾 。
-* 如果可能,请使用公共IP地址 (比如说,https://oceanwatch.pfeg.noaa.gov) 在 URL 中,不是本地数字 IP 地址 (比如说,https://12.34.56.78) 。 。 。 如果 THREDDS 只能通过本地数字 IP 地址访问, 您可以使用 [&lt;转换为 PublicSourceUrl &gt;] (#转换为公共源代码) 这样 ERDDAP™ 用户可以看到公共地址, 尽管 ERDDAP™ 从本地数字地址获取数据。
+* 如果可能,请使用公共IP地址 (比如说, https://oceanwatch.pfeg.noaa.gov ) 在 URL 中,不是本地数字 IP 地址 (比如说, https://12.34.56.78 ) 。 。 。 如果 THREDDS 只能通过本地数字 IP 地址访问, 您可以使用 [&lt;转换为 PublicSourceUrl &gt;] (#转换为公共源代码) 这样 ERDDAP™ 用户可以看到公共地址, 尽管 ERDDAP™ 从本地数字地址获取数据。
 * 如果你有无法解决的问题 [检查故障排除提示](#troubleshooting-tips) 。 。 。 。
 * 低级代码现在使用 Unidata netcdf-java 目录爬行器代码 (鞭打声 分类类) 这样它就能处理所有 THREDDS 目录 (非常复杂) 感谢 Unidata 密码
          
 #####  EDDGrid LonPM180 从ErddapCatalog 读取{#eddgridlonpm180fromerddapcatalog} 
 这个 EDDType 生成 datasets.xml 准备 [ EDDGrid 龙PM180](#eddgridlonpm180) 来自所有 EDDGrid 数据集在一个 ERDDAP 其经度值大于180。
-* 如果可能,请使用公共IP地址 (比如说,https://oceanwatch.pfeg.noaa.gov) 在 URL 中,不是本地数字 IP 地址 (比如说,https://12.34.56.78) 。 。 。 。 如果 ERDDAP™ 只能通过本地数字 IP 地址访问, 您可以使用 [&lt;转换为 PublicSourceUrl &gt;] (#转换为公共源代码) 这样 ERDDAP™ 用户可以看到公共地址, 尽管 ERDDAP™ 从本地数字地址获取数据。
+* 如果可能,请使用公共IP地址 (比如说, https://oceanwatch.pfeg.noaa.gov ) 在 URL 中,不是本地数字 IP 地址 (比如说, https://12.34.56.78 ) 。 。 。 。 如果 ERDDAP™ 只能通过本地数字 IP 地址访问, 您可以使用 [&lt;转换为 PublicSourceUrl &gt;] (#转换为公共源代码) 这样 ERDDAP™ 用户可以看到公共地址, 尽管 ERDDAP™ 从本地数字地址获取数据。
          
 #####  EDDGrid Lon0360 来自 ErddapCatalog{#eddgridlon0360fromerddapcatalog} 
 这个 EDDType 生成 datasets.xml 准备 [ EDDGrid 龙0360](#eddgridlon0360) 来自所有 EDDGrid 数据集在一个 ERDDAP 的经度值小于 0。
-* 如果可能,请使用公共IP地址 (比如说,https://oceanwatch.pfeg.noaa.gov) 在 URL 中,不是本地数字 IP 地址 (比如说,https://12.34.56.78) 。 。 。 。 如果 ERDDAP™ 只能通过本地数字 IP 地址访问, 您可以使用 [&lt;转换为 PublicSourceUrl &gt;] (#转换为公共源代码) 这样 ERDDAP™ 用户可以看到公共地址, 尽管 ERDDAP™ 从本地数字地址获取数据。
+* 如果可能,请使用公共IP地址 (比如说, https://oceanwatch.pfeg.noaa.gov ) 在 URL 中,不是本地数字 IP 地址 (比如说, https://12.34.56.78 ) 。 。 。 。 如果 ERDDAP™ 只能通过本地数字 IP 地址访问, 您可以使用 [&lt;转换为 PublicSourceUrl &gt;] (#转换为公共源代码) 这样 ERDDAP™ 用户可以看到公共地址, 尽管 ERDDAP™ 从本地数字地址获取数据。
          
 ##### 文档中的 EDDs{#eddsfromfiles} 
 设定一个启动目录, 将目录和所有子目录翻转, 并尝试为它找到的每组数据文件创建一个数据集 。
@@ -566,7 +566,7 @@ NCCSV 1.0文件不支持任何未签名的整数数据类型.
 ### 数据类型注释{#data-type-comments} 
 * 由于许多文件类型对长、乌龙和字符数据的支持不足,我们劝阻使用这些数据类型。 ERDDAP 。 。 。 可能时,使用双倍代替长和乌龙,使用字符串代替字符串.
      
-* 元数据 - 因为(OPeN)DAP'.das和.dds的响应不支持长或乌龙属性或数据类型 (并显示他们为双人) ,您可能想要使用 ERDDAP 表格中元数据的表述情况,见 http .../erddap/ (英语). **信息** 页:1 * datasetID * .html网页 (比如说, [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (也可以在其它文件类型中获取,例如.csv, .htmlTable , (中文). .itx , (中文). .json , (中文). .jsonlCSV1 , (中文). .jsonlCSV , (中文). .jsonlKVP , (中文). .mat , (中文). .nc , (中文). .nccsv , (中文). .tsv , (中文). .xhtml ) 或 .nccsv 元数据响应 (比如说, [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) 虽然 .nccsv 元数据只可用于表格数据集) ,两者都支持所有数据类型 (特别是,长,乌龙,和Char) 。 。 。 。
+* 元数据 - 因为(OPeN)DAP'.das和.dds的响应不支持长或乌龙属性或数据类型 (并显示他们为双人) ,您可能想要使用 ERDDAP 表格中元数据的表述情况,见 http .../erddap/ (英语). **信息** 页:1 * datasetID * .html网页 (比如说, [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (也可以在其它文件类型中获取,例如.csv, .htmlTable , (中文). .itx , (中文). .json , (中文). .jsonlCSV1 , (中文). .jsonlCSV , (中文). .jsonlKVP , (中文). .mat , (中文). .nc , (中文). .nccsv , (中文). .tsv , (中文). .xhtml ) 或 .nccsv 元数据响应 (比如说, [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) 虽然 .nccsv 元数据只可用于表格数据集) ,两者都支持所有数据类型 (特别是,长,乌龙,和Char) 。 。 。 。
          
 ### 媒体文件{#media-files} 
 并非所有数据都是数字或文本的数组。 一些数据集包括或包含媒体文件,如图像,音频和视频文件. ERDDAP™ 有一些特殊功能,使用户更容易访问媒体文件. 这是两个步骤:
@@ -604,7 +604,7 @@ NCCSV 1.0文件不支持任何未签名的整数数据类型.
 ### 使用 AWS S3 文件工作{#working-with-aws-s3-files} 
  [亚马逊网络服务 (自动取款机) ](https://aws.amazon.com) 卖方 [云计算](https://en.wikipedia.org/wiki/Cloud_computing) 服务。 [第3节](https://aws.amazon.com/s3/) 是一个由 AWS 提供的对象存储系统。 而不是传统文件系统的目录和文件的分级系统 (就像电脑里的硬盘) , S3 提供的只是 "buckets" 持有"对象" (我们打给他们 "files" ) 。 。 。 。
 
-对于 ASCII 文件 (例如,.csv) , (中文). ERDDAP™ 可直接与桶中的文件一起工作。 你只需要说明&lt;使用 AWS 桶特定格式的数据集文件Dir&gt;,例如,https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/。 。 。 。 你不应该用&lt;缓存从Url &gt; 。 详情见下文。
+对于 ASCII 文件 (例如,.csv) , (中文). ERDDAP™ 可直接与桶中的文件一起工作。 你只需要说明&lt;使用 AWS 桶特定格式的数据集文件Dir&gt;,例如, https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ 。 。 。 。 你不应该用&lt;缓存从Url &gt; 。 详情见下文。
 
 但对于二进制文件 (例如, .nc , .grib, .bufr, 和 .hdf 文件) 时,您需要使用&lt;缓存FromUrl&gt; 系统描述如下. ERDDAP ,网易新闻 (哪个 ERDDAP™ 用于从这些文件读取数据) ,而其他科学数据软件则旨在与传统文件系统中提供的文件合作。 [块级](https://en.wikipedia.org/wiki/Block-level_storage) 访问文件 (它允许读取文件块) ,但S3只提供 [文件级别 (对象) ](https://en.wikipedia.org/wiki/Block-level_storage) 访问文件 (它只允许读取整个文件) 。 。 。 AWS提供了S3的替代品, [弹性块存储器 (统计局) ](https://aws.amazon.com/ebs/) ),它支持块级访问文件,但比S3更昂贵,因此很少用于大量数据文件的批量存储. (所以当人们说在云中存储数据 (第3节) 价格低廉 通常是苹果和橙子的比较) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 该对象的相应 URl 是
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 AWS 支持该 URL 构建方式的微小变化, 但是 ERDDAP™ 需要这个特定格式:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 截止 ERDDAP v2.29,现在可以使用 `第3条` URI 格式代替桶 URL 。 此格式用于 [AWS s 3 cli (英语).](https://docs.aws.amazon.com/cli/latest/reference/s3/) 。 。 。 。
 第3条 *桶Name* 页:1 *键* 
@@ -697,22 +697,22 @@ ABI-Lib.2018.052.22.OR\\_ABI-L1b-RadM2-M3C10\\_G16\\_s20180522247575),后改编.
 在所有情况下,都需要一个 AWS 账户,因为 AWS SDK 用于 Java   (哪个 ERDDAP™ 用于获取有关桶内内容的信息) 需要 AWS 账户证书。 (更多关于这一点,下面) 
 
  ERDDAP™ 只能访问 AWS S3 桶,前提是您指定 [&lt;缓存从Url&gt;] (&#123;\fn方正粗倩简体\fs12\\an8\\1cHFFFF00\b0&#125;我的宝贝) (或&lt;以特定格式:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 地点
 
 * 桶名(英語:bandle)是桶名的简称,例如noaa-goes17.
 * Aws-region,例如我们东一号,来自其中一张表格中的"Region"一栏. [AWS 服务端点](https://docs.aws.amazon.com/general/latest/gr/rande.html) 水桶实际位于何处.
 * 前缀可选. 如果存在,它必须结束于 '/' 。 。 。 。
 
-举例来说,https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+举例来说, https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 此 URL 格式是 AWS S3 建议之一 : [正在访问 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) 和 [此前缀描述](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) 。 。 。 。 ERDDAP™ 要求您将桶 URL 和可选的前缀合并为一个 URL ,以便指定&lt;从Url处缓存 &gt; (或&lt;文件所在位置。
 
 #### 测试公用 AWS S3 桶{#test-public-aws-s3-buckets} 
 对于公共桶,您可以也应该在浏览器中测试 AWS S3 目录的桶 URL,例如,
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) 如果桶 URL 正确且适合 ERDDAP ,它将返回 XML 文档,该文档已经 (部分) 列出该桶的内容。 不幸的是,整个URL (即桶 URL 加上前缀) 那个 ERDDAP™ 想要给定的数据集不能在浏览器中工作 。 AWS 不提供系统可以轻松浏览浏览浏览器中的桶的等级. (如果这不正确,请发电子邮件给克里斯。 约翰在Noaa.gov。 否则,亚马逊,请增加支持&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) 如果桶 URL 正确且适合 ERDDAP ,它将返回 XML 文档,该文档已经 (部分) 列出该桶的内容。 不幸的是,整个URL (即桶 URL 加上前缀) 那个 ERDDAP™ 想要给定的数据集不能在浏览器中工作 。 AWS 不提供系统可以轻松浏览浏览浏览器中的桶的等级. (如果这不正确,请发电子邮件给克里斯。 约翰在Noaa.gov。 否则,亚马逊,请增加支持&#33;) 
 
 #### 查看密钥的内容{#viewing-the-contents-of-a-bucket} 
-S3桶经常包含几类文件,在几个伪副目录中,这可能成为几类文件. ERDDAP™ 数据集。 来做 ERDDAP™ 数据集,您需要知道起始目录&lt;从Url处缓存 &gt; (或&lt;fileDir&gt;)和识别该子集文件的文件名称格式。 如果尝试在浏览器中查看一个桶的全部内容,S3将只显示前1000个文件,这是不够的. 目前,你查看水桶所有内容的最好方式是制作一个 [来自文件名的 EDD 表格](#eddtablefromfilenames) 数据集 (在你的电脑上 ERDDAP™ 和/或公众 ERDDAP ) ,这也为您提供了浏览目录结构和下载文件的简单方法。 那个&lt;fileDir&gt; 对于此操作,将是您在上面绘制的 URL, 例如 。https://noaa-goes17.s3.us-east-1.amazonaws.com。 。 。 。 \\[ 为什么AWS S3不为任何人提供一个没有AWS账户的快速而简单的方法? \\] 请注意 当我在非亚马逊网络的PC上做这个时 亚马逊似乎减缓了对微风的反应 (约100人 (? 。 。 。) 每个块的文件) 前几块之后 (每块1,000个文件) 正在下载。 因为桶里可能有很多文件 (Noaa-goes17有2 600万) ,获取一个桶的所有内容可能会从文件名中提取 EDDTable 数小时 (例如,12岁&#33;) 结束。 \\[ 亚马逊,是吗? \\] 
+S3桶经常包含几类文件,在几个伪副目录中,这可能成为几类文件. ERDDAP™ 数据集。 来做 ERDDAP™ 数据集,您需要知道起始目录&lt;从Url处缓存 &gt; (或&lt;fileDir&gt;)和识别该子集文件的文件名称格式。 如果尝试在浏览器中查看一个桶的全部内容,S3将只显示前1000个文件,这是不够的. 目前,你查看水桶所有内容的最好方式是制作一个 [来自文件名的 EDD 表格](#eddtablefromfilenames) 数据集 (在你的电脑上 ERDDAP™ 和/或公众 ERDDAP ) ,这也为您提供了浏览目录结构和下载文件的简单方法。 那个&lt;fileDir&gt; 对于此操作,将是您在上面绘制的 URL, 例如 。 https://noaa-goes17.s3.us-east-1.amazonaws.com 。 。 。 。 \\[ 为什么AWS S3不为任何人提供一个没有AWS账户的快速而简单的方法? \\] 请注意 当我在非亚马逊网络的PC上做这个时 亚马逊似乎减缓了对微风的反应 (约100人 (? 。 。 。) 每个块的文件) 前几块之后 (每块1,000个文件) 正在下载。 因为桶里可能有很多文件 (Noaa-goes17有2 600万) ,获取一个桶的所有内容可能会从文件名中提取 EDDTable 数小时 (例如,12岁&#33;) 结束。 \\[ 亚马逊,是吗? \\] 
 
 #### 制作 EDD 表格 从带有 AWS S3 弹匣的文件名数据集{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 如果您有桶名, 但请不要在 S3 桶或前缀中列出文件列表, 以识别桶中相关文件的位置, 请使用下面的指令来制作 EDDTable FromFileNames 数据集, 这样您就可以浏览 S3 桶的目录等级 。 ERDDAP 因为 "files" 系统。
@@ -727,22 +727,24 @@ java.lang (法语). 非法参数例外: 配置文件不能为无效错误 ERDDAP
 Linux 和 Mac OS 的提示: 证书文件必须位于运行 Tomcat 的用户的主目录中 (和 ERDDAP )   (对于此段落,我们假设用户=tomcat) 在名为~/.aws/证书的文件中。 不要假设~是/home/tomcat——实际上用cd~来找出操作系统认为~是给用户=tomcat的. 如果目录不存在, 则创建目录 。 另外,在您将证书文件设置好后,请确保文件的用户和组是tomcat,然后使用chmod 400证书,确保文件只读用户=tomcat.
     
 3. 创建桶 URL [格式为 ERDDAP™ 要求](#accessing-files-in-an-aws-s3-bucket) 例如,
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) ,以及 (公共水桶) 在浏览器中测试它,以确保它返回 XML 文档,该文档部分列出该桶的内容。
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) ,以及 (公共水桶) 在浏览器中测试它,以确保它返回 XML 文档,该文档部分列出该桶的内容。
      
 4. 使用 [生成 DatasetsXml](#generatedatasetsxml) 创建一个 [来自文件名的 EDD 表格](#eddtablefromfilenames) 数据集 :
     * 对于起始目录,请使用此语法:
         \\*\\*&#123;\fn黑体\fs22\bord1\\shad0\\3aHBE\\4aH00\fscx67\fscy66\\2cHFFFFFF\\3cH808080&#125;你觉得呢? *从飞行,* 你的小宝贝
 比如说,
-        \\*\\*从飞行,https://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\*从飞行, https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * 文件名Regex吗? ._____________________________________________
     * 递归? 真实
     * 重新装入 每一个NMinute? 10080 (英语).
-    *    infoUrl ? 。 。 。https://registry.opendata.aws/noaa-goes/
+    *    infoUrl ? 。 。 。 https://registry.opendata.aws/noaa-goes/
+ 
     * 机构? NOAA 
     * 总结? 无 ( ERDDAP™ 将自动创建一个像样的摘要。) 
     * 标题 ? 无 ( ERDDAP™ 将自动创建像样的标题。) 和往常一样,您应该编辑产生的XML,以验证正确性,并在使用它的数据集块之前作出改进 datasets.xml 。 。 。 。
 5. 如果您遵循上面的指令并加载数据集 ERDDAP ,您创建了 EDD Table fromFiles 数据集。 例如,为了方便任何人浏览和下载 AWS 开放数据桶中的文件,我们创建了 EDDTable FromFileNames 数据集(见列表 at
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) 对于几乎所有 [AWS S3 打开数据桶](https://registry.opendata.aws/) 。 。 。 。
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) 对于几乎所有 [AWS S3 打开数据桶](https://registry.opendata.aws/) 。 。 。 。
      \\[ 我们没有加入的几个桶 也有很多文件在根目录里 (无法在合理时间内下载) ,或者不允许公众访问 (难道他们都不应该公开吗?) 或请求者支付桶 (例如,哨兵) 。 。 。 。 \\]   
 如果点击 "files" 链接中,您可以浏览S3桶中的目录树和文件。 因为路\\*\\*来自On The Fly EDD Table FromFiles作品的这些目录列表总是完美地更新,因为 ERDDAP™ 让他们飞起来。 如果您点击目录树到一个实际文件名并点击文件名, ERDDAP™ 将会将您的请求重定向到 AWS S3,这样您就可以直接从 AWS 下载文件 。 你可以检查那个文件。
     
@@ -756,7 +758,7 @@ java.lang (法语). 非法参数例外: 配置文件不能为无效错误, 问�
  **那样你就能 ERDDAP™ 数据集,使用户能够访问文件中的数据。**   
 见说明 [ ERDDAP™ 和 S3 键](#erddap-and-aws-s3-buckets)   (上文) 。 。 。 。
 对于您在上面制作的 EDDTable FromFileNames 数据集样本, 如果您在目录树上对目录和文件名称稍作浏览, 就会发现顶级目录名称 (例如,ABI-L1b-RadC) 对应什么 ERDDAP™ 将调用单独的数据集。 你用过的桶可能很相似 然后,您可以在 ERDDAP™ 使用,例如,
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 作为&lt;缓存从Url&gt;. 不幸的是,就这个具体例子而言,桶中的数据集似乎都是一级或二级数据集。 ERDDAP™   [不太擅长](#dimensions) ,因为数据集是使用不同维度的变量比较复杂的集合.
      
     
@@ -975,7 +977,7 @@ nco/ncatted - a单位,时间,o,c,秒数自1970-01-01T00:00Z'QQ .nc
 ###  EDDGrid 从 Dap 中{#eddgridfromdap} 
  [ ** EDDGrid 从 Dap 中** ](#eddgridfromdap) 处理网格变量 [ DAP ](https://www.opendap.org/) 服务器。
 
-* 我们强烈建议使用 [生成数据 Xml 程序](#generatedatasetsxml) 简略的草案 datasets.xml 此数据集的块 。 您可以收集所需的信息来修补它或者创建自己的 XML 用于 EDDGrid 通过查看您浏览器中源数据集的 DDS 和 DAS 文件从 Dap 数据集中获取 (将 .das 和.dds 添加到 sourceUrl 例如, [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) 。 。 。 。
+* 我们强烈建议使用 [生成数据 Xml 程序](#generatedatasetsxml) 简略的草案 datasets.xml 此数据集的块 。 您可以收集所需的信息来修补它或者创建自己的 XML 用于 EDDGrid 通过查看您浏览器中源数据集的 DDS 和 DAS 文件从 Dap 数据集中获取 (将 .das 和.dds 添加到 sourceUrl 例如, [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) 。 。 。 。
      
 *    EDDGrid 从Dap中可以从任何多维变量中获取数据 DAP 数据服务器。 (先前, EDDGrid FromDap仅限于被指定为"grid"的变量,但这已不再是一个要求.)   
      
@@ -1335,7 +1337,7 @@ nouterAxes=1 4 nouter请求=22
         </addAttributes>
       </axisVariable>
 ```
-注意使用抓取组 2 来捕捉“ r” 或“ s” 之后和“ QQGlobal” 之前出现的位数 。 此示例还显示如何添加附加属性 (例如, ioos\\_category 单位) 到轴变量。
+注意使用抓取组 2 来抓取“ r” 或“ s” 之后和前面的位数 "\\_global" 。 。 。 此示例还显示如何添加附加属性 (例如, ioos\\_category 单位) 到轴变量。
      
 #### 外部压缩文件{#externally-compressed-files} 
 * 属于 EDDGrid 从文件夹和 EDD 表格 从Files可以直接从外部压缩的数据文件服务数据,包括 .tgz , (中文). .tar  .gz , (中文). .tar  .gzip , (中文). .gz , (中文). .gzip , (中文). .zip , (中文). .bz2 ,还有.Z文件.
@@ -1433,7 +1435,7 @@ nouterAxes=1 4 nouter请求=22
 相反,使用[&lt;缓存从Url&gt;系统] (&#123;\fn方正粗倩简体\fs12\\an8\\1cHFFFF00\b0&#125;我的宝贝) 。 。 。 。
 
 访问 ERDDAP™ 通过字节范围请求将数据集作为文件 --
-翻转这个,如果你可以 (理论上) 考虑在 ERDDAP™ 作为巨人 .nc 通过附加文件 " .nc " 到基地OPEN DAP 给定数据集的 URL (例如,https://myserver.org/erddap/griddap/datasetID.nc并在此之后添加一个 ? query 以指定子集) 问一下你是否可以使用Netcdf-java,也许是合理的, Ferret ,或者其他一些 NetCDF 可以通过客户端软件读取数据 HTTP 区域请求 ERDDAP 。 。 。 答案是否定的,因为实际上没有巨大的 " .nc " 文件。 如果你想这样做,就做其中一种选择:
+翻转这个,如果你可以 (理论上) 考虑在 ERDDAP™ 作为巨人 .nc 通过附加文件 " .nc " 到基地OPEN DAP 给定数据集的 URL (例如, https://myserver.org/erddap/griddap/datasetID.nc 并在此之后添加一个 ? query 以指定子集) 问一下你是否可以使用Netcdf-java,也许是合理的, Ferret ,或者其他一些 NetCDF 可以通过客户端软件读取数据 HTTP 区域请求 ERDDAP 。 。 。 答案是否定的,因为实际上没有巨大的 " .nc " 文件。 如果你想这样做,就做其中一种选择:
 
 * 使用(OPeN)DAP用户端软件,可以连接到由 ERDDAP 。 。 。 。 就是这样 DAP   (并由此而来 ERDDAP ) 被设计。 它非常有效。
 * 或者,下载源文件 (编号) 从 "files" 系统 (或通过一个 .nc ? 。 。 。 查询) 到你的电脑上 使用netcdf -java, Ferret ,或者其他一些 NetCDF 要读取的客户端软件 (现在) 本地文件 (编号) 。 。 。 。
@@ -2253,9 +2255,9 @@ CQL的性质是查询是 [声明](https://en.wikipedia.org/wiki/Declarative_prog
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### 来自 DapSequence 的 EDD 表{#eddtablefromdapsequence} 
- [ **来自 DapSequence 的 EDD 表** ](#eddtablefromdapsequence) 处理 1 级和 2 级序列中的变量 [ DAP ](https://www.opendap.org/) 服务器等 DAP 临 时 (当时是https://www.pmel.noaa.gov/epic/software/dapper/,现已终止) 。 。 。 。
+ [ **来自 DapSequence 的 EDD 表** ](#eddtablefromdapsequence) 处理 1 级和 2 级序列中的变量 [ DAP ](https://www.opendap.org/) 服务器等 DAP 临 时 (当时是 https://www.pmel.noaa.gov/epic/software/dapper/ ,现已终止) 。 。 。 。
 
-* 我们强烈建议使用 [生成数据 Xml 程序](#generatedatasetsxml) 简略的草案 datasets.xml 此数据集的块 。 然后您可以编辑它来调谐它。 您可以在浏览器中查看源数据集的 DDS 和 DAS 文件( 将.das 和.dds 添加到 sourceUrl (一个实例是:https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds) (中文(简体) ).
+* 我们强烈建议使用 [生成数据 Xml 程序](#generatedatasetsxml) 简略的草案 datasets.xml 此数据集的块 。 然后您可以编辑它来调谐它。 您可以在浏览器中查看源数据集的 DDS 和 DAS 文件( 将.das 和.dds 添加到 sourceUrl (一个实例是: https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds ) (中文(简体) ).
     
 * 一个变量在 DAP 如果 .dds 响应表示持有变量的数据结构是“序列” (大小写不敏感) 。 。 。 。
 * 在某些情况下,你会看到一个序列中的序列,一个2级序列——EDDTable FromDapSequence也处理这些序列.
@@ -2378,15 +2380,15 @@ CQL的性质是查询是 [声明](https://en.wikipedia.org/wiki/Declarative_prog
 * [JDBC 驱动程序&lt;驱动程序Name &gt;] (#Jdbc驱动程序) - —— - 说 您必须获取合适的 JDBC 3 或 JDBC 4 驱动程序 .jar 文件以用于您的数据库和
 放进去 *移动猫* 安装后/webapps/erddap/WEB-INF/lib ERDDAP 。 。 。 。 在你身边 datasets.xml 对于此数据集,您必须指定&lt;驱动程序Name &gt; 此驱动程序, 即 (很遗憾) 与文件名不同。 在网络上搜索您的数据库和驱动程序 JDBC 驱动程序Name Java 必须使用它。
     
-    * 马里亚DB,试试 [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * 马里亚DB,试试 [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 那个&lt;要使用的驱动程序Name &gt; datasets.xml   (见下文) 可能是org.mariadb.jdbc。 驾驶员。
-    * 对于 MySQL 和 Amazon RDS , 请尝试 [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * 对于 MySQL 和 Amazon RDS , 请尝试 [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 那个&lt;要使用的驱动程序Name &gt; datasets.xml   (见下文) 也许是com.mysql.jdbc。 驾驶员。
-    * 对于 Oracle ,尝试 [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) 。 。 。 。
+    * 对于 Oracle ,尝试 [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) 。 。 。 。
 那个&lt;要使用的驱动程序Name &gt; datasets.xml   (见下文) 可能是神谕 jdbc.driver。 Oracle 驾驶员。
-    * 对于Postgresql,我们得到了JDBC 4驱动从 [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * 对于Postgresql,我们得到了JDBC 4驱动从 [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 那个&lt;要使用的驱动程序Name &gt; datasets.xml   (见下文) 也许是org.postgresql。 驾驶员。
-    * 对于 SQL 服务器,您可以从中获取 JTDS JDBC 驱动程序 [https://jtds.sourceforge.net](https://jtds.sourceforge.net) 。 。 。 。
+    * 对于 SQL 服务器,您可以从中获取 JTDS JDBC 驱动程序 [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) 。 。 。 。
 那个&lt;要使用的驱动程序Name &gt; datasets.xml   (见下文) (原始内容存档于2018-03-29). probably net. sourceforge.jtds.jdbc. 驾驶员。
     
 把JDBC司机放进去后 ERDDAP™ lib 目录中,您需要在 .bat 和/或 GenerateDatasets 的 .sh 脚本文件中添加引用 .jar 文件 Xml 、 DasDds 和 ArchiveADataset 中包含的 *移动猫* /webapps/erddap/WEB-INF/目录;否则,您在运行这些脚本时会得到一个Class NotFoundExcepion.
@@ -2524,7 +2526,7 @@ PostgreSQL 响应速度要快得多 [瓦努阿图](https://www.postgresql.org/do
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-关于使用数据源的一般信息 [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) 。 。 。 。
+关于使用数据源的一般信息 [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) 。 。 。 。
 见 [Tomcat 数据来源信息](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) 和 [Tomcat 数据来源示例](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) 或与其他应用程序服务器一起搜索网络中使用数据源的例子。
 * 如果其他都失败了
 考虑将数据储存在收集中 NetCDF 页:1 .nc 文件 (特别是 .nc 使用 [CF 数字 断层采样 (副秘书长) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) 相邻的标记矩阵数据结构,因此可以处理 ERDDAP 因为 [来自 NcCFF 的 EDD 表格](#eddtablefromnccffiles) ) 。 。 。 。 如果有逻辑组织 (每个都有一块空间和时间的数据) , (中文). ERDDAP™ 可以非常迅速地从它们中提取数据.
@@ -2608,7 +2610,7 @@ PostgreSQL 响应速度要快得多 [瓦努阿图](https://www.postgresql.org/do
     
 GenerateDatasetsXml为每个数据集生成的 XML 块包括:
     
-    * 页:1 datasetID 这是 EDDGrid 因为 datasetID 加上"AsAtTable"。 (笑声)
+    * 页:1 datasetID 这是 EDDGrid 因为 datasetID 加号 "\\_AsATable" 。 。 。 。
     * 一个新的全球属性摘要,即: EDDGrid “摘要”加新的第一段,说明该数据集是什么。
     * 一个新的标题全局属性,即 EDDGrid '标题加', (作为表格) " ..
     * 一个新的最大轴0全局属性,值为10.
@@ -2644,21 +2646,21 @@ GenerateDatasetsXml为每个数据集生成的 XML 块包括:
 *    [EDD Table FromFileNames 数据集中的数据](#eddtablefromfilenames-data) 是一个表格, ERDDAP™ 以关于一组本地文件的信息创建在线。 在表格中,每个文件都有一个行. 四个特殊属性 [ datasets.xml 用于此数据集](#eddtablefromfilenames-skeleton-xml) 确定将包含在本数据集中的文件 :
     
 ##### 文件 目录{#filedir} 
-    *   &lt;文件目录 &gt; -- 此处指定了服务器文件系统中的源目录与此数据集的文件. 位于服务器文件系统中的文件&lt;文件 Dir&gt; 将出现在本数据集的url 列中, 包含在命名的虚拟目录中https://*serverUrl*/erddap/files/*datasetID/*。 。 。 。
+    *   &lt;文件目录 &gt; -- 此处指定了服务器文件系统中的源目录与此数据集的文件. 位于服务器文件系统中的文件&lt;文件 Dir&gt; 将出现在本数据集的url 列中, 包含在命名的虚拟目录中 https://*serverUrl*/erddap/files/*datasetID/* 。 。 。 。
 例如,如果 datasetID 是 jplMU 语句 RSS 东,
 页:1&lt;fileDir &gt; 是/home/data/mur/ , (中文).
 而该目录有一个名为jplMU的文件 RSS T20150103000000.png, (中文(简体) ).
 然后向用户显示该文件的 URL 将是
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png。 。 。 。
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png 。 。 。 。
         
 除了使用本地目录外,&lt;文件 Dir&gt;,您也可以指定远程目录类网页的URL。 这项工作涉及:
         
         * THREDDS中的未分类数据集,例如,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 (中文(简体) ). 此服务器已不再可靠可用 。 \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 (中文(简体) ). 此服务器已不再可靠可用 。 \\] 
         * 未分类数据集 Hyrax 例如,
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * 大多数类似Apache的目录列表,例如,
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### 飞翔时{#fromonthefly} 
  [\\*\\*"从飞行中"](#fromonthefly) - —— - 说 为了一些巨大的S3桶 (像Noaa -goes17, 它有2600万文件) ,也许需要 ERDDAP™ 最多12小时下载所有关于桶内内容的信息 (还有其他问题) 。 。 。 要绕过这个圈子,有特别的方法&lt;文件 Dir&gt; 在 EDDTable FromFileNames 中,可以使用 AWS S3 桶中的目录和文件名制作数据集。 数据集不会有用户可以通过请求到数据集搜索的全部S3桶目录和文件名列表. 但是,如果用户将目录等级与数据集的等级进行交叉,数据集将获得目录和文件的名称。 "files" 选项。 因此,这允许用户通过数据集浏览 S3 桶的文件等级和文件 "files" 系统。 要做到这一点, 而不是将 S3 桶的 URL 指定为“ 启动目录 ” (生成数据 xml 数据) 或&lt;文件目录 &gt; (输入 datasets.xml ) ,使用:
 ```
@@ -2837,13 +2839,13 @@ GenerateDatasetsXml为每个数据集生成的 XML 块包括:
     * 那个&lt;缓存 FromUrl &gt; 标记允许您从远程文件列表中指定包含远程数据集文件列表的 URL 。
         
         * THREDDS中的未分类数据集,例如,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 (中文(简体) ). 此服务器已不再可靠可用 。 \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 (中文(简体) ). 此服务器已不再可靠可用 。 \\] 
         * 未分类数据集 Hyrax 例如,
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * 大多数类似Apache的目录列表,例如,
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * S3桶,例如,
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 然而,这可能需要一个AWS账户和更多的设置.
 见 [与 S3 弹匣一起工作 ERDDAP™ ](#working-with-aws-s3-files) 。 。 。 。
 而且,你通常不需要使用缓存 如果文件为 ASCII 文件, 则 FromUrl 有 S3 桶中的文件 (例如,.csv) ,因为 ERDDAP™ 可以通过流直接读取桶中的数据。
@@ -2901,7 +2903,7 @@ GenerateDatasetsXml为每个数据集生成的 XML 块包括:
 而第二个选项是一个特定的值。
             
 以上示例只匹配2018年第二个10天的目录,例如,.
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020-10-21 (中文(简体) ). 此服务器已不再可靠可用 。 \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020-10-21 (中文(简体) ). 此服务器已不再可靠可用 。 \\]   
 和011,012,019号
              (看这个 [正则文档](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) 和 [regex 教程](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) 。 。 。 。)   
 如果您需要帮助创建&lt;缓存PartialPathRegex &gt;,请发送电子邮件&lt;缓存从Url&gt;到 Chris. 约翰在Noaa.gov。
@@ -3384,7 +3386,7 @@ EDDTable FromAscii Service是所有EDDTable FromAscii Service的超级类. 无�
 
 * 插入
     * 请求格式化为标准的HTML格式响应,键=值对,由"( &)"分隔. 举例来说,
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 告诉 ERDDAP™ 要添加或修改数据 stationID =46088 为指定时间。
     * 这个变化的作者是JohnSmith,关键是一些Key1.
     * URL 必须包含有效值 (不缺少数值) 为所有人 [ http 获取必要变量](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ EDDTable FromAscii Service是所有EDDTable FromAscii Service的超级类. 无�
              
     * 删除
         * 请求格式化为标准的HTML格式响应,键=值对,由"( &)"分隔. 举例来说,
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 告诉 ERDDAP™ 删除数据 stationID =46088 在指定的时间。
         * 这个变化的作者是JohnSmith,关键是一些Key1.
         * URL必须指定 [ http 获取必要变量](#httpgetrequiredvariables-global-attribute) 请求中 (例如, stationID 时间) 。 。 。 如果这些值与数据集中已经存在的一行值相符 (他们通常会) ,将旧值有效删除 (如果用户请求前一个数据, 旧值仍然可以访问 [版本](#versioning) 数据组) 。 。 。 。
@@ -3667,7 +3669,7 @@ HTTP 软件 [职位](https://en.wikipedia.org/wiki/POST_(HTTP) )是更好的选�
     
 ##### HTTPS 设置和删除{#https-put-and-delete} 
 *    ["HTTPS PUT和DELETE怎么办?"](#https-put-and-delete)   
-     [超文本传输协议 (HTTP 软件) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) 是万维网的基础,也是网页URL开始的原因 "http://"或 "https://"。 。 。 HTTP是带有额外安全层的HTTP. 每天浏览器、脚本和计算机程序都会产生数十亿HTTP (页:1)   **快点** 请求从远程来源获得信息。 HTTP 软件 (页:1) 还包括其他 [动词](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) ,特别是PUT (将数据推向服务器) 并删除 (到服务器的 DELETE 数据) 。 。 。 是, PUT 和 DELETE 是通过 HTTP 将数据插入数据集并从数据集中删除数据的正确方式 (页:1) 。 。 。 GET 由每个可以与 HTTP 合作的软件支持 (页:1) 。 。 。 和他一起工作很轻松 人人都知道怎么和GET合作 很多人知道怎么用POST (基本上与GET相同) ,所以我们做了EDD Table FromHttpGet 工作与GET和POST。 很少有人 (甚至很少计算机程序员) 曾经与PUT和DELETE合作过. PUT和DELETE一般只由计算机语言支持,因此使用它们需要一个技能丰富的程序. 所以PUT和DELETE通常是一种更为繁琐的方法,因为工具的发展方式.
+     [超文本传输协议 (HTTP 软件) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) 是万维网的基础,也是网页URL开始的原因 " http://" 或 " https://" 。 。 。 HTTP是带有额外安全层的HTTP. 每天浏览器、脚本和计算机程序都会产生数十亿HTTP (页:1)   **快点** 请求从远程来源获得信息。 HTTP 软件 (页:1) 还包括其他 [动词](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) ,特别是PUT (将数据推向服务器) 并删除 (到服务器的 DELETE 数据) 。 。 。 是, PUT 和 DELETE 是通过 HTTP 将数据插入数据集并从数据集中删除数据的正确方式 (页:1) 。 。 。 GET 由每个可以与 HTTP 合作的软件支持 (页:1) 。 。 。 和他一起工作很轻松 人人都知道怎么和GET合作 很多人知道怎么用POST (基本上与GET相同) ,所以我们做了EDD Table FromHttpGet 工作与GET和POST。 很少有人 (甚至很少计算机程序员) 曾经与PUT和DELETE合作过. PUT和DELETE一般只由计算机语言支持,因此使用它们需要一个技能丰富的程序. 所以PUT和DELETE通常是一种更为繁琐的方法,因为工具的发展方式.
      
 ##### HttpGet 笔记{#httpget-notes} 
 *    [页:1](#httpget-notes) 
@@ -3676,7 +3678,7 @@ HTTP 软件 [职位](https://en.wikipedia.org/wiki/POST_(HTTP) )是更好的选�
 ##### 谢谢{#thanks} 
 *    [感谢CHORDS的基本想法。](#thanks)   
 EDD Table FromHttpGet 的基本构想 (即使用 HTTP GET 请求将数据添加到数据集) 是从UCAR的 (NCAR的吗?)   [云宿实时数据服务 (困难) ](https://github.com/earthcubeprojects-chords) 项目。 请求中参数的格式 (重复 *名称=值* , 由 &'s 分隔) 是网页上HTML表格使用的相同标准格式。 这是一个简单而聪明的主意, 更是这样,因为它是如此完美地与 ERDDAP 现有的表格数据处理系统。 这个想法在事后看来很明显,但我 (鲍勃) 没想到 来自 Http 的 EDD 表格 利用这个基本想法,结合我们如何实施这个想法,建立一个系统 ERDDAP™ 用于上传数据。 除了使用GET将数据推入系统的基本想法外,EDDTable FromHttpGet执行是完全不同的,完全独立于CHORDS,并具有不同的特性. (例如,日志文件、数据块、不同的安全系统、CRUD支持、可复制数据) 。 。 。 我们接触CHORDS只是网球 我们没有看他们的代码,也没有读到他们的计划,因为我们立即知道我们想用另一种方式实施这个系统。 但我们感谢他们的基本想法。 全面提及CHORDS是:
-Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., 巴托斯, M., Jones, J., Keiser, K. (2014 (中文(简体) ).) 。 。 。 为地球科学提供云存储实时数据服务 (困难) 软件。 UCAR/NCAR-地球观测实验室。 [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., 巴托斯, M., Jones, J., Keiser, K. (2014 (中文(简体) ).) 。 。 。 为地球科学提供云存储实时数据服务 (困难) 软件。 UCAR/NCAR-地球观测实验室。 [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### 从 EDD 表格 Hyrax 文件{#eddtablefromhyraxfiles} 
  [ **从 EDD 表格 Hyrax 文件** ](#eddtablefromhyraxfiles)   (已贬值) 汇总带有多个变量的数据文件,每个变量都有一个或多个共享维度 (例如,时间,高度 (或深度) ,经度) ,服务于 [ Hyrax   OPeNDAP 服务器](https://www.opendap.org/software/hyrax-data-server) 。 。 。 。
@@ -3692,7 +3694,7 @@ Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin,
 * 这个班级的屏幕 Hyrax 网页,每个目录中都有文件列表。 由于这个原因,它非常具体地适用于目前的格式: Hyrax 网页。 我们会努力调整 ERDDAP™ 如果/当未来版本 Hyrax 更改文件的列表方式。
 * 那个&lt;文件 Dir &gt; 设置被忽略。 由于本课下载并制作每个远程数据文件的本地副本, ERDDAP™ 强制文件 将是 *大家长会* /副本/ * datasetID * (原始内容存档于2018-09-26). /.
 * 对于&lt; sourceUrl &gt;,使用该数据库中数据集的基础目录的URL Hyrax 例如,服务器,
-    &lt; sourceUrl &gt; 翻译:http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;页:1 sourceUrl &gt; 翻译:
+    &lt; sourceUrl &gt; 翻译: http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;页:1 sourceUrl &gt; 翻译:
      (但放上一条线)   (抱歉,服务器已经不可用了) 。 。 。 。
 那个 sourceUrl 网页通常有 " OPeNDAP 服务器索引 \\[ 目录Name \\] " 在顶上.
 * 由于该类总是下载并制作每个远程数据文件的本地副本,所以你不应该将此数据集包在 [EDD 表格复制](#eddtablecopy) 。 。 。 。
@@ -3706,7 +3708,7 @@ Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin,
 
 这些文件的另一个问题:首席调查官行XXX大小变量没有样本XXDimension属性,没有遵循上述规则.
 
-此数据集类型的样本文件可见于https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 (中文(简体) ). 此服务器已无法可靠使用 \\] 。 。 。 。
+此数据集类型的样本文件可见于 https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020-10-21 (中文(简体) ). 此服务器已无法可靠使用 \\] 。 。 。 。
 
 看这个班级的超级班级 [来自文件的 EDD 表格](#eddtablefromfiles) ,用于了解这个班级是如何工作的以及如何使用.
 
@@ -3850,10 +3852,10 @@ CF DSG公约定义了数十种文件格式,并包括许多细微的变体. 这�
  [ **来自NOS的EDD表** ](#eddtablefromnos)   (过期) 处理来自 a 的数据 NOAA   [职位](https://opendap.co-ops.nos.noaa.gov/axis/) 源,用于 [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) 请求和答复。 它非常具体 NOAA NOS的XML. (英语). 参见数据集2.xml中的EDDTable FromNOS数据集样本.
  
 ### EDD 表从OBIS{#eddtablefromobis} 
- [ **EDD 表从OBIS** ](#eddtablefromobis) 处理来自海洋生物地理信息系统的数据 (办公室) 服务器 (当时是http://www.iobis.org ) 。 。 。 可能没有更多的活动服务器使用这种现已过时的OBIS服务器系统.
+ [ **EDD 表从OBIS** ](#eddtablefromobis) 处理来自海洋生物地理信息系统的数据 (办公室) 服务器 (当时是 http://www.iobis.org  ) 。 。 。 可能没有更多的活动服务器使用这种现已过时的OBIS服务器系统.
 
 * OBIS服务器期望有一个XML请求,并返回一个XML响应.
-* 因为所有的OBIS服务器都以同样的方式服务于相同的变量 (当时是http://iobis.org/tech/provider/questions) 中,您不需要指定多少设置 OBIS 数据集。 ERDDAP 。 。 。 。
+* 因为所有的OBIS服务器都以同样的方式服务于相同的变量 (当时是 http://iobis.org/tech/provider/questions ) 中,您不需要指定多少设置 OBIS 数据集。 ERDDAP 。 。 。 。
 * 你一定要包括一个" creator\\_email " 全球 addAttributes ,因为该信息在许可证内使用。 通过读取源代码URL的XML响应,可以找到合适的电子邮件地址.
 * 您可能或无法获得全局属性 [&lt; subsetVariables &gt;] (中文(简体) ). (# 亚位变量) 与 OBIS 服务器合作。 如果你尝试,只要尝试一个变量 (例如,科学名称或基因) 。 。 。 。
 #### EDD 表从OBIS 模板 XML{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ CF DSG公约定义了数十种文件格式,并包括许多细微的变体. 这�
     * 瑞典 (传感器网络启用) 和 SOS   (传感器观察处) 已经 [OpenGIS 标准](https://www.ogc.org/standards) 。 。 。 该网站有标准文件。
     * 那个 OGC 网页服务共同规格 ( OGC 06-121r3 (韩语).) 覆盖构建 GET 和 POST 查询 (见第7.2.3节和第9节。) 。 。 。 。
     * 如果您向一个 SOS 服务器 ( sourceUrl + "? 服务= SOS 请求( S) GetCapabilities " , ") ,您可以得到一个 xml 的结果,并列出站台和观测到的 他们有数据的属性。
-    * 财产法正式提到财产法。 例如,urn:ogc:phenomenon:经度:wgs84或https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * 财产法正式提到财产法。 例如,urn:ogc:phenomenon:经度:wgs84或 https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * 被观测到的产物不是变量.
-    * 不止一个变量可能观测到相同 财产 (例如,Temp内外 时间可能都观察到了 财产https://mmisw.org/ont/cf/parameter/air\\_temperature) 。 。 。 。
+    * 不止一个变量可能观测到相同 财产 (例如,Temp内外 时间可能都观察到了 财产 https://mmisw.org/ont/cf/parameter/air\\_temperature ) 。 。 。 。
     * 如果您向一个 SOS 服务器,您可以得到一个 xml 的结果,在响应中描述字段名称、字段单位和数据。 字段名称包括经度、纬度、深度 (也许) 时间
     * 每个 dataVariable 用于 EDD 表格 SOS 必须包含一个“ observatedProperty ” 属性,该属性可以识别从服务器获取该变量必须请求的可观察到的Property 。 经常是几个 dataVariable s将列出同样的复合观测数据。
     * 每个数据类型 dataVariable 服务器可能不指定。 如果是,您必须查看服务器的XML数据回复,并指定适当的[&lt;数据类型&gt;s] (# 数据类型) 输入 ERDDAP™ 数据集 dataVariable 定义。
@@ -3991,11 +3994,11 @@ CF DSG公约定义了数十种文件格式,并包括许多细微的变体. 这�
 * 此类可读取THREDDS提供的目录.xml文件,其中包含列表&lt;目录参考文献 &gt; (引用额外的目录.xml 子文件) 和&lt;数据集&gt;s (数据文件) 。 。 。 。
 * 那个&lt;文件 Dir &gt; 设置被忽略。 由于本课下载并制作每个远程数据文件的本地副本, ERDDAP™ 强制文件 将是 *大家长会* /副本/ * datasetID * (原始内容存档于2018-09-26). /.
 * 对于&lt; sourceUrl &gt;,对THREDDS服务器中的数据集使用目录.xml文件的URL,例如: 对于这个可用于网页浏览器的URL,
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020-10-21 (中文(简体) ). 此服务器已不再可靠可用 。 \\] , (中文).
-使用情况&lt; sourceUrl &gt; 翻译:https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;页:1 sourceUrl &gt; 翻译:
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020-10-21 (中文(简体) ). 此服务器已不再可靠可用 。 \\] , (中文).
+使用情况&lt; sourceUrl &gt; 翻译: https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;页:1 sourceUrl &gt; 翻译:
      (但放上一条线) 。 。 。 。
 * 由于该类总是下载并制作每个远程数据文件的本地副本,所以你不应该将此数据集包在 [EDD 表格复制](#eddtablecopy) 。 。 。 。
-* 此数据集类型支持一个OPTIONAL,很少使用,特殊标记,&lt;特殊模式 &gt; *模式* &lt;/ specialMode&gt;,可用于指定特殊,硬码规则应用于确定哪些文件应从服务器下载. 目前,唯一有效的 *模式* 是SAMOS,使用数据集来自https://tds.coaps.fsu.edu/thredds/catalog/samos只下载最后一个版本编号的文件。
+* 此数据集类型支持一个OPTIONAL,很少使用,特殊标记,&lt;特殊模式 &gt; *模式* &lt;/ specialMode&gt;,可用于指定特殊,硬码规则应用于确定哪些文件应从服务器下载. 目前,唯一有效的 *模式* 是SAMOS,使用数据集来自 https://tds.coaps.fsu.edu/thredds/catalog/samos 只下载最后一个版本编号的文件。
 * 看这个班级的超级班级 [来自文件的 EDD 表格](#eddtablefromfiles) ,用于了解这个班级是如何工作的以及如何使用.
 * 见1D、2D、3D和4D实例 [来自 NcFiles 的 EDD 表格](#eddtablefromncfiles) 。 。 。 。
      
@@ -4182,8 +4185,8 @@ CF DSG公约定义了数十种文件格式,并包括许多细微的变体. 这�
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-将生成匹配的本地 sourceUrl   (例如,https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-进入公众 sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) 。 。 。 。
+将生成匹配的本地 sourceUrl   (例如, https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+进入公众 sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) 。 。 。 。
 此标签值的任何更改将在下次生效 ERDDAP™ 读取 datasets.xml ,包括针对数据集 [旗帜](/docs/server-admin/additional-information#flag) 。 。 。 。
 
 但出于安全原因和订阅系统的原因 **别用这个**   
@@ -4314,7 +4317,7 @@ ing *一些.域名. Name*
     ```
     * 你不需要重启 ERDDAP™ 更改为&lt;请求 Blacklist &gt; 生效。 下次会发现这些变化 ERDDAP™ 检查是否需要重新装入任何数据集 。 或者,你可以通过访问一个 [设置数据集 旗帜 URL](/docs/server-admin/additional-information#set-dataset-flag) 用于任何数据集。
     * 你们 ERDDAP™ 每日报告包含一个最活跃的允许和被封禁的请求者列表/全部.
-    * 如果您想了解哪个域/机构与一个数字IP地址有关,您可以使用一个免费的,逆向的DNS网络服务,比如: [https://network-tools.com/](https://network-tools.com/) 。 。 。 。
+    * 如果您想了解哪个域/机构与一个数字IP地址有关,您可以使用一个免费的,逆向的DNS网络服务,比如: [ https://network-tools.com/ ](https://network-tools.com/) 。 。 。 。
     * 可能有时在更高层次封锁某些用户是有意义的,例如恶意用户. 例如,你可以阻止他们访问服务器上的一切,而不只是 ERDDAP 。 。 。 在Linux上,使用的方法之一是 [平板电脑](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) 。 。 。 例如,您可以添加一条规则,以命令屏蔽所有来自198.51.10.0的规则
 iptables - I INPUT - 第198.51.100.0节 -J 德鲁普
        
@@ -4738,17 +4741,17 @@ md5 - djsmith: (中文(简体) ). ERDDAP : MyPassword 语句
     * 目前,为 EDDGrid 子类, 元数据或轴变量的任何更改 (例如,近实时数据的新时间点) 但重新装入数据集不视为更改 (本身) 。 。 。 。
     * 目前,对于EDDTable子类,数据集的任何重新加载都被认为是一个变化.
     * 目前,只允许两种行动:
-        * " , "http://"或 "https://"- —— - 说 如果动作以 " 开始http://"或 "https://", (中文). ERDDAP™ 将发送 HTTP GET 请求到指定的 URL。 答复将被忽略。 例如,URL可能会让一些其他的网络服务做一些事情.
+        * " , " http://" 或 " https://" - —— - 说 如果动作以 " 开始 http://" 或 " https://" , (中文). ERDDAP™ 将发送 HTTP GET 请求到指定的 URL。 答复将被忽略。 例如,URL可能会让一些其他的网络服务做一些事情.
             * 如果 URL 有查询部分 (在""之后吗?) ,它必须已经 [编码百分比](https://en.wikipedia.org/wiki/Percent-encoding) 。 。 。 您需要在限制中编码特殊字符 (除初始“ &” 和主 '=' 制约因素) 输入表单%HH,其中HH是字符的两位数十六进制值。 通常情况下,您只需要将一些点缀字符 :% 转换为% 25, &% 26, " 转换为% 22,&lt;输入% 3C, = 输入% 3D, &gt; 输入% 3E, + 输入% 2B, | 进入% 7C, \\[ 输入% 5B, \\] 变为% 5D, 空间变为% 20, 并将 # 127 以上所有字符转换为 UTF-8 格式, 然后% 将 UTF-8 格式的每个字节编码为% HH格式 (请求程序员帮助) 。 。 。 。
 例如,( S) stationID "41004" (中文(简体) ).
 成为 & stationID % 3E% 2241004% 22
 访问时通常需要百分率编码 ERDDAP 通过浏览器以外的软件。 浏览器通常为您处理 % 编码 。
 在某些情况下,您需要将除A-Za-z0-9XX之外的所有字符编码%&#33;~&#33;  ' () QQ, 但仍不编码初始“ & ” 或主代码 '=' 限制。
-编程语言有这样做的工具(例如,见 Java 因为 [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) 和 Java 脚本encodeURIComponent()[ . ] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) 还有
+编程语言有这样做的工具(例如,见 Java 因为 [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) 和 Java 脚本encodeURIComponent()[ . ] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) 还有
                  [为您编码/解码的百分比网站](https://www.url-encode-decode.com/) 。 。 。 。
             * 从 datasets.xml 是一个 XML 文件, 您也使用 &- encode All ' &,'&lt;在 URL 作为“ &amp;” 的“ ” 和“&gt; ” 中,&lt;', 和' & gt;' 编码% 之后 。
             * 示例 用于输入浏览器的 URL :
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 您应该指定一个&lt;通过 Change &gt; 标记 (单行) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ md5 - djsmith: (中文(简体) ). ERDDAP : MyPassword 语句
     * 页:1 sourceUrl 可能从 http:// , (中文). https:// ,ftp://,也许还有其他前缀. https 连接读取并检查来源的数字证书,以确保来源是他们所说的人. 在罕见的情况下,由于错误"javax.net.ssl.SSL ProtocolExcession:握手提醒:未识别的QQ名称",此检查可能失败. 这可能是由于证书上的域名与您使用的域名不匹配. 你可以而且应该读读 sourceUrl 在您的网页浏览器中的证书, 特别是“ 对象替代名称” 部分的“ DNS 名称” 列表 。
         
 在某些情况下, sourceUrl 您使用的可能是证书上域名的别名。 举例来说,
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/将丢出此错误, 但是
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/,使用证书上的域名,不会. 因此,在这种情况下的解决办法是找到和使用证书上的域名。 在证书上找不到的,联系数据提供者.
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ 将丢出此错误, 但是
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ,使用证书上的域名,不会. 因此,在这种情况下的解决办法是找到和使用证书上的域名。 在证书上找不到的,联系数据提供者.
         
 在其他情况下,证书上的域名可能为一组名. 如果发生这种情况或问题无法解决,请发电子邮件给Chris。 约翰在Noaa.gov报告问题。
          
@@ -5221,7 +5224,7 @@ md5 - djsmith: (中文(简体) ). ERDDAP : MyPassword 语句
 访问时通常需要百分率编码 ERDDAP 通过浏览器以外的软件。 浏览器通常为您处理 % 编码 。
 在某些情况下,您需要将除A-Za-z0-9XX之外的所有字符编码%&#33;~&#33;  ' () QQ, 但仍不编码初始“ & ” 或主代码 '=' 。 。 。 。
 编程语言有这样做的工具(例如,见 Java 因为 [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-和 Java 脚本encodeURIComponent()[ . ] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) 还有
+和 Java 脚本encodeURIComponent()[ . ] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) 还有
          [为您编码/解码的百分比网站](https://www.url-encode-decode.com/) 。 。 。 。
     * 从 datasets.xml 是一个 XML 文件, 您也使用 &- encode All ' &,'&lt;在 URL 作为“ &amp;” 的“ ” 和“&gt; ” 中,&lt;', 和' & gt;' 编码% 之后 。
     *    infoUrl 是独一无二的 ERDDAP 。 。 。 这不是任何元数据标准。
@@ -5257,7 +5260,28 @@ md5 - djsmith: (中文(简体) ). ERDDAP : MyPassword 语句
     ```
     * 若 " . \\[ 标准 \\] " 发生在属性值中,它将被标准所取代 ERDDAP™ 许可证来自&lt;标准License &gt; 标记在 ERDDAP 因为
          \\[ 移动猫 \\] /webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml文件.
-         
+
+###### 分类{#classification} 
+*    [ **分类** ](#classification) 数据分类级别。
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * 可接受值为_未分类_,_机密_,_受限制_,_机密_,或_顶端_机密_.
+
+###### 专题_类别{#topic_category} 
+*    [ **专题_类别** ](#topic_category) 高层次地理数据专题分类,协助分类和搜索现有地理数据集.
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * 可接受值为:_生物_,_边界_,_气候学_气象学_原子圈_,_经济_,_经济_,_环境_,_农作_,_地质科学_信息_,_健康_,_图像_基础_地图_地球_覆盖_,_内陆_水利_,_情报_军事_,_地点_,_海洋_,_规划_地籍_,_社会_,_结构_,_过渡_,用户_通讯_.
+
+###### 维护_频率{#maintenance_frequency} 
+*    [ **维护_频率** ](#maintenance_frequency) 首次生成后对数据进行修改和删除的频率。
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * 可接受值的可接受值为_每年_,_按_需要_,_每半年_,_连续_,_每日_,_每周_,_正常_,_月_,_不_计划_,_季度_,_未知_,每周_.
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) 是从过时的 [ACDD 1.0 数据交换系统](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (中识别 Metadata\\_Conventions 作为 " Unidata 数据集发现 v1.0") 元数据标准。 属性值是本数据集使用的以逗号分隔的元数据常规列表.
 如果一个数据集使用ACDD 1.0,这个属性是严格推荐的,例如,
@@ -5389,7 +5413,7 @@ md5 - djsmith: (中文(简体) ). ERDDAP : MyPassword 语句
 如果索引是&lt;=1,数据集视为过时.
 如果索引是&lt;=2,数据集被认为非常过时.
     
-那个 testOutOfDate 值也用于 ERDDAP™ 生成https://*yourDomain*/erddap/outOfDateDatasets.html网页 ( [实例](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) 显示有&lt; testOutOfDate &gt; tags,其数据集的排名按其过时程度排序. 如果您更改文件类型 (从.html到.csv, .jsonlCSV , (中文). .nc , (中文). .tsv ,, , , , , , , , , .) ,您可以以不同的文件格式获取这些信息。
+那个 testOutOfDate 值也用于 ERDDAP™ 生成 https://*yourDomain*/erddap/outOfDateDatasets.html 网页 ( [实例](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) 显示有&lt; testOutOfDate &gt; tags,其数据集的排名按其过时程度排序. 如果您更改文件类型 (从.html到.csv, .jsonlCSV , (中文). .nc , (中文). .tsv ,, , , , , , , , , .) ,您可以以不同的文件格式获取这些信息。
     
 在可能的情况下, [生成 DatasetsXml](#generatedatasetsxml) 添加a testOutOfDate 属性 addAttributes 数据组。 这个值是基于GenerateDatasetsXml可用信息的建议. 如果价值不合适,就改变它.
     
@@ -5948,8 +5972,8 @@ EDD Table FromFiles 数据集可以使用一些特殊编码的,伪的 sourceName
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone 是用于 ERDDAP™   (没有元数据标准) (单位:千美元) [时间和时间戳变量](#time-units) ,可以在网格数据集或表格数据集中。
     * 默认是 " Zulu " , " (这是格林尼治标准时区的现代版本) 。 。 。 。
-    * 背景资料:"时间冲抵" (例如太平洋标准时间-08:00,GMT-8) 相对于 Zulu   (格林尼治标准时) 。 。 。 反之,"时区"是受日光节影响更复杂的事物 (例如,“美国/太平洋”) 它们在不同的时间在不同的地方有不同的规则。 时区总是有名字,因为不能用简单的抵消值来归纳 (请参看表格中的“TZ数据库名称”栏。 [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) 。 。 。 。 ERDDAP 因为 time\\_zone 属性帮助您处理来自某个时区的本地时间数据 (例如,1987-03-25T17:32:05 太平洋 时间) 。 。 。 如果您有字符串或数字时间数据 (固定) 时间偏移,您只需将数据调整到 Zulu   (这是什么 ERDDAP™ 请求) 在单位属性中指定不同的基时间 (例如,"1970-01-01T08:00Z以来的小时数",注意T08以指定时间偏移) ,并始终检查结果以确保得到你想要的结果。
-    * 对于带有 Strings 源数据的时间戳变量,此属性允许您指定一个导致的时区 ERDDAP™ 转换本地时区源时间 (有些在标准时间,有些在日光节时) 输入 Zulu 时间 (标准时间) 。 。 。 有效时区名称列表可能与TZ列列表完全相同 。 [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 。 。 。 美国常见的时区有:美国/夏威夷,美国/阿拉斯加,美国/太平洋,美国/山地,美国/阿里索纳,美国/中部,美国/东部.
+    * 背景资料:"时间冲抵" (例如太平洋标准时间-08:00,GMT-8) 相对于 Zulu   (格林尼治标准时) 。 。 。 反之,"时区"是受日光节影响更复杂的事物 (例如,“美国/太平洋”) 它们在不同的时间在不同的地方有不同的规则。 时区总是有名字,因为不能用简单的抵消值来归纳 (请参看表格中的“TZ数据库名称”栏。 [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) 。 。 。 。 ERDDAP 因为 time\\_zone 属性帮助您处理来自某个时区的本地时间数据 (例如,1987-03-25T17:32:05 太平洋 时间) 。 。 。 如果您有字符串或数字时间数据 (固定) 时间偏移,您只需将数据调整到 Zulu   (这是什么 ERDDAP™ 请求) 在单位属性中指定不同的基时间 (例如,"1970-01-01T08:00Z以来的小时数",注意T08以指定时间偏移) ,并始终检查结果以确保得到你想要的结果。
+    * 对于带有 Strings 源数据的时间戳变量,此属性允许您指定一个导致的时区 ERDDAP™ 转换本地时区源时间 (有些在标准时间,有些在日光节时) 输入 Zulu 时间 (标准时间) 。 。 。 有效时区名称列表可能与TZ列列表完全相同 。 [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 。 。 。 美国常见的时区有:美国/夏威夷,美国/阿拉斯加,美国/太平洋,美国/山地,美国/阿里索纳,美国/中部,美国/东部.
     * 对于带有数字源数据的时间戳变量,可以指定 " time\\_zone " 属性,但价值必须是 " Zulu " 或"UTC"(UTC). 如果您需要其他时区的支持,请发电子邮件给克里斯. 约翰在Noaa.gov。
          
 ###### 遗留时间(_T){#legacy_time_adjust} 

@@ -45,14 +45,14 @@ Si algún requisito en este documento parece extraño o exigente, es probable qu
 Esta especificación se refiere a varias otras especificaciones y bibliotecas con las que está diseñado para trabajar, pero esta especificación no es parte de ninguna de esas otras especificaciones, ni necesita ningún cambio para ellos, ni contradice con ellos. Si un detalle relacionado con uno de estos estándares no se especifica aquí, vea la especificación relacionada. Notablemente, esto incluye:
 
 * El Convenio de Atributo para el Descubrimiento de Dataset (ACDD) metadatos estándar:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * The Climate and Forecast (CF) metadatos estándar:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * El NetCDF Guía del usuario (NUG) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * El NetCDF bibliotecas de software como NetCDF -java y NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Estas bibliotecas no pueden leer archivos NCCSV, pero pueden leer .nc archivos creados de archivos NCCSV.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . Estas bibliotecas no pueden leer archivos NCCSV, pero pueden leer .nc archivos creados de archivos NCCSV.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Notación{#notation} 
 En esta especificación, corchetes, \\[   \\] , denota artículos opcionales.
@@ -152,12 +152,12 @@ Las definiciones de los tipos de datos de atributos son:
     * Citas dobles (") debe ser codificado como dos citas dobles (") . Eso es lo que los programas de hoja de cálculo requieren al leer archivos .csv. Eso es lo que los programas de hoja de cálculo escriben cuando guardas una hoja de cálculo como un archivo .csv.
     * Los caracteres especiales JSON backslash-encoded deben ser codificados como en JSON (en particular \\n (newline), pero también \\\\ (backslash), \\f (formfeed), \\t (tab), \\r (retorno del coche) o con el [\\u *hhhh* ](#uhhhh) sintaxis. En una hoja de cálculo, no utilice Alt Enter para especificar una nueva línea dentro de una célula de texto; en lugar de ello, use \\n   (2 caracteres: backslash y 'n ') para indicar una nueva línea.
 #####  uhhhh  {#uhhhh} 
-    * \\u *hhhh - Todos los caracteres menos que el carácter #32 o mayor que el carácter #126, y no de otro modo codificados, deben ser codificados con la sintaxis \\u* hhhh*, donde hhhh es el número hexadecimal de 4 dígitos del personaje, por ejemplo, el signo Euro es \\u20AC. Ver las páginas de código mencionadas [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) para encontrar los números hexadecimales asociados con caracteres Unicode específicos, o utilizar una biblioteca de software.
+    * \\u *hhhh - Todos los caracteres menos que el carácter #32 o mayor que el carácter #126, y no de otro modo codificados, deben ser codificados con la sintaxis \\u* hhhh*, donde hhhh es el número hexadecimal de 4 dígitos del personaje, por ejemplo, el signo Euro es \\ \\u20AC . Ver las páginas de código mencionadas [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) para encontrar los números hexadecimales asociados con caracteres Unicode específicos, o utilizar una biblioteca de software.
     * Si el String tiene un espacio al principio o al final, o incluye " (doble cita) o una coma, o contiene valores que de otro modo se interpretarían como algún otro tipo de datos (por ejemplo, una int) , o es la palabra "null", todo el String debe ser encerrado en citas dobles; de lo contrario, a diferencia de JSON, las citas dobles adjuntas son opcionales. Recomendamos: cuando en duda, cierre todo el String en citas dobles. Los espacios al principio o al final de una cuerda están fuertemente desalentados.
     * Por ahora, se desalienta el uso de caracteres superiores a #255. NCCSV los apoya. ERDDAP™ los apoya internamente. Algunos tipos de archivos de salida los apoyan (por ejemplo, .json y .nccsv ) . Pero muchos tipos de archivos de salida no los soportan. Por ejemplo, NetCDF -3 archivos no soportan tales caracteres porque NetCDF Los archivos usan caracteres de 1 byte y CF actualmente no tiene un sistema para especificar cómo los caracteres Unicode están codificados en NetCDF Pendientes (por ejemplo, UTF-8) . Esto probablemente mejorará con el tiempo.
          
 #### char{#char} 
-* valores de atributo char son un único personaje UCS-2 (i.e., 2 caracteres Unicode, como en Java ) , que debe ser escrito como caracteres ASCII de 7 bits, JSON-like para que otros caracteres puedan ser especificados (ver la definición de String arriba para la codificación de caracteres especiales, con la adición de codificación de una sola cita como \\ ') . Los valores de atributo de Char deben ser encerrados en citas individuales (las citas internas) y citas dobles (las citas externas) , por ejemplo, "'a'", "''" (un personaje de cita doble) , "'\''" (un único personaje de cita) , "'\t'" (una pestaña) "'\\u20AC'" (un carácter Euro) . Este sistema de usar citas individuales y dobles es extraño y engorroso, pero es una manera de distinguir los valores de char de Strings de una manera que funciona con hojas de cálculo. Un valor que parece un char pero es inválido generará un mensaje de error. Al igual que con Strings, el uso de caracteres superiores a #255 se desalienta actualmente.
+* valores de atributo char son un único personaje UCS-2 (i.e., 2 caracteres Unicode, como en Java ) , que debe ser escrito como caracteres ASCII de 7 bits, JSON-like para que otros caracteres puedan ser especificados (ver la definición de String arriba para la codificación de caracteres especiales, con la adición de codificación de una sola cita como \\ ') . Los valores de atributo de Char deben ser encerrados en citas individuales (las citas internas) y citas dobles (las citas externas) , por ejemplo, "'a'", "''" (un personaje de cita doble) , "'\''" (un único personaje de cita) , "'\t'" (una pestaña) " \\u20AC ' (un carácter Euro) . Este sistema de usar citas individuales y dobles es extraño y engorroso, pero es una manera de distinguir los valores de char de Strings de una manera que funciona con hojas de cálculo. Un valor que parece un char pero es inválido generará un mensaje de error. Al igual que con Strings, el uso de caracteres superiores a #255 se desalienta actualmente.
 
 ### Suffix{#suffix} 
 Tenga en cuenta que en la sección de atributos de un archivo NCCSV, todos los valores de atributos numéricos deben tener una letra de sufijo (por ejemplo, 'b') para identificar el tipo de datos numéricos (por ejemplo, byte) . Pero en la sección de datos de un archivo NCCSV, los valores numéricos de datos nunca deben tener estas letras de sufijo (con la excepción de 'L' para enteros largos y 'uL' para enteros ulong) — el tipo de datos es especificado por el\\*DATA\\_TYPE\\*atributo para la variable.
@@ -220,7 +220,7 @@ Los valores DateTime representados como valores numéricos deben tener un atribu
 tiempo,unidades,segundos desde 1970-01T00:00Z
 
 Valores de DateTime representados como valores de String deben tener una cuerda\\*DATA\\_TYPE\\*atributo y atributo de unidades que especifica una fecha patrón de tiempo especificado por el Java DateTimeFormatter class
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Por ejemplo,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Por ejemplo,
 tiempo, unidades, yyyy-MM-dd 'T'HH:mm:ssZ
 Todos los valores dateTime para una variable de datos dada deben usar el mismo formato.
 En la mayoría de los casos, el patrón dateTime que necesita para el atributo de unidades será una variación de uno de estos formatos:
@@ -245,7 +245,7 @@ Como exige CF, todos los valores de grado (por ejemplo, por longitud y latitud) 
 ##  [DSG Tipos de función](#dsg-feature-types)  {#dsg-feature-types} 
 
 Un archivo NCCSV puede contener geometría de muestreo CF Discrete
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) datos. Son los atributos que hacen este trabajo:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) datos. Son los atributos que hacen este trabajo:
 
 1. Como exige CF, el archivo NCCSV debe incluir una línea en la sección de metadatos identificando el [\\*GLOBAL\\*](#global)   featureType atributo, por ejemplo,
     \\*GLOBAL\\*, featureType ,trajectory
@@ -326,7 +326,7 @@ Notas:
 
 * Este archivo muestra muchos casos difíciles (por ejemplo, char y variables largas y difíciles valores de String) . La mayoría de los archivos NCCSV serán mucho más simples.
 * La línea de licencia se divide en dos líneas aquí, pero es sólo una línea en el archivo de la muestra.
-* \\u20AC es la codificación del carácter Euro y \\u00FC es la codificación de ü.
+* \\ \\u20AC es la codificación del carácter Euro y \\u00FC es la codificación de ü.
 * Muchos Las cuerdas en el ejemplo están cerradas por citas dobles aunque no tengan que ser, por ejemplo, muchos atributos globales incluyendo el título, el atributo de las unidades de lon, y la tercera línea de datos.)
 * Sería más claro y mejor si las unidades atributos para la variable testLong se redactaran en citas dobles indicando que es un valor String. Pero la representación actual (1, sin citas) será interpretado correctamente como un String, no un entero, porque no hay sufijo 'i'.
 * A diferencia de otros tipos de datos numéricos, los valores largos en la sección de datos tienen el sufijo ('L') que identifica su tipo de datos numéricos. Esto es necesario para evitar que las hojas de cálculo interpreten los valores como números de puntos flotantes y así perder precisión.
@@ -336,7 +336,7 @@ Notas:
 En una hoja de cálculo, como en un archivo NCCSV:
 
 * Escriba valores de atributo numéricos como se especifica para los archivos NCCSV (por ejemplo, con una carta de sufijo, por ejemplo, 'f', para identificar el tipo de datos del atributo) .
-* En Strings, escriba todos los caracteres menos que el personaje de ASCII #32 o superior al personaje #126 como un personaje de JSON (por ejemplo, \\n para la nueva línea) o como el número de caracteres de Unicode hexadecimal (caso insensible) con la sintaxis [\\u *hhhh* ](#uhhhh)   (por ejemplo, \\u20AC para el signo Euro) . Uso \\n   (2 caracteres: backslash y 'n ') para indicar una nueva línea, no Alt Enter.
+* En Strings, escriba todos los caracteres menos que el personaje de ASCII #32 o superior al personaje #126 como un personaje de JSON (por ejemplo, \\n para la nueva línea) o como el número de caracteres de Unicode hexadecimal (caso insensible) con la sintaxis [\\u *hhhh* ](#uhhhh)   (por ejemplo, \\ \\u20AC para el signo Euro) . Uso \\n   (2 caracteres: backslash y 'n ') para indicar una nueva línea, no Alt Enter.
 
 Las únicas diferencias entre los archivos NCCSV y la hoja de cálculo analógica que siguen estas convenciones son:
 
@@ -392,7 +392,7 @@ Para crear un archivo NCCSV de una hoja de cálculo de hojas de Google:
 * Si un archivo NCCSV tiene exceso de comas al final de las filas, puede eliminarlos convirtiendo el archivo NCCSV en un NetCDF archivo y luego la conversión NetCDF volver a un archivo NCCSV.
 * Cuando intenta convertir un archivo NCCSV en un NetCDF archivo, algunos errores serán detectados por el software y generarán mensajes de error, causando que la conversión falle. Otros problemas son difíciles o imposibles de atrapar y no generarán mensajes de error o advertencias. Otros problemas (por ejemplo, exceso de comas al final de las filas) será ignorado. El convertidor de archivo sólo hará una comprobación mínima de la corrección del resultado NetCDF archivo, por ejemplo, en lo que respecta al cumplimiento de CF. Es responsabilidad del creador de archivos y del usuario de archivos comprobar que los resultados de la conversión son tan deseados y correctos. Dos formas de comprobar son:
     * Imprima el contenido del .nc archivo con ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * Vea el contenido de los datos en ERDDAP .
 
 ##  [Cambios](#changes)  {#changes} 

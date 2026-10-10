@@ -45,14 +45,14 @@ Jos jokin vaatimus tässä asiakirjassa vaikuttaa oudolta tai hankalalta, se on 
 Tämä spesifikaatio viittaa useisiin muihin eritelmiin ja kirjastoihin, joiden kanssa se on suunniteltu toimimaan, mutta tämä eritelmä ei ole osa mitään näistä muista eritelmistä, eikä se tarvitse niihin muutoksia eikä se ole ristiriidassa niiden kanssa. Jos johonkin näistä standardeista ei ole täsmennetty yksityiskohtaisesti, katso tästä. Erityisesti tämä sisältää:
 
 * Tietoaineiston löydöstä tehty attribuutiosopimus (ACDD) Metadata-standardi:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * Ilmasto ja ennuste (CF) Metadata-standardi:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * The NetCDF Käyttäjäohjaus (NUG) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * The NetCDF ohjelmistokirjastot, kuten NetCDF Java ja NetCDF c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Nämä kirjastot eivät voi lukea NCCSV-tiedostoja, mutta ne voivat lukea .nc NCCSV-tiedostoista luodut tiedostot.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . Nämä kirjastot eivät voi lukea NCCSV-tiedostoja, mutta ne voivat lukea .nc NCCSV-tiedostoista luodut tiedostot.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Ilmoitus{#notation} 
 Tässä spesifikaatiossa, \\[   \\] Valitse valinnaiset kohteet.
@@ -152,12 +152,12 @@ Tietotyyppien määritelmät ovat:
     * Kaksinkertainen lainaus (""") Ne on koodattava kahdeksi kaksoislainaksi. (""") . Tämä on mitä laskentataulukko-ohjelmat vaativat, kun luet .csv-tiedostoja. Tämä on mitä laskentataulukko-ohjelmat kirjoittavat, kun tallentaa laskentataulukon .csv-tiedostona.
     * Erityiset JSON-taustaiset hahmot on koodattava JSONin tavoin (erityisesti \\n (uusi viiva), mutta myös (backslash), \f (formfeed), \t (tab), \r (kuljetuspalautus) tai [U *Hhhh* ](#uhhhh) syntaksi. Laajennustaulukossa älä käytä Alt Enteriä määrittämään tekstisolussa olevaa uutta linjaa. \\n   (2 merkkiä: selkäranka ja n """) ilmoittamaan uudesta linjasta.
 #####  uhhhh  {#uhhhh} 
-    * U *hhhh - Kaikki merkit, jotka ovat vähemmän kuin merkki #32 tai suurempia kuin merkki #126, eikä muuten koodattu, on koodattava syntaksin kanssa* hhh*, jossa hhhh on 4-numeroinen heksadesimaalinen luku, esim. euromerkki on #u20AC. Katso koodisivut, joihin viitataan [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) löytää heksadesimaaliluvut, jotka liittyvät tiettyihin Unicode-merkkeihin tai käyttää ohjelmistokirjastoa.
+    * U *hhhh - Kaikki merkit, jotka ovat vähemmän kuin merkki #32 tai suurempia kuin merkki #126, eikä muuten koodattu, on koodattava syntaksin kanssa* hhh*, jossa hhh on 4-numeroinen heksadesimaalinen luku, esim. euromerkki on \\ \\u20AC . Katso koodisivut, joihin viitataan [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) löytää heksadesimaaliluvut, jotka liittyvät tiettyihin Unicode-merkkeihin tai käyttää ohjelmistokirjastoa.
     * Jos ketjussa on tilaa alussa tai lopussa, tai se sisältää (Kaksinkertainen) tai tiivistelmä tai sisältää arvoja, joita muuten tulkitaan jonkin muun tietotyypin mukaan (Esimerkki: Int) Tai on sana "null", koko String on suljettava kaksoislainoihin; muuten, toisin kuin JSON, suljetut kaksi lainausta ovat valinnaisia. Suosittelemme: jos epäilet, sulje koko String kaksoislainoihin. Avaruudet, jotka ovat alkaneet tai päättyneet, lannistuvat voimakkaasti.
     * Toistaiseksi yli 255-hahmojen käyttö on lannistunut. NCCSV tukee heitä. ERDDAP™ tukee niitä sisäisesti. Jotkut tiedostot tukevat niitä (esim. .json ja .nccsv ) . Monet tiedostotyypit eivät tue niitä. Esimerkiksi, NetCDF 3 tiedostot eivät tue tällaisia hahmoja, koska NetCDF tiedostot käyttävät 1-tavuisia merkkejä ja CF: llä ei tällä hetkellä ole järjestelmää, jolla määritetään, miten Unicode-hahmot koodataan. NetCDF Strings (UTF-8) . Tämä paranee todennäköisesti ajan myötä.
          
 #### Char{#char} 
-* char attribute -arvot ovat yksi UCS-2-hahmo (2-tavuiset Unicode-hahmot, kuten Java ) , joka on kirjoitettava 7-bittiseksi ASCII:ksi, JSONin kaltaisiksi hahmoiksi, jotta muut hahmot voidaan määrittää. (ks. edellä oleva String-määritelmä erityishahmojen koodaamiseksi, lisättynä koodaamaan yksi lainaus. """) . Char attribute -arvot on sisällytettävä yksittäisiin tarjouksiin. (Sisäiset lainaukset) Kaksinkertainen lainaus (Ulkoiset lainaukset) Esimerkkinä "a" """ """" (Kaksinkertainen merkintä) "'''''' (Yhden lainauksen hahmo) "Ei" (Tab) &gt; 20AC &gt; (Euro-hahmo) . Tämä järjestelmä käyttää yksi- ja kaksi lainauksia on outo ja hankala, mutta se on tapa erottaa hyväntekeväisyys arvot Strings tavalla, joka toimii laskentataulukot. Arvo, joka näyttää kartalta, mutta on mitätön, tuottaa virheilmoituksen. Kuten Stringsissä, yli #255-hahmojen käyttö on tällä hetkellä lannistunut.
+* char attribute -arvot ovat yksi UCS-2-hahmo (2-tavuiset Unicode-hahmot, kuten Java ) , joka on kirjoitettava 7-bittiseksi ASCII:ksi, JSONin kaltaisiksi hahmoiksi, jotta muut hahmot voidaan määrittää. (ks. edellä oleva String-määritelmä erityishahmojen koodaamiseksi, lisättynä koodaamaan yksi lainaus. """) . Char attribute -arvot on sisällytettävä yksittäisiin tarjouksiin. (Sisäiset lainaukset) Kaksinkertainen lainaus (Ulkoiset lainaukset) Esimerkkinä "a" """ """" (Kaksinkertainen merkintä) "'''''' (Yhden lainauksen hahmo) "Ei" (Tab) » » \\u20AC """" (Euro-hahmo) . Tämä järjestelmä käyttää yksi- ja kaksi lainauksia on outo ja hankala, mutta se on tapa erottaa hyväntekeväisyys arvot Strings tavalla, joka toimii laskentataulukot. Arvo, joka näyttää kartalta, mutta on mitätön, tuottaa virheilmoituksen. Kuten Stringsissä, yli #255-hahmojen käyttö on tällä hetkellä lannistunut.
 
 ### Suffix{#suffix} 
 Huomaa, että NCCSV-tiedoston attribuuttiosassa kaikilla numeerisilla attribuuttiarvoilla on oltava riittävä kirjain. (Esim. ”b”) Numeerisen tietotyypin tunnistaminen (Esimerkki: Tate) . NCCSV-tiedoston tietojen osiossa numeeriset tietoarvot eivät saa koskaan olla näitä riittäviä kirjaimia. (poikkeuksena 'L' pitkät kokonaisluvut ja 'UL' ulottuvilla kokonaisluvuilla) tietotyyppi on määritelty\\*DATA TIPE\\*Muuttujien ominaisuus.
@@ -220,7 +220,7 @@ Numeerisina arvoina esitetyillä DateTime-arvoilla on oltava yksiköiden ominais
 aika, yksiköt, sekunnit vuodesta 1970-01-01T00:00
 
 DateTime-arvot, jotka on edustettuina String-arvoina, täytyy olla String.\\*DATA TIPE\\*attribuutti ja yksiköt, jotka määrittävät päivämäärän Aikataulu, joka on määritelty Java DateFormatter-luokka
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Esimerkiksi,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Esimerkiksi,
 aika, yksiköt, yyyy-MM-dd T'Hh: mm: ssz
 Kaikkien tietomuuttujan päivämäärien on käytettävä samaa muotoa.
 Useimmissa tapauksissa yksiköiden attribuutin päivämäärän malli on jonkin näistä muodoista vaihtelua:
@@ -245,7 +245,7 @@ Kuten CF vaatii, kaikki arvot (esim. pituus ja leveys) on määriteltävä desim
 ##  [DSG Ominaisuudet Types](#dsg-feature-types)  {#dsg-feature-types} 
 
 NCCSV-tiedosto voi sisältää CF Discrete Sampling Geometrian.
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) dataa. Nämä ominaisuudet tekevät tämän työn:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) dataa. Nämä ominaisuudet tekevät tämän työn:
 
 1. CF:n edellyttämällä tavalla NCCSV-tiedoston on sisällettävä rivi metadata-osioon, jossa tunnistetaan [\\*GLOBAL\\*](#global)   featureType attribuutti, esim.
     \\*GLOBAL\\*, featureType Trajectory
@@ -326,7 +326,7 @@ Huomautuksia:
 
 * Näytetiedosto sisältää monia vaikeita tapauksia (esim. char ja pitkät muuttujat ja vaikeat String-arvot) . Useimmat NCCSV-tiedostot ovat yksinkertaisempia.
 * Lisenssilinja on jaettu kahteen riviin, mutta se on vain yksi rivi näytetiedostossa.
-* u20AC on Euro-hahmon koodaus ja 00FC on ü:n koodaus.
+* \\ \\ \\u20AC Euro-hahmon koodaus ja u00FC on ü:n koodaus.
 * Monet monet Esimerkkiin kuuluvat kaksinkertaiset lainaukset, vaikka niiden ei tarvitse olla esimerkiksi monia globaaleja ominaisuuksia, kuten otsikko, yksittäisten yksikköjen attribuutti ja kolmas data.
 * Olisi selkeämpää ja parempi, jos testLong-muuttujan yksiköt kirjoitettaisiin kaksinkertaisilla merkinnöillä, jotka osoittavat sen olevan String-arvo. Nykyinen edustus (1. Ilman lainauksia) tulkitaan oikein lantiona, ei kokonaislukuna, koska ei ole "i"-kiinteä.
 * Toisin kuin muissa numeerisissa tietotyypeissä, data-alueen pitkät arvot ovat riittäviä. ("L") Se tunnistaa numerotietotyypin. Tämä on välttämätöntä, jotta laskentataulukot eivät tulkitse arvoja kelluvana pistenumerona ja menettäisi täsmällisyyttä.
@@ -336,7 +336,7 @@ Huomautuksia:
 taulukossa, kuten NCCSV-tiedostossa:
 
 * Kirjoita numeerisia attribuuttiarvoja NCCSV-tiedostojen mukaisesti (esimerkiksi riittävillä kirjaimilla, kuten f, attribuutin tietotyypin tunnistamiseksi) .
-* Stringsissä, kirjoita kaikki hahmot vähemmän kuin ASCII-hahmo #32 tai suurempi kuin hahmo #126 joko JSON-kaltainen selkärankainen hahmo. (esim. \\n Newline) Hexadecimal Unicode -luku (Tapaus herkkä) syntaksin kanssa [U *Hhhh* ](#uhhhh)   (Esim. euron merkki) . Käytä \\n   (2 merkkiä: selkäranka ja n """) Uutta linjaa, ei Alt Enter.
+* Stringsissä, kirjoita kaikki hahmot vähemmän kuin ASCII-hahmo #32 tai suurempi kuin hahmo #126 joko JSON-kaltainen selkärankainen hahmo. (esim. \\n Newline) Hexadecimal Unicode -luku (Tapaus herkkä) syntaksin kanssa [U *Hhhh* ](#uhhhh)   (esim. \\ \\u20AC Euron merkki) . Käytä \\n   (2 merkkiä: selkäranka ja n """) Uutta linjaa, ei Alt Enter.
 
 Ainoat erot NCCSV-tiedostojen ja analogisen laskentataulukon välillä ovat:
 
@@ -392,7 +392,7 @@ Luo NCCSV-tiedosto Google Sheets -taulukosta:
 * Jos NCCSV-tiedostossa on ylimääräisiä törmäyksiä rivien lopussa, voit poistaa ne muuntamalla NCCSV-tiedoston tiedostoksi. NetCDF tiedosto ja sen jälkeen muuntaa NetCDF Palauta NCCSV-tiedostoon.
 * Kun yrität muuntaa NCCSV-tiedoston NetCDF tiedosto, ohjelmisto havaitsee joitakin virheitä ja tuottaa virheviestejä, jolloin muuntaminen epäonnistuu. Muut ongelmat ovat vaikeita tai mahdottomia saada kiinni, eikä niistä aiheudu virheilmoituksia tai varoituksia. Muita ongelmia (Esim. liiallinen komma rivien lopussa) jätetään huomiotta. Tiedostomuunnin tekee vain minimaalisen tarkastuksen tuloksena olevan korrektiuden. NetCDF esim. CF-vaatimusten noudattamisesta. Tiedoston luojan ja tiedostokäyttäjän vastuulla on tarkistaa, että muuntamisen tulokset ovat yhtä haluttuja ja oikein. Kaksi tapaa tarkistaa ovat:
     * Tulosta sisältö .nc tiedosto ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * Katso tietojen sisältö sisään ERDDAP .
 
 ##  [Muutoksia](#changes)  {#changes} 

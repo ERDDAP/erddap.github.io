@@ -42,7 +42,7 @@ Amikor egy adatszolgáltató érkezik hozzád, remélve, hogy hozzáad néhány 
 A tényleges adatfájlok külső forrásokból történő benyújtása hatalmas biztonsági kockázat, így ERDDAP™ nem foglalkozik ezzel. Meg kell találnia egy olyan megoldást, amely az Ön és az adatszolgáltató számára működik, például e-mail (kis fájlokhoz) , húzza ki a felhőből (például a DropBox vagy a Google Drive) Sftp webhely (jelszavakkal) vagy sneaker Net (USB hüvelykujjj meghajtó vagy külső merevlemez) ... Valószínűleg csak olyan fájlokat kell elfogadnia az emberektől, akiket ismer. Meg kell szkennelni a fájlokat vírusok és más biztonsági óvintézkedések.
 
 Nincs kapcsolat ERDDAP™ az adatszolgáltatói űrlaphoz (például, ERDDAP™ weboldal) ... Ehelyett, ha valaki azt mondja, hogy az adatait az Ön által szolgáltatott ERDDAP Küldhet nekik egy e-mailt, mondván valamit:
-Igen, megkaphatjuk az adatait ERDDAP ... Kezdéshez kérjük, töltse ki az űrlapothttps://*yourUrl*/erddap/dataProviderForm.html  (vagy http:// ha https:// nem engedélyezett) ...
+Igen, megkaphatjuk az adatait ERDDAP ... Kezdéshez kérjük, töltse ki az űrlapot https://*yourUrl*/erddap/dataProviderForm.html   (vagy http:// ha https:// nem engedélyezett) ...
 Miután befejezte, kapcsolatba lépek, hogy dolgozzon ki a végső részleteket.
 Ha csak meg akarja nézni a formát (anélkül, hogy kitölte volna) Láthatja a formát ERD A ERDDAP : [Bevezetés](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) , [1. rész](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) , [2. rész](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) , [3. rész](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) és [4. rész](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) ... Ezek a linkek a ERD   ERDDAP™ Információt küldj hozzám, nem te, ezért ne nyújts be információt velük, hacsak nem szeretné hozzáadni az adatokat ERD   ERDDAP ...
 
@@ -190,23 +190,23 @@ Ez az EDDType az összes datasets.xml cunks szükséges ahhoz, hogy [EDDTableFro
      
 #####  EDDGrid FromThreddsCatalog{#eddgridfromthreddscatalog} 
 Ez az EDDType az összes datasets.xml a zsák szükséges az összes [ EDDGrid dalszöveg](#eddgridfromdap) olyan adatkészletek, amelyeket visszanyerő módon találhat egy THREDDS-en keresztül (alá: beadás) katalógus. Számos formája van a THREDDS katalógus URL-eknek. Ez az opció REQUIRES egy THREDDS .xml URL /catalog / benne, például,
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xmlvagy
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml vagy
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (Egy kapcsolódó .html katalógus van
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.htmlamely nem elfogadható EDDGrid FromThreddsCatalog.
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html amely nem elfogadható EDDGrid FromThreddsCatalog.
 Ha problémái vannak EDDGrid FromThredd Katalógus:
 * Győződjön meg róla, hogy az URL-t használja, érvényes, tartalmazza / katalog /, és végződik /catalog.xml .
-* Ha lehetséges, használjon nyilvános IP-címet (például,https://oceanwatch.pfeg.noaa.gov) az URL-ben, nem egy helyi numerikus IP-cím (például,https://12.34.56.78) ... Ha a THREDDS csak a helyi numerikus IP címen keresztül érhető el, használhatja [&lt;átalakításToPublicSourceUrl&gt; (#konverttopublicsourceurl) így ERDDAP™ a felhasználók látják a nyilvános címet, bár ERDDAP™ adatokat kap a helyi numerikus címről.
+* Ha lehetséges, használjon nyilvános IP-címet (például, https://oceanwatch.pfeg.noaa.gov ) az URL-ben, nem egy helyi numerikus IP-cím (például, https://12.34.56.78 ) ... Ha a THREDDS csak a helyi numerikus IP címen keresztül érhető el, használhatja [&lt;átalakításToPublicSourceUrl&gt; (#konverttopublicsourceurl) így ERDDAP™ a felhasználók látják a nyilvános címet, bár ERDDAP™ adatokat kap a helyi numerikus címről.
 * Ha olyan problémák vannak, amelyeket nem lehet megoldani, [Ellenőrizze a hibaelhárítási tippeket](#troubleshooting-tips) ...
 * Az alacsony szintű kód ezt most használja Unidata netcdf-java katalógus személyzeti kód (Szárak. katalógus osztályok) hogy kezelje az összes THREDDS katalógust (amely meglepően bonyolult lehet) Köszönöm Unidata ehhez a kódhoz.
          
 #####  EDDGrid LonPM180FromErddapCatalog{#eddgridlonpm180fromerddapcatalog} 
 Ez az EDDType generálja datasets.xml Hogy [ EDDGrid LonPM180](#eddgridlonpm180) adatkészletek az összes EDDGrid adatkészletek egy ERDDAP olyan hosszúsági értékek, amelyek 180-nál nagyobbak.
-* Ha lehetséges, használjon nyilvános IP-címet (például,https://oceanwatch.pfeg.noaa.gov) az URL-ben, nem egy helyi numerikus IP-cím (például,https://12.34.56.78) ... Ha ERDDAP™ csak a helyi numerikus IP-címen keresztül érhető el, használhatja [&lt;átalakításToPublicSourceUrl&gt; (#konverttopublicsourceurl) így ERDDAP™ a felhasználók látják a nyilvános címet, bár ERDDAP™ adatokat kap a helyi numerikus címről.
+* Ha lehetséges, használjon nyilvános IP-címet (például, https://oceanwatch.pfeg.noaa.gov ) az URL-ben, nem egy helyi numerikus IP-cím (például, https://12.34.56.78 ) ... Ha ERDDAP™ csak a helyi numerikus IP-címen keresztül érhető el, használhatja [&lt;átalakításToPublicSourceUrl&gt; (#konverttopublicsourceurl) így ERDDAP™ a felhasználók látják a nyilvános címet, bár ERDDAP™ adatokat kap a helyi numerikus címről.
          
 #####  EDDGrid Lon0360 FromErddapCatalog{#eddgridlon0360fromerddapcatalog} 
 Ez az EDDType generálja datasets.xml Hogy [ EDDGrid Lon0360](#eddgridlon0360) adatkészletek az összes EDDGrid adatkészletek egy ERDDAP aminek bármilyen hosszúsági értéke kevesebb, mint 0.
-* Ha lehetséges, használjon nyilvános IP-címet (például,https://oceanwatch.pfeg.noaa.gov) az URL-ben, nem egy helyi numerikus IP-cím (például,https://12.34.56.78) ... Ha ERDDAP™ csak a helyi numerikus IP-címen keresztül érhető el, használhatja [&lt;átalakításToPublicSourceUrl&gt; (#konverttopublicsourceurl) így ERDDAP™ a felhasználók látják a nyilvános címet, bár ERDDAP™ adatokat kap a helyi numerikus címről.
+* Ha lehetséges, használjon nyilvános IP-címet (például, https://oceanwatch.pfeg.noaa.gov ) az URL-ben, nem egy helyi numerikus IP-cím (például, https://12.34.56.78 ) ... Ha ERDDAP™ csak a helyi numerikus IP-címen keresztül érhető el, használhatja [&lt;átalakításToPublicSourceUrl&gt; (#konverttopublicsourceurl) így ERDDAP™ a felhasználók látják a nyilvános címet, bár ERDDAP™ adatokat kap a helyi numerikus címről.
          
 ##### EDDSFromFiles{#eddsfromfiles} 
 Tekintettel az induló könyvtárra, ez megfordítja a könyvtárat és az összes alirányítót, és megpróbál létrehozni egy adatkészletet minden egyes adatfájlhoz, amelyet megtalál.
@@ -566,7 +566,7 @@ Az NCCSV 1.0 fájlok nem támogatnak semmilyen nem aláírt integrált adattípu
 ### Adattípus megjegyzések{#data-type-comments} 
 * Mivel a rossz támogatás hosszú, ulong, és char adatok sok fájltípusban, elriasztjuk az ilyen adattípusok használatát ERDDAP ... Ha lehetséges, használja kettős helyett hosszú és ulong, és használja String helyett char.
      
-* Metadata - Mert(OPeN)DAP.das és .dds válaszok nem támogatják a hosszú vagy ulong tulajdonságokat vagy adattípusokat (helyettük kettősnek mutatják őket) Ehelyett inkább használni akarod ERDDAP "A metafora reprezentációja a metaadata, mint látható a http .../erddap/ **Info** / * datasetID * .html weboldal (például, [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (amely más fájltípusokban is kaphat, például .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) vagy .nccsv Metadata válasz (például, [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) bár .nccsv A Metadata csak tabuláris adatkészletekhez érhető el) mindkettő támogatja az összes adattípust (különösen, hosszú, ulong és char) ...
+* Metadata - Mert(OPeN)DAP.das és .dds válaszok nem támogatják a hosszú vagy ulong tulajdonságokat vagy adattípusokat (helyettük kettősnek mutatják őket) Ehelyett inkább használni akarod ERDDAP "A metafora reprezentációja a metaadata, mint látható a http .../erddap/ **Info** / * datasetID * .html weboldal (például, [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (amely más fájltípusokban is kaphat, például .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) vagy .nccsv Metadata válasz (például, [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) bár .nccsv A Metadata csak tabuláris adatkészletekhez érhető el) mindkettő támogatja az összes adattípust (különösen, hosszú, ulong és char) ...
          
 ### Media Files{#media-files} 
 Nem minden adat számos szám vagy szöveg. Néhány adatkészlet tartalmaz vagy tartalmazza a médiafájlokat, például a képet, az audio- és videofájlokat. ERDDAP™ Van néhány speciális jellemzője, hogy megkönnyítse a felhasználók számára, hogy hozzáférjenek a médiafájlokhoz. Ez egy két lépéses folyamat:
@@ -604,7 +604,7 @@ Vagy ha egy felhasználó kattint a fájlnévre, amelyet egy ERDDAP™ weboldal,
 ### Az AWS S3 fájlokkal való együttműködés{#working-with-aws-s3-files} 
  [Amazon Web szolgáltatás (AWS) ](https://aws.amazon.com) egy eladója [felhő számítás](https://en.wikipedia.org/wiki/Cloud_computing) Szolgáltatások. [S3](https://aws.amazon.com/s3/) az AWS által kínált objektumtároló rendszer. A hagyományos fájlrendszer hierarchikus rendszere és fájljai helyett (mint egy kemény meghajtó a PC-ben) Az S3 csak "bucketeket" kínál, amelyek "objekteket" tartanak (hívjuk őket "files" ) ...
 
-Az ASCII fájlokhoz (pl.: .csv) , ERDDAP™ közvetlenül a vödörökben lévő fájlokkal dolgozhat. Az egyetlen dolog, amit meg kell tennie, az megadja a&lt;fájlDir&gt; az adatkészlethez egy adott formátumot használva az AWS bucket számára, példáulhttps://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/... Nem szabad használni&lt;cacheFromUrl&gt; Lásd alább részleteket.
+Az ASCII fájlokhoz (pl.: .csv) , ERDDAP™ közvetlenül a vödörökben lévő fájlokkal dolgozhat. Az egyetlen dolog, amit meg kell tennie, az megadja a&lt;fájlDir&gt; az adatkészlethez egy adott formátumot használva az AWS bucket számára, például https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ ... Nem szabad használni&lt;cacheFromUrl&gt; Lásd alább részleteket.
 
 De a bináris fájlokhoz (pl.: .nc , .grib, .bufr és .hdf fájlok) Használnia kell&lt;cacheFromUrl&gt; rendszer az alábbiakban leírt. ERDDAP Netcdf-java (melyik ERDDAP™ használja az adatok olvasását ezekből a fájlokból) , és más tudományos adatszoftvereket úgy terveztek, hogy egy hagyományos fájlrendszerben dolgozzanak, amely kínál [blokk szint](https://en.wikipedia.org/wiki/Block-level_storage) hozzáférés fájlokhoz (amely lehetővé teszi, hogy elolvassa a zsákokat egy fájlból) , de az S3 csak ajánlatok [fájlszint (objektum) ](https://en.wikipedia.org/wiki/Block-level_storage) hozzáférés fájlokhoz (amely csak lehetővé teszi az egész fájl olvasását) ... Az AWS alternatívát kínál az S3-nak, [Elastic Block áruház (EBS) ](https://aws.amazon.com/ebs/) ), amely támogatja a blokk szintű hozzáférést a fájlokhoz, de drágább, mint az S3, ezért ritkán használják nagy mennyiségű adatfájl tárolására. (Tehát amikor az emberek azt mondják, hogy tárolja az adatokat a felhőben (S3) olcsó, általában almák narancsok összehasonlításához.) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 A megfelelő URl ehhez a tárgyhoz
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 Az AWS egy kis variációt támogat abban, hogy hogyan épül fel az URL, de ERDDAP™ megköveteli ezt az egy adott formátumot:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 Mint ERDDAP v2.29, most használhatja a `S3:` URI formátum a bucket URL helyett. Ez a formátum, amelyet a [AWS s3 cli](https://docs.aws.amazon.com/cli/latest/reference/s3/) ...
 S3: *BucketName* / *kulcs* 
@@ -697,22 +697,22 @@ Egy privát S3 adatcsomag esetében a vödör tulajdonosának hozzáférést kel
 Minden esetben szüksége lesz egy AWS fiókra, mert az AWS SDK Java   (melyik ERDDAP™ az információ visszaszerzése egy vödör tartalmáról) megköveteli az AWS fiók hitelesítő adatait. (többet az alábbiakban) 
 
  ERDDAP™ csak az AWS S3 vödörhöz férhet hozzá, ha megadja a [&lt;cacheFromUrl&gt; (#cachefromurl) (vagy&lt;fájlDir&gt;) egy adott formátumban:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 ahol
 
 * A bucketName a vödör neve rövid formája, pl. noaa-goes17.
 * Az aws-region, például a kelet-1, a "Region" oszlop egyik táblázatában található. [AWS Service Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) ahol a vödör valójában található.
 * Az előtag opcionális. Ha jelen van, akkor véget kell érnie '/' ...
 
-Például,https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+Például, https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 Ez az URL formátum az egyik AWS S3 ajánlás: lásd [Bucket hozzáférése](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) és [az előtagok leírása](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) ... ERDDAP™ megköveteli, hogy kombinálja a vödör URL-t és az opcionális előtagot egy URL-be annak érdekében, hogy meghatározza a&lt;cacheFromUrl&gt; (vagy&lt;fájlDir&gt;), ahol a fájlok találhatók.
 
 #### Test Public AWS S3 Buckets{#test-public-aws-s3-buckets} 
 A nyilvános vödörök számára tesztelheti és tesztelheti az AWS S3 könyvtárának vödörét a böngészőben, pl.
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) Ha a vödör URL helyes és megfelelő ERDDAP visszatér egy XML dokumentumhoz, amely rendelkezik (Részleges) e vödör tartalmának felsorolása. Sajnos a teljes URL (i.e., bucket URL plus prefix) az ERDDAP™ egy adott adatkészletet akar, nem működik egy böngészőben. Az AWS nem kínál rendszert, hogy a böngészőben könnyen böngészhesse a vödör hierarchiáját. (Ha ez helytelen, kérjük, e-mailben Chris. John at noaa.gov. Ellenkező esetben az Amazon, kérlek, adjon támogatást ehhez&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) Ha a vödör URL helyes és megfelelő ERDDAP visszatér egy XML dokumentumhoz, amely rendelkezik (Részleges) e vödör tartalmának felsorolása. Sajnos a teljes URL (i.e., bucket URL plus prefix) az ERDDAP™ egy adott adatkészletet akar, nem működik egy böngészőben. Az AWS nem kínál rendszert, hogy a böngészőben könnyen böngészhesse a vödör hierarchiáját. (Ha ez helytelen, kérjük, e-mailben Chris. John at noaa.gov. Ellenkező esetben az Amazon, kérlek, adjon támogatást ehhez&#33;) 
 
 #### Egy vödör tartalmának megtekintése{#viewing-the-contents-of-a-bucket} 
-Az S3 buckets gyakran tartalmaz néhány fájlkategóriát, néhány pszeudo-közvetítőt, amelyek pár ERDDAP™ adatkészletek. Ahhoz, hogy a ERDDAP™ adatkészletek, tudnia kell a kezdő könyvtárat&lt;cacheFromUrl&gt; (vagy&lt;fájlDir&gt;) és a fájl nevek formátuma, amelyek azonosítják a fájlok beállítását. Ha egy böngészőben megpróbálja megtekinteni a teljes tartalmat, az S3 csak az első 1000 fájlt mutatja be, ami elégtelen. Jelenleg a legjobb módja annak, hogy megnézze az összes tartalmat egy vödör, hogy egy [EDDTableFromFileNames](#eddtablefromfilenames) adatkészlet (a PC-jén ERDDAP™ és/vagy a nyilvánosságra ERDDAP ) , amely egy egyszerű módja annak, hogy böngészje a könyvtári struktúrát és letöltse fájlokat. A&lt;fájlDir&gt; ez lesz az URL, amit fent tett, pl.https://noaa-goes17.s3.us-east-1.amazonaws.com... \\[ Miért nem kínálja az AWS S3 gyors és egyszerű módját bárkinek, aki ezt AWS fiók nélkül teszi? \\] Vegye figyelembe, hogy amikor ezt a PC-n egy nem Amazon hálózaton csinálom, úgy tűnik, hogy az Amazon lelassítja a trükkre adott válaszot (körülbelül 100 (?) fájlok / chunk) az első néhány darab után (1000 fájlból darabonként) letöltve. Mivel a vödrök hatalmas számú fájlt tartalmazhatnak (Noaa-goes17 26 millióval rendelkezik) , hogy az összes tartalmát egy vödör lehet venni EDDTableFromFileNames órák (pl. 12&#33;) befejezni. \\[ Az Amazon igaz? \\] 
+Az S3 buckets gyakran tartalmaz néhány fájlkategóriát, néhány pszeudo-közvetítőt, amelyek pár ERDDAP™ adatkészletek. Ahhoz, hogy a ERDDAP™ adatkészletek, tudnia kell a kezdő könyvtárat&lt;cacheFromUrl&gt; (vagy&lt;fájlDir&gt;) és a fájl nevek formátuma, amelyek azonosítják a fájlok beállítását. Ha egy böngészőben megpróbálja megtekinteni a teljes tartalmat, az S3 csak az első 1000 fájlt mutatja be, ami elégtelen. Jelenleg a legjobb módja annak, hogy megnézze az összes tartalmat egy vödör, hogy egy [EDDTableFromFileNames](#eddtablefromfilenames) adatkészlet (a PC-jén ERDDAP™ és/vagy a nyilvánosságra ERDDAP ) , amely egy egyszerű módja annak, hogy böngészje a könyvtári struktúrát és letöltse fájlokat. A&lt;fájlDir&gt; ez lesz az URL, amit fent tett, pl. https://noaa-goes17.s3.us-east-1.amazonaws.com ... \\[ Miért nem kínálja az AWS S3 gyors és egyszerű módját bárkinek, aki ezt AWS fiók nélkül teszi? \\] Vegye figyelembe, hogy amikor ezt a PC-n egy nem Amazon hálózaton csinálom, úgy tűnik, hogy az Amazon lelassítja a trükkre adott válaszot (körülbelül 100 (?) fájlok / chunk) az első néhány darab után (1000 fájlból darabonként) letöltve. Mivel a vödrök hatalmas számú fájlt tartalmazhatnak (Noaa-goes17 26 millióval rendelkezik) , hogy az összes tartalmát egy vödör lehet venni EDDTableFromFileNames órák (pl. 12&#33;) befejezni. \\[ Az Amazon igaz? \\] 
 
 #### EDDTable készítése FromFileNames Dataset with AWS S3 Bucket{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 Ha van egy vödör neve, de nem rendelkezik már egy listát a fájlok az S3 vödör vagy az előtag, amely azonosítja a helyét a vonatkozó fájlokat a vödörben, használja az utasításokat, hogy az EDDTableFileNames adatkészlet, így böngészheti a könyvtár hierarchia az S3 vödör keresztül ERDDAP A "files" rendszer.
@@ -727,22 +727,24 @@ java.lang. IllegalArgumentException: profilfájl nem lehet null hiba ERDDAP Log.
 Hint for Linux és Mac OS: a hitelesítő fájlnak a Tomcat futó felhasználó otthoni könyvtárában kell lennie (és ERDDAP )   (e bekezdés esetében a felhasználó=tomcat) egy ~/.aws/credentials nevű fájlban. Ne feltételezzük, hogy ~ a /home/tomcat - valójában használja a cd-t -, hogy megtudja, hol gondolja az operációs rendszer - a felhasználó=tomcat. Hozzon létre a könyvtárat, ha nem létezik. Továbbá, miután elhelyezte a hitelesítő fájlt, győződjön meg róla, hogy a fájl felhasználója és csoportja tomcat, majd használja a chmod 400 hitelesítőt, hogy megbizonyosodjon arról, hogy a fájl csak a felhasználói=tomcat.
     
 3. Hozzon létre a bucket URL-t [formátum, ERDDAP™ követelmények](#accessing-files-in-an-aws-s3-bucket) pl.:
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) és (nyilvános vödrökkel) tesztelni egy böngészőben, hogy megbizonyosodjon arról, hogy visszatér egy XML dokumentum, amely részlegesen felsorolja a tartalmát a bucket.
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) és (nyilvános vödrökkel) tesztelni egy böngészőben, hogy megbizonyosodjon arról, hogy visszatér egy XML dokumentum, amely részlegesen felsorolja a tartalmát a bucket.
      
 4. Használat [GenerateDatasetsXml](#generatedatasetsxml) létrehozni egy [EDDTableFromFileNames](#eddtablefromfilenames) adatkészlet:
     * A Starting könyvtárhoz használja ezt a szintaxot:
         \\*\\*\" *A-tól,* YourBucketUrl*
 például,
-        \\*\\*\\*fromOnTheFly,https://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\*\\*fromOnTheFly, https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * File név regex? **
     * Visszatérő? Igaz
     * újratöltés EveryNMinutes? 10080
-    *    infoUrl ?https://registry.opendata.aws/noaa-goes/
+    *    infoUrl ? https://registry.opendata.aws/noaa-goes/
+ 
     * intézmény? NOAA 
     * összefoglaló? Nincs semmi ( ERDDAP™ automatikusan egy tisztességes összefoglalót hoz létre.) 
     * cím? Nincs semmi ( ERDDAP™ automatikusan létrehoz egy tisztességes címet.) A szokásos módon szerkesztenie kell az elért XML-t, hogy ellenőrizze a korrektséget, és javítson, mielőtt az adatkészletek zsunkja használja azt. datasets.xml ...
 5. Ha követi a fenti utasításokat, és betölti az adatkészletet ERDDAP , létrehozott egy EDDTableFromFiles adatkészletet. Példaként, és hogy megkönnyítse bárki számára, hogy böngészjen és letöltse az AWS Open Data buckets fájlokat, létrehoztuk az EDDTableFromFileNames adatkészleteket (lásd a listát a listán az AWS Open Data buckets-ből).
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) szinte az összes [AWS S3 Open Data buckets](https://registry.opendata.aws/) ...
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) szinte az összes [AWS S3 Open Data buckets](https://registry.opendata.aws/) ...
      \\[ A kevesek, akiket nem tartalmaztunk, vagy számos fájlt tartalmaztak a gyökérkönyvtárban (több, mint letölthető ésszerű idő alatt) vagy nem engedélyezi a nyilvános hozzáférést (Nem ők mind nyilvánosak?) vagy a Requester Pays buckets (pl. Sentinel) ... \\]   
 Ha rákattintasz a "files" link az egyik ilyen adatkészlethez, böngészheti a könyvtárfát és a fájlokat ebben az S3-ban. Az út miatt\\*\\*\\*fromOnTheFly EDDTableFromFiles működik, ezek a könyvtári listák mindig tökéletesen naprakészek, mert ERDDAP™ a repülésen kapja meg őket. Ha rákattint a könyvtárfára egy tényleges fájlnévre, és kattintson a fájlnévre, ERDDAP™ átirányítja kérését az AWS S3-ra, hogy közvetlenül letölthesse a fájlt az AWS-től. Ezután ellenőrizheti ezt a fájlt.
     
@@ -756,7 +758,7 @@ Sajnálatos, hogy az AWS nem egyszerűen lehetővé teszi, hogy az emberek egy b
  **Aztán megteheted ERDDAP™ olyan adatkészletek, amelyek hozzáférést biztosítanak a felhasználóknak az adatokhoz a fájlokban.**   
 Lásd az utasításokat [ ERDDAP™ S3 vödör](#erddap-and-aws-s3-buckets)   (felett) ...
 A minta EDDTableFromFileNames adatkészlet, amelyet fent készített, ha egy kicsit feküdt a könyvtár és a fájl nevek a könyvtárban, egyértelművé válik, hogy a felső szintű könyvtár nevek (pl.: ABI-L1b-RadC) megfelel annak, amit ERDDAP™ külön adatkészleteknek neveznék. A vödör, amellyel dolgozol, hasonló lehet. Ezután külön adatkészleteket hozhat létre ERDDAP™ az egyes adatkészletek esetében, például,
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 mint&lt;cacheFromUrl&gt; Sajnos ebben a példában az adatkészletek a vödörben úgy tűnik, hogy az 1. vagy 2. szintű adatkészletek, amelyek ERDDAP™   [nem különösebben jó](#dimensions) Mivel az adatkészlet bonyolultabb változógyűjtemény, amely különböző dimenziókat használ.
      
     
@@ -975,7 +977,7 @@ A nem szorított dimenziós értékek szinte mindig problémát jelentenek a for
 ###  EDDGrid dalszöveg{#eddgridfromdap} 
  [ ** EDDGrid dalszöveg** ](#eddgridfromdap) kezeli a hálózati változókat [ DAP ](https://www.opendap.org/) szerverek.
 
-* Erősen ajánljuk a használatát [GenerateDatasets Xml program](#generatedatasetsxml) egy durva tervezetet készíteni datasets.xml cunk ehhez az adatkészlethez. Összegyűjtheti azokat az információkat, amelyekre szüksége van, hogy csípjen vagy létrehozza a saját XML-jét egy EDDGrid FromDap adatkészlet a forrásadatlap DDS és DAS fájlok megtekintésével a böngészőben (.das és .dds hozzáadása sourceUrl Például, [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) ...
+* Erősen ajánljuk a használatát [GenerateDatasets Xml program](#generatedatasetsxml) egy durva tervezetet készíteni datasets.xml cunk ehhez az adatkészlethez. Összegyűjtheti azokat az információkat, amelyekre szüksége van, hogy csípjen vagy létrehozza a saját XML-jét egy EDDGrid FromDap adatkészlet a forrásadatlap DDS és DAS fájlok megtekintésével a böngészőben (.das és .dds hozzáadása sourceUrl Például, [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) ...
      
 *    EDDGrid FromDap adatokat kaphat bármilyen többdimenziós változóból DAP adatkiszolgáló. (Korábban, EDDGrid FromDap korlátozott volt a változók kijelölt "széles", de ez már nem követelmény.)   
      
@@ -1335,7 +1337,7 @@ Teljes példa egy axisVariable ami aggregált adatállományt egy új "run" teng
         </addAttributes>
       </axisVariable>
 ```
-Vegye figyelembe a 2. számú rögzítő csoport használatát, hogy rögzítse a "r" vagy "s" után bekövetkező számjegyeket, és mielőtt "\\_global". Ez a példa azt is mutatja, hogyan kell hozzáadni további tulajdonságokat (pl.: ioos\\_category és egység) a tengely változó.
+Vegye figyelembe a 2. számú rögzítő csoport használatát, hogy rögzítse a "r" vagy "s" után bekövetkező számjegyeket, és mielőtt "\\_global" ... Ez a példa azt is mutatja, hogyan kell hozzáadni további tulajdonságokat (pl.: ioos\\_category és egység) a tengely változó.
      
 #### Külsőleg elnyomott fájlok{#externally-compressed-files} 
 * Adatkészletek, amelyek alkatrészei EDDGrid FromFiles és EDDTable Az FromFiles közvetlenül külsőleg tömörített adatfájlokból szolgálhat adatokat, köztük .tgz , .tar  .gz , .tar  .gzip , .gz , .gzip , .zip , .bz2 és .Z fájlok.
@@ -1433,7 +1435,7 @@ Minden EDDGrid FromFiles és az összes EDDTableFromFiles adatkészlet támogatj
 Ehelyett használja a [[szerkesztés]]]&lt;cacheFromUrl&gt; rendszer (#cachefromurl) ...
 
 Hozzáférés ERDDAP™ adatkészletek, mint fájlok byte range kéréseken keresztül -
-Flipping ezt körül, mert lehet (elmélet) Gondolj egy adatkészletre ERDDAP™ mint óriás .nc fájlt a "Csak" beállításával .nc "Az OPen bázisra DAP URL egy adott adatkészlethez (pl.:https://myserver.org/erddap/griddap/datasetID.ncés egy ?query hozzáadása után is, hogy megadja az aljzatot) Talán ésszerű megkérdezni, hogy használhatja-e a netcdf-java-t, Ferret vagy más NetCDF kliens szoftver az adatok olvasásához HTTP Range kérések ERDDAP ... A válasz nem, mert nincs igazán hatalmas " .nc "fájl. Ha ezt akarod csinálni, ehelyett tedd meg az egyik ilyen lehetőséget:
+Flipping ezt körül, mert lehet (elmélet) Gondolj egy adatkészletre ERDDAP™ mint óriás .nc fájlt a "Csak" beállításával .nc "Az OPen bázisra DAP URL egy adott adatkészlethez (pl.: https://myserver.org/erddap/griddap/datasetID.nc és egy ?query hozzáadása után is, hogy megadja az aljzatot) Talán ésszerű megkérdezni, hogy használhatja-e a netcdf-java-t, Ferret vagy más NetCDF kliens szoftver az adatok olvasásához HTTP Range kérések ERDDAP ... A válasz nem, mert nincs igazán hatalmas " .nc "fájl. Ha ezt akarod csinálni, ehelyett tedd meg az egyik ilyen lehetőséget:
 
 * Használat(OPeN)DAPügyfélszoftver, hogy csatlakozzon a griddap szolgáltatások által kínált ERDDAP ... Ez az, ami DAP   (és így ERDDAP ) tervezték. Nagyon hatékony.
 * Vagy letöltse a forrás fájlt (s) a "files" rendszerrendszer (vagy subset fájl egy .nc ? Lekérdezés) a számítógépére, és netcdf-java-t használ, Ferret vagy más NetCDF ügyfél szoftver olvasni (most) helyi fájl (s) ...
@@ -2253,9 +2255,9 @@ fontolja meg az adatok tárolását egy gyűjteményben NetCDF v3 .nc fájlok (k
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### EDDTableFromDapSequence{#eddtablefromdapsequence} 
- [ **EDDTableFromDapSequence** ](#eddtablefromdapsequence) a változók kezelése 1- és 2-szintű sorrendben [ DAP ](https://www.opendap.org/) szerverek, mint például DAP PER (volthttps://www.pmel.noaa.gov/epic/software/dapper/Most megszűnt) ...
+ [ **EDDTableFromDapSequence** ](#eddtablefromdapsequence) a változók kezelése 1- és 2-szintű sorrendben [ DAP ](https://www.opendap.org/) szerverek, mint például DAP PER (volt https://www.pmel.noaa.gov/epic/software/dapper/ Most megszűnt) ...
 
-* Erősen ajánljuk a használatát [GenerateDatasets Xml program](#generatedatasetsxml) egy durva tervezetet készíteni datasets.xml cunk ehhez az adatkészlethez. Ezután szerkesztheti ezt, hogy finomhangolja azt. Összegyűjtheti a szükséges információkat azáltal, hogy megvizsgálja a forrásadatlap DDS és a DAS fájlokat a böngészőben (a .das és .dds hozzáadásával a sourceUrl (Egy példa volthttps://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds).
+* Erősen ajánljuk a használatát [GenerateDatasets Xml program](#generatedatasetsxml) egy durva tervezetet készíteni datasets.xml cunk ehhez az adatkészlethez. Ezután szerkesztheti ezt, hogy finomhangolja azt. Összegyűjtheti a szükséges információkat azáltal, hogy megvizsgálja a forrásadatlap DDS és a DAS fájlokat a böngészőben (a .das és .dds hozzáadásával a sourceUrl (Egy példa volt https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds ).
     
 * A változó egy DAP sorrendben, ha a .dds válasz azt jelzi, hogy a változó adatstruktúra "sorozat" (eseti érzéketlenség) ...
 * Bizonyos esetekben, látni fogja a sorrendben, egy 2 szintű sorozat - EDDTableFromDapSequence kezeli ezeket is.
@@ -2378,15 +2380,15 @@ GenerateDatasets Az Xml három speciális opcióval rendelkezik az EDDTableFromD
 * [JDBC sofőr és&lt;sofőrName&gt;] (#jdbc-driver) - Meg kell szereznie a megfelelő JDBC 3 vagy JDBC 4 vezető .jar fájlt az adatbázishoz és
 Tedd be&#33; *Tomcat* /webapps/erddap/WEB-INF/lib miután telepített ERDDAP ... Aztán, a te datasets.xml ehhez az adatkészlethez meg kell határoznia a&lt;sofőrName&gt; erre a sofőrre, ami (Sajnos) különbözik a fájlnévtől. Keressen az interneten a JDBC sofőr számára az adatbázis és a sofőrName számára Java használnia kell.
     
-    * MariaDB számára próbálkozzon [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * MariaDB számára próbálkozzon [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 A&lt;sofőrName&gt; használni datasets.xml   (lásd alább) valószínűleg org.mariadb.jdbc. Vezető .
-    * A MySQL és az Amazon RDS számára próbálkozzon [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * A MySQL és az Amazon RDS számára próbálkozzon [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 A&lt;sofőrName&gt; használni datasets.xml   (lásd alább) valószínűleg com.mysql.jdbc. Vezető .
-    * Mert Oracle Próbálj ki [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) ...
+    * Mert Oracle Próbálj ki [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) ...
 A&lt;sofőrName&gt; használni datasets.xml   (lásd alább) valószínűleg oracle.jdbc.driver. Oracle Vezető .
-    * Postgresql számára megkaptuk a JDBC 4-es sofőrt [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * Postgresql számára megkaptuk a JDBC 4-es sofőrt [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 A&lt;sofőrName&gt; használni datasets.xml   (lásd alább) valószínűleg org.postgresql. Vezető .
-    * Az SQL Server számára megkaphatja a JTDS JDBC sofőrt [https://jtds.sourceforge.net](https://jtds.sourceforge.net) ...
+    * Az SQL Server számára megkaphatja a JTDS JDBC sofőrt [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) ...
 A&lt;sofőrName&gt; használni datasets.xml   (lásd alább) valószínűleg net.sourceforge.jtds.jdbc. Vezető .
     
 Miután betette a JDBC vezetőjét.jar ERDDAP™ lib könyvtár, meg kell adni egy hivatkozást, hogy .jar fájl a .bat és / vagy .sh script fájlok a GenerateDatasets Xml, DasDds és ArchiveADataset, amelyek a *Tomcat* /webapps/erddap/WEB-INF/ könyvtár; különben kapsz egy ClassNotFoundException, amikor futtatod ezeket a forgatókönyveket.
@@ -2524,7 +2526,7 @@ jobb mellett&lt; sourceUrl &gt;,&lt;sofőrName&gt; és&lt;kapcsolat Tulajdonság
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-Általános információk a DataSource használatáról [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) ...
+Általános információk a DataSource használatáról [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) ...
 Lásd [Tomcat DataSource információ](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) és [Tomcat DataSource példák](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) vagy keresse meg az internetet például az adatszolgáltatások más alkalmazásszerverekkel történő használatával.
 * Ha minden más kudarcot vall,
 fontolja meg az adatok tárolását egy gyűjteményben NetCDF v3 .nc fájlok (különösen különösen .nc fájlok, amelyek a [CF Discrete Sampling Geometries (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Contiguous Ragged Array adatstruktúrák és így kezelhetők ERDDAP A [EDDTableFromNcCFFiles](#eddtablefromnccffiles) ) ... Ha logikailag megszervezik őket (mindegyik adat egy darab űr és idő) , ERDDAP™ nagyon gyorsan kivonhatja az adatokat tőlük.
@@ -2608,7 +2610,7 @@ fontolja meg az adatok tárolását egy gyűjteményben NetCDF v3 .nc fájlok (k
     
 Az XML darabja, amelyet a GenerateDatasetsXml generál minden adatkészlethez:
     
-    * A datasetID ami az EDDGrid A datasetID plusz "\\_Asatable".
+    * A datasetID ami az EDDGrid A datasetID plusz "\\_AsATable" ...
     * Egy új összefoglaló globális tulajdonság, amely a EDDGrid összefoglaló plusz egy új első bekezdés, amely leírja, hogy mi ez az adatkészlet.
     * Egy új cím globális tulajdonság, amely a EDDGrid dalszöveg: 's cím plus', (Mint asztal) "..."
     * Egy új maxAxis0 globális tulajdonság 10 értékkel.
@@ -2644,21 +2646,21 @@ Az XML darabja, amelyet a GenerateDatasetsXml generál minden adatkészlethez:
 *    [Az adatok egy EDDTableFromFileNames adatkészletben](#eddtablefromfilenames-data) egy asztal, amely ERDDAP™ on-the-fly információt hoz létre a helyi fájlok csoportjáról. Az asztalnál van egy sor minden fájlhoz. Négy különleges tulajdonság a [ datasets.xml ez az adatkészlet](#eddtablefromfilenames-skeleton-xml) meghatározza, hogy mely fájlokat fognak tartalmazni ebben az adatkészletben:
     
 ##### fájl Dir{#filedir} 
-    *   &lt;fájlDir&gt; - Ez meghatározza a szerver fájlrendszerének forráskönyvtárát az adatkészlethez tartozó fájlokkal. Azok a fájlok, amelyek valójában a szerver fájlrendszerében találhatók&lt;fájlDir&gt; jelenik meg az adatkészlet url oszlopában egy virtuális könyvtáron belülhttps://*serverUrl*/erddap/files/*datasetID/*...
+    *   &lt;fájlDir&gt; - Ez meghatározza a szerver fájlrendszerének forráskönyvtárát az adatkészlethez tartozó fájlokkal. Azok a fájlok, amelyek valójában a szerver fájlrendszerében találhatók&lt;fájlDir&gt; jelenik meg az adatkészlet url oszlopában egy virtuális könyvtáron belül https://*serverUrl*/erddap/files/*datasetID/* ...
 Például, ha datasetID jplMU RSS T,
 és&lt;fájlDir&gt; /home/data/mur/
 és ez a könyvtár egy jplMU nevű fájlt tartalmaz RSS T20150103000000.png,
 Ezután az URL, amely a felhasználók számára jelenik meg, hogy ez a fájl lesz
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png...
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png ...
         
 Amellett, hogy egy helyi könyvtárat használunk&lt;fájlDir&gt;, akkor is megadhatja az URL egy távoli, könyvtári-szerű weboldal. Ez működik:
         
         * A nem összesített adatkészletek a THREDDS-ben, például
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Ez a szerver már nem megbízhatóan elérhető. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Ez a szerver már nem megbízhatóan elérhető. \\] 
         * A nem összesített adatkészletek Hyrax pl.:
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * A legtöbb Apache-szerű könyvtári lista, például
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### dalszöveg: OnTheFly{#fromonthefly} 
  [\\*\\*\\*fromOnTheFly](#fromonthefly) - Néhány hatalmas S3 vödör (mint a noaa-goes17, amely 26 millió fájlt tartalmaz) Lehet, hogy ERDDAP™ legfeljebb 12 óra, hogy letöltse az összes információt a tartalmát a vödör (vannak más problémák) ... Ahhoz, hogy körül ezt, van egy speciális módja annak, hogy használja&lt;fájlDir&gt; az EDDTableFromFileNames-ben, hogy adathalmazt készítsen az AWS S3 bucket könyvtárával és fájlneveivel. Az adatkészletnek nem lesz az összes S3 bucket könyvtárának és fájlnevének listája, amelyet a felhasználó kereshet az adatkészlet iránti kérelmeken keresztül. De az adatkészlet megkapja a könyvtárak és fájlok nevét, ha a felhasználó átlépi a könyvtári hierarchiát az adatkészlettel "files" opció. Így ez lehetővé teszi a felhasználók számára, hogy böngészjenek az S3 bucket fájlhierarchiájával és fájlokkal az adatkészleten keresztül "files" rendszer. Ehhez, ahelyett, hogy meghatározná az URL-t az S3 bucket számára, mint a "Starting Directory" (a GenerateDatasets Xml) vagy&lt;fájlDir&gt; (benne datasets.xml ) Használat:
 ```
@@ -2837,13 +2839,13 @@ Minden EDDGrid FromFiles és az összes EDDTableFromFiles adatkészlet támogatj
     * A&lt;cacheFromUrl&gt; címke lehetővé teszi, hogy megadja az URL-t egy távoli adatkészlet fájlainak listájával egy távoli fájllistából.
         
         * A nem összesített adatkészletek a THREDDS-ben, például
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Ez a szerver már nem megbízhatóan elérhető. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Ez a szerver már nem megbízhatóan elérhető. \\] 
         * A nem összesített adatkészletek Hyrax pl.:
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * A legtöbb Apache-szerű könyvtári lista, például
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * S3 vödör, pl.
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 Ez azonban AWS-fiókot és több beállítást igényelhet.
 Lásd [S3 Buckets-szel dolgozunk ERDDAP™ ](#working-with-aws-s3-files) ...
 Továbbá, általában nem kell használni a cache FromUrl fájlokkal S3 buckets, ha a fájlok ASCII fájlok (pl.: .csv) mert ERDDAP™ hatékonyan olvassa el az adatokat a vödörről közvetlenül egy patakon keresztül.
@@ -2901,7 +2903,7 @@ Ezután van egy sor fészkes rögzítő csoport, ahol az első lehetőség semmi
 és a második lehetőség egy adott érték.
             
 A fenti példának csak 2018 második 10 napján kell megfelelnie a könyvtáraknak, pl.
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020-10-21 Ez a szerver már nem megbízhatóan elérhető. \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020-10-21 Ez a szerver már nem megbízhatóan elérhető. \\]   
 nap 011, 012, ..., 019.
              (Lásd ezt [regex dokumentáció](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) és [regex bemutató](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) ...)   
 Ha segítségre van szüksége&lt;cachePartialPathRegex&gt;, kérlek e-mailt&lt;cacheFromUrl&gt; Chrishez. John at noaa.gov.
@@ -3384,7 +3386,7 @@ Minden adatkészlethez ERDDAP™ , ha küld egy kérést, hogy ERDDAP™ az adat
 
 * .insert
     * A kérés úgy formázódik, mint egy standard HTML-forma válasz, a kulcs=érték párok, elválasztva a '&'. Például,
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 Megjegyzés ERDDAP™ hozzáadni vagy megváltoztatni az adatokat stationID =46088 a megadott időre.
     * Ennek a változásnak a szerzője JohnSmith, és a kulcs néhányKey1.
     * Az URL-nek tartalmaznia kell az érvényes értékeket (nem hiányzó értékek) az egészet [ http GetRequiredVariables](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ Megjegyzés ERDDAP™ hozzáadni vagy megváltoztatni az adatokat stationID =460
              
     * .delete
         * A kérés úgy formázódik, mint egy standard HTML-forma válasz, a kulcs=érték párok, elválasztva a '&'. Például,
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 Megjegyzés ERDDAP™ törölni az adatokat stationID = 46088 a megadott időpontban.
         * Ennek a változásnak a szerzője JohnSmith, és a kulcs néhányKey1.
         * Az URL-nek meg kell határoznia [ http GetRequiredVariables](#httpgetrequiredvariables-global-attribute) kérelemben (pl.: stationID és idő) ... Ha ezek az értékek már az adatkészletben megfelelnek az értékeknek (melyeket általában) A régi értékek hatékonyan törlődnek (bár a régi értékek még mindig elérhetőek, ha egy felhasználó kéri az adatokat egy korábbi [verzió](#versioning) az adatkészlet) ...
@@ -3667,7 +3669,7 @@ Nem mindenkinek van szüksége az ilyen típusú finomított változatozásra, d
     
 ##### HTTPS Put és törlés{#https-put-and-delete} 
 *    [Mi a helyzet a HTTPS PUT és a DELETE?](#https-put-and-delete)   
-     [Hypertext Transfer protokoll (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) a World Wide Web alapja, és az oka annak, hogy a weboldal URL-jei "http://"vagy "https://"... A HTTPS a HTTP egy további biztonsági réteggel. Minden nap, a böngészők, a szkriptek és a számítógépes programok teszik több milliárd HTTP (Súgó)   **GET** kéri a távoli forrásokból származó információkat. HTTP (Súgó) más is [verbs](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , nevezetesen PUT (adatokat tolni a szerverre) DELETE (DELETE adatok a szerverről) ... Igen, a PUT és a DELETE a megfelelő módja az adatok beillesztésének, és az adatok törlésének, a HTTP segítségével (Súgó) ... A GET-t minden olyan szoftver támogatja, amely együttműködhet a HTTP-vel (Súgó) ... A GET nagyon könnyű dolgozni. Mindenki már tudja, hogyan kell dolgozni a GET és sokan tudják, hogyan kell használni a POST (amely lényegében ugyanúgy használható, mint a GET) Így az EDDTableFromHttpGet a GET és a POST segítségével dolgozott. Nagyon kevés ember (még kevés számítógépes programozó) valaha is dolgozott a PUT és a DELETE. A PUT és a DELETE-t általában csak számítógépes nyelvek támogatják, így a használatukhoz ügyes programra van szükség. Tehát a PUT és a DELETE általában sokkal több égető megközelítés, mivel az eszközök fejlődtek.
+     [Hypertext Transfer protokoll (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) a World Wide Web alapja, és az oka annak, hogy a weboldal URL-jei " http://" vagy " https://" ... A HTTPS a HTTP egy további biztonsági réteggel. Minden nap, a böngészők, a szkriptek és a számítógépes programok teszik több milliárd HTTP (Súgó)   **GET** kéri a távoli forrásokból származó információkat. HTTP (Súgó) más is [verbs](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , nevezetesen PUT (adatokat tolni a szerverre) DELETE (DELETE adatok a szerverről) ... Igen, a PUT és a DELETE a megfelelő módja az adatok beillesztésének, és az adatok törlésének, a HTTP segítségével (Súgó) ... A GET-t minden olyan szoftver támogatja, amely együttműködhet a HTTP-vel (Súgó) ... A GET nagyon könnyű dolgozni. Mindenki már tudja, hogyan kell dolgozni a GET és sokan tudják, hogyan kell használni a POST (amely lényegében ugyanúgy használható, mint a GET) Így az EDDTableFromHttpGet a GET és a POST segítségével dolgozott. Nagyon kevés ember (még kevés számítógépes programozó) valaha is dolgozott a PUT és a DELETE. A PUT és a DELETE-t általában csak számítógépes nyelvek támogatják, így a használatukhoz ügyes programra van szükség. Tehát a PUT és a DELETE általában sokkal több égető megközelítés, mivel az eszközök fejlődtek.
      
 ##### HttpGet Notes{#httpget-notes} 
 *    [Megjegyzések](#httpget-notes) 
@@ -3676,7 +3678,7 @@ Nem mindenkinek van szüksége az ilyen típusú finomított változatozásra, d
 ##### Köszönöm{#thanks} 
 *    [A CHORDS-nek köszönhetően az alapvető ötletért.](#thanks)   
 Az EDDTableFromHttpGet alapgondolata (azaz egy HTTP GET adatok hozzáadása egy adatkészlethez) az UCAR-tól (NCAR?)   [Cloud-Host valós idejű adatszolgáltatások (CHORDS) ](https://github.com/earthcubeprojects-chords) projekt. A paraméterek formátuma a kérelemben (ismétlődő *név=érték* Elválasztva &’s) ugyanaz a szabványos formátum, amelyet a HTML űrlapok használnak a weboldalakon. Ez egy egyszerű és ragyogó ötlet, és még inkább azért, mert olyan tökéletesen összeomlik ERDDAP meglévő rendszer a mesés adatok kezeléséhez. Az ötlet nyilvánvaló a hindukban, de én (Bob) nem gondolt rá. EDDTableFromHtp Használja ezt az alapvető ötletet, kombinálva az elképzeléseinket, hogyan kell végrehajtani, hogy rendszert készítsen ERDDAP™ az adatok feltöltéséhez. Más, mint az alapvető ötlet, hogy használja a GET-t, hogy nyomja az adatokat a rendszerbe, az EDDTableFromHttpGet végrehajtás teljesen más és teljesen független a CHORDS-től, és különböző jellemzőkkel rendelkezik (pl. naplófájlok, adatgyűjtés, különböző biztonsági rendszer, CRUD támogatás, reprodukálható adatok) ... A CHORDS-nek való kitettségünk csak webinárium volt. Nem néztük meg a kódjukat, vagy olvastunk a projektjükről, mert azonnal tudtuk, hogy a rendszert másképp akarjuk végrehajtani. De hálásak vagyunk nekik az alapvető ötletért. A CHORDS-re való teljes hivatkozás
-Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, R., Bartos, M., Jones, J., Keiser, K. (2014.) ... Cloud-Host valós idejű adatszolgáltatások a geosciences számára (CHORDS) szoftver. UCAR/NCAR - Föld megfigyelő laboratórium. [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, R., Bartos, M., Jones, J., Keiser, K. (2014.) ... Cloud-Host valós idejű adatszolgáltatások a geosciences számára (CHORDS) szoftver. UCAR/NCAR - Föld megfigyelő laboratórium. [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### EDDTableFrom Hyrax Fiók{#eddtablefromhyraxfiles} 
  [ **EDDTableFrom Hyrax Fiók** ](#eddtablefromhyraxfiles)   (detektáltak) összesíti az adatfájlokat több változóval, mindegyik egy vagy több megosztott dimenzióval (Például, idő, magasság (vagy mélység) , magasság, hosszúság) és szolgált egy [ Hyrax   OPeNDAP szerver](https://www.opendap.org/software/hyrax-data-server) ...
@@ -3692,7 +3694,7 @@ Ha 2020 előtt nincs panasz, ez az adatkészlet típusa eltávolítható. **
 * Ez az osztály képernyője a Hyrax weboldalak a fájlok listáival az egyes könyvtárban. Emiatt nagyon specifikus a jelenlegi formátumban. Hyrax weboldalak. Megpróbáljuk alkalmazkodni ERDDAP™ ha/ha a jövőbeli verziók Hyrax módosítsa, hogy a fájlok hogyan szerepelnek.
 * A&lt;fájlDir&gt; beállítás figyelmen kívül hagyva. Mivel ez az osztály letöltése és minden távoli adatfájl helyi másolata, ERDDAP™ erők a fájl Dir, hogy *bigParentDirectory[szerkesztés]* /copy/ * datasetID * /.
 * Mert&lt; sourceUrl &gt; az adatkészlet alapkönyvtárának URL-jét használja Hyrax szerver, például
-    &lt; sourceUrl &gt; &gt; &gt; &gt;http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;/ sourceUrl &gt; &gt; &gt; &gt;
+    &lt; sourceUrl &gt; &gt; &gt; &gt; http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;/ sourceUrl &gt; &gt; &gt; &gt;
      (de tedd egy sorba)   (sajnálatos, hogy a szerver már nem áll rendelkezésre) ...
 A sourceUrl weboldal általában " OPeNDAP Server Index \\[ DirectoryName \\] A tetején.
 * Mivel ez az osztály mindig letölti és helyi másolatot készít minden távoli adatfájlról, soha ne csomagolja be ezt az adatkészletet [EDDTableCopy](#eddtablecopy) ...
@@ -3706,7 +3708,7 @@ Részletek: Ezek a fájlok több row\\_size változóval rendelkeznek, mindegyik
 
 Egy másik probléma ezekkel a fájlokkal: a Principal\\_Investigator row\\_size változónak nincs minta\\_dimenziós tulajdonsága, és nem követi a fenti szabályt.
 
-A mintafájlok az adatkészlet típusához megtalálhatókhttps://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 Ez a szerver már nem megbízhatóan elérhető \\] ...
+A mintafájlok az adatkészlet típusához megtalálhatók https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020-10-21 Ez a szerver már nem megbízhatóan elérhető \\] ...
 
 Lásd ezt az osztályt, [EDDTableFromFiles](#eddtablefromfiles) információ arról, hogyan működik ez az osztály, és hogyan kell használni.
 
@@ -3850,10 +3852,10 @@ Az első dolog, amit a GenerateDatasetsXml tesz az ilyen típusú adatkészlethe
  [ **EDDTableFromNOS** ](#eddtablefromnos)   (Meghatározva) adatokat kezel egy NOAA   [NOS](https://opendap.co-ops.nos.noaa.gov/axis/) forrás, amely használja [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) kérések és válaszok. Nagyon specifikus NOAA NOS XML. Lásd a minta EDDTableFromNOS adatkészletet az adatkészletekben2.xml.
  
 ### EDDTableFromOBIS{#eddtablefromobis} 
- [ **EDDTableFromOBIS** ](#eddtablefromobis) adatokat kezel egy Ocean Biogeographic Information System (OBIS) szerver (volthttp://www.iobis.org ) ... Lehetséges, hogy nincs olyan aktív szerver, amely ezt a mostantól naprakész OBIS szerverrendszert használja.
+ [ **EDDTableFromOBIS** ](#eddtablefromobis) adatokat kezel egy Ocean Biogeographic Information System (OBIS) szerver (volt http://www.iobis.org  ) ... Lehetséges, hogy nincs olyan aktív szerver, amely ezt a mostantól naprakész OBIS szerverrendszert használja.
 
 * Az OBIS szerverek egy XML kérést várnak el, és visszatérnek egy XML válaszhoz.
-* Mert minden OBIS-kiszolgáló ugyanazokat a változókat szolgálja, mint (volthttp://iobis.org/tech/provider/questions) Nem kell sokat megadnia egy OBIS adatkészlet létrehozásához ERDDAP ...
+* Mert minden OBIS-kiszolgáló ugyanazokat a változókat szolgálja, mint (volt http://iobis.org/tech/provider/questions ) Nem kell sokat megadnia egy OBIS adatkészlet létrehozásához ERDDAP ...
 * Ön is tartalmaz egy " creator\\_email "A globális tulajdonság addAttributes Mivel az információt a licencben használják. Egy megfelelő e-mail cím megtalálható az XML válasz elolvasásával a forrásURL-től.
 * Lehet, vagy nem lehet képes a globális tulajdonságot elérni [&lt; subsetVariables &gt;&gt;&gt;&gt;&gt;&gt; (#subsetvariables) egy adott OBIS-kiszolgálóval dolgozni. Ha megpróbálja, csak próbálja ki az egyik változót (Például ScientificName vagy Genus) ...
 #### EDDTableFromOBIS Skeleton XML{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ Az első dolog, amit a GenerateDatasetsXml tesz az ilyen típusú adatkészlethe
     * SWE (Sensor Web Enablement) és SOS   (Érzékelő megfigyelő szolgálat) vannak [OpenGIS® szabványok](https://www.ogc.org/standards) ... Ez a weboldal rendelkezik a szabványos dokumentumokkal.
     * A OGC Web Services Common Specification 1.1.0 ( OGC 06-121r3) fedezi a GET és a POST lekérdezések építését (lásd a 7.2.3. szakaszt és a 9. szakaszt) ...
     * Ha GetCapabilities xml kérést küld egy SOS szerver ( sourceUrl + "?service= SOS &request= GetCapabilities "...") , kap egy xml eredmény egy listát az állomások és a megfigyelt Tulajdonságok, amelyekre adatuk van.
-    * A megfigyeltProperty egy hivatalos URI hivatkozás egy ingatlanra. Például:ogc:phenomenon:longitude:wgs84 vagyhttps://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * A megfigyeltProperty egy hivatalos URI hivatkozás egy ingatlanra. Például:ogc:phenomenon:longitude:wgs84 vagy https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * A megfigyeltProperty nem változó.
-    * Egynél több változó lehet ugyanaz a megfigyelt Tulajdonság (Például: belülTemp és kívül A tempó mindkettő megfigyelhető Tulajdonsághttps://mmisw.org/ont/cf/parameter/air\\_temperature) ...
+    * Egynél több változó lehet ugyanaz a megfigyelt Tulajdonság (Például: belülTemp és kívül A tempó mindkettő megfigyelhető Tulajdonság https://mmisw.org/ont/cf/parameter/air\\_temperature ) ...
     * Ha GetObservation xml kérést küld egy SOS szerver, kap egy xml eredmény leírása mező nevek a válasz, mezőegységek, és az adatok. A mező nevek tartalmazzák a hosszúságot, a szélességet, a mélységet (talán talán talán talán talán) és az idő.
     * Minden dataVariable EDDTableFrom SOS tartalmaznia kell egy „megfigyelt területet” tulajdonságot, amely azonosítja a megfigyelt tulajdonságot, amelyet a kiszolgálótól kell kérni, hogy megkapja ezt a változót. Gyakran, több dataVariable S fogja felsorolni ugyanazt a kompozit megfigyeltTermészet.
     * Az adattípus minden egyes számára dataVariable előfordulhat, hogy a szerver nem határozza meg. Ha igen, akkor meg kell néznie az XML adatválaszait a szerverről, és megfelelőnek kell lennie [&lt;adatType&gt; (#datatype) a ERDDAP™ adatkészlet dataVariable definíciók.
@@ -3991,11 +3994,11 @@ Ha 2020 előtt nincs panasz, ez az adatkészlet típusa eltávolítható. **
 * Ez az osztály elolvassa a THREDDS által szolgált katalógus.xml fájlokat a listákkal&lt;katalógusRefs&gt; (hivatkozások további katalógus.xml sub-files) és&lt;adatkészlet&gt; (adatfájlok) ...
 * A&lt;fájlDir&gt; beállítás figyelmen kívül hagyva. Mivel ez az osztály letöltése és minden távoli adatfájl helyi másolata, ERDDAP™ erők a fájl Dir, hogy *bigParentDirectory[szerkesztés]* /copy/ * datasetID * /.
 * Mert&lt; sourceUrl &gt; használja a THREDDS szerver adatkészletének URL-jét, például: ehhez az URL-hez, amelyet egy webböngészőben lehet használni,
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020-10-21 Ez a szerver már nem megbízhatóan elérhető. \\] ,
-Használat&lt; sourceUrl &gt; &gt; &gt; &gt;https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;/ sourceUrl &gt; &gt; &gt; &gt;
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020-10-21 Ez a szerver már nem megbízhatóan elérhető. \\] ,
+Használat&lt; sourceUrl &gt; &gt; &gt; &gt; https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;/ sourceUrl &gt; &gt; &gt; &gt;
      (de tedd egy sorba) ...
 * Mivel ez az osztály mindig letölti és helyi másolatot készít minden távoli adatfájlról, soha ne csomagolja be ezt az adatkészletet [EDDTableCopy](#eddtablecopy) ...
-* Ez az adatkészlet típus támogatja az OPTIONAL, ritkán használt, speciális címkét,&lt;SpecialMode&gt; *mód* &lt;/specialMode&gt; amely arra használható, hogy meghatározza, hogy a speciális, kemény kódolt szabályokat kell használni annak meghatározására, hogy melyik fájlokat kell letölteni a szerverről. Jelenleg az egyetlen érvényes *mód* a SAMOS, amelyet adatkészletekkel használnakhttps://tds.coaps.fsu.edu/thredds/catalog/samosletölteni csak a fájlokat az utolsó verziószámmal.
+* Ez az adatkészlet típus támogatja az OPTIONAL, ritkán használt, speciális címkét,&lt;SpecialMode&gt; *mód* &lt;/specialMode&gt; amely arra használható, hogy meghatározza, hogy a speciális, kemény kódolt szabályokat kell használni annak meghatározására, hogy melyik fájlokat kell letölteni a szerverről. Jelenleg az egyetlen érvényes *mód* a SAMOS, amelyet adatkészletekkel használnak https://tds.coaps.fsu.edu/thredds/catalog/samos letölteni csak a fájlokat az utolsó verziószámmal.
 * Lásd ezt az osztályt, [EDDTableFromFiles](#eddtablefromfiles) információ arról, hogyan működik ez az osztály, és hogyan kell használni.
 * Lásd az 1D, 2D, 3D és 4D példákat [EDDTableFromNcFiles](#eddtablefromncfiles) ...
      
@@ -4182,8 +4185,8 @@ Amikor a kiszolgáló befejezi a kérést, ellenőrizni fogja, hogy mennyi ideig
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-egy megfelelő helyiséget okoz sourceUrl   (mint példáulhttps://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-nyilvános sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) ...
+egy megfelelő helyiséget okoz sourceUrl   (mint például https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+nyilvános sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) ...
 A tag értékének bármilyen változása a következő alkalommal lép életbe ERDDAP™ olvasó datasets.xml , beleértve az adatkészletre adott válaszban is [zászló](/docs/server-admin/additional-information#flag) ...
 
 De az előfizetési rendszerhez kapcsolódó biztonsági okokból és okokból, **Ne kövessétek ezt a lépést&#33;**   
@@ -4314,7 +4317,7 @@ A felhasználók gyakran egyszerűen nem tudják, hogy kéréseik problémásak.
     ```
     * Nem kell újraindítani ERDDAP™ a változásokra&lt;kérelemBlacklist&gt;, hogy lépjen hatályba. A változásokat a következő alkalommal fogják észlelni ERDDAP™ ellenőrzi, hogy minden adatkészletet újra kell tölteni. Vagy felgyorsíthatja a folyamatot egy látogatással [setDataset Flag URL](/docs/server-admin/additional-information#set-dataset-flag) minden adatkészlethez.
     * A ERDDAP™ A napi jelentés tartalmazza a legaktívabb engedélyezett és blokkolt kérők listáját/tally-ját.
-    * Ha szeretné kitalálni, hogy mi a domain/intézmény kapcsolódik egy numerikus IP címhez, használhat egy ingyenes, fordított DNS webes szolgáltatást, mint például [https://network-tools.com/](https://network-tools.com/) ...
+    * Ha szeretné kitalálni, hogy mi a domain/intézmény kapcsolódik egy numerikus IP címhez, használhat egy ingyenes, fordított DNS webes szolgáltatást, mint például [ https://network-tools.com/ ](https://network-tools.com/) ...
     * Lehetnek olyan idők, amikor értelme van bizonyos felhasználókat magasabb szinten blokkolni, például rosszindulatú felhasználókat. Például blokkolhatja a hozzáférést mindenhez a szerverén, nem csak ERDDAP ... Linuxon egy ilyen módszert kell használni [iptables](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) ... Például hozzáadhat egy olyan szabályt, amely megakadályozza mindazt, ami 198.51.100.0-ból érkezik a parancshoz.
 I INPUT – 198.51.100.0 J DROP
        
@@ -4738,17 +4741,17 @@ FIGYELMEZTETÉS: Ha egyedi palettákat ad hozzá ERDDAP™ és van EDDGrid FromE
     * Jelenleg, EDDGrid alosztályok, bármilyen változás a metaadata vagy a tengely változó (például a közeli valós idejű adatok új időpontja) változásnak tekinthető, de az adatkészlet újratöltése nem tekinthető változásnak (önmagára) ...
     * Jelenleg az EDDTable alosztály esetében az adatkészlet bármilyen újratöltése változásnak tekinthető.
     * Jelenleg csak kétféle intézkedés engedélyezett:
-        * "..."http://"vagy "https://"- Ha a cselekvés "http://"vagy "https://", ERDDAP™ küldjön HTTP GET kérelem a megadott URL-hez. A válasz figyelmen kívül hagyásra kerül. Például az URL elmondhat egy másik webes szolgáltatást, hogy tegyen valamit.
+        * "..." http://" vagy " https://" - Ha a cselekvés " http://" vagy " https://" , ERDDAP™ küldjön HTTP GET kérelem a megadott URL-hez. A válasz figyelmen kívül hagyásra kerül. Például az URL elmondhat egy másik webes szolgáltatást, hogy tegyen valamit.
             * Ha az URL-nek van egy lekérdező része (utána a "?") MIÉRT már [százalék kódolva](https://en.wikipedia.org/wiki/Percent-encoding) ... Különleges karaktereket kell kódolni a korlátozásokban (a kezdeti „és” és a fő '=' korlátok) a %H formában, ahol a HH a karakter két számjegyű hexadecimális értéke. Általában csak néhány punctuációs karaktert kell átalakítania: %-25, és %26, "- %22,&lt;%3C, = %3D, &gt; %3E, + %2B, | %7C, \\[ %5B, \\] %5D, tér %20, és átalakítani minden karakter felett #127 a saját UTF-8 formában, majd százaléka kódolja minden byte az UTF-8 formában a %HH formátum (kérjen programozót segítségért) ...
 Például, & stationID &gt;="41004"
 Beszéd és stationID %3E=%2241004%22
 A százalékos kódolás általában akkor szükséges, ha hozzáfér ERDDAP szoftveren keresztül, mint egy böngésző. A böngészők általában kezelik a százalékos kódolást az Ön számára.
 Bizonyos helyzetekben százalékban kell kódolni az A-Za-z0-9\\_-től eltérő összes karaktert&#33; "..." () \\*, de még mindig nem kódolja az eredeti '&' vagy a fő '=' korlátokban.
-A programozási nyelveknek van eszközük erre (például lásd Java A [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) és Java Olvasson bele a(z)encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) és vannak
+A programozási nyelveknek van eszközük erre (például lásd Java A [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) és Java Olvasson bele a(z)encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) és vannak
                  [olyan webhelyek, amelyek százalékos kódot / dekódot mutatnak Önnek](https://www.url-encode-decode.com/) ...
             * óta datasets.xml XML fájl, akkor is &-encode ALL ' &',&lt;"és "&gt;" az URL-ben, mint '&amp;',&lt;és a „&gt;” százalékos kódolás után.
             * Példa: Egy olyan URL-hez, amelyet egy böngészőbe lehet beírni:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 Meg kell határoznia egy&lt;OnChange&gt; címke keresztül (Egy vonalon) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ Ez befolyásolhatja a rövid szavak fajta versus hosszabb szavakat, amelyek a r�
     * A sourceUrl Kezdődhet http:// , https:// Ftp: és talán más előtagok. https kapcsolatok olvassa el és ellenőrizze a forrás digitális tanúsítványát annak biztosítása érdekében, hogy a forrás az, akiről azt mondják, hogy azok. Ritka esetekben ez az ellenőrzés kudarcot vallhat a "javax.net.ssl.SSLProtocolException: kézfogás figyelmeztetés: ismeretlen\\_name". Ez valószínűleg annak köszönhető, hogy a domain név a tanúsítványon nem egyezik a domain névvel, amelyet használ. Elolvashatja és el kell olvasnia a részleteket sourceUrl "a tanúsítvány a webböngészőben, nevezetesen a "DNS neve" listája a "Subject Alternative Name" részben.
         
 Bizonyos esetekben, sourceUrl Ön használhatja a domain nevet a tanúsítványon. Például,
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/dobja ezt a hibát, de
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/, amely a domain nevet használja a tanúsítványon, nem. A megoldás ezekben az esetekben tehát megtalálja és használja a domain nevet a tanúsítványon. Ha nem találja meg a tanúsítványt, lépjen kapcsolatba az adatszolgáltatóval.
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ dobja ezt a hibát, de
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ , amely a domain nevet használja a tanúsítványon, nem. A megoldás ezekben az esetekben tehát megtalálja és használja a domain nevet a tanúsítványon. Ha nem találja meg a tanúsítványt, lépjen kapcsolatba az adatszolgáltatóval.
         
 Más esetekben a tanúsítvány domain neve lehet a nevek csoportja. Ha ez megtörténik, vagy a probléma másként megoldhatatlan, kérlek e-mailt Chris. John at noaa.gov, hogy jelentse a problémát.
          
@@ -5221,7 +5224,7 @@ Beszéd és stationID %3E=%2241004%22
 A százalékos kódolás általában akkor szükséges, ha hozzáfér ERDDAP szoftveren keresztül, mint egy böngésző. A böngészők általában kezelik a százalékos kódolást az Ön számára.
 Bizonyos helyzetekben százalékban kell kódolni az A-Za-z0-9\\_-től eltérő összes karaktert&#33; "..." () \\*, de még mindig nem kódolja az eredeti '&' vagy a fő '=' ...
 A programozási nyelveknek van eszközük erre (például lásd Java A [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-és Java Olvasson bele a(z)encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) és vannak
+és Java Olvasson bele a(z)encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) és vannak
          [olyan webhelyek, amelyek százalékos kódot / dekódot mutatnak Önnek](https://www.url-encode-decode.com/) ...
     * óta datasets.xml XML fájl, akkor is &-encode ALL ' &',&lt;"és "&gt;" az URL-ben, mint '&amp;',&lt;és a „&gt;” százalékos kódolás után.
     *    infoUrl egyedi ERDDAP ... Ez nem bármilyen metaadat szabványból származik.
@@ -5257,7 +5260,28 @@ Amikor egy adatkészletet töltenek be ERDDAP ,
     ```
     * Ha " \\[ szabvány \\] " a tulajdonképpeni értékben fordul elő, a szabvány helyettesíti ERDDAP™ licenc a&lt;StandardLicense&gt; címke ERDDAP A
          \\[ Tomcat \\] /webapps/erddap/WEB-INF/classes/gov/noa/pfel/erddap/util/messages.xml fájl.
-         
+
+###### osztályozás{#classification} 
+*    [ **osztályozás** ](#classification) az adatok osztályozási szintje.
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * Az elfogadható értékek _unclassified_, _confidential_, _restricted_, _secret_ vagy _top_secret_.
+
+###### topic_category{#topic_category} 
+*    [ **topic_category** ](#topic_category) Magas szintű földrajzi adatok tematikus besorolása a rendelkezésre álló földrajzi adatkészletek csoportosításában és keresésében.
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * Elfogadható értékek _biota_, _boundaries_, _climatology_atomosphere_, _economy_, _elevation_, _environment_, _farming_, _geoscientific_information_, _health_, _imagery_base_maps_earth_cover_, _inland_waters_, _intelligence_military_, _location_, _oceans_structy_
+
+###### karbantartás_frekvencia{#maintenance_frequency} 
+*    [ **karbantartás_frekvencia** ](#maintenance_frequency) Frekvenciát, amellyel a módosítások és a törlések az adatokhoz kerülnek, miután először előállították.
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * Az elfogadható értékek elfogadható értékek _annually_, _as_needed_, _biannually_, _continual_, _daily_, _fortnightly_, _irregular_, _monthly_, _not_planned_, _quarterly_, _unknown_, _weekly_.
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) az elavult [ACDD 1.0](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (amelyet azonosítottak Metadata\\_Conventions mint " Unidata Dataset Discovery v1.0") metadata szabvány. A tulajdonság érték az adatkészlet által használt metaadat-konvenciók egy különálló listája volt.
 Ha egy adatkészlet ACDD 1.0-t használ, ez a tulajdonság például szigorúan elismert.
@@ -5389,7 +5413,7 @@ Ha az index&lt;1, az adatkészlet naprakésznek tekinthető.
 Ha az index&lt;=1, az adatkészletet naprakésznek tekintik.
 Ha az index&lt;=2, az adatkészlet nagyon naprakésznek tekinthető.
     
-A testOutOfDate értéket is használnak ERDDAP™ létrehoznihttps://*yourDomain*/erddap/outOfDateDatasets.htmlWeboldal ( [példa](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) amely megmutatja az adatkészleteket, amelyek&lt; testOutOfDate &gt; címkék, az adatkészletek rangsorolva, hogy milyen out-of-date ők. Ha módosítja a fájltípust (.html és .csv, .jsonlCSV , .nc , .tsv ...) Ezeket az információkat különböző fájlformátumokban kaphatja meg.
+A testOutOfDate értéket is használnak ERDDAP™ létrehozni https://*yourDomain*/erddap/outOfDateDatasets.html Weboldal ( [példa](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) amely megmutatja az adatkészleteket, amelyek&lt; testOutOfDate &gt; címkék, az adatkészletek rangsorolva, hogy milyen out-of-date ők. Ha módosítja a fájltípust (.html és .csv, .jsonlCSV , .nc , .tsv ...) Ezeket az információkat különböző fájlformátumokban kaphatja meg.
     
 Ha lehetséges, [GenerateDatasetsXml](#generatedatasetsxml) hozzáad egy testOutOfDate a globális addAttributes adatkészlet. Ez az érték egy javaslat, amely a GenerateDatasetsXml rendelkezésére álló információkon alapul. Ha az érték nem megfelelő, változtassa meg.
     
@@ -5948,8 +5972,8 @@ UnpackedValue = csomagolás Érték \\* scale\\_factor + add\\_offset
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone egy OPTIONAL tulajdonság, amelyet a ERDDAP™   (és nem metadata szabványok) Mert [Idő és időbélyegző változók](#time-units) , amely rácsos adatkészletekben vagy tabuláris adatkészletekben lehet.
     * Az alapértelmezett " Zulu "..." (amely a GMT modern időzóna verziója) ...
-    * Háttérinformáció: "idős ofszets" (pl. Pacific Standard Time, -08:00, GMT-8) rögzített, specifikus, ellentmondások Zulu   (GMT) ... Ezzel szemben a "időzónák" sokkal összetettebb dolgok, amelyek befolyásolják a Daylight Saving (pl. „US/Pacific”) , amelyeknek különböző szabályok vannak különböző helyeken különböző időpontokban. Az időzónáknak mindig vannak nevei, mivel nem lehet egy egyszerű ofset értékkel összefoglalni (lásd a "TZ adatbázis nevek" oszlopot az asztalon [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) ... ERDDAP A time\\_zone attribute segít kezelni a helyi időadatokat egy időzónából (1987-03-25T17:32:05 Pacific Idő) ... Ha van sztring vagy numerikus időadata egy (rögzített) idő ofszet, egyszerűen ki kell igazítania az adatokat Zulu   (Ez az, ami ERDDAP™ Akarat) egy másik alapidő meghatározása az egységekben (pl. „órákat 1970-01-01T08:00Z óta”, jegyezze meg a T08-at, hogy meghatározza az idő ofszetet) , és mindig ellenőrizze az eredményeket annak biztosítása érdekében, hogy megkapja az eredményeket akar.
-    * Az időbélyegző változók forrásadatokkal a Strings-tól, ez a tulajdonság lehetővé teszi, hogy meghatározza az időzónát, amely vezet ERDDAP™ átalakítani a helyi-time-zóna forrási időket (néhány a Standard időben, néhány a Daylight Saving Time) a Zulu Időnként (amelyek mindig a szabványos időben vannak) ... Az érvényes időzóna nevek listája valószínűleg azonos a TZ oszlop listáján [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ... A közös amerikai időzónák: US/Hawaii, US/Alaska, US/Cacific, US/Mountain, US/Arizona, US/Central, US/Kelet.
+    * Háttérinformáció: "idős ofszets" (pl. Pacific Standard Time, -08:00, GMT-8) rögzített, specifikus, ellentmondások Zulu   (GMT) ... Ezzel szemben a "időzónák" sokkal összetettebb dolgok, amelyek befolyásolják a Daylight Saving (pl. „US/Pacific”) , amelyeknek különböző szabályok vannak különböző helyeken különböző időpontokban. Az időzónáknak mindig vannak nevei, mivel nem lehet egy egyszerű ofset értékkel összefoglalni (lásd a "TZ adatbázis nevek" oszlopot az asztalon [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) ... ERDDAP A time\\_zone attribute segít kezelni a helyi időadatokat egy időzónából (1987-03-25T17:32:05 Pacific Idő) ... Ha van sztring vagy numerikus időadata egy (rögzített) idő ofszet, egyszerűen ki kell igazítania az adatokat Zulu   (Ez az, ami ERDDAP™ Akarat) egy másik alapidő meghatározása az egységekben (pl. „órákat 1970-01-01T08:00Z óta”, jegyezze meg a T08-at, hogy meghatározza az idő ofszetet) , és mindig ellenőrizze az eredményeket annak biztosítása érdekében, hogy megkapja az eredményeket akar.
+    * Az időbélyegző változók forrásadatokkal a Strings-tól, ez a tulajdonság lehetővé teszi, hogy meghatározza az időzónát, amely vezet ERDDAP™ átalakítani a helyi-time-zóna forrási időket (néhány a Standard időben, néhány a Daylight Saving Time) a Zulu Időnként (amelyek mindig a szabványos időben vannak) ... Az érvényes időzóna nevek listája valószínűleg azonos a TZ oszlop listáján [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ... A közös amerikai időzónák: US/Hawaii, US/Alaska, US/Cacific, US/Mountain, US/Arizona, US/Central, US/Kelet.
     * Az időbélyegző változók számszerű forrásadatokkal, megadhatja a " time\\_zone tulajdonság, de az értéknek " Zulu " vagy "UTC". Ha más időzónák támogatására van szüksége, kérjük, e-mailben Chris. John at noaa.gov.
          
 ###### Legacy_time_adjust{#legacy_time_adjust} 

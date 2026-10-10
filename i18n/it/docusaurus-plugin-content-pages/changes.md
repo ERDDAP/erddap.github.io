@@ -1102,7 +1102,7 @@ Vedi [questa documentazione](/docs/server-admin/datasets#aggregation-via-file-na
     * Modifiche a EDDTableFrom EDDGrid che lo rendono molto meglio. EDDTEDD EDDGrid consente agli utenti di query dataset grigliati come se fossero set di dati tabulari ("query by value") .
         
         * Ora supporta un&lt;maxAxis0&gt; tag (default = 10) che specifica il numero massimo di asse \\[ 0 \\]   (di solito "time" ) valori che possono essere interrogati subito. Questo impedisce alle richieste ingenue di ottenere EDDTableFrom EDDGrid per cercare attraverso un intero set dati grigliato (che fallisce con un errore di timeout) .
-        * Genera i dati Xml ora ha un'opzione per generare EDDTableFrom EDDGrid set di dati per tutti i dataset grigliati in un dato ERDDAP™ che corrispondono a regex specificato (utilizzare .\\* per abbinare tutti i set di dati) . I dataset che crea hanno ulteriori informazioni nell'attributo sommario indicando che questa è una versione tabulare di un dataset grigliato. E loro datasetID è il datasetID del dataset grigliato, più "\\_AsATable".
+        * Genera i dati Xml ora ha un'opzione per generare EDDTableFrom EDDGrid set di dati per tutti i dataset grigliati in un dato ERDDAP™ che corrispondono a regex specificato (utilizzare .\\* per abbinare tutti i set di dati) . I dataset che crea hanno ulteriori informazioni nell'attributo sommario indicando che questa è una versione tabulare di un dataset grigliato. E loro datasetID è il datasetID del dataset grigliato, più "\\_AsATable" .
         * C'è una grande velocità per la configurazione più comune: quando il dataset grigliato è un EDDGrid FromErddap dataset che è nello stesso ERDDAP .
         
 Grazie a James Gallagher e Ed Armstrong.

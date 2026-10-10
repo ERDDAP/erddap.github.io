@@ -45,14 +45,14 @@ Wenn einige Anforderung in diesem Dokument seltsam oder wählerisch scheint, ist
 Diese Spezifikation bezieht sich auf mehrere andere Spezifikationen und Bibliotheken, mit denen sie arbeiten soll, aber diese Spezifikation ist nicht Teil einer dieser anderen Spezifikationen, noch braucht sie Änderungen an ihnen, und sie kollidiert nicht mit ihnen. Wenn hier ein mit einem dieser Standards verbundenes Detail nicht angegeben ist, siehe die zugehörige Spezifikation. Insbesondere umfasst dies:
 
 * Die Attributkonvention für Dataset Discovery (ANLAGE) Metadatenstandard:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * Das Klima und Prognose (CF) Metadatenstandard:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * Die NetCDF Benutzerhandbuch (NUG) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * Die NetCDF Softwarebibliotheken wie NetCDF - Java und NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Diese Bibliotheken können NCCSV-Dateien nicht lesen, aber sie können lesen .nc Dateien, die aus NCCSV-Dateien erstellt wurden.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . Diese Bibliotheken können NCCSV-Dateien nicht lesen, aber sie können lesen .nc Dateien, die aus NCCSV-Dateien erstellt wurden.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Notierung{#notation} 
 In dieser Spezifikation, Klammern, \\[   \\] , bezeichnet optionale Elemente.
@@ -152,12 +152,12 @@ Die Definitionen der Attributdatentypen sind:
     * Doppelte Zitate (") muss als zwei doppelte Zitate kodiert werden (") . Das ist, was Tabellenkalkulation Programme erfordern, wenn Sie .csv Dateien lesen. Das ist, was Tabellenkalkulation Programme schreiben, wenn Sie ein Tabellenkalkulation als .csv-Datei speichern.
     * Die speziellen JSON-Backslash-codierten Zeichen müssen wie in JSON kodiert werden (insbesondere \\n (newline), aber auch \\\\\\ (backslash), \\f (formfeed), \\t (tab), \\r (carriage return) oder mit der [,, *h* ](#uhhhh) Syntax. In einem Tabellenblatt verwenden Sie nicht Alt Enter, um eine neue Zeile innerhalb einer Textzelle anzugeben; stattdessen verwenden Sie \\n   (2 Zeichen: Backslash und 'n ') eine neue Linie angeben.
 #####  uhhhh  {#uhhhh} 
-    * ,, *hhhh - Alle Zeichen kleiner als Zeichen #32 oder größer als Zeichen #126, und nicht anders codiert, müssen mit der Syntax \\u codiert werden* hhhh*, wo hhhh die 4-stellige hexadezimale Zahl des Zeichens ist, z.B. das Euro-Zeichen ist \\u20AC. Siehe die auf der [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) die hexadezimalen Zahlen, die mit bestimmten Unicode-Zeichen verbunden sind, zu finden oder eine Software-Bibliothek zu verwenden.
+    * ,, *hhhh - Alle Zeichen kleiner als Zeichen #32 oder größer als Zeichen #126, und nicht anders codiert, müssen mit der Syntax \\u codiert werden* hhhh*, wo hhhh die 4-stellige hexadezimale Zahl des Zeichens ist, z.B. das Euro-Zeichen ist \\ \\u20AC . Siehe die bei [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) die hexadezimalen Zahlen, die mit bestimmten Unicode-Zeichen verbunden sind, zu finden oder eine Software-Bibliothek zu verwenden.
     * Wenn der String einen Raum am Anfang oder Ende hat, oder " (doppeltes Angebot) oder ein Komma oder enthält Werte, die sonst als ein anderer Datentyp interpretiert würden (z.B. ein Int) , oder ist das Wort "null", die gesamte String muss in doppelten Zitaten eingeschlossen werden; andernfalls, im Gegensatz zu JSON, sind die einschließenden doppelten Zitate optional. Wir empfehlen: wenn im Zweifel, um die gesamte String in doppelte Zitate. Räume am Anfang oder Ende eines Strings werden stark entmutigt.
     * Für die Zeit wird die Verwendung von Zeichen größer als #255 entmutigt. NCCSV unterstützt sie. ERDDAP™ unterstützt sie intern. Einige Ausgabedateitypen unterstützen sie (z.B., .json und .nccsv ) . Aber viele Ausgabedateitypen unterstützen sie nicht. Zum Beispiel NetCDF -3 Dateien unterstützen solche Zeichen nicht, weil NetCDF Dateien verwenden 1-Byte-Zeichen und CF hat derzeit kein System zur Angabe, wie Unicode-Zeichen in NetCDF Streicher (z.B. UTF-8) . Das wird sich im Laufe der Zeit wahrscheinlich verbessern.
          
 #### &#33;{#char} 
-* char Attributwerte sind ein einziges UCS-2 Zeichen (d.h. 2-byte Unicode Zeichen, wie in Java ) , die als 7-Bit ASCII, JSON-ähnliche Zeichen geschrieben werden muss, damit andere Zeichen spezifiziert werden können (siehe oben die String-Definition zur Kodierung von Sonderzeichen, mit der Hinzufügung der Kodierung eines einzigen Zitats als \\ ') . Char Attributwerte müssen in einzelnen Zitaten eingeschlossen werden (die inneren Zitate) und doppelte Zitate (die äußeren Zitate) , z.B. "'a'", "'"" (ein doppeltes Zitatzeichen) , "'\'" (ein einziges Zitat) , "'\t" (ein Tab) "'\\u20AC'" (ein Euro-Zeichen) . Dieses System der Verwendung von einzelnen und doppelten Zitaten ist seltsam und umständlich, aber es ist eine Möglichkeit, Char-Werte von Strings in einer Weise zu unterscheiden, die mit Tabellenkalkulationen arbeitet. Ein Wert, der wie ein Zeichen aussieht, aber ungültig ist, erzeugt eine Fehlermeldung. Wie bei Strings wird derzeit die Verwendung von Zeichen größer als #255 entmutigt.
+* char Attributwerte sind ein einziges UCS-2 Zeichen (d.h. 2-byte Unicode Zeichen, wie in Java ) , die als 7-Bit ASCII, JSON-ähnliche Zeichen geschrieben werden muss, damit andere Zeichen spezifiziert werden können (siehe oben die String-Definition zur Kodierung von Sonderzeichen, mit der Hinzufügung der Kodierung eines einzigen Zitats als \\ ') . Char Attributwerte müssen in einzelnen Zitaten eingeschlossen werden (die inneren Zitate) und doppelte Zitate (die äußeren Zitate) , z.B. "'a'", "'"" (ein doppeltes Zitatzeichen) , "'\'" (ein einziges Zitat) , "'\t" (ein Tab) " \\u20AC " (ein Euro-Zeichen) . Dieses System der Verwendung von einzelnen und doppelten Zitaten ist seltsam und umständlich, aber es ist eine Möglichkeit, Char-Werte von Strings in einer Weise zu unterscheiden, die mit Tabellenkalkulationen arbeitet. Ein Wert, der wie ein Zeichen aussieht, aber ungültig ist, erzeugt eine Fehlermeldung. Wie bei Strings wird derzeit die Verwendung von Zeichen größer als #255 entmutigt.
 
 ### Suffix{#suffix} 
 Beachten Sie, dass im Attributbereich einer NCCSV-Datei alle numerischen Attributwerte einen Suffix-Brief haben müssen (z.B. 'b') zur Identifizierung des numerischen Datentyps (z.B. Byte) . Aber im Datenbereich einer NCCSV-Datei dürfen numerische Datenwerte diese Suffix-Briefe nie haben (mit Ausnahme von 'L' für lange ganze Zahlen und 'uL' für ulong ganze Zahlen) — der Datentyp durch\\*DATEN\\*Attribut für die Variable.
@@ -220,7 +220,7 @@ Die als numerische Werte dargestellten Zeitpunkte müssen ein Einheitenattribut 
 Zeit, Einheiten,Sekunden seit 1970-01-01T00:00Z
 
 Datums-Zeitwerte, die als String-Werte dargestellt sind, müssen einen String aufweisen\\*DATEN\\*Attribut und ein Einheitenattribut, das ein Datum angibt Zeitmuster, wie durch die Java DatumTimeFormatter Unterricht
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Zum Beispiel
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Zum Beispiel
 Zeit, Einheiten, yyyy-MM-dd 'T'HH:mm:ssZ
 Alle Datumszeitwerte für eine bestimmte Datenvariable müssen das gleiche Format verwenden.
 In den meisten Fällen wird das DatumTime-Muster, das Sie für die Einheiten Attribut benötigen, eine Variation eines dieser Formate sein:
@@ -245,7 +245,7 @@ Wie von CF gefordert, alle Gradwerte (z.B. für Länge und Breite) als Dezimalgr
 ##  [DSG Eigenschaften](#dsg-feature-types)  {#dsg-feature-types} 
 
 Eine NCCSV-Datei kann CF Discrete Sampling Geometry enthalten
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) Daten. Es sind die Attribute, die diese Arbeit machen:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) Daten. Es sind die Attribute, die diese Arbeit machen:
 
 1. Die NCCSV-Datei muss, wie von CF gefordert, eine Zeile im Metadatenbereich enthalten, die die [\\*GLOBAL\\*](#global)   featureType Attribut, z.B.
     \\*GLOBAL\\*, featureType ,Trajektorie
@@ -326,7 +326,7 @@ Anmerkungen:
 
 * Diese Beispieldatei enthält viele schwierige Fälle (z.B. Char und lange Variablen und schwierige String-Werte) . Die meisten NCCSV-Dateien werden viel einfacher.
 * Die Lizenzlinie ist hier in zwei Zeilen gebrochen, ist aber nur eine Zeile in der Musterdatei.
-* \\u20AC ist die Kodierung des Euro-Zeichens und \\u00FC ist die Kodierung von ü.
+* ( \\u20AC ist die Kodierung des Euro-Zeichens und \\u00FC ist die Kodierung von ü.
 * Viele Strings im Beispiel werden von doppelten Zitaten eingeschlossen, auch wenn sie nicht sein müssen, z.B. viele globale Attribute einschließlich des Titels, des lon Units Attributs und der 3. Zeile der Daten.)
 * Es wäre klarer und besser, wenn die Einheiten Attribut für die TestLong-Variable in doppelten Zitaten geschrieben wurden, die angeben, dass es ein String-Wert ist. Aber die aktuelle Darstellung (1, ohne Zitate) wird korrekt als String interpretiert, nicht als Ganzes, weil es keinen 'i'-Suffix gibt.
 * Im Gegensatz zu anderen numerischen Datentypen haben die langen Werte im Datenbereich den Suffix (L) dass ihren numerischen Datentyp identifiziert. Dies ist erforderlich, um zu verhindern, dass die Tabellenkalkulationen die Werte als Floating Point numbers interpretieren und damit Präzision verlieren.
@@ -336,7 +336,7 @@ Anmerkungen:
 In einem Tabellenblatt wie in einer NCCSV-Datei:
 
 * Schreiben Sie numerische Attributwerte wie für NCCSV-Dateien angegeben (z.B. mit einem Suffixbrief, z.B. 'f', um den Datentyp des Attributs zu identifizieren) .
-* In Strings, schreiben Sie alle Zeichen weniger als ASCII Zeichen #32 oder größer als Zeichen #126 als entweder ein JSON-ähnliches Hintergrundbild (z.B., \\n für neue Linie) oder als hexadezimale Unicode-Zeichennummer (Fall unempfindlich) mit der Syntax [,, *h* ](#uhhhh)   (z.B. \\u20AC für das Euro-Zeichen) . Verwendung \\n   (2 Zeichen: Backslash und 'n ') um eine neue Zeile anzuzeigen, nicht Alt Enter.
+* In Strings, schreiben Sie alle Zeichen weniger als ASCII Zeichen #32 oder größer als Zeichen #126 als entweder ein JSON-ähnliches Hintergrundbild (z.B., \\n für neue Linie) oder als hexadezimale Unicode-Zeichennummer (Fall unempfindlich) mit der Syntax [,, *h* ](#uhhhh)   (z.B., \\ \\u20AC für das Euro-Zeichen) . Verwendung \\n   (2 Zeichen: Backslash und 'n ') um eine neue Zeile anzuzeigen, nicht Alt Enter.
 
 Die einzigen Unterschiede zwischen NCCSV-Dateien und der analogen Tabellenkalkulation, die diesen Konventionen folgen, sind:
 
@@ -392,7 +392,7 @@ Um eine NCCSV-Datei aus einem Google Sheetsheet zu erstellen:
 * Wenn eine NCCSV-Datei am Ende von Zeilen überschüssige Kommas hat, können Sie sie entfernen, indem Sie die NCCSV-Datei in eine NetCDF Datei und dann die Konvertierung NetCDF Datei zurück in eine NCCSV-Datei.
 * Wenn Sie versuchen, die Datei NCCSV in eine zu konvertieren NetCDF Datei, einige Fehler werden von der Software erkannt und erzeugt Fehlermeldungen, wodurch die Konvertierung zu scheitern. Andere Probleme sind schwer oder unmöglich zu fangen und erzeugt keine Fehlermeldungen oder Warnungen. Sonstige Probleme (z.B. überschüssige Kommas am Ende der Zeilen) wird ignoriert. Der Dateikonverter wird nur minimale Überprüfung der Korrektheit des resultierenden NetCDF Datei, z.B. in Bezug auf CF-Compliance. Es ist die Aufgabe des Datei-Erstellers und des Datei-Benutzers zu überprüfen, ob die Ergebnisse der Konvertierung beliebig und korrekt sind. Zwei Möglichkeiten zu prüfen sind:
     * Drucken Sie den Inhalt des .nc Datei mit ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * Inhalt der Daten in ERDDAP .
 
 ##  [Änderungen](#changes)  {#changes} 

@@ -1102,7 +1102,7 @@ See See See See [Bu belge](/docs/server-admin/datasets#aggregation-via-file-name
     * CHANGES to EDDTable From EDDGrid Bu çok daha iyi yapar. EDDTable From From EDDGrid Kullanıcıların tabular veri setleri olduğu gibi ağlayan veri kümelerini sorgulamasına izin verir ("değerli") .
         
         * Şimdi bir destek&lt;maxAxis0&gt; etiketi (varsayılan=10) Hangi maksimum eksen sayısını belirtir \\[ 0 0 0 0 \\]   (Genellikle genellikle genellikle genellikle genellikle "time" ) Bir zamanlar queried olabilecek değerler. Bu, EDDTable'den almak için naif talepleri önler EDDGrid Tüm bir ağlanmış veri kümesi aracılığıyla aramak (Bu bir süre içinde başarısız olur) .
-        * GenrateDatasets X ml şimdi EDDTable'ı oluşturmak için bir seçenek var EDDGrid Verilen bir veri kümesinin hepsi için veri setleri ERDDAP™ Hangi maç belirli bir regex (.\\* tüm veri kümelerini eşleştirmek için) . Veri setleri, bunun bir ızgara veri kümesinin bir tabut versiyonu olduğunu gösteren özet özellikleri hakkında daha fazla bilgiye sahip olmasıdır. Ve onların datasetID İşte bu, datasetID Kafeded dataset, artı "\\_AsATable".
+        * GenrateDatasets X ml şimdi EDDTable'ı oluşturmak için bir seçenek var EDDGrid Verilen bir veri kümesinin hepsi için veri setleri ERDDAP™ Hangi maç belirli bir regex (.\\* tüm veri kümelerini eşleştirmek için) . Veri setleri, bunun bir ızgara veri kümesinin bir tabut versiyonu olduğunu gösteren özet özellikleri hakkında daha fazla bilgiye sahip olmasıdır. Ve onların datasetID İşte bu, datasetID Kafeded dataset, artı "\\_AsATable" .
         * En yaygın kurulum için büyük bir hız var: ızgara veri setinin bir an olduğu zaman EDDGrid Erddap veri setinden bu aynı zamanda ERDDAP .
         
 James Gallagher ve Ed Armstrong sayesinde.

@@ -45,14 +45,14 @@ Ha a dokumentumban egyes követelmények furcsának vagy szelídnek tűnnek, val
 Ez a specifikáció számos más specifikációra és könyvtárra utal, amelyeket úgy terveztek, hogy együtt dolgozzanak, de ez a specifikáció nem része az egyéb specifikációknak, és nem is kell semmilyen változást nekik, és nem is ellentmond velük. Ha az egyik ilyen szabványhoz kapcsolódó részleteket itt nem határozzák meg, lásd a kapcsolódó specifikációt. Ez különösen magában foglalja:
 
 * Az adatkészlet-felfedezés tulajdonsági egyezménye (ACDD) metadata szabvány:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) ...
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) ...
 * Az éghajlat és előrejelzés (CF) metadata szabvány:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) ...
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) ...
 * A NetCDF Felhasználói útmutató (NUG) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) ...
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) ...
 * A NetCDF szoftver könyvtárak, mint például NetCDF Java és NetCDF c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) ... Ezek a könyvtárak nem olvashatják az NCCSV fájlokat, de olvashatók .nc Az NCCSV fájlokból létrehozott fájlok.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) ... Ezek a könyvtárak nem olvashatják az NCCSV fájlokat, de olvashatók .nc Az NCCSV fájlokból létrehozott fájlok.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Megjegyzés{#notation} 
 Ebben a specifikációban, konzolok, \\[   \\] , denote opcionális elemek.
@@ -152,12 +152,12 @@ Az attribútum adattípusok meghatározásai:
     * Dupla idézetek ("...") két kettős idézetként kell kódolni ("") ... Ez az, amit a táblázatprogramok megkövetelnek az .csv fájlok olvasásakor. Ez az, amit a spreadsheet programok írnak, amikor egy .csv fájlként menti meg a táblát.
     * A különleges JSON backslash kódolt karaktereket úgy kell kódolni, mint a JSON-ban (nem valószínű, hogy \\n (újvonal), de || (backslash), \f (fokozat) \tab (ab), r (fuvarozási visszatérés) vagy [↑u *hhhh* ](#uhhhh) Szintax. Egy táblázatban ne használja az Alt Enter-et, hogy egy szövegsejtben határozzon meg egy új vonalat; ehelyett használjon \\n   (2 karakter: backslash és 'n "...") új vonal jelzésére.
 #####  uhhhh  {#uhhhh} 
-    * ↑u *hhh - Minden karakter kevesebb, mint a karakter #32 vagy nagyobb, mint a karakter #126, és nem másként kódolt, kódolni kell a szintax \\u* hh*, ahol a hhhh a karakter 4 számjegyű hexadecimális száma, pl. az eurójel \\u20AC. Lásd a kódoldalakat hivatkozva [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) megtalálni a speciális Unicode karakterekkel kapcsolatos hexadecimális számokat, vagy használjon szoftverkönyvtárat.
+    * ↑u *hhh - Minden karakter kevesebb, mint a karakter #32 vagy nagyobb, mint a karakter #126, és nem másként kódolt, kódolni kell a szintax \\u* hhh*, ahol hhhh a karakter 4 számjegyű hexadecimális száma, pl. az eurójel \\ \\u20AC ... Lásd a kódoldalakat hivatkozva [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) megtalálni a speciális Unicode karakterekkel kapcsolatos hexadecimális számokat, vagy használjon szoftverkönyvtárat.
     * Ha a sztringnek van egy helye az elején vagy a végén, vagy magában foglalja a " (dupla idézet) vagy egy comma, vagy olyan értékeket tartalmaz, amelyeket egyébként más adattípusként értelmeznek (pl. egy int) Vagy a "null" szó, az egész sztringet kettős idézetbe kell zárni; máskülönben a JSON-val ellentétben a kettős idézetek opcionálisak. Javasoljuk: ha kétséges, zárja be az egész Stringet a kettős idézetekben. A sztring kezdetén vagy végén lévő űrök erősen elriasztottak.
     * Mostanra a karakterek használata nagyobb, mint a #255 elriasztott. Az NCCSV támogatja őket. ERDDAP™ belsőleg támogatja őket. Néhány kimeneti fájltípus támogatja őket (pl.: .json és .nccsv ) ... De sok kimeneti fájltípus nem támogatja őket. Például, NetCDF 3 fájl nem támogatja az ilyen karaktereket, mert NetCDF A fájlok 1 fehér karaktereket használnak, és a CF jelenleg nem rendelkezik rendszerrel annak meghatározására, hogy az Unicode karaktereket hogyan kódolják NetCDF Hangok (pl. UTF-8) ... Ez valószínűleg javítja az idő múlásával.
          
 #### char{#char} 
-* char attribute értékek egyetlen UCS-2 karakter (i.e., 2 fehér Unicode karakterek, mint a Java ) 7 bites ASCII-ként, JSON-szerű karakterként kell megírni, hogy más karaktereket is meg lehet határozni (lásd a különleges karakterek kódolásához fent említett String definíciót, amellett, hogy egyetlen idézetet kódolsz \\ "...") ... A Char attribútum értékeit egyetlen idézetbe kell zárni (a belső idézetek) dupla idézetek (a külső idézetek) , pl. "a", """"" (kettős idézet karakter) , "" \"""" (egyetlen idézet karakter) , "'''''''''''''' (egy lap) , ''''U20AC'''''''' (Euro karakter) ... Ez a rendszer az egységes és kettős idézetek furcsa és nehézkes, de ez egy módja annak, hogy különbséget tegyen a karakterisztikai értékek a Strings-től oly módon, hogy működik a táblázatok. Az érték, amely úgy néz ki, mint egy char, de érvénytelen lesz generálni egy hibaüzenetet. Mint a Strings, a karakterek használata nagyobb, mint a #255 jelenleg elriasztott.
+* char attribute értékek egyetlen UCS-2 karakter (i.e., 2 fehér Unicode karakterek, mint a Java ) 7 bites ASCII-ként, JSON-szerű karakterként kell megírni, hogy más karaktereket is meg lehet határozni (lásd a különleges karakterek kódolásához fent említett String definíciót, amellett, hogy egyetlen idézetet kódolsz \\ "...") ... A Char attribútum értékeit egyetlen idézetbe kell zárni (a belső idézetek) dupla idézetek (a külső idézetek) , pl. "a", """"" (kettős idézet karakter) , "" \"""" (egyetlen idézet karakter) , "'''''''''''''' (egy lap) , "''\" \\u20AC "" (Euro karakter) ... Ez a rendszer az egységes és kettős idézetek furcsa és nehézkes, de ez egy módja annak, hogy különbséget tegyen a karakterisztikai értékek a Strings-től oly módon, hogy működik a táblázatok. Az érték, amely úgy néz ki, mint egy char, de érvénytelen lesz generálni egy hibaüzenetet. Mint a Strings, a karakterek használata nagyobb, mint a #255 jelenleg elriasztott.
 
 ### Suffix{#suffix} 
 Vegye figyelembe, hogy az NCCSV fájl tulajdonságaiban minden numerikus tulajdonsági értéknek elegendő levelet kell tartalmaznia (pl. „b”) azonosítani a számszerű adattípust (pl. byte) ... De egy NCCSV-fájl adatrészében a számszerű adatértékeknek soha nem kell ezeknek elegendő betűkkel rendelkezniük (kivételével a "L" hosszú integrátorok és "uL" az ulong integerek) — az adattípust a\\*DATA_TYPE\\*a változó tulajdonsága.
@@ -220,7 +220,7 @@ A numerikus értékként képviselt DateTime értékeknek olyan egységekkel kel
 Idő, egységek, másodpercek 1970-01-01T00:00Z
 
 A String értékként képviselt DateTime értékeknek erősnek kell lennie\\*DATA_TYPE\\*attribútum és egy olyan egység, amely meghatározza a dátumot Az idő minta, amit a megadott Java DateTimeFormatter osztály
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) ... Például,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) ... Például,
 Idő, egységek, yyyy-MM-dd T'HH:mm:ssZ
 Az adott adatok változójának összes dátuma ugyanazt a formátumot kell használni.
 A legtöbb esetben a dátumTime minta, amire szüksége van az egységek tulajdonsága lesz a variáció az egyik ilyen formátumok:
@@ -245,7 +245,7 @@ Amint azt a CF megköveteli, minden fokos érték (pl. a hosszúság és a szél
 ##  [DSG Jellemző típusok](#dsg-feature-types)  {#dsg-feature-types} 
 
 Egy NCCSV fájl tartalmazhat CF Discrete Sampling Geometry
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) adatok. Ez az a tulajdonság, amely ezt a munkát végzi:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) adatok. Ez az a tulajdonság, amely ezt a munkát végzi:
 
 1. Amint azt a CF megköveteli, az NCCSV fájlnak tartalmaznia kell egy sort a metaadat szakaszban, amely azonosítja a [\\*Globális\\*](#global)   featureType tulajdonság, pl.
     \\*Globális\\*, featureType ,trajekció
@@ -326,7 +326,7 @@ Megjegyzések:
 
 * Ez a minta fájl sok nehéz esetet tartalmaz (pl. char és hosszú változók és nehéz String értékek) ... A legtöbb NCCSV fájl sokkal egyszerűbb lesz.
 * A licencvonal itt két sorba kerül, de csak egy sor a mintafájlban.
-* \\u20AC az Euro karakter kódolása, és a \\u00FC az ü kódolása.
+* \" \\u20AC az Euro karakter kódolása és a \\u00FC az ü kódolása.
 * Sok A példabeszédeket kettős idézetek zárják be, annak ellenére, hogy nem kell, pl. sok globális tulajdonság, beleértve a címet, a lon egységeket és az adatok 3. sorát.)
 * Világosabb és jobb lenne, ha a teszthez tartozó egységek magasan változót írnának két idézetben, jelezve, hogy ez egy erős érték. De a jelenlegi képviselet (1, idézetek nélkül) helyesen értelmezzük, mint egy String, nem pedig egy integrált, mert nincs „i” suffix.
 * Ellentétben más numerikus adattípusok, a hosszú értékek az adatszekcióban elegendő ("L") Ez azonosítja számszerű adattípusát. Ez szükséges ahhoz, hogy megakadályozzák a táblákat az értékek úszó pontszámként értelmezésének, és így elveszítsék a pontosságot.
@@ -392,7 +392,7 @@ Az NCCSV fájl létrehozása egy Google Sheets tábláról:
 * Ha egy NCCSV fájl túlzott kommákkal rendelkezik a sorok végén, eltávolíthatja őket az NCCSV fájl átalakításával. NetCDF fájl, majd átalakítja a NetCDF vissza egy NCCSV fájlba.
 * Amikor megpróbálja átalakítani egy NCCSV fájlt egy NetCDF fájl, néhány hibát a szoftver észlel, és hibaüzeneteket generál, ami miatt a megtérés kudarcot vall. Más problémák kemények vagy lehetetlenek elkapni, és nem generál hibaüzeneteket vagy figyelmeztetéseket. Egyéb problémák (pl. túlzott commas a sorok végén) figyelmen kívül hagyják. A fájlátalakító csak minimális ellenőrzést végez az elért korrektségről NetCDF fájl, pl. a CF megfelelés tekintetében. Ez a fájl alkotója és a fájlfelhasználó felelőssége, hogy ellenőrizze, hogy a konverzió eredményei a kívánt és helyesek. Két módja annak, hogy ellenőrizze:
     * Nyomtassa ki a tartalmát .nc fájl ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) ...
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) ...
     * Nézd meg az adatok tartalmát ERDDAP ...
 
 ##  [változások](#changes)  {#changes} 

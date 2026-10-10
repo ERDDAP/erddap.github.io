@@ -42,7 +42,7 @@ Ketika penyedia data datang ke Anda berharap untuk menambahkan beberapa data ke 
 Penerapan file data aktual dari sumber eksternal adalah risiko keamanan yang besar, sehingga ERDDAP™ tidak berurusan dengan itu. Anda harus mencari solusi yang bekerja untuk Anda dan penyedia data, misalnya, email (untuk file kecil) , tarik dari awan (misalnya, DropBox atau Google Drive) sftp situs (dengan password) Sitemap Login (USB thumb drive atau hard drive eksternal) Sitemap Anda mungkin hanya harus menerima file dari orang yang Anda tahu. Anda harus memindai file untuk virus dan mengambil tindakan pencegahan keamanan lainnya.
 
 Tidak ada tautan di ERDDAP™ Formulir Penyedia Data (misalnya, pada ERDDAP™ Login) Sitemap Sebaliknya, ketika seseorang memberitahu Anda mereka ingin memiliki data mereka yang dilayani oleh Anda ERDDAP Anda dapat mengirim mereka email mengatakan sesuatu seperti:
-Ya, kita bisa mendapatkan data Anda ke ERDDAP Sitemap Untuk memulai, silakan mengisi formulir dihttps://*yourUrl*/erddap/dataProviderForm.html  (Sitemap http:// Sitemap https:// tidak diaktifkan) Sitemap
+Ya, kita bisa mendapatkan data Anda ke ERDDAP Sitemap Untuk memulai, silakan mengisi formulir di https://*yourUrl*/erddap/dataProviderForm.html   (Sitemap http:// Sitemap https:// tidak diaktifkan) Sitemap
 Setelah selesai, saya akan menghubungi Anda untuk mengerjakan rincian akhir.
 Jika Anda hanya ingin melihat formulir (tanpa mengisinya) Anda dapat melihat bentuknya ERD Sitemap ERDDAP Sitemap [Sitemap](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) Login [Bagian 1](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) Login [Bagian 2](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) Login [Bagian 3](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) Sitemap [Bagian 4](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) Sitemap Tautan ini di ERD   ERDDAP™ mengirimkan informasi kepada saya, bukan Anda, jadi jangan menyerahkan informasi dengan mereka kecuali Anda benar-benar ingin menambahkan data ke ERD   ERDDAP Sitemap
 
@@ -190,23 +190,23 @@ EDDType ini menghasilkan semua datasets.xml chunks diperlukan untuk membuat [Log
      
 #####  EDDGrid Sitemap{#eddgridfromthreddscatalog} 
 EDDType ini menghasilkan semua datasets.xml chunks diperlukan untuk semua Meme it [ EDDGrid Login](#eddgridfromdap) dataset yang dapat ditemukan dengan merangkai berulang melalui THREDDS (Sitemap) Katalog Ada banyak bentuk URL katalog THREDDS. Opsi ini REQUIRES URL THREDDS .xml dengan /katalog / di dalamnya, misalnya,
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xmlSitemap
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml Sitemap
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 Katalog .html
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html, yang tidak dapat diterima EDDGrid Sitemap
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html , yang tidak dapat diterima EDDGrid Sitemap
 Jika Anda memiliki masalah dengan EDDGrid Sitemap Katalog
 * Pastikan URL yang Anda gunakan adalah valid, termasuk / katalog / dan berakhir dengan /katalog.xml .
-* Jika memungkinkan, gunakan alamat IP publik (Sitemaphttps://oceanwatch.pfeg.noaa.gov) di URL, bukan alamat IP numerik lokal (Sitemaphttps://12.34.56.78) Sitemap Jika THREDDS hanya dapat diakses melalui alamat IP numerik lokal, Anda dapat menggunakan [&lt;Login (Login) Sitemap ERDDAP™ pengguna melihat alamat publik, meskipun Meme it ERDDAP™ mendapatkan data dari alamat numerik lokal.
+* Jika memungkinkan, gunakan alamat IP publik (Sitemap https://oceanwatch.pfeg.noaa.gov ) di URL, bukan alamat IP numerik lokal (Sitemap https://12.34.56.78 ) Sitemap Jika THREDDS hanya dapat diakses melalui alamat IP numerik lokal, Anda dapat menggunakan [&lt;Login (Login) Sitemap ERDDAP™ pengguna melihat alamat publik, meskipun Meme it ERDDAP™ mendapatkan data dari alamat numerik lokal.
 * Jika Anda memiliki masalah yang tidak dapat Anda selesaikan, [periksa tips pemecahan masalah](#troubleshooting-tips) Sitemap
 * Kode tingkat rendah untuk ini sekarang menggunakan Unidata netcdf-java katalog kode crawler (Login Katalog) sehingga dapat menangani semua katalog THREDDS (yang bisa sangat kompleks) Sitemap Unidata untuk kode itu.
          
 #####  EDDGrid LonPM180DariErddapKatalog{#eddgridlonpm180fromerddapcatalog} 
 EDDType ini menghasilkan datasets.xml Sitemap [ EDDGrid LonPM180](#eddgridlonpm180) dataset dari semua EDDGrid dataset dalam sebuah ERDDAP yang memiliki nilai longitude lebih dari 180.
-* Jika memungkinkan, gunakan alamat IP publik (Sitemaphttps://oceanwatch.pfeg.noaa.gov) di URL, bukan alamat IP numerik lokal (Sitemaphttps://12.34.56.78) Sitemap Sitemap ERDDAP™ hanya dapat diakses melalui alamat IP numerik lokal, Anda dapat menggunakan [&lt;Login (Login) Sitemap ERDDAP™ pengguna melihat alamat publik, meskipun Meme it ERDDAP™ mendapatkan data dari alamat numerik lokal.
+* Jika memungkinkan, gunakan alamat IP publik (Sitemap https://oceanwatch.pfeg.noaa.gov ) di URL, bukan alamat IP numerik lokal (Sitemap https://12.34.56.78 ) Sitemap Sitemap ERDDAP™ hanya dapat diakses melalui alamat IP numerik lokal, Anda dapat menggunakan [&lt;Login (Login) Sitemap ERDDAP™ pengguna melihat alamat publik, meskipun Meme it ERDDAP™ mendapatkan data dari alamat numerik lokal.
          
 #####  EDDGrid Datasheet PDF{#eddgridlon0360fromerddapcatalog} 
 EDDType ini menghasilkan datasets.xml Sitemap [ EDDGrid Lon0360](#eddgridlon0360) dataset dari semua EDDGrid dataset dalam sebuah ERDDAP yang memiliki nilai longitude kurang dari 0.
-* Jika memungkinkan, gunakan alamat IP publik (Sitemaphttps://oceanwatch.pfeg.noaa.gov) di URL, bukan alamat IP numerik lokal (Sitemaphttps://12.34.56.78) Sitemap Sitemap ERDDAP™ hanya dapat diakses melalui alamat IP numerik lokal, Anda dapat menggunakan [&lt;Login (Login) Sitemap ERDDAP™ pengguna melihat alamat publik, meskipun Meme it ERDDAP™ mendapatkan data dari alamat numerik lokal.
+* Jika memungkinkan, gunakan alamat IP publik (Sitemap https://oceanwatch.pfeg.noaa.gov ) di URL, bukan alamat IP numerik lokal (Sitemap https://12.34.56.78 ) Sitemap Sitemap ERDDAP™ hanya dapat diakses melalui alamat IP numerik lokal, Anda dapat menggunakan [&lt;Login (Login) Sitemap ERDDAP™ pengguna melihat alamat publik, meskipun Meme it ERDDAP™ mendapatkan data dari alamat numerik lokal.
          
 ##### Login{#eddsfromfiles} 
 Mengingat direktori awal, melintasi direktori ini dan semua subdirectories dan mencoba untuk membuat dataset untuk setiap kelompok file data yang ditemukan.
@@ -566,7 +566,7 @@ file NCCSV 1.0 tidak mendukung jenis data yang tidak ditentukan.
 ### Data Type Komentar{#data-type-comments} 
 * Karena dukungan yang buruk untuk data yang panjang, ulong, dan char dalam banyak jenis file, kami mengumpulkan penggunaan jenis data ini ERDDAP Sitemap Bila memungkinkan, gunakan dua kali lipat dan ulong, dan gunakan String bukan char.
      
-* Metadata(OPeN)DAP's .das dan .dds tanggapan tidak mendukung atribut panjang atau ulong atau jenis data (dan bukan menunjukkan mereka sebagai ganda) , Anda mungkin tidak ingin menggunakan ERDDAP representasi tabular metadata seperti yang terlihat di http Login **Sitemap** Sitemap * datasetID * .html halaman web (Sitemap [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (yang Anda juga bisa mendapatkan dalam jenis file lain, misalnya, .csv, .htmlTable Login .itx Login .json Login .jsonlCSV1 Login .jsonlCSV Login .jsonlKVP Login .mat Login .nc Login .nccsv Login .tsv Login .xhtml ) atau .nccsv Metadata (Sitemap [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) Login .nccsv Metadata hanya tersedia untuk set data tabel) keduanya mendukung semua jenis data (ulong, panjang, ulong, dan char) Sitemap
+* Metadata(OPeN)DAP's .das dan .dds tanggapan tidak mendukung atribut panjang atau ulong atau jenis data (dan bukan menunjukkan mereka sebagai ganda) , Anda mungkin tidak ingin menggunakan ERDDAP representasi tabular metadata seperti yang terlihat di http Login **Sitemap** Sitemap * datasetID * .html halaman web (Sitemap [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (yang Anda juga bisa mendapatkan dalam jenis file lain, misalnya, .csv, .htmlTable Login .itx Login .json Login .jsonlCSV1 Login .jsonlCSV Login .jsonlKVP Login .mat Login .nc Login .nccsv Login .tsv Login .xhtml ) atau .nccsv Metadata (Sitemap [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) Login .nccsv Metadata hanya tersedia untuk set data tabel) keduanya mendukung semua jenis data (ulong, panjang, ulong, dan char) Sitemap
          
 ### Database{#media-files} 
 Tidak semua data adalah array dari angka atau teks. Beberapa dataset terdiri dari atau menyertakan file media, seperti gambar, file audio dan video. ERDDAP™ memiliki beberapa fitur khusus untuk memudahkan pengguna mendapatkan akses ke file media. Ini adalah proses dua langkah:
@@ -604,7 +604,7 @@ Atau, jika pengguna mengklik nama file yang ditampilkan pada ERDDAP™ halaman w
 ### AWS S3 File{#working-with-aws-s3-files} 
  [Layanan Web Amazon (Login) ](https://aws.amazon.com) adalah penjual [komputasi awan](https://en.wikipedia.org/wiki/Cloud_computing) Sitemap [S3](https://aws.amazon.com/s3/) adalah sistem penyimpanan objek yang ditawarkan oleh AWS. Alih-alih sistem hirarkis dan file dari sistem file tradisional (seperti hard drive di PC Anda) S3 menawarkan hanya "bucket" yang memegang "objects" (kita akan memanggil mereka Meme it "files" ) Sitemap
 
-Untuk file ASCII (Sitemap) Login ERDDAP™ dapat bekerja dengan file di ember secara langsung. Satu-satunya hal yang perlu Anda lakukan adalah menentukan&lt;fileDir&gt; untuk dataset menggunakan format spesifik untuk ember AWS, misalnya,https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/Sitemap Anda tidak boleh menggunakan&lt;Login Lihat di bawah ini untuk rincian.
+Untuk file ASCII (Sitemap) Login ERDDAP™ dapat bekerja dengan file di ember secara langsung. Satu-satunya hal yang perlu Anda lakukan adalah menentukan&lt;fileDir&gt; untuk dataset menggunakan format spesifik untuk ember AWS, misalnya, https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ Sitemap Anda tidak boleh menggunakan&lt;Login Lihat di bawah ini untuk rincian.
 
 Tapi untuk file biner (Login .nc .grib, .bufr, dan .hdf Login) Anda perlu menggunakan&lt;cacheDariUrl&gt; sistem yang dijelaskan di bawah ini. ERDDAP netcdf-java (Sitemap ERDDAP™ menggunakan untuk membaca data dari file-file ini) Perangkat lunak data ilmiah lainnya dirancang untuk bekerja dengan file dalam sistem file tradisional yang menawarkan [tingkat blok](https://en.wikipedia.org/wiki/Block-level_storage) akses ke file (yang memungkinkan membaca chunks file) S3 [Database (Login) ](https://en.wikipedia.org/wiki/Block-level_storage) akses ke file (yang hanya mengizinkan membaca seluruh file) Sitemap AWS menawarkan alternatif untuk S3, [Toko Blok Elastis (Login) ](https://aws.amazon.com/ebs/) ), yang mendukung akses tingkat blok ke file tetapi lebih mahal daripada S3, sehingga jarang digunakan untuk penyimpanan massal dari sejumlah besar file data. (Jadi ketika orang mengatakan menyimpan data di cloud (S3) murah, biasanya apel untuk perbandingan jeruk.) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 URl yang sesuai untuk objek itu
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 AWS mendukung sedikit variasi dalam bagaimana URL itu dibangun, tetapi ERDDAP™ membutuhkan satu format khusus ini:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 Sitemap ERDDAP v2.29, Anda sekarang dapat menggunakan `Sitemap` URI format bukan URL ember. Ini adalah format yang digunakan oleh [Datasheet PDF](https://docs.aws.amazon.com/cli/latest/reference/s3/) Sitemap
 Sitemap *Login* Sitemap *Login* 
@@ -697,22 +697,22 @@ Untuk ember data S3 pribadi, pemilik bucket harus memberi Anda akses ke ember. (
 Dalam semua kasus, Anda akan membutuhkan akun AWS karena AWS SDK untuk Java   (Sitemap ERDDAP™ menggunakan untuk mengambil informasi tentang isi ember) membutuhkan kredensial akun AWS. (lebih banyak di bawah ini) 
 
  ERDDAP™ hanya dapat mengakses ember AWS S3 jika Anda menentukan [&lt;Login (Login) Login&lt;fileDir&gt;) dalam format tertentu:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 Sitemap
 
 * emberName adalah bentuk singkat dari nama ember, misalnya noaaaa-goes17.
 * Aws-region, misalnya, kita-east-1, adalah dari kolom "Region" di salah satu tabel [Layanan AWS Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) di mana bucket sebenarnya terletak. Meme it
 * Prefix adalah opsional. Jika ada, itu harus berakhir dengan Meme it '/' Sitemap
 
-Sitemaphttps://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+Sitemap https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 Format URL ini adalah salah satu rekomendasi AWS S3: lihat [Mengakses Bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) Login [deskripsi ini dari awalan](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) Sitemap ERDDAP™ mengharuskan Anda menggabungkan URL ember dan prefiks opsional ke satu URL untuk menentukan&lt;cacheDariUrl&gt; (atau&lt;fileDir&gt;) di mana file berada.
 
 #### Uji Public AWS S3 Buckets{#test-public-aws-s3-buckets} 
 Untuk ember publik, Anda dapat dan harus menguji URL ember dari direktori AWS S3 di browser Anda, misalnya,
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) Jika URL ember benar dan tepat untuk ERDDAP , itu akan mengembalikan dokumen XML yang memiliki (Login) daftar konten ember itu. Sayangnya, URL penuh (i.e., URL bucket ditambah awal) Login ERDDAP™ ingin dataset yang diberikan tidak berfungsi di browser. AWS tidak menawarkan sistem untuk menelusuri hirarki bucket dengan mudah di browser Anda. (Jika itu salah, silakan email Chris. John di noaaa.gov. Jika tidak, Amazon, tambahkan dukungan untuk ini&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) Jika URL ember benar dan tepat untuk ERDDAP , itu akan mengembalikan dokumen XML yang memiliki (Login) daftar konten ember itu. Sayangnya, URL penuh (i.e., URL bucket ditambah awal) Login ERDDAP™ ingin dataset yang diberikan tidak berfungsi di browser. AWS tidak menawarkan sistem untuk menelusuri hirarki bucket dengan mudah di browser Anda. (Jika itu salah, silakan email Chris. John di noaaa.gov. Jika tidak, Amazon, tambahkan dukungan untuk ini&#33;) 
 
 #### Melihat Konten Bucket{#viewing-the-contents-of-a-bucket} 
-S3 bucket sering mengandung beberapa kategori file, dalam beberapa subdirectories pseudo, yang bisa menjadi beberapa dari ERDDAP™ Login Untuk membuat ERDDAP™ dataset, Anda perlu tahu direktori awal untuk&lt;cacheDariUrl&gt; (atau&lt;fileDir&gt;) dan format nama file yang mengidentifikasi bahwa subset file. Jika Anda mencoba untuk melihat seluruh konten ember di browser, S3 hanya akan menunjukkan Anda 1000 file pertama, yang tidak mencukupi. Saat ini, cara terbaik bagi Anda untuk melihat semua konten ember adalah membuat [Login](#eddtablefromfilenames) Login (di PC Anda ERDDAP™ dan/atau di publik Anda ERDDAP ) , yang juga memberi Anda cara mudah untuk menelusuri struktur direktori dan mengunduh file. Login&lt;fileDir&gt; yang akan menjadi URL yang Anda buat di atas, misalnya,https://noaa-goes17.s3.us-east-1.amazonaws.comSitemap \\[ Mengapa AWS S3 menawarkan cara cepat dan mudah bagi siapa pun untuk melakukan ini tanpa akun AWS? \\] Perhatikan bahwa ketika saya melakukan ini di PC saya di jaringan non-Amazon, tampaknya Amazon memperlambat respons terhadap trik (100 g (Sitemap) file per chunk) setelah beberapa chunks pertama (dari 1000 file per chunk) didownload. Karena ember mungkin memiliki sejumlah besar file (noaa-goes17 memiliki 26 juta) , mendapatkan semua konten ember dapat mengambil EDDTableDariFileNames beberapa jam (g., 12&#33;) Sitemap \\[ Amazon, adalah hak?&#33; \\] 
+S3 bucket sering mengandung beberapa kategori file, dalam beberapa subdirectories pseudo, yang bisa menjadi beberapa dari ERDDAP™ Login Untuk membuat ERDDAP™ dataset, Anda perlu tahu direktori awal untuk&lt;cacheDariUrl&gt; (atau&lt;fileDir&gt;) dan format nama file yang mengidentifikasi bahwa subset file. Jika Anda mencoba untuk melihat seluruh konten ember di browser, S3 hanya akan menunjukkan Anda 1000 file pertama, yang tidak mencukupi. Saat ini, cara terbaik bagi Anda untuk melihat semua konten ember adalah membuat [Login](#eddtablefromfilenames) Login (di PC Anda ERDDAP™ dan/atau di publik Anda ERDDAP ) , yang juga memberi Anda cara mudah untuk menelusuri struktur direktori dan mengunduh file. Login&lt;fileDir&gt; yang akan menjadi URL yang Anda buat di atas, misalnya, https://noaa-goes17.s3.us-east-1.amazonaws.com Sitemap \\[ Mengapa AWS S3 menawarkan cara cepat dan mudah bagi siapa pun untuk melakukan ini tanpa akun AWS? \\] Perhatikan bahwa ketika saya melakukan ini di PC saya di jaringan non-Amazon, tampaknya Amazon memperlambat respons terhadap trik (100 g (Sitemap) file per chunk) setelah beberapa chunks pertama (dari 1000 file per chunk) didownload. Karena ember mungkin memiliki sejumlah besar file (noaa-goes17 memiliki 26 juta) , mendapatkan semua konten ember dapat mengambil EDDTableDariFileNames beberapa jam (g., 12&#33;) Sitemap \\[ Amazon, adalah hak?&#33; \\] 
 
 #### Membuat EDDTable DariFileNames Dataset dengan Bucket AWS S3{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 Jika Anda memiliki nama ember, tetapi belum memiliki daftar file di ember S3 atau awalan yang mengidentifikasi lokasi file yang relevan di ember, gunakan instruksi di bawah ini untuk membuat dataset EDDTableDariFileNames sehingga Anda dapat menjelajahi hierarki direktori dari ember S3 melalui ERDDAP Sitemap "files" sistem.
@@ -727,22 +727,24 @@ Login IllegalArgumentException: file profil tidak bisa menjadi kesalahan null da
 Hint untuk Linux dan Mac OS: file kredensial harus berada di direktori rumah pengguna yang menjalankan Tomcat (Login ERDDAP )   (untuk paragraf ini, kita akan mengasumsikan pengguna=tomcat) dalam file yang disebut ~/.aws/credentials. Jangan berasumsi bahwa ~ adalah /home/tomcat -- sebenarnya menggunakan cd ~ untuk mengetahui di mana sistem operasi berpikir ~ untuk pengguna=tomcat adalah. Buat direktori jika tidak ada. Juga, setelah Anda menempatkan file credentials di tempat, pastikan pengguna dan kelompok untuk file adalah tomcat dan kemudian gunakan kredensial chmod 400 untuk memastikan file dibaca-hanya untuk pengguna=tomcat.
     
 3. Buat URL ember di [format yang ERDDAP™ Login](#accessing-files-in-an-aws-s3-bucket) Sitemap
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) Sitemap (untuk ember publik) mengujinya di browser untuk memastikan kembali dokumen XML yang memiliki daftar parsial dari ember itu.
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) Sitemap (untuk ember publik) mengujinya di browser untuk memastikan kembali dokumen XML yang memiliki daftar parsial dari ember itu.
      
 4. Sitemap [Login](#generatedatasetsxml) untuk membuat [Login](#eddtablefromfilenames) Sitemap
     * Untuk direktori Start, gunakan sintaks ini:
         \\*\\*Login *Login* Login
 Sitemap
-        \\*\\*Loginhttps://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\*Login https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * Nama file regex? Login
     * Recursif? Login
     * Login Login 100 g
-    *    infoUrl Sitemaphttps://registry.opendata.aws/noaa-goes/
+    *    infoUrl Sitemap https://registry.opendata.aws/noaa-goes/
+ 
     * Login NOAA 
     * Sitemap Sitemap ( ERDDAP™ akan membuat ringkasan yang layak secara otomatis.) 
     * Login Sitemap ( ERDDAP™ akan membuat judul yang layak secara otomatis.) Seperti biasa, Anda harus mengedit XML yang dihasilkan untuk memverifikasi kebenaran dan membuat perbaikan sebelum chunk dataset menggunakannya dalam datasets.xml Sitemap
 5. Jika Anda mengikuti instruksi di atas dan memuat dataset di ERDDAP , Anda telah membuat dataset EDDTableDariFiles. Sebagai contoh, dan untuk memudahkan siapa pun untuk menelusuri dan mengunduh file dari ember Data Terbuka AWS, kami telah menciptakan dataset EDDTableDariFileNames (lihat daftar di
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) untuk hampir semua Meme it [AWS S3 Open Data ember](https://registry.opendata.aws/) Sitemap
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) untuk hampir semua Meme it [AWS S3 Open Data ember](https://registry.opendata.aws/) Sitemap
      \\[ Beberapa ember yang kita tidak termasuk memiliki sejumlah besar file di direktori akar (lebih dari dapat diunduh dalam waktu yang wajar) atau tidak mengizinkan akses publik (tidak mereka semua seharusnya menjadi publik?) , atau adalah ember Pays (Sitemap) Sitemap \\]   
 Jika Anda mengklik "files" tautan untuk salah satu set data ini, Anda dapat menjelajahi pohon direktori dan file di ember S3. Karena cara\\*\\*\\ * DariOnTheFly EDDTableDariFiles bekerja, daftar direktori ini selalu sangat up-to-date karena ERDDAP™ mendapatkan mereka on-the-fly. Meme it Jika Anda mengklik pohon direktori ke nama file yang sebenarnya dan klik pada nama file, ERDDAP™ akan mengarahkan permintaan Anda ke AWS S3 sehingga Anda dapat mengunduh file langsung dari AWS. Anda kemudian dapat memeriksa file tersebut.
     
@@ -756,7 +758,7 @@ Tidak hanya mengizinkan orang untuk menggunakan browser untuk melihat isi ember 
  **Kemudian Anda dapat membuat ERDDAP™ dataset yang memberi pengguna akses ke data dalam file.**   
 Lihat petunjuk [ ERDDAP™ dan S3 Buckets](#erddap-and-aws-s3-buckets)   (Sitemap) Sitemap
 Untuk sampel EDDTableDariFileNames dataset yang Anda buat di atas, jika Anda melakukan sedikit berdering di sekitar dengan direktori dan nama file di pohon direktori, itu menjadi jelas bahwa nama direktori tingkat atas (ABI-L1b-RadC) sesuai dengan apa ERDDAP™ akan memanggil dataset terpisah. Bucket yang Anda kerjakan dengan mungkin sama. Anda kemudian bisa mengejar membuat set data terpisah di Meme it ERDDAP™ untuk setiap dataset, menggunakan, misalnya,
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 Sitemap&lt;Login Sayangnya, untuk contoh tertentu ini, dataset di ember semua tampaknya tingkat 1 atau tingkat 2 dataset, yang ERDDAP™   [tidak terlalu baik di Meme it](#dimensions) , karena dataset adalah koleksi variabel yang lebih rumit yang menggunakan dimensi yang berbeda.
      
     
@@ -975,7 +977,7 @@ Unsorted nilai dimensi hampir selalu menunjukkan masalah dengan dataset sumber. 
 ###  EDDGrid Login{#eddgridfromdap} 
  [ ** EDDGrid Login** ](#eddgridfromdap) menangani variabel grid dari [ DAP ](https://www.opendap.org/) server.
 
-* Kami sangat merekomendasikan menggunakan [Login Program Xml](#generatedatasetsxml) untuk membuat draft kasar dari datasets.xml chunk dataset ini. Anda dapat mengumpulkan informasi yang Anda butuhkan untuk mengubah atau membuat XML Anda sendiri untuk EDDGrid DariDap dataset dengan melihat file DDS dan DAS dataset sumber di browser Anda (dengan menambahkan .das dan .dds ke sourceUrl , misalnya, [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) Sitemap
+* Kami sangat merekomendasikan menggunakan [Login Program Xml](#generatedatasetsxml) untuk membuat draft kasar dari datasets.xml chunk dataset ini. Anda dapat mengumpulkan informasi yang Anda butuhkan untuk mengubah atau membuat XML Anda sendiri untuk EDDGrid DariDap dataset dengan melihat file DDS dan DAS dataset sumber di browser Anda (dengan menambahkan .das dan .dds ke sourceUrl , misalnya, [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) Sitemap
      
 *    EDDGrid DariDap dapat mendapatkan data dari variabel multi-dimensi dari DAP server data. (Sitemap EDDGrid DariDap terbatas pada variabel yang ditunjuk sebagai "grid", tetapi tidak lagi persyaratan.)   
      
@@ -1335,7 +1337,7 @@ Contoh penuh dari axisVariable yang membuat dataset agregat dengan sumbu "run" b
         </addAttributes>
       </axisVariable>
 ```
-Perhatikan penggunaan nomor kelompok capture 2 untuk menangkap digit yang terjadi setelah 'r' atau 's', dan sebelum "\\_global". Contoh ini juga menunjukkan bagaimana menambahkan atribut tambahan (Login ioos\\_category dan unit) ke variabel sumbu.
+Perhatikan penggunaan nomor kelompok capture 2 untuk menangkap digit yang terjadi setelah 'r' atau 's', dan sebelum "\\_global" Sitemap Contoh ini juga menunjukkan bagaimana menambahkan atribut tambahan (Login ioos\\_category dan unit) ke variabel sumbu.
      
 #### File terkompresi secara eksternal{#externally-compressed-files} 
 * Database EDDGrid Dari File dan EDDTable Dari File dapat melayani data langsung dari file data terkompresi secara eksternal, termasuk .tgz Login .tar  .gz Login .tar  .gzip Login .gz Login .gzip Login .zip Login .bz2 .Z file.
@@ -1433,7 +1435,7 @@ Sitemap EDDGrid DariFiles dan semua dataset EDDTableDariFiles mendukung satu set
 Alih-alih, gunakan [&lt;cacheDariUrl&gt; sistem] (Login) Sitemap
 
 Login ERDDAP™ dataset sebagai file melalui permintaan rentang byte --
-Membalikkan ini di sekitar, mengingat bahwa Anda dapat (dalam teori) berpikir dataset dalam ERDDAP™ sebagai raksasa .nc file dengan appending " .nc Login DAP URL untuk dataset yang diberikan (Loginhttps://myserver.org/erddap/griddap/datasetID.ncdan juga dengan menambahkan?query setelah itu untuk menentukan subset) , mungkin wajar untuk bertanya apakah Anda dapat menggunakan netcdf-java, Ferret atau beberapa lainnya NetCDF software klien untuk membaca data melalui Permintaan Jangkauan HTTP dari ERDDAP Sitemap Jawabannya tidak ada, karena tidak ada yang sangat besar " .nc Login Jika Anda ingin melakukan ini, bukan salah satu opsi ini:
+Membalikkan ini di sekitar, mengingat bahwa Anda dapat (dalam teori) berpikir dataset dalam ERDDAP™ sebagai raksasa .nc file dengan appending " .nc Login DAP URL untuk dataset yang diberikan (Login https://myserver.org/erddap/griddap/datasetID.nc dan juga dengan menambahkan?query setelah itu untuk menentukan subset) , mungkin wajar untuk bertanya apakah Anda dapat menggunakan netcdf-java, Ferret atau beberapa lainnya NetCDF software klien untuk membaca data melalui Permintaan Jangkauan HTTP dari ERDDAP Sitemap Jawabannya tidak ada, karena tidak ada yang sangat besar " .nc Login Jika Anda ingin melakukan ini, bukan salah satu opsi ini:
 
 * Sitemap(OPeN)DAPsoftware klien untuk terhubung ke layanan griddap yang ditawarkan oleh ERDDAP Sitemap Itu adalah apa DAP   (dan ERDDAP ) dirancang untuk. Sangat efisien.
 * Atau, unduh file sumber (Login) dari "files" sistem (atau file subset melalui .nc Sitemap Login) ke komputer Anda dan gunakan netcdf-java, Ferret atau beberapa lainnya NetCDF software klien untuk membaca (Sitemap) file lokal (Login) Sitemap
@@ -2253,9 +2255,9 @@ mempertimbangkan menyimpan data dalam koleksi NetCDF g .nc Login (Sitemap .nc fi
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### Login{#eddtablefromdapsequence} 
- [ **Login** ](#eddtablefromdapsequence) menangani variabel dalam urutan 1- dan 2-level dari [ DAP ](https://www.opendap.org/) server seperti DAP Login (Sitemaphttps://www.pmel.noaa.gov/epic/software/dapper/Sekarang dihentikan) Sitemap
+ [ **Login** ](#eddtablefromdapsequence) menangani variabel dalam urutan 1- dan 2-level dari [ DAP ](https://www.opendap.org/) server seperti DAP Login (Sitemap https://www.pmel.noaa.gov/epic/software/dapper/ Sekarang dihentikan) Sitemap
 
-* Kami sangat merekomendasikan menggunakan [Login Program Xml](#generatedatasetsxml) untuk membuat draft kasar dari datasets.xml chunk dataset ini. Anda kemudian dapat mengedit bahwa untuk tune halus itu. Meme it Anda dapat mengumpulkan informasi yang Anda butuhkan dengan melihat file DDS dan DAS dataset sumber di browser Anda (dengan menambahkan .das dan .dds ke sourceUrl (misalnya dihttps://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.ddsSitemap
+* Kami sangat merekomendasikan menggunakan [Login Program Xml](#generatedatasetsxml) untuk membuat draft kasar dari datasets.xml chunk dataset ini. Anda kemudian dapat mengedit bahwa untuk tune halus itu. Meme it Anda dapat mengumpulkan informasi yang Anda butuhkan dengan melihat file DDS dan DAS dataset sumber di browser Anda (dengan menambahkan .das dan .dds ke sourceUrl (misalnya di https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds Sitemap
     
 * variabel dalam DAP urutan jika respons .dds menunjukkan bahwa struktur data memegang variabel adalah "sequence" (kasus tidak sensitif) Sitemap
 * Dalam beberapa kasus, Anda akan melihat urutan dalam urutan, urutan 2-level -- EDDTableDariDapSequence menangani ini, juga.
@@ -2378,15 +2380,15 @@ Login Xml memiliki tiga pilihan khusus untuk EDDTableDariDatabase:
 * [JDBC Driver dan&lt;Login (Login) Login Anda harus mendapatkan yang tepat JDBC 3 atau driver JDBC 4 untuk database Anda dan
 taruh di *Login* /webapps/erddap/WEB-INF/lib setelah anda menginstal ERDDAP Sitemap Kemudian, di Anda datasets.xml untuk dataset ini, Anda harus menentukan&lt;driverName&gt; untuk driver ini, yang (Sitemap) berbeda dari nama file. Cari di web untuk driver JDBC untuk database Anda dan driverName yang Java perlu menggunakannya.
     
-    * Untuk MariaDB, coba [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * Untuk MariaDB, coba [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 Login&lt;driverName&gt; untuk digunakan datasets.xml   (Sitemap) org.mariadb.jdbc. Login
-    * Untuk MySQL dan Amazon RDS, coba [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * Untuk MySQL dan Amazon RDS, coba [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 Login&lt;driverName&gt; untuk digunakan datasets.xml   (Sitemap) com.mysql.jdbc. Login
-    * Sitemap Oracle Sitemap [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) Sitemap
+    * Sitemap Oracle Sitemap [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) Sitemap
 Login&lt;driverName&gt; untuk digunakan datasets.xml   (Sitemap) mungkin oracle.jdbc.driver. Oracle Login
-    * Untuk Postgresql, kami mendapat driver JDBC 4 dari [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * Untuk Postgresql, kami mendapat driver JDBC 4 dari [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 Login&lt;driverName&gt; untuk digunakan datasets.xml   (Sitemap) org.postgresql. Login
-    * Untuk SQL Server, Anda bisa mendapatkan driver JTDS JDBC dari [https://jtds.sourceforge.net](https://jtds.sourceforge.net) Sitemap
+    * Untuk SQL Server, Anda bisa mendapatkan driver JTDS JDBC dari [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) Sitemap
 Login&lt;driverName&gt; untuk digunakan datasets.xml   (Sitemap) adalah mungkin net.sourceforge.jtds.jdbc. Login
     
 Setelah Anda menempatkan driver JDBC .jar di ERDDAP™ lib direktori, Anda perlu menambahkan referensi ke file .jar di file .bat dan/atau .sh script untuk GenerateDatasets Xml, DasDds, dan ArsipADataset yang ada di *Login* /webapps/erddap/WEB-INF/ directory; jika tidak, Anda akan mendapatkan ClassNotFoundException ketika Anda menjalankan skrip tersebut.
@@ -2524,7 +2526,7 @@ Dan *Login* /conf/context.xml, mendefinisikan sumber daya dengan informasi yang 
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-Informasi umum tentang menggunakan DataSource adalah [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) Sitemap
+Informasi umum tentang menggunakan DataSource adalah [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) Sitemap
 Sitemap [Informasi Tomcat DataSource](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) Login [Contoh Tomcat DataSource](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) atau mencari web misalnya menggunakan DataSources dengan server aplikasi lainnya.
 * Jika semua gagal lain,
 mempertimbangkan menyimpan data dalam koleksi NetCDF g .nc Login (Sitemap .nc file yang menggunakan [Login Sitemap (Login) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Struktur data Array yang berkelanjutan dan dapat ditangani dengan ERDDAP Sitemap [Sitemap](#eddtablefromnccffiles) ) Sitemap Jika mereka diatur secara logis (setiap data untuk chunk ruang dan waktu) Login ERDDAP™ dapat mengekstrak data dari mereka dengan sangat cepat.
@@ -2608,7 +2610,7 @@ mempertimbangkan menyimpan data dalam koleksi NetCDF g .nc Login (Sitemap .nc fi
     
 Potongan dari XML yang dihasilkan oleh GenerateDatasetsXml untuk setiap dataset termasuk:
     
-    * Login datasetID yang merupakan EDDGrid Sitemap datasetID ditambah "\\_AsATable".
+    * Login datasetID yang merupakan EDDGrid Sitemap datasetID Sitemap "\\_AsATable" Sitemap
     * Atribut global ringkasan baru yang merupakan EDDGrid 's ringkasan ditambah paragraf pertama baru yang menggambarkan apa dataset ini.
     * Atribut global judul baru yang merupakan EDDGrid 's judul plus ", (Sebagai Tabel) Sitemap
     * Atribut global maxAxis0 baru dengan nilai 10.
@@ -2644,21 +2646,21 @@ Potongan dari XML yang dihasilkan oleh GenerateDatasetsXml untuk setiap dataset 
 *    [Data di EDDTableDariFileNames dataset](#eddtablefromfilenames-data) adalah tabel yang ERDDAP™ menciptakan on-the-fly dengan informasi tentang sekelompok file lokal. Dalam tabel, ada baris untuk setiap file. Empat atribut khusus di [ datasets.xml dataset](#eddtablefromfilenames-skeleton-xml) menentukan file mana yang akan dimasukkan dalam dataset ini:
     
 ##### Login Login{#filedir} 
-    *   &lt;Login Ini menentukan direktori sumber dalam sistem file server dengan file untuk dataset ini. File yang sebenarnya terletak di sistem file server di&lt;fileDir&gt; akan muncul di kolom url dataset ini dalam direktori virtual bernamahttps://*serverUrl*/erddap/files/*datasetID/*Sitemap
+    *   &lt;Login Ini menentukan direktori sumber dalam sistem file server dengan file untuk dataset ini. File yang sebenarnya terletak di sistem file server di&lt;fileDir&gt; akan muncul di kolom url dataset ini dalam direktori virtual bernama https://*serverUrl*/erddap/files/*datasetID/* Sitemap
 Contohnya, jika datasetID jplMU RSS Login
 dan&lt;fileDir&gt; adalah /home/data/mur/,
 dan direktori itu memiliki file bernama jplMU RSS T20150103000000.png,
 maka URL yang akan ditampilkan kepada pengguna untuk file itu akan ditampilkan
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.pngSitemap
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png Sitemap
         
 Selain menggunakan direktori lokal untuk&lt;fileDir&gt;, Anda juga dapat menentukan URL dari lama, halaman web seperti direktori. Ini bekerja dengan:
         
         * Dataset tidak agregasi di THREDDS, misalnya,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Server ini tidak lagi tersedia. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Server ini tidak lagi tersedia. \\] 
         * Database Hyrax Sitemap
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * Kebanyakan daftar direktori Apache-like, misalnya,
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### Login{#fromonthefly} 
  [\\*\\*Sitemap](#fromonthefly) Login Untuk beberapa ember S3 besar (seperti noaa-goes17, yang memiliki 26 juta file) , itu mungkin mengambil ERDDAP™ hingga 12 jam untuk mengunduh semua informasi tentang isi ember (dan kemudian ada masalah lain Meme it) Sitemap Untuk mendapatkan sekitar ini, ada cara khusus untuk digunakan&lt;fileDir&gt; di EDDTableDariFileNames untuk membuat dataset dengan direktori dan nama file dari ember AWS S3. Dataset tidak akan memiliki daftar semua direktori bucket S3 dan nama file yang dapat dicari pengguna melalui permintaan dataset. Tapi dataset akan mendapatkan nama direktori dan file on-the-fly jika pengguna melintang hierarki direktori dengan dataset's "files" Login Dengan demikian, ini memungkinkan pengguna untuk menelusuri hierarki file ember S3 dan file melalui dataset "files" sistem. Untuk melakukan ini, alih-alih menentukan URL untuk ember S3 sebagai "Starting directory" (di GenerateDataset Login) Sitemap&lt;Login (Sitemap datasets.xml ) Penggunaan:
 ```
@@ -2837,13 +2839,13 @@ Sitemap EDDGrid DariFiles dan semua dataset EDDTableDariFiles mendukung satu set
     * Login&lt;cacheFromUrl&gt; tag memungkinkan Anda menentukan URL dengan daftar file dataset jarak jauh dari daftar file jarak jauh.
         
         * Dataset tidak agregasi di THREDDS, misalnya,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Server ini tidak lagi tersedia. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Server ini tidak lagi tersedia. \\] 
         * Database Hyrax Sitemap
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * Kebanyakan daftar direktori Apache-like, misalnya,
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * ember S3, misalnya,
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 Namun, ini mungkin memerlukan akun AWS dan lebih setup.
 Sitemap [bekerja dengan S3 Bucket di ERDDAP™ ](#working-with-aws-s3-files) Sitemap
 Juga, Anda biasanya tidak perlu menggunakan cache DariUrl dengan file di ember S3 jika file adalah file ASCII (Sitemap) Sitemap ERDDAP™ dapat secara efisien membaca data dari ember langsung melalui aliran.
@@ -2901,7 +2903,7 @@ kemudian memiliki serangkaian kelompok capture bersarang di mana opsi pertama ti
 dan opsi kedua adalah nilai tertentu.
             
 Contoh di atas hanya akan mencocokkan direktori untuk 10 hari kedua 2018, misalnya,
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020-10-21 Server ini tidak lagi tersedia. \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020-10-21 Server ini tidak lagi tersedia. \\]   
 dan hari 011, 012, ..., 019.
              (Lihat ini [database](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) Login [Login](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) Sitemap)   
 Jika Anda memerlukan bantuan&lt;cachePartialPathRegex&gt;, silakan email&lt;cacheDariUrl&gt; ke Chris. John di noaaa.gov .
@@ -3384,7 +3386,7 @@ Untuk dataset apa pun ERDDAP™ ketika Anda mengirim permintaan untuk Meme it ER
 
 * Login
     * Permintaan diformat seperti respons formulir HTML standar, dengan pasangan nilai kunci, dipisahkan oleh '&'. Sitemap
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 Sitemap ERDDAP™ untuk menambahkan atau mengubah data untuk stationID =46088 untuk waktu yang ditentukan.
     * Penulis perubahan ini JohnSmith dan kuncinya adalah beberapaKey1.
     * URL harus menyertakan nilai yang valid (tidak hilang nilai) untuk semua [ http Login](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ Sitemap ERDDAP™ untuk menambahkan atau mengubah data untuk stationID =46088 un
              
     * Login
         * Permintaan diformat seperti respons formulir HTML standar, dengan pasangan nilai kunci, dipisahkan oleh '&'. Sitemap
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 Sitemap ERDDAP™ untuk menghapus data untuk stationID =46088 pada waktu tertentu.
         * Penulis perubahan ini JohnSmith dan kuncinya adalah beberapaKey1.
         * URL harus menentukan [ http Login](#httpgetrequiredvariables-global-attribute) Sitemap (Login stationID dan waktu) Sitemap Jika nilai-nilai tersebut sesuai dengan nilai pada baris yang sudah ada di dataset (yang biasanya mereka akan Meme it) Nilai lama dihapus secara efektif (meskipun nilai lama masih dapat diakses jika data permintaan pengguna dari sebelumnya [Sitemap](#versioning) dataset) Sitemap
@@ -3667,7 +3669,7 @@ Tidak semua orang memiliki kebutuhan untuk jenis versi biji-bijian ini, tetapi i
     
 ##### HTTPS Put dan Hapus{#https-put-and-delete} 
 *    ["Bagaimana tentang HTTPS PUT dan DELETE?&#33;"](#https-put-and-delete)   
-     [Protokol Transfer Hypertext (Login) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) adalah dasar dari World Wide Web dan alasan bahwa URL halaman web dimulai dengan "http://"atau "https://"Sitemap HTTPS adalah HTTP dengan lapisan keamanan tambahan. Setiap hari, browser, skrip dan program komputer membuat miliaran HTTP (Login)   **Sitemap** permintaan untuk mendapatkan informasi dari sumber jarak jauh. Login (Login) juga termasuk [Sitemap](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) PUT yang tidak boleh (untuk mendorong data ke server) Login (ke DELETE data dari server) Sitemap Ya, PUT dan DELETE adalah cara yang tepat untuk memasukkan data ke dalam, dan menghapus data dari, dataset melalui HTTP (Login) Sitemap GET didukung oleh setiap bagian perangkat lunak yang dapat bekerja dengan HTTP (Login) Sitemap MENDAPATKAN sangat mudah untuk bekerja dengan. Setiap orang sudah tahu bagaimana bekerja dengan GET dan banyak tahu cara menggunakan POST (yang dapat digunakan pada dasarnya cara yang sama seperti GET) , jadi kami membuat EDDTableDariHttpGet bekerja dengan GET dan POST. Sangat sedikit orang (bahkan beberapa programmer komputer) pernah bekerja dengan PUT dan DELETE. PUT dan DELETE umumnya hanya didukung oleh bahasa komputer, sehingga menggunakannya membutuhkan program yang terampil. Jadi PUT dan DELETE biasanya pendekatan yang jauh lebih rumit mengingat cara alat telah berkembang.
+     [Protokol Transfer Hypertext (Login) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) adalah dasar dari World Wide Web dan alasan bahwa URL halaman web dimulai dengan " http://" atau " https://" Sitemap HTTPS adalah HTTP dengan lapisan keamanan tambahan. Setiap hari, browser, skrip dan program komputer membuat miliaran HTTP (Login)   **Sitemap** permintaan untuk mendapatkan informasi dari sumber jarak jauh. Login (Login) juga termasuk [Sitemap](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) PUT yang tidak boleh (untuk mendorong data ke server) Login (ke DELETE data dari server) Sitemap Ya, PUT dan DELETE adalah cara yang tepat untuk memasukkan data ke dalam, dan menghapus data dari, dataset melalui HTTP (Login) Sitemap GET didukung oleh setiap bagian perangkat lunak yang dapat bekerja dengan HTTP (Login) Sitemap MENDAPATKAN sangat mudah untuk bekerja dengan. Setiap orang sudah tahu bagaimana bekerja dengan GET dan banyak tahu cara menggunakan POST (yang dapat digunakan pada dasarnya cara yang sama seperti GET) , jadi kami membuat EDDTableDariHttpGet bekerja dengan GET dan POST. Sangat sedikit orang (bahkan beberapa programmer komputer) pernah bekerja dengan PUT dan DELETE. PUT dan DELETE umumnya hanya didukung oleh bahasa komputer, sehingga menggunakannya membutuhkan program yang terampil. Jadi PUT dan DELETE biasanya pendekatan yang jauh lebih rumit mengingat cara alat telah berkembang.
      
 ##### Login{#httpget-notes} 
 *    [Login](#httpget-notes) 
@@ -3676,7 +3678,7 @@ Tidak semua orang memiliki kebutuhan untuk jenis versi biji-bijian ini, tetapi i
 ##### Sitemap{#thanks} 
 *    [Berkat CHORDS untuk ide dasar.](#thanks)   
 Ide dasar untuk EDDTableDariHttpGet (i.e., menggunakan HTTP GET meminta untuk menambahkan data ke dataset) dari UCAR (Login)   [Layanan Data Real-time Cloud-Hosted (Login) ](https://github.com/earthcubeprojects-chords) Sitemap Format untuk parameter dalam permintaan (Sitemap *nama=value* Sitemap) adalah format standar yang sama yang digunakan oleh bentuk HTML di halaman web. Ini adalah ide sederhana dan brilian dan bahkan lebih sehingga karena jala sehingga sempurna dengan ERDDAP Sistem yang ada untuk menangani data tabel. Idenya jelas terjadi, tetapi saya (Login) tidak memikirkannya. Meme it Login Gunakan ide dasar, dikombinasikan dengan ide-ide kami tentang cara menerapkannya, untuk membuat sistem dalam ERDDAP™ untuk mengunggah data. Selain ide dasar penggunaan GET untuk mendorong data ke dalam sistem, implementasi EDDTableDariHttpGet sepenuhnya berbeda dan sepenuhnya independen CHORDS dan memiliki fitur yang berbeda (e.g., file log, chunking data, sistem keamanan yang berbeda, dukungan CRUD, data reproduksi) Sitemap Eksposur kami untuk CHORDS hanya webinar. Kami tidak melihat kode atau membaca proyek mereka karena kami segera tahu kami ingin menerapkan sistem dengan cara yang berbeda. Tapi kita berterima kasih kepada mereka untuk ide dasar. Referensi penuh ke CHORDS adalah
-Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Pewarna, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (Sitemap) Sitemap Layanan Data Real-time Cloud-Hosted untuk Geosciences (Login) perangkat lunak. UCAR / NCAR -- Laboratorium Pengawet Bumi. [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Pewarna, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (Sitemap) Sitemap Layanan Data Real-time Cloud-Hosted untuk Geosciences (Login) perangkat lunak. UCAR / NCAR -- Laboratorium Pengawet Bumi. [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### Login Hyrax Login{#eddtablefromhyraxfiles} 
  [ **Login Hyrax Login** ](#eddtablefromhyraxfiles)   (Login) file data agregat dengan beberapa variabel, masing-masing dengan satu atau lebih dimensi bersama (misalnya, waktu, ketinggian (atau kedalaman) , lintang, longitude) dan dilayani oleh a [ Hyrax   OPeNDAP Login](https://www.opendap.org/software/hyrax-data-server) Sitemap
@@ -3692,7 +3694,7 @@ Jika tidak ada keluhan sebelum 2020, jenis dataset ini dapat dihapus. **
 * Layar kelas ini-mencabut Hyrax halaman web dengan daftar file di setiap direktori. Karena ini, sangat spesifik untuk format saat ini Hyrax halaman web. Kami akan mencoba menyesuaikan ERDDAP™ cepat jika/ketika versi masa depan Hyrax mengubah bagaimana file terdaftar.
 * Login&lt;fileDir&gt; pengaturan diabaikan. Karena unduhan kelas ini dan membuat salinan lokal dari setiap file data jarak jauh, ERDDAP™ memaksa file Sitemap *Login* Login * datasetID * Sitemap
 * Sitemap&lt; sourceUrl &gt;, gunakan URL direktori dasar dataset di Hyrax server, misalnya,
-    &lt; sourceUrl Sitemaphttp://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;Sitemap sourceUrl Sitemap
+    &lt; sourceUrl Sitemap http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;Sitemap sourceUrl Sitemap
      (tetapi letakkan di satu baris)   (maaf, server tidak lagi tersedia) Sitemap
 Login sourceUrl halaman web biasanya memiliki " OPeNDAP Indeks Server \\[ Login \\] " di atas. Meme it
 * Karena kelas ini selalu mengunduh dan membuat salinan lokal dari setiap file data jarak jauh, Anda tidak boleh membungkus dataset ini di [Login](#eddtablecopy) Sitemap
@@ -3706,7 +3708,7 @@ Sitemap File ini memiliki beberapa baris \\_size variabel, masing-masing dengan 
 
 Masalah lain dengan file ini: Kepala Sekolah \\_Investigator baris \\_size variabel tidak memiliki atribut sampel \\_dimension dan tidak mengikuti aturan di atas.
 
-File sampel untuk jenis dataset ini dapat ditemukan dihttps://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 Server ini tidak lagi tersedia \\] Sitemap
+File sampel untuk jenis dataset ini dapat ditemukan di https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020-10-21 Server ini tidak lagi tersedia \\] Sitemap
 
 Lihat kelas super ini, [Login](#eddtablefromfiles) Informasi tentang bagaimana kelas ini bekerja dan cara menggunakannya.
 
@@ -3850,10 +3852,10 @@ Hal pertama GenerateDatasetsXml lakukan untuk jenis dataset ini setelah Anda men
  [ **Login** ](#eddtablefromnos)   (Login) menangani data dari NOAA   [Login](https://opendap.co-ops.nos.noaa.gov/axis/) sumber, yang menggunakan [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) untuk permintaan dan tanggapan. Hal ini sangat spesifik untuk NOAA XML Sitemap Lihat contoh EDDTableDariNOS dataset dalam dataset2.xml.
  
 ### Sitemap{#eddtablefromobis} 
- [ **Sitemap** ](#eddtablefromobis) menangani data dari Sistem Informasi Biogeografi Laut (Login) Login (Sitemaphttp://www.iobis.org ) Sitemap Hal ini dimungkinkan bahwa tidak ada server yang lebih aktif yang menggunakan ini sekarang jenis sistem server OBIS.
+ [ **Sitemap** ](#eddtablefromobis) menangani data dari Sistem Informasi Biogeografi Laut (Login) Login (Sitemap http://www.iobis.org  ) Sitemap Hal ini dimungkinkan bahwa tidak ada server yang lebih aktif yang menggunakan ini sekarang jenis sistem server OBIS.
 
 * Server OBIS mengharapkan permintaan XML dan mengembalikan respons XML.
-* Karena semua server OBIS melayani variabel yang sama dengan cara yang sama (Sitemaphttp://iobis.org/tech/provider/questions) Anda tidak perlu menentukan banyak untuk mengatur dataset OBIS di ERDDAP Sitemap
+* Karena semua server OBIS melayani variabel yang sama dengan cara yang sama (Sitemap http://iobis.org/tech/provider/questions ) Anda tidak perlu menentukan banyak untuk mengatur dataset OBIS di ERDDAP Sitemap
 * Anda MUST termasuk " creator\\_email " atribut di global addAttributes Karena informasi tersebut digunakan dalam lisensi. Alamat email yang cocok dapat ditemukan dengan membaca respon XML dari sumberURL.
 * Anda mungkin atau tidak dapat mendapatkan atribut global [&lt; subsetVariables Sitemap (Sitemap) untuk bekerja dengan server OBIS yang diberikan. Jika Anda mencoba, coba satu variabel (misalnya, ScientificName atau Genus) Sitemap
 #### Sitemap Login{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ Hal pertama GenerateDatasetsXml lakukan untuk jenis dataset ini setelah Anda men
     * Login (Sensor Web) Login SOS   (Layanan Observasi Sensor) Sitemap [Standar OpenGIS®](https://www.ogc.org/standards) Sitemap Situs web ini memiliki dokumen standar.
     * Login OGC Layanan Web Spesifikasi Umum ver 1.1.0 ( OGC 06-121r3) mencakup konstruksi pertanyaan GET dan POST (melihat bagian 7.2.3 dan bagian 9) Sitemap
     * Jika Anda mengirim permintaan getCapabilitas xml ke SOS Login ( sourceUrl Sitemap SOS Login GetCapabilities Sitemap) Anda mendapatkan hasil xml dengan daftar stasiun dan diamati Properti yang memiliki data.
-    * AmatiProperty adalah referensi URI resmi untuk properti. Sebagai contoh, urn:ogc:phenomenon: longitude:wgs84 atauhttps://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * AmatiProperty adalah referensi URI resmi untuk properti. Sebagai contoh, urn:ogc:phenomenon: longitude:wgs84 atau https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * AmatiProperty bukan variabel.
-    * Lebih dari satu variabel mungkin memiliki diamati yang sama Login (misalnya, dalam Temp dan luar Temp mungkin keduanya telah diamati Loginhttps://mmisw.org/ont/cf/parameter/air\\_temperature) Sitemap
+    * Lebih dari satu variabel mungkin memiliki diamati yang sama Login (misalnya, dalam Temp dan luar Temp mungkin keduanya telah diamati Login https://mmisw.org/ont/cf/parameter/air\\_temperature ) Sitemap
     * Jika Anda mengirim permintaan getObservation xml ke SOS server, Anda mendapatkan hasil xml dengan deskripsi nama lapangan dalam respon, unit lapangan, dan data. Nama lapangan akan mencakup longitude, latitude, kedalaman (Sitemap) Sitemap
     * Sitemap dataVariable untuk EDDTableDari SOS harus menyertakan atribut "observedProperty", yang mengidentifikasi amatiProperty yang harus diminta dari server untuk mendapatkan variabel itu. Sering, beberapa dataVariable s akan mencantumkan amatian komposit yang sama.
     * DataType untuk setiap dataVariable mungkin tidak ditentukan oleh server. Meme it Jika demikian, Anda harus melihat respon data XML dari server dan menetapkan sesuai [&lt;Login (Login) Sitemap ERDDAP™ Login dataVariable Sitemap
@@ -3991,11 +3994,11 @@ Jika tidak ada keluhan sebelum 2020, jenis dataset ini dapat dihapus. **
 * Kelas ini membaca file katalog.xml yang disajikan oleh THREDDS dengan daftar&lt;Katalog (referensi ke katalog tambahan.xml sub-file) Login&lt;Login (file data) Sitemap
 * Login&lt;fileDir&gt; pengaturan diabaikan. Karena unduhan kelas ini dan membuat salinan lokal dari setiap file data jarak jauh, ERDDAP™ memaksa file Sitemap *Login* Login * datasetID * Sitemap
 * Sitemap&lt; sourceUrl &gt;, gunakan URL file katalog.xml untuk dataset di server THREDDS, misalnya: untuk URL ini yang dapat digunakan di browser web,
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020-10-21 Server ini tidak lagi tersedia. \\] Login
-Sitemap&lt; sourceUrl Sitemaphttps://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;Sitemap sourceUrl Sitemap
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020-10-21 Server ini tidak lagi tersedia. \\] Login
+Sitemap&lt; sourceUrl Sitemap https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;Sitemap sourceUrl Sitemap
      (tetapi letakkan di satu baris) Sitemap
 * Karena kelas ini selalu mengunduh dan membuat salinan lokal dari setiap file data jarak jauh, Anda tidak boleh membungkus dataset ini di [Login](#eddtablecopy) Sitemap
-* Jenis dataset ini mendukung OPTIONAL, jarang digunakan, tag khusus,&lt;Login *Login* &lt;/khususMode&gt; yang dapat digunakan untuk menentukan aturan khusus yang dikodekan keras harus digunakan untuk menentukan file mana yang harus didownload dari server. Saat ini, satu-satunya valid *Login* SAMOS yang digunakan dengan dataset darihttps://tds.coaps.fsu.edu/thredds/catalog/samosuntuk mengunduh hanya file dengan nomor versi terakhir.
+* Jenis dataset ini mendukung OPTIONAL, jarang digunakan, tag khusus,&lt;Login *Login* &lt;/khususMode&gt; yang dapat digunakan untuk menentukan aturan khusus yang dikodekan keras harus digunakan untuk menentukan file mana yang harus didownload dari server. Saat ini, satu-satunya valid *Login* SAMOS yang digunakan dengan dataset dari https://tds.coaps.fsu.edu/thredds/catalog/samos untuk mengunduh hanya file dengan nomor versi terakhir.
 * Lihat kelas super ini, [Login](#eddtablefromfiles) Informasi tentang bagaimana kelas ini bekerja dan cara menggunakannya.
 * Lihat 1D, 2D, 3D, dan 4D contoh untuk [Login](#eddtablefromncfiles) Sitemap
      
@@ -4182,8 +4185,8 @@ Ketika server selesai menangani permintaan itu akan memeriksa berapa lama yang l
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-akan menyebabkan pencocokan lokal sourceUrl   (Sitemaphttps://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-ke publik sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) Sitemap
+akan menyebabkan pencocokan lokal sourceUrl   (Sitemap https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+ke publik sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) Sitemap
 Setiap perubahan nilai tag ini akan berpengaruh pada waktu berikutnya ERDDAP™ Login datasets.xml termasuk dalam menanggapi dataset [Login](/docs/server-admin/additional-information#flag) Sitemap
 
 Tapi, untuk alasan keamanan dan alasan terkait dengan sistem berlangganan, **TAG INI&#33;**   
@@ -4314,7 +4317,7 @@ Pengguna sering hanya menyadari bahwa permintaan mereka bermasalah. Mereka serin
     ```
     * Anda tidak perlu restart ERDDAP™ untuk perubahan&lt;memintaBlacklist&gt; untuk mengambil efek. Perubahan akan terdeteksi waktu berikutnya ERDDAP™ memeriksa apakah dataset harus diisi ulang. Atau, Anda dapat mempercepat proses dengan mengunjungi [Login URL:](/docs/server-admin/additional-information#set-dataset-flag) untuk setiap dataset.
     * Login ERDDAP™ laporan harian termasuk daftar/banyak dari yang paling aktif diperbolehkan dan memblokir permintaan.
-    * Jika Anda ingin mengetahui apa domain / institusi terkait dengan alamat IP numerik, Anda dapat menggunakan layanan web DNS gratis, terbalik seperti [https://network-tools.com/](https://network-tools.com/) Sitemap
+    * Jika Anda ingin mengetahui apa domain / institusi terkait dengan alamat IP numerik, Anda dapat menggunakan layanan web DNS gratis, terbalik seperti [ https://network-tools.com/ ](https://network-tools.com/) Sitemap
     * Mungkin ada saat masuk akal untuk memblokir pengguna tertentu pada tingkat yang lebih tinggi, misalnya, pengguna jahat. Misalnya, Anda dapat memblokir akses mereka ke segala sesuatu di server Anda, tidak hanya ERDDAP Sitemap Pada Linux, salah satu metode tersebut untuk digunakan [Login](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) Sitemap Misalnya, Anda dapat menambahkan aturan yang akan memblokir segala sesuatu yang berasal dari 198.51.100.0 dengan perintah
 Mozilla Firefox 57.0.1 ... Login
        
@@ -4738,17 +4741,17 @@ PERINGATAN: Jika Anda menambahkan palet kustom untuk Anda ERDDAP™ dan Anda mem
     * Sitemap EDDGrid subclasses, setiap perubahan pada metadata atau ke variabel sumbu (misalnya, titik waktu baru untuk data waktu dekat) dianggap sebagai perubahan, tetapi reloading dataset tidak dianggap perubahan (di) Sitemap
     * Saat ini, untuk subkelas EDDTable, setiap reloading dataset dianggap sebagai perubahan.
     * Saat ini, hanya dua jenis tindakan yang diperbolehkan:
-        * Sitemaphttp://"atau "https://"Login Jika tindakan dimulai dengan "http://"atau "https://"Login ERDDAP™ akan mengirimkan HTTP GET meminta URL yang ditentukan. Jawaban akan diabaikan. Sebagai contoh, URL mungkin memberitahu beberapa layanan web lain untuk melakukan sesuatu.
+        * Sitemap http://" atau " https://" Login Jika tindakan dimulai dengan " http://" atau " https://" Login ERDDAP™ akan mengirimkan HTTP GET meminta URL yang ditentukan. Jawaban akan diabaikan. Sebagai contoh, URL mungkin memberitahu beberapa layanan web lain untuk melakukan sesuatu.
             * Jika URL memiliki bagian query (setelah "?") , MUST sudah [persen dikodekan](https://en.wikipedia.org/wiki/Percent-encoding) Sitemap Anda perlu mengkodekan karakter khusus dalam batasan (selain '&' awal dan utama '=' Sitemap) ke dalam bentuk %HH, di mana HH adalah nilai heksadecimal 2 digit karakter. Biasanya, Anda hanya perlu mengkonversi beberapa karakter tanda baca: %25, & menjadi %26, " menjadi %22,&lt;ke %3C, = menjadi %3D, &gt; menjadi %3E, + menjadi %2B, | ke %7C, \\[ ke %5B, \\] menjadi %5D, ruang menjadi %20, dan mengkonversi semua karakter di atas #127 menjadi bentuk UTF-8 mereka dan kemudian kode persen masing-masing byte dari bentuk UTF-8 ke format %HH (meminta programmer untuk membantu) Sitemap
 Sitemap stationID Datasheet PDF
 Sitemap stationID %3E=%2241004%22
 Percent encoding umumnya diperlukan ketika Anda mengakses ERDDAP melalui perangkat lunak selain browser. Browser biasanya menangani pengkodean persen untuk Anda.
 Dalam beberapa situasi, Anda perlu persen mengkodekan semua karakter selain A-Za-z0-9\\_-&#33;. ~ Sitemap () \\ *, tetapi masih tidak mengkodekan '&' awal atau utama '=' Sitemap
-Bahasa pemrograman memiliki alat untuk melakukan ini (misalnya, lihat Java Sitemap [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) Login Java LoginencodeURIComponent()Sitemap (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) dan ada
+Bahasa pemrograman memiliki alat untuk melakukan ini (misalnya, lihat Java Sitemap [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) Login Java LoginencodeURIComponent()Sitemap ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) dan ada
                  [situs web yang dikodekan persen / kode untuk Anda](https://www.url-encode-decode.com/) Sitemap
             * Sitemap datasets.xml adalah file XML, Anda MUST juga & kode SEMUA '&', '&lt;', dan '&gt;' di URL sebagai '&amp;', '&lt;', dan '&gt;' setelah pengkodean persen.
             * Contoh: Untuk URL yang mungkin Anda ketikkan ke browser sebagai:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 Anda harus menentukan&lt;onChange&gt; tag melalui (di satu baris) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ Ini juga dapat mempengaruhi penyortiran kata-kata pendek versus kata-kata lebih 
     * Login sourceUrl dapat dimulai dengan http:// Login https:// , ftp://, dan mungkin prefiks lainnya. https koneksi membaca dan memeriksa sertifikat digital sumber untuk memastikan bahwa sumbernya adalah mereka mengatakan mereka. Dalam kasus yang jarang terjadi, cek ini dapat gagal dengan kesalahan "javax.net.ssl.SSLProtocolException: peringatan handshake: unrecognized\\_name". Ini mungkin karena nama domain pada sertifikat tidak cocok dengan nama domain yang Anda gunakan. Anda dapat dan harus membaca rincian sourceUrl Sertifikat di browser web Anda, terutama, daftar "DNS Name" di bagian "Subject Alternative Name".
         
 Dalam beberapa kasus, sourceUrl Anda dapat menggunakan alias nama domain pada sertifikat. Sitemap
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/akan membuang kesalahan ini, tetapi
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/, yang menggunakan nama domain pada sertifikat, tidak akan. Solusi dalam kasus ini adalah karenanya untuk menemukan dan menggunakan nama domain pada sertifikat. Jika Anda tidak dapat menemukan sertifikat, hubungi penyedia data.
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ akan membuang kesalahan ini, tetapi
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ , yang menggunakan nama domain pada sertifikat, tidak akan. Solusi dalam kasus ini adalah karenanya untuk menemukan dan menggunakan nama domain pada sertifikat. Jika Anda tidak dapat menemukan sertifikat, hubungi penyedia data.
         
 Dalam kasus lain, nama domain pada sertifikat mungkin untuk kelompok nama. Jika ini terjadi atau masalahnya tidak dapat dipecahkan, silakan email Chris. John di noaaa.gov untuk melaporkan masalah.
          
@@ -5221,7 +5224,7 @@ Sitemap stationID %3E=%2241004%22
 Percent encoding umumnya diperlukan ketika Anda mengakses ERDDAP melalui perangkat lunak selain browser. Browser biasanya menangani pengkodean persen untuk Anda.
 Dalam beberapa situasi, Anda perlu persen mengkodekan semua karakter selain A-Za-z0-9\\_-&#33;. ~ Sitemap () \\ *, tetapi masih tidak mengkodekan '&' awal atau utama '=' Sitemap
 Bahasa pemrograman memiliki alat untuk melakukan ini (misalnya, lihat Java Sitemap [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-Login Java LoginencodeURIComponent()Sitemap (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) dan ada
+Login Java LoginencodeURIComponent()Sitemap ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) dan ada
          [situs web yang dikodekan persen / kode untuk Anda](https://www.url-encode-decode.com/) Sitemap
     * Sitemap datasets.xml adalah file XML, Anda MUST juga & kode SEMUA '&', '&lt;', dan '&gt;' di URL sebagai '&amp;', '&lt;', dan '&gt;' setelah pengkodean persen.
     *    infoUrl unik ERDDAP Sitemap Tidak dari standar metadata apa pun.
@@ -5257,7 +5260,28 @@ Ketika dataset dimuat ERDDAP Login
     ```
     * Sitemap \\[ Sitemap \\] " terjadi pada nilai atribut, itu akan diganti oleh standar ERDDAP™ lisensi dari&lt;standarLicense&gt; tag dalam ERDDAP Sitemap
          \\[ Login \\] /webapps/erddap/WEB-INF/classes/gov/noa/pfel/erddap/util/messages.xml file.
-         
+
+###### Sitemap{#classification} 
+*    [ **Sitemap** ](#classification) tingkat klasifikasi data.
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * Nilai yang dapat diterima adalah _unclassified_, _confidential_, _ dibatasi_, _secret_, atau _top_secret_.
+
+###### topik_kategori{#topic_category} 
+*    [ **topik_kategori** ](#topic_category) klasifikasi geografis tingkat tinggi untuk membantu dalam kelompok dan pencarian set data geografis yang tersedia.
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * Nilai yang bisa diterima adalah _biota_, _boundaries_, _ klimatology_meteorology_atomosphere_, _economy_, _ height_, _environment_, _farming_, _geoscientific_information_, _health_, _imagery_base_maps_earth_cover_, _inland_waters_, _intelligence_military_, _location_, _oceans_, _planning_cadastre_, _society_, _struktur_, _ komporl.
+
+###### Login{#maintenance_frequency} 
+*    [ **Login** ](#maintenance_frequency) Frekuensi dengan modifikasi dan penghapusan yang dibuat untuk data setelah pertama diproduksi.
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * Nilai yang dapat diterima adalah _annually_, _as_need_, _biannually_, _continual_, _daily_, _fortnightly_, _irregular_, _monthly_, _not_planned_, _quarterly_, _unknown_, _ mingguly_.
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) adalah dari yang disebutkan [WCDMA 1.0](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (yang diidentifikasi Metadata\\_Conventions Sitemap Unidata Dataset Discovery v1.0") standar metadata. Nilai atribut adalah daftar konvensi metadata yang dipisahkan oleh dataset ini.
 Jika dataset menggunakan ACDD 1.0, atribut ini STRONGLY RECOMMENDED, misalnya,
@@ -5389,7 +5413,7 @@ Jika indeks&lt;1, dataset dianggap terbaru.
 Jika indeks&lt;=1, dataset dianggap kedaluwarsa.
 Jika indeks&lt;= 2, dataset dianggap sangat kedaluwarsa.
     
-Login testOutOfDate nilai juga digunakan oleh ERDDAP™ untuk menghasilkanhttps://*yourDomain*/erddap/outOfDateDatasets.htmlSitemap ( [Sitemap](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) yang menunjukkan dataset yang memiliki Meme it&lt; testOutOfDate &gt; Tag, dengan set data yang ditajuk oleh bagaimana kedaluwarsa mereka. Jika Anda mengubah jenis file (.html ke .csv, .jsonlCSV Login .nc Login .tsv Login) Anda bisa mendapatkan informasi dalam format file yang berbeda.
+Login testOutOfDate nilai juga digunakan oleh ERDDAP™ untuk menghasilkan https://*yourDomain*/erddap/outOfDateDatasets.html Sitemap ( [Sitemap](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) yang menunjukkan dataset yang memiliki Meme it&lt; testOutOfDate &gt; Tag, dengan set data yang ditajuk oleh bagaimana kedaluwarsa mereka. Jika Anda mengubah jenis file (.html ke .csv, .jsonlCSV Login .nc Login .tsv Login) Anda bisa mendapatkan informasi dalam format file yang berbeda.
     
 Sitemap [Login](#generatedatasetsxml) Sitemap testOutOfDate atribut ke global addAttributes dataset. Nilai ini adalah saran berdasarkan informasi yang tersedia untuk GenerateDatasetsXml. Jika nilai tidak sesuai, gantinya.
     
@@ -5948,8 +5972,8 @@ unpackedValue = dikemas Login scale\\_factor Sitemap add\\_offset
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone adalah atribut OPTIONAL yang digunakan oleh ERDDAP™   (dan tidak ada standar metadata) Sitemap [variabel waktu dan kalitamp](#time-units) , yang dapat di gridded dataset atau tabular dataset.
     * default adalah " Zulu Sitemap (yang merupakan versi zona waktu modern dari GMT) Sitemap
-    * Informasi latar belakang: "waktu mengimbangi" (e.g., Waktu Standar Pasifik, -08:00, GMT-8) tetap, spesifik, mengimbangi relatif terhadap Zulu   (Login) Sitemap Sebaliknya, " zona waktu" adalah hal yang jauh lebih kompleks yang dipengaruhi oleh Daylight Saving (e.g., "US/Pasifik") yang memiliki aturan yang berbeda di berbagai tempat pada waktu yang berbeda. Zona waktu selalu memiliki nama karena mereka tidak dapat dirangkum oleh nilai offset sederhana (lihat kolom "TZ database name" di tabel di [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) Sitemap ERDDAP Sitemap time\\_zone atribut membantu Anda menangani data waktu setempat dari beberapa zona waktu (e.g., 1987-03-25T17:32:05 Login Sitemap) Sitemap Jika Anda memiliki data waktu string atau numerik dengan (Login) waktu offset, Anda hanya harus menyesuaikan data ke Zulu   (yang ERDDAP™ Login) dengan menentukan waktu dasar yang berbeda dalam atribut unit (e.g., "jam sejak 1970-01T08:00Z", perhatikan T08 untuk menentukan waktu offset) dan selalu periksa hasilnya untuk memastikan Anda mendapatkan hasil yang Anda inginkan.
-    * Untuk variabel kalitamp dengan data sumber dari String, atribut ini memungkinkan Anda menentukan zona waktu yang mengarah ERDDAP™ untuk mengubah waktu-waktu sumber zona lokal (beberapa dalam Waktu Standar, beberapa dalam Waktu Hemat Daylight) Login Zulu Sitemap (yang selalu dalam waktu Standar) Sitemap Daftar nama zona waktu yang valid mungkin identik dengan daftar di kolom TZ di [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) Sitemap Zona waktu AS umum adalah: US / Hawaii, US / Alaska, US / US / US / Mountain, US / Arizona, AS / Tengah, AS / Timur.
+    * Informasi latar belakang: "waktu mengimbangi" (e.g., Waktu Standar Pasifik, -08:00, GMT-8) tetap, spesifik, mengimbangi relatif terhadap Zulu   (Login) Sitemap Sebaliknya, " zona waktu" adalah hal yang jauh lebih kompleks yang dipengaruhi oleh Daylight Saving (e.g., "US/Pasifik") yang memiliki aturan yang berbeda di berbagai tempat pada waktu yang berbeda. Zona waktu selalu memiliki nama karena mereka tidak dapat dirangkum oleh nilai offset sederhana (lihat kolom "TZ database name" di tabel di [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) Sitemap ERDDAP Sitemap time\\_zone atribut membantu Anda menangani data waktu setempat dari beberapa zona waktu (e.g., 1987-03-25T17:32:05 Login Sitemap) Sitemap Jika Anda memiliki data waktu string atau numerik dengan (Login) waktu offset, Anda hanya harus menyesuaikan data ke Zulu   (yang ERDDAP™ Login) dengan menentukan waktu dasar yang berbeda dalam atribut unit (e.g., "jam sejak 1970-01T08:00Z", perhatikan T08 untuk menentukan waktu offset) dan selalu periksa hasilnya untuk memastikan Anda mendapatkan hasil yang Anda inginkan.
+    * Untuk variabel kalitamp dengan data sumber dari String, atribut ini memungkinkan Anda menentukan zona waktu yang mengarah ERDDAP™ untuk mengubah waktu-waktu sumber zona lokal (beberapa dalam Waktu Standar, beberapa dalam Waktu Hemat Daylight) Login Zulu Sitemap (yang selalu dalam waktu Standar) Sitemap Daftar nama zona waktu yang valid mungkin identik dengan daftar di kolom TZ di [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) Sitemap Zona waktu AS umum adalah: US / Hawaii, US / Alaska, US / US / US / Mountain, US / Arizona, AS / Tengah, AS / Timur.
     * Untuk variabel timestamp dengan data sumber numerik, Anda dapat menentukan " time\\_zone " atribut, tetapi nilai harus " Zulu " atau "UTC". Jika Anda butuh dukungan untuk zona waktu lainnya, silakan email Chris. John di noaaa.gov .
          
 ###### legacy_time_adjust{#legacy_time_adjust} 

@@ -79,6 +79,8 @@ dont_translate_strings = [
     "\"&amp;units=...\"",
     "\"&C;\"",
     "\"&micro;\"", # otherwise it is often dropped from the translation.   Only used in one place
+    "\"\_AsATable\"",
+    "\"\_global\"",
     # in messages.xml.
     "\"BLANK\"",
     "\"c/s\"",
@@ -145,6 +147,7 @@ dont_translate_strings = [
     "'*'",
     "'^'",
     "'='",
+    "\\u20AC",
     # <kbd> was here
 
     # Affiliation abbreviations from the StrategicInsightGroup page.

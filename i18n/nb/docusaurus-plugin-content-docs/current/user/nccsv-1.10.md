@@ -45,14 +45,14 @@ Hvis noen krav i dette dokumentet virker merkelig eller picky, er det sannsynlig
 Denne spesifikasjonen refererer til flere andre spesifikasjoner og biblioteker som den er utformet for å jobbe med, men denne spesifikasjonen er ikke en del av noen av de andre spesifikasjonene, og trenger heller ikke noen endringer i dem, og heller ikke i konflikt med dem. Hvis det ikke er angitt noen detaljer knyttet til en av disse standardene her, se den relaterte spesifikasjonen. Dette inkluderer:
 
 * Attributkonvensjonen for oppdaging av datasett (ACDD) metadatastandard:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) ..
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) ..
 * Klima og prognoser (CF) metadatastandard:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) ..
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) ..
 * Den NetCDF Brukerveiledning (NUG) :)
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) ..
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) ..
 * Den NetCDF programvarebiblioteker som NetCDF -java og NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) .. Disse bibliotekene kan ikke lese NCCSV-filer, men de kan lese .nc filer opprettet fra NCCSV-filer.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) .. Disse bibliotekene kan ikke lese NCCSV-filer, men de kan lese .nc filer opprettet fra NCCSV-filer.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Notasjon{#notation} 
 I denne spesifikasjonen, parenteser, \\[   \\] , betegne valgfrie elementer.
@@ -152,12 +152,12 @@ Definisjonene av egenskapsdatatypene er:
     * Dobbel sitat (") Må kodes som to dobbel sitater (") .. Det er det regneark programmer krever når du leser .csv-filer. Det er det regnearkprogrammer skriver når du lagrer et regneark som en .csv-fil.
     * De spesielle JSON backslash-kodede tegnene må kodes som i JSON (navnlig \\n (newline), men også \\\\ (backslash), \\f (formfeed), \\t (tab), \\r (transport retur) eller med [\\u *hhhh* ](#uhhhh) Syntaks. I et regneark, ikke bruk Alt Enter til å angi en ny linje i en tekstcelle. I stedet, bruk \\n   (2 tegn: backslash og 'n \") For å angi en ny linje.
 #####  uhhhh  {#uhhhh} 
-    * \\u *hhhh - Alle tegn mindre enn tegn #32 eller større enn tegn #126, og ikke på annen måte kodet, må kodes med syntaksen \\u* hhhh*, hvor hhhh er det 4-sifferensiale HHH-tallet på figuren, f.eks. er Euro-tegnet \\u20AC. Se kodesidene som vises på [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) å finne de heksadesimale tallene tilknyttet spesifikke Unicode tegn, eller bruke et programvarebibliotek.
+    * \\u *hhhh - Alle tegn mindre enn tegn #32 eller større enn tegn #126, og ikke på annen måte kodet, må kodes med syntaksen \\u* hhhh*, hvor hhhh er det 4-sifferensiale heksadesimale tallet på tegnet, f.eks. er Euro-tegnet \\ \\u20AC .. Se kodesidene som vises på [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) å finne de heksadesimale tallene tilknyttet spesifikke Unicode tegn, eller bruke et programvarebibliotek.
     * Hvis strengen har en plass i begynnelsen eller slutten, eller inkluderer (dobbel sitat) eller et komma, eller inneholder verdier som ellers vil bli tolket som noen annen datatype (f.eks. et intenst) , eller er ordet  " Null", hele strengen må være innesluttet i doble sitater; ellers, i motsetning til JSON, er de omsluttende doble sitater valgfrie. Vi anbefaler: Når i tvil, legge hele strengen i doble sitater. Rommene i begynnelsen eller slutten av en streng er sterkt misfornøyd.
     * For nå er bruken av tegn større enn #255 mislykket. NCCSV støtter dem. ERDDAP™ støtter dem internt. Noen utgangsfiltyper støtter dem (f.eks. .json og .nccsv ) .. Men mange utgangsfiltyper støtter dem ikke. For eksempel NetCDF -3 filer støtter ikke slike tegn fordi NetCDF filer bruker 1-byte tegn og CF har for tiden ikke et system for å spesifisere hvordan Unicode tegn er kodet i NetCDF Stringer (f.eks. UTF-8) .. Dette vil sannsynligvis forbedres over tid.
          
 #### tegn{#char} 
-* tegn attributtverdier er et enkelt UCS-2 tegn (2 byte Unicode-tegn som i Java ) , som må skrives som 7-biters ASCII, JSON-lignende tegn slik at andre tegn kan angis (se strengdefinisjonen ovenfor for koding av spesielle tegn, med tilsetning av koding av et enkelt sitat som \\ \") .. Char attributtverdier må være innesluttet i enkelt sitater (de indre sitatene) og dobbelt sitater (de ytre sitatene) , f.eks. (en dobbel sitat tegn)  "'''' (Et enkelt sitattegn) , " " " " (en fane) , \\u20AC " (en Euro-karakter) .. Dette systemet med å bruke enkelt- og dobbel sitater er merkelig og tungt, men det er en måte å skille tegnverdier fra strenger på en måte som fungerer med regneark. En verdi som ser ut som et tegn, men som er ugyldig, vil generere en feilmelding. Som med strenger er bruken av tegn større enn # 255 for tiden mislykket.
+* tegn attributtverdier er et enkelt UCS-2 tegn (2 byte Unicode-tegn som i Java ) , som må skrives som 7-biters ASCII, JSON-lignende tegn slik at andre tegn kan angis (se strengdefinisjonen ovenfor for koding av spesielle tegn, med tilsetning av koding av et enkelt sitat som \\ \") .. Char attributtverdier må være innesluttet i enkelt sitater (de indre sitatene) og dobbelt sitater (de ytre sitatene) , f.eks. (en dobbel sitat tegn)  "'''' (Et enkelt sitattegn) , " " " " (en fane)  " \\u20AC '" (en Euro-karakter) .. Dette systemet med å bruke enkelt- og dobbel sitater er merkelig og tungt, men det er en måte å skille tegnverdier fra strenger på en måte som fungerer med regneark. En verdi som ser ut som et tegn, men som er ugyldig, vil generere en feilmelding. Som med strenger er bruken av tegn større enn # 255 for tiden mislykket.
 
 ### Suffix{#suffix} 
 Merk at i egenskapsdelen av en NCCSV-fil må alle numeriske attributtverdier ha en suffiks bokstav (For eksempel \"b\") å identifisere den numeriske datatypen (For eksempel byte) .. Men i datadelen av en NCCSV-fil, må numeriske dataverdier aldri ha disse suffiks bokstavene (med unntak av \"L\" for lange heltal og \"UL\" for avlange heltal) — datatypen er angitt av\\*DATA\\ TYPE\\*attributt for variabelen.
@@ -220,7 +220,7 @@ DateTime-verdier representert som numeriske verdier må ha en enhetsattributt so
 tid, enheter, sekunder siden 1970-01-01T00:00:00Z
 
 DatoTime-verdier representert som strengverdier må ha en streng\\*DATA\\ TYPE\\*attributt og enhetsattributt som angir en dato Tidsmønster som angitt av Java DatoTimeFormater klasse
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) .. For eksempel
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) .. For eksempel
 tid, enheter, yyyy-MM-dd T'HH:mm:ssZ
 Alle datotider for en gitt datavariabel må bruke samme format.
 I de fleste tilfeller vil datoTidsmønsteret du trenger for enhetsattributten være en variasjon av et av disse formatene:
@@ -245,7 +245,7 @@ Som det kreves av CF, alle grader (f.eks. lengdegrad og breddegrad) må være sp
 ##  [DSG Funksjonstyper](#dsg-feature-types)  {#dsg-feature-types} 
 
 En NCCSV-fil kan inneholde CF Discrete Sampling Geometri
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) Data. Det er de egenskapene som gjør dette arbeidet:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) Data. Det er de egenskapene som gjør dette arbeidet:
 
 1. Som CF krever, må NCCSV-filen inneholde en linje i metadatadelen som identifiserer [\\*GLOBAL\\*](#global)   featureType egenskap, f.eks.
     \\*GLOBAL\\*, featureType ,trajectory
@@ -326,7 +326,7 @@ Merknader:
 
 * Denne prøvefilen inneholder mange vanskelige tilfeller (For eksempel Char og lange variabler og vanskelige strengverdier) .. De fleste NCCSV-filer vil være mye enklere.
 * Lisenslinjen er inndelt i to linjer her, men er bare én linje i prøvefilen.
-* \\u20AC er koding av Euro tegn og \\u00FC er koding av ü.
+* \\ \\u20AC er koding av Euro tegn og \\u00FC er koding av ü.
 * Mange Strenger i eksemplet er innesluttet av doble sitater selv om de ikke trenger å være, for eksempel, mange globale attributter inkludert tittelen, lonenhetene attributt og den tredje linjen av data.)
 * Det ville være klarere og bedre hvis enhetene attributt for testLong variabelen ble skrevet i doble sitater som indikerer det er en strengeverdi. Men den nåværende representasjonen (1, uten tilbud) vil bli tolket riktig som en streng, ikke et heltall, fordi det ikke er noe \"i\" suffiks.
 * I motsetning til andre numeriske datatyper har de lange verdiene i dataseksjonen suffiks (\"L\") som identifiserer sin numeriske datatype. Dette er nødvendig for å hindre regneark fra å tolke verdiene som flytende punkttall og dermed miste presisjon.
@@ -336,7 +336,7 @@ Merknader:
 I et regneark som i en NCCSV-fil:
 
 * Skriv numeriske attributtverdier som spesifisert for NCCSV-filer (f.eks. med et suffiksbrev, f.eks. «f», for å identifisere egenskapens datatype) ..
-* I strenger, skriv alle tegn mindre enn ASCII tegn #32 eller større enn tegn #126 som enten en JSON-lignende tilbakespurt tegn (f.eks. \\n for newline) eller som det heksadesimale Unicode-tegnnummeret (tilfelle ufølsom) med syntaksen [\\u *hhhh* ](#uhhhh)   (f.eks. \\u20AC for Euro-tegnet) .. Bruk \\n   (2 tegn: backslash og 'n \") å angi en ny linje, ikke Alt Enter.
+* I strenger, skriv alle tegn mindre enn ASCII tegn #32 eller større enn tegn #126 som enten en JSON-lignende tilbakespurt tegn (f.eks. \\n for newline) eller som det heksadesimale Unicode-tegnnummeret (tilfelle ufølsom) med syntaksen [\\u *hhhh* ](#uhhhh)   (f.eks. \\u20AC For Euro-tegnet) .. Bruk \\n   (2 tegn: backslash og 'n \") å angi en ny linje, ikke Alt Enter.
 
 De eneste forskjellene mellom NCCSV-filer og det analoge regneark som følger disse konvensjonene er:
 
@@ -392,7 +392,7 @@ Hvis du vil opprette en NCCSV-fil fra et Google Sheets-regneark:
 * Hvis en NCCSV-fil har overskudd komma på slutten av radene, kan du fjerne dem ved å konvertere NCCSV-filen til en NetCDF fil og deretter konvertere NetCDF fil tilbake til en NCCSV-fil.
 * Når du prøver å konvertere en NCCSV-fil til en NetCDF fil, noen feil vil bli oppdaget av programvaren og vil generere feilmeldinger, noe som gjør konverteringen feil. Andre problemer er vanskelig eller umulig å fange og vil ikke generere feilmeldinger eller advarsler. Andre problemer (f.eks. overskudd komma ved slutten av radene) vil bli ignorert. Filomformeren vil gjøre bare minimal kontroll av riktighet av resultatet NetCDF fil, f.eks. med hensyn til overholdelse av CF. Det er filskaperens og filbrukerens ansvar å sjekke at resultatene av konverteringen er som ønsket og riktig. To måter å sjekke på er:
     * Skriv ut innholdet i .nc fil med ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) ..
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) ..
     * Vis innholdet i dataene i ERDDAP ..
 
 ##  [Endringer](#changes)  {#changes} 

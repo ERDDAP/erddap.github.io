@@ -45,14 +45,14 @@ Om vissa krav i detta dokument verkar udda eller kräsna, är det förmodligen n
 Denna specifikation hänvisar till flera andra specifikationer och bibliotek som den är utformad för att arbeta med, men denna specifikation är inte en del av någon av dessa andra specifikationer, inte heller behöver den några ändringar av dem, och inte heller strider den mot dem. Om en detalj relaterad till en av dessa standarder inte anges här, se den relaterade specifikationen. I synnerhet inkluderar detta:
 
 * Attributkonventionen för Dataset Discovery (ACDD) metadatastandard:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * Klimat och prognos (CF) metadatastandard:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * och NetCDF Användarguide (NUG) Från:
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * och NetCDF Programbibliotek som NetCDF -java och NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Dessa bibliotek kan inte läsa NCCSV-filer, men de kan läsa .nc filer som skapats från NCCSV filer.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . Dessa bibliotek kan inte läsa NCCSV-filer, men de kan läsa .nc filer som skapats från NCCSV filer.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Notation{#notation} 
 I denna specifikation, fästen, \\[   \\] Beteckna valfria objekt.
@@ -152,12 +152,12 @@ Definitionerna av attributdatatyperna är:
     * Dubbelcitat (") måste kodas som två dubbla citat (""") . Det är vad kalkylprogram kräver när du läser .csv-filer. Det är vad kalkylprogram skriver när du sparar ett kalkylblad som en .csv-fil.
     * De speciella JSON backslash-kodade tecknen måste kodas som i JSON (särskilt \\n (newline), men också θ (backslash), \f (formfeed), \\ t (tab), \\ r (vagnsavkastning) eller med [ðu *Hhhhh* ](#uhhhh) syntax. I ett kalkylblad, använd inte Alt Enter för att ange en ny linje i en textcell; Använd istället \\n   (2 tecken: backslash och 'n ") att ange en ny linje.
 #####  uhhhh  {#uhhhh} 
-    * ðu *hhh - Alla tecken mindre än tecken #32 eller större än karaktär #126, och inte på annat sätt kodade, måste kodas med syntaxen \\u* hhh*, där hhhh är det 4-siffriga hexadecimaltalet av karaktären, t.ex. Euro-tecknet är \\u20AC. Se de kodsidor som refereras på [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) för att hitta de hexadecimaltal som är associerade med specifika Unicode-tecken eller använda ett programbibliotek.
+    * ðu *hhh - Alla tecken mindre än tecken #32 eller större än karaktär #126, och inte på annat sätt kodade, måste kodas med syntaxen \\u* hhh*, där hhhh är det 4-siffriga hexadecimaltalet av karaktären, t.ex. Euro-tecknet är \\ \\u20AC . Se de kodsidor som refereras på [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) för att hitta de hexadecimaltal som är associerade med specifika Unicode-tecken eller använda ett programbibliotek.
     * Om strängen har ett utrymme i början eller slutet, eller inkluderar " (Dubbel citat) eller ett kommatecken, eller innehåller värden som annars skulle tolkas som någon annan datatyp (t.ex. en int) , eller är ordet "null", hela strängen måste bifogas i dubbla citat; annars, till skillnad från JSON, är de inneslutande dubbla citat valfria. Vi rekommenderar: när du är osäker, omslut hela strängen i dubbla citat. Utrymmen i början eller slutet av en sträng är starkt avskräckta.
     * För närvarande är användningen av tecken större än #255 avskräckt. NCCSV stöder dem. ERDDAP™ stöder dem internt. Vissa utdatafiltyper stöder dem (t.ex., .json och .nccsv ) . Men många utdatafiltyper stöder dem inte. Till exempel, NetCDF 3 filer stöder inte sådana tecken eftersom NetCDF filer använder 1-byte tecken och CF för närvarande inte har ett system för att ange hur Unicode tecken är kodade i NetCDF Strängar (t.ex. UTF-8) . Detta kommer förmodligen att förbättras över tiden.
          
 #### Char{#char} 
-* char attribut värden är en enda UCS-2 tecken (2-byte Unicode-karaktärer, som i Java ) , som måste skrivas som 7-bitars ASCII, JSON-liknande tecken så att andra tecken kan specificeras (se String definitionen ovan för kodning av speciella tecken, med tillägg av kodning ett enda citat som ") . Char attribut värden måste bifogas i enstaka citat (Inre citat) och dubbla citat (De yttre citat) t.ex. "a", """ (en dubbel citat karaktär) "\"""" (En enda citat karaktär) "\'t'" (En flik) "U20AC" (en Euro-karaktär) . Detta system med att använda enstaka och dubbla citat är udda och besvärliga, men det är ett sätt att skilja char värden från strängar på ett sätt som fungerar med kalkylblad. Ett värde som ser ut som en char men är ogiltigt kommer att generera ett felmeddelande. Som med strängar är användningen av tecken större än #255 för närvarande avskräckt.
+* char attribut värden är en enda UCS-2 tecken (2-byte Unicode-karaktärer, som i Java ) , som måste skrivas som 7-bitars ASCII, JSON-liknande tecken så att andra tecken kan specificeras (se String definitionen ovan för kodning av speciella tecken, med tillägg av kodning ett enda citat som ") . Char attribut värden måste bifogas i enstaka citat (Inre citat) och dubbla citat (De yttre citat) t.ex. "a", """ (en dubbel citat karaktär) "\"""" (En enda citat karaktär) "\'t'" (En flik) , "\" \\u20AC """ (en Euro-karaktär) . Detta system med att använda enstaka och dubbla citat är udda och besvärliga, men det är ett sätt att skilja char värden från strängar på ett sätt som fungerar med kalkylblad. Ett värde som ser ut som en char men är ogiltigt kommer att generera ett felmeddelande. Som med strängar är användningen av tecken större än #255 för närvarande avskräckt.
 
 ### Suffix{#suffix} 
 Observera att i attributen i en NCCSV-fil måste alla numeriska attributvärden ha ett suffixbrev (t.ex. ”b”) för att identifiera den numeriska datatypen (t.ex. byte) . Men i datasektionen av en NCCSV-fil får numeriska datavärden aldrig ha dessa suffix-brev. (Med undantag för "L" för långa heltal och "uL" för ulong integers) — datatypen specificeras av\\*DATA\\_TYPE\\*attribut för variabeln.
@@ -220,7 +220,7 @@ DateTime värden som representeras som numeriska värden måste ha en enhet attr
 tid, enheter, sekunder sedan 1970-01-01T00:00:00Z
 
 Datumtidsvärden som representeras som strängvärden måste ha en sträng\\*DATA\\_TYPE\\*attribut och en enhet attribut som anger ett datum Tidsmönster som specificeras av Java DateTimeFormatter klass
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Till exempel,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Till exempel,
 tid, enheter, yyyy-MM-dd T'H:mm:ssZ
 Alla datumTime-värden för en viss datavariabel måste använda samma format.
 I de flesta fall kommer datumtidsmönstret du behöver för attributet enheter att vara en variant av ett av dessa format:
@@ -245,7 +245,7 @@ Som krävs av CF, alla gradvärden (t.ex. för longitud och latitud) måste ange
 ##  [DSG Funktion Typer](#dsg-feature-types)  {#dsg-feature-types} 
 
 En NCCSV-fil kan innehålla CF diskret sampling geometri
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) data. Det är attributen som gör detta arbete:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) data. Det är attributen som gör detta arbete:
 
 1. Som krävs av CF måste NCCSV-filen innehålla en linje i metadatasektionen som identifierar [\\*Global\\*](#global)   featureType attribut, t.ex.,
     \\*Global\\*, featureType Trajektor
@@ -326,7 +326,7 @@ Anteckningar:
 
 * Denna provfil innehåller många svåra fall (t.ex. char och långa variabler och svåra String-värden) . De flesta NCCSV-filer kommer att vara mycket enklare.
 * Licenslinjen är uppdelad i två rader här, men är bara en linje i provfilen.
-* U20AC är kodningen av Euro-karaktären och \\u00FC är kodningen av ü.
+* O \\u20AC är kodningen av Euro-karaktären och \\u00FC är kodningen av ü.
 * Många många Strängar i exemplet är inneslutna av dubbla citat trots att de inte behöver vara, t.ex. många globala attribut inklusive titeln, lonenheterna attributet och den tredje raden av data.)
 * Det skulle vara tydligare och bättre om enheterna attribut för testLong-variabeln skrevs i dubbla citat som indikerar att det är ett strängvärde. Men den nuvarande representationen (1 utan citat) kommer att tolkas korrekt som en sträng, inte ett heltal, eftersom det inte finns något "i" suffix.
 * Till skillnad från andra numeriska datatyper har de långa värdena i datasektionen suffixet. ("L") som identifierar deras numeriska datatyp. Detta krävs för att förhindra kalkylblad från att tolka värdena som flytande punktnummer och därmed förlora precision.
@@ -336,7 +336,7 @@ Anteckningar:
 I ett kalkylblad, som i en NCCSV-fil:
 
 * Skriv numeriska attributvärden som anges för NCCSV-filer (t.ex., med ett suffixbrev, t.ex. "f" för att identifiera attributets datatyp) .
-* I Strings, skriv alla tecken mindre än ASCII tecken #32 eller större än karaktär #126 som antingen en JSON-liknande backslashed karaktär (t.ex., \\n för newline) eller som Hexadecimal Unicode-karaktärsnumret (fall okänslig) med syntax [ðu *Hhhhh* ](#uhhhh)   (t.ex. ðu20AC för Euro-tecknet) . Användning \\n   (2 tecken: backslash och 'n ") Ange en ny linje, inte Alt Enter.
+* I Strings, skriv alla tecken mindre än ASCII tecken #32 eller större än karaktär #126 som antingen en JSON-liknande backslashed karaktär (t.ex., \\n för newline) eller som Hexadecimal Unicode-karaktärsnumret (fall okänslig) med syntax [ðu *Hhhhh* ](#uhhhh)   (t.ex. \\ \\u20AC För Euro-tecknet) . Användning \\n   (2 tecken: backslash och 'n ") Ange en ny linje, inte Alt Enter.
 
 De enda skillnaderna mellan NCCSV-filer och det analoga kalkylbladet som följer dessa konventioner är:
 
@@ -392,7 +392,7 @@ För att skapa en NCCSV-fil från ett Google Sheets-kalkylblad:
 * Om en NCCSV-fil har överskridande kommatecken i slutet av raderna kan du ta bort dem genom att konvertera NCCSV-filen till en NetCDF fil och sedan konvertera NetCDF fil tillbaka till en NCCSV-fil.
 * När du försöker konvertera en NCCSV-fil till en NetCDF fil, vissa fel kommer att upptäckas av programvaran och kommer att generera felmeddelanden, vilket gör att konverteringen misslyckas. Andra problem är svåra eller omöjliga att fånga och kommer inte att generera felmeddelanden eller varningar. Andra problem (t.ex. överflödiga kommatecken i slutet av rader) kommer att ignoreras. Filomvandlaren kommer endast att göra minimal kontroll av korrektheten av resultatet NetCDF fil, t.ex. när det gäller CF-efterlevnad. Det är filskaparens och filanvändarens ansvar att kontrollera att konverteringens resultat är lika önskade och korrekta. Två sätt att kontrollera är:
     * Skriv innehållet i .nc Fil med ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * Visa innehållet i data i ERDDAP .
 
 ##  [Förändringar](#changes)  {#changes} 
