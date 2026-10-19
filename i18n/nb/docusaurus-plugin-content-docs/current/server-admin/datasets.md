@@ -42,7 +42,7 @@ Når en dataleverandør kommer til deg i håp om å legge til noen data i din ER
 Innlevering av faktiske datafiler fra eksterne kilder er en stor sikkerhetsrisiko, så ERDDAP™ tar seg ikke av det. Du må finne ut en løsning som fungerer for deg og dataleverandøren, for eksempel e-post (for små filer) Trekk fra skyen (For eksempel DropBox eller Google Drive) , en sftp nettsted (med passord) , eller sneaker Netto (en USB tommelfingerstasjon eller ekstern harddisk) .. Du bør sannsynligvis bare akseptere filer fra folk du kjenner. Du må skanne filene for virus og ta andre sikkerhetstiltak.
 
 Det er ingen link i ERDDAP™ til dataleverandørskjemaet (For eksempel på ERDDAP™ hjemmeside) .. I stedet, når noen forteller deg at de ønsker å ha sine opplysninger servert av din ERDDAP Du kan sende dem en e-post som sier noe som:
-Ja, vi kan få dine data inn i ERDDAP .. For å komme i gang, vennligst fyll ut skjemaet påhttps://*yourUrl*/erddap/dataProviderForm.html  (eller http:// hvis https:// er ikke aktivert) ..
+Ja, vi kan få dine data inn i ERDDAP .. For å komme i gang, vennligst fyll ut skjemaet på https://*yourUrl*/erddap/dataProviderForm.html   (eller http:// hvis https:// er ikke aktivert) ..
 Når du er ferdig, kontakter jeg deg for å finne ut de siste detaljene.
 Hvis du bare vil se på skjemaet (Uten å fylle den ut) Du kan se skjemaet på ERD 's ERDDAP :) [Introduksjon](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) , [Del 1](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) , [Del 2](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) , [Del 3](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) , og [Del 4](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) .. Disse linkene på ERD   ERDDAP™ Send informasjon til meg, ikke deg, så ikke send informasjon med dem med mindre du faktisk vil legge til data til ERD   ERDDAP ..
 
@@ -190,23 +190,23 @@ Denne EDDType genererer alle datasets.xml Biter som trengs for å lage [EDDTable
      
 #####  EDDGrid FraThreddsCatalog{#eddgridfromthreddscatalog} 
 Denne EDDType genererer alle datasets.xml Knebb som trengs for alle [ EDDGrid FraDap](#eddgridfromdap) datasett som det kan finne ved å krype rekursivt gjennom en TREDDS (sub) Katalog. Det er mange former for THREDDS katalog-adresser. Dette alternativet REQUIRES a THREDDS .xml URL med / catalog / i det, for eksempel,
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xmleller
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml eller
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (en relatert .html katalog er på
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.htmlsom ikke er akseptabelt for EDDGrid Fra ThreddsCatalog).
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html som ikke er akseptabelt for EDDGrid Fra ThreddsCatalog).
 Hvis du har problemer med EDDGrid FraThredds Katalog:
 * Kontroller at URL-adressen du bruker er gyldig, inkluderer / catalog/, og slutter med / catalog.xml .
-* Hvis det er mulig, bruk en offentlig IP-adresse (For eksempelhttps://oceanwatch.pfeg.noaa.gov) i URLen, ikke en lokal numerisk IP-adresse (For eksempelhttps://12.34.56.78) .. Hvis THREDDS er kun tilgjengelig via den lokale numeriske IP-adressen, kan du bruke [&lt;convertToPublicSourceUrl&gt;] (#converttopublicsourceurl) så ERDDAP™ brukere ser offentlig adresse, selv om ERDDAP™ får data fra den lokale numeriske adressen.
+* Hvis det er mulig, bruk en offentlig IP-adresse (For eksempel https://oceanwatch.pfeg.noaa.gov ) i URLen, ikke en lokal numerisk IP-adresse (For eksempel https://12.34.56.78 ) .. Hvis THREDDS er kun tilgjengelig via den lokale numeriske IP-adressen, kan du bruke [&lt;convertToPublicSourceUrl&gt;] (#converttopublicsourceurl) så ERDDAP™ brukere ser offentlig adresse, selv om ERDDAP™ får data fra den lokale numeriske adressen.
 * Hvis du har problemer som du ikke kan løse, [Sjekk feilsøking tips](#troubleshooting-tips) ..
 * Den lave nivåkoden for dette bruker nå Unidata netcdf-java katalog crawler kode (treder. katalogklasser) slik at det kan håndtere alle THREDDS kataloger (som kan være overraskende komplekse) Takket være Unidata For den koden.
          
 #####  EDDGrid LonPM180FraErddapKatalog{#eddgridlonpm180fromerddapcatalog} 
 Denne EDDType genererer datasets.xml å lage [ EDDGrid LonPM180](#eddgridlonpm180) Datasett fra alle EDDGrid Datasett i et ERDDAP som har noen lengdeverdier høyere enn 180.
-* Hvis det er mulig, bruk en offentlig IP-adresse (For eksempelhttps://oceanwatch.pfeg.noaa.gov) i URLen, ikke en lokal numerisk IP-adresse (For eksempelhttps://12.34.56.78) .. Hvis ERDDAP™ er kun tilgjengelig via den lokale numeriske IP-adressen, kan du bruke [&lt;convertToPublicSourceUrl&gt;] (#converttopublicsourceurl) så ERDDAP™ brukere ser offentlig adresse, selv om ERDDAP™ får data fra den lokale numeriske adressen.
+* Hvis det er mulig, bruk en offentlig IP-adresse (For eksempel https://oceanwatch.pfeg.noaa.gov ) i URLen, ikke en lokal numerisk IP-adresse (For eksempel https://12.34.56.78 ) .. Hvis ERDDAP™ er kun tilgjengelig via den lokale numeriske IP-adressen, kan du bruke [&lt;convertToPublicSourceUrl&gt;] (#converttopublicsourceurl) så ERDDAP™ brukere ser offentlig adresse, selv om ERDDAP™ får data fra den lokale numeriske adressen.
          
 #####  EDDGrid Lon0360FraErddapCatalog{#eddgridlon0360fromerddapcatalog} 
 Denne EDDType genererer datasets.xml å lage [ EDDGrid Dreier0360](#eddgridlon0360) Datasett fra alle EDDGrid Datasett i et ERDDAP som har noen lengdeverdier mindre enn 0.
-* Hvis det er mulig, bruk en offentlig IP-adresse (For eksempelhttps://oceanwatch.pfeg.noaa.gov) i URLen, ikke en lokal numerisk IP-adresse (For eksempelhttps://12.34.56.78) .. Hvis ERDDAP™ er kun tilgjengelig via den lokale numeriske IP-adressen, kan du bruke [&lt;convertToPublicSourceUrl&gt;] (#converttopublicsourceurl) så ERDDAP™ brukere ser offentlig adresse, selv om ERDDAP™ får data fra den lokale numeriske adressen.
+* Hvis det er mulig, bruk en offentlig IP-adresse (For eksempel https://oceanwatch.pfeg.noaa.gov ) i URLen, ikke en lokal numerisk IP-adresse (For eksempel https://12.34.56.78 ) .. Hvis ERDDAP™ er kun tilgjengelig via den lokale numeriske IP-adressen, kan du bruke [&lt;convertToPublicSourceUrl&gt;] (#converttopublicsourceurl) så ERDDAP™ brukere ser offentlig adresse, selv om ERDDAP™ får data fra den lokale numeriske adressen.
          
 ##### EDDsFra Filer{#eddsfromfiles} 
 Gitt en startmappe, dette krysser katalogen og alle undermapper og prøver å opprette et datasett for hver gruppe av datafiler som den finner.
@@ -566,7 +566,7 @@ NCCSV 1.0 filer støtter ikke uoppklarte heltallsdatatyper.
 ### Datatype Kommentarer{#data-type-comments} 
 * På grunn av den dårlige støtten for lange, avlange og tegndata i mange filtyper, avviser vi bruken av disse datatypene i ERDDAP .. Når det er mulig, bruk doble i stedet for lange og avlange, og bruk streng i stedet for tegn.
      
-* Metadata - Fordi(OPeN)DAP.das og .dds-svar støtter ikke lange eller ulange attributter eller datatyper (I stedet vise dem som dobbel) Du kan i stedet ønske å bruke ERDDAP tabuar representasjon av metadata som sett i http .../erddap/ **info** / * datasetID * .html nettside (For eksempel [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (som du også kan komme i andre filtyper, f.eks. .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) eller .nccsv Metadatarespons (For eksempel [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) selv om .nccsv Metadata er kun tilgjengelig for tabelldatasett) Begge deler støtter alle datatyper (Spesielt lang, avlang og char) ..
+* Metadata - Fordi(OPeN)DAP.das og .dds-svar støtter ikke lange eller ulange attributter eller datatyper (I stedet vise dem som dobbel) Du kan i stedet ønske å bruke ERDDAP tabuar representasjon av metadata som sett i http .../erddap/ **info** / * datasetID * .html nettside (For eksempel [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (som du også kan komme i andre filtyper, f.eks. .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) eller .nccsv Metadatarespons (For eksempel [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) selv om .nccsv Metadata er kun tilgjengelig for tabelldatasett) Begge deler støtter alle datatyper (Spesielt lang, avlang og char) ..
          
 ### Mediefiler{#media-files} 
 Ikke alle data er tabeller med tall eller tekst. Noen datasett består av eller inkluderer mediefiler, for eksempel bilder, lyd- og videofiler. ERDDAP™ har noen spesielle funksjoner for å gjøre det lettere for brukerne å få tilgang til mediefiler. Det er en to-trinns prosess:
@@ -604,7 +604,7 @@ Eller hvis en bruker klikker på filnamnet som vises på en ERDDAP™ Nettlesere
 ### Arbeider med AWS S3 Filer{#working-with-aws-s3-files} 
  [Amazon Web Service (AWS) ](https://aws.amazon.com) er selger av [sky databehandling](https://en.wikipedia.org/wiki/Cloud_computing) Tjenester. [S3](https://aws.amazon.com/s3/) er et objektlagringssystem som tilbys av AWS. I stedet for det hierarkiske systemet med kataloger og filer av et tradisjonelt filsystem (som en harddisk i PCen) , S3 tilbyr bare "buketter" som holder " objekter" (Vi ringer dem "files" ) ..
 
-For ASCII-filer (f.eks.) , ERDDAP™ kan jobbe med filene i bøtter direkte. Det eneste du trenger å gjøre er å spesifisere&lt;filDir&gt; for datasettet ved hjelp av et bestemt format for AWS-bøtte, f.eks.https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/.. Du bør ikke bruke&lt;cacheFromUrl&gt; . Se nedenfor for detaljer.
+For ASCII-filer (f.eks.) , ERDDAP™ kan jobbe med filene i bøtter direkte. Det eneste du trenger å gjøre er å spesifisere&lt;filDir&gt; for datasettet ved hjelp av et bestemt format for AWS-bøtte, f.eks. https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ .. Du bør ikke bruke&lt;cacheFromUrl&gt; . Se nedenfor for detaljer.
 
 Men for binære filer (f.eks. .nc , .grib, .bufr, og .hdf filer) Du trenger å bruke&lt;cacheFromUrl&gt; system beskrevet nedenfor. ERDDAP , netcdf-java (som ERDDAP™ bruker til å lese data fra disse filene) , og annen vitenskapelig dataprogramvare er designet for å jobbe med filer i et tradisjonelt filsystem som tilbyr [blokknivå](https://en.wikipedia.org/wiki/Block-level_storage) tilgang til filer (som tillater å lese deler av en fil) , men S3 tilbyr kun [filnivå (objekt) ](https://en.wikipedia.org/wiki/Block-level_storage) tilgang til filer (som bare tillater å lese hele filen) .. AWS tilbyr et alternativ til S3, [Elastisk blokkbutikk (EBS) ](https://aws.amazon.com/ebs/) ), som støtter blokknivå tilgang til filer, men det er dyrere enn S3, så det brukes sjelden til bulk lagring av store mengder datafiler. (Når folk sier å lagre data i skyen (S3) er billig, det er vanligvis en epler til appelsiner sammenligning.) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 Den tilsvarende URl for det objektet er
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 AWS støtter litt variasjon i hvordan URL er konstruert, men ERDDAP™ krever dette spesifikke formatet:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 som ERDDAP v2.29, kan du nå bruke `s3://` URI-format i stedet for nettadresse. Dette er det formatet som brukes av [AWS s3 cli](https://docs.aws.amazon.com/cli/latest/reference/s3/) ..
 s3:// *bøtteName* / *nøkkel* 
@@ -697,22 +697,22 @@ For en privat S3-databøtte må bøtteens eier gi deg tilgang til bøtten. (Se A
 I alle tilfeller trenger du en AWS-konto fordi AWS SDK for Java   (som ERDDAP™ bruker til å hente informasjon om innholdet i en bøtte) krever AWS kontoinformasjon. (Mer om dette nedenfor) 
 
  ERDDAP™ kan kun få tilgang til AWS S3 bøtter hvis du angir [&lt;cacheFromUrl&gt;] (#cachefromurl) (eller&lt;filDir&gt;) i et bestemt format:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 hvor
 
 * Bøttenavnet er den korte formen for bøttenavnet, for eksempel noaa-goes17.
 * Aws-region, for eksempel us-aust-1, er fra "regionen" kolonnen i en av tabellene i [AWS Service Endepunkter](https://docs.aws.amazon.com/general/latest/gr/rande.html) Hvor bøtte er faktisk plassert.
 * Prefikset er valgfritt. Hvis det er til stede, må det slutte med '/' ..
 
-For eksempelhttps://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+For eksempel https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 Dette URL-formatet er en av AWS S3-anbefalingene: se [Få tilgang til en Bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) og [denne beskrivelsen av prefiks](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) .. ERDDAP™ krever at du kombinerer bucket URL og det valgfrie prefikset i en URL for å angi&lt;cacheFra Url&gt; (eller&lt;filDir&gt;) der filene er plassert.
 
 #### Test Offentlige AWS S3 Buckets{#test-public-aws-s3-buckets} 
 For offentlige bøtter kan du og bør teste buckle URL i AWS S3-katalogen i nettleseren din, f.eks.
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) Hvis nettadressen er riktig og egnet for ERDDAP , vil det returnere et XML-dokument som har (delvis) Liste over innholdet i den bøylen. Dessverre, hele URL (bucket URL pluss prefiks) som ERDDAP™ Ønsker for et gitt datasett fungerer ikke i en nettleser. AWS tilbyr ikke et system for å bla gjennom hierarkiet i en bøtte enkelt i nettleseren din. (Hvis det er feil, vennligst send en e-post til Chris. John på noaa.gov. Ellers Amazon, vennligst legg til støtte for dette&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) Hvis nettadressen er riktig og egnet for ERDDAP , vil det returnere et XML-dokument som har (delvis) Liste over innholdet i den bøylen. Dessverre, hele URL (bucket URL pluss prefiks) som ERDDAP™ Ønsker for et gitt datasett fungerer ikke i en nettleser. AWS tilbyr ikke et system for å bla gjennom hierarkiet i en bøtte enkelt i nettleseren din. (Hvis det er feil, vennligst send en e-post til Chris. John på noaa.gov. Ellers Amazon, vennligst legg til støtte for dette&#33;) 
 
 #### Se innholdet i en bucket{#viewing-the-contents-of-a-bucket} 
-S3 bøtter inneholder ofte et par kategorier av filer, i et par pseudo underkataloger, som kan bli et par av ERDDAP™ Datasett. å gjøre ERDDAP™ datasett, må du vite startkatalogen for&lt;cacheFra Url&gt; (eller&lt;filDir&gt;) og filformatet til filnavnene som identifiserer den undergruppen av filer. Hvis du prøver å vise hele innholdet i en bøtte i en nettleser, vil S3 bare vise deg de første 1000 filene, noe som er utilstrekkelig. For øyeblikket, den beste måten for deg å se alt innholdet i en bøtte er å lage en [EDDTableFromFileNames](#eddtablefromfilenames) Datasett (på din PCs ERDDAP™ og/eller offentlig ERDDAP ) , som også gir deg en enkel måte å bla gjennom katalogstrukturen og laste ned filer. Den&lt;filDir&gt; for det vil være URL du laget ovenfor, f.eks.https://noaa-goes17.s3.us-east-1.amazonaws.com.. \\[ Hvorfor tilbyr ikke AWS S3 en rask og enkel måte for alle å gjøre dette uten en AWS-konto? \\] Legg merke til at når jeg gjør dette på PCen min på et ikke-Amazon-nettverk, ser det ut til at Amazon senker responsen på en trickle (Rundt 100 (?) filer per bit) etter de første bitene (1000 av filer per bit) er lastet ned. Siden bøtter kan ha et stort antall filer (noaa-goes17 har 26 millioner) , å få alt innholdet i en bøtte kan ta EDDTableFromFileNames flere timer (For eksempel 12&#33;) For å fullføre. \\[ Amazon, er det sant? \\] 
+S3 bøtter inneholder ofte et par kategorier av filer, i et par pseudo underkataloger, som kan bli et par av ERDDAP™ Datasett. å gjøre ERDDAP™ datasett, må du vite startkatalogen for&lt;cacheFra Url&gt; (eller&lt;filDir&gt;) og filformatet til filnavnene som identifiserer den undergruppen av filer. Hvis du prøver å vise hele innholdet i en bøtte i en nettleser, vil S3 bare vise deg de første 1000 filene, noe som er utilstrekkelig. For øyeblikket, den beste måten for deg å se alt innholdet i en bøtte er å lage en [EDDTableFromFileNames](#eddtablefromfilenames) Datasett (på din PCs ERDDAP™ og/eller offentlig ERDDAP ) , som også gir deg en enkel måte å bla gjennom katalogstrukturen og laste ned filer. Den&lt;filDir&gt; for det vil være URL du laget ovenfor, f.eks. https://noaa-goes17.s3.us-east-1.amazonaws.com .. \\[ Hvorfor tilbyr ikke AWS S3 en rask og enkel måte for alle å gjøre dette uten en AWS-konto? \\] Legg merke til at når jeg gjør dette på PCen min på et ikke-Amazon-nettverk, ser det ut til at Amazon senker responsen på en trickle (Rundt 100 (?) filer per bit) etter de første bitene (1000 av filer per bit) er lastet ned. Siden bøtter kan ha et stort antall filer (noaa-goes17 har 26 millioner) , å få alt innholdet i en bøtte kan ta EDDTableFromFileNames flere timer (For eksempel 12&#33;) For å fullføre. \\[ Amazon, er det sant? \\] 
 
 #### Å lage en EDD-tabell FraFileNames datasett med AWS S3 Bucket{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 Hvis du har et bøndenavn, men ikke allerede har en liste over filer i S3-bøtten eller prefikset som identifiserer plasseringen av de relevante filene i bøtten, bruk instruksjonene nedenfor for å lage en EDDTableFromFileNames datasett slik at du kan bla gjennom kataloghierarkiet til S3-bøtten via ERDDAP 's "files" systemet.
@@ -727,22 +727,24 @@ Java.lang. UlovligArgumentException: profilfil kan ikke være null feil i ERDDAP
 Tips til Linux og Mac OS: legitimasjonsfilen må være i hjemmekatalogen til brukeren som kjører Tomcat (og ERDDAP )   (For dette avsnittet antar vi bruker=tomcat) i en fil som heter ~/.aws/credentials. Ikke anta at ~ er /home/tomcat -- faktisk bruke cd ~ til å finne ut hvor operativsystemet tenker ~ for user=tomcat er. Lag katalogen hvis den ikke eksisterer. Når du har satt legitimasjonsfilen på plass, må du også sørge for at brukeren og gruppen til filen er tomcat og deretter bruke chmod 400 legitimasjoner for å sikre at filen er skrivebar for bruker=tomcat.
     
 3. Opprett bucket URL i [format som ERDDAP™ krever](#accessing-files-in-an-aws-s3-bucket) f.eks.
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) , og (For offentlige bøtter) test den i en nettleser for å sørge for at den returnerer et XML-dokument som har en delvis oppføring av innholdet i den bøtten.
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) , og (For offentlige bøtter) test den i en nettleser for å sørge for at den returnerer et XML-dokument som har en delvis oppføring av innholdet i den bøtten.
      
 4. Bruk [Generer DatasetsXml](#generatedatasetsxml) å skape en [EDDTableFromFileNames](#eddtablefromfilenames) datasett:
     * Bruk denne syntaksen for å starte mappen:
         \\*\\*\\ *fra OnTheFly,* dinBucketUrl*
 For eksempel
-        \\*\\**fraOnTheFly,https://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\**fraOnTheFly, https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * Filnavn regulært? .\\*
     * Rekursivt? sant
     * Last på nytt Hver minute? 10080
-    *    infoUrl ?https://registry.opendata.aws/noaa-goes/
+    *    infoUrl ? https://registry.opendata.aws/noaa-goes/
+ 
     * institusjon? NOAA 
     * Sammendrag? ingenting ( ERDDAP™ vil opprette et anstendig sammendrag automatisk.) 
     * Tittel? ingenting ( ERDDAP™ vil opprette en god tittel automatisk.) Som vanlig bør du redigere den resulterende XML for å verifisere riktighet og gjøre forbedringer før biten av datasett ved hjelp av den i datasets.xml ..
 5. Hvis du følger instruksjonene ovenfor og laster datasettet i ERDDAP , har du opprettet et EDDTableFromFiles datasett. Som et eksempel, og for å gjøre det lettere for alle å bla gjennom og laste ned filer fra AWS Open Data-bøtter, har vi opprettet EDDTableFromFileNames datasett (se listen på
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) For nesten alle [AWS S3 Åpne databøtter](https://registry.opendata.aws/) ..
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) For nesten alle [AWS S3 Åpne databøtter](https://registry.opendata.aws/) ..
      \\[ De få bøtter som vi ikke inkluderte enten har et stort antall filer i rotkatalogen (Mer enn kan lastes ned på rimelig tid) eller ikke tillater offentlig tilgang (Skal ikke alle være offentlige?) , eller er forespører betaler bøtter (For eksempel Sentinel) .. \\]   
 Hvis du klikker på "files" lenke for et av disse datasettene, kan du bla gjennom katalogtreet og filene i den S3 bøtte. På grunn av veien\\*\\**FraOnTheFly EDDTableFraFiles fungerer, disse kataloglistene er alltid helt oppdaterte fordi ERDDAP™ Få dem på flyet. Hvis du klikker ned katalogtreet til et faktisk filnamn og klikker på filnamnet, ERDDAP™ vil omdirigere forespørselen din til AWS S3 slik at du kan laste ned filen direkte fra AWS. Du kan så inspisere den filen.
     
@@ -756,7 +758,7 @@ Det er uheldig at AWS ikke bare tillater folk å bruke en nettleser til å se in
  **Da kan du lage ERDDAP™ datasett som gir brukerne tilgang til dataene i filene.**   
 Se instruksjonene i [ ERDDAP™ S3 Buckets](#erddap-and-aws-s3-buckets)   (over) ..
 For prøven EDDTableFromFileNames datasett som du laget ovenfor, hvis du gjør en liten poking rundt med mappen og filnavnene i katalogtreet, blir det klart at toppnivåkatalognavnene (For eksempel ABI-L1b-RadC) svarer til hva ERDDAP™ Skulle kalle separate datasett. Boksen du jobber med kan være lignende. Du kan deretter forfølge å skape separate datasett i ERDDAP™ for hvert av disse datasettene, f.eks.
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 som&lt;cacheFromUrl&gt;. Dessverre synes alle datasettene i bøtte å være nivå 1 eller nivå 2 datasett, som ERDDAP™   [Er ikke spesielt bra på](#dimensions) , fordi datasettet er en mer komplisert samling av variabler som bruker ulike dimensjoner.
      
     
@@ -975,7 +977,7 @@ Usorterte dimensjonsverdier indikerer nesten alltid et problem med kildedatasett
 ###  EDDGrid FraDap{#eddgridfromdap} 
  [ ** EDDGrid FraDap** ](#eddgridfromdap) håndterer rutenettvariabler fra [ DAP ](https://www.opendap.org/) servere.
 
-* Vi anbefaler å bruke [Opprett datasett Xml-programmet](#generatedatasetsxml) å lage et grovt utkast av datasets.xml bit for dette datasettet. Du kan samle inn informasjonen du trenger for å justere det eller opprette din egen XML for en EDDGrid FraDap datasett ved å se på kildedatasettets DDS- og DAS-filer i nettleseren din (ved å legge til .das og .dds til sourceUrl For eksempel: [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) ..
+* Vi anbefaler å bruke [Opprett datasett Xml-programmet](#generatedatasetsxml) å lage et grovt utkast av datasets.xml bit for dette datasettet. Du kan samle inn informasjonen du trenger for å justere det eller opprette din egen XML for en EDDGrid FraDap datasett ved å se på kildedatasettets DDS- og DAS-filer i nettleseren din (ved å legge til .das og .dds til sourceUrl For eksempel: [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) ..
      
 *    EDDGrid FromDap kan få data fra alle multidimensjonale variabel fra en DAP Dataserver. (Tidligere, EDDGrid FraDap var begrenset til variabler betegnet som "grid"s, men det er ikke lenger et krav.)   
      
@@ -1335,7 +1337,7 @@ Et fullt eksempel på et axisVariable som gjør et samlet datasett med en ny "ru
         </addAttributes>
       </axisVariable>
 ```
-Legg merke til bruken av opptaksgruppens nummer 2 for å fange sifferene som oppstår etter 'r' eller 's', og før "_global". Dette eksemplet viser også hvordan du legger til ekstra attributter (f.eks. ioos\\_category og enheter) til aksevariabelen.
+Merk bruken av opptaksgruppe nummer 2 for å fange sifferene som oppstår etter 'r' eller 's', og før "\\_global" .. Dette eksemplet viser også hvordan du legger til ekstra attributter (f.eks. ioos\\_category og enheter) til aksevariabelen.
      
 #### Eksternt komprimerte filer{#externally-compressed-files} 
 * Datasett som er undergrupper av EDDGrid Fra Filer og EDDTable FromFiles kan betjene data direkte fra eksterne komprimerte datafiler, inkludert .tgz , .tar  .gz , .tar  .gzip , .gz , .gzip , .zip , .bz2 , og .Z-filer.
@@ -1433,7 +1435,7 @@ Alle EDDGrid Fra Filer og alle EDDTableFromFiles datasett støtter et sett tagge
 Bruk i stedet&lt;cacheFromUrl&gt; system] (#cachefromurl) ..
 
 Tilgang ERDDAP™ Datasett som filer via byteområdeforespørsler --
-Flipping dette rundt, gitt at du kan (i teorien) Tenk på et datasett i ERDDAP™ Som en kjempe .nc fil ved å legge til " .nc " til basen OPen DAP URL til et gitt datasett (f.eks.https://myserver.org/erddap/griddap/datasetID.ncog også ved å legge til en ?query etter det for å spesifisere en undergruppe) , det er kanskje rimelig å spørre om du kan bruke netcdf-java, Ferret eller noen andre NetCDF Kundeprogramvare å lese data via HTTP Range forespørsler fra ERDDAP .. Svaret er nei, for det er egentlig ikke noe stort. .nc - Fil. Hvis du vil gjøre dette, gjør du i stedet et av disse alternativene:
+Flipping dette rundt, gitt at du kan (i teorien) Tenk på et datasett i ERDDAP™ Som en kjempe .nc fil ved å legge til " .nc " til basen OPen DAP URL til et gitt datasett (f.eks. https://myserver.org/erddap/griddap/datasetID.nc og også ved å legge til en ?query etter det for å spesifisere en undergruppe) , det er kanskje rimelig å spørre om du kan bruke netcdf-java, Ferret eller noen andre NetCDF Kundeprogramvare å lese data via HTTP Range forespørsler fra ERDDAP .. Svaret er nei, for det er egentlig ikke noe stort. .nc - Fil. Hvis du vil gjøre dette, gjør du i stedet et av disse alternativene:
 
 * Bruk(OPeN)DAPkundeprogramvare til å koble til netadap-tjenester som tilbys av ERDDAP .. Det er det som DAP   (og dermed ERDDAP ) var designet for. Det er svært effektivt.
 * Eller last ned kildefilen (s) fra "files" systemet (eller en undergruppefil via en .nc ? spørring) til datamaskinen og bruk netcdf-java, Ferret eller noen andre NetCDF Kundeprogramvare å lese (Nå) lokal fil (s) ..
@@ -2253,9 +2255,9 @@ Den viktigste bruken av disse diagnostiske meldingene er å sikre at ERDDAP™ G
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### EDDTableFra DapSekvens{#eddtablefromdapsequence} 
- [ **EDDTableFra DapSekvens** ](#eddtablefromdapsequence) håndterer variabler innenfor 1- og 2-nivå sekvenser fra [ DAP ](https://www.opendap.org/) servere som DAP PER (var påhttps://www.pmel.noaa.gov/epic/software/dapper/Nå avsluttet) ..
+ [ **EDDTableFra DapSekvens** ](#eddtablefromdapsequence) håndterer variabler innenfor 1- og 2-nivå sekvenser fra [ DAP ](https://www.opendap.org/) servere som DAP PER (var på https://www.pmel.noaa.gov/epic/software/dapper/ Nå avsluttet) ..
 
-* Vi anbefaler å bruke [Opprett datasett Xml-programmet](#generatedatasetsxml) å lage et grovt utkast av datasets.xml bit for dette datasettet. Deretter kan du redigere det for å finjustere det. Du kan samle inn informasjonen du trenger ved å se på kildedatasettets DDS- og DAS-filer i nettleseren din (ved å legge til .das og .dds til den sourceUrl (Et eksempel varhttps://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds).
+* Vi anbefaler å bruke [Opprett datasett Xml-programmet](#generatedatasetsxml) å lage et grovt utkast av datasets.xml bit for dette datasettet. Deretter kan du redigere det for å finjustere det. Du kan samle inn informasjonen du trenger ved å se på kildedatasettets DDS- og DAS-filer i nettleseren din (ved å legge til .das og .dds til den sourceUrl (Et eksempel var https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds ).
     
 * En variabel er i en DAP sekvens hvis .dds-responsen indikerer at datastrukturen som holder variabelen, er en "sekvens" (tilfelle ufølsom) ..
 * I noen tilfeller vil du se en sekvens i en sekvens, en 2-nivå sekvens -- EDDTableFromDapSequence håndterer disse også.
@@ -2378,15 +2380,15 @@ Opprett datasett Xml har tre spesialalternativer for EDDTableFromDatabase:
 * [JDBC driver og&lt;driverName&gt;] (#jdbc-driver) -- Du må få riktig JDBC 3 eller JDBC 4 driver .jar fil for databasen din og
 Legg den i *tomcat* /webapps/erddap/WEB-INF/lib etter at du har installert ERDDAP .. Så i din datasets.xml For dette datasettet må du angi&lt;driverName&gt; for denne driveren, som er (Dessverre) forskjellig fra navnet. Søk på nettet etter JDBC-driveren for databasen og driverenName Java Må bruke den.
     
-    * For MariaDB, prøv [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * For MariaDB, prøv [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 Den&lt;driverName&gt; å bruke i datasets.xml   (Se nedenfor) er sannsynligvis org.mariadb.jdbc. Fører.
-    * For MySQL og Amazon RDS, prøv [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * For MySQL og Amazon RDS, prøv [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 Den&lt;driverName&gt; å bruke i datasets.xml   (Se nedenfor) er sannsynligvis com.mysql.jdbc. Fører.
-    * For Oracle , prøve [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) ..
+    * For Oracle , prøve [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) ..
 Den&lt;driverName&gt; å bruke i datasets.xml   (Se nedenfor) er sannsynligvis orakel.jdbc.driver. Oracle Fører.
-    * For Postgresql fikk vi JDBC 4-driveren fra [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * For Postgresql fikk vi JDBC 4-driveren fra [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 Den&lt;driverName&gt; å bruke i datasets.xml   (Se nedenfor) Det er nok org.postgresql. Fører.
-    * For SQL Server kan du få JTDS JDBC-driveren fra [https://jtds.sourceforge.net](https://jtds.sourceforge.net) ..
+    * For SQL Server kan du få JTDS JDBC-driveren fra [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) ..
 Den&lt;driverName&gt; å bruke i datasets.xml   (Se nedenfor) er sannsynligvis net.sourceforge.jtds.jdbc. Fører.
     
 Etter at du har satt JDBC-sjåfør .jar i ERDDAP™ lib katalog, du må legge til en referanse til den .jar-filen i .bat og/eller .sh-skriptfiler for Genererer Datasett Xml, DasDds og ArchiveADatasett som er i *tomcat* /webapps/erddap/WEB-INF/-katalogen; ellers får du en klasseNotFoundException når du kjører disse skriptene.
@@ -2524,7 +2526,7 @@ Og i *tomcat* /conf/context.xml, definere en ressurs med samme informasjon, for 
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-Generelt informasjon om bruk av datakilde er på [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) ..
+Generelt informasjon om bruk av datakilde er på [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) ..
 Se [Tomcat Datakildeinformasjon](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) og [Tomcat Datakildeeksempler](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) eller søk på nettet etter eksempler på å bruke DataSources med andre programservere.
 * Hvis alt annet mislykkes,
 å lagre dataene i en samling av NetCDF v3 .nc filer (spesielt .nc filer som bruker [CF Diskret prøvetakingsgeometri (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Contiguous Tagge Array datastrukturer og så kan håndteres med ERDDAP 's [EDDTableFraNcCFFiler](#eddtablefromnccffiles) ) .. Hvis de er logisk organisert (hver med data for en bit plass og tid) , ERDDAP™ kan raskt trekke ut data fra dem.
@@ -2608,7 +2610,7 @@ Se [Tomcat Datakildeinformasjon](https://tomcat.apache.org/tomcat-7.0-doc/jndi-r
     
 Biten av XML som genereres av GenerationDatasetsXml for hvert datasett inkluderer:
     
-    * A datasetID som er EDDGrid 's datasetID plus "__Asatable".
+    * A datasetID som er EDDGrid 's datasetID pluss "\\_AsATable" ..
     * En ny sammendrag global attributt som er EDDGrid Sammendrag pluss et nytt første ledd som beskriver hva dette datasettet er.
     * En ny tittel global attributt som er EDDGrid tittelen Plus- (Som tabell)  ".
     * En ny maxAxis0 global attributt med en verdi på 10.
@@ -2644,21 +2646,21 @@ Biten av XML som genereres av GenerationDatasetsXml for hvert datasett inkludere
 *    [Dataene i et EDDTableFromFileNames datasett](#eddtablefromfilenames-data) Et bord som ERDDAP™ oppretter on-the-fly med informasjon om en gruppe lokale filer. I tabellen er det en rad for hver fil. Fire spesielle egenskaper i [ datasets.xml For dette datasettet](#eddtablefromfilenames-skeleton-xml) bestemme hvilke filer som vil bli inkludert i dette datasettet:
     
 ##### fil Dir{#filedir} 
-    *   &lt;filDir&gt; -- Dette angir kildekatalogen i serverens filsystem med filene for dette datasettet. Filene som faktisk er plassert i serverens filsystem i&lt;filDir&gt; vil vises i url-kolonnen i dette datasettet i en virtuell katalog som heterhttps://*serverUrl*/erddap/files/*datasetID/*..
+    *   &lt;filDir&gt; -- Dette angir kildekatalogen i serverens filsystem med filene for dette datasettet. Filene som faktisk er plassert i serverens filsystem i&lt;filDir&gt; vil vises i url-kolonnen i dette datasettet i en virtuell katalog som heter https://*serverUrl*/erddap/files/*datasetID/* ..
 For eksempel, hvis datasetID er jplMU RSS T,
 og&lt;filDir&gt; er /home/data/mur/ ,
 og den katalogen har en fil som heter jplMU RSS T201501030000.png,
 da URL som vil bli vist til brukere for den filen vil være
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png..
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png ..
         
 I tillegg til å bruke en lokal katalog for&lt;filDir&gt;, kan du også angi URL til en ekstern, kataloglignende nettside. Dette fungerer med:
         
         * Usamlede datasett i TREDDS, f.eks.
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Denne serveren er ikke lenger pålitelig tilgjengelig. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Denne serveren er ikke lenger pålitelig tilgjengelig. \\] 
         * Usamlede datasett i Hyrax f.eks.
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * De fleste Apache-lignende kataloglister, f.eks.
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### fraOnTheFly{#fromonthefly} 
  [\\*\\** fraOnTheFly](#fromonthefly) -- For noen store S3 bøtter (som noaa-goes17, som har 26 millioner filer) Det kan ta ERDDAP™ Opp til 12 timer for å laste ned all informasjonen om innholdet i skuffen (Og så er det andre problemer) .. For å komme rundt dette er det en spesiell måte å bruke på&lt;filDir&gt; i EDDTableFromFileNames for å lage et datasett med katalogen og filnavnene fra en AWS S3-bøtte. Datasettet vil ikke ha listen over alle S3 bøttes mapper og filnavn som en bruker kan søke via forespørsler til datasettet. Men datasettet vil få navn på mapper og filer på flyet hvis brukeren krysser kataloghierarkiet med datasettets "files" Valg. Dette tillater brukerne å bla gjennom S3 bøtte filhierarki og filer via datasettets "files" systemet. For å gjøre dette i stedet for å spesifisere URL-adressen for S3-bøtte som startmappen" (i Generer Datasett Xml) eller&lt;filDir&gt; (i datasets.xml ) Bruk:
 ```
@@ -2837,13 +2839,13 @@ Alle EDDGrid Fra Filer og alle EDDTableFromFiles datasett støtter et sett tagge
     * Den&lt;cacheFromUrl&gt; tag lar deg angi en URL med en liste over eksterne datasetts filer fra en fjernfilliste.
         
         * Usamlede datasett i TREDDS, f.eks.
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Denne serveren er ikke lenger pålitelig tilgjengelig. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Denne serveren er ikke lenger pålitelig tilgjengelig. \\] 
         * Usamlede datasett i Hyrax f.eks.
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * De fleste Apache-lignende kataloglister, f.eks.
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * S3 bøtter, f.eks.
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 Dette kan imidlertid kreve en AWS-konto og mer installasjon.
 Se [samarbeid med S3 Buckets i ERDDAP™ ](#working-with-aws-s3-files) ..
 Du trenger vanligvis ikke å bruke cache FraUrl med filer i S3 bøtter hvis filene er ASCII-filer (f.eks.) fordi ERDDAP™ kan effektivt lese data fra bøtte direkte via en strøm.
@@ -2901,7 +2903,7 @@ så har en rekke hekkede fangstgrupper der det første alternativet er ingenting
 og det andre alternativet er en bestemt verdi.
             
 Eksemplet ovenfor vil bare matche kataloger for andre 10 dager i 2018, f.eks.
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020-10-21 Denne serveren er ikke lenger pålitelig tilgjengelig. \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020-10-21 Denne serveren er ikke lenger pålitelig tilgjengelig. \\]   
 dag 011, 012, ..., 019.
              (Se dette [Regulatorisk dokumentasjon](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) og [Regular tutorial](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) ..)   
 Hvis du trenger hjelp til å skape&lt;cachePartialPathRegex&gt;, vennligst e-post den&lt;cacheFra Url&gt; til Chris. John på noaa.gov.
@@ -3384,7 +3386,7 @@ For alle datasett i ERDDAP™ Når du sender en forespørsel til ERDDAP™ for e
 
 * .innsettelse
     * Forespørselen er formatert som en standard HTML skjemarespons, med key=verdi par, separert med '&'. For eksempel
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 forteller ERDDAP™ å legge til eller endre data for stationID =46088 for det angitte tidspunkt.
     * Forfatteren av denne endringen er JohnSmith og nøkkelen er noenKey1.
     * URL-en må inneholde gyldige verdier (manglende verdier) for alle [ http Få nødvendige variabler](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ forteller ERDDAP™ å legge til eller endre data for stationID =46088 for det a
              
     * . slette
         * Forespørselen er formatert som en standard HTML skjemarespons, med key=verdi par, separert med '&'. For eksempel
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 forteller ERDDAP™ å slette dataene for stationID = 46088 på det angitte tidspunkt.
         * Forfatteren av denne endringen er JohnSmith og nøkkelen er noenKey1.
         * URL-en må angi [ http Få nødvendige variabler](#httpgetrequiredvariables-global-attribute) på anmodningen (f.eks. stationID og tid) .. Hvis disse verdiene samsvarer med verdiene på en rad allerede i datasettet (som de vanligvis vil) De gamle verdiene slettes effektivt (Selv om de gamle verdiene fortsatt er tilgjengelige dersom en bruker ber om data fra en tidligere [versjon](#versioning) av datasettet) ..
@@ -3667,7 +3669,7 @@ Ikke alle har behov for denne typen finkornet versjon, men det er overveldende n
     
 ##### HTTPS Sett og Slett{#https-put-and-delete} 
 *    [Hva med HTTPS PUT og DELETE?](#https-put-and-delete)   
-     [Hypertekstoverføringsprotokoll (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) er grunnlaget for World Wide Web og grunnen til at websiden URLs begynner med -http://"ellerhttps://".. HTTPS er HTTP med et ekstra sikkerhetslag. Hver dag gjør nettlesere, skript og dataprogrammer milliarder av HTTP (S)   **Hent** Forespørsler om å få informasjon fra eksterne kilder. HTTP (S) Inkluderer også andre [verb](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) Spesielt PUT (å presse data til serveren) og DELETE (til DELETE-data fra serveren) .. Ja, PUT og DELETE er den riktige måten å sette inn data i og slette data fra, et datasett via HTTP (S) .. GET støttes av alle deler programvare som kan fungere med HTTP (S) .. Det er virkelig enkelt å jobbe med. Alle vet allerede hvordan man jobber med GET og mange vet hvordan man bruker POST (som kan brukes på i det vesentlige samme måte som GET) , så vi gjorde EDDTableFraHttpGet arbeid med GET og POST. Svært få mennesker (Selv få datamaskinprogrammerere) Har noen gang jobbet med PUT og DELETE. PUT og DELETE støttes generelt kun av dataspråk, så bruk av dem krever et dyktig program. Så PUT og DELETE er vanligvis en mye mer tung tilnærming gitt måten verktøyene har utviklet seg.
+     [Hypertekstoverføringsprotokoll (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) er grunnlaget for World Wide Web og grunnen til at websiden URLs begynner med - http://" eller https://" .. HTTPS er HTTP med et ekstra sikkerhetslag. Hver dag gjør nettlesere, skript og dataprogrammer milliarder av HTTP (S)   **Hent** Forespørsler om å få informasjon fra eksterne kilder. HTTP (S) Inkluderer også andre [verb](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) Spesielt PUT (å presse data til serveren) og DELETE (til DELETE-data fra serveren) .. Ja, PUT og DELETE er den riktige måten å sette inn data i og slette data fra, et datasett via HTTP (S) .. GET støttes av alle deler programvare som kan fungere med HTTP (S) .. Det er virkelig enkelt å jobbe med. Alle vet allerede hvordan man jobber med GET og mange vet hvordan man bruker POST (som kan brukes på i det vesentlige samme måte som GET) , så vi gjorde EDDTableFraHttpGet arbeid med GET og POST. Svært få mennesker (Selv få datamaskinprogrammerere) Har noen gang jobbet med PUT og DELETE. PUT og DELETE støttes generelt kun av dataspråk, så bruk av dem krever et dyktig program. Så PUT og DELETE er vanligvis en mye mer tung tilnærming gitt måten verktøyene har utviklet seg.
      
 ##### HttpGet Notes{#httpget-notes} 
 *    [Noter](#httpget-notes) 
@@ -3676,7 +3678,7 @@ Ikke alle har behov for denne typen finkornet versjon, men det er overveldende n
 ##### Takk{#thanks} 
 *    [Takk til CORDS for den grunnleggende ideen.](#thanks)   
 Grunnleggende ide for EDDTableFramtHttpGet (dvs. ved bruk av en HTTP GET forespørsel om å legge til data i et datasett) er fra UCARs (NCARs?)   [Cloud-verte datatjenester i sanntid (KORDER) ](https://github.com/earthcubeprojects-chords) Prosjekt. Format for parametrene i anmodningen (gjentatt *navn=verdi* , separert av &) er det samme standardformatet som brukes av HTML-skjemaer på nettsider. Det er en enkel og strålende ide og enda mer fordi det mesher så perfekt med ERDDAP Det eksisterende systemet for å håndtere tabelldata. Ideen er åpenbar i baksynet, men jeg (Bob) Jeg tenkte ikke på det. EDDTableFraHttp Få bruk av den grunnleggende ideen, kombinert med våre ideer om hvordan man implementerer den, for å lage et system i ERDDAP™ for å laste opp data. Bortsett fra den grunnleggende ideen om å bruke GET til å presse data inn i systemet, er EDDTableFromHttpGet implementasjon helt annerledes og helt uavhengig av CORDS og har ulike funksjoner (f.eks. loggfiler, biting av data, forskjellige sikkerhetssystem, CRUD-støtte, reproducerbare data) .. Vår eksponering for CORDS var bare en webinar. Vi så ikke på koden eller leste om prosjektet deres fordi vi umiddelbart visste at vi ønsket å implementere systemet på en annen måte. Men vi er takknemlige for den grunnleggende ideen. Full referanse til CORDS er
-Daniels, M. D., Kerkez, B., Chandrasekar, V., Graver, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014) .. Cloud-verte datatjenester i sanntid for geovitenskapene (KORDER) programvare. UCAR/NCAR - Jordobservasjonslaboratorium. [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+Daniels, M. D., Kerkez, B., Chandrasekar, V., Graver, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014) .. Cloud-verte datatjenester i sanntid for geovitenskapene (KORDER) programvare. UCAR/NCAR - Jordobservasjonslaboratorium. [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### EDDTableFra Hyrax Filer{#eddtablefromhyraxfiles} 
  [ **EDDTableFra Hyrax Filer** ](#eddtablefromhyraxfiles)   (Foreldet) aggregerer datafiler med flere variabler, hver med en eller flere delte dimensjoner (For eksempel tid, høyde (eller dybde) , breddegrad, lengdegrad) og tjenestegjort av en [ Hyrax   OPeNDAP server](https://www.opendap.org/software/hyrax-data-server) ..
@@ -3692,7 +3694,7 @@ Hvis det ikke er noen klager før 2020, kan denne datasetttypen fjernes. **
 * Denne klassen skjermskraper Hyrax websider med listene over filer i hver katalog. På grunn av dette er det svært spesifikt for det aktuelle formatet av Hyrax nettsider. Vi vil prøve å justere ERDDAP™ raskt hvis/når fremtidige versjoner av Hyrax Endre hvordan filene er oppført.
 * Den&lt;filDir&gt; innstillingen ignoreres. Siden denne klassen laster ned og lager en lokal kopi av hver ekstern datafil, ERDDAP™ tvinger filen Dir å være *bigParentDirectory* /kopi/ * datasetID * /.
 * For&lt; sourceUrl &gt;, bruk URL til basiskatalogen til datasettet i Hyrax server for eksempel
-    &lt; sourceUrl &gt;http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;/ sourceUrl &gt;
+    &lt; sourceUrl &gt; http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;/ sourceUrl &gt;
      (Legg den på én linje)   (Beklager at serveren ikke lenger er tilgjengelig) ..
 Den sourceUrl Nettsiden har vanligvis OPeNDAP Serverindeks av \\[ mappeName \\] På toppen.
 * Siden denne klassen alltid laster ned og lager en lokal kopi av hver ekstern datafil, bør du aldri pakke dette datasettet i [EDDTableCopy](#eddtablecopy) ..
@@ -3706,7 +3708,7 @@ Detaljer: Disse filene har flere rad-_størrelse variabler, hver med en prøve-_
 
 Et annet problem med disse filene: Principal-_Investigator rad-_size variabelen har ikke en prøve-_dimensjon attributt og følger ikke ovennevnte regel.
 
-Prøvefiler for denne type datasett kan finnes påhttps://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 Denne tjeneren er ikke lenger pålitelig tilgjengelig \\] ..
+Prøvefiler for denne type datasett kan finnes på https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020-10-21 Denne tjeneren er ikke lenger pålitelig tilgjengelig \\] ..
 
 Se denne klassens superklasse, [EDDTableFra Filer](#eddtablefromfiles) For informasjon om hvordan denne klassen fungerer og hvordan du bruker den.
 
@@ -3850,10 +3852,10 @@ Det første GenererDatasetsXml gjør for denne typen datasett etter at du har sv
  [ **EDDTableFra NOS** ](#eddtablefromnos)   (Deprekert) håndterer data fra en NOAA   [NOS](https://opendap.co-ops.nos.noaa.gov/axis/) kilde, som bruker [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) for forespørsler og svar. Det er veldig spesifikk å NOAA Ingens XML. Se prøven EDDTableFra NOS-datasett i datasett2.xml.
  
 ### EDDTableFromOBIS{#eddtablefromobis} 
- [ **EDDTableFromOBIS** ](#eddtablefromobis) håndtere data fra et Ocean Biogeografisk informasjonssystem (OBIS) server (varhttp://www.iobis.org ) .. Det er mulig at det ikke er mer aktive servere som bruker denne nå utdaterte typen OBIS serversystem.
+ [ **EDDTableFromOBIS** ](#eddtablefromobis) håndtere data fra et Ocean Biogeografisk informasjonssystem (OBIS) server (var http://www.iobis.org  ) .. Det er mulig at det ikke er mer aktive servere som bruker denne nå utdaterte typen OBIS serversystem.
 
 * OBIS-servere forventer en XML-forespørsel og returnerer en XML-respons.
-* Fordi alle OBIS-servere tjener samme variabler på samme måte (varhttp://iobis.org/tech/provider/questions) , trenger du ikke å spesifisere mye for å konfigurere et OBIS-datasett i ERDDAP ..
+* Fordi alle OBIS-servere tjener samme variabler på samme måte (var http://iobis.org/tech/provider/questions ) , trenger du ikke å spesifisere mye for å konfigurere et OBIS-datasett i ERDDAP ..
 * Du må inkludere a- creator\\_email " Attribut i det globale addAttributes Siden denne informasjonen brukes i lisensen. En egnet e-postadresse kan finnes ved å lese XML-responsen fra kildeadressen.
 * Du kan eller ikke kan få den globale egenskapen [&lt; subsetVariables &gt;] (#subsetvariables) å jobbe med en gitt OBIS-server. Hvis du prøver, bare prøv en variabel (For eksempel vitenskapelig navn eller genus) ..
 #### EDDTableFromOBIS skjelett XML{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ Det første GenererDatasetsXml gjør for denne typen datasett etter at du har sv
     * SWE (Sensor Web Aktivering) og SOS   (Sensorobservasjon) er [OpenGIS® standarder](https://www.ogc.org/standards) .. Nettstedet har standarddokumentene.
     * Den OGC Web Services Common Spesifikasjon Ver 1.1.0 ( OGC 06-121r3) dekker bygging av GET og POST-forespørsler (se § 7.2.3 og § 9) ..
     * Hvis du sender en getCapabilites xml forespørsel til en SOS server ( sourceUrl + "?service= SOS & Request= GetCapabilities ") , får du et xml resultat med en liste over stasjoner og observert Egenskaper som de har data til.
-    * En observertProperty er en formel URI referanse til en eiendom. For eksempel urn:ogc:fenomenon: lengdegrad:wgs84 ellerhttps://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * En observertProperty er en formel URI referanse til en eiendom. For eksempel urn:ogc:fenomenon: lengdegrad:wgs84 eller https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * En observertProperty er ikke en variabel.
-    * Mer enn én variabel kan ha samme observert Eiendom (For eksempel, inneTemp og utenfor Temp kan begge ha observert Eiendomhttps://mmisw.org/ont/cf/parameter/air\\_temperature) ..
+    * Mer enn én variabel kan ha samme observert Eiendom (For eksempel, inneTemp og utenfor Temp kan begge ha observert Eiendom https://mmisw.org/ont/cf/parameter/air\\_temperature ) ..
     * Hvis du sender en getObservation xml forespørsel til en SOS server, får du et xml resultat med beskrivelser av feltnavn i respons, feltenheter og data. Feltnavnene inkluderer lengdegrad, breddegrad, dybde (Kanskje) , og tid.
     * Hver dataVariable for en EDD-tabellFra SOS må inneholde en "observertProperty"-attributt som identifiserer den observerteProperty som må be om fra serveren for å få den variabelen. Ofte flere dataVariable S vil liste den samme kompositt observertProperty.
     * Datatypen for hver dataVariable kan ikke angis av serveren. I så fall må du se på XML-datasvarene fra serveren og tildele passende [&lt;dataType&gt;s] (#datatype) i ERDDAP™ Datasett dataVariable Definisjoner.
@@ -3991,11 +3994,11 @@ Hvis det ikke er noen klager før 2020, kan denne datasetttypen fjernes. **
 * Denne klassen leser katalog.xml filer som betjenes av THREDDS med listene over&lt;katalogRefs&gt; (referanser til ytterligere katalog.xml underfiler) og&lt;Datasett&gt;s (datafiler) ..
 * Den&lt;filDir&gt; innstillingen ignoreres. Siden denne klassen laster ned og lager en lokal kopi av hver ekstern datafil, ERDDAP™ tvinger filen Dir å være *bigParentDirectory* /kopi/ * datasetID * /.
 * For&lt; sourceUrl &gt;, bruk URL til katalog.xml-filen for datasettet i TREDDS-serveren, for eksempel: for denne URL som kan brukes i en nettleser,
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020-10-21 Denne serveren er ikke lenger pålitelig tilgjengelig. \\] ,
-bruk&lt; sourceUrl &gt;https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;/ sourceUrl &gt;
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020-10-21 Denne serveren er ikke lenger pålitelig tilgjengelig. \\] ,
+bruk&lt; sourceUrl &gt; https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;/ sourceUrl &gt;
      (Legg den på én linje) ..
 * Siden denne klassen alltid laster ned og lager en lokal kopi av hver ekstern datafil, bør du aldri pakke dette datasettet i [EDDTableCopy](#eddtablecopy) ..
-* Denne datasetttypen støtter en valgfri, sjelden brukt, spesiell tag,&lt;spesialMode &gt; *modus* &lt;/spesialMode&gt; som kan brukes til å spesifisere at spesielle, hardkodede regler bør brukes til å bestemme hvilke filer som skal lastes ned fra serveren. Den eneste gyldige *modus* er SAMOS som brukes med datasett frahttps://tds.coaps.fsu.edu/thredds/catalog/samoså laste ned bare filene med siste versjonsnummer.
+* Denne datasetttypen støtter en valgfri, sjelden brukt, spesiell tag,&lt;spesialMode &gt; *modus* &lt;/spesialMode&gt; som kan brukes til å spesifisere at spesielle, hardkodede regler bør brukes til å bestemme hvilke filer som skal lastes ned fra serveren. Den eneste gyldige *modus* er SAMOS som brukes med datasett fra https://tds.coaps.fsu.edu/thredds/catalog/samos å laste ned bare filene med siste versjonsnummer.
 * Se denne klassens superklasse, [EDDTableFra Filer](#eddtablefromfiles) For informasjon om hvordan denne klassen fungerer og hvordan du bruker den.
 * Se eksempelene 1D, 2D, 3D og 4D for [EDDTableFraNcFiler](#eddtablefromncfiles) ..
      
@@ -4182,8 +4185,8 @@ Når serveren er ferdig med å håndtere en forespørsel, vil den sjekke hvor le
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-vil forårsake en matchende lokal sourceUrl   (somhttps://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-Inn i offentligheten sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) ..
+vil forårsake en matchende lokal sourceUrl   (som https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+Inn i offentligheten sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) ..
 Eventuelle endringer i denne etikettens verdi vil tre i kraft neste gang ERDDAP™ Leser datasets.xml , inkludert som reaksjon på et datasett [flagg](/docs/server-admin/additional-information#flag) ..
 
 Men av sikkerhetsgrunner og grunner knyttet til abonnementssystemet, **Ikke bruk denne taken&#33;**   
@@ -4314,7 +4317,7 @@ Brukere er ofte bare uvitende om at deres forespørsler er problemer. De er ofte
     ```
     * Du trenger ikke å omstarte ERDDAP™ For endringer i&lt;ForespørselBlacklist&gt; å tre i kraft. Endringene vil bli oppdaget neste gang ERDDAP™ Sjekk om datasett må lastes på nytt. Eller, kan du fremskynde prosessen ved å besøke en [setDataset Flag URL](/docs/server-admin/additional-information#set-dataset-flag) for alle datasett.
     * Din ERDDAP™ daglig rapport inneholder en liste/tall av de mest aktive tillatte og blokkerte forespørerne.
-    * Hvis du vil finne ut hvilket domene/institusjon som er relatert til en numerisk IP-adresse, kan du bruke en gratis, omvendt DNS-netttjeneste som [https://network-tools.com/](https://network-tools.com/) ..
+    * Hvis du vil finne ut hvilket domene/institusjon som er relatert til en numerisk IP-adresse, kan du bruke en gratis, omvendt DNS-netttjeneste som [ https://network-tools.com/ ](https://network-tools.com/) ..
     * Det kan være tider når det er fornuftig å blokkere visse brukere på et høyere nivå, for eksempel ondsinnede brukere. For eksempel kan du blokkere deres tilgang til alt på serveren din, ikke bare ERDDAP .. På Linux er en slik metode å bruke [iptables](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) .. For eksempel kan du legge til en regel som vil blokkere alt kommer fra 199.51.100.0 med kommandoen
 iptables -I INPUT -s 199.51.100.0 -j DROPS
        
@@ -4738,17 +4741,17 @@ ADVARSEL: Hvis du legger til egendefinerte paletter i din ERDDAP™ og du har ED
     * For øyeblikket, for EDDGrid underklasser, alle endringer i metadata eller til en aksevariabel (For eksempel et nytt tidspunkt for data i nærheten av sanntid) anses som en endring, men en reloading av datasettet anses ikke som en endring (i seg selv) ..
     * For tiden, for EDDTable-underklasser, regnes enhver reloading av datasettet som en endring.
     * I dag er det bare to typer handlinger tillatt:
-        * "http://"ellerhttps://"-- Hvis handlingen starter medhttp://"ellerhttps://", ERDDAP™ vil sende et HTTP GET forespørsel til den angitte URL. Svaret vil bli ignorert. For eksempel kan URL-adressen fortelle noen andre webtjenester å gjøre noe.
+        * " http://" eller https://" -- Hvis handlingen starter med http://" eller https://" , ERDDAP™ vil sende et HTTP GET forespørsel til den angitte URL. Svaret vil bli ignorert. For eksempel kan URL-adressen fortelle noen andre webtjenester å gjøre noe.
             * Hvis URL-en har en spørringsdel (etter) Det må allerede være [prosent kodet](https://en.wikipedia.org/wiki/Percent-encoding) .. Du må kode spesielle tegn i begrensningene (annet enn den opprinnelige \"&\" og den viktigste '=' i begrensninger) inn i formen %HH, hvor HH er den 2-siffers heksadesimale verdien av tegnet. Vanligvis trenger du bare å konvertere noen av tegntegnene: % til %25, og til %26, " til %22,&lt;i% 3C, = i% 3D, &gt; i% 3E, + i% 2B, | til %7C, \\[ til %5B, \\] til %5D, mellomrom til %20, og konvertere alle tegn over #127 til deres UTF-8-form og deretter prosent kode hver byte av UTF-8-formen til %H-format (spør en programmerer om hjelp) ..
 For eksempel, & stationID &gt;=-41004"
 blir & stationID %3E=%2241004%22
 Prosent koding er vanligvis nødvendig når du får tilgang til ERDDAP via annen programvare enn en nettleser. Browsere håndterer vanligvis prosent koding for deg.
 I noen situasjoner, må du prosent kode alle andre tegn enn A-Za-z0-9-_-&#33;. ~ \" () \\*, men likevel ikke kode den opprinnelige '&' eller den viktigste '=' i begrensninger.
-Programmeringsspråk har verktøy for å gjøre dette (for eksempel se Java 's [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) og Java Scripts [encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) og det er
+Programmeringsspråk har verktøy for å gjøre dette (for eksempel se Java 's [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) og Java Scripts [encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) og det er
                  [nettsteder som prosent kode/kode for deg](https://www.url-encode-decode.com/) ..
             * Siden datasets.xml er en XML-fil, du må også & kode ALL '&', '&lt;', og '&gt;' i URL som '&amp;', '&lt;', og '&gt;' etter prosent koding.
             * Eksempel: For en URL du kan skrive inn i en nettleser som:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 Du bør angi en&lt;onChange&gt; tag via (på én linje) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ Dette kan også påvirke sorteringen av korte ord mot lengre ord som starter med
     * A sourceUrl Kan begynne med http:// , https:// , ftp://, og kanskje andre prefikser. https tilkoblinger lese og sjekke kildens digitale sertifikat for å sikre at kilden er hvem de sier de er. I sjeldne tilfeller kan denne sjekken mislykkes med feilen "javax.net.ssl.SSLProtocolException: håndtrykksvarsel: ukjent\\_name". Dette skyldes sannsynligvis domenenavnet på sertifikatet som ikke samsvarer med domenenavnet du bruker. Du kan og bør lese detaljene i sourceUrl sertifikat i nettleseren din, spesielt listen over "DNS-navn" i delen "subject Alternative Name".
         
 I noen tilfeller sourceUrl du bruker kan være et alias av domenenavnet på sertifikatet. For eksempel
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/vil kaste denne feilen, men
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/, som bruker domenenavnet på sertifikatet, vil ikke. Løsningen i disse tilfellene er derfor å finne og bruke domenenavnet på sertifikatet. Hvis du ikke finner det på sertifikatet, kontakte dataleverandøren.
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ vil kaste denne feilen, men
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ , som bruker domenenavnet på sertifikatet, vil ikke. Løsningen i disse tilfellene er derfor å finne og bruke domenenavnet på sertifikatet. Hvis du ikke finner det på sertifikatet, kontakte dataleverandøren.
         
 I andre tilfeller kan domenenavnet på sertifikatet være for en gruppe navn. Hvis dette skjer eller problemet er ellers uløselig, vennligst send en e-post til Chris. John på noaa.gov for å rapportere problemet.
          
@@ -5221,7 +5224,7 @@ blir & stationID %3E=%2241004%22
 Prosent koding er vanligvis nødvendig når du får tilgang til ERDDAP via annen programvare enn en nettleser. Browsere håndterer vanligvis prosent koding for deg.
 I noen situasjoner, må du prosent kode alle andre tegn enn A-Za-z0-9-_-&#33;. ~ \" () \\*, men likevel ikke kode den opprinnelige '&' eller den viktigste '=' ..
 Programmeringsspråk har verktøy for å gjøre dette (for eksempel se Java 's [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-og Java Scripts [encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) og det er
+og Java Scripts [encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) og det er
          [nettsteder som prosent kode/kode for deg](https://www.url-encode-decode.com/) ..
     * Siden datasets.xml er en XML-fil, du må også & kode ALL '&', '&lt;', og '&gt;' i URL som '&amp;', '&lt;', og '&gt;' etter prosent koding.
     *    infoUrl Det er unikt å ERDDAP .. Det er ikke fra noen metadatastandard.
@@ -5257,7 +5260,28 @@ Når et datasett lastes inn ERDDAP ,
     ```
     * Hvis \\[ standard \\] " oppstår i attributtverdien, det vil bli erstattet av standarden ERDDAP™ lisens fra&lt;standardLicense&gt; tag in ERDDAP 's
          \\[ tomcat \\] /webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml fil.
-         
+
+###### klassifisering{#classification} 
+*    [ **klassifisering** ](#classification) klassifiseringsnivå for dataene.
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * Godkjennbare verdier er _uklassifiserte_, _konfidentiell_, _begrenset_, _hemmelig_, eller _top_hemmelig_.
+
+###### emne_kategori{#topic_category} 
+*    [ **emne_kategori** ](#topic_category) Høynivå geografiske data tematisk klassifisering for å bistå i gruppering og søk av tilgjengelige geografiske datasett.
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * Godkjennbare verdier er _biota_, _boundaries_, _klimatologi_meteorologi_atomosphere_, _economy_, _elativ_, _miljø_, _farming_, _geo scientific_information_, _helse_, _imagery_base_maps_earth_cover_, _inland_waters_, _telligence_military_, _location_, _oceans_, _planning_cadastre_, _society_, _struktur_, _transporasjon_, _utlities_communication_.
+
+###### vedlikehold_frekvens{#maintenance_frequency} 
+*    [ **vedlikehold_frekvens** ](#maintenance_frequency) Frekvens med hvilke modifikasjoner og slettinger gjøres til dataene etter at det først er produsert.
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * Godkjente verdier er akseptable verdier er _årlig_, _as_needed_, _årlig_, _kontinuerlig_, _daglig_, _fortnightly_, _uregelmessig_, _ månedlig_, _ikke_planlagt_, _fjerdedels_, _ukjent_, _ukelig_.
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) er fra de utdaterte [ACDD 1.0](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (som ble identifisert i Metadata\\_Conventions som- Unidata Datasett Discovery v1.0") metadatastandard. Attributverdien var en kommadelt liste over metadatakonvensjoner som ble brukt av dette datasettet.
 Hvis et datasett bruker ACDD 1.0, er denne attributten STRONGLY KJØPET for eksempel,
@@ -5389,7 +5413,7 @@ Hvis indeksen er&lt;1. datasettet anses oppdatert.
 Hvis indeksen er&lt;=1, datasettet anses utdatert.
 Hvis indeksen er&lt;=2, datasettet anses svært utdatert.
     
-Den testOutOfDate Verdien brukes også av ERDDAP™ å genererehttps://*yourDomain*/erddap/outOfDateDatasets.htmlNettside ( [eksempel](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) som viser datasettene som har&lt; testOutOfDate &gt; tagger, med datasett rangert etter hvor utdatert de er. Hvis du endrer filtypen (fra .html til .csv, .jsonlCSV , .nc , .tsv ...) , kan du få den informasjonen i ulike filformater.
+Den testOutOfDate Verdien brukes også av ERDDAP™ å generere https://*yourDomain*/erddap/outOfDateDatasets.html Nettside ( [eksempel](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) som viser datasettene som har&lt; testOutOfDate &gt; tagger, med datasett rangert etter hvor utdatert de er. Hvis du endrer filtypen (fra .html til .csv, .jsonlCSV , .nc , .tsv ...) , kan du få den informasjonen i ulike filformater.
     
 Når det er mulig, [Generer DatasetsXml](#generatedatasetsxml) Legger til en testOutOfDate til den globale addAttributes av et datasett. Denne verdien er et forslag basert på informasjonen som er tilgjengelig for CreateDatasetsXml. Hvis verdien ikke er riktig, endre den.
     
@@ -5948,8 +5972,8 @@ pakket verdi = pakket Verdi \\* scale\\_factor + add\\_offset
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone er en valgfri attributt som brukes av ERDDAP™   (Ingen metadatastandarder) for [Tid og tid](#time-units) , som kan være i nettbaserte datasett eller tabelldatasett.
     * Standarden er - Zulu " (som er den moderne tidssoneversjonen av GMT) ..
-    * Bakgrunnsinformasjon: "tid forskyvninger" (f.eks. Stillehavsstandardtid, -08:00, GMT-8) er faste, spesifikke, forskyvninger i forhold til Zulu   (GMT) .. I motsetning til dette er tidssonene de mye mer komplekse tingene som påvirkes av Daylight Sparing. (f.eks. "US/Pacific") , som har hatt forskjellige regler på forskjellige steder på ulike tidspunkter. Tidssonene har alltid navn siden de ikke kan oppsummeres av en enkel offsetverdi (se  "TZ-databasenavn" kolonne i tabellen på [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) .. ERDDAP 's time\\_zone attributt hjelper deg å håndtere lokale tidsdata fra en tidssone (f.eks. 1987-03-25T17:32:05 Stillehavet Tid) .. Hvis du har streng- eller numeriske tidsdata med en (Fast) tidsforskyvning, bør du bare justere dataene til Zulu   (som er hva ERDDAP™ Ønsker) ved å spesifisere en annen basistid i enhetsattributten (f.eks. " timer siden 1970-01-01T08:00:00Z", Legg merke til T08 for å spesifisere tidsforsinkelsen) , og alltid sjekke resultatene for å sikre at du får resultatene du vil ha.
-    * For tidsstempelvariabler med kildedata fra Strenger kan du angi en tidssone som fører ERDDAP™ å konvertere lokale tidssonekildetider (Noen i Standard tid, noen i Daylight Spar tid) i Zulu ganger (som alltid er i standardtid) .. Listen over gyldige tidssonenavn er sannsynligvis identisk med listen i TZ-kolonnen ved [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) .. Vanlige amerikanske tidssoner er: US/Hawaii, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, US/Eastern.
+    * Bakgrunnsinformasjon: "tid forskyvninger" (f.eks. Stillehavsstandardtid, -08:00, GMT-8) er faste, spesifikke, forskyvninger i forhold til Zulu   (GMT) .. I motsetning til dette er tidssonene de mye mer komplekse tingene som påvirkes av Daylight Sparing. (f.eks. "US/Pacific") , som har hatt forskjellige regler på forskjellige steder på ulike tidspunkter. Tidssonene har alltid navn siden de ikke kan oppsummeres av en enkel offsetverdi (se  "TZ-databasenavn" kolonne i tabellen på [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) .. ERDDAP 's time\\_zone attributt hjelper deg å håndtere lokale tidsdata fra en tidssone (f.eks. 1987-03-25T17:32:05 Stillehavet Tid) .. Hvis du har streng- eller numeriske tidsdata med en (Fast) tidsforskyvning, bør du bare justere dataene til Zulu   (som er hva ERDDAP™ Ønsker) ved å spesifisere en annen basistid i enhetsattributten (f.eks. " timer siden 1970-01-01T08:00:00Z", Legg merke til T08 for å spesifisere tidsforsinkelsen) , og alltid sjekke resultatene for å sikre at du får resultatene du vil ha.
+    * For tidsstempelvariabler med kildedata fra Strenger kan du angi en tidssone som fører ERDDAP™ å konvertere lokale tidssonekildetider (Noen i Standard tid, noen i Daylight Spar tid) i Zulu ganger (som alltid er i standardtid) .. Listen over gyldige tidssonenavn er sannsynligvis identisk med listen i TZ-kolonnen ved [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) .. Vanlige amerikanske tidssoner er: US/Hawaii, US/Alaska, US/Pacific, US/Mountain, US/Arizona, US/Central, US/Eastern.
     * For tidsstempelvariabler med numeriske kildedata kan du angi " time\\_zone " Attribut, men verdien må være Zulu " eller "UTC". Hvis du trenger støtte til andre tidssoner, vennligst e-post Chris. John på noaa.gov.
          
 ###### argent_time_just{#legacy_time_adjust} 

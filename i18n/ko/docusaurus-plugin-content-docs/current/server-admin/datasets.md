@@ -42,7 +42,7 @@ dataset 설정 ERDDAP™ dataset의 디렉토리 또는 URL에 포인팅의 문�
 외부 소스에서 실제 데이터 파일의 제출은 거대한 보안 위험이므로 ERDDAP™ 그것을 취급하지 않습니다. 예를 들어, 이메일에 대한 데이터 공급자와 함께 작동하는 솔루션을 파악해야 합니다. (작은 파일) , 구름에서 잡아 (예를 들면, DropBox 또는 Google 드라이브) , sftp 사이트 (비밀번호) , 또는 운동화 이름 * (USB 엄지 드라이브 또는 외부 하드 드라이브) · 당신은 아마 당신이 알고있는 사람들로부터 파일을 받아 들일 수 있습니다. 바이러스에 대한 파일을 스캔하고 다른 보안 주의를해야합니다.
 
 링크가 없습니다. ERDDAP™ 데이터 공급자 양식에 (예를 들어, ERDDAP™ 홈 페이지) · 대신 누군가가 자신의 데이터를 가지고 싶어 할 때 ERDDAP , 당신은 같은 이메일 말을 보낼 수 있습니다:
-그렇습니다, 우리는 당신의 자료를에 얻을 수 있습니다 ERDDAP · 시작하려면 양식을 작성하십시오.https://*yourUrl*/erddap/dataProviderForm.html  (또는 http:// 이름 * https:// 지원되지 않음) ·
+그렇습니다, 우리는 당신의 자료를에 얻을 수 있습니다 ERDDAP · 시작하려면 양식을 작성하십시오. https://*yourUrl*/erddap/dataProviderForm.html   (또는 http:// 이름 * https:// 지원되지 않음) ·
 당신이 끝내기 후에, 나는 당신에게 마지막 세부사항을 밖으로 일할 것입니다.
 양식을 보면 (충전하지 않고) , 당신은 위에 모양을 볼 수 있습니다 ERD 이름 * ERDDAP :: [제품정보](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) · [부품 1](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) · [부품 2](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) · [부품 3](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) · [부품 4](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) · 이 링크에 ERD   ERDDAP™ 데이터에 데이터를 추가하려는 경우, 정보를 제출하지 마십시오. ERD   ERDDAP ·
 
@@ -190,23 +190,23 @@ GenerateDatasetsXml의 출력은 거친 초안입니다.
      
 #####  EDDGrid 인기 카테고리{#eddgridfromthreddscatalog} 
 이 EDDType은 모든 것을 생성합니다 datasets.xml 모두에 필요한 펑크 [ EDDGrid 사이트맵](#eddgridfromdap) THREDDS를 통해 crawling recursively에 의해 찾을 수있는 데이터 세트 (이름 *) 카탈로그. THREDDS 카탈로그 URL의 많은 형태가 있습니다. 이 옵션은 /catalog/와 함께 THREDDS .xml URL을 요구합니다. 예를 들어,
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml또는
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml 또는
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (관련 .html 카탈로그에
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html허용되지 않는, EDDGrid fromThreddsCatalog).
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html 허용되지 않는, EDDGrid fromThreddsCatalog).
 당신은 문제가있는 경우 EDDGrid 인기 동영상 상표:
 * 사용중인 URL을 확인하면 /catalog/가 포함되어 있으며 /catalog.xml .
-* 가능한 경우 공용 IP 주소를 사용하십시오. (예를 들어,https://oceanwatch.pfeg.noaa.gov) URL에서 로컬 숫자 IP 주소가 아닌 (예를 들어,https://12.34.56.78) · THREDDS가 로컬 숫자 IP 주소를 통해 접근 할 수 있다면, [&lt;변환ToPublicSourceUrl&gt;] (#converttopublicsourceurl에 대해) · ERDDAP™ 사용자는 심지어 공공 주소를 참조 ERDDAP™ 로컬 숫자 주소에서 데이터를 가져옵니다.
+* 가능한 경우 공용 IP 주소를 사용하십시오. (예를 들어, https://oceanwatch.pfeg.noaa.gov ) URL에서 로컬 숫자 IP 주소가 아닌 (예를 들어, https://12.34.56.78 ) · THREDDS가 로컬 숫자 IP 주소를 통해 접근 할 수 있다면, [&lt;변환ToPublicSourceUrl&gt;] (#converttopublicsourceurl에 대해) · ERDDAP™ 사용자는 심지어 공공 주소를 참조 ERDDAP™ 로컬 숫자 주소에서 데이터를 가져옵니다.
 * 당신이 해결할 수없는 문제가 있다면, [문제 해결 팁](#troubleshooting-tips) ·
 * 이들의 저수준 부호는 지금 사용합니다 Unidata netcdf-java 카탈로그 크롤러 코드 (사이트맵 카탈로그) 그래서 그것은 모든 THREDDS 카탈로그를 처리 할 수 (surprisingly complex일 수 있는) 이름 * Unidata 그 코드.
          
 #####  EDDGrid LonPM180Erddap카탈로그{#eddgridlonpm180fromerddapcatalog} 
 이 EDDType은 datasets.xml 이름 * [ EDDGrid 론PM180](#eddgridlonpm180) 모든 데이터 세트 EDDGrid 데이터 세트 ERDDAP 180보다 더 큰 경도 값이 있습니다.
-* 가능한 경우 공용 IP 주소를 사용하십시오. (예를 들어,https://oceanwatch.pfeg.noaa.gov) URL에서 로컬 숫자 IP 주소가 아닌 (예를 들어,https://12.34.56.78) · 만약에 ERDDAP™ 로컬 숫자 IP 주소를 통해만 액세스할 수 있습니다. [&lt;변환ToPublicSourceUrl&gt;] (#converttopublicsourceurl에 대해) · ERDDAP™ 사용자는 심지어 공공 주소를 참조 ERDDAP™ 로컬 숫자 주소에서 데이터를 가져옵니다.
+* 가능한 경우 공용 IP 주소를 사용하십시오. (예를 들어, https://oceanwatch.pfeg.noaa.gov ) URL에서 로컬 숫자 IP 주소가 아닌 (예를 들어, https://12.34.56.78 ) · 만약에 ERDDAP™ 로컬 숫자 IP 주소를 통해만 액세스할 수 있습니다. [&lt;변환ToPublicSourceUrl&gt;] (#converttopublicsourceurl에 대해) · ERDDAP™ 사용자는 심지어 공공 주소를 참조 ERDDAP™ 로컬 숫자 주소에서 데이터를 가져옵니다.
          
 #####  EDDGrid Lon0360ErddapCatalog에서{#eddgridlon0360fromerddapcatalog} 
 이 EDDType은 datasets.xml 이름 * [ EDDGrid 론0360](#eddgridlon0360) 모든 데이터 세트 EDDGrid 데이터 세트 ERDDAP 어떤 경도 값이 0 미만입니다.
-* 가능한 경우 공용 IP 주소를 사용하십시오. (예를 들어,https://oceanwatch.pfeg.noaa.gov) URL에서 로컬 숫자 IP 주소가 아닌 (예를 들어,https://12.34.56.78) · 만약에 ERDDAP™ 로컬 숫자 IP 주소를 통해만 액세스할 수 있습니다. [&lt;변환ToPublicSourceUrl&gt;] (#converttopublicsourceurl에 대해) · ERDDAP™ 사용자는 심지어 공공 주소를 참조 ERDDAP™ 로컬 숫자 주소에서 데이터를 가져옵니다.
+* 가능한 경우 공용 IP 주소를 사용하십시오. (예를 들어, https://oceanwatch.pfeg.noaa.gov ) URL에서 로컬 숫자 IP 주소가 아닌 (예를 들어, https://12.34.56.78 ) · 만약에 ERDDAP™ 로컬 숫자 IP 주소를 통해만 액세스할 수 있습니다. [&lt;변환ToPublicSourceUrl&gt;] (#converttopublicsourceurl에 대해) · ERDDAP™ 사용자는 심지어 공공 주소를 참조 ERDDAP™ 로컬 숫자 주소에서 데이터를 가져옵니다.
          
 ##### EDDs파일{#eddsfromfiles} 
 시작 디렉토리를 제공,이 디렉토리와 모든 하위 디렉토리를 가로 질러 검색하는 데이터 파일의 각 그룹에 대한 데이터 세트를 만들 수 있습니다.
@@ -566,7 +566,7 @@ NCCSV 1.0 파일은 무수한 정수 데이터 유형을 지원하지 않습니�
 ### Data Type 댓글{#data-type-comments} 
 * 긴, ulong 및 많은 파일 유형의 char 데이터에 대한 가난한 지원 때문에, 우리는 이러한 데이터 유형의 사용을 차별 ERDDAP · 가능한 경우, 긴과 우롱 대신 두 배를 사용하며, 차 대신 문자열을 사용합니다.
      
-* 메타데이터 -(OPeN)DAP's .das 및 .dds 응답은 긴 또는 ulong 속성 또는 데이터 유형을 지원하지 않습니다 (그리고 대신 두 배로 표시) , 대신 사용할 수 있습니다 ERDDAP metadata의 tabular 표현 http · erddap/ **(주)** / 한국어 * datasetID * HTML 웹 페이지 (예를 들어, [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (다른 파일 유형, 예를 들어, .csv, .htmlTable · .itx · .json · .jsonlCSV1 · .jsonlCSV · .jsonlKVP · .mat · .nc · .nccsv · .tsv · .xhtml ) 또는 .nccsv Metadata 응답 (예를 들어, [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) 한국어 .nccsv Metadata는 tabular datasets에서만 가능합니다.) , 모든 자료 유형을 지원하는 둘 다 (, 긴, ulong 및 차) ·
+* 메타데이터 -(OPeN)DAP's .das 및 .dds 응답은 긴 또는 ulong 속성 또는 데이터 유형을 지원하지 않습니다 (그리고 대신 두 배로 표시) , 대신 사용할 수 있습니다 ERDDAP metadata의 tabular 표현 http · erddap/ **(주)** / 한국어 * datasetID * HTML 웹 페이지 (예를 들어, [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (다른 파일 유형, 예를 들어, .csv, .htmlTable · .itx · .json · .jsonlCSV1 · .jsonlCSV · .jsonlKVP · .mat · .nc · .nccsv · .tsv · .xhtml ) 또는 .nccsv Metadata 응답 (예를 들어, [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) 한국어 .nccsv Metadata는 tabular datasets에서만 가능합니다.) , 모든 자료 유형을 지원하는 둘 다 (, 긴, ulong 및 차) ·
          
 ### 미디어 파일{#media-files} 
 모든 데이터는 숫자 또는 텍스트의 배열입니다. 일부 데이터 세트는 이미지, 오디오 및 비디오 파일과 같은 미디어 파일을 포함하고 있습니다. ERDDAP™ 미디어 파일에 대한 액세스를 얻기 위해 쉽게 만들 수있는 몇 가지 특수 기능이 있습니다. 그것은 2 단계 과정입니다:
@@ -604,7 +604,7 @@ NCCSV 1.0 파일은 무수한 정수 데이터 유형을 지원하지 않습니�
 ### AWS S3 파일로 작업{#working-with-aws-s3-files} 
  [Amazon 웹 서비스 (사이트맵) ](https://aws.amazon.com) 의 판매 [클라우드 컴퓨팅](https://en.wikipedia.org/wiki/Cloud_computing) 서비스. [사이트맵](https://aws.amazon.com/s3/) AWS가 제공하는 객체 저장 시스템입니다. 전통적인 파일 시스템의 감독 및 파일 대신 (PC에서 하드 드라이브처럼) , S3는 "objects"를 붙드는 다만 "buckets"를 제안합니다 (우리는 그들을 호출합니다 "files" ) ·
 
-ASCII 파일 (예를 들어, .csv) · ERDDAP™ 물통에 있는 파일과 직접 작동할 수 있습니다. 할 필요가있는 유일한 것은 지정합니다.&lt;fileDir&gt; AWS 버킷의 특정 형식을 사용하여 dataset에 대한, 예를 들어,https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/· 사용 안 함&lt;캐시FromUrl&gt; . 자세히 보기
+ASCII 파일 (예를 들어, .csv) · ERDDAP™ 물통에 있는 파일과 직접 작동할 수 있습니다. 할 필요가있는 유일한 것은 지정합니다.&lt;fileDir&gt; AWS 버킷의 특정 형식을 사용하여 dataset에 대한, 예를 들어, https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ · 사용 안 함&lt;캐시FromUrl&gt; . 자세히 보기
 
 그러나 바이너리 파일 (₢ 킹 .nc , .grib, .bufr, 그리고 .hdf 파일 형식) , 당신은 사용을 필요로 합니다&lt;cacheFromUrl&gt; 시스템 아래에 설명. ERDDAP , netcdf 자바 (이름 * ERDDAP™ 이 파일에서 데이터를 읽는 용도) , 및 다른 과학적인 자료 소프트웨어는 제안하는 전통적인 파일 시스템에 있는 파일로 일하기 위하여 디자인됩니다 [블록 레벨](https://en.wikipedia.org/wiki/Block-level_storage) 파일 연결 (파일의 펑크를 읽을 수 있음) S3만 제공 [파일 수준 (기타 제품) ](https://en.wikipedia.org/wiki/Block-level_storage) 파일 연결 (전체 파일을 읽을 수 있음) · AWS는 S3에 대안을 제공합니다, [회사 소개 (사이트맵) ](https://aws.amazon.com/ebs/) ), 파일에 구획 수평 접근을 지원하는 그러나 S3 보다는 더 비싼, 그래서 자료 파일의 대량 저장을 위해 드물게 사용됩니다. (그래서 사람들이 구름에 데이터를 저장한다고 말할 때 (사이트맵) 저렴 한, 그것은 일반적으로 오렌지 비교에 사과입니다.) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 해당 객체의 대응 URl은
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 AWS는 URL이 어떻게 구성되었는지에 약간의 변화를 지원하지만, ERDDAP™ 이 1개의 특정한 체재를 요구합니다:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 이름 * ERDDAP v2.29, 이제 사용할 수 있습니다 `·` 버킷 URL 대신 URI 형식. 이것은에 의해 사용되는 형식입니다. [AWS s3의 cli](https://docs.aws.amazon.com/cli/latest/reference/s3/) ·
 · *버킷 이름* / 한국어 *주요 특징* 
@@ -697,22 +697,22 @@ dataset가 거대한 Gridded 데이터 파일의 거대한 컬렉션 인 경우,
 모든 경우 AWS SDK가 필요하므로 AWS 계정이 필요합니다. Java   (이름 * ERDDAP™ 버킷의 내용에 대한 정보를 검색) AWS 계정 자격 증명을 요구합니다. (더 많은) 
 
  ERDDAP™ AWS S3 Buckets만 접근할 수 있습니다.&lt;캐시FromUrl&gt;] (#cachefromurl의 경우) (주)&lt;fileDir&gt;) 특정 형식으로:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 이름 *
 
 * BucketName은 버킷 이름의 짧은 형태입니다, 예를 들어 noaaa-goes17 .
 * aws-region, e.g., us-east-1, 테이블 중 하나에있는 "Region"열에서 [AWS 서비스 종료점](https://docs.aws.amazon.com/general/latest/gr/rande.html) 버킷이 실제로 있습니다.
 * 접두사는 선택 사항입니다. 현재, 그것은 끝해야 '/' ·
 
-예를 들어,https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+예를 들어, https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 이 URL 형식은 AWS S3 권고 중 하나입니다. [버킷 접근](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) 이름 * [접두사의이 설명](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) · ERDDAP™ 버킷 URL과 옵션 접두사를 지정하려면 하나의 URL로 결합해야 합니다.&lt;cacheFromUrl&gt; (또는&lt;fileDir&gt;) 파일이 있습니다.
 
 #### 공중 AWS S3 물통을 시험하십시오{#test-public-aws-s3-buckets} 
 공개 버킷의 경우 브라우저의 AWS S3 디렉토리의 버킷 URL을 테스트하고, 예를 들어,
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) 버킷 URL이 정확하고 적합하다면 ERDDAP , XML 문서를 반환합니다. (이름 *) 그 버킷의 내용 목록. 불행히도, 전체 URL (i.e., 버킷 URL 플러스 접두사) 이름 * ERDDAP™ 주어진 dataset를 원하면 브라우저에서 작동하지 않습니다. AWS는 브라우저에서 쉽게 버킷의 계층을 검색 할 수있는 시스템을 제공하지 않습니다. (부정확한 경우, Chris에게 이메일을 보내십시오. noaaa.gov에서 존. 그렇지 않으면, 아마존,이에 대한 지원을 추가하십시오&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) 버킷 URL이 정확하고 적합하다면 ERDDAP , XML 문서를 반환합니다. (이름 *) 그 버킷의 내용 목록. 불행히도, 전체 URL (i.e., 버킷 URL 플러스 접두사) 이름 * ERDDAP™ 주어진 dataset를 원하면 브라우저에서 작동하지 않습니다. AWS는 브라우저에서 쉽게 버킷의 계층을 검색 할 수있는 시스템을 제공하지 않습니다. (부정확한 경우, Chris에게 이메일을 보내십시오. noaaa.gov에서 존. 그렇지 않으면, 아마존,이에 대한 지원을 추가하십시오&#33;) 
 
 #### 버킷의 내용보기{#viewing-the-contents-of-a-bucket} 
-S3 버킷은 종종 파일의 두 가지 범주를 포함, 가짜 하위 디렉토리의 몇, 이는 몇 가지가 될 수 ERDDAP™ 데이터셋. 으로 ERDDAP™ datasets, 시작 디렉토리를 알아야 합니다.&lt;cacheFromUrl&gt; (또는&lt;fileDir&gt;) 및 파일의 하위 설정 식별 파일 이름의 형식. 브라우저의 버킷 전체 내용을 보려면 S3가 먼저 1000 파일을 보여 주면 충분합니다. 현재 버킷의 모든 내용을 볼 수있는 가장 좋은 방법은 버킷을 만드는 것입니다. [EDDTable파일이름](#eddtablefromfilenames) 데이터셋 (PC에서 ERDDAP™ 그리고/또는 당신의 공중에 ERDDAP ) , 디렉토리 구조를 검색하고 파일을 다운로드 할 수있는 쉬운 방법을 제공합니다. 더 보기&lt;fileDir&gt; 위의 URL이 될 것입니다, 예,https://noaa-goes17.s3.us-east-1.amazonaws.com· \\[ 왜 AWS S3가 AWS 계정없이이 작업을 할 수있는 빠르고 쉬운 방법을 제공합니까? \\] 나는 비 아마존 네트워크에 내 PC에 이것을 할 때, 아마존은 속임수에 대한 응답을 느리게 나타납니다 (약 100 (·) chunk 당 파일) 첫 번째 몇 척 후 (chunk 당 1000의 파일) 다운로드 버킷이 많은 파일이 있을 수 있기 때문에 (noaaa-goes17 은 26 백만) , 버킷의 모든 내용을 얻을 수 있습니다 EDDTableFromFileNames 몇 시간 (예, 12&#33;) 끝으로. \\[ 아마존은 맞습니까?&#33; \\] 
+S3 버킷은 종종 파일의 두 가지 범주를 포함, 가짜 하위 디렉토리의 몇, 이는 몇 가지가 될 수 ERDDAP™ 데이터셋. 으로 ERDDAP™ datasets, 시작 디렉토리를 알아야 합니다.&lt;cacheFromUrl&gt; (또는&lt;fileDir&gt;) 및 파일의 하위 설정 식별 파일 이름의 형식. 브라우저의 버킷 전체 내용을 보려면 S3가 먼저 1000 파일을 보여 주면 충분합니다. 현재 버킷의 모든 내용을 볼 수있는 가장 좋은 방법은 버킷을 만드는 것입니다. [EDDTable파일이름](#eddtablefromfilenames) 데이터셋 (PC에서 ERDDAP™ 그리고/또는 당신의 공중에 ERDDAP ) , 디렉토리 구조를 검색하고 파일을 다운로드 할 수있는 쉬운 방법을 제공합니다. 더 보기&lt;fileDir&gt; 위의 URL이 될 것입니다, 예, https://noaa-goes17.s3.us-east-1.amazonaws.com · \\[ 왜 AWS S3가 AWS 계정없이이 작업을 할 수있는 빠르고 쉬운 방법을 제공합니까? \\] 나는 비 아마존 네트워크에 내 PC에 이것을 할 때, 아마존은 속임수에 대한 응답을 느리게 나타납니다 (약 100 (·) chunk 당 파일) 첫 번째 몇 척 후 (chunk 당 1000의 파일) 다운로드 버킷이 많은 파일이 있을 수 있기 때문에 (noaaa-goes17 은 26 백만) , 버킷의 모든 내용을 얻을 수 있습니다 EDDTableFromFileNames 몇 시간 (예, 12&#33;) 끝으로. \\[ 아마존은 맞습니까?&#33; \\] 
 
 #### EDDTable 만들기 FromFileNames AWS S3 버킷과 데이터 세트{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 만약 당신이 물통 이름이 있는 경우, 하지만 이미 S3 버킷의 파일 목록 또는 버킷의 관련 파일의 위치를 식별, EDDTableFromFileNames 데이터 세트를 만들기 위해 아래의 지침을 사용 하 여 S3 버킷의 디렉토리 계층을 검색할 수 있습니다 ERDDAP 이름 * "files" 시스템.
@@ -727,22 +727,24 @@ S3 버킷은 종종 파일의 두 가지 범주를 포함, 가짜 하위 디렉�
 Linux 및 Mac OS 용 Hint : 자격 증명 파일은 Tomcat을 실행하는 사용자의 홈 디렉토리에 있어야합니다. (이름 * ERDDAP )   (이 단락을 위해, 우리는 user=tomcat을 가정할 것입니다) ~/.aws/credentials라는 파일에서. /home/tomcat -- 실제로 cd ~ 운영 체제가 ~ user=tomcat을 생각하는 곳을 찾을 수 있음을 가정하지 마십시오. 존재하지 않는 경우 디렉토리를 만듭니다. 또한, 파일에 대한 credentials 파일을 넣어 한 후, 파일에 대한 사용자 및 그룹이 tomcat이고, chmod 400 credentials를 사용하여 파일이 user=tomcat에 대한 읽기 전용인지 확인합니다.
     
 3. 버킷 URL 만들기 [파일 형식 ERDDAP™ 견적 요청](#accessing-files-in-an-aws-s3-bucket) , 예를들면
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) · (대중적인 물통) 브라우저에서 테스트하여 그 버킷의 내용을 나열한 XML 문서를 반환합니다.
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) · (대중적인 물통) 브라우저에서 테스트하여 그 버킷의 내용을 나열한 XML 문서를 반환합니다.
      
 4. 제품 정보 [생성데이터셋Xml](#generatedatasetsxml) 더 보기 [EDDTable파일이름](#eddtablefromfilenames) 데이터 세트:
     * 시작 디렉토리에 대 한, 이 구문을 사용:
         \\*\\*이름 * *에서OnTheFly,* 당신의BucketUrl*
 예를 들어,
-        \\*\\*\\*fromOn더플라이,https://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\*\\*fromOn더플라이, https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * 파일 이름 regex? ·
     * 반복? 한국어
     * 관련 제품 모든 분? 10080년
-    *    infoUrl ·https://registry.opendata.aws/noaa-goes/
+    *    infoUrl · https://registry.opendata.aws/noaa-goes/
+ 
     * 기관? NOAA 
     * 요약? 이름 * ( ERDDAP™ decent Summary를 자동으로 생성합니다.) 
     * 이름 * 이름 * ( ERDDAP™ decent title을 자동으로 생성합니다.) 평소처럼, 당신은 정확한 확인하기 위해 XML을 편집하고 데이터 세트의 펑크 전에 개선을해야합니다 datasets.xml ·
 5. 위의 지시를 따르고 dataset을로드하면 ERDDAP , 당신은 EDDTableFromFiles 데이터셋을 만들었습니다. 예를 들어, AWS Open Data Buckets에서 파일을 검색하고 다운로드하기 위해 누구나 쉽게 만들려면 EDDTableFromFileNames datasets를 만들었습니다 (목록을 참조)
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) 거의 모든 [AWS S3는 자료 물통을 엽니다](https://registry.opendata.aws/) ·
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) 거의 모든 [AWS S3는 자료 물통을 엽니다](https://registry.opendata.aws/) ·
      \\[ 우리가 포함하지 않은 몇 개의 버킷에는 루트 디렉토리에 많은 파일이 있습니다. (합리적인 시간에 다운로드 할 수 있습니다) , 또는 공공 액세스 허용하지 않습니다 (그들은 모두 공개되어야합니까?) , 또는 Requester 급여 물통입니다 (예, Sentinel) · \\]   
 클릭하시면 "files" 이 데이터셋 중 하나에 대한 링크는 S3 버킷의 디렉토리 트리 및 파일을 검색할 수 있습니다. 방법 때문에\\*\\*\\*fromOnTheFly EDDTableFromFiles 작품, 이 디렉토리 목록은 항상 완벽하게 최신이기 때문에 ERDDAP™ 을 얻 그 에 a-fly. 디렉토리 트리를 실제 파일 이름로 클릭하고 파일 이름을 클릭합니다. ERDDAP™ AWS에서 파일을 직접 다운로드 할 수 있도록 AWS S3에 요청을 리디렉션합니다. 그런 파일을 검사 할 수 있습니다.
     
@@ -756,7 +758,7 @@ AWS가 단순히 브라우저를 사용하여 공용 버킷의 내용을 볼 수
  **그런 다음 ERDDAP™ 사용자가 파일에 액세스하는 데이터 세트.**   
 자주 묻는 질문 [ ERDDAP™ S3 버킷](#erddap-and-aws-s3-buckets)   (이름 *) ·
 위에 만든 샘플 EDDTableFromFileNames dataset의 경우, 디렉토리 트리의 디렉토리 및 파일 이름과 함께 작은 포킹을 수행하면 최상위 디렉토리 이름이 명확하게됩니다. (예, ABI-L1b-RadC) 관련 기사 ERDDAP™ 별도의 데이터셋을 호출합니다. 당신이 일하는 물통은 유사할지도 모릅니다. 별도의 데이터 세트를 만들 수 있습니다. ERDDAP™ 그 datasets의 각각을 위해, 예를 들면,
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 으로&lt;cacheFromUrl&gt;. 불행히도, 이 특정한 예를 위해, 물통에 있는 자료 세트는 1개 수준 2 datasets이기 위하여 봅니다, ERDDAP™   [특히 좋지 않습니다.](#dimensions) dataset가 다른 크기를 사용하는 변수의 더 복잡한 컬렉션이기 때문에.
      
     
@@ -975,7 +977,7 @@ Unsorted 치수 값은 거의 항상 소스 데이터 세트와 문제를 나타
 ###  EDDGrid 사이트맵{#eddgridfromdap} 
  [ ** EDDGrid 사이트맵** ](#eddgridfromdap) 핸들 그리드 변수에서 [ DAP ](https://www.opendap.org/) 서버.
 
-* 우리는 강하게 추천합니다 [Generate데이터셋 Xml 프로그램](#generatedatasetsxml) 거친 초안을 만들기 위해 datasets.xml 이 dataset에 대한 펑크. 해당 정보를 수집하거나 자신의 XML을 만들 필요가 있습니다. EDDGrid FromDap dataset 를 클릭하여 소스 데이터셋의 DDS 및 DAS 파일을 브라우저에서 찾으세요 (.das 및 .dds를 추가하여 sourceUrl , 예를 들면, [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) ·
+* 우리는 강하게 추천합니다 [Generate데이터셋 Xml 프로그램](#generatedatasetsxml) 거친 초안을 만들기 위해 datasets.xml 이 dataset에 대한 펑크. 해당 정보를 수집하거나 자신의 XML을 만들 필요가 있습니다. EDDGrid FromDap dataset 를 클릭하여 소스 데이터셋의 DDS 및 DAS 파일을 브라우저에서 찾으세요 (.das 및 .dds를 추가하여 sourceUrl , 예를 들면, [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) ·
      
 *    EDDGrid FromDap은 모든 다차원 변수에서 데이터를 얻을 수 있습니다. DAP 데이터 서버. (이전, EDDGrid fromDap은 "grid"로 지정된 변수에 제한되었지만 더 이상 요구 사항은 없습니다.)   
      
@@ -1335,7 +1337,7 @@ THREDDS의 유사한 기능과는 달리, ERDDAP™ 항상 창조 axisVariable �
         </addAttributes>
       </axisVariable>
 ```
-캡처 그룹 번호 2의 사용을 참고하여 'r' 또는 's' 이후 발생하는 손가락을 캡처하고, "\\_global". 이 예제는 또한 추가 속성을 추가하는 방법을 보여줍니다. (₢ 킹 ioos\\_category 및 단위) 축 변수에.
+캡처 그룹 번호 2의 사용은 'r' 또는 's' 이후 발생하는 손가락을 캡처하기 위해 "\\_global" · 이 예제는 또한 추가 속성을 추가하는 방법을 보여줍니다. (₢ 킹 ioos\\_category 및 단위) 축 변수에.
      
 #### 외부 압축 파일{#externally-compressed-files} 
 * Datasets는 EDDGrid 파일 및 EDDTable fromFiles는 외부 압축 데이터 파일에서 직접 데이터를 제공 할 수 있습니다. .tgz · .tar  .gz · .tar  .gzip · .gz · .gzip · .zip · .bz2 , 그리고 .Z 파일.
@@ -1433,7 +1435,7 @@ MAY 는 하나의 디렉토리 또는 디렉토리 및 하위 디렉토리에 �
 대신, 사용 [&lt;cacheFromUrl&gt; 시스템 (#cachefromurl의 경우) ·
 
 오시는 길 ERDDAP™ byte 범위 요청을 통해 파일로 datasets --
-이 주위에 플러핑, 당신이 할 수있는 주어진 (한국어) dataset의 생각 ERDDAP™ 큰자지 .nc 첨부 파일 " .nc "베이스 OPen DAP 주어진 dataset를 위한 URL (₢ 킹https://myserver.org/erddap/griddap/datasetID.nc그리고 ?query를 추가하여 subset을 지정합니다.) , 그것은 아마도 당신이 netcdf-java를 사용할 수 있는지 묻는 것입니다, Ferret 다른 것 NetCDF 클라이언트 소프트웨어를 통해 데이터를 읽기 HTTP 범위 요청 ERDDAP · 대답은 아니, 정말 거대하지 않기 때문에 " .nc " 파일. 이 작업을 수행하려면 대신이 옵션 중 하나를 수행하십시오.
+이 주위에 플러핑, 당신이 할 수있는 주어진 (한국어) dataset의 생각 ERDDAP™ 큰자지 .nc 첨부 파일 " .nc "베이스 OPen DAP 주어진 dataset를 위한 URL (₢ 킹 https://myserver.org/erddap/griddap/datasetID.nc 그리고 ?query를 추가하여 subset을 지정합니다.) , 그것은 아마도 당신이 netcdf-java를 사용할 수 있는지 묻는 것입니다, Ferret 다른 것 NetCDF 클라이언트 소프트웨어를 통해 데이터를 읽기 HTTP 범위 요청 ERDDAP · 대답은 아니, 정말 거대하지 않기 때문에 " .nc " 파일. 이 작업을 수행하려면 대신이 옵션 중 하나를 수행하십시오.
 
 * 제품 정보(OPeN)DAP클라이언트 소프트웨어가 제공하는 griddap 서비스에 연결 ERDDAP · 그것은 무엇인가 DAP   (그리고 이렇게 ERDDAP ) 설계 되었습니다. 그것은 아주 능률적입니다.
 * 또는, 소스 파일을 다운로드 (₢ 킹) 이름 * "files" 시스템 (또는 subset 파일 .nc · 이름 *) 컴퓨터에 netcdf-java, Ferret 다른 것 NetCDF 클라이언트 소프트웨어 읽기 (현재 위치) 지역 파일 (₢ 킹) ·
@@ -2253,9 +2255,9 @@ Cassandra는 목록, 세트, 또는 지도 란을 위한 색인을 만들 수 �
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### 연락처{#eddtablefromdapsequence} 
- [ **연락처** ](#eddtablefromdapsequence) 1- 및 2-level sequences 내의 변수 처리 [ DAP ](https://www.opendap.org/) 서버와 같은 DAP 1개 (에 의해https://www.pmel.noaa.gov/epic/software/dapper/, 이제 중단) ·
+ [ **연락처** ](#eddtablefromdapsequence) 1- 및 2-level sequences 내의 변수 처리 [ DAP ](https://www.opendap.org/) 서버와 같은 DAP 1개 (에 의해 https://www.pmel.noaa.gov/epic/software/dapper/ , 이제 중단) ·
 
-* 우리는 강하게 추천합니다 [Generate데이터셋 Xml 프로그램](#generatedatasetsxml) 거친 초안을 만들기 위해 datasets.xml 이 dataset에 대한 펑크. 그런 다음 수정할 수 있습니다. 브라우저의 소스 데이터셋의 DDS 및 DAS 파일을 찾는 데 필요한 정보를 수집할 수 있습니다 (.das 및 .dds를 추가하여 sourceUrl (예: 예)https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds).
+* 우리는 강하게 추천합니다 [Generate데이터셋 Xml 프로그램](#generatedatasetsxml) 거친 초안을 만들기 위해 datasets.xml 이 dataset에 대한 펑크. 그런 다음 수정할 수 있습니다. 브라우저의 소스 데이터셋의 DDS 및 DAS 파일을 찾는 데 필요한 정보를 수집할 수 있습니다 (.das 및 .dds를 추가하여 sourceUrl (예: 예) https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds ).
     
 * 변수는 DAP .dds 응답이 변수를 붙드는 데이터 구조가 "sequence"임을 나타냅니다. (케이스 insensitive) ·
 * 일부 경우에, 당신은 순서 내에서 시퀀스를 볼 것 이다, 2-level sequence -- EDDTableFromDapSequence 이러한 핸들, 너무.
@@ -2378,15 +2380,15 @@ Generate데이터셋 Xml는 EDDTableFromDatabase를 위한 3개의 특별한 선
 * [JDBC 드라이버 및&lt;드라이버이름&gt;] (#jdbc 드라이버) -- 데이터베이스에 적합한 JDBC 3 또는 JDBC 4 드라이버 .jar 파일을 가져야하며
 내 계정 *뚱 베어* /webapps/erddap/WEB-INF/lib 설치 후 ERDDAP · 그때, 당신의 datasets.xml 이 dataset의 경우, 지정해야 합니다.&lt;driverName&gt; 이 드라이버의 경우, 이는 (불행히도) 파일명과 다릅니다. 데이터베이스 및 driverName에 대한 JDBC 드라이버에 대한 웹 검색 Java 사용해야 합니다.
     
-    * MariaDB의 경우, 시도 [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * MariaDB의 경우, 시도 [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 더 보기&lt;driverName&gt; 사용 datasets.xml   (더 보기) 아마 org.mariadb.jdbc. 드라이버 .
-    * MySQL 및 Amazon RDS의 경우 [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * MySQL 및 Amazon RDS의 경우 [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 더 보기&lt;driverName&gt; 사용 datasets.xml   (더 보기) 아마 com.mysql.jdbc. 드라이버 .
-    * 제품 정보 Oracle , 시도 [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) ·
+    * 제품 정보 Oracle , 시도 [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) ·
 더 보기&lt;driverName&gt; 사용 datasets.xml   (더 보기) 아마도 oracle.jdbc.driver입니다. Oracle 드라이버 .
-    * Postgresql의 경우 JDBC 4 드라이버가 있습니다. [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * Postgresql의 경우 JDBC 4 드라이버가 있습니다. [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 더 보기&lt;driverName&gt; 사용 datasets.xml   (더 보기) 아마 org.postgresql입니다. 드라이버 .
-    * SQL Server의 경우 JTDS JDBC 드라이버를 얻을 수 있습니다. [https://jtds.sourceforge.net](https://jtds.sourceforge.net) ·
+    * SQL Server의 경우 JTDS JDBC 드라이버를 얻을 수 있습니다. [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) ·
 더 보기&lt;driverName&gt; 사용 datasets.xml   (더 보기) is 아마 net.sourceforge.jtds.jdbc. 드라이버 .
     
 당신은 JDBC 드라이버 .jar를 넣어 후 ERDDAP™ lib 디렉토리, 당신은 .bat 및 / 또는 .sh 스크립트 파일에 .jar 파일에 대한 참조를 추가해야합니다 GenerateDatasets Xml, DasDds 및 ArchiveADataset는 *뚱 베어* /webapps/erddap/WEB-INF/ 디렉토리; 그렇지 않으면, 당신은 그 스크립트를 실행할 때 ClassNotFoundException을 얻을 것이다.
@@ -2524,7 +2526,7 @@ PostgreSQL은 훨씬 빨리 반응합니다. [채용정보](https://www.postgres
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-DataSource를 사용하는 일반 정보 [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) ·
+DataSource를 사용하는 일반 정보 [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) ·
 이름 * [Tomcat DataSource 정보](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) 이름 * [Tomcat DataSource 예제](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) 또는 다른 애플리케이션 서버와 DataSources를 사용하여 웹을 검색합니다.
 * 다른 모든 것이 실패하면
 데이터 저장을 고려하십시오. NetCDF v3의 .nc 파일 형식 (기타 제품 .nc 파일 사용 [사이트맵 분리된 표본 추출 Geometries (사이트맵) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Contiguous Ragged 배열 자료 구조 etc로 취급될 수 있습니다 ERDDAP 이름 * [EDDTableNcCFFiles에서](#eddtablefromnccffiles) ) · 로그인한 경우 (각 공간과 시간의 펑크에 대한 데이터) · ERDDAP™ 데이터를 신속하게 추출할 수 있습니다.
@@ -2608,7 +2610,7 @@ DataSource를 사용하는 일반 정보 [https://docs.oracle.com/javase/tutoria
     
 생성되는 XML의 펑크는 각 dataset의 GenerateDatasetsXml에 의해 포함합니다:
     
-    * · datasetID 그것은 EDDGrid 이름 * datasetID 플러스 "\\_AsATable".
+    * · datasetID 그것은 EDDGrid 이름 * datasetID 더 보기 "\\_AsATable" ·
     * 새로운 요약 글로벌 속성은 EDDGrid 's Summary plus this dataset이 무엇인지 설명하는 새로운 첫 번째 단락.
     * 새로운 타이틀 글로벌 속성은 EDDGrid 's title plus ", (테이블으로) ·
     * 10의 값으로 새로운 maxAxis0 글로벌 속성.
@@ -2644,21 +2646,21 @@ DataSource를 사용하는 일반 정보 [https://docs.oracle.com/javase/tutoria
 *    [EDDTableFromFileNames dataset의 데이터](#eddtablefromfilenames-data) 테이블은 ERDDAP™ 로컬 파일 그룹에 대한 정보로 on-the-fly를 만듭니다. 테이블에는 각 파일에 대한 행이 있습니다. 4개의 특수 속성 [ datasets.xml 이 dataset를 위해](#eddtablefromfilenames-skeleton-xml) 이 dataset에 어떤 파일이 포함될지 결정하십시오:
     
 ##### 파일 형식 사이트맵{#filedir} 
-    *   &lt;파일Dir&gt; -- 이 데이터셋의 파일로 서버의 파일 시스템에 소스 디렉토리를 지정합니다. 실제로 서버의 파일 시스템에 위치하는 파일&lt;fileDir&gt;는 가상 디렉토리에서 이 dataset의 URL 열에 나타납니다.https://*serverUrl*/erddap/files/*datasetID/*·
+    *   &lt;파일Dir&gt; -- 이 데이터셋의 파일로 서버의 파일 시스템에 소스 디렉토리를 지정합니다. 실제로 서버의 파일 시스템에 위치하는 파일&lt;fileDir&gt;는 가상 디렉토리에서 이 dataset의 URL 열에 나타납니다. https://*serverUrl*/erddap/files/*datasetID/* ·
 예를 들어, datasetID jplMU 이다 RSS 사이트맵
 그리고&lt;fileDir&gt;는 /home/data/mur/,
 그리고 그 디렉토리에는 jplMU라는 파일이 있습니다. RSS 파일 형식: .png (2000x2400)
 그 파일에 대한 사용자에 표시된 URL은
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png·
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png ·
         
 로컬 디렉토리를 사용하여&lt;fileDir&gt;, 당신은 또한 원격의 URL을 지정할 수 있습니다, 디렉토리 같은 웹 페이지. 이 작품 :
         
         * THREDDS, e.g에 통합 된 데이터 세트,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020년 10월 21일 이 서버는 더 이상 믿을 수 없습니다. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020년 10월 21일 이 서버는 더 이상 믿을 수 없습니다. \\] 
         * 통합된 datasets Hyrax , 예를들면
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * 대부분의 Apache-like 디렉토리 목록, 예,
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### 으로OnTheFly{#fromonthefly} 
  [\\*\\*\\*fromOn더플라이](#fromonthefly) -- 어떤 거대한 S3 물통을 위해 (noaa-goes17 처럼, 이는 26 백만 파일) , 그것은 걸릴 수 있습니다 ERDDAP™ 최대 12 시간 동안 버킷의 내용에 대한 모든 정보를 다운로드 (그런 다음 다른 문제가 있습니다.) · 이 주변을 얻으려면, 사용할 수있는 특별한 방법이 있습니다.&lt;fileDir&gt; 에 EDDTableFromFileNames 을 사용하여 디렉토리와 파일 이름을 AWS S3 버킷. dataset는 S3 버킷의 감독 및 파일 이름의 모든 목록이 데이터 세트에 요청을 통해 검색 할 수 없습니다. 그러나 dataset는 디렉토리의 이름을 얻을 것이다 및 파일 on-the-fly if user traverses the directory hierarchy with dataset's "files" 옵션. 따라서, 사용자는 데이터셋을 통해 S3 버킷의 파일 계층 및 파일을 검색 할 수 있습니다. "files" 시스템. 이렇게하려면 S3 버킷의 URL을 "시작 디렉토리"로 지정합니다. (GenerateDatasets에 대하여 사이트맵) 또는&lt;파일Dir&gt; (내 계정 datasets.xml ) , 사용:
 ```
@@ -2837,13 +2839,13 @@ dataset가 다시로드되면 ERDDAP™ 현재 사용 가능한 파일을 캐시
     * 더 보기&lt;cacheFromUrl&gt; 태그는 원격 파일 목록에서 원격 데이터셋의 파일 목록으로 URL을 지정할 수 있습니다.
         
         * THREDDS, e.g에 통합 된 데이터 세트,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020년 10월 21일 이 서버는 더 이상 믿을 수 없습니다. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020년 10월 21일 이 서버는 더 이상 믿을 수 없습니다. \\] 
         * 통합된 datasets Hyrax , 예를들면
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * 대부분의 Apache-like 디렉토리 목록, 예,
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * S3 물통, 예를들면,
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 그러나 AWS 계정과 설정이 필요할 수 있습니다.
 이름 * [S3 버킷 작업 ERDDAP™ ](#working-with-aws-s3-files) ·
 또한, 당신은 보통 캐시를 사용할 필요가 없습니다 파일이 ASCII 파일 인 경우 S3 버킷의 파일이있는 FromUrl (예를 들어, .csv) , 때문에 ERDDAP™ 효율적으로 스트림을 통해 버킷에서 데이터를 읽을 수 있습니다.
@@ -2901,7 +2903,7 @@ dataset가 다시로드되면 ERDDAP™ 현재 사용 가능한 파일을 캐시
 두 번째 옵션은 특정 값입니다.
             
 위의 예는 2018 년 2 월 10 일, 예를 들어,
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020년 10월 21일 이 서버는 더 이상 믿을 수 없습니다. \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020년 10월 21일 이 서버는 더 이상 믿을 수 없습니다. \\]   
 일 011, 012, ..., 019.
              (더 보기 [regex 문서](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) 이름 * [regex 튜토리얼](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) ·)   
 당신이 만드는 데 도움이 필요한 경우&lt;cachePartialPathRegex&gt;, 이메일을 보내&lt;cacheFromUrl&gt; 에 Chris. noaaa.gov의 존.
@@ -3384,7 +3386,7 @@ EDDTableFromHttpGet의 독특한 특징은 아래와 같습니다. 당신은이 
 
 * 사이트맵
     * 요청은 '&'에 의해 분리된 key=value 쌍과 더불어 표준 HTML 형태 응답과 같이 형식화됩니다. 예를 들어,
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 이름 * ERDDAP™ 데이터 추가 또는 변경 stationID 지정된 시간에 =46088.
     * 이 변화의 저자는 JohnSmith이고 열쇠는 someKey1입니다.
     * URL은 유효한 값을 포함해야 합니다. (누락된 값) 모든 것 [ http 자주 묻는 질문](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ EDDTableFromHttpGet의 독특한 특징은 아래와 같습니다. 당신은이 
              
     * · .delete
         * 요청은 '&'에 의해 분리된 key=value 쌍과 더불어 표준 HTML 형태 응답과 같이 형식화됩니다. 예를 들어,
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 이름 * ERDDAP™ 데이터 삭제 stationID 지정된 시간에 =46088.
         * 이 변화의 저자는 JohnSmith이고 열쇠는 someKey1입니다.
         * URL을 지정해야 합니다. [ http 자주 묻는 질문](#httpgetrequiredvariables-global-attribute) 자주 묻는 질문 (₢ 킹 stationID 그리고 시간) · 그 값이 dataset에서 행에 이미 일치하면 (그들은 일반적으로) , 오래된 값은 효과적으로 삭제됩니다 (이전 값이 여전히 이전의 사용자 요청 데이터에 접근하는 경우 [이름 *](#versioning) dataset의) ·
@@ -3667,7 +3669,7 @@ EDDTable 때문에 에서Http Dataset의 모든 변경 사항을 저장하고, �
     
 ##### HTTPS 넣어 및 삭제{#https-put-and-delete} 
 *    ["HTTP PUT 및 DELETE는 어떻습니까?&#33;"](#https-put-and-delete)   
-     [Hypertext 전송 프로토콜 (HTTP를) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) 월드 와이드 웹의 기초이며 웹 페이지 URL이 "로 시작하는 이유http://"또는 "https://"· HTTPS는 추가 보안 레이어와 HTTP입니다. 매일, 브라우저, 스크립트 및 컴퓨터 프로그램은 수십억 개의 HTTP를 만듭니다. (사이트맵)   **이름 *** 원격 소스에서 정보를 얻는 요청. HTTP를 (사이트맵) 기타 [한국어](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , 믿을 수 있는 PUT (데이터를 서버에 밀어) 그리고 DELETE (서버에서 DELETE 데이터) · 예, PUT 및 DELETE는 데이터를 삽입하는 적절한 방법이며, HTTP를 통해 데이터셋을 삭제합니다. (사이트맵) · HTTP와 함께 작동 할 수있는 소프트웨어의 모든 조각에 의해 지원됩니다 (사이트맵) · 함께 일하는 것은 정말 쉽습니다. 누구나 이미 POST를 사용하는 방법을 알고 (일반적으로 같은 방법으로 사용할 수 있습니다.) , 그래서 우리는 EDDTableFromHttpGet 작업을 수행 GET 및 POST. 매우 몇 명 (몇몇 컴퓨터 프로그래머) PUT와 DELETE와 함께 일했습니다. PUT 및 DELETE는 일반적으로 컴퓨터 언어로만 지원되므로 숙련 된 프로그램을 사용하십시오. 그래서 PUT 및 DELETE는 일반적으로 도구가 진화 한 방법을 주어진 훨씬 더 커진 접근입니다.
+     [Hypertext 전송 프로토콜 (HTTP를) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) 월드 와이드 웹의 기초이며 웹 페이지 URL이 "로 시작하는 이유 http://" 또는 " https://" · HTTPS는 추가 보안 레이어와 HTTP입니다. 매일, 브라우저, 스크립트 및 컴퓨터 프로그램은 수십억 개의 HTTP를 만듭니다. (사이트맵)   **이름 *** 원격 소스에서 정보를 얻는 요청. HTTP를 (사이트맵) 기타 [한국어](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , 믿을 수 있는 PUT (데이터를 서버에 밀어) 그리고 DELETE (서버에서 DELETE 데이터) · 예, PUT 및 DELETE는 데이터를 삽입하는 적절한 방법이며, HTTP를 통해 데이터셋을 삭제합니다. (사이트맵) · HTTP와 함께 작동 할 수있는 소프트웨어의 모든 조각에 의해 지원됩니다 (사이트맵) · 함께 일하는 것은 정말 쉽습니다. 누구나 이미 POST를 사용하는 방법을 알고 (일반적으로 같은 방법으로 사용할 수 있습니다.) , 그래서 우리는 EDDTableFromHttpGet 작업을 수행 GET 및 POST. 매우 몇 명 (몇몇 컴퓨터 프로그래머) PUT와 DELETE와 함께 일했습니다. PUT 및 DELETE는 일반적으로 컴퓨터 언어로만 지원되므로 숙련 된 프로그램을 사용하십시오. 그래서 PUT 및 DELETE는 일반적으로 도구가 진화 한 방법을 주어진 훨씬 더 커진 접근입니다.
      
 ##### HttpGet 노트{#httpget-notes} 
 *    [지원하다](#httpget-notes) 
@@ -3676,7 +3678,7 @@ EDDTable 때문에 에서Http Dataset의 모든 변경 사항을 저장하고, �
 ##### 이름 *{#thanks} 
 *    [기본 아이디어에 대한 CHORDS 덕분에.](#thanks)   
 EDDTableFromHttpGet의 기본 아이디어 (i.e., 사용 HTTP GET dataset에 데이터 추가 요청) UCAR에서 (NCAR의?)   [Cloud-Hosted 실시간 데이터 서비스 (주요 특징) ](https://github.com/earthcubeprojects-chords) 프로젝트. 요청에 매개 변수의 형식 (반복되는 *name=값* , &'s에 의해 분리하는) 웹 페이지에 HTML 형태로 사용되는 동일한 표준 형식입니다. 그것은 간단 하 고 화려한 아이디어와 더 많은 그래서 그것 때문에 메쉬 너무 완벽 하 게 ERDDAP 탭 데이터 처리를위한 기존 시스템. 아이디어는 힌트에 분명하지만, 나는 (뚱 베어) 생각하지 않았다. EDDTableHttp에서 기본 아이디어를 사용하여 구현하는 방법의 우리의 아이디어와 결합하여 시스템을 만들기 ERDDAP™ 데이터 업로드 을 사용하는 기본 아이디어 이외의 을 사용하여 데이터를 시스템에 밀어, EDDTableFromHttpGet 구현은 완전히 CHORDS의 독립적이며 다른 기능을 가지고 (e.g., 로그 파일, 데이터의 Chunking, 다른 보안 시스템, CRUD 지원, 재현성 데이터) · CHORDS에 대한 우리의 노출은 웹 세미나였습니다. 우리는 코드를보고하지 않았거나 프로젝트에 대해 읽지 않았다. 즉시 우리가 시스템을 다른 방식으로 구현하려는 것을 알고 있기 때문에. 그러나 우리는 기본적인 아이디어를 위해 그들에게 감사하고 있습니다. CHORDS에 대한 전체 참조는
-Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., 염료, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014년) · Geosciences를 위한 Cloud-Hosted 실시간 데이터 서비스 (주요 특징) 소프트웨어. UCAR/NCAR -- 지구 관찰 실험실. [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., 염료, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014년) · Geosciences를 위한 Cloud-Hosted 실시간 데이터 서비스 (주요 특징) 소프트웨어. UCAR/NCAR -- 지구 관찰 실험실. [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### EDDTable에서 Hyrax 파일 형식{#eddtablefromhyraxfiles} 
  [ **EDDTable에서 Hyrax 파일 형식** ](#eddtablefromhyraxfiles)   (뚱 베어) 여러 변수를 가진 데이터 파일, 각각 하나 이상의 공유 크기 (예를 들면, 시간, 고도 (또는 깊이) , 위도, 경도) , 에 의해 제공 [ Hyrax   OPeNDAP 계정 관리](https://www.opendap.org/software/hyrax-data-server) ·
@@ -3692,7 +3694,7 @@ Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin,
 * 이 클래스 스크린 스크랩 Hyrax 각 디렉토리의 파일 목록이있는 웹 페이지. 이 때문에, 그것은 현재의 형식에 매우 구체적인 Hyrax 웹 페이지. 우리는 조정하려고합니다. ERDDAP™ /when 미래 버전의 경우 Hyrax 파일이 나열된 방법을 변경합니다.
 * 더 보기&lt;fileDir&gt; 설정은 무시됩니다. 이 클래스 다운로드 이후 각 원격 데이터 파일의 로컬 복사본을 만듭니다. ERDDAP™ 파일 힘 Dir는 *큰Parent감독* / 복사/ * datasetID * ·.
 * 제품 정보&lt; sourceUrl &gt;, dataset의 기본 디렉토리의 URL을 사용 Hyrax 서버, 예를 들면,
-    &lt; sourceUrl ·http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;/ 한국어 sourceUrl ·
+    &lt; sourceUrl · http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;/ 한국어 sourceUrl ·
      (하지만 한 줄에 넣어)   (죄송합니다, 서버는 더 이상 사용할 수 없습니다.) ·
 더 보기 sourceUrl 웹 페이지는 일반적으로 " OPeNDAP Server 인덱스 \\[ 디렉토리Name \\] " 상단에.
 * 이 클래스는 항상 다운로드하고 각 원격 데이터 파일의 로컬 복사본을 만들려면이 데이터 세트를 결코 감싸지 않아야합니다. [EDDTable코피](#eddtablecopy) ·
@@ -3706,7 +3708,7 @@ Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin,
 
 이 파일과 또 다른 문제: Principal\\_Investigator row\\_size 변수는 sample\\_dimension 속성이 없고 위의 규칙을 따르지 않습니다.
 
-이 dataset 유형을 위한 표본 파일은에서 찾아낼 수 있습니다https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020년 10월 21일 이 서버는 더 이상 믿을 수 없습니다 \\] ·
+이 dataset 유형을 위한 표본 파일은에서 찾아낼 수 있습니다 https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020년 10월 21일 이 서버는 더 이상 믿을 수 없습니다 \\] ·
 
 이 클래스의 슈퍼 클래스를 참조, [EDDTable파일](#eddtablefromfiles) , 이 클래스의 작품과 사용법에 대한 정보.
 
@@ -3850,10 +3852,10 @@ CF DSG 컨벤션은 수십 개의 파일 형식을 정의하고 수많은 사소
  [ **연락처** ](#eddtablefromnos)   (관련 상품) 데이터 처리 NOAA   [이름 *](https://opendap.co-ops.nos.noaa.gov/axis/) 사용 설명서 [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) 요청 및 응답을 위해. 그것은 아주 특정합니다 NOAA NOS의 XML. datasets2.xml의 sample EDDTableFromNOS dataset을 참조하십시오.
  
 ### EDDTable온도{#eddtablefromobis} 
- [ **EDDTable온도** ](#eddtablefromobis) Ocean Biogeographic Information System의 데이터 처리 (오비스) 계정 관리 (·http://www.iobis.org ) · 이제 OBIS 서버 시스템의 최신형을 사용하는 더 많은 활성 서버가 없습니다.
+ [ **EDDTable온도** ](#eddtablefromobis) Ocean Biogeographic Information System의 데이터 처리 (오비스) 계정 관리 (· http://www.iobis.org  ) · 이제 OBIS 서버 시스템의 최신형을 사용하는 더 많은 활성 서버가 없습니다.
 
 * OBIS 서버는 XML 요청을 기대하고 XML 응답을 반환합니다.
-* 모든 OBIS 서버는 동일한 변수를 동일하게 제공합니다. (·http://iobis.org/tech/provider/questions) , OBIS dataset을 설정하기 위해 다량을 지정할 필요가 없습니다. ERDDAP ·
+* 모든 OBIS 서버는 동일한 변수를 동일하게 제공합니다. (· http://iobis.org/tech/provider/questions ) , OBIS dataset을 설정하기 위해 다량을 지정할 필요가 없습니다. ERDDAP ·
 * 당신은 "을 포함 creator\\_email "글로벌의 특성 addAttributes , 그 정보는 라이센스 내에서 사용됩니다. 적합한 이메일 주소는 sourceURL에서 XML 응답을 읽을 수 있습니다.
 * 글로벌 속성을 얻을 수 없거나 할 수 없습니다 [&lt; subsetVariables &gt;] (#subsetvariables의 특징) 주어진 OBIS 서버로 일하기. 시도하면, 단지 하나의 변수를 시도 (예를 들면, ScientificName 또는 Genus) ·
 #### EDDTable온도 스켈레톤 XML{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ CF DSG 컨벤션은 수십 개의 파일 형식을 정의하고 수많은 사소
     * 사이트맵 (Sensor 웹 사용) 이름 * SOS   (센서 관측 서비스) 이름 * [OpenGIS® 표준](https://www.ogc.org/standards) · 이 웹 사이트는 표준 문서가 있습니다.
     * 더 보기 OGC 웹 서비스 일반적인 명세 ver 1.1.0 ( OGC 06-121r3에) GET 및 POST 쿼리의 구성 (단면도를 보십시오 7.2.3와 단면도 9) ·
     * getCapabilities xml 요청을 보내면 SOS 계정 관리 ( sourceUrl + "?서비스 = SOS 관련 기사 GetCapabilities ·) , 당신은 역과 관찰의 목록으로 xml 결과를 얻을 데이터가 있는 속성.
-    * ObservProperty는 URI의 공식 참조입니다. 예를 들면, urn:ogc:phenomenon: 경도: wgs84 또는https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * ObservProperty는 URI의 공식 참조입니다. 예를 들면, urn:ogc:phenomenon: 경도: wgs84 또는 https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * discoverProperty는 변수가 아닙니다.
-    * 1 개 이상의 변수는 동일한 관찰을 가질 수 있습니다. 제품정보 (예를 들면, insideTemp 및 외부 임시 직원은 둘 다 관찰했습니다 제품정보https://mmisw.org/ont/cf/parameter/air\\_temperature) ·
+    * 1 개 이상의 변수는 동일한 관찰을 가질 수 있습니다. 제품정보 (예를 들면, insideTemp 및 외부 임시 직원은 둘 다 관찰했습니다 제품정보 https://mmisw.org/ont/cf/parameter/air\\_temperature ) ·
     * getObservation xml 요청을 보낼 경우 SOS 서버, 당신은 응답, 필드 단위 및 데이터에 필드 이름의 설명으로 xml 결과를 얻을. 분야 이름은 경도, 위도, 깊이를 포함합니다 (아마) , 그리고 시간.
     * 각 각 dataVariable EDDTableFrom를 위해 SOS 서버에서 요청해야 하는 ObservProperty를 식별하는 "observedProperty" 속성을 포함해야 합니다. 종종, 몇몇 dataVariable s는 동일한 복합 ObservProperty를 나열합니다.
     * 각 데이터 유형 dataVariable 서버로 지정할 수 없습니다. 그래서, 서버에서 XML 데이터 응답을보고 적절한 할당해야합니다 [&lt;dataType&gt;s는 (#자료) 내 계정 ERDDAP™ 데이터셋 dataVariable 정의.
@@ -3991,11 +3994,11 @@ dataset가 생성될 때 dataset의 글로벌 속성에.
 * 이 클래스는 THREDDS가 제공하는 Catalog.xml 파일을 목록으로 읽습니다.&lt;카탈로그Refs (추가 Catalog.xml 하위 파일 참조) 이름 *&lt;데이터셋&gt;s (데이터 파일) ·
 * 더 보기&lt;fileDir&gt; 설정은 무시됩니다. 이 클래스 다운로드 이후 각 원격 데이터 파일의 로컬 복사본을 만듭니다. ERDDAP™ 파일 힘 Dir는 *큰Parent감독* / 복사/ * datasetID * ·.
 * 제품 정보&lt; sourceUrl &gt;, THREDDS 서버의 dataset에 대한 Catalog.xml 파일의 URL을 사용, 예를 들어: 웹 브라우저에서 사용할 수있는이 URL의 경우,
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020년 10월 21일 이 서버는 더 이상 믿을 수 없습니다. \\] ·
-제품 정보&lt; sourceUrl ·https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;/ 한국어 sourceUrl ·
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020년 10월 21일 이 서버는 더 이상 믿을 수 없습니다. \\] ·
+제품 정보&lt; sourceUrl · https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;/ 한국어 sourceUrl ·
      (하지만 한 줄에 넣어) ·
 * 이 클래스는 항상 다운로드하고 각 원격 데이터 파일의 로컬 복사본을 만들려면이 데이터 세트를 결코 감싸지 않아야합니다. [EDDTable코피](#eddtablecopy) ·
-* 이 dataset 유형은 OPTIONAL, 드물게 사용된, 특별한 꼬리표를 지원합니다,&lt;특수모드&gt; *지원하다* &lt;/specialMode&gt; 특별한 것을 지정할 수 있는, 하드 코딩된 규칙은 서버에서 다운로드해야 하는 파일을 결정하기 위하여 사용되어야 합니다. 현재, 유일한 유효한 *지원하다* datasets와 함께 사용되는 SAMOShttps://tds.coaps.fsu.edu/thredds/catalog/samos마지막 버전 번호로만 파일을 다운로드합니다.
+* 이 dataset 유형은 OPTIONAL, 드물게 사용된, 특별한 꼬리표를 지원합니다,&lt;특수모드&gt; *지원하다* &lt;/specialMode&gt; 특별한 것을 지정할 수 있는, 하드 코딩된 규칙은 서버에서 다운로드해야 하는 파일을 결정하기 위하여 사용되어야 합니다. 현재, 유일한 유효한 *지원하다* datasets와 함께 사용되는 SAMOS https://tds.coaps.fsu.edu/thredds/catalog/samos 마지막 버전 번호로만 파일을 다운로드합니다.
 * 이 클래스의 슈퍼 클래스를 참조, [EDDTable파일](#eddtablefromfiles) , 이 클래스의 작품과 사용법에 대한 정보.
 * 1D, 2D, 3D 및 4D 예제를 참조하십시오. [EDDTableFromNcFiles는](#eddtablefromncfiles) ·
      
@@ -4182,8 +4185,8 @@ WARNING : 값의 주어진 조합이 원격 데이터셋에서 사라지면 EDDT
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-해당 지역은 sourceUrl   (·https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-관련 기사 sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) ·
+해당 지역은 sourceUrl   (· https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+관련 기사 sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) ·
 이 태그의 값에 대한 변경은 다음 번 효력을 발생합니다. ERDDAP™ 지원하다 datasets.xml dataset에 응답을 포함하여 [기본 정보](/docs/server-admin/additional-information#flag) ·
 
 그러나, 가입 시스템과 관련된 보안상의 이유로, **이 태그를 사용할 수 없습니다&#33;**   
@@ -4314,7 +4317,7 @@ partRequestMaxBytes는 부분 그리드 데이터 요청에 대한 바이트의 
     ```
     * 재시작할 필요가 없습니다. ERDDAP™ 변경사항&lt;requestBlacklist&gt; 효과를 가져다줍니다. 변경은 다음 시간을 감지합니다. ERDDAP™ reloaded 어떤 datasets 필요든지 검사하십시오. 또는, 당신은 방문해서 과정을 가속화할 수 있습니다 [설정Dataset 플래그 URL](/docs/server-admin/additional-information#set-dataset-flag) 어떤 dataset든지를 위해.
     * 내 계정 ERDDAP™ 매일 보고서에는 가장 활발한 허용 및 차단 된 요청자 목록을 포함합니다.
-    * 도메인/소용이 숫자 IP 주소와 관련되었는지 파악하려면 무료 DNS 웹 서비스를 이용할 수 있습니다. [https://network-tools.com/](https://network-tools.com/) ·
+    * 도메인/소용이 숫자 IP 주소와 관련되었는지 파악하려면 무료 DNS 웹 서비스를 이용할 수 있습니다. [ https://network-tools.com/ ](https://network-tools.com/) ·
     * 더 높은 수준에서 특정 사용자를 차단 할 때 시간이 될 수 있습니다, 예를 들어, 악성 사용자. 예를 들어, 서버의 모든 것에 대한 액세스를 차단할 수 있습니다. ERDDAP · Linux에서 그러한 방법은 다음과 같습니다. [IP 테이블](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) · 예를 들어, 명령을 사용하여 198.51.100.0에서 오는 모든 것을 차단하는 규칙을 추가 할 수 있습니다.
 iptables -I 입력 -s 198.51.100.0 -j 드롭
        
@@ -4738,17 +4741,17 @@ nThreads를 컴퓨터의 CPU에 있는 CPU 핵심의 수 보다는 더 큰 숫�
     * 현재 EDDGrid subclasses, metadata 또는 축 변수로 변경 (예를 들면, 근실한 시간 자료를 위한 새로운 시간 점) 변화로 간주되지만 dataset의 재부팅은 변경되지 않습니다. (으로 그들) ·
     * 현재, EDDTable subclasses의 경우, dataset의 재부팅은 변경으로 간주됩니다.
     * 현재 두 가지 유형의 작업이 허용됩니다.
-        * ·http://"또는 "https://"-- 행동이 시작되면 "http://"또는 "https://"· ERDDAP™ 메시지 보내기 HTTP GET 지정된 URL에 요청합니다. 응답은 무시됩니다. 예를 들어 URL은 다른 웹 서비스에 대해 뭔가 할 수 있습니다.
+        * · http://" 또는 " https://" -- 행동이 시작되면 " http://" 또는 " https://" · ERDDAP™ 메시지 보내기 HTTP GET 지정된 URL에 요청합니다. 응답은 무시됩니다. 예를 들어 URL은 다른 웹 서비스에 대해 뭔가 할 수 있습니다.
             * URL이 쿼리 부분이있는 경우 ("?"후) , 그것은 이미 [% 인코딩](https://en.wikipedia.org/wiki/Percent-encoding) · constraints의 특수 문자를 인코딩해야합니다. (초기 '&'와 주 이외의 '=' 제약 분야) HH가 문자의 2 자리 6 진수 값 인 형태 %HH로. 보통, 당신은 단지 몇 가지의 구두 문자를 변환해야합니다: %25 %, & %26, "%22,&lt;%3C로, = %3D로, &gt; %3E로, + %2B로, | %7C로, \\[ %5B로, \\] %5D로, %20로 공간, #127 이상의 모든 문자를 UTF-8 양식으로 변환하고 UTF-8 양식의 각 바이트를 %H 형식으로 인코딩합니다. (도움을위한 프로그래머에게 물어보십시오) ·
 예를 들어, & stationID &gt;=41004"
 은 & stationID %3E=%2241004%22
 Percent 인코딩은 일반적으로 액세스 할 때 필요합니다. ERDDAP 브라우저 이외의 소프트웨어를 통해. 브라우저는 보통 % 인코딩을 처리합니다.
 일부 상황에서는 A-Za-z0-9\\_-&#33;.~ 이외의 모든 문자를 % 인코딩해야합니다. 이름 * () \\*, 아직 초기 '&' 또는 주를 인코딩하지 않습니다 '=' 제약에서.
-프로그래밍 언어는 이것을 할 수있는 도구가 (예를 들어, 참조 Java 이름 * [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) 이름 * Java 스크립트 [encodeURIComponent()· (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) 거기에
+프로그래밍 언어는 이것을 할 수있는 도구가 (예를 들어, 참조 Java 이름 * [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) 이름 * Java 스크립트 [encodeURIComponent()· ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) 거기에
                  [웹 사이트 % encode / decode 당신을 위해](https://www.url-encode-decode.com/) ·
             * 이름 * datasets.xml XML 파일이며, 모든 '&', '&lt;', '&gt;' URL에서 '&amp;', '&lt;', and '&gt;'% 인코딩 후.
             * 예: 브라우저로 입력할 수 있는 URL:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 지정해야 합니다.&lt;onChange&gt; 태그를 통해 (1개의 선에) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ Percent 인코딩은 일반적으로 액세스 할 때 필요합니다. ERDDAP �
     * · sourceUrl 시작하기 http:// · https:// , ftp://, 아마 다른 접두사. https 연결이 읽고 소스의 디지털 인증서를 확인하고 소스가 그들이 말하는 누구인지 확인합니다. 드문 경우, 이 체크는 오류 "javax.net.sssl.SSLProtocolException: handhake alert: uncognized\\_name"로 실패할 수 있습니다. 이것은 아마도 당신이 사용하는 도메인 이름과 일치하는 인증서의 도메인 이름 때문에. 당신은 할 수 있고 세부 사항을 읽어야한다 sourceUrl 웹 브라우저의 인증서, notably, the list of "DNS Name"s in the "Subject Alternative Name"섹션.
         
 어떤 경우, sourceUrl 당신은 인증서에 도메인 이름의 별명이 될 수 있습니다. 예를 들어,
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/이 오류를 발생하지만,
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/, 인증서의 도메인 이름을 사용하는 것은 원하지 않습니다. 이 경우의 해결책은 그러므로 인증서에 도메인 이름을 찾아내고 사용합니다. 인증서에 찾을 수없는 경우 데이터 공급자에 문의하십시오.
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ 이 오류를 발생하지만,
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ , 인증서의 도메인 이름을 사용하는 것은 원하지 않습니다. 이 경우의 해결책은 그러므로 인증서에 도메인 이름을 찾아내고 사용합니다. 인증서에 찾을 수없는 경우 데이터 공급자에 문의하십시오.
         
 다른 경우, 인증서의 도메인 이름은 이름의 그룹에있을 수 있습니다. 이 발생하거나 문제가 그렇지 않으면 해지지 않는 경우 Chris에게 이메일을 보내주십시오. noaaa.gov의 존은 문제를보고.
          
@@ -5221,7 +5224,7 @@ dataset가 추가 메타데이터 표준을 따르면, Conventions 속성의 CSV
 Percent 인코딩은 일반적으로 액세스 할 때 필요합니다. ERDDAP 브라우저 이외의 소프트웨어를 통해. 브라우저는 보통 % 인코딩을 처리합니다.
 일부 상황에서는 A-Za-z0-9\\_-&#33;.~ 이외의 모든 문자를 % 인코딩해야합니다. 이름 * () \\*, 아직 초기 '&' 또는 주를 인코딩하지 않습니다 '=' ·
 프로그래밍 언어는 이것을 할 수있는 도구가 (예를 들어, 참조 Java 이름 * [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-이름 * Java 스크립트 [encodeURIComponent()· (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) 거기에
+이름 * Java 스크립트 [encodeURIComponent()· ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) 거기에
          [웹 사이트 % encode / decode 당신을 위해](https://www.url-encode-decode.com/) ·
     * 이름 * datasets.xml XML 파일이며, 모든 '&', '&lt;', '&gt;' URL에서 '&amp;', '&lt;', and '&gt;'% 인코딩 후.
     *    infoUrl 이란 ERDDAP · 그것은 어떤 metadata 표준에서 아닙니다.
@@ -5257,7 +5260,28 @@ dataset가 로드될 때 ERDDAP ·
     ```
     * 이름 * \\[ 표준: \\] " 속성 값에서 발생, 그것은 표준에 의해 대체 될 것이다 ERDDAP™ 의 라이센스&lt;standardLicense&gt; 태그 ERDDAP 이름 *
          \\[ 뚱 베어 \\] /webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml 파일.
-         
+
+###### 관련 기사{#classification} 
+*    [ **관련 기사** ](#classification) 데이터의 분류 수준.
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * 허용 값은 _unclassified_, _confidential_, _restricted_, _secret_, 또는 _top_secret_입니다.
+
+###### 관련 항목{#topic_category} 
+*    [ **관련 항목** ](#topic_category) 높은 수준의 지리적 데이터 분석 분류는 그룹화 및 사용 가능한 지리적 데이터 세트의 검색에 도움이.
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * _biota_, _boundaries_, _climatology_meteorology_atomosphere_, _economy_, _ Highway_, _environment_, _farming_, _geoscientific_information_, _health_, _imagery_base_maps_earth_cover_, _inland_waters_, _intelligence_military_, _location_, __ocean_, _munity_, _transitions_,
+
+###### 정비_frequency{#maintenance_frequency} 
+*    [ **정비_frequency** ](#maintenance_frequency) 수정 및 삭제 빈도는 첫 번째 생성 후 데이터로 이루어집니다.
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * 허용 값은 허용 값입니다 _annually_, _as_needed_, _biannually_, _continual_, _daily_, _fortnightly_, _irregular_, _monthly_, _not_planned_, _quarterly_, _unknown_, _weekly_.
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) 결과가 없습니다. [추가 1.0](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (정의 된 Metadata\\_Conventions 으로 " Unidata 데이터셋 디스커버리 v1.0") metadata 표준. 속성 값은 이 dataset에 의해 사용되는 메타 데이터 협약의 기념 목록이었다.
 dataset가 ACDD 1.0을 사용하는 경우, 이 속성은 STRONGLY RECOMMENDED, 예를 들어,
@@ -5389,7 +5413,7 @@ dataset이 생성되면
 인덱스가 있다면&lt;=1, dataset는 out-of-date로 간주됩니다.
 인덱스가 있다면&lt;=2, dataset는 매우 최신 것으로 간주됩니다.
     
-더 보기 testOutOfDate 값도 사용 ERDDAP™ 생성하기https://*yourDomain*/erddap/outOfDateDatasets.html웹 페이지 ( [이름 *](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) datasets를 보여준다.&lt; testOutOfDate &gt; 태그, datasets는 의 날짜에 의해 순위. 파일 형식을 변경하면 (.html에서 .csv로, .jsonlCSV · .nc · .tsv , ...) , 당신은 다른 파일 형식으로 그 정보를 얻을 수 있습니다.
+더 보기 testOutOfDate 값도 사용 ERDDAP™ 생성하기 https://*yourDomain*/erddap/outOfDateDatasets.html 웹 페이지 ( [이름 *](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) datasets를 보여준다.&lt; testOutOfDate &gt; 태그, datasets는 의 날짜에 의해 순위. 파일 형식을 변경하면 (.html에서 .csv로, .jsonlCSV · .nc · .tsv , ...) , 당신은 다른 파일 형식으로 그 정보를 얻을 수 있습니다.
     
 가능한 한, [생성데이터셋Xml](#generatedatasetsxml) 추가하기 testOutOfDate 글로벌 특성 addAttributes 데이터셋의. 이 값은 GenerateDatasetsXml에 대한 정보를 기반으로 제안입니다. 값이 적합하지 않은 경우, 변경하십시오.
     
@@ -5948,8 +5972,8 @@ unpackedValue = 포장 가치 \\* scale\\_factor + 더보기 add\\_offset
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone 사용한 OPTIONAL 속성입니다. ERDDAP™   (그리고 metadata 기준 없음) 제품정보 [시간 및 타임스탬프 변수](#time-units) , 이는 gridded datasets 또는 tabular datasets에 있을지도 모릅니다.
     * 기본값은 " Zulu · (GMT의 현대 시간대 버전) ·
-    * 배경 정보: "time offsets" (e.g., 태평양 표준시, -08:00, GMT-8) 고정, 특정, 상쇄 상대 Zulu   (주요특징) · 대조적으로, "시간 영역"은 Daylight Saving에 영향을받는 훨씬 더 복잡한 것들입니다. (예, "미국 / 태평양") , 다른 시간에 다른 장소에 다른 규칙이 있었다. 시간대는 항상 간단한 오프셋 값으로 요약 할 수 없기 때문에 이름이 있습니다. (테이블에 "TZ 데이터베이스 이름"열을 참조하십시오 [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) · ERDDAP 이름 * time\\_zone 속성은 일부 시간대에서 현지 시간 데이터를 처리하는 데 도움이됩니다. (예, 1987-03-25T17:32:05 주요사업 (주)) · 문자열 또는 숫자 시간 데이터가있는 경우 (설치하기) 시간 상쇄, 당신은 단순히 자료를 조정해야 합니다 Zulu   (그것은 무엇인가 ERDDAP™ 이름 *) 단위 속성에 다른 기본 시간을 지정하여 (e.g., "시간 이후 1970-01-01T08:00:00Z", T08을 참고하여 시간 오프셋을 지정합니다.) , 항상 당신이 원하는 결과를 얻을 수있는 결과를 확인합니다.
-    * Strings에서 소스 데이터를 가진 timestamp 변수를 위해, 이 속성은 당신이 리드 타임 영역을 지정할 수 있습니다 ERDDAP™ 로컬 시간대 소스 시간을 변환 (어떤 표준 시간에, 일광 절약 시간에 약간) 로그인 Zulu 시간 : (항상 표준 시간에) · 유효한 시간대의 목록은 아마도 TZ 칼럼의 목록과 동일합니다. [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) · 일반 미국 시간대는 미국/하와이, 미국/알래스카, 미국/태평양, 미국/산, 미국/아리조나, 미국/중앙, 미국/동부입니다.
+    * 배경 정보: "time offsets" (e.g., 태평양 표준시, -08:00, GMT-8) 고정, 특정, 상쇄 상대 Zulu   (주요특징) · 대조적으로, "시간 영역"은 Daylight Saving에 영향을받는 훨씬 더 복잡한 것들입니다. (예, "미국 / 태평양") , 다른 시간에 다른 장소에 다른 규칙이 있었다. 시간대는 항상 간단한 오프셋 값으로 요약 할 수 없기 때문에 이름이 있습니다. (테이블에 "TZ 데이터베이스 이름"열을 참조하십시오 [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) · ERDDAP 이름 * time\\_zone 속성은 일부 시간대에서 현지 시간 데이터를 처리하는 데 도움이됩니다. (예, 1987-03-25T17:32:05 주요사업 (주)) · 문자열 또는 숫자 시간 데이터가있는 경우 (설치하기) 시간 상쇄, 당신은 단순히 자료를 조정해야 합니다 Zulu   (그것은 무엇인가 ERDDAP™ 이름 *) 단위 속성에 다른 기본 시간을 지정하여 (e.g., "시간 이후 1970-01-01T08:00:00Z", T08을 참고하여 시간 오프셋을 지정합니다.) , 항상 당신이 원하는 결과를 얻을 수있는 결과를 확인합니다.
+    * Strings에서 소스 데이터를 가진 timestamp 변수를 위해, 이 속성은 당신이 리드 타임 영역을 지정할 수 있습니다 ERDDAP™ 로컬 시간대 소스 시간을 변환 (어떤 표준 시간에, 일광 절약 시간에 약간) 로그인 Zulu 시간 : (항상 표준 시간에) · 유효한 시간대의 목록은 아마도 TZ 칼럼의 목록과 동일합니다. [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) · 일반 미국 시간대는 미국/하와이, 미국/알래스카, 미국/태평양, 미국/산, 미국/아리조나, 미국/중앙, 미국/동부입니다.
     * numeric source data를 가진 timestamp variables를 위해, 당신은 "를 지정할 수 있습니다 time\\_zone " 속성이지만 값은 "이어야한다. Zulu "또는 "UTC". 다른 시간대에 대한 지원이 필요하면 Chris에게 이메일을 보내주십시오. noaaa.gov의 존.
          
 ###### 레거시_time_adjust{#legacy_time_adjust} 

@@ -1102,7 +1102,7 @@ AdoptOpenJDK로 구축 된 DejaVu Sans Java · 이름 *
     * EDDTable로 변경 EDDGrid 그것은 훨씬 더 나은. EDDTable에서 EDDGrid user query gridded datasets as if they were tabular datasets 를 지정한다. ("값으로 정함") ·
         
         * 지금 지원&lt;maxAxis0&gt; 태그 (기본값=10) 최대 축을 지정합니다. \\[ 0 댓글 \\]   ((주) "time" ) 한 번에 queried 할 수있는 값. 이것은 EDDTableFrom 얻기에서 네이티브 요청을 방지 EDDGrid 전체 Gridded dataset을 통해 검색하기 (timeout 오류가 발생) ·
-        * Generate데이터셋 Xml는 지금 EDDTableFrom 생성하는 선택권이 있습니다 EDDGrid 주어진에 있는 gridded datasets의 모두를 위한 datasets ERDDAP™ 지정된 regex와 일치 (사용 .\\* 모든 datasets 일치하기) · 생성하는 데이터 세트는 요약 속성에 추가 정보가 표시되어 그리드 데이터 세트의 탭 버전입니다. 그리고 그들의 datasetID 이름 * datasetID gridded dataset의, 플러스 "\\_AsATable".
+        * Generate데이터셋 Xml는 지금 EDDTableFrom 생성하는 선택권이 있습니다 EDDGrid 주어진에 있는 gridded datasets의 모두를 위한 datasets ERDDAP™ 지정된 regex와 일치 (사용 .\\* 모든 datasets 일치하기) · 생성하는 데이터 세트는 요약 속성에 추가 정보가 표시되어 그리드 데이터 세트의 탭 버전입니다. 그리고 그들의 datasetID 이름 * datasetID gridded dataset의, 더하기 "\\_AsATable" ·
         * 가장 일반적인 설정에 대한 큰 속도가 있습니다. gridded dataset이 될 때 EDDGrid fromErddap dataset 같은 ERDDAP ·
         
 James Gallagher 및 Ed Armstrong 덕분에.

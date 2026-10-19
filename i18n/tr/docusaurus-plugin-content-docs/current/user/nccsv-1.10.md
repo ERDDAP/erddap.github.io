@@ -45,14 +45,14 @@ Bu belgedeki bazı ihtiyaç garip veya seçici görünüyorsa, muhtemelen bu ger
 Bu spesifikasyon, birlikte çalışmak için tasarlanmış olan diğer çeşitli özelliklere ve kütüphanelere atıfta bulunur, ancak bu spesifikasyon diğer özelliklerin herhangi birinin bir parçası değildir, ne de onlara herhangi bir değişiklik ihtiyacı yoktur. Bu standartların biri ile ilgili bir detay burada belirtilmezse, ilgili özellikleri görün. Elbette, bu şunları içerir:
 
 * Dataset Discovery için Attribute Konvansiyonu (ACDDDD) metadata standardı:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * İklim ve Tahminler (CF) metadata standardı:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * The The The The The The The The NetCDF Kullanıcı Kılavuzu (NUG) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * The The The The The The The The NetCDF yazılım kütüphaneleri gibi NetCDF -java ve NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Bu kütüphaneler NCCSV dosyalarını okuyamıyor, ancak okuyabiliyorlar .nc NCCSV dosyalarından oluşturulan dosyalar.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . Bu kütüphaneler NCCSV dosyalarını okuyamıyor, ancak okuyabiliyorlar .nc NCCSV dosyalarından oluşturulan dosyalar.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Notation{#notation} 
 Bu spesifikasyonda, braketler, \\[   \\] 2) Seçmeli eşyaları gösterir.
@@ -152,12 +152,12 @@ Karakter veri türlerinin tanımları şunlardır:
     * Çift alıntı (" " "") İki çift alıntı olarak kodlanmalıdır ("") . Bu, tablo programları .csv dosyalarını okuduğunuzda gerektirir. Bu, tablo programları bir .csv dosyası olarak yaydığınızda yazılacak.
     * Özel JSON backslash-encoded karakterleri JSON olarak kodlanmalıdır (muhtemelen değil) \\n (newline), ama aynı zamanda  the (backslash), Žf (formfeed), Žt (tab), Žr (karriage return) veya ile [. *hhhh* ](#uhhhh) Kelimeler. Bir spread sayfasında, Alt'ı bir metin hücresinde yeni bir çizgi belirtmek için kullanmayın; bunun yerine, kullanmak \\n   (2 karakter: backslash ve 'n ‘ ‘ ‘) Yeni bir çizgi göstermek için.
 #####  uhhhh  {#uhhhh} 
-    * . *hhhh - Karakter #32 veya karakterden daha az karakter #126 ve başka bir şekilde kodlanmış değil, sözcüler ile kodlanmalıdır.* hhhh*, hhhh karakterin 4 dijital hexadecimal numarası, e.g., Euro işareti Žu20AC. Kod sayfalarını referans olarak görün [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) Belirli Unicode karakterleri ile ilişkili hexadecimal sayılarını bulmak veya bir yazılım kütüphanesi kullanmak.
+    * . *hhhh - Karakter #32 veya karakterden daha az karakter #126 ve başka bir şekilde kodlanmış değil, sözcüler ile kodlanmalıdır.* hhhh*, hhhh karakterin 4 dijital hexadecimal numarası, e.g., Euro işareti \\ \\u20AC . Kod sayfalarını referans olarak görün [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) Belirli Unicode karakterleri ile ilişkili hexadecimal sayılarını bulmak veya bir yazılım kütüphanesi kullanmak.
     * Eğer String'in başlangıçta veya sonunda bir alanı varsa veya " (çift alıntı) veya bir komün, veya başka bir veri türü olarak yorumlanacak değerleri içerir (E.g., bir int) Ya da "null" kelimesi, tüm String çift alıntılarda kapalı olmalıdır; aksi takdirde JSON'un aksine, çift alıntılar isteğe bağlı. Biz tavsiye ederiz: şüphe içinde tüm String'i çift alıntılarda kapat. Bir String'in başında veya sonundaki uzaylar güçlü bir şekilde cesaretiniz.
     * Şimdilik, #255'den daha büyük karakterler kullanımı cesaret vericidir. NCCSV onları destekliyor. ERDDAP™ Onları içsel olarak destekler. Bazı çıktı dosyası türleri onları destekliyor (E.g., .json ve .nccsv ) . Ancak birçok çıkış dosya türü onları desteklemiyor. Örneğin, NetCDF -3 dosyaları bu karakterleri desteklemiyor çünkü NetCDF dosyaları 1bay karakterleri ve CF şu anda Unicode karakterlerinin nasıl kodlandığını belirtmek için bir sisteme sahip değildir NetCDF Strings (e.g., UTF-8) . Bu muhtemelen zamanla gelişecektir.
          
 #### hayır{#char} 
-* Kar özellikleri değerleri tek bir UCS-2 karakteridir (i.e., 2bay Unicode karakterleri, sanki içinde Java ) 7bit ASCII, JSON gibi karakterler olarak yazılmalıdır, böylece diğer karakterler belirtilebilir. (String tanımının, özel karakterlerin yaygınlaşması için yukarıda, bir tek alıntının yanı sıra, ‘ ‘ ‘) . Char özellikleri değerleri tek alıntılarda kapalı olmalıdır (İç alıntılar) ve çift alıntılar (Dış alıntılar) E.g., "'a", "" (Çift bir alıntı karakteri) ""Lo" (Tek bir alıntı karakteri) "'Lot" (Bir sekme) "'Lou20AC" (Bir Euro karakteri) . Bu tek ve çift alıntıyı kullanmanın sistemi garip ve cumbersome, ancak yayranlarla çalışan bir şekilde Strings'ten kar değerlerini ayırt etmenin bir yoludur. Bir kömür gibi görünen bir değer ama geçersiz bir hata mesajı üretecektir. Strings ile olduğu gibi, karakterlerin kullanımı #255'den daha büyük.
+* Kar özellikleri değerleri tek bir UCS-2 karakteridir (i.e., 2bay Unicode karakterleri, sanki içinde Java ) 7bit ASCII, JSON gibi karakterler olarak yazılmalıdır, böylece diğer karakterler belirtilebilir. (String tanımının, özel karakterlerin yaygınlaşması için yukarıda, bir tek alıntının yanı sıra, ‘ ‘ ‘) . Char özellikleri değerleri tek alıntılarda kapalı olmalıdır (İç alıntılar) ve çift alıntılar (Dış alıntılar) E.g., "'a", "" (Çift bir alıntı karakteri) ""Lo" (Tek bir alıntı karakteri) "'Lot" (Bir sekme) "'\'\'\'\\ \\u20AC "" (Bir Euro karakteri) . Bu tek ve çift alıntıyı kullanmanın sistemi garip ve cumbersome, ancak yayranlarla çalışan bir şekilde Strings'ten kar değerlerini ayırt etmenin bir yoludur. Bir kömür gibi görünen bir değer ama geçersiz bir hata mesajı üretecektir. Strings ile olduğu gibi, karakterlerin kullanımı #255'den daha büyük.
 
 ### Suffix{#suffix} 
 NCCSV dosyasının özellikleri bölümünde, tüm sayısal özelliklerin değerlerinin bir ek mektubu olması gerektiğini unutmayın. (E.g., 'b') numeric veri tipini tanımlamak için (E.g., bytete) . Ancak NCCSV dosyasının veri bölümünde, sayısal veri değerleri asla bu ek mektuplara sahip olmamalıdır ("L" uzun tamsayılar ve "uL" ulong tamsaları için) - veri türü,\\*DATA\\_TYPE\\*Değişken için özellik.
@@ -220,7 +220,7 @@ TarihTime değerleri sayısal değerler olarak temsil edilen bir birim özelliğ
 Zaman, 1970'ten bu yana saniyeler,-01T00:00Z
 
 String değerleri olarak temsil edilen tarihTime değerleri bir String değerine sahip olmalıdır\\*DATA\\_TYPE\\*Özellikler ve bir birim, bir tarihe işaret eden bir özelliktir Time pattern as specified by the Java DateTimeFormatter class
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Örneğin,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Örneğin,
 Zamanlar, yyyy-MM-dd 'T'HH:mm:sZ
 Verilen bir veri değişkeni için tüm tarihTime değerleri aynı formatı kullanmalıdır.
 Çoğu durumda, birim özellikleri için ihtiyacınız olan tarihTime modeli bu formatlardan birinin bir varyasyonu olacaktır:
@@ -245,7 +245,7 @@ CF tarafından gerektiğinde, tüm derece değerleri (E.g., uzun ve entitude iç
 ##  [DSG Özel Özellikleri](#dsg-feature-types)  {#dsg-feature-types} 
 
 Bir NCCSV dosyası, CF Discrete Sampling Geometry içerebilir
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) Veriler. Bu işi yapan özelliklerdir:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) Veriler. Bu işi yapan özelliklerdir:
 
 1. CF tarafından gerekli olduğu gibi, NCCSV dosyası metadata bölümünde bir çizgi içermelidir [\\*GLOBAL GLOBAL GLOBAL\\*](#global)   featureType Özellikler, e.g.,
     \\*GLOBAL GLOBAL GLOBAL\\*, featureType ,trajectory
@@ -326,7 +326,7 @@ Notlar:
 
 * Bu örnek dosya birçok zor vaka içeriyor (e.g., kar ve uzun değişkenler ve zor String değerleri) . Çoğu NCCSV dosyaları çok daha basit olacaktır.
 * Lisans hattı burada iki çizgiye kırılır, ancak örnek dosyada sadece bir çizgidir.
-* Žu20AC, Euro karakterinin en yaygınlaşması ve Žu00FC, ü'nin en yaygınlaşmasıdır.
+* \\ \\u20AC Euro karakterinin ve 4.99u00FC'nin en yaygınlaşmasıdır.
 * Pek çok Örneğin Strings çift alıntılarla kapalıdır, ancak olması gerekmez, e.g., başlık dahil birçok küresel özellik, lon birimleri özelliği ve 3rd veri hattı.)
 * TestLong değişkeni için birimlerin özellikleri çift alıntılarda yazılırsa, bunun bir String değeri olduğunu gösterir. Ancak mevcut temsiliyet (1, alıntı yapmadan) Bir String olarak doğru yorumlanacaktır, tam olarak değil, çünkü ‘i’ eki yoktur.
 * Diğer sayısal veri türlerinden farklı olarak, veri bölümündeki uzun değerler ekinlere sahiptir. ('L') Bu onların sayısal veri türünü tanımlar. Bu, tabloları yüzen sayılar olarak yorumlamak ve böylece hassaslığı kaybetmek için gereklidir.
@@ -336,7 +336,7 @@ Notlar:
 Bir NCCSV dosyasında olduğu gibi, yaygın bir tabloda:
 
 * NCCSV dosyaları için belirtildiği gibi sayısal özellikler yazın (e.g., bir ek mektubu ile, e.g., 'f', özelliklerini tanımlamak için) .
-* Strings'te, tüm karakterleri ASCII karakterinden daha az yaz #32 veya karakterden daha büyük #126 bir JSON benzeri backslashed karakter (E.g., \\n Yeniline için) Ya da hexadecimal Unicode karakteri numarası (En hassas durumda) Sözcüklerle [. *hhhh* ](#uhhhh)   (e.g., Euro işareti için 4.99u20AC) . Use Use Use Use Use \\n   (2 karakter: backslash ve 'n ‘ ‘ ‘) Yeni bir çizgi göstermek için, Alt Gir değil.
+* Strings'te, tüm karakterleri ASCII karakterinden daha az yaz #32 veya karakterden daha büyük #126 bir JSON benzeri backslashed karakter (E.g., \\n Yeniline için) Ya da hexadecimal Unicode karakteri numarası (En hassas durumda) Sözcüklerle [. *hhhh* ](#uhhhh)   (E.g., \\ \\u20AC Euro işareti için) . Use Use Use Use Use \\n   (2 karakter: backslash ve 'n ‘ ‘ ‘) Yeni bir çizgi göstermek için, Alt Gir değil.
 
 NCCSV dosyaları ve bu kongreleri takip eden analog yayılma tablosu arasındaki tek fark:
 
@@ -392,7 +392,7 @@ Bir Google Dokümanlarından NCCSV dosyası oluşturmak için:
 * Bir NCCSV dosyası satırların sonunda fazla komüne sahipse, NCCSV dosyasını NCCSV dosyasına bir şekilde dönüştürmekle onları kaldırabilirsiniz. NetCDF Dosya ve sonra dönüştürme NetCDF Dosya bir NCCSV dosyasına geri döndü.
 * NCCSV dosyasını bira dönüştürmeye çalıştığınızda NetCDF Dosya, bazı hatalar yazılım tarafından tespit edilecek ve hata mesajları üretecek, dönüştürmenin başarısız olmasına neden olacaktır. Diğer sorunlar yakalamak için zor veya imkansız ve hata mesajları veya uyarılar üretmeyecektir. Diğer sorunlar (E.g., sıraların sonunda aşırı komünler) Göz ardı edilecektir. Dosya dönüştürücü sadece ortaya çıkan doğrulığı kontrol edecektir NetCDF Dosya, e.g., CF uyumluluğu ile ilgili. Dosya yaratıcısının ve dosya kullanıcının dönüştürme sonuçlarının istenen ve doğru olduğunu kontrol etmek için sorumluluğudur. Kontrol etmenin iki yolu:
     * Yazdır the content of the .nc ncdump ile dosya
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * Verilerin içeriğini görüntüleyin ERDDAP .
 
 ##  [Değişiklikler Değişiklikler Değişiklikler](#changes)  {#changes} 

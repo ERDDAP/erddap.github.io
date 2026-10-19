@@ -42,7 +42,7 @@ Když k vám přijde poskytovatel údajů a doufá, že vám přidá nějaké ú
 Předkládání skutečných datových souborů z externích zdrojů je obrovské bezpečnostní riziko, takže ERDDAP™ s tím se nevyrovná. Musíte přijít na řešení, které funguje pro vás a poskytovatele dat, například, e-mail (pro malé soubory) , vytáhnout z mraku (například DropBox nebo Google Drive) , místo sftp (s hesly) nebo tenisky Čistá (USB disk nebo externí pevný disk) . Asi bys měl přijmout složky jen od lidí, které znáš. Budete muset skenovat soubory pro viry a přijmout další bezpečnostní opatření.
 
 Není tam žádné spojení. ERDDAP™ na formulář poskytovatele údajů (např. ERDDAP™ domovská stránka) . Místo toho, když vám někdo řekne, že chce, aby jim jejich data doručila vaše ERDDAP , můžete jim poslat e-mail s nápisem:
-Ano, můžeme vaše data dostat do ERDDAP . Pro začátek prosím vyplňte formulář nahttps://*yourUrl*/erddap/dataProviderForm.html  (nebo http:// pokud https:// není povoleno) .
+Ano, můžeme vaše data dostat do ERDDAP . Pro začátek prosím vyplňte formulář na https://*yourUrl*/erddap/dataProviderForm.html   (nebo http:// pokud https:// není povoleno) .
 Až to dokončíte, zavolám vám, abych vám vysvětlila detaily.
 Pokud se jen chcete podívat na formulář (bez vyplnění) , můžete vidět formulář na ERD 's ERDDAP : [Úvod](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) , [Část 1](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) , [Část 2](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) , [Část 3](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) a [Část 4](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) . Tyto odkazy na ERD   ERDDAP™ Pošlete mi informace, ne vy, takže s nimi neposílejte informace, pokud opravdu nechcete přidat data do ERD   ERDDAP .
 
@@ -190,23 +190,23 @@ Tento EDDType generuje všechny datasets.xml kousky potřebné k výrobě [EDDTa
      
 #####  EDDGrid FromThreddsCatalog{#eddgridfromthreddscatalog} 
 Tento EDDType generuje všechny datasets.xml kousky potřebné pro všechny [ EDDGrid FromDap](#eddgridfromdap) Soubory dat, které může najít tím, že se opakovaně plazí přes THREDDS (sub) Katalog. Existuje mnoho forem katalogových URL THREDDS. Tato volba REQUERES a THREDDS .xml URL s /catalog/ v ní, například,
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xmlnebo
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml nebo
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (příbuzný katalog .html je na
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html, které není přijatelné pro EDDGrid FromThreddsCatalog).
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html , které není přijatelné pro EDDGrid FromThreddsCatalog).
 Pokud máte problémy s EDDGrid FromThredds Katalog:
 * Ujistěte se, že URL, kterou používáte, je platné, obsahuje /catalog/ a končí s /catalog.xml .
-* Pokud je to možné, použijte veřejnou IP adresu (například:https://oceanwatch.pfeg.noaa.gov) v URL, nikoli místní numerická IP adresa (například:https://12.34.56.78) . Pokud je THREDDS přístupný pouze prostřednictvím místní číselné IP adresy, můžete použít [&lt;convertToPublicSourceUrl&gt;] (# Konvertovat na veřejné zdrojeurl) tak ERDDAP™ uživatelé vidí veřejnou adresu, i když ERDDAP™ získává data z místní číselné adresy.
+* Pokud je to možné, použijte veřejnou IP adresu (například: https://oceanwatch.pfeg.noaa.gov ) v URL, nikoli místní numerická IP adresa (například: https://12.34.56.78 ) . Pokud je THREDDS přístupný pouze prostřednictvím místní číselné IP adresy, můžete použít [&lt;convertToPublicSourceUrl&gt;] (# Konvertovat na veřejné zdrojeurl) tak ERDDAP™ uživatelé vidí veřejnou adresu, i když ERDDAP™ získává data z místní číselné adresy.
 * Pokud máte problémy, které nemůžete vyřešit, [zkontrolovat tipy na odstraňování problémů](#troubleshooting-tips) .
 * Nízkoúrovňové kód pro tento nyní používá Unidata katalogový kód netcdf-java (Thredds. Katalogové třídy) takže může zvládnout všechny katalogy THREDDS (což může být překvapivě složité.) Díky Unidata na ten kód.
          
 #####  EDDGrid LonPM180FromErddapKatalog{#eddgridlonpm180fromerddapcatalog} 
 Tento EDDType generuje datasets.xml k výrobě [ EDDGrid LonPM180](#eddgridlonpm180) Data ze všech EDDGrid data v souboru ERDDAP jejichž délka je větší než 180.
-* Pokud je to možné, použijte veřejnou IP adresu (například:https://oceanwatch.pfeg.noaa.gov) v URL, nikoli místní numerická IP adresa (například:https://12.34.56.78) . Pokud ERDDAP™ je přístupná pouze prostřednictvím místní číselné IP adresy, můžete použít [&lt;convertToPublicSourceUrl&gt;] (# Konvertovat na veřejné zdrojeurl) tak ERDDAP™ uživatelé vidí veřejnou adresu, i když ERDDAP™ získává data z místní číselné adresy.
+* Pokud je to možné, použijte veřejnou IP adresu (například: https://oceanwatch.pfeg.noaa.gov ) v URL, nikoli místní numerická IP adresa (například: https://12.34.56.78 ) . Pokud ERDDAP™ je přístupná pouze prostřednictvím místní číselné IP adresy, můžete použít [&lt;convertToPublicSourceUrl&gt;] (# Konvertovat na veřejné zdrojeurl) tak ERDDAP™ uživatelé vidí veřejnou adresu, i když ERDDAP™ získává data z místní číselné adresy.
          
 #####  EDDGrid Lon0360FromErddapKatalog{#eddgridlon0360fromerddapcatalog} 
 Tento EDDType generuje datasets.xml k výrobě [ EDDGrid Lon0360](#eddgridlon0360) Data ze všech EDDGrid data v souboru ERDDAP jejichž délka je menší než 0.
-* Pokud je to možné, použijte veřejnou IP adresu (například:https://oceanwatch.pfeg.noaa.gov) v URL, nikoli místní numerická IP adresa (například:https://12.34.56.78) . Pokud ERDDAP™ je přístupná pouze prostřednictvím místní číselné IP adresy, můžete použít [&lt;convertToPublicSourceUrl&gt;] (# Konvertovat na veřejné zdrojeurl) tak ERDDAP™ uživatelé vidí veřejnou adresu, i když ERDDAP™ získává data z místní číselné adresy.
+* Pokud je to možné, použijte veřejnou IP adresu (například: https://oceanwatch.pfeg.noaa.gov ) v URL, nikoli místní numerická IP adresa (například: https://12.34.56.78 ) . Pokud ERDDAP™ je přístupná pouze prostřednictvím místní číselné IP adresy, můžete použít [&lt;convertToPublicSourceUrl&gt;] (# Konvertovat na veřejné zdrojeurl) tak ERDDAP™ uživatelé vidí veřejnou adresu, i když ERDDAP™ získává data z místní číselné adresy.
          
 ##### EDDsFromFoles{#eddsfromfiles} 
 Vzhledem k startovnímu adresáři prochází adresář a všechny podadresáře a snaží se vytvořit soubor pro každou skupinu datových souborů, které najde.
@@ -566,7 +566,7 @@ NCCSV 1.0 soubory nepodporuje žádné nepodepsané celočíselné datové typy.
 ### Poznámky typu údajů{#data-type-comments} 
 * Vzhledem k tomu, že špatná podpora pro dlouhé, ulong, a char data v mnoha typech souborů, odrazujeme používání těchto datových typů v ERDDAP . Pokud je to možné, použijte dvojité místo dlouhé a ulong, a použijte String místo char.
      
-* Metadata - protože(OPeN)DAP's .das a .dds odpovědi nepodporuje dlouhé nebo dlouhé atributy nebo datové typy (a místo toho jim ukázat jako dvojité) , můžete místo toho použít ERDDAP 's tabulární reprezentace metadat, jak je vidět v http .../erddap/ **Informace** / * datasetID * .html webová stránka (například: [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (které můžete také získat v jiných typech souborů, např. .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) nebo .nccsv Odpověď na metadata (například: [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) i když .nccsv Metadata jsou dostupná pouze pro tabulkové soubory dat) , obojí podporuje všechny datové typy (zejména dlouhé, ulong a char) .
+* Metadata - protože(OPeN)DAP's .das a .dds odpovědi nepodporuje dlouhé nebo dlouhé atributy nebo datové typy (a místo toho jim ukázat jako dvojité) , můžete místo toho použít ERDDAP 's tabulární reprezentace metadat, jak je vidět v http .../erddap/ **Informace** / * datasetID * .html webová stránka (například: [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (které můžete také získat v jiných typech souborů, např. .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) nebo .nccsv Odpověď na metadata (například: [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) i když .nccsv Metadata jsou dostupná pouze pro tabulkové soubory dat) , obojí podporuje všechny datové typy (zejména dlouhé, ulong a char) .
          
 ### Soubory médií{#media-files} 
 Ne všechna data jsou pole čísel nebo textu. Některé soubory souborů se skládají z mediálních souborů, jako jsou obrazy, audio a video soubory. ERDDAP™ má některé speciální funkce, které uživatelům usnadní přístup k mediálním souborům. Je to dvoustupňový proces:
@@ -604,7 +604,7 @@ Nebo pokud uživatel klikne na název souboru zobrazený na ERDDAP™ webová st
 ### Práce se soubory AWS S3{#working-with-aws-s3-files} 
  [Amazon Web Service (AWS) ](https://aws.amazon.com) je prodejcem [cloud computing](https://en.wikipedia.org/wiki/Cloud_computing) služby. [S3](https://aws.amazon.com/s3/) je systém úložiště objektů nabízený AWS. Místo hierarchického systému adresářů a souborů tradičního souborového systému (jako pevný disk ve vašem počítači) , S3 nabízí jen "kakety," které drží "objekty" (Zavoláme jim. "files" ) .
 
-Pro soubory ASCII (např. .csv) , ERDDAP™ může pracovat přímo se soubory v kbelících. Jediné, co musíte udělat, je upřesnit&lt;souborDir&gt; pro datový soubor, který používá specifický formát pro kbelík AWS, např.https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/. Nepoužívejte&lt;cacheFromUrl&gt; . Podrobnosti viz níže.
+Pro soubory ASCII (např. .csv) , ERDDAP™ může pracovat přímo se soubory v kbelících. Jediné, co musíte udělat, je upřesnit&lt;souborDir&gt; pro datový soubor, který používá specifický formát pro kbelík AWS, např. https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ . Nepoužívejte&lt;cacheFromUrl&gt; . Podrobnosti viz níže.
 
 Ale pro binární soubory (např. .nc , .grib, .bufr a .hdf soubory) , musíte použít&lt;cacheFromUrl&gt; systém popsaný níže. ERDDAP , netcdf-java (která ERDDAP™ používá pro čtení dat z těchto souborů) , a další vědecký datový software jsou navrženy pro práci se soubory v tradičním souborovém systému, který nabízí [úroveň bloku](https://en.wikipedia.org/wiki/Block-level_storage) přístup ke souborům (který umožňuje čtení částí souboru) , ale pouze S3 nabízí [Úroveň souboru (objekt) ](https://en.wikipedia.org/wiki/Block-level_storage) přístup ke souborům (což umožňuje pouze čtení celého souboru) . AWS nabízí alternativu k S3, [Elastický blokový obchod (EBS) ](https://aws.amazon.com/ebs/) ), který podporuje přístup k souborům na úrovni bloku, ale je dražší než S3, takže se zřídka používá pro hromadné ukládání velkého množství datových souborů. (Takže když lidé říkají ukládání dat v cloudu (S3) je levné, je to obvykle jablka k pomerančům srovnání.) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 Odpovídající URL pro tento objekt je
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 AWS podporuje malou variaci v tom, jak je tato URL vytvořena, ale ERDDAP™ vyžaduje tento zvláštní formát:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 Od ERDDAP V2.29 můžete nyní použít `s3://` URI formát místo kbelík URL. Toto je formát používaný [AWS s3 cli](https://docs.aws.amazon.com/cli/latest/reference/s3/) .
 s3:// *kbelík Název* / *klíč* 
@@ -697,22 +697,22 @@ Pro soukromý datový kbelík S3 vám majitel kbelíku musí dát přístup k v�
 Ve všech případech budete potřebovat účet AWS, protože AWS SDK pro Java   (která ERDDAP™ používá k získávání informací o obsahu vědra) vyžaduje oprávnění AWS účtu. (více v tomto níže) 
 
  ERDDAP™ přístup k kbelíkům AWS S3 pouze pokud zadáte [&lt;cacheFromUrl&gt;] (#Cachefromurl) (nebo&lt;souborDir&gt;) ve zvláštním formátu:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 kde
 
 * KbelíkJméno je krátká forma jména kbelíku, např. noaa-goes17 .
 * Oblast Aws, např. us-east-1, je ze sloupce "Region" v jedné z tabulek [Konec služby AWS](https://docs.aws.amazon.com/general/latest/gr/rande.html) kde je kbelík skutečně umístěn.
 * Předpona je volitelná. Pokud je přítomen, musí skončit '/' .
 
-Například,https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+Například, https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 Tento formát URL je jedním z doporučení AWS S3: viz [Přístup k kýblu](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) a [popis předpon](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) . ERDDAP™ vyžaduje, abyste spojili kbelík URL a volitelný prefix do jedné URL, aby bylo možné určit&lt;cacheFromUrl&gt; (nebo&lt;fileDir&gt;) kde jsou soubory umístěny.
 
 #### Testování veřejných AWS S3 Kýble{#test-public-aws-s3-buckets} 
 Pro veřejné kbelíky můžete a měli byste otestovat kbelík URL adresáře AWS S3 ve vašem prohlížeči, např.
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) Pokud je kbelík URL správný a vhodný pro ERDDAP , vrátí XML dokument, který má (částečný) seznam obsahu toho vědra. Bohužel, celá URL (tj. kbelík URL plus předpona) že ERDDAP™ nefunguje v prohlížeči. AWS nenabízí systém prohlížení hierarchie kbelíku snadno ve vašem prohlížeči. (Pokud je to špatně, pošlete prosím Chrisovi email. John v Noaa.gov. Jinak, Amazone, prosím přidejte podporu&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) Pokud je kbelík URL správný a vhodný pro ERDDAP , vrátí XML dokument, který má (částečný) seznam obsahu toho vědra. Bohužel, celá URL (tj. kbelík URL plus předpona) že ERDDAP™ nefunguje v prohlížeči. AWS nenabízí systém prohlížení hierarchie kbelíku snadno ve vašem prohlížeči. (Pokud je to špatně, pošlete prosím Chrisovi email. John v Noaa.gov. Jinak, Amazone, prosím přidejte podporu&#33;) 
 
 #### Zobrazení obsahu kýblu{#viewing-the-contents-of-a-bucket} 
-Kbelíky S3 často obsahují několik kategorií souborů, v několika pseudo podadresářů, které by se mohly stát pár ERDDAP™ Data. Aby se ERDDAP™ Soubory dat, musíte znát výchozí adresář pro&lt;cacheFromUrl&gt; (nebo&lt;fileDir&gt;) a formát názvů souborů, které tuto podmnožinu souborů identifikují. Pokud se pokusíte zobrazit celý obsah kbelíku v prohlížeči, S3 vám ukáže prvních 1000 souborů, což je nedostatečné. V současné době, nejlepší způsob, jak si prohlédnout veškerý obsah kbelíku je vytvořit [EDDTableFromFileNames](#eddtablefromfilenames) Soubor údajů (na počítači. ERDDAP™ a/nebo na veřejnosti ERDDAP ) , který vám také dává snadný způsob, jak procházet strukturu adresáře a stahovat soubory. The&lt;souborDir&gt; pro to bude URL, které jste vytvořili výše, např.,https://noaa-goes17.s3.us-east-1.amazonaws.com. \\[ Proč AWS S3 nenabízí rychlý a snadný způsob, jak to udělat bez účtu AWS? \\] Všimněte si, že když tohle dělám na svém počítači v neamazonské síti, zdá se, že Amazon zpomaluje reakci na trik. (asi 100 (?) Soubory za kus) po prvních několika útržcích (1000 souborů za kus) jsou staženy. Vzhledem k tomu, kbelíky mohou mít obrovské množství souborů (Noaa-goes17 má 26 milionů) , získání všech obsahů kbelíku může trvat EDDTableFromFileJména několik hodin (např. 12&#33;) do konce. \\[ Amazonka, je to tak? \\] 
+Kbelíky S3 často obsahují několik kategorií souborů, v několika pseudo podadresářů, které by se mohly stát pár ERDDAP™ Data. Aby se ERDDAP™ Soubory dat, musíte znát výchozí adresář pro&lt;cacheFromUrl&gt; (nebo&lt;fileDir&gt;) a formát názvů souborů, které tuto podmnožinu souborů identifikují. Pokud se pokusíte zobrazit celý obsah kbelíku v prohlížeči, S3 vám ukáže prvních 1000 souborů, což je nedostatečné. V současné době, nejlepší způsob, jak si prohlédnout veškerý obsah kbelíku je vytvořit [EDDTableFromFileNames](#eddtablefromfilenames) Soubor údajů (na počítači. ERDDAP™ a/nebo na veřejnosti ERDDAP ) , který vám také dává snadný způsob, jak procházet strukturu adresáře a stahovat soubory. The&lt;souborDir&gt; pro to bude URL, které jste vytvořili výše, např., https://noaa-goes17.s3.us-east-1.amazonaws.com . \\[ Proč AWS S3 nenabízí rychlý a snadný způsob, jak to udělat bez účtu AWS? \\] Všimněte si, že když tohle dělám na svém počítači v neamazonské síti, zdá se, že Amazon zpomaluje reakci na trik. (asi 100 (?) Soubory za kus) po prvních několika útržcích (1000 souborů za kus) jsou staženy. Vzhledem k tomu, kbelíky mohou mít obrovské množství souborů (Noaa-goes17 má 26 milionů) , získání všech obsahů kbelíku může trvat EDDTableFromFileJména několik hodin (např. 12&#33;) do konce. \\[ Amazonka, je to tak? \\] 
 
 #### Vytvářet graf ZFileNames Dataset s AWS S3 Bucket{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 Pokud máte jméno kbelíku, ale již nemáte seznam souborů v kbelíku S3 nebo předponu, která identifikuje umístění příslušných souborů v kbelíku, použijte níže uvedené pokyny k vytvoření souboru EDDTableFromFileNames, abyste mohli procházet hierarchii adresáře kbelíku S3 prostřednictvím ERDDAP 's "files" systém.
@@ -727,22 +727,24 @@ Java.lang. IlegálníHargument Výjimkou: profilový soubor nemůže být chybou
 Tip pro Linux a Mac OS: pověřovací soubor musí být v domovském adresáři uživatele, který spouští Tomcat (a ERDDAP )   (pro tento odstavec, budeme předpokládat user=tomcat) ve složce zvané ~/.aws/credentials . Nepředpokládejte, že ~ je /home/tomcat -- vlastně použít cd ~ zjistit, kde operační systém myslí ~ pro uživatele=tomcat je. Vytvořte adresář, pokud neexistuje. Dále, poté, co umístíte pověřovací soubor na místo, ujistěte se, že uživatel a skupina pro soubor jsou tomcat a pak použít Chmod 400 pověřovacích listin, aby se ujistil, že soubor je čten pouze pro uživatele=tomcat.
     
 3. Vytvořit kbelík URL v [formát, který ERDDAP™ vyžaduje](#accessing-files-in-an-aws-s3-bucket) např.
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) a (pro veřejné vědro) otestujte jej v prohlížeči, aby se ujistil, že vrátí XML dokument, který má částečný seznam obsahu tohoto kbelíku.
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) a (pro veřejné vědro) otestujte jej v prohlížeči, aby se ujistil, že vrátí XML dokument, který má částečný seznam obsahu tohoto kbelíku.
      
 4. Použití [GenerovatDatasetsXml](#generatedatasetsxml) vytvořit [EDDTableFromFileNames](#eddtablefromfilenames) Soubor údajů:
     * Pro úvodní adresář použijte tuto syntaxi:
         \\*\\*\\ *z OnTheFly,* Vaše BucketUrl*
 například:
-        \\*\\*\\* from OnThe Fly,https://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\*\\* from OnThe Fly, https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * Jméno souboru regex? .\\*
     * Rekurzivní? pravda
     * reload Každý NMinutes? 10080
-    *    infoUrl ?https://registry.opendata.aws/noaa-goes/
+    *    infoUrl ? https://registry.opendata.aws/noaa-goes/
+ 
     * Instituce? NOAA 
     * Shrnutí? Nic. ( ERDDAP™ automaticky vytvoří slušné shrnutí.) 
     * Název? Nic. ( ERDDAP™ automaticky vytvoří slušný název.) Jako obvykle byste měli editovat výsledný XML pro ověření správnosti a provést vylepšení před částí souborů, které jej používají v datasets.xml .
 5. Pokud budete postupovat podle výše uvedených pokynů a načíst soubor údajů v ERDDAP , jste vytvořili EDDTableFromFoles soubor. Jako příklad, a aby bylo pro každého jednodušší procházet a stahovat soubory z kbelíků AWS Open Data, jsme vytvořili soubory EDDTableFromFileNames (viz seznam na
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) pro téměř všechny [AWS S3 Otevřít datové vědro](https://registry.opendata.aws/) .
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) pro téměř všechny [AWS S3 Otevřít datové vědro](https://registry.opendata.aws/) .
      \\[ Pár kýblů, které jsme do kořenového adresáře nezahrnuli. (více než lze stáhnout v přiměřeném čase) , nebo nedovolují přístup veřejnosti (Neměly by být všechny veřejné?) , nebo jsou kbelíky Requester Pays (např. Sentinel) . \\]   
 Pokud kliknete na "files" odkaz na jeden z těchto souborů, můžete procházet adresář strom a soubory v tomto S3 kbelíku. Kvůli cestě\\*\\*\\*fromOnTheFly EDDTableFromFiles funguje, tyto seznamy adresářů jsou vždy dokonale aktuální, protože ERDDAP™ Dostane je do letadla. Pokud kliknete na strom adresáře na aktuální název souboru a kliknete na název souboru, ERDDAP™ přesměruje váš požadavek na AWS S3 tak, abyste mohli soubor stáhnout přímo z AWS. Pak si můžete ten soubor prohlédnout.
     
@@ -756,7 +758,7 @@ Je nešťastné, že AWS nedovoluje lidem, aby prohlížečem prohlíželi obsah
  **Pak můžete udělat ERDDAP™ data, která uživatelům umožňují přístup k datům v souborech.**   
 Viz pokyny v [ ERDDAP™ a S3 kýbly](#erddap-and-aws-s3-buckets)   (nad) .
 Pro vzorek EDDTableFromFileNames soubor, který jste vytvořili výše, pokud uděláte trochu pošťouchání kolem adresáře a názvy souborů ve stromu adresáře, je jasné, že jména adresářů nejvyšší úrovně (např. ABI-L1b-RadC) odpovídá tomu, co ERDDAP™ Volal bych samostatné soubory dat. Kbelík, se kterým pracujete, může být podobný. Pak byste mohli pokračovat v vytváření samostatných souborů v ERDDAP™ pro každý z těchto souborů údajů, např.
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 jako&lt;cacheFromUrl&gt;. Bohužel, pro tento konkrétní příklad, soubory údajů v kbelíku se zdá být úroveň 1 nebo úroveň 2 soubory údajů, které ERDDAP™   [není moc dobrý v](#dimensions) , protože datový soubor je složitější sběr proměnných, které používají různé rozměry.
      
     
@@ -975,7 +977,7 @@ Netříděné hodnoty rozměrů téměř vždy indikují problém se zdrojovým 
 ###  EDDGrid FromDap{#eddgridfromdap} 
  [ ** EDDGrid FromDap** ](#eddgridfromdap) zpracovává proměnné sítě z [ DAP ](https://www.opendap.org/) servery.
 
-* Důrazně doporučujeme použít [Generovat soubory dat Xml program](#generatedatasetsxml) vytvořit hrubý návrh datasets.xml kus pro tento datový soubor. Můžete shromáždit informace, které potřebujete k vylepšení, nebo vytvořit vlastní XML pro EDDGrid FromDap data database tím, že se podíváte na soubory DDS a DAS zdrojového souboru ve vašem prohlížeči (přidáním .das a .dds do sourceUrl Například: [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
+* Důrazně doporučujeme použít [Generovat soubory dat Xml program](#generatedatasetsxml) vytvořit hrubý návrh datasets.xml kus pro tento datový soubor. Můžete shromáždit informace, které potřebujete k vylepšení, nebo vytvořit vlastní XML pro EDDGrid FromDap data database tím, že se podíváte na soubory DDS a DAS zdrojového souboru ve vašem prohlížeči (přidáním .das a .dds do sourceUrl Například: [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
      
 *    EDDGrid FromDap může získat data z jakékoliv multidimenzionální proměnné z a DAP datový server. (V předchozích dílech... EDDGrid FromDap byl omezen na proměnné označené jako "grid," ale to již není požadavek.)   
      
@@ -1335,7 +1337,7 @@ Plný příklad axisVariable což činí souhrnný soubor údajů s novou "běh"
         </addAttributes>
       </axisVariable>
 ```
-Všimněte si, že skupina zachytit číslo 2 zachytit číslice, které se vyskytují po 'r' nebo 's', a před "\\_globální'. Tento příklad také ukazuje, jak přidat další atributy (např. ioos\\_category a jednotky) k proměnné osy.
+Všimněte si, že skupina zachytit číslo 2 zachytit číslice, které se vyskytují po 'r' nebo 's', a před "\\_global" . Tento příklad také ukazuje, jak přidat další atributy (např. ioos\\_category a jednotky) k proměnné osy.
      
 #### Vnější komprimované soubory{#externally-compressed-files} 
 * Datové soubory, které jsou podskupinami EDDGrid FromFiles a EDDTable FromFiles mohou sloužit data přímo z externě komprimovaných datových souborů, včetně .tgz , .tar  .gz , .tar  .gzip , .gz , .gzip , .zip , .bz2 , a .Z soubory.
@@ -1433,7 +1435,7 @@ Všechny EDDGrid FromFiles a všechny soubory EDDTableFromFoles podporují sadu 
 Místo toho použijte [&lt;cacheFromUrl&gt; system] (#Cachefromurl) .
 
 Přístup ERDDAP™ Soubory jako soubory prostřednictvím žádostí o rozsah byte --
-Otočím to kolem, vzhledem k tomu, že můžete (teoreticky) Pomyšlení na soubor údajů v ERDDAP™ jako obr .nc soubor započítáním " .nc " na základnu OPen DAP URL pro daný datový soubor (např.https://myserver.org/erddap/griddap/datasetID.nca také přidáním ?query poté, co zadat podmnožinu) , je možná rozumné se zeptat, zda můžete použít netcdf-java, Ferret , nebo jiné NetCDF klientský software pro čtení dat prostřednictvím Žádosti o HTTP rozsah od ERDDAP . Odpověď je ne, protože není opravdu velký " .nc "Složka. Pokud to chcete udělat, udělejte místo toho jednu z těchto možností:
+Otočím to kolem, vzhledem k tomu, že můžete (teoreticky) Pomyšlení na soubor údajů v ERDDAP™ jako obr .nc soubor započítáním " .nc " na základnu OPen DAP URL pro daný datový soubor (např. https://myserver.org/erddap/griddap/datasetID.nc a také přidáním ?query poté, co zadat podmnožinu) , je možná rozumné se zeptat, zda můžete použít netcdf-java, Ferret , nebo jiné NetCDF klientský software pro čtení dat prostřednictvím Žádosti o HTTP rozsah od ERDDAP . Odpověď je ne, protože není opravdu velký " .nc "Složka. Pokud to chcete udělat, udělejte místo toho jednu z těchto možností:
 
 * Použití(OPeN)DAPklientský software pro připojení ke službám Griddap nabízeným ERDDAP . To je ono. DAP   (a tak ERDDAP ) byl navržen pro. Je velmi efektivní.
 * Nebo stáhnout zdrojový soubor (án) z "files" systém (nebo podmnožina souboru prostřednictvím .nc ? dotaz) do počítače a používat netcdf-java, Ferret , nebo jiné NetCDF klientský software pro čtení (Teď) místní soubor (án) .
@@ -2253,9 +2255,9 @@ zvážit uložení údajů ve shromažďování NetCDF v3 .nc soubory (zvlášt�
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### EDDTableFromDapSekvence{#eddtablefromdapsequence} 
- [ **EDDTableFromDapSekvence** ](#eddtablefromdapsequence) zpracovává proměnné v rámci 1- a 2-úrovňové posloupnosti od [ DAP ](https://www.opendap.org/) servery jako např. DAP PE (vhttps://www.pmel.noaa.gov/epic/software/dapper/, nyní přerušen) .
+ [ **EDDTableFromDapSekvence** ](#eddtablefromdapsequence) zpracovává proměnné v rámci 1- a 2-úrovňové posloupnosti od [ DAP ](https://www.opendap.org/) servery jako např. DAP PE (v https://www.pmel.noaa.gov/epic/software/dapper/ , nyní přerušen) .
 
-* Důrazně doporučujeme použít [Generovat soubory dat Xml program](#generatedatasetsxml) vytvořit hrubý návrh datasets.xml kus pro tento datový soubor. Pak to můžete upravit tak, abyste to naladili. Informace, které potřebujete, můžete získat při pohledu na soubory DDS zdrojových dat a DAS ve vašem prohlížeči (přidáním .das a .dds do sourceUrl (příklad bylhttps://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds).
+* Důrazně doporučujeme použít [Generovat soubory dat Xml program](#generatedatasetsxml) vytvořit hrubý návrh datasets.xml kus pro tento datový soubor. Pak to můžete upravit tak, abyste to naladili. Informace, které potřebujete, můžete získat při pohledu na soubory DDS zdrojových dat a DAS ve vašem prohlížeči (přidáním .das a .dds do sourceUrl (příklad byl https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds ).
     
 * Proměnná je v DAP sekvence, pokud odpověď .dds ukazuje, že datová struktura drží proměnnou je "sekvence" (případ necitlivý) .
 * V některých případech uvidíte sekvenci v sekvenci, dvouúrovňovou sekvenci -- EDDTableFromDapSekvence je také zpracovává.
@@ -2378,15 +2380,15 @@ Generovat soubory dat Xml má tři speciální možnosti pro EDDTableFromDatabas
 * [JDBC ovladač a&lt;Název řidiče &gt;] (#jdbc-driver) -- Musíte získat příslušný JDBC 3 nebo JDBC 4 ovladač .jar soubor pro vaši databázi a
 Dej to tam. *tomcat* /webapps/erddap/WEB-INF/lib po instalaci ERDDAP . Pak ve tvém datasets.xml pro tento soubor údajů musíte uvést&lt;DriverName&gt; pro tohoto řidiče, který je (Bohužel) jiný než název souboru. Hledat na webu JDBC ovladač pro vaši databázi a ovladačJméno, že Java Musíš ho použít.
     
-    * Pro MariaDB, zkuste [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * Pro MariaDB, zkuste [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 The&lt;název řidiče &gt; pro použití v datasets.xml   (viz níže) je pravděpodobně org.mariadb.jdbc. Řidiči.
-    * Pro MySQL a Amazon RDS, zkuste [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * Pro MySQL a Amazon RDS, zkuste [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 The&lt;název řidiče &gt; pro použití v datasets.xml   (viz níže) je pravděpodobně com.mysql.jdbc. Řidiči.
-    * Pro Oracle , zkuste [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
+    * Pro Oracle , zkuste [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
 The&lt;název řidiče &gt; pro použití v datasets.xml   (viz níže) je pravděpodobně oracle.jdbc.driver. Oracle Řidiči.
-    * Pro Postgresql jsme dostali JDBC 4 řidiče z [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * Pro Postgresql jsme dostali JDBC 4 řidiče z [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 The&lt;název řidiče &gt; pro použití v datasets.xml   (viz níže) je pravděpodobně Org.postgresql. Řidiči.
-    * Pro SQL Server můžete získat JTDS JDBC ovladač od [https://jtds.sourceforge.net](https://jtds.sourceforge.net) .
+    * Pro SQL Server můžete získat JTDS JDBC ovladač od [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) .
 The&lt;název řidiče &gt; pro použití v datasets.xml   (viz níže) je pravděpodobně net.sourceforge.jtds.jdbc. Řidiči.
     
 Poté, co dáte JDBC ovladač .jar ERDDAP™ lib adresář, musíte přidat odkaz na že .jar soubor v .bat a / nebo .sh skript soubory pro GenerateDatasets Xml, DasDds, a ArchiveADataset, které jsou v *tomcat* /webapps/erddap/WEB-INF/ adresář; jinak získáte ClassNotFoundException při spuštění těchto skriptů.
@@ -2524,7 +2526,7 @@ A v *tomcat* /conf/context.xml, definovat zdroj se stejnou informací, napříkl
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-Obecné informace o použití datového zdroje jsou na [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
+Obecné informace o použití datového zdroje jsou na [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
 Viz [Informace o datovém zdroji Tomcat](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) a [Příklady datového zdroje Tomcat](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) nebo hledat na webu příklady použití DataSources s jinými servery aplikace.
 * Pokud všechno ostatní selže,
 zvážit uložení údajů ve shromažďování NetCDF v3 .nc soubory (zvláště .nc Soubory, které používají [CF Geometrie diskrétního odběru vzorků (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Kontiguous Ragged Array datové struktury a tak lze zacházet s ERDDAP 's [EDDTableFromNcCFFiles](#eddtablefromnccffiles) ) . Pokud jsou logicky organizovaní (každý s údaji pro kus prostoru a času) , ERDDAP™ může z nich velmi rychle extrahovat data.
@@ -2608,7 +2610,7 @@ zvážit uložení údajů ve shromažďování NetCDF v3 .nc soubory (zvlášt�
     
 Část XML, která je generována pomocí GenerateDatasetsXml pro každý soubor dat, zahrnuje:
     
-    * A datasetID což je EDDGrid 's datasetID plus "\\_AsATable."
+    * A datasetID což je EDDGrid 's datasetID plus "\\_AsATable" .
     * Nový souhrnný globální atribut, který je EDDGrid 's shrnutím plus nový první odstavec popisující, co je tento datový soubor.
     * Nový titul globální atribut, který je EDDGrid 's názvem plus', (Jako tabulka) ".
     * Nový globální atribut maxAxis0 s hodnotou 10.
@@ -2644,21 +2646,21 @@ zvážit uložení údajů ve shromažďování NetCDF v3 .nc soubory (zvlášt�
 *    [Údaje v souboru EDDTableFromFileNames](#eddtablefromfilenames-data) je stůl, který ERDDAP™ vytváří on-the-fly s informacemi o skupině místních souborů. V tabulce je řádek pro každý soubor. Čtyři zvláštní atributy v [ datasets.xml pro tento soubor údajů](#eddtablefromfilenames-skeleton-xml) určit, které soubory budou zahrnuty do tohoto souboru údajů:
     
 ##### soubor Dir{#filedir} 
-    *   &lt;fileDir&gt; -- To určuje zdrojový adresář v souborovém systému serveru soubory pro tento soubor. Soubory, které jsou skutečně umístěny v systému serveru v&lt;fileDir&gt; se objeví ve sloupci URL tohoto datového souboru ve virtuálním adresáři s názvemhttps://*serverUrl*/erddap/files/*datasetID/*.
+    *   &lt;fileDir&gt; -- To určuje zdrojový adresář v souborovém systému serveru soubory pro tento soubor. Soubory, které jsou skutečně umístěny v systému serveru v&lt;fileDir&gt; se objeví ve sloupci URL tohoto datového souboru ve virtuálním adresáři s názvem https://*serverUrl*/erddap/files/*datasetID/* .
 Například, pokud datasetID n jplMU RSS T,
 a&lt;fileDir&gt; is /home/data/mur/ ,
 a že adresář má soubor jplMU RSS T20150103000000.png,
 pak URL, která bude zobrazena uživatelům pro tento soubor bude
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png.
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png .
         
 Kromě použití místního adresáře pro&lt;fileDir&gt; můžete také zadat URL vzdálené webové stránky podobné adresáři. To funguje s:
         
         * Neagregovaná data v THREDDS, např.
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Tento server již není spolehlivě dostupný. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Tento server již není spolehlivě dostupný. \\] 
         * Neagregované datové soubory v Hyrax např.
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * Většina adresářů podobných Apači, např.
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### zOnTheFly{#fromonthefly} 
  [\\*\\*\\*fromOnTheFly](#fromonthefly) -- Pro nějaké velké S3 vědro (jako noaa-goes17, který má 26 milionů souborů) , může trvat ERDDAP™ do 12 hodin ke stažení veškeré informace o obsahu kbelíku (a pak jsou tu další problémy.) . Abych se přes to dostal, existuje zvláštní způsob, jak použít&lt;fileDir&gt; v EDDTableFromFileNames vytvořit soubor s adresářem a názvy souborů z kbelíku AWS S3. Databáze nebude mít seznam všech adresářů kbelíku S3 a názvů souborů, které uživatel může vyhledávat prostřednictvím žádostí do datového souboru. Ale soubor dostane jména adresářů a souborů on-the-fly, pokud uživatel přejde hierarchii adresáře s datovým souborem "files" Možnost. To umožňuje uživatelům prohlížet hierarchii souborů a souborů v kbelíku S3 prostřednictvím datového souboru "files" systém. K tomu místo určení URL pro kbelík S3 jako "Starting adresář" (ve generováníDatasets Xml) nebo&lt;souborDir&gt; (v datasets.xml ) , použití:
 ```
@@ -2837,13 +2839,13 @@ Všechny EDDGrid FromFiles a všechny soubory EDDTableFromFoles podporují sadu 
     * The&lt;cacheFromUrl&gt; tag umožňuje zadat URL se seznamem souborů vzdáleného souboru ze vzdáleného seznamu souborů.
         
         * Neagregovaná data v THREDDS, např.
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Tento server již není spolehlivě dostupný. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Tento server již není spolehlivě dostupný. \\] 
         * Neagregované datové soubory v Hyrax např.
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * Většina adresářů podobných Apači, např.
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * S3 kbelíky, např.
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 To však může vyžadovat účet AWS a další nastavení.
 Viz [práce s S3 Kyblíky v ERDDAP™ ](#working-with-aws-s3-files) .
 Také, obvykle nemusíte používat cache FromUrl se soubory v S3 kbelíky, pokud jsou soubory ASCII soubory (např. .csv) , protože ERDDAP™ efektivně číst data z kbelíku přímo přes proud.
@@ -2901,7 +2903,7 @@ pak má řadu vnořených skupin, kde první možnost je nic.
 a druhá možnost je specifická hodnota.
             
 Výše uvedený příklad bude odpovídat adresářům pouze pro druhé 10 dnů roku 2018, např.
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020-10-21 Tento server již není spolehlivě dostupný. \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020-10-21 Tento server již není spolehlivě dostupný. \\]   
 a den 011, 012, ..., 019.
              (Vidíš tohle? [dokumentace regexu](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) a [reflexní tutoriál](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) .)   
 Pokud potřebujete pomoct vytvořit&lt;cachePartialPathRegex&gt;, prosím e-mailem&lt;cacheFromUrl&gt; to Chris. John at noaa.gov .
@@ -3384,7 +3386,7 @@ Pro jakýkoli datový soubor v ERDDAP™ , když zašlete žádost na ERDDAP™ 
 
 * . vložit
     * Žádost je formátována jako standardní HTML forma odezvy, s key=value párů, oddělena '&'. Například,
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 říká ERDDAP™ přidat nebo změnit údaje pro stationID =46088 pro stanovený čas.
     * Autorem této změny je JohnSmith a klíčem je Klíč1.
     * URL musí obsahovat platné hodnoty (chybějící hodnoty) pro všechny [ http GetRequiredVariables](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ Pro jakýkoli datový soubor v ERDDAP™ , když zašlete žádost na ERDDAP™ 
              
     * .delete
         * Žádost je formátována jako standardní HTML forma odezvy, s key=value párů, oddělena '&'. Například,
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 říká ERDDAP™ smazat údaje pro stationID =46088 ve stanovené době.
         * Autorem této změny je JohnSmith a klíčem je Klíč1.
         * URL musí určit [ http GetRequiredVariables](#httpgetrequiredvariables-global-attribute) v žádosti (např. stationID a čas) . Pokud tyto hodnoty odpovídají hodnotám v řádku, které jsou již v datovém souboru (které obvykle budou) , staré hodnoty jsou účinně smazány (i když staré hodnoty jsou stále přístupné, pokud uživatel požaduje údaje z předchozího [verze](#versioning) souboru údajů) .
@@ -3667,7 +3669,7 @@ Ne každý potřebuje tento typ jemné verze, ale je mimořádně užitečný, m
     
 ##### HTTPS Put and Delete{#https-put-and-delete} 
 *    ["A co HTTPS PUT a DELETE?&#33;"](#https-put-and-delete)   
-     [Protokol Hypertext Transfer (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) je základem World Wide Web a důvod, proč webové stránky URL začínají s "http://"nebo "https://". HTTPS je HTTP s dodatečnou bezpečnostní vrstvou. Každý den, prohlížeče, skripty a počítačové programy tvoří miliardy HTTP (S)   **GET** žádá o získání informací ze vzdálených zdrojů. HTTP (S) zahrnuje také jiné [slovesa](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , zejména PUT (přesměrovat data na server) A DELETE (na DELETE data ze serveru) . Ano, PUT a DELETE jsou vhodným způsobem, jak vložit data do datového souboru a z něj odstranit data přes HTTP (S) . GET podporuje každý kousek softwaru, který může pracovat s HTTP (S) . GET je opravdu snadné pracovat s. Každý již ví, jak pracovat s GET a mnozí vědí, jak používat POST (které lze použít v podstatě stejným způsobem jako GET) , Takže jsme udělali EDDTableFromHttpZískejte práci s GET a POST. Velmi málo lidí (i málo programátorů počítačů) kdy pracoval s PUT a DELETE. PUT a DELETE jsou obecně podporovány pouze počítačovými jazyky, takže jejich použití vyžaduje zručný program. Takže PUT a DELETE jsou obvykle mnohem náročnější přístup vzhledem k tomu, jak se nástroje vyvinuly.
+     [Protokol Hypertext Transfer (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) je základem World Wide Web a důvod, proč webové stránky URL začínají s " http://" nebo " https://" . HTTPS je HTTP s dodatečnou bezpečnostní vrstvou. Každý den, prohlížeče, skripty a počítačové programy tvoří miliardy HTTP (S)   **GET** žádá o získání informací ze vzdálených zdrojů. HTTP (S) zahrnuje také jiné [slovesa](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , zejména PUT (přesměrovat data na server) A DELETE (na DELETE data ze serveru) . Ano, PUT a DELETE jsou vhodným způsobem, jak vložit data do datového souboru a z něj odstranit data přes HTTP (S) . GET podporuje každý kousek softwaru, který může pracovat s HTTP (S) . GET je opravdu snadné pracovat s. Každý již ví, jak pracovat s GET a mnozí vědí, jak používat POST (které lze použít v podstatě stejným způsobem jako GET) , Takže jsme udělali EDDTableFromHttpZískejte práci s GET a POST. Velmi málo lidí (i málo programátorů počítačů) kdy pracoval s PUT a DELETE. PUT a DELETE jsou obecně podporovány pouze počítačovými jazyky, takže jejich použití vyžaduje zručný program. Takže PUT a DELETE jsou obvykle mnohem náročnější přístup vzhledem k tomu, jak se nástroje vyvinuly.
      
 ##### HttpGet Notes{#httpget-notes} 
 *    [Poznámky](#httpget-notes) 
@@ -3676,7 +3678,7 @@ Ne každý potřebuje tento typ jemné verze, ale je mimořádně užitečný, m
 ##### Díky.{#thanks} 
 *    [Díky CHORDS za základní myšlenku.](#thanks)   
 Základní myšlenka pro EDDTableFromHttpGet (tj. použití HTTP GET žádost o přidání údajů do souboru údajů) je z UCAR (NOR?)   [Cloudové datové služby v reálném čase (OZNAČENÍ) ](https://github.com/earthcubeprojects-chords) projekt. Formát parametrů v žádosti (opakovaná *name=value* , odděleno pomocí &) je stejný standardní formát, který používá HTML formuláře na webových stránkách. Je to jednoduchý a brilantní nápad a ještě více proto, že se tak dokonale prolíná s ERDDAP 's existujícím systémem pro zpracování tabulkových dat. Myšlenka je jasná, ale já (Bobe.) Nepřemýšlel jsem o tom. EDDTableFromHttp Získejte využití této základní myšlenky, v kombinaci s našimi představami o tom, jak ji implementovat, aby systém v ERDDAP™ pro nahrávání dat. Kromě základní myšlenky použití GET pro vkládání dat do systému je implementace EDDTableFromHttpGet zcela odlišná a zcela nezávislá na CHORDS a má různé vlastnosti (např. soubory záznamů, ukládání dat, jiný bezpečnostní systém, podpora CRUD, opakovatelná data) . Naše vystavení CHORDS byl jen webinar. Nedívali jsme se na jejich kód ani nečetli o jejich projektu, protože jsme okamžitě věděli, že chceme systém implementovat jiným způsobem. Ale jsme jim vděční za základní myšlenku. Plná zmínka o přípravku CHORDS je
-Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014) . Cloud-hosted v reálném čase datové služby pro geovědy (OZNAČENÍ) software. UCAR/NCAR -- Laboratoř pozorování Země. [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014) . Cloud-hosted v reálném čase datové služby pro geovědy (OZNAČENÍ) software. UCAR/NCAR -- Laboratoř pozorování Země. [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### EDDTableFrom Hyrax Soubory{#eddtablefromhyraxfiles} 
  [ **EDDTableFrom Hyrax Soubory** ](#eddtablefromhyraxfiles)   (odprekovaný) agreguje datové soubory s několika proměnnými, každý s jednou nebo více sdílenými rozměry (například čas, výška (nebo hloubka) , zeměpisná šířka, zeměpisná délka) , a sloužil [ Hyrax   OPeNDAP server](https://www.opendap.org/software/hyrax-data-server) .
@@ -3692,7 +3694,7 @@ Pokud před rokem 2020 neexistují žádné stížnosti, může být tento typ d
 * Tato třída obrazovka-scrapes Hyrax webové stránky se seznamy souborů v každém adresáři. Vzhledem k tomu, že je velmi specifický pro současný formát Hyrax webové stránky. Pokusíme se přizpůsobit. ERDDAP™ rychle pokud / pokud budoucí verze Hyrax změnit, jak jsou soubory uvedeny.
 * The&lt;fileDir&gt; nastavení je ignorováno. Protože tato třída stáhne a vytvoří místní kopii každého vzdáleného datového souboru, ERDDAP™ nutí soubor Dir to be *velkýRodič rodičů* /kopie/ * datasetID * /.
 * Pro&lt; sourceUrl &gt; použijte URL základního adresáře datového souboru v Hyrax například server,
-    &lt; sourceUrl &gt;http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;/ sourceUrl &gt;
+    &lt; sourceUrl &gt; http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;/ sourceUrl &gt;
      (Ale dejte to na jednu čáru.)   (Promiň, ale ten server už není k dispozici.) .
 The sourceUrl Webová stránka má obvykle " OPeNDAP Index serveru \\[ název adresáře \\] "nahoře.
 * Vzhledem k tomu, že tato třída vždy stáhne a vytvoří místní kopii každého vzdáleného datového souboru, nikdy byste neměli zabalit tento soubor do [EDDtableCopy](#eddtablecopy) .
@@ -3706,7 +3708,7 @@ Podrobnosti: Tyto soubory mají více proměnných řádků\\_size, z nichž ka�
 
 Další problém s těmito soubory: proměnná Principal\\_Investigator row\\_size nemá atribut vzor\\_dimension a neřídí se výše uvedeným pravidlem.
 
-Ukázky souborů pro tento typ souboru lze nalézt nahttps://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 Tento server již není spolehlivě dostupný \\] .
+Ukázky souborů pro tento typ souboru lze nalézt na https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020-10-21 Tento server již není spolehlivě dostupný \\] .
 
 Vidíš tuhle třídu? [EDDTableFromFoles](#eddtablefromfiles) , informace o tom, jak tato třída funguje a jak ji používat.
 
@@ -3850,10 +3852,10 @@ První věc, kterou GenerateDatasetsXml dělá pro tento typ datového souboru p
  [ **EDDTableFromNOS** ](#eddtablefromnos)   (ODCHYLKY) zpracovává údaje od NOAA   [NOS](https://opendap.co-ops.nos.noaa.gov/axis/) zdroj, který používá [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) pro žádosti a odpovědi. Je to velmi specifické pro NOAA XML. Viz vzorek EDDTableFromNOS v souborech dat2.xml.
  
 ### EDDTableFromOBIS{#eddtablefromobis} 
- [ **EDDTableFromOBIS** ](#eddtablefromobis) zpracovává data z Ocean Biogeographic Information System (OBIS) server (bylhttp://www.iobis.org ) . Je možné, že již neexistují žádné aktivní servery, které tento zastaralý typ OBIS serveru používají.
+ [ **EDDTableFromOBIS** ](#eddtablefromobis) zpracovává data z Ocean Biogeographic Information System (OBIS) server (byl http://www.iobis.org  ) . Je možné, že již neexistují žádné aktivní servery, které tento zastaralý typ OBIS serveru používají.
 
 * OBIS servery očekávají požadavek XML a vrací XML odpověď.
-* Protože všechny OBIS servery slouží stejným způsobem. (bylhttp://iobis.org/tech/provider/questions) , Nemusíte specifikovat moc, aby nastavení OBIS data v ERDDAP .
+* Protože všechny OBIS servery slouží stejným způsobem. (byl http://iobis.org/tech/provider/questions ) , Nemusíte specifikovat moc, aby nastavení OBIS data v ERDDAP .
 * Musíte zahrnout " creator\\_email " atribut v globální addAttributes Vzhledem k tomu, že se tato informace používá v rámci licence. Vhodná e-mailová adresa lze nalézt čtením XML odezvy ze zdrojeURL.
 * Můžete, ale nemusíte být schopni získat globální atribut [&lt; subsetVariables &gt;] (#subsetvariables) pracovat s daným OBIS serverem. Pokud to zkusíte, zkuste jednu proměnnou. (například vědecký název nebo genus) .
 #### EDDTableFromOBIS kostra XML{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ První věc, kterou GenerateDatasetsXml dělá pro tento typ datového souboru p
     * SWE (Povolit web senzoru) a SOS   (Služba sledování senzorů) jsou [Standardy OpenGIS®](https://www.ogc.org/standards) . Tato webová stránka má standardní dokumenty.
     * The OGC Webové služby Společné specifikace ver 1.1.0 ( OGC 06-121r3) pokrývá výstavbu dotazů GET a POST (viz bod 7.2.3 a bod 9) .
     * Pokud jste poslat getKapacity xml žádost na SOS server ( sourceUrl +"?service= SOS & Žádost= GetCapabilities ") , dostanete xml výsledek se seznam stanic a pozorované Vlastnosti, které mají data.
-    * ObservedProperty je formální URI odkaz na vlastnost. Například urn:ogc:fenomén:longitude:wgs84 nebohttps://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * ObservedProperty je formální URI odkaz na vlastnost. Například urn:ogc:fenomén:longitude:wgs84 nebo https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * Pozorovaná vlastnost není proměnná.
-    * Více než jedna proměnná může mít stejný pozorovaný Majetek (například uvnitřTempu a vně Teplota by mohla pozorovat oba Majetekhttps://mmisw.org/ont/cf/parameter/air\\_temperature) .
+    * Více než jedna proměnná může mít stejný pozorovaný Majetek (například uvnitřTempu a vně Teplota by mohla pozorovat oba Majetek https://mmisw.org/ont/cf/parameter/air\\_temperature ) .
     * Pokud pošlete GetObservation xml žádost na SOS server, dostanete xml výsledek s popisy jmen polí v odpovědi, jednotky pole, a data. Název pole bude zahrnovat délku, zeměpisnou šířku, hloubku (Možná.) A čas.
     * Každý dataVariable pro EDDTableFrom SOS musí obsahovat atribut "observedProperty," který identifikuje observedProperty, který musí být vyžádán ze serveru pro získání této proměnné. Často, několik dataVariable s bude vyjmenována stejná směs ObservedProperty.
     * DataType pro každý dataVariable server nemusí být specifikován. Pokud ano, musíte se podívat na odpovědi XML dat ze serveru a přiřadit příslušné [&lt;dataType&gt;s] (#datatyp) v ERDDAP™ Soubor údajů dataVariable definice.
@@ -3991,11 +3994,11 @@ Pokud před rokem 2020 neexistují žádné stížnosti, může být tento typ d
 * Tato třída čte katalog.xml soubory podávané THREDDS se seznamy&lt;katalogRefs&gt; (odkazy na další katalog.xml podsoubory) a&lt;Databáze &gt; (datové soubory) .
 * The&lt;fileDir&gt; nastavení je ignorováno. Protože tato třída stáhne a vytvoří místní kopii každého vzdáleného datového souboru, ERDDAP™ nutí soubor Dir to be *velkýRodič rodičů* /kopie/ * datasetID * /.
 * Pro&lt; sourceUrl &gt; použijte URL souboru catalog.xml pro soubor dat v THREDDS serveru, například: pro tuto URL, která může být použita ve webovém prohlížeči,
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020-10-21 Tento server již není spolehlivě dostupný. \\] ,
-podání&lt; sourceUrl &gt;https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;/ sourceUrl &gt;
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020-10-21 Tento server již není spolehlivě dostupný. \\] ,
+podání&lt; sourceUrl &gt; https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;/ sourceUrl &gt;
      (Ale dejte to na jednu čáru.) .
 * Vzhledem k tomu, že tato třída vždy stáhne a vytvoří místní kopii každého vzdáleného datového souboru, nikdy byste neměli zabalit tento soubor do [EDDtableCopy](#eddtablecopy) .
-* Tento typ datového souboru podporuje VOLITELNÝ, zřídka používaný speciální štítek,&lt;SpecialMode&gt; *režim* &lt;/specialMode&gt;, které lze použít k určení, že by měla být použita speciální, hard-kódovaná pravidla k určení, které soubory by měly být staženy ze serveru. V současné době jediný platný *režim* je SAMOS, který se používá s datovými soubory zhttps://tds.coaps.fsu.edu/thredds/catalog/samosstáhnout pouze soubory s číslem poslední verze.
+* Tento typ datového souboru podporuje VOLITELNÝ, zřídka používaný speciální štítek,&lt;SpecialMode&gt; *režim* &lt;/specialMode&gt;, které lze použít k určení, že by měla být použita speciální, hard-kódovaná pravidla k určení, které soubory by měly být staženy ze serveru. V současné době jediný platný *režim* je SAMOS, který se používá s datovými soubory z https://tds.coaps.fsu.edu/thredds/catalog/samos stáhnout pouze soubory s číslem poslední verze.
 * Vidíš tuhle třídu? [EDDTableFromFoles](#eddtablefromfiles) , informace o tom, jak tato třída funguje a jak ji používat.
 * Viz příklady 1D, 2D, 3D a 4D [EDDTableFromNcFiles](#eddtablefromncfiles) .
      
@@ -4182,8 +4185,8 @@ Když server dokončí zpracování požadavku, bude kontrolovat, jak dlouho byl
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-způsobí odpovídající místní sourceUrl   (např.https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-do veřejnosti sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) .
+způsobí odpovídající místní sourceUrl   (např. https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+do veřejnosti sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) .
 Jakékoli změny hodnoty této značky nabudou účinku příště ERDDAP™ čte datasets.xml , včetně odpovědi na soubor údajů [vlajka](/docs/server-admin/additional-information#flag) .
 
 Ale z bezpečnostních důvodů a důvodů spojených se systémem předplatného, **Nepoužívej tenhle pytel&#33;**   
@@ -4314,7 +4317,7 @@ Uživatelé si často prostě neuvědomují, že jejich požadavky jsou nepříj
     ```
     * Nemusíš restartovat. ERDDAP™ pro změny&lt;requestBlacklist&gt; nabýt účinku. Změny budou detekovány příště ERDDAP™ kontroluje, zda je třeba znovu načíst některé soubory údajů. Nebo můžete urychlit proces návštěvou [setDataset URL vlajky](/docs/server-admin/additional-information#set-dataset-flag) pro jakýkoli datový soubor.
     * Vaše ERDDAP™ denní zpráva obsahuje seznam/tálně těch nejaktivnějších povolených a blokovaných žadatelů.
-    * Pokud chcete zjistit, jaká doména/instituce souvisí s numerickou IP adresou, můžete použít bezplatnou, reverzní DNS webovou službu jako [https://network-tools.com/](https://network-tools.com/) .
+    * Pokud chcete zjistit, jaká doména/instituce souvisí s numerickou IP adresou, můžete použít bezplatnou, reverzní DNS webovou službu jako [ https://network-tools.com/ ](https://network-tools.com/) .
     * Mohou nastat chvíle, kdy má smysl blokovat určité uživatele na vyšší úrovni, například škodlivé uživatele. Například můžete blokovat jejich přístup ke všemu na vašem serveru, nejen ERDDAP . Na Linux, jedna taková metoda je použít [iptables](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) . Například můžete přidat pravidlo, které zablokuje vše přicházející z 198.51.100.0 příkazem
 iptables -I INPUT -s 198.51.100.0 -J DROP
        
@@ -4738,17 +4741,17 @@ UPOZORNĚNÍ: Pokud přidáte vlastní palety do svého ERDDAP™ a máte EDDGri
     * V současné době pro EDDGrid podtřídy, jakákoli změna metadat nebo proměnné osy (například nový časový bod pro data v reálném čase) je považována za změnu, ale opětovné načtení datového souboru se nepovažuje za změnu (sama) .
     * V současné době se u podtříd EDDTable jakékoli opětovné načtení datového souboru považuje za změnu.
     * V současné době jsou povoleny pouze dva druhy akcí:
-        * "http://"nebo "https://"-- Pokud akce začíná na "http://"nebo "https://", ERDDAP™ pošle HTTP GET požadavek na zadanou URL adresu. Odpověď bude ignorována. Například, URL může říct některé jiné webové služby, aby něco udělat.
+        * " http://" nebo " https://" -- Pokud akce začíná na " http://" nebo " https://" , ERDDAP™ pošle HTTP GET požadavek na zadanou URL adresu. Odpověď bude ignorována. Například, URL může říct některé jiné webové služby, aby něco udělat.
             * Pokud má URL dotaz (po "?") , to musí být již [% zakódováno](https://en.wikipedia.org/wiki/Percent-encoding) . Musíte zakódovat speciální znaky do omezení (jiné než počáteční "&" a hlavní '=' omezení) do formuláře %HH, kde HH je 2 číslice hexadecimální hodnota znaku. Obvykle stačí převést několik interpunkčních znaků: % na% 225, & na% 226, "na% 222,&lt;do% 3C, = do% 3D, &gt; do% 3E, + do% 2B, | do% 7C, \\[ do % 5B, \\] do %5D, prostor na%20, a převést všechny znaky nad #127 do jejich UTF-8 formuláře a pak procento enkódovat každý byte UTF-8 formuláře do%HH formátu (Požádat programátora o pomoc) .
 Například stationID Podvozky a jejich části a součásti
 se stává & stationID % 3E=% 2241004%22
 Procentuální kódování je obecně nutné, když přístup ERDDAP přes jiný software než prohlížeč. Prohlížeče obvykle zvládnout procento kódování pro vás.
 V některých situacích, musíte procent enkódovat všechny znaky jiné než A-Za-z0-9\\_-&#33;.~ ' () \\*, ale stále nezakódujte počáteční "&" nebo hlavní '=' v omezeních.
-Programovací jazyky mají k tomu nástroje (např. viz Java 's [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) a Java Skript je [encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) a existují
+Programovací jazyky mají k tomu nástroje (např. viz Java 's [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) a Java Skript je [encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) a existují
                  [webové stránky, které pro vás tvoří procento enkódování/dekódování](https://www.url-encode-decode.com/) .
             * Od datasets.xml je XML soubor, musíte také kódovat ALL '&', '&lt;"a "&gt;" v URL jako "&amp;," "&lt;' a '&gt;' po procentu kódování.
             * Příklad: Pro URL, které můžete zadat do prohlížeče jako:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 Měli byste určit&lt;onChange&gt; značka prostřednictvím (na jednom řádku) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ To může také ovlivnit třídění krátkých slov oproti delším slovům, kt
     * A sourceUrl může začít http:// , https:// , ftp://, a možná další předpony. https spojení čte a kontroluje digitální certifikát zdroje, aby bylo zajištěno, že zdroj je tím, kým říkají, že jsou. Ve vzácných případech může tato kontrola selhat s chybou "javax.net.ssl.SSLProtocolVýjimkou: handshake alarm: uncognized\\_name." To je pravděpodobně způsobeno doménovým jménem na certifikátu, který neodpovídá doménovému názvu, které používáte. Můžete a měli byste si přečíst podrobnosti o sourceUrl 's certifikátem ve vašem webovém prohlížeči, zejména seznam "DNS Name" v sekci "Subjekt Alternative Name."
         
 V některých případech sourceUrl používáte jméno domény uvedené v osvědčení. Například,
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/bude házet tuto chybu, ale
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/, Který používá název domény na certifikátu, nebude. Řešením v těchto případech je proto najít a použít název domény na osvědčení. Pokud ho nenajdete v certifikátu, kontaktujte poskytovatele dat.
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ bude házet tuto chybu, ale
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ , Který používá název domény na certifikátu, nebude. Řešením v těchto případech je proto najít a použít název domény na osvědčení. Pokud ho nenajdete v certifikátu, kontaktujte poskytovatele dat.
         
 V ostatních případech může být název domény uvedený v osvědčení pro skupinu jmen. Pokud k tomu dojde nebo je problém jinak neřešitelný, prosím, e-mail Chris. John v Noaa.gov nahlásí problém.
          
@@ -5221,7 +5224,7 @@ se stává & stationID % 3E=% 2241004%22
 Procentuální kódování je obecně nutné, když přístup ERDDAP přes jiný software než prohlížeč. Prohlížeče obvykle zvládnout procento kódování pro vás.
 V některých situacích, musíte procent enkódovat všechny znaky jiné než A-Za-z0-9\\_-&#33;.~ ' () \\*, ale stále nezakódujte počáteční "&" nebo hlavní '=' .
 Programovací jazyky mají k tomu nástroje (např. viz Java 's [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-a Java Skript je [encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) a existují
+a Java Skript je [encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) a existují
          [webové stránky, které pro vás tvoří procento enkódování/dekódování](https://www.url-encode-decode.com/) .
     * Od datasets.xml je XML soubor, musíte také kódovat ALL '&', '&lt;"a "&gt;" v URL jako "&amp;," "&lt;' a '&gt;' po procentu kódování.
     *    infoUrl je jedinečná pro ERDDAP . Není to ze standardu metadat.
@@ -5257,7 +5260,28 @@ Při načtení datového souboru ERDDAP ,
     ```
     * Pokud " \\[ standardní \\] " se vyskytuje v hodnotě atributu, bude nahrazen standardem ERDDAP™ licence od&lt;standardní značkaLicence&gt; ERDDAP 's
          \\[ tomcat \\] /webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml file.
-         
+
+###### klasifikace{#classification} 
+*    [ **klasifikace** ](#classification) úroveň klasifikace údajů.
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * Přijatelné hodnoty jsou _neutajované_, _ důvěrné_, _omezené_, _secret_, nebo _top_secret_.
+
+###### téma_kategorie{#topic_category} 
+*    [ **téma_kategorie** ](#topic_category) Vysokoúrovňová geografická klasifikace dat s cílem pomoci při shromažďování a vyhledávání dostupných zeměpisných souborů dat.
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * Příjemné hodnoty jsou _biota_, _boundaries_, _klimatologie_meteorologie_atomosféra_, _economy_, _elevation_, _environment_, _farming_, _geovědec_informations_, _health_, _imagery_base_maps_earth_cover_, _inland_waters_, _intelligence_vojenské_, _location_, _oceans_, _planning_cadastre_, _society_, _structure_, _transporation_, _utlities_communication_.
+
+###### údržba_frekvence{#maintenance_frequency} 
+*    [ **údržba_frekvence** ](#maintenance_frequency) Frekvence, s níž jsou provedeny úpravy a výmazy údajů po jejich prvním vytvoření.
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * Přijatelné hodnoty jsou přijatelné hodnoty _roční_, _jako_potřeba_, _biqually_, _continual_, _daily_, _fortnightly_, _nepravidelné_, _měsíce_, _not_pláned_, _quarterly_, _neznámé_, _weekly_.
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) je ze zastaralých [ACDD 1. 0](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (který byl identifikován v Metadata\\_Conventions jako " Unidata Dataset Discovery v1.0") Standard metadat. Hodnota atributu byla čárkou odděleným seznamem úmluv metadat použitých tímto datovým souborem.
 Pokud datový soubor používá ACDD 1.0, tento atribut je například STRONGLY RECOMMENDED,
@@ -5389,7 +5413,7 @@ Pokud index je&lt;1, datový soubor se považuje za aktuální.
 Pokud index je&lt;=1, datový soubor se považuje za zastaralý.
 Pokud index je&lt;=2 je datový soubor považován za velmi zastaralý.
     
-The testOutOfDate hodnota je také použita ERDDAP™ generovathttps://*yourDomain*/erddap/outOfDateDatasets.htmlwebová stránka ( [příklad](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) který ukazuje soubory údajů, které mají&lt; testOutOfDate &gt; značky, s datovými soubory zařazenými podle toho, jak jsou zastaralé. Pokud změníte typ souboru (od .html do .csv, .jsonlCSV , .nc , .tsv , ...) , můžete získat tyto informace v různých formátech souborů.
+The testOutOfDate hodnota je také použita ERDDAP™ generovat https://*yourDomain*/erddap/outOfDateDatasets.html webová stránka ( [příklad](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) který ukazuje soubory údajů, které mají&lt; testOutOfDate &gt; značky, s datovými soubory zařazenými podle toho, jak jsou zastaralé. Pokud změníte typ souboru (od .html do .csv, .jsonlCSV , .nc , .tsv , ...) , můžete získat tyto informace v různých formátech souborů.
     
 Pokud je to možné, [GenerovatDatasetsXml](#generatedatasetsxml) přidává a testOutOfDate atribut globální addAttributes datového souboru. Tato hodnota je návrh založený na informacích dostupných pro GenerateDatasetsXml. Pokud hodnota není vhodná, změňte ji.
     
@@ -5948,8 +5972,8 @@ unpackedValue = baleno Hodnota \\* scale\\_factor + add\\_offset
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone je VOLITELNÝ atribut používaný ERDDAP™   (a žádné standardy metadat) místo [proměnné času a času](#time-units) , které mohou být v mřížkových datových souborech nebo souborech tabulek.
     * Výchozí je " Zulu " (což je moderní časová zóna verze GMT) .
-    * Základní informace: "časové offsety" (např. Pacific Standard Time, -08:00, GMT-8) jsou pevné, specifické, offsety vzhledem k Zulu   (GMT) . Naproti tomu "časové zóny" jsou mnohem složitější věci, které jsou ovlivněny úsporou denního světla (např. "US/Pacific") , které měly různá pravidla na různých místech v různých časech. Časová pásma mají vždy jména, protože nemohou být shrnuta jednoduchou offsetovou hodnotou. (viz sloupec "TZ database names" v tabulce v [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP 's time\\_zone atribut vám pomůže vypořádat se s místními daty z určitého časového pásma (např. 1987-03-25T17:32:05 Tichý oceán Čas) . Pokud máte řetězec nebo numerická data času s (pevný) časový posun, měli byste jednoduše upravit data na Zulu   (Což je co ERDDAP™ chce) určením jiného základního času v atributu jednotek (např. "hodiny od 1970-01-01T08:00Z," zaznamenejte T08 pro upřesnění časové kompenzace) , a vždy zkontrolujte výsledky, abyste získali výsledky, které chcete.
-    * Pro proměnné časového razítka se zdrojovými daty ze Strings vám tento atribut umožňuje určit časové pásmo, které vede ERDDAP™ převést na místní čas-zóna zdrojové časy (někteří ve standardním čase, někteří v denním světle šetří čas) do Zulu časy (které jsou vždy ve standardním čase) . Seznam platných názvů časových pásem je pravděpodobně totožný se seznamem ve sloupci TZ [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Společná americká časová pásma jsou: USA/Hawaii, USA/Alaska, USA/Pacific, USA/Mountain, USA/Arizona, USA/Central, USA/Východ.
+    * Základní informace: "časové offsety" (např. Pacific Standard Time, -08:00, GMT-8) jsou pevné, specifické, offsety vzhledem k Zulu   (GMT) . Naproti tomu "časové zóny" jsou mnohem složitější věci, které jsou ovlivněny úsporou denního světla (např. "US/Pacific") , které měly různá pravidla na různých místech v různých časech. Časová pásma mají vždy jména, protože nemohou být shrnuta jednoduchou offsetovou hodnotou. (viz sloupec "TZ database names" v tabulce v [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP 's time\\_zone atribut vám pomůže vypořádat se s místními daty z určitého časového pásma (např. 1987-03-25T17:32:05 Tichý oceán Čas) . Pokud máte řetězec nebo numerická data času s (pevný) časový posun, měli byste jednoduše upravit data na Zulu   (Což je co ERDDAP™ chce) určením jiného základního času v atributu jednotek (např. "hodiny od 1970-01-01T08:00Z," zaznamenejte T08 pro upřesnění časové kompenzace) , a vždy zkontrolujte výsledky, abyste získali výsledky, které chcete.
+    * Pro proměnné časového razítka se zdrojovými daty ze Strings vám tento atribut umožňuje určit časové pásmo, které vede ERDDAP™ převést na místní čas-zóna zdrojové časy (někteří ve standardním čase, někteří v denním světle šetří čas) do Zulu časy (které jsou vždy ve standardním čase) . Seznam platných názvů časových pásem je pravděpodobně totožný se seznamem ve sloupci TZ [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Společná americká časová pásma jsou: USA/Hawaii, USA/Alaska, USA/Pacific, USA/Mountain, USA/Arizona, USA/Central, USA/Východ.
     * Pro proměnné časového razítka s číselnými zdrojovými daty můžete zadat " time\\_zone " atribut, ale hodnota musí být " Zulu "nebo "UTC." Pokud potřebujete podporu pro jiná časová pásma, prosím e-mail Chris. John at noaa.gov .
          
 ###### odkaz_time_adjust{#legacy_time_adjust} 

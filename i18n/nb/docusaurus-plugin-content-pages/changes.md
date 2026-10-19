@@ -1102,7 +1102,7 @@ Se [denne dokumentasjonen](/docs/server-admin/datasets#aggregation-via-file-name
     * Endringer til EDDTabellFra EDDGrid som gjør det mye bedre. EDDTableFra EDDGrid lar brukere spørre gitte datasett som om de var tabulær datasett ("Ved verdi by) ..
         
         * Den støtter nå en&lt;maxAxis0&gt; tag (standard=10) som angir det maksimale antall akser \\[ 0 \\]   (vanligvis "time" ) verdier som kan spørres samtidig. Dette hindrer naive forespørsler fra å få EDDTableFrom EDDGrid å søke gjennom et helt datasett (som ville mislykkes med en tidsavbruddsfeil) ..
-        * Opprett datasett Xml har nå et alternativ til å generere EDDTableFrom EDDGrid datasett for alle datasettene i gitt ERDDAP™ som matcher et spesifisert regulært regulært uttrykk (bruk .\\* for å matche alle datasett) .. Datasettene som den oppretter har ytterligere informasjon i den sammendragsattributten som indikerer at dette er en tabellversjon av et gitt datasett. Og deres datasetID er datasetID av det nettbaserte datasettet, pluss "__Asatable".
+        * Opprett datasett Xml har nå et alternativ til å generere EDDTableFrom EDDGrid datasett for alle datasettene i gitt ERDDAP™ som matcher et spesifisert regulært regulært uttrykk (bruk .\\* for å matche alle datasett) .. Datasettene som den oppretter har ytterligere informasjon i den sammendragsattributten som indikerer at dette er en tabellversjon av et gitt datasett. Og deres datasetID er datasetID i det nettbaserte datasettet, pluss "\\_AsATable" ..
         * Det er en stor hastighet for det vanligste oppsettet: når det gitte datasettet er et EDDGrid FraErddap datasett som er i samme ERDDAP ..
         
 Takk til James Gallagher og Ed Armstrong.

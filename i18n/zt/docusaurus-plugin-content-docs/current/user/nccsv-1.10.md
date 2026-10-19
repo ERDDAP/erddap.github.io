@@ -45,14 +45,14 @@ NCCSV格式的設計平衡了几种要求:
 這項规格是指它所設計的另外几项规格和文庫, 但這項规格並非其他规格的一部分, 若在此未指定與其中一個標準相關的細節, 請參考相關的說明 。 主要是:
 
 * 數據集探索的屬性常规 (ACDD) 元数据標準 :
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * 气候与預測 (CF) 元数据標準 :
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * 其 NetCDF 使用者指南 (努格) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * 其 NetCDF 軟體文庫類型 NetCDF - 賈瓦和 NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . 這些文庫無法讀取 NCCSV 檔案, 但可以讀取 .nc 從 NCCSV 檔案建立檔案 。
-* 杰森: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . 這些文庫無法讀取 NCCSV 檔案, 但可以讀取 .nc 從 NCCSV 檔案建立檔案 。
+* 杰森: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### 标记{#notation} 
 括弧 \\[   \\] ,表示可選項。
@@ -152,12 +152,12 @@ NCCSV 檔案的元数据區段的尾端必須用只有一行表示
     * 雙引號 (") 必須編碼為兩個雙引號 ("") . 电子表格程式在讀取 .csv 檔案時需要這個 這就是电子表格程式在儲存电子表格為.csv檔案時所寫的.
     * 特殊 JSON 反斜編碼的字元必須像 JSON 一樣編碼( 特别是) \\n (新行),但也有(背斜),\\f(格式),\\ t(tab),\\r(返回)或与 [\\u *啊* ](#uhhhh) 語法。 在工作表中,不要使用 Alt Enter 在文字格內指定新行;而是使用 \\n   (2 個字元:反斜和n ' ') 表示新行。
 #####  uhhhh  {#uhhhh} 
-    * \\u *hhhh - 所有字符都小于32或大于字符 #126, 而不是其他編碼, 必須用語法\\u編碼* hhh*, 其中hhh是字符的四位數十六進位數字, 例如歐洲標籤是\\u20AC 。 參考 [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) 查找與特定 Unicode 字元相關的十六進制數字, 或者使用軟體文庫 。
+    * \\u *hhhh - 所有字符都小于32或大于字符 #126, 而不是其他編碼, 必須用語法\\u編碼* hhh *,其中hhhh是字符的四位數十六進制數字,例如歐洲符號是\\ \\u20AC . 參考 [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) 查找與特定 Unicode 字元相關的十六進制數字, 或者使用軟體文庫 。
     * 如果字串在起始或末端有空格,或包括 " (雙引號) 或 逗號,或包含會被解釋成其他資料類型的數值 (例如,) , 或者是「 null 」 一词, 整個字串必須用雙引號來包圍; 否則, 和 JSON 不同的是, 附加的雙引號是可選擇的 。 我們建議:當懷疑的時候,你應當把整條弦帶入兩句。 字串起始或末端的空格很不方便 。
     * 目前, NCCSV支持他們. ERDDAP™ 在內部支援他們。 一些輸出檔案類型支援它們 (例如, .json 和 .nccsv ) . 但很多輸出檔案型態不支援它們. 例如, NetCDF -3份文件不支持此字元, 因為 NetCDF 檔案使用 1字节字元, CF 目前沒有指定 Unicode 字元如何編碼的系統 NetCDF 字串 (例如UTF-8) . 這可能會隨時改善
          
 #### 字符{#char} 
-* 字元屬性值是單一個 UCS-2 字元 (例如, 2字节的Unicode 字符, 如 Java ) ,它必須被寫成 7 位 ASCII, JSON 類型的字符才能指定其他字符 (參觀上面對特殊字元編碼的字串定義, 加上單句編碼為\\ ' ') . 字元屬性值必須用單引號封存 (內部引言) 雙倍引號 (外部引文) ,例如:"'a',"''" (雙引號字元) ,"'\'" (單一引號字符) ,"'\\" (分頁) ,"'\\u20AC'" (a 歐元字元) . 使用單引數和雙引數的系統是奇特而繁琐的, 但是它是用工作表格來区分字符串和字符串的方法 。 看起來像字元但無效的值會產生錯誤訊息 。 和 Strings 一樣,目前不鼓励使用大于 # 255 的字符 。
+* 字元屬性值是單一個 UCS-2 字元 (例如, 2字节的Unicode 字符, 如 Java ) ,它必須被寫成 7 位 ASCII, JSON 類型的字符才能指定其他字符 (參觀上面對特殊字元編碼的字串定義, 加上單句編碼為\\ ' ') . 字元屬性值必須用單引號封存 (內部引言) 雙倍引號 (外部引文) ,例如:"'a',"''" (雙引號字元) ,"'\'" (單一引號字符) ,"'\\" (分頁) ,"'\\ \\u20AC '" (a 歐元字元) . 使用單引數和雙引數的系統是奇特而繁琐的, 但是它是用工作表格來区分字符串和字符串的方法 。 看起來像字元但無效的值會產生錯誤訊息 。 和 Strings 一樣,目前不鼓励使用大于 # 255 的字符 。
 
 ### 后缀{#suffix} 
 注意, 在 NCCSV 檔案的屬性區域中, 所有數字屬性值必須有後缀字母 (例如,“b”) 以表示數據型態 (例如,字节) . 但在 NCCSV 檔案的資料區域中,數值絕對不能有這些後缀字母 (除長整數的 L 和 ulong 整數的 UL 外) ─數據型態由\\*数据类型\\*變數的屬性。
@@ -220,7 +220,7 @@ Bell M. Shimada, 123.4,
 1970-01-01T00:00Z
 
 以字串值表示的日期時值必須有字串\\*数据类型\\*屬性與指定日期的單位屬性 指定時間模式 Java 日期
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . 例如,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . 例如,
 時間 單位 yyyy-MM-dd 'T'HH:mm:sZ
 指定資料變數的所有日期時值必須使用相同的格式 。
 大多數情况下,您需要的單位屬性的日期時刻模式會是其中一個格式的變化 :
@@ -245,7 +245,7 @@ Bell M. Shimada, 123.4,
 ##  [副秘书长 特性類型](#dsg-feature-types)  {#dsg-feature-types} 
 
 NCCSV 檔案可能包含 CF Discrete 采样几何
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) 數據 由於這些特性,
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) 數據 由於這些特性,
 
 1. 根據 CF 的要求, NCCSV 檔案必須在元件區域中包含一行, 以表示 [\\*全球\\*](#global)   featureType 屬性,例如,
     \\*全球\\*, featureType 傳射
@@ -326,7 +326,7 @@ Bell M. Shimada,2017-03-23T01:45:00Z,28.0003,-130.3472,\\u20AC,0,127,-9007199254
 
 * 此樣本檔案包含很多難題 (例如,字符與長變數和困難的字符串值) . 大多數NCCSV檔案會簡單得多 。
 * 駕照線被分成兩行 但只是樣本檔的一行
-* \\u20AC 是歐元的編碼, 而\\u00FC 是 ü 的編碼 。
+* ~ \\u20AC 是歐元字符的編碼, 而\\ u00FC 是 ü 的編碼 。
 * 很多 示例中的字串被雙引號所封閉, 即使它們不必是, 例如, 包括標題、 Lon 單位屬性, 以及數據的第 3 行在内的許多全球屬性 。 )
 * 如果測試Long 變數的單位屬性是以雙引號寫成, 表示它是一個字串值, 這會更明確和更好 。 但目前的代表 (1, 不引號) 會被正确解釋為字符串而不是整數, 因為沒有 'i' 後缀 。
 * 不像其他數據類型, 資料區的長數值有後缀 ('L') 表示其數據型態。 這是為了防止电子表格把數值解釋成浮點數,从而失去精度。
@@ -336,7 +336,7 @@ Bell M. Shimada,2017-03-23T01:45:00Z,28.0003,-130.3472,\\u20AC,0,127,-9007199254
 在工作表中, 如 NCCSV 檔案中:
 
 * 按指定的 NCCSV 檔案寫入數值屬性值 (例如, 加上一個後缀字母, 例如 'f', 以辨識屬性資料型態) .
-* 在字串中, 寫入所有小於 ASCII 字元 # 32 或大于字元 # 126 的字元為 JSON 類似反擊字元 (例如, \\n 新行) 或為十六進制 Unicode 字元數字 (大小寫不敏感) 用語法 [\\u *啊* ](#uhhhh)   (例如, 歐洲標籤的\\u20AC) . 使用 \\n   (2 個字元:反斜和n ' ') 以指示新行,而不是 Alt Enter 。
+* 在字串中, 寫入所有小於 ASCII 字元 # 32 或大于字元 # 126 的字元為 JSON 類似反擊字元 (例如, \\n 新行) 或為十六進制 Unicode 字元數字 (大小寫不敏感) 用語法 [\\u *啊* ](#uhhhh)   (例如,\\ \\u20AC 歐洲標示) . 使用 \\n   (2 個字元:反斜和n ' ') 以指示新行,而不是 Alt Enter 。
 
 NCCSV 檔案和遵循這些約定的類似工作表的唯一不同是:
 
@@ -392,7 +392,7 @@ NCCSV 檔案和遵循這些約定的類似工作表的唯一不同是:
 * 如果 NCCSV 檔案在行尾有多余的逗號, 您可以將 NCCSV 檔案轉換成 NetCDF 檔案,然后轉換 NetCDF 檔案回到 NCCSV 文件。
 * 當您試圖將 NCCSV 文件轉換成 NetCDF 檔案中, 軟體會發現一些錯誤, 並產生錯誤訊息, 造成轉換失敗 。 其它問題都很難或無法抓住, 不會產生錯誤訊息或警告 。 其他問題 (例如行尾的過量逗號) 會被忽略的 檔案轉換器只會對結果的正確性做最小檢查 NetCDF 例如,在遵守CF方面。 檔案建立者及檔案使用者的責任是檢查轉換結果是否如願與正確 。 兩種檢查方式是:
     * 列印其中的內容 .nc 使用 ncdump 的檔案
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * 檢視資料內容於 ERDDAP .
 
 ##  [變更](#changes)  {#changes} 

@@ -45,14 +45,14 @@ Als een bepaalde eis in dit document vreemd of kieskeurig lijkt, is het waarschi
 Deze specificatie verwijst naar verschillende andere specificaties en bibliotheken waarmee het is ontworpen om mee te werken, maar deze specificatie maakt geen deel uit van een van die andere specificaties, noch heeft het wijzigingen nodig, noch is het in strijd met hen. Als een detail met betrekking tot een van deze normen hier niet wordt gespecificeerd, zie de bijbehorende specificatie. Dit omvat met name:
 
 * Het Attribuutverdrag voor de ontdekking van gegevens (ACDD) Metadatastandaard:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * Klimaat en prognose (CF) Metadatastandaard:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * De NetCDF Handleiding (NUG) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * De NetCDF softwarebibliotheken zoals NetCDF - Java en NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Deze bibliotheken kunnen NCCSV-bestanden niet lezen, maar ze kunnen wel lezen .nc bestanden gemaakt van NCCSV-bestanden.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . Deze bibliotheken kunnen NCCSV-bestanden niet lezen, maar ze kunnen wel lezen .nc bestanden gemaakt van NCCSV-bestanden.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Notatie{#notation} 
 In deze specificatie, haakjes, \\[   \\] , aangeven optionele items.
@@ -152,12 +152,12 @@ De definities van de typen attribuutgegevens zijn:
     * Dubbele citaten (") moet worden gecodeerd als twee dubbele aanhalingstekens ("") . Dat is wat spreadsheet programma's vereisen bij het lezen van .csv bestanden. Dat is wat spreadsheet programma's schrijven als je een spreadsheet opslaat als een .csv bestand.
     * De speciale JSON backslash-gecodeerde tekens moeten worden gecodeerd zoals in JSON (met name \\n (nieuwe regel), maar ook \\\\ (backslash), \\f (formfeed), \\t (tab), \\r (carriage return) of met de [\\u *Hhhh* ](#uhhhh) syntaxis. Gebruik in een spreadsheet Alt Enter niet om een nieuwe regel binnen een tekstcel op te geven; gebruik in plaats daarvan \\n   (2 tekens: backslash en 'n ') om een nieuwe regel aan te geven.
 #####  uhhhh  {#uhhhh} 
-    * \\u *hhhh - Alle tekens minder dan teken #32 of groter dan teken #126, en niet anders gecodeerd, moeten worden gecodeerd met de syntax \\u* hhhh*, waarbij hhhh het viercijferige hexadecimaal getal van het teken is, bijvoorbeeld het Euroteken is \\u20AC. Zie de referentiepagina's [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) het vinden van hexadecimale getallen in verband met specifieke Unicode tekens, of het gebruik van een softwarebibliotheek.
+    * \\u *hhhh - Alle tekens minder dan teken #32 of groter dan teken #126, en niet anders gecodeerd, moeten worden gecodeerd met de syntax \\u* hhhh*, waarbij hhhh het viercijferige hexadecimaal getal van het teken is, bijvoorbeeld het Euroteken is \\ \\u20AC . Zie de referentiepagina's [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) het vinden van hexadecimale getallen in verband met specifieke Unicode tekens, of het gebruik van een softwarebibliotheek.
     * Als de tekenreeks een spatie heeft aan het begin of het einde, of " (dubbel citaat) of een komma, of bevat waarden die anders zouden worden geïnterpreteerd als een ander gegevenstype (bv. een int) , of is het woord "null," de gehele tekenreeks moet worden ingesloten in dubbele aanhalingstekens; anders, in tegenstelling tot JSON, de bijvoegende dubbele aanhalingstekens zijn facultatief. Wij raden aan: bij twijfel, sluit de gehele String in dubbele citaten. Ruimten aan het begin of het einde van een tekenreeks worden sterk ontmoedigd.
     * Voorlopig wordt het gebruik van tekens groter dan #255 ontmoedigd. NCCSV steunt hen. ERDDAP™ ondersteunt ze intern. Sommige uitvoer bestandstypen ondersteunen hen (bv. .json en .nccsv ) . Maar veel uitvoer bestandstypen ondersteunen ze niet. Bijvoorbeeld, NetCDF -3 bestanden ondersteunen dergelijke tekens niet omdat NetCDF bestanden gebruiken 1-byte tekens en CF heeft momenteel geen systeem om aan te geven hoe Unicode tekens gecodeerd zijn in NetCDF Tekenreeks (bv. UTF-8) . Dit zal waarschijnlijk in de loop van de tijd verbeteren.
          
 #### char{#char} 
-* tekenattribuutwaarden zijn een enkel UCS-2 teken (d.w.z. 2-byte Unicode tekens, zoals in Java ) , die moet worden geschreven als 7-bit ASCII, JSON-achtige tekens zodat andere tekens kunnen worden gespecificeerd (zie de tekenreeks definitie hierboven voor het coderen van speciale tekens, met de toevoeging van een enkele quote als \\ ') . Char-attribuutwaarden moeten in enkele aanhalingstekens worden opgenomen (de innerlijke citaten) en dubbele citaten (de buitenste citaten) , bv. "'a'," "'""" (een dubbel aanhalingsteken) , "'\\'" (een enkel aanhalingsteken) , "'\\t" (een tabblad) , "'\\u20AC" (een euroteken) . Dit systeem van het gebruik van enkele en dubbele aanhalingen is vreemd en omslachtig, maar het is een manier om char waarden te onderscheiden van Strings op een manier die werkt met spreadsheets. Een waarde die eruit ziet als een teken maar ongeldig is zal een foutmelding genereren. Net als bij Strings is het gebruik van tekens groter dan #255 momenteel ontmoedigd.
+* tekenattribuutwaarden zijn een enkel UCS-2 teken (d.w.z. 2-byte Unicode tekens, zoals in Java ) , die moet worden geschreven als 7-bit ASCII, JSON-achtige tekens zodat andere tekens kunnen worden gespecificeerd (zie de tekenreeks definitie hierboven voor het coderen van speciale tekens, met de toevoeging van een enkele quote als \\ ') . Char-attribuutwaarden moeten in enkele aanhalingstekens worden opgenomen (de innerlijke citaten) en dubbele citaten (de buitenste citaten) , bv. "'a'," "'""" (een dubbel aanhalingsteken) , "'\\'" (een enkel aanhalingsteken) , "'\\t" (een tabblad) ""\\ \\u20AC '" (een euroteken) . Dit systeem van het gebruik van enkele en dubbele aanhalingen is vreemd en omslachtig, maar het is een manier om char waarden te onderscheiden van Strings op een manier die werkt met spreadsheets. Een waarde die eruit ziet als een teken maar ongeldig is zal een foutmelding genereren. Net als bij Strings is het gebruik van tekens groter dan #255 momenteel ontmoedigd.
 
 ### Achtervoegsel{#suffix} 
 Merk op dat in de attributensectie van een NCCSV-bestand alle numerieke attribuutwaarden een achtervoegselletter moeten hebben (b.v.) om het numerieke gegevenstype te identificeren (bv. byte) . Maar in de gegevenssectie van een NCCSV-bestand mogen numerieke gegevenswaarden nooit deze achtervoegselletters hebben (met uitzondering van 'L' voor lange gehele getallen en 'uL' voor langwerpige gehele getallen) Het gegevenstype wordt gespecificeerd door de\\*GEGEVENS\\_TYPE\\*attribuut voor de variabele.
@@ -220,7 +220,7 @@ Datumtijdswaarden die als numerieke waarden worden weergegeven, moeten een eenhe
 time,units,seconden sinds 1970-01-01T00:00:00Z
 
 DatumTijd waarden weergegeven als tekenreeks waarden moeten een tekenreeks hebben\\*GEGEVENS\\_TYPE\\*attribuut en een eenheidsattribuut dat een datum specificeert Tijdpatroon zoals gespecificeerd door de Java DatumTijdFormatter klasse
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Bijvoorbeeld,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Bijvoorbeeld,
 tijd, eenheden, yyyy-MM-dd 'T'HH:mm:ssZ
 Alle datumTijdswaarden voor een gegeven gegevensvariabele moeten hetzelfde formaat gebruiken.
 In de meeste gevallen zal het dateTijd patroon dat u nodig hebt voor de eenheden attribuut een variatie van een van deze formaten zijn:
@@ -245,7 +245,7 @@ Zoals vereist door CF, alle graden waarden (bv. voor lengte- en breedtegraad) mo
 ##  [DSG Kenmerken](#dsg-feature-types)  {#dsg-feature-types} 
 
 Een NCCSV-bestand kan CF Discrete Sampling Geometry bevatten
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) gegevens. Het zijn de eigenschappen die dit laten werken:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) gegevens. Het zijn de eigenschappen die dit laten werken:
 
 1. Zoals vereist door CF, moet het NCCSV-bestand een regel bevatten in de metagegevens sectie die de [\\*GLOBAL\\*](#global)   featureType attribuut, bijvoorbeeld,
     \\*GLOBAL\\*, featureType ,trajectory
@@ -326,7 +326,7 @@ Opmerkingen:
 
 * Dit voorbeeldbestand bevat vele moeilijke gevallen (bijv. char en lange variabelen en moeilijke tekenreekswaarden) . De meeste NCCSV-bestanden zullen veel eenvoudiger zijn.
 * De licentieregel is hier in twee regels gebroken, maar is slechts één regel in het voorbeeldbestand.
-* \\u20AC is de codering van het Euroteken en \\u00FC is de codering van ü.
+* \\ \\u20AC is de codering van het Euro teken en \\u00FC is de codering van ü.
 * Veel Tekenreeksen in het voorbeeld worden ingesloten door dubbele aanhalingstekens, ook al hoeven ze niet, bijvoorbeeld, vele globale attributen te zijn, waaronder de titel, de lon units attribuut, en de 3e regel van gegevens.)
 * Het zou duidelijker en beter zijn als de eenhedenattribuut voor de testLange variabele werden geschreven in dubbele aanhalingstekens die aangeven dat het een tekenreekswaarde is. Maar de huidige vertegenwoordiging (1, zonder quotes) zal correct worden geïnterpreteerd als een tekenreeks, geen geheel getal, omdat er geen 'i' achtervoegsel is.
 * In tegenstelling tot andere numerieke gegevenstypes hebben de lange waarden in de gegevenssectie het achtervoegsel ('L') die hun numerieke gegevenstype identificeren. Dit is nodig om te voorkomen dat spreadsheets de waarden interpreteren als zwevende puntnummers en daardoor de precisie verliezen.
@@ -336,7 +336,7 @@ Opmerkingen:
 In een spreadsheet, zoals in een NCCSV bestand:
 
 * Schrijf numerieke attribuutwaarden zoals gespecificeerd voor NCCSV-bestanden (b.v. met een achtervoegselletter, bijvoorbeeld 'f', om het gegevenstype van het attribuut te identificeren) .
-* In Strings, schrijf alle karakters minder dan ASCII karakter #32 of groter dan karakter #126 als ofwel een JSON-achtige backslashed karakter (bv. \\n voor nieuwe regel) of als hexadecimaal Unicode tekennummer (hoofdletter ongevoelig) met de syntax [\\u *Hhhh* ](#uhhhh)   (bv. \\u20AC voor het Euroteken) . Gebruik \\n   (2 tekens: backslash en 'n ') om een nieuwe regel aan te geven, niet Alt Enter.
+* In Strings, schrijf alle karakters minder dan ASCII karakter #32 of groter dan karakter #126 als ofwel een JSON-achtige backslashed karakter (bv. \\n voor nieuwe regel) of als hexadecimaal Unicode tekennummer (hoofdletter ongevoelig) met de syntax [\\u *Hhhh* ](#uhhhh)   (bv., \\ \\u20AC voor het Euroteken) . Gebruik \\n   (2 tekens: backslash en 'n ') om een nieuwe regel aan te geven, niet Alt Enter.
 
 De enige verschillen tussen NCCSV-bestanden en de analoge spreadsheet die deze conventies volgen zijn:
 
@@ -392,7 +392,7 @@ Om een NCCSV-bestand te maken van een Google Sheets spreadsheet:
 * Als een NCCSV bestand heeft overtollige komma's aan het einde van rijen, kunt u ze verwijderen door het NCCSV bestand te converteren naar een NetCDF bestand en vervolgens converteren van de NetCDF bestand terug in een NCCSV bestand.
 * Wanneer u probeert om een NCCSV-bestand te converteren naar een NetCDF bestand, sommige fouten zullen worden gedetecteerd door de software en zal foutmeldingen genereren, waardoor de conversie te mislukken. Andere problemen zijn moeilijk of onmogelijk te vangen en zullen geen foutmeldingen of waarschuwingen genereren. Andere problemen (b.v. overtollige komma's aan het einde van rijen) zal genegeerd worden. De file converter zal slechts minimale controle van de juistheid van de resulterende NetCDF bestand, bijvoorbeeld wat betreft de naleving van het CF. Het is de verantwoordelijkheid van de bestandsmaker en de gebruiker om te controleren of de resultaten van de conversie zijn zoals gewenst en correct. Twee manieren om te controleren zijn:
     * Print de inhoud van de .nc bestand met nudump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * Bekijk de inhoud van de gegevens in ERDDAP .
 
 ##  [Wijzigingen](#changes)  {#changes} 

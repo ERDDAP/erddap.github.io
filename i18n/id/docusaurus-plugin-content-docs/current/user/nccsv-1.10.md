@@ -45,14 +45,14 @@ Jika beberapa persyaratan dalam dokumen ini tampaknya aneh atau acar, mungkin di
 Spesifikasi ini mengacu pada beberapa spesifikasi dan perpustakaan lain yang dirancang untuk bekerja dengan, tetapi spesifikasi ini bukan bagian dari salah satu spesifikasi lain, atau tidak perlu perubahan pada mereka, atau tidak bertentangan dengan mereka. Jika detail terkait dengan salah satu standar ini tidak ditentukan di sini, lihat spesifikasi terkait. Tidak mungkin, ini termasuk:
 
 * Konvensi Menarik untuk Penemuan Dataset (Login) standar metadata:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Sitemap
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) Sitemap
 * Iklim dan Prakiraan (Login) standar metadata:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) Sitemap
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) Sitemap
 * Login NetCDF Panduan Pengguna (Login) Sitemap
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) Sitemap
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) Sitemap
 * Login NetCDF pustaka perangkat lunak seperti NetCDF Login NetCDF Login
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) Sitemap Perpustakaan ini tidak dapat membaca file NCCSV, tetapi mereka dapat membaca .nc file yang dibuat dari file NCCSV.
-* Login [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) Sitemap Perpustakaan ini tidak dapat membaca file NCCSV, tetapi mereka dapat membaca .nc file yang dibuat dari file NCCSV.
+* Login [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Login{#notation} 
 Dalam spesifikasi ini, kurung, \\[   \\] , menunjukkan item opsional.
@@ -152,12 +152,12 @@ Definisi jenis data atribut adalah:
     * Kutipan ganda (Sitemap) harus dikodekan sebagai dua kutipan ganda (Sitemap) Sitemap Itu program spreadsheet apa yang diperlukan ketika membaca file .csv. Itu apa program spreadsheet menulis ketika Anda menyimpan spreadsheet sebagai file .csv.
     * Karakter JSON backslash-encoded khusus harus dikodekan seperti di JSON (tidak boleh \\n (newline), tetapi juga \\\ (backslash), \\f (formfeed), \\t (tab), \\r (carriage return) atau dengan [Login *Login* ](#uhhhh) Login Dalam spreadsheet, jangan gunakan Alt Enter untuk menentukan garis baru dalam sel teks; bukan, gunakan \\n   (2 karakter: backslash dan 'n Sitemap) untuk menunjukkan garis baru.
 #####  uhhhh  {#uhhhh} 
-    * Login *hhhhh - Semua karakter kurang dari karakter #32 atau lebih besar dari karakter #126, dan tidak dikodekan, harus dikodekan dengan sintaks \\u* hhhhh*, di mana hhhhhh adalah angka heksadecimal 4-digit karakter, misalnya, tanda Euro adalah \\ u20AC. Lihat halaman kode yang direferensikan di [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) untuk menemukan angka heksadecimal yang terkait dengan karakter Unicode tertentu, atau menggunakan perpustakaan perangkat lunak.
+    * Login *hhhhh - Semua karakter kurang dari karakter #32 atau lebih besar dari karakter #126, dan tidak dikodekan, harus dikodekan dengan sintaks \\u* hhhh*, di mana hhhhh adalah angka heksadecimal 4-digit karakter, misalnya, tanda Euro adalah \\ \\u20AC Sitemap Lihat halaman kode yang direferensikan di [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) untuk menemukan angka heksadecimal yang terkait dengan karakter Unicode tertentu, atau menggunakan perpustakaan perangkat lunak.
     * Jika String memiliki ruang di awal atau berakhir, atau termasuk " (kutipan ganda) atau komma, atau mengandung nilai-nilai yang akan diinterpretasikan sebagai beberapa jenis data lainnya (Sitemap) , atau kata "null", seluruh String harus ditutup dalam kutipan ganda; jika tidak, tidak seperti JSON, kutipan ganda enclosing adalah opsional. Kami merekomendasikan: ketika ragu, tutup seluruh String dalam kutipan ganda. Ruang pada awal atau akhir dari String sangat terkecil.
     * Untuk saat ini, penggunaan karakter lebih besar dari #255 didiskusikan. NCCSV mendukung mereka. ERDDAP™ mendukung mereka secara internal. Beberapa jenis file output mendukung mereka (Login .json Login .nccsv ) Sitemap Tapi banyak jenis file output tidak mendukung mereka. Sitemap NetCDF -3 file tidak mendukung karakter tersebut karena NetCDF file menggunakan karakter 1-byte dan CF saat ini tidak memiliki sistem untuk menentukan bagaimana karakter Unicode dikodekan dalam NetCDF Login (Sitemap) Sitemap Ini mungkin akan meningkatkan waktu.
          
 #### Login{#char} 
-* nilai atribut char adalah karakter UCS-2 tunggal (i.e., 2-byte Unicode karakter, seperti dalam Java ) , yang harus ditulis sebagai karakter seperti 7-bit ASCII, JSON sehingga karakter lain dapat ditentukan (melihat definisi String di atas untuk pengkodean karakter khusus, dengan penambahan pengkodean kutipan tunggal sebagai \\ Sitemap) Sitemap Nilai atribut Char harus ditutup dalam kutipan tunggal (kutipan dalam) dan kutipan ganda (kutipan luar) "'a'", "'" (karakter kutipan ganda) "'\'" (satu karakter kutipan) "'\t'" (tab) "'\\u20AC'" (Euro karakter) Sitemap Sistem ini menggunakan kutipan tunggal dan ganda aneh dan kunyit, tetapi itu adalah cara untuk membedakan nilai char dari String dengan cara yang bekerja dengan spreadsheet. Nilai yang terlihat seperti char tetapi tidak valid akan menghasilkan pesan kesalahan. Seperti dengan String, penggunaan karakter lebih besar dari #255 saat ini didiskusikan.
+* nilai atribut char adalah karakter UCS-2 tunggal (i.e., 2-byte Unicode karakter, seperti dalam Java ) , yang harus ditulis sebagai karakter seperti 7-bit ASCII, JSON sehingga karakter lain dapat ditentukan (melihat definisi String di atas untuk pengkodean karakter khusus, dengan penambahan pengkodean kutipan tunggal sebagai \\ Sitemap) Sitemap Nilai atribut Char harus ditutup dalam kutipan tunggal (kutipan dalam) dan kutipan ganda (kutipan luar) "'a'", "'" (karakter kutipan ganda) "'\'" (satu karakter kutipan) "'\t'" (tab) Login \\u20AC Sitemap (Euro karakter) Sitemap Sistem ini menggunakan kutipan tunggal dan ganda aneh dan kunyit, tetapi itu adalah cara untuk membedakan nilai char dari String dengan cara yang bekerja dengan spreadsheet. Nilai yang terlihat seperti char tetapi tidak valid akan menghasilkan pesan kesalahan. Seperti dengan String, penggunaan karakter lebih besar dari #255 saat ini didiskusikan.
 
 ### Login{#suffix} 
 Perhatikan bahwa di bagian atribut dari file NCCSV, semua nilai atribut numerik harus memiliki huruf suffix (Sitemap) untuk mengidentifikasi jenis data numerik (Sitemap) Sitemap Tapi di bagian data dari file NCCSV, nilai data numerik tidak boleh memiliki huruf suffix ini (dengan pengecualian 'L' untuk integer panjang dan 'uL' untuk ulong integers) — jenis data ditentukan oleh\\*DATA\\_TYPE\\*atribut untuk variabel.
@@ -220,7 +220,7 @@ Nilai DateTime diwakili sebagai nilai numerik harus memiliki atribut unit yang m
 waktu, unit, detik sejak 1970-01T00:00Z
 
 Nilai DateTime diwakili sebagai nilai String harus memiliki String\\*DATA\\_TYPE\\*atribut dan atribut unit yang menentukan tanggal Pola waktu sebagaimana ditentukan oleh Java Sitemap
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) Sitemap Sitemap
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) Sitemap Sitemap
 waktu, unit, yyyy-MM-dd 'T'HH:mm:sZ
 Semua nilai tanggalTime untuk variabel data yang diberikan harus menggunakan format yang sama.
 Dalam kebanyakan kasus, pola tanggal yang Anda butuhkan untuk atribut unit akan menjadi variasi salah satu format ini:
@@ -245,7 +245,7 @@ Seperti yang diperlukan oleh CF, semua nilai tingkat (e.g., untuk longitude dan 
 ##  [Login Jenis Fitur](#dsg-feature-types)  {#dsg-feature-types} 
 
 File NCCSV dapat mengandung CF Discrete Sampling Geometry
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) Sitemap Ini adalah atribut yang membuat pekerjaan ini:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) Sitemap Ini adalah atribut yang membuat pekerjaan ini:
 
 1. Seperti yang diperlukan oleh CF, file NCCSV harus mencakup garis di bagian metadata mengidentifikasi [\\*Login\\*](#global)   featureType atribut, misalnya,
     \\*Login\\*Login featureType Login
@@ -326,7 +326,7 @@ Catatan:
 
 * File sampel ini mencakup banyak kasus sulit (e.g., char dan variabel panjang dan nilai string yang sulit) Sitemap Kebanyakan file NCCSV akan jauh lebih sederhana.
 * Garis lisensi rusak menjadi dua baris di sini, tetapi hanya satu baris dalam file sampel.
-* \\u20AC adalah pengkodean karakter euro dan \\u00FC adalah pengkodean ü.
+* Login \\u20AC adalah pengkodean karakter euro dan \\u00FC adalah pengkodean ü.
 * Login String dalam contoh ditutupi oleh kutipan ganda meskipun mereka tidak harus, misalnya, banyak atribut global termasuk judul, atribut unit lon, dan garis data ke-3.)
 * Ini akan lebih jelas dan lebih baik jika atribut unit untuk variabel TestLong ditulis dalam kutipan ganda yang menunjukkan itu adalah nilai String. Tapi representasi saat ini (1, tanpa kutipan) akan ditafsirkan dengan benar sebagai String, bukan bilangan bulat, karena tidak ada suffix 'i'.
 * Tidak seperti jenis data numerik lainnya, nilai panjang di bagian data memiliki suffix (Login) yang mengidentifikasi jenis data numerik mereka. Hal ini diperlukan untuk mencegah spreadsheet dari menafsirkan nilai sebagai nomor titik mengambang dan dengan demikian kehilangan presisi.
@@ -336,7 +336,7 @@ Catatan:
 Dalam spreadsheet, seperti dalam file NCCSV:
 
 * Tulis nilai atribut numerik sebagaimana ditentukan untuk file NCCSV (e.g., dengan surat suffix, misalnya, 'f', untuk mengidentifikasi jenis data atribut) Sitemap
-* Dalam String, menulis semua karakter kurang dari karakter ASCII #32 atau lebih besar dari karakter #126 sebagai karakter backslashed seperti JSON (Login \\n Login) atau sebagai nomor karakter Unicode heksadecimal (kasus tidak sensitif) dengan sintaks [Login *Login* ](#uhhhh)   (e.g., \\u20AC untuk tanda euro) Sitemap Sitemap \\n   (2 karakter: backslash dan 'n Sitemap) untuk menunjukkan garis baru, tidak Alt Enter.
+* Dalam String, menulis semua karakter kurang dari karakter ASCII #32 atau lebih besar dari karakter #126 sebagai karakter backslashed seperti JSON (Login \\n Login) atau sebagai nomor karakter Unicode heksadecimal (kasus tidak sensitif) dengan sintaks [Login *Login* ](#uhhhh)   (Sitemap \\u20AC untuk tanda euro) Sitemap Sitemap \\n   (2 karakter: backslash dan 'n Sitemap) untuk menunjukkan garis baru, tidak Alt Enter.
 
 Satu-satunya perbedaan antara file NCCSV dan spreadsheet analog yang mengikuti Konvensi ini adalah:
 
@@ -392,7 +392,7 @@ Untuk membuat file NCCSV dari spreadsheet Google Sheets:
 * Jika file NCCSV memiliki kelebihan kommas pada akhir baris, Anda dapat menghapusnya dengan mengubah file NCCSV menjadi NetCDF file dan kemudian mengkonversi file NetCDF file kembali ke file NCCSV.
 * Ketika Anda mencoba untuk mengonversi file NCCSV ke dalam NetCDF file, beberapa kesalahan akan terdeteksi oleh perangkat lunak dan akan menghasilkan pesan kesalahan, menyebabkan konversi gagal. Masalah lain sulit atau tidak mungkin untuk menangkap dan tidak akan menghasilkan pesan kesalahan atau peringatan. Masalah lain (e.g., kelebihan kommas pada akhir baris) akan diabaikan. Meme it Konverter file hanya akan melakukan pemeriksaan minimal kebenaran hasil NetCDF file, misalnya, sehubungan dengan kepatuhan CF. Ini adalah tanggung jawab pengguna file dan file untuk memeriksa bahwa hasil konversi yang diinginkan dan benar. Dua cara untuk memeriksa adalah:
     * Cetak konten .nc file dengan ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) Sitemap
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) Sitemap
     * Lihat isi data dalam ERDDAP Sitemap
 
 ##  [Login](#changes)  {#changes} 

@@ -42,7 +42,7 @@ Nuair a thagann soláthraí sonraí chun tú ag súil a chur ar roinnt sonraí l
 Is baol slándála ollmhór é comhaid sonraí iarbhír a chur isteach ó fhoinsí seachtracha, mar sin ERDDAP™ nach déileáil leis sin. Caithfidh tú réiteach a dhéanamh a oibríonn duit féin agus an soláthraí sonraí, mar shampla, ríomhphost (le haghaidh comhaid bheaga) , tarraingt as an scamall (mar shampla, DropBox nó Google Drive) , suíomh sftp (le pasfhocail) , nó sneaker Glan (tiomáint USB ordóg nó tiomáint crua seachtracha) . Ba chóir duit glacadh le dócha ach comhaid ó dhaoine a fhios agat. Beidh ort a scanadh na comhaid le haghaidh víris agus réamhchúraimí slándála eile a ghlacadh.
 
 Níl nasc i ERDDAP™ chuig an bhFoirm Soláthraí Sonraí (mar shampla, ar an ERDDAP™ Leathanach baile) . Ina áit sin, nuair a insíonn duine éigin mian leat go mbeadh a gcuid sonraí a sheirbheáil ag do ERDDAP , Is féidir leat a sheoladh dóibh ríomhphost ag rá rud éigin cosúil le:
-Sea, is féidir linn do chuid sonraí a fháil isteach ERDDAP . Chun tús a chur leis, líon amach an fhoirm aghttps://*yourUrl*/erddap/dataProviderForm.html  (nó http:// más rud é https:// Níl cumasaithe) .
+Sea, is féidir linn do chuid sonraí a fháil isteach ERDDAP . Chun tús a chur leis, líon amach an fhoirm ag https://*yourUrl*/erddap/dataProviderForm.html   (nó http:// más rud é https:// Níl cumasaithe) .
 Tar éis duit a chríochnú, beidh mé i dteagmháil leat a bheith ag obair amach na sonraí deiridh.
 Más mian leat ach chun breathnú ar an bhfoirm (gan a líonadh amach) , is féidir leat an fhoirm a fheiceáil ar ERD 's ERDDAP : [Déan teagmháil anois](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) , [Cuid 1](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) , [Cuid 2](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) , [Cuid 3](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) , agus [Cuid 4](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) . Na naisc ar ERD   ERDDAP™ faisnéis a sheoladh chugam, nach bhfuil tú, mar sin ná faisnéis a chur isteach leo mura mian leat i ndáiríre sonraí a chur leis an ERD   ERDDAP .
 
@@ -190,23 +190,23 @@ Gineann an EDDType seo gach ceann de na datasets.xml smután ag teastáil a dhé
      
 #####  EDDGrid Naisc go dtí suíomhanna eile{#eddgridfromthreddscatalog} 
 Gineann an EDDType seo gach ceann de na datasets.xml smután ag teastáil le haghaidh gach ceann de na [ EDDGrid Ó Dhéag](#eddgridfromdap) datasets gur féidir é a fháil ag crawling recoursely trí THREDDS (fo-alt fo) chatalóg. Tá go leor cineálacha de URLanna Catalóg THREDDS. An rogha seo REQUIRES a THREDDS .xml URL le / chatalóg / ann, mar shampla,
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xmlnó
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml nó
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (a bhaineann le catalóg html ag
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html, nach bhfuil inghlactha le haghaidh EDDGrid Ó ThreddsCatalog).
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html , nach bhfuil inghlactha le haghaidh EDDGrid Ó ThreddsCatalog).
 Má tá fadhbanna agat le EDDGrid Seirbhís do Chustaiméirí Catalóg:
 * Bí cinnte go bhfuil an URL a bhfuil tú ag baint úsáide as bailí, Áirítear / catalog /, agus a chríochnaíonn le /catalog.xml.
-* Más féidir, bain úsáid as seoladh IP poiblí (mar shampla,https://oceanwatch.pfeg.noaa.gov) sa URL, ní seoladh IP uimhriúil áitiúil (mar shampla,https://12.34.56.78) . Má tá an THREDDS inrochtana ach amháin tríd an seoladh IP uimhriúil áitiúil, is féidir leat é a úsáid [&lt;Conas a oibríonn sé? (Tuilleadh eolais) amhlaidh ERDDAP™ úsáideoirí a fheiceáil ar an seoladh poiblí, cé go ERDDAP™ faigheann sonraí ón seoladh áitiúil uimhriúil.
+* Más féidir, bain úsáid as seoladh IP poiblí (mar shampla, https://oceanwatch.pfeg.noaa.gov ) sa URL, ní seoladh IP uimhriúil áitiúil (mar shampla, https://12.34.56.78 ) . Má tá an THREDDS inrochtana ach amháin tríd an seoladh IP uimhriúil áitiúil, is féidir leat é a úsáid [&lt;Conas a oibríonn sé? (Tuilleadh eolais) amhlaidh ERDDAP™ úsáideoirí a fheiceáil ar an seoladh poiblí, cé go ERDDAP™ faigheann sonraí ón seoladh áitiúil uimhriúil.
 * Má tá fadhbanna agat nach féidir leat a réiteach, [seiceáil na leideanna fabhtcheartaithe](#troubleshooting-tips) .
 * Úsáideann an cód leibhéal íseal seo anois Unidata cód crawler catalóige (threds. cineál gas: in airde) ionas gur féidir é a láimhseáil gach catalóga THREDDS (is féidir a bheith casta ionadh) Go raibh maith agat as Unidata don chód sin.
          
 #####  EDDGrid Sonraí Teagmhála{#eddgridlonpm180fromerddapcatalog} 
 Gineann an EDDType seo na datasets.xml a dhéanamh [ EDDGrid Naisc go dtí suíomhanna eile](#eddgridlonpm180) datasets ó gach ceann de na EDDGrid datasets i ERDDAP go bhfuil aon luachanna domhanfhad níos mó ná 180.
-* Más féidir, bain úsáid as seoladh IP poiblí (mar shampla,https://oceanwatch.pfeg.noaa.gov) sa URL, ní seoladh IP uimhriúil áitiúil (mar shampla,https://12.34.56.78) . Má tá an ERDDAP™ níl sé inrochtana ach tríd an seoladh IP uimhriúil áitiúil, is féidir leat é a úsáid [&lt;Conas a oibríonn sé? (Tuilleadh eolais) amhlaidh ERDDAP™ úsáideoirí a fheiceáil ar an seoladh poiblí, cé go ERDDAP™ faigheann sonraí ón seoladh áitiúil uimhriúil.
+* Más féidir, bain úsáid as seoladh IP poiblí (mar shampla, https://oceanwatch.pfeg.noaa.gov ) sa URL, ní seoladh IP uimhriúil áitiúil (mar shampla, https://12.34.56.78 ) . Má tá an ERDDAP™ níl sé inrochtana ach tríd an seoladh IP uimhriúil áitiúil, is féidir leat é a úsáid [&lt;Conas a oibríonn sé? (Tuilleadh eolais) amhlaidh ERDDAP™ úsáideoirí a fheiceáil ar an seoladh poiblí, cé go ERDDAP™ faigheann sonraí ón seoladh áitiúil uimhriúil.
          
 #####  EDDGrid Sonraí Teagmhála{#eddgridlon0360fromerddapcatalog} 
 Gineann an EDDType seo na datasets.xml a dhéanamh [ EDDGrid Seirbhís do Chustaiméirí](#eddgridlon0360) datasets ó gach ceann de na EDDGrid datasets i ERDDAP go bhfuil aon luachanna domhanfhad níos lú ná 0.
-* Más féidir, bain úsáid as seoladh IP poiblí (mar shampla,https://oceanwatch.pfeg.noaa.gov) sa URL, ní seoladh IP uimhriúil áitiúil (mar shampla,https://12.34.56.78) . Má tá an ERDDAP™ níl sé inrochtana ach tríd an seoladh IP uimhriúil áitiúil, is féidir leat é a úsáid [&lt;Conas a oibríonn sé? (Tuilleadh eolais) amhlaidh ERDDAP™ úsáideoirí a fheiceáil ar an seoladh poiblí, cé go ERDDAP™ faigheann sonraí ón seoladh áitiúil uimhriúil.
+* Más féidir, bain úsáid as seoladh IP poiblí (mar shampla, https://oceanwatch.pfeg.noaa.gov ) sa URL, ní seoladh IP uimhriúil áitiúil (mar shampla, https://12.34.56.78 ) . Má tá an ERDDAP™ níl sé inrochtana ach tríd an seoladh IP uimhriúil áitiúil, is féidir leat é a úsáid [&lt;Conas a oibríonn sé? (Tuilleadh eolais) amhlaidh ERDDAP™ úsáideoirí a fheiceáil ar an seoladh poiblí, cé go ERDDAP™ faigheann sonraí ón seoladh áitiúil uimhriúil.
          
 ##### EDDsFromFiles{#eddsfromfiles} 
 Mar gheall ar eolaire tús, seo a thrasnaíonn an eolaire agus gach fostiúrthóirí agus iarracht a chruthú tacar sonraí do gach grúpa de chomhaid sonraí a fhaigheann sé.
@@ -566,7 +566,7 @@ Ní NCCSV 1.0 comhaid tacú le haon chineálacha sonraí slánuimhir gan síniú
 ### Sonraí Cineál Comments{#data-type-comments} 
 * Mar gheall ar an tacaíocht bocht ar feadh i bhfad, ulong, agus sonraí char i go leor cineálacha comhaid, dímholadh againn ar an úsáid a bhaint as na cineálacha sonraí i ERDDAP . Nuair is féidir, bain úsáid as dúbailte in ionad fada agus fada, agus úsáid a bhaint as String in ionad char.
      
-* Metadata - Toisc(OPeN)DAP's .das agus .dds freagraí nach bhfuil tacaíocht tréithe fada nó ulong nó cineálacha sonraí (agus ina ionad sin iad a thaispeáint mar doubles) , b'fhéidir gur mhaith leat ina ionad sin a úsáid ERDDAP 's léiriú tabular de meiteashonraí mar atá le feiceáil sa http .../cuir isteach/ **info** / Baile * datasetID * .html leathanach gréasáin (mar shampla, [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (ar féidir leat a fháil freisin i cineálacha comhaid eile, m.sh., .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) nó an .nccsv Freagra meiteashonraí (mar shampla, [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) cé go cé .nccsv Tá meiteashonraí ar fáil ach amháin le haghaidh tacair sonraí tabular) , a dtacaíonn an dá cheann le gach cineál sonraí (go háirithe, fada, fada, agus char) .
+* Metadata - Toisc(OPeN)DAP's .das agus .dds freagraí nach bhfuil tacaíocht tréithe fada nó ulong nó cineálacha sonraí (agus ina ionad sin iad a thaispeáint mar doubles) , b'fhéidir gur mhaith leat ina ionad sin a úsáid ERDDAP 's léiriú tabular de meiteashonraí mar atá le feiceáil sa http .../cuir isteach/ **info** / Baile * datasetID * .html leathanach gréasáin (mar shampla, [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (ar féidir leat a fháil freisin i cineálacha comhaid eile, m.sh., .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) nó an .nccsv Freagra meiteashonraí (mar shampla, [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) cé go cé .nccsv Tá meiteashonraí ar fáil ach amháin le haghaidh tacair sonraí tabular) , a dtacaíonn an dá cheann le gach cineál sonraí (go háirithe, fada, fada, agus char) .
          
 ### Na Meáin Comhaid{#media-files} 
 Níl na sonraí go léir eagar uimhreacha nó téacs. Is éard atá i roinnt tacar sonraí ná comhaid meáin, mar shampla comhaid íomhá, fuaime agus físe. ERDDAP™ Tá roinnt gnéithe speisialta a dhéanamh níos éasca d'úsáideoirí rochtain a fháil ar chomhaid meán. Tá sé próiseas dhá chéim:
@@ -604,7 +604,7 @@ Nó, má chliceálann úsáideoir ar an ainm comhaid a thaispeántar ar ERDDAP�
 ### Ag obair le AWS S3 Comhaid{#working-with-aws-s3-files} 
  [Seirbhís Gréasáin Amazon (Amharc ar gach eolas) ](https://aws.amazon.com) is díoltóir de [internet marketing](https://en.wikipedia.org/wiki/Cloud_computing) seirbhísí. [S3](https://aws.amazon.com/s3/) córas stórála réad a thairgeann AWS. In ionad an chórais ordlathach na eolairí agus comhaid de chóras comhad traidisiúnta (cosúil le tiomáint crua i do ríomhaire) , cuireann S3 ach "buckets" a bhfuil "cuspóirí" acu (beidh orainn glaoch orthu "files" ) .
 
-Do ASCII comhaid (e.g.,) , ERDDAP™ is féidir oibriú leis na comhaid sna buicéid go díreach. Is é an rud amháin is gá duit a dhéanamh a shonrú ar an&lt;comhad Dir uaire le haghaidh an tacar sonraí ag baint úsáide as formáid ar leith le haghaidh an buicéad AWS, m.sh.,https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/. Níor chóir duit úsáid a bhaint as&lt;. Féach thíos le haghaidh sonraí.
+Do ASCII comhaid (e.g.,) , ERDDAP™ is féidir oibriú leis na comhaid sna buicéid go díreach. Is é an rud amháin is gá duit a dhéanamh a shonrú ar an&lt;comhad Dir uaire le haghaidh an tacar sonraí ag baint úsáide as formáid ar leith le haghaidh an buicéad AWS, m.sh., https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ . Níor chóir duit úsáid a bhaint as&lt;. Féach thíos le haghaidh sonraí.
 
 Ach le haghaidh comhaid dénártha (e.g., .nc , .grib, .bufr, agus .hdf comhaid comhad) , is gá duit a bhaint as an&lt;córas cur síos ar thíos. ERDDAP cliceáil grianghraf a mhéadú (a bhfuil ERDDAP™ úsáidí a léamh sonraí ó na comhaid) , agus bogearraí sonraí eolaíochta eile atá deartha a bheith ag obair le comhaid i gcóras comhad traidisiúnta a thairgeann [leibhéal bloc](https://en.wikipedia.org/wiki/Block-level_storage) rochtain ar chomhaid (a cheadaíonn smután comhad a léamh) , ach cuireann S3 amháin [leibhéal an chomhaid (réad) ](https://en.wikipedia.org/wiki/Block-level_storage) rochtain ar chomhaid (a cheadaíonn ach léamh an comhad ar fad) . Cuireann AWS rogha eile ar fáil do S3, [Siopa Bloc leaisteacha (EBS) ](https://aws.amazon.com/ebs/) ), a thacaíonn le rochtain ar leibhéal bloc ar chomhaid ach tá sé níos costasaí ná S3, mar sin is annamh a úsáidtear é le haghaidh stóráil mórchóir cainníochtaí móra de chomhaid sonraí. (Mar sin, nuair a deir daoine sonraí a stóráil sa scamall (S3) tá sé saor, de ghnáth úlla le comparáid oráistí.) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 Is é an URl comhfhreagrach don réad
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 Tacaíonn AWS le hathrú beag ar an gcaoi a bhfuil URL tógtha, ach ERDDAP™ Éilíonn an fhormáid amháin ar leith:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 As ERDDAP v2.29, is féidir leat úsáid a bhaint as anois `Cóipeáil nasc leis an tweet` URI formáid in ionad an URL buicéad. Is é seo an fhormáid a úsáideann an [Seirbhís do Chustaiméirí](https://docs.aws.amazon.com/cli/latest/reference/s3/) .
 Cóipeáil nasc leis an tweet *Déan Teagmháil Linn* / Baile *eochair eochair* 
@@ -697,22 +697,22 @@ I gcás buicéad sonraí S3 príobháideacha, ní mór d'úinéir an bhucket roc
 I ngach cás, beidh ort cuntas AWS mar gheall ar an SDK AWS le haghaidh Java   (a bhfuil ERDDAP™ úsáidí chun faisnéis a fháil faoi ábhar buicéad) Éilíonn dintiúir cuntais AWS. (níos mó ar seo thíos) 
 
  ERDDAP™ is féidir rochtain a fháil ach buicéid AWS S3 má shonraíonn tú an [&lt;riachtanais uisce: measartha (Tuilleadh roghanna...) (nó&lt;fileDir uaire) i bhformáid ar leith:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 i gcás
 
 * Is é an buicéad Name an fhoirm ghearr an t-ainm buicéad, m.sh. noa-goes17 .
 * Tá an aws-region, m.sh., linn-east-1, ón gcolún "Region" i gceann de na táblaí [AWS Seirbhís Críochphointí](https://docs.aws.amazon.com/general/latest/gr/rande.html) áit a bhfuil an buicéad suite i ndáiríre.
 * Tá an réimír roghnach. Má tá sé i láthair, caithfidh sé deireadh a chur leis '/' .
 
-Mar shampla,https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+Mar shampla, https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 Tá an fhormáid URL ar cheann de na moltaí AWS S3: féach [Rochtain a fháil ar Bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) agus [an tuairisc seo ar réimeanna](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) . ERDDAP™ Éilíonn tú le chéile an URL buicéad agus an réimír roghnach i URL amháin d'fhonn a shonrú ar an&lt;riachtanais uisce: measartha&lt;fileDir uaire) i gcás ina bhfuil na comhaid suite.
 
 #### Tástáil Buicéid S3 Poiblí{#test-public-aws-s3-buckets} 
 I gcás buicéid phoiblí, is féidir leat agus ba chóir duit an URL buicéad den eolaire AWS S3 a thástáil i do bhrabhsálaí, m.sh.,
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) Má tá an URL buicéad ceart agus cuí le haghaidh ERDDAP , beidh sé ar ais doiciméad XML a bhfuil (bláthanna cumhra: cumhráin) inneachar an bhuicéid sin a liostú. Ar an drochuair, an URL iomlán (i.e., URL buicéad móide réim) go bhfuil ERDDAP™ ag iarraidh le haghaidh tacar sonraí ar leith nach bhfuil ag obair i bhrabhsálaí. Ní chuireann AWS córas ar fáil chun ordlathas buicéad a bhrabhsáil go héasca i do bhrabhsálaí. (Má tá sé sin mícheart, cuir ríomhphost chuig Chris. John ag noaa.gov. Seachas sin, Amazon, cuir tacaíocht leis seo&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) Má tá an URL buicéad ceart agus cuí le haghaidh ERDDAP , beidh sé ar ais doiciméad XML a bhfuil (bláthanna cumhra: cumhráin) inneachar an bhuicéid sin a liostú. Ar an drochuair, an URL iomlán (i.e., URL buicéad móide réim) go bhfuil ERDDAP™ ag iarraidh le haghaidh tacar sonraí ar leith nach bhfuil ag obair i bhrabhsálaí. Ní chuireann AWS córas ar fáil chun ordlathas buicéad a bhrabhsáil go héasca i do bhrabhsálaí. (Má tá sé sin mícheart, cuir ríomhphost chuig Chris. John ag noaa.gov. Seachas sin, Amazon, cuir tacaíocht leis seo&#33;) 
 
 #### Ag féachaint ar Ábhar Bucket{#viewing-the-contents-of-a-bucket} 
-Tá buicéid S3 go minic cúpla catagóirí de chomhaid, i cúpla fo-stiúrthóirí pseudo, a d'fhéadfadh a bheith ina cúpla ERDDAP™ datasets. A dhéanamh ar an ERDDAP™ datasets, ní mór duit a fhios ag an eolaire ag tosú do&lt;riachtanais uisce: measartha&lt;fileDir uaire) agus an fhormáid na n-ainmneacha comhaid a aithint an fo-thacar de chomhaid. Má iarracht tú chun féachaint ar an t-ábhar ar fad de buicéad i bhrabhsálaí, beidh S3 thaispeáint ach tú an chéad 1000 comhaid, nach bhfuil dóthain. Faoi láthair, is é an bealach is fearr chun tú a fheiceáil go léir an t-ábhar buicéad a dhéanamh [Naisc ábhartha eile](#eddtablefromfilenames) dataset (ar do ríomhaire ar ERDDAP™ agus/nó ar do phobal ERDDAP ) , a thugann freisin duit ar bhealach éasca a bhrabhsáil ar an struchtúr eolaire agus comhaid a íoslódáil. An bhfuil&lt;fileDir uaire go mbeidh an URL a rinne tú thuas, m.sh.,https://noaa-goes17.s3.us-east-1.amazonaws.com. \\[ Cén fáth nach AWS S3 thairiscint ar bhealach tapa agus éasca do dhuine ar bith é seo a dhéanamh gan cuntas AWS? \\] Tabhair faoi deara nuair a dhéanann mé seo ar mo ríomhaire ar líonra neamh-Amazon, is cosúil go slows Amazon síos ar an freagra ar trickle (thart ar 100 (?) comhaid in aghaidh smután) tar éis an chéad cúpla smután (de 1000 de chomhaid in aghaidh smután) íoslódáil. Ós rud é go bhféadfadh líon mór comhad a bheith ag buicéid (noaa-goes17 Tá 26 milliún) , ag fáil gach ceann de na t-ábhar buicéad a ghlacadh EDDTableFromFileNames roinnt uaireanta an chloig (e.g., 12&#33;) a chríochnú. \\[ Amazon, an ceart sin?&#33; \\] 
+Tá buicéid S3 go minic cúpla catagóirí de chomhaid, i cúpla fo-stiúrthóirí pseudo, a d'fhéadfadh a bheith ina cúpla ERDDAP™ datasets. A dhéanamh ar an ERDDAP™ datasets, ní mór duit a fhios ag an eolaire ag tosú do&lt;riachtanais uisce: measartha&lt;fileDir uaire) agus an fhormáid na n-ainmneacha comhaid a aithint an fo-thacar de chomhaid. Má iarracht tú chun féachaint ar an t-ábhar ar fad de buicéad i bhrabhsálaí, beidh S3 thaispeáint ach tú an chéad 1000 comhaid, nach bhfuil dóthain. Faoi láthair, is é an bealach is fearr chun tú a fheiceáil go léir an t-ábhar buicéad a dhéanamh [Naisc ábhartha eile](#eddtablefromfilenames) dataset (ar do ríomhaire ar ERDDAP™ agus/nó ar do phobal ERDDAP ) , a thugann freisin duit ar bhealach éasca a bhrabhsáil ar an struchtúr eolaire agus comhaid a íoslódáil. An bhfuil&lt;fileDir uaire go mbeidh an URL a rinne tú thuas, m.sh., https://noaa-goes17.s3.us-east-1.amazonaws.com . \\[ Cén fáth nach AWS S3 thairiscint ar bhealach tapa agus éasca do dhuine ar bith é seo a dhéanamh gan cuntas AWS? \\] Tabhair faoi deara nuair a dhéanann mé seo ar mo ríomhaire ar líonra neamh-Amazon, is cosúil go slows Amazon síos ar an freagra ar trickle (thart ar 100 (?) comhaid in aghaidh smután) tar éis an chéad cúpla smután (de 1000 de chomhaid in aghaidh smután) íoslódáil. Ós rud é go bhféadfadh líon mór comhad a bheith ag buicéid (noaa-goes17 Tá 26 milliún) , ag fáil gach ceann de na t-ábhar buicéad a ghlacadh EDDTableFromFileNames roinnt uaireanta an chloig (e.g., 12&#33;) a chríochnú. \\[ Amazon, an ceart sin?&#33; \\] 
 
 #### Ag déanamh EDDTable ÓFileNames Socrú Sonraí le AWS S3 Bucket{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 Má tá tú ainm buicéad, ach nach bhfuil cheana féin liosta de na comhaid i buicéad S3 nó an réimír a shainaithníonn suíomh na comhaid ábhartha sa bhuicéad, bain úsáid as na treoracha thíos a dhéanamh tacar sonraí EDDTableFromFileNames ionas gur féidir leat brabhsáil an ordlathas eolaire an buicéad S3 trí ERDDAP 's "files" córas.
@@ -727,22 +727,24 @@ cliceáil grianghraf a mhéadú NeamhdhleathachArgumentException: Ní féidir co
 Leid do Linux agus Mac OS: ní mór an comhad dintiúir a bheith i eolaire baile an úsáideora atá ag rith Tomcat (agus ERDDAP )   (don mhír seo, beidh muid ag glacadh úsáideoir = tocat) i gcomhad ar a dtugtar ~/.aws/credentials. Ná glacadh leis go bhfuil ~ / baile / cat - i ndáiríre a úsáid cd ~ a fháil amach nuair a cheapann an córas oibriúcháin ~ d'úsáideoir = Tá boilg. Cruthaigh an eolaire más rud é nach bhfuil sé ann. Chomh maith leis sin, tar éis a chuir tú an comhad dintiúir i bhfeidhm, déan cinnte go bhfuil an t-úsáideoir agus grúpa don chomhad tomcat agus ansin úsáid chmod 400 dintiúir a dhéanamh cinnte go bhfuil an comhad a léamh-amháin d'úsáideoir = tomcat.
     
 3. Cruthaigh an URL buicéad sa [formáid sin ERDDAP™ Éilíonn](#accessing-files-in-an-aws-s3-bucket) , m.sh.,
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) , agus (le haghaidh buicéid phoiblí) é a thástáil i bhrabhsálaí chun a chinntiú go bhfilleann sé doiciméad XML a bhfuil liosta páirteach ann ar ábhar an bhuicéid sin.
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) , agus (le haghaidh buicéid phoiblí) é a thástáil i bhrabhsálaí chun a chinntiú go bhfilleann sé doiciméad XML a bhfuil liosta páirteach ann ar ábhar an bhuicéid sin.
      
 4. Úsáid Úsáid Úsáidte [Socraigh mar teanga réamhshocraithe](#generatedatasetsxml) a chruthú [Naisc ábhartha eile](#eddtablefromfilenames) tacar sonraí:
     * Chun an eolaire Tosaigh, bain úsáid as an syntax:
         \\*\\*\\ *ó Faraor,* Naisc ábhartha eile
 mar shampla,
-        \\*\\*\\ * As an Fly,https://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\*\\ * As an Fly, https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * ainm comhaid regex? .\\*
     * Athchúrsach? fíor fíor
     * reload Gach Neamhghnách? 10080
-    *    infoUrl ?https://registry.opendata.aws/noaa-goes/
+    *    infoUrl ? https://registry.opendata.aws/noaa-goes/
+ 
     * institiúid? NOAA 
     * achoimre? rud ar bith ( ERDDAP™ Beidh a chruthú achoimre réasúnta go huathoibríoch.) 
     * teideal? rud ar bith ( ERDDAP™ a chruthú teideal réasúnta go huathoibríoch.) Mar is gnách, ba chóir duit an XML mar thoradh air sin a chur in eagar chun cruinneas a fhíorú agus feabhsuithe a dhéanamh roimh an smután tacar sonraí a úsáid i datasets.xml .
 5. Má leanann tú na treoracha thuas agus an tacar sonraí a luchtú i ERDDAP , gur chruthaigh tú tacar sonraí EDDTableFromFiles. Mar shampla, agus a dhéanamh níos éasca do dhuine ar bith a bhrabhsáil agus a íoslódáil comhaid ó na buicéid AWS Sonraí Oscailte, ní mór dúinn a cruthaíodh EDDTableFromFileNames datasets (féach ar an liosta ag an
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) le haghaidh beagnach gach ceann de na [AWS S3 buicéid Sonraí Oscailte](https://registry.opendata.aws/) .
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) le haghaidh beagnach gach ceann de na [AWS S3 buicéid Sonraí Oscailte](https://registry.opendata.aws/) .
      \\[ Na buicéid beag nach raibh muid san áireamh ceachtar bhfuil líon mór de na comhaid sa eolaire fhréamh (níos mó ná is féidir iad a íoslódáil i méid réasúnach ama) , nó ná lig rochtain phoiblí (Nach bhfuil siad go léir ceaptha a bheith poiblí?) , nó tá buicéid Íoc Iarrthóir (e.g., Sentinel) . \\]   
 Má chliceálann tú ar an "files" nasc le haghaidh ceann de na tacair shonraí seo, is féidir leat an crann eolaire agus comhaid a bhrabhsáil sa bhucket S3 sin. Mar gheall ar an mbealach\\*\\*\\ * Ó Oibríonn OnTheFly EDDTableFromFiles, tá na liostaí eolaire i gcónaí breá cothrom le dáta mar gheall ar ERDDAP™ faigheann siad ar-an-eitilt. Má chliceálann tú síos ar an crann eolaire chuig ainm comhad iarbhír agus cliceáil ar an ainm comhaid, ERDDAP™ d’iarratas atreorú chuig AWS S3 ionas gur féidir leat an comhad a íoslódáil go díreach ó AWS. Is féidir leat iniúchadh ansin an comhad.
     
@@ -756,7 +758,7 @@ Is trua nach ligeann AWS do dhaoine brabhsálaí a úsáid chun ábhar buicéad 
  **Ansin is féidir leat a dhéanamh ERDDAP™ datasets a thugann rochtain d'úsáideoirí ar na sonraí sna comhaid.**   
 Féach na treoracha i [ ERDDAP™ agus S3 Buckets](#erddap-and-aws-s3-buckets)   (thuas thuas) .
 Maidir leis an sampla EDDTableFromFileNames tacar sonraí a rinne tú thuas, má dhéanann tú poking beag ar fud leis an eolaire agus ainmneacha comhaid sa chrann eolaire, éiríonn sé soiléir go bhfuil an leibhéal barr ainmneacha eolaire ainmneacha (e.g., ABI-L1b-RadC) a fhreagraíonn do cad ERDDAP™ bheadh glaoch tacar sonraí ar leith. D'fhéadfadh an buicéad atá tú ag obair le bheith cosúil. D'fhéadfá a shaothrú ansin a chruthú tacair sonraí ar leith i ERDDAP™ i gcás gach ceann de na tacair shonraí sin, ag úsáid, e.g.
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 mar an&lt;taisceFromUrl . Ar an drochuair, mar shampla ar leith, is cosúil go bhfuil na tacair sonraí sa bhucket leibhéal 1 nó leibhéal 2 tacar sonraí, a ERDDAP™   [Ní maith go háirithe ag](#dimensions) , toisc go bhfuil an tacar sonraí bailiúchán níos casta de athróga a úsáideann toisí éagsúla.
      
     
@@ -975,7 +977,7 @@ luachanna gné unsorted fios beagnach i gcónaí fadhb leis an tacar sonraí foi
 ###  EDDGrid Ó Dhéag{#eddgridfromdap} 
  [ ** EDDGrid Ó Dhéag** ](#eddgridfromdap) Láimhseálann athróg greille ó [ DAP ](https://www.opendap.org/) freastalaithe.
 
-* Molaimid go láidir ag baint úsáide as [Sonraí a ghiniúint Xml clár](#generatedatasetsxml) a dhéanamh dréacht garbh den datasets.xml smután don tacar sonraí. Is féidir leat a bhailiú ar an eolas is gá duit a tweak go nó a chruthú do XML féin le haghaidh EDDGrid ÓDap tacar sonraí ag féachaint ar an tacar sonraí foinse DDS agus comhaid DAS i do bhrabhsálaí (ag cur .das agus .dds leis an sourceUrl , mar shampla, [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
+* Molaimid go láidir ag baint úsáide as [Sonraí a ghiniúint Xml clár](#generatedatasetsxml) a dhéanamh dréacht garbh den datasets.xml smután don tacar sonraí. Is féidir leat a bhailiú ar an eolas is gá duit a tweak go nó a chruthú do XML féin le haghaidh EDDGrid ÓDap tacar sonraí ag féachaint ar an tacar sonraí foinse DDS agus comhaid DAS i do bhrabhsálaí (ag cur .das agus .dds leis an sourceUrl , mar shampla, [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
      
 *    EDDGrid Is féidir ÓDap sonraí a fháil ó aon athróg il-tríthoiseach ó DAP freastalaí sonraí. (Roimhe seo, EDDGrid ÓDap bhí teoranta do athróga ainmnithe mar "greille" ar, ach is é sin a thuilleadh ceanglas.)   
      
@@ -1335,7 +1337,7 @@ Sampla iomlán de axisVariable a dhéanann tacar sonraí comhiomlánaithe le ais
         </addAttributes>
       </axisVariable>
 ```
-Tabhair faoi deara go n-úsáidfear uimhir an ghrúpa gabhála 2 chun na digití a tharlaíonn tar éis 'r' nó 's' a ghabháil, agus roimh "\\_global". Léiríonn an sampla seo freisin conas tréithe breise a chur leis (e.g., ioos\\_category agus aonaid) go dtí an ais athróg.
+Tabhair faoi deara go n-úsáidfear uimhir an ghrúpa gabhála 2 chun na digití a tharlaíonn tar éis 'r' nó 's' a ghabháil, agus roimh "\\_global" . Léiríonn an sampla seo freisin conas tréithe breise a chur leis (e.g., ioos\\_category agus aonaid) go dtí an ais athróg.
      
 #### Go seachtrach Comhbhrúite Comhaid{#externally-compressed-files} 
 * Sonraí atá fo-thacar de EDDGrid Ó Fianáin agus EDDTable Is féidir le FromFiles sonraí a sheirbheáil go díreach ó chomhaid sonraí atá comhbhrúite go seachtrach, lena n-áirítear .tgz , .tar  .gz , .tar  .gzip , .gz , .gzip , .zip , .bz2 , agus .Z comhaid.
@@ -1433,7 +1435,7 @@ Gach duine EDDGrid Ó Fianáin agus gach tacar sonraí EDDTableFromFiles tacú l
 Ina áit sin, bain úsáid as an [&lt;córas eHouse4 (Tuilleadh roghanna...) .
 
 Rochtain ar Rochtain ERDDAP™ datasets mar chomhaid trí iarratais raon byte --
-Flipping seo thart, mar gheall ar gur féidir leat (i teoiric) smaoineamh ar tacar sonraí i ERDDAP™ mar fathach .nc comhad ag gabháil " .nc " go dtí an bonn OPen DAP URL le haghaidh tacar sonraí ar leith (e.g.,https://myserver.org/erddap/griddap/datasetID.ncagus freisin trí query a chur i ndiaidh sin a shonrú fo-thacar) , tá sé b'fhéidir réasúnta a iarraidh an féidir leat a úsáid netcdf-java, Ferret , nó roinnt eile NetCDF bogearraí cliant a léamh sonraí via Iarratais Raon HTTP ó ERDDAP . Níl an freagra, toisc nach bhfuil i ndáiríre ollmhór " .nc " comhad. Más mian leat é seo a dhéanamh, ina ionad sin a dhéanamh ar cheann de na roghanna seo:
+Flipping seo thart, mar gheall ar gur féidir leat (i teoiric) smaoineamh ar tacar sonraí i ERDDAP™ mar fathach .nc comhad ag gabháil " .nc " go dtí an bonn OPen DAP URL le haghaidh tacar sonraí ar leith (e.g., https://myserver.org/erddap/griddap/datasetID.nc agus freisin trí query a chur i ndiaidh sin a shonrú fo-thacar) , tá sé b'fhéidir réasúnta a iarraidh an féidir leat a úsáid netcdf-java, Ferret , nó roinnt eile NetCDF bogearraí cliant a léamh sonraí via Iarratais Raon HTTP ó ERDDAP . Níl an freagra, toisc nach bhfuil i ndáiríre ollmhór " .nc " comhad. Más mian leat é seo a dhéanamh, ina ionad sin a dhéanamh ar cheann de na roghanna seo:
 
 * Úsáid Úsáid Úsáidte(OPeN)DAPbogearraí cliant a nascadh leis na seirbhísí griddap ar fáil ag ERDDAP . Is maith liom é DAP   (agus dá bhrí sin ERDDAP ) bhí deartha le haghaidh. Tá sé an-éifeachtach.
 * Nó, íoslódáil an comhad foinse (s s) ó na "files" córas córas (nó comhad fo-thacar trí .nc ? search engine) le do ríomhaire agus a úsáid netcdf-java, Ferret , nó roinnt eile NetCDF bogearraí cliant a léamh ar an (anois) local file (s s) .
@@ -2253,9 +2255,9 @@ na sonraí a stóráil i mbailiúchán NetCDF v3 .nc comhaid comhad (go háirith
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### EDDTableFromDapSequence{#eddtablefromdapsequence} 
- [ **EDDTableFromDapSequence** ](#eddtablefromdapsequence) Láimhseálann athróg laistigh de 1- agus 2-leibhéal ord ó [ DAP ](https://www.opendap.org/) freastalaithe ar nós DAP PER (bhí aghttps://www.pmel.noaa.gov/epic/software/dapper/, scor anois) .
+ [ **EDDTableFromDapSequence** ](#eddtablefromdapsequence) Láimhseálann athróg laistigh de 1- agus 2-leibhéal ord ó [ DAP ](https://www.opendap.org/) freastalaithe ar nós DAP PER (bhí ag https://www.pmel.noaa.gov/epic/software/dapper/ , scor anois) .
 
-* Molaimid go láidir ag baint úsáide as [Sonraí a ghiniúint Xml clár](#generatedatasetsxml) a dhéanamh dréacht garbh den datasets.xml smután don tacar sonraí. Is féidir leat a chur in eagar ansin go fíneáil tune é. Is féidir leat a bhailiú ar an eolas is gá duit ag féachaint ar an tacar sonraí foinse DDS agus comhaid DAS i do bhrabhsálaí (ag cur .das agus .dds leis an sourceUrl (Bhí sampla aghttps://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds).
+* Molaimid go láidir ag baint úsáide as [Sonraí a ghiniúint Xml clár](#generatedatasetsxml) a dhéanamh dréacht garbh den datasets.xml smután don tacar sonraí. Is féidir leat a chur in eagar ansin go fíneáil tune é. Is féidir leat a bhailiú ar an eolas is gá duit ag féachaint ar an tacar sonraí foinse DDS agus comhaid DAS i do bhrabhsálaí (ag cur .das agus .dds leis an sourceUrl (Bhí sampla ag https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds ).
     
 * Tá athróg i DAP ord má léiríonn an freagra .dds go bhfuil an struchtúr sonraí a bhfuil an athróg a "de bharr" (cás íogair) .
 * I gcásanna áirithe, feicfidh tú seicheamh laistigh d'ord, seicheamh 2-leibhéal - EDDTableFromDapSequence Láimhseálann na, freisin.
@@ -2378,15 +2380,15 @@ Sonraí a ghiniúint Tá trí rogha speisialta ag Xml do EDDTableFromDatabase:
 * [JDBC Tiománaí agus&lt;an tiománaí Namaim ú (Tuilleadh roghanna...) -- Ní mór duit a fháil ar an JDBC 3 cuí nó JDBC 4 tiománaí . jar comhad do do bhunachar sonraí agus
 é a chur i *taiseachas aeir: fliuch* / webapps / erddap / WEB-INF /lib tar éis duit a shuiteáil ERDDAP . Ansin, i do datasets.xml don tacar sonraí seo, ní mór duit an&lt;tiománaíName uaire don tiománaí, atá (Ar an drochuair,) difriúil ón ainm comhaid. Cuardaigh ar an ngréasán le haghaidh an tiománaí JDBC do do bhunachar sonraí agus an tiománaí Name sin Java Ní mór é a úsáid.
     
-    * Do MariaDB, déan iarracht [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * Do MariaDB, déan iarracht [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 An bhfuil&lt;tiománaí Name uaire a úsáid i datasets.xml   (féach thíos) Is dócha org.mariadb.jdbc. Tiománaí .
-    * Do MySQL agus Amazon RDS, déan iarracht [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * Do MySQL agus Amazon RDS, déan iarracht [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 An bhfuil&lt;tiománaí Name uaire a úsáid i datasets.xml   (féach thíos) Is dócha com.mysql.jdbc. Tiománaí .
-    * Le haghaidh Oracle , déan iarracht [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
+    * Le haghaidh Oracle , déan iarracht [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
 An bhfuil&lt;tiománaí Name uaire a úsáid i datasets.xml   (féach thíos) Is dócha oracle.jdbc.driver. Oracle Tiománaí .
-    * Do Postgresql, fuair muid an tiománaí JDBC 4 ó [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * Do Postgresql, fuair muid an tiománaí JDBC 4 ó [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 An bhfuil&lt;tiománaí Name uaire a úsáid i datasets.xml   (féach thíos) Is dócha org.postgresql. Tiománaí .
-    * Do Freastalaí SQL, is féidir leat a fháil ar an JTDS JDBC tiománaí ó [https://jtds.sourceforge.net](https://jtds.sourceforge.net) .
+    * Do Freastalaí SQL, is féidir leat a fháil ar an JTDS JDBC tiománaí ó [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) .
 An bhfuil&lt;tiománaí Name uaire a úsáid i datasets.xml   (féach thíos) Is dócha net.sourceforge.jtds.jdbc. Tiománaí .
     
 Tar éis a chuir tú an tiománaí JDBC .jar i ERDDAP™ leabharlann eolaire, ní mór duit a chur tagairt don .jar comhad sa .bat agus / nó .sh comhaid script do GenerateDatasets Xml, DasDds, agus ArchiveADataset atá sa *taiseachas aeir: fliuch* /webapps / erddap / WEB-INF / eolaire; ar shlí eile, beidh tú a fháil ClassNotFoundException nuair a ritheann tú na scripteanna.
@@ -2524,7 +2526,7 @@ Agus i *taiseachas aeir: fliuch* / conf/context.xml, acmhainn a shainiú leis an
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-Tá eolas ginearálta faoi úsáid a bhaint as DataSource ag [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
+Tá eolas ginearálta faoi úsáid a bhaint as DataSource ag [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
 Féach ar [Tomcat Sonraíource faisnéis](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) agus [samplaí Tomcat DataSource](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) nó cuardach a dhéanamh ar an ngréasán le haghaidh samplaí a úsáid DataSources le freastalaithe iarratais eile.
 * Má theipeann ar gach ceann eile,
 na sonraí a stóráil i mbailiúchán NetCDF v3 .nc comhaid comhad (go háirithe go háirithe .nc comhaid a úsáideann an [CF Diosca Geometris Sampling (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Is féidir struchtúir sonraí Ragged Contiguous Array agus mar sin a láimhseáil le ERDDAP 's [EDDTableFromNcCFFiles](#eddtablefromnccffiles) ) . Má tá siad eagraithe go loighciúil (gach ceann acu le sonraí le haghaidh smután de spás agus am) , ERDDAP™ is féidir le sonraí a bhaint astu go han-tapa.
@@ -2608,7 +2610,7 @@ na sonraí a stóráil i mbailiúchán NetCDF v3 .nc comhaid comhad (go háirith
     
 Áirítear ar an smután de XML a ghintear ag GenerateDatasetsXml do gach tacar sonraí:
     
-    * Amharc ar gach eolas datasetID is é an EDDGrid 's datasetID móide "\\_AsATable".
+    * Amharc ar gach eolas datasetID is é an EDDGrid 's datasetID móide móide "\\_AsATable" .
     * A tréith domhanda achoimre nua a bhfuil an EDDGrid 's achoimre móide an chéad mhír nua cur síos ar cad é an tacar sonraí seo.
     * A teideal nua tréith domhanda a bhfuil an EDDGrid 's teideal móide', (Mar Tábla) ".
     * A maxAxis0 nua tréith domhanda le luach de 10.
@@ -2644,21 +2646,21 @@ na sonraí a stóráil i mbailiúchán NetCDF v3 .nc comhaid comhad (go háirith
 *    [Na sonraí i tacar sonraí EDDTableFromFileNames](#eddtablefromfilenames-data) Is tábla go ERDDAP™ Cruthaíonn ar-an-eitilt le faisnéis faoi ghrúpa de chomhaid áitiúla. Sa tábla, tá sraith le haghaidh gach comhad. Ceithre tréithe speisialta sna [ datasets.xml don tacar sonraí seo](#eddtablefromfilenames-skeleton-xml) a chinneadh cé na comhaid a bheidh san áireamh sa tacar sonraí seo:
     
 ##### comhad comhad An Roinn{#filedir} 
-    *   &lt;comhad Dir uaire -- Sonraíonn sé seo an eolaire foinse i gcóras comhaid an fhreastalaí leis na comhaid don tacar sonraí. Na comhaid atá suite i ndáiríre i gcóras comhaid an fhreastalaí i&lt;Beidh fileDir uaire le feiceáil sa cholún url den tacar sonraí laistigh de eolaire fíorúil ainmnithehttps://*serverUrl*/erddap/files/*datasetID/*.
+    *   &lt;comhad Dir uaire -- Sonraíonn sé seo an eolaire foinse i gcóras comhaid an fhreastalaí leis na comhaid don tacar sonraí. Na comhaid atá suite i ndáiríre i gcóras comhaid an fhreastalaí i&lt;Beidh fileDir uaire le feiceáil sa cholún url den tacar sonraí laistigh de eolaire fíorúil ainmnithe https://*serverUrl*/erddap/files/*datasetID/* .
 Mar shampla, má tá an datasetID Is maith liom é RSS T,
 agus an&lt;Is é / baile / sonraí / mur/,
 agus go bhfuil eolaire comhad ainmnithe jplMU RSS T20150103000000.png,
 ansin beidh an URL a thaispeáint d'úsáideoirí don chomhad sin a
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png.
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png .
         
 Chomh maith le húsáid eolaire áitiúil don&lt;fileDir uaire, Is féidir leat a shonrú chomh maith leis an URL ar iargúlta, eolaire-mhaith leathanach gréasáin. Oibríonn sé seo le:
         
         * Socruithe sonraí neamhchomhiomlánaithe i THREDDS, m.sh.,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ Clár na dToghthóirí Níl an freastalaí seo ar fáil go hiontaofa a thuilleadh. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ Clár na dToghthóirí Níl an freastalaí seo ar fáil go hiontaofa a thuilleadh. \\] 
         * Socraigh sonraí neamhchomhiomlánaithe i Hyrax , m.sh.,
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * An chuid is mó Apache-mhaith liostaí eolaire, m.sh.,
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### Go raibh maith agat{#fromonthefly} 
  [\\*\\*\\ *](#fromonthefly) -- I gcás roinnt buicéid S3 ollmhór (cosúil le noaa-goes17, a bhfuil 26 milliún comhad) , d'fhéadfadh sé a ghlacadh ERDDAP™ suas go dtí 12 uair an chloig a íoslódáil an t-eolas go léir faoi ábhar an buicéid (agus ansin tá fadhbanna eile) . Chun a fháil timpeall seo, tá bealach speisialta a úsáid&lt;fileDir uaire i EDDTableFromFileNames a dhéanamh tacar sonraí leis an eolaire agus ainmneacha comhaid ó buicéad AWS S3. Ní bheidh liosta de na heolairí buicéad S3 agus ainmneacha comhaid gur féidir le húsáideoir cuardach a dhéanamh trí iarrataí ar an tacar sonraí. Ach beidh an tacar sonraí a fháil ar ainmneacha na eolairí agus comhaid ar-an-eitilt má thrasnaíonn an t-úsáideoir an ordlathas eolaire leis an tacar sonraí ar "files" rogha. Dá bhrí sin, ligeann sé seo d'úsáideoirí a bhrabhsáil ordlathas agus comhaid an bhuicéad S3 tríd an tacar sonraí "files" córas. Chun seo a dhéanamh, in ionad an URL a shonrú le haghaidh an buicéad S3 mar an "Eolaire Starting" (i GenerateDatasets XLUMX) nó&lt;comhad a scriosadh (i datasets.xml ) , úsáid:
 ```
@@ -2837,13 +2839,13 @@ Gach duine EDDGrid Ó Fianáin agus gach tacar sonraí EDDTableFromFiles tacú l
     * An bhfuil&lt;taisceFromUrl ^ ligeann chlib tú a shonrú URL le liosta de na comhaid tacar sonraí iargúlta ó liosta comhad iargúlta.
         
         * Socruithe sonraí neamhchomhiomlánaithe i THREDDS, m.sh.,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ Clár na dToghthóirí Níl an freastalaí seo ar fáil go hiontaofa a thuilleadh. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ Clár na dToghthóirí Níl an freastalaí seo ar fáil go hiontaofa a thuilleadh. \\] 
         * Socraigh sonraí neamhchomhiomlánaithe i Hyrax , m.sh.,
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * An chuid is mó Apache-mhaith liostaí eolaire, m.sh.,
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * buicéid S3, e.g,
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 Mar sin féin, d'fhéadfadh sé seo a cheangal ar chuntas AWS agus thus níos mó.
 Féach ar [ag obair le Buckets S3 i ERDDAP™ ](#working-with-aws-s3-files) .
 Chomh maith leis sin, ní gá duit de ghnáth taisce a úsáid FromUrl le comhaid i buicéid S3 má tá na comhaid ASCII comhaid (e.g.,) , mar gheall ar ERDDAP™ is féidir na sonraí a léamh go héifeachtach ón mbucket go díreach trí shruth.
@@ -2901,7 +2903,7 @@ ansin tá sraith de ghrúpaí ghabháil neadaithe i gcás ina bhfuil an chéad r
 agus is luach sonrach é an dara rogha.
             
 Ní bheidh an sampla thuas comhoiriúnach ach le heolairí don dara 10 lá de 2018, e.g.
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ Clár na dToghthóirí Níl an freastalaí seo ar fáil go hiontaofa a thuilleadh. \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ Clár na dToghthóirí Níl an freastalaí seo ar fáil go hiontaofa a thuilleadh. \\]   
 agus lá 011, 012, ..., 019.
              (Féach seo [doiciméadú regex](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) agus [riachtanais uisce: measartha](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) .)   
 Más gá duit cabhair a chruthú&lt;taiscePartialPathRegex ×, le do thoil ríomhphost chuig an&lt;Conas a oibríonn sé? John ag noaa.gov.
@@ -3384,7 +3386,7 @@ Le haghaidh aon tacar sonraí i ERDDAP™ , nuair a sheolann tú iarratas chuig 
 
 * Seirbhís do Chustaiméirí
     * Tá an t-iarratas formáidithe cosúil le freagra foirm HTML caighdeánach, le eochair = péirí luach, scartha ag 'agus'. Mar shampla,
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 india ERDDAP™ na sonraí a chur leis nó a athrú stationID =46088 don am sonraithe.
     * Is é an t-údar an athraithe seo JohnSmith agus is é an eochair éigin Key1.
     * Ní mór an URL luachanna bailí san áireamh (gan luachanna ar iarraidh) do gach ceann de na [ http Faigh Aitheantas](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ india ERDDAP™ na sonraí a chur leis nó a athrú stationID =46088 don am sonr
              
     * taiseachas aeir: fliuch
         * Tá an t-iarratas formáidithe cosúil le freagra foirm HTML caighdeánach, le eochair = péirí luach, scartha ag 'agus'. Mar shampla,
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 india ERDDAP™ na sonraí a scriosadh stationID =46088 ag an am sonraithe.
         * Is é an t-údar an athraithe seo JohnSmith agus is é an eochair éigin Key1.
         * Ní mór an URL a shonrú ar an [ http Faigh Aitheantas](#httpgetrequiredvariables-global-attribute) san iarraidh (e.g., stationID agus am) . Má mheaitseáil na luachanna na luachanna ar a chéile cheana féin sa tacar sonraí (a bheidh siad de ghnáth) , na seanluachanna scriosta go héifeachtach (cé go bhfuil na seanluachanna fós inrochtana má iarrann úsáideoir sonraí ó roimhe seo [leagan leagan](#versioning) an tacar sonraí) .
@@ -3667,7 +3669,7 @@ Níl gach duine gá le haghaidh an cineál leagan fíneáil-grained, ach tá sé
     
 ##### HTTPS Cuir agus Scrios{#https-put-and-delete} 
 *    ["Cad faoi HTTPS PUT agus DELETE?&#33;"](#https-put-and-delete)   
-     [Prótacal Aistrithe Hipirtéal (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) Is é bunús an Gréasán Domhanda agus an chúis a thosaíonn URLanna leathanach gréasáin le "http://"nó "https://". Is HTTPS HTTP le sraith slándála breise. Gach lá, brabhsálaithe, scripteanna agus cláir ríomhaireachta a dhéanamh billiúin de HTTP (Staidéar S)   **Glóthach** iarratais chun faisnéis a fháil ó fhoinsí iargúlta. HTTP (Staidéar S) san áireamh freisin eile [briathra](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , go háirithe PUT (sonraí a bhrú chuig an bhfreastalaí) agus DELETE (go sonraí DELETE ón bhfreastalaí) . Is ea, PUT agus DELETE an bealach ceart chun sonraí a chur isteach, agus sonraí a scriosadh ó, tacar sonraí trí HTTP (Staidéar S) . Tá GET tacaíocht ó gach píosa bogearraí is féidir a bheith ag obair le HTTP (Staidéar S) . Tá GET i ndáiríre éasca a bheith ag obair leis. Tá a fhios ag gach duine cheana féin conas a bheith ag obair le GET agus go leor a fhios conas a úsáid POST (is féidir a úsáid go bunúsach ar an mbealach céanna le GET) , mar sin rinne muid obair EDDTableFromHttpGet le GET agus POST. An-beag daoine (fiú níos lú ríomhchláraitheoirí) ag obair riamh le PUT agus DELETE. PUT agus DELETE tacaíocht de ghnáth ach amháin ag teangacha ríomhaireachta, mar sin ag baint úsáide as éilíonn siad clár sciliúil. Mar sin, tá PUT agus ROLETE de ghnáth cur chuige i bhfad níos cumbersome mar gheall ar an mbealach na huirlisí tagtha chun cinn.
+     [Prótacal Aistrithe Hipirtéal (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) Is é bunús an Gréasán Domhanda agus an chúis a thosaíonn URLanna leathanach gréasáin le " http://" nó " https://" . Is HTTPS HTTP le sraith slándála breise. Gach lá, brabhsálaithe, scripteanna agus cláir ríomhaireachta a dhéanamh billiúin de HTTP (Staidéar S)   **Glóthach** iarratais chun faisnéis a fháil ó fhoinsí iargúlta. HTTP (Staidéar S) san áireamh freisin eile [briathra](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , go háirithe PUT (sonraí a bhrú chuig an bhfreastalaí) agus DELETE (go sonraí DELETE ón bhfreastalaí) . Is ea, PUT agus DELETE an bealach ceart chun sonraí a chur isteach, agus sonraí a scriosadh ó, tacar sonraí trí HTTP (Staidéar S) . Tá GET tacaíocht ó gach píosa bogearraí is féidir a bheith ag obair le HTTP (Staidéar S) . Tá GET i ndáiríre éasca a bheith ag obair leis. Tá a fhios ag gach duine cheana féin conas a bheith ag obair le GET agus go leor a fhios conas a úsáid POST (is féidir a úsáid go bunúsach ar an mbealach céanna le GET) , mar sin rinne muid obair EDDTableFromHttpGet le GET agus POST. An-beag daoine (fiú níos lú ríomhchláraitheoirí) ag obair riamh le PUT agus DELETE. PUT agus DELETE tacaíocht de ghnáth ach amháin ag teangacha ríomhaireachta, mar sin ag baint úsáide as éilíonn siad clár sciliúil. Mar sin, tá PUT agus ROLETE de ghnáth cur chuige i bhfad níos cumbersome mar gheall ar an mbealach na huirlisí tagtha chun cinn.
      
 ##### Plean Gníomhaíochta don Oideachas{#httpget-notes} 
 *    [Nótaí](#httpget-notes) 
@@ -3676,7 +3678,7 @@ Níl gach duine gá le haghaidh an cineál leagan fíneáil-grained, ach tá sé
 ##### Go raibh maith agat{#thanks} 
 *    [Buíochas le CHORDS don smaoineamh bunúsach.](#thanks)   
 An smaoineamh bunúsach do EDDTableFromHttpGet (i.e., ag baint úsáide as HTTP GET iarraidh sonraí a chur le tacar sonraí) Is ó UCAR ar (NCAR ar?)   [Seirbhísí Sonraí Fíor-ama Cloud-Hosted (An tSraith Shinsearach) ](https://github.com/earthcubeprojects-chords) tionscadal. An fhormáid do na paraiméadair san iarraidh (arís agus arís eile *ainm = luach* , scartha ag &amp;) Is é an fhormáid chaighdeánach chéanna a úsáideann foirmeacha HTML ar leathanaigh ghréasáin. Tá sé smaoineamh simplí agus iontach agus fiú níos mó mar gheall ar mogalra sé chomh breá le ERDDAP 's córas atá ann cheana féin chun déileáil le sonraí tabular. Is é an smaoineamh soiléir i hindsight, ach mé (Bob go bhfuil) Ní raibh smaoineamh air. EDDTableFrom Http Faigh Úsáideann go smaoineamh bunúsach, in éineacht lenár smaointe ar conas é a chur i bhfeidhm, chun córas a dhéanamh i ERDDAP™ chun sonraí a uaslódáil. Seachas an smaoineamh bunúsach ag baint úsáide as GET chun sonraí a bhrú isteach sa chóras, is é an cur i bhfeidhm EDDTableFromHttpGet go hiomlán difriúil agus go hiomlán neamhspleách ar CHORDS agus tá gnéithe éagsúla (e.g., comhaid logála, smután sonraí, córas slándála éagsúla, tacaíocht CRUD, sonraí in-atáirgthe) . Bhí ár nochtadh do CHORDS ach seimineár gréasáin. Ní raibh muid ag breathnú ar a n-cód nó a léamh mar gheall ar a fhios againn láithreach bhíomar ag iarraidh a chur i bhfeidhm ar an gcóras ar bhealach difriúil. Ach tá muid buíoch dóibh as an smaoineamh bunúsach. Is é an tagairt iomlán do CHORDS
-Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stampaí, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (Roghnaigh gach rud) . Cloud-Hosted Real-am Seirbhísí Sonraí do na Geosciences (An tSraith Shinsearach) bogearraí. UCAR / NCAR - An tSaotharlann Breathnadóireachta Domhain. [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stampaí, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (Roghnaigh gach rud) . Cloud-Hosted Real-am Seirbhísí Sonraí do na Geosciences (An tSraith Shinsearach) bogearraí. UCAR / NCAR - An tSaotharlann Breathnadóireachta Domhain. [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### EDDTableFrom Hyrax Amharc ar gach eolas{#eddtablefromhyraxfiles} 
  [ **EDDTableFrom Hyrax Amharc ar gach eolas** ](#eddtablefromhyraxfiles)   (bláthanna cumhra: cumhráin) comhiomlánaí comhaid sonraí le hathróga éagsúla, gach ceann acu le toisí amháin nó níos mó roinnte (mar shampla, am, airde (nó doimhneacht) , domhanleithead, domhanfhad) , agus a sheirbheáil ag [ Hyrax   OPeNDAP freastalaí freastalaí](https://www.opendap.org/software/hyrax-data-server) .
@@ -3692,7 +3694,7 @@ Mura bhfuil aon ghearáin ann roimh 2020, féadfar an cineál tacar sonraí seo 
 * An scáileán rang-scrapes an Hyrax leathanaigh ghréasáin leis na liostaí de chomhaid i ngach eolaire. Mar gheall ar seo, tá sé an-sonrach don fhormáid reatha Hyrax leathanaigh ghréasáin. Déanfaimid iarracht a choigeartú ERDDAP™ go tapa má / nuair leaganacha amach anseo Hyrax athrú ar an gcaoi a bhfuil na comhaid liostaithe.
 * An bhfuil&lt;Tá comhadDir uaire leagan neamhaird. Ós rud é go n-íoslódálann an rang seo agus go ndéanann sé cóip áitiúil de gach comhad sonraí iargúlta, ERDDAP™ fórsaí an comhad Dir a bheith *Treoir do Thuismitheoirí* Seirbhís do Chustaiméirí * datasetID * /.
 * Le haghaidh&lt; sourceUrl ×, bain úsáid as an URL an eolaire bonn de na tacar sonraí sa Hyrax freastalaí, mar shampla,
-    &lt; sourceUrl úhttp://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;/ Baile sourceUrl ú
+    &lt; sourceUrl ú http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;/ Baile sourceUrl ú
      (ach é a chur ar líne amháin)   (Tá brón orainn, go bhfuil freastalaí a thuilleadh ar fáil) .
 An bhfuil sourceUrl leathanach gréasáin de ghnáth " OPeNDAP Innéacs Freastalaí de \\[ tréimhse saoil: ilbhliantúil \\] " ag an mbarr.
 * Ós rud é go n-íoslódálann an rang seo i gcónaí agus déanann sé cóip áitiúil de gach comhad sonraí iargúlta, níor chóir duit an tacar sonraí seo a fhilleadh i [EDDTableCopy](#eddtablecopy) .
@@ -3706,7 +3708,7 @@ Sonraí: Tá na comhaid seo athróg sraith il\\_size, gach ceann acu le tréith 
 
 Fadhb eile leis na comhaid seo: an Príomh\\_Investigator as a chéile\\_size athróg nach bhfuil gné sampla \\_dimension agus nach leanann an riail thuas.
 
-Is féidir le comhaid samplacha don chineál seo tacar sonraí a fháil aghttps://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ Clár na dToghthóirí Níl an freastalaí seo ar fáil go hiontaofa a thuilleadh \\] .
+Is féidir le comhaid samplacha don chineál seo tacar sonraí a fháil ag https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ Clár na dToghthóirí Níl an freastalaí seo ar fáil go hiontaofa a thuilleadh \\] .
 
 Féach an rang seo' superclass, [EDDTableFromFiles](#eddtablefromfiles) , le haghaidh faisnéise ar conas a oibríonn an rang seo agus conas é a úsáid.
 
@@ -3850,10 +3852,10 @@ Déanann an chéad rud GenerateDatasetsXml don chineál seo tacar sonraí tar é
  [ **Seirbhísí ar líne** ](#eddtablefromnos)   (DEPRECATE) Láimhseálann sonraí ó NOAA   [NOS](https://opendap.co-ops.nos.noaa.gov/axis/) foinse, a úsáideann [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) le haghaidh iarrataí agus freagraí. Tá sé an-sonrach do NOAA NOS XML. Féach ar an sampla EDDTableFromNOS tacar sonraí i datasets2.xml.
  
 ### Seirbhísí ar líne{#eddtablefromobis} 
- [ **Seirbhísí ar líne** ](#eddtablefromobis) Láimhseálann sonraí ó Aigéan Córas Faisnéise Bitheolaíochta (OBIS) freastalaí freastalaí (a bhíhttp://www.iobis.org ) . Is féidir nach bhfuil aon freastalaithe níos gníomhaí a bhaineann úsáid as seo anois amach-de-dáta de chóras freastalaí OBIS.
+ [ **Seirbhísí ar líne** ](#eddtablefromobis) Láimhseálann sonraí ó Aigéan Córas Faisnéise Bitheolaíochta (OBIS) freastalaí freastalaí (a bhí http://www.iobis.org  ) . Is féidir nach bhfuil aon freastalaithe níos gníomhaí a bhaineann úsáid as seo anois amach-de-dáta de chóras freastalaí OBIS.
 
 * freastalaithe OBIS súil iarratas XML agus freagra XML ar ais.
-* Mar gheall ar gach freastalaithe OBIS freastal ar na hathróga céanna ar an mbealach céanna (a bhíhttp://iobis.org/tech/provider/questions) , ní gá duit a shonrú i bhfad a chur ar bun tacar sonraí OBIS i ERDDAP .
+* Mar gheall ar gach freastalaithe OBIS freastal ar na hathróga céanna ar an mbealach céanna (a bhí http://iobis.org/tech/provider/questions ) , ní gá duit a shonrú i bhfad a chur ar bun tacar sonraí OBIS i ERDDAP .
 * MUST tú san áireamh " creator\\_email " tréith sa domhan domhanda addAttributes , ós rud é go bhfuil an t-eolas a úsáidtear laistigh den cheadúnas. Is féidir seoladh ríomhphoist oiriúnach a fháil ag léamh an freagra XML ón sourceURL.
 * Is féidir leat nó nach féidir a bheith in ann a fháil ar an tréith dhomhanda [&lt; subsetVariables ú (#subsetvariables) chun obair le freastalaí OBIS ar leith. Má tá tú iarracht, ach iarracht athróg amháin (mar shampla, ScientificName nó Genus) .
 #### Seirbhísí ar líne creatlach XML{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ Déanann an chéad rud GenerateDatasetsXml don chineál seo tacar sonraí tar é
     * Slí an Atlantaigh (Braiteoir Cumasú Gréasáin) agus SOS   (Seirbhís Breathnóireachta Braiteoir) go bhfuil siad [Caighdeáin OpenGIS®](https://www.ogc.org/standards) . Tá an láithreán gréasáin na doiciméid caighdeáin.
     * An bhfuil OGC Seirbhísí Gréasáin Coiteann Sonraíocht ver 1.1.0 ( OGC Cuardach le haghaidh Iarratas Pleanála) Clúdaíonn sé tógáil ceisteanna GET agus POST (féach alt 7.2.3 agus alt 9) .
     * Má sheolann tú iarratas xml getCapability chuig SOS freastalaí freastalaí ( sourceUrl + "? seirbhíse = SOS Déan Teagmháil Linn GetCapabilities " " ") , gheobhaidh tú toradh xml le liosta de na stáisiúin agus breathnaithe Airíonna go bhfuil siad sonraí le haghaidh.
-    * Is tagairt fhoirmiúil URI é an Property a breathnaíodh do mhaoin. Mar shampla, urn: agusc: feiniméan: leithead: wgs84 nóhttps://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * Is tagairt fhoirmiúil URI é an Property a breathnaíodh do mhaoin. Mar shampla, urn: agusc: feiniméan: leithead: wgs84 nó https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * Níl an Property breathnaithe athróg.
-    * D'fhéadfadh níos mó ná athróg amháin a bheith mar an gcéanna faoi deara Díroghnaigh gach rud (mar shampla, insideTemp agus taobh amuigh D'fhéadfadh Temp araon faoi deara Díroghnaigh gach rudhttps://mmisw.org/ont/cf/parameter/air\\_temperature) .
+    * D'fhéadfadh níos mó ná athróg amháin a bheith mar an gcéanna faoi deara Díroghnaigh gach rud (mar shampla, insideTemp agus taobh amuigh D'fhéadfadh Temp araon faoi deara Díroghnaigh gach rud https://mmisw.org/ont/cf/parameter/air\\_temperature ) .
     * Má sheolann tú iarratas xml getObservation chuig SOS freastalaí, gheobhaidh tú toradh xml le cur síos ar ainmneacha réimse sa fhreagra, aonaid réimse, agus na sonraí. Beidh na hainmneacha réimse san áireamh le fada, domhanleithead, doimhneacht (b'fhéidir b'fhéidir) , agus am.
     * Gach ceann dataVariable do EDDTableFrom SOS Ní mór a chur san áireamh "Property tuillte" tréith, aithníonn an Property breathnaithe nach mór a iarraidh ar an bhfreastalaí a fháil ar an athróg. Go minic, roinnt dataVariable s liosta an Comhdhéanta céanna faoi dearaProperty.
     * An Téip Sonraí do gach dataVariable Ní fhéadfaidh an freastalaí a shonrú. Más amhlaidh, ní mór duit breathnú ar na freagraí sonraí XML ón bhfreastalaí agus a shannadh cuí [&lt;Sonraí Teagmhála (#cineál) i an ERDDAP™ dataset dataVariable mínithe.
@@ -3991,11 +3994,11 @@ Mura bhfuil aon ghearáin ann roimh 2020, féadfar an cineál tacar sonraí seo 
 * Léann an rang na comhaid catalóg.xml sheirbheáil ag THREDDS leis na liostaí de&lt;cliceáil grianghraf a mhéadú (tagairtí do bhreise chatalóg.xml fo-comhaid) agus&lt;dataset bushing (comhaid sonraí) .
 * An bhfuil&lt;Tá comhadDir uaire leagan neamhaird. Ós rud é go n-íoslódálann an rang seo agus go ndéanann sé cóip áitiúil de gach comhad sonraí iargúlta, ERDDAP™ fórsaí an comhad Dir a bheith *Treoir do Thuismitheoirí* Seirbhís do Chustaiméirí * datasetID * /.
 * Le haghaidh&lt; sourceUrl ^, bain úsáid as an URL an comhad catalóg.xml don tacar sonraí sa freastalaí THREDDS, mar shampla: don URL seo a fhéadfar a úsáid i bhrabhsálaí gréasáin,
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ Clár na dToghthóirí Níl an freastalaí seo ar fáil go hiontaofa a thuilleadh. \\] ,
-úsáid tírdhreach&lt; sourceUrl úhttps://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;/ Baile sourceUrl ú
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ Clár na dToghthóirí Níl an freastalaí seo ar fáil go hiontaofa a thuilleadh. \\] ,
+úsáid tírdhreach&lt; sourceUrl ú https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;/ Baile sourceUrl ú
      (ach é a chur ar líne amháin) .
 * Ós rud é go n-íoslódálann an rang seo i gcónaí agus déanann sé cóip áitiúil de gach comhad sonraí iargúlta, níor chóir duit an tacar sonraí seo a fhilleadh i [EDDTableCopy](#eddtablecopy) .
-* Tacaíonn an cineál tacar sonraí seo le OPTIONAL, is annamh a úsáidtear, tag speisialta,&lt;speisialtaMode *modh modh modh modh* &lt;/specialMode uaire is féidir a úsáid chun a shonrú gur chóir rialacha speisialta, crua-chódaithe a úsáid chun a chinneadh ar chóir comhaid a íoslódáil ón bhfreastalaí. Faoi láthair, an t-aon bailí *modh modh modh modh* SAMOS a úsáidtear le tacair sonraí óhttps://tds.coaps.fsu.edu/thredds/catalog/samosa íoslódáil ach na comhaid leis an uimhir leagan deireanach.
+* Tacaíonn an cineál tacar sonraí seo le OPTIONAL, is annamh a úsáidtear, tag speisialta,&lt;speisialtaMode *modh modh modh modh* &lt;/specialMode uaire is féidir a úsáid chun a shonrú gur chóir rialacha speisialta, crua-chódaithe a úsáid chun a chinneadh ar chóir comhaid a íoslódáil ón bhfreastalaí. Faoi láthair, an t-aon bailí *modh modh modh modh* SAMOS a úsáidtear le tacair sonraí ó https://tds.coaps.fsu.edu/thredds/catalog/samos a íoslódáil ach na comhaid leis an uimhir leagan deireanach.
 * Féach an rang seo' superclass, [EDDTableFromFiles](#eddtablefromfiles) , le haghaidh faisnéise ar conas a oibríonn an rang seo agus conas é a úsáid.
 * Féach an 1D, 2D, 3D, agus 4D samplaí le haghaidh [EDDTableFromNcFiles](#eddtablefromncfiles) .
      
@@ -4182,8 +4185,8 @@ Nuair a chríochnaíonn an freastalaí láimhseáil iarratas beidh sé a sheice�
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-a bheith ina chúis le meaitseáil áitiúil sourceUrl   (den sórt sinhttps://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-go poiblí sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) .
+a bheith ina chúis le meaitseáil áitiúil sourceUrl   (den sórt sin https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+go poiblí sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) .
 Beidh aon athruithe ar luach an chlib seo i bhfeidhm an chéad uair eile ERDDAP™ léamha datasets.xml , lena n-áirítear mar fhreagra ar tacar sonraí [bratach bratach](/docs/server-admin/additional-information#flag) .
 
 Ach, ar chúiseanna slándála agus cúiseanna a bhaineann leis an gcóras síntiús, **Ná ÚSÁID AN TAG SEO&#33;**   
@@ -4314,7 +4317,7 @@ Tá úsáideoirí go minic ach aineolach go bhfuil a n-iarratais troublesome. T�
     ```
     * Ní gá duit atosú ERDDAP™ do na hathruithe ar&lt;iarratas a dhéanamh ar an liosta dubh le héifeacht a ghlacadh. Beidh na hathruithe a bhrath an chéad uair eile ERDDAP™ seiceálacha más gá aon tacar sonraí a athlódáil. Nó, is féidir leat dlús a chur leis an bpróiseas trí chuairt a thabhairt [leagan síos Bratach URL](/docs/server-admin/additional-information#set-dataset-flag) le haghaidh aon tacar sonraí.
     * Do chuid oibre ERDDAP™ Áirítear sa tuarascáil laethúil liosta/tally de na hiarratasóirí is gníomhaí a cheadaítear agus blocáilte.
-    * Más mian leat a fháil amach cén bhfearann / institiúid a bhaineann le seoladh IP uimhriúil, is féidir leat úsáid a bhaint saor in aisce, droim ar ais seirbhís gréasáin DNS cosúil le [https://network-tools.com/](https://network-tools.com/) .
+    * Más mian leat a fháil amach cén bhfearann / institiúid a bhaineann le seoladh IP uimhriúil, is féidir leat úsáid a bhaint saor in aisce, droim ar ais seirbhís gréasáin DNS cosúil le [ https://network-tools.com/ ](https://network-tools.com/) .
     * D'fhéadfadh go mbeadh amanna nuair a dhéanann sé ciall chun úsáideoirí áirithe a bhlocáil ag leibhéal níos airde, mar shampla, úsáideoirí mailíseacha. Mar shampla, is féidir leat bloc a rochtain ar gach rud ar do fhreastalaí, ní hamháin ERDDAP . Ar Linux, tá modh amháin den sórt sin a úsáid [iptables](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) . Mar shampla, is féidir leat a chur riail a bloc gach rud ag teacht ó 198.51.100.0 leis an ordú
 iptables -I INPUT -s 198.51.100.0 Seirbhís do Chustaiméirí
        
@@ -4738,17 +4741,17 @@ WARNING: Má chuireann tú pailéid saincheaptha le do ERDDAP™ agus tá tú ED
     * Faoi láthair, le haghaidh EDDGrid fo-aicmí, aon athrú ar meiteashonraí nó ar ais athróg (mar shampla, pointe ama nua le haghaidh sonraí in aice-réad-ama) a mheastar a athrú, ach nach bhfuil athlódáil an tacar sonraí a mheas athrú (leis féin) .
     * Faoi láthair, i gcás fo-aicmí EDDTable, meastar go n-athraíonn aon athlódáil ar an tacar sonraí.
     * Faoi láthair, ní cheadaítear ach dhá chineál gníomhaíochtaí:
-        * " " "http://"nó "https://"-- Má thosaíonn an gníomh le "http://"nó "https://", ERDDAP™ a sheoladh chuig HTTP GET a iarraidh ar an URL sonraithe. Déanfar neamhaird ar an bhfreagra. Mar shampla, d'fhéadfadh an URL insint roinnt seirbhíse gréasáin eile rud éigin a dhéanamh.
+        * " " " http://" nó " https://" -- Má thosaíonn an gníomh le " http://" nó " https://" , ERDDAP™ a sheoladh chuig HTTP GET a iarraidh ar an URL sonraithe. Déanfar neamhaird ar an bhfreagra. Mar shampla, d'fhéadfadh an URL insint roinnt seirbhíse gréasáin eile rud éigin a dhéanamh.
             * Má tá an URL cuid cheist (tar éis an "?") , MUST sé a bheith cheana féin [faoin gcéad ionchódú](https://en.wikipedia.org/wiki/Percent-encoding) . Ní mór duit a ionchódú carachtair speisialta sna srianta (seachas an chéad 'Tógáil' agus an príomh '=' i srianta) i bhfoirm %H, i gcás ina bhfuil HH an luach heicseagach 2 dhigit an carachtar. De ghnáth, ní mór duit ach roinnt de na carachtair poncaíochta a thiontú: % isteach i %25, &amp; i %26, " isteach i %22,&lt;i %3C, = isteach i %3D, × i %3E, + isteach i %2B, | i %7C, \\[ i %5B, \\] isteach %5D, spás isteach% 20, agus gach carachtar a thiontú os cionn #127 isteach ina bhfoirm UTF-8 agus ansin ionchódú faoin gcéad gach beart de na foirm UTF-8 isteach i bhformáid%H (iarraidh ar Ríomhchláraitheoir le haghaidh cabhrach) .
 Mar shampla, &amp; stationID × "41004"
 Tagann agus stationID %3E =% 2241004%22
 Tá ionchódú réasúnta ag teastáil go ginearálta nuair a rochtain tú ERDDAP trí bhogearraí seachas brabhsálaí. Brabhsálaithe láimhseáil de ghnáth ionchódú faoin gcéad ar do shon.
 I gcásanna áirithe, ní mór duit a ionchódú faoin gcéad gach carachtar seachas A-Za-z0-9\\_-&#33;. '' () \\*, ach nach bhfuil fós ionchódú an tosaigh 'agus' nó an príomh- '=' i srianta.
-teangacha Clárú Tá uirlisí a dhéanamh seo (mar shampla, féach Java 's [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) agus Java Script's [encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) agus tá
+teangacha Clárú Tá uirlisí a dhéanamh seo (mar shampla, féach Java 's [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) agus Java Script's [encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) agus tá
                  [láithreáin ghréasáin go ionchódú faoin gcéad / dhíchódú ar do shon](https://www.url-encode-decode.com/) .
             * Ós rud é datasets.xml Is comhad XML, MUST tú freisin &amp;-ionchódú GACH 'agus', '&lt;', agus '3' sa URL mar 'T &amp;', '&lt;', agus ' &amp; rsquo;' tar éis ionchódú faoin gcéad.
             * Sampla: Chun URL a d'fhéadfá a chlóscríobh isteach i bhrabhsálaí mar:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 Ba chóir duit a shonrú&lt;arChange bhéil chlib via (ar líne amháin) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ D'fhéadfadh sé seo difear a dhéanamh freisin ar an sórtáil focail gearr i g
     * Amharc ar gach eolas sourceUrl Is féidir tús a chur leis http:// , https:// Cóipeáil nasc leis an tweet Leabaigh an Tweet . https naisc a léamh agus a sheiceáil an fhoinse teastas digiteach a chinntiú go bhfuil an fhoinse a deir siad go bhfuil siad. I gcásanna neamhchoitianta, d'fhéadfadh sé seo a sheiceáil theipeann leis an earráid "javax.net.sssl.SSLProtocolException: handshake airdeall: gan aithint \\_name". Tá sé seo dócha mar gheall ar an ainm fearainn ar an deimhniú nach meaitseáil an t-ainm fearainn go bhfuil tú ag baint úsáide as. Is féidir leat agus ba chóir na sonraí ar an sourceUrl 's deimhniú i do bhrabhsálaí gréasáin, go háirithe, an liosta de "DNS Name" sa roinn "Faoi Ainm Malartach".
         
 I gcásanna áirithe, na sourceUrl is féidir go bhfuil tú ag baint úsáide as ailias an ainm fearainn ar an deimhniú. Mar shampla,
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/caith an earráid, ach
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/, a úsáideann an t-ainm fearainn ar an deimhniú, Ní bheidh. Dá bhrí sin, is é an réiteach sna cásanna seo an t-ainm fearainn ar an deimhniú a aimsiú agus a úsáid. Mura féidir leat é a fháil ar an deimhniú, déan teagmháil leis an soláthraí sonraí.
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ caith an earráid, ach
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ , a úsáideann an t-ainm fearainn ar an deimhniú, Ní bheidh. Dá bhrí sin, is é an réiteach sna cásanna seo an t-ainm fearainn ar an deimhniú a aimsiú agus a úsáid. Mura féidir leat é a fháil ar an deimhniú, déan teagmháil leis an soláthraí sonraí.
         
 I gcásanna eile, d'fhéadfadh an t-ainm fearainn ar an deimhniú a bheith do ghrúpa ainmneacha. Má tharlaíonn sé seo nó má tá an fhadhb inbhraite ar shlí eile, le do thoil ríomhphost Chris. John ag noa.gov chun an fhadhb a thuairisciú.
          
@@ -5221,7 +5224,7 @@ Tagann agus stationID %3E =% 2241004%22
 Tá ionchódú réasúnta ag teastáil go ginearálta nuair a rochtain tú ERDDAP trí bhogearraí seachas brabhsálaí. Brabhsálaithe láimhseáil de ghnáth ionchódú faoin gcéad ar do shon.
 I gcásanna áirithe, ní mór duit a ionchódú faoin gcéad gach carachtar seachas A-Za-z0-9\\_-&#33;. '' () \\*, ach nach bhfuil fós ionchódú an tosaigh 'agus' nó an príomh- '=' .
 teangacha Clárú Tá uirlisí a dhéanamh seo (mar shampla, féach Java 's [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-agus Java Script's [encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) agus tá
+agus Java Script's [encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) agus tá
          [láithreáin ghréasáin go ionchódú faoin gcéad / dhíchódú ar do shon](https://www.url-encode-decode.com/) .
     * Ós rud é datasets.xml Is comhad XML, MUST tú freisin &amp;-ionchódú GACH 'agus', '&lt;', agus '3' sa URL mar 'T &amp;', '&lt;', agus ' &amp; rsquo;' tar éis ionchódú faoin gcéad.
     *    infoUrl Is uathúil go ERDDAP . Níl sé ó aon chaighdeán meiteashonraí.
@@ -5257,7 +5260,28 @@ Nuair a bhíonn tacar sonraí luchtaithe i ERDDAP ,
     ```
     * Má " \\[ caighdeán caighdeánach \\] " a tharlaíonn sa luach tréith, cuirfear an caighdeán in ionad ERDDAP™ ceadúnas ó na&lt;standardLicense bhéil chlib ERDDAP 's
          \\[ taiseachas aeir: fliuch \\] / webapps / erddap / WEB-INF / Ranganna/gov/noaa/pfel / erddap / util/messages.xml comhad.
-         
+
+###### aicmiú aicmithe{#classification} 
+*    [ **aicmiú aicmithe** ](#classification) leibhéal aicmithe na sonraí.
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * Tá luachanna inghlactha _unclassified_, _confidential_, _restricted_, _secret_, nó _top_secret_.
+
+###### thopaic_cata{#topic_category} 
+*    [ **thopaic_cata** ](#topic_category) aicmiú téamach sonraí geografacha ardleibhéil chun cabhrú le grúpáil agus cuardach a dhéanamh ar thacair sonraí geografacha atá ar fáil.
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * Tá luachanna inghlactha _biota_, _boundaries_, _climatology_meteorology_atomosphere, _economy_, _elevation_, __farming_, _geoscientific_information_, _health_health_, _imagery_base_climate_earth_cover_, _inland_waters_, _intelligence_national_, _oceans_, __planning_cadre_, _society_, __structure_, __transportation, __cumarsáid __communication_
+
+###### cothabháil _ minicíocht{#maintenance_frequency} 
+*    [ **cothabháil _ minicíocht** ](#maintenance_frequency) Minicíocht lena ndéantar modhnuithe agus scriosadh leis na sonraí tar éis é a tháirgeadh den chéad uair.
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * Tá luachanna inghlactha Tá luachanna inghlactha Tá _yearly_, _as_need_, _biennially_, _continual_, _daily_, _fortnightly_, _irregular_, _monthly_, _not_planned_, _ quarterly_, _unknown_, _weekly_.
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) Is as an as dáta [Déan teagmháil linn](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (a aithníodh i Metadata\\_Conventions mar " Unidata Sonraí a aimsiú v1.0 ") caighdeán meiteashonraí. Ba é an luach tréith liosta de choinbhinsiúin meiteashonraí a úsáidtear ag an tacar sonraí seo.
 Má úsáideann tacar sonraí ACDD 1.0, is é an tréith seo ná STRONGLY AMNDED, mar shampla,
@@ -5389,7 +5413,7 @@ Má tá an t-innéacs&lt;1, meastar go bhfuil an tacar sonraí cothrom le dáta.
 Má tá an t-innéacs&lt;=1, meastar go bhfuil an tacar sonraí as dáta.
 Má tá an t-innéacs&lt;= 2, meastar go bhfuil an tacar sonraí an-as dáta.
     
-An bhfuil testOutOfDate luach a úsáidtear freisin ag ERDDAP™ a ghiniúint anhttps://*yourDomain*/erddap/outOfDateDatasets.htmlweb development ( [sampla sampla sampla](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) a léiríonn na tacair sonraí a bhfuil&lt; testOutOfDate × clibeanna, leis na tacair sonraí rangaithe ag an gcaoi a bhfuil siad lasmuigh den dáta. Má athraíonn tú an cineál comhaid (ó .html go .csv, .jsonlCSV , .nc , .tsv , ...) , is féidir leat an t-eolas sin a fháil i bhformáidí comhaid éagsúla.
+An bhfuil testOutOfDate luach a úsáidtear freisin ag ERDDAP™ a ghiniúint an https://*yourDomain*/erddap/outOfDateDatasets.html web development ( [sampla sampla sampla](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) a léiríonn na tacair sonraí a bhfuil&lt; testOutOfDate × clibeanna, leis na tacair sonraí rangaithe ag an gcaoi a bhfuil siad lasmuigh den dáta. Má athraíonn tú an cineál comhaid (ó .html go .csv, .jsonlCSV , .nc , .tsv , ...) , is féidir leat an t-eolas sin a fháil i bhformáidí comhaid éagsúla.
     
 Nuair is féidir, [Socraigh mar teanga réamhshocraithe](#generatedatasetsxml) Cuireann sé testOutOfDate tréith don domhan domhanda addAttributes de tacar sonraí. Is é seo an luach moladh bunaithe ar an eolas atá ar fáil a GenerateDatasetsXml. Mura bhfuil an luach cuí, é a athrú.
     
@@ -5948,8 +5972,8 @@ unpackedValue = pacáilte Luach \\* scale\\_factor + + + + add\\_offset
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone Is tréith OPTIONAL a úsáideann ERDDAP™   (agus aon caighdeáin meiteashonraí) le haghaidh [am agus amstamp athróg](#time-units) , a d'fhéadfadh a bheith i tacar sonraí gridded nó tacar sonraí tabular.
     * Is é an mhainneachtain " Zulu " " " (a bhfuil an leagan crios ama nua-aimseartha de GMT) .
-    * Faisnéis chúlra: "fritháireamh ama" (e.g., Am Caighdeánach an Aigéin Chiúin, -08:00, GMT-8) atá socraithe, sonrach, fritháireamh i gcoibhneas le Zulu   (Uaireadóirí GMT) . I gcodarsnacht leis sin, is iad "criosanna ama" na rudaí i bhfad níos casta a bhfuil tionchar ag an gcosaint ar an tsampla (e.g., "SAM / Fanacht") , a raibh rialacha éagsúla in áiteanna éagsúla ag amanna éagsúla. Tá na criosanna ama i gcónaí ainmneacha ós rud é nach féidir iad a achoimre ag luach fhritháireamh simplí (féach an "TZ ainmneacha bunachar sonraí" colún sa tábla ag [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP 's time\\_zone Cuidíonn tréith leat déileáil le sonraí am áitiúil ó roinnt crios ama (e.g., 1987-03-25T17:32:05 An tAigéan Ciúin Am agus am) . Má tá tú sonraí ama teaghrán nó uimhriúil le (seasta) am fhritháireamh, ba chóir duit a choigeartú ach na sonraí a Zulu   (a bhfuil an méid ERDDAP™ ag iarraidh) trí shonrú ama bonn éagsúla sa tréith aonad (e.g., "uair an chloig ó 1970-01T08:00:00Z", tabhair faoi deara an T08 chun an t-am a fhritháireamh) , agus i gcónaí na torthaí a sheiceáil chun a chinntiú go bhfaigheann tú na torthaí is mian leat.
-    * Le haghaidh athróg ama le sonraí foinse ó Stringsa, ligeann an tréith tú a shonrú crios ama a thoradh ERDDAP™ na hamanna foinse áitiúil-chrios a thiontú (roinnt in am caighdeánach, cuid acu in am a shábháil ar an Solas) isteach i Zulu amanna (atá i gcónaí i Am caighdeánach) . Is dócha go bhfuil liosta na n-ainmneacha crios ama bailí comhionann leis an liosta sa cholún TZ ag [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Tá criosanna ama coitianta na Stát Aontaithe: US / Hawaii, Stáit Aontaithe Mheiriceá / Alaska, SAM / Saor, US / Montain, US / Arizona, SAM / Lár, SAM / Eastern.
+    * Faisnéis chúlra: "fritháireamh ama" (e.g., Am Caighdeánach an Aigéin Chiúin, -08:00, GMT-8) atá socraithe, sonrach, fritháireamh i gcoibhneas le Zulu   (Uaireadóirí GMT) . I gcodarsnacht leis sin, is iad "criosanna ama" na rudaí i bhfad níos casta a bhfuil tionchar ag an gcosaint ar an tsampla (e.g., "SAM / Fanacht") , a raibh rialacha éagsúla in áiteanna éagsúla ag amanna éagsúla. Tá na criosanna ama i gcónaí ainmneacha ós rud é nach féidir iad a achoimre ag luach fhritháireamh simplí (féach an "TZ ainmneacha bunachar sonraí" colún sa tábla ag [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP 's time\\_zone Cuidíonn tréith leat déileáil le sonraí am áitiúil ó roinnt crios ama (e.g., 1987-03-25T17:32:05 An tAigéan Ciúin Am agus am) . Má tá tú sonraí ama teaghrán nó uimhriúil le (seasta) am fhritháireamh, ba chóir duit a choigeartú ach na sonraí a Zulu   (a bhfuil an méid ERDDAP™ ag iarraidh) trí shonrú ama bonn éagsúla sa tréith aonad (e.g., "uair an chloig ó 1970-01T08:00:00Z", tabhair faoi deara an T08 chun an t-am a fhritháireamh) , agus i gcónaí na torthaí a sheiceáil chun a chinntiú go bhfaigheann tú na torthaí is mian leat.
+    * Le haghaidh athróg ama le sonraí foinse ó Stringsa, ligeann an tréith tú a shonrú crios ama a thoradh ERDDAP™ na hamanna foinse áitiúil-chrios a thiontú (roinnt in am caighdeánach, cuid acu in am a shábháil ar an Solas) isteach i Zulu amanna (atá i gcónaí i Am caighdeánach) . Is dócha go bhfuil liosta na n-ainmneacha crios ama bailí comhionann leis an liosta sa cholún TZ ag [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Tá criosanna ama coitianta na Stát Aontaithe: US / Hawaii, Stáit Aontaithe Mheiriceá / Alaska, SAM / Saor, US / Montain, US / Arizona, SAM / Lár, SAM / Eastern.
     * Le haghaidh athróg ama le sonraí foinse uimhriúil, is féidir leat a shonrú ar an " time\\_zone " tréith, ach ní mór an luach a bheith " Zulu " nó "UTC". Más gá duit tacaíocht do chriosanna ama eile, le do thoil ríomhphost Chris. John ag noaa.gov.
          
 ###### Oidhreacht_time_adjust{#legacy_time_adjust} 

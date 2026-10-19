@@ -45,14 +45,14 @@ NCCSV 형식의 디자인은 몇몇 필요조건의 균형입니다:
 이 사양은 여러 가지 사양과 라이브러리를 참조하여 작업하도록 설계되었지만, 이 사양은 다른 사양의 일부가 아니며 변경 사항이 필요하지 않으며 그와 충돌하지 않습니다. 이 표준 중 하나와 관련된 세부 사항이 여기에 지정되지 않은 경우, 관련 사양을 참조하십시오. 물론,이 포함:
 
 * Dataset Discovery에 대한 Attribute 협약 (사이트맵) metadata 기준:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) ·
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) ·
 * 기후와 예측 (사이트맵) metadata 기준:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) ·
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) ·
 * 더 보기 NetCDF 사용자 가이드 (이름 *) ::
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) ·
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) ·
 * 더 보기 NetCDF 같은 소프트웨어 라이브러리 NetCDF - 자바 및 NetCDF 유형:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) · 이 라이브러리는 NCCSV 파일을 읽을 수 없습니다, 그러나 그들은 읽을 수 있습니다 .nc NCCSV 파일에서 생성된 파일.
-* JSON: [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) · 이 라이브러리는 NCCSV 파일을 읽을 수 없습니다, 그러나 그들은 읽을 수 있습니다 .nc NCCSV 파일에서 생성된 파일.
+* JSON: [ https://www.json.org/ ](https://www.json.org/) 
 
 ### 이름 *{#notation} 
 이 명세에서, 부류, \\[   \\] , denote 선택적인 품목.
@@ -152,12 +152,12 @@ scalar 데이터 변수가 읽을 때 ERDDAP™ , scalar 가치는 각 줄에 �
     * 두 배 인용 (·) 2개의 두 배 따옴표로 인코딩되어야 합니다 ("") · 스프레드 시트 프로그램이 .csv 파일을 읽을 때 필요한 것입니다. 그것은 당신이 스프레드 시트를 .csv 파일로 저장할 때 스프레드 시트 프로그램 쓰기입니다.
     * 특수 JSON backslash-encoded 문자는 JSON으로 인코딩되어야 합니다. \\n (신선), 또한 \\\\(backslash), \\f(formfeed), \\t(tab), \\r(carriage return) 또는 [₢ 킹 *뚱 베어* ](#uhhhh) 구문. 스프레드 시트에서 Alt Enter를 사용하여 텍스트 셀 내에서 새로운 라인을 지정하십시오. 대신 사용 \\n   (2개의 문자: backslash와 'n 이름 *) 새 줄을 나타냅니다.
 #####  uhhhh  {#uhhhh} 
-    * ₢ 킹 *hhhh - 모든 문자보다 더 적은 #32 또는 문자보다 큰 #126, 그렇지 않으면 인코딩되지, 구문 \\u로 인코딩해야합니다* hhhh*, hhhh는 문자의 4 자리 6 진수 번호, 예를 들어, 유로 기호는 \\u20AC입니다. 참조된 코드 페이지 참조 [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) 특정 유니코드 문자와 관련된 16 진수 번호를 찾으려면 소프트웨어 라이브러리를 사용하십시오.
+    * ₢ 킹 *hhhh - 모든 문자보다 더 적은 #32 또는 문자보다 큰 #126, 그렇지 않으면 인코딩되지, 구문 \\u로 인코딩해야합니다* hhhh*, hhhh는 문자의 4 자리 6 진수 번호, 예를 들어, 유로 기호는 \\ \\u20AC · 참조된 코드 페이지 참조 [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) 특정 유니코드 문자와 관련된 16 진수 번호를 찾으려면 소프트웨어 라이브러리를 사용하십시오.
     * 문자열이 시작이나 끝에서 공간을 가지고 있다면, " (더블 인용) 또는 comma, 또는 다른 데이터 유형으로 해석 될 값을 포함 (예, int) , 또는 단어 "null", 전체 문자열은 두 배 인용에서 동봉되어야한다; 그렇지 않으면, JSON과는 달리, 두 배 인용을 삽입하는 것은 선택 사항입니다. 우리는 권장 : 의심 할 여지없이 전체 문자열을 두 배 인용합니다. 문자열의 시작 또는 끝에서 공간은 강력하게 식별됩니다.
     * 이제 #255보다 더 큰 문자의 사용은 discouraged입니다. NCCSV 지원 ERDDAP™ 내부 지원 몇몇 산출 파일 유형은 그들을 지원합니다 (₢ 킹 .json 이름 * .nccsv ) · 그러나 많은 출력 파일 유형은 그들을 지원하지 않습니다. 예를 들어, NetCDF -3 파일은 그런 문자를 지원하지 않습니다. NetCDF 파일 사용 1 바이트 문자와 CF는 현재 Unicode 문자가 인코딩 된 방법을 지정하기위한 시스템이 없습니다 NetCDF 사이트맵 (예, UTF-8) · 이것은 아마도 시간이 지남에 따라 향상됩니다.
          
 #### ₢ 킹{#char} 
-* char 속성 값은 단일 UCS-2 문자입니다. (i.e., 2-byte 유니코드 문자, Java ) , 7 비트 ASCII로 작성해야, 다른 문자가 지정될 수 있도록 JSON 같은 문자 (특별한 문자의 인코딩을 위해 위의 문자열 정의를 참조, 인코딩의 추가와 함께 단일 견적 \\ 이름 *) · Char 속성 값은 단일 인용문에 동봉되어야 합니다. (내부 견적) 그리고 두 배 인용 (외부 견적) , 예를들면, "'a'", """" (더블 인용 문자) , "''''''''''''', (단일 인용 문자) , "\\t'" 를 (탭) , "\\u20AC" " (유로 문자) · 단일 및 이중 인용을 사용하는 이 시스템은 확률과 조잡하지만 스프레드 시트와 함께 작동하는 방식으로 문자열에서 char 값을 구별하는 방법입니다. 숯처럼 보이는 값이지만 잘못된 오류 메시지를 생성합니다. 문자열로, #255보다 더 큰 문자의 사용은 현재 discouraged.
+* char 속성 값은 단일 UCS-2 문자입니다. (i.e., 2-byte 유니코드 문자, Java ) , 7 비트 ASCII로 작성해야, 다른 문자가 지정될 수 있도록 JSON 같은 문자 (특별한 문자의 인코딩을 위해 위의 문자열 정의를 참조, 인코딩의 추가와 함께 단일 견적 \\ 이름 *) · Char 속성 값은 단일 인용문에 동봉되어야 합니다. (내부 견적) 그리고 두 배 인용 (외부 견적) , 예를들면, "'a'", """" (더블 인용 문자) , "''''''''''''', (단일 인용 문자) , "\\t'" 를 (탭) · \\u20AC ₢ 킹 (유로 문자) · 단일 및 이중 인용을 사용하는 이 시스템은 확률과 조잡하지만 스프레드 시트와 함께 작동하는 방식으로 문자열에서 char 값을 구별하는 방법입니다. 숯처럼 보이는 값이지만 잘못된 오류 메시지를 생성합니다. 문자열로, #255보다 더 큰 문자의 사용은 현재 discouraged.
 
 ### 스핑크{#suffix} 
 NCCSV 파일의 속성 섹션에서, 모든 숫자 속성 값은 suffix 문자가 있어야 (예, 'b') 숫자 데이터 유형을 식별 (예를 들어, 바이트) · 그러나 NCCSV 파일의 데이터 섹션에서 숫자 데이터 값은이 suffix 문자가 없습니다. (긴 정수와 'uL'의 예외로 ulong 정수를 위한) — 데이터 유형은 지정됩니다.\\*사이트맵\\*변수의 속성.
@@ -220,7 +220,7 @@ DateTime 값은 숫자 값으로 표현되어야 합니다. *단위 단위* 이�
 시간, 단위, 1970-01-01T00:00:00Z 이후 초
 
 DateTime 값은 String 값으로 표현되어야 합니다.\\*사이트맵\\*속성과 날짜를 지정하는 단위 속성 지정된 시간 패턴 Java DateTimeFormatter 클래스
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) · 예를 들어,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) · 예를 들어,
 시간, 단위, yyyy-MM-dd 'T'HH:mm:sZ
 주어진 데이터 변수에 대한 모든 dateTime 값은 동일한 형식을 사용한다.
 대부분의 경우, dateTime 패턴은 단위 속성의 변형이 될 것입니다:
@@ -245,7 +245,7 @@ CF에 의해 요구되는, 모든 정도 가치 (e.g. 경도와 고도를 위해
 ##  [사이트맵 기능 유형](#dsg-feature-types)  {#dsg-feature-types} 
 
 NCCSV 파일은 CF Discrete 샘플링 기하학을 포함 할 수 있습니다.
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) 데이터. 이 작업을 만드는 속성입니다:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) 데이터. 이 작업을 만드는 속성입니다:
 
 1. CF에 의해 요구되는 경우, NCCSV 파일은 식별 메타 데이터 섹션의 라인을 포함해야합니다 [\\*- 연혁\\*](#global)   featureType 속성, 예를들면,
     \\*- 연혁\\*· featureType , 부속품
@@ -326,7 +326,7 @@ Bell M. Shimada,2017-03-23T01:45:00Z,28.0003,-130.3472,\\u20AC,0,127,-9007199254
 
 * 이 표본 파일은 많은 어려운 케이스를 포함합니다 (e.g., char 및 긴 변수 및 어려운 문자열 값) · 대부분의 NCCSV 파일은 훨씬 간단합니다.
 * 라이센스 라인은 여기에 두 개의 라인으로 끊겨져 있지만 샘플 파일에 한 줄입니다.
-* \\u20AC는 유로 문자의 인코딩이며 \\u00FC는 ü의 인코딩입니다.
+* 이름 * \\u20AC 유로 문자의 인코딩이며 \\u00FC는 ü의 인코딩입니다.
 * 이름 * 예를 들어 문자열은 두 배의 따옴표로 동봉되지만, 예를 들어, 제목, lon 단위 속성, 그리고 데이터의 3 줄을 포함한 많은 글로벌 속성이 있습니다.)
 * testLong 변수에 대 한 단위 속성이 문자열 값 인 두 배 인용에 기록 된 경우 명확 하 고 더 나은 것 이다. 그러나 현재 표현 (인용 없는 1,) 문자열로 올바르게 해석됩니다. 정수가 없기 때문에 'i' suffix가 없습니다.
 * 다른 숫자 데이터 유형과는 달리 데이터 섹션의 긴 값은 suffix가 있습니다. (사이트맵) 그것은 그들의 수치 데이터 유형을 식별합니다. 부동점 번호로 값을 해석하고 정밀도를 잃는 스프레드시트를 방지해야 합니다.
@@ -336,7 +336,7 @@ Bell M. Shimada,2017-03-23T01:45:00Z,28.0003,-130.3472,\\u20AC,0,127,-9007199254
 스프레드 시트에서 NCCSV 파일로 :
 
 * NCCSV 파일에 지정된 숫자 속성 값을 쓰기 (e.g. suffix Letter, e.g., 'f', 속성의 데이터 유형을 식별하기 위해) ·
-* 문자열에서, 모든 문자를 ASCII 문자 #32 또는 문자보다 더 큰 #126을 JSON과 같은 backslashed 문자로 쓰기 (₢ 킹 \\n 새 소식) 또는 hexadecimal 유니코드 문자 번호로 (케이스 insensitive) 구문과 [₢ 킹 *뚱 베어* ](#uhhhh)   (e.g., 유로 사인 \\u20AC) · 제품 정보 \\n   (2개의 문자: backslash와 'n 이름 *) 새로운 줄을 나타내는 것은 Alt Enter가 아닙니다.
+* 문자열에서, 모든 문자를 ASCII 문자 #32 또는 문자보다 더 큰 #126을 JSON과 같은 backslashed 문자로 쓰기 (₢ 킹 \\n 새 소식) 또는 hexadecimal 유니코드 문자 번호로 (케이스 insensitive) 구문과 [₢ 킹 *뚱 베어* ](#uhhhh)   (₢ 킹 \\u20AC 유로 기호) · 제품 정보 \\n   (2개의 문자: backslash와 'n 이름 *) 새로운 줄을 나타내는 것은 Alt Enter가 아닙니다.
 
 NCCSV 파일과 이러한 규칙을 따르는 아날로그 스프레드 시트의 유일한 차이점은 다음과 같습니다.
 
@@ -392,7 +392,7 @@ Google 스프레드 시트에서 NCCSV 파일을 만들려면 :
 * NCCSV 파일이 행 끝에 초과된 commas가 있으면 NCCSV 파일을 변환하여 제거할 수 있습니다. NetCDF 파일 및 그 후 변환 NetCDF NCCSV 파일로 다시 파일.
 * NCCSV 파일을 변환하려고 할 때 NetCDF 파일, 일부 오류는 소프트웨어에 의해 감지되고 오류 메시지를 생성하고 변환을 실패합니다. 다른 문제는 어렵거나 불가능하며 오류 메시지 또는 경고를 생성하지 않습니다. 다른 문제 (e.g., 행 끝에 과잉 commas) 무시됩니다. 파일 변환기는 결과의 교정의 최소 검사 만 수행됩니다. NetCDF CF 준수와 관련하여 파일, 예를 들어. 파일 제작자의 및 파일 사용자의 책임은 변환의 결과가 원하고 정확하다는 것을 확인하는 것입니다. 검사하는 2가지 방법:
     * 본문내용 바로가기 .nc ncdump 파일
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) ·
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) ·
     * 데이터의 내용 보기 ERDDAP ·
 
 ##  [기타](#changes)  {#changes} 

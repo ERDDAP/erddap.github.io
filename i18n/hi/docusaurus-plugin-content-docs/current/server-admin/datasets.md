@@ -42,7 +42,7 @@ sidebar_position: 3
 बाह्य स्रोतों से वास्तविक डेटा फ़ाइलों को जमा करना एक भारी सुरक्षा जोखिम है, इसलिए ERDDAP™ इसके साथ सौदा नहीं करता है। उदाहरण के लिए, आपको एक ऐसे समाधान का पता लगाना होगा जो आपके और डेटा प्रदाता के लिए काम करता है, उदाहरण के लिए, ईमेल (छोटी फ़ाइलों के लिए) , बादल से खींचो (उदाहरण के लिए, ड्रॉपबॉक्स या गूगल ड्राइव) , एक sftp साइट (पासवर्ड के साथ) , या स्नीकर नेट (यूएसबी अंगूठे ड्राइव या बाहरी हार्ड ड्राइव) । आपको शायद केवल उन लोगों से फ़ाइलों को स्वीकार करना चाहिए जिन्हें आप जानते हैं। आपको वायरस के लिए फ़ाइलों को स्कैन करने और अन्य सुरक्षा सावधानियों को लेने की आवश्यकता होगी।
 
 इसमें कोई लिंक नहीं है ERDDAP™ डेटा प्रदाता फॉर्म (उदाहरण के लिए, पर ERDDAP™ होम पेज) । इसके बजाय, जब कोई आपको बताता है कि वे अपने डेटा को आपके द्वारा सेवा प्रदान करना चाहते हैं ERDDAP , आप उन्हें कुछ ऐसा कह सकते हैं:
-हां, हम आपके डेटा को आपके डेटा में बदल सकते हैं ERDDAP । शुरू करने के लिए, कृपया फॉर्म भरेंhttps://*yourUrl*/erddap/dataProviderForm.html  (या http:// अगर https:// सक्षम नहीं है) ।
+हां, हम आपके डेटा को आपके डेटा में बदल सकते हैं ERDDAP । शुरू करने के लिए, कृपया फॉर्म भरें https://*yourUrl*/erddap/dataProviderForm.html   (या http:// अगर https:// सक्षम नहीं है) ।
 समाप्त होने के बाद, मैं आपसे अंतिम विवरण देने के लिए संपर्क करूँगा।
 यदि आप सिर्फ फॉर्म देखना चाहते हैं (इसे भरने के बिना) , आप फॉर्म को देख सकते हैं ERD ' ERDDAP : [परिचय](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) , [भाग 1](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) , [भाग 2](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) , [भाग 3](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) , और [भाग 4](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) । ये लिंक ERD   ERDDAP™ मुझे जानकारी भेजें, न कि आप, इसलिए उन लोगों के साथ जानकारी प्रस्तुत न करें जब तक कि आप वास्तव में डेटा जोड़ना चाहते हैं। ERD   ERDDAP ।
 
@@ -190,23 +190,23 @@ GenerateDatasetsXml का उत्पादन एक मोटे ड्र�
      
 #####  EDDGrid FromThreddsCatalog{#eddgridfromthreddscatalog} 
 यह EDDType सभी उत्पन्न करता है datasets.xml सभी के लिए जरूरत पड़ने वाले हिस्से [ EDDGrid FromDap](#eddgridfromdap) डेटासेट जो इसे एक THREDDS के माध्यम से तेजी से क्रॉलिंग द्वारा खोज सकते हैं (उप) सूची THREDDS कैटलॉग URL के कई रूप हैं। यह विकल्प उदाहरण के लिए, इसमें / कैटलॉग के साथ एक THREDDS .xml URL की आवश्यकता है।
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xmlया
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml या
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (a related) HTML catalog is at
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.htmlजिसके लिए स्वीकार्य नहीं है EDDGrid FromThreddsCatalog).
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html जिसके लिए स्वीकार्य नहीं है EDDGrid FromThreddsCatalog).
 यदि आपके पास समस्या है EDDGrid सेथरेड कैटलॉग:
 * सुनिश्चित करें कि आप जिस URL का उपयोग कर रहे हैं वह मान्य है, इसमें /catalog/, और /catalog.xml के साथ समाप्त होता है।
-* यदि संभव हो, तो सार्वजनिक आईपी पते का उपयोग करें (उदाहरण के लिए,https://oceanwatch.pfeg.noaa.gov) यूआरएल में, एक स्थानीय संख्यात्मक आईपी पता नहीं (उदाहरण के लिए,https://12.34.56.78) । यदि THREDDS केवल स्थानीय संख्यात्मक IP पते के माध्यम से सुलभ है, तो आप उपयोग कर सकते हैं [&lt;ConvertTopublicSourceUrl&gt; (#converttopublicsourceurl) इसलिए ERDDAP™ हालांकि, उपयोगकर्ता सार्वजनिक पते को देखते हैं ERDDAP™ स्थानीय संख्यात्मक पते से डेटा प्राप्त होता है।
+* यदि संभव हो, तो सार्वजनिक आईपी पते का उपयोग करें (उदाहरण के लिए, https://oceanwatch.pfeg.noaa.gov ) यूआरएल में, एक स्थानीय संख्यात्मक आईपी पता नहीं (उदाहरण के लिए, https://12.34.56.78 ) । यदि THREDDS केवल स्थानीय संख्यात्मक IP पते के माध्यम से सुलभ है, तो आप उपयोग कर सकते हैं [&lt;ConvertTopublicSourceUrl&gt; (#converttopublicsourceurl) इसलिए ERDDAP™ हालांकि, उपयोगकर्ता सार्वजनिक पते को देखते हैं ERDDAP™ स्थानीय संख्यात्मक पते से डेटा प्राप्त होता है।
 * यदि आपको कोई समस्या है तो आप हल नहीं कर सकते, [समस्या निवारण युक्तियाँ की जाँच करें](#troubleshooting-tips) ।
 * इसके लिए निम्न स्तर कोड अब उपयोग करता है Unidata Netcdf-java catalog क्रॉलर कोड (थर्ड सूची वर्ग) ताकि यह सभी THREDDS कैटलॉग को संभाल सके (जो आश्चर्यजनक रूप से जटिल हो सकता है) धन्यवाद Unidata उस कोड के लिए।
          
 #####  EDDGrid LonPM180FromErddapCatalog{#eddgridlonpm180fromerddapcatalog} 
 यह EDDtype उत्पन्न करता है datasets.xml बनाना [ EDDGrid LonPM180](#eddgridlonpm180) सभी से डेटासेट EDDGrid एक में डेटासेट ERDDAP इसमें 180 से अधिक लम्बाई मान होते हैं।
-* यदि संभव हो, तो सार्वजनिक आईपी पते का उपयोग करें (उदाहरण के लिए,https://oceanwatch.pfeg.noaa.gov) यूआरएल में, एक स्थानीय संख्यात्मक आईपी पता नहीं (उदाहरण के लिए,https://12.34.56.78) । यदि ERDDAP™ केवल स्थानीय संख्यात्मक आईपी पते के माध्यम से सुलभ है, आप उपयोग कर सकते हैं [&lt;ConvertTopublicSourceUrl&gt; (#converttopublicsourceurl) इसलिए ERDDAP™ हालांकि, उपयोगकर्ता सार्वजनिक पते को देखते हैं ERDDAP™ स्थानीय संख्यात्मक पते से डेटा प्राप्त होता है।
+* यदि संभव हो, तो सार्वजनिक आईपी पते का उपयोग करें (उदाहरण के लिए, https://oceanwatch.pfeg.noaa.gov ) यूआरएल में, एक स्थानीय संख्यात्मक आईपी पता नहीं (उदाहरण के लिए, https://12.34.56.78 ) । यदि ERDDAP™ केवल स्थानीय संख्यात्मक आईपी पते के माध्यम से सुलभ है, आप उपयोग कर सकते हैं [&lt;ConvertTopublicSourceUrl&gt; (#converttopublicsourceurl) इसलिए ERDDAP™ हालांकि, उपयोगकर्ता सार्वजनिक पते को देखते हैं ERDDAP™ स्थानीय संख्यात्मक पते से डेटा प्राप्त होता है।
          
 #####  EDDGrid Lon0360FromErddapCatalog{#eddgridlon0360fromerddapcatalog} 
 यह EDDtype उत्पन्न करता है datasets.xml बनाना [ EDDGrid Lon0360](#eddgridlon0360) सभी से डेटासेट EDDGrid एक में डेटासेट ERDDAP 0 से कम किसी भी देशांतर मान है।
-* यदि संभव हो, तो सार्वजनिक आईपी पते का उपयोग करें (उदाहरण के लिए,https://oceanwatch.pfeg.noaa.gov) यूआरएल में, एक स्थानीय संख्यात्मक आईपी पता नहीं (उदाहरण के लिए,https://12.34.56.78) । यदि ERDDAP™ केवल स्थानीय संख्यात्मक आईपी पते के माध्यम से सुलभ है, आप उपयोग कर सकते हैं [&lt;ConvertTopublicSourceUrl&gt; (#converttopublicsourceurl) इसलिए ERDDAP™ हालांकि, उपयोगकर्ता सार्वजनिक पते को देखते हैं ERDDAP™ स्थानीय संख्यात्मक पते से डेटा प्राप्त होता है।
+* यदि संभव हो, तो सार्वजनिक आईपी पते का उपयोग करें (उदाहरण के लिए, https://oceanwatch.pfeg.noaa.gov ) यूआरएल में, एक स्थानीय संख्यात्मक आईपी पता नहीं (उदाहरण के लिए, https://12.34.56.78 ) । यदि ERDDAP™ केवल स्थानीय संख्यात्मक आईपी पते के माध्यम से सुलभ है, आप उपयोग कर सकते हैं [&lt;ConvertTopublicSourceUrl&gt; (#converttopublicsourceurl) इसलिए ERDDAP™ हालांकि, उपयोगकर्ता सार्वजनिक पते को देखते हैं ERDDAP™ स्थानीय संख्यात्मक पते से डेटा प्राप्त होता है।
          
 ##### EDDsFromFiles{#eddsfromfiles} 
 एक प्रारंभ निर्देशिका को देखते हुए, यह निर्देशिका और सभी उपनिर्देशों को विकृत करता है और डेटा फ़ाइलों के प्रत्येक समूह के लिए डेटासेट बनाने की कोशिश करता है जो इसे पाता है।
@@ -566,7 +566,7 @@ NCCSV 1.0 फाइलें किसी भी निर्दिष्ट प
 ### डेटा प्रकार टिप्पणियाँ{#data-type-comments} 
 * कई फ़ाइल प्रकारों में लंबे, ulong और char डेटा के लिए खराब समर्थन के कारण, हम इन डेटा प्रकारों के उपयोग को हतोत्साहित करते हैं ERDDAP । जब संभव हो, तो लंबे और लंबे समय तक डबल का उपयोग करें और चार के बजाय स्ट्रिंग का उपयोग करें।
      
-* मेटाडाटा - क्योंकि(OPeN)DAP'.das and .dds प्रतिक्रियाओं लंबे या ulong विशेषताओं या डेटा प्रकारों का समर्थन नहीं करते हैं (इसके बजाय उन्हें डबल्स के रूप में दिखाते हैं) , आप इसके बजाय उपयोग करना चाहते हैं ERDDAP मेटाडाटा के सारणीबद्ध प्रतिनिधित्व के रूप में देखा गया http .../erddap/ **जानकारी** / * datasetID * Web page (उदाहरण के लिए, [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (जो आप अन्य फ़ाइल प्रकारों में भी प्राप्त कर सकते हैं, उदाहरण के लिए, .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) या .nccsv मेटाडाटा प्रतिक्रिया (उदाहरण के लिए, [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) हालांकि .nccsv मेटाडाटा केवल सारणीबद्ध डेटासेट के लिए उपलब्ध है) दोनों डेटा प्रकारों का समर्थन करते हैं (विशेष रूप से, लंबे, लंबे समय तक, और char) ।
+* मेटाडाटा - क्योंकि(OPeN)DAP'.das and .dds प्रतिक्रियाओं लंबे या ulong विशेषताओं या डेटा प्रकारों का समर्थन नहीं करते हैं (इसके बजाय उन्हें डबल्स के रूप में दिखाते हैं) , आप इसके बजाय उपयोग करना चाहते हैं ERDDAP मेटाडाटा के सारणीबद्ध प्रतिनिधित्व के रूप में देखा गया http .../erddap/ **जानकारी** / * datasetID * Web page (उदाहरण के लिए, [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (जो आप अन्य फ़ाइल प्रकारों में भी प्राप्त कर सकते हैं, उदाहरण के लिए, .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) या .nccsv मेटाडाटा प्रतिक्रिया (उदाहरण के लिए, [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) हालांकि .nccsv मेटाडाटा केवल सारणीबद्ध डेटासेट के लिए उपलब्ध है) दोनों डेटा प्रकारों का समर्थन करते हैं (विशेष रूप से, लंबे, लंबे समय तक, और char) ।
          
 ### मीडिया फ़ाइलें{#media-files} 
 सभी डेटा संख्याओं या पाठ के सरणी नहीं हैं। कुछ डेटासेट में मीडिया फ़ाइलों जैसे छवि, ऑडियो और वीडियो फ़ाइलों को शामिल या शामिल किया गया है। ERDDAP™ उपयोगकर्ताओं के लिए मीडिया फ़ाइलों तक पहुंच प्राप्त करना आसान बनाने के लिए कुछ विशेष सुविधाएँ हैं। यह दो चरण प्रक्रिया है:
@@ -604,7 +604,7 @@ EDDTableFromFileNames के माध्यम से सुलभ सभी �
 ### AWS S3 Files के साथ काम करना{#working-with-aws-s3-files} 
  [अमेज़न वेब सेवा (एडब्ल्यूएस) ](https://aws.amazon.com) एक विक्रेता है [क्लाउड कंप्यूटिंग](https://en.wikipedia.org/wiki/Cloud_computing) सेवाएं [S3](https://aws.amazon.com/s3/) AWS द्वारा प्रस्तावित एक ऑब्जेक्ट स्टोरेज सिस्टम है। एक पारंपरिक फ़ाइल सिस्टम की निर्देशिकाओं और फ़ाइलों की पदानुक्रम प्रणाली के बजाय (अपने पीसी में हार्ड ड्राइव की तरह) , S3 सिर्फ "buckets" प्रदान करता है जो "objects" पकड़ता है (हम उन्हें कॉल करेंगे "files" ) ।
 
-ASCII फ़ाइलों के लिए (उदाहरण के लिए, csv) , ERDDAP™ सीधे बाल्टी में फ़ाइलों के साथ काम कर सकते हैं। केवल वही चीज जो आपको करना है उसे निर्दिष्ट करें&lt;AWS बाल्टी के लिए एक विशिष्ट प्रारूप का उपयोग करके डेटासेट के लिए फ़ाइलDir&gt;, उदाहरण के लिए,https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/। आपको उपयोग नहीं करना चाहिए&lt;CashFromUrl&gt;। विवरण के लिए नीचे देखें।
+ASCII फ़ाइलों के लिए (उदाहरण के लिए, csv) , ERDDAP™ सीधे बाल्टी में फ़ाइलों के साथ काम कर सकते हैं। केवल वही चीज जो आपको करना है उसे निर्दिष्ट करें&lt;AWS बाल्टी के लिए एक विशिष्ट प्रारूप का उपयोग करके डेटासेट के लिए फ़ाइलDir&gt;, उदाहरण के लिए, https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ । आपको उपयोग नहीं करना चाहिए&lt;CashFromUrl&gt;। विवरण के लिए नीचे देखें।
 
 लेकिन द्विआधारी फ़ाइलों के लिए (उदाहरण के लिए .nc , .grib, .bufr, और .hdf फ़ाइलें) , आपको उपयोग करने की आवश्यकता है&lt;CashFromUrl&gt; प्रणाली नीचे वर्णित है। ERDDAP , netcdfjava (जो ERDDAP™ इन फ़ाइलों से डेटा पढ़ने के लिए उपयोग करता है) , और अन्य वैज्ञानिक डेटा सॉफ्टवेयर को पारंपरिक फ़ाइल सिस्टम में फ़ाइलों के साथ काम करने के लिए डिज़ाइन किया गया है जो प्रदान करता है [ब्लॉक स्तर](https://en.wikipedia.org/wiki/Block-level_storage) फ़ाइलों तक पहुंच (जो किसी फ़ाइल के पढ़ने वाले हिस्से की अनुमति देता है) लेकिन केवल S3 प्रदान करता है [फाइल का स्तर (वस्तु) ](https://en.wikipedia.org/wiki/Block-level_storage) फ़ाइलों तक पहुंच (जो केवल संपूर्ण फ़ाइल पढ़ने की अनुमति देता है) । AWS S3 का विकल्प प्रदान करता है, [लोचदार ब्लॉक स्टोर (EBS) ](https://aws.amazon.com/ebs/) ), जो फ़ाइलों के लिए ब्लॉक स्तर की पहुंच का समर्थन करता है लेकिन यह S3 की तुलना में अधिक महंगा है, इसलिए इसका उपयोग शायद ही कभी बड़ी मात्रा में डेटा फ़ाइलों के थोक भंडारण के लिए किया जाता है। (इसलिए जब लोग क्लाउड में डेटा संग्रहीत करते हैं (S3) यह आमतौर पर नारंगी तुलना के लिए एक सेब है।) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 उस वस्तु के लिए संबंधित यूआरएल है
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 AWS उस URL का निर्माण करने के तरीके में थोड़ा भिन्नता का समर्थन करता है, लेकिन ERDDAP™ इस एक विशिष्ट प्रारूप की आवश्यकता है:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 जैसा ERDDAP v2.29, अब आप उपयोग कर सकते हैं `s3` यूआरआई प्रारूप के बजाय बाल्टी यूआरएल। यह प्रारूप द्वारा उपयोग किया जाता है [AWS s3 cli](https://docs.aws.amazon.com/cli/latest/reference/s3/) ।
 s3 *बाल्टीनाम* / *कुंजी* 
@@ -697,22 +697,22 @@ S3 विन्यास चर की एक पूरी सूची के �
 सभी मामलों में, आपको AWS खाता की आवश्यकता होगी क्योंकि AWS SDK के लिए Java   (जो ERDDAP™ एक बाल्टी की सामग्री के बारे में जानकारी पुनर्प्राप्त करने के लिए उपयोग करता है) AWS खाता क्रेडेंशियल की आवश्यकता है। (नीचे) 
 
  ERDDAP™ अगर आप निर्दिष्ट करते हैं तो केवल AWS S3 बाल्टी तक पहुंच सकते हैं [&lt;CashFromUrl&gt; (#cachefromurl) (or)&lt;एक विशिष्ट प्रारूप में फ़ाइलDir&gt;:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 कहाँ
 
 * बाल्टीनाम बाल्टी नाम का छोटा रूप है, उदाहरण के लिए noaa-goes17।
 * Aws-region, उदाहरण के लिए, us-east-1, "Region" कॉलम से एक सारणी में है। [AWS सेवा समापन बिंदु](https://docs.aws.amazon.com/general/latest/gr/rande.html) जहां बाल्टी वास्तव में स्थित है।
 * उपसर्ग वैकल्पिक है। यदि आप उपस्थित हैं, तो इसके साथ समाप्त होना चाहिए '/' ।
 
-उदाहरण के लिए,https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+उदाहरण के लिए, https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 यह URL प्रारूप AWS S3 सिफारिशों में से एक है: देखें [एक बाल्टी तक पहुंचना](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) और [यह विवरण उपसर्ग](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) । ERDDAP™ की आवश्यकता है कि आप बाल्टी यूआरएल और वैकल्पिक उपसर्ग को एक URL में जोड़ते हैं ताकि निर्दिष्ट किया जा सके।&lt;कैशFromUrl&gt; (या&lt;फ़ाइलDir&gt;
 
 #### टेस्ट पब्लिक AWS S3 बाल्टी{#test-public-aws-s3-buckets} 
 सार्वजनिक बाल्टी के लिए, आप कर सकते हैं और अपने ब्राउज़र में AWS S3 निर्देशिका के बाल्टी URL का परीक्षण करना चाहिए, उदाहरण के लिए,
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) यदि बाल्टी यूआरएल सही है और उपयुक्त है ERDDAP यह एक XML दस्तावेज़ वापस कर देगा, जिसने XML दस्तावेज़ को वापस कर दिया है। (आंशिक) उस बाल्टी की सामग्री की सूची। दुर्भाग्य से, पूर्ण यूआरएल (यानी, बाल्टी यूआरएल प्लस उपसर्ग) कि ERDDAP™ किसी दिए गए डेटासेट के लिए एक ब्राउज़र में काम नहीं करता है। AWS अपने ब्राउज़र में आसानी से बाल्टी के पदानुक्रम को ब्राउज़ करने के लिए एक प्रणाली की पेशकश नहीं करता है। (यदि वह गलत है, तो कृपया क्रिस को ईमेल करें। जॉन at noaa.gov. अन्यथा, अमेज़न, कृपया इसके लिए समर्थन जोड़ें&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) यदि बाल्टी यूआरएल सही है और उपयुक्त है ERDDAP यह एक XML दस्तावेज़ वापस कर देगा, जिसने XML दस्तावेज़ को वापस कर दिया है। (आंशिक) उस बाल्टी की सामग्री की सूची। दुर्भाग्य से, पूर्ण यूआरएल (यानी, बाल्टी यूआरएल प्लस उपसर्ग) कि ERDDAP™ किसी दिए गए डेटासेट के लिए एक ब्राउज़र में काम नहीं करता है। AWS अपने ब्राउज़र में आसानी से बाल्टी के पदानुक्रम को ब्राउज़ करने के लिए एक प्रणाली की पेशकश नहीं करता है। (यदि वह गलत है, तो कृपया क्रिस को ईमेल करें। जॉन at noaa.gov. अन्यथा, अमेज़न, कृपया इसके लिए समर्थन जोड़ें&#33;) 
 
 #### एक बाल्टी की सामग्री देखना{#viewing-the-contents-of-a-bucket} 
-S3 बाल्टी में अक्सर कुछ श्रेणियों की फाइलें होती हैं, कुछ छद्म उपनिर्देशों में, जो एक जोड़ी बन सकती हैं। ERDDAP™ डेटासेट बनाने के लिए ERDDAP™ डेटासेट, आपको प्रारंभिक निर्देशिका के लिए जानने की आवश्यकता है&lt;कैशFromUrl&gt; (या&lt;फ़ाइलDir&gt; और फ़ाइल नामों का प्रारूप जो फ़ाइलों की उस सबसेट की पहचान करता है। यदि आप किसी ब्राउज़र में बाल्टी की पूरी सामग्री को देखने की कोशिश करते हैं, तो S3 आपको पहली 1000 फाइलें दिखाएगा, जो अपर्याप्त है। वर्तमान में, आपके लिए एक बाल्टी की सभी सामग्री को देखने का सबसे अच्छा तरीका है [EDDTableFromFileNames](#eddtablefromfilenames) डेटासेट (अपने पीसी पर ERDDAP™ और/या अपनी जनता पर ERDDAP ) , जो आपको निर्देशिका संरचना और डाउनलोड फ़ाइलों को ब्राउज़ करने का एक आसान तरीका भी देता है। The The most of the&lt;फ़ाइलDir&gt; इसके लिए वह URL होगा जिसे आपने ऊपर बनाया है, उदाहरण के लिए,https://noaa-goes17.s3.us-east-1.amazonaws.com। \\[ क्यों नहीं करता AWS S3 किसी को भी AWS खाते के बिना ऐसा करने का एक त्वरित और आसान तरीका प्रदान करता है? \\] ध्यान दें कि जब मैं अपने पीसी पर एक गैर-अमेज़न नेटवर्क पर ऐसा करता हूं, तो ऐसा लगता है कि अमेज़ॅन एक ट्रिकल के जवाब को धीमा कर देता है (लगभग 100 (?) प्रति चंक) पहले कुछ हिस्सों के बाद (1000 फ़ाइलों का प्रति हिस्सा) डाउनलोड किया गया है। चूंकि बाल्टी में बड़ी संख्या में फाइलें हो सकती हैं (Noaa-goes17 है 26 मिलियन) एक बाल्टी की सभी सामग्री प्राप्त करने से EDDTableFromFileNames कई घंटे लग सकते हैं। (उदाहरण के लिए, 12&#33;) समाप्त करना \\[ अमेज़न क्या है? \\] 
+S3 बाल्टी में अक्सर कुछ श्रेणियों की फाइलें होती हैं, कुछ छद्म उपनिर्देशों में, जो एक जोड़ी बन सकती हैं। ERDDAP™ डेटासेट बनाने के लिए ERDDAP™ डेटासेट, आपको प्रारंभिक निर्देशिका के लिए जानने की आवश्यकता है&lt;कैशFromUrl&gt; (या&lt;फ़ाइलDir&gt; और फ़ाइल नामों का प्रारूप जो फ़ाइलों की उस सबसेट की पहचान करता है। यदि आप किसी ब्राउज़र में बाल्टी की पूरी सामग्री को देखने की कोशिश करते हैं, तो S3 आपको पहली 1000 फाइलें दिखाएगा, जो अपर्याप्त है। वर्तमान में, आपके लिए एक बाल्टी की सभी सामग्री को देखने का सबसे अच्छा तरीका है [EDDTableFromFileNames](#eddtablefromfilenames) डेटासेट (अपने पीसी पर ERDDAP™ और/या अपनी जनता पर ERDDAP ) , जो आपको निर्देशिका संरचना और डाउनलोड फ़ाइलों को ब्राउज़ करने का एक आसान तरीका भी देता है। The The most of the&lt;फ़ाइलDir&gt; इसके लिए वह URL होगा जिसे आपने ऊपर बनाया है, उदाहरण के लिए, https://noaa-goes17.s3.us-east-1.amazonaws.com । \\[ क्यों नहीं करता AWS S3 किसी को भी AWS खाते के बिना ऐसा करने का एक त्वरित और आसान तरीका प्रदान करता है? \\] ध्यान दें कि जब मैं अपने पीसी पर एक गैर-अमेज़न नेटवर्क पर ऐसा करता हूं, तो ऐसा लगता है कि अमेज़ॅन एक ट्रिकल के जवाब को धीमा कर देता है (लगभग 100 (?) प्रति चंक) पहले कुछ हिस्सों के बाद (1000 फ़ाइलों का प्रति हिस्सा) डाउनलोड किया गया है। चूंकि बाल्टी में बड़ी संख्या में फाइलें हो सकती हैं (Noaa-goes17 है 26 मिलियन) एक बाल्टी की सभी सामग्री प्राप्त करने से EDDTableFromFileNames कई घंटे लग सकते हैं। (उदाहरण के लिए, 12&#33;) समाप्त करना \\[ अमेज़न क्या है? \\] 
 
 #### EDDTable AWS S3 बाल्टी के साथ FileNames Dataset से{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 यदि आपके पास एक बाल्टी का नाम है, लेकिन पहले से ही S3 बाल्टी में फ़ाइलों की एक सूची नहीं है, जो बाल्टी में प्रासंगिक फ़ाइलों के स्थान की पहचान करता है, तो EDDTableFromFileNames डेटासेट बनाने के लिए नीचे दिए गए निर्देशों का उपयोग करें ताकि आप S3 बाल्टी के डायरेक्टरी पदानुक्रम को ब्राउज़ कर सकें। ERDDAP ' "files" प्रणाली।
@@ -727,22 +727,24 @@ java.lang. IllegalArgumentException: प्रोफाइल फ़ाइल �
 लिनक्स और मैक ओएस के लिए Hint: क्रेडेंशियल फ़ाइल उपयोगकर्ता की होम डायरेक्टरी में होना चाहिए जो टॉमकैट चल रहा है। (और ERDDAP )   (इस अनुच्छेद के लिए, हम उपयोगकर्ता = tomcat मान लेंगे) एक फ़ाइल में ~/.aws/credentials कहा जाता है। यह नहीं मानो कि ~ /home/tomcat - वास्तव में सीडी ~ का उपयोग यह पता लगाने के लिए कि ऑपरेटिंग सिस्टम किस तरह सोचता है ~ उपयोगकर्ता के लिए=tomcat है। यदि यह मौजूद नहीं है तो निर्देशिका बनाएं। इसके अलावा, जब आप क्रेडेंशियल फ़ाइल को जगह में डाल देते हैं, तो सुनिश्चित करें कि उपयोगकर्ता और फ़ाइल के लिए समूह टोमकैट है और फिर यह सुनिश्चित करने के लिए chmod 400 क्रेडेंशियल का उपयोग करें कि फ़ाइल केवल उपयोगकर्ता=tomcat के लिए पढ़ी जाती है।
     
 3. में बाल्टी यूआरएल बनाएं [प्रारूप ERDDAP™ आवश्यकता](#accessing-files-in-an-aws-s3-bucket) , उदाहरण के लिए,
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) , और (सार्वजनिक बाल्टी के लिए) यह सुनिश्चित करने के लिए कि यह XML दस्तावेज़ लौटाता है जिसमें उस बाल्टी की सामग्री को आंशिक रूप से सूचीबद्ध किया गया है।
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) , और (सार्वजनिक बाल्टी के लिए) यह सुनिश्चित करने के लिए कि यह XML दस्तावेज़ लौटाता है जिसमें उस बाल्टी की सामग्री को आंशिक रूप से सूचीबद्ध किया गया है।
      
 4. उपयोग [जनरेट DatasetXml](#generatedatasetsxml) बनाना [EDDTableFromFileNames](#eddtablefromfilenames) डेटासेट:
     * प्रारंभिक निर्देशिका के लिए, इस वाक्यविन्यास का उपयोग करें:
         \\*\\*\\ *fromOnTheFly,* YourBucketUrl*
 उदाहरण के लिए,
-        \\*\\**OnTheFly से,https://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\**OnTheFly से, https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * फ़ाइल का नाम regex? *
     * Recursive? सच
     * रीलोड हरNMinutes? 10080
-    *    infoUrl ?https://registry.opendata.aws/noaa-goes/
+    *    infoUrl ? https://registry.opendata.aws/noaa-goes/
+ 
     * संस्था? NOAA 
     * सारांश? कुछ नहीं ( ERDDAP™ स्वचालित रूप से एक सभ्य सारांश तैयार करेगा।) 
     * शीर्षक? कुछ नहीं ( ERDDAP™ स्वचालित रूप से एक सभ्य शीर्षक तैयार करेगा।) सामान्य रूप से, आपको सुधार को सत्यापित करने और डेटासेट के हिस्से से पहले सुधार करने के लिए परिणामी XML को संपादित करना चाहिए। datasets.xml ।
 5. यदि आप ऊपर दिए गए निर्देशों का पालन करते हैं और डेटासेट को लोड करते हैं ERDDAP , आपने EDDTableFromFiles डेटासेट बनाया है। उदाहरण के रूप में, और किसी के लिए AWS ओपन डेटा बाल्टी से फ़ाइलों को ब्राउज़ करने और डाउनलोड करने के लिए इसे आसान बनाने के लिए, हमने EDDTableFromFileNames डेटासेट बनाया है (सूची को देखें)
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) लगभग सभी के लिए [AWS S3 ओपन डेटा बकेट](https://registry.opendata.aws/) ।
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) लगभग सभी के लिए [AWS S3 ओपन डेटा बकेट](https://registry.opendata.aws/) ।
      \\[ कुछ बाल्टी जिसमें हम शामिल नहीं थे, या तो रूट डायरेक्टरी में बड़ी संख्या में फाइलें हैं। (अधिक से अधिक समय में डाउनलोड किया जा सकता है) सार्वजनिक पहुंच की अनुमति नहीं है (क्या वे सभी को सार्वजनिक नहीं होना चाहिए?) , या अनुरोधकर्ता भुगतान बाल्टी हैं (उदाहरण के लिए, सेन्टिनेल) । \\]   
 यदि आप क्लिक करते हैं "files" इन डेटासेटों में से एक के लिए लिंक, आप उस S3 बाल्टी में निर्देशिका पेड़ और फ़ाइलों को ब्राउज़ कर सकते हैं। रास्ते के कारण\\*\\*\\*OnTheFly EDDTableFromFiles काम करता है, इन निर्देशिका लिस्टिंग हमेशा पूरी तरह से अद्यतन कर रहे हैं क्योंकि ERDDAP™ उन्हें ऑन-द-फ्लाई मिलती है। यदि आप निर्देशिका के पेड़ को एक वास्तविक फ़ाइल नाम पर क्लिक करते हैं और फ़ाइल नाम पर क्लिक करते हैं, ERDDAP™ अपने अनुरोध को AWS S3 पर रीडायरेक्ट करेगा ताकि आप सीधे AWS से फाइल डाउनलोड कर सकें। फिर आप उस फ़ाइल का निरीक्षण कर सकते हैं।
     
@@ -756,7 +758,7 @@ java.lang. IllegalArgumentException: प्रोफ़ाइल फ़ाइल
  **फिर आप कर सकते हैं ERDDAP™ डेटासेट जो उपयोगकर्ताओं को फ़ाइलों में डेटा तक पहुंच प्रदान करते हैं।**   
 में निर्देश देखें [ ERDDAP™ S3 बाल्टी](#erddap-and-aws-s3-buckets)   (ऊपर) ।
 नमूना EDDTableFromFileNames डेटासेट के लिए जिसे आपने ऊपर बनाया था, यदि आप निर्देशिका के पेड़ में निर्देशिका और फ़ाइल नामों के साथ थोड़ा poking करते हैं, तो यह स्पष्ट हो जाता है कि शीर्ष स्तर निर्देशिका नाम (उदाहरण के लिए, ABI-L1b-RadC) क्या ERDDAP™ अलग डेटासेट कहेगा। आप जिस बाल्टी के साथ काम कर रहे हैं वह समान हो सकता है। तब आप अलग-अलग डेटासेट बना सकते हैं ERDDAP™ उन सभी डेटासेटों के लिए, उपयोग, उदाहरण के लिए,
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 जैसा&lt;CashFromUrl&gt;। दुर्भाग्य से, इस विशेष उदाहरण के लिए, बाल्टी में डेटासेट सभी स्तर 1 या स्तर 2 डेटासेट प्रतीत होते हैं, जो स्तर 1 या स्तर 2 डेटासेट है। ERDDAP™   [विशेष रूप से अच्छा नहीं है](#dimensions) क्योंकि डेटासेट चर का एक अधिक जटिल संग्रह है जो विभिन्न आयामों का उपयोग करता है।
      
     
@@ -975,7 +977,7 @@ Unsorted आयाम मान लगभग हमेशा स्रोत ड
 ###  EDDGrid FromDap{#eddgridfromdap} 
  [ ** EDDGrid FromDap** ](#eddgridfromdap) ग्रिड चर संभालती है [ DAP ](https://www.opendap.org/) सर्वर
 
-* हम दृढ़ता से उपयोग करने की सलाह देते हैं [जनगणना Xml कार्यक्रम](#generatedatasetsxml) का एक मोटे ड्राफ्ट बनाने के लिए datasets.xml इस डेटासेट के लिए भाग लें। आप उस जानकारी को इकट्ठा कर सकते हैं जिसे आप tweak करना चाहते हैं या एक के लिए अपना खुद का XML बना सकते हैं EDDGrid अपने ब्राउज़र में स्रोत डेटासेट के डीडीएस और डीएएस फ़ाइलों को देखकर डेटासेट (.das और .dds जोड़कर sourceUrl उदाहरण के लिए, [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) ।
+* हम दृढ़ता से उपयोग करने की सलाह देते हैं [जनगणना Xml कार्यक्रम](#generatedatasetsxml) का एक मोटे ड्राफ्ट बनाने के लिए datasets.xml इस डेटासेट के लिए भाग लें। आप उस जानकारी को इकट्ठा कर सकते हैं जिसे आप tweak करना चाहते हैं या एक के लिए अपना खुद का XML बना सकते हैं EDDGrid अपने ब्राउज़र में स्रोत डेटासेट के डीडीएस और डीएएस फ़ाइलों को देखकर डेटासेट (.das और .dds जोड़कर sourceUrl उदाहरण के लिए, [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) ।
      
 *    EDDGrid FromDap किसी भी बहु-आयामी चर से डेटा प्राप्त कर सकता है DAP डेटा सर्वर (पहले, EDDGrid FromDap को "grid" के रूप में नामित चर तक सीमित किया गया था, लेकिन यह अब आवश्यकता नहीं है।)   
      
@@ -1335,7 +1337,7 @@ THREDDS में समान विशेषता के विपरीत, 
         </addAttributes>
       </axisVariable>
 ```
-'r' या 's' के बाद होने वाले अंकों को पकड़ने के लिए कैप्चर समूह संख्या 2 का उपयोग नोट करें, और "\\_global" से पहले। यह उदाहरण यह भी दिखाता है कि अतिरिक्त विशेषताओं को कैसे जोड़ा जाए (उदाहरण के लिए ioos\\_category इकाई) अक्ष चर के लिए।
+नोट करें कैप्चर समूह संख्या 2 का उपयोग उन अंकों को कैप्चर करने के लिए जो 'r' या 's' के बाद होते हैं, और इससे पहले "\\_global" । यह उदाहरण यह भी दिखाता है कि अतिरिक्त विशेषताओं को कैसे जोड़ा जाए (उदाहरण के लिए ioos\\_category इकाई) अक्ष चर के लिए।
      
 #### बाह्य रूप से संपीड़ित फ़ाइलें{#externally-compressed-files} 
 * डेटासेट जो कि सबसेट हैं EDDGrid FromFiles and EDDTable FromFiles बाह्य रूप से संपीड़ित डेटा फ़ाइलों से सीधे डेटा की सेवा कर सकते हैं, जिनमें शामिल हैं .tgz , .tar  .gz , .tar  .gzip , .gz , .gzip , .zip , .bz2 , और .Z फ़ाइलें।
@@ -1433,7 +1435,7 @@ MAY फ़ाइलों को एक निर्देशिका में
 इसके बजाय, [] का उपयोग करें&lt;कैशFromUrl&gt; प्रणाली (#cachefromurl) ।
 
 प्रवेश ERDDAP™ बाइट रेंज अनुरोधों के माध्यम से फ़ाइलों के रूप में डेटासेट --
-इसे छोड़कर सामग्री पर बढ़ने के लिए (सिद्धांत) में डेटासेट के बारे में सोचना ERDDAP™ एक विशाल .nc "आवेदन" द्वारा फ़ाइल .nc "बेस ओपेन" DAP किसी दिए गए डेटासेट के लिए यूआरएल (उदाहरण के लिएhttps://myserver.org/erddap/griddap/datasetID.ncऔर इसके बाद एक सबसेट निर्दिष्ट करने के बाद एक क्वेरी जोड़कर) , शायद यह पूछने के लिए कि क्या आप netcdf-java का उपयोग कर सकते हैं, Ferret अन्य NetCDF क्लाइंट सॉफ्टवेयर के माध्यम से डेटा पढ़ने के लिए HTTP रेंज अनुरोध से ERDDAP । उत्तर नहीं है क्योंकि वास्तव में एक विशाल नहीं है " .nc "फ़ाइल"। यदि आप ऐसा करना चाहते हैं, तो इन विकल्पों में से एक करें:
+इसे छोड़कर सामग्री पर बढ़ने के लिए (सिद्धांत) में डेटासेट के बारे में सोचना ERDDAP™ एक विशाल .nc "आवेदन" द्वारा फ़ाइल .nc "बेस ओपेन" DAP किसी दिए गए डेटासेट के लिए यूआरएल (उदाहरण के लिए https://myserver.org/erddap/griddap/datasetID.nc और इसके बाद एक सबसेट निर्दिष्ट करने के बाद एक क्वेरी जोड़कर) , शायद यह पूछने के लिए कि क्या आप netcdf-java का उपयोग कर सकते हैं, Ferret अन्य NetCDF क्लाइंट सॉफ्टवेयर के माध्यम से डेटा पढ़ने के लिए HTTP रेंज अनुरोध से ERDDAP । उत्तर नहीं है क्योंकि वास्तव में एक विशाल नहीं है " .nc "फ़ाइल"। यदि आप ऐसा करना चाहते हैं, तो इन विकल्पों में से एक करें:
 
 * उपयोग(OPeN)DAPग्राहक सॉफ्टवेयर द्वारा दी गई ग्रिडडैप सेवाओं से कनेक्ट करने के लिए ERDDAP । यह क्या है DAP   (इस प्रकार ERDDAP ) इसके लिए डिज़ाइन किया गया था। यह बहुत कुशल है।
 * या, स्रोत फ़ाइल डाउनलोड करें (s) से "files" प्रणाली (या एक सबसेट फ़ाइल के माध्यम से .nc ? क्वेरी) अपने कंप्यूटर के लिए और netcdf-java का उपयोग करें, Ferret अन्य NetCDF ग्राहक सॉफ्टवेयर पढ़ने के लिए (अब) स्थानीय फाइल (s) ।
@@ -2253,9 +2255,9 @@ Cassandra सूची, सेट, या मानचित्र स्तं�
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### EDDTableFromDapSequence{#eddtablefromdapsequence} 
- [ **EDDTableFromDapSequence** ](#eddtablefromdapsequence) 1- और 2-स्तर अनुक्रमों के भीतर चर संभालती है [ DAP ](https://www.opendap.org/) जैसे सर्वर DAP प्रति व्यक्ति (पर थाhttps://www.pmel.noaa.gov/epic/software/dapper/अब बंद) ।
+ [ **EDDTableFromDapSequence** ](#eddtablefromdapsequence) 1- और 2-स्तर अनुक्रमों के भीतर चर संभालती है [ DAP ](https://www.opendap.org/) जैसे सर्वर DAP प्रति व्यक्ति (पर था https://www.pmel.noaa.gov/epic/software/dapper/ अब बंद) ।
 
-* हम दृढ़ता से उपयोग करने की सलाह देते हैं [जनगणना Xml कार्यक्रम](#generatedatasetsxml) का एक मोटे ड्राफ्ट बनाने के लिए datasets.xml इस डेटासेट के लिए भाग लें। तब आप इसे ठीक करने के लिए संपादित कर सकते हैं। आप अपने ब्राउज़र में स्रोत डेटासेट के डीडीएस और डीएएस फ़ाइलों को देखकर आवश्यक जानकारी एकत्र कर सकते हैं (dads और .dds को जोड़कर) sourceUrl (a उदाहरण)https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds).
+* हम दृढ़ता से उपयोग करने की सलाह देते हैं [जनगणना Xml कार्यक्रम](#generatedatasetsxml) का एक मोटे ड्राफ्ट बनाने के लिए datasets.xml इस डेटासेट के लिए भाग लें। तब आप इसे ठीक करने के लिए संपादित कर सकते हैं। आप अपने ब्राउज़र में स्रोत डेटासेट के डीडीएस और डीएएस फ़ाइलों को देखकर आवश्यक जानकारी एकत्र कर सकते हैं (dads और .dds को जोड़कर) sourceUrl (a उदाहरण) https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds ).
     
 * एक चर में है DAP यदि .dds प्रतिक्रिया इंगित करती है कि चर धारण करने वाली डेटा संरचना एक "अनुक्रम" है। (असंवेदनशील) ।
 * कुछ मामलों में, आप एक अनुक्रम के भीतर एक अनुक्रम देखेंगे, एक 2-स्तरीय अनुक्रम - EDDTableFromDapSequence इन को भी संभालती है।
@@ -2378,15 +2380,15 @@ denormalized टेबल बनाना या देखने के लि�
 * [JDBC Driver]&lt;ड्राइवर नाम&gt; (#jdbc-driver) -- आपको अपने डेटाबेस के लिए उपयुक्त JDBC 3 या JDBC 4 ड्राइवर .jar फ़ाइल प्राप्त करनी होगी और
 इसे अंदर रखें *tomcat* / Webapps/erddap/WEB-INF/lib स्थापित करने के बाद ERDDAP । फिर, अपने आप में datasets.xml इस डेटासेट के लिए आपको निर्दिष्ट करना होगा&lt;ड्राइवरनाम (दुर्भाग्य से) फ़ाइल नाम से अलग। अपने डेटाबेस और ड्राइवर नाम के लिए JDBC ड्राइवर के लिए वेब पर खोजें Java इसका उपयोग करने की जरूरत है।
     
-    * मारिया डीबी के लिए, प्रयास करें [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * मारिया डीबी के लिए, प्रयास करें [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 The The most of the&lt;चालकनाम&gt; में उपयोग करने के लिए datasets.xml   (नीचे देखें) शायद org.mariadb.jdbc है। चालक
-    * MySQL और Amazon RDS के लिए, कोशिश करें [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * MySQL और Amazon RDS के लिए, कोशिश करें [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 The The most of the&lt;चालकनाम&gt; में उपयोग करने के लिए datasets.xml   (नीचे देखें) शायद com.mysql.jdbc है। चालक
-    * के लिए Oracle कोशिश करो [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) ।
+    * के लिए Oracle कोशिश करो [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) ।
 The The most of the&lt;चालकनाम&gt; में उपयोग करने के लिए datasets.xml   (नीचे देखें) शायद oracle.jdbc.driver है। Oracle चालक
-    * Postgresql के लिए, हमें JDBC 4 ड्राइवर से मिला [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * Postgresql के लिए, हमें JDBC 4 ड्राइवर से मिला [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 The The most of the&lt;चालकनाम&gt; में उपयोग करने के लिए datasets.xml   (नीचे देखें) शायद org.postgresql है। चालक
-    * SQL सर्वर के लिए, आप JTDS JDBC ड्राइवर से प्राप्त कर सकते हैं [https://jtds.sourceforge.net](https://jtds.sourceforge.net) ।
+    * SQL सर्वर के लिए, आप JTDS JDBC ड्राइवर से प्राप्त कर सकते हैं [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) ।
 The The most of the&lt;चालकनाम&gt; में उपयोग करने के लिए datasets.xml   (नीचे देखें) शायद net.sourceforge.jtds.jdbc है। चालक
     
 बाद में आप JDBC ड्राइवर .jar डाल दिया ERDDAP™ lib डायरेक्टरी, आपको उस .jar फ़ाइल के लिए एक संदर्भ जोड़ने की आवश्यकता है। Xml, DasDds, और पुरालेखADataset जो में हैं *tomcat* /webapps/erddap/WEB-INF/ निर्देशिका; अन्यथा, जब आप उन लिपियों को चलाते हैं तो आपको ClassNotFoundException मिलेगा।
@@ -2524,7 +2526,7 @@ PostgreSQL के लिए उपयोग करें
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-DataSource का उपयोग करने के बारे में सामान्य जानकारी है [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) ।
+DataSource का उपयोग करने के बारे में सामान्य जानकारी है [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) ।
 देखें [टॉमकैट डेटासोर्स जानकारी](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) और [टॉमकैट डेटासोर्स उदाहरण](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) या अन्य अनुप्रयोग सर्वर के साथ DataSources का उपयोग करने के उदाहरणों के लिए वेब को खोजें।
 * यदि सब कुछ विफल रहता है,
 डेटा को संग्रह में संग्रहीत करने पर विचार करें NetCDF v3 .nc फ़ाइलें (विशेष रूप से .nc फ़ाइलें जो उपयोग करती हैं [CF Discrete Sampling Geometries (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Contiguous Ragged Array डेटा संरचनाओं और इतने के साथ संभाला जा सकता है ERDDAP ' [EDDTableFromNcCFFiles](#eddtablefromnccffiles) ) । यदि वे तार्किक रूप से व्यवस्थित हैं (प्रत्येक अंतरिक्ष और समय के एक हिस्से के लिए डेटा के साथ) , ERDDAP™ उनमें से बहुत जल्दी डेटा निकाल सकते हैं।
@@ -2608,7 +2610,7 @@ DataSource का उपयोग करने के बारे में स
     
 प्रत्येक डेटासेट के लिए जनरेटडाटासेटएक्सएमएल द्वारा उत्पन्न XML का हिस्सा शामिल है:
     
-    * A datasetID जो है EDDGrid ' datasetID प्लस "\\_AsATable"।
+    * A datasetID जो है EDDGrid ' datasetID प्लस "\\_AsATable" ।
     * एक नया सारांश वैश्विक विशेषता जो है EDDGrid सारांश प्लस एक नया पहला अनुच्छेद जिसमें यह वर्णन किया गया है कि यह डेटासेट क्या है।
     * एक नया शीर्षक वैश्विक विशेषता जो है EDDGrid शीर्षक प्लस ", (A table) "।
     * 10 के मान के साथ एक नया मैक्सएक्सिस0 वैश्विक विशेषता
@@ -2644,21 +2646,21 @@ DataSource का उपयोग करने के बारे में स
 *    [एक EDDTableFromFileNames Dataset में डेटा](#eddtablefromfilenames-data) एक सारणी है कि ERDDAP™ स्थानीय फ़ाइलों के समूह के बारे में जानकारी के साथ ऑन-द-फ्लाई बनाता है। तालिका में प्रत्येक फ़ाइल के लिए एक पंक्ति है। में चार विशेष गुण [ datasets.xml इस डेटासेट के लिए](#eddtablefromfilenames-skeleton-xml) यह निर्धारित करना कि इस डेटासेट में कौन सी फाइलें शामिल होंगी:
     
 ##### फ़ाइल दीर{#filedir} 
-    *   &lt;फ़ाइल यह सर्वर की फ़ाइल प्रणाली में इस डेटासेट के लिए फ़ाइलों के साथ स्रोत निर्देशिका निर्दिष्ट करता है। वास्तव में सर्वर की फ़ाइल प्रणाली में स्थित फाइलें&lt;फ़ाइलDir&gt; एक आभासी निर्देशिका के भीतर इस डेटासेट के यूआरएल कॉलम में दिखाई देगा जिसका नाम हैhttps://*serverUrl*/erddap/files/*datasetID/*।
+    *   &lt;फ़ाइल यह सर्वर की फ़ाइल प्रणाली में इस डेटासेट के लिए फ़ाइलों के साथ स्रोत निर्देशिका निर्दिष्ट करता है। वास्तव में सर्वर की फ़ाइल प्रणाली में स्थित फाइलें&lt;फ़ाइलDir&gt; एक आभासी निर्देशिका के भीतर इस डेटासेट के यूआरएल कॉलम में दिखाई देगा जिसका नाम है https://*serverUrl*/erddap/files/*datasetID/* ।
 उदाहरण के लिए, यदि datasetID JplMU है RSS टी
 और&lt;फ़ाइलDir&gt; है /home/data/mur/ ,
 और उस निर्देशिका में jplmu नामक एक फ़ाइल है RSS T20150103000000.png
 तब यूआरएल जो उस फाइल के लिए उपयोगकर्ताओं को दिखाया जाएगा
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png।
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png ।
         
 स्थानीय निर्देशिका का उपयोग करने के अलावा&lt;फ़ाइलDir&gt;, आप दूरस्थ, निर्देशिका जैसी वेब पेज के यूआरएल को भी निर्दिष्ट कर सकते हैं। यह काम करता है:
         
         * THREDDS में अद्वितीय डेटासेट, उदाहरण के लिए,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 यह सर्वर अब विश्वसनीय नहीं है। \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 यह सर्वर अब विश्वसनीय नहीं है। \\] 
         * Unaggregated datasets in Hyrax , उदाहरण के लिए,
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * अधिकांश अपाचे जैसी निर्देशिका लिस्टिंग, उदाहरण के लिए,
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### fromOnTheFly{#fromonthefly} 
  [\\*\\** FromOnTheFly](#fromonthefly) -- कुछ विशाल S3 बाल्टी के लिए (Noaa-goes17 की तरह, जिसमें 26 मिलियन फाइलें हैं) हो सकता है ERDDAP™ बाल्टी की सामग्री के बारे में सभी जानकारी डाउनलोड करने के लिए 12 घंटे तक (और फिर अन्य समस्याएं हैं) । इसके आसपास जाने के लिए, उपयोग करने का एक विशेष तरीका है&lt;फ़ाइलDir&gt; EDDTableFromFileNames में AWS S3 बाल्टी से निर्देशिका और फ़ाइल नामों के साथ डेटासेट बनाने के लिए। डेटासेट में सभी S3 बाल्टी की निर्देशिकाओं और फ़ाइल नामों की सूची नहीं होगी जो एक उपयोगकर्ता डेटासेट के अनुरोध के माध्यम से खोज सकता है। लेकिन डेटासेट को निर्देशिकाओं और फ़ाइलों के नामों को ऑन-द-फ्लाई मिलेगी यदि उपयोगकर्ता डेटासेट के साथ निर्देशिका पदानुक्रमित करता है "files" विकल्प इस प्रकार, यह उपयोगकर्ताओं को डेटासेट के माध्यम से S3 बाल्टी की फ़ाइल पदानुक्रम और फ़ाइलों को ब्राउज़ करने की अनुमति देता है "files" प्रणाली। ऐसा करने के बजाय, S3 बाल्टी के लिए URL निर्दिष्ट करने के बजाय "शुरू निर्देशिका" के रूप में (में GenerateDatasets एक्सएमएल) या&lt;फ़ाइल (में datasets.xml ) उपयोग:
 ```
@@ -2837,13 +2839,13 @@ dirTable .nc   (जो अद्वितीय निर्देशिका �
     * The The most of the&lt;कैशFromUrl&gt; टैग आपको दूरस्थ फ़ाइल सूची से दूरस्थ डेटासेट की फ़ाइलों की सूची के साथ एक URL निर्दिष्ट करने देता है।
         
         * THREDDS में अद्वितीय डेटासेट, उदाहरण के लिए,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 यह सर्वर अब विश्वसनीय नहीं है। \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 यह सर्वर अब विश्वसनीय नहीं है। \\] 
         * Unaggregated datasets in Hyrax , उदाहरण के लिए,
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * अधिकांश अपाचे जैसी निर्देशिका लिस्टिंग, उदाहरण के लिए,
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * S3 बाल्टी, उदाहरण के लिए,
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 हालांकि, इसे एडब्ल्यूएस खाता और अधिक सेटअप की आवश्यकता हो सकती है।
 देखें [S3 बाल्टी के साथ काम करना ERDDAP™ ](#working-with-aws-s3-files) ।
 इसके अलावा, आपको आमतौर पर कैश का उपयोग करने की आवश्यकता नहीं है S3 बाल्टी में फ़ाइलों के साथ Url अगर फाइलें ASCII फाइलें हैं (उदाहरण के लिए, csv) क्योंकि ERDDAP™ एक धारा के माध्यम से सीधे बाल्टी से डेटा को कुशलतापूर्वक पढ़ सकते हैं।
@@ -2901,7 +2903,7 @@ dirTable .nc   (जो अद्वितीय निर्देशिका �
 और दूसरा विकल्प एक विशिष्ट मान है।
             
 ऊपर का उदाहरण केवल 2018 के दूसरे 10 दिनों के लिए मैच डायरेक्टरी होगा, उदाहरण के लिए,
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020-10-21 यह सर्वर अब विश्वसनीय नहीं है। \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020-10-21 यह सर्वर अब विश्वसनीय नहीं है। \\]   
 और दिन 011, 012, ..., 019।
              (इसे देखें [रेगेक्स प्रलेखन](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) और [Regex ट्यूटोरियल](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) ।)   
 यदि आपको मदद की आवश्यकता है&lt;CashPartialPathRegex&lt;CashFromUrl&gt; to Chris. जॉन at noaa.gov.
@@ -3384,7 +3386,7 @@ EDDTableFromHttpGet की अनूठी विशेषताओं को �
 
 * Insert
     * अनुरोध को एक मानक एचटीएमएल फॉर्म प्रतिक्रिया की तरह प्रारूपित किया गया है, जिसमें कुंजी = वैल्यू जोड़े, जिसे '&' से अलग किया गया है। उदाहरण के लिए,
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 कहना ERDDAP™ डेटा को जोड़ने या बदलने के लिए stationID निर्दिष्ट समय के लिए =46088।
     * इस बदलाव का लेखक JohnSmith है और कुंजी कुछKey1 है।
     * URL में मान्य मान शामिल होना चाहिए (नहीं लापता मान) सभी के लिए [ http प्राप्त करना](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ EDDTableFromHttpGet की अनूठी विशेषताओं को �
              
     * .delete
         * अनुरोध को एक मानक एचटीएमएल फॉर्म प्रतिक्रिया की तरह प्रारूपित किया गया है, जिसमें कुंजी = वैल्यू जोड़े, जिसे '&' से अलग किया गया है। उदाहरण के लिए,
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 कहना ERDDAP™ डेटा को हटाने के लिए stationID निर्दिष्ट समय पर =46088।
         * इस बदलाव का लेखक JohnSmith है और कुंजी कुछKey1 है।
         * यूआरएल निर्दिष्ट करना चाहिए [ http प्राप्त करना](#httpgetrequiredvariables-global-attribute) अनुरोध में (उदाहरण के लिए stationID समय) । यदि वे मान डेटासेट में पहले से ही पंक्ति पर मानों का मिलान करते हैं (जो आम तौर पर वे करेंगे) पुराने मूल्यों को प्रभावी ढंग से हटा दिया जाता है (हालांकि पुराने मान अभी भी सुलभ हैं अगर कोई उपयोगकर्ता पिछले डेटा का अनुरोध करता है [संस्करण](#versioning) डेटासेट) ।
@@ -3667,7 +3669,7 @@ EDDTableFromHttpGet उपयोग [JSON लाइन्स CSV फ़ाइल
     
 ##### https://www.youtu.com{#https-put-and-delete} 
 *    ["What के बारे में HTTPS PUT और DELETE?&#33;](#https-put-and-delete)   
-     [हाइपरटेक्स्ट ट्रांसफर प्रोटोकॉल (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) वर्ल्ड वाइड वेब का आधार है और कारण यह है कि वेब पेज यूआरएल "के साथ शुरू होता हैhttp://"या "https://"। HTTP एक अतिरिक्त सुरक्षा परत के साथ है। हर दिन, ब्राउज़र, स्क्रिप्ट और कंप्यूटर प्रोग्राम अरबों HTTP बनाते हैं (एस)   **भुगतान** दूरस्थ स्रोतों से जानकारी प्राप्त करने का अनुरोध करता है। HTTP (एस) अन्य भी शामिल है [क्रिया](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) विशेष रूप से पुट (सर्वर पर डेटा को धक्का देने के लिए) और DELETE (सर्वर से डेटा DELETE करने के लिए) । हाँ, PUT और DELETE HTTP के माध्यम से डेटासेट से डेटा को डालने और हटाने का उचित तरीका है। (एस) । GET सॉफ़्टवेयर के प्रत्येक टुकड़े द्वारा समर्थित है जो HTTP के साथ काम कर सकता है (एस) । वास्तव में काम करना आसान है। सभी पहले से ही जानते हैं कि कैसे काम करने के लिए? (जिसका उपयोग अनिवार्य रूप से उसी तरह किया जा सकता है जैसे GET) इसलिए हमने EDDTableFromHttpGet को GET और POST के साथ काम किया। बहुत कम लोग (कंप्यूटर प्रोग्रामर) कभी कभी PUT और DELETE के साथ काम किया है। PUT और DELETE आम तौर पर केवल कंप्यूटर भाषाओं द्वारा समर्थित होते हैं, इसलिए उनका उपयोग एक कुशल कार्यक्रम की आवश्यकता होती है। इसलिए PUT और DELETE आमतौर पर उपकरण विकसित करने के तरीके को देखते हुए एक बहुत अधिक बोझिल दृष्टिकोण होता है।
+     [हाइपरटेक्स्ट ट्रांसफर प्रोटोकॉल (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) वर्ल्ड वाइड वेब का आधार है और कारण यह है कि वेब पेज यूआरएल "के साथ शुरू होता है http://" या " https://" । HTTP एक अतिरिक्त सुरक्षा परत के साथ है। हर दिन, ब्राउज़र, स्क्रिप्ट और कंप्यूटर प्रोग्राम अरबों HTTP बनाते हैं (एस)   **भुगतान** दूरस्थ स्रोतों से जानकारी प्राप्त करने का अनुरोध करता है। HTTP (एस) अन्य भी शामिल है [क्रिया](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) विशेष रूप से पुट (सर्वर पर डेटा को धक्का देने के लिए) और DELETE (सर्वर से डेटा DELETE करने के लिए) । हाँ, PUT और DELETE HTTP के माध्यम से डेटासेट से डेटा को डालने और हटाने का उचित तरीका है। (एस) । GET सॉफ़्टवेयर के प्रत्येक टुकड़े द्वारा समर्थित है जो HTTP के साथ काम कर सकता है (एस) । वास्तव में काम करना आसान है। सभी पहले से ही जानते हैं कि कैसे काम करने के लिए? (जिसका उपयोग अनिवार्य रूप से उसी तरह किया जा सकता है जैसे GET) इसलिए हमने EDDTableFromHttpGet को GET और POST के साथ काम किया। बहुत कम लोग (कंप्यूटर प्रोग्रामर) कभी कभी PUT और DELETE के साथ काम किया है। PUT और DELETE आम तौर पर केवल कंप्यूटर भाषाओं द्वारा समर्थित होते हैं, इसलिए उनका उपयोग एक कुशल कार्यक्रम की आवश्यकता होती है। इसलिए PUT और DELETE आमतौर पर उपकरण विकसित करने के तरीके को देखते हुए एक बहुत अधिक बोझिल दृष्टिकोण होता है।
      
 ##### HttpGet Notes{#httpget-notes} 
 *    [नोट्स](#httpget-notes) 
@@ -3676,7 +3678,7 @@ EDDTableFromHttpGet उपयोग [JSON लाइन्स CSV फ़ाइल
 ##### धन्यवाद{#thanks} 
 *    [मूल विचार के लिए CHORDS को धन्यवाद।](#thanks)   
 EDDTableFromHttpGet के लिए बुनियादी विचार (यानी, एक का उपयोग करना HTTP GET डेटासेट में डेटा जोड़ने का अनुरोध करें) यूसीएआर से है (NCAR?)   [क्लाउड-होस्टेड रियल टाइम डेटा सर्विसेज (मंडल) ](https://github.com/earthcubeprojects-chords) परियोजना अनुरोध में मापदंडों के लिए प्रारूप (बार-बार *नाम = मूल्य* , अलग करके और) एक ही मानक प्रारूप है कि वेब पृष्ठों पर HTML रूपों द्वारा प्रयोग किया जाता है। यह एक सरल और शानदार विचार है और इससे भी अधिक है क्योंकि यह पूरी तरह से साथ मेज़ करता है ERDDAP सारणीबद्ध डेटा से निपटने के लिए मौजूदा प्रणाली। विचार बाधा में स्पष्ट है, लेकिन मैं (बॉब) इसके बारे में नहीं सोचा था। EDDTableFromHttp उस बुनियादी विचार का उपयोग करें, इसे लागू करने के हमारे विचारों के साथ मिलकर, सिस्टम बनाने के लिए ERDDAP™ डेटा अपलोड करने के लिए। सिस्टम में डेटा को पुश करने के लिए GET का उपयोग करने के मूल विचार के अलावा, EDDTableFromHttpGet कार्यान्वयन पूरी तरह से अलग है और पूरी तरह से CHORDS से स्वतंत्र है और इसमें विभिन्न विशेषताएं हैं। (उदाहरण के लिए, लॉग फाइलें, डेटा का मिश्रण, विभिन्न सुरक्षा प्रणाली, CRUD समर्थन, पुन: प्रयोज्य डेटा) । CHORDS के लिए हमारा एक्सपोजर सिर्फ एक वेबिनार था। हमने अपने कोड को नहीं देखा या उनकी परियोजना के बारे में पढ़ा क्योंकि हम तुरंत जानते थे कि हम सिस्टम को एक अलग तरीके से लागू करना चाहते थे। लेकिन हम उन्हें बुनियादी विचार के लिए आभारी हैं। CHORDS का पूरा संदर्भ है
-Daniels, M.D., Kerkez, B., चंद्रसेकर, V., Graves, S., Stamps, D.S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014) । भूविज्ञान के लिए क्लाउड-होस्टेड रियल टाइम डेटा सर्विसेज (मंडल) सॉफ्टवेयर UCAR/NCAR - पृथ्वी अवलोकन प्रयोगशाला। [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+Daniels, M.D., Kerkez, B., चंद्रसेकर, V., Graves, S., Stamps, D.S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014) । भूविज्ञान के लिए क्लाउड-होस्टेड रियल टाइम डेटा सर्विसेज (मंडल) सॉफ्टवेयर UCAR/NCAR - पृथ्वी अवलोकन प्रयोगशाला। [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### EDDTableFrom Hyrax फ़ाइलें{#eddtablefromhyraxfiles} 
  [ **EDDTableFrom Hyrax फ़ाइलें** ](#eddtablefromhyraxfiles)   (विकृत) कई चर के साथ डेटा फ़ाइलों को एकत्रित करता है, प्रत्येक एक या अधिक साझा आयाम के साथ (उदाहरण के लिए, समय, ऊंचाई (या गहराई) अक्षांश) , और एक द्वारा सेवा की [ Hyrax   OPeNDAP सर्वर](https://www.opendap.org/software/hyrax-data-server) ।
@@ -3692,7 +3694,7 @@ Daniels, M.D., Kerkez, B., चंद्रसेकर, V., Graves, S., Stamps, 
 * इस वर्ग स्क्रीन स्क्रैप Hyrax प्रत्येक निर्देशिका में फ़ाइलों की सूची के साथ वेब पेज। इसके कारण, यह वर्तमान प्रारूप के लिए बहुत विशिष्ट है Hyrax वेब पेज हम समायोजित करने की कोशिश करेंगे ERDDAP™ जल्दी अगर/जब भविष्य के संस्करण Hyrax फ़ाइलों को कैसे सूचीबद्ध किया जाता है।
 * The The most of the&lt;फ़ाइलDir&gt; सेटिंग को नजरअंदाज कर दिया गया है। चूंकि यह वर्ग डाउनलोड करता है और प्रत्येक दूरस्थ डेटा फ़ाइल की स्थानीय प्रति बनाता है, ERDDAP™ फाइल को मजबूर करता है देना *बड़ाParentDirectory* साइटमैप * datasetID * /।
 * के लिए&lt; sourceUrl &gt;, डेटासेट की आधार निर्देशिका के URL का उपयोग करें Hyrax सर्वर उदाहरण के लिए,
-    &lt; sourceUrl &gt;http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;/ sourceUrl &gt;
+    &lt; sourceUrl &gt; http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;/ sourceUrl &gt;
      (लेकिन इसे एक पंक्ति में डाल दिया)   (खेद है कि सर्वर अब उपलब्ध नहीं है) ।
 The The most of the sourceUrl आमतौर पर वेब पेज में " होता है OPeNDAP सर्वर सूचकांक \\[ निर्देशिकानाम \\] "ऊपर"।
 * चूंकि यह वर्ग हमेशा डाउनलोड करता है और प्रत्येक दूरस्थ डेटा फ़ाइल की स्थानीय प्रतिलिपि बनाता है, इसलिए आपको कभी भी इस डेटासेट को लपेटना नहीं चाहिए। [EDDTableCopy](#eddtablecopy) ।
@@ -3706,7 +3708,7 @@ The The most of the sourceUrl आमतौर पर वेब पेज मे�
 
 इन फ़ाइलों के साथ एक और समस्या: प्रिंसिपल \\_Investigator पंक्ति \\_size चर में एक नमूना \\_dimension विशेषता नहीं है और उपरोक्त नियम का पालन नहीं करता है।
 
-इस डेटासेट प्रकार के लिए नमूना फ़ाइलों को पाया जा सकता हैhttps://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 यह सर्वर अब विश्वसनीय नहीं है \\] ।
+इस डेटासेट प्रकार के लिए नमूना फ़ाइलों को पाया जा सकता है https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020-10-21 यह सर्वर अब विश्वसनीय नहीं है \\] ।
 
 इस वर्ग के सुपरक्लास को देखें, [EDDTableFromFiles](#eddtablefromfiles) यह कैसे काम करता है और इसका उपयोग कैसे किया जाता है, इस बारे में जानकारी के लिए।
 
@@ -3850,10 +3852,10 @@ CF DSG सम्मेलन दर्जनों फ़ाइल प्रा�
  [ **EDDTableFromNOS** ](#eddtablefromnos)   (डिप्रेषित) डेटा को एक से संभालता है NOAA   [NOS](https://opendap.co-ops.nos.noaa.gov/axis/) स्रोत, जो उपयोग करता है [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) अनुरोधों और प्रतिक्रियाओं के लिए। यह बहुत विशिष्ट है NOAA NOS XML. Dataset2.xml में नमूना EDDTableFromNOS डेटासेट देखें।
  
 ### EDDTableFromOBIS{#eddtablefromobis} 
- [ **EDDTableFromOBIS** ](#eddtablefromobis) एक महासागर जीवविज्ञान सूचना प्रणाली से डेटा को संभालती है (ओबीआईएस) सर्वर (थाhttp://www.iobis.org ) । यह संभव है कि अधिक सक्रिय सर्वर नहीं हैं जो अब ओबीआईएस सर्वर सिस्टम के आउट-ऑफ-डेट प्रकार का उपयोग करते हैं।
+ [ **EDDTableFromOBIS** ](#eddtablefromobis) एक महासागर जीवविज्ञान सूचना प्रणाली से डेटा को संभालती है (ओबीआईएस) सर्वर (था http://www.iobis.org  ) । यह संभव है कि अधिक सक्रिय सर्वर नहीं हैं जो अब ओबीआईएस सर्वर सिस्टम के आउट-ऑफ-डेट प्रकार का उपयोग करते हैं।
 
 * ओबीआईएस सर्वर एक XML अनुरोध की उम्मीद करते हैं और XML प्रतिक्रिया वापस करते हैं।
-* चूंकि सभी ओबीआईएस सर्वर समान चरों की सेवा करते हैं (थाhttp://iobis.org/tech/provider/questions) , आपको एक ओबीआईएस डाटासेट स्थापित करने के लिए बहुत कुछ निर्दिष्ट नहीं करना है ERDDAP ।
+* चूंकि सभी ओबीआईएस सर्वर समान चरों की सेवा करते हैं (था http://iobis.org/tech/provider/questions ) , आपको एक ओबीआईएस डाटासेट स्थापित करने के लिए बहुत कुछ निर्दिष्ट नहीं करना है ERDDAP ।
 * You MUST in a " creator\\_email "वैश्विक में विशेषता addAttributes चूंकि उस सूचना का उपयोग लाइसेंस के भीतर किया जाता है। SourceURL से XML प्रतिक्रिया पढ़ने के द्वारा उपयुक्त ईमेल पता पाया जा सकता है।
 * आप वैश्विक विशेषता प्राप्त करने में सक्षम हो सकते हैं या नहीं&lt; subsetVariables &gt; (#subsetvariables) किसी दिए गए ओबीआईएस सर्वर के साथ काम करने के लिए। यदि आप कोशिश करते हैं, तो सिर्फ एक चर प्रयास करें (उदाहरण के लिए, वैज्ञानिकनाम या जेनस) ।
 #### EDDTableFromOBIS कंकाल XML{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ CF DSG सम्मेलन दर्जनों फ़ाइल प्रा�
     * SWE (सेंसर वेब सक्षमता) और SOS   (सेंसर अवलोकन सेवा) हैं [OpenGIS® मानकों](https://www.ogc.org/standards) । इस वेबसाइट के मानक दस्तावेज हैं।
     * The The most of the OGC वेब सर्विसेज कॉमन विशिष्टता ver 1.1.0 ( OGC 06-121r3) GET और POST प्रश्नों के निर्माण को कवर करता है (अनुभाग 7.2.3 और अनुभाग 9 देखें) ।
     * यदि आप एक प्राप्त करने की क्षमता xml अनुरोध भेजते हैं तो SOS सर्वर ( sourceUrl "?service= SOS &request GetCapabilities ") , आपको स्टेशनों की सूची और मनाया जाने वाला एक xml परिणाम मिलता है गुण जो उनके पास डेटा है।
-    * एक मनायाProperty एक संपत्ति के लिए एक औपचारिक URI संदर्भ है। उदाहरण के लिए, urn:ogc:phenomenon: देशांतर: wgs84 याhttps://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * एक मनायाProperty एक संपत्ति के लिए एक औपचारिक URI संदर्भ है। उदाहरण के लिए, urn:ogc:phenomenon: देशांतर: wgs84 या https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * एक मनायाProperty एक चर नहीं है।
-    * एक से अधिक चर में वही देखा जा सकता है संपत्ति (उदाहरण के लिए, अंदर टेम्प और बाहर दोनों को देखा जा सकता है संपत्तिhttps://mmisw.org/ont/cf/parameter/air\\_temperature) ।
+    * एक से अधिक चर में वही देखा जा सकता है संपत्ति (उदाहरण के लिए, अंदर टेम्प और बाहर दोनों को देखा जा सकता है संपत्ति https://mmisw.org/ont/cf/parameter/air\\_temperature ) ।
     * यदि आप एक जांच xml अनुरोध भेजने के लिए एक SOS सर्वर, आपको प्रतिक्रिया, फील्ड इकाइयों और डेटा में फ़ील्ड नामों के विवरण के साथ xml परिणाम मिलता है। क्षेत्र के नामों में लम्बाई, अक्षांश, गहराई शामिल होगी (शायद) समय
     * प्रत्येक dataVariable EDDTableFrom SOS एक "observedProperty" विशेषता शामिल होना चाहिए, जो उस परिवर्तनीय को प्राप्त करने के लिए सर्वर से अनुरोध किया जाना चाहिए कि मनायाProperty की पहचान करता है। अक्सर, कई dataVariable s एक ही समग्र मनायाProperty सूची होगा।
     * प्रत्येक के लिए डेटाटाइप dataVariable सर्वर द्वारा निर्दिष्ट नहीं किया जा सकता है। यदि हां, तो आपको सर्वर से XML डेटा प्रतिक्रियाओं को देखना होगा और उचित निर्दिष्ट करना होगा [&lt;Datatype&gt;s (#datatype) में ERDDAP™ डेटासेट dataVariable परिभाषाएं।
@@ -3991,11 +3994,11 @@ CF DSG सम्मेलन दर्जनों फ़ाइल प्रा�
 * इस वर्ग ने THREDDS द्वारा सेवा की गई catalog.xml फ़ाइलों को पढ़ा है, जिसमें सूची की गई है।&lt;कैटलॉग (अतिरिक्त catalog.xml उप फ़ाइल के संदर्भ) और&lt;डेटासेट&gt; (डेटा फाइलें) ।
 * The The most of the&lt;फ़ाइलDir&gt; सेटिंग को नजरअंदाज कर दिया गया है। चूंकि यह वर्ग डाउनलोड करता है और प्रत्येक दूरस्थ डेटा फ़ाइल की स्थानीय प्रति बनाता है, ERDDAP™ फाइल को मजबूर करता है देना *बड़ाParentDirectory* साइटमैप * datasetID * /।
 * के लिए&lt; sourceUrl &gt;, THREDDS सर्वर में डेटासेट के लिए catalog.xml फ़ाइल के URL का उपयोग करें, उदाहरण के लिए: इस URL के लिए जिसका उपयोग वेब ब्राउज़र में किया जा सकता है।
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020-10-21 यह सर्वर अब विश्वसनीय नहीं है। \\] ,
-उपयोग&lt; sourceUrl &gt;https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;/ sourceUrl &gt;
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020-10-21 यह सर्वर अब विश्वसनीय नहीं है। \\] ,
+उपयोग&lt; sourceUrl &gt; https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;/ sourceUrl &gt;
      (लेकिन इसे एक पंक्ति में डाल दिया) ।
 * चूंकि यह वर्ग हमेशा डाउनलोड करता है और प्रत्येक दूरस्थ डेटा फ़ाइल की स्थानीय प्रतिलिपि बनाता है, इसलिए आपको कभी भी इस डेटासेट को लपेटना नहीं चाहिए। [EDDTableCopy](#eddtablecopy) ।
-* यह डेटासेट प्रकार एक वैकल्पिक, शायद ही कभी इस्तेमाल किया, विशेष टैग का समर्थन करता है,&lt;विशेष मोड&gt; *मोड* &lt;/specialMode&gt; जिसका उपयोग यह निर्दिष्ट करने के लिए किया जा सकता है कि विशेष, हार्ड-कोडित नियमों का उपयोग यह निर्धारित करने के लिए किया जाना चाहिए कि कौन से फ़ाइलों को सर्वर से डाउनलोड किया जाना चाहिए। वर्तमान में, एकमात्र मान्य *मोड* SAMOS है जो डेटासेट के साथ प्रयोग किया जाता हैhttps://tds.coaps.fsu.edu/thredds/catalog/samosकेवल अंतिम संस्करण संख्या के साथ फ़ाइलों को डाउनलोड करने के लिए।
+* यह डेटासेट प्रकार एक वैकल्पिक, शायद ही कभी इस्तेमाल किया, विशेष टैग का समर्थन करता है,&lt;विशेष मोड&gt; *मोड* &lt;/specialMode&gt; जिसका उपयोग यह निर्दिष्ट करने के लिए किया जा सकता है कि विशेष, हार्ड-कोडित नियमों का उपयोग यह निर्धारित करने के लिए किया जाना चाहिए कि कौन से फ़ाइलों को सर्वर से डाउनलोड किया जाना चाहिए। वर्तमान में, एकमात्र मान्य *मोड* SAMOS है जो डेटासेट के साथ प्रयोग किया जाता है https://tds.coaps.fsu.edu/thredds/catalog/samos केवल अंतिम संस्करण संख्या के साथ फ़ाइलों को डाउनलोड करने के लिए।
 * इस वर्ग के सुपरक्लास को देखें, [EDDTableFromFiles](#eddtablefromfiles) यह कैसे काम करता है और इसका उपयोग कैसे किया जाता है, इस बारे में जानकारी के लिए।
 * 1D, 2D, 3D और 4D उदाहरणों के लिए देखें [EDDTableFromNcFiles](#eddtablefromncfiles) ।
      
@@ -4182,8 +4185,8 @@ The The most of the datasets.xml इस डेटासेट के लिए �
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-स्थानीय मिलान करना sourceUrl   (जैसेhttps://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-जनता में sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) ।
+स्थानीय मिलान करना sourceUrl   (जैसे https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+जनता में sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) ।
 इस टैग के मूल्य में कोई बदलाव अगली बार प्रभावी होगा ERDDAP™ पढ़ना datasets.xml डेटासेट के जवाब में, [झंडा](/docs/server-admin/additional-information#flag) ।
 
 लेकिन, सदस्यता प्रणाली से संबंधित सुरक्षा कारणों और कारणों के लिए, **इस टैग का उपयोग नहीं करें&#33;**   
@@ -4314,7 +4317,7 @@ The The most of the datasets.xml इस डेटासेट के लिए �
     ```
     * आपको पुनरारंभ करने की आवश्यकता नहीं है ERDDAP™ परिवर्तन के लिए&lt;ब्लैकलिस्ट&gt; का अनुरोध करने के लिए। परिवर्तन अगली बार पता लगाया जाएगा ERDDAP™ अगर किसी डेटासेट को फिर से लोड करने की आवश्यकता है, तो चेक करें। या, आप प्रक्रिया को गति दे सकते हैं [सेट ध्वज यूआरएल](/docs/server-admin/additional-information#set-dataset-flag) किसी भी डेटासेट के लिए।
     * आपका ERDDAP™ दैनिक रिपोर्ट में सबसे सक्रिय अनुमति और अवरुद्ध अनुरोधकर्ता की सूची/tally शामिल है।
-    * यदि आप यह जानना चाहते हैं कि डोमेन / संस्था एक संख्यात्मक आईपी पते से संबंधित है, तो आप एक मुफ्त, रिवर्स DNS वेब सेवा जैसे कि उपयोग कर सकते हैं। [https://network-tools.com/](https://network-tools.com/) ।
+    * यदि आप यह जानना चाहते हैं कि डोमेन / संस्था एक संख्यात्मक आईपी पते से संबंधित है, तो आप एक मुफ्त, रिवर्स DNS वेब सेवा जैसे कि उपयोग कर सकते हैं। [ https://network-tools.com/ ](https://network-tools.com/) ।
     * जब कुछ उपयोगकर्ताओं को उच्च स्तर पर ब्लॉक करना पड़ता है, उदाहरण के लिए, दुर्भावनापूर्ण उपयोगकर्ता। उदाहरण के लिए, आप अपने सर्वर पर सब कुछ करने के लिए अपनी पहुँच को अवरुद्ध कर सकते हैं, न केवल ERDDAP । लिनक्स पर, एक ऐसी विधि का उपयोग करना है [आईपीटेबल](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) । उदाहरण के लिए, आप एक नियम जोड़ सकते हैं जो आदेश के साथ 198.51.100.0 से आने वाली सभी चीजों को अवरुद्ध करेगा
 iptables -I INPUT -s 198.51.100.0 -j DROP
        
@@ -4738,17 +4741,17 @@ WARNING: पैलेट्स में सूचीबद्ध datasets.xml �
     * वर्तमान में, EDDGrid उपवर्ग, मेटाडाटा में कोई भी परिवर्तन या अक्ष चर में (उदाहरण के लिए, निकट-वास्तविक समय डेटा के लिए एक नया समय बिंदु) एक बदलाव माना जाता है, लेकिन डेटासेट का पुनः लोड एक बदलाव नहीं माना जाता है (खुद) ।
     * वर्तमान में, EDDTable subclasses के लिए, डेटासेट का कोई भी रीलोडिंग एक बदलाव माना जाता है।
     * वर्तमान में, केवल दो प्रकार के कार्यों की अनुमति है:
-        * "http://"या "https://"-- यदि कार्रवाई शुरू होती है तो "http://"या "https://", ERDDAP™ भेजेगा HTTP GET निर्दिष्ट URL का अनुरोध करें। प्रतिक्रिया को नजरअंदाज कर दिया जाएगा। उदाहरण के लिए, यूआरएल कुछ करने के लिए कुछ अन्य वेब सेवा बता सकता है।
+        * " http://" या " https://" -- यदि कार्रवाई शुरू होती है तो " http://" या " https://" , ERDDAP™ भेजेगा HTTP GET निर्दिष्ट URL का अनुरोध करें। प्रतिक्रिया को नजरअंदाज कर दिया जाएगा। उदाहरण के लिए, यूआरएल कुछ करने के लिए कुछ अन्य वेब सेवा बता सकता है।
             * यदि URL में क्वेरी पार्ट है (" के बाद?) , यह पहले से ही होना चाहिए [प्रतिशत encoded](https://en.wikipedia.org/wiki/Percent-encoding) । आपको बाधाओं में विशेष वर्णों को कोडित करने की आवश्यकता है (प्रारंभिक '&' और मुख्य के अलावा '=' बाधाओं में) %HHH के रूप में, जहां HH चरित्र का 2 अंक hexadecimal मान है। आमतौर पर, आपको बस कुछ punctuation अक्षरों को बदलने की आवश्यकता होती है: % में %25, और %26 में, "%22 में,&lt;%3C में =%3D में&gt;%3E में +%2B में, | %7C में \\[ %5B में \\] %5D में,%20 में अंतरिक्ष, और # 127 से ऊपर के सभी पात्रों को अपने UTF-8 फॉर्म में परिवर्तित करें और फिर %HH प्रारूप में UTF-8 फॉर्म के प्रत्येक बाइट को कोडित करें। (मदद के लिए प्रोग्रामर से पूछें) ।
 उदाहरण के लिए, & stationID &gt;="41004"
 बन गया stationID %3E =%2241004%22
 जब आप एक्सेस करते हैं तो पर्सेंट एन्कोडिंग की आवश्यकता होती है ERDDAP एक ब्राउज़र के अलावा अन्य सॉफ्टवेयर के माध्यम से। ब्राउज़र आमतौर पर आपके लिए प्रतिशत एन्कोडिंग संभालते हैं।
 कुछ स्थितियों में, आपको A-Za-z0-9\\_-&#33; ' () \\*, लेकिन अभी भी प्रारंभिक '&' या मुख्य कोड नहीं है '=' बाधाओं में।
-प्रोग्रामिंग भाषाओं में ऐसा करने के लिए उपकरण हैं (उदाहरण के लिए, देखें Java ' [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) और Java स्क्रिप्टencodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) और वहाँ रहे हैं
+प्रोग्रामिंग भाषाओं में ऐसा करने के लिए उपकरण हैं (उदाहरण के लिए, देखें Java ' [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) और Java स्क्रिप्टencodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) और वहाँ रहे हैं
                  [उन वेबसाइटों के लिए जो आपके लिए प्रतिशत एनकोड / डीकोड करते हैं](https://www.url-encode-decode.com/) ।
             * चूंकि datasets.xml एक XML फ़ाइल है, आप MUST भी और सभी '&', '&lt;यूआरएल में '&amp;', '&lt;',' और '&gt;' प्रतिशत एन्कोडिंग के बाद।
             * उदाहरण: एक URL के लिए जिसे आप ब्राउज़र में टाइप कर सकते हैं:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 आपको निर्दिष्ट करना चाहिए&lt;OnChange&gt; द्वारा टैग (एक पंक्ति पर) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ WARNING: पैलेट्स में सूचीबद्ध datasets.xml �
     * A sourceUrl शुरू हो सकता है http:// , https:// , ftp://, और शायद अन्य उपसर्ग. https यह सुनिश्चित करने के लिए कि स्रोत कौन है, वे कहते हैं कि वे हैं, यह सुनिश्चित करने के लिए स्रोत के डिजिटल प्रमाण पत्र को पढ़ने और जांचें। दुर्लभ मामलों में, यह जांच त्रुटि "javax.net.ssl.SSLProtocolException: handhake चेतावनी: unrecognized \\_name" के साथ विफल हो सकता है। यह शायद प्रमाण पत्र पर डोमेन नाम के कारण होता है कि आप जिस डोमेन नाम का उपयोग कर रहे हैं उसे मेल नहीं खाता है। आप कर सकते हैं और विवरण पढ़ना चाहिए sourceUrl अपने वेब ब्राउज़र में प्रमाण पत्र, विशेष रूप से, "Subject वैकल्पिक नाम" अनुभाग में "डीएनएस नाम" की सूची।
         
 कुछ मामलों में, sourceUrl आप उपयोग कर रहे हैं, प्रमाण पत्र पर डोमेन नाम का उपनाम हो सकता है। उदाहरण के लिए,
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/इस त्रुटि को फेंक देगा, लेकिन
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/, जो प्रमाण पत्र पर डोमेन नाम का उपयोग करता है, नहीं जीता। इन मामलों में समाधान इसलिए प्रमाण पत्र पर डोमेन नाम को ढूंढना और उसका उपयोग करना है। यदि आप इसे प्रमाण पत्र पर नहीं पा सकते हैं, तो डेटा प्रदाता से संपर्क करें।
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ इस त्रुटि को फेंक देगा, लेकिन
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ , जो प्रमाण पत्र पर डोमेन नाम का उपयोग करता है, नहीं जीता। इन मामलों में समाधान इसलिए प्रमाण पत्र पर डोमेन नाम को ढूंढना और उसका उपयोग करना है। यदि आप इसे प्रमाण पत्र पर नहीं पा सकते हैं, तो डेटा प्रदाता से संपर्क करें।
         
 अन्य मामलों में, प्रमाणपत्र पर डोमेन नाम नाम नामों के एक समूह के लिए हो सकता है। यदि ऐसा होता है या समस्या अन्यथा असंभव है, तो कृपया क्रिस को ईमेल करें। जॉन noaa.gov पर समस्या की रिपोर्ट करने के लिए।
          
@@ -5221,7 +5224,7 @@ MUST सूची में Cf \\_role = प्रोफाइल \\_id चर �
 जब आप एक्सेस करते हैं तो पर्सेंट एन्कोडिंग की आवश्यकता होती है ERDDAP एक ब्राउज़र के अलावा अन्य सॉफ्टवेयर के माध्यम से। ब्राउज़र आमतौर पर आपके लिए प्रतिशत एन्कोडिंग संभालते हैं।
 कुछ स्थितियों में, आपको A-Za-z0-9\\_-&#33; ' () \\*, लेकिन अभी भी प्रारंभिक '&' या मुख्य कोड नहीं है '=' ।
 प्रोग्रामिंग भाषाओं में ऐसा करने के लिए उपकरण हैं (उदाहरण के लिए, देखें Java ' [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-और Java स्क्रिप्टencodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) और वहाँ रहे हैं
+और Java स्क्रिप्टencodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) और वहाँ रहे हैं
          [उन वेबसाइटों के लिए जो आपके लिए प्रतिशत एनकोड / डीकोड करते हैं](https://www.url-encode-decode.com/) ।
     * चूंकि datasets.xml एक XML फ़ाइल है, आप MUST भी और सभी '&', '&lt;यूआरएल में '&amp;', '&lt;',' और '&gt;' प्रतिशत एन्कोडिंग के बाद।
     *    infoUrl इसके लिए अद्वितीय है ERDDAP । यह किसी भी मेटाडाटा मानक से नहीं है।
@@ -5257,7 +5260,28 @@ MUST सूची में Cf \\_role = प्रोफाइल \\_id चर �
     ```
     * यदि \\[ मानक \\] " विशेषता मान में होता है, इसे मानक द्वारा प्रतिस्थापित किया जाएगा ERDDAP™ लाइसेंस&lt;StandardLicense ERDDAP '
          \\[ tomcat \\] / webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/message.xml फ़ाइल.
-         
+
+###### वर्गीकरण{#classification} 
+*    [ **वर्गीकरण** ](#classification) डेटा का वर्गीकरण स्तर।
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * स्वीकार्य मान _unclassified_, _confidential_, _restricted_, _secret_, या _top_secret_
+
+###### विषय_श्रेणी{#topic_category} 
+*    [ **विषय_श्रेणी** ](#topic_category) उपलब्ध भौगोलिक डेटा सेटों के समूहीकरण और खोज में सहायता के लिए उच्च स्तरीय भौगोलिक डेटा विषयगत वर्गीकरण।
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * स्वीकार्य मान हैं _बायोटा_, _बाउंड्री_, _climatology_meteorology_atomosphere_, _economy_, _levit_, _environment_, _farming_, _geoscientific_information_, _health_, _imagery_base_maps_earth_cover_, _inland_waters_, _intelligence_military_, _location_, _oceans_, _planning_cadastre_, _society_, _structure_, _transporation_, _utlity_communication_________________________________________________________________________________________________________________
+
+###### रखरखाव_आवृत्ति{#maintenance_frequency} 
+*    [ **रखरखाव_आवृत्ति** ](#maintenance_frequency) आवृत्ति जिसके साथ संशोधन और विलोपन पहले उत्पन्न होने के बाद डेटा में किए जाते हैं।
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * स्वीकार्य मान स्वीकार्य मान हैं _nnually_______________________________________________________________________________
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) पुराना [ACDD 1.0](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (जिसे पहचाना गया था Metadata\\_Conventions जैसा कि " Unidata Dataset डिस्कवरी v1.0) मेटाडाटा मानक। विशेषता मान इस डेटासेट द्वारा उपयोग किए जाने वाले मेटाडाटा सम्मेलनों की एक कॉमा-सेपरेटेड सूची थी।
 यदि कोई डेटासेट ACDD 1.0 का उपयोग करता है, तो यह विशेषता STRONGLY RECOMMENDED है, उदाहरण के लिए,
@@ -5389,7 +5413,7 @@ The The most of the testOutOfDate मूल्य में एक स्तं�
 यदि सूचकांक है&lt;=1, डेटासेट को आउट-ऑफ-डेट माना जाता है।
 यदि सूचकांक है&lt;=2, डेटासेट को बहुत पुराना माना जाता है।
     
-The The most of the testOutOfDate मूल्य का भी उपयोग किया जाता है ERDDAP™ उत्पन्न करने के लिएhttps://*yourDomain*/erddap/outOfDateDatasets.htmlवेब पेज ( [उदाहरण](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) जो डेटासेट दिखाता है&lt; testOutOfDate &gt; टैग, डेटासेट के साथ यह बताया गया है कि वे किस तरह हैं। यदि आप फ़ाइल प्रकार बदल जाते हैं (HTML से .csv तक, .jsonlCSV , .nc , .tsv ...) , आप विभिन्न फ़ाइल स्वरूपों में उस जानकारी प्राप्त कर सकते हैं।
+The The most of the testOutOfDate मूल्य का भी उपयोग किया जाता है ERDDAP™ उत्पन्न करने के लिए https://*yourDomain*/erddap/outOfDateDatasets.html वेब पेज ( [उदाहरण](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) जो डेटासेट दिखाता है&lt; testOutOfDate &gt; टैग, डेटासेट के साथ यह बताया गया है कि वे किस तरह हैं। यदि आप फ़ाइल प्रकार बदल जाते हैं (HTML से .csv तक, .jsonlCSV , .nc , .tsv ...) , आप विभिन्न फ़ाइल स्वरूपों में उस जानकारी प्राप्त कर सकते हैं।
     
 जब संभव हो, [जनरेट DatasetXml](#generatedatasetsxml) जोड़ना testOutOfDate वैश्विक विशेषता addAttributes डेटासेट का। यह मान एक सुझाव है जो जनरेटडाटासेटएक्सएमएल को उपलब्ध सूचना पर आधारित है। यदि मूल्य उचित नहीं है, तो इसे बदल दें।
     
@@ -5948,8 +5972,8 @@ UnpackedValue = पैक मान scale\\_factor + add\\_offset
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone द्वारा उपयोग की जाने वाली एक वैकल्पिक विशेषता है ERDDAP™   (कोई मेटाडाटा मानकों) के लिए [समय और समय-समय परिवर्तनशील](#time-units) , जो ग्रिड डेटासेट या सारणीबद्ध डेटासेट में हो सकता है।
     * डिफ़ॉल्ट " है Zulu " (जो GMT का आधुनिक समय क्षेत्र संस्करण है) ।
-    * पृष्ठभूमि की जानकारी: "टाइम ऑफ़सेट" (उदाहरण के लिए, प्रशांत मानक समय, -08:00, GMT-8) निर्धारित, विशिष्ट, ऑफसेट के सापेक्ष हैं Zulu   (GMT) । इसके विपरीत, "टाइम जोन" डेलाइट सेविंग से प्रभावित होने वाली अधिक जटिल चीजें हैं (उदाहरण के लिए, "यूएस / प्रशांत") अलग-अलग स्थानों पर अलग-अलग नियमों का पालन किया जाता है। समय क्षेत्र हमेशा नाम होते हैं क्योंकि उन्हें एक सरल ऑफसेट मान द्वारा संक्षेपित नहीं किया जा सकता है (तालिका में "TZ डेटाबेस नाम" कॉलम देखें [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) । ERDDAP ' time\\_zone विशेषता आपको कुछ समय क्षेत्र से स्थानीय समय डेटा से निपटने में मदद करती है (उदाहरण के लिए, 1987-03-25T17:32:05 प्रशांत समय) । यदि आपके पास स्ट्रिंग या संख्यात्मक समय डेटा है, तो एक साथ (निर्धारित) टाइम ऑफ़सेट, आपको बस डेटा को समायोजित करना चाहिए Zulu   (क्या है ERDDAP™ करना) इकाई विशेषता में एक अलग आधार समय निर्दिष्ट करके (उदाहरण के लिए, " 1970-01-01T08:00:00Z के बाद से घंटे", टाइम ऑफ़सेट को निर्दिष्ट करने के लिए T08 को नोट करें) यह सुनिश्चित करने के लिए कि आप चाहते हैं कि परिणाम प्राप्त करें।
-    * स्ट्रिंग्स से स्रोत डेटा के साथ टाइमस्टैम्प चर के लिए, यह विशेषता आपको एक समय क्षेत्र निर्दिष्ट करने देता है जो लीड करता है ERDDAP™ स्थानीय समय क्षेत्र के स्रोत समय को परिवर्तित करने के लिए (कुछ मानक समय में, कुछ डेलाइट सेविंग टाइम में) में Zulu बार (जो हमेशा मानक समय में होते हैं) । मान्य समय क्षेत्र नामों की सूची शायद TZ कॉलम में सूची के समान है। [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) । आम अमेरिकी समय क्षेत्र हैं: US / Hawaii, US / Alaska, US / Pacific, US / Mountain, US / Arizona, US / Central, US / Eastern.
+    * पृष्ठभूमि की जानकारी: "टाइम ऑफ़सेट" (उदाहरण के लिए, प्रशांत मानक समय, -08:00, GMT-8) निर्धारित, विशिष्ट, ऑफसेट के सापेक्ष हैं Zulu   (GMT) । इसके विपरीत, "टाइम जोन" डेलाइट सेविंग से प्रभावित होने वाली अधिक जटिल चीजें हैं (उदाहरण के लिए, "यूएस / प्रशांत") अलग-अलग स्थानों पर अलग-अलग नियमों का पालन किया जाता है। समय क्षेत्र हमेशा नाम होते हैं क्योंकि उन्हें एक सरल ऑफसेट मान द्वारा संक्षेपित नहीं किया जा सकता है (तालिका में "TZ डेटाबेस नाम" कॉलम देखें [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) । ERDDAP ' time\\_zone विशेषता आपको कुछ समय क्षेत्र से स्थानीय समय डेटा से निपटने में मदद करती है (उदाहरण के लिए, 1987-03-25T17:32:05 प्रशांत समय) । यदि आपके पास स्ट्रिंग या संख्यात्मक समय डेटा है, तो एक साथ (निर्धारित) टाइम ऑफ़सेट, आपको बस डेटा को समायोजित करना चाहिए Zulu   (क्या है ERDDAP™ करना) इकाई विशेषता में एक अलग आधार समय निर्दिष्ट करके (उदाहरण के लिए, " 1970-01-01T08:00:00Z के बाद से घंटे", टाइम ऑफ़सेट को निर्दिष्ट करने के लिए T08 को नोट करें) यह सुनिश्चित करने के लिए कि आप चाहते हैं कि परिणाम प्राप्त करें।
+    * स्ट्रिंग्स से स्रोत डेटा के साथ टाइमस्टैम्प चर के लिए, यह विशेषता आपको एक समय क्षेत्र निर्दिष्ट करने देता है जो लीड करता है ERDDAP™ स्थानीय समय क्षेत्र के स्रोत समय को परिवर्तित करने के लिए (कुछ मानक समय में, कुछ डेलाइट सेविंग टाइम में) में Zulu बार (जो हमेशा मानक समय में होते हैं) । मान्य समय क्षेत्र नामों की सूची शायद TZ कॉलम में सूची के समान है। [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) । आम अमेरिकी समय क्षेत्र हैं: US / Hawaii, US / Alaska, US / Pacific, US / Mountain, US / Arizona, US / Central, US / Eastern.
     * न्यूमेरिक स्रोत डेटा के साथ टाइमस्टैम्प चर के लिए, आप निर्दिष्ट कर सकते हैं " time\\_zone " विशेषता, लेकिन मान होना चाहिए " Zulu यूटीसी यदि आपको अन्य समय क्षेत्रों के लिए समर्थन की आवश्यकता है, तो कृपया क्रिस को ईमेल करें। जॉन at noaa.gov.
          
 ###### legacy_time_adjust{#legacy_time_adjust} 

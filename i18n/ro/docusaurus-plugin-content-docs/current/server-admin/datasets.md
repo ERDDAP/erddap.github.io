@@ -42,7 +42,7 @@ Când un furnizor de date vine la tine în speranța de a adăuga unele date la 
 Prezentarea de fișiere de date reale din surse externe este un risc imens de securitate, astfel încât ERDDAP™ nu se ocupă cu asta. Trebuie să găsiți o soluție care funcționează pentru dvs. și furnizorul de date, de exemplu, e-mail (pentru fișiere mici) , trage din nor (de exemplu, DropBox sau Google Drive) , un site sftp (cu parole) , sau adidași Net (un hard disk USB sau un hard disk extern) . Probabil că ar trebui să accepţi doar dosarele celor pe care îi cunoşti. Va trebui să scanați fișierele pentru viruși și să luați alte măsuri de precauție de securitate.
 
 Nu există nicio legătură. ERDDAP™ la forma furnizorului de date (de exemplu, pe ERDDAP™ pagina de start) . În schimb, atunci când cineva vă spune că doresc să aibă datele lor deservite de dvs. ERDDAP , le puteți trimite un e-mail spunând ceva de genul:
-Da, putem obține datele dumneavoastră în ERDDAP . Pentru a începe, vă rugăm să completați formularul lahttps://*yourUrl*/erddap/dataProviderForm.html  (sau http:// dacă https:// nu este activat) .
+Da, putem obține datele dumneavoastră în ERDDAP . Pentru a începe, vă rugăm să completați formularul la https://*yourUrl*/erddap/dataProviderForm.html   (sau http:// dacă https:// nu este activat) .
 După ce termini, te voi contacta pentru a stabili detaliile finale.
 Dacă vrei doar să te uiţi la formular (fără a completa) , puteți vedea formularul pe ERD 's ERDDAP : [Introducere](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) , [Partea 1](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) , [Partea 2](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) , [Partea 3](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) , și [Partea 4](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) . Aceste link-uri pe ERD   ERDDAP™ trimite-mi informaţii, nu tu, aşa că nu trimite informaţii cu ei decât dacă vrei să adaugi date ERD   ERDDAP .
 
@@ -190,23 +190,23 @@ Acest Tip EDD generează toate datasets.xml bucăți necesare pentru a face [Tab
      
 #####  EDDGrid De la ThreddsCatalog{#eddgridfromthreddscatalog} 
 Acest Tip EDD generează toate datasets.xml bucăți necesare pentru toate [ EDDGrid FromDap](#eddgridfromdap) seturi de date pe care le poate găsi târându-se recursiv printr-un THREDS (sub) catalog. Există multe forme de URL-uri catalog THREDS. Această opțiune REquires a THREDS .xml URL cu /catalog / în ea, de exemplu,
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xmlsau
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml sau
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (un catalog legat de .html este la
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html, care nu este acceptabil pentru EDDGrid FromThreddsCatalog).
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html , care nu este acceptabil pentru EDDGrid FromThreddsCatalog).
 Dacă aveţi probleme cu EDDGrid Din trei mii Catalog:
 * Asigurați-vă că URL-ul pe care îl utilizați este valid, include /catalog/, și se termină cu /catalog.xml .
-* Dacă este posibil, utilizați o adresă IP publică (de exemplu,https://oceanwatch.pfeg.noaa.gov) în URL, nu o adresă locală numerică IP (de exemplu,https://12.34.56.78) . Dacă THREDDS este accesibil numai prin intermediul adresei IP numerice locale, puteți utiliza [&lt;Traducerea şi adaptarea: (#convertto publicsourceurl) Deci... ERDDAP™ utilizatorii văd adresa publică, chiar dacă ERDDAP™ Obţine date de la adresa numerică locală.
+* Dacă este posibil, utilizați o adresă IP publică (de exemplu, https://oceanwatch.pfeg.noaa.gov ) în URL, nu o adresă locală numerică IP (de exemplu, https://12.34.56.78 ) . Dacă THREDDS este accesibil numai prin intermediul adresei IP numerice locale, puteți utiliza [&lt;Traducerea şi adaptarea: (#convertto publicsourceurl) Deci... ERDDAP™ utilizatorii văd adresa publică, chiar dacă ERDDAP™ Obţine date de la adresa numerică locală.
 * Dacă ai probleme pe care nu le poţi rezolva, [Verificați vârfurile de depanare](#troubleshooting-tips) .
 * Codul de nivel scăzut pentru acest lucru folosește acum Unidata cod netcdf-java catalog crawler (Trei. clase de catalog) astfel încât să se poată ocupa de toate cataloagele TREDDS (care poate fi surprinzător de complex) Mulţumită Unidata pentru acel cod.
          
 #####  EDDGrid LonPM180FromErddapCatalog{#eddgridlonpm180fromerddapcatalog} 
 Acest Tip EDD generează datasets.xml pentru a face [ EDDGrid LonPM180](#eddgridlonpm180) seturi de date din toate EDDGrid Seturi de date într-un ERDDAP care au valori de longitudine mai mari de 180.
-* Dacă este posibil, utilizați o adresă IP publică (de exemplu,https://oceanwatch.pfeg.noaa.gov) în URL, nu o adresă locală numerică IP (de exemplu,https://12.34.56.78) . Dacă ERDDAP™ este accesibil numai prin intermediul adresei IP numerice locale, puteți utiliza [&lt;Traducerea şi adaptarea: (#convertto publicsourceurl) Deci... ERDDAP™ utilizatorii văd adresa publică, chiar dacă ERDDAP™ Obţine date de la adresa numerică locală.
+* Dacă este posibil, utilizați o adresă IP publică (de exemplu, https://oceanwatch.pfeg.noaa.gov ) în URL, nu o adresă locală numerică IP (de exemplu, https://12.34.56.78 ) . Dacă ERDDAP™ este accesibil numai prin intermediul adresei IP numerice locale, puteți utiliza [&lt;Traducerea şi adaptarea: (#convertto publicsourceurl) Deci... ERDDAP™ utilizatorii văd adresa publică, chiar dacă ERDDAP™ Obţine date de la adresa numerică locală.
          
 #####  EDDGrid Lon0360FromErddapCatalog{#eddgridlon0360fromerddapcatalog} 
 Acest Tip EDD generează datasets.xml pentru a face [ EDDGrid Lon0360](#eddgridlon0360) seturi de date din toate EDDGrid Seturi de date într-un ERDDAP care au valori de longitudine mai mici de 0.
-* Dacă este posibil, utilizați o adresă IP publică (de exemplu,https://oceanwatch.pfeg.noaa.gov) în URL, nu o adresă locală numerică IP (de exemplu,https://12.34.56.78) . Dacă ERDDAP™ este accesibil numai prin intermediul adresei IP numerice locale, puteți utiliza [&lt;Traducerea şi adaptarea: (#convertto publicsourceurl) Deci... ERDDAP™ utilizatorii văd adresa publică, chiar dacă ERDDAP™ Obţine date de la adresa numerică locală.
+* Dacă este posibil, utilizați o adresă IP publică (de exemplu, https://oceanwatch.pfeg.noaa.gov ) în URL, nu o adresă locală numerică IP (de exemplu, https://12.34.56.78 ) . Dacă ERDDAP™ este accesibil numai prin intermediul adresei IP numerice locale, puteți utiliza [&lt;Traducerea şi adaptarea: (#convertto publicsourceurl) Deci... ERDDAP™ utilizatorii văd adresa publică, chiar dacă ERDDAP™ Obţine date de la adresa numerică locală.
          
 ##### EDD din dosare{#eddsfromfiles} 
 Având în vedere un director de pornire, acest lucru traversează directorul și toate subdirectoarele și încearcă să creeze un set de date pentru fiecare grup de fișiere de date pe care le găsește.
@@ -566,7 +566,7 @@ Fișierele NCCSV 1.0 nu suportă niciun tip de date întregi nesemnate.
 ### Tip de date Comentarii{#data-type-comments} 
 * Din cauza suportului slab pentru date de lungă durată, ulong și char în multe tipuri de fișiere, descurajăm utilizarea acestor tipuri de date în ERDDAP . Când este posibil, utilizați dublu în loc de lung și lung, și utilizați String în loc de char.
      
-* Metadate - Deoarece(OPeN)DAPrăspunsurile .das și .dds nu susțin atribute lungi sau lungi sau tipuri de date (şi în loc să le arate ca dublu) , ați putea dori în schimb să utilizați ERDDAP Reprezentarea tabelară a metadatelor, așa cum se vede în http .../erddap/ **info** / * datasetID * Pagina web .html (de exemplu, [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (pe care le puteți obține și în alte tipuri de fișiere, de exemplu, .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) sau .nccsv Răspunsul la metadate (de exemplu, [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) de .nccsv Metadatele sunt disponibile numai pentru seturile de date tabulare) , ambele dintre care sprijină toate tipurile de date (în special, lung, lung și Char) .
+* Metadate - Deoarece(OPeN)DAPrăspunsurile .das și .dds nu susțin atribute lungi sau lungi sau tipuri de date (şi în loc să le arate ca dublu) , ați putea dori în schimb să utilizați ERDDAP Reprezentarea tabelară a metadatelor, așa cum se vede în http .../erddap/ **info** / * datasetID * Pagina web .html (de exemplu, [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (pe care le puteți obține și în alte tipuri de fișiere, de exemplu, .csv, .htmlTable , .itx , .json , .jsonlCSV1 , .jsonlCSV , .jsonlKVP , .mat , .nc , .nccsv , .tsv , .xhtml ) sau .nccsv Răspunsul la metadate (de exemplu, [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) de .nccsv Metadatele sunt disponibile numai pentru seturile de date tabulare) , ambele dintre care sprijină toate tipurile de date (în special, lung, lung și Char) .
          
 ### Fișiere media{#media-files} 
 Nu toate datele sunt array-uri de numere sau text. Unele seturi de date constau în sau includ fișiere media, cum ar fi imagini, fișiere audio și video. ERDDAP™ are unele caracteristici speciale pentru a facilita accesul utilizatorilor la fișiere media. E un proces în două etape:
@@ -604,7 +604,7 @@ Sau, dacă un utilizator face clic pe numele de fișier afișat pe un ERDDAP™ 
 ### Lucrul cu fișiere AWS S3{#working-with-aws-s3-files} 
  [Amazon Web Service (AWS) ](https://aws.amazon.com) este un vânzător de [cloud computing](https://en.wikipedia.org/wiki/Cloud_computing) Servicii. [S3](https://aws.amazon.com/s3/) este un sistem de stocare a obiectelor oferit de AWS. În locul sistemului ierarhic de directoare și fișiere ale unui sistem tradițional de fișiere (ca un hard disk în PC-ul tău) , S3 oferă doar "buchete" care dețin "obiecte" (Îi vom suna. "files" ) .
 
-Pentru fișierele ASCII (de exemplu, .csv.) , ERDDAP™ poate lucra cu fișierele în găleți direct. Singurul lucru pe care trebuie să faci este să specifice&lt;fileDir&gt; pentru setul de date utilizând un format specific pentru găleata AWS, de exemplu,https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/. Nu trebuie să utilizaţi&lt;Cache FromUrl&gt;. A se vedea mai jos pentru detalii.
+Pentru fișierele ASCII (de exemplu, .csv.) , ERDDAP™ poate lucra cu fișierele în găleți direct. Singurul lucru pe care trebuie să faci este să specifice&lt;fileDir&gt; pentru setul de date utilizând un format specific pentru găleata AWS, de exemplu, https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ . Nu trebuie să utilizaţi&lt;Cache FromUrl&gt;. A se vedea mai jos pentru detalii.
 
 Dar pentru fișiere binare (de exemplu, .nc ,.grib,.bufr, și .hdf fișiere) , trebuie să utilizați&lt;CacheFromUrl&gt; sistem descris mai jos. ERDDAP , netcdf-java (care ERDDAP™ folosește pentru a citi date din aceste fișiere) , și alte software-ul de date științifice sunt concepute pentru a lucra cu fișiere într-un sistem tradițional de fișiere care oferă [nivel bloc](https://en.wikipedia.org/wiki/Block-level_storage) acces la fișiere (care permite citirea bucăților unui fișier) , dar S3 oferă doar [nivel fișier (obiect) ](https://en.wikipedia.org/wiki/Block-level_storage) acces la fișiere (care permite numai citirea întregului fișier) . AWS oferă o alternativă la S3, [Magazin Elastic Block (EBS) ](https://aws.amazon.com/ebs/) ), care susține accesul la nivel bloc la fișiere, dar este mai scump decât S3, astfel încât este rar utilizat pentru stocarea în vrac a unor cantități mari de fișiere de date. (Deci, atunci când oamenii spun stocarea datelor în nor (S3) este ieftin, este, de obicei, o comparație mere la portocale.) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 URl corespunzătoare pentru acel obiect este
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 AWS suportă o mică variație în modul în care URL-ul este construit, dar ERDDAP™ necesită acest format specific:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 Ca de ERDDAP v2.29, puteți utiliza acum `s3://` Format URI în loc de URL-ul găleată. Acesta este formatul utilizat de [AWS s3 cli](https://docs.aws.amazon.com/cli/latest/reference/s3/) .
 s3:// *nume găleată* / *cheie* 
@@ -697,22 +697,22 @@ Pentru o găleată de date S3, proprietarul găleţii trebuie să vă dea acces 
 În toate cazurile, veți avea nevoie de un cont AWS deoarece AWS SDK pentru Java   (care ERDDAP™ folosește pentru a prelua informații despre conținutul unei găleți) necesită acreditarea contului AWS. (mai multe pe aceasta mai jos) 
 
  ERDDAP™ poate accesa găleți AWS S3 numai dacă specificați [&lt;CacheFromUrl&gt;] (#cachefromurl) (sau&lt;fileDir&gt;) într-un format specific:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 unde
 
 * Numele găleții este forma scurtă a numelui găleții, de exemplu noa-goes17.
 * Regiunea-aws, de exemplu, ne-est-1, este din coloana "Region" într-una din tabelele de [Puncte finale ale serviciului AWS](https://docs.aws.amazon.com/general/latest/gr/rande.html) unde se află găleata.
 * Prefixul este opţional. Dacă este prezent, trebuie să se termine cu '/' .
 
-De exemplu,https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+De exemplu, https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 Acest format URL este una dintre recomandările AWS S3: a se vedea [Accesarea unei găleţi](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) şi [această descriere a prefixelor](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) . ERDDAP™ cere să combinaţi URL- ul găleată şi prefixul opţional într-un URL pentru a specifica&lt;CacheFromUrl&gt; (sau&lt;fileDir&gt;) în cazul în care fișierele sunt situate.
 
 #### Testați găleți AWS S3{#test-public-aws-s3-buckets} 
 Pentru găleți publice, puteți și ar trebui să testați URL-ul găleții din directorul AWS S3 din browser, de exemplu,
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) Dacă URL-ul găleată este corect și adecvat pentru ERDDAP , va returna un document XML care are (parţial) lista conţinutului găleţii. Din păcate, URL-ul complet (Adică URL- ul găleții plus prefix) că ERDDAP™ nu funcţionează într-un browser. AWS nu oferă un sistem pentru a naviga ierarhia unei găleți ușor în browser. (Dacă nu e corect, trimite-i un e-mail lui Chris. John la Noaa.gov. În caz contrar, Amazon, vă rugăm să adăugați sprijin pentru acest lucru&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) Dacă URL-ul găleată este corect și adecvat pentru ERDDAP , va returna un document XML care are (parţial) lista conţinutului găleţii. Din păcate, URL-ul complet (Adică URL- ul găleții plus prefix) că ERDDAP™ nu funcţionează într-un browser. AWS nu oferă un sistem pentru a naviga ierarhia unei găleți ușor în browser. (Dacă nu e corect, trimite-i un e-mail lui Chris. John la Noaa.gov. În caz contrar, Amazon, vă rugăm să adăugați sprijin pentru acest lucru&#33;) 
 
 #### Vizualizarea conţinutului unei găleţi{#viewing-the-contents-of-a-bucket} 
-Găleți S3 conțin adesea câteva categorii de fișiere, într-un cuplu de subdirecții pseudo, care ar putea deveni un cuplu de ERDDAP™ Seturi de date. Pentru a face ERDDAP™ Seturi de date, trebuie să știți directorul de pornire pentru&lt;CacheFromUrl&gt; (sau&lt;fileDir&gt;) și formatul numelor fișierelor care identifică acel subset de fișiere. Dacă încercați să vizualizați întregul conținut al unei găleți într-un browser, S3 vă va arăta doar primele 1000 de fișiere, ceea ce este insuficient. În prezent, cel mai bun mod pentru tine de a vedea tot conținutul unei găleți este de a face o [Tabel EDDFromFileNames](#eddtablefromfilenames) Set de date (pe PC-uri ERDDAP™ și/sau pe publicul dumneavoastră ERDDAP ) , care vă oferă, de asemenea, o modalitate ușoară de a naviga structura director și de a descărca fișiere. ă&lt;fileDir&gt; for that will be the URL you made above, ex.,https://noaa-goes17.s3.us-east-1.amazonaws.com. \\[ De ce AWS S3 nu oferă o modalitate rapidă și ușoară pentru oricine să facă acest lucru fără un cont AWS? \\] Rețineți că atunci când fac acest lucru pe PC-ul meu pe o rețea non-Amazon, se pare că Amazon încetinește răspunsul la un firicel (aproximativ 100 (?) fișiere pe bucată) după primele câteva bucăți (din 1000 de fișiere pe bucată) sunt descărcate. Deoarece gălețile pot avea un număr mare de fișiere (noaa-goes17 are 26 de milioane) , obtinerea tot continutul unei galeti poate lua EDDtableFromFileNames câteva ore (De exemplu, 12&#33;) pentru a termina. \\[ Amazon, nu-i aşa?&#33; \\] 
+Găleți S3 conțin adesea câteva categorii de fișiere, într-un cuplu de subdirecții pseudo, care ar putea deveni un cuplu de ERDDAP™ Seturi de date. Pentru a face ERDDAP™ Seturi de date, trebuie să știți directorul de pornire pentru&lt;CacheFromUrl&gt; (sau&lt;fileDir&gt;) și formatul numelor fișierelor care identifică acel subset de fișiere. Dacă încercați să vizualizați întregul conținut al unei găleți într-un browser, S3 vă va arăta doar primele 1000 de fișiere, ceea ce este insuficient. În prezent, cel mai bun mod pentru tine de a vedea tot conținutul unei găleți este de a face o [Tabel EDDFromFileNames](#eddtablefromfilenames) Set de date (pe PC-uri ERDDAP™ și/sau pe publicul dumneavoastră ERDDAP ) , care vă oferă, de asemenea, o modalitate ușoară de a naviga structura director și de a descărca fișiere. ă&lt;fileDir&gt; for that will be the URL you made above, ex., https://noaa-goes17.s3.us-east-1.amazonaws.com . \\[ De ce AWS S3 nu oferă o modalitate rapidă și ușoară pentru oricine să facă acest lucru fără un cont AWS? \\] Rețineți că atunci când fac acest lucru pe PC-ul meu pe o rețea non-Amazon, se pare că Amazon încetinește răspunsul la un firicel (aproximativ 100 (?) fișiere pe bucată) după primele câteva bucăți (din 1000 de fișiere pe bucată) sunt descărcate. Deoarece gălețile pot avea un număr mare de fișiere (noaa-goes17 are 26 de milioane) , obtinerea tot continutul unei galeti poate lua EDDtableFromFileNames câteva ore (De exemplu, 12&#33;) pentru a termina. \\[ Amazon, nu-i aşa?&#33; \\] 
 
 #### Realizarea unui tabel EDD De la FileNames Dataset cu un AWS S3 Bucket{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 Dacă aveți un nume găleată, dar nu aveți deja o listă de fișiere în găleata S3 sau prefixul care identifică locația fișierelor relevante în găleată, utilizați instrucțiunile de mai jos pentru a face un set de date EDDDe la FileNames astfel încât să puteți naviga în ierarhia directoarelor găleată S3 prin ERDDAP 's "files" sistem.
@@ -727,22 +727,24 @@ Java.lang. Argument ilegal Excepție: fișierul profil nu poate fi o eroare nul�
 Indiciu pentru Linux și Mac OS: fișierul de acreditare trebuie să fie în directorul de origine al utilizatorului care rulează Tomcat (şi ERDDAP )   (pentru acest paragraf, vom presupune utilizator=tomcat) într-un fișier numit ~/.aws/credentials . Nu presupune că ~ este / home/tomcat - de fapt, utilizați cd ~ pentru a afla unde crede sistemul de operare ~ pentru utilizator = Tomcat este. Creează directorul dacă nu există. De asemenea, după ce ați pus fișierul de acreditare în loc, asigurați-vă că utilizatorul și grupul pentru fișier sunt Tomcat și apoi utilizați chmod 400 acreditări pentru a vă asigura că fișierul este citit-doar pentru utilizator=tomcat.
     
 3. Creează URL- ul găleată în [format care ERDDAP™ necesită](#accessing-files-in-an-aws-s3-bucket) , de exemplu,
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) , și (pentru găleți publice) testați-l într-un browser pentru a vă asigura că returnează un document XML care are o listă parțială a conținutului acelei găleți.
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) , și (pentru găleți publice) testați-l într-un browser pentru a vă asigura că returnează un document XML care are o listă parțială a conținutului acelei găleți.
      
 4. Utilizare [GenereazăSeturi de dateXml](#generatedatasetsxml) pentru a crea un [Tabel EDDFromFileNames](#eddtablefromfilenames) Set de date:
     * Pentru directorul de pornire, utilizați această sintaxă:
         \\*\\*\\ *de la OnTheFly,* Bucketurl
 de exemplu,
-        \\*\\*De la OnTheFly,https://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\*De la OnTheFly, https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * Numele fișierului regex? \\*
     * Recursiv? Adevărat.
     * reîncărcare Fiecare NMinutes? 10080
-    *    infoUrl ?https://registry.opendata.aws/noaa-goes/
+    *    infoUrl ? https://registry.opendata.aws/noaa-goes/
+ 
     * Instituţie? NOAA 
     * Un rezumat? Nimic. ( ERDDAP™ va crea automat un rezumat decent.) 
     * Titlul? Nimic. ( ERDDAP™ va crea automat un titlu decent.) Ca de obicei, ar trebui să editați XML-ul rezultat pentru a verifica corectitudinea și a face îmbunătățiri înainte de bucata de seturi de date folosindu-l în datasets.xml .
 5. Dacă urmați instrucțiunile de mai sus și încărcați setul de date în ERDDAP , ați creat un set de date EDD TableFromFiles. Ca un exemplu, și pentru a face mai ușor pentru oricine să navigheze și să descarce fișiere din galețile AWS Open Data, am creat seturi de date EDDTabelFromFileNames (a se vedea lista de la
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) pentru aproape toate [AWS S3 Deschideți gălețile de date](https://registry.opendata.aws/) .
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) ) pentru aproape toate [AWS S3 Deschideți gălețile de date](https://registry.opendata.aws/) .
      \\[ Cele câteva găleți pe care nu le-am inclus fie au un număr mare de fișiere în directorul rădăcină (mai mult decât poate fi descărcat într-un timp rezonabil) , sau nu permit accesul public (Nu ar trebui să fie toate publice?) , sau sunt cereri de plată găleți (De exemplu, Sentinel) . \\]   
 Dacă faceţi clic pe "files" link-ul pentru unul dintre aceste seturi de date, puteți naviga copacul director și fișiere în acea găleată S3. Din cauza drumului\\*\\*\\* De la OnTheFly EDD TableFromFiles works, aceste liste directoare sunt întotdeauna perfect actualizate deoarece ERDDAP™ îi face să zboare. Dacă faceți clic pe arborele director pentru un nume de fișier real și faceți clic pe numele fișierului, ERDDAP™ va redirecționa cererea la AWS S3 astfel încât să puteți descărca fișierul direct de la AWS. Poţi să verifici dosarul.
     
@@ -756,7 +758,7 @@ Este regretabil că AWS nu permite pur și simplu oamenilor să folosească un b
  **Apoi, puteți face ERDDAP™ seturi de date care oferă utilizatorilor acces la datele din fișiere.**   
 Vezi instrucţiunile din [ ERDDAP™ și S3 Buckets](#erddap-and-aws-s3-buckets)   (mai sus) .
 Pentru setul de date EDDtableFromFileNames pe care l-ați făcut mai sus, dacă faceți un pic poking în jurul cu directorul și numele de fișiere în arborele director, devine clar că numele directoarelor de nivel superior (De exemplu, ABI-L1b-RadC) corespunde cu ceea ce ERDDAP™ ar numi seturi de date separate. Găleata cu care lucrezi poate fi similară. Ați putea apoi să creați seturi de date separate în ERDDAP™ pentru fiecare dintre aceste seturi de date, utilizând, de exemplu,
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 ca&lt;Cache FromUrl&gt;. Din păcate, pentru acest exemplu special, seturile de date din găleată toate par a fi de nivel 1 sau de nivel 2, care ERDDAP™   [nu este deosebit de bun la](#dimensions) , deoarece setul de date este o colecție mai complicată de variabile care utilizează diferite dimensiuni.
      
     
@@ -975,7 +977,7 @@ Valorile de dimensiune nesortate indică aproape întotdeauna o problemă cu set
 ###  EDDGrid FromDap{#eddgridfromdap} 
  [ ** EDDGrid FromDap** ](#eddgridfromdap) se ocupă de variabilele rețelei din [ DAP ](https://www.opendap.org/) servere.
 
-* Vă recomandăm cu tărie utilizarea [Generează dateName Programul Xml](#generatedatasetsxml) să facă un proiect dur al datasets.xml bucată pentru acest set de date. Puteți colecta informațiile de care aveți nevoie pentru a modifica că sau de a crea propriul XML pentru o EDDGrid Set de date FromDap prin examinarea fișierelor DDS și DAS ale setului sursă din browser (prin adăugarea .das și .dds la sourceUrl , de exemplu, [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
+* Vă recomandăm cu tărie utilizarea [Generează dateName Programul Xml](#generatedatasetsxml) să facă un proiect dur al datasets.xml bucată pentru acest set de date. Puteți colecta informațiile de care aveți nevoie pentru a modifica că sau de a crea propriul XML pentru o EDDGrid Set de date FromDap prin examinarea fișierelor DDS și DAS ale setului sursă din browser (prin adăugarea .das și .dds la sourceUrl , de exemplu, [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
      
 *    EDDGrid FromDap poate obține date de la orice variabilă multidimensională de la o DAP server de date. (Anterior, EDDGrid Din Dap s-a limitat la variabilele numite "grid," dar asta nu mai este o cerinţă.)   
      
@@ -1335,7 +1337,7 @@ Un exemplu complet de o axisVariable care face un set de date agregat cu o nouă
         </addAttributes>
       </axisVariable>
 ```
-Observați utilizarea grupului de capturare numărul 2 pentru a captura cifrele care apar după 'r' sau 's' și înainte de "\\_global." Acest exemplu arată, de asemenea, cum să adăugați atribute suplimentare (de exemplu, ioos\\_category și unități) la variabila axei.
+Notă privind utilizarea grupului de capturare numărul 2 pentru a captura cifrele care apar după "r" sau "s" și înainte "\\_global" . Acest exemplu arată, de asemenea, cum să adăugați atribute suplimentare (de exemplu, ioos\\_category și unități) la variabila axei.
      
 #### Fișiere comprimate extern{#externally-compressed-files} 
 * Seturi de date care sunt subseturi de EDDGrid Din fişiere şi tabel EDD FromFiles poate servi date direct din fișiere de date externe comprimate, inclusiv .tgz , .tar  .gz , .tar  .gzip , .gz , .gzip , .zip , .bz2 , și fișiere .Z .
@@ -1433,7 +1435,7 @@ Toate EDDGrid Din Dosare și toate seturile de date EDDFromFiles susțin un set 
 În schimb, utilizați [&lt;cacheFromUrl&gt; sistem] (#cachefromurl) .
 
 Accesare ERDDAP™ Seturile de date ca fișiere prin cereri de intervale de octeți -
-Flipping acest lucru în jurul valorii de, având în vedere că puteți (în teorie) Gândiți-vă la un set de date în ERDDAP™ ca un gigant .nc fișier prin adăugare " .nc " la baza OPen DAP URL pentru un set de date dat (de exemplu,https://myserver.org/erddap/griddap/datasetID.ncși, de asemenea, prin adăugarea unui ?query după aceea pentru a specifica un subset) , este probabil rezonabil să întreb dacă puteți utiliza netcdf-java , Ferret , sau alte NetCDF software client pentru a citi datele prin intermediul Solicitări pentru intervalul HTTP ERDDAP . Răspunsul este nu, pentru că nu există într-adevăr un imens " .nc " dosar. Dacă doriți să faceți acest lucru, faceți în schimb una dintre aceste opțiuni:
+Flipping acest lucru în jurul valorii de, având în vedere că puteți (în teorie) Gândiți-vă la un set de date în ERDDAP™ ca un gigant .nc fișier prin adăugare " .nc " la baza OPen DAP URL pentru un set de date dat (de exemplu, https://myserver.org/erddap/griddap/datasetID.nc și, de asemenea, prin adăugarea unui ?query după aceea pentru a specifica un subset) , este probabil rezonabil să întreb dacă puteți utiliza netcdf-java , Ferret , sau alte NetCDF software client pentru a citi datele prin intermediul Solicitări pentru intervalul HTTP ERDDAP . Răspunsul este nu, pentru că nu există într-adevăr un imens " .nc " dosar. Dacă doriți să faceți acest lucru, faceți în schimb una dintre aceste opțiuni:
 
 * Utilizare(OPeN)DAPsoftware client pentru a se conecta la serviciile Griddap oferite de ERDDAP . Asta este ceea ce DAP   (şi astfel ERDDAP ) a fost proiectat pentru. Este foarte eficient.
 * Sau, descărcați fișierul sursă (s) de la "files" sistem (sau un fișier subset prin intermediul a .nc ? interogare) la computer și de a utiliza netcdf-java, Ferret , sau alte NetCDF software client pentru a citi (Acum) fișier local (s) .
@@ -2253,9 +2255,9 @@ ia în considerare stocarea datelor într-o colecție de NetCDF v3 .nc fișiere 
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### Tabel EDD din DapSequence{#eddtablefromdapsequence} 
- [ **Tabel EDD din DapSequence** ](#eddtablefromdapsequence) se ocupă de variabile în cadrul secvențelor 1 și 2 nivele de la [ DAP ](https://www.opendap.org/) servere cum ar fi DAP PER (a fost lahttps://www.pmel.noaa.gov/epic/software/dapper/, acum se întrerupe) .
+ [ **Tabel EDD din DapSequence** ](#eddtablefromdapsequence) se ocupă de variabile în cadrul secvențelor 1 și 2 nivele de la [ DAP ](https://www.opendap.org/) servere cum ar fi DAP PER (a fost la https://www.pmel.noaa.gov/epic/software/dapper/ , acum se întrerupe) .
 
-* Vă recomandăm cu tărie utilizarea [Generează dateName Programul Xml](#generatedatasetsxml) să facă un proiect dur al datasets.xml bucată pentru acest set de date. Puteți apoi edita asta pentru a-l acorda fin. Puteți aduna informațiile de care aveți nevoie uitându-vă la fișierele DDS și DAS ale setului sursă din browser (prin adăugarea de .das și .dds la sourceUrl (un exemplu a fost lahttps://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds).
+* Vă recomandăm cu tărie utilizarea [Generează dateName Programul Xml](#generatedatasetsxml) să facă un proiect dur al datasets.xml bucată pentru acest set de date. Puteți apoi edita asta pentru a-l acorda fin. Puteți aduna informațiile de care aveți nevoie uitându-vă la fișierele DDS și DAS ale setului sursă din browser (prin adăugarea de .das și .dds la sourceUrl (un exemplu a fost la https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds ).
     
 * O variabilă este într- o DAP Secvența în cazul în care răspunsul .dds indică faptul că structura de date care deține variabila este o "secvență" (insensibil la caz) .
 * În unele cazuri, veţi vedea o secvenţă într-o secvenţă, o secvenţă de 2 nivele -- EDDtableFromDapSequence se ocupă şi de acestea.
@@ -2378,15 +2380,15 @@ Generează dateName Xml are trei opțiuni speciale pentru tabelul EDDFromDatabas
 * [JDBC Driver și&lt;driverName&gt;] (#jdbc-driver) -- Trebuie să obțineți JDBC 3 corespunzătoare sau JDBC 4 driver .jar fișier pentru baza de date și
 Pune-l în *Tomcat* /webapps/erddap/WEB-INF/lib după ce instalați ERDDAP . Apoi, în datasets.xml pentru acest set de date, trebuie să specificați&lt;driverName&gt; pentru acest conducător auto, care este (Din păcate) diferit de numele fișierului. Căutați pe web pentru driver-ul JDBC pentru baza de date și driverName care Java trebuie să-l folosească.
     
-    * Pentru MariaDB, încearcă [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * Pentru MariaDB, încearcă [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 ă&lt;Numele conducătorului auto &gt; utilizat în datasets.xml   (vezi mai jos) este probabil org.mariadb.jdbc. Şofer.
-    * Pentru MySQL și Amazon RDS, încercați [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * Pentru MySQL și Amazon RDS, încercați [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 ă&lt;Numele conducătorului auto &gt; utilizat în datasets.xml   (vezi mai jos) este probabil com.mysql.jdbc. Şofer.
-    * Pentru Oracle , incearca [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
+    * Pentru Oracle , incearca [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
 ă&lt;Numele conducătorului auto &gt; utilizat în datasets.xml   (vezi mai jos) este probabil Oracle.jdbc.driver. Oracle Şofer.
-    * Pentru Postgresql, avem şoferul JDBC 4 de la [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * Pentru Postgresql, avem şoferul JDBC 4 de la [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 ă&lt;Numele conducătorului auto &gt; utilizat în datasets.xml   (vezi mai jos) este probabil org.postgresql. Şofer.
-    * Pentru SQL Server, puteți obține driver-ul JTDS JDBC de la [https://jtds.sourceforge.net](https://jtds.sourceforge.net) .
+    * Pentru SQL Server, puteți obține driver-ul JTDS JDBC de la [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) .
 ă&lt;Numele conducătorului auto &gt; utilizat în datasets.xml   (vezi mai jos) este probabil net.sourceforge.jtds.jdbc. Şofer.
     
 După ce l-ai pus pe şoferul JDBC. ERDDAP™ directorul lib, aveți nevoie pentru a adăuga o referință la acel fișier .jar în .bat și/sau .sh script fișiere pentru GenerateDatasets Xml, DasDds, și ArchiveADataset care sunt în *Tomcat* /webapps/erddap/WEB-INF/ director; în caz contrar, veți obține o ClassNotFoundException atunci când executați aceste scripturi.
@@ -2524,7 +2526,7 @@ chiar lângă&lt; sourceUrl &gt;,&lt;numele conducătorului auto&gt; și&lt;cone
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-Informaţii generale despre utilizarea unei DataSource este la [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
+Informaţii generale despre utilizarea unei DataSource este la [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
 Vezi? [Informaţii despre Tomcat DataSource](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) şi [Tomcat DataSource exemple](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) sau căutați pe web exemple de utilizare a DataSources cu alte servere de aplicații.
 * Dacă toate celelalte nu reușesc,
 ia în considerare stocarea datelor într-o colecție de NetCDF v3 .nc fișiere (Mai ales .nc fișiere care utilizează [CF Geometrii de eșantionare discrete (DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) Structuri de date Contiguous Ragged Array și astfel pot fi manipulate cu ERDDAP 's [Tabel EDD din NCFFile](#eddtablefromnccffiles) ) . Dacă sunt organizate logic (fiecare cu date pentru o bucată de spațiu și timp) , ERDDAP™ poate extrage date de la ei foarte repede.
@@ -2608,7 +2610,7 @@ ia în considerare stocarea datelor într-o colecție de NetCDF v3 .nc fișiere 
     
 Bucata de XML generată de GenerateDatasetsXml pentru fiecare set de date include:
     
-    * A datasetID care este EDDGrid 's datasetID plus "\\_ASATable."
+    * A datasetID care este EDDGrid 's datasetID plus "\\_AsATable" .
     * Un nou atribut global rezumat care este EDDGrid "sumarul plus un nou prim paragraf care descrie ce este acest set de date.
     * Un nou titlu de atribut global, care este EDDGrid titlul lui plus, (Tabelul A) ".
     * Un nou atribut maxAxis0 global cu o valoare de 10.
@@ -2644,21 +2646,21 @@ Bucata de XML generată de GenerateDatasetsXml pentru fiecare set de date includ
 *    [Datele dintr-un set de date EDDFromFileNames](#eddtablefromfilenames-data) este o masă care ERDDAP™ creează on-the-fly cu informații despre un grup de fișiere locale. În tabel, există un rând pentru fiecare fișier. Patru atribute speciale în [ datasets.xml pentru acest set de date](#eddtablefromfilenames-skeleton-xml) să stabilească ce fișiere vor fi incluse în acest set de date:
     
 ##### fișier Dir{#filedir} 
-    *   &lt;fileDir&gt; -- Acest lucru specifică directorul sursă în sistemul de fișiere al serverului cu fișierele pentru acest set de date. Fișierele care sunt de fapt situate în sistemul de fișiere al serverului în&lt;fileDir&gt; va apărea în coloana url a acestui set de date într-un director virtual numithttps://*serverUrl*/erddap/files/*datasetID/*.
+    *   &lt;fileDir&gt; -- Acest lucru specifică directorul sursă în sistemul de fișiere al serverului cu fișierele pentru acest set de date. Fișierele care sunt de fapt situate în sistemul de fișiere al serverului în&lt;fileDir&gt; va apărea în coloana url a acestui set de date într-un director virtual numit https://*serverUrl*/erddap/files/*datasetID/* .
 De exemplu, dacă datasetID este jplMU RSS T,
 şi&lt;fileDir&gt; is /home/data/mur/ ,
 și că directorul are un fișier numit JplMU RSS T20150103000000.png;
 atunci URL-ul care va fi afișat utilizatorilor pentru acel fișier va fi
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png.
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png .
         
 Pe lângă utilizarea unui director local pentru&lt;fileDir&gt;, puteți specifica, de asemenea, URL-ul unei pagini web de la distanță, cum ar fi directorul. Acest lucru funcționează cu:
         
         * Seturi de date neexhaustive în THREDS, de exemplu,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Acest server nu mai este disponibil în mod fiabil. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Acest server nu mai este disponibil în mod fiabil. \\] 
         * Seturi de date neagregate în Hyrax , de exemplu,
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * Cele mai multe liste de dosare Apache, de exemplu,
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### de la OnTheFly{#fromonthefly} 
  [\\*\\*# From The Fly #](#fromonthefly) -- Pentru nişte găleţi uriaşe S3 (cum ar fi noaa-goes17, care are 26 de milioane de fișiere) , poate dura ERDDAP™ până la 12 ore pentru a descărca toate informațiile despre conținutul găleții (și apoi există alte probleme) . Pentru a obține în jurul valorii de acest lucru, există o modalitate specială de a utiliza&lt;fileDir&gt; în EDDtableFromFileNames pentru a face un set de date cu directorul și numele fișierelor dintr-o găleată AWS S3. Setul de date nu va avea lista tuturor directoarelor și numelor de fișiere ale găleții S3 pe care un utilizator le poate căuta prin intermediul cererilor adresate setului de date. Dar setul de date va primi numele directoarelor și fișierelor pe zbor în cazul în care utilizatorul traversează ierarhia directoarelor cu setul de date "files" Opţiune. Astfel, acest lucru permite utilizatorilor să navigheze în ierarhia de fișiere și fișiere ale găleții S3 prin intermediul setului de date "files" sistem. Pentru a face acest lucru, în loc de a specifica URL-ul pentru găleata S3 ca "Starting director" (Comment Xml) sau&lt;fileDir&gt; (în datasets.xml ) , utilizați:
 ```
@@ -2837,13 +2839,13 @@ Toate EDDGrid Din Dosare și toate seturile de date EDDFromFiles susțin un set 
     * ă&lt;cacheFromurl&gt; tag vă permite să specificați un URL cu o listă a fișierelor unui set de date la distanță dintr-o listă de fișiere la distanță.
         
         * Seturi de date neexhaustive în THREDS, de exemplu,
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 Acest server nu mai este disponibil în mod fiabil. \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 Acest server nu mai este disponibil în mod fiabil. \\] 
         * Seturi de date neagregate în Hyrax , de exemplu,
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * Cele mai multe liste de dosare Apache, de exemplu,
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * găleți S3, de exemplu,
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 Cu toate acestea, acest lucru poate necesita un cont AWS și mai multe configurare.
 Vezi? [lucrează cu S3 Buckets în ERDDAP™ ](#working-with-aws-s3-files) .
 De asemenea, de obicei nu trebuie să utilizați cache FromUrl cu fișiere în găleți S3 dacă fișierele sunt fișiere ASCII (de exemplu, .csv.) , pentru că ERDDAP™ poate citi eficient datele din găleată direct printr-un pârâu.
@@ -2901,7 +2903,7 @@ apoi are o serie de grupuri de capturare cuiburi în cazul în care prima opțiu
 și a doua opțiune este o valoare specifică.
             
 Exemplul de mai sus se va potrivi doar cu directoarele pentru a doua zi a anului 2018, de exemplu,
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020-10-21 Acest server nu mai este disponibil în mod fiabil. \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020-10-21 Acest server nu mai este disponibil în mod fiabil. \\]   
 și ziua 011, 012, ..., 019.
              (Vezi asta? [documentația regex](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) şi [tutorial regex](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) .)   
 Dacă ai nevoie de ajutor pentru a crea&lt;cachePartialPathRegex&gt;, vă rugăm să trimiteți e-mail&lt;Cache FromUrl&gt; to Chris. John la Noaa.gov.
@@ -3384,7 +3386,7 @@ Pentru orice set de date din ERDDAP™ , atunci când trimiteți o cerere ERDDAP
 
 * .se introduce
     * Cererea este formatată ca un răspuns standard format HTML, cu cheie = perechi de valoare, separate de "&." De exemplu,
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 spune ERDDAP™ pentru a adăuga sau modifica datele pentru stationID =46088 pentru timpul specificat.
     * Autorul acestei schimbări este JohnSmith și cheia este unele cheie1.
     * URL- ul trebuie să includă valori valabile (valori care nu lipsesc) pentru toate [ http GetRequiredVariables](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ spune ERDDAP™ pentru a adăuga sau modifica datele pentru stationID =46088 pen
              
     * .delete
         * Cererea este formatată ca un răspuns standard format HTML, cu cheie = perechi de valoare, separate de "&." De exemplu,
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 spune ERDDAP™ pentru a șterge datele pentru stationID =46088 la ora specificată.
         * Autorul acestei schimbări este JohnSmith și cheia este unele cheie1.
         * URL- ul trebuie să specifice [ http GetRequiredVariables](#httpgetrequiredvariables-global-attribute) în cerere (de exemplu, stationID şi timp) . Dacă aceste valori corespund valorilor de pe un rând deja incluse în setul de date (pe care de obicei o vor face) , vechile valori sunt efectiv eliminate (cu toate că valorile vechi sunt încă accesibile în cazul în care un utilizator solicită date de la un precedent [versiune](#versioning) din setul de date) .
@@ -3667,7 +3669,7 @@ Nu toată lumea are nevoie de acest tip de versiune fină, dar este extrem de ut
     
 ##### Pune și șterge HTTPS{#https-put-and-delete} 
 *    ["Dar HTTPS Put and DELETE?"](#https-put-and-delete)   
-     [Protocolul de transfer al hipertextului (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) este baza World Wide Web și motivul pentru care URL-urile paginii web încep cu "http://"sau "https://". HTTPS este HTTP cu un strat suplimentar de securitate. În fiecare zi, browsere, scripturi și programe de calculator fac miliarde de HTTP (S)   **GET** cereri pentru a obține informații din surse îndepărtate. HTTP (S) include și alte [verbe](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , în special PUT (pentru a împinge datele către server) şi DELETE (la DELETE date de pe server) . Da, Put și DELETE sunt modul adecvat de a introduce date în, și șterge datele de la, un set de date prin HTTP (S) . GET este susținut de fiecare bucată de software care poate lucra cu HTTP (S) . E foarte uşor să lucrezi cu GET. Toată lumea știe deja cum să lucreze cu GET și mulți știu cum să utilizeze POST (care poate fi folosit în principal în același mod ca GET) , așa că am făcut EDD Table FromHttpGet de lucru cu GET și Post. Foarte puţini oameni (chiar puțini programatori de calculator) au lucrat vreodată cu PUT și DELETE. Put și DELETE sunt, în general, susținute numai de limbaje informatice, astfel încât utilizarea lor necesită un program abil. Așa că Put și DELETE sunt de obicei o abordare mult mai greoaie având în vedere modul în care instrumentele au evoluat.
+     [Protocolul de transfer al hipertextului (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) este baza World Wide Web și motivul pentru care URL-urile paginii web încep cu " http://" sau " https://" . HTTPS este HTTP cu un strat suplimentar de securitate. În fiecare zi, browsere, scripturi și programe de calculator fac miliarde de HTTP (S)   **GET** cereri pentru a obține informații din surse îndepărtate. HTTP (S) include și alte [verbe](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) , în special PUT (pentru a împinge datele către server) şi DELETE (la DELETE date de pe server) . Da, Put și DELETE sunt modul adecvat de a introduce date în, și șterge datele de la, un set de date prin HTTP (S) . GET este susținut de fiecare bucată de software care poate lucra cu HTTP (S) . E foarte uşor să lucrezi cu GET. Toată lumea știe deja cum să lucreze cu GET și mulți știu cum să utilizeze POST (care poate fi folosit în principal în același mod ca GET) , așa că am făcut EDD Table FromHttpGet de lucru cu GET și Post. Foarte puţini oameni (chiar puțini programatori de calculator) au lucrat vreodată cu PUT și DELETE. Put și DELETE sunt, în general, susținute numai de limbaje informatice, astfel încât utilizarea lor necesită un program abil. Așa că Put și DELETE sunt de obicei o abordare mult mai greoaie având în vedere modul în care instrumentele au evoluat.
      
 ##### Note HttpGet{#httpget-notes} 
 *    [Note](#httpget-notes) 
@@ -3676,7 +3678,7 @@ Nu toată lumea are nevoie de acest tip de versiune fină, dar este extrem de ut
 ##### Mulţumesc.{#thanks} 
 *    [Mulţumesc pentru ideea de bază.](#thanks)   
 Ideea de bază pentru tabelul EDD de la HttpGet (a. HTTP GET cerere de adăugare a datelor la un set de date) este de la UCAR (NCAA?)   [Servicii de date în timp real în cloud (MENŢIUNEA) ](https://github.com/earthcubeprojects-chords) proiect. Formatul parametrilor din cerere (Repetat *Denumire = valoare* , separate de &s) este același format standard care este folosit de formularele HTML pe pagini web. Este o idee simplă și genială și chiar mai mult pentru că se îmbină perfect cu ERDDAP e sistemul existent pentru tratarea datelor tabulare. Ideea este evidentă în retrospectivă, dar eu (Bob.) Nu m-am gândit la asta. Tabel EDDFromHttp Obțineți utilizări ca idee de bază, combinate cu ideile noastre despre cum să o implementăm, să facem un sistem în ERDDAP™ pentru încărcarea datelor. Altele decât ideea de bază de utilizare a GET pentru a împinge date în sistem, implementarea EDDTABLEFromHttpGet este complet diferită și complet independentă de Chwords și are caracteristici diferite (De exemplu, fișiere jurnal, bucăți de date, diferite sisteme de securitate, suport CRUD, date reproductibile) . Expunerea noastră la Chwords a fost doar un webinar. Nu ne-am uitat la codul lor sau am citit despre proiectul lor pentru că am ştiut imediat că vrem să implementăm sistemul într-un mod diferit. Dar le suntem recunoscători pentru ideea de bază. Referinţa completă la Ch MENŢIUNEA este:
-Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014) . Servicii de date în timp real pentru Geoștiințe (MENŢIUNEA) software. UCAR/NCAR -- Laboratorul de observare a Pământului. [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+Daniels, M. D., Kerkez, B., Chandrasekar, V., Graves, S., Stamps, D. S., Martin, C., Dye, M., Gooch, R., Bartos, M., Jones, J., Keiser, K. (2014) . Servicii de date în timp real pentru Geoștiințe (MENŢIUNEA) software. UCAR/NCAR -- Laboratorul de observare a Pământului. [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### Tabel EDD din Hyrax Fișiere{#eddtablefromhyraxfiles} 
  [ **Tabel EDD din Hyrax Fișiere** ](#eddtablefromhyraxfiles)   (depreciat) agregate fișiere de date cu mai multe variabile, fiecare cu una sau mai multe dimensiuni comune (de exemplu, timpul, altitudinea (sau adâncime) , latitudine, longitudine) , și servit de un [ Hyrax   OPeNDAP server](https://www.opendap.org/software/hyrax-data-server) .
@@ -3692,7 +3694,7 @@ Dacă nu există plângeri înainte de 2020, acest tip de set de date poate fi e
 * Această clasă de ecran-zgârie Hyrax pagini web cu listele de fișiere din fiecare director. Din acest motiv, este foarte specific formatului actual al Hyrax pagini web. Vom încerca să se adapteze ERDDAP™ rapid dacă/atunci când versiunile viitoare ale Hyrax schimba modul în care fișierele sunt enumerate.
 * ă&lt;Setarea fișierelor este ignorată. Deoarece această clasă descarcă și face o copie locală a fiecărui fișier de date la distanță, ERDDAP™ forțează fișierul Dir to be *Big ParentDirectory* /copie / * datasetID * /.
 * Pentru&lt; sourceUrl &gt;, utilizaţi URL- ul dosarului de bază al setului de date în Hyrax server, de exemplu,
-    &lt; sourceUrl &gt;http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;/ sourceUrl &gt;
+    &lt; sourceUrl &gt; http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;/ sourceUrl &gt;
      (dar pune-l pe o linie)   (Îmi pare rău, acel server nu mai este disponibil.) .
 ă sourceUrl pagina web are de obicei " OPeNDAP Index server \\[ nume director \\] "în vârf.
 * Din moment ce această clasă descarcă întotdeauna și face o copie locală a fiecărui fișier de date la distanță, nu ar trebui să împacheteze acest set de date în [EDDCommentCopy](#eddtablecopy) .
@@ -3706,7 +3708,7 @@ Detalii: Aceste fișiere au mai multe variabile row\\_size, fiecare cu un atribu
 
 O altă problemă cu aceste fișiere: the Principal\\_Investigator row\\_size variabila nu are un atribut mostră\\_dimensiuni și nu respectă regula de mai sus.
 
-Fișiere eșantion pentru acest tip de set de date pot fi găsite lahttps://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 Acest server nu mai este disponibil în mod fiabil \\] .
+Fișiere eșantion pentru acest tip de set de date pot fi găsite la https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020-10-21 Acest server nu mai este disponibil în mod fiabil \\] .
 
 Vezi această clasă super clasă, [Tabel EDD din dosare](#eddtablefromfiles) , pentru informații privind modul în care funcționează această clasă și cum să-l folosească.
 
@@ -3850,10 +3852,10 @@ Primul lucru pe care GenerateDatasetsXml îl face pentru acest tip de set de dat
  [ **Tabel EDDFromNOS** ](#eddtablefromnos)   (DEPRECAT) se ocupă de date de la o NOAA   [NOS](https://opendap.co-ops.nos.noaa.gov/axis/) sursă, care utilizează [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) pentru cereri și răspunsuri. Este foarte specific NOAA XML-ul lui NOS. A se vedea setul de date EDDFromNOS din seturile de date2.xml.
  
 ### Tabel EDD FromOBIS{#eddtablefromobis} 
- [ **Tabel EDD FromOBIS** ](#eddtablefromobis) gestionează datele dintr-un sistem de informații biogeografice oceanice (OBIS) server (a fosthttp://www.iobis.org ) . Este posibil să nu mai existe servere active care utilizează acest tip de server OBIS în prezent.
+ [ **Tabel EDD FromOBIS** ](#eddtablefromobis) gestionează datele dintr-un sistem de informații biogeografice oceanice (OBIS) server (a fost http://www.iobis.org  ) . Este posibil să nu mai existe servere active care utilizează acest tip de server OBIS în prezent.
 
 * Serverele OBIS așteaptă o cerere XML și returnează un răspuns XML.
-* Deoarece toate serverele OBIS servesc aceleași variabile în același mod (a fosthttp://iobis.org/tech/provider/questions) , nu trebuie să specifice mult pentru a configura un set de date OBIS în ERDDAP .
+* Deoarece toate serverele OBIS servesc aceleași variabile în același mod (a fost http://iobis.org/tech/provider/questions ) , nu trebuie să specifice mult pentru a configura un set de date OBIS în ERDDAP .
 * Trebuie să includeţi un " creator\\_email " atribut la nivel mondial addAttributes Din moment ce informaţia este folosită în licenţă. O adresă de e-mail adecvată poate fi găsită citind răspunsul XML de la sursăURL.
 * Puteți sau nu poate fi capabil de a obține atributul global [&lt; subsetVariables &gt;] (#Subsetvariables) să lucreze cu un server OBIS dat. Dacă încerci, încearcă o variabilă. (De exemplu, denumirea științifică sau genus) .
 #### Tabel EDD FromOBIS Name{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ Primul lucru pe care GenerateDatasetsXml îl face pentru acest tip de set de dat
     * SWE (Activare Web senzor) şi SOS   (Serviciul de observare a senzorilor) sunt [Standarde OpenGIS®](https://www.ogc.org/standards) . Acel site are documentele standardelor.
     * ă OGC Servicii web Specificaţie comună ver 1.1.0 ( OGC 06-121r3) acoperă construirea de întrebări GET și Post (Vezi secţiunea 7.2.3 şi secţiunea 9) .
     * Dacă trimiteți o cerere GETCapabilități xml la o SOS server ( sourceUrl + "?service= SOS & Cerere = GetCapabilities ") , veți obține un rezultat xml cu o listă de stații și observate Proprietăți pentru care au date.
-    * Un URI observat este o referire oficială la o proprietate. De exemplu, urn:ogc:fenomenon:longitudine:wgs84 sauhttps://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * Un URI observat este o referire oficială la o proprietate. De exemplu, urn:ogc:fenomenon:longitudine:wgs84 sau https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * O proprietate observată nu este o variabilă.
-    * Pot fi observate mai multe variabile Proprietate (de exemplu, în interiorul și în afara Temp Tempul ar fi putut fi observat Proprietatehttps://mmisw.org/ont/cf/parameter/air\\_temperature) .
+    * Pot fi observate mai multe variabile Proprietate (de exemplu, în interiorul și în afara Temp Tempul ar fi putut fi observat Proprietate https://mmisw.org/ont/cf/parameter/air\\_temperature ) .
     * Dacă trimiteți o cerere getObservation xml la o SOS server, veți obține un rezultat xml cu descrieri ale numelor de câmp în răspuns, unități de câmp, și datele. Numele câmpului va include longitudine, latitudine, adâncime (Poate.) Şi timpul.
     * Fiecare dataVariable pentru un tabel EDDDe la SOS trebuie să includă un atribut "observedProperty," care identifică Property observat care trebuie solicitat de la server pentru a obține acea variabilă. De multe ori, mai multe dataVariable s va enumera aceeași structură observatăProperty.
     * Tipul de date pentru fiecare dataVariable nu poate fi specificat de server. Dacă da, trebuie să vă uitați la răspunsurile de date XML de pe server și să atribuiți corespunzător [&lt;DataType &gt;s] (#Tipul de date) în ERDDAP™ Set de date dataVariable definiții.
@@ -3991,11 +3994,11 @@ Dacă nu există plângeri înainte de 2020, acest tip de set de date poate fi e
 * Această clasă citește catalogul.xml fișiere deservite de THREDS cu listele de&lt;catalogRefs&gt; (referințe la cataloage suplimentare.xml sub-fișiere) şi&lt;Set de date&gt;s (fișiere de date) .
 * ă&lt;Setarea fișierelor este ignorată. Deoarece această clasă descarcă și face o copie locală a fiecărui fișier de date la distanță, ERDDAP™ forțează fișierul Dir to be *Big ParentDirectory* /copie / * datasetID * /.
 * Pentru&lt; sourceUrl &gt;, utilizează URL- ul catalogului.xml pentru setul de date din serverul THREDS, de exemplu: pentru acest URL care poate fi utilizat într-un browser web;
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020-10-21 Acest server nu mai este disponibil în mod fiabil. \\] ,
-Administrare&lt; sourceUrl &gt;https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;/ sourceUrl &gt;
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020-10-21 Acest server nu mai este disponibil în mod fiabil. \\] ,
+Administrare&lt; sourceUrl &gt; https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;/ sourceUrl &gt;
      (dar pune-l pe o linie) .
 * Din moment ce această clasă descarcă întotdeauna și face o copie locală a fiecărui fișier de date la distanță, nu ar trebui să împacheteze acest set de date în [EDDCommentCopy](#eddtablecopy) .
-* Acest tip de set de date suportă o etichetă OPTIONALă, rareori utilizată, specială,&lt;Mod special &gt; *mod* &lt;/Mode special&gt; care poate fi folosit pentru a specifica că normele speciale, hard-codate ar trebui utilizate pentru a determina ce fișiere ar trebui descărcate de pe server. În prezent, singurul valid *mod* este SAMOS care este utilizat cu seturi de date dinhttps://tds.coaps.fsu.edu/thredds/catalog/samospentru a descărca doar fișierele cu ultimul număr de versiune.
+* Acest tip de set de date suportă o etichetă OPTIONALă, rareori utilizată, specială,&lt;Mod special &gt; *mod* &lt;/Mode special&gt; care poate fi folosit pentru a specifica că normele speciale, hard-codate ar trebui utilizate pentru a determina ce fișiere ar trebui descărcate de pe server. În prezent, singurul valid *mod* este SAMOS care este utilizat cu seturi de date din https://tds.coaps.fsu.edu/thredds/catalog/samos pentru a descărca doar fișierele cu ultimul număr de versiune.
 * Vezi această clasă super clasă, [Tabel EDD din dosare](#eddtablefromfiles) , pentru informații privind modul în care funcționează această clasă și cum să-l folosească.
 * A se vedea exemplele 1D, 2D, 3D și 4D pentru [Tabel EDDFromNcFiles](#eddtablefromncfiles) .
      
@@ -4182,8 +4185,8 @@ Atunci când serverul termină de manipulare o cerere va verifica cât timp în 
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-va provoca o potrivire locală sourceUrl   (cum ar fihttps://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-într-un public sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) .
+va provoca o potrivire locală sourceUrl   (cum ar fi https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+într-un public sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) .
 Orice modificare a valorii acestei etichete va avea efect data viitoare ERDDAP™ citeste datasets.xml , inclusiv ca răspuns la un set de date [pavilion](/docs/server-admin/additional-information#flag) .
 
 Dar, din motive de securitate și motive legate de sistemul de abonament, **Nu folosi TAG-ul ăsta&#33;**   
@@ -4314,7 +4317,7 @@ Adesea, utilizatorii nu ştiu că cererile lor sunt supărătoare. Adesea, ei nu
     ```
     * Nu trebuie să reporneşti. ERDDAP™ pentru modificările&lt;solicita Blacklist&gt; pentru a intra în vigoare. Modificările vor fi detectate data viitoare. ERDDAP™ verifică dacă seturile de date trebuie reîncărcate. Sau, puteți accelera procesul prin vizitarea unui [setDataset URL- ul steagului](/docs/server-admin/additional-information#set-dataset-flag) pentru orice set de date.
     * Al tău ERDDAP™ raportul zilnic include o listă/talie a celor mai activi solicitanţi autorizaţi şi blocaţi.
-    * Dacă doriți să vă dați seama ce domeniu/instituție este legată de o adresă IP numerică, puteți utiliza un serviciu web DNS gratuit, inversat, cum ar fi [https://network-tools.com/](https://network-tools.com/) .
+    * Dacă doriți să vă dați seama ce domeniu/instituție este legată de o adresă IP numerică, puteți utiliza un serviciu web DNS gratuit, inversat, cum ar fi [ https://network-tools.com/ ](https://network-tools.com/) .
     * Pot exista momente în care este logic să blocăm anumiţi utilizatori la un nivel mai ridicat, de exemplu, utilizatori maliţioşi. De exemplu, puteți bloca accesul lor la tot de pe server, nu doar ERDDAP . Pe Linux, o astfel de metodă este de a utiliza [iptables](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) . De exemplu, puteți adăuga o regulă care va bloca totul venind de la 198.51.100.0 cu comanda
 iptables - I INPUT -s 198.51.100.0 -J DROP
        
@@ -4738,17 +4741,17 @@ ATENŢIONARE: Dacă adăugaţi palete personalizate ERDDAP™ si tu ai EDDGrid F
     * În prezent, pentru EDDGrid subclase, orice modificare a metadatelor sau a unei variabile a axei (de exemplu, un nou moment pentru datele în timp aproape real) este considerată o modificare, dar o reîncărcare a setului de date nu este considerată o modificare (de la sine) .
     * În prezent, pentru subclasele de tabele EDD, orice reîncărcare a setului de date este considerată o modificare.
     * În prezent, sunt permise doar două tipuri de acțiuni:
-        * "http://"sau "https://"-- Dacă acțiunea începe cu "http://"sau "https://", ERDDAP™ va trimite un HTTP GET cerere la URL-ul specificat. Răspunsul va fi ignorat. De exemplu, URL-ul ar putea spune altor servicii web să facă ceva.
+        * " http://" sau " https://" -- Dacă acțiunea începe cu " http://" sau " https://" , ERDDAP™ va trimite un HTTP GET cerere la URL-ul specificat. Răspunsul va fi ignorat. De exemplu, URL-ul ar putea spune altor servicii web să facă ceva.
             * Dacă URL-ul are o parte de interogare (după "?") Trebuie să fie deja. [% codificat](https://en.wikipedia.org/wiki/Percent-encoding) . Trebuie să codifici caractere speciale în constrângeri (altele decât "&" inițială și principal '=' în constrângeri) în forma %HH, unde HH este valoarea hexazecimală de 2 cifre a caracterului. De obicei, trebuie doar să convertiți câteva dintre personajele punctuației: % în%25, & în%26, " în% 2;&lt;în% 3C, = în% 3D, &gt; în% 3E, + în% 2B; | în % 7C; \\[ în% 5B; \\] în %5D, spațiu în%20, și converti toate personajele de mai sus #127 în forma lor UTF-8 și apoi la sută codați fiecare octet din forma UTF-8 în formatul %HH (Cere ajutorul unui programator) .
 De exemplu, & stationID Nr.
 devine & stationID % 3E=% 2241004%22
 Codarea procentuală este necesară în general atunci când accesați ERDDAP prin alte programe decât un browser. Navigatorii se ocupă de obicei de codarea ta.
 În unele situații, aveți nevoie pentru a coda la sută toate personajele altele decât A-Za-z0-9\\_-&#33;~ ' () \\*, dar încă nu codifică "&" inițială sau principal '=' în constrângeri.
-Limbile de programare au instrumente pentru a face acest lucru (de exemplu, a se vedea Java 's [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) şi Java Scenariul lui [encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) și există
+Limbile de programare au instrumente pentru a face acest lucru (de exemplu, a se vedea Java 's [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) şi Java Scenariul lui [encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) și există
                  [site-uri care codează/decodează procente pentru tine](https://www.url-encode-decode.com/) .
             * De când datasets.xml este un fișier XML, trebuie, de asemenea, să & codați TOATE "&," "&lt;" și "&gt; " în URL ca "&amp; ," "&lt;" și "&gt; " după codificarea la sută.
             * Exemplu: Pentru un URL pe care îl puteți tasta într-un browser ca:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 Trebuie să specificaţi&lt;onChange&gt; tag via (pe o linie) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ Acest lucru poate afecta, de asemenea, sortarea de cuvinte scurte versus cuvinte
     * A sourceUrl poate începe cu http:// , https:// , ftp://, și poate alte prefixe. https conexiunile citesc și verifică certificatul digital al sursei pentru a se asigura că sursa este cine spun ei că sunt. În cazuri rare, acest control poate eșua cu eroarea "javax.net.ssl.SSLProtocol Excepție: alertă strângere de mână: nerecunoscut\\_name." Acest lucru se datorează probabil numelui de domeniu de pe certificat care nu corespunde numelui de domeniu pe care îl utilizați. Puteți și ar trebui să citiți detaliile sourceUrl Certificat în browser-ul dvs. web, în special lista de "DNS Name" din secțiunea "Subiect Alternative Name."
         
 În unele cazuri, sourceUrl utilizaţi poate fi un alias al numelui de domeniu de pe certificat. De exemplu,
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/va arunca această eroare, dar
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/, care utilizează numele de domeniu pe certificat, nu va fi. Prin urmare, soluţia în aceste cazuri este găsirea şi utilizarea numelui de domeniu pe certificat. Dacă nu-l puteți găsi pe certificat, contactați furnizorul de date.
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ va arunca această eroare, dar
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ , care utilizează numele de domeniu pe certificat, nu va fi. Prin urmare, soluţia în aceste cazuri este găsirea şi utilizarea numelui de domeniu pe certificat. Dacă nu-l puteți găsi pe certificat, contactați furnizorul de date.
         
 În alte cazuri, numele de domeniu al certificatului poate fi pentru un grup de nume. Dacă acest lucru se întâmplă sau problema este altfel de nerezolvat, vă rugăm să trimiteți un e-mail Chris. John de la Noaa.gov să raporteze problema.
          
@@ -5221,7 +5224,7 @@ devine & stationID % 3E=% 2241004%22
 Codarea procentuală este necesară în general atunci când accesați ERDDAP prin alte programe decât un browser. Navigatorii se ocupă de obicei de codarea ta.
 În unele situații, aveți nevoie pentru a coda la sută toate personajele altele decât A-Za-z0-9\\_-&#33;~ ' () \\*, dar încă nu codifică "&" inițială sau principal '=' .
 Limbile de programare au instrumente pentru a face acest lucru (de exemplu, a se vedea Java 's [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-şi Java Scenariul lui [encodeURIComponent()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) ) și există
+şi Java Scenariul lui [encodeURIComponent()] ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) ) și există
          [site-uri care codează/decodează procente pentru tine](https://www.url-encode-decode.com/) .
     * De când datasets.xml este un fișier XML, trebuie, de asemenea, să & codați TOATE "&," "&lt;" și "&gt; " în URL ca "&amp; ," "&lt;" și "&gt; " după codificarea la sută.
     *    infoUrl este unică ERDDAP . Nu este de la nici un standard de metadate.
@@ -5257,7 +5260,28 @@ Atunci când un set de date este încărcat ERDDAP ,
     ```
     * Dacă " \\[ standard \\] " apare în valoarea atributului, acesta va fi înlocuit cu standardul ERDDAP™ licență de la&lt;standardLicense&gt; tag in ERDDAP 's
          \\[ Tomcat \\] /webapps/erddap/WEB-INF/classes/gov/noaa/pfel/erddap/util/messages.xml file.
-         
+
+###### clasificare{#classification} 
+*    [ **clasificare** ](#classification) nivelul de clasificare a datelor.
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * Valorile acceptabile sunt _neclasificate_, _confidenţiale_, _restricţionate_, _secret_, sau _top_secret_.
+
+###### topic_categoria{#topic_category} 
+*    [ **topic_categoria** ](#topic_category) Clasificarea tematică a datelor geografice la nivel înalt pentru a ajuta la gruparea și căutarea seturilor de date geografice disponibile.
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * Valorile acceptabile sunt _biota_, _boundaries_, _climatologie_meteorology_atomosphere_, _economy_, _elevation_, _environment_, _farming_, _geostiintific_information_, _health_, _imagery_base_maps_earth_cover_, _inland_waters_, _inteligence_military_, _location_, _oceans_, _planning_cadastre_, _society_, _structure_, _utlities_communication_.
+
+###### Întreținere_frecvență{#maintenance_frequency} 
+*    [ **Întreținere_frecvență** ](#maintenance_frequency) Frecvenţa cu care se efectuează modificările şi ştergerile datelor după prima producţie.
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * Valorile acceptabile sunt valori acceptabile sunt _anual_, _aş_nevoie_, _bianual_, _continual_, _day_, _formightly_, _regular_, _lunaly_, _not_planificat_, _quarterly_, _nown_, _weekly_.
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) este de la învechite [ACDD 1, 0](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (care a fost identificată în Metadata\\_Conventions " Unidata Dataset Discovery v1.0") standardul metadatelor. Valoarea atributului a fost o listă separată de convenţii de metadate utilizate de acest set de date.
 În cazul în care un set de date utilizează ACDD 1.0, acest atribut este RECOMANDAT PUTERNIC, de exemplu,
@@ -5389,7 +5413,7 @@ Dacă indicele este&lt;1, setul de date este considerat actualizat.
 Dacă indicele este&lt;=1, setul de date este considerat expirat.
 Dacă indicele este&lt;=2, setul de date este considerat foarte învechit.
     
-ă testOutOfDate valoarea este de asemenea utilizată de ERDDAP™ generareahttps://*yourDomain*/erddap/outOfDateDatasets.htmlpagina web ( [exemplu](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) care indică seturile de date care au&lt; testOutOfDate &gt; tag-uri, cu seturile de date clasificate după cum sunt depăşite. Dacă modificați tipul de fișier (de la .html la .csv, .jsonlCSV , .nc , .tsv , ...) , puteți obține această informație în diferite formate de fișiere.
+ă testOutOfDate valoarea este de asemenea utilizată de ERDDAP™ generarea https://*yourDomain*/erddap/outOfDateDatasets.html pagina web ( [exemplu](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) care indică seturile de date care au&lt; testOutOfDate &gt; tag-uri, cu seturile de date clasificate după cum sunt depăşite. Dacă modificați tipul de fișier (de la .html la .csv, .jsonlCSV , .nc , .tsv , ...) , puteți obține această informație în diferite formate de fișiere.
     
 Când este posibil, [GenereazăSeturi de dateXml](#generatedatasetsxml) adaugă testOutOfDate atribut global addAttributes unui set de date. Această valoare este o sugestie bazată pe informațiile disponibile pentru GenerateDatasetsXml. Dacă valoarea nu este adecvată, schimbă-o.
     
@@ -5948,8 +5972,8 @@ despachetatValue = ambalat Valoare \\ * scale\\_factor + add\\_offset
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone este un atribut OPTIONAL utilizat de ERDDAP™   (și fără standarde de metadate) pentru [variabile de timp și de timp](#time-units) , care pot fi incluse în seturi de date grupate sau în seturi de date tabelare.
     * Implicit este " Zulu " (care este versiunea modernă a zonei timpului a GMT) .
-    * Informaţii de fond: "timp compensat" (De exemplu, Pacific Standard Time, -08:00, GMT-8) sunt fixe, specifice, compensare în raport cu Zulu   (GMT) . În schimb, "zonele temporale" sunt lucruri mult mai complexe care sunt afectate de Daylight Saving (de exemplu, "US/Pacific") , care au avut reguli diferite în locuri diferite în momente diferite. Zonele orare au întotdeauna nume, deoarece nu pot fi rezumate printr-o simplă valoare compensată. (a se vedea coloana "Denumirile bazei de date TZ" din tabel la [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP 's time\\_zone atributul vă ajută să se ocupe de datele locale de timp din unele fus orar (De exemplu, 1987-03-25T17:32:05 Pacific Timp) . Dacă aveți șir sau date numerice privind timpul cu a (fix) timpul de compensare, ar trebui pur și simplu ajustați datele la Zulu   (care este ceea ce ERDDAP™ Vreau) prin specificarea unui timp de bază diferit în atributul unităților (De exemplu, "ore din 1970-01-01T08:00Z," notați T08 pentru a specifica timpul de compensare) , și întotdeauna verificați rezultatele pentru a vă asigura că obțineți rezultatele dorite.
-    * Pentru variabilele timbru cu date sursă de la Strings, acest atribut vă permite să specificați o zonă de timp care conduce ERDDAP™ pentru a converti timpul local-zonă de sursă ori (unele în timp standard, unele în lumina zilei de economisire a timpului) în Zulu ori (care sunt întotdeauna în timp standard) . Lista numelor de fus orar valabile este probabil identică cu lista din coloana TZ la [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Zonele orare comune din SUA sunt: SUA/Hawaii, SUA/Alaska, SUA/Pacific, SUA/Mountain, SUA/Arizona, SUA/Central, SUA/Est.
+    * Informaţii de fond: "timp compensat" (De exemplu, Pacific Standard Time, -08:00, GMT-8) sunt fixe, specifice, compensare în raport cu Zulu   (GMT) . În schimb, "zonele temporale" sunt lucruri mult mai complexe care sunt afectate de Daylight Saving (de exemplu, "US/Pacific") , care au avut reguli diferite în locuri diferite în momente diferite. Zonele orare au întotdeauna nume, deoarece nu pot fi rezumate printr-o simplă valoare compensată. (a se vedea coloana "Denumirile bazei de date TZ" din tabel la [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP 's time\\_zone atributul vă ajută să se ocupe de datele locale de timp din unele fus orar (De exemplu, 1987-03-25T17:32:05 Pacific Timp) . Dacă aveți șir sau date numerice privind timpul cu a (fix) timpul de compensare, ar trebui pur și simplu ajustați datele la Zulu   (care este ceea ce ERDDAP™ Vreau) prin specificarea unui timp de bază diferit în atributul unităților (De exemplu, "ore din 1970-01-01T08:00Z," notați T08 pentru a specifica timpul de compensare) , și întotdeauna verificați rezultatele pentru a vă asigura că obțineți rezultatele dorite.
+    * Pentru variabilele timbru cu date sursă de la Strings, acest atribut vă permite să specificați o zonă de timp care conduce ERDDAP™ pentru a converti timpul local-zonă de sursă ori (unele în timp standard, unele în lumina zilei de economisire a timpului) în Zulu ori (care sunt întotdeauna în timp standard) . Lista numelor de fus orar valabile este probabil identică cu lista din coloana TZ la [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . Zonele orare comune din SUA sunt: SUA/Hawaii, SUA/Alaska, SUA/Pacific, SUA/Mountain, SUA/Arizona, SUA/Central, SUA/Est.
     * Pentru variabilele de timp cu date de sursă numerice, puteți specifica " time\\_zone " atribut, dar valoarea trebuie să fie " Zulu "sau "UTC." Dacă aveți nevoie de sprijin pentru alte zone de timp, vă rugăm să trimiteți un e-mail lui Chris. John la Noaa.gov.
          
 ###### moștenire_timp_adjust{#legacy_time_adjust} 

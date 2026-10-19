@@ -45,14 +45,14 @@ Si certaines exigences de ce document semblent étranges ou difficiles, il est p
 Cette spécification se réfère à plusieurs autres spécifications et bibliothèques avec lesquelles elle est conçue, mais cette spécification ne fait partie d'aucune de ces autres spécifications, et n'a pas besoin de modifications, ni de conflit avec elles. Si un détail relatif à l'une de ces normes n'est pas précisé ici, voir la spécification correspondante. Cela comprend notamment:
 
 * La Convention des Attributs pour la Découverte des Données (ACDD) Norme de métadonnées:
-     [https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
+     [ https://wiki.esipfed.org/Attribute\\_Convention\\_for\\_Data\\_Discovery\\_1-3 ](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) .
 * Climat et prévisions (FC) Norme de métadonnées:
-     [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
+     [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html) .
 * Les NetCDF Guide de l'utilisateur (NUCEAU) :
-     [https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
+     [ https:///docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html ](https://docs.unidata.ucar.edu/netcdf-java/current/userguide/index.html) .
 * Les NetCDF bibliothèques de logiciels comme NetCDF -java et NetCDF -c:
-     [https://www.unidata.ucar.edu/software/netcdf/](https://www.unidata.ucar.edu/software/netcdf/) . Ces bibliothèques ne peuvent pas lire les fichiers CCNSV, mais elles peuvent lire .nc fichiers créés à partir de fichiers NCCSV.
-* - Oui. [https://www.json.org/](https://www.json.org/) 
+     [ https://www.unidata.ucar.edu/software/netcdf/ ](https://www.unidata.ucar.edu/software/netcdf/) . Ces bibliothèques ne peuvent pas lire les fichiers CCNSV, mais elles peuvent lire .nc fichiers créés à partir de fichiers NCCSV.
+* - Oui. [ https://www.json.org/ ](https://www.json.org/) 
 
 ### Notation{#notation} 
 Dans cette spécification, entre parenthèses, \\[   \\] , indiquer les éléments facultatifs.
@@ -152,12 +152,12 @@ Les définitions des types de données d'attribut sont les suivantes:
     * Double citations (") doit être codé comme deux guillemets doubles ("") . C'est ce que les programmes de tableur exigent lors de la lecture des fichiers .csv. C'est ce que les programmes de tableur écrire quand vous enregistrez un tableur comme un fichier .csv.
     * Les caractères spéciaux en code arrière JSON doivent être encodés comme dans JSON (notamment \\n (newline), mais aussi \\\\ (backslash), \\f (formfeed), \\t (tab), \\r (retour de chargement) ou avec la [\\u *- Oui.* ](#uhhhh) syntaxe. Dans un tableur, n'utilisez pas Alt Enter pour spécifier une nouvelle ligne dans une cellule de texte; utilisez plutôt \\n   (2 caractères : backslash et 'n ') pour indiquer une nouvelle ligne.
 #####  uhhhh  {#uhhhh} 
-    * \\u *hhhh - Tous les caractères inférieurs au caractère #32 ou supérieurs au caractère #126, et non autrement encodés, doivent être encodés avec la syntaxe \\u* hhhh*, où hhhh est le numéro hexadécimal à 4 chiffres du caractère, par exemple, le signe Euro est \\u20AC. Voir les pages de code référencées à [https://en.wikipedia.org/wiki/Unicode](https://en.wikipedia.org/wiki/Unicode) pour trouver les numéros hexadécimaux associés à des caractères Unicode spécifiques, ou utiliser une bibliothèque logicielle.
+    * \\u *hhhh - Tous les caractères inférieurs au caractère #32 ou supérieurs au caractère #126, et non autrement encodés, doivent être encodés avec la syntaxe \\u* hhhh*, où hhhh est le numéro hexadécimal à 4 chiffres du caractère, par exemple, le signe Euro est \\ \\u20AC . Voir les pages de code référencées à [ https://en.wikipedia.org/wiki/Unicode ](https://en.wikipedia.org/wiki/Unicode) pour trouver les numéros hexadécimaux associés à des caractères Unicode spécifiques, ou utiliser une bibliothèque logicielle.
     * Si la chaîne a un espace au début ou à la fin, ou inclut " (double citation) ou une virgule, ou contient des valeurs qui seraient autrement interprétées comme un autre type de données (Par exemple, une auberge) , ou est le mot "null", la chaîne entière doit être jointe en guillemets doubles; sinon, contrairement à JSON, les guillemets doubles enclos sont facultatifs. Nous vous recommandons: en cas de doute, enfermez l'ensemble de la chaîne en guillemets doubles. Les espaces au début ou à la fin d'une corde sont fortement découragés.
     * Pour l'instant, l'utilisation de caractères supérieurs à 255 est découragée. Le CCNV les soutient. ERDDAP™ les soutient en interne. Certains types de fichiers de sortie les supportent (Par exemple, .json et .nccsv ) . Mais de nombreux types de fichiers de sortie ne les supportent pas. Par exemple, NetCDF -3 fichiers ne supportent pas ces caractères parce que NetCDF les fichiers utilisent des caractères de 1-octet et CF n'a actuellement pas de système pour spécifier comment les caractères Unicode sont encodés dans NetCDF Chaînes (Par exemple, UTF-8) . Cela s'améliorera probablement avec le temps.
          
 #### Char{#char} 
-* Les valeurs de l'attribut char sont un seul caractère UCS-2 (i.e., caractères Unicode à 2 octets, comme dans Java ) , qui doit être écrit en caractères ASCII 7 bits, comme JSON pour que d'autres caractères puissent être spécifiés (voir la définition de chaîne ci-dessus pour l'encodage de caractères spéciaux, avec l'ajout de l'encodage d'un seul devis comme \\ ') . Les valeurs de l'attribut Char doivent être jointes en guillemets simples (les citations intérieures) et doubles citations (les citations extérieures) , par exemple, "'a'", "'""" (un caractère double citation) , "'\\''" (un caractère de citation unique) , "'\\t'" (un onglet) "\\u20AC" (un caractère euro) . Ce système d'utilisation de guillemets simples et doubles est étrange et lourd, mais c'est un moyen de distinguer les valeurs char de Strings d'une manière qui fonctionne avec des tableurs. Une valeur qui ressemble à un char mais est invalide générera un message d'erreur. Comme dans le cas des cordes, l'utilisation de caractères supérieurs à 255 est actuellement découragée.
+* Les valeurs de l'attribut char sont un seul caractère UCS-2 (i.e., caractères Unicode à 2 octets, comme dans Java ) , qui doit être écrit en caractères ASCII 7 bits, comme JSON pour que d'autres caractères puissent être spécifiés (voir la définition de chaîne ci-dessus pour l'encodage de caractères spéciaux, avec l'ajout de l'encodage d'un seul devis comme \\ ') . Les valeurs de l'attribut Char doivent être jointes en guillemets simples (les citations intérieures) et doubles citations (les citations extérieures) , par exemple, "'a'", "'""" (un caractère double citation) , "'\\''" (un caractère de citation unique) , "'\\t'" (un onglet) "," \\u20AC "" (un caractère euro) . Ce système d'utilisation de guillemets simples et doubles est étrange et lourd, mais c'est un moyen de distinguer les valeurs char de Strings d'une manière qui fonctionne avec des tableurs. Une valeur qui ressemble à un char mais est invalide générera un message d'erreur. Comme dans le cas des cordes, l'utilisation de caractères supérieurs à 255 est actuellement découragée.
 
 ### Suffixe{#suffix} 
 Notez que dans la section des attributs d'un fichier CCNSV, toutes les valeurs d'attribut numériques doivent avoir une lettre suffixe (Par exemple, "b") pour identifier le type de données numériques (Par exemple, octet) . Mais dans la section de données d'un fichier CCNSV, les valeurs numériques de données ne doivent jamais avoir ces lettres suffixes (à l'exception de 'L' pour les entiers longs et 'uL' pour les entiers longs) — le type de données est spécifié par\\*DONNÉES\\*attribut pour la variable.
@@ -220,7 +220,7 @@ Les valeurs DateTime représentées par des valeurs numériques doivent avoir un
 heure,unités,secondes depuis 1970-01-01T00:00:00Z
 
 Les valeurs DateTime représentées comme des valeurs de chaîne doivent avoir une chaîne\\*DONNÉES\\*attribut et un attribut units qui spécifie une date Modèle de temps tel que spécifié par la Java DateTimeFormatière classe
- ( [https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Par exemple,
+ ( [ https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html ](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) ) . Par exemple,
 temps, unités, yyyy-MM-dd 'T'HH:mm:ssZ
 Toutes les valeurs de date pour une variable donnée doivent utiliser le même format.
 Dans la plupart des cas, le modèle dateTime dont vous avez besoin pour l'attribut unit sera une variation de l'un de ces formats:
@@ -245,7 +245,7 @@ Comme l'exigent les FC, toutes les valeurs de degré (Par exemple, pour la longi
 ##  [DSG Types de fonctionnalités](#dsg-feature-types)  {#dsg-feature-types} 
 
 Un fichier CCNSV peut contenir une géométrie d'échantillonnage discrète des FC
- ( [https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) données. Ce sont les attributs qui font que cela fonctionne:
+ ( [ https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) ) données. Ce sont les attributs qui font que cela fonctionne:
 
 1. Comme l'exigent les FC, le fichier CCNSV doit inclure une ligne dans la section sur les métadonnées qui identifie les [\\*GLOBAL\\*](#global)   featureType attribut, par exemple,
     \\*GLOBAL\\*, featureType ,trajectoire
@@ -326,7 +326,7 @@ Remarques:
 
 * Ce fichier exemple comprend de nombreux cas difficiles (Par exemple, les variables char et longues et les valeurs de chaînes difficiles) . La plupart des fichiers CCNSV seront beaucoup plus simples.
 * La ligne de licence est divisée en deux lignes ici, mais n'est qu'une ligne dans le fichier échantillon.
-* \\u20AC est l'encodage du caractère Euro et \\u00FC est l'encodage de ü.
+* \\ \\u20AC est l'encodage du caractère Euro et \\u00FC est l'encodage de ü.
 * Nombreux Les chaînes de l'exemple sont jointes par des guillemets doubles, même s'ils n'ont pas à être, par exemple, de nombreux attributs globaux, dont le titre, l'attribut lon units et la 3e ligne de données.)
 * Il serait plus clair et mieux si l'attribut unit pour la variable testLong était écrit en guillemets doubles indiquant qu'il s'agit d'une valeur String. Mais la représentation actuelle (1, sans citations) sera interprété correctement comme une chaîne, pas comme un entier, parce qu'il n'y a pas de suffixe 'i'.
 * Contrairement à d'autres types de données numériques, les valeurs longues dans la section de données ont le suffixe ('L') qui identifie leur type de données numériques. Ceci est nécessaire pour empêcher les tableurs d'interpréter les valeurs comme des nombres flottants et ainsi perdre de la précision.
@@ -336,7 +336,7 @@ Remarques:
 Dans un tableur, comme dans un fichier CCNSV :
 
 * Écrire des valeurs d'attributs numériques comme spécifié pour les fichiers NCCSV (Par exemple, avec une lettre suffixe, par exemple « f », pour identifier le type de données de l'attribut) .
-* Dans Strings, écrivez tous les caractères moins que le caractère ASCII #32 ou plus que le caractère #126 comme un caractère rétro-slashé de type JSON (Par exemple, \\n pour newline) ou comme le numéro de caractères Unicode hexadécimal (insensible au cas) avec la syntaxe [\\u *- Oui.* ](#uhhhh)   (Par exemple, \\u20AC pour le signe Euro) . Utilisation \\n   (2 caractères : backslash et 'n ') pour indiquer une nouvelle ligne, pas Alt Enter.
+* Dans Strings, écrivez tous les caractères moins que le caractère ASCII #32 ou plus que le caractère #126 comme un caractère rétro-slashé de type JSON (Par exemple, \\n pour newline) ou comme le numéro de caractères Unicode hexadécimal (insensible au cas) avec la syntaxe [\\u *- Oui.* ](#uhhhh)   (Par exemple, \\ \\u20AC pour le signe Euro) . Utilisation \\n   (2 caractères : backslash et 'n ') pour indiquer une nouvelle ligne, pas Alt Enter.
 
 Les seules différences entre les fichiers du CCNSV et le tableur analogue qui suivent ces conventions sont :
 
@@ -392,7 +392,7 @@ Pour créer un fichier NCCSV à partir d'un tableur Feuilles Google :
 * Si un fichier NCCSV a des virgules excédentaires à la fin des lignes, vous pouvez les supprimer en convertissant le fichier NCCSV en un NetCDF fichier et puis la conversion NetCDF fichier dans un fichier NCCSV.
 * Lorsque vous essayez de convertir un fichier NCCSV en un NetCDF fichier, certaines erreurs seront détectées par le logiciel et généreront des messages d'erreurs, causant l'échec de la conversion. D'autres problèmes sont difficiles ou impossibles à attraper et ne généreront pas de messages d'erreur ou d'avertissements. Autres problèmes (Par exemple, les virgules excédentaires à la fin des lignes) seront ignorés. Le convertisseur de fichiers fera seulement un minimum de vérification de l'exactitude du résultat NetCDF dossier, p. ex., concernant la conformité des FC. Il est de la responsabilité du créateur et de l'utilisateur du fichier de vérifier que les résultats de la conversion sont tels que désirés et corrects. Voici deux façons de vérifier :
     * Imprimer le contenu .nc fichier avec ncdump
-         ( [https://linux.die.net/man/1/ncdump](https://linux.die.net/man/1/ncdump)  ) .
+         ( [ https://linux.die.net/man/1/ncdump ](https://linux.die.net/man/1/ncdump)  ) .
     * Afficher le contenu des données dans ERDDAP .
 
 ##  [Changements](#changes)  {#changes} 

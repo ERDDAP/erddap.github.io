@@ -42,7 +42,7 @@ sidebar_position: 3
 การส่งไฟล์ข้อมูลจริงจากแหล่งภายนอก มีความเสี่ยงสูง ERDDAP™ ไม่เกี่ยวกับเรื่องนั้น คุณต้องหาคําตอบที่ใช้ได้สําหรับคุณ และผู้ให้บริการข้อมูล ตัวอย่างเช่น อีเมล (สําหรับแฟ้มขนาดเล็ก) ดึงจากเมฆ (ตัวอย่างเช่น, Drop Box หรือ Google ไดรฟ์) เว็บไซต์ Sftp (ด้วยรหัสผ่าน) , หรือ คนแอบ เน็ต (ฮาร์ดดิสก์ภายนอก) . คุณควรจะรับไฟล์จากคนที่คุณรู้จักเท่านั้น คุณจะต้องสแกนไฟล์ไวรัส และใช้การป้องกันอื่น ๆ
 
 มันไม่มีการเชื่อมโยง ERDDAP™ ไปยังแบบฟอร์มข้อมูล (ยกตัวอย่างเช่น ERDDAP™ หน้าหลัก) . แต่เวลามีคนบอกคุณว่า เขาอยากได้ข้อมูล ERDDAP คุณส่งอีเมล์ไปให้พวกเขา แล้วบอกว่า
-ใช่ เราเอาข้อมูลคุณเข้าไปได้ ERDDAP . เพื่อเริ่มต้น โปรดกรอกแบบฟอร์มที่https://*yourUrl*/erddap/dataProviderForm.html  (หรือ http:// ถ้า https:// ไม่เปิดใช้) .
+ใช่ เราเอาข้อมูลคุณเข้าไปได้ ERDDAP . เพื่อเริ่มต้น โปรดกรอกแบบฟอร์มที่ https://*yourUrl*/erddap/dataProviderForm.html   (หรือ http:// ถ้า https:// ไม่เปิดใช้) .
 หลังจากคุณเสร็จ ผมจะติดต่อไป เพื่อสรุปรายละเอียดสุดท้าย
 ถ้าคุณอยากดูรูป (โดยไม่กรอก) คุณจะเห็นแบบฟอร์มบน ERD ' ERDDAP . [แนะนํา](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm.html) . [ตอน 1](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm1.html) . [ตอน 2](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm2.html) . [ตอน 3](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm3.html) และ [ตอน 4](https://coastwatch.pfeg.noaa.gov/erddap/dataProviderForm4.html) . ลิงก์พวกนี้บน ERD   ERDDAP™ ส่งข้อมูลมาให้ฉัน ไม่ใช่นาย ดังนั้นอย่าส่งข้อมูลไปกับพวกเขา เว้นแต่นายอยากจะเพิ่มข้อมูล ERD   ERDDAP .
 
@@ -190,23 +190,23 @@ DID นี้สร้างทั้งหมดของ datasets.xml ชิ�
      
 #####  EDDGrid จากสมุดที่อยู่{#eddgridfromthreddscatalog} 
 DID นี้สร้างทั้งหมดของ datasets.xml ชิ้นส่วนที่จําเป็นสําหรับทั้งหมด [ EDDGrid จาก Dap](#eddgridfromdap) ชุด ข้อมูล ที่ สามารถ พบ ได้ โดย การ คลาน เวียน ไป มา ตลอด ทาง (ย่อย) แคตตาล็อก มีรายการที่อยู่ URL หลายรูปแบบ ตัวเลือกนี้ RIFTES คือที่อยู่ URL.xml โดยมี / กาตาล็อก/ ในนั้น ตัวอย่างเช่น
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xmlหรือ
-https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml  
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/catalog.xml หรือ
+ https://oceanwatch.pfeg.noaa.gov/thredds/catalog/Satellite/aggregsatMH/chla/catalog.xml   
 (รายการเกี่ยวกับ .html อยู่ที่
-https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.htmlซึ่งไม่ยอมรับ EDDGrid จาก Threds Catalog.
+ https://oceanwatch.pfeg.noaa.gov/thredds/Satellite/aggregsatMH/chla/catalog.html ซึ่งไม่ยอมรับ EDDGrid จาก Threds Catalog.
 ถ้าคุณมีปัญหากับ EDDGrid จาก ปก แคตตาล็อก:
 * ตรวจสอบให้แน่ใจว่าที่อยู่ URL ที่คุณกําลังใช้นั้นถูกต้อง รวมถึง / catalog/ และสิ้นสุดด้วย /catalog.xml.
-* ถ้าเป็นไปได้ ใช้หมายเลขไอพีสาธารณะ (ยกตัวอย่างเช่นhttps://oceanwatch.pfeg.noaa.gov) ในที่อยู่ URL ไม่ใช่หมายเลข IP (ยกตัวอย่างเช่นhttps://12.34.56.78) . ถ้าที่อยู่ IP ของคุณเข้าถึงได้โดยผ่านทางที่อยู่ IP เท่านั้น&lt;แปลง Tublic Source Url&gt;] (# Convent to August Resourcessurl) ดังนั้น ERDDAP™ ผู้ใช้เห็นที่อยู่สาธารณะ แม้ว่า ERDDAP™ ได้ข้อมูลจากที่อยู่ตัวเลขท้องถิ่น
+* ถ้าเป็นไปได้ ใช้หมายเลขไอพีสาธารณะ (ยกตัวอย่างเช่น https://oceanwatch.pfeg.noaa.gov ) ในที่อยู่ URL ไม่ใช่หมายเลข IP (ยกตัวอย่างเช่น https://12.34.56.78 ) . ถ้าที่อยู่ IP ของคุณเข้าถึงได้โดยผ่านทางที่อยู่ IP เท่านั้น&lt;แปลง Tublic Source Url&gt;] (# Convent to August Resourcessurl) ดังนั้น ERDDAP™ ผู้ใช้เห็นที่อยู่สาธารณะ แม้ว่า ERDDAP™ ได้ข้อมูลจากที่อยู่ตัวเลขท้องถิ่น
 * ถ้าคุณมีปัญหาที่คุณแก้ไม่ได้ [ตรวจสอบเคล็ดลับการยิงปัญหา](#troubleshooting-tips) .
 * รหัสระดับต่ําสําหรับตอนนี้ใช้ Unidata หมวดหมู่ของ Netcdf-java (บิดเบี้ยว คลาสของหมวดหมู่) เพื่อให้สามารถจัดการกับแคตตาล็อกทั้งหมด (ซึ่งมีความซับซ้อนอย่างน่าประหลาดใจ) ขอบคุณ Unidata สําหรับรหัสนั่น
          
 #####  EDDGrid logy log{#eddgridlonpm180fromerddapcatalog} 
 เครื่องดีอีนี้สร้าง datasets.xml เพื่อให้ [ EDDGrid ลอน PM 180](#eddgridlonpm180) ชุดข้อมูลทั้งหมด EDDGrid ชุดข้อมูลใน ERDDAP ที่มีค่า ลองจิจูดมากกว่า 180
-* ถ้าเป็นไปได้ ใช้หมายเลขไอพีสาธารณะ (ยกตัวอย่างเช่นhttps://oceanwatch.pfeg.noaa.gov) ในที่อยู่ URL ไม่ใช่หมายเลข IP (ยกตัวอย่างเช่นhttps://12.34.56.78) . ถ้า ERDDAP™ จะเข้าถึงได้โดยผ่านทางที่อยู่ IP ท้องถิ่นเท่านั้น คุณสามารถใช้ได้&lt;แปลง Tublic Source Url&gt;] (# Convent to August Resourcessurl) ดังนั้น ERDDAP™ ผู้ใช้เห็นที่อยู่สาธารณะ แม้ว่า ERDDAP™ ได้ข้อมูลจากที่อยู่ตัวเลขท้องถิ่น
+* ถ้าเป็นไปได้ ใช้หมายเลขไอพีสาธารณะ (ยกตัวอย่างเช่น https://oceanwatch.pfeg.noaa.gov ) ในที่อยู่ URL ไม่ใช่หมายเลข IP (ยกตัวอย่างเช่น https://12.34.56.78 ) . ถ้า ERDDAP™ จะเข้าถึงได้โดยผ่านทางที่อยู่ IP ท้องถิ่นเท่านั้น คุณสามารถใช้ได้&lt;แปลง Tublic Source Url&gt;] (# Convent to August Resourcessurl) ดังนั้น ERDDAP™ ผู้ใช้เห็นที่อยู่สาธารณะ แม้ว่า ERDDAP™ ได้ข้อมูลจากที่อยู่ตัวเลขท้องถิ่น
          
 #####  EDDGrid logn0360 from Eddepcatalog{#eddgridlon0360fromerddapcatalog} 
 เครื่องดีอีนี้สร้าง datasets.xml เพื่อให้ [ EDDGrid ลอน0360](#eddgridlon0360) ชุดข้อมูลทั้งหมด EDDGrid ชุดข้อมูลใน ERDDAP ที่มีค่า ลองจิจูดน้อยกว่า 0
-* ถ้าเป็นไปได้ ใช้หมายเลขไอพีสาธารณะ (ยกตัวอย่างเช่นhttps://oceanwatch.pfeg.noaa.gov) ในที่อยู่ URL ไม่ใช่หมายเลข IP (ยกตัวอย่างเช่นhttps://12.34.56.78) . ถ้า ERDDAP™ จะเข้าถึงได้โดยผ่านทางที่อยู่ IP ท้องถิ่นเท่านั้น คุณสามารถใช้ได้&lt;แปลง Tublic Source Url&gt;] (# Convent to August Resourcessurl) ดังนั้น ERDDAP™ ผู้ใช้เห็นที่อยู่สาธารณะ แม้ว่า ERDDAP™ ได้ข้อมูลจากที่อยู่ตัวเลขท้องถิ่น
+* ถ้าเป็นไปได้ ใช้หมายเลขไอพีสาธารณะ (ยกตัวอย่างเช่น https://oceanwatch.pfeg.noaa.gov ) ในที่อยู่ URL ไม่ใช่หมายเลข IP (ยกตัวอย่างเช่น https://12.34.56.78 ) . ถ้า ERDDAP™ จะเข้าถึงได้โดยผ่านทางที่อยู่ IP ท้องถิ่นเท่านั้น คุณสามารถใช้ได้&lt;แปลง Tublic Source Url&gt;] (# Convent to August Resourcessurl) ดังนั้น ERDDAP™ ผู้ใช้เห็นที่อยู่สาธารณะ แม้ว่า ERDDAP™ ได้ข้อมูลจากที่อยู่ตัวเลขท้องถิ่น
          
 ##### ED จากแฟ้ม{#eddsfromfiles} 
 เมื่อกําหนดไดเรกทอรีเริ่มต้นแล้ว สิ่งนี้จะผ่านไดเร็กทอรีและส่วนย่อยทั้งหมด และพยายามสร้างชุดข้อมูล สําหรับแต่ละกลุ่มของแฟ้มข้อมูลที่มันค้นพบ
@@ -566,7 +566,7 @@ NCOSV 1. 0 ไม่สนับสนุนชนิดของข้อมู
 ### หมายเหตุประเภทข้อมูล{#data-type-comments} 
 * เนื่องจากการสนับสนุนที่ยากจนสําหรับยาว, ยาว, และข้อมูล char ในหลายประเภทไฟล์ เรายับยั้งการใช้ชนิดของข้อมูลเหล่านี้ใน ERDDAP . เมื่อ เป็น ไป ได้ จง ใช้ สอง แบบ แทน ที่ จะ ใช้ เวลา ยาว และ ยาว และ ใช้ เชือก แทน ที่ จะ ใช้ ขี้ ผึ้ง.
      
-* ข้อมูลกํากับภาพ - เพราะว่า(OPeN)DAPการตอบรับของ .das และ ids ไม่สนับสนุนคุณสมบัติหรือประเภทข้อมูลแบบยาว ๆ (และแสดงให้พวกเขาเป็นสองเท่า) คุณอาจต้องการใช้ ERDDAP รูปแบบของข้อมูลกํากับที่ปรากฏใน http ... / เซอแดป/ **ข้อมูล** / * datasetID * หน้าเว็บ.html (ยกตัวอย่างเช่น [https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (ซึ่งคุณสามารถรับได้ในรูปแบบแฟ้มอื่น เช่น .csv .htmlTable . .itx . .json . .jsonlCSV1 . .jsonlCSV . .jsonlKVP . .mat . .nc . .nccsv . .tsv . .xhtml ) หรือ .nccsv การตอบรับข้อมูลกํากับภาพ (ยกตัวอย่างเช่น [https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) แม้ว่า .nccsv ข้อมูลกํากับภาพใช้ได้เฉพาะกับชุดข้อมูลอักขระแท็บเท่านั้น) ทั้งสองอย่างรองรับชนิดของข้อมูล (โดยเฉพาะอย่างยิ่ง ยาว, ยาว, และมงกุฎ) .
+* ข้อมูลกํากับภาพ - เพราะว่า(OPeN)DAPการตอบรับของ .das และ ids ไม่สนับสนุนคุณสมบัติหรือประเภทข้อมูลแบบยาว ๆ (และแสดงให้พวกเขาเป็นสองเท่า) คุณอาจต้องการใช้ ERDDAP รูปแบบของข้อมูลกํากับที่ปรากฏใน http ... / เซอแดป/ **ข้อมูล** / * datasetID * หน้าเว็บ.html (ยกตัวอย่างเช่น [ https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html ](https://coastwatch.pfeg.noaa.gov/erddap/info/cwwcNDBCMet/index.html)  )   (ซึ่งคุณสามารถรับได้ในรูปแบบแฟ้มอื่น เช่น .csv .htmlTable . .itx . .json . .jsonlCSV1 . .jsonlCSV . .jsonlKVP . .mat . .nc . .nccsv . .tsv . .xhtml ) หรือ .nccsv การตอบรับข้อมูลกํากับภาพ (ยกตัวอย่างเช่น [ https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata ](https://coastwatch.pfeg.noaa.gov/erddap/tabledap/cwwcNDBCMet.nccsvMetadata) แม้ว่า .nccsv ข้อมูลกํากับภาพใช้ได้เฉพาะกับชุดข้อมูลอักขระแท็บเท่านั้น) ทั้งสองอย่างรองรับชนิดของข้อมูล (โดยเฉพาะอย่างยิ่ง ยาว, ยาว, และมงกุฎ) .
          
 ### แฟ้มสื่อ{#media-files} 
 ไม่ใช่ข้อมูลทั้งหมดเป็นอาร์เรย์ของตัวเลขหรือข้อความ ชุดข้อมูลบางตัวประกอบด้วย หรือรวมแฟ้มสื่อ เช่น ภาพ, เสียงและวิดีโอ ERDDAP™ มีคุณลักษณะพิเศษบางอย่าง ที่จะทําให้ผู้ใช้เข้าถึงแฟ้มสื่อได้ง่ายขึ้น มันเป็นขั้นตอนที่ 2
@@ -604,7 +604,7 @@ NCOSV 1. 0 ไม่สนับสนุนชนิดของข้อมู
 ### ทํางานกับแฟ้มแบบ AWS S3{#working-with-aws-s3-files} 
  [บริการเว็บของ Amazon (ขนาด AWS) ](https://aws.amazon.com) เป็นผู้ขาย [การคํานวณของเมฆ](https://en.wikipedia.org/wiki/Cloud_computing) บริการ [ขนาด S3](https://aws.amazon.com/s3/) เป็นระบบจัดเก็บวัตถุที่นําเสนอโดย AWS แทนที่ระบบลําดับชั้นของไดเรกทอรีและแฟ้มของระบบไฟล์ดั้งเดิม (เหมือนฮาร์ดไดรฟ์ในคอมพิวเตอร์ของคุณ) S3 เสนอเพียง "Bubets" ซึ่งถือ "objects" (เราจะเรียกพวกเขา "files" ) .
 
-สําหรับแฟ้ม ASCII (e.g., .csv) . ERDDAP™ สามารถทํางานกับไฟล์ในถังโดยตรง สิ่งเดียวที่คุณต้องทํา คือระบุ&lt;แฟ้ม Dir &gt; สําหรับชุดข้อมูลโดยใช้รูปแบบเฉพาะสําหรับถัง AWS, e.g.https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/. คุณไม่ควรใช้&lt;แคชจาก Url&gt;. ดูรายละเอียดข้างล่าง
+สําหรับแฟ้ม ASCII (e.g., .csv) . ERDDAP™ สามารถทํางานกับไฟล์ในถังโดยตรง สิ่งเดียวที่คุณต้องทํา คือระบุ&lt;แฟ้ม Dir &gt; สําหรับชุดข้อมูลโดยใช้รูปแบบเฉพาะสําหรับถัง AWS, e.g. https://*bucketName*.s3.*aws-region*.amazonaws.com/*subdirectory*/ . คุณไม่ควรใช้&lt;แคชจาก Url&gt;. ดูรายละเอียดข้างล่าง
 
 แต่สําหรับแฟ้มไบนารี (อี.จี. .nc .gridge, . Buf และ .hdf แฟ้ม) คุณต้องใช้&lt;แคชจาก Url&gt; ระบบที่อธิบายด้านล่างนี้ ERDDAP (เพลง) (ซึ่ง ERDDAP™ ใช้อ่านข้อมูลจากแฟ้มเหล่านี้) และซอฟท์แวร์วิทยาศาสตร์อื่น ๆ ได้รับการออกแบบให้ทํางานกับไฟล์ในระบบไฟล์แบบดั้งเดิมซึ่ง [ระดับการบล็อค](https://en.wikipedia.org/wiki/Block-level_storage) เข้าถึงแฟ้ม (อนุญาตให้อ่านส่วนย่อยของแฟ้มได้) แต่ S3 เสนอเท่านั้น [ระดับแฟ้ม (วัตถุ) ](https://en.wikipedia.org/wiki/Block-level_storage) เข้าถึงแฟ้ม (ซึ่งอนุญาตให้อ่านแฟ้มทั้งหมดได้) . AWS เสนอทางเลือก S3 [ร้านขายกระดาษแข็ง (อีบีเอส) ](https://aws.amazon.com/ebs/) ) ซึ่งรองรับการเข้าถึงไฟล์ในระดับบล็อก แต่มันแพงกว่า S3, จึงไม่ค่อยใช้เก็บข้อมูลจํานวนมาก (ดังนั้นเมื่อคนพูดว่าการเก็บข้อมูลในเมฆ (ขนาด S3) มัน มี ราคา ถูก ตาม ปกติ มัน จะ เป็น แอปเปิล สําหรับ เปรียบ เทียบ ส้ม.) 
 
@@ -617,10 +617,10 @@ ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e2019
 ```
 URI ที่ตรงกันสําหรับวัตถุที่เป็น
 
- [https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR\\_ABI-L1b-RadC-M6C01\\_G17\\_s20192352201196\\_e20192352203569\\_c20192352204013.nc ](https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/2019/235/22/OR_ABI-L1b-RadC-M6C01_G17_s20192352201196_e20192352203569_c20192352204013.nc) 
 
 AWS รองรับความแตกต่างเล็กน้อยในการสร้างที่อยู่ URL นั้น แต่ ERDDAP™ ต้องการรูปแบบเฉพาะนี้:
-  https://*bucketName*.s3.*region*.amazonaws.com/*key*  
+   https://*bucketName*.s3.*region*.amazonaws.com/*key*   
 
 ของ ERDDAP v2.29, ตอนนี้คุณสามารถใช้ `ขนาด s3 &lt; br /&gt;` รูปแบบ URI แทนที่จะเป็นที่อยู่ URL ถัง นี่เป็นรูปแบบที่จะใช้โดย [ขนาด AWS s3Cli](https://docs.aws.amazon.com/cli/latest/reference/s3/) .
 ขนาด s3 &lt; br /&gt; *ตะกร้าName* / *กุญแจ* 
@@ -697,22 +697,22 @@ ABI-Lib. 2018. 0518. 052.or/_ABI-L1b-Rad2-M3C10/_G16/s2018222475), ERDDAP™ จ
 ในทุกกรณี คุณจะต้องมีบัญชี AWS เพราะ AWS SDK สําหรับ Java   (ซึ่ง ERDDAP™ ใช้ขอรับข้อมูลเกี่ยวกับเนื้อหาของถัง) ต้องการรับรองบัญชีของ AWS (บนนี้ด้านล่าง) 
 
  ERDDAP™ เข้าถึงได้เฉพาะช่อง AWS S3 ถ้าคุณระบุช่อง&lt;แคชจาก URI] (# คาเชฟัวร์) (หรือ&lt;Dir &gt;) ในรูปแบบเฉพาะ:
-https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*  
+ https://*bucketName*.s3.*aws-region*.amazonaws.com/*prefix/*   
 ที่ไหน
 
 * ตะกร้านี้มีชื่อย่อของชื่อถัง เช่น Noa-goes17
 * aws-region, e.g., our- East-1 มาจากคอลัมน์ "Region" ในตารางหนึ่งของ [จุด จบ ของ การ รับ ใช้ AWS](https://docs.aws.amazon.com/general/latest/gr/rande.html) ที่ที่ถังตั้งอยู่จริงๆ
 * การเสนอราคาเป็นทางเลือก ถ้า ปัจจุบัน ต้อง จบ ลง ด้วย '/' .
 
-ยกตัวอย่างเช่นhttps://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ยกตัวอย่างเช่น https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 รูปแบบที่อยู่ URL นี้เป็นหนึ่งในคําแนะนําของ AWS S3: ดู [เข้า ถึง บัคเก็ต](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) ถึง [คําอธิบายของคํานําหน้านี้](https://docs.aws.amazon.com/AmazonS3/latest/dev/ListingKeysHierarchy.html) . ERDDAP™ ต้องการให้ทําการรวมที่อยู่ URL ของถัง และส่วนนําหน้าที่ต้องการเข้าไปไว้ในที่อยู่ URL หนึ่ง เพื่อระบุ&lt;แคชจาก Url&gt; (หรือ)&lt;fileDir) ที่ตําแหน่งแฟ้ม
 
 #### การทดสอบ AWS S3 บัคเก็ต{#test-public-aws-s3-buckets} 
 สําหรับถังสาธารณะ คุณสามารถทดสอบที่อยู่ URL ถังของไดเร็กทอรี AWS S3 ในเบราว์เซอร์ของคุณ เช่น
- [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) หากตําแหน่ง URL ของถังถูกต้องและเหมาะสมสําหรับ ERDDAP มันจะคืนเอกสาร XML ที่ (บาง) รายการเนื้อหาของถังที่ โชคไม่ดี ที่อยู่ URL เต็ม (เช่น ที่อยู่ URL ถัง บวกคํานําหน้า) นั่น ERDDAP™ ต้องการชุดข้อมูลที่ให้มา ใช้ไม่ได้กับเบราว์เซอร์ AWS ไม่ได้เสนอระบบที่จะดูลําดับชั้นของถังในเว็บของคุณได้ง่ายๆ (ถ้าไม่ถูกต้อง โปรดส่งอีเมลหาคริส จอห์นที่โนอา โกฟ ไม่อย่างนั้น, Amazon, กรุณาเพิ่มการสนับสนุนสําหรับเรื่องนี้&#33;) 
+ [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) หากตําแหน่ง URL ของถังถูกต้องและเหมาะสมสําหรับ ERDDAP มันจะคืนเอกสาร XML ที่ (บาง) รายการเนื้อหาของถังที่ โชคไม่ดี ที่อยู่ URL เต็ม (เช่น ที่อยู่ URL ถัง บวกคํานําหน้า) นั่น ERDDAP™ ต้องการชุดข้อมูลที่ให้มา ใช้ไม่ได้กับเบราว์เซอร์ AWS ไม่ได้เสนอระบบที่จะดูลําดับชั้นของถังในเว็บของคุณได้ง่ายๆ (ถ้าไม่ถูกต้อง โปรดส่งอีเมลหาคริส จอห์นที่โนอา โกฟ ไม่อย่างนั้น, Amazon, กรุณาเพิ่มการสนับสนุนสําหรับเรื่องนี้&#33;) 
 
 #### การ มอง ดู เนื้อหา ของ บัคเก็ต{#viewing-the-contents-of-a-bucket} 
-S3 ถังมักบรรจุแฟ้มหลายประเภท ในชุดย่อยปลอมๆ ซึ่งอาจกลายเป็น ERDDAP™ ชุดข้อมูล เพื่อทําให้ ERDDAP™ ชุดข้อมูล, คุณต้องรู้ไดเรกทอรีเริ่มต้นสําหรับ&lt;แคชจาก Url&gt; (หรือ)&lt;fileDir) และรูปแบบของชื่อแฟ้ม ที่ระบุสับเซตของแฟ้ม หากคุณพยายามแสดงเนื้อหาทั้งหมดของถังในเบราว์เซอร์ S3 จะแสดงเพียง 1,000 แฟ้มแรกที่ไม่เพียงพอ ใน ปัจจุบัน วิธี ที่ ดี ที่ สุด ที่ คุณ จะ มอง เนื้อหา ทั้ง หมด ของ ถัง คือ การ ทํา ถัง [แก้ไขโครงการหลัก...](#eddtablefromfilenames) ชุดข้อมูล (ในคอมพิวเตอร์ของคุณ ERDDAP™ หรือต่อหน้าสาธารณชน ERDDAP ) ซึ่งยังช่วยให้คุณสามารถเรียกดูโครงสร้างไดเรกทอรีและดาวน์โหลดได้ง่ายขึ้น เดอะ&lt;แฟ้ม Dir) สําหรับมัน จะเป็นที่อยู่ URL ที่คุณสร้างไว้ด้านบน เช่นhttps://noaa-goes17.s3.us-east-1.amazonaws.com. \\[ ทําไมเอดับเบิลยูเอสเอส3 ไม่เสนอวิธีง่ายๆ ให้ใครทําโดยไม่มีบัญชีเอดับเบิลยูเอส \\] หมายเหตุว่าเมื่อฉันทําเช่นนี้บนคอมพิวเตอร์ของฉันบนเครือข่ายที่ไม่ใช่อะมาซอน ดูเหมือนว่าอะเมซอนจะชะลอการตอบสนองไปยัง (ประมาณ 100 คน (?) แฟ้มต่อก้อน) หลังจากชิ้นแรกๆ (จาก 1000 แฟ้มต่อก้อน) ถูกดาวน์โหลดมาแล้ว เนื่องจากถังอาจมีแฟ้มจํานวนมาก (Noa-goes17 มี 26 ล้าน) การได้รับเนื้อหาทั้งหมดของถังอาจจะใช้ EDTable จากแฟ้มName (อี.จี., 12&#33;) เพื่อจบ \\[ อเมซอน ใช่ไหม \\] 
+S3 ถังมักบรรจุแฟ้มหลายประเภท ในชุดย่อยปลอมๆ ซึ่งอาจกลายเป็น ERDDAP™ ชุดข้อมูล เพื่อทําให้ ERDDAP™ ชุดข้อมูล, คุณต้องรู้ไดเรกทอรีเริ่มต้นสําหรับ&lt;แคชจาก Url&gt; (หรือ)&lt;fileDir) และรูปแบบของชื่อแฟ้ม ที่ระบุสับเซตของแฟ้ม หากคุณพยายามแสดงเนื้อหาทั้งหมดของถังในเบราว์เซอร์ S3 จะแสดงเพียง 1,000 แฟ้มแรกที่ไม่เพียงพอ ใน ปัจจุบัน วิธี ที่ ดี ที่ สุด ที่ คุณ จะ มอง เนื้อหา ทั้ง หมด ของ ถัง คือ การ ทํา ถัง [แก้ไขโครงการหลัก...](#eddtablefromfilenames) ชุดข้อมูล (ในคอมพิวเตอร์ของคุณ ERDDAP™ หรือต่อหน้าสาธารณชน ERDDAP ) ซึ่งยังช่วยให้คุณสามารถเรียกดูโครงสร้างไดเรกทอรีและดาวน์โหลดได้ง่ายขึ้น เดอะ&lt;แฟ้ม Dir) สําหรับมัน จะเป็นที่อยู่ URL ที่คุณสร้างไว้ด้านบน เช่น https://noaa-goes17.s3.us-east-1.amazonaws.com . \\[ ทําไมเอดับเบิลยูเอสเอส3 ไม่เสนอวิธีง่ายๆ ให้ใครทําโดยไม่มีบัญชีเอดับเบิลยูเอส \\] หมายเหตุว่าเมื่อฉันทําเช่นนี้บนคอมพิวเตอร์ของฉันบนเครือข่ายที่ไม่ใช่อะมาซอน ดูเหมือนว่าอะเมซอนจะชะลอการตอบสนองไปยัง (ประมาณ 100 คน (?) แฟ้มต่อก้อน) หลังจากชิ้นแรกๆ (จาก 1000 แฟ้มต่อก้อน) ถูกดาวน์โหลดมาแล้ว เนื่องจากถังอาจมีแฟ้มจํานวนมาก (Noa-goes17 มี 26 ล้าน) การได้รับเนื้อหาทั้งหมดของถังอาจจะใช้ EDTable จากแฟ้มName (อี.จี., 12&#33;) เพื่อจบ \\[ อเมซอน ใช่ไหม \\] 
 
 #### ทํา ดี ดีที จากแฟ้มName{#making-an-eddtablefromfilenames-dataset-with-an-aws-s3-bucket} 
 หากคุณมีชื่อถัง แต่ยังไม่มีรายการของแฟ้มในถัง S3 หรือคํานําหน้าที่ระบุตําแหน่งของแฟ้มที่เกี่ยวข้องในถัง ให้ใช้คําสั่งด้านล่างนี้ เพื่อสร้างชุดข้อมูล DDTable จากแฟ้มName ERDDAP ' "files" ระบบ
@@ -727,22 +727,24 @@ S3 ถังมักบรรจุแฟ้มหลายประเภท �
 แนะนําให้ใช้ลินุกซ์และ Mac OS: แฟ้มใบรับรองต้องอยู่ในไดเร็คทอรีส่วนตัวของผู้ใช้ที่กําลังทํางานอยู่ (ถึง ERDDAP )   (สําหรับย่อหน้านี้ เราจะถือว่าผู้ใช้=tommcat) ในแฟ้มที่ชื่อ ~/.aws/credentials อย่าสมมุติว่า ~คือ / home/tommcat -- ที่จริงใช้ cd ~ เพื่อหาว่าระบบปฏิบัติการคิดว่า ~ สําหรับผู้ใช้=tommcat สร้างไดเรกทอรีหากไม่มีอยู่ และหลังจากที่คุณใส่แฟ้มใบรับรองลงไปแล้ว ให้ตรวจสอบว่าผู้ใช้และกลุ่มของแฟ้มคือ tomct และใช้ comd 400 access เพื่อให้มั่นใจว่าแฟ้มนี้อ่านได้เฉพาะผู้ใช้เท่านั้น=tommcat
     
 3. สร้างที่อยู่ URL ของถังใน [รูปแบบที่ ERDDAP™ ต้องการ](#accessing-files-in-an-aws-s3-bucket) อี.จี.
-     [https://noaa-goes17.s3.us-east-1.amazonaws.com](https://noaa-goes17.s3.us-east-1.amazonaws.com) และ (สําหรับถังสาธารณะ) ทดสอบในเบราว์เซอร์เพื่อให้แน่ใจว่าเอกสาร XML ที่มีการเรียงลําดับของเนื้อหาของถังดังกล่าว
+     [ https://noaa-goes17.s3.us-east-1.amazonaws.com ](https://noaa-goes17.s3.us-east-1.amazonaws.com) และ (สําหรับถังสาธารณะ) ทดสอบในเบราว์เซอร์เพื่อให้แน่ใจว่าเอกสาร XML ที่มีการเรียงลําดับของเนื้อหาของถังดังกล่าว
      
 4. ใช้ [สร้าง DatatasXml](#generatedatasetsxml) เพื่อสร้าง [แก้ไขโครงการหลัก...](#eddtablefromfilenames) ชุดข้อมูล:
     * สําหรับไดเรกทอรีเริ่มต้น ใช้ไวยากรณ์นี้:
         \\*\\*/ *จากออนฟลาย* Bucketurl ของคุณ♪
 ยกตัวอย่างเช่น
-        \\*\\*จากบนฟลายhttps://noaa-goes17.s3.us-east-1.amazonaws.com/
+        \\*\\*จากบนฟลาย https://noaa-goes17.s3.us-east-1.amazonaws.com/
+ 
     * ชื่อแฟ้มRegex? . /*
     * สํานึกผิด? จริง
     * โหลดใหม่ ทุกคนเหรอ? 10080
-    *    infoUrl ?https://registry.opendata.aws/noaa-goes/
+    *    infoUrl ? https://registry.opendata.aws/noaa-goes/
+ 
     * สถาบัน? NOAA 
     * สรุป? ไม่มีอะไร ( ERDDAP™ จะทําการสรุปอย่างเหมาะสมโดยอัตโนมัติ) 
     * ชื่อ? ไม่มีอะไร ( ERDDAP™ จะสร้างชื่อเล่นที่เหมาะสมให้โดยอัตโนมัติ) ตามปกติ คุณควรแก้ไขผลของ XML เพื่อตรวจสอบความถูกต้องและทําการปรับปรุงก่อนที่ชิ้นข้อมูลชุดที่จะใช้ใน datasets.xml .
 5. ถ้าคุณทําตามคําแนะนําด้านบนและโหลดข้อมูลชุดใน ERDDAP คุณได้สร้าง ADTable จากแฟ้มข้อมูล เพื่อเป็นตัวอย่าง และเพื่อทําให้ทุกคนสามารถเรียกดูและดาวน์โหลดไฟล์จากช่องข้อมูล AWS ได้ง่ายขึ้น เราได้สร้าง DDTable from Files (ดูรายการที่
-     [https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) สําหรับเกือบทั้งหมด [ช่องข้อมูล AWS S3](https://registry.opendata.aws/) .
+     [ https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files\\_ ](https://upwell.pfeg.noaa.gov/erddap/search/index.html?searchFor=awsS3Files_) สําหรับเกือบทั้งหมด [ช่องข้อมูล AWS S3](https://registry.opendata.aws/) .
      \\[ ถังสองสามใบที่เราไม่ได้รวมไว้ มีแฟ้มจํานวนมากอยู่ในไดเร็กทอรีราก (กว่าที่สามารถดาวน์โหลดได้ในระยะเวลาที่เหมาะสม) ไม่งั้นก็ไม่อนุญาตให้ประชาชนเข้า (พวกเขาทุกคนควรจะเป็นคนเปิดเผยไม่ใช่เหรอ?) หรือผู้ขอจ่ายถัง (อี.) . \\]   
 ถ้าคุณคลิกบน "files" ลิงก์สําหรับชุดข้อมูลเหล่านี้ คุณสามารถเรียกดูไดเร็กทอรีต้นไม้และแฟ้มในถัง S3 ได้ เพราะหนทาง\\*\\*_* จาก OntheFly EDTable from Files ทํางาน รายการไดเร็กทอรีเหล่านี้มักจะมีวันที่ดีขึ้นเสมอเพราะ ERDDAP™ พาพวกเขาบิน หากคุณคลิกต้นไม้ไดเรกทอรีลงที่ชื่อแฟ้มจริง ๆ แล้วคลิกที่ชื่อแฟ้ม ERDDAP™ จะเปลี่ยนค่าคําขอของคุณไปเป็น AWS S3 เพื่อให้สามารถดาวน์โหลดแฟ้มโดยตรงจาก AWS ได้ จากนั้นคุณสามารถตรวจสอบไฟล์ที่
     
@@ -756,7 +758,7 @@ S3 ถังมักบรรจุแฟ้มหลายประเภท �
  **แล้วคุณก็ทําได้ ERDDAP™ ชุดข้อมูลที่จะให้ผู้ใช้เข้าถึงข้อมูลในแฟ้ม**   
 ดูคําแนะนําใน [ ERDDAP™ และ S3 บัคเก็ต](#erddap-and-aws-s3-buckets)   (เหนือ) .
 สําหรับตัวอย่าง EDTable จากแฟ้มNames ข้อมูลต่าง ๆ ที่คุณทําไว้ด้านบน หากคุณลองเล่นกับไดเร็กทอรีและชื่อแฟ้มในต้นไม้ไดเร็กทอรีดู จะเห็นอย่างชัดเจนถึงชื่อไดเรกทอรีระดับบนสุด (E.g., ABI-L1b-RadC) ตรงกับอะไร ERDDAP™ จะเรียกว่าชุดข้อมูลแยก ถัง ที่ คุณ ทํา อยู่ อาจ คล้าย กัน. คุณสามารถไล่ตามการสร้างชุดข้อมูลแยกใน ERDDAP™ สําหรับข้อมูลแต่ละชุด โดยใช้, e.g.
-https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/  
+ https://noaa-goes17.s3.us-east-1.amazonaws.com/ABI-L1b-RadC/   
 คือ&lt;แคชจาก URI]. โชคไม่ดี, สําหรับตัวอย่างนี้, ชุดข้อมูลในถัง ดูเหมือนจะเป็นข้อมูลระดับ 1 หรือระดับ 2 ERDDAP™   [ไม่ค่อยดีเท่าไหร่](#dimensions) เนื่องจากชุดข้อมูล เป็นชุดตัวแปรที่ซับซ้อนกว่า ซึ่งใช้มิติต่าง ๆ
      
     
@@ -975,7 +977,7 @@ nco/ncathed - หน่วย, เวลา, o, c'วินาทีตั้ง
 ###  EDDGrid จาก Dap{#eddgridfromdap} 
  [ ** EDDGrid จาก Dap** ](#eddgridfromdap) ใช้ตัวแปรกริดจาก [ DAP ](https://www.opendap.org/) เซิฟเวอร์
 
-* เราขอแนะนําให้ใช้ [ตั้งค่าชุดภาพไอคอนสื่ออารมณ์ โปรแกรม Xml](#generatedatasetsxml) เพื่อให้ฉบับหยาบของ datasets.xml รวมเข้ากับชุดข้อมูล คุณสามารถรวบรวมข้อมูลที่คุณต้องการเพื่อปรับเปลี่ยนหรือสร้าง XML ของคุณเองสําหรับ EDDGrid จากฐานข้อมูล Dap โดยดูที่ DDS และ DAS ในเบราว์เซอร์ของคุณ (โดยการเพิ่ม .das และ ids กับ sourceUrl ยกตัวอย่างเช่น [https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
+* เราขอแนะนําให้ใช้ [ตั้งค่าชุดภาพไอคอนสื่ออารมณ์ โปรแกรม Xml](#generatedatasetsxml) เพื่อให้ฉบับหยาบของ datasets.xml รวมเข้ากับชุดข้อมูล คุณสามารถรวบรวมข้อมูลที่คุณต้องการเพื่อปรับเปลี่ยนหรือสร้าง XML ของคุณเองสําหรับ EDDGrid จากฐานข้อมูล Dap โดยดูที่ DDS และ DAS ในเบราว์เซอร์ของคุณ (โดยการเพิ่ม .das และ ids กับ sourceUrl ยกตัวอย่างเช่น [ https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds ](https://thredds1.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day.dds) ) .
      
 *    EDDGrid จาก Dap สามารถได้ข้อมูลจากตัวแปรหลายมิติจาก DAP เซิร์ฟเวอร์ข้อมูล (ความเดิมตอนที่แล้ว EDDGrid จาก Dap จํากัด เป็นตัวแปรที่กําหนดให้เป็น "gridge" แต่ที่ไม่เป็นที่ต้องการอีกต่อไป)   
      
@@ -1335,7 +1337,7 @@ nco/ncathed - หน่วย, เวลา, o, c'วินาทีตั้ง
         </addAttributes>
       </axisVariable>
 ```
-หมายเหตุการใช้งานของกลุ่มจับหมายเลข 2 เพื่อจับตัวเลขที่เกิดขึ้นหลังจาก 'r' หรือ 's' และก่อน "/global". ตัว อย่าง นี้ ยัง แสดง ให้ เห็น ด้วย ว่า จะ เพิ่ม คุณลักษณะ อื่น ๆ ได้ อย่าง ไร (อี.จี. ioos\\_category และหน่วย) กับตัวแปรแกน
+หมายเหตุการใช้งานของกลุ่มจับหมายเลข 2 เพื่อจับตัวเลขที่เกิดขึ้นหลังจาก 'r' หรือ 's' และก่อนหน้า "\\_global" . ตัว อย่าง นี้ ยัง แสดง ให้ เห็น ด้วย ว่า จะ เพิ่ม คุณลักษณะ อื่น ๆ ได้ อย่าง ไร (อี.จี. ioos\\_category และหน่วย) กับตัวแปรแกน
      
 #### แฟ้มที่ถูกบีบอัดภายนอก{#externally-compressed-files} 
 * ชุดข้อมูลที่เป็นสับเซตของ EDDGrid จากแฟ้มและ EDTable จากแฟ้ม สามารถป้อนข้อมูลโดยตรงจากแฟ้มบีบอัดภายนอกได้ รวมถึง .tgz . .tar  .gz . .tar  .gzip . .gz . .gzip . .zip . .bz2 และแฟ้ม .Z
@@ -1433,7 +1435,7 @@ nco/ncathed - หน่วย, เวลา, o, c'วินาทีตั้ง
 ใช้ [แทน]&lt;แคชจาก Url&gt; ระบบ] (# คาเชฟัวร์) .
 
 การเข้าถึง ERDDAP™ ชุดข้อมูลเป็นแฟ้มต่าง ๆ ที่ร้องขอมา โดยผ่านช่วงต่าง ๆ
-การพลิกกลับนี้, ถ้าคุณสามารถ (ในทางทฤษฎี) คิดถึงชุดข้อมูลใน ERDDAP™ ในฐานะยักษ์ .nc แฟ้มโดยเพิ่มเข้าไป .nc "ที่ฐาน OPen DAP ที่อยู่ URL สําหรับชุดข้อมูล (อี.จี.https://myserver.org/erddap/griddap/datasetID.ncและด้วยการเพิ่มข้อมูล หลังการระบุสับเซต) มันอาจจะมีเหตุผลที่จะถามว่า คุณสามารถใช้ Netcf-java, Ferret หรืออย่างอื่น NetCDF โปรแกรมลูกข่ายที่จะอ่านข้อมูลผ่านทาง ร้องขอช่วง HTTP จาก ERDDAP . คําตอบคือไม่ เพราะมันไม่ใหญ่มาก .nc "ไฟล์. ถ้าคุณต้องการทํา แทนที่จะเลือกแบบนี้
+การพลิกกลับนี้, ถ้าคุณสามารถ (ในทางทฤษฎี) คิดถึงชุดข้อมูลใน ERDDAP™ ในฐานะยักษ์ .nc แฟ้มโดยเพิ่มเข้าไป .nc "ที่ฐาน OPen DAP ที่อยู่ URL สําหรับชุดข้อมูล (อี.จี. https://myserver.org/erddap/griddap/datasetID.nc และด้วยการเพิ่มข้อมูล หลังการระบุสับเซต) มันอาจจะมีเหตุผลที่จะถามว่า คุณสามารถใช้ Netcf-java, Ferret หรืออย่างอื่น NetCDF โปรแกรมลูกข่ายที่จะอ่านข้อมูลผ่านทาง ร้องขอช่วง HTTP จาก ERDDAP . คําตอบคือไม่ เพราะมันไม่ใหญ่มาก .nc "ไฟล์. ถ้าคุณต้องการทํา แทนที่จะเลือกแบบนี้
 
 * ใช้(OPeN)DAPโปรแกรมลูกข่ายที่จะเชื่อมต่อไปยังบริการระบบกริด ERDDAP . นั่นคือสิ่งที่ DAP   (และดังนั้น ERDDAP ) ถูกออกแบบมาเพื่อ มันมีประสิทธิภาพมาก
 * หรือ ดาวน์โหลดแฟ้มต้นฉบับ (วินาที) จาก "files" ระบบ (หรือแฟ้มสับเซตผ่านทาง .nc ? สืบค้น) ในคอมพิวเตอร์ของคุณ และใช้ Netcdf-java Ferret หรืออย่างอื่น NetCDF โปรแกรมลูกความที่จะอ่าน (ตอนนี้) แฟ้มภายในระบบ (วินาที) .
@@ -2253,9 +2255,9 @@ Int เสียง Samplesize Inbits 16; //# ของบิตต่อช่�
 >&nbsp;&nbsp;&lt;/dataset>  
 
 ### DDTable from Depsquest{#eddtablefromdapsequence} 
- [ **DDTable from Depsquest** ](#eddtablefromdapsequence) จับตัวแปรภายใน 1 และ 2 ลําดับจาก [ DAP ](https://www.opendap.org/) เซิร์ฟเวอร์อย่างเช่น DAP ใช่ (เคยอยู่ที่https://www.pmel.noaa.gov/epic/software/dapper/ตอนนี้เลิกแล้ว) .
+ [ **DDTable from Depsquest** ](#eddtablefromdapsequence) จับตัวแปรภายใน 1 และ 2 ลําดับจาก [ DAP ](https://www.opendap.org/) เซิร์ฟเวอร์อย่างเช่น DAP ใช่ (เคยอยู่ที่ https://www.pmel.noaa.gov/epic/software/dapper/ ตอนนี้เลิกแล้ว) .
 
-* เราขอแนะนําให้ใช้ [ตั้งค่าชุดภาพไอคอนสื่ออารมณ์ โปรแกรม Xml](#generatedatasetsxml) เพื่อให้ฉบับหยาบของ datasets.xml รวมเข้ากับชุดข้อมูล จากนั้นคุณสามารถแก้ไขที่ปรับมัน คุณสามารถเก็บข้อมูลที่คุณต้องการได้ โดยการดูแฟ้ม DDS และ DASS ของแหล่งข้อมูลต่าง ๆ ในเว็บเบราว์เซอร์ของคุณ (โดยเพิ่ม .das และ inds ไปยัง sourceUrl (ตัวอย่างหนึ่งอยู่ที่https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds)
+* เราขอแนะนําให้ใช้ [ตั้งค่าชุดภาพไอคอนสื่ออารมณ์ โปรแกรม Xml](#generatedatasetsxml) เพื่อให้ฉบับหยาบของ datasets.xml รวมเข้ากับชุดข้อมูล จากนั้นคุณสามารถแก้ไขที่ปรับมัน คุณสามารถเก็บข้อมูลที่คุณต้องการได้ โดยการดูแฟ้ม DDS และ DASS ของแหล่งข้อมูลต่าง ๆ ในเว็บเบราว์เซอร์ของคุณ (โดยเพิ่ม .das และ inds ไปยัง sourceUrl (ตัวอย่างหนึ่งอยู่ที่ https://dapper.pmel.noaa.gov/dapper/epic/tao\\_time\\_series.cdp.dds )
     
 * ตัวแปรอยู่ใน DAP ลําดับถ้าการตอบสนองของ .ds บ่งชี้ว่าโครงสร้างข้อมูล ที่ถือตัวแปรเป็น "ความต่อเนื่อง" (กรณีที่ขาดความรู้สึก) .
 * ในบางกรณี คุณจะเห็นลําดับภายในลําดับ ลําดับระดับ 2 -- EDTable fromDapSequinence จัดการกับเหล่านี้ด้วย
@@ -2378,15 +2380,15 @@ Timetamps ไม่มีเขตเวลาข้อมูลการทํ�
 * [คนขับ JDBC และ&lt;ไดรเวอร์Name (#jdc- driver) -- คุณต้องหาแฟ้มข้อมูลของ JDBC 3 หรือ JDBC 4 สําหรับฐานข้อมูลของคุณ
 ใส่ลงไป *แว่นขยาย* / webapps/erdap/WEB-INF/lib หลังจากคุณติดตั้ง ERDDAP . แล้วในของคุณ datasets.xml สําหรับชุดข้อมูลนี้ คุณต้องระบุค่า&lt;ไดรเวอร์Name (โชคไม่ดี) แตกต่างจากชื่อแฟ้ม ค้นหาในเว็บสําหรับไดรเวอร์ JDBC สําหรับฐานข้อมูลและไดรเวอร์ของคุณName Java ต้องใช้มัน
     
-    * สําหรับ MariaDB, ลอง [https://mariadb.com/kb/en/about-the-mariadb-java-client/](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
+    * สําหรับ MariaDB, ลอง [ https://mariadb.com/kb/en/about-the-mariadb-java-client/ ](https://mariadb.com/kb/en/about-the-mariadb-java-client/)   
 เดอะ&lt;ไดรเวอร์Name datasets.xml   (ดูด้านล่าง) น่าจะเป็น org.mariadb.jdc. คนขับ
-    * สําหรับ MySQL และ Amazon RDS, ลอง [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)   
+    * สําหรับ MySQL และ Amazon RDS, ลอง [ https://dev.mysql.com/downloads/connector/j/ ](https://dev.mysql.com/downloads/connector/j/)   
 เดอะ&lt;ไดรเวอร์Name datasets.xml   (ดูด้านล่าง) น่าจะเป็น com.Mysql.jdbc คนขับ
-    * สําหรับ Oracle # ลองดู [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
+    * สําหรับ Oracle # ลองดู [ https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html ](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) .
 เดอะ&lt;ไดรเวอร์Name datasets.xml   (ดูด้านล่าง) น่าจะเป็น Acatha.jdc.driver Oracle คนขับ
-    * สําหรับ Postgrestql เราได้ไดรเวอร์ JDBC 4 จาก [https://mvnrepository.com/artifact/org.postgresql/postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
+    * สําหรับ Postgrestql เราได้ไดรเวอร์ JDBC 4 จาก [ https://mvnrepository.com/artifact/org.postgresql/postgresql ](https://mvnrepository.com/artifact/org.postgresql/postgresql)   
 เดอะ&lt;ไดรเวอร์Name datasets.xml   (ดูด้านล่าง) น่าจะเป็น org. posstgrsql. คนขับ
-    * สําหรับ SQL Server คุณสามารถหาไดรเวอร์ JDS JDBC จาก [https://jtds.sourceforge.net](https://jtds.sourceforge.net) .
+    * สําหรับ SQL Server คุณสามารถหาไดรเวอร์ JDS JDBC จาก [ https://jtds.sourceforge.net ](https://jtds.sourceforge.net) .
 เดอะ&lt;ไดรเวอร์Name datasets.xml   (ดูด้านล่าง) น่าจะเป็นตาข่าย. Wource Forge.jtds.jdbc. คนขับ
     
 หลังจากที่คุณใส่ไดรเวอร์ JDBC ใน ERDDAP™ ไดเร็กทอรี lib, คุณต้องเพิ่มการอ้างอิงไปยังแฟ้ม .jr นั้นในแฟ้ม .bat และ/ หรือแฟ้ม .sh สําหรับสร้างแฟ้ม Datatets Xml, DasDDs และ ArchiveADatatet ซึ่งอยู่ใน *แว่นขยาย* / webapps/ erdep/WEB-INF/ Directory; มิฉะนั้น คุณจะได้รับรุ่น NotFound Exception เมื่อคุณเรียกใช้งานสคริปต์ดังกล่าว
@@ -2524,7 +2526,7 @@ PostgrsQL จะตอบสนองอย่างรวดเร็วถ้�
         username="*myUsername*" password="*myPassword*"  
         initialSize="0" maxActive="8" minIdle="0" maxIdle="0" maxWait="-1"/>  
 ```
-ข้อมูลทั่วไปเกี่ยวกับการใช้ข้อมูล [https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
+ข้อมูลทั่วไปเกี่ยวกับการใช้ข้อมูล [ https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html ](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html) .
 ดู [ข้อมูลข้อมูลของ Tomcate](https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html#JDBC_Data_Sources) ถึง [ตัวอย่างข้อมูล Tomcate](https://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html) หรือค้นหาตัวอย่างของการใช้ข้อมูลในเว็บร่วมกับเซิร์ฟเวอร์โปรแกรมอื่น ๆ
 * ถ้าอย่างอื่นล้มเหลว
 พิจารณาการเก็บข้อมูลในคลังเก็บ NetCDF v3 .nc แฟ้ม (โดยเฉพาะ .nc แฟ้มที่ใช้ [CF แว่นขยาย (แบบ DSG) ](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#discrete-sampling-geometries) โครง สร้าง ข้อมูล ของ อาร์เรย์ อย่าง ต่อ เนื่อง และ สามารถ จัด การ ได้ ERDDAP ' [แฟ้ม DDTable จาก NCF](#eddtablefromnccffiles) ) . ถ้าพวกเขาถูกจัดการตามหลักเหตุผล (แต่ละด้วยข้อมูลสําหรับชิ้นส่วนของพื้นที่และเวลา) . ERDDAP™ สามารถดึงข้อมูลจากพวกมันได้อย่างรวดเร็ว
@@ -2608,7 +2610,7 @@ PostgrsQL จะตอบสนองอย่างรวดเร็วถ้�
     
 ชิ้นส่วนของ XML ที่ถูกสร้างโดยการสร้าง DatatatetsXml สําหรับแต่ละชุดข้อมูลรวม:
     
-    * A datasetID ซึ่งก็คือ EDDGrid ' datasetID บวก "/ ที่เป็นไปได้"
+    * A datasetID ซึ่งก็คือ EDDGrid ' datasetID บวก "\\_AsATable" .
     * ข้อสรุปใหม่ของโลก ซึ่งเป็น EDDGrid สรุปของบทนี้ บวกกับ ย่อหน้าใหม่ อธิบายว่าชุดข้อมูลนี้คืออะไร
     * คุณสมบัติใหม่ของโลกซึ่งเป็น EDDGrid ชื่อเพลง บวก " (เป็นตาราง) ".
     * แอตทริบิวต์ใหม่ที่มี 10
@@ -2644,21 +2646,21 @@ PostgrsQL จะตอบสนองอย่างรวดเร็วถ้�
 *    [ข้อมูลใน DDTable จากแฟ้มName](#eddtablefromfilenames-data) เป็นตารางที่ ERDDAP™ สร้างข้อมูลออนไลน์ด้วยข้อมูลเกี่ยวกับกลุ่มแฟ้มท้องถิ่น ในตาราง มีแถวสําหรับแต่ละไฟล์ สี่คุณลักษณะพิเศษใน [ datasets.xml สําหรับชุดข้อมูล](#eddtablefromfilenames-skeleton-xml) เลือกว่าจะให้แฟ้มใดรวมอยู่ในชุดข้อมูลนี้:
     
 ##### แฟ้ม ไดร์{#filedir} 
-    *   &lt;ไฟล์ Dir) -- กําหนดไดเร็คทอรีต้นทางในระบบแฟ้มของแม่ข่ายด้วยแฟ้มสําหรับชุดข้อมูลนี้ แฟ้มที่มีตําแหน่งอยู่ในระบบแฟ้มของเซิร์ฟเวอร์&lt;แฟ้ม Dir) จะปรากฏในคอลัมน์ url ของชุดข้อมูลนี้ภายในไดเรกทอรีเสมือนชื่อhttps://*serverUrl*/erddap/files/*datasetID/*.
+    *   &lt;ไฟล์ Dir) -- กําหนดไดเร็คทอรีต้นทางในระบบแฟ้มของแม่ข่ายด้วยแฟ้มสําหรับชุดข้อมูลนี้ แฟ้มที่มีตําแหน่งอยู่ในระบบแฟ้มของเซิร์ฟเวอร์&lt;แฟ้ม Dir) จะปรากฏในคอลัมน์ url ของชุดข้อมูลนี้ภายในไดเรกทอรีเสมือนชื่อ https://*serverUrl*/erddap/files/*datasetID/* .
 ยกตัวอย่างเช่น ถ้า datasetID แฟ้มภาพประเภท JIPMU RSS T
 และ&lt;แฟ้ม Dir) คือ / home/data/Mur/
 และไดเร็กทอรีดังกล่าวมีไฟล์ที่ชื่อ jIPMU RSS T201501000000.png.
 แล้วที่อยู่ URL ที่จะแสดงให้กับผู้ใช้สําหรับแฟ้มดังกล่าวจะเป็น
-        https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png.
+         https://*serverUrl*/erddap/jplMURSST/jplMURSST20150103000000.png .
         
 นอกจากการใช้ไดเรกทอรีท้องถิ่นสําหรับ&lt;แฟ้ม Dir &gt; คุณสามารถกําหนดที่อยู่ URL ของหน้าเว็บทางไกลแบบไดเร็กทอรีได้ มันใช้ได้กับ
         
         * ข้อมูลไม่แบ่งแยกใน THEDS, e.g.
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 เซิร์ฟเวอร์นี้ไม่สามารถใช้งานได้อีก \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 เซิร์ฟเวอร์นี้ไม่สามารถใช้งานได้อีก \\] 
         * ชุดข้อมูลการจําแนกประเภท Hyrax อี.จี.
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * รายการไดเรกทอรีคล้าย Apache ส่วนใหญ่, e.g.
-             [https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
+             [ https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/ ](https://www1.ncdc.noaa.gov/pub/data/cmb/ersst/v5/netcdf/) 
 ##### จาก ออนฟลาย{#fromonthefly} 
  [\\*\\*♪ จากบนฟลาย](#fromonthefly) -- สําหรับ S3 ถังขนาดใหญ่ (เช่น Noa-goes17 ซึ่งมี 26 ล้านไฟล์) อาจต้องใช้เวลา ERDDAP™ ถึง 12 ชั่วโมงที่จะดาวน์โหลดข้อมูลทั้งหมดเกี่ยวกับเนื้อหาของถัง (แล้วก็มีปัญหาอื่นอีก) . การจะอ้อมค้อมเรื่องนี้ มันมีวิธีพิเศษ&lt;Dir) ใน DDTable from Files เพื่อสร้างชุดข้อมูลและชื่อแฟ้มจากถัง AWS S3 ชุดข้อมูลจะไม่มีรายการไดเรกทอรีของ S3 ถังทั้งหมด และชื่อแฟ้มที่ผู้ใช้สามารถค้นหาได้โดยผ่านทางการร้องขอไปยังชุดข้อมูล แต่ชุดข้อมูลจะได้รับการตั้งชื่อไดเรกทอรีและแฟ้มบน-the-fly ถ้าผู้ใช้ผ่านลําดับไดเรกทอรีที่มีชุดข้อมูล "files" ทางเลือก ดังนั้น จึงอนุญาตให้ผู้ใช้สามารถเรียกดูลําดับชั้นแฟ้มและแฟ้มของ s3 ได้ โดยใช้ข้อมูลชุด "files" ระบบ เพื่อทําเช่นนี้ แทนที่จะระบุที่อยู่ URL สําหรับถัง S3 ว่าเป็น "ไดเรกทอรีเริ่มการทํางาน" (ในชุดสะสม Xml) หรือ&lt;Dir) (ใน datasets.xml ) ใช้:
 ```
@@ -2837,13 +2839,13 @@ Dirtable .nc   (ซึ่งมีรายชื่อของชื่อไ�
     * เดอะ&lt;แคชจากUrl&gt; แท็กจะให้คุณได้ระบุที่อยู่ URL ที่มีรายการของแฟ้มทางไกล
         
         * ข้อมูลไม่แบ่งแยกใน THEDS, e.g.
-            https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/  \\[ 2020-10-21 เซิร์ฟเวอร์นี้ไม่สามารถใช้งานได้อีก \\] 
+             https://data.nodc.noaa.gov/thredds/catalog/aquarius/nodc\\_binned\\_V3.0/monthly/   \\[ 2020-10-21 เซิร์ฟเวอร์นี้ไม่สามารถใช้งานได้อีก \\] 
         * ชุดข้อมูลการจําแนกประเภท Hyrax อี.จี.
-             [https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
+             [ https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ](https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/) 
         * รายการไดเรกทอรีคล้าย Apache ส่วนใหญ่, e.g.
-             [https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
+             [ https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/ ](https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/) 
         * S3 ถัง, อี.จี.
-             [https://noaa-goes17.s3.us-east-1.amazonaws.com/](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
+             [ https://noaa-goes17.s3.us-east-1.amazonaws.com/ ](https://noaa-goes17.s3.us-east-1.amazonaws.com/)   
 อย่าง ไร ก็ ตาม การ ทํา เช่น นี้ อาจ ต้อง ใช้ บัญชี เอ ดับเบิล ยู เอส และ การ วาง แผน มาก ขึ้น.
 ดู [ทํางานกับ S3 Buckets ใน ERDDAP™ ](#working-with-aws-s3-files) .
 และปกติคุณไม่จําเป็นต้องใช้แคช จาก Url กับไฟล์ในถัง S3 ถ้าไฟล์เป็นแฟ้ม ASCII (e.g., .csv) เพราะว่า ERDDAP™ สามารถอ่านข้อมูลจากถังโดยตรง ผ่านกระแส
@@ -2901,7 +2903,7 @@ Dirtable .nc   (ซึ่งมีรายชื่อของชื่อไ�
 และตัวเลือกที่สอง คือค่าเฉพาะ
             
 ตัวอย่างด้านบนจะตรงกับไดเรกทอรีสําหรับ 10 วันที่สอง 2018, e.g.
-            https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/  \\[ 2020-10-21 เซิร์ฟเวอร์นี้ไม่สามารถใช้งานได้อีก \\]   
+             https://data.nodc.noaa.gov/ghrsst/GDS2/L4/GLOB/JPL/MUR/v4.1/2018/010/   \\[ 2020-10-21 เซิร์ฟเวอร์นี้ไม่สามารถใช้งานได้อีก \\]   
 และวันที่ 011, 012, 019
              (ดูนี่สิ [เอกสารของ Regex](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html) ถึง [บทเรียน regax](https://www.vogella.com/tutorials/JavaRegularExpressions/article.html) .)   
 ถ้าคุณต้องการความช่วยเหลือในการสร้าง&lt;แคชPartial Path Regex:" โปรดส่งอีเมล์&lt;แคชจาก Url&gt; ถึงคริส. จอห์นที่โนอา โกฟ
@@ -3384,7 +3386,7 @@ EDTable from Ascisiserview เป็นสุดยอดคลาสของ E
 
 * อินเซอร์ท
     * คําร้องขอนี้จัดรูปแบบเป็นรูปแบบ HTML แบบมาตรฐาน โดยมีคีย์ = คู่ค่า โดยแยกด้วย '&' ยกตัวอย่างเช่น
-        https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1  
+         https://*some.erddap.url*/erddap/tabledap/myDataset**.insert**?stationID=46088&time=2016-03-30T12:37:55Z&latitude=10.1&longitude=-150.1&airTemp=17.23&waterTemp=12.3&author=JohnSmith\\_someKey1   
 บอก ERDDAP™ เพื่อเพิ่มหรือเปลี่ยนแปลงข้อมูล stationID =46088 สําหรับเวลาที่กําหนดไว้
     * ผู้เขียนการเปลี่ยนแปลงนี้ คือ จอห์น สมิท และกุญแจคือ บางเคย์ 1
     * ที่อยู่ URL ต้องรวมค่าที่ถูกต้องด้วย (ไม่ขาดค่า) สําหรับทั้งหมด [ http รับ การ ปรับ ตั้ง ใหม่](#httpgetrequiredvariables-global-attribute) 
@@ -3394,7 +3396,7 @@ EDTable from Ascisiserview เป็นสุดยอดคลาสของ E
              
     * . เดเลต
         * คําร้องขอนี้จัดรูปแบบเป็นรูปแบบ HTML แบบมาตรฐาน โดยมีคีย์ = คู่ค่า โดยแยกด้วย '&' ยกตัวอย่างเช่น
-            https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1  
+             https://*some.erddap.url*/erddap/tabledap/myDataset**.delete**?stationID=46088&time=2016-03-30T12:37:55Z&author=JohnSmith\\_someKey1   
 บอก ERDDAP™ เพื่อลบข้อมูล stationID =46088 ณ เวลาที่กําหนดไว้
         * ผู้เขียนการเปลี่ยนแปลงนี้ คือ จอห์น สมิท และกุญแจคือ บางเคย์ 1
         * ที่อยู่ URL ต้องกําหนดที่อยู่ URL [ http รับ การ ปรับ ตั้ง ใหม่](#httpgetrequiredvariables-global-attribute) ในคําขอ (อี.จี. stationID & เวลา) . หากค่าเหล่านั้นตรงกับค่าในแถวอยู่แล้วในชุดข้อมูล (ซึ่งพวกเขาก็ปรารถนา) ค่าเก่าถูกลบออกไป (แม้ว่าค่าเก่าจะยังเข้าถึงได้ หากผู้ใช้ร้องขอข้อมูลจากข้อมูลก่อนหน้า [รุ่น](#versioning) ของชุดข้อมูล) .
@@ -3667,7 +3669,7 @@ DDTable fromhtpget ใช้ [เจ สัน แฟ้มข้อความ
     
 ##### HTTPS ใส่และลบ{#https-put-and-delete} 
 *    ["แล้ว HTTPsPhot and Deleet ล่ะ"](#https-put-and-delete)   
-     [โพรโทคอลการส่งถ่ายข้อมูลแบบไฮเปอร์ไลน์ (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) เป็นพื้นฐานของเว็บ World Broad และเหตุผลที่หน้าเว็บที่อยู่ URL เริ่มต้นด้วย "http://"หรือhttps://". HTTPs เป็น HTTP ด้วยระดับความปลอดภัยเพิ่มเติม ทุกวัน, เว็บเบราว์เซอร์, สคริปต์และโปรแกรมคอมพิวเตอร์ สร้าง HTTP หลายพันล้าน (เอส)   **รับ** ขอข้อมูลจากระยะไกล HTTP (เอส) รวมถึงคนอื่นด้วย [คํากริยา](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) โดดเด่นที่วาง (เพื่อเพิ่มข้อมูลไปยังเซิร์ฟเวอร์) และเดเลต (ไปยังข้อมูล DELETE จากแม่ข่ายให้บริการ) . ใช่, PTL และ DELETE เป็นวิธีที่เหมาะสมในการใส่ข้อมูลเข้าไป และลบข้อมูลจาก, ข้อมูลชุดผ่าน HTTP (เอส) . Get ได้รับการสนับสนุนจากโปรแกรมทุกชิ้นที่สามารถทํางานกับ HTTP (เอส) . ได้มาก็ง่ายเหมือนกัน ทุกคนอยู่แล้วรู้วิธีการทํางานกับ GE และหลายคนรู้วิธีการใช้ POS (ซึ่งสามารถใช้ได้แบบเดียวกับ GP) เราเลยทํา EDTable fromhtpget ทํางานกับ JE และ POST มีไม่กี่คน (ขนาดโปรแกรมเมอร์คอมพิวเตอร์น้อยนัก) เคยทํางานกับแลมเบอร์และเดเลต โดย ทั่ว ไป แล้ว ภาษา คอมพิวเตอร์ จะ ให้ การ สนับสนุน เท่า นั้น ดัง นั้น การ ใช้ ภาษา เหล่า นั้น ต้อง ใช้ โปรแกรม ที่ ชํานาญ. ดัง นั้น ตาม ปกติ แล้ว เครื่อง มือ และ เครื่อง มือ ต่าง ๆ เป็น วิธี ที่ น่า รําคาญ ยิ่ง ขึ้น เมื่อ คํานึง ถึง วิธี ที่ เครื่อง มือ ได้ พัฒนา ขึ้น.
+     [โพรโทคอลการส่งถ่ายข้อมูลแบบไฮเปอร์ไลน์ (HTTP) ](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) เป็นพื้นฐานของเว็บ World Broad และเหตุผลที่หน้าเว็บที่อยู่ URL เริ่มต้นด้วย " http://" หรือ https://" . HTTPs เป็น HTTP ด้วยระดับความปลอดภัยเพิ่มเติม ทุกวัน, เว็บเบราว์เซอร์, สคริปต์และโปรแกรมคอมพิวเตอร์ สร้าง HTTP หลายพันล้าน (เอส)   **รับ** ขอข้อมูลจากระยะไกล HTTP (เอส) รวมถึงคนอื่นด้วย [คํากริยา](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) โดดเด่นที่วาง (เพื่อเพิ่มข้อมูลไปยังเซิร์ฟเวอร์) และเดเลต (ไปยังข้อมูล DELETE จากแม่ข่ายให้บริการ) . ใช่, PTL และ DELETE เป็นวิธีที่เหมาะสมในการใส่ข้อมูลเข้าไป และลบข้อมูลจาก, ข้อมูลชุดผ่าน HTTP (เอส) . Get ได้รับการสนับสนุนจากโปรแกรมทุกชิ้นที่สามารถทํางานกับ HTTP (เอส) . ได้มาก็ง่ายเหมือนกัน ทุกคนอยู่แล้วรู้วิธีการทํางานกับ GE และหลายคนรู้วิธีการใช้ POS (ซึ่งสามารถใช้ได้แบบเดียวกับ GP) เราเลยทํา EDTable fromhtpget ทํางานกับ JE และ POST มีไม่กี่คน (ขนาดโปรแกรมเมอร์คอมพิวเตอร์น้อยนัก) เคยทํางานกับแลมเบอร์และเดเลต โดย ทั่ว ไป แล้ว ภาษา คอมพิวเตอร์ จะ ให้ การ สนับสนุน เท่า นั้น ดัง นั้น การ ใช้ ภาษา เหล่า นั้น ต้อง ใช้ โปรแกรม ที่ ชํานาญ. ดัง นั้น ตาม ปกติ แล้ว เครื่อง มือ และ เครื่อง มือ ต่าง ๆ เป็น วิธี ที่ น่า รําคาญ ยิ่ง ขึ้น เมื่อ คํานึง ถึง วิธี ที่ เครื่อง มือ ได้ พัฒนา ขึ้น.
      
 ##### บันทึกช่วยจํา Httpget{#httpget-notes} 
 *    [บันทึกย่อ](#httpget-notes) 
@@ -3676,7 +3678,7 @@ DDTable fromhtpget ใช้ [เจ สัน แฟ้มข้อความ
 ##### ขอบคุณ{#thanks} 
 *    [ขอบคุณสําหรับความคิดพื้นฐาน](#thanks)   
 แนวคิดพื้นฐานสําหรับ EDTable from Htttpget (เช่น ใช้ HTTP GET ต้องการเพิ่มข้อมูลลงในชุดข้อมูล) จากยูคาร์ (ของ Ncar?)   [บริการข้อมูลแบบเรียลไทม์ (CHORDS) ](https://github.com/earthcubeprojects-chords) โครงการ รูปแบบพารามิเตอร์ในการร้องขอ (ซ้ํา *ชื่อ=ค่า* เรียงลําดับโดย &) เป็นรูปแบบมาตรฐานที่ถูกใช้โดยแบบฟอร์ม HTML บนหน้าเว็บ มันเป็นความคิดที่เรียบง่ายและฉลาด และยิ่งกว่านั้น เพราะมันเข้ากับ ERDDAP ระบบที่มีอยู่สําหรับการจัดการกับข้อมูลอักขระแท็บลาร์ แนวคิดนี้ชัดเจนในการวิเคราะห์ แต่ผม (บ๊อบ) ไม่ได้คิดถึงมัน แก้ไขลวดลายจุดเชื่อมต่อStencils ใช้แนวคิดพื้นฐานนี้ ผนวกเข้ากับความคิดของเรา ว่าจะนําไปใช้อย่างไร เพื่อสร้างระบบ ERDDAP™ เพื่ออัปโหลดข้อมูล นอกจากแนวคิดพื้นฐานของการใช้ GEP เพื่อผลักดันข้อมูลเข้าสู่ระบบ EDTable from Htpip offication นั้นแตกต่างกันอย่างสิ้นเชิง (e.g., ไฟล์ปูมบันทึก, การแยกข้อมูล, ระบบรักษาความปลอดภัยที่แตกต่างกัน, การรองรับ CRUD, ข้อมูลที่ถอดได้) . การที่เราเจอชอพชร็อพ ก็แค่ตัวอ่อน เรา ไม่ ได้ ดู รหัส ของ พวก เขา หรือ อ่าน เกี่ยว กับ โครงการ ของ พวก เขา เพราะ เรา รู้ ทันที ว่า เรา ต้องการ จะ นํา ระบบ ไป ใช้ อีก แบบ หนึ่ง. แต่ เรา รู้สึก ขอบคุณ พวก เขา สําหรับ แนว คิด พื้น ฐาน. การอ้างอิงอย่างเต็มรูปแบบของ ChORDS คือ
-แดเนียลส์ เอ็ม. ดี., เคอร์เคซ, บี. จันทราเซก้า, วี., เกรฟส์, เอส., สตรอมส์, เอส., มาร์ติน, ซี., ดี., เอ็ม. (2014) . บริการข้อมูลเรียลไทม์ของจีโอไซลด์ (CHORDS) ซอฟท์แวร์ UCAR/NCAR - ห้องควบคุมโรคโลก [https://doi.org/10.5065/d6v1236q](https://doi.org/10.5065/d6v1236q)   
+แดเนียลส์ เอ็ม. ดี., เคอร์เคซ, บี. จันทราเซก้า, วี., เกรฟส์, เอส., สตรอมส์, เอส., มาร์ติน, ซี., ดี., เอ็ม. (2014) . บริการข้อมูลเรียลไทม์ของจีโอไซลด์ (CHORDS) ซอฟท์แวร์ UCAR/NCAR - ห้องควบคุมโรคโลก [ https://doi.org/10.5065/d6v1236q ](https://doi.org/10.5065/d6v1236q)   
      
 ### จาก Hyrax แฟ้ม{#eddtablefromhyraxfiles} 
  [ **จาก Hyrax แฟ้ม** ](#eddtablefromhyraxfiles)   (หมดอายุแล้ว) ผนวกรวมแฟ้มข้อมูลด้วยตัวแปรหลายค่า แต่ละแฟ้มมีหนึ่งมิติที่ใช้ร่วมกันหรือมากกว่า (ยกตัวอย่างเช่น เวลา ความสูง (ความลึก) ละติจูด ลองติจูด) และรับใช้โดย [ Hyrax   OPeNDAP เซิร์ฟเวอร์](https://www.opendap.org/software/hyrax-data-server) .
@@ -3692,7 +3694,7 @@ DDTable fromhtpget ใช้ [เจ สัน แฟ้มข้อความ
 * คลาสนี้ทําลายหน้าจอ Hyrax หน้าเว็บที่มีรายการของแฟ้มในแต่ละไดเรกทอรี เพราะอย่างนี้ มันถึงเจาะจงในรูปแบบปัจจุบัน Hyrax เว็บเพจ เราจะพยายามปรับตัว ERDDAP™ ได้อย่างรวดเร็วหาก/ เมื่อรุ่นในอนาคตของ Hyrax เปลี่ยนรายการของแฟ้ม
 * เดอะ&lt;ชื่อแฟ้มDir &gt; การตั้งค่าจะถูกละทิ้ง เนื่องจากคลาสนี้ดาวน์โหลดและทําสําเนาแฟ้มข้อมูลภายในแต่ละแฟ้ม ERDDAP™ บังคับให้แฟ้ม ♪ Dir to be *เครื่อง มือ ขนาด ใหญ่* / รับทราบ / * datasetID * /
 * สําหรับ&lt; sourceUrl &gt; ใช้ที่อยู่ URL ของไดเรกทอรีพื้นฐานของชุดข้อมูลใน Hyrax ตัวอย่างเช่น แม่ข่าย
-    &lt; sourceUrl &gt;http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/&lt;/ sourceUrl &gt;
+    &lt; sourceUrl &gt; http://edac-dap.northerngulfinstitute.org/dods-bin/nph-dods/WCOS/nmsp/wcos/ &lt;/ sourceUrl &gt;
      (แต่วางบนบรรทัดหนึ่ง)   (ขออภัย ที่แม่ข่ายไม่มีอยู่) .
 เดอะ sourceUrl หน้าเว็บปกติจะมี " OPeNDAP ดัชนีของแม่ข่าย \\[ ไดเร็กทอรีName \\] "ที่ด้านบน
 * เนื่องจากคลาสนี้มักจะดาวน์โหลดและทําคัดลอกแฟ้มข้อมูลภายในแต่ละแฟ้ม คุณไม่ควรจะห่อข้อมูลชุดนี้เข้าไป [โปรแกรมคัดลอก DDTable](#eddtablecopy) .
@@ -3706,7 +3708,7 @@ DDTable fromhtpget ใช้ [เจ สัน แฟ้มข้อความ
 
 อีกปัญหาหนึ่งเกี่ยวกับแฟ้มเหล่านี้: อาจารย์ใหญ่/ ตัวแปร _size ตัวแปรไม่มีคุณลักษณะตัวอย่าง\\_ dimession และไม่ได้ทําตามกฏเบื้องบน
 
-หาแฟ้มตัวอย่างสําหรับประเภทชุดข้อมูลนี้ได้ที่https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/  \\[ 2020-10-21 เซิร์ฟเวอร์นี้ไม่สามารถใช้งานได้ \\] .
+หาแฟ้มตัวอย่างสําหรับประเภทชุดข้อมูลนี้ได้ที่ https://data.nodc.noaa.gov/thredds/catalog/ncei/wod/   \\[ 2020-10-21 เซิร์ฟเวอร์นี้ไม่สามารถใช้งานได้ \\] .
 
 ดูคลาสนี้สิ [เลือกแฟ้ม](#eddtablefromfiles) สําหรับข้อมูลการทํางานของคลาสนี้ และวิธีการใช้มัน
 
@@ -3850,10 +3852,10 @@ DDTable from Multiidnc Files มีคุณสมบัติพิเศษใ
  [ **อิเล็กทรอนิกส์** ](#eddtablefromnos)   (ขอบเขต) จับข้อมูลจาก NOAA   [โหนด](https://opendap.co-ops.nos.noaa.gov/axis/) แหล่งที่มาซึ่งใช้ [ SOAP+XML ](https://www.w3schools.com/xml/xml_soap.asp) สําหรับคําขอและการตอบสนอง มันเจาะจงมากกับ NOAA NOS ของ XML ดูตัวอย่าง EDTable fromNOS ในชุดข้อมูล 2xml
  
 ### อิเล็กทรอนิกส์จาก OBIS{#eddtablefromobis} 
- [ **อิเล็กทรอนิกส์จาก OBIS** ](#eddtablefromobis) จัดการกับข้อมูลจากระบบข้อมูลชีวประวัติมหาสมุทร (OBIS) เซิร์ฟเวอร์ (คือhttp://www.iobis.org ) . เป็นไปได้ว่า ไม่มีเซิร์ฟเวอร์ที่ทํางานอยู่ ใช้ระบบเซิร์ฟเวอร์ OBIS นี้เดี๋ยวนี้
+ [ **อิเล็กทรอนิกส์จาก OBIS** ](#eddtablefromobis) จัดการกับข้อมูลจากระบบข้อมูลชีวประวัติมหาสมุทร (OBIS) เซิร์ฟเวอร์ (คือ http://www.iobis.org  ) . เป็นไปได้ว่า ไม่มีเซิร์ฟเวอร์ที่ทํางานอยู่ ใช้ระบบเซิร์ฟเวอร์ OBIS นี้เดี๋ยวนี้
 
 * เซิร์ฟเวอร์ OBIS คาดว่าจะมีการร้องขอแบบ XML และตอบกลับแบบ XML
-* เพราะเซิร์ฟเวอร์ของ OBIS ล้วนให้บริการตัวแปรเดียวกัน (คือhttp://iobis.org/tech/provider/questions) คุณไม่ต้องระบุข้อมูลมากนัก เพื่อตั้งค่าชุดข้อมูล OBIS ERDDAP .
+* เพราะเซิร์ฟเวอร์ของ OBIS ล้วนให้บริการตัวแปรเดียวกัน (คือ http://iobis.org/tech/provider/questions ) คุณไม่ต้องระบุข้อมูลมากนัก เพื่อตั้งค่าชุดข้อมูล OBIS ERDDAP .
 * คุณต้องรวม" creator\\_email "คุณสมบัติของโลก addAttributes ตั้งแต่ข้อมูลนั้น ถูกใช้ภายในใบอนุญาต ที่อยู่อีเมลที่เหมาะสม จะสามารถพบได้โดยอ่านการตอบกลับแบบ XML จากแหล่งกําเนิด
 * คุณอาจหรืออาจจะไม่สามารถได้คุณลักษณะระดับโลก&lt; subsetVariables &gt;) (# เปลี่ยนตัวแปรได้) เพื่อทํางานกับเซิร์ฟเวอร์ของ OBIS ถ้าคุณลอง, ลองแค่ตัวแปรเดียว (ยกตัวอย่างเช่น วิทยาศาสตร์ หรือ จีนัส) .
 #### อิเล็กทรอนิกส์จาก OBIS โครงสร้าง XML{#eddtablefromobis-skeleton-xml} 
@@ -3907,9 +3909,10 @@ DDTable from Multiidnc Files มีคุณสมบัติพิเศษใ
     * แบบ SWE (เปิดใช้งานเว็บตัวตรวจจับ) ถึง SOS   (บริการ Observation ของตัวตรวจจับ) คือ [มาตรฐาน OpenGISH](https://www.ogc.org/standards) . เว็บไซต์นั้นมีเอกสารมาตรฐาน
     * เดอะ OGC Webservice inter 1. 0 ( OGC 06-1213) ครอบคลุมการก่อสร้าง get and POST quesies (ดูตอน 7.2.3 และตอน 9) .
     * ถ้าคุณส่งความน่าจะเป็น xml ร้องขอ SOS เซิร์ฟเวอร์ ( sourceUrl +"? บริการ= SOS & การถาม = GetCapabilities ") คุณได้ผล xml จากรายการของสถานี และค่าที่สังเกต คุณสมบัติที่พวกเขามีข้อมูล
-    * เครื่องราชอิสริยาภรณ์ที่สังเกตได้ เป็น URI ที่อ้างอิงไปยังทรัพย์สิน ตัวอย่างเช่น, urn:ogc:phenineon: ลองติจูด: wgs84 หรือhttps://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+    * เครื่องราชอิสริยาภรณ์ที่สังเกตได้ เป็น URI ที่อ้างอิงไปยังทรัพย์สิน ตัวอย่างเช่น, urn:ogc:phenineon: ลองติจูด: wgs84 หรือ https://mmisw.org/ont/cf/parameter/sea\\_water\\_temperature
+ 
     * สัญญาณที่สังเกตได้ไม่ใช่ตัวแปร
-    * มีตัวแปรมากกว่าหนึ่งตัวที่สังเกตได้ คุณสมบัติ (ยกตัวอย่างเช่น ภายใน Temp และภายนอก Temp อาจจะทั้งสองได้สังเกต คุณสมบัติhttps://mmisw.org/ont/cf/parameter/air\\_temperature) .
+    * มีตัวแปรมากกว่าหนึ่งตัวที่สังเกตได้ คุณสมบัติ (ยกตัวอย่างเช่น ภายใน Temp และภายนอก Temp อาจจะทั้งสองได้สังเกต คุณสมบัติ https://mmisw.org/ont/cf/parameter/air\\_temperature ) .
     * ถ้าคุณส่งคําร้องขอไป SOS เซิร์ฟเวอร์ คุณได้ผล xml พร้อมกับรายละเอียดของชื่อสนาม ในช่องตอบรับ, หน่วยภาคสนาม, และข้อมูล ชื่อสนามจะรวม ลองติจูดละติจูด ความลึก (บางที) และเวลา
     * แต่ละ dataVariable สําหรับ EDTable from SOS ต้องรวมแอตทริบิวต์ "Property" ที่ระบุเครื่องหมาย propperty ที่จะต้องร้องขอจากเซิร์ฟเวอร์เพื่อให้ได้ตัวแปรนั้น บ่อย ครั้ง หลาย dataVariable s จะระบุองค์ประกอบที่สังเกตได้
     * ข้อมูล dataVariable อาจจะไม่ได้ระบุโดยเซิร์ฟเวอร์ หากเป็นเช่นนั้น คุณต้องดูที่การตอบรับข้อมูล XML จากเซิร์ฟเวอร์ และกําหนดค่าที่เหมาะสม&lt;ข้อมูล (# ดาต้าชนิด) ใน ERDDAP™ ชุดข้อมูล dataVariable นิยาม
@@ -3991,11 +3994,11 @@ DDTable from Multiidnc Files มีคุณสมบัติพิเศษใ
 * คลาสนี้อ่านรายการแฟ้ม.xml ที่ให้บริการโดย THEDS กับรายการของ&lt;แคตตาล็อกRefs) (อ้างอิงไปยังแคตตาล็อกเพิ่มเติม.xml sub-files) ถึง&lt;ชุดข้อมูล:s (แฟ้มข้อมูล) .
 * เดอะ&lt;ชื่อแฟ้มDir &gt; การตั้งค่าจะถูกละทิ้ง เนื่องจากคลาสนี้ดาวน์โหลดและทําสําเนาแฟ้มข้อมูลภายในแต่ละแฟ้ม ERDDAP™ บังคับให้แฟ้ม ♪ Dir to be *เครื่อง มือ ขนาด ใหญ่* / รับทราบ / * datasetID * /
 * สําหรับ&lt; sourceUrl &gt; ใช้ที่อยู่ URL ของรายการแฟ้ม.xml สําหรับข้อมูลในเซิร์ฟเวอร์ THEDS ตัวอย่างเช่น: สําหรับที่อยู่ URL นี้ ซึ่งอาจจะถูกใช้ในเว็บเบราว์เซอร์
-    https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html  \\[ 2020-10-21 เซิร์ฟเวอร์นี้ไม่สามารถใช้งานได้อีก \\] .
-ใช้&lt; sourceUrl &gt;https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml&lt;/ sourceUrl &gt;
+     https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.html   \\[ 2020-10-21 เซิร์ฟเวอร์นี้ไม่สามารถใช้งานได้อีก \\] .
+ใช้&lt; sourceUrl &gt; https://data.nodc.noaa.gov/thredds/catalog/nmsp/wcos/catalog.xml &lt;/ sourceUrl &gt;
      (แต่วางบนบรรทัดหนึ่ง) .
 * เนื่องจากคลาสนี้มักจะดาวน์โหลดและทําคัดลอกแฟ้มข้อมูลภายในแต่ละแฟ้ม คุณไม่ควรจะห่อข้อมูลชุดนี้เข้าไป [โปรแกรมคัดลอก DDTable](#eddtablecopy) .
-* ประเภทชุดข้อมูลนี้รองรับรูปแบบ OPOtical, แทบจะไม่ใช้, แท็กพิเศษ&lt;Mode พิเศษ) *โหมด* &lt;/ การปรับแต่งพิเศษ) ซึ่งสามารถใช้เพื่อระบุกฏพิเศษ, โค้ดยาก ให้ใช้พิจารณาว่าควรดาวน์โหลดแฟ้มใดจากเซิร์ฟเวอร์ ปัจจุบัน มันใช้ได้อย่างเดียว *โหมด* คือ Sampos ซึ่งถูกใช้กับชุดข้อมูลต่าง ๆhttps://tds.coaps.fsu.edu/thredds/catalog/samosเพื่อดาวน์โหลดเฉพาะแฟ้มที่มีหมายเลขรุ่นสุดท้ายเท่านั้น
+* ประเภทชุดข้อมูลนี้รองรับรูปแบบ OPOtical, แทบจะไม่ใช้, แท็กพิเศษ&lt;Mode พิเศษ) *โหมด* &lt;/ การปรับแต่งพิเศษ) ซึ่งสามารถใช้เพื่อระบุกฏพิเศษ, โค้ดยาก ให้ใช้พิจารณาว่าควรดาวน์โหลดแฟ้มใดจากเซิร์ฟเวอร์ ปัจจุบัน มันใช้ได้อย่างเดียว *โหมด* คือ Sampos ซึ่งถูกใช้กับชุดข้อมูลต่าง ๆ https://tds.coaps.fsu.edu/thredds/catalog/samos เพื่อดาวน์โหลดเฉพาะแฟ้มที่มีหมายเลขรุ่นสุดท้ายเท่านั้น
 * ดูคลาสนี้สิ [เลือกแฟ้ม](#eddtablefromfiles) สําหรับข้อมูลการทํางานของคลาสนี้ และวิธีการใช้มัน
 * ดูตัวอย่าง 1D, 2D, 3D และ 4 มิติ [แฟ้ม DDTAB จาก Nc](#eddtablefromncfiles) .
      
@@ -4182,8 +4185,8 @@ DDTable from Multiidnc Files มีคุณสมบัติพิเศษใ
 ```
     <convertToPublicSourceUrl from="https://192.168.31.18/" to="https://oceanwatch.pfeg.noaa.gov/" />  
 ```
-จะทําให้เกิดการจับคู่ภายใน sourceUrl   (เช่นhttps://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day)   
-ไปสู่สาธารณะชน sourceUrl   (https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day) .
+จะทําให้เกิดการจับคู่ภายใน sourceUrl   (เช่น https://192.168.31.18/thredds/dodsC/satellite/BA/ssta/5day )   
+ไปสู่สาธารณะชน sourceUrl   ( https://oceanwatch.pfeg.noaa.gov/thredds/dodsC/satellite/BA/ssta/5day ) .
 การเปลี่ยนแปลงใด ๆ ของค่าป้ายกํากับนี้จะมีผลในครั้งต่อไป ERDDAP™ อ่าน datasets.xml ร่วมกับชุดข้อมูล [ธง](/docs/server-admin/additional-information#flag) .
 
 แต่ด้วยเหตุผลด้านความปลอดภัย และเหตุผลที่เกี่ยวข้องกับระบบการสมัครสมาชิก **อย่าใช้กล่องนี้&#33;**   
@@ -4314,7 +4317,7 @@ The "Major opendatatets Times Times" ส่วนของสถานะ. html 
     ```
     * คุณไม่ต้องเริ่มใหม่ก็ได้ ERDDAP™ สําหรับการเปลี่ยนแปลงไปยัง&lt;ขอให้แบล็คลิสต์) มีผลกระทบ จะตรวจพบการเปลี่ยนแปลงในครั้งต่อไป ERDDAP™ ตรวจสอบว่าชุดข้อมูลใด ๆ ที่ต้องการจะเรียกใหม่อีกครั้งหรือไม่ หรือ คุณสามารถเร่งกระบวนการได้โดยไปเยี่ยม [ตั้งค่า ที่อยู่ URL ธง](/docs/server-admin/additional-information#set-dataset-flag) สําหรับชุดข้อมูลใดๆ
     * คุณ ERDDAP™ รายงานรายวันรวมถึงรายการ/ tractally ของรายการที่ใช้งานมากที่สุด และบล็อคการร้องขอ
-    * ถ้าคุณอยากหาว่าโดเมน/ การแบ่งประเภท เกี่ยวข้องกับหมายเลขไอพีคืออะไร คุณสามารถใช้บริการเว็บ DNS แบบฟรี ๆ ได้ เช่น [https://network-tools.com/](https://network-tools.com/) .
+    * ถ้าคุณอยากหาว่าโดเมน/ การแบ่งประเภท เกี่ยวข้องกับหมายเลขไอพีคืออะไร คุณสามารถใช้บริการเว็บ DNS แบบฟรี ๆ ได้ เช่น [ https://network-tools.com/ ](https://network-tools.com/) .
     * อาจ มี บาง ครั้ง ที่ มี เหตุ ผล ที่ จะ กัน ผู้ ใช้ บาง คน ไว้ ใน ระดับ ที่ สูง กว่า ตัว อย่าง เช่น ผู้ ใช้ ที่ มุ่ง ร้าย. ยกตัวอย่างเช่น คุณสามารถปิดกั้นการเข้าถึงทุกอย่างบนเซิร์ฟเวอร์ของคุณ ไม่ใช่แค่ ERDDAP . บนลินุกซ์ หนึ่งในวิธีการดังกล่าวก็คือ [ตัวเลข](https://www.linode.com/docs/guides/control-network-traffic-with-iptables/) . ตัวอย่างเช่น คุณสามารถเพิ่มกฎที่ จะบล็อกทุกอย่างที่มาจาก 198.150.100.0 กับคําสั่ง
 Ipables -I INPUT -s 198.51.100.0. - เจ ดีโอพี
        
@@ -4738,17 +4741,17 @@ nTheads=2: แม้ว่า บ่อยครั้งจะมีผลป�
     * ตอนนี้ สําหรับ EDDGrid คลาสย่อย, การเปลี่ยนแปลงข้อมูลกํากับภาพหรือตัวแปรแกน (ตัวอย่างเช่น เวลาใหม่สําหรับข้อมูลใกล้เวลา) ถือเป็นการเปลี่ยนแปลง แต่การโหลดข้อมูลชุดไม่ได้พิจารณาการเปลี่ยนแปลง (ด้วยตัวมันเอง) .
     * ปัจจุบัน สําหรับ คลาส ย่อย EDTable การโหลดข้อมูลใด ๆ จะถือว่าเป็นการเปลี่ยนแปลง
     * ปัจจุบัน อนุญาต ให้ ทํา ได้ เพียง สอง ประเภท:
-        * "http://"หรือhttps://"-- ถ้าการกระทําเริ่มต้นด้วยhttp://"หรือhttps://". ERDDAP™ จะส่ง HTTP GET ร้องขอไปยังที่อยู่ URL ที่กําหนด การตอบสนองจะถูกละทิ้ง ยกตัวอย่างเช่น ที่อยู่ URL อาจบอกบริการเว็บอื่นให้ทําอะไรสักอย่าง
+        * " http://" หรือ https://" -- ถ้าการกระทําเริ่มต้นด้วย http://" หรือ https://" . ERDDAP™ จะส่ง HTTP GET ร้องขอไปยังที่อยู่ URL ที่กําหนด การตอบสนองจะถูกละทิ้ง ยกตัวอย่างเช่น ที่อยู่ URL อาจบอกบริการเว็บอื่นให้ทําอะไรสักอย่าง
             * หากที่อยู่ URL มีส่วนของการค้นหา (หลังจาก "?) มันควรจะเป็นอยู่แล้ว [เข้ารหัสไว้%](https://en.wikipedia.org/wiki/Percent-encoding) . คุณต้องเข้ารหัสอักขระพิเศษในเงื่อนไข (อื่น ๆ นอกเหนือจากเริ่มต้น '&' และหลัก '=' อยู่ในเงื่อนไข) ในรูป %HH, โดย HH เป็น 2 หลักที่เลขฐานสิบหกของตัวละคร โดยทั่วไปแล้ว คุณต้องแปลงตัวอักษรบางตัวในวรรคตอน: %s เป็น %25, & เป็น %26, "เป็น% 22,&lt;ใน% 3C, =ลงใน% 3D, &gt; ใน% 3E, + ใน% 2B, | เป็น % 7C, \\[ เป็น % 5B, \\] เป็น % 5 มิติ, ช่องว่างเป็น % 20, และแปลงตัวอักษรทั้งหมดด้านบน #127 เป็นรูปแบบ UTF-8 ของพวกเขา จากนั้นเปอร์เซ็นต์การเข้ารหัสแต่ละ byte ของรูป UTF-8 เป็นรูปแบบ% HH (ถามโปรแกรมเมอร์เพื่อขอความช่วยเหลือ) .
 ตัวอย่างเช่น stationID &gt; = "41004"
 กลายเป็น stationID % 3 =% 241004% 2
 ต้องการการเข้ารหัส Percent เมื่อคุณใช้งาน ERDDAP ผ่านซอฟต์แวร์อื่นที่ไม่ใช่เบราว์เซอร์ เว็บเบราว์เซอร์มักจะใช้รหัสเปอร์เซ็นต์สําหรับคุณ
 ในบางสถานการณ์ คุณต้องเข้ารหัสตัวอักษรทุกตัว นอกจาก A-Za-z0-9/_-~ ' () ** แต่ยังคงไม่เข้ารหัสเริ่มต้น '&' หรือหลัก '=' ในเงื่อนไข
-การเขียนโปรแกรมภาษามีเครื่องมือในการทําเช่นนี้ (ตัวอย่างเช่น ดู Java ' [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) ถึง Java สคริปต์encodeURIComponent()) (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) และยังมี
+การเขียนโปรแกรมภาษามีเครื่องมือในการทําเช่นนี้ (ตัวอย่างเช่น ดู Java ' [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html) ถึง Java สคริปต์encodeURIComponent()) ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) และยังมี
                  [เว็บไซต์ที่มีการเข้ารหัส/ถอดรหัสให้คุณ](https://www.url-encode-decode.com/) .
             * ตั้งแต่ datasets.xml เป็นแฟ้ม XML นอกจากนี้คุณยังต้องกําหนด &-encode ทั้งหมด '&' ด้วย&lt;'และ'&gt;' ในที่อยู่ URL ที่เรียกว่า '&amp;'&lt;'และ '&gt;'หลังจากเปอร์เซ็นต์การเข้ารหัส
             * ตัวอย่าง: สําหรับที่อยู่ URL ที่คุณอาจพิมพ์ไปยังเบราว์เซอร์เป็น:
-                https://www.company.com/webService?department=R%26D&param2=value2  
+                 https://www.company.com/webService?department=R%26D&param2=value2   
 คุณควรจะระบุ&lt;แท็กผ่าน (ในบรรทัดเดียว) 
             ```
                 <onChange>https://www.company.com/webService?department=R%26D&amp;param2=value2</onChange>
@@ -4910,8 +4913,8 @@ nTheads=2: แม้ว่า บ่อยครั้งจะมีผลป�
     * A sourceUrl อาจเริ่มต้นด้วย http:// . https:// (พ.ศ. https การเชื่อมต่ออ่านและตรวจสอบใบรับรองดิจิตอลของแหล่งที่มา เพื่อให้แน่ใจว่าแหล่งที่มาเป็นที่พวกเขากล่าวว่าพวกเขาเป็นใคร ในกรณีหายาก การตรวจสอบนี้อาจล้มเหลวด้วยข้อผิดพลาด "jawx.net.sl.SSLProcol ExpressE: แจ้งเตือนการจับมือ: uncognized\\ ชื่อ". นี่อาจจะเนื่องจากชื่อโดเมนบนใบรับรองที่ไม่ตรงกับชื่อโดเมนที่คุณใช้อยู่ คุณอ่านและอ่านรายละเอียด sourceUrl ใบรับรอง 's in เว็บเบราว์เซอร์ของคุณ, โดดเด่น, รายการของ "ชื่อ DNS" ในส่วน "ชื่อย่อย"
         
 ในบางกรณี sourceUrl คุณอาจจะใช้นามแฝงของชื่อโดเมนบนใบรับรอง ยกตัวอย่างเช่น
-        https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/จะโยนข้อผิดพลาดนี้ แต่
-        https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ซึ่งใช้ชื่อโดเมนในใบรับรองไม่ได้ ดังนั้นคําตอบในกรณีเหล่านี้ คือการค้นหาและใช้ชื่อโดเมนบนใบรับรอง ถ้าคุณหามันในใบรับรองไม่ได้ ติดต่อผู้จัดทําข้อมูล
+         https://podaac-opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ จะโยนข้อผิดพลาดนี้ แต่
+         https://opendap.jpl.nasa.gov/opendap/allData/ccmp/L3.5a/monthly/flk/ ซึ่งใช้ชื่อโดเมนในใบรับรองไม่ได้ ดังนั้นคําตอบในกรณีเหล่านี้ คือการค้นหาและใช้ชื่อโดเมนบนใบรับรอง ถ้าคุณหามันในใบรับรองไม่ได้ ติดต่อผู้จัดทําข้อมูล
         
 ในกรณีอื่น ๆ ชื่อโดเมนบนใบรับรอง อาจเป็นชื่อกลุ่มของชื่อ หากนี่เกิดขึ้น หรือปัญหานี้ไม่สามารถแก้ไขได้ โปรดส่งอีเมลหาคริส จอห์นที่โนอาโกฟเพื่อรายงานปัญหา
          
@@ -5221,7 +5224,7 @@ CDM ยังคงพัฒนาและอาจจะเปลี่ยน�
 ต้องการการเข้ารหัส Percent เมื่อคุณใช้งาน ERDDAP ผ่านซอฟต์แวร์อื่นที่ไม่ใช่เบราว์เซอร์ เว็บเบราว์เซอร์มักจะใช้รหัสเปอร์เซ็นต์สําหรับคุณ
 ในบางสถานการณ์ คุณต้องเข้ารหัสตัวอักษรทุกตัว นอกจาก A-Za-z0-9/_-~ ' () ** แต่ยังคงไม่เข้ารหัสเริ่มต้น '&' หรือหลัก '=' .
 การเขียนโปรแกรมภาษามีเครื่องมือในการทําเช่นนี้ (ตัวอย่างเช่น ดู Java ' [ java.net.URLEncoder ](https://docs.oracle.com/javase/8/docs/api/java/net/URLEncoder.html)   
-ถึง Java สคริปต์encodeURIComponent()) (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) และยังมี
+ถึง Java สคริปต์encodeURIComponent()) ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent ) และยังมี
          [เว็บไซต์ที่มีการเข้ารหัส/ถอดรหัสให้คุณ](https://www.url-encode-decode.com/) .
     * ตั้งแต่ datasets.xml เป็นแฟ้ม XML นอกจากนี้คุณยังต้องกําหนด &-encode ทั้งหมด '&' ด้วย&lt;'และ'&gt;' ในที่อยู่ URL ที่เรียกว่า '&amp;'&lt;'และ '&gt;'หลังจากเปอร์เซ็นต์การเข้ารหัส
     *    infoUrl มีเอกลักษณ์เฉพาะ ERDDAP . มันไม่ได้มาจากมาตรฐานข้อมูล
@@ -5257,7 +5260,28 @@ CDM ยังคงพัฒนาและอาจจะเปลี่ยน�
     ```
     * ถ้า \\[ มาตรฐาน \\] "เกิดขึ้นในค่าคุณลักษณะ, มันจะแทนที่ด้วยมาตรฐาน ERDDAP™ ใบอนุญาตจาก&lt;ป้ายมาตรฐาน) ERDDAP '
          \\[ แว่นขยาย \\] แฟ้ม / webapps/ erdep/WEB-INF/คลาสต่างๆ/gov/noa/pfel/erdep/util/xmlfile
-         
+
+###### หมวดหมู่{#classification} 
+*    [ **หมวดหมู่** ](#classification) ระดับการจําแนกข้อมูล
+    ```
+    <att name="classification">unclassified</att>
+    ``` 
+    * ค่าที่ยอมรับได้จะถูกเ_ปลี่ยน_ปลี่ยนชื่อ, แ_ส่ต้องจํากัดไว้_, แ_ส่ความลับ, หรือ_BAR_ลับสุดยอด
+
+###### เรื่อง{#topic_category} 
+*    [ **เรื่อง** ](#topic_category) ข้อมูลทางภูมิศาสตร์ระดับสูง การจําแนกประเภท เพื่อช่วยเหลือในการจัดกลุ่ม และการค้นหาชุดข้อมูลภูมิศาสตร์ที่มีอยู่
+    ```
+    <att name="topic_category">geoscientific_information</att>
+    ``` 
+    * ค่าที่ยอมรับได้คือ _biota_, mindaries_ accessyclophy_matiology_thoriography_otiography_thoriography_rmoros_s_round_inin_sentrography_s_sport_s_r.port_BAR_pendoration,_BAR_publication,_BAR_publication,_BAR_pk/smloritys_s_c. peritions,_BAR_s_c.p.p.com/sm.com,_c.
+
+###### ความทึบแสง{#maintenance_frequency} 
+*    [ **ความทึบแสง** ](#maintenance_frequency) ความถี่ที่ดัดแปลงและลบข้อมูล เกิดขึ้นกับข้อมูล หลังจากที่มันถูกสร้างขึ้นครั้งแรก
+    ```
+    <att name="maintenance_frequency">daily</att>
+    ``` 
+    * ค่าที่ยอมรับได้คือ _annal__BAR_as installd_____nal__,_nownnal__,_dital_,_dayly_,_fortaily_,_restly___rmlookly_r.
+
 ######  Metadata\\_Conventions  {#metadata_conventions} 
 *    [ ** Metadata\\_Conventions ** ](#metadata_conventions) มาจากยุคโบราณ [ACD 1. 0](https://wiki.esipfed.org/ArchivalCopyOfVersion1)   (ซึ่งระบุใน Metadata\\_Conventions ว่า Unidata Datetset Directory v1. 0") มาตรฐานข้อมูล ค่าของแอททริบิวต์เป็นรายการของการประชุมข้อมูลกํากับที่ถูกใช้โดยชุดข้อมูลนี้
 ถ้าชุดข้อมูลใช้ ACD 1.0 แอตทริบิวต์นี้จะถูกรีคอมมิวสิกชั่น
@@ -5389,7 +5413,7 @@ CDM ยังคงพัฒนาและอาจจะเปลี่ยน�
 หากดัชนีเป็น&lt;=1 ชุดข้อมูลถูกพิจารณาออกจากวันที่
 หากดัชนีเป็น&lt;=2 ชุดข้อมูลถือว่าเป็นวันนอกเวลามาก
     
-เดอะ testOutOfDate ค่ายังถูกใช้โดย ERDDAP™ สร้างhttps://*yourDomain*/erddap/outOfDateDatasets.htmlหน้าเว็บ ( [ตัวอย่าง](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) ซึ่งแสดงชุดข้อมูลที่มี&lt; testOutOfDate &gt; ป้ายกํากับ, ชุดข้อมูลจัดอันดับโดยวิธีการที่ออกจากวันที่เป็น หากคุณเปลี่ยนประเภทแฟ้ม (จาก .html ถึง.csv .jsonlCSV . .nc . .tsv ....) คุณสามารถหาข้อมูลได้ในรูปแบบแฟ้มที่แตกต่างกัน
+เดอะ testOutOfDate ค่ายังถูกใช้โดย ERDDAP™ สร้าง https://*yourDomain*/erddap/outOfDateDatasets.html หน้าเว็บ ( [ตัวอย่าง](https://coastwatch.pfeg.noaa.gov/erddap/outOfDateDatasets.html) ) ซึ่งแสดงชุดข้อมูลที่มี&lt; testOutOfDate &gt; ป้ายกํากับ, ชุดข้อมูลจัดอันดับโดยวิธีการที่ออกจากวันที่เป็น หากคุณเปลี่ยนประเภทแฟ้ม (จาก .html ถึง.csv .jsonlCSV . .nc . .tsv ....) คุณสามารถหาข้อมูลได้ในรูปแบบแฟ้มที่แตกต่างกัน
     
 ถ้าเป็นไปได้ [สร้าง DatatasXml](#generatedatasetsxml) เพิ่ม testOutOfDate คําพูดของโลก addAttributes ของชุดข้อมูล ค่านี้เป็นคําแนะนําที่อิงจากข้อมูลที่มีให้สร้าง DatatatetsXml ถ้าค่ามันไม่เหมาะสม ก็เปลี่ยนมันซะ
     
@@ -5948,8 +5972,8 @@ ArchiveValue =แพ็ค ค่า / * scale\\_factor + add\\_offset
 *    [ ** time\\_zone ** ](#time_zone) 
     *    time\\_zone เป็นคุณสมบัติเฉพาะที่ใช้โดย ERDDAP™   (และไม่มีมาตรฐานกํากับ) สําหรับ [ตัวแปรเวลาและเวลา](#time-units) ซึ่งอาจอยู่ในชุดข้อมูล หรือชุดข้อมูลรอบนอก
     * ค่าปริยายคือ Zulu " (ซึ่งเป็นพื้นที่เวลาสมัยใหม่ของ GMT) .
-    * ข้อมูลพื้นหลัง: "เวลาตรงข้าม" (E.g., Pacific Standard Times, -08:00, GMT-8) ถูกแก้ไข, เจาะจง, ปรับค่าเทียบกับ Zulu   (แบบ GMT) . ในทางกลับกัน "เวลาโซน" เป็นอะไรที่ซับซ้อนกว่ามาก ที่ได้รับผลกระทบจากการประหยัดเวลากลางวัน (เช่น "US/Pacific") ซึ่งมีกฏต่างกันในหลายๆที่ ในเวลาที่แตกต่างกัน พื้นที่เวลามีชื่อเสมอ เนื่องจากไม่สามารถสรุปด้วยค่าตรงข้ามธรรมดา (ดูคอลัมน์ "ชื่อฐานข้อมูล TZ" ในตารางที่ [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP ' time\\_zone แอตทริบิวต์ช่วยให้คุณจัดการกับข้อมูลเวลาท้องถิ่นจากพื้นที่เวลาบาง (E.g., 1987-03-25T17:32:05. แปซิฟิก เวลา) . หากคุณมีข้อมูลเวลาหรือค่าตัวเลข (คงที่) ปรับค่าเวลา คุณควรจะปรับข้อมูลเป็น Zulu   (ซึ่งก็คือ ERDDAP™ ต้องการ) โดยระบุเวลาพื้นฐานอื่น ๆ ในแอตทริบิวต์หน่วย (e.g. "ชั่วโมงตั้งแต่ 1970-01-01T08:00:00Z" หมายเหตุ T08 เพื่อระบุเวลาตรงข้าม) และตรวจสอบผล เพื่อให้แน่ใจว่าคุณได้ผลตามที่คุณต้องการ
-    * สําหรับตัวแปรเวลาประทับด้วยข้อมูลแหล่งจากสตริง แอตทริบิวต์นี้ช่วยให้คุณกําหนดเขตเวลาที่นําไปสู่ ERDDAP™ แปลงเวลาท้องถิ่น (บาง คน ใน สมัย มาตรฐาน บาง คน ใช้ เวลา กลาง วัน เพื่อ ประหยัด เวลา) ไปยัง Zulu คูณ (ซึ่งมักจะเป็นเวลามาตรฐาน) . รายชื่อเขตเวลาที่ถูกต้อง อาจจะเหมือนกับรายการในคอลัมน์ TZ ที่ [https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . สหรัฐอเมริกาโซนเวลาเป็น: US/ Hawai, US/ harpolica, US/Pacific, US/Mountain, US/Ariazona, US/Central, US/Ecten.
+    * ข้อมูลพื้นหลัง: "เวลาตรงข้าม" (E.g., Pacific Standard Times, -08:00, GMT-8) ถูกแก้ไข, เจาะจง, ปรับค่าเทียบกับ Zulu   (แบบ GMT) . ในทางกลับกัน "เวลาโซน" เป็นอะไรที่ซับซ้อนกว่ามาก ที่ได้รับผลกระทบจากการประหยัดเวลากลางวัน (เช่น "US/Pacific") ซึ่งมีกฏต่างกันในหลายๆที่ ในเวลาที่แตกต่างกัน พื้นที่เวลามีชื่อเสมอ เนื่องจากไม่สามารถสรุปด้วยค่าตรงข้ามธรรมดา (ดูคอลัมน์ "ชื่อฐานข้อมูล TZ" ในตารางที่ [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) ) . ERDDAP ' time\\_zone แอตทริบิวต์ช่วยให้คุณจัดการกับข้อมูลเวลาท้องถิ่นจากพื้นที่เวลาบาง (E.g., 1987-03-25T17:32:05. แปซิฟิก เวลา) . หากคุณมีข้อมูลเวลาหรือค่าตัวเลข (คงที่) ปรับค่าเวลา คุณควรจะปรับข้อมูลเป็น Zulu   (ซึ่งก็คือ ERDDAP™ ต้องการ) โดยระบุเวลาพื้นฐานอื่น ๆ ในแอตทริบิวต์หน่วย (e.g. "ชั่วโมงตั้งแต่ 1970-01-01T08:00:00Z" หมายเหตุ T08 เพื่อระบุเวลาตรงข้าม) และตรวจสอบผล เพื่อให้แน่ใจว่าคุณได้ผลตามที่คุณต้องการ
+    * สําหรับตัวแปรเวลาประทับด้วยข้อมูลแหล่งจากสตริง แอตทริบิวต์นี้ช่วยให้คุณกําหนดเขตเวลาที่นําไปสู่ ERDDAP™ แปลงเวลาท้องถิ่น (บาง คน ใน สมัย มาตรฐาน บาง คน ใช้ เวลา กลาง วัน เพื่อ ประหยัด เวลา) ไปยัง Zulu คูณ (ซึ่งมักจะเป็นเวลามาตรฐาน) . รายชื่อเขตเวลาที่ถูกต้อง อาจจะเหมือนกับรายการในคอลัมน์ TZ ที่ [ https://en.wikipedia.org/wiki/List\\_of\\_tz\\_database\\_time\\_zones ](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) . สหรัฐอเมริกาโซนเวลาเป็น: US/ Hawai, US/ harpolica, US/Pacific, US/Mountain, US/Ariazona, US/Central, US/Ecten.
     * สําหรับตัวแปรของเวลา time\\_zone "คุณสมบัติ แต่มูลค่าต้อง" Zulu หรือ "UTC" ถ้าคุณต้องการการสนับสนุนพื้นที่เวลาอื่น โปรดส่งอีเมลหาคริส จอห์นที่โนอา โกฟ
          
 ###### _เวลาหน่วงการ{#legacy_time_adjust} 
